@@ -1079,3 +1079,184 @@ h3 {
     margin-top: 1.55rem;
   }
   }
+/* =========================
+   UX POLISH – MOBILE DENSITY
+========================= */
+
+.paper-process-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.7rem;
+  margin-top: 0.9rem;
+}
+
+.paper-process-card {
+  text-align: center;
+  padding: 0.85rem 0.7rem;
+  border-radius: 18px;
+  border: 1px solid rgba(92,110,132,0.12);
+  background: linear-gradient(135deg, #fffefb, #f5eddc);
+  box-shadow: var(--shadow-soft);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.paper-process-card:hover {
+  transform: translateY(-2px);
+}
+
+.paper-process-card.active {
+  border-color: rgba(47, 122, 103, 0.28);
+  box-shadow: var(--shadow-medium);
+}
+
+.process-icon {
+  display: block;
+  font-size: 1.2rem;
+  margin-bottom: 0.35rem;
+}
+
+.process-title {
+  display: block;
+  font-size: 0.86rem;
+  font-weight: 800;
+  color: var(--ink);
+}
+
+.paper-process-panels {
+  margin-top: 0.9rem;
+}
+
+.paper-process-panel {
+  display: none;
+  padding: 0.95rem 1rem;
+  border-radius: 16px;
+  background: var(--paper-note);
+  border: 1px dashed rgba(146, 117, 39, 0.26);
+  color: var(--muted);
+  animation: fadeSlide 0.35s ease;
+}
+
+.paper-process-panel.active {
+  display: block;
+}
+
+.paper-accordion {
+  display: grid;
+  gap: 0.8rem;
+  margin-top: 0.9rem;
+}
+
+.paper-accordion-item {
+  border-radius: 18px;
+}
+
+.paper-accordion-trigger {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 2.2rem 1fr;
+  gap: 0.6rem;
+  align-items: center;
+  text-align: left;
+  padding: 0.9rem 0.95rem;
+  border-radius: 18px;
+  border: 1px solid rgba(92,110,132,0.12);
+  background: linear-gradient(135deg, #fffefb, #f5eddc);
+  box-shadow: var(--shadow-soft);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.paper-accordion-trigger:hover {
+  transform: translateY(-1px);
+}
+
+.paper-accordion-trigger.active {
+  border-color: rgba(47, 122, 103, 0.28);
+  box-shadow: var(--shadow-medium);
+}
+
+.paper-accordion-no {
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.paper-accordion-title {
+  font-size: 0.96rem;
+  font-weight: 800;
+  color: var(--ink);
+}
+
+.paper-accordion-panel {
+  display: none;
+  margin-top: 0.5rem;
+  padding: 1rem;
+  border-radius: 18px;
+  background: var(--paper);
+  border: 1px solid rgba(92,110,132,0.12);
+  box-shadow: var(--shadow-soft);
+}
+
+.paper-accordion-panel.active {
+  display: block;
+  animation: fadeSlide 0.35s ease;
+}
+
+.compact-kingdom-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.compact-steps .paper-step {
+  padding: 0.8rem;
+}
+
+.compact-steps .paper-step p {
+  font-size: 0.86rem;
+}
+
+@media (max-width: 760px) {
+  .compact-kingdom-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.65rem;
+  }
+
+  .paper-process-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0.55rem;
+  }
+
+  .paper-process-card {
+    padding: 0.75rem 0.45rem;
+    border-radius: 16px;
+  }
+
+  .process-icon {
+    font-size: 1.05rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .process-title {
+    font-size: 0.76rem;
+    line-height: 1.2;
+  }
+
+  .paper-kingdom {
+    min-height: 64px;
+    padding: 0.7rem 0.45rem;
+    font-size: 0.9rem;
+    border-radius: 16px;
+  }
+
+  .paper-accordion-trigger {
+    padding: 0.82rem 0.85rem;
+    grid-template-columns: 2rem 1fr;
+  }
+
+  .paper-accordion-title {
+    font-size: 0.92rem;
+  }
+
+  .paper-accordion-panel {
+    padding: 0.9rem;
+  }
+}
