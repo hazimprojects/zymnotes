@@ -1486,3 +1486,34 @@ h3 {
     padding-right: 2.4rem;
   }
 }
+/* =========================
+   HOMEPAGE / INDEX POLISH
+========================= */
+
+.homepage-hero .hero-copy .paper-label {
+  margin-bottom: 0.8rem;
+}
+
+.paper-preview-panel {
+  background: rgba(255, 253, 248, 0.94);
+}
+
+.preview-subtopic {
+  margin: -0.1rem 0 0.9rem;
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.preview-chip-list {
+  margin-top: 0.9rem;
+}
+
+.homepage-focus-section .paper-board {
+  background: linear-gradient(135deg, #fffdf8, #f7f0e1);
+}
+
+@media (max-width: 760px) {
+  .preview-subtopic {
+    font-size: 0.92rem;
+  }
+}
