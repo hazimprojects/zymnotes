@@ -1565,3 +1565,90 @@ h3 {
     padding: 0.06rem 0.34rem 0.1rem;
   }
 }
+/* =========================
+   KEYWORD HIGHLIGHT REFINED
+========================= */
+
+.kw {
+  display: inline;
+  padding: 0 0.12em;
+  border-radius: 0.24em;
+  font-weight: 800;
+  line-height: inherit;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+.kw-tokoh {
+  color: #8f1d3f;
+  background: linear-gradient(
+    transparent 0.42em,
+    rgba(255, 228, 230, 0.82) 0.42em
+  );
+}
+
+.kw-masa {
+  color: #1d4ed8;
+  background: linear-gradient(
+    transparent 0.42em,
+    rgba(219, 234, 254, 0.86) 0.42em
+  );
+}
+
+.kw-tempat {
+  color: #166534;
+  background: linear-gradient(
+    transparent 0.42em,
+    rgba(220, 252, 231, 0.84) 0.42em
+  );
+}
+
+.kw-konsep {
+  color: #c2410c;
+  background: linear-gradient(
+    transparent 0.42em,
+    rgba(255, 237, 213, 0.9) 0.42em
+  );
+}
+
+.kw-kerajaan {
+  color: #6d28d9;
+  background: linear-gradient(
+    transparent 0.42em,
+    rgba(237, 233, 254, 0.88) 0.42em
+  );
+}
+
+.kw-istilah {
+  color: #0f766e;
+  background: linear-gradient(
+    transparent 0.42em,
+    rgba(204, 251, 241, 0.88) 0.42em
+  );
+}
+
+/* Supaya highlight nampak lebih kemas dalam chip dan ayat */
+.paper-chip .kw,
+.point-line .kw,
+.lead .kw,
+.emoji-point-list .kw,
+.answer-paper .kw {
+  padding: 0 0.1em;
+}
+
+/* Baiki aliran teks dalam chip */
+.paper-chip {
+  align-items: flex-start;
+  line-height: 1.5;
+}
+
+/* Elak highlight nampak terlalu besar pada mobile */
+@media (max-width: 760px) {
+  .kw {
+    padding: 0 0.08em;
+  }
+
+  .paper-chip {
+    line-height: 1.45;
+  }
+}
