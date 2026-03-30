@@ -1683,3 +1683,149 @@ h3 {
     line-height: 1.45;
   }
 }
+/* =========================
+   KEYWORD HIGHLIGHT SYSTEM
+   REFINED INLINE VERSION
+========================= */
+
+.kw {
+  display: inline;
+  padding: 0 0.08em;
+  margin: 0;
+  border-radius: 0.14em;
+  font-size: inherit;
+  line-height: inherit;
+  font-weight: inherit;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+/* kategori warna */
+.kw-tokoh {
+  color: #9f1239;
+  background: rgba(255, 228, 230, 0.92);
+}
+
+.kw-masa {
+  color: #1d4ed8;
+  background: rgba(219, 234, 254, 0.92);
+}
+
+.kw-tempat {
+  color: #166534;
+  background: rgba(220, 252, 231, 0.92);
+}
+
+.kw-konsep {
+  color: #c2410c;
+  background: rgba(255, 237, 213, 0.94);
+}
+
+.kw-kerajaan {
+  color: #6d28d9;
+  background: rgba(237, 233, 254, 0.94);
+}
+
+.kw-istilah {
+  color: #0f766e;
+  background: rgba(204, 251, 241, 0.94);
+}
+
+/* elak keyword jadi lebih besar / lebih tebal daripada ayat */
+.paper-chip .kw,
+.point-line .kw,
+.lead .kw,
+.emoji-point-list .kw,
+.answer-paper .kw,
+.paper-kingdom .kw,
+.paper-timeline-panel .kw,
+.paper-accordion-panel .kw,
+.keyword-legend-item .kw {
+  font-size: inherit;
+  line-height: inherit;
+  font-weight: inherit;
+}
+
+/* =========================
+   SENTENCE CHIP FIX
+========================= */
+
+.paper-chip-sentence {
+  display: block;
+  width: 100%;
+  white-space: normal;
+  line-height: 1.65;
+  text-align: left;
+}
+
+.paper-chip-sentence .chip-icon {
+  margin-right: 0.45rem;
+}
+
+.paper-chip-sentence .kw {
+  display: inline;
+  white-space: normal;
+}
+
+.paper-chip-sentence,
+.paper-chip-sentence * {
+  vertical-align: baseline;
+}
+
+/* =========================
+   KEYWORD LEGEND
+========================= */
+
+.keyword-legend-wrap {
+  margin-top: 1rem;
+}
+
+.keyword-legend-title {
+  margin: 0 0 0.7rem;
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: var(--ink);
+}
+
+.keyword-legend-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.7rem;
+}
+
+.keyword-legend-item {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.8rem;
+  padding: 0.85rem 0.95rem;
+  border-radius: 18px;
+  background: rgba(255, 253, 248, 0.72);
+  border: 1px solid rgba(92, 110, 132, 0.1);
+  box-shadow: var(--shadow-soft);
+  line-height: 1.35;
+}
+
+/* kemaskan chip biasa */
+.paper-chip {
+  line-height: 1.55;
+}
+
+@media (max-width: 760px) {
+  .keyword-legend-grid {
+    grid-template-columns: 1fr;
+    gap: 0.6rem;
+  }
+
+  .keyword-legend-item {
+    min-height: auto;
+    padding: 0.8rem 0.9rem;
+  }
+
+  .kw {
+    padding: 0 0.07em;
+  }
+
+  .paper-chip {
+    line-height: 1.5;
+  }
+}
