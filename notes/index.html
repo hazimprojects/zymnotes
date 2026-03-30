@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="stylesheet" href="../assets/css/style.css?v=10" />
 </head>
 <body>
   <header class="site-header">
@@ -24,22 +24,63 @@
   </header>
 
   <main>
-    <section class="section page-hero">
+    <section class="section page-hero papercraft-hero">
       <div class="container narrow">
-        <p class="eyebrow">Koleksi nota</p>
-        <h1>Nota yang dibina sedikit demi sedikit, dengan fokus pada kejelasan.</h1>
-        <p class="lead">Bahagian ini menghimpunkan nota yang sedang dibangunkan. Fokus awal ialah Sejarah Tingkatan 4.</p>
+        <div class="paper-label">Koleksi Nota</div>
+        <h1>Nota yang dibina secara bertahap, dengan fokus pada kejelasan.</h1>
+        <p class="lead">
+          Halaman ini menghimpunkan nota yang sedang dibangunkan. Setiap topik disusun mengikut bab dan subtopik supaya pembaca lebih mudah mencari laluan pembelajaran yang sesuai.
+        </p>
       </div>
     </section>
 
-    <section class="section">
-      <div class="container cards-grid">
-        <article class="note-card">
-          <p class="card-kicker">Sejarah Tingkatan 4</p>
-          <h2>Bab 1 · Warisan Negara Bangsa</h2>
-          <p>Struktur nota awal untuk topik negara bangsa sebelum kedatangan Barat.</p>
-          <a class="text-link" href="bab-1.html">Buka nota →</a>
+    <section class="section note-section">
+      <div class="container narrow">
+        <article class="paper-board reveal-on-scroll">
+          <div class="paper-strip">Fokus Semasa</div>
+          <p>
+            Buat masa ini, fokus utama diberikan kepada Sejarah Tingkatan 4 bermula dengan Bab 1. Struktur telah dipecahkan kepada halaman bab dan subtopik supaya nota lebih kemas dan tidak mengelirukan.
+          </p>
         </article>
+
+        <section class="note-subsection reveal-on-scroll">
+          <div class="section-heading">
+            <div class="paper-label small">Sejarah Tingkatan 4</div>
+            <h2>Bab yang tersedia</h2>
+          </div>
+
+          <div class="bab-grid">
+            <a class="bab-card" href="bab-1.html">
+              <div class="bab-card-top">Bab 1</div>
+              <h3>Warisan Negara Bangsa</h3>
+              <p>Halaman induk Bab 1 yang menghimpunkan ringkasan dan susunan subtopik.</p>
+            </a>
+
+            <a class="bab-card" href="bab-1-1.html">
+              <div class="bab-card-top">1.1</div>
+              <h3>Latar Belakang Negara Bangsa Sebelum Kedatangan Barat</h3>
+              <p>Nota interaktif tentang asas negara bangsa di Alam Melayu dan kesinambungannya.</p>
+            </a>
+
+            <a class="bab-card bab-card-disabled" href="#">
+              <div class="bab-card-top">1.2</div>
+              <h3>Ciri-ciri Negara Bangsa Kesultanan Melayu Melaka</h3>
+              <p>Akan dibangunkan seterusnya.</p>
+            </a>
+
+            <a class="bab-card bab-card-disabled" href="#">
+              <div class="bab-card-top">1.3</div>
+              <h3>Keunggulan Sistem Pentadbiran dan Undang-undang</h3>
+              <p>Akan dibangunkan seterusnya.</p>
+            </a>
+
+            <a class="bab-card bab-card-disabled" href="#">
+              <div class="bab-card-top">1.4</div>
+              <h3>Peranan Pemerintah dan Rakyat</h3>
+              <p>Akan dibangunkan seterusnya.</p>
+            </a>
+          </div>
+        </section>
       </div>
     </section>
   </main>
@@ -58,6 +99,6 @@
     </div>
   </footer>
 
-  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/main.js?v=10"></script>
 </body>
 </html>
