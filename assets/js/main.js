@@ -44,9 +44,7 @@ processCards.forEach((card) => {
   });
 });
 
-/* =========================
-   PAPER ACCORDION
-========================= */
+/* PAPER ACCORDION */
 const accordionTriggers = document.querySelectorAll(".paper-accordion-trigger");
 const accordionPanels = document.querySelectorAll(".paper-accordion-panel");
 
@@ -58,21 +56,19 @@ accordionTriggers.forEach((trigger) => {
     const targetPanel = document.getElementById(targetId);
     if (!targetPanel) return;
 
-    const isAlreadyOpen = trigger.classList.contains("active");
+    const isOpen = trigger.classList.contains("active");
 
     accordionTriggers.forEach((item) => item.classList.remove("active"));
     accordionPanels.forEach((panel) => panel.classList.remove("active"));
 
-    if (!isAlreadyOpen) {
+    if (!isOpen) {
       trigger.classList.add("active");
       targetPanel.classList.add("active");
     }
   });
 });
 
-/* =========================
-   PAPER TIMELINE
-========================= */
+/* PAPER TIMELINE */
 const paperTimelineNodes = document.querySelectorAll(".paper-timeline-node");
 const paperTimelinePanels = document.querySelectorAll(".paper-timeline-panel");
 
