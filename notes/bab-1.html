@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../assets/css/style.css?v=5" />
+  <link rel="stylesheet" href="../assets/css/style.css?v=6" />
 </head>
 <body>
   <header class="site-header">
@@ -80,10 +80,33 @@
           <article class="paper-board">
             <p class="point-heading">📌 Berlaku secara:</p>
 
-            <div class="paper-chip-list">
-              <div class="paper-chip">🕰️ berperingkat</div>
-              <div class="paper-chip">⏳ mengambil masa yang panjang</div>
-              <div class="paper-chip">📈 berkembang mengikut keperluan dan zaman</div>
+            <div class="paper-process-grid">
+              <button class="paper-process-card active" data-process="process-1">
+                <span class="process-icon">🕰️</span>
+                <span class="process-title">Berperingkat</span>
+              </button>
+
+              <button class="paper-process-card" data-process="process-2">
+                <span class="process-icon">⏳</span>
+                <span class="process-title">Masa yang panjang</span>
+              </button>
+
+              <button class="paper-process-card" data-process="process-3">
+                <span class="process-icon">📈</span>
+                <span class="process-title">Mengikut keperluan zaman</span>
+              </button>
+            </div>
+
+            <div class="paper-process-panels">
+              <div id="process-1" class="paper-process-panel active">
+                Pembentukan negara bangsa berlaku sedikit demi sedikit dan tidak terbina secara sekaligus.
+              </div>
+              <div id="process-2" class="paper-process-panel">
+                Proses ini berkembang dalam tempoh yang panjang mengikut perubahan masyarakat dan pemerintahan.
+              </div>
+              <div id="process-3" class="paper-process-panel">
+                Ciri-cirinya berkembang berdasarkan keperluan pentadbiran, kuasa, dan perkembangan zaman.
+              </div>
             </div>
           </article>
         </section>
@@ -97,7 +120,7 @@
           <article class="paper-board">
             <p class="point-heading">📌 Antara kerajaan yang membuktikan kewujudan awal negara bangsa:</p>
 
-            <div class="paper-grid">
+            <div class="paper-grid compact-kingdom-grid">
               <article class="paper-kingdom">🏛️ Funan</article>
               <article class="paper-kingdom">🏛️ Champa</article>
               <article class="paper-kingdom">🏛️ Kedah Tua</article>
@@ -121,109 +144,98 @@
           <div class="section-heading">
             <div class="paper-label small">Empat Unsur Utama</div>
             <h2>📜 Negara bangsa Alam Melayu terbina melalui empat unsur utama</h2>
-            <p>Klik setiap kad untuk melihat isi dengan lebih jelas.</p>
+            <p>Klik kad dan isi akan terbuka terus di bawahnya.</p>
           </div>
 
-          <div class="paper-tabs">
-            <button class="paper-tab active" data-tab="tab-raja">
-              <span class="paper-tab-no">1️⃣</span>
-              <span class="paper-tab-title">Raja 👑</span>
-            </button>
-
-            <button class="paper-tab" data-tab="tab-undang">
-              <span class="paper-tab-no">2️⃣</span>
-              <span class="paper-tab-title">Undang-undang 📜</span>
-            </button>
-
-            <button class="paper-tab" data-tab="tab-wilayah">
-              <span class="paper-tab-no">3️⃣</span>
-              <span class="paper-tab-title">Wilayah Pengaruh 🗺️</span>
-            </button>
-
-            <button class="paper-tab" data-tab="tab-rakyat">
-              <span class="paper-tab-no">4️⃣</span>
-              <span class="paper-tab-title">Rakyat 👥</span>
-            </button>
-          </div>
-
-          <div class="paper-tab-panels">
-            <article id="tab-raja" class="paper-tab-panel active">
-              <div class="paper-strip small">1️⃣ Raja 👑</div>
-              <ul class="emoji-point-list">
-                <li><span class="emoji-bullet">📌</span><span>Raja merupakan tonggak utama sesebuah kerajaan.</span></li>
-                <li><span class="emoji-bullet">📌</span><span>Kedudukan raja diperkukuh melalui:</span></li>
-              </ul>
-
-              <div class="paper-chip-list">
-                <div class="paper-chip">🏛️ sistem pentadbiran</div>
-                <div class="paper-chip">🤝 bantuan para pembesar</div>
-                <div class="paper-chip">👥 ketaatan rakyat</div>
-              </div>
-
-              <p class="point-line">💡 Raja dianggap mempunyai kedudukan yang suci dan dihormati.</p>
-              <p class="point-line">📖 Contoh: Raja Champa dianggap suci dan dikaitkan dengan Dewa Siva.</p>
-            </article>
-
-            <article id="tab-undang" class="paper-tab-panel">
-              <div class="paper-strip small">2️⃣ Undang-undang 📜</div>
-
-              <p class="point-heading">📌 Undang-undang dilaksanakan untuk memastikan:</p>
-              <div class="paper-chip-list">
-                <div class="paper-chip">🛡️ keamanan kerajaan</div>
-                <div class="paper-chip">😊 kesejahteraan rakyat</div>
-                <div class="paper-chip">⚖️ kelancaran pentadbiran</div>
-              </div>
-
-              <p class="point-heading">📌 Undang-undang ini:</p>
-              <div class="paper-chip-list">
-                <div class="paper-chip">🌍 terpakai di seluruh wilayah pengaruh</div>
-                <div class="paper-chip">📘 menjadi panduan dalam pentadbiran</div>
-              </div>
-
-              <p class="point-line">📖 Contoh: Kerajaan Majapahit mengamalkan undang-undang Kutara Manawa.</p>
-            </article>
-
-            <article id="tab-wilayah" class="paper-tab-panel">
-              <div class="paper-strip small">3️⃣ Wilayah Pengaruh 🗺️</div>
-
-              <ul class="emoji-point-list">
-                <li><span class="emoji-bullet">📌</span><span>Wilayah pengaruh ialah kawasan yang rakyatnya:</span></li>
-              </ul>
-
-              <div class="paper-chip-list">
-                <div class="paper-chip">✔️ menerima</div>
-                <div class="paper-chip">✔️ mengakui</div>
-                <div class="paper-chip">✔️ mematuhi pemerintahan raja</div>
-              </div>
-
-              <p class="point-line">📖 Contoh: Kerajaan Funan mempunyai wilayah yang luas meliputi:</p>
-
-              <div class="paper-chip-list">
-                <div class="paper-chip">🌊 Sungai Mekong</div>
-                <div class="paper-chip">🌊 Teluk Cam Ranh</div>
-                <div class="paper-chip">🌏 Selatan Myanmar</div>
-                <div class="paper-chip">📍 Segenting Kra</div>
+          <div class="paper-accordion">
+            <article class="paper-accordion-item active">
+              <button class="paper-accordion-trigger active" data-accordion="acc-raja">
+                <span class="paper-accordion-no">1️⃣</span>
+                <span class="paper-accordion-title">Raja 👑</span>
+              </button>
+              <div id="acc-raja" class="paper-accordion-panel active">
+                <div class="paper-strip small">1️⃣ Raja 👑</div>
+                <ul class="emoji-point-list">
+                  <li><span class="emoji-bullet">📌</span><span>Raja merupakan tonggak utama sesebuah kerajaan.</span></li>
+                  <li><span class="emoji-bullet">📌</span><span>Kedudukan raja diperkukuh melalui:</span></li>
+                </ul>
+                <div class="paper-chip-list">
+                  <div class="paper-chip">🏛️ sistem pentadbiran</div>
+                  <div class="paper-chip">🤝 bantuan para pembesar</div>
+                  <div class="paper-chip">👥 ketaatan rakyat</div>
+                </div>
+                <p class="point-line">💡 Raja dianggap mempunyai kedudukan yang suci dan dihormati.</p>
+                <p class="point-line">📖 Contoh: Raja Champa dianggap suci dan dikaitkan dengan Dewa Siva.</p>
               </div>
             </article>
 
-            <article id="tab-rakyat" class="paper-tab-panel">
-              <div class="paper-strip small">4️⃣ Rakyat 👥</div>
-
-              <ul class="emoji-point-list">
-                <li><span class="emoji-bullet">📌</span><span>Rakyat merujuk kepada penduduk yang:</span></li>
-              </ul>
-
-              <div class="paper-chip-list">
-                <div class="paper-chip">🤝 setia kepada raja</div>
-                <div class="paper-chip">🚫 tidak menderhaka</div>
+            <article class="paper-accordion-item">
+              <button class="paper-accordion-trigger" data-accordion="acc-undang">
+                <span class="paper-accordion-no">2️⃣</span>
+                <span class="paper-accordion-title">Undang-undang 📜</span>
+              </button>
+              <div id="acc-undang" class="paper-accordion-panel">
+                <div class="paper-strip small">2️⃣ Undang-undang 📜</div>
+                <p class="point-heading">📌 Undang-undang dilaksanakan untuk memastikan:</p>
+                <div class="paper-chip-list">
+                  <div class="paper-chip">🛡️ keamanan kerajaan</div>
+                  <div class="paper-chip">😊 kesejahteraan rakyat</div>
+                  <div class="paper-chip">⚖️ kelancaran pentadbiran</div>
+                </div>
+                <p class="point-heading">📌 Undang-undang ini:</p>
+                <div class="paper-chip-list">
+                  <div class="paper-chip">🌍 terpakai di seluruh wilayah pengaruh</div>
+                  <div class="paper-chip">📘 menjadi panduan dalam pentadbiran</div>
+                </div>
+                <p class="point-line">📖 Contoh: Kerajaan Majapahit mengamalkan undang-undang Kutara Manawa.</p>
               </div>
+            </article>
 
-              <p class="point-heading">📌 Contoh kesetiaan:</p>
-              <p>Rakyat Srivijaya menunjukkan kesetiaan melalui:</p>
+            <article class="paper-accordion-item">
+              <button class="paper-accordion-trigger" data-accordion="acc-wilayah">
+                <span class="paper-accordion-no">3️⃣</span>
+                <span class="paper-accordion-title">Wilayah Pengaruh 🗺️</span>
+              </button>
+              <div id="acc-wilayah" class="paper-accordion-panel">
+                <div class="paper-strip small">3️⃣ Wilayah Pengaruh 🗺️</div>
+                <ul class="emoji-point-list">
+                  <li><span class="emoji-bullet">📌</span><span>Wilayah pengaruh ialah kawasan yang rakyatnya:</span></li>
+                </ul>
+                <div class="paper-chip-list">
+                  <div class="paper-chip">✔️ menerima</div>
+                  <div class="paper-chip">✔️ mengakui</div>
+                  <div class="paper-chip">✔️ mematuhi pemerintahan raja</div>
+                </div>
+                <p class="point-line">📖 Contoh: Kerajaan Funan mempunyai wilayah yang luas meliputi:</p>
+                <div class="paper-chip-list">
+                  <div class="paper-chip">🌊 Sungai Mekong</div>
+                  <div class="paper-chip">🌊 Teluk Cam Ranh</div>
+                  <div class="paper-chip">🌏 Selatan Myanmar</div>
+                  <div class="paper-chip">📍 Segenting Kra</div>
+                </div>
+              </div>
+            </article>
 
-              <div class="paper-chip-list">
-                <div class="paper-chip">🧪 upacara persetiaan</div>
-                <div class="paper-chip">💧 meminum air sumpah</div>
+            <article class="paper-accordion-item">
+              <button class="paper-accordion-trigger" data-accordion="acc-rakyat">
+                <span class="paper-accordion-no">4️⃣</span>
+                <span class="paper-accordion-title">Rakyat 👥</span>
+              </button>
+              <div id="acc-rakyat" class="paper-accordion-panel">
+                <div class="paper-strip small">4️⃣ Rakyat 👥</div>
+                <ul class="emoji-point-list">
+                  <li><span class="emoji-bullet">📌</span><span>Rakyat merujuk kepada penduduk yang:</span></li>
+                </ul>
+                <div class="paper-chip-list">
+                  <div class="paper-chip">🤝 setia kepada raja</div>
+                  <div class="paper-chip">🚫 tidak menderhaka</div>
+                </div>
+                <p class="point-heading">📌 Contoh kesetiaan:</p>
+                <p>Rakyat Srivijaya menunjukkan kesetiaan melalui:</p>
+                <div class="paper-chip-list">
+                  <div class="paper-chip">🧪 upacara persetiaan</div>
+                  <div class="paper-chip">💧 meminum air sumpah</div>
+                </div>
               </div>
             </article>
           </div>
@@ -239,7 +251,7 @@
               <li><span class="emoji-bullet">📌</span><span>Proses upacara:</span></li>
             </ul>
 
-            <div class="paper-steps">
+            <div class="paper-steps compact-steps">
               <div class="paper-step">
                 <div class="paper-step-icon">💧</div>
                 <p>Air dituangkan ke atas inskripsi</p>
@@ -351,6 +363,6 @@
     </div>
   </footer>
 
-  <script src="../assets/js/main.js?v=5"></script>
+  <script src="../assets/js/main.js?v=6"></script>
 </body>
-</html>
+  </html>
