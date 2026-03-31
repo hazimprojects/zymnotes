@@ -167,6 +167,15 @@ if (revealElements.length) {
 // READING PROGRESS INDICATOR
 // =========================
 (function setupReadingProgress() {
+  const path = window.location.pathname.toLowerCase();
+
+  const isReadingPage =
+    path.includes("/notes/bab-") &&
+    !path.endsWith("/notes/bab-1.html") &&
+    !path.endsWith("/notes/bab-1");
+
+  if (!isReadingPage) return;
+
   const mainContent = document.querySelector("main");
   if (!mainContent) return;
 
