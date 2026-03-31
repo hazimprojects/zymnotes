@@ -1909,3 +1909,92 @@ h3 {
     max-width: 100%;
   }
 }
+/* =========================
+   WIDER NOTE LAYOUT
+========================= */
+
+.note-wide {
+  max-width: 1180px;
+}
+
+.note-section-wide .container.narrow,
+.note-section-wide .container.note-wide {
+  max-width: 1180px;
+}
+
+.two-up-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  align-items: start;
+}
+
+/* =========================
+   ORGANIZATION CHART
+========================= */
+
+.org-chart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.45rem;
+  text-align: center;
+}
+
+.org-level {
+  display: flex;
+  justify-content: center;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.org-level-1,
+.org-level-2 {
+  max-width: 320px;
+}
+
+.org-level-3 {
+  max-width: 920px;
+}
+
+.org-node {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 54px;
+  padding: 0.85rem 1rem;
+  border-radius: 18px;
+  background: rgba(255, 253, 248, 0.85);
+  border: 1px solid rgba(92, 110, 132, 0.1);
+  box-shadow: var(--shadow-soft);
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.org-arrow {
+  font-size: 1.35rem;
+  line-height: 1;
+}
+
+/* blok nota 1.3 lebih stabil di desktop */
+.note-section-wide .paper-board,
+.note-section-wide .paper-flap-card,
+.note-section-wide .paper-accordion-item {
+  width: 100%;
+}
+
+@media (max-width: 900px) {
+  .two-up-grid {
+    grid-template-columns: 1fr;
+    gap: 0.9rem;
+  }
+
+  .note-wide {
+    max-width: 100%;
+  }
+
+  .org-level-3 {
+    max-width: 100%;
+  }
+}
