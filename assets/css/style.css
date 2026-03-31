@@ -1262,6 +1262,7 @@ h3 {
   -webkit-box-decoration-break: clone;
 }
 
+/* Bab 1 */
 .kw-tokoh {
   color: #9f1239;
   background: rgba(255, 228, 230, 0.92);
@@ -1290,6 +1291,32 @@ h3 {
 .kw-istilah {
   color: #0f766e;
   background: rgba(204, 251, 241, 0.94);
+}
+
+/* Bab 2 */
+.kw-tahun {
+  color: #3458b2;
+  background: rgba(219, 232, 255, 0.94);
+}
+
+.kw-peristiwa {
+  color: #b35c1e;
+  background: rgba(255, 230, 207, 0.94);
+}
+
+.kw-gerakan {
+  color: #7c35b2;
+  background: rgba(242, 222, 252, 0.94);
+}
+
+.kw-pertubuhan {
+  color: #5f3eb2;
+  background: rgba(231, 222, 252, 0.94);
+}
+
+.kw-karya {
+  color: #2f7f86;
+  background: rgba(217, 243, 244, 0.94);
 }
 
 .paper-chip .kw,
@@ -1330,6 +1357,10 @@ h3 {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem 0.6rem;
+}
+
+.keyword-legend-grid-bab2 {
+  gap: 0.52rem 0.62rem;
 }
 
 .keyword-legend-item {
@@ -1698,7 +1729,8 @@ h3 {
     margin-bottom: 0.55rem;
   }
 
-  .keyword-legend-grid {
+  .keyword-legend-grid,
+  .keyword-legend-grid-bab2 {
     gap: 0.45rem 0.5rem;
   }
 
@@ -1763,12 +1795,12 @@ h3 {
   .org-node {
     width: 100%;
   }
-  }
+}
+
 /* =========================
    SPACING FIX FOR 📌 POINTS
 ========================= */
 
-/* Bila point heading datang selepas kad/grid/chips, beri ruang lebih jelas */
 .paper-chip-list + .point-heading,
 .paper-grid + .point-heading,
 .paper-process-grid + .point-heading,
@@ -1781,7 +1813,6 @@ h3 {
   margin-top: 1.15rem;
 }
 
-/* Bila senarai emoji datang selepas block lain, jangan terlalu rapat */
 .paper-chip-list + .emoji-point-list,
 .paper-grid + .emoji-point-list,
 .paper-process-grid + .emoji-point-list,
@@ -1792,29 +1823,24 @@ h3 {
   margin-top: 1rem;
 }
 
-/* Jika point-line diikuti point heading, beri nafas sedikit */
 .point-line + .point-heading {
   margin-top: 1rem;
 }
 
-/* Jika beberapa point heading berturutan, rapat sedikit tapi masih kemas */
 .point-heading + .point-heading {
   margin-top: 0.8rem;
 }
 
-/* Dalam kad, point dengan emoji 📌 nampak lebih kemas */
 .emoji-point-list li + li {
   margin-top: 0.08rem;
 }
 
-/* Ruang sebelum point selepas paper strip */
 .paper-strip + .point-heading,
 .paper-strip + .point-line,
 .paper-strip + .emoji-point-list {
   margin-top: 0.15rem;
 }
 
-/* Mobile: ruang sedikit lembut supaya tak terlalu panjang */
 @media (max-width: 760px) {
   .paper-chip-list + .point-heading,
   .paper-grid + .point-heading,
@@ -1841,4 +1867,4 @@ h3 {
   .point-line + .point-heading {
     margin-top: 0.9rem;
   }
-}
+  }
