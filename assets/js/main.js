@@ -1,3 +1,6 @@
+// =========================
+// NAV TOGGLE
+// =========================
 const navToggle = document.querySelector(".nav-toggle");
 const siteNav = document.querySelector(".site-nav");
 
@@ -6,31 +9,61 @@ if (navToggle && siteNav) {
     const isOpen = siteNav.classList.toggle("open");
     navToggle.setAttribute("aria-expanded", String(isOpen));
   });
+
+  siteNav.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => {
+      siteNav.classList.remove("open");
+      navToggle.setAttribute("aria-expanded", "false");
+    });
+  });
+
+  document.addEventListener("click", (event) => {
+    const clickedInsideNav = siteNav.contains(event.target);
+    const clickedToggle = navToggle.contains(event.target);
+
+    if (!clickedInsideNav && !clickedToggle && siteNav.classList.contains("open")) {
+      siteNav.classList.remove("open");
+      navToggle.setAttribute("aria-expanded", "false");
+    }
+  });
 }
 
-/* =========================
-   PROCESS CARDS
-========================= */
+// =========================
+// PROCESS CARDS
+// =========================
 const processCards = document.querySelectorAll(".paper-process-card");
 const processPanels = document.querySelectorAll(".paper-process-panel");
 
-processCards.forEach((card) => {
-  card.addEventListener("click", () => {
-    const targetId = card.getAttribute("data-process");
-    if (!targetId) return;
+function activateProcessCard(card) {
+  const targetId = card.getAttribute("data-process");
+  if (!targetId) return;
 
-    processCards.forEach((item) => item.classList.remove("active"));
-    processPanels.forEach((panel) => panel.classList.remove("active"));
+  const targetPanel = document.getElementById(targetId);
+  if (!targetPanel) return;
 
-    card.classList.add("active");
-    const targetPanel = document.getElementById(targetId);
-    if (targetPanel) targetPanel.classList.add("active");
+  processCards.forEach((item) => item.classList.remove("active"));
+  processPanels.forEach((panel) => panel.classList.remove("active"));
+
+  card.classList.add("active");
+  targetPanel.classList.add("active");
+}
+
+if (processCards.length && processPanels.length) {
+  processCards.forEach((card) => {
+    card.addEventListener("click", () => activateProcessCard(card));
   });
-});
 
-/* PAPER ACCORDION */
+  if (!document.querySelector(".paper-process-card.active")) {
+    activateProcessCard(processCards[0]);
+  }
+}
+
+// =========================
+// PAPER ACCORDION
+// - satu terbuka bagi setiap kumpulan
+// - klik item yang sama untuk tutup
+// =========================
 const accordionTriggers = document.querySelectorAll(".paper-accordion-trigger");
-const accordionPanels = document.querySelectorAll(".paper-accordion-panel");
 
 accordionTriggers.forEach((trigger) => {
   trigger.addEventListener("click", () => {
@@ -40,19 +73,39 @@ accordionTriggers.forEach((trigger) => {
     const targetPanel = document.getElementById(targetId);
     if (!targetPanel) return;
 
-    const isOpen = trigger.classList.contains("active");
+    const currentItem = trigger.closest(".paper-accordion-item");
+    const accordionGroup = trigger.closest(".paper-accordion");
+    const isOpen = currentItem?.classList.contains("is-open");
 
-    accordionTriggers.forEach((item) => item.classList.remove("active"));
-    accordionPanels.forEach((panel) => panel.classList.remove("active"));
+    if (!accordionGroup || !currentItem) return;
+
+    accordionGroup.querySelectorAll(".paper-accordion-item").forEach((item) => {
+      item.classList.remove("is-open");
+    });
+
+    accordionGroup.querySelectorAll(".paper-accordion-trigger").forEach((item) => {
+      item.classList.remove("active");
+      item.setAttribute("aria-expanded", "false");
+    });
+
+    accordionGroup.querySelectorAll(".paper-accordion-panel").forEach((panel) => {
+      panel.classList.remove("active");
+    });
 
     if (!isOpen) {
+      currentItem.classList.add("is-open");
       trigger.classList.add("active");
+      trigger.setAttribute("aria-expanded", "true");
       targetPanel.classList.add("active");
     }
   });
 });
 
-/* PAPER TIMELINE */
+// =========================
+// PAPER TIMELINE
+// - klik untuk buka
+// - klik semula untuk tutup
+// =========================
 const paperTimelineNodes = document.querySelectorAll(".paper-timeline-node");
 const paperTimelinePanels = document.querySelectorAll(".paper-timeline-panel");
 
@@ -76,19 +129,212 @@ paperTimelineNodes.forEach((node) => {
   });
 });
 
-/* =========================
-   REVEAL ON SCROLL
-========================= */
+// =========================
+// REVEAL ON SCROLL
+// =========================
 const revealElements = document.querySelectorAll(".reveal-on-scroll");
 
-function revealOnScroll() {
-  revealElements.forEach((el) => {
-    const rect = el.getBoundingClientRect();
-    if (rect.top < window.innerHeight - 70) {
-      el.classList.add("visible");
+if (revealElements.length) {
+  if ("IntersectionObserver" in window) {
+    const revealObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        threshold: 0.12,
+        rootMargin: "0px 0px -40px 0px",
+      }
+    );
+
+    revealElements.forEach((el) => revealObserver.observe(el));
+  } else {
+    function revealOnScrollFallback() {
+      revealElements.forEach((el) => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 70) {
+          el.classList.add("visible");
+        }
+      });
     }
-  });
+
+    window.addEventListener("scroll", revealOnScrollFallback, { passive: true });
+    window.addEventListener("load", revealOnScrollFallback);
+  }
 }
 
-window.addEventListener("scroll", revealOnScroll);
-window.addEventListener("load", revealOnScroll);
+// =========================
+// READING PROGRESS INDICATOR
+// - inject terus tanpa perlu edit HTML/CSS lain
+// - klik indicator untuk scroll ke atas
+// =========================
+(function setupReadingProgress() {
+  const mainContent = document.querySelector("main");
+  if (!mainContent) return;
+
+  const style = document.createElement("style");
+  style.innerHTML = `
+    .reading-progress-pill {
+      position: fixed;
+      right: 16px;
+      bottom: 18px;
+      z-index: 60;
+      width: 84px;
+      padding: 10px 10px 9px;
+      border-radius: 18px;
+      background: rgba(255, 253, 248, 0.95);
+      border: 1px solid rgba(92, 110, 132, 0.16);
+      box-shadow: 0 12px 30px rgba(36, 49, 63, 0.12);
+      backdrop-filter: blur(10px);
+      cursor: pointer;
+      user-select: none;
+      transition: transform 0.2s ease, opacity 0.2s ease, box-shadow 0.2s ease;
+      opacity: 0;
+      pointer-events: none;
+      transform: translateY(10px);
+    }
+
+    .reading-progress-pill.is-visible {
+      opacity: 1;
+      pointer-events: auto;
+      transform: translateY(0);
+    }
+
+    .reading-progress-pill:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 16px 34px rgba(36, 49, 63, 0.16);
+    }
+
+    .reading-progress-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 6px;
+      margin-bottom: 7px;
+    }
+
+    .reading-progress-label {
+      font-family: "Nunito", sans-serif;
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: #5d6a79;
+      line-height: 1;
+    }
+
+    .reading-progress-percent {
+      font-family: "Nunito", sans-serif;
+      font-size: 18px;
+      font-weight: 900;
+      line-height: 1;
+      color: #24313f;
+    }
+
+    .reading-progress-bar {
+      position: relative;
+      height: 7px;
+      border-radius: 999px;
+      overflow: hidden;
+      background: #edf1f5;
+    }
+
+    .reading-progress-fill {
+      position: absolute;
+      inset: 0 auto 0 0;
+      width: 0%;
+      border-radius: 999px;
+      background: linear-gradient(90deg, #2f7a67, #d7b163);
+      transition: width 0.18s ease;
+    }
+
+    .reading-progress-hint {
+      margin-top: 7px;
+      font-family: "Nunito", sans-serif;
+      font-size: 10px;
+      font-weight: 700;
+      color: #6b7280;
+      text-align: center;
+      line-height: 1.15;
+    }
+
+    @media (max-width: 760px) {
+      .reading-progress-pill {
+        right: 12px;
+        bottom: 14px;
+        width: 78px;
+        padding: 9px 9px 8px;
+        border-radius: 16px;
+      }
+
+      .reading-progress-percent {
+        font-size: 17px;
+      }
+
+      .reading-progress-label,
+      .reading-progress-hint {
+        font-size: 9px;
+      }
+    }
+  `;
+  document.head.appendChild(style);
+
+  const pill = document.createElement("button");
+  pill.className = "reading-progress-pill";
+  pill.setAttribute("type", "button");
+  pill.setAttribute("aria-label", "Kemajuan bacaan. Klik untuk kembali ke atas.");
+  pill.innerHTML = `
+    <div class="reading-progress-top">
+      <span class="reading-progress-label">Baca</span>
+      <span class="reading-progress-percent">0%</span>
+    </div>
+    <div class="reading-progress-bar">
+      <div class="reading-progress-fill"></div>
+    </div>
+    <div class="reading-progress-hint">Naik semula</div>
+  `;
+  document.body.appendChild(pill);
+
+  const percentEl = pill.querySelector(".reading-progress-percent");
+  const fillEl = pill.querySelector(".reading-progress-fill");
+
+  function getReadingProgress() {
+    const mainRect = mainContent.getBoundingClientRect();
+    const scrollTop = window.scrollY || window.pageYOffset;
+    const mainTop = scrollTop + mainRect.top;
+    const mainHeight = mainContent.offsetHeight;
+    const viewportHeight = window.innerHeight;
+
+    const start = mainTop;
+    const end = Math.max(mainTop + mainHeight - viewportHeight, start + 1);
+    const progress = ((scrollTop - start) / (end - start)) * 100;
+
+    return Math.max(0, Math.min(100, progress));
+  }
+
+  function updateReadingProgress() {
+    const progress = Math.round(getReadingProgress());
+    percentEl.textContent = `${progress}%`;
+    fillEl.style.width = `${progress}%`;
+
+    if (window.scrollY > 120) {
+      pill.classList.add("is-visible");
+    } else {
+      pill.classList.remove("is-visible");
+    }
+  }
+
+  pill.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+
+  window.addEventListener("scroll", updateReadingProgress, { passive: true });
+  window.addEventListener("resize", updateReadingProgress);
+  window.addEventListener("load", updateReadingProgress);
+
+  updateReadingProgress();
+})();
