@@ -355,3 +355,26 @@ if (revealElements.length) {
 
   updateReadingProgress();
 })();
+
+// =========================
+// MOBILE CHIP SENTENCE FIX
+// =========================
+(function setupSentenceChipFix() {
+  const style = document.createElement("style");
+  style.innerHTML = `
+    @media (max-width: 760px) {
+      .paper-chip.paper-chip-sentence {
+        display: block !important;
+        width: 100% !important;
+        flex: none !important;
+      }
+
+      .paper-chip-list .paper-chip.paper-chip-sentence {
+        display: block !important;
+        width: 100% !important;
+        flex: none !important;
+      }
+    }
+  `;
+  document.head.appendChild(style);
+})();
