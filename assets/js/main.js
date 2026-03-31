@@ -1,3 +1,4 @@
+document.documentElement.classList.add("js-enhanced");
 // =========================
 // NAV TOGGLE
 // =========================
