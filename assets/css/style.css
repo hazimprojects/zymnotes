@@ -2773,3 +2773,59 @@ h3 {
     padding: 0 1rem 1rem;
   }
   }
+/* =========================
+   MOBILE FIX OVERRIDE
+========================= */
+
+@media (max-width: 900px) {
+  .two-up-grid {
+    grid-template-columns: 1fr !important;
+    gap: 0.9rem !important;
+  }
+
+  .note-wide,
+  .note-section-wide .container.narrow,
+  .note-section-wide .container.note-wide {
+    max-width: 100% !important;
+  }
+
+  .paper-grid.compact-kingdom-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  .paper-board,
+  .paper-flap-card,
+  .paper-accordion-item {
+    width: 100%;
+    min-width: 0;
+  }
+}
+
+@media (max-width: 760px) {
+  .two-up-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .paper-grid.compact-kingdom-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 0.65rem !important;
+  }
+
+  .paper-chip-list.two-col-chips,
+  .two-col-chips {
+    grid-template-columns: 1fr !important;
+  }
+
+  .paper-chip {
+    width: 100%;
+  }
+
+  .org-level-3 {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .org-node {
+    width: 100%;
+  }
+}
