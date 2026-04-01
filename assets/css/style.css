@@ -2217,7 +2217,8 @@ h3 {
 
   .paper-chip-list.two-col-chips,
   .two-col-chips {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-wrap: wrap;
   }
 
   .paper-accordion-trigger,
