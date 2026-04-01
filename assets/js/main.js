@@ -382,10 +382,10 @@ if (revealElements.length) {
         gap: 0.62rem !important;
       }
 
-      .paper-accordion-panel .paper-chip,
-      .answer-paper .paper-chip,
-      .info-paper .paper-chip,
-      .glossary-paper .paper-chip {
+      .paper-accordion-panel div.paper-chip,
+      .answer-paper div.paper-chip,
+      .info-paper div.paper-chip,
+      .glossary-paper div.paper-chip {
         display: flex !important;
         width: 100% !important;
         max-width: 100% !important;

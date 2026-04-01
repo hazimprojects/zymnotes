@@ -748,14 +748,12 @@ h3 {
 }
 
 span.paper-chip {
+  display: inline-block;
   padding: 0.12rem 0.5rem;
   font-size: 0.88em;
   vertical-align: middle;
   line-height: 1.2;
   border-radius: 0.55rem;
-  gap: 0.28rem;
-  max-width: max-content;
-  flex: 0 0 auto;
 }
 
 .paper-chip-full {
@@ -2036,12 +2034,11 @@ span.paper-chip {
   }
 
   span.paper-chip {
+    display: inline-block;
     padding: 0.12rem 0.5rem;
     font-size: 0.88em;
     vertical-align: middle;
     border-radius: 0.55rem;
-    max-width: max-content;
-    flex: 0 0 auto;
   }
 
   .paper-chip-list {
