@@ -398,8 +398,8 @@ if (revealElements.length) {
         grid-template-columns: none !important;
       }
 
-      .master-summary-paper .paper-chip,
-      .summary-paper .paper-chip {
+      .master-summary-paper div.paper-chip,
+      .summary-paper div.paper-chip {
         width: auto !important;
         max-width: 100% !important;
       }

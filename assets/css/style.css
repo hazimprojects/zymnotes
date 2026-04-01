@@ -2110,8 +2110,8 @@ span.paper-chip {
     flex-wrap: wrap;
   }
 
-  .summary-paper .paper-chip,
-  .master-summary-paper .paper-chip {
+  .summary-paper div.paper-chip,
+  .master-summary-paper div.paper-chip {
     width: fit-content;
     max-width: 100%;
     padding: 0.54rem 0.68rem;
