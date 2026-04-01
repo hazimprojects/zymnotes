@@ -1474,43 +1474,41 @@ h3 {
    WW1 + WW2
 ========================= */
 
-/* ---------- Inline identity ---------- */
+/* ---------- Inline identity (lebih halus untuk perenggan) ---------- */
 
 .bloc-central,
 .bloc-triple-entente,
 .bloc-axis,
 .bloc-allies {
   display: inline;
-  padding: 0 0.1em;
-  border-radius: 0.16em;
-  font-weight: 800;
+  padding: 0 0.04em;
+  border-radius: 0.12em;
+  font-weight: 700;
   box-decoration-break: clone;
   -webkit-box-decoration-break: clone;
 }
 
-/* Perang Dunia Pertama */
 .bloc-central {
   color: #334155;
-  background: rgba(226, 232, 240, 0.96);
+  background: rgba(226, 232, 240, 0.58);
 }
 
 .bloc-triple-entente {
-  color: #14532d;
-  background: rgba(220, 252, 231, 0.96);
+  color: #166534;
+  background: rgba(220, 252, 231, 0.58);
 }
 
-/* Perang Dunia Kedua */
 .bloc-axis {
   color: #991b1b;
-  background: rgba(254, 226, 226, 0.96);
+  background: rgba(254, 226, 226, 0.58);
 }
 
 .bloc-allies {
   color: #1d4ed8;
-  background: rgba(219, 234, 254, 0.96);
+  background: rgba(219, 234, 254, 0.58);
 }
 
-/* ---------- Chip identity ---------- */
+/* ---------- Chip identity (masih lebih kuat) ---------- */
 
 .paper-chip.bloc-chip-central,
 .paper-chip.bloc-chip-entente,
@@ -1618,165 +1616,6 @@ h3 {
 .bloc-legend-entente .bloc-legend-swatch {
   background: #16a34a;
 }
-/* =========================
-   IDENTITI BLOK PERANG
-   WW1 + WW2 — refined
-========================= */
-
-/* ---------- Inline identity ---------- */
-/* Gaya halus untuk ayat / perenggan */
-
-.bloc-central,
-.bloc-triple-entente,
-.bloc-axis,
-.bloc-allies {
-  display: inline;
-  padding: 0;
-  border-radius: 0;
-  font-weight: 800;
-  background: transparent;
-  text-decoration-line: underline;
-  text-decoration-thickness: 0.1em;
-  text-underline-offset: 0.16em;
-  text-decoration-skip-ink: auto;
-  box-decoration-break: clone;
-  -webkit-box-decoration-break: clone;
-}
-
-/* Perang Dunia Pertama */
-.bloc-central {
-  color: #475569;
-  text-decoration-color: rgba(100, 116, 139, 0.34);
-}
-
-.bloc-triple-entente {
-  color: #166534;
-  text-decoration-color: rgba(22, 163, 74, 0.30);
-}
-
-/* Perang Dunia Kedua */
-.bloc-axis {
-  color: #b91c1c;
-  text-decoration-color: rgba(220, 38, 38, 0.28);
-}
-
-.bloc-allies {
-  color: #1d4ed8;
-  text-decoration-color: rgba(37, 99, 235, 0.28);
-}
-
-/* ---------- Chip identity ---------- */
-/* Gaya lebih jelas tetapi masih lembut */
-
-.paper-chip.bloc-chip-central,
-.paper-chip.bloc-chip-entente,
-.paper-chip.bloc-chip-axis,
-.paper-chip.bloc-chip-allies {
-  font-weight: 800;
-  border-width: 1px;
-  border-style: solid;
-  box-shadow: none;
-}
-
-.paper-chip.bloc-chip-central {
-  color: #475569;
-  background: #f8fafc;
-  border-color: rgba(100, 116, 139, 0.18);
-}
-
-.paper-chip.bloc-chip-entente {
-  color: #166534;
-  background: #f0fdf4;
-  border-color: rgba(22, 163, 74, 0.18);
-}
-
-.paper-chip.bloc-chip-axis {
-  color: #b91c1c;
-  background: #fef2f2;
-  border-color: rgba(220, 38, 38, 0.18);
-}
-
-.paper-chip.bloc-chip-allies {
-  color: #1d4ed8;
-  background: #eff6ff;
-  border-color: rgba(37, 99, 235, 0.18);
-}
-
-/* ---------- Box identity ---------- */
-/* Untuk info box / pengenalan blok */
-
-.bloc-box {
-  padding: 0.9rem 1rem;
-  border-radius: 18px;
-  border: 1px solid transparent;
-  box-shadow: var(--shadow-soft);
-}
-
-.bloc-box h3,
-.bloc-box p,
-.bloc-box .point-line,
-.bloc-box .point-heading {
-  margin-top: 0;
-}
-
-.bloc-box-central {
-  background: linear-gradient(135deg, #fbfcfe, #f3f6fa);
-  border-color: rgba(100, 116, 139, 0.14);
-}
-
-.bloc-box-entente {
-  background: linear-gradient(135deg, #f7fdf8, #effaf2);
-  border-color: rgba(22, 163, 74, 0.14);
-}
-
-.bloc-box-axis {
-  background: linear-gradient(135deg, #fff8f8, #fff1f1);
-  border-color: rgba(220, 38, 38, 0.14);
-}
-
-.bloc-box-allies {
-  background: linear-gradient(135deg, #f7fbff, #eef5ff);
-  border-color: rgba(37, 99, 235, 0.14);
-}
-
-/* ---------- Legend / mini guide ---------- */
-
-.bloc-legend-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.55rem 0.65rem;
-  margin-top: 0.75rem;
-}
-
-.bloc-legend-item {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.45rem;
-  padding: 0.5rem 0.68rem;
-  border-radius: 14px;
-  border: 1px solid rgba(92, 110, 132, 0.10);
-  background: rgba(255, 253, 248, 0.88);
-  box-shadow: var(--shadow-soft);
-  font-size: 0.84rem;
-  font-weight: 800;
-  line-height: 1.3;
-}
-
-.bloc-legend-swatch {
-  display: inline-flex;
-  width: 0.82rem;
-  height: 0.82rem;
-  border-radius: 999px;
-  flex: 0 0 auto;
-}
-
-.bloc-legend-central .bloc-legend-swatch {
-  background: #64748b;
-}
-
-.bloc-legend-entente .bloc-legend-swatch {
-  background: #16a34a;
-}
 
 .bloc-legend-axis .bloc-legend-swatch {
   background: #dc2626;
@@ -1811,43 +1650,23 @@ h3 {
 .paper-accordion-panel .bloc-central,
 .paper-accordion-panel .bloc-triple-entente,
 .paper-accordion-panel .bloc-axis,
-.paper-accordion-panel .bloc-allies,
-.paper-accordion-title .bloc-central,
-.paper-accordion-title .bloc-triple-entente,
-.paper-accordion-title .bloc-axis,
-.paper-accordion-title .bloc-allies {
+.paper-accordion-panel .bloc-allies {
   font-size: inherit;
   line-height: inherit;
-}
-
-/* Tajuk accordion: jangan terlalu menonjol */
-.paper-accordion-title .bloc-central,
-.paper-accordion-title .bloc-triple-entente,
-.paper-accordion-title .bloc-axis,
-.paper-accordion-title .bloc-allies {
-  font-weight: 900;
-}
-
-/* Dalam chip, buang underline supaya lebih bersih */
-.paper-chip .bloc-central,
-.paper-chip .bloc-triple-entente,
-.paper-chip .bloc-axis,
-.paper-chip .bloc-allies {
-  text-decoration: none;
 }
 
 /* ---------- Mobile ---------- */
 
 @media (max-width: 760px) {
   .bloc-legend-grid {
-    gap: 0.46rem 0.48rem;
+    gap: 0.48rem 0.5rem;
   }
 
   .bloc-legend-item {
     width: 100%;
     justify-content: flex-start;
-    font-size: 0.82rem;
-    padding: 0.48rem 0.62rem;
+    font-size: 0.84rem;
+    padding: 0.52rem 0.66rem;
     border-radius: 13px;
   }
 
