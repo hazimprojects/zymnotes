@@ -838,6 +838,16 @@ h3 {
   max-width: min(100%, 30rem);
 }
 
+.paper-chip-list.inline-chips {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.inline-chips .paper-chip {
+  width: auto;
+  flex: 0 0 auto;
+}
+
 /* =========================
    TABS / PROCESS / TIMELINE
 ========================= */
@@ -2057,6 +2067,26 @@ h3 {
     flex: 0 1 auto;
   }
 
+  /* Compact inline chips — override single-column panel rule */
+  .paper-accordion-panel .paper-chip-list.inline-chips,
+  .answer-paper .paper-chip-list.inline-chips,
+  .info-paper .paper-chip-list.inline-chips,
+  .glossary-paper .paper-chip-list.inline-chips {
+    display: flex;
+    flex-wrap: wrap;
+    grid-template-columns: unset;
+  }
+
+  .paper-accordion-panel .inline-chips .paper-chip,
+  .answer-paper .inline-chips .paper-chip,
+  .info-paper .inline-chips .paper-chip,
+  .glossary-paper .inline-chips .paper-chip {
+    width: auto;
+    max-width: unset;
+    flex: 0 0 auto;
+  }
+
+  /* Rumusan dan kad ringkas kekal padat */
   .summary-paper .paper-chip-list,
   .master-summary-paper .paper-chip-list {
     display: flex;
