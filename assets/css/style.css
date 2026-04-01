@@ -747,6 +747,15 @@ h3 {
   overflow-wrap: break-word;
 }
 
+span.paper-chip {
+  padding: 0.12rem 0.5rem;
+  font-size: 0.88em;
+  vertical-align: middle;
+  line-height: 1.2;
+  border-radius: 0.55rem;
+  gap: 0.28rem;
+}
+
 .paper-chip-full {
   display: flex;
   width: 100%;
@@ -2022,6 +2031,13 @@ h3 {
     padding: 0.82rem 0.9rem;
     border-radius: 1rem;
     font-size: 0.98rem;
+  }
+
+  span.paper-chip {
+    padding: 0.12rem 0.5rem;
+    font-size: 0.88em;
+    vertical-align: middle;
+    border-radius: 0.55rem;
   }
 
   .paper-chip-list {
