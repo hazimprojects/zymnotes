@@ -754,6 +754,8 @@ span.paper-chip {
   line-height: 1.2;
   border-radius: 0.55rem;
   gap: 0.28rem;
+  max-width: max-content;
+  flex: 0 0 auto;
 }
 
 .paper-chip-full {
@@ -2047,6 +2049,8 @@ span.paper-chip {
     font-size: 0.88em;
     vertical-align: middle;
     border-radius: 0.55rem;
+    max-width: max-content;
+    flex: 0 0 auto;
   }
 
   .paper-chip-list {
