@@ -1470,6 +1470,215 @@ h3 {
 }
 
 /* =========================
+   IDENTITI BLOK PERANG
+   WW1 + WW2
+========================= */
+
+/* ---------- Inline identity ---------- */
+
+.bloc-central,
+.bloc-triple-entente,
+.bloc-axis,
+.bloc-allies {
+  display: inline;
+  padding: 0 0.1em;
+  border-radius: 0.16em;
+  font-weight: 800;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+/* Perang Dunia Pertama */
+.bloc-central {
+  color: #334155;
+  background: rgba(226, 232, 240, 0.96);
+}
+
+.bloc-triple-entente {
+  color: #14532d;
+  background: rgba(220, 252, 231, 0.96);
+}
+
+/* Perang Dunia Kedua */
+.bloc-axis {
+  color: #991b1b;
+  background: rgba(254, 226, 226, 0.96);
+}
+
+.bloc-allies {
+  color: #1d4ed8;
+  background: rgba(219, 234, 254, 0.96);
+}
+
+/* ---------- Chip identity ---------- */
+
+.paper-chip.bloc-chip-central,
+.paper-chip.bloc-chip-entente,
+.paper-chip.bloc-chip-axis,
+.paper-chip.bloc-chip-allies {
+  font-weight: 800;
+  border-width: 1px;
+}
+
+.paper-chip.bloc-chip-central {
+  color: #334155;
+  background: linear-gradient(135deg, #f8fafc, #e2e8f0);
+  border-color: rgba(71, 85, 105, 0.22);
+}
+
+.paper-chip.bloc-chip-entente {
+  color: #14532d;
+  background: linear-gradient(135deg, #f0fdf4, #dcfce7);
+  border-color: rgba(22, 101, 52, 0.20);
+}
+
+.paper-chip.bloc-chip-axis {
+  color: #991b1b;
+  background: linear-gradient(135deg, #fef2f2, #fee2e2);
+  border-color: rgba(153, 27, 27, 0.20);
+}
+
+.paper-chip.bloc-chip-allies {
+  color: #1d4ed8;
+  background: linear-gradient(135deg, #eff6ff, #dbeafe);
+  border-color: rgba(29, 78, 216, 0.20);
+}
+
+/* ---------- Box identity ---------- */
+
+.bloc-box {
+  padding: 0.9rem 1rem;
+  border-radius: 18px;
+  border: 1px solid transparent;
+  box-shadow: var(--shadow-soft);
+}
+
+.bloc-box h3,
+.bloc-box p,
+.bloc-box .point-line,
+.bloc-box .point-heading {
+  margin-top: 0;
+}
+
+.bloc-box-central {
+  background: linear-gradient(135deg, #f8fafc, #e2e8f0);
+  border-color: rgba(71, 85, 105, 0.18);
+}
+
+.bloc-box-entente {
+  background: linear-gradient(135deg, #f0fdf4, #dcfce7);
+  border-color: rgba(22, 101, 52, 0.18);
+}
+
+.bloc-box-axis {
+  background: linear-gradient(135deg, #fef2f2, #fee2e2);
+  border-color: rgba(153, 27, 27, 0.18);
+}
+
+.bloc-box-allies {
+  background: linear-gradient(135deg, #eff6ff, #dbeafe);
+  border-color: rgba(29, 78, 216, 0.18);
+}
+
+/* ---------- Legend / mini guide ---------- */
+
+.bloc-legend-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem 0.65rem;
+  margin-top: 0.75rem;
+}
+
+.bloc-legend-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.55rem 0.72rem;
+  border-radius: 14px;
+  border: 1px solid rgba(92, 110, 132, 0.12);
+  background: rgba(255, 253, 248, 0.82);
+  box-shadow: var(--shadow-soft);
+  font-size: 0.88rem;
+  font-weight: 800;
+  line-height: 1.35;
+}
+
+.bloc-legend-swatch {
+  display: inline-flex;
+  width: 0.92rem;
+  height: 0.92rem;
+  border-radius: 999px;
+  flex: 0 0 auto;
+}
+
+.bloc-legend-central .bloc-legend-swatch {
+  background: #64748b;
+}
+
+.bloc-legend-entente .bloc-legend-swatch {
+  background: #16a34a;
+}
+
+.bloc-legend-axis .bloc-legend-swatch {
+  background: #dc2626;
+}
+
+.bloc-legend-allies .bloc-legend-swatch {
+  background: #2563eb;
+}
+
+/* ---------- Force inherit in key contexts ---------- */
+
+.point-line .bloc-central,
+.point-line .bloc-triple-entente,
+.point-line .bloc-axis,
+.point-line .bloc-allies,
+.lead .bloc-central,
+.lead .bloc-triple-entente,
+.lead .bloc-axis,
+.lead .bloc-allies,
+.paper-chip .bloc-central,
+.paper-chip .bloc-triple-entente,
+.paper-chip .bloc-axis,
+.paper-chip .bloc-allies,
+.answer-paper .bloc-central,
+.answer-paper .bloc-triple-entente,
+.answer-paper .bloc-axis,
+.answer-paper .bloc-allies,
+.keyword-legend-item .bloc-central,
+.keyword-legend-item .bloc-triple-entente,
+.keyword-legend-item .bloc-axis,
+.keyword-legend-item .bloc-allies,
+.paper-accordion-panel .bloc-central,
+.paper-accordion-panel .bloc-triple-entente,
+.paper-accordion-panel .bloc-axis,
+.paper-accordion-panel .bloc-allies {
+  font-size: inherit;
+  line-height: inherit;
+}
+
+/* ---------- Mobile ---------- */
+
+@media (max-width: 760px) {
+  .bloc-legend-grid {
+    gap: 0.48rem 0.5rem;
+  }
+
+  .bloc-legend-item {
+    width: 100%;
+    justify-content: flex-start;
+    font-size: 0.84rem;
+    padding: 0.52rem 0.66rem;
+    border-radius: 13px;
+  }
+
+  .bloc-box {
+    padding: 0.82rem 0.9rem;
+    border-radius: 16px;
+  }
+}
+
+/* =========================
    KEYWORD LEGEND
 ========================= */
 
