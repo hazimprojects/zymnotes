@@ -8,9 +8,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../assets/css/style.css?v=28" />
+  <link rel="stylesheet" href="../assets/css/style.css?v=29" />
 
-  <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZTQB7MML49"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -29,6 +28,10 @@
         <a href="index.html">Nota</a>
         <a href="../about.html">Tentang</a>
       </nav>
+      <button class="theme-toggle" aria-label="Tukar ke mod gelap">
+        <span class="icon-sun">☀️</span>
+        <span class="icon-moon">🌙</span>
+      </button>
     </div>
   </header>
 
@@ -46,7 +49,27 @@
     <section class="section note-section">
       <div class="container narrow">
 
-        <div class="bab-grid">
+        <!-- Search -->
+        <div class="search-wrap reveal-on-scroll">
+          <span class="search-icon">🔍</span>
+          <input
+            type="search"
+            class="search-input"
+            placeholder="Cari nota... (contoh: waadat, bendahara, srivijaya)"
+            autocomplete="off"
+            spellcheck="false"
+          />
+        </div>
+
+        <div class="search-results" role="region" aria-live="polite">
+          <p class="search-result-count"></p>
+        </div>
+        <div class="search-empty" role="status">
+          😕 Tiada keputusan untuk carian tersebut. Cuba kata kunci lain.
+        </div>
+
+        <!-- Bab Grid -->
+        <div class="bab-grid reveal-on-scroll">
           <a class="bab-card" href="bab-1.html">
             <div class="bab-card-top">Sejarah Tingkatan 4</div>
             <h3>Bab 1 · Warisan Negara Bangsa</h3>
@@ -66,8 +89,8 @@
           </a>
         </div>
 
-        <section class="note-subsection">
-          <article class="paper-board info-paper reveal-on-scroll">
+        <section class="note-subsection reveal-on-scroll">
+          <article class="paper-board info-paper">
             <div class="paper-strip strip-info">Status kandungan</div>
             <ul class="emoji-point-list">
               <li><span class="emoji-bullet">📌</span><span>Kandungan di Hazim EduHub dibina secara berperingkat dan dikemas dari semasa ke semasa.</span></li>
@@ -78,12 +101,23 @@
           </article>
         </section>
 
-        <section class="note-subsection">
-          <article class="paper-board summary-paper reveal-on-scroll">
+        <section class="note-subsection reveal-on-scroll">
+          <article class="paper-board summary-paper">
             <div class="paper-strip strip-summary">Arah bacaan</div>
             <p class="point-line">
               Jika anda baru bermula, mulakan dengan <strong>Bab 1</strong> untuk memahami asas warisan negara bangsa, teruskan ke <strong>Bab 2</strong> bagi melihat perkembangan nasionalisme, dan sambung ke <strong>Bab 3</strong> untuk memahami konflik dunia serta kesan pendudukan Jepun di negara kita.
             </p>
+          </article>
+        </section>
+
+        <section class="note-subsection reveal-on-scroll">
+          <article class="paper-board glossary-paper">
+            <div class="paper-strip strip-glossary">💡 Tips Carian</div>
+            <ul class="emoji-point-list">
+              <li><span class="emoji-bullet">⌨️</span><span>Taip <strong>/</strong> di mana-mana halaman ini untuk fokus ke kotak carian dengan cepat.</span></li>
+              <li><span class="emoji-bullet">🔍</span><span>Cuba cari nama tokoh, istilah, konsep atau nama kerajaan seperti <em>bendahara</em>, <em>waadat</em>, <em>srivijaya</em>.</span></li>
+              <li><span class="emoji-bullet">🌙</span><span>Gunakan butang 🌙 / ☀️ di penjuru kanan atas untuk tukar antara mod cerah dan gelap.</span></li>
+            </ul>
           </article>
         </section>
 
@@ -106,6 +140,6 @@
     </div>
   </footer>
 
-  <script src="../assets/js/main.js?v=28"></script>
+  <script src="../assets/js/main.js?v=29"></script>
 </body>
 </html>
