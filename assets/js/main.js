@@ -117,6 +117,13 @@ document.addEventListener("DOMContentLoaded", function () {
 // =========================
 const accordionTriggers = document.querySelectorAll(".paper-accordion-trigger");
 
+// Elak butang ambil focus yang boleh gerakkan viewport pada sesetengah browser/mobile
+accordionTriggers.forEach((trigger) => {
+  trigger.addEventListener("pointerdown", (e) => {
+    e.preventDefault();
+  });
+});
+
 accordionTriggers.forEach((trigger) => {
   trigger.addEventListener("click", () => {
     const targetId = trigger.getAttribute("data-accordion");
@@ -131,9 +138,8 @@ accordionTriggers.forEach((trigger) => {
 
     const isOpen = currentItem.classList.contains("is-open");
 
-    // Kunci scroll semasa supaya page tidak bergerak langsung
-    const lockedScrollY = window.scrollY;
-    const lockedScrollX = window.scrollX;
+    // Simpan posisi trigger sebelum layout berubah
+    const beforeTop = trigger.getBoundingClientRect().top;
 
     // Tutup hanya accordion tahap ini
     accordionGroup.querySelectorAll(":scope > .paper-accordion-item").forEach((item) => {
@@ -153,7 +159,7 @@ accordionTriggers.forEach((trigger) => {
         panel.classList.remove("active");
       });
 
-    // Jika item tadi belum terbuka, buka item itu
+    // Jika item tadi belum buka, buka item itu
     if (!isOpen) {
       currentItem.classList.add("is-open");
       trigger.classList.add("active");
@@ -161,25 +167,40 @@ accordionTriggers.forEach((trigger) => {
       targetPanel.classList.add("active");
     }
 
-    // Pastikan browser tidak alih fokus hingga gerakkan viewport
-    trigger.blur();
-
-    // Kunci kedudukan halaman sepanjang animasi accordion
-    const start = performance.now();
-    const DURATION = 500;
-
-    function lockPagePosition(now) {
-      window.scrollTo(lockedScrollX, lockedScrollY);
-
-      if (now - start < DURATION) {
-        requestAnimationFrame(lockPagePosition);
-      } else {
-        // pastikan posisi akhir kekal tepat
-        window.scrollTo(lockedScrollX, lockedScrollY);
+    // Fokus semula tanpa scroll
+    if (typeof trigger.focus === "function") {
+      try {
+        trigger.focus({ preventScroll: true });
+      } catch {
+        trigger.focus();
       }
     }
 
-    requestAnimationFrame(lockPagePosition);
+    // Matlamat: kedudukan trigger kekal pada tempat yang sama dalam viewport
+    document.documentElement.classList.add("accordion-scroll-lock");
+    document.body.classList.add("accordion-scroll-lock");
+
+    const start = performance.now();
+    const DURATION = 500; // lebih sedikit daripada transition CSS
+
+    function keepTriggerStable(now) {
+      const afterTop = trigger.getBoundingClientRect().top;
+      const delta = afterTop - beforeTop;
+
+      // Pampas layout shift supaya trigger kekal pada tempat sama
+      if (Math.abs(delta) > 0.5) {
+        window.scrollBy(0, delta);
+      }
+
+      if (now - start < DURATION) {
+        requestAnimationFrame(keepTriggerStable);
+      } else {
+        document.documentElement.classList.remove("accordion-scroll-lock");
+        document.body.classList.remove("accordion-scroll-lock");
+      }
+    }
+
+    requestAnimationFrame(keepTriggerStable);
   });
 });
 
