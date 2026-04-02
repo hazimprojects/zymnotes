@@ -44,6 +44,9 @@ document.documentElement.classList.add("js-enhanced");
   });
 })();
 
+
+document.addEventListener("DOMContentLoaded", function () {
+
 // =========================
 // NAV TOGGLE
 // =========================
@@ -121,7 +124,9 @@ accordionTriggers.forEach((trigger) => {
 
     if (!accordionGroup || !currentItem) return;
 
-    // Tutup semua — max-height CSS transition handle animasi
+    const triggerRectBefore = trigger.getBoundingClientRect();
+    const triggerOffsetFromTop = triggerRectBefore.top;
+
     accordionGroup.querySelectorAll(".paper-accordion-item").forEach((item) => item.classList.remove("is-open"));
     accordionGroup.querySelectorAll(".paper-accordion-trigger").forEach((item) => {
       item.classList.remove("active");
@@ -129,7 +134,6 @@ accordionTriggers.forEach((trigger) => {
     });
     accordionGroup.querySelectorAll(".paper-accordion-panel").forEach((panel) => panel.classList.remove("active"));
 
-    // Buka yang baru
     if (!isOpen) {
       currentItem.classList.add("is-open");
       trigger.classList.add("active");
@@ -195,223 +199,8 @@ if (revealElements.length) {
   }
 }
 
-// =========================
-// SEARCH ENGINE — Full text dari setiap halaman
-// =========================
-(function setupSearch() {
-  const searchInput = document.querySelector(".search-input");
-  if (!searchInput) return;
+}); // end DOMContentLoaded
 
-  const resultsContainer = document.querySelector(".search-results");
-  const emptyState = document.querySelector(".search-empty");
-  const countEl = document.querySelector(".search-result-count");
-  if (!resultsContainer) return;
-
-  const isInNotes = window.location.pathname.includes("/notes/");
-  const base = isInNotes ? "" : "notes/";
-
-  // Senarai semua halaman — title, tag, href
-  const PAGES = [
-    { title: "Bab 1 · Warisan Negara Bangsa", tag: "Bab Induk", href: "bab-1.html" },
-    { title: "1.1 · Latar Belakang Negara Bangsa Sebelum Kedatangan Barat", tag: "Subtopik 1.1", href: "bab-1-1.html" },
-    { title: "1.2 · Ciri-ciri Negara Bangsa Kesultanan Melayu Melaka", tag: "Subtopik 1.2", href: "bab-1-2.html" },
-    { title: "1.3 · Keunggulan Sistem Pentadbiran dan Undang-undang", tag: "Subtopik 1.3", href: "bab-1-3.html" },
-    { title: "1.4 · Peranan Pemerintah dan Rakyat", tag: "Subtopik 1.4", href: "bab-1-4.html" },
-    { title: "Bab 2 · Kebangkitan Nasionalisme", tag: "Bab Induk", href: "bab-2.html" },
-    { title: "2.1 · Maksud dan Konsep Nasionalisme", tag: "Subtopik 2.1", href: "bab-2-1.html" },
-    { title: "2.2 · Perkembangan Nasionalisme di Barat", tag: "Subtopik 2.2", href: "bab-2-2.html" },
-    { title: "2.3 · Perkembangan Nasionalisme di Asia", tag: "Subtopik 2.3", href: "bab-2-3.html" },
-    { title: "2.4 · Perkembangan Nasionalisme di Asia Tenggara", tag: "Subtopik 2.4", href: "bab-2-4.html" },
-    { title: "2.5 · Faktor Kebangkitan Nasionalisme di Tanah Melayu", tag: "Subtopik 2.5", href: "bab-2-5.html" },
-    { title: "2.6 · Perkembangan Nasionalisme di Tanah Melayu", tag: "Subtopik 2.6", href: "bab-2-6.html" },
-    { title: "2.7 · Nasionalisme Melayu", tag: "Subtopik 2.7", href: "bab-2-7.html" },
-    { title: "2.8 · Kesan Nasionalisme di Tanah Melayu", tag: "Subtopik 2.8", href: "bab-2-8.html" },
-    { title: "Bab 3 · Konflik Dunia dan Pendudukan Jepun", tag: "Bab Induk", href: "bab-3.html" },
-    { title: "3.1 · Latar Belakang Perang Dunia Pertama", tag: "Subtopik 3.1", href: "bab-3-1.html" },
-    { title: "3.2 · Kesan Perang Dunia Pertama", tag: "Subtopik 3.2", href: "bab-3-2.html" },
-    { title: "3.3 · Latar Belakang Perang Dunia Kedua", tag: "Subtopik 3.3", href: "bab-3-3.html" },
-    { title: "3.4 · Kesan Perang Dunia Kedua", tag: "Subtopik 3.4", href: "bab-3-4.html" },
-    { title: "3.5 · Pendudukan Jepun di Negara Kita", tag: "Subtopik 3.5", href: "bab-3-5.html" },
-    { title: "3.6 · Dasar Pemerintahan Jepun", tag: "Subtopik 3.6", href: "bab-3-6.html" },
-    { title: "3.7 · Penentangan terhadap Pendudukan Jepun", tag: "Subtopik 3.7", href: "bab-3-7.html" },
-    { title: "3.8 · Kesan Pendudukan Jepun", tag: "Subtopik 3.8", href: "bab-3-8.html" },
-    { title: "3.9 · Perkembangan Nasionalisme Selepas Perang", tag: "Subtopik 3.9", href: "bab-3-9.html" },
-  ];
-
-  // Index cache — will be built lazily on first search
-  let INDEX = null;
-  let indexBuilding = false;
-
-  // Extract teks bersih dari HTML string — termasuk accordion, chip, timeline dll
-  function extractText(html) {
-    const doc = new DOMParser().parseFromString(html, "text/html");
-    // Buang nav, footer, script, style
-    doc.querySelectorAll("header, footer, script, style, .site-nav, .hero-actions, .keyword-legend-wrap").forEach(el => el.remove());
-    // Ambil semua teks dari main
-    const main = doc.querySelector("main") || doc.body;
-    return main ? main.textContent.replace(/\s+/g, " ").trim() : "";
-  }
-
-  // Build full-text index dengan fetch semua halaman
-  async function buildIndex() {
-    if (INDEX || indexBuilding) return;
-    indexBuilding = true;
-    INDEX = [];
-
-    const fetches = PAGES.map(async (page) => {
-      try {
-        const url = base + page.href;
-        const res = await fetch(url);
-        if (!res.ok) return;
-        const html = await res.text();
-        const fullText = extractText(html);
-        // Excerpt — ambil 150 chars pertama dari teks badan
-        const excerpt = fullText.replace(page.title, "").trim().slice(0, 160) + "...";
-        INDEX.push({
-          title: page.title,
-          tag: page.tag,
-          href: base + page.href,
-          fullText: fullText.toLowerCase(),
-          excerpt: excerpt,
-        });
-      } catch (e) {
-        // Kalau fetch gagal (offline), skip
-      }
-    });
-
-    await Promise.all(fetches);
-    indexBuilding = false;
-  }
-
-  function normalize(str) {
-    return str.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "");
-  }
-
-  function highlight(text, query) {
-    if (!query) return text;
-    const words = query.trim().split(/\s+/).filter(Boolean);
-    let result = text;
-    words.forEach(word => {
-      const escaped = word.replace(/[.*+?^${}()|[\]\]/g, "\$&");
-      result = result.replace(new RegExp(`(${escaped})`, "gi"), "<mark>$1</mark>");
-    });
-    return result;
-  }
-
-  // Cari excerpt yang mengandungi query untuk paparan lebih relevan
-  function findRelevantExcerpt(fullText, query) {
-    const words = query.toLowerCase().trim().split(/\s+/);
-    const lowerText = fullText.toLowerCase();
-    // Cari posisi pertama mana-mana kata query
-    let bestPos = -1;
-    words.forEach(word => {
-      const pos = lowerText.indexOf(word);
-      if (pos !== -1 && (bestPos === -1 || pos < bestPos)) bestPos = pos;
-    });
-    if (bestPos === -1) return fullText.slice(0, 160) + "...";
-    const start = Math.max(0, bestPos - 40);
-    const end = Math.min(fullText.length, bestPos + 160);
-    const excerpt = (start > 0 ? "..." : "") + fullText.slice(start, end) + (end < fullText.length ? "..." : "");
-    return excerpt;
-  }
-
-  function search(query) {
-    if (!INDEX) return [];
-    const q = normalize(query.trim());
-    if (!q) return [];
-    const words = q.split(/\s+/).filter(Boolean);
-
-    return INDEX.filter(item => {
-      const haystack = normalize(item.fullText + " " + item.title);
-      return words.every(word => haystack.includes(word));
-    }).map(item => ({
-      ...item,
-      relevantExcerpt: findRelevantExcerpt(item.fullText, q),
-    }));
-  }
-
-  function clearResults() {
-    resultsContainer.querySelectorAll(".search-result-item").forEach(el => el.remove());
-    resultsContainer.classList.remove("has-results");
-    if (emptyState) emptyState.classList.remove("visible");
-    if (countEl) countEl.textContent = "";
-  }
-
-  function renderResults(results, query) {
-    resultsContainer.querySelectorAll(".search-result-item").forEach(el => el.remove());
-
-    if (results.length === 0) {
-      resultsContainer.classList.remove("has-results");
-      if (emptyState) emptyState.classList.add("visible");
-      return;
-    }
-
-    if (emptyState) emptyState.classList.remove("visible");
-    resultsContainer.classList.add("has-results");
-    if (countEl) countEl.textContent = `${results.length} keputusan ditemui`;
-
-    results.forEach(item => {
-      const a = document.createElement("a");
-      a.className = "search-result-item";
-      a.href = item.href;
-      a.innerHTML = `
-        <span class="search-result-tag">${item.tag}</span>
-        <p class="search-result-title">${highlight(item.title, query)}</p>
-        <p class="search-result-excerpt">${highlight(item.relevantExcerpt || item.excerpt, query)}</p>
-      `;
-      resultsContainer.appendChild(a);
-    });
-  }
-
-  // Show loading state
-  function showLoading() {
-    resultsContainer.querySelectorAll(".search-result-item").forEach(el => el.remove());
-    resultsContainer.classList.add("has-results");
-    if (countEl) countEl.textContent = "Sedang memuat indeks...";
-  }
-
-  let debounceTimer;
-  let pendingQuery = null;
-
-  searchInput.addEventListener("input", async function () {
-    const query = this.value.trim();
-    clearTimeout(debounceTimer);
-
-    if (!query) {
-      clearResults();
-      return;
-    }
-
-    debounceTimer = setTimeout(async () => {
-      // Build index on first search
-      if (!INDEX) {
-        showLoading();
-        await buildIndex();
-      }
-      const results = search(query);
-      renderResults(results, query);
-    }, 250);
-  });
-
-  // Preload index bila page idle
-  if ("requestIdleCallback" in window) {
-    requestIdleCallback(() => buildIndex(), { timeout: 3000 });
-  } else {
-    setTimeout(() => buildIndex(), 2000);
-  }
-
-  // Keyboard shortcut: / to focus
-  document.addEventListener("keydown", function (e) {
-    if (e.key === "/" && document.activeElement !== searchInput) {
-      e.preventDefault();
-      searchInput.focus();
-      searchInput.scrollIntoView({ behavior: "smooth", block: "center" });
-    }
-    if (e.key === "Escape" && document.activeElement === searchInput) {
-      searchInput.blur();
-    }
-  });
-})();
 // =========================
 // READING PROGRESS INDICATOR
 // =========================
@@ -507,6 +296,181 @@ if (revealElements.length) {
   window.addEventListener("resize", updateReadingProgress);
   window.addEventListener("load", updateReadingProgress);
   updateReadingProgress();
+})();
+
+// =========================
+// SEARCH ENGINE — Full text fetch
+// =========================
+(function setupSearch() {
+  const searchInput = document.querySelector(".search-input");
+  if (!searchInput) return;
+
+  const resultsContainer = document.querySelector(".search-results");
+  const emptyState = document.querySelector(".search-empty");
+  const countEl = document.querySelector(".search-result-count");
+  if (!resultsContainer) return;
+
+  const isInNotes = window.location.pathname.includes("/notes/");
+  const base = isInNotes ? "" : "notes/";
+
+  const PAGES = [
+    { title: "Bab 1 · Warisan Negara Bangsa", tag: "Bab Induk", href: "bab-1.html" },
+    { title: "1.1 · Latar Belakang Negara Bangsa Sebelum Kedatangan Barat", tag: "Subtopik 1.1", href: "bab-1-1.html" },
+    { title: "1.2 · Ciri-ciri Negara Bangsa Kesultanan Melayu Melaka", tag: "Subtopik 1.2", href: "bab-1-2.html" },
+    { title: "1.3 · Keunggulan Sistem Pentadbiran dan Undang-undang", tag: "Subtopik 1.3", href: "bab-1-3.html" },
+    { title: "1.4 · Peranan Pemerintah dan Rakyat", tag: "Subtopik 1.4", href: "bab-1-4.html" },
+    { title: "Bab 2 · Kebangkitan Nasionalisme", tag: "Bab Induk", href: "bab-2.html" },
+    { title: "2.1 · Maksud dan Konsep Nasionalisme", tag: "Subtopik 2.1", href: "bab-2-1.html" },
+    { title: "2.2 · Perkembangan Nasionalisme di Barat", tag: "Subtopik 2.2", href: "bab-2-2.html" },
+    { title: "2.3 · Perkembangan Nasionalisme di Asia", tag: "Subtopik 2.3", href: "bab-2-3.html" },
+    { title: "2.4 · Perkembangan Nasionalisme di Asia Tenggara", tag: "Subtopik 2.4", href: "bab-2-4.html" },
+    { title: "2.5 · Faktor Kebangkitan Nasionalisme di Tanah Melayu", tag: "Subtopik 2.5", href: "bab-2-5.html" },
+    { title: "2.6 · Perkembangan Nasionalisme di Tanah Melayu", tag: "Subtopik 2.6", href: "bab-2-6.html" },
+    { title: "2.7 · Nasionalisme Melayu", tag: "Subtopik 2.7", href: "bab-2-7.html" },
+    { title: "2.8 · Kesan Nasionalisme di Tanah Melayu", tag: "Subtopik 2.8", href: "bab-2-8.html" },
+    { title: "Bab 3 · Konflik Dunia dan Pendudukan Jepun", tag: "Bab Induk", href: "bab-3.html" },
+    { title: "3.1 · Latar Belakang Perang Dunia Pertama", tag: "Subtopik 3.1", href: "bab-3-1.html" },
+    { title: "3.2 · Kesan Perang Dunia Pertama", tag: "Subtopik 3.2", href: "bab-3-2.html" },
+    { title: "3.3 · Latar Belakang Perang Dunia Kedua", tag: "Subtopik 3.3", href: "bab-3-3.html" },
+    { title: "3.4 · Kesan Perang Dunia Kedua", tag: "Subtopik 3.4", href: "bab-3-4.html" },
+    { title: "3.5 · Pendudukan Jepun di Negara Kita", tag: "Subtopik 3.5", href: "bab-3-5.html" },
+    { title: "3.6 · Dasar Pemerintahan Jepun", tag: "Subtopik 3.6", href: "bab-3-6.html" },
+    { title: "3.7 · Penentangan terhadap Pendudukan Jepun", tag: "Subtopik 3.7", href: "bab-3-7.html" },
+    { title: "3.8 · Kesan Pendudukan Jepun", tag: "Subtopik 3.8", href: "bab-3-8.html" },
+    { title: "3.9 · Perkembangan Nasionalisme Selepas Perang", tag: "Subtopik 3.9", href: "bab-3-9.html" },
+  ];
+
+  let INDEX = null;
+  let indexBuilding = false;
+
+  function extractText(html) {
+    const doc = new DOMParser().parseFromString(html, "text/html");
+    doc.querySelectorAll("header, footer, script, style, .site-nav, .hero-actions, .keyword-legend-wrap").forEach(function(el) { el.remove(); });
+    const main = doc.querySelector("main") || doc.body;
+    return main ? main.textContent.replace(/\s+/g, " ").trim() : "";
+  }
+
+  async function buildIndex() {
+    if (INDEX || indexBuilding) return;
+    indexBuilding = true;
+    INDEX = [];
+    const fetches = PAGES.map(async function(page) {
+      try {
+        const res = await fetch(base + page.href);
+        if (!res.ok) return;
+        const html = await res.text();
+        const fullText = extractText(html);
+        INDEX.push({
+          title: page.title,
+          tag: page.tag,
+          href: base + page.href,
+          fullText: fullText.toLowerCase(),
+          excerpt: fullText.slice(0, 160) + "...",
+        });
+      } catch(e) {}
+    });
+    await Promise.all(fetches);
+    indexBuilding = false;
+  }
+
+  function normalize(str) {
+    return str.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+  }
+
+  function highlight(text, query) {
+    if (!query) return text;
+    query.trim().split(/\s+/).filter(Boolean).forEach(function(word) {
+      const esc = word.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+      text = text.replace(new RegExp("(" + esc + ")", "gi"), "<mark>$1</mark>");
+    });
+    return text;
+  }
+
+  function findExcerpt(fullText, query) {
+    const words = query.toLowerCase().trim().split(/\s+/);
+    const lower = fullText.toLowerCase();
+    let best = -1;
+    words.forEach(function(w) {
+      const p = lower.indexOf(w);
+      if (p !== -1 && (best === -1 || p < best)) best = p;
+    });
+    if (best === -1) return fullText.slice(0, 160) + "...";
+    const s = Math.max(0, best - 40);
+    const e = Math.min(fullText.length, best + 160);
+    return (s > 0 ? "..." : "") + fullText.slice(s, e) + "...";
+  }
+
+  function search(query) {
+    if (!INDEX) return [];
+    const q = normalize(query.trim());
+    if (!q) return [];
+    const words = q.split(/\s+/).filter(Boolean);
+    return INDEX.filter(function(item) {
+      const hay = normalize(item.fullText + " " + item.title);
+      return words.every(function(w) { return hay.includes(w); });
+    }).map(function(item) {
+      return Object.assign({}, item, { relevantExcerpt: findExcerpt(item.fullText, q) });
+    });
+  }
+
+  function clearResults() {
+    resultsContainer.querySelectorAll(".search-result-item").forEach(function(el) { el.remove(); });
+    resultsContainer.classList.remove("has-results");
+    if (emptyState) emptyState.classList.remove("visible");
+    if (countEl) countEl.textContent = "";
+  }
+
+  function renderResults(results, query) {
+    resultsContainer.querySelectorAll(".search-result-item").forEach(function(el) { el.remove(); });
+    if (results.length === 0) {
+      resultsContainer.classList.remove("has-results");
+      if (emptyState) emptyState.classList.add("visible");
+      return;
+    }
+    if (emptyState) emptyState.classList.remove("visible");
+    resultsContainer.classList.add("has-results");
+    if (countEl) countEl.textContent = results.length + " keputusan ditemui";
+    results.forEach(function(item) {
+      const a = document.createElement("a");
+      a.className = "search-result-item";
+      a.href = item.href;
+      a.innerHTML =
+        '<span class="search-result-tag">' + item.tag + '</span>' +
+        '<p class="search-result-title">' + highlight(item.title, query) + '</p>' +
+        '<p class="search-result-excerpt">' + highlight(item.relevantExcerpt, query) + '</p>';
+      resultsContainer.appendChild(a);
+    });
+  }
+
+  var debounceTimer;
+  searchInput.addEventListener("input", function() {
+    const query = this.value.trim();
+    clearTimeout(debounceTimer);
+    if (!query) { clearResults(); return; }
+    debounceTimer = setTimeout(async function() {
+      if (!INDEX) {
+        resultsContainer.classList.add("has-results");
+        if (countEl) countEl.textContent = "Sedang memuat indeks...";
+        await buildIndex();
+      }
+      renderResults(search(query), query);
+    }, 250);
+  });
+
+  if ("requestIdleCallback" in window) {
+    requestIdleCallback(function() { buildIndex(); }, { timeout: 3000 });
+  } else {
+    setTimeout(function() { buildIndex(); }, 2000);
+  }
+
+  document.addEventListener("keydown", function(e) {
+    if (e.key === "/" && document.activeElement !== searchInput) {
+      e.preventDefault();
+      searchInput.focus();
+      searchInput.scrollIntoView({ behavior: "smooth", block: "center" });
+    }
+    if (e.key === "Escape" && document.activeElement === searchInput) searchInput.blur();
+  });
 })();
 
 // =========================
