@@ -116,6 +116,30 @@ accordionTriggers.forEach((trigger) => {
 
     if (!accordionGroup || !currentItem) return;
 
+    // Kira tinggi panel yang sedang terbuka (akan ditutup)
+    // supaya kita boleh compensate scroll position
+    let collapsingHeight = 0;
+    let collapsingItemTop = null;
+
+    accordionGroup.querySelectorAll(".paper-accordion-item.is-open").forEach((openItem) => {
+      // Jangan compensate kalau ia item yang sama (toggle tutup)
+      if (openItem === currentItem) return;
+
+      const openPanel = openItem.querySelector(".paper-accordion-panel");
+      if (openPanel) {
+        const itemRect = openItem.getBoundingClientRect();
+        const triggerRect = trigger.getBoundingClientRect();
+
+        // Hanya compensate kalau accordion yang akan tutup berada DI ATAS
+        // accordion yang diklik — supaya page tak melompat
+        if (itemRect.top < triggerRect.top) {
+          collapsingHeight += openPanel.getBoundingClientRect().height;
+          collapsingItemTop = itemRect.top;
+        }
+      }
+    });
+
+    // Tutup semua
     accordionGroup.querySelectorAll(".paper-accordion-item").forEach((item) => item.classList.remove("is-open"));
     accordionGroup.querySelectorAll(".paper-accordion-trigger").forEach((item) => {
       item.classList.remove("active");
@@ -123,11 +147,19 @@ accordionTriggers.forEach((trigger) => {
     });
     accordionGroup.querySelectorAll(".paper-accordion-panel").forEach((panel) => panel.classList.remove("active"));
 
+    // Buka yang baru
     if (!isOpen) {
       currentItem.classList.add("is-open");
       trigger.classList.add("active");
       trigger.setAttribute("aria-expanded", "true");
       targetPanel.classList.add("active");
+    }
+
+    // Compensate scroll supaya page tak melompat
+    // Bila accordion di atas ditutup, scroll naik sama banyak dengan
+    // tinggi panel yang hilang — mata pengguna kekal di tempat yang sama
+    if (collapsingHeight > 0) {
+      window.scrollBy({ top: -collapsingHeight, behavior: "instant" });
     }
   });
 });
