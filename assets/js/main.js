@@ -112,7 +112,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  // =========================
+// =========================
   // PAPER ACCORDION
   // =========================
   const accordionTriggers = document.querySelectorAll(".paper-accordion-trigger");
@@ -128,6 +128,12 @@ document.addEventListener("DOMContentLoaded", function () {
     panel.classList.toggle("active", open);
   }
 
+  function getHeaderOffset() {
+    const header = document.querySelector(".site-header");
+    const headerHeight = header ? header.getBoundingClientRect().height : 72;
+    return Math.round(headerHeight + 10);
+  }
+
   accordionTriggers.forEach((trigger) => {
     trigger.addEventListener("click", () => {
       const currentItem = trigger.closest(".paper-accordion-item");
@@ -135,72 +141,126 @@ document.addEventListener("DOMContentLoaded", function () {
       if (!currentItem || !accordionGroup) return;
 
       const wasOpen = currentItem.classList.contains("is-open");
-      const anchorTop = trigger.getBoundingClientRect().top;
 
-      document.documentElement.classList.add("accordion-no-smooth-scroll");
-      document.body.classList.add("accordion-no-smooth-scroll");
+      // Jika accordion yang sama ditekan semula, tutup seperti biasa tanpa auto-scroll awal
+      if (wasOpen) {
+        const anchorTop = trigger.getBoundingClientRect().top;
 
-      accordionGroup.querySelectorAll(":scope > .paper-accordion-item").forEach((item) => {
-        setAccordionState(item, false);
-      });
+        document.documentElement.classList.add("accordion-no-smooth-scroll");
+        document.body.classList.add("accordion-no-smooth-scroll");
 
-      if (!wasOpen) {
-        setAccordionState(currentItem, true);
-      }
+        accordionGroup.querySelectorAll(":scope > .paper-accordion-item").forEach((item) => {
+          setAccordionState(item, false);
+        });
 
-      trigger.blur();
+        trigger.blur();
 
-      let rafId = 0;
-      let stillFrames = 0;
-      let lastTop = null;
-      const REQUIRED_STILL_FRAMES = 10;
-      const MAX_FRAMES = 40;
-      let frameCount = 0;
+        let rafId = 0;
+        let stillFrames = 0;
+        let lastTop = null;
+        const REQUIRED_STILL_FRAMES = 10;
+        const MAX_FRAMES = 40;
+        let frameCount = 0;
 
-      function stabilize() {
-        frameCount += 1;
+        function stabilizeClose() {
+          frameCount += 1;
 
-        const currentTop = trigger.getBoundingClientRect().top;
-        const delta = currentTop - anchorTop;
+          const currentTop = trigger.getBoundingClientRect().top;
+          const delta = currentTop - anchorTop;
 
-        if (Math.abs(delta) > 0.5) {
-          window.scrollTo(window.scrollX, window.scrollY + delta);
-        }
+          if (Math.abs(delta) > 0.5) {
+            window.scrollTo(window.scrollX, window.scrollY + delta);
+          }
 
-        const adjustedTop = trigger.getBoundingClientRect().top;
+          const adjustedTop = trigger.getBoundingClientRect().top;
 
-        if (lastTop !== null && Math.abs(adjustedTop - lastTop) < 0.25) {
-          stillFrames += 1;
-        } else {
-          stillFrames = 0;
-        }
+          if (lastTop !== null && Math.abs(adjustedTop - lastTop) < 0.25) {
+            stillFrames += 1;
+          } else {
+            stillFrames = 0;
+          }
 
-        lastTop = adjustedTop;
+          lastTop = adjustedTop;
 
-        if (stillFrames < REQUIRED_STILL_FRAMES && frameCount < MAX_FRAMES) {
-          rafId = requestAnimationFrame(stabilize);
-        } else {
-          document.documentElement.classList.remove("accordion-no-smooth-scroll");
-          document.body.classList.remove("accordion-no-smooth-scroll");
-
-          if (rafId) cancelAnimationFrame(rafId);
-
-          if (!wasOpen) {
-            setTimeout(() => {
-              trigger.scrollIntoView({
-                behavior: "smooth",
-                block: "start",
-                inline: "nearest",
-              });
-            }, 40);
+          if (stillFrames < REQUIRED_STILL_FRAMES && frameCount < MAX_FRAMES) {
+            rafId = requestAnimationFrame(stabilizeClose);
+          } else {
+            document.documentElement.classList.remove("accordion-no-smooth-scroll");
+            document.body.classList.remove("accordion-no-smooth-scroll");
+            if (rafId) cancelAnimationFrame(rafId);
           }
         }
+
+        rafId = requestAnimationFrame(stabilizeClose);
+        return;
       }
 
-      rafId = requestAnimationFrame(stabilize);
+      // ===== VERSI BARU =====
+      // 1) Scroll dulu supaya trigger duduk tepat di bawah nav
+      const triggerRect = trigger.getBoundingClientRect();
+      const absoluteTop = window.scrollY + triggerRect.top;
+      const targetTop = Math.max(0, absoluteTop - getHeaderOffset());
+
+      window.scrollTo({
+        top: targetTop,
+        behavior: "smooth",
+      });
+
+      // 2) Selepas scroll selesai, baru tutup accordion lain dan buka yang semasa
+      setTimeout(() => {
+        const anchorTop = trigger.getBoundingClientRect().top;
+
+        document.documentElement.classList.add("accordion-no-smooth-scroll");
+        document.body.classList.add("accordion-no-smooth-scroll");
+
+        accordionGroup.querySelectorAll(":scope > .paper-accordion-item").forEach((item) => {
+          setAccordionState(item, false);
+        });
+
+        setAccordionState(currentItem, true);
+        trigger.blur();
+
+        let rafId = 0;
+        let stillFrames = 0;
+        let lastTop = null;
+        const REQUIRED_STILL_FRAMES = 10;
+        const MAX_FRAMES = 40;
+        let frameCount = 0;
+
+        function stabilizeOpen() {
+          frameCount += 1;
+
+          const currentTop = trigger.getBoundingClientRect().top;
+          const delta = currentTop - anchorTop;
+
+          if (Math.abs(delta) > 0.5) {
+            window.scrollTo(window.scrollX, window.scrollY + delta);
+          }
+
+          const adjustedTop = trigger.getBoundingClientRect().top;
+
+          if (lastTop !== null && Math.abs(adjustedTop - lastTop) < 0.25) {
+            stillFrames += 1;
+          } else {
+            stillFrames = 0;
+          }
+
+          lastTop = adjustedTop;
+
+          if (stillFrames < REQUIRED_STILL_FRAMES && frameCount < MAX_FRAMES) {
+            rafId = requestAnimationFrame(stabilizeOpen);
+          } else {
+            document.documentElement.classList.remove("accordion-no-smooth-scroll");
+            document.body.classList.remove("accordion-no-smooth-scroll");
+            if (rafId) cancelAnimationFrame(rafId);
+          }
+        }
+
+        rafId = requestAnimationFrame(stabilizeOpen);
+      }, 320);
     });
   });
-
+  
   // =========================
   // PAPER TIMELINE
   // =========================
