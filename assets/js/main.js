@@ -196,7 +196,7 @@ if (revealElements.length) {
 }
 
 // =========================
-// SEARCH ENGINE
+// SEARCH ENGINE — Full text dari setiap halaman
 // =========================
 (function setupSearch() {
   const searchInput = document.querySelector(".search-input");
@@ -207,211 +207,138 @@ if (revealElements.length) {
   const countEl = document.querySelector(".search-result-count");
   if (!resultsContainer) return;
 
-  // Determine base path (notes/ or root)
   const isInNotes = window.location.pathname.includes("/notes/");
   const base = isInNotes ? "" : "notes/";
 
-  const SEARCH_DATA = [
-    // ── BAB 1 ──
-    {
-      title: "Bab 1 · Warisan Negara Bangsa",
-      tag: "Bab Induk",
-      href: base + "bab-1.html",
-      keywords: ["warisan", "negara bangsa", "alam melayu", "kesultanan melayu melaka", "johor-riau", "srivijaya", "funan", "champa"],
-      excerpt: "Bab ini menerangkan bagaimana warisan negara bangsa berkembang di Alam Melayu dan diteruskan hingga zaman Kesultanan Melayu Melaka.",
-    },
-    {
-      title: "1.1 · Latar Belakang Negara Bangsa Sebelum Kedatangan Barat",
-      tag: "Subtopik 1.1",
-      href: base + "bab-1-1.html",
-      keywords: ["negara bangsa", "alam melayu", "funan", "champa", "kedah tua", "gangga nagara", "srivijaya", "angkor", "majapahit", "inskripsi telaga batu", "raja", "undang-undang", "wilayah", "rakyat", "berperingkat"],
-      excerpt: "Asas negara bangsa telah wujud di Alam Melayu sebelum kedatangan Barat melalui raja, undang-undang, wilayah pengaruh dan rakyat.",
-    },
-    {
-      title: "1.2 · Ciri-ciri Negara Bangsa Kesultanan Melayu Melaka",
-      tag: "Subtopik 1.2",
-      href: base + "bab-1-2.html",
-      keywords: ["kesultanan melayu melaka", "kerajaan", "rakyat", "kedaulatan", "wilayah pengaruh", "undang-undang", "lambang kebesaran", "sultan", "pembesar", "cheng ho", "dinasti ming", "hukum kanun melaka", "undang-undang laut melaka", "cap mohor", "nobat", "regalia"],
-      excerpt: "Enam ciri utama negara bangsa Melaka: kerajaan, rakyat, kedaulatan, wilayah pengaruh, undang-undang dan lambang kebesaran.",
-    },
-    {
-      title: "1.3 · Keunggulan Sistem Pentadbiran dan Undang-undang",
-      tag: "Subtopik 1.3",
-      href: base + "bab-1-3.html",
-      keywords: ["pentadbiran", "undang-undang", "sistem pembesar empat lipatan", "bendahara", "temenggung", "laksamana", "penghulu bendahari", "syahbandar", "hukum kanun melaka", "undang-undang laut melaka", "tun perak", "sultan mahmud shah", "kawasan pegangan", "kewangan", "cukai"],
-      excerpt: "Keunggulan Melaka terbukti melalui Sistem Pembesar Empat Lipatan dan dua undang-undang bertulis: Hukum Kanun Melaka dan Undang-undang Laut Melaka.",
-    },
-    {
-      title: "1.4 · Peranan Pemerintah dan Rakyat",
-      tag: "Subtopik 1.4",
-      href: base + "bab-1-4.html",
-      keywords: ["waadat", "pemerintah", "rakyat", "sultan", "pembesar", "sang sapurba", "demang lebar daun", "tulah", "taat setia", "menderhaka", "timbal balik", "kerah", "serah", "hamba"],
-      excerpt: "Hubungan antara pemerintah dan rakyat berasaskan konsep waadat — perjanjian timbal balik antara Sang Sapurba dan Demang Lebar Daun.",
-    },
-
-    // ── BAB 2 ──
-    {
-      title: "Bab 2 · Kebangkitan Nasionalisme",
-      tag: "Bab Induk",
-      href: base + "bab-2.html",
-      keywords: ["nasionalisme", "kebangkitan", "barat", "asia", "asia tenggara", "tanah melayu"],
-      excerpt: "Nota tentang maksud nasionalisme, perkembangannya di Barat, Asia dan Asia Tenggara serta kesannya di negara kita.",
-    },
-    {
-      title: "2.1 · Maksud dan Konsep Nasionalisme",
-      tag: "Subtopik 2.1",
-      href: base + "bab-2-1.html",
-      keywords: ["nasionalisme", "konsep", "maksud", "bangsa", "identiti", "semangat"],
-      excerpt: "Nasionalisme ialah semangat cinta akan tanah air dan bangsa yang mendorong perjuangan untuk kemerdekaan.",
-    },
-    {
-      title: "2.2 · Perkembangan Nasionalisme di Barat",
-      tag: "Subtopik 2.2",
-      href: base + "bab-2-2.html",
-      keywords: ["nasionalisme barat", "revolusi perancis", "eropah", "perlembagaan", "demokrasi"],
-      excerpt: "Nasionalisme di Barat bermula dengan Revolusi Perancis dan menyebar ke seluruh Eropah.",
-    },
-    {
-      title: "2.3 · Perkembangan Nasionalisme di Asia",
-      tag: "Subtopik 2.3",
-      href: base + "bab-2-3.html",
-      keywords: ["nasionalisme asia", "china", "india", "turki", "gerakan", "penjajah"],
-      excerpt: "Nasionalisme di Asia berkembang sebagai reaksi terhadap penjajahan Barat.",
-    },
-    {
-      title: "2.4 · Perkembangan Nasionalisme di Asia Tenggara",
-      tag: "Subtopik 2.4",
-      href: base + "bab-2-4.html",
-      keywords: ["nasionalisme asia tenggara", "indonesia", "filipina", "vietnam", "myanmar", "penjajah"],
-      excerpt: "Nasionalisme di Asia Tenggara lahir daripada kesedaran rakyat menentang penjajahan Barat.",
-    },
-    {
-      title: "2.5 · Faktor Kebangkitan Nasionalisme di Tanah Melayu",
-      tag: "Subtopik 2.5",
-      href: base + "bab-2-5.html",
-      keywords: ["faktor", "nasionalisme tanah melayu", "penjajahan british", "ekonomi", "pendidikan", "akhbar"],
-      excerpt: "Faktor-faktor kebangkitan nasionalisme di Tanah Melayu termasuk penjajahan British, pendidikan dan perkembangan akhbar.",
-    },
-    {
-      title: "2.6 · Perkembangan Nasionalisme di Tanah Melayu",
-      tag: "Subtopik 2.6",
-      href: base + "bab-2-6.html",
-      keywords: ["nasionalisme tanah melayu", "pertubuhan", "gerakan", "perjuangan", "british"],
-      excerpt: "Perkembangan nasionalisme di Tanah Melayu melalui pertubuhan dan gerakan yang menentang penjajahan.",
-    },
-    {
-      title: "2.7 · Nasionalisme Melayu",
-      tag: "Subtopik 2.7",
-      href: base + "bab-2-7.html",
-      keywords: ["nasionalisme melayu", "umno", "kaum muda", "kaum tua", "kesatuan melayu muda", "ibrahim yaakob"],
-      excerpt: "Nasionalisme Melayu berkembang melalui pertubuhan seperti UMNO dan Kesatuan Melayu Muda.",
-    },
-    {
-      title: "2.8 · Kesan Nasionalisme di Tanah Melayu",
-      tag: "Subtopik 2.8",
-      href: base + "bab-2-8.html",
-      keywords: ["kesan nasionalisme", "kemerdekaan", "perlembagaan", "persekutuan tanah melayu", "merdeka"],
-      excerpt: "Nasionalisme membawa kepada kemerdekaan Tanah Melayu dan pembentukan negara yang berdaulat.",
-    },
-
-    // ── BAB 3 ──
-    {
-      title: "Bab 3 · Konflik Dunia dan Pendudukan Jepun",
-      tag: "Bab Induk",
-      href: base + "bab-3.html",
-      keywords: ["konflik dunia", "perang dunia", "jepun", "pendudukan", "penjajahan", "nasionalisme"],
-      excerpt: "Konflik dunia, pendudukan Jepun di Negara Kita, perjuangan rakyat dan perkembangan nasionalisme tempatan.",
-    },
-    {
-      title: "3.1 · Latar Belakang Perang Dunia Pertama",
-      tag: "Subtopik 3.1",
-      href: base + "bab-3-1.html",
-      keywords: ["perang dunia pertama", "pdp", "triple entente", "kuasa tengah", "austria hungary", "jerman", "russia", "britain", "perancis"],
-      excerpt: "Perang Dunia Pertama berlaku akibat persaingan antara kuasa besar Eropah — Kuasa Tengah menentang Triple Entente.",
-    },
-    {
-      title: "3.2 · Kesan Perang Dunia Pertama",
-      tag: "Subtopik 3.2",
-      href: base + "bab-3-2.html",
-      keywords: ["kesan pdp", "perjanjian versailles", "liga bangsa-bangsa", "nasionalisme", "ekonomi"],
-      excerpt: "Kesan Perang Dunia Pertama termasuk Perjanjian Versailles dan penubuhan Liga Bangsa-Bangsa.",
-    },
-    {
-      title: "3.3 · Latar Belakang Perang Dunia Kedua",
-      tag: "Subtopik 3.3",
-      href: base + "bab-3-3.html",
-      keywords: ["perang dunia kedua", "pdk", "axis", "berikat", "jerman nazi", "hitler", "mussolini", "jepun", "fasisme"],
-      excerpt: "Perang Dunia Kedua tercetus akibat dasar perkembangan Jerman Nazi, Itali Fasis dan Jepun.",
-    },
-    {
-      title: "3.4 · Kesan Perang Dunia Kedua",
-      tag: "Subtopik 3.4",
-      href: base + "bab-3-4.html",
-      keywords: ["kesan pdk", "bom atom", "hiroshima", "nagasaki", "pbb", "perang dingin"],
-      excerpt: "Kesan Perang Dunia Kedua termasuk pengeboman atom Hiroshima dan Nagasaki serta penubuhan PBB.",
-    },
-    {
-      title: "3.5 · Pendudukan Jepun di Negara Kita",
-      tag: "Subtopik 3.5",
-      href: base + "bab-3-5.html",
-      keywords: ["pendudukan jepun", "tentera jepun", "asia timur raya", "perang pasifik", "tanah melayu", "singapura", "1941", "1942"],
-      excerpt: "Jepun menduduki Tanah Melayu dan Singapura pada 1941–1942 dalam tempoh yang dikenali sebagai Zaman Pendudukan Jepun.",
-    },
-    {
-      title: "3.6 · Dasar Pemerintahan Jepun",
-      tag: "Subtopik 3.6",
-      href: base + "bab-3-6.html",
-      keywords: ["dasar jepun", "pemerintahan jepun", "romusha", "kempen menabung", "ekonomi perang", "propaganda"],
-      excerpt: "Dasar pemerintahan Jepun termasuk penggunaan tenaga kerja paksa romusha dan kempen ekonomi perang.",
-    },
-    {
-      title: "3.7 · Penentangan terhadap Pendudukan Jepun",
-      tag: "Subtopik 3.7",
-      href: base + "bab-3-7.html",
-      keywords: ["penentangan", "rintangan", "mpaja", "force 136", "gerila", "wataniah", "perjuangan"],
-      excerpt: "Rakyat menentang penjajahan Jepun melalui MPAJA, Force 136 dan gerakan rintangan yang lain.",
-    },
-    {
-      title: "3.8 · Kesan Pendudukan Jepun",
-      tag: "Subtopik 3.8",
-      href: base + "bab-3-8.html",
-      keywords: ["kesan pendudukan jepun", "nasionalisme", "ekonomi", "sosial", "penderitaan rakyat"],
-      excerpt: "Pendudukan Jepun memberi kesan mendalam kepada ekonomi, sosial dan nasionalisme di negara kita.",
-    },
-    {
-      title: "3.9 · Perkembangan Nasionalisme Selepas Perang",
-      tag: "Subtopik 3.9",
-      href: base + "bab-3-9.html",
-      keywords: ["nasionalisme selepas perang", "malayan union", "umno", "parti melayu", "kemerdekaan"],
-      excerpt: "Penentangan terhadap Malayan Union mencetuskan kebangkitan semangat nasionalisme Melayu selepas Perang Dunia Kedua.",
-    },
+  // Senarai semua halaman — title, tag, href
+  const PAGES = [
+    { title: "Bab 1 · Warisan Negara Bangsa", tag: "Bab Induk", href: "bab-1.html" },
+    { title: "1.1 · Latar Belakang Negara Bangsa Sebelum Kedatangan Barat", tag: "Subtopik 1.1", href: "bab-1-1.html" },
+    { title: "1.2 · Ciri-ciri Negara Bangsa Kesultanan Melayu Melaka", tag: "Subtopik 1.2", href: "bab-1-2.html" },
+    { title: "1.3 · Keunggulan Sistem Pentadbiran dan Undang-undang", tag: "Subtopik 1.3", href: "bab-1-3.html" },
+    { title: "1.4 · Peranan Pemerintah dan Rakyat", tag: "Subtopik 1.4", href: "bab-1-4.html" },
+    { title: "Bab 2 · Kebangkitan Nasionalisme", tag: "Bab Induk", href: "bab-2.html" },
+    { title: "2.1 · Maksud dan Konsep Nasionalisme", tag: "Subtopik 2.1", href: "bab-2-1.html" },
+    { title: "2.2 · Perkembangan Nasionalisme di Barat", tag: "Subtopik 2.2", href: "bab-2-2.html" },
+    { title: "2.3 · Perkembangan Nasionalisme di Asia", tag: "Subtopik 2.3", href: "bab-2-3.html" },
+    { title: "2.4 · Perkembangan Nasionalisme di Asia Tenggara", tag: "Subtopik 2.4", href: "bab-2-4.html" },
+    { title: "2.5 · Faktor Kebangkitan Nasionalisme di Tanah Melayu", tag: "Subtopik 2.5", href: "bab-2-5.html" },
+    { title: "2.6 · Perkembangan Nasionalisme di Tanah Melayu", tag: "Subtopik 2.6", href: "bab-2-6.html" },
+    { title: "2.7 · Nasionalisme Melayu", tag: "Subtopik 2.7", href: "bab-2-7.html" },
+    { title: "2.8 · Kesan Nasionalisme di Tanah Melayu", tag: "Subtopik 2.8", href: "bab-2-8.html" },
+    { title: "Bab 3 · Konflik Dunia dan Pendudukan Jepun", tag: "Bab Induk", href: "bab-3.html" },
+    { title: "3.1 · Latar Belakang Perang Dunia Pertama", tag: "Subtopik 3.1", href: "bab-3-1.html" },
+    { title: "3.2 · Kesan Perang Dunia Pertama", tag: "Subtopik 3.2", href: "bab-3-2.html" },
+    { title: "3.3 · Latar Belakang Perang Dunia Kedua", tag: "Subtopik 3.3", href: "bab-3-3.html" },
+    { title: "3.4 · Kesan Perang Dunia Kedua", tag: "Subtopik 3.4", href: "bab-3-4.html" },
+    { title: "3.5 · Pendudukan Jepun di Negara Kita", tag: "Subtopik 3.5", href: "bab-3-5.html" },
+    { title: "3.6 · Dasar Pemerintahan Jepun", tag: "Subtopik 3.6", href: "bab-3-6.html" },
+    { title: "3.7 · Penentangan terhadap Pendudukan Jepun", tag: "Subtopik 3.7", href: "bab-3-7.html" },
+    { title: "3.8 · Kesan Pendudukan Jepun", tag: "Subtopik 3.8", href: "bab-3-8.html" },
+    { title: "3.9 · Perkembangan Nasionalisme Selepas Perang", tag: "Subtopik 3.9", href: "bab-3-9.html" },
   ];
 
+  // Index cache — will be built lazily on first search
+  let INDEX = null;
+  let indexBuilding = false;
+
+  // Extract teks bersih dari HTML string — termasuk accordion, chip, timeline dll
+  function extractText(html) {
+    const doc = new DOMParser().parseFromString(html, "text/html");
+    // Buang nav, footer, script, style
+    doc.querySelectorAll("header, footer, script, style, .site-nav, .hero-actions, .keyword-legend-wrap").forEach(el => el.remove());
+    // Ambil semua teks dari main
+    const main = doc.querySelector("main") || doc.body;
+    return main ? main.textContent.replace(/\s+/g, " ").trim() : "";
+  }
+
+  // Build full-text index dengan fetch semua halaman
+  async function buildIndex() {
+    if (INDEX || indexBuilding) return;
+    indexBuilding = true;
+    INDEX = [];
+
+    const fetches = PAGES.map(async (page) => {
+      try {
+        const url = base + page.href;
+        const res = await fetch(url);
+        if (!res.ok) return;
+        const html = await res.text();
+        const fullText = extractText(html);
+        // Excerpt — ambil 150 chars pertama dari teks badan
+        const excerpt = fullText.replace(page.title, "").trim().slice(0, 160) + "...";
+        INDEX.push({
+          title: page.title,
+          tag: page.tag,
+          href: base + page.href,
+          fullText: fullText.toLowerCase(),
+          excerpt: excerpt,
+        });
+      } catch (e) {
+        // Kalau fetch gagal (offline), skip
+      }
+    });
+
+    await Promise.all(fetches);
+    indexBuilding = false;
+  }
+
   function normalize(str) {
-    return str.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+    return str.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "");
   }
 
   function highlight(text, query) {
     if (!query) return text;
-    const escaped = query.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-    return text.replace(new RegExp(`(${escaped})`, "gi"), "<mark>$1</mark>");
+    const words = query.trim().split(/\s+/).filter(Boolean);
+    let result = text;
+    words.forEach(word => {
+      const escaped = word.replace(/[.*+?^${}()|[\]\]/g, "\$&");
+      result = result.replace(new RegExp(`(${escaped})`, "gi"), "<mark>$1</mark>");
+    });
+    return result;
+  }
+
+  // Cari excerpt yang mengandungi query untuk paparan lebih relevan
+  function findRelevantExcerpt(fullText, query) {
+    const words = query.toLowerCase().trim().split(/\s+/);
+    const lowerText = fullText.toLowerCase();
+    // Cari posisi pertama mana-mana kata query
+    let bestPos = -1;
+    words.forEach(word => {
+      const pos = lowerText.indexOf(word);
+      if (pos !== -1 && (bestPos === -1 || pos < bestPos)) bestPos = pos;
+    });
+    if (bestPos === -1) return fullText.slice(0, 160) + "...";
+    const start = Math.max(0, bestPos - 40);
+    const end = Math.min(fullText.length, bestPos + 160);
+    const excerpt = (start > 0 ? "..." : "") + fullText.slice(start, end) + (end < fullText.length ? "..." : "");
+    return excerpt;
   }
 
   function search(query) {
+    if (!INDEX) return [];
     const q = normalize(query.trim());
     if (!q) return [];
+    const words = q.split(/\s+/).filter(Boolean);
 
-    return SEARCH_DATA.filter((item) => {
-      const haystack = normalize(
-        item.title + " " + item.excerpt + " " + item.keywords.join(" ")
-      );
-      return q.split(" ").every((word) => haystack.includes(word));
-    });
+    return INDEX.filter(item => {
+      const haystack = normalize(item.fullText + " " + item.title);
+      return words.every(word => haystack.includes(word));
+    }).map(item => ({
+      ...item,
+      relevantExcerpt: findRelevantExcerpt(item.fullText, q),
+    }));
+  }
+
+  function clearResults() {
+    resultsContainer.querySelectorAll(".search-result-item").forEach(el => el.remove());
+    resultsContainer.classList.remove("has-results");
+    if (emptyState) emptyState.classList.remove("visible");
+    if (countEl) countEl.textContent = "";
   }
 
   function renderResults(results, query) {
-    // Clear existing result items (keep count + empty)
-    resultsContainer.querySelectorAll(".search-result-item").forEach((el) => el.remove());
+    resultsContainer.querySelectorAll(".search-result-item").forEach(el => el.remove());
 
     if (results.length === 0) {
       resultsContainer.classList.remove("has-results");
@@ -421,42 +348,59 @@ if (revealElements.length) {
 
     if (emptyState) emptyState.classList.remove("visible");
     resultsContainer.classList.add("has-results");
-
     if (countEl) countEl.textContent = `${results.length} keputusan ditemui`;
 
-    results.forEach((item) => {
+    results.forEach(item => {
       const a = document.createElement("a");
       a.className = "search-result-item";
       a.href = item.href;
       a.innerHTML = `
         <span class="search-result-tag">${item.tag}</span>
         <p class="search-result-title">${highlight(item.title, query)}</p>
-        <p class="search-result-excerpt">${highlight(item.excerpt, query)}</p>
+        <p class="search-result-excerpt">${highlight(item.relevantExcerpt || item.excerpt, query)}</p>
       `;
       resultsContainer.appendChild(a);
     });
   }
 
+  // Show loading state
+  function showLoading() {
+    resultsContainer.querySelectorAll(".search-result-item").forEach(el => el.remove());
+    resultsContainer.classList.add("has-results");
+    if (countEl) countEl.textContent = "Sedang memuat indeks...";
+  }
+
   let debounceTimer;
-  searchInput.addEventListener("input", function () {
-    const query = this.value;
+  let pendingQuery = null;
+
+  searchInput.addEventListener("input", async function () {
+    const query = this.value.trim();
     clearTimeout(debounceTimer);
 
-    if (!query.trim()) {
-      resultsContainer.classList.remove("has-results");
-      if (emptyState) emptyState.classList.remove("visible");
-      if (countEl) countEl.textContent = "";
-      resultsContainer.querySelectorAll(".search-result-item").forEach((el) => el.remove());
+    if (!query) {
+      clearResults();
       return;
     }
 
-    debounceTimer = setTimeout(() => {
+    debounceTimer = setTimeout(async () => {
+      // Build index on first search
+      if (!INDEX) {
+        showLoading();
+        await buildIndex();
+      }
       const results = search(query);
-      renderResults(results, query.trim());
-    }, 200);
+      renderResults(results, query);
+    }, 250);
   });
 
-  // Keyboard shortcut: / to focus search
+  // Preload index bila page idle
+  if ("requestIdleCallback" in window) {
+    requestIdleCallback(() => buildIndex(), { timeout: 3000 });
+  } else {
+    setTimeout(() => buildIndex(), 2000);
+  }
+
+  // Keyboard shortcut: / to focus
   document.addEventListener("keydown", function (e) {
     if (e.key === "/" && document.activeElement !== searchInput) {
       e.preventDefault();
@@ -468,7 +412,6 @@ if (revealElements.length) {
     }
   });
 })();
-
 // =========================
 // READING PROGRESS INDICATOR
 // =========================
