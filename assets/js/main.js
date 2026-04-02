@@ -185,7 +185,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
           if (rafId) cancelAnimationFrame(rafId);
 
-          // Auto-scroll hanya bila accordion baru dibuka
           if (!wasOpen) {
             setTimeout(() => {
               trigger.scrollIntoView({
