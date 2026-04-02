@@ -1,44 +1,201 @@
 document.documentElement.classList.add("js-enhanced");
 
 // =========================
-// DARK MODE
+// DISPLAY PANEL — Brightness + Warmth
+// Floating Kindle/iBooks style control
 // =========================
-(function setupDarkMode() {
-  const STORAGE_KEY = "hazimedu-theme";
+(function setupDisplayPanel() {
+  const STORAGE_KEY = "hazimedu-display";
 
-  function getPreferred() {
-    const saved = localStorage.getItem(STORAGE_KEY);
-    if (saved) return saved;
-    return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+  // Presets: [brightness 0-100, warmth 0-100, label]
+  const PRESETS = {
+    terang:  { brightness: 100, warmth: 40,  label: "Terang" },
+    neutral: { brightness: 72,  warmth: 55,  label: "Neutral" },
+    malam:   { brightness: 28,  warmth: 72,  label: "Malam" },
+    gelap:   { brightness: 12,  warmth: 60,  label: "Gelap" },
+  };
+
+  // Load saved state
+  function loadState() {
+    try {
+      const saved = localStorage.getItem(STORAGE_KEY);
+      if (saved) return JSON.parse(saved);
+    } catch(e) {}
+    // Default: neutral
+    return { brightness: 72, warmth: 55 };
   }
 
-  function applyTheme(theme) {
-    document.documentElement.setAttribute("data-theme", theme);
-    localStorage.setItem(STORAGE_KEY, theme);
-    const btn = document.querySelector(".theme-toggle");
-    if (btn) btn.setAttribute("aria-label", theme === "dark" ? "Tukar ke mod cerah" : "Tukar ke mod gelap");
+  function saveState(state) {
+    try { localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); } catch(e) {}
   }
 
-  // Apply immediately to avoid flash
-  applyTheme(getPreferred());
+  // Apply brightness + warmth to CSS custom properties on <html>
+  function applyDisplay(brightness, warmth) {
+    const root = document.documentElement;
 
-  document.addEventListener("DOMContentLoaded", function () {
-    const btn = document.querySelector(".theme-toggle");
-    if (!btn) return;
-    btn.addEventListener("click", function () {
-      const current = document.documentElement.getAttribute("data-theme");
-      applyTheme(current === "dark" ? "light" : "dark");
-    });
-  });
+    // Brightness: 0 = very dark, 100 = full light
+    // We map to background lightness and whether dark theme applies
+    const isDark = brightness < 55;
+    root.setAttribute("data-theme", isDark ? "dark" : "light");
 
-  // Listen to system preference changes
-  window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", function (e) {
-    if (!localStorage.getItem(STORAGE_KEY)) {
-      applyTheme(e.matches ? "dark" : "light");
+    // Fine-tune background darkness via CSS filter on a dedicated overlay
+    // We use a CSS variable that controls the overlay opacity
+    const darknessOverlay = isDark
+      ? Math.max(0, (55 - brightness) / 55 * 0.55)  // 0 → 0.55 opacity dark overlay
+      : 0;
+
+    // Warmth: 0 = cool blue tint, 100 = warm amber tint
+    // Map to sepia-like warm overlay
+    const warmOverlay = (warmth - 50) / 50;  // -1 to +1
+    const warmR = warmOverlay > 0 ? Math.round(warmOverlay * 22) : 0;
+    const warmB = warmOverlay < 0 ? Math.round(-warmOverlay * 18) : 0;
+
+    root.style.setProperty("--display-dark-overlay", darknessOverlay.toFixed(3));
+    root.style.setProperty("--display-warm-r", warmR);
+    root.style.setProperty("--display-warm-b", warmB);
+
+    // Inject/update overlay element
+    let overlay = document.getElementById("display-overlay");
+    if (!overlay) {
+      overlay = document.createElement("div");
+      overlay.id = "display-overlay";
+      overlay.style.cssText = `
+        position: fixed; inset: 0; z-index: 9999;
+        pointer-events: none; mix-blend-mode: multiply;
+        transition: background 0.3s ease;
+      `;
+      document.body.appendChild(overlay);
     }
-  });
-})();
 
+    if (darknessOverlay > 0) {
+      overlay.style.background = `rgba(0,0,0,${darknessOverlay.toFixed(3)})`;
+    } else if (warmR > 0) {
+      overlay.style.background = `rgba(${warmR * 4},${Math.round(warmR*1.5)},0,${(warmR/22*0.18).toFixed(3)})`;
+    } else if (warmB > 0) {
+      overlay.style.background = `rgba(0,${Math.round(warmB*0.8)},${warmB * 4},${(warmB/18*0.12).toFixed(3)})`;
+    } else {
+      overlay.style.background = "transparent";
+    }
+  }
+
+  function buildPanel() {
+    // FAB button
+    const fab = document.createElement("button");
+    fab.className = "display-fab";
+    fab.setAttribute("aria-label", "Tetapan paparan");
+    fab.setAttribute("type", "button");
+    fab.textContent = "☀";
+    document.body.appendChild(fab);
+
+    // Panel
+    const panel = document.createElement("div");
+    panel.className = "display-panel";
+    panel.setAttribute("role", "dialog");
+    panel.setAttribute("aria-label", "Tetapan paparan");
+    panel.innerHTML = `
+      <p class="display-panel-title">Tetapan Paparan</p>
+
+      <div class="display-slider-row">
+        <span class="display-slider-icon">🌑</span>
+        <input type="range" class="display-slider" id="slider-brightness"
+          min="5" max="100" step="1" value="72"
+          aria-label="Kecerahan">
+        <span class="display-slider-icon">☀️</span>
+      </div>
+
+      <div class="display-slider-row">
+        <span class="display-slider-icon">🔵</span>
+        <input type="range" class="display-slider" id="slider-warmth"
+          min="0" max="100" step="1" value="55"
+          aria-label="Suhu warna">
+        <span class="display-slider-icon">🟡</span>
+      </div>
+
+      <div class="display-divider"></div>
+
+      <div class="display-presets">
+        <button class="display-preset" data-preset="terang" type="button">Terang</button>
+        <button class="display-preset" data-preset="neutral" type="button">Neutral</button>
+        <button class="display-preset" data-preset="malam" type="button">Malam</button>
+        <button class="display-preset" data-preset="gelap" type="button">Gelap</button>
+      </div>
+    `;
+    document.body.appendChild(panel);
+
+    const sliderBrightness = panel.querySelector("#slider-brightness");
+    const sliderWarmth = panel.querySelector("#slider-warmth");
+    const presetBtns = panel.querySelectorAll(".display-preset");
+
+    // Load & apply saved state
+    const state = loadState();
+    sliderBrightness.value = state.brightness;
+    sliderWarmth.value = state.warmth;
+    applyDisplay(state.brightness, state.warmth);
+    updateActivePreset(state.brightness, state.warmth);
+
+    // FAB toggle
+    fab.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const isOpen = panel.classList.toggle("is-open");
+      fab.classList.toggle("is-open", isOpen);
+    });
+
+    // Close on outside click
+    document.addEventListener("click", (e) => {
+      if (!panel.contains(e.target) && e.target !== fab) {
+        panel.classList.remove("is-open");
+        fab.classList.remove("is-open");
+      }
+    });
+
+    // Slider events
+    function onSliderChange() {
+      const b = parseInt(sliderBrightness.value);
+      const w = parseInt(sliderWarmth.value);
+      applyDisplay(b, w);
+      saveState({ brightness: b, warmth: w });
+      updateActivePreset(b, w);
+    }
+
+    sliderBrightness.addEventListener("input", onSliderChange);
+    sliderWarmth.addEventListener("input", onSliderChange);
+
+    // Preset buttons
+    presetBtns.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const key = btn.getAttribute("data-preset");
+        const preset = PRESETS[key];
+        if (!preset) return;
+        sliderBrightness.value = preset.brightness;
+        sliderWarmth.value = preset.warmth;
+        applyDisplay(preset.brightness, preset.warmth);
+        saveState({ brightness: preset.brightness, warmth: preset.warmth });
+        updateActivePreset(preset.brightness, preset.warmth);
+      });
+    });
+
+    function updateActivePreset(b, w) {
+      presetBtns.forEach((btn) => btn.classList.remove("is-active"));
+      for (const [key, preset] of Object.entries(PRESETS)) {
+        if (Math.abs(preset.brightness - b) < 3 && Math.abs(preset.warmth - w) < 3) {
+          const match = panel.querySelector(`[data-preset="${key}"]`);
+          if (match) match.classList.add("is-active");
+          break;
+        }
+      }
+      // Update fab icon
+      if (b < 30) fab.textContent = "🌙";
+      else if (b < 65) fab.textContent = "🌤";
+      else fab.textContent = "☀";
+    }
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", buildPanel);
+  } else {
+    buildPanel();
+  }
+})();
 // =========================
 // NAV TOGGLE
 // =========================
