@@ -22,23 +22,37 @@
 
 /* =========================
    DARK MODE TOKENS
+   Pendekatan: "Warm Dim" — seperti Bear, Notion, iBooks Night
+   Bukan gelap pekat. Warm amber-tinted dark untuk bacaan panjang.
+   Background: ~#1f1e1b (warm charcoal, bukan cold navy)
+   Teks: ~#ddd8cc (warm off-white, bukan pure #fff)
+   Kontras: 7–8:1 — cukup untuk baca, tidak menyakitkan mata
 ========================= */
 
 [data-theme="dark"] {
-  --bg: #141c24;
-  --paper: #1c2630;
-  --paper-soft: #1e2a35;
-  --paper-warm: #1f2b38;
-  --paper-note: #22301e;
-  --ink: #e8ede4;
-  --muted: #8fa3b0;
-  --line: rgba(180, 200, 220, 0.1);
-  --line-strong: rgba(180, 200, 220, 0.18);
-  --primary: #4aaa8f;
-  --primary-dark: #3d8f77;
-  --shadow-soft: 0 6px 18px rgba(0, 0, 0, 0.25);
-  --shadow-medium: 0 12px 28px rgba(0, 0, 0, 0.35);
-  --shadow-strong: 0 22px 48px rgba(0, 0, 0, 0.45);
+  /* Backgrounds — warm charcoal, amber undertone seperti Bear app */
+  --bg: #1c1b18;
+  --paper: #242220;
+  --paper-soft: #272522;
+  --paper-warm: #2a2720;
+  --paper-note: #252318;
+
+  /* Teks — warm off-white, bukan pure white */
+  --ink: #ddd8cc;
+  --muted: #8c8579;
+
+  /* Borders — subtle warm */
+  --line: rgba(220, 210, 190, 0.09);
+  --line-strong: rgba(220, 210, 190, 0.16);
+
+  /* Primary — slightly desaturated untuk mata rehat */
+  --primary: #52b396;
+  --primary-dark: #429e84;
+
+  /* Shadows — warm, bukan cold blue-black */
+  --shadow-soft: 0 6px 18px rgba(0, 0, 0, 0.28);
+  --shadow-medium: 0 12px 28px rgba(0, 0, 0, 0.38);
+  --shadow-strong: 0 22px 48px rgba(0, 0, 0, 0.48);
 }
 
 * {
@@ -63,9 +77,9 @@ body {
 
 [data-theme="dark"] body {
   background:
-    radial-gradient(circle at top left, rgba(47, 122, 103, 0.12), transparent 25%),
-    radial-gradient(circle at top right, rgba(211, 170, 78, 0.07), transparent 20%),
-    linear-gradient(180deg, #141c24 0%, #111820 100%);
+    radial-gradient(circle at top left, rgba(60, 130, 100, 0.07), transparent 22%),
+    radial-gradient(circle at top right, rgba(180, 140, 60, 0.06), transparent 18%),
+    linear-gradient(180deg, #1c1b18 0%, #191815 100%);
 }
 
 img {
@@ -114,7 +128,7 @@ select {
 }
 
 [data-theme="dark"] .section-soft {
-  background: rgba(28, 38, 48, 0.6);
+  background: rgba(36, 34, 32, 0.6);
 }
 
 /* =========================
@@ -132,8 +146,8 @@ select {
 }
 
 [data-theme="dark"] .site-header {
-  background: rgba(20, 28, 36, 0.88);
-  border-bottom-color: rgba(180, 200, 220, 0.1);
+  background: rgba(28, 27, 24, 0.92);
+  border-bottom-color: rgba(220, 210, 190, 0.1);
 }
 
 .nav-wrap {
@@ -399,7 +413,7 @@ h3 {
 [data-theme="dark"] .note-card,
 [data-theme="dark"] .value-card,
 [data-theme="dark"] .content-block {
-  background: rgba(28, 38, 48, 0.88);
+  background: rgba(36, 34, 32, 0.9);
 }
 
 .metric-card:hover,
@@ -593,8 +607,8 @@ h3 {
 }
 
 [data-theme="dark"] .hero-panel {
-  background: rgba(28, 38, 48, 0.92);
-  border-color: rgba(255, 255, 255, 0.08);
+  background: rgba(36, 34, 32, 0.95);
+  border-color: rgba(220, 210, 190, 0.08);
 }
 
 .hero-panel-top {
@@ -731,7 +745,7 @@ h3 {
 }
 
 [data-theme="dark"] .homepage-focus-section .paper-board {
-  background: linear-gradient(135deg, #1c2630, #1a2530);
+  background: linear-gradient(135deg, #242220, #1f1e1b);
 }
 
 /* =========================
@@ -1056,7 +1070,7 @@ h3 {
 }
 
 [data-theme="dark"] .paper-board::before {
-  background: rgba(180, 160, 100, 0.18);
+  background: rgba(160, 140, 90, 0.12);
 }
 
 .paper-flap-card {
@@ -1097,8 +1111,8 @@ h3 {
 }
 
 [data-theme="dark"] .answer-paper {
-  background: rgba(34, 48, 30, 0.5);
-  border-color: rgba(146, 117, 39, 0.2);
+  background: rgba(37, 35, 24, 0.5);
+  border-color: rgba(180, 140, 60, 0.16);
 }
 
 .info-paper {
@@ -1107,7 +1121,7 @@ h3 {
 }
 
 [data-theme="dark"] .info-paper {
-  background: linear-gradient(135deg, rgba(20, 35, 60, 0.8), rgba(15, 30, 55, 0.8));
+  background: linear-gradient(135deg, rgba(20, 28, 42, 0.8), rgba(17, 25, 38, 0.8));
   border-color: rgba(59, 130, 246, 0.18);
 }
 
@@ -1117,7 +1131,7 @@ h3 {
 }
 
 [data-theme="dark"] .glossary-paper {
-  background: linear-gradient(135deg, rgba(30, 20, 55, 0.8), rgba(25, 15, 50, 0.8));
+  background: linear-gradient(135deg, rgba(26, 20, 42, 0.8), rgba(22, 16, 38, 0.8));
   border-color: rgba(109, 40, 217, 0.22);
 }
 
@@ -1127,7 +1141,7 @@ h3 {
 }
 
 [data-theme="dark"] .summary-paper {
-  background: linear-gradient(135deg, rgba(50, 28, 10, 0.7), rgba(44, 22, 5, 0.7));
+  background: linear-gradient(135deg, rgba(38, 24, 14, 0.75), rgba(34, 20, 10, 0.75));
   border-color: rgba(193, 93, 23, 0.2);
 }
 
@@ -1138,7 +1152,7 @@ h3 {
 }
 
 [data-theme="dark"] .master-summary-paper {
-  background: linear-gradient(135deg, rgba(20, 45, 35, 0.8), rgba(30, 35, 20, 0.8));
+  background: linear-gradient(135deg, rgba(20, 36, 28, 0.8), rgba(28, 28, 18, 0.8));
   border-color: rgba(74, 170, 143, 0.22);
 }
 
@@ -1197,8 +1211,8 @@ h3 {
 }
 
 [data-theme="dark"] .paper-chip {
-  background: rgba(255, 250, 240, 0.05);
-  border-color: rgba(180, 200, 220, 0.12);
+  background: rgba(220, 210, 190, 0.05);
+  border-color: rgba(220, 210, 190, 0.1);
 }
 
 span.paper-chip {
@@ -1442,8 +1456,8 @@ span.paper-chip {
 }
 
 [data-theme="dark"] .paper-process-panel {
-  background: rgba(34, 48, 30, 0.4);
-  border-color: rgba(146, 117, 39, 0.18);
+  background: rgba(37, 35, 24, 0.5);
+  border-color: rgba(180, 140, 60, 0.14);
 }
 
 .paper-process-panel.active {
@@ -1539,7 +1553,7 @@ span.paper-chip {
 }
 
 [data-theme="dark"] .paper-accordion-item {
-  background: rgba(28, 38, 48, 0.82);
+  background: rgba(36, 34, 32, 0.85);
 }
 
 .paper-accordion-trigger {
@@ -1778,7 +1792,7 @@ span.paper-chip {
 }
 
 [data-theme="dark"] .bab-card {
-  background: linear-gradient(135deg, rgba(28,38,48,0.9), rgba(25,34,44,0.9));
+  background: linear-gradient(135deg, rgba(36,34,32,0.95), rgba(32,30,28,0.95));
 }
 
 .bab-card-top {
@@ -1794,8 +1808,8 @@ span.paper-chip {
 }
 
 [data-theme="dark"] .bab-card-top {
-  background: rgba(74,170,143,0.2);
-  color: #6fcfb5;
+  background: rgba(82, 179, 150, 0.18);
+  color: #7ecfb8;
 }
 
 .bab-card h3 {
@@ -1862,12 +1876,12 @@ span.paper-chip {
 .kw-kerajaan { color: #6d28d9; background: rgba(237, 233, 254, 0.94); }
 .kw-istilah { color: #0f766e; background: rgba(204, 251, 241, 0.94); }
 
-[data-theme="dark"] .kw-tokoh { color: #fb7185; background: rgba(255, 228, 230, 0.14); }
-[data-theme="dark"] .kw-masa { color: #93c5fd; background: rgba(219, 234, 254, 0.12); }
-[data-theme="dark"] .kw-tempat { color: #86efac; background: rgba(220, 252, 231, 0.12); }
-[data-theme="dark"] .kw-konsep { color: #fdba74; background: rgba(255, 237, 213, 0.14); }
-[data-theme="dark"] .kw-kerajaan { color: #c4b5fd; background: rgba(237, 233, 254, 0.14); }
-[data-theme="dark"] .kw-istilah { color: #5eead4; background: rgba(204, 251, 241, 0.12); }
+[data-theme="dark"] .kw-tokoh { color: #e8828f; background: rgba(232, 130, 143, 0.12); }
+[data-theme="dark"] .kw-masa { color: #82a8e0; background: rgba(130, 168, 224, 0.12); }
+[data-theme="dark"] .kw-tempat { color: #7ec49a; background: rgba(126, 196, 154, 0.12); }
+[data-theme="dark"] .kw-konsep { color: #e0a070; background: rgba(224, 160, 112, 0.12); }
+[data-theme="dark"] .kw-kerajaan { color: #b09ae0; background: rgba(176, 154, 224, 0.12); }
+[data-theme="dark"] .kw-istilah { color: #5ec4b4; background: rgba(94, 196, 180, 0.12); }
 
 /* Bab 2 */
 .kw-tahun { color: #3458b2; background: rgba(219, 232, 255, 0.94); }
@@ -1876,11 +1890,11 @@ span.paper-chip {
 .kw-pertubuhan { color: #5f3eb2; background: rgba(231, 222, 252, 0.94); }
 .kw-karya { color: #2f7f86; background: rgba(217, 243, 244, 0.94); }
 
-[data-theme="dark"] .kw-tahun { color: #93c5fd; background: rgba(219, 232, 255, 0.12); }
-[data-theme="dark"] .kw-peristiwa { color: #fdba74; background: rgba(255, 230, 207, 0.12); }
-[data-theme="dark"] .kw-gerakan { color: #d8b4fe; background: rgba(242, 222, 252, 0.12); }
-[data-theme="dark"] .kw-pertubuhan { color: #c4b5fd; background: rgba(231, 222, 252, 0.12); }
-[data-theme="dark"] .kw-karya { color: #67e8f9; background: rgba(217, 243, 244, 0.12); }
+[data-theme="dark"] .kw-tahun { color: #82a8e0; background: rgba(130, 168, 224, 0.12); }
+[data-theme="dark"] .kw-peristiwa { color: #e0a070; background: rgba(224, 160, 112, 0.12); }
+[data-theme="dark"] .kw-gerakan { color: #c89ee0; background: rgba(200, 158, 224, 0.12); }
+[data-theme="dark"] .kw-pertubuhan { color: #b09ae0; background: rgba(176, 154, 224, 0.12); }
+[data-theme="dark"] .kw-karya { color: #60c4cc; background: rgba(96, 196, 204, 0.12); }
 
 .paper-chip .kw, .point-line .kw, .lead .kw,
 .emoji-point-list .kw, .answer-paper .kw, .paper-kingdom .kw,
@@ -1904,15 +1918,15 @@ span.paper-chip {
 .kw-b3-istilah { color: #0f766e; background: rgba(204, 251, 241, 0.94); }
 .kw-b3-karya { color: #92400e; background: rgba(254, 243, 199, 0.94); }
 
-[data-theme="dark"] .kw-b3-tokoh { color: #fb7185; background: rgba(255, 228, 230, 0.14); }
-[data-theme="dark"] .kw-b3-tahun { color: #93c5fd; background: rgba(219, 232, 255, 0.12); }
-[data-theme="dark"] .kw-b3-tempat { color: #86efac; background: rgba(220, 252, 231, 0.12); }
-[data-theme="dark"] .kw-b3-peristiwa { color: #fdba74; background: rgba(255, 230, 207, 0.12); }
-[data-theme="dark"] .kw-b3-ideologi { color: #d8b4fe; background: rgba(242, 222, 252, 0.12); }
-[data-theme="dark"] .kw-b3-pertubuhan { color: #c4b5fd; background: rgba(231, 222, 252, 0.12); }
-[data-theme="dark"] .kw-b3-perjanjian { color: #67e8f9; background: rgba(217, 243, 244, 0.12); }
-[data-theme="dark"] .kw-b3-istilah { color: #5eead4; background: rgba(204, 251, 241, 0.12); }
-[data-theme="dark"] .kw-b3-karya { color: #fcd34d; background: rgba(254, 243, 199, 0.12); }
+[data-theme="dark"] .kw-b3-tokoh { color: #e8828f; background: rgba(232, 130, 143, 0.12); }
+[data-theme="dark"] .kw-b3-tahun { color: #82a8e0; background: rgba(130, 168, 224, 0.12); }
+[data-theme="dark"] .kw-b3-tempat { color: #7ec49a; background: rgba(126, 196, 154, 0.12); }
+[data-theme="dark"] .kw-b3-peristiwa { color: #e0a070; background: rgba(224, 160, 112, 0.12); }
+[data-theme="dark"] .kw-b3-ideologi { color: #c89ee0; background: rgba(200, 158, 224, 0.12); }
+[data-theme="dark"] .kw-b3-pertubuhan { color: #b09ae0; background: rgba(176, 154, 224, 0.12); }
+[data-theme="dark"] .kw-b3-perjanjian { color: #60c4cc; background: rgba(96, 196, 204, 0.12); }
+[data-theme="dark"] .kw-b3-istilah { color: #5ec4b4; background: rgba(94, 196, 180, 0.12); }
+[data-theme="dark"] .kw-b3-karya { color: #d4aa60; background: rgba(212, 170, 96, 0.12); }
 
 [class^="kw-b3-"] {
   font-size: inherit;
@@ -1977,7 +1991,7 @@ span.paper-chip {
   transition: background 0.35s ease;
 }
 
-[data-theme="dark"] .bloc-legend-item { background: rgba(28, 38, 48, 0.82); }
+[data-theme="dark"] .bloc-legend-item { background: rgba(36, 34, 32, 0.85); }
 
 .bloc-legend-swatch { display: inline-flex; width: 0.92rem; height: 0.92rem; border-radius: 999px; flex: 0 0 auto; }
 .bloc-legend-central .bloc-legend-swatch { background: #64748b; }
@@ -2000,7 +2014,7 @@ span.paper-chip {
 }
 
 [data-theme="dark"] .keyword-legend-wrap {
-  background: rgba(28, 38, 48, 0.6);
+  background: rgba(36, 34, 32, 0.6);
 }
 
 .keyword-legend-title { margin: 0 0 0.65rem; font-size: 0.88rem; font-weight: 800; color: var(--ink); }
@@ -2036,7 +2050,7 @@ span.paper-chip {
 }
 
 .org-node:hover { transform: translateY(-2px); }
-[data-theme="dark"] .org-node { background: rgba(28, 38, 48, 0.85); }
+[data-theme="dark"] .org-node { background: rgba(36, 34, 32, 0.9); }
 .org-arrow { font-size: 1.35rem; line-height: 1; }
 
 /* =========================
@@ -2087,8 +2101,8 @@ span.paper-chip {
 }
 
 [data-theme="dark"] .site-footer {
-  background: rgba(20, 28, 36, 0.7);
-  border-top-color: rgba(180, 200, 220, 0.1);
+  background: rgba(28, 27, 24, 0.7);
+  border-top-color: rgba(220, 210, 190, 0.1);
 }
 
 .footer-wrap { display: flex; align-items: flex-start; justify-content: space-between; gap: 1rem; }
@@ -2149,7 +2163,7 @@ span.paper-chip {
   }
 
   [data-theme="dark"] .site-nav {
-    background: rgba(20, 28, 36, 0.98);
+    background: rgba(28, 27, 24, 0.98);
   }
 
   .site-nav.open { display: flex; animation: fadeSlide 0.25s ease; }
