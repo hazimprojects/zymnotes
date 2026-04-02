@@ -137,24 +137,19 @@ document.addEventListener("DOMContentLoaded", function () {
       const wasOpen = currentItem.classList.contains("is-open");
       const anchorTop = trigger.getBoundingClientRect().top;
 
-      // Matikan smooth scroll sementara
       document.documentElement.classList.add("accordion-no-smooth-scroll");
       document.body.classList.add("accordion-no-smooth-scroll");
 
-      // Tutup semua item tahap yang sama
       accordionGroup.querySelectorAll(":scope > .paper-accordion-item").forEach((item) => {
         setAccordionState(item, false);
       });
 
-      // Buka item semasa jika sebelum ini tertutup
       if (!wasOpen) {
         setAccordionState(currentItem, true);
       }
 
-      // Buang focus ring / box hitam default browser
       trigger.blur();
 
-      // Pastikan trigger yang ditekan kekal pada tempat sama
       let rafId = 0;
       let stillFrames = 0;
       let lastTop = null;
@@ -173,31 +168,35 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         const adjustedTop = trigger.getBoundingClientRect().top;
+
         if (lastTop !== null && Math.abs(adjustedTop - lastTop) < 0.25) {
           stillFrames += 1;
         } else {
           stillFrames = 0;
         }
+
         lastTop = adjustedTop;
 
         if (stillFrames < REQUIRED_STILL_FRAMES && frameCount < MAX_FRAMES) {
-  rafId = requestAnimationFrame(stabilize);
-} else {
-  document.documentElement.classList.remove("accordion-no-smooth-scroll");
-  document.body.classList.remove("accordion-no-smooth-scroll");
-  if (rafId) cancelAnimationFrame(rafId);
+          rafId = requestAnimationFrame(stabilize);
+        } else {
+          document.documentElement.classList.remove("accordion-no-smooth-scroll");
+          document.body.classList.remove("accordion-no-smooth-scroll");
 
-  // Auto bawa accordion aktif ke posisi lebih selesa untuk dibaca
-  if (!wasOpen) {
-    requestAnimationFrame(() => {
-      trigger.scrollIntoView({
-        behavior: "smooth",
-        block: "center", // tukar kepada "start" jika mahu di bahagian atas
-        inline: "nearest"
-      });
-    });
-  }
-}
+          if (rafId) cancelAnimationFrame(rafId);
+
+          // Auto-scroll hanya bila accordion baru dibuka
+          if (!wasOpen) {
+            setTimeout(() => {
+              trigger.scrollIntoView({
+                behavior: "smooth",
+                block: "center",
+                inline: "nearest",
+              });
+            }, 40);
+          }
+        }
+      }
 
       rafId = requestAnimationFrame(stabilize);
     });
