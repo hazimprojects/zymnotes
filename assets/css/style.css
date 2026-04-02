@@ -1831,6 +1831,10 @@ span.paper-chip {
   padding: 0 1.1rem 1.1rem;
 }
 
+.paper-accordion-trigger {
+  scroll-margin-top: 96px;
+}
+
 /* =========================
    ACCORDION STABILITY FIX
 ========================= */
