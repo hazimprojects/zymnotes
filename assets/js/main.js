@@ -162,11 +162,11 @@ accordionTriggers.forEach((trigger) => {
 
     // Stabilkan posisi bacaan sepanjang animasi accordion
     const start = performance.now();
-    const DURATION = 450; // sedikit lebih lama daripada transition CSS
+    const DURATION = 450;
 
     function stabilizeScroll(now) {
       const afterTop = trigger.getBoundingClientRect().top;
-      const delta = afterTop - beforeTop;
+      const delta = beforeTop - afterTop; // <- ini yang betul
 
       if (Math.abs(delta) > 1) {
         window.scrollBy(0, delta);
