@@ -2795,3 +2795,218 @@ html[data-theme="dark"] body.bab-theme-3 .site-footer {
   background: rgba(28, 26, 23, 0.82) !important;
   border-top: 1px solid rgba(220, 210, 190, 0.10);
 }
+
+/* =========================================================
+   FINAL BAB THEMES DARK OVERRIDE
+   LETAK PALING BAWAH SEKALI
+========================================================= */
+
+html[data-theme="dark"] body.bab-theme-1 .site-header,
+html[data-theme="dark"] body.bab-theme-2 .site-header,
+html[data-theme="dark"] body.bab-theme-3 .site-header {
+  background: rgba(28, 26, 23, 0.92) !important;
+  border-bottom-color: rgba(220, 210, 190, 0.10) !important;
+}
+
+html[data-theme="dark"] body.bab-theme-1 .brand,
+html[data-theme="dark"] body.bab-theme-2 .brand,
+html[data-theme="dark"] body.bab-theme-3 .brand,
+html[data-theme="dark"] body.bab-theme-1 h1,
+html[data-theme="dark"] body.bab-theme-1 h2,
+html[data-theme="dark"] body.bab-theme-1 h3,
+html[data-theme="dark"] body.bab-theme-2 h1,
+html[data-theme="dark"] body.bab-theme-2 h2,
+html[data-theme="dark"] body.bab-theme-2 h3,
+html[data-theme="dark"] body.bab-theme-3 h1,
+html[data-theme="dark"] body.bab-theme-3 h2,
+html[data-theme="dark"] body.bab-theme-3 h3,
+html[data-theme="dark"] body.bab-theme-1 .point-heading,
+html[data-theme="dark"] body.bab-theme-2 .point-heading,
+html[data-theme="dark"] body.bab-theme-3 .point-heading {
+  color: #f1eadf !important;
+}
+
+html[data-theme="dark"] body.bab-theme-1 .lead,
+html[data-theme="dark"] body.bab-theme-2 .lead,
+html[data-theme="dark"] body.bab-theme-3 .lead,
+html[data-theme="dark"] body.bab-theme-1 .point-line,
+html[data-theme="dark"] body.bab-theme-2 .point-line,
+html[data-theme="dark"] body.bab-theme-3 .point-line,
+html[data-theme="dark"] body.bab-theme-1 .footer-text,
+html[data-theme="dark"] body.bab-theme-2 .footer-text,
+html[data-theme="dark"] body.bab-theme-3 .footer-text,
+html[data-theme="dark"] body.bab-theme-1 .preview-answer,
+html[data-theme="dark"] body.bab-theme-2 .preview-answer,
+html[data-theme="dark"] body.bab-theme-3 .preview-answer {
+  color: #b7ae9f !important;
+}
+
+html[data-theme="dark"] body.bab-theme-1 .paper-label,
+html[data-theme="dark"] body.bab-theme-1 .paper-label.small,
+html[data-theme="dark"] body.bab-theme-1 .bab-card-top {
+  background: rgba(82, 179, 150, 0.18) !important;
+  color: #7ecfb8 !important;
+}
+
+html[data-theme="dark"] body.bab-theme-2 .paper-label,
+html[data-theme="dark"] body.bab-theme-2 .paper-label.small,
+html[data-theme="dark"] body.bab-theme-2 .bab-card-top {
+  background: rgba(88, 135, 206, 0.18) !important;
+  color: #9fc0f1 !important;
+}
+
+html[data-theme="dark"] body.bab-theme-3 .paper-label,
+html[data-theme="dark"] body.bab-theme-3 .paper-label.small,
+html[data-theme="dark"] body.bab-theme-3 .bab-card-top {
+  background: rgba(120, 138, 156, 0.18) !important;
+  color: #c2d0dd !important;
+}
+
+html[data-theme="dark"] body.bab-theme-1 .paper-strip.strip-main,
+html[data-theme="dark"] body.bab-theme-2 .paper-strip.strip-main,
+html[data-theme="dark"] body.bab-theme-3 .paper-strip.strip-main {
+  background: linear-gradient(90deg, rgba(212,170,96,0.18), rgba(180,140,60,0.14)) !important;
+  color: #e2b56f !important;
+}
+
+html[data-theme="dark"] body.bab-theme-1 .paper-strip.strip-sub,
+html[data-theme="dark"] body.bab-theme-2 .paper-strip.strip-sub,
+html[data-theme="dark"] body.bab-theme-3 .paper-strip.strip-sub {
+  background: linear-gradient(90deg, rgba(82,179,150,0.18), rgba(82,179,150,0.12)) !important;
+  color: #79d2b8 !important;
+}
+
+html[data-theme="dark"] body.bab-theme-1 .paper-strip.strip-info,
+html[data-theme="dark"] body.bab-theme-2 .paper-strip.strip-info,
+html[data-theme="dark"] body.bab-theme-3 .paper-strip.strip-info {
+  background: linear-gradient(90deg, rgba(59,130,246,0.18), rgba(99,160,255,0.14)) !important;
+  color: #8eb9f7 !important;
+}
+
+html[data-theme="dark"] body.bab-theme-1 .paper-strip.strip-glossary,
+html[data-theme="dark"] body.bab-theme-2 .paper-strip.strip-glossary,
+html[data-theme="dark"] body.bab-theme-3 .paper-strip.strip-glossary {
+  background: linear-gradient(90deg, rgba(139,92,246,0.18), rgba(167,139,250,0.14)) !important;
+  color: #c0aaf8 !important;
+}
+
+html[data-theme="dark"] body.bab-theme-1 .paper-strip.strip-summary,
+html[data-theme="dark"] body.bab-theme-2 .paper-strip.strip-summary,
+html[data-theme="dark"] body.bab-theme-3 .paper-strip.strip-summary {
+  background: linear-gradient(90deg, rgba(244,63,94,0.16), rgba(255,100,130,0.12)) !important;
+  color: #f48ca0 !important;
+}
+
+html[data-theme="dark"] body.bab-theme-1 .paper-board,
+html[data-theme="dark"] body.bab-theme-1 .paper-flap-card,
+html[data-theme="dark"] body.bab-theme-1 .paper-accordion-item,
+html[data-theme="dark"] body.bab-theme-1 .paper-tab,
+html[data-theme="dark"] body.bab-theme-1 .paper-tab-panel,
+html[data-theme="dark"] body.bab-theme-1 .paper-process-card,
+html[data-theme="dark"] body.bab-theme-1 .paper-process-panel,
+html[data-theme="dark"] body.bab-theme-1 .paper-timeline-node,
+html[data-theme="dark"] body.bab-theme-1 .paper-chip,
+html[data-theme="dark"] body.bab-theme-1 .keyword-legend-wrap,
+html[data-theme="dark"] body.bab-theme-1 .mindmap-card,
+html[data-theme="dark"] body.bab-theme-1 .paper-flow-card,
+html[data-theme="dark"] body.bab-theme-1 .org-node,
+html[data-theme="dark"] body.bab-theme-1 .metric-card,
+html[data-theme="dark"] body.bab-theme-1 .editorial-card,
+html[data-theme="dark"] body.bab-theme-1 .audience-card,
+html[data-theme="dark"] body.bab-theme-1 .note-card,
+html[data-theme="dark"] body.bab-theme-1 .value-card,
+html[data-theme="dark"] body.bab-theme-1 .content-block,
+html[data-theme="dark"] body.bab-theme-2 .paper-board,
+html[data-theme="dark"] body.bab-theme-2 .paper-flap-card,
+html[data-theme="dark"] body.bab-theme-2 .paper-accordion-item,
+html[data-theme="dark"] body.bab-theme-2 .paper-tab,
+html[data-theme="dark"] body.bab-theme-2 .paper-tab-panel,
+html[data-theme="dark"] body.bab-theme-2 .paper-process-card,
+html[data-theme="dark"] body.bab-theme-2 .paper-process-panel,
+html[data-theme="dark"] body.bab-theme-2 .paper-timeline-node,
+html[data-theme="dark"] body.bab-theme-2 .paper-chip,
+html[data-theme="dark"] body.bab-theme-2 .keyword-legend-wrap,
+html[data-theme="dark"] body.bab-theme-2 .mindmap-card,
+html[data-theme="dark"] body.bab-theme-2 .paper-flow-card,
+html[data-theme="dark"] body.bab-theme-2 .org-node,
+html[data-theme="dark"] body.bab-theme-2 .metric-card,
+html[data-theme="dark"] body.bab-theme-2 .editorial-card,
+html[data-theme="dark"] body.bab-theme-2 .audience-card,
+html[data-theme="dark"] body.bab-theme-2 .note-card,
+html[data-theme="dark"] body.bab-theme-2 .value-card,
+html[data-theme="dark"] body.bab-theme-2 .content-block,
+html[data-theme="dark"] body.bab-theme-3 .paper-board,
+html[data-theme="dark"] body.bab-theme-3 .paper-flap-card,
+html[data-theme="dark"] body.bab-theme-3 .paper-accordion-item,
+html[data-theme="dark"] body.bab-theme-3 .paper-tab,
+html[data-theme="dark"] body.bab-theme-3 .paper-tab-panel,
+html[data-theme="dark"] body.bab-theme-3 .paper-process-card,
+html[data-theme="dark"] body.bab-theme-3 .paper-process-panel,
+html[data-theme="dark"] body.bab-theme-3 .paper-timeline-node,
+html[data-theme="dark"] body.bab-theme-3 .paper-chip,
+html[data-theme="dark"] body.bab-theme-3 .keyword-legend-wrap,
+html[data-theme="dark"] body.bab-theme-3 .mindmap-card,
+html[data-theme="dark"] body.bab-theme-3 .paper-flow-card,
+html[data-theme="dark"] body.bab-theme-3 .org-node,
+html[data-theme="dark"] body.bab-theme-3 .metric-card,
+html[data-theme="dark"] body.bab-theme-3 .editorial-card,
+html[data-theme="dark"] body.bab-theme-3 .audience-card,
+html[data-theme="dark"] body.bab-theme-3 .note-card,
+html[data-theme="dark"] body.bab-theme-3 .value-card,
+html[data-theme="dark"] body.bab-theme-3 .content-block {
+  background: rgba(31, 29, 26, 0.88) !important;
+  border-color: rgba(220, 210, 190, 0.10) !important;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.22) !important;
+}
+
+html[data-theme="dark"] body.bab-theme-1 .site-footer,
+html[data-theme="dark"] body.bab-theme-2 .site-footer,
+html[data-theme="dark"] body.bab-theme-3 .site-footer {
+  background: rgba(28, 26, 23, 0.82) !important;
+  border-top-color: rgba(220, 210, 190, 0.10) !important;
+}
+
+/* =========================================================
+   FINAL LABEL FIX — BAB INDUK & SUBTOPIK NUMBER (DARK MODE)
+   Letak PALING BAWAH SEKALI
+========================================================= */
+
+html[data-theme="dark"] body.bab-theme-1 .paper-label,
+html[data-theme="dark"] body.bab-theme-1 .paper-label.small,
+html[data-theme="dark"] body.bab-theme-1 .bab-card-top,
+html[data-theme="dark"] body.bab-theme-2 .paper-label,
+html[data-theme="dark"] body.bab-theme-2 .paper-label.small,
+html[data-theme="dark"] body.bab-theme-2 .bab-card-top,
+html[data-theme="dark"] body.bab-theme-3 .paper-label,
+html[data-theme="dark"] body.bab-theme-3 .paper-label.small,
+html[data-theme="dark"] body.bab-theme-3 .bab-card-top {
+  background-image: none !important;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.22) !important;
+}
+
+/* Bab 1 */
+html[data-theme="dark"] body.bab-theme-1 .paper-label,
+html[data-theme="dark"] body.bab-theme-1 .paper-label.small,
+html[data-theme="dark"] body.bab-theme-1 .bab-card-top {
+  background-color: rgba(82, 179, 150, 0.16) !important;
+  color: #99dbc8 !important;
+  border: 1px solid rgba(126, 207, 184, 0.16) !important;
+}
+
+/* Bab 2 */
+html[data-theme="dark"] body.bab-theme-2 .paper-label,
+html[data-theme="dark"] body.bab-theme-2 .paper-label.small,
+html[data-theme="dark"] body.bab-theme-2 .bab-card-top {
+  background-color: rgba(88, 135, 206, 0.16) !important;
+  color: #a9c4f2 !important;
+  border: 1px solid rgba(169, 196, 242, 0.16) !important;
+}
+
+/* Bab 3 */
+html[data-theme="dark"] body.bab-theme-3 .paper-label,
+html[data-theme="dark"] body.bab-theme-3 .paper-label.small,
+html[data-theme="dark"] body.bab-theme-3 .bab-card-top {
+  background-color: rgba(120, 138, 156, 0.16) !important;
+  color: #ccd7e1 !important;
+  border: 1px solid rgba(204, 215, 225, 0.14) !important;
+}
