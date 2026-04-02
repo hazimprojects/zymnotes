@@ -112,86 +112,86 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-// =========================
-// PAPER ACCORDION
-// =========================
-const accordionTriggers = document.querySelectorAll(".paper-accordion-trigger");
+  // =========================
+  // PAPER ACCORDION
+  // =========================
+  const accordionTriggers = document.querySelectorAll(".paper-accordion-trigger");
 
-accordionTriggers.forEach((trigger) => {
-  trigger.addEventListener("click", () => {
-    const targetId = trigger.getAttribute("data-accordion");
-    if (!targetId) return;
+  function setAccordionState(item, open) {
+    const trigger = item.querySelector(":scope > .paper-accordion-trigger");
+    const panel = item.querySelector(":scope > .paper-accordion-panel");
+    if (!trigger || !panel) return;
 
-    const targetPanel = document.getElementById(targetId);
-    if (!targetPanel) return;
+    item.classList.toggle("is-open", open);
+    trigger.classList.toggle("active", open);
+    trigger.setAttribute("aria-expanded", open ? "true" : "false");
+    panel.classList.toggle("active", open);
+  }
 
-    const currentItem = trigger.closest(".paper-accordion-item");
-    const accordionGroup = trigger.closest(".paper-accordion");
-    if (!accordionGroup || !currentItem) return;
+  accordionTriggers.forEach((trigger) => {
+    trigger.addEventListener("click", () => {
+      const currentItem = trigger.closest(".paper-accordion-item");
+      const accordionGroup = trigger.closest(".paper-accordion");
+      if (!currentItem || !accordionGroup) return;
 
-    const isOpen = currentItem.classList.contains("is-open");
+      const wasOpen = currentItem.classList.contains("is-open");
+      const anchorTop = trigger.getBoundingClientRect().top;
 
-    // Simpan posisi trigger sebelum layout berubah
-    const beforeTop = trigger.getBoundingClientRect().top;
+      // Matikan smooth scroll sementara
+      document.documentElement.classList.add("accordion-no-smooth-scroll");
+      document.body.classList.add("accordion-no-smooth-scroll");
 
-    // Matikan smooth scroll sementara supaya pampasan scroll tidak "meluncur"
-    document.documentElement.classList.add("accordion-no-smooth-scroll");
+      // Tutup semua item tahap yang sama
+      accordionGroup.querySelectorAll(":scope > .paper-accordion-item").forEach((item) => {
+        setAccordionState(item, false);
+      });
 
-    // Tutup hanya accordion tahap ini
-    accordionGroup.querySelectorAll(":scope > .paper-accordion-item").forEach((item) => {
-      item.classList.remove("is-open");
+      // Buka item semasa jika sebelum ini tertutup
+      if (!wasOpen) {
+        setAccordionState(currentItem, true);
+      }
+
+      // Buang focus ring / box hitam default browser
+      trigger.blur();
+
+      // Pastikan trigger yang ditekan kekal pada tempat sama
+      let rafId = 0;
+      let stillFrames = 0;
+      let lastTop = null;
+      const REQUIRED_STILL_FRAMES = 10;
+      const MAX_FRAMES = 40;
+      let frameCount = 0;
+
+      function stabilize() {
+        frameCount += 1;
+
+        const currentTop = trigger.getBoundingClientRect().top;
+        const delta = currentTop - anchorTop;
+
+        if (Math.abs(delta) > 0.5) {
+          window.scrollTo(window.scrollX, window.scrollY + delta);
+        }
+
+        const adjustedTop = trigger.getBoundingClientRect().top;
+        if (lastTop !== null && Math.abs(adjustedTop - lastTop) < 0.25) {
+          stillFrames += 1;
+        } else {
+          stillFrames = 0;
+        }
+        lastTop = adjustedTop;
+
+        if (stillFrames < REQUIRED_STILL_FRAMES && frameCount < MAX_FRAMES) {
+          rafId = requestAnimationFrame(stabilize);
+        } else {
+          document.documentElement.classList.remove("accordion-no-smooth-scroll");
+          document.body.classList.remove("accordion-no-smooth-scroll");
+          if (rafId) cancelAnimationFrame(rafId);
+        }
+      }
+
+      rafId = requestAnimationFrame(stabilize);
     });
-
-    accordionGroup
-      .querySelectorAll(":scope > .paper-accordion-item > .paper-accordion-trigger")
-      .forEach((btn) => {
-        btn.classList.remove("active");
-        btn.setAttribute("aria-expanded", "false");
-      });
-
-    accordionGroup
-      .querySelectorAll(":scope > .paper-accordion-item > .paper-accordion-panel")
-      .forEach((panel) => {
-        panel.classList.remove("active");
-      });
-
-    // Jika item tadi belum buka, buka item itu
-    if (!isOpen) {
-      currentItem.classList.add("is-open");
-      trigger.classList.add("active");
-      trigger.setAttribute("aria-expanded", "true");
-      targetPanel.classList.add("active");
-    }
-
-    // Buang fokus supaya tak muncul box hitam / focus ring
-    trigger.blur();
-
-    // Kekalkan trigger pada kedudukan yang sama dalam viewport
-    const start = performance.now();
-    const DURATION = 450;
-
-    function keepTriggerStable(now) {
-      const afterTop = trigger.getBoundingClientRect().top;
-      const delta = afterTop - beforeTop;
-
-      if (Math.abs(delta) > 0.5) {
-        window.scrollTo({
-          top: window.scrollY + delta,
-          behavior: "instant"
-        });
-      }
-
-      if (now - start < DURATION) {
-        requestAnimationFrame(keepTriggerStable);
-      } else {
-        // kemas semula
-        document.documentElement.classList.remove("accordion-no-smooth-scroll");
-      }
-    }
-
-    requestAnimationFrame(keepTriggerStable);
   });
-});
 
   // =========================
   // PAPER TIMELINE
@@ -253,7 +253,7 @@ accordionTriggers.forEach((trigger) => {
       window.addEventListener("load", revealFallback);
     }
   }
-}); // end DOMContentLoaded
+});
 
 // =========================
 // READING PROGRESS INDICATOR
@@ -451,15 +451,15 @@ accordionTriggers.forEach((trigger) => {
     { title: "2.7 · Nasionalisme Melayu", tag: "Subtopik 2.7", href: "bab-2-7.html" },
     { title: "2.8 · Kesan Nasionalisme di Tanah Melayu", tag: "Subtopik 2.8", href: "bab-2-8.html" },
     { title: "Bab 3 · Konflik Dunia dan Pendudukan Jepun", tag: "Bab Induk", href: "bab-3.html" },
-    { title: "3.1 · Latar Belakang Perang Dunia Pertama", tag: "Subtopik 3.1", href: "bab-3-1.html" },
-    { title: "3.2 · Kesan Perang Dunia Pertama", tag: "Subtopik 3.2", href: "bab-3-2.html" },
-    { title: "3.3 · Latar Belakang Perang Dunia Kedua", tag: "Subtopik 3.3", href: "bab-3-3.html" },
-    { title: "3.4 · Kesan Perang Dunia Kedua", tag: "Subtopik 3.4", href: "bab-3-4.html" },
-    { title: "3.5 · Pendudukan Jepun di Negara Kita", tag: "Subtopik 3.5", href: "bab-3-5.html" },
-    { title: "3.6 · Dasar Pemerintahan Jepun", tag: "Subtopik 3.6", href: "bab-3-6.html" },
-    { title: "3.7 · Penentangan terhadap Pendudukan Jepun", tag: "Subtopik 3.7", href: "bab-3-7.html" },
-    { title: "3.8 · Kesan Pendudukan Jepun", tag: "Subtopik 3.8", href: "bab-3-8.html" },
-    { title: "3.9 · Perkembangan Nasionalisme Selepas Perang", tag: "Subtopik 3.9", href: "bab-3-9.html" },
+    { title: "3.1 · Nasionalisme di Negara Kita Sebelum Perang Dunia", tag: "Subtopik 3.1", href: "bab-3-1.html" },
+    { title: "3.2 · Latar Belakang Perang Dunia", tag: "Subtopik 3.2", href: "bab-3-2.html" },
+    { title: "3.3 · Perang Dunia Kedua", tag: "Subtopik 3.3", href: "bab-3-3.html" },
+    { title: "3.4 · Perang Dunia Kedua di Asia Pasifik", tag: "Subtopik 3.4", href: "bab-3-4.html" },
+    { title: "3.5 · Faktor Kedatangan Jepun ke Negara Kita", tag: "Subtopik 3.5", href: "bab-3-5.html" },
+    { title: "3.6 · Dasar Pendudukan Jepun di Negara Kita", tag: "Subtopik 3.6", href: "bab-3-6.html" },
+    { title: "3.7 · Perjuangan Rakyat Menentang Pendudukan Jepun", tag: "Subtopik 3.7", href: "bab-3-7.html" },
+    { title: "3.8 · Perkembangan Gerakan Nasionalisme Tempatan dan Pendudukan Jepun", tag: "Subtopik 3.8", href: "bab-3-8.html" },
+    { title: "3.9 · Keadaan Negara Kita Selepas Kekalahan Jepun", tag: "Subtopik 3.9", href: "bab-3-9.html" },
   ];
 
   let INDEX = null;
