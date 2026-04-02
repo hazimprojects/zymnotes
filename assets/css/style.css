@@ -1731,6 +1731,22 @@ span.paper-chip {
 }
 
 /* =========================
+   ACCORDION STABILITY FIX
+========================= */
+
+.paper-accordion,
+.paper-accordion-item,
+.paper-accordion-trigger,
+.paper-accordion-panel {
+  overflow-anchor: none;
+}
+
+html.accordion-scroll-lock,
+body.accordion-scroll-lock {
+  overflow-anchor: none;
+}
+
+/* =========================
    STEPS / LISTS
 ========================= */
 
