@@ -1,219 +1,49 @@
 document.documentElement.classList.add("js-enhanced");
 
 // =========================
-// DISPLAY PANEL — Brightness + Warmth
-// Floating Kindle/iBooks style control
+// DARK MODE TOGGLE
 // =========================
-(function setupDisplayPanel() {
-  const STORAGE_KEY = "hazimedu-display";
+(function () {
+  const KEY = "hazimedu-theme";
 
-  // Presets: [brightness 0-100, warmth 0-100, label]
-  const PRESETS = {
-    terang:  { brightness: 100, warmth: 40,  label: "Terang" },
-    neutral: { brightness: 72,  warmth: 55,  label: "Neutral" },
-    malam:   { brightness: 28,  warmth: 72,  label: "Malam" },
-    gelap:   { brightness: 12,  warmth: 60,  label: "Gelap" },
-  };
-
-  // Load saved state
-  function loadState() {
-    try {
-      const saved = localStorage.getItem(STORAGE_KEY);
-      if (saved) return JSON.parse(saved);
-    } catch(e) {}
-    // Default: neutral
-    return { brightness: 72, warmth: 55 };
+  function getTheme() {
+    return localStorage.getItem(KEY) ||
+      (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
   }
 
-  function saveState(state) {
-    try { localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); } catch(e) {}
-  }
-
-  // Apply brightness + warmth to CSS custom properties on <html>
-  function applyDisplay(brightness, warmth) {
-    const root = document.documentElement;
-
-    // Brightness: 0 = very dark, 100 = full light
-    // We map to background lightness and whether dark theme applies
-    const isDark = brightness < 55;
-    root.setAttribute("data-theme", isDark ? "dark" : "light");
-
-    // Fine-tune background darkness via CSS filter on a dedicated overlay
-    // We use a CSS variable that controls the overlay opacity
-    const darknessOverlay = isDark
-      ? Math.max(0, (55 - brightness) / 55 * 0.55)  // 0 → 0.55 opacity dark overlay
-      : 0;
-
-    // Warmth: 0 = cool blue tint, 100 = warm amber tint
-    // Map to sepia-like warm overlay
-    const warmOverlay = (warmth - 50) / 50;  // -1 to +1
-    const warmR = warmOverlay > 0 ? Math.round(warmOverlay * 22) : 0;
-    const warmB = warmOverlay < 0 ? Math.round(-warmOverlay * 18) : 0;
-
-    root.style.setProperty("--display-dark-overlay", darknessOverlay.toFixed(3));
-    root.style.setProperty("--display-warm-r", warmR);
-    root.style.setProperty("--display-warm-b", warmB);
-
-    // Inject/update overlay element
-    let overlay = document.getElementById("display-overlay");
-    if (!overlay) {
-      overlay = document.createElement("div");
-      overlay.id = "display-overlay";
-      overlay.style.cssText = `
-        position: fixed; inset: 0; z-index: 9999;
-        pointer-events: none; mix-blend-mode: multiply;
-        transition: background 0.3s ease;
-      `;
-      document.body.appendChild(overlay);
-    }
-
-    if (darknessOverlay > 0) {
-      overlay.style.background = `rgba(0,0,0,${darknessOverlay.toFixed(3)})`;
-    } else if (warmR > 0) {
-      overlay.style.background = `rgba(${warmR * 4},${Math.round(warmR*1.5)},0,${(warmR/22*0.18).toFixed(3)})`;
-    } else if (warmB > 0) {
-      overlay.style.background = `rgba(0,${Math.round(warmB*0.8)},${warmB * 4},${(warmB/18*0.12).toFixed(3)})`;
-    } else {
-      overlay.style.background = "transparent";
-    }
-  }
-
-  function buildPanel() {
-    // Cari nav-wrap untuk inject display-wrap
-    const navWrap = document.querySelector(".nav-wrap");
-    if (!navWrap) return;
-
-    // Wrapper (supaya panel boleh position: absolute relative to ini)
-    const wrap = document.createElement("div");
-    wrap.className = "display-wrap";
-
-    // FAB button — emoji cantik, inline dalam nav
-    const fab = document.createElement("button");
-    fab.className = "display-fab";
-    fab.setAttribute("aria-label", "Tetapan paparan");
-    fab.setAttribute("type", "button");
-    fab.textContent = "🌤️";
-
-    // Panel dropdown
-    const panel = document.createElement("div");
-    panel.className = "display-panel";
-    panel.setAttribute("role", "dialog");
-    panel.setAttribute("aria-label", "Tetapan paparan");
-    panel.innerHTML = `
-      <p class="display-panel-title">Tetapan Paparan</p>
-
-      <div class="display-slider-row">
-        <span class="display-slider-icon">🌑</span>
-        <input type="range" class="display-slider" id="slider-brightness"
-          min="5" max="100" step="1" value="72"
-          aria-label="Kecerahan">
-        <span class="display-slider-icon">☀️</span>
-      </div>
-
-      <div class="display-slider-row">
-        <span class="display-slider-icon">❄️</span>
-        <input type="range" class="display-slider" id="slider-warmth"
-          min="0" max="100" step="1" value="55"
-          aria-label="Suhu warna">
-        <span class="display-slider-icon">🕯️</span>
-      </div>
-
-      <div class="display-divider"></div>
-
-      <div class="display-presets">
-        <button class="display-preset" data-preset="terang" type="button">☀️ Terang</button>
-        <button class="display-preset" data-preset="neutral" type="button">🌤️ Neutral</button>
-        <button class="display-preset" data-preset="malam" type="button">🌙 Malam</button>
-        <button class="display-preset" data-preset="gelap" type="button">🌑 Gelap</button>
-      </div>
-    `;
-
-    wrap.appendChild(fab);
-    wrap.appendChild(panel);
-
-    // Sisipkan sebelum nav-toggle (kalau ada) atau hujung nav-wrap
-    const navToggle = navWrap.querySelector(".nav-toggle");
-    if (navToggle) {
-      navWrap.insertBefore(wrap, navToggle);
-    } else {
-      navWrap.appendChild(wrap);
-    }
-
-    const sliderBrightness = panel.querySelector("#slider-brightness");
-    const sliderWarmth = panel.querySelector("#slider-warmth");
-    const presetBtns = panel.querySelectorAll(".display-preset");
-
-    // Load & apply saved state
-    const state = loadState();
-    sliderBrightness.value = state.brightness;
-    sliderWarmth.value = state.warmth;
-    applyDisplay(state.brightness, state.warmth);
-    updateActivePreset(state.brightness, state.warmth);
-
-    // FAB toggle
-    fab.addEventListener("click", (e) => {
-      e.stopPropagation();
-      const isOpen = panel.classList.toggle("is-open");
-      fab.classList.toggle("is-open", isOpen);
+  function applyTheme(theme) {
+    document.documentElement.setAttribute("data-theme", theme);
+    localStorage.setItem(KEY, theme);
+    document.querySelectorAll(".display-fab").forEach((btn) => {
+      btn.textContent = theme === "dark" ? "🌙" : "☀️";
     });
+  }
 
-    // Close on outside click
-    document.addEventListener("click", (e) => {
-      if (!panel.contains(e.target) && e.target !== fab) {
-        panel.classList.remove("is-open");
-        fab.classList.remove("is-open");
-      }
-    });
+  // Apply immediately to avoid flash
+  applyTheme(getTheme());
 
-    // Slider events
-    function onSliderChange() {
-      const b = parseInt(sliderBrightness.value);
-      const w = parseInt(sliderWarmth.value);
-      applyDisplay(b, w);
-      saveState({ brightness: b, warmth: w });
-      updateActivePreset(b, w);
-    }
-
-    sliderBrightness.addEventListener("input", onSliderChange);
-    sliderWarmth.addEventListener("input", onSliderChange);
-
-    // Preset buttons
-    presetBtns.forEach((btn) => {
+  document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll(".nav-wrap").forEach((nav) => {
+      if (nav.querySelector(".display-fab")) return;
+      const btn = document.createElement("button");
+      btn.className = "display-fab";
+      btn.setAttribute("type", "button");
+      btn.setAttribute("aria-label", "Tukar mod paparan");
+      btn.textContent = getTheme() === "dark" ? "🌙" : "☀️";
       btn.addEventListener("click", () => {
-        const key = btn.getAttribute("data-preset");
-        const preset = PRESETS[key];
-        if (!preset) return;
-        sliderBrightness.value = preset.brightness;
-        sliderWarmth.value = preset.warmth;
-        applyDisplay(preset.brightness, preset.warmth);
-        saveState({ brightness: preset.brightness, warmth: preset.warmth });
-        updateActivePreset(preset.brightness, preset.warmth);
+        const current = document.documentElement.getAttribute("data-theme");
+        applyTheme(current === "dark" ? "light" : "dark");
       });
+      const navToggle = nav.querySelector(".nav-toggle");
+      navToggle ? nav.insertBefore(btn, navToggle) : nav.appendChild(btn);
     });
+  });
 
-    function updateActivePreset(b, w) {
-      presetBtns.forEach((btn) => btn.classList.remove("is-active"));
-      for (const [key, preset] of Object.entries(PRESETS)) {
-        if (Math.abs(preset.brightness - b) < 3 && Math.abs(preset.warmth - w) < 3) {
-          const match = panel.querySelector(`[data-preset="${key}"]`);
-          if (match) match.classList.add("is-active");
-          break;
-        }
-      }
-      // Update fab icon ikut kecerahan
-      if (b < 25) fab.textContent = "🌑";
-      else if (b < 45) fab.textContent = "🌙";
-      else if (b < 70) fab.textContent = "🌤️";
-      else fab.textContent = "☀️";
-    }
-  }
-
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", buildPanel);
-  } else {
-    buildPanel();
-  }
+  window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", (e) => {
+    if (!localStorage.getItem(KEY)) applyTheme(e.matches ? "dark" : "light");
+  });
 })();
+
 // =========================
 // NAV TOGGLE
 // =========================
@@ -236,9 +66,9 @@ if (navToggle && siteNav) {
   document.addEventListener("click", (event) => {
     const clickedInsideNav = siteNav.contains(event.target);
     const clickedToggle = navToggle.contains(event.target);
-    const clickedThemeToggle = event.target.closest(".theme-toggle");
+    const clickedDisplayFab = event.target.closest(".display-fab");
 
-    if (!clickedInsideNav && !clickedToggle && !clickedThemeToggle && siteNav.classList.contains("open")) {
+    if (!clickedInsideNav && !clickedToggle && !clickedDisplayFab && siteNav.classList.contains("open")) {
       siteNav.classList.remove("open");
       navToggle.setAttribute("aria-expanded", "false");
     }
@@ -679,100 +509,7 @@ if (revealElements.length) {
       opacity: 0;
       pointer-events: none;
       transform: translateY(10px);
-    }
-
-    [data-theme="dark"] .reading-progress-pill {
-      background: rgba(28, 27, 24, 0.95);
-      border-color: rgba(220, 210, 190, 0.14);
-    }
-
-    .reading-progress-pill.is-visible {
-      opacity: 1;
-      pointer-events: auto;
-      transform: translateY(0);
-    }
-
-    .reading-progress-pill:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 16px 34px rgba(36, 49, 63, 0.16);
-    }
-
-    .reading-progress-top {
-      display: flex;
-      align-items: flex-end;
-      justify-content: space-between;
-      gap: 6px;
-      margin-bottom: 7px;
-    }
-
-    .reading-progress-label {
-      font-family: "Nunito", sans-serif;
-      font-size: 10px;
-      font-weight: 800;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      color: #5d6a79;
-      line-height: 1;
-    }
-
-    [data-theme="dark"] .reading-progress-label { color: #8c8579; }
-
-    .reading-progress-percent {
-      font-family: "Nunito", sans-serif;
-      font-size: 15px;
-      font-weight: 900;
-      line-height: 1;
-      color: #24313f;
-      transition: color 0.35s ease;
-    }
-
-    [data-theme="dark"] .reading-progress-percent { color: #ddd8cc; }
-
-    .reading-progress-bar {
-      position: relative;
-      height: 7px;
-      border-radius: 999px;
-      overflow: hidden;
-      background: #edf1f5;
-      transition: background 0.35s ease;
-    }
-
-    [data-theme="dark"] .reading-progress-bar { background: rgba(220,210,190,0.1); }
-
-    .reading-progress-fill {
-      position: absolute;
-      inset: 0 auto 0 0;
-      width: 0%;
-      border-radius: 999px;
-      background: linear-gradient(90deg, #2f7a67, #d7b163);
-      transition: width 0.18s ease;
-    }
-
-    .reading-progress-hint {
-      margin-top: 7px;
-      font-family: "Nunito", sans-serif;
-      font-size: 9px;
-      font-weight: 800;
-      color: #6b7280;
-      text-align: center;
-      line-height: 1.2;
-      min-height: 22px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    [data-theme="dark"] .reading-progress-hint { color: #8c8579; }
-
-    @media (max-width: 760px) {
-      .reading-progress-pill {
-        right: 12px; bottom: 14px; width: 86px;
-        padding: 9px 9px 8px; border-radius: 16px;
-      }
-      .reading-progress-percent { font-size: 14px; }
-      .reading-progress-label, .reading-progress-hint { font-size: 9px; }
-    }
-  `;
+    }`;
   document.head.appendChild(style);
 
   const pill = document.createElement("button");
