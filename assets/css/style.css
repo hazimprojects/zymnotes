@@ -1607,26 +1607,19 @@ span.paper-chip {
 }
 
 .paper-accordion-panel {
-  display: none;
-  padding: 0 1.1rem 1.1rem;
+  max-height: 0;
   overflow: hidden;
+  padding: 0 1.1rem;
+  opacity: 0;
+  transition: max-height 0.35s ease, opacity 0.25s ease, padding 0.35s ease;
 }
 
 .paper-accordion-panel.active,
 .paper-accordion-item.is-open .paper-accordion-panel {
-  display: block;
-  animation: accordionOpen 0.3s ease;
-}
-
-@keyframes accordionOpen {
-  from {
-    opacity: 0;
-    transform: translateY(-8px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  max-height: 2000px;
+  opacity: 1;
+  padding: 0 1.1rem 1.1rem;
+  transition: max-height 0.4s ease, opacity 0.3s ease 0.05s, padding 0.35s ease;
 }
 
 /* =========================
