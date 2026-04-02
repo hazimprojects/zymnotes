@@ -190,7 +190,7 @@ document.addEventListener("DOMContentLoaded", function () {
             setTimeout(() => {
               trigger.scrollIntoView({
                 behavior: "smooth",
-                block: "center",
+                block: "start",
                 inline: "nearest",
               });
             }, 40);
