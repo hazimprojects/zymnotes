@@ -7,8 +7,10 @@ document.documentElement.classList.add("js-enhanced");
   const KEY = "hazimedu-theme";
 
   function getTheme() {
-    return localStorage.getItem(KEY) ||
-      (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+    return (
+      localStorage.getItem(KEY) ||
+      (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light")
+    );
   }
 
   function applyTheme(theme) {
@@ -19,186 +21,221 @@ document.documentElement.classList.add("js-enhanced");
     });
   }
 
-  // Apply immediately to avoid flash
   applyTheme(getTheme());
 
   document.addEventListener("DOMContentLoaded", function () {
     document.querySelectorAll(".nav-wrap").forEach((nav) => {
       if (nav.querySelector(".display-fab")) return;
+
       const btn = document.createElement("button");
       btn.className = "display-fab";
       btn.setAttribute("type", "button");
       btn.setAttribute("aria-label", "Tukar mod paparan");
       btn.textContent = getTheme() === "dark" ? "🌙" : "☀️";
+
       btn.addEventListener("click", () => {
         const current = document.documentElement.getAttribute("data-theme");
         applyTheme(current === "dark" ? "light" : "dark");
       });
+
       const navToggle = nav.querySelector(".nav-toggle");
       navToggle ? nav.insertBefore(btn, navToggle) : nav.appendChild(btn);
     });
   });
 
   window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", (e) => {
-    if (!localStorage.getItem(KEY)) applyTheme(e.matches ? "dark" : "light");
+    if (!localStorage.getItem(KEY)) {
+      applyTheme(e.matches ? "dark" : "light");
+    }
   });
 })();
 
-
 document.addEventListener("DOMContentLoaded", function () {
+  // =========================
+  // NAV TOGGLE
+  // =========================
+  const navToggle = document.querySelector(".nav-toggle");
+  const siteNav = document.querySelector(".site-nav");
 
-// =========================
-// NAV TOGGLE
-// =========================
-const navToggle = document.querySelector(".nav-toggle");
-const siteNav = document.querySelector(".site-nav");
-
-if (navToggle && siteNav) {
-  navToggle.addEventListener("click", () => {
-    const isOpen = siteNav.classList.toggle("open");
-    navToggle.setAttribute("aria-expanded", String(isOpen));
-  });
-
-  siteNav.querySelectorAll("a").forEach((link) => {
-    link.addEventListener("click", () => {
-      siteNav.classList.remove("open");
-      navToggle.setAttribute("aria-expanded", "false");
+  if (navToggle && siteNav) {
+    navToggle.addEventListener("click", () => {
+      const isOpen = siteNav.classList.toggle("open");
+      navToggle.setAttribute("aria-expanded", String(isOpen));
     });
-  });
 
-  document.addEventListener("click", (event) => {
-    const clickedInsideNav = siteNav.contains(event.target);
-    const clickedToggle = navToggle.contains(event.target);
-    const clickedDisplayFab = event.target.closest(".display-fab");
+    siteNav.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        siteNav.classList.remove("open");
+        navToggle.setAttribute("aria-expanded", "false");
+      });
+    });
 
-    if (!clickedInsideNav && !clickedToggle && !clickedDisplayFab && siteNav.classList.contains("open")) {
-      siteNav.classList.remove("open");
-      navToggle.setAttribute("aria-expanded", "false");
-    }
-  });
-}
+    document.addEventListener("click", (event) => {
+      const clickedInsideNav = siteNav.contains(event.target);
+      const clickedToggle = navToggle.contains(event.target);
+      const clickedDisplayFab = event.target.closest(".display-fab");
 
-// =========================
-// PROCESS CARDS
-// =========================
-const processCards = document.querySelectorAll(".paper-process-card");
-const processPanels = document.querySelectorAll(".paper-process-panel");
-
-function activateProcessCard(card) {
-  const targetId = card.getAttribute("data-process");
-  if (!targetId) return;
-  const targetPanel = document.getElementById(targetId);
-  if (!targetPanel) return;
-
-  processCards.forEach((item) => item.classList.remove("active"));
-  processPanels.forEach((panel) => panel.classList.remove("active"));
-
-  card.classList.add("active");
-  targetPanel.classList.add("active");
-}
-
-if (processCards.length && processPanels.length) {
-  processCards.forEach((card) => {
-    card.addEventListener("click", () => activateProcessCard(card));
-  });
-  if (!document.querySelector(".paper-process-card.active")) {
-    activateProcessCard(processCards[0]);
+      if (!clickedInsideNav && !clickedToggle && !clickedDisplayFab && siteNav.classList.contains("open")) {
+        siteNav.classList.remove("open");
+        navToggle.setAttribute("aria-expanded", "false");
+      }
+    });
   }
-}
 
-// =========================
-// PAPER ACCORDION
-// =========================
-const accordionTriggers = document.querySelectorAll(".paper-accordion-trigger");
+  // =========================
+  // PROCESS CARDS
+  // =========================
+  const processCards = document.querySelectorAll(".paper-process-card");
+  const processPanels = document.querySelectorAll(".paper-process-panel");
 
-accordionTriggers.forEach((trigger) => {
-  trigger.addEventListener("click", () => {
-    const targetId = trigger.getAttribute("data-accordion");
+  function activateProcessCard(card) {
+    const targetId = card.getAttribute("data-process");
     if (!targetId) return;
+
     const targetPanel = document.getElementById(targetId);
     if (!targetPanel) return;
 
-    const currentItem = trigger.closest(".paper-accordion-item");
-    const accordionGroup = trigger.closest(".paper-accordion");
-    const isOpen = currentItem?.classList.contains("is-open");
+    processCards.forEach((item) => item.classList.remove("active"));
+    processPanels.forEach((panel) => panel.classList.remove("active"));
 
-    if (!accordionGroup || !currentItem) return;
+    card.classList.add("active");
+    targetPanel.classList.add("active");
+  }
 
-    const triggerRectBefore = trigger.getBoundingClientRect();
-    const triggerOffsetFromTop = triggerRectBefore.top;
-
-    accordionGroup.querySelectorAll(".paper-accordion-item").forEach((item) => item.classList.remove("is-open"));
-    accordionGroup.querySelectorAll(".paper-accordion-trigger").forEach((item) => {
-      item.classList.remove("active");
-      item.setAttribute("aria-expanded", "false");
+  if (processCards.length && processPanels.length) {
+    processCards.forEach((card) => {
+      card.addEventListener("click", () => activateProcessCard(card));
     });
-    accordionGroup.querySelectorAll(".paper-accordion-panel").forEach((panel) => panel.classList.remove("active"));
 
-    if (!isOpen) {
-      currentItem.classList.add("is-open");
-      trigger.classList.add("active");
-      trigger.setAttribute("aria-expanded", "true");
-      targetPanel.classList.add("active");
+    if (!document.querySelector(".paper-process-card.active")) {
+      activateProcessCard(processCards[0]);
     }
+  }
+
+  // =========================
+  // PAPER ACCORDION
+  // =========================
+  const accordionTriggers = document.querySelectorAll(".paper-accordion-trigger");
+
+  accordionTriggers.forEach((trigger) => {
+    trigger.addEventListener("click", () => {
+      const targetId = trigger.getAttribute("data-accordion");
+      if (!targetId) return;
+
+      const targetPanel = document.getElementById(targetId);
+      if (!targetPanel) return;
+
+      const currentItem = trigger.closest(".paper-accordion-item");
+      const accordionGroup = trigger.closest(".paper-accordion");
+      if (!accordionGroup || !currentItem) return;
+
+      const isOpen = currentItem.classList.contains("is-open");
+
+      // Simpan posisi trigger sebelum layout berubah
+      const beforeTop = trigger.getBoundingClientRect().top;
+
+      // Tutup hanya accordion tahap ini
+      accordionGroup.querySelectorAll(":scope > .paper-accordion-item").forEach((item) => {
+        item.classList.remove("is-open");
+      });
+
+      accordionGroup
+        .querySelectorAll(":scope > .paper-accordion-item > .paper-accordion-trigger")
+        .forEach((btn) => {
+          btn.classList.remove("active");
+          btn.setAttribute("aria-expanded", "false");
+        });
+
+      accordionGroup
+        .querySelectorAll(":scope > .paper-accordion-item > .paper-accordion-panel")
+        .forEach((panel) => {
+          panel.classList.remove("active");
+        });
+
+      // Jika belum terbuka, buka item ini
+      if (!isOpen) {
+        currentItem.classList.add("is-open");
+        trigger.classList.add("active");
+        trigger.setAttribute("aria-expanded", "true");
+        targetPanel.classList.add("active");
+      }
+
+      // Kekalkan kedudukan bacaan supaya skrin tidak "melompat"
+      requestAnimationFrame(() => {
+        const afterTop = trigger.getBoundingClientRect().top;
+        const delta = afterTop - beforeTop;
+
+        if (Math.abs(delta) > 1) {
+          window.scrollBy({
+            top: delta,
+            left: 0,
+            behavior: "auto",
+          });
+        }
+      });
+    });
   });
-});
 
-// =========================
-// PAPER TIMELINE
-// =========================
-const paperTimelineNodes = document.querySelectorAll(".paper-timeline-node");
-const paperTimelinePanels = document.querySelectorAll(".paper-timeline-panel");
+  // =========================
+  // PAPER TIMELINE
+  // =========================
+  const paperTimelineNodes = document.querySelectorAll(".paper-timeline-node");
+  const paperTimelinePanels = document.querySelectorAll(".paper-timeline-panel");
 
-paperTimelineNodes.forEach((node) => {
-  node.addEventListener("click", () => {
-    const targetId = node.getAttribute("data-timeline");
-    if (!targetId) return;
-    const targetPanel = document.getElementById(targetId);
-    if (!targetPanel) return;
+  paperTimelineNodes.forEach((node) => {
+    node.addEventListener("click", () => {
+      const targetId = node.getAttribute("data-timeline");
+      if (!targetId) return;
 
-    const isOpen = node.classList.contains("active");
+      const targetPanel = document.getElementById(targetId);
+      if (!targetPanel) return;
 
-    paperTimelineNodes.forEach((item) => item.classList.remove("active"));
-    paperTimelinePanels.forEach((panel) => panel.classList.remove("active"));
+      const isOpen = node.classList.contains("active");
 
-    if (!isOpen) {
-      node.classList.add("active");
-      targetPanel.classList.add("active");
-    }
+      paperTimelineNodes.forEach((item) => item.classList.remove("active"));
+      paperTimelinePanels.forEach((panel) => panel.classList.remove("active"));
+
+      if (!isOpen) {
+        node.classList.add("active");
+        targetPanel.classList.add("active");
+      }
+    });
   });
-});
 
-// =========================
-// REVEAL ON SCROLL
-// =========================
-const revealElements = document.querySelectorAll(".reveal-on-scroll");
+  // =========================
+  // REVEAL ON SCROLL
+  // =========================
+  const revealElements = document.querySelectorAll(".reveal-on-scroll");
 
-if (revealElements.length) {
-  if ("IntersectionObserver" in window) {
-    const revealObserver = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("visible");
-            revealObserver.unobserve(entry.target);
+  if (revealElements.length) {
+    if ("IntersectionObserver" in window) {
+      const revealObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+              revealObserver.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.1, rootMargin: "0px 0px -30px 0px" }
+      );
+
+      revealElements.forEach((el) => revealObserver.observe(el));
+    } else {
+      function revealFallback() {
+        revealElements.forEach((el) => {
+          const rect = el.getBoundingClientRect();
+          if (rect.top < window.innerHeight - 70) {
+            el.classList.add("visible");
           }
         });
-      },
-      { threshold: 0.1, rootMargin: "0px 0px -30px 0px" }
-    );
-    revealElements.forEach((el) => revealObserver.observe(el));
-  } else {
-    function revealFallback() {
-      revealElements.forEach((el) => {
-        const rect = el.getBoundingClientRect();
-        if (rect.top < window.innerHeight - 70) el.classList.add("visible");
-      });
-    }
-    window.addEventListener("scroll", revealFallback, { passive: true });
-    window.addEventListener("load", revealFallback);
-  }
-}
+      }
 
+      window.addEventListener("scroll", revealFallback, { passive: true });
+      window.addEventListener("load", revealFallback);
+    }
+  }
 }); // end DOMContentLoaded
 
 // =========================
@@ -241,7 +278,71 @@ if (revealElements.length) {
       opacity: 0;
       pointer-events: none;
       transform: translateY(10px);
-    }`;
+    }
+    .reading-progress-pill.is-visible {
+      opacity: 1;
+      pointer-events: auto;
+      transform: translateY(0);
+    }
+    .reading-progress-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 7px;
+    }
+    .reading-progress-label {
+      font-size: 0.7rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: #5d6a79;
+    }
+    .reading-progress-percent {
+      font-size: 0.75rem;
+      font-weight: 900;
+      color: #24313f;
+    }
+    .reading-progress-bar {
+      height: 8px;
+      border-radius: 999px;
+      background: rgba(92, 110, 132, 0.14);
+      overflow: hidden;
+      margin-bottom: 7px;
+    }
+    .reading-progress-fill {
+      height: 100%;
+      width: 0%;
+      border-radius: 999px;
+      background: linear-gradient(90deg, #2f7a67, #d3aa4e);
+      transition: width 0.2s ease;
+    }
+    .reading-progress-hint {
+      font-size: 0.72rem;
+      line-height: 1.25;
+      font-weight: 700;
+      color: #6a6f7b;
+      text-align: center;
+    }
+
+    [data-theme="dark"] .reading-progress-pill {
+      background: rgba(36, 34, 32, 0.95);
+      border-color: rgba(220, 210, 190, 0.12);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.32);
+    }
+    [data-theme="dark"] .reading-progress-label {
+      color: #a39a8d;
+    }
+    [data-theme="dark"] .reading-progress-percent {
+      color: #ddd8cc;
+    }
+    [data-theme="dark"] .reading-progress-bar {
+      background: rgba(220, 210, 190, 0.12);
+    }
+    [data-theme="dark"] .reading-progress-hint {
+      color: #a39a8d;
+    }
+  `;
   document.head.appendChild(style);
 
   const pill = document.createElement("button");
@@ -272,6 +373,7 @@ if (revealElements.length) {
     const viewportHeight = window.innerHeight;
     const start = mainTop;
     const end = Math.max(mainTop + mainHeight - viewportHeight, start + 1);
+
     return Math.max(0, Math.min(100, ((scrollTop - start) / (end - start)) * 100));
   }
 
@@ -291,7 +393,10 @@ if (revealElements.length) {
     pill.classList.toggle("is-visible", window.scrollY > 120);
   }
 
-  pill.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
+  pill.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+
   window.addEventListener("scroll", updateReadingProgress, { passive: true });
   window.addEventListener("resize", updateReadingProgress);
   window.addEventListener("load", updateReadingProgress);
@@ -345,7 +450,9 @@ if (revealElements.length) {
 
   function extractText(html) {
     const doc = new DOMParser().parseFromString(html, "text/html");
-    doc.querySelectorAll("header, footer, script, style, .site-nav, .hero-actions, .keyword-legend-wrap").forEach(function(el) { el.remove(); });
+    doc.querySelectorAll("header, footer, script, style, .site-nav, .hero-actions, .keyword-legend-wrap").forEach(function (el) {
+      el.remove();
+    });
     const main = doc.querySelector("main") || doc.body;
     return main ? main.textContent.replace(/\s+/g, " ").trim() : "";
   }
@@ -354,12 +461,15 @@ if (revealElements.length) {
     if (INDEX || indexBuilding) return;
     indexBuilding = true;
     INDEX = [];
-    const fetches = PAGES.map(async function(page) {
+
+    const fetches = PAGES.map(async function (page) {
       try {
         const res = await fetch(base + page.href);
         if (!res.ok) return;
+
         const html = await res.text();
         const fullText = extractText(html);
+
         INDEX.push({
           title: page.title,
           tag: page.tag,
@@ -367,8 +477,11 @@ if (revealElements.length) {
           fullText: fullText.toLowerCase(),
           excerpt: fullText.slice(0, 160) + "...",
         });
-      } catch(e) {}
+      } catch (e) {
+        // senyap sahaja
+      }
     });
+
     await Promise.all(fetches);
     indexBuilding = false;
   }
@@ -379,10 +492,16 @@ if (revealElements.length) {
 
   function highlight(text, query) {
     if (!query) return text;
-    query.trim().split(/\s+/).filter(Boolean).forEach(function(word) {
-      const esc = word.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-      text = text.replace(new RegExp("(" + esc + ")", "gi"), "<mark>$1</mark>");
-    });
+
+    query
+      .trim()
+      .split(/\s+/)
+      .filter(Boolean)
+      .forEach(function (word) {
+        const esc = word.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+        text = text.replace(new RegExp("(" + esc + ")", "gi"), "<mark>$1</mark>");
+      });
+
     return text;
   }
 
@@ -390,11 +509,14 @@ if (revealElements.length) {
     const words = query.toLowerCase().trim().split(/\s+/);
     const lower = fullText.toLowerCase();
     let best = -1;
-    words.forEach(function(w) {
+
+    words.forEach(function (w) {
       const p = lower.indexOf(w);
       if (p !== -1 && (best === -1 || p < best)) best = p;
     });
+
     if (best === -1) return fullText.slice(0, 160) + "...";
+
     const s = Math.max(0, best - 40);
     const e = Math.min(fullText.length, best + 160);
     return (s > 0 ? "..." : "") + fullText.slice(s, e) + "...";
@@ -402,52 +524,72 @@ if (revealElements.length) {
 
   function search(query) {
     if (!INDEX) return [];
+
     const q = normalize(query.trim());
     if (!q) return [];
+
     const words = q.split(/\s+/).filter(Boolean);
-    return INDEX.filter(function(item) {
+
+    return INDEX.filter(function (item) {
       const hay = normalize(item.fullText + " " + item.title);
-      return words.every(function(w) { return hay.includes(w); });
-    }).map(function(item) {
-      return Object.assign({}, item, { relevantExcerpt: findExcerpt(item.fullText, q) });
+      return words.every(function (w) {
+        return hay.includes(w);
+      });
+    }).map(function (item) {
+      return Object.assign({}, item, {
+        relevantExcerpt: findExcerpt(item.fullText, q),
+      });
     });
   }
 
   function clearResults() {
-    resultsContainer.querySelectorAll(".search-result-item").forEach(function(el) { el.remove(); });
+    resultsContainer.querySelectorAll(".search-result-item").forEach(function (el) {
+      el.remove();
+    });
     resultsContainer.classList.remove("has-results");
     if (emptyState) emptyState.classList.remove("visible");
     if (countEl) countEl.textContent = "";
   }
 
   function renderResults(results, query) {
-    resultsContainer.querySelectorAll(".search-result-item").forEach(function(el) { el.remove(); });
+    resultsContainer.querySelectorAll(".search-result-item").forEach(function (el) {
+      el.remove();
+    });
+
     if (results.length === 0) {
       resultsContainer.classList.remove("has-results");
       if (emptyState) emptyState.classList.add("visible");
       return;
     }
+
     if (emptyState) emptyState.classList.remove("visible");
     resultsContainer.classList.add("has-results");
     if (countEl) countEl.textContent = results.length + " keputusan ditemui";
-    results.forEach(function(item) {
+
+    results.forEach(function (item) {
       const a = document.createElement("a");
       a.className = "search-result-item";
       a.href = item.href;
       a.innerHTML =
-        '<span class="search-result-tag">' + item.tag + '</span>' +
-        '<p class="search-result-title">' + highlight(item.title, query) + '</p>' +
-        '<p class="search-result-excerpt">' + highlight(item.relevantExcerpt, query) + '</p>';
+        '<span class="search-result-tag">' + item.tag + "</span>" +
+        '<p class="search-result-title">' + highlight(item.title, query) + "</p>" +
+        '<p class="search-result-excerpt">' + highlight(item.relevantExcerpt, query) + "</p>";
       resultsContainer.appendChild(a);
     });
   }
 
-  var debounceTimer;
-  searchInput.addEventListener("input", function() {
+  let debounceTimer;
+
+  searchInput.addEventListener("input", function () {
     const query = this.value.trim();
     clearTimeout(debounceTimer);
-    if (!query) { clearResults(); return; }
-    debounceTimer = setTimeout(async function() {
+
+    if (!query) {
+      clearResults();
+      return;
+    }
+
+    debounceTimer = setTimeout(async function () {
       if (!INDEX) {
         resultsContainer.classList.add("has-results");
         if (countEl) countEl.textContent = "Sedang memuat indeks...";
@@ -458,18 +600,25 @@ if (revealElements.length) {
   });
 
   if ("requestIdleCallback" in window) {
-    requestIdleCallback(function() { buildIndex(); }, { timeout: 3000 });
+    requestIdleCallback(function () {
+      buildIndex();
+    }, { timeout: 3000 });
   } else {
-    setTimeout(function() { buildIndex(); }, 2000);
+    setTimeout(function () {
+      buildIndex();
+    }, 2000);
   }
 
-  document.addEventListener("keydown", function(e) {
+  document.addEventListener("keydown", function (e) {
     if (e.key === "/" && document.activeElement !== searchInput) {
       e.preventDefault();
       searchInput.focus();
       searchInput.scrollIntoView({ behavior: "smooth", block: "center" });
     }
-    if (e.key === "Escape" && document.activeElement === searchInput) searchInput.blur();
+
+    if (e.key === "Escape" && document.activeElement === searchInput) {
+      searchInput.blur();
+    }
   });
 })();
 
