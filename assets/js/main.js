@@ -79,15 +79,22 @@ document.documentElement.classList.add("js-enhanced");
   }
 
   function buildPanel() {
-    // FAB button
+    // Cari nav-wrap untuk inject display-wrap
+    const navWrap = document.querySelector(".nav-wrap");
+    if (!navWrap) return;
+
+    // Wrapper (supaya panel boleh position: absolute relative to ini)
+    const wrap = document.createElement("div");
+    wrap.className = "display-wrap";
+
+    // FAB button — emoji cantik, inline dalam nav
     const fab = document.createElement("button");
     fab.className = "display-fab";
     fab.setAttribute("aria-label", "Tetapan paparan");
     fab.setAttribute("type", "button");
-    fab.textContent = "☀";
-    document.body.appendChild(fab);
+    fab.textContent = "🌤️";
 
-    // Panel
+    // Panel dropdown
     const panel = document.createElement("div");
     panel.className = "display-panel";
     panel.setAttribute("role", "dialog");
@@ -104,23 +111,33 @@ document.documentElement.classList.add("js-enhanced");
       </div>
 
       <div class="display-slider-row">
-        <span class="display-slider-icon">🔵</span>
+        <span class="display-slider-icon">❄️</span>
         <input type="range" class="display-slider" id="slider-warmth"
           min="0" max="100" step="1" value="55"
           aria-label="Suhu warna">
-        <span class="display-slider-icon">🟡</span>
+        <span class="display-slider-icon">🕯️</span>
       </div>
 
       <div class="display-divider"></div>
 
       <div class="display-presets">
-        <button class="display-preset" data-preset="terang" type="button">Terang</button>
-        <button class="display-preset" data-preset="neutral" type="button">Neutral</button>
-        <button class="display-preset" data-preset="malam" type="button">Malam</button>
-        <button class="display-preset" data-preset="gelap" type="button">Gelap</button>
+        <button class="display-preset" data-preset="terang" type="button">☀️ Terang</button>
+        <button class="display-preset" data-preset="neutral" type="button">🌤️ Neutral</button>
+        <button class="display-preset" data-preset="malam" type="button">🌙 Malam</button>
+        <button class="display-preset" data-preset="gelap" type="button">🌑 Gelap</button>
       </div>
     `;
-    document.body.appendChild(panel);
+
+    wrap.appendChild(fab);
+    wrap.appendChild(panel);
+
+    // Sisipkan sebelum nav-toggle (kalau ada) atau hujung nav-wrap
+    const navToggle = navWrap.querySelector(".nav-toggle");
+    if (navToggle) {
+      navWrap.insertBefore(wrap, navToggle);
+    } else {
+      navWrap.appendChild(wrap);
+    }
 
     const sliderBrightness = panel.querySelector("#slider-brightness");
     const sliderWarmth = panel.querySelector("#slider-warmth");
@@ -183,10 +200,11 @@ document.documentElement.classList.add("js-enhanced");
           break;
         }
       }
-      // Update fab icon
-      if (b < 30) fab.textContent = "🌙";
-      else if (b < 65) fab.textContent = "🌤";
-      else fab.textContent = "☀";
+      // Update fab icon ikut kecerahan
+      if (b < 25) fab.textContent = "🌑";
+      else if (b < 45) fab.textContent = "🌙";
+      else if (b < 70) fab.textContent = "🌤️";
+      else fab.textContent = "☀️";
     }
   }
 
