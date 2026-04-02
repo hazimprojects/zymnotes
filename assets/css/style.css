@@ -2470,119 +2470,44 @@ body.accordion-no-smooth-scroll {
 }
 
 /* =========================================================
-   BAB VISUAL THEMES
+   BAB VISUAL THEMES — VERSI STABIL
    Letak di HUJUNG style.css
-   Guna pada <body>:
-   body class="bab-theme-1"
-   body class="bab-theme-2"
-   body class="bab-theme-3"
 ========================================================= */
 
-/* ---------- Base hook ---------- */
-
+/* Pastikan page biasa kekal neutral */
 body.bab-theme-1,
 body.bab-theme-2,
 body.bab-theme-3 {
-  position: relative;
-  isolation: isolate;
-}
-
-body.bab-theme-1::before,
-body.bab-theme-1::after,
-body.bab-theme-2::before,
-body.bab-theme-2::after,
-body.bab-theme-3::before,
-body.bab-theme-3::after {
-  content: "";
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: -1;
-}
-
-/* Supaya card/kertas masih lebih dominan */
-body.bab-theme-1 .paper-board,
-body.bab-theme-1 .paper-flap-card,
-body.bab-theme-1 .paper-accordion-item,
-body.bab-theme-1 .paper-tab-panel,
-body.bab-theme-1 .paper-tab,
-body.bab-theme-1 .paper-process-card,
-body.bab-theme-1 .paper-process-panel,
-body.bab-theme-1 .paper-timeline-node,
-body.bab-theme-1 .paper-chip,
-body.bab-theme-1 .keyword-legend-wrap,
-body.bab-theme-1 .current-focus-card,
-body.bab-theme-1 .metric-card,
-body.bab-theme-1 .editorial-card,
-body.bab-theme-1 .audience-card,
-body.bab-theme-1 .note-card,
-body.bab-theme-1 .value-card,
-body.bab-theme-1 .content-block,
-body.bab-theme-2 .paper-board,
-body.bab-theme-2 .paper-flap-card,
-body.bab-theme-2 .paper-accordion-item,
-body.bab-theme-2 .paper-tab-panel,
-body.bab-theme-2 .paper-tab,
-body.bab-theme-2 .paper-process-card,
-body.bab-theme-2 .paper-process-panel,
-body.bab-theme-2 .paper-timeline-node,
-body.bab-theme-2 .paper-chip,
-body.bab-theme-2 .keyword-legend-wrap,
-body.bab-theme-2 .current-focus-card,
-body.bab-theme-2 .metric-card,
-body.bab-theme-2 .editorial-card,
-body.bab-theme-2 .audience-card,
-body.bab-theme-2 .note-card,
-body.bab-theme-2 .value-card,
-body.bab-theme-2 .content-block,
-body.bab-theme-3 .paper-board,
-body.bab-theme-3 .paper-flap-card,
-body.bab-theme-3 .paper-accordion-item,
-body.bab-theme-3 .paper-tab-panel,
-body.bab-theme-3 .paper-tab,
-body.bab-theme-3 .paper-process-card,
-body.bab-theme-3 .paper-process-panel,
-body.bab-theme-3 .paper-timeline-node,
-body.bab-theme-3 .paper-chip,
-body.bab-theme-3 .keyword-legend-wrap,
-body.bab-theme-3 .current-focus-card,
-body.bab-theme-3 .metric-card,
-body.bab-theme-3 .editorial-card,
-body.bab-theme-3 .audience-card,
-body.bab-theme-3 .note-card,
-body.bab-theme-3 .value-card,
-body.bab-theme-3 .content-block {
-  backdrop-filter: blur(0px);
+  background-attachment: fixed, fixed, fixed, fixed, fixed, scroll;
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, repeat, no-repeat;
 }
 
 /* =========================================================
    BAB 1 — WARISAN NEGARA BANGSA
-   Mood: warisan, manuskrip, ukiran halus
 ========================================================= */
 
 body.bab-theme-1 {
-  background:
-    radial-gradient(circle at top left, rgba(58, 121, 96, 0.10), transparent 22%),
-    radial-gradient(circle at top right, rgba(196, 157, 71, 0.10), transparent 18%),
-    linear-gradient(180deg, #f7f2e8 0%, #f1ebdf 100%);
-}
-
-body.bab-theme-1::before {
-  background:
-    radial-gradient(circle at 12% 14%, rgba(47, 122, 103, 0.08), transparent 0 18%),
-    radial-gradient(circle at 88% 20%, rgba(201, 160, 71, 0.08), transparent 0 16%),
-    radial-gradient(circle at 20% 82%, rgba(47, 122, 103, 0.05), transparent 0 15%),
-    radial-gradient(circle at 82% 86%, rgba(201, 160, 71, 0.05), transparent 0 14%);
-  opacity: 0.9;
-}
-
-body.bab-theme-1::after {
   background-image:
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='360' height='360' viewBox='0 0 360 360'%3E%3Cg fill='none' stroke='%23907b4a' stroke-width='1.2' opacity='0.12'%3E%3Cpath d='M40 70c22-18 48-18 70 0 22 18 48 18 70 0 22-18 48-18 70 0'/%3E%3Cpath d='M40 110c22-18 48-18 70 0 22 18 48 18 70 0 22-18 48-18 70 0'/%3E%3Cpath d='M40 150c22-18 48-18 70 0 22 18 48 18 70 0 22-18 48-18 70 0'/%3E%3Ccircle cx='284' cy='262' r='34'/%3E%3Ccircle cx='284' cy='262' r='18'/%3E%3Cpath d='M284 228v68M250 262h68'/%3E%3C/g%3E%3C/svg%3E");
-  background-repeat: repeat;
-  background-size: 320px 320px;
-  opacity: 0.18;
-  mix-blend-mode: multiply;
+    radial-gradient(circle at 12% 14%, rgba(47, 122, 103, 0.10), transparent 0 18%),
+    radial-gradient(circle at 88% 18%, rgba(201, 160, 71, 0.10), transparent 0 16%),
+    radial-gradient(circle at 22% 84%, rgba(47, 122, 103, 0.06), transparent 0 15%),
+    radial-gradient(circle at 82% 86%, rgba(201, 160, 71, 0.06), transparent 0 14%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='360' height='360' viewBox='0 0 360 360'%3E%3Cg fill='none' stroke='%23907b4a' stroke-width='1.2' opacity='0.12'%3E%3Cpath d='M40 70c22-18 48-18 70 0 22 18 48 18 70 0 22-18 48-18 70 0'/%3E%3Cpath d='M40 110c22-18 48-18 70 0 22 18 48 18 70 0 22-18 48-18 70 0'/%3E%3Cpath d='M40 150c22-18 48-18 70 0 22 18 48 18 70 0 22-18 48-18 70 0'/%3E%3Ccircle cx='284' cy='262' r='34'/%3E%3Ccircle cx='284' cy='262' r='18'/%3E%3Cpath d='M284 228v68M250 262h68'/%3E%3C/g%3E%3C/svg%3E"),
+    linear-gradient(180deg, #f7f2e8 0%, #f1ebdf 100%);
+  background-size:
+    auto,
+    auto,
+    auto,
+    auto,
+    320px 320px,
+    cover;
+  background-position:
+    left top,
+    right top,
+    left bottom,
+    right bottom,
+    center center,
+    center center;
 }
 
 body.bab-theme-1 .site-header {
@@ -2595,59 +2520,32 @@ body.bab-theme-1 .bab-card-top {
   color: #315649;
 }
 
-body.bab-theme-1 .paper-strip.strip-main {
-  background: linear-gradient(90deg, #f2dbab, #ebcb84);
-  color: #6a4a16;
-}
-
-/* Dark */
-[data-theme="dark"] body.bab-theme-1 {
-  background:
-    radial-gradient(circle at top left, rgba(67, 145, 112, 0.08), transparent 24%),
-    radial-gradient(circle at top right, rgba(176, 143, 67, 0.08), transparent 18%),
-    linear-gradient(180deg, #1d1a17 0%, #191713 100%);
-}
-
-[data-theme="dark"] body.bab-theme-1::before {
-  background:
-    radial-gradient(circle at 12% 14%, rgba(82, 179, 150, 0.08), transparent 0 18%),
-    radial-gradient(circle at 88% 20%, rgba(212, 170, 96, 0.08), transparent 0 16%),
-    radial-gradient(circle at 20% 82%, rgba(82, 179, 150, 0.05), transparent 0 15%),
-    radial-gradient(circle at 82% 86%, rgba(212, 170, 96, 0.05), transparent 0 14%);
-}
-
-[data-theme="dark"] body.bab-theme-1::after {
-  opacity: 0.10;
-  mix-blend-mode: screen;
-}
-
 /* =========================================================
    BAB 2 — KEBANGKITAN NASIONALISME
-   Mood: akhbar, dakwat, gerakan idea
 ========================================================= */
 
 body.bab-theme-2 {
-  background:
-    radial-gradient(circle at top left, rgba(55, 92, 150, 0.08), transparent 22%),
-    radial-gradient(circle at top right, rgba(58, 120, 98, 0.07), transparent 16%),
-    linear-gradient(180deg, #f6f2ea 0%, #efe9de 100%);
-}
-
-body.bab-theme-2::before {
-  background:
-    linear-gradient(to right, rgba(47, 122, 103, 0.035) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(36, 49, 63, 0.02) 1px, transparent 1px);
-  background-size: 28px 28px, 28px 28px;
-  opacity: 0.65;
-}
-
-body.bab-theme-2::after {
   background-image:
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='520' height='320' viewBox='0 0 520 320'%3E%3Cg opacity='0.11'%3E%3Crect x='26' y='32' width='202' height='118' rx='8' fill='none' stroke='%23455d7a' stroke-width='1.2'/%3E%3Cline x1='44' y1='58' x2='208' y2='58' stroke='%23455d7a' stroke-width='1.2'/%3E%3Cline x1='44' y1='78' x2='184' y2='78' stroke='%23455d7a' stroke-width='1.2'/%3E%3Cline x1='44' y1='98' x2='194' y2='98' stroke='%23455d7a' stroke-width='1.2'/%3E%3Cline x1='44' y1='118' x2='172' y2='118' stroke='%23455d7a' stroke-width='1.2'/%3E%3Cpath d='M280 62c40-28 84-28 124 0' fill='none' stroke='%232f7a67' stroke-width='1.5'/%3E%3Cpath d='M280 92c40-28 84-28 124 0' fill='none' stroke='%232f7a67' stroke-width='1.5'/%3E%3Cpath d='M280 122c40-28 84-28 124 0' fill='none' stroke='%232f7a67' stroke-width='1.5'/%3E%3Cpath d='M48 234c46-18 90-18 136 0 46 18 90 18 136 0 46-18 90-18 136 0' fill='none' stroke='%23b07b2c' stroke-width='1.3'/%3E%3C/g%3E%3C/svg%3E");
-  background-repeat: repeat;
-  background-size: 460px 280px;
-  opacity: 0.16;
-  mix-blend-mode: multiply;
+    radial-gradient(circle at 10% 12%, rgba(55, 92, 150, 0.10), transparent 0 18%),
+    radial-gradient(circle at 88% 16%, rgba(58, 120, 98, 0.08), transparent 0 16%),
+    linear-gradient(to right, rgba(47, 122, 103, 0.035) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(36, 49, 63, 0.02) 1px, transparent 1px),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='520' height='320' viewBox='0 0 520 320'%3E%3Cg opacity='0.11'%3E%3Crect x='26' y='32' width='202' height='118' rx='8' fill='none' stroke='%23455d7a' stroke-width='1.2'/%3E%3Cline x1='44' y1='58' x2='208' y2='58' stroke='%23455d7a' stroke-width='1.2'/%3E%3Cline x1='44' y1='78' x2='184' y2='78' stroke='%23455d7a' stroke-width='1.2'/%3E%3Cline x1='44' y1='98' x2='194' y2='98' stroke='%23455d7a' stroke-width='1.2'/%3E%3Cline x1='44' y1='118' x2='172' y2='118' stroke='%23455d7a' stroke-width='1.2'/%3E%3Cpath d='M280 62c40-28 84-28 124 0' fill='none' stroke='%232f7a67' stroke-width='1.5'/%3E%3Cpath d='M280 92c40-28 84-28 124 0' fill='none' stroke='%232f7a67' stroke-width='1.5'/%3E%3Cpath d='M280 122c40-28 84-28 124 0' fill='none' stroke='%232f7a67' stroke-width='1.5'/%3E%3Cpath d='M48 234c46-18 90-18 136 0 46 18 90 18 136 0 46-18 90-18 136 0' fill='none' stroke='%23b07b2c' stroke-width='1.3'/%3E%3C/g%3E%3C/svg%3E"),
+    linear-gradient(180deg, #f6f2ea 0%, #efe9de 100%);
+  background-size:
+    auto,
+    auto,
+    28px 28px,
+    28px 28px,
+    460px 280px,
+    cover;
+  background-position:
+    left top,
+    right top,
+    center center,
+    center center,
+    center center,
+    center center;
 }
 
 body.bab-theme-2 .site-header {
@@ -2660,58 +2558,32 @@ body.bab-theme-2 .bab-card-top {
   color: #294d80;
 }
 
-body.bab-theme-2 .paper-strip.strip-main {
-  background: linear-gradient(90deg, #dff0e7, #cfe7d9);
-  color: #2f6b57;
-}
-
-/* Dark */
-[data-theme="dark"] body.bab-theme-2 {
-  background:
-    radial-gradient(circle at top left, rgba(88, 135, 206, 0.07), transparent 22%),
-    radial-gradient(circle at top right, rgba(82, 179, 150, 0.06), transparent 18%),
-    linear-gradient(180deg, #1c1a18 0%, #181613 100%);
-}
-
-[data-theme="dark"] body.bab-theme-2::before {
-  opacity: 0.28;
-}
-
-[data-theme="dark"] body.bab-theme-2::after {
-  opacity: 0.08;
-  mix-blend-mode: screen;
-}
-
 /* =========================================================
    BAB 3 — KONFLIK DUNIA & PENDUDUKAN JEPUN
-   Mood: peta, grid strategi, konflik dunia
 ========================================================= */
 
 body.bab-theme-3 {
-  background:
-    radial-gradient(circle at top left, rgba(75, 102, 128, 0.12), transparent 24%),
-    radial-gradient(circle at top right, rgba(111, 128, 84, 0.10), transparent 18%),
-    linear-gradient(180deg, #f2eee6 0%, #ebe5d9 100%);
-}
-
-body.bab-theme-3::before {
-  background:
-    linear-gradient(to right, rgba(78, 96, 118, 0.05) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(78, 96, 118, 0.05) 1px, transparent 1px),
-    radial-gradient(circle at 18% 18%, rgba(130, 88, 74, 0.08), transparent 0 10%),
-    radial-gradient(circle at 82% 28%, rgba(80, 110, 84, 0.08), transparent 0 12%),
-    radial-gradient(circle at 78% 78%, rgba(130, 88, 74, 0.06), transparent 0 10%);
-  background-size: 34px 34px, 34px 34px, auto, auto, auto;
-  opacity: 0.8;
-}
-
-body.bab-theme-3::after {
   background-image:
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='520' height='340' viewBox='0 0 520 340'%3E%3Cg fill='none' stroke='%23546a7f' opacity='0.12'%3E%3Cpath d='M62 96c38-26 92-34 142-22 26 6 46 6 70-4 24-10 46-12 76-4 22 6 42 16 62 28' stroke-width='1.3'/%3E%3Cpath d='M70 148c46 14 92 18 138 10 28-4 54 0 84 10 28 10 62 14 102 8' stroke-width='1.2'/%3E%3Cpath d='M96 212c34-18 70-24 108-20 34 4 60 0 92-14 30-14 62-18 102-10' stroke-width='1.2'/%3E%3Cpath d='M112 268c20-10 38-14 58-14 24 0 44-6 66-20 24-16 50-24 84-24 30 0 56 8 88 24' stroke-width='1.2'/%3E%3Cpath d='M176 70l42 18-42 18' stroke='%2380594b' stroke-width='1.6'/%3E%3Cpath d='M312 240l54-24' stroke='%2380594b' stroke-width='1.6'/%3E%3Cpath d='M360 216l8 26-28 0' stroke='%2380594b' stroke-width='1.6'/%3E%3Ccircle cx='128' cy='174' r='6' stroke-width='1.4'/%3E%3Ccircle cx='286' cy='126' r='6' stroke-width='1.4'/%3E%3Ccircle cx='392' cy='268' r='6' stroke-width='1.4'/%3E%3C/g%3E%3C/svg%3E");
-  background-repeat: repeat;
-  background-size: 460px 300px;
-  opacity: 0.18;
-  mix-blend-mode: multiply;
+    radial-gradient(circle at 12% 12%, rgba(75, 102, 128, 0.12), transparent 0 20%),
+    radial-gradient(circle at 88% 16%, rgba(111, 128, 84, 0.10), transparent 0 18%),
+    linear-gradient(to right, rgba(78, 96, 118, 0.045) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(78, 96, 118, 0.045) 1px, transparent 1px),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='520' height='340' viewBox='0 0 520 340'%3E%3Cg fill='none' stroke='%23546a7f' opacity='0.12'%3E%3Cpath d='M62 96c38-26 92-34 142-22 26 6 46 6 70-4 24-10 46-12 76-4 22 6 42 16 62 28' stroke-width='1.3'/%3E%3Cpath d='M70 148c46 14 92 18 138 10 28-4 54 0 84 10 28 10 62 14 102 8' stroke-width='1.2'/%3E%3Cpath d='M96 212c34-18 70-24 108-20 34 4 60 0 92-14 30-14 62-18 102-10' stroke-width='1.2'/%3E%3Cpath d='M112 268c20-10 38-14 58-14 24 0 44-6 66-20 24-16 50-24 84-24 30 0 56 8 88 24' stroke-width='1.2'/%3E%3Cpath d='M176 70l42 18-42 18' stroke='%2380594b' stroke-width='1.6'/%3E%3Cpath d='M312 240l54-24' stroke='%2380594b' stroke-width='1.6'/%3E%3Cpath d='M360 216l8 26-28 0' stroke='%2380594b' stroke-width='1.6'/%3E%3Ccircle cx='128' cy='174' r='6' stroke-width='1.4'/%3E%3Ccircle cx='286' cy='126' r='6' stroke-width='1.4'/%3E%3Ccircle cx='392' cy='268' r='6' stroke-width='1.4'/%3E%3C/g%3E%3C/svg%3E"),
+    linear-gradient(180deg, #f2eee6 0%, #ebe5d9 100%);
+  background-size:
+    auto,
+    auto,
+    34px 34px,
+    34px 34px,
+    460px 300px,
+    cover;
+  background-position:
+    left top,
+    right top,
+    center center,
+    center center,
+    center center,
+    center center;
 }
 
 body.bab-theme-3 .site-header {
@@ -2724,65 +2596,60 @@ body.bab-theme-3 .bab-card-top {
   color: #41576c;
 }
 
-body.bab-theme-3 .paper-strip.strip-main {
-  background: linear-gradient(90deg, #e8dbc8, #dcc8aa);
-  color: #74533b;
+/* =========================================================
+   DARK MODE
+========================================================= */
+
+[data-theme="dark"] body.bab-theme-1 {
+  background-image:
+    radial-gradient(circle at 12% 14%, rgba(82, 179, 150, 0.08), transparent 0 18%),
+    radial-gradient(circle at 88% 20%, rgba(212, 170, 96, 0.08), transparent 0 16%),
+    radial-gradient(circle at 20% 82%, rgba(82, 179, 150, 0.05), transparent 0 15%),
+    radial-gradient(circle at 82% 86%, rgba(212, 170, 96, 0.05), transparent 0 14%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='360' height='360' viewBox='0 0 360 360'%3E%3Cg fill='none' stroke='%23bda26b' stroke-width='1.1' opacity='0.08'%3E%3Cpath d='M40 70c22-18 48-18 70 0 22 18 48 18 70 0 22-18 48-18 70 0'/%3E%3Cpath d='M40 110c22-18 48-18 70 0 22 18 48 18 70 0 22-18 48-18 70 0'/%3E%3Ccircle cx='284' cy='262' r='34'/%3E%3Ccircle cx='284' cy='262' r='18'/%3E%3C/g%3E%3C/svg%3E"),
+    linear-gradient(180deg, #1d1a17 0%, #191713 100%);
 }
 
-/* Dark */
+[data-theme="dark"] body.bab-theme-2 {
+  background-image:
+    radial-gradient(circle at 10% 12%, rgba(88, 135, 206, 0.07), transparent 0 18%),
+    radial-gradient(circle at 88% 16%, rgba(82, 179, 150, 0.06), transparent 0 16%),
+    linear-gradient(to right, rgba(150, 170, 190, 0.025) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(150, 170, 190, 0.025) 1px, transparent 1px),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='520' height='320' viewBox='0 0 520 320'%3E%3Cg opacity='0.07'%3E%3Crect x='26' y='32' width='202' height='118' rx='8' fill='none' stroke='%23b4c0cf' stroke-width='1.1'/%3E%3Cline x1='44' y1='58' x2='208' y2='58' stroke='%23b4c0cf' stroke-width='1.1'/%3E%3Cpath d='M280 62c40-28 84-28 124 0' fill='none' stroke='%2376c9ae' stroke-width='1.3'/%3E%3Cpath d='M48 234c46-18 90-18 136 0 46 18 90 18 136 0 46-18 90-18 136 0' fill='none' stroke='%23d5a35e' stroke-width='1.1'/%3E%3C/g%3E%3C/svg%3E"),
+    linear-gradient(180deg, #1c1a18 0%, #181613 100%);
+}
+
 [data-theme="dark"] body.bab-theme-3 {
-  background:
-    radial-gradient(circle at top left, rgba(102, 126, 153, 0.09), transparent 24%),
-    radial-gradient(circle at top right, rgba(112, 133, 92, 0.08), transparent 18%),
+  background-image:
+    radial-gradient(circle at 12% 12%, rgba(102, 126, 153, 0.09), transparent 0 20%),
+    radial-gradient(circle at 88% 16%, rgba(112, 133, 92, 0.08), transparent 0 18%),
+    linear-gradient(to right, rgba(160, 176, 194, 0.025) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(160, 176, 194, 0.025) 1px, transparent 1px),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='520' height='340' viewBox='0 0 520 340'%3E%3Cg fill='none' stroke='%23aebfce' opacity='0.08'%3E%3Cpath d='M62 96c38-26 92-34 142-22 26 6 46 6 70-4 24-10 46-12 76-4 22 6 42 16 62 28' stroke-width='1.2'/%3E%3Cpath d='M176 70l42 18-42 18' stroke='%23d39a72' stroke-width='1.4'/%3E%3Ccircle cx='128' cy='174' r='6' stroke-width='1.2'/%3E%3Ccircle cx='286' cy='126' r='6' stroke-width='1.2'/%3E%3C/g%3E%3C/svg%3E"),
     linear-gradient(180deg, #1b1a18 0%, #161513 100%);
 }
 
-[data-theme="dark"] body.bab-theme-3::before {
-  opacity: 0.30;
-}
-
-[data-theme="dark"] body.bab-theme-3::after {
-  opacity: 0.08;
-  mix-blend-mode: screen;
-}
-
 /* =========================================================
-   OPTIONAL: sedikit bezakan card ikut bab
-========================================================= */
-
-body.bab-theme-1 .paper-board,
-body.bab-theme-1 .paper-flap-card,
-body.bab-theme-1 .paper-accordion-item {
-  border-color: rgba(92, 110, 132, 0.11);
-}
-
-body.bab-theme-2 .paper-board,
-body.bab-theme-2 .paper-flap-card,
-body.bab-theme-2 .paper-accordion-item {
-  border-color: rgba(82, 101, 128, 0.13);
-}
-
-body.bab-theme-3 .paper-board,
-body.bab-theme-3 .paper-flap-card,
-body.bab-theme-3 .paper-accordion-item {
-  border-color: rgba(94, 102, 112, 0.14);
-}
-
-/* =========================================================
-   MOBILE: kurangkan motif supaya tak terlalu sibuk
+   MOBILE — ringankan motif
 ========================================================= */
 
 @media (max-width: 760px) {
-  body.bab-theme-1::after,
-  body.bab-theme-2::after,
-  body.bab-theme-3::after {
-    opacity: 0.10;
-    background-size: 300px 240px;
+  body.bab-theme-1,
+  body.bab-theme-2,
+  body.bab-theme-3 {
+    background-attachment: scroll, scroll, scroll, scroll, scroll, scroll;
   }
 
-  body.bab-theme-1::before,
-  body.bab-theme-2::before,
-  body.bab-theme-3::before {
-    opacity: 0.65;
+  body.bab-theme-1 {
+    background-size: auto, auto, auto, auto, 260px 260px, cover;
+  }
+
+  body.bab-theme-2 {
+    background-size: auto, auto, 24px 24px, 24px 24px, 320px 220px, cover;
+  }
+
+  body.bab-theme-3 {
+    background-size: auto, auto, 26px 26px, 26px 26px, 320px 230px, cover;
   }
 }
