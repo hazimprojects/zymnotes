@@ -889,3 +889,156 @@ html[data-theme="dark"] body .paper-chip.bloc-chip-allies {
   background: linear-gradient(135deg, rgba(20,35,65,0.92), rgba(15,30,60,0.92)) !important;
   border-color: rgba(147,197,253,0.20) !important;
 }
+
+/* =========================================================
+   BAB 4 — ERA PERALIHAN KUASA BRITISH DI NEGARA KITA
+   motif: dokumen pentadbiran + cap rasmi + garis peralihan
+========================================================= */
+
+body.bab-theme-4 {
+  background-color: #eee6d8;
+  background-image:
+    radial-gradient(circle at 10% 12%, rgba(84, 103, 132, 0.16), transparent 0 18%),
+    radial-gradient(circle at 88% 14%, rgba(58, 112, 104, 0.14), transparent 0 16%),
+    radial-gradient(circle at 18% 84%, rgba(145, 108, 62, 0.10), transparent 0 14%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='760' height='660' viewBox='0 0 760 660'%3E%3Crect width='760' height='660' fill='none'/%3E%3Cg opacity='0.16'%3E%3Crect x='54' y='56' width='272' height='172' rx='14' fill='none' stroke='%23566a84' stroke-width='3'/%3E%3Cpath d='M86 92h208M86 124h176M86 156h196M86 188h148' stroke='%23566a84' stroke-width='3' stroke-linecap='round'/%3E%3Ccircle cx='622' cy='128' r='54' fill='none' stroke='%237b6442' stroke-width='4'/%3E%3Ccircle cx='622' cy='128' r='30' fill='none' stroke='%237b6442' stroke-width='3'/%3E%3Cpath d='M592 128h60M622 98v60' stroke='%237b6442' stroke-width='3' stroke-linecap='round'/%3E%3Crect x='394' y='282' width='280' height='156' rx='14' fill='none' stroke='%234f7a6f' stroke-width='3'/%3E%3Cpath d='M426 316h216M426 348h194M426 380h208M426 412h152' stroke='%234f7a6f' stroke-width='3' stroke-linecap='round'/%3E%3Cpath d='M104 330c44 0 74 16 104 32 30 16 60 32 104 32 44 0 74-16 104-32 30-16 60-32 104-32' fill='none' stroke='%23a1763f' stroke-width='3' stroke-linecap='round'/%3E%3Cpath d='M104 392c44 0 74 16 104 32 30 16 60 32 104 32 44 0 74-16 104-32 30-16 60-32 104-32' fill='none' stroke='%23a1763f' stroke-width='3' stroke-linecap='round'/%3E%3Cpath d='M120 528h520' stroke='%236d665b' stroke-width='3' stroke-dasharray='10 12' stroke-linecap='round'/%3E%3Cpath d='M206 496l48 32-48 32' fill='none' stroke='%23905d4a' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M440 496l48 32-48 32' fill='none' stroke='%23905d4a' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/g%3E%3Cg opacity='0.07'%3E%3Cpath d='M0 120h760M0 240h760M0 360h760M0 480h760M0 600h760' stroke='%236b706f' stroke-width='2'/%3E%3Cpath d='M100 0v660M240 0v660M380 0v660M520 0v660M660 0v660' stroke='%236b706f' stroke-width='2'/%3E%3C/g%3E%3C/svg%3E"),
+    linear-gradient(180deg, #efe7d9 0%, #e2d7c8 100%);
+  background-size:
+    auto,
+    auto,
+    auto,
+    720px 620px,
+    cover;
+  background-position:
+    left top,
+    right top,
+    left bottom,
+    center top,
+    center center;
+  background-repeat:
+    no-repeat,
+    no-repeat,
+    no-repeat,
+    repeat,
+    no-repeat;
+  background-attachment:
+    fixed,
+    fixed,
+    fixed,
+    scroll,
+    scroll;
+}
+
+body.bab-theme-4 .site-header {
+  background: rgba(241, 236, 227, 0.86);
+}
+
+body.bab-theme-4 .paper-label,
+body.bab-theme-4 .bab-card-top {
+  background: linear-gradient(90deg, #e2e7ef, #d5dde8);
+  color: #465d77;
+}
+
+body.bab-theme-4 .paper-board,
+body.bab-theme-4 .paper-flap-card,
+body.bab-theme-4 .paper-accordion-item,
+body.bab-theme-4 .paper-tab,
+body.bab-theme-4 .paper-tab-panel,
+body.bab-theme-4 .paper-process-card,
+body.bab-theme-4 .paper-process-panel,
+body.bab-theme-4 .paper-timeline-node,
+body.bab-theme-4 .paper-chip,
+body.bab-theme-4 .keyword-legend-wrap,
+body.bab-theme-4 .mindmap-card,
+body.bab-theme-4 .paper-flow-card,
+body.bab-theme-4 .org-node,
+body.bab-theme-4 .metric-card,
+body.bab-theme-4 .editorial-card,
+body.bab-theme-4 .audience-card,
+body.bab-theme-4 .note-card,
+body.bab-theme-4 .value-card,
+body.bab-theme-4 .content-block {
+  background: rgba(255, 252, 247, 0.90);
+  border-color: rgba(92, 110, 132, 0.14);
+  box-shadow: 0 16px 36px rgba(36, 49, 63, 0.12);
+}
+
+/* ---------- Dark mode ---------- */
+
+html[data-theme="dark"] body.bab-theme-4 {
+  color: #ddd8cc;
+  background-image:
+    radial-gradient(circle at 10% 12%, rgba(98, 126, 168, 0.11), transparent 0 18%),
+    radial-gradient(circle at 88% 14%, rgba(86, 158, 145, 0.09), transparent 0 16%),
+    radial-gradient(circle at 18% 84%, rgba(176, 130, 78, 0.08), transparent 0 14%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='760' height='660' viewBox='0 0 760 660'%3E%3Crect width='760' height='660' fill='none'/%3E%3Cg opacity='0.09'%3E%3Crect x='54' y='56' width='272' height='172' rx='14' fill='none' stroke='%23b5c3d4' stroke-width='3'/%3E%3Cpath d='M86 92h208M86 124h176M86 156h196M86 188h148' stroke='%23b5c3d4' stroke-width='3' stroke-linecap='round'/%3E%3Ccircle cx='622' cy='128' r='54' fill='none' stroke='%23c89a64' stroke-width='4'/%3E%3Ccircle cx='622' cy='128' r='30' fill='none' stroke='%23c89a64' stroke-width='3'/%3E%3Crect x='394' y='282' width='280' height='156' rx='14' fill='none' stroke='%2376b3a7' stroke-width='3'/%3E%3Cpath d='M426 316h216M426 348h194M426 380h208M426 412h152' stroke='%2376b3a7' stroke-width='3' stroke-linecap='round'/%3E%3Cpath d='M120 528h520' stroke='%23969a99' stroke-width='3' stroke-dasharray='10 12' stroke-linecap='round'/%3E%3Cpath d='M206 496l48 32-48 32' fill='none' stroke='%23d29a79' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M440 496l48 32-48 32' fill='none' stroke='%23d29a79' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/g%3E%3C/svg%3E"),
+    linear-gradient(180deg, #1c1a18 0%, #171512 100%);
+}
+
+html[data-theme="dark"] body.bab-theme-4 .site-header {
+  background: rgba(24, 23, 20, 0.90) !important;
+  border-bottom-color: rgba(220, 210, 190, 0.10) !important;
+}
+
+html[data-theme="dark"] body.bab-theme-4 .paper-label,
+html[data-theme="dark"] body.bab-theme-4 .paper-label.small,
+html[data-theme="dark"] body.bab-theme-4 .bab-card-top {
+  background-image: none !important;
+  background-color: rgba(98, 126, 168, 0.16) !important;
+  color: #b9ccef !important;
+  border: 1px solid rgba(185, 204, 239, 0.16) !important;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.22) !important;
+}
+
+html[data-theme="dark"] body.bab-theme-4 .paper-board,
+html[data-theme="dark"] body.bab-theme-4 .paper-flap-card,
+html[data-theme="dark"] body.bab-theme-4 .paper-accordion-item,
+html[data-theme="dark"] body.bab-theme-4 .paper-tab,
+html[data-theme="dark"] body.bab-theme-4 .paper-tab-panel,
+html[data-theme="dark"] body.bab-theme-4 .paper-process-card,
+html[data-theme="dark"] body.bab-theme-4 .paper-process-panel,
+html[data-theme="dark"] body.bab-theme-4 .paper-timeline-node,
+html[data-theme="dark"] body.bab-theme-4 .paper-chip,
+html[data-theme="dark"] body.bab-theme-4 .keyword-legend-wrap,
+html[data-theme="dark"] body.bab-theme-4 .mindmap-card,
+html[data-theme="dark"] body.bab-theme-4 .paper-flow-card,
+html[data-theme="dark"] body.bab-theme-4 .org-node,
+html[data-theme="dark"] body.bab-theme-4 .metric-card,
+html[data-theme="dark"] body.bab-theme-4 .editorial-card,
+html[data-theme="dark"] body.bab-theme-4 .audience-card,
+html[data-theme="dark"] body.bab-theme-4 .note-card,
+html[data-theme="dark"] body.bab-theme-4 .value-card,
+html[data-theme="dark"] body.bab-theme-4 .content-block {
+  background: rgba(29, 27, 24, 0.88) !important;
+  border-color: rgba(220, 210, 190, 0.12) !important;
+  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.24) !important;
+}
+
+html[data-theme="dark"] body.bab-theme-4 h1,
+html[data-theme="dark"] body.bab-theme-4 h2,
+html[data-theme="dark"] body.bab-theme-4 h3,
+html[data-theme="dark"] body.bab-theme-4 .point-heading,
+html[data-theme="dark"] body.bab-theme-4 .brand {
+  color: #f1eadf !important;
+}
+
+html[data-theme="dark"] body.bab-theme-4 .lead,
+html[data-theme="dark"] body.bab-theme-4 .point-line,
+html[data-theme="dark"] body.bab-theme-4 .footer-text,
+html[data-theme="dark"] body.bab-theme-4 .preview-answer {
+  color: #b7ae9f !important;
+}
+
+html[data-theme="dark"] body.bab-theme-4 .site-footer {
+  background: rgba(28, 26, 23, 0.82) !important;
+  border-top-color: rgba(220, 210, 190, 0.10) !important;
+}
+
+/* ---------- Mobile ---------- */
+
+@media (max-width: 760px) {
+  body.bab-theme-4 {
+    background-size: auto, auto, auto, 500px 430px, cover;
+    background-attachment: scroll, scroll, scroll, scroll, scroll;
+  }
+}
