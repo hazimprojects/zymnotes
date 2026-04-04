@@ -112,7 +112,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-// =========================
+  // =========================
   // PAPER ACCORDION
   // =========================
   const accordionTriggers = document.querySelectorAll(".paper-accordion-trigger");
@@ -296,7 +296,7 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     });
   });
-  
+
   // =========================
   // PAPER TIMELINE
   // =========================
@@ -372,7 +372,9 @@ document.addEventListener("DOMContentLoaded", function () {
     !path.endsWith("/notes/bab-2.html") &&
     !path.endsWith("/notes/bab-2") &&
     !path.endsWith("/notes/bab-3.html") &&
-    !path.endsWith("/notes/bab-3");
+    !path.endsWith("/notes/bab-3") &&
+    !path.endsWith("/notes/bab-4.html") &&
+    !path.endsWith("/notes/bab-4");
 
   if (!isReadingPage) return;
 
@@ -545,16 +547,18 @@ document.addEventListener("DOMContentLoaded", function () {
     { title: "1.2 · Ciri-ciri Negara Bangsa Kesultanan Melayu Melaka", tag: "Subtopik 1.2", href: "bab-1-2.html" },
     { title: "1.3 · Keunggulan Sistem Pentadbiran dan Undang-undang", tag: "Subtopik 1.3", href: "bab-1-3.html" },
     { title: "1.4 · Peranan Pemerintah dan Rakyat", tag: "Subtopik 1.4", href: "bab-1-4.html" },
+
     { title: "Bab 2 · Kebangkitan Nasionalisme", tag: "Bab Induk", href: "bab-2.html" },
-    { title: "2.1 · Maksud dan Konsep Nasionalisme", tag: "Subtopik 2.1", href: "bab-2-1.html" },
-    { title: "2.2 · Perkembangan Nasionalisme di Barat", tag: "Subtopik 2.2", href: "bab-2-2.html" },
+    { title: "2.1 · Maksud Nasionalisme", tag: "Subtopik 2.1", href: "bab-2-1.html" },
+    { title: "2.2 · Perkembangan Idea Nasionalisme di Barat", tag: "Subtopik 2.2", href: "bab-2-2.html" },
     { title: "2.3 · Perkembangan Nasionalisme di Asia", tag: "Subtopik 2.3", href: "bab-2-3.html" },
     { title: "2.4 · Perkembangan Nasionalisme di Asia Tenggara", tag: "Subtopik 2.4", href: "bab-2-4.html" },
-    { title: "2.5 · Faktor Kebangkitan Nasionalisme di Tanah Melayu", tag: "Subtopik 2.5", href: "bab-2-5.html" },
-    { title: "2.6 · Perkembangan Nasionalisme di Tanah Melayu", tag: "Subtopik 2.6", href: "bab-2-6.html" },
-    { title: "2.7 · Nasionalisme Melayu", tag: "Subtopik 2.7", href: "bab-2-7.html" },
-    { title: "2.8 · Kesan Nasionalisme di Tanah Melayu", tag: "Subtopik 2.8", href: "bab-2-8.html" },
-    { title: "Bab 3 · Konflik Dunia dan Pendudukan Jepun", tag: "Bab Induk", href: "bab-3.html" },
+    { title: "2.5 · Kesedaran Nasionalisme di Negara Kita", tag: "Subtopik 2.5", href: "bab-2-5.html" },
+    { title: "2.6 · Faktor Kemunculan Gerakan Nasionalisme", tag: "Subtopik 2.6", href: "bab-2-6.html" },
+    { title: "2.7 · Perkembangan Nasionalisme", tag: "Subtopik 2.7", href: "bab-2-7.html" },
+    { title: "2.8 · Kesan Perkembangan Nasionalisme", tag: "Subtopik 2.8", href: "bab-2-8.html" },
+
+    { title: "Bab 3 · Konflik Dunia dan Pendudukan Jepun di Negara Kita", tag: "Bab Induk", href: "bab-3.html" },
     { title: "3.1 · Nasionalisme di Negara Kita Sebelum Perang Dunia", tag: "Subtopik 3.1", href: "bab-3-1.html" },
     { title: "3.2 · Latar Belakang Perang Dunia", tag: "Subtopik 3.2", href: "bab-3-2.html" },
     { title: "3.3 · Perang Dunia Kedua", tag: "Subtopik 3.3", href: "bab-3-3.html" },
@@ -564,6 +568,15 @@ document.addEventListener("DOMContentLoaded", function () {
     { title: "3.7 · Perjuangan Rakyat Menentang Pendudukan Jepun", tag: "Subtopik 3.7", href: "bab-3-7.html" },
     { title: "3.8 · Perkembangan Gerakan Nasionalisme Tempatan dan Pendudukan Jepun", tag: "Subtopik 3.8", href: "bab-3-8.html" },
     { title: "3.9 · Keadaan Negara Kita Selepas Kekalahan Jepun", tag: "Subtopik 3.9", href: "bab-3-9.html" },
+
+    { title: "Bab 4 · Era Peralihan Kuasa British di Negara Kita", tag: "Bab Induk", href: "bab-4.html" },
+    { title: "4.1 · British Military Administration (BMA)", tag: "Subtopik 4.1", href: "bab-4-1.html" },
+    { title: "4.2 · Gagasan Malayan Union", tag: "Subtopik 4.2", href: "bab-4-2.html" },
+    { title: "4.3 · Reaksi Penduduk Tempatan terhadap Malayan Union", tag: "Subtopik 4.3", href: "bab-4-3.html" },
+    { title: "4.4 · Penyerahan Sarawak kepada Kerajaan British", tag: "Subtopik 4.4", href: "bab-4-4.html" },
+    { title: "4.5 · Reaksi Penduduk Tempatan terhadap Penyerahan Sarawak", tag: "Subtopik 4.5", href: "bab-4-5.html" },
+    { title: "4.6 · Penyerahan Sabah kepada Kerajaan British", tag: "Subtopik 4.6", href: "bab-4-6.html" },
+    { title: "4.7 · Reaksi Penduduk Tempatan terhadap Penyerahan Sabah", tag: "Subtopik 4.7", href: "bab-4-7.html" },
   ];
 
   let INDEX = null;
