@@ -1,708 +1,38 @@
 /* =========================================================
-   BAB VISUAL THEMES — VERSI STABIL
-   Letak di HUJUNG style.css
+   HAZIM EDUHUB — BAB VISUAL THEMES (SCALABLE)
+   Gantikan keseluruhan themes.css dengan versi ini
+   Menyokong bab-theme-1 hingga bab-theme-10
 ========================================================= */
-
-/* Pastikan page biasa kekal neutral */
-body.bab-theme-1,
-body.bab-theme-2,
-body.bab-theme-3 {
-  background-attachment: fixed, fixed, fixed, fixed, fixed, scroll;
-  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
-}
 
 /* =========================================================
-   BAB 1 — WARISAN NEGARA BANGSA
+   THEME CORE — semua bab guna rangka sama
 ========================================================= */
 
-body.bab-theme-1 {
+body[class^="bab-theme-"] {
+  --theme-bg-solid: #efe9de;
+  --theme-overlay-1: radial-gradient(circle at 10% 12%, rgba(80, 110, 130, 0.14), transparent 0 18%);
+  --theme-overlay-2: radial-gradient(circle at 88% 14%, rgba(95, 120, 90, 0.12), transparent 0 16%);
+  --theme-overlay-3: radial-gradient(circle at 18% 84%, rgba(150, 100, 70, 0.08), transparent 0 14%);
+  --theme-pattern: none;
+  --theme-gradient: linear-gradient(180deg, #f3ece0 0%, #e6dccb 100%);
+
+  --theme-label-bg: linear-gradient(90deg, #e3e8ef, #d8dfe8);
+  --theme-label-color: #445b74;
+
+  --theme-surface-bg: rgba(255, 252, 247, 0.90);
+  --theme-surface-border: rgba(92, 110, 132, 0.14);
+  --theme-surface-shadow: 0 16px 36px rgba(36, 49, 63, 0.12);
+
+  --theme-header-bg: rgba(243, 238, 229, 0.86);
+  --theme-footer-bg: rgba(243, 238, 229, 0.74);
+
+  background-color: var(--theme-bg-solid);
   background-image:
-    radial-gradient(circle at 10% 12%, rgba(47, 122, 103, 0.14), transparent 0 22%),
-    radial-gradient(circle at 88% 16%, rgba(201, 160, 71, 0.14), transparent 0 20%),
-    radial-gradient(circle at 18% 86%, rgba(47, 122, 103, 0.09), transparent 0 18%),
-    radial-gradient(circle at 84% 88%, rgba(201, 160, 71, 0.09), transparent 0 16%),
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='480' height='480' viewBox='0 0 480 480'%3E%3Cg fill='none'%3E%3Cpath d='M-10 50 Q20 28 50 50 Q80 72 110 50 Q140 28 170 50 Q200 72 230 50 Q260 28 290 50 Q320 72 350 50 Q380 28 410 50 Q440 72 470 50 Q500 28 530 50' stroke='%23c9a03b' stroke-width='2.6' opacity='0.30'/%3E%3Cpath d='M-10 95 Q20 73 50 95 Q80 117 110 95 Q140 73 170 95 Q200 117 230 95 Q260 73 290 95 Q320 117 350 95 Q380 73 410 95 Q440 117 470 95 Q500 73 530 95' stroke='%23a8852f' stroke-width='2.2' opacity='0.24'/%3E%3Cpath d='M-10 140 Q20 118 50 140 Q80 162 110 140 Q140 118 170 140 Q200 162 230 140 Q260 118 290 140 Q320 162 350 140 Q380 118 410 140 Q440 162 470 140 Q500 118 530 140' stroke='%23d4b04a' stroke-width='1.8' opacity='0.18'/%3E%3Cpath d='M-10 185 Q20 163 50 185 Q80 207 110 185 Q140 163 170 185 Q200 207 230 185 Q260 163 290 185 Q320 207 350 185 Q380 163 410 185 Q440 207 470 185 Q500 163 530 185' stroke='%23907040' stroke-width='1.4' opacity='0.13'/%3E%3Cpath d='M390 40 C370 30 340 40 326 70 C312 100 322 135 348 156 C360 164 376 168 388 162 C362 142 354 110 360 80 C366 52 382 40 390 40 Z' stroke='%23276f5a' stroke-width='2.4' opacity='0.28'/%3E%3Cpolygon points='448,66 451,74 459,74 453,80 455,88 448,83 441,88 443,80 437,74 445,74' stroke='%23276f5a' stroke-width='2' opacity='0.26'/%3E%3Cline x1='30' y1='296' x2='198' y2='296' stroke='%23907040' stroke-width='1.8' opacity='0.24'/%3E%3Cline x1='30' y1='318' x2='186' y2='318' stroke='%23907040' stroke-width='1.8' opacity='0.24'/%3E%3Cline x1='30' y1='340' x2='194' y2='340' stroke='%23907040' stroke-width='1.8' opacity='0.24'/%3E%3Cline x1='30' y1='362' x2='180' y2='362' stroke='%23907040' stroke-width='1.8' opacity='0.24'/%3E%3Cline x1='30' y1='384' x2='190' y2='384' stroke='%23907040' stroke-width='1.8' opacity='0.24'/%3E%3Cpath d='M20 282 Q14 290 14 306 L14 396 Q14 410 20 416' stroke='%23907040' stroke-width='2.2' opacity='0.22'/%3E%3Ccircle cx='392' cy='392' r='38' stroke='%23c9a03b' stroke-width='2' opacity='0.24'/%3E%3Ccircle cx='392' cy='392' r='24' stroke='%23b89434' stroke-width='2' opacity='0.22'/%3E%3Ccircle cx='392' cy='392' r='9' stroke='%23c9a03b' stroke-width='2' opacity='0.24'/%3E%3Cline x1='354' y1='392' x2='430' y2='392' stroke='%23c9a03b' stroke-width='2' opacity='0.22'/%3E%3Cline x1='392' y1='354' x2='392' y2='430' stroke='%23c9a03b' stroke-width='2' opacity='0.22'/%3E%3Cline x1='366' y1='366' x2='418' y2='418' stroke='%23b89434' stroke-width='1.5' opacity='0.18'/%3E%3Cline x1='418' y1='366' x2='366' y2='418' stroke='%23b89434' stroke-width='1.5' opacity='0.18'/%3E%3C/g%3E%3C/svg%3E"),
-    linear-gradient(180deg, #f7f2e8 0%, #f1ebdf 100%);
-  background-size:
-    auto,
-    auto,
-    auto,
-    auto,
-    480px 480px,
-    cover;
-  background-position:
-    left top,
-    right top,
-    left bottom,
-    right bottom,
-    center center,
-    center center;
-}
-
-body.bab-theme-1 .site-header {
-  background: rgba(247, 242, 232, 0.84);
-}
-
-body.bab-theme-1 .paper-label,
-body.bab-theme-1 .bab-card-top {
-  background: linear-gradient(90deg, #e5efdf, #d7e9cf);
-  color: #315649;
-}
-
-/* =========================================================
-   BAB 2 — KEBANGKITAN NASIONALISME
-========================================================= */
-
-body.bab-theme-2 {
-  background-image:
-    radial-gradient(circle at 10% 12%, rgba(55, 92, 150, 0.14), transparent 0 22%),
-    radial-gradient(circle at 88% 16%, rgba(58, 120, 98, 0.12), transparent 0 20%),
-    radial-gradient(circle at 16% 88%, rgba(55, 92, 150, 0.08), transparent 0 18%),
-    radial-gradient(circle at 84% 84%, rgba(176, 123, 44, 0.08), transparent 0 16%),
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='560' height='380' viewBox='0 0 560 380'%3E%3Cg fill='none'%3E%3Crect x='28' y='28' width='220' height='155' rx='6' stroke='%23455d7a' stroke-width='2' opacity='0.26'/%3E%3Cline x1='46' y1='56' x2='230' y2='56' stroke='%23455d7a' stroke-width='3' opacity='0.28'/%3E%3Cline x1='46' y1='72' x2='218' y2='72' stroke='%23455d7a' stroke-width='1.6' opacity='0.22'/%3E%3Cline x1='127' y1='82' x2='127' y2='172' stroke='%23455d7a' stroke-width='1.4' opacity='0.20'/%3E%3Cline x1='46' y1='86' x2='119' y2='86' stroke='%23455d7a' stroke-width='1.2' opacity='0.20'/%3E%3Cline x1='46' y1='98' x2='119' y2='98' stroke='%23455d7a' stroke-width='1.2' opacity='0.20'/%3E%3Cline x1='46' y1='110' x2='119' y2='110' stroke='%23455d7a' stroke-width='1.2' opacity='0.20'/%3E%3Cline x1='46' y1='122' x2='119' y2='122' stroke='%23455d7a' stroke-width='1.2' opacity='0.20'/%3E%3Cline x1='46' y1='134' x2='119' y2='134' stroke='%23455d7a' stroke-width='1.2' opacity='0.20'/%3E%3Cline x1='46' y1='146' x2='119' y2='146' stroke='%23455d7a' stroke-width='1.2' opacity='0.20'/%3E%3Cline x1='46' y1='158' x2='108' y2='158' stroke='%23455d7a' stroke-width='1.2' opacity='0.20'/%3E%3Cline x1='135' y1='86' x2='230' y2='86' stroke='%23455d7a' stroke-width='1.2' opacity='0.20'/%3E%3Cline x1='135' y1='98' x2='226' y2='98' stroke='%23455d7a' stroke-width='1.2' opacity='0.20'/%3E%3Cline x1='135' y1='110' x2='230' y2='110' stroke='%23455d7a' stroke-width='1.2' opacity='0.20'/%3E%3Cline x1='135' y1='122' x2='222' y2='122' stroke='%23455d7a' stroke-width='1.2' opacity='0.20'/%3E%3Cline x1='135' y1='134' x2='228' y2='134' stroke='%23455d7a' stroke-width='1.2' opacity='0.20'/%3E%3Cline x1='135' y1='146' x2='220' y2='146' stroke='%23455d7a' stroke-width='1.2' opacity='0.20'/%3E%3Cline x1='135' y1='158' x2='212' y2='158' stroke='%23455d7a' stroke-width='1.2' opacity='0.20'/%3E%3Cpath d='M286 52 Q318 30 350 52 Q382 74 414 52 Q446 30 478 52 Q510 74 542 52 Q574 30 606 52' stroke='%232f7a67' stroke-width='2.4' opacity='0.28'/%3E%3Cpath d='M286 96 Q318 74 350 96 Q382 118 414 96 Q446 74 478 96 Q510 118 542 96 Q574 74 606 96' stroke='%233d8e78' stroke-width='2' opacity='0.22'/%3E%3Cpath d='M286 140 Q318 118 350 140 Q382 162 414 140 Q446 118 478 140 Q510 162 542 140 Q574 118 606 140' stroke='%23267362' stroke-width='1.6' opacity='0.17'/%3E%3Cpath d='M310 228 Q348 188 392 185 Q432 182 455 200 C478 218 468 250 438 260 Q408 270 374 254 Q340 238 310 228 Z' stroke='%23b07b2c' stroke-width='2' opacity='0.24'/%3E%3Cpath d='M330 238 Q368 208 406 204' stroke='%23b07b2c' stroke-width='1.6' opacity='0.22'/%3E%3Cpath d='M310 228 L288 302 L307 282' stroke='%23b07b2c' stroke-width='1.8' opacity='0.22'/%3E%3Cpath d='M288 302 L304 280' stroke='%23b07b2c' stroke-width='1.8' opacity='0.22'/%3E%3Cpath d='M28 334 Q60 314 92 334 Q124 354 156 334 Q188 314 220 334 Q252 354 284 334 Q316 314 348 334 Q380 354 412 334 Q444 314 476 334 Q508 354 540 334' stroke='%23b07b2c' stroke-width='1.8' opacity='0.20'/%3E%3C/g%3E%3C/svg%3E"),
-    linear-gradient(180deg, #f6f2ea 0%, #efe9de 100%);
-  background-size:
-    auto,
-    auto,
-    auto,
-    auto,
-    560px 380px,
-    cover;
-  background-position:
-    left top,
-    right top,
-    left bottom,
-    right bottom,
-    center center,
-    center center;
-}
-
-body.bab-theme-2 .site-header {
-  background: rgba(246, 242, 234, 0.84);
-}
-
-body.bab-theme-2 .paper-label,
-body.bab-theme-2 .bab-card-top {
-  background: linear-gradient(90deg, #dbe8f4, #cdddf0);
-  color: #294d80;
-}
-
-/* =========================================================
-   BAB 3 — KONFLIK DUNIA & PENDUDUKAN JEPUN
-========================================================= */
-
-body.bab-theme-3 {
-  background-image:
-    radial-gradient(circle at 12% 12%, rgba(75, 102, 128, 0.14), transparent 0 22%),
-    radial-gradient(circle at 88% 16%, rgba(111, 128, 84, 0.12), transparent 0 20%),
-    radial-gradient(circle at 14% 88%, rgba(75, 102, 128, 0.08), transparent 0 18%),
-    radial-gradient(circle at 86% 86%, rgba(128, 89, 75, 0.08), transparent 0 16%),
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='560' height='420' viewBox='0 0 560 420'%3E%3Cg fill='none'%3E%3Ccircle cx='426' cy='88' r='54' stroke='%234b6680' stroke-width='2' opacity='0.26'/%3E%3Ccircle cx='426' cy='88' r='36' stroke='%234b6680' stroke-width='1.6' opacity='0.22'/%3E%3Ccircle cx='426' cy='88' r='14' stroke='%234b6680' stroke-width='1.6' opacity='0.22'/%3E%3Cline x1='426' y1='34' x2='426' y2='142' stroke='%234b6680' stroke-width='2.4' opacity='0.28'/%3E%3Cline x1='372' y1='88' x2='480' y2='88' stroke='%234b6680' stroke-width='2.4' opacity='0.28'/%3E%3Cpolygon points='426,30 421,48 426,66 431,48' stroke='%234b6680' stroke-width='1.6' opacity='0.28'/%3E%3Cline x1='388' y1='50' x2='426' y2='88' stroke='%234b6680' stroke-width='1.4' opacity='0.20'/%3E%3Cline x1='464' y1='50' x2='426' y2='88' stroke='%234b6680' stroke-width='1.4' opacity='0.20'/%3E%3Cline x1='464' y1='126' x2='426' y2='88' stroke='%234b6680' stroke-width='1.4' opacity='0.20'/%3E%3Cline x1='388' y1='126' x2='426' y2='88' stroke='%234b6680' stroke-width='1.4' opacity='0.20'/%3E%3Cpath d='M418 30 L426 20 L434 30' stroke='%234b6680' stroke-width='2' opacity='0.28'/%3E%3Cpath d='M28 130 Q82 108 148 122 Q214 136 274 116 Q328 98 384 114 Q424 126 462 112' stroke='%236f8054' stroke-width='2' opacity='0.26'/%3E%3Cpath d='M28 172 Q92 150 164 166 Q236 182 298 158 Q354 138 412 158 Q452 172 494 158' stroke='%236f8054' stroke-width='1.8' opacity='0.22'/%3E%3Cpath d='M28 214 Q102 190 178 208 Q254 226 320 200 Q380 178 444 200 Q484 216 526 200' stroke='%237a8c5e' stroke-width='1.6' opacity='0.19'/%3E%3Cpath d='M28 256 Q112 232 194 250 Q276 268 348 242 Q412 218 480 242 Q514 256 548 242' stroke='%236f8054' stroke-width='1.4' opacity='0.16'/%3E%3Cpath d='M28 298 Q122 272 208 292 Q294 312 372 284 Q440 260 510 286' stroke='%236f8054' stroke-width='1.2' opacity='0.13'/%3E%3Cpath d='M52 356 L148 334 L232 356 L330 330 L432 354' stroke='%2380594b' stroke-width='2.4' opacity='0.28'/%3E%3Cpolygon points='432,354 418,342 422,358' stroke='%2380594b' stroke-width='2' opacity='0.28'/%3E%3Ccircle cx='52' cy='356' r='6' stroke='%2380594b' stroke-width='2' opacity='0.28'/%3E%3Ccircle cx='148' cy='334' r='5' stroke='%2380594b' stroke-width='1.8' opacity='0.24'/%3E%3Ccircle cx='232' cy='356' r='5' stroke='%2380594b' stroke-width='1.8' opacity='0.24'/%3E%3Ccircle cx='330' cy='330' r='5' stroke='%2380594b' stroke-width='1.8' opacity='0.24'/%3E%3Cline x1='28' y1='70' x2='28' y2='82' stroke='%234b6680' stroke-width='1.4' opacity='0.20'/%3E%3Cline x1='22' y1='76' x2='34' y2='76' stroke='%234b6680' stroke-width='1.4' opacity='0.20'/%3E%3Cline x1='150' y1='70' x2='150' y2='82' stroke='%234b6680' stroke-width='1.4' opacity='0.20'/%3E%3Cline x1='144' y1='76' x2='156' y2='76' stroke='%234b6680' stroke-width='1.4' opacity='0.20'/%3E%3Cline x1='272' y1='70' x2='272' y2='82' stroke='%234b6680' stroke-width='1.4' opacity='0.20'/%3E%3Cline x1='266' y1='76' x2='278' y2='76' stroke='%234b6680' stroke-width='1.4' opacity='0.20'/%3E%3Cline x1='28' y1='192' x2='28' y2='204' stroke='%234b6680' stroke-width='1.4' opacity='0.17'/%3E%3Cline x1='22' y1='198' x2='34' y2='198' stroke='%234b6680' stroke-width='1.4' opacity='0.17'/%3E%3Cline x1='28' y1='314' x2='28' y2='326' stroke='%234b6680' stroke-width='1.4' opacity='0.14'/%3E%3Cline x1='22' y1='320' x2='34' y2='320' stroke='%234b6680' stroke-width='1.4' opacity='0.14'/%3E%3C/g%3E%3C/svg%3E"),
-    linear-gradient(180deg, #f2eee6 0%, #ebe5d9 100%);
-  background-size:
-    auto,
-    auto,
-    auto,
-    auto,
-    560px 420px,
-    cover;
-  background-position:
-    left top,
-    right top,
-    left bottom,
-    right bottom,
-    center center,
-    center center;
-}
-
-body.bab-theme-3 .site-header {
-  background: rgba(242, 238, 230, 0.84);
-}
-
-body.bab-theme-3 .paper-label,
-body.bab-theme-3 .bab-card-top {
-  background: linear-gradient(90deg, #dde4ea, #d0d9e2);
-  color: #41576c;
-}
-
-/* =========================================================
-   DARK MODE
-========================================================= */
-
-[data-theme="dark"] body.bab-theme-1 {
-  background-image:
-    radial-gradient(circle at 10% 12%, rgba(82, 179, 150, 0.10), transparent 0 22%),
-    radial-gradient(circle at 88% 16%, rgba(212, 170, 96, 0.10), transparent 0 20%),
-    radial-gradient(circle at 18% 86%, rgba(82, 179, 150, 0.06), transparent 0 18%),
-    radial-gradient(circle at 84% 88%, rgba(212, 170, 96, 0.06), transparent 0 16%),
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='480' height='480' viewBox='0 0 480 480'%3E%3Cg fill='none'%3E%3Cpath d='M-10 50 Q20 28 50 50 Q80 72 110 50 Q140 28 170 50 Q200 72 230 50 Q260 28 290 50 Q320 72 350 50 Q380 28 410 50 Q440 72 470 50 Q500 28 530 50' stroke='%23d4b57a' stroke-width='2.4' opacity='0.17'/%3E%3Cpath d='M-10 95 Q20 73 50 95 Q80 117 110 95 Q140 73 170 95 Q200 117 230 95 Q260 73 290 95 Q320 117 350 95 Q380 73 410 95 Q440 117 470 95 Q500 73 530 95' stroke='%23c4a468' stroke-width='2' opacity='0.13'/%3E%3Cpath d='M-10 140 Q20 118 50 140 Q80 162 110 140 Q140 118 170 140 Q200 162 230 140 Q260 118 290 140 Q320 162 350 140 Q380 118 410 140 Q440 162 470 140 Q500 118 530 140' stroke='%23d4b57a' stroke-width='1.6' opacity='0.09'/%3E%3Cpath d='M390 40 C370 30 340 40 326 70 C312 100 322 135 348 156 C360 164 376 168 388 162 C362 142 354 110 360 80 C366 52 382 40 390 40 Z' stroke='%234aab8a' stroke-width='2.2' opacity='0.17'/%3E%3Cpolygon points='448,66 451,74 459,74 453,80 455,88 448,83 441,88 443,80 437,74 445,74' stroke='%234aab8a' stroke-width='1.8' opacity='0.15'/%3E%3Cline x1='30' y1='296' x2='198' y2='296' stroke='%23b89a5c' stroke-width='1.6' opacity='0.14'/%3E%3Cline x1='30' y1='318' x2='186' y2='318' stroke='%23b89a5c' stroke-width='1.6' opacity='0.14'/%3E%3Cline x1='30' y1='340' x2='194' y2='340' stroke='%23b89a5c' stroke-width='1.6' opacity='0.14'/%3E%3Cline x1='30' y1='362' x2='180' y2='362' stroke='%23b89a5c' stroke-width='1.6' opacity='0.14'/%3E%3Cline x1='30' y1='384' x2='190' y2='384' stroke='%23b89a5c' stroke-width='1.6' opacity='0.14'/%3E%3Cpath d='M20 282 Q14 290 14 306 L14 396 Q14 410 20 416' stroke='%23b89a5c' stroke-width='2' opacity='0.12'/%3E%3Ccircle cx='392' cy='392' r='38' stroke='%23d4b57a' stroke-width='1.8' opacity='0.14'/%3E%3Ccircle cx='392' cy='392' r='24' stroke='%23c4a468' stroke-width='1.8' opacity='0.12'/%3E%3Ccircle cx='392' cy='392' r='9' stroke='%23d4b57a' stroke-width='1.8' opacity='0.14'/%3E%3Cline x1='354' y1='392' x2='430' y2='392' stroke='%23d4b57a' stroke-width='1.8' opacity='0.12'/%3E%3Cline x1='392' y1='354' x2='392' y2='430' stroke='%23d4b57a' stroke-width='1.8' opacity='0.12'/%3E%3Cline x1='366' y1='366' x2='418' y2='418' stroke='%23c4a468' stroke-width='1.3' opacity='0.10'/%3E%3Cline x1='418' y1='366' x2='366' y2='418' stroke='%23c4a468' stroke-width='1.3' opacity='0.10'/%3E%3C/g%3E%3C/svg%3E"),
-    linear-gradient(180deg, #1d1a17 0%, #191713 100%);
-}
-
-[data-theme="dark"] body.bab-theme-2 {
-  background-image:
-    radial-gradient(circle at 10% 12%, rgba(88, 135, 206, 0.09), transparent 0 22%),
-    radial-gradient(circle at 88% 16%, rgba(82, 179, 150, 0.08), transparent 0 20%),
-    radial-gradient(circle at 16% 88%, rgba(88, 135, 206, 0.05), transparent 0 18%),
-    radial-gradient(circle at 84% 84%, rgba(212, 163, 90, 0.05), transparent 0 16%),
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='560' height='380' viewBox='0 0 560 380'%3E%3Cg fill='none'%3E%3Crect x='28' y='28' width='220' height='155' rx='6' stroke='%238aa3bf' stroke-width='1.8' opacity='0.16'/%3E%3Cline x1='46' y1='56' x2='230' y2='56' stroke='%238aa3bf' stroke-width='2.6' opacity='0.18'/%3E%3Cline x1='46' y1='72' x2='218' y2='72' stroke='%238aa3bf' stroke-width='1.4' opacity='0.14'/%3E%3Cline x1='127' y1='82' x2='127' y2='172' stroke='%238aa3bf' stroke-width='1.2' opacity='0.13'/%3E%3Cline x1='46' y1='86' x2='119' y2='86' stroke='%238aa3bf' stroke-width='1.0' opacity='0.12'/%3E%3Cline x1='46' y1='98' x2='119' y2='98' stroke='%238aa3bf' stroke-width='1.0' opacity='0.12'/%3E%3Cline x1='46' y1='110' x2='119' y2='110' stroke='%238aa3bf' stroke-width='1.0' opacity='0.12'/%3E%3Cline x1='46' y1='122' x2='119' y2='122' stroke='%238aa3bf' stroke-width='1.0' opacity='0.12'/%3E%3Cline x1='46' y1='134' x2='119' y2='134' stroke='%238aa3bf' stroke-width='1.0' opacity='0.12'/%3E%3Cline x1='135' y1='86' x2='230' y2='86' stroke='%238aa3bf' stroke-width='1.0' opacity='0.12'/%3E%3Cline x1='135' y1='98' x2='226' y2='98' stroke='%238aa3bf' stroke-width='1.0' opacity='0.12'/%3E%3Cline x1='135' y1='110' x2='230' y2='110' stroke='%238aa3bf' stroke-width='1.0' opacity='0.12'/%3E%3Cline x1='135' y1='122' x2='222' y2='122' stroke='%238aa3bf' stroke-width='1.0' opacity='0.12'/%3E%3Cline x1='135' y1='134' x2='228' y2='134' stroke='%238aa3bf' stroke-width='1.0' opacity='0.12'/%3E%3Cpath d='M286 52 Q318 30 350 52 Q382 74 414 52 Q446 30 478 52 Q510 74 542 52 Q574 30 606 52' stroke='%235cb899' stroke-width='2.2' opacity='0.17'/%3E%3Cpath d='M286 96 Q318 74 350 96 Q382 118 414 96 Q446 74 478 96 Q510 118 542 96 Q574 74 606 96' stroke='%236dc4a8' stroke-width='1.8' opacity='0.13'/%3E%3Cpath d='M286 140 Q318 118 350 140 Q382 162 414 140 Q446 118 478 140 Q510 162 542 140 Q574 118 606 140' stroke='%235cb899' stroke-width='1.4' opacity='0.10'/%3E%3Cpath d='M28 334 Q60 314 92 334 Q124 354 156 334 Q188 314 220 334 Q252 354 284 334 Q316 314 348 334 Q380 354 412 334 Q444 314 476 334 Q508 354 540 334' stroke='%23d4a55a' stroke-width='1.6' opacity='0.13'/%3E%3C/g%3E%3C/svg%3E"),
-    linear-gradient(180deg, #1c1a18 0%, #181613 100%);
-}
-
-[data-theme="dark"] body.bab-theme-3 {
-  background-image:
-    radial-gradient(circle at 12% 12%, rgba(102, 126, 153, 0.10), transparent 0 22%),
-    radial-gradient(circle at 88% 16%, rgba(112, 133, 92, 0.09), transparent 0 20%),
-    radial-gradient(circle at 14% 88%, rgba(102, 126, 153, 0.06), transparent 0 18%),
-    radial-gradient(circle at 86% 86%, rgba(176, 130, 110, 0.06), transparent 0 16%),
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='560' height='420' viewBox='0 0 560 420'%3E%3Cg fill='none'%3E%3Ccircle cx='426' cy='88' r='54' stroke='%238aaec8' stroke-width='1.8' opacity='0.16'/%3E%3Ccircle cx='426' cy='88' r='36' stroke='%238aaec8' stroke-width='1.4' opacity='0.13'/%3E%3Ccircle cx='426' cy='88' r='14' stroke='%238aaec8' stroke-width='1.4' opacity='0.13'/%3E%3Cline x1='426' y1='34' x2='426' y2='142' stroke='%238aaec8' stroke-width='2.2' opacity='0.18'/%3E%3Cline x1='372' y1='88' x2='480' y2='88' stroke='%238aaec8' stroke-width='2.2' opacity='0.18'/%3E%3Cpolygon points='426,30 421,48 426,66 431,48' stroke='%238aaec8' stroke-width='1.4' opacity='0.18'/%3E%3Cline x1='388' y1='50' x2='426' y2='88' stroke='%238aaec8' stroke-width='1.2' opacity='0.13'/%3E%3Cline x1='464' y1='50' x2='426' y2='88' stroke='%238aaec8' stroke-width='1.2' opacity='0.13'/%3E%3Cline x1='464' y1='126' x2='426' y2='88' stroke='%238aaec8' stroke-width='1.2' opacity='0.13'/%3E%3Cline x1='388' y1='126' x2='426' y2='88' stroke='%238aaec8' stroke-width='1.2' opacity='0.13'/%3E%3Cpath d='M418 30 L426 20 L434 30' stroke='%238aaec8' stroke-width='1.8' opacity='0.18'/%3E%3Cpath d='M28 130 Q82 108 148 122 Q214 136 274 116 Q328 98 384 114 Q424 126 462 112' stroke='%2396a876' stroke-width='1.8' opacity='0.16'/%3E%3Cpath d='M28 172 Q92 150 164 166 Q236 182 298 158 Q354 138 412 158 Q452 172 494 158' stroke='%2396a876' stroke-width='1.6' opacity='0.13'/%3E%3Cpath d='M28 214 Q102 190 178 208 Q254 226 320 200 Q380 178 444 200 Q484 216 526 200' stroke='%23a0b27e' stroke-width='1.4' opacity='0.11'/%3E%3Cpath d='M28 256 Q112 232 194 250 Q276 268 348 242 Q412 218 480 242 Q514 256 548 242' stroke='%2396a876' stroke-width='1.2' opacity='0.09'/%3E%3Cpath d='M52 356 L148 334 L232 356 L330 330 L432 354' stroke='%23b0826e' stroke-width='2.2' opacity='0.16'/%3E%3Cpolygon points='432,354 418,342 422,358' stroke='%23b0826e' stroke-width='1.8' opacity='0.16'/%3E%3Ccircle cx='52' cy='356' r='5' stroke='%23b0826e' stroke-width='1.8' opacity='0.16'/%3E%3Ccircle cx='148' cy='334' r='4' stroke='%23b0826e' stroke-width='1.6' opacity='0.14'/%3E%3Ccircle cx='232' cy='356' r='4' stroke='%23b0826e' stroke-width='1.6' opacity='0.14'/%3E%3Ccircle cx='330' cy='330' r='4' stroke='%23b0826e' stroke-width='1.6' opacity='0.14'/%3E%3C/g%3E%3C/svg%3E"),
-    linear-gradient(180deg, #1b1a18 0%, #161513 100%);
-}
-
-/* =========================================================
-   MOBILE — ringankan motif
-========================================================= */
-
-@media (max-width: 760px) {
-  body.bab-theme-1,
-  body.bab-theme-2,
-  body.bab-theme-3 {
-    background-attachment: scroll, scroll, scroll, scroll, scroll, scroll;
-  }
-
-  body.bab-theme-1 {
-    background-size: auto, auto, auto, auto, 300px 300px, cover;
-  }
-
-  body.bab-theme-2 {
-    background-size: auto, auto, auto, auto, 360px 244px, cover;
-  }
-
-  body.bab-theme-3 {
-    background-size: auto, auto, auto, auto, 360px 270px, cover;
-  }
-}
-
-/* =========================================================
-   BAB THEMES — DARK MODE FIX
-   Letak PALING BAWAH style.css
-========================================================= */
-
-html[data-theme="dark"] body.bab-theme-1,
-html[data-theme="dark"] body.bab-theme-2,
-html[data-theme="dark"] body.bab-theme-3 {
-  color: #ddd8cc;
-}
-
-html[data-theme="dark"] body.bab-theme-1 .site-header,
-html[data-theme="dark"] body.bab-theme-2 .site-header,
-html[data-theme="dark"] body.bab-theme-3 .site-header {
-  background: rgba(28, 26, 23, 0.88) !important;
-  border-bottom: 1px solid rgba(220, 210, 190, 0.10);
-  backdrop-filter: blur(14px);
-}
-
-html[data-theme="dark"] body.bab-theme-1 .brand,
-html[data-theme="dark"] body.bab-theme-2 .brand,
-html[data-theme="dark"] body.bab-theme-3 .brand {
-  color: #ece5d8 !important;
-}
-
-html[data-theme="dark"] body.bab-theme-1 .site-nav a,
-html[data-theme="dark"] body.bab-theme-2 .site-nav a,
-html[data-theme="dark"] body.bab-theme-3 .site-nav a {
-  color: #b9b0a2 !important;
-}
-
-html[data-theme="dark"] body.bab-theme-1 .site-nav a:hover,
-html[data-theme="dark"] body.bab-theme-2 .site-nav a:hover,
-html[data-theme="dark"] body.bab-theme-3 .site-nav a:hover {
-  color: #f0eadf !important;
-}
-
-html[data-theme="dark"] body.bab-theme-1 .nav-toggle,
-html[data-theme="dark"] body.bab-theme-2 .nav-toggle,
-html[data-theme="dark"] body.bab-theme-3 .nav-toggle,
-html[data-theme="dark"] body.bab-theme-1 .display-fab,
-html[data-theme="dark"] body.bab-theme-2 .display-fab,
-html[data-theme="dark"] body.bab-theme-3 .display-fab {
-  background: #24211d !important;
-  color: #ece5d8 !important;
-  border: 1px solid rgba(220, 210, 190, 0.12) !important;
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.24);
-}
-
-html[data-theme="dark"] body.bab-theme-1 .paper-board,
-html[data-theme="dark"] body.bab-theme-1 .paper-flap-card,
-html[data-theme="dark"] body.bab-theme-1 .paper-accordion-item,
-html[data-theme="dark"] body.bab-theme-1 .paper-tab-panel,
-html[data-theme="dark"] body.bab-theme-1 .paper-tab,
-html[data-theme="dark"] body.bab-theme-1 .paper-process-card,
-html[data-theme="dark"] body.bab-theme-1 .paper-process-panel,
-html[data-theme="dark"] body.bab-theme-1 .paper-timeline-node,
-html[data-theme="dark"] body.bab-theme-1 .paper-chip,
-html[data-theme="dark"] body.bab-theme-1 .keyword-legend-wrap,
-html[data-theme="dark"] body.bab-theme-1 .current-focus-card,
-html[data-theme="dark"] body.bab-theme-1 .metric-card,
-html[data-theme="dark"] body.bab-theme-1 .editorial-card,
-html[data-theme="dark"] body.bab-theme-1 .audience-card,
-html[data-theme="dark"] body.bab-theme-1 .note-card,
-html[data-theme="dark"] body.bab-theme-1 .value-card,
-html[data-theme="dark"] body.bab-theme-1 .content-block,
-html[data-theme="dark"] body.bab-theme-2 .paper-board,
-html[data-theme="dark"] body.bab-theme-2 .paper-flap-card,
-html[data-theme="dark"] body.bab-theme-2 .paper-accordion-item,
-html[data-theme="dark"] body.bab-theme-2 .paper-tab-panel,
-html[data-theme="dark"] body.bab-theme-2 .paper-tab,
-html[data-theme="dark"] body.bab-theme-2 .paper-process-card,
-html[data-theme="dark"] body.bab-theme-2 .paper-process-panel,
-html[data-theme="dark"] body.bab-theme-2 .paper-timeline-node,
-html[data-theme="dark"] body.bab-theme-2 .paper-chip,
-html[data-theme="dark"] body.bab-theme-2 .keyword-legend-wrap,
-html[data-theme="dark"] body.bab-theme-2 .current-focus-card,
-html[data-theme="dark"] body.bab-theme-2 .metric-card,
-html[data-theme="dark"] body.bab-theme-2 .editorial-card,
-html[data-theme="dark"] body.bab-theme-2 .audience-card,
-html[data-theme="dark"] body.bab-theme-2 .note-card,
-html[data-theme="dark"] body.bab-theme-2 .value-card,
-html[data-theme="dark"] body.bab-theme-2 .content-block,
-html[data-theme="dark"] body.bab-theme-3 .paper-board,
-html[data-theme="dark"] body.bab-theme-3 .paper-flap-card,
-html[data-theme="dark"] body.bab-theme-3 .paper-accordion-item,
-html[data-theme="dark"] body.bab-theme-3 .paper-tab-panel,
-html[data-theme="dark"] body.bab-theme-3 .paper-tab,
-html[data-theme="dark"] body.bab-theme-3 .paper-process-card,
-html[data-theme="dark"] body.bab-theme-3 .paper-process-panel,
-html[data-theme="dark"] body.bab-theme-3 .paper-timeline-node,
-html[data-theme="dark"] body.bab-theme-3 .paper-chip,
-html[data-theme="dark"] body.bab-theme-3 .keyword-legend-wrap,
-html[data-theme="dark"] body.bab-theme-3 .current-focus-card,
-html[data-theme="dark"] body.bab-theme-3 .metric-card,
-html[data-theme="dark"] body.bab-theme-3 .editorial-card,
-html[data-theme="dark"] body.bab-theme-3 .audience-card,
-html[data-theme="dark"] body.bab-theme-3 .note-card,
-html[data-theme="dark"] body.bab-theme-3 .value-card,
-html[data-theme="dark"] body.bab-theme-3 .content-block {
-  background: rgba(31, 29, 26, 0.86) !important;
-  border-color: rgba(220, 210, 190, 0.10) !important;
-  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.22);
-}
-
-html[data-theme="dark"] body.bab-theme-1 .lead,
-html[data-theme="dark"] body.bab-theme-1 .point-line,
-html[data-theme="dark"] body.bab-theme-1 .preview-answer,
-html[data-theme="dark"] body.bab-theme-1 .footer-text,
-html[data-theme="dark"] body.bab-theme-2 .lead,
-html[data-theme="dark"] body.bab-theme-2 .point-line,
-html[data-theme="dark"] body.bab-theme-2 .preview-answer,
-html[data-theme="dark"] body.bab-theme-2 .footer-text,
-html[data-theme="dark"] body.bab-theme-3 .lead,
-html[data-theme="dark"] body.bab-theme-3 .point-line,
-html[data-theme="dark"] body.bab-theme-3 .preview-answer,
-html[data-theme="dark"] body.bab-theme-3 .footer-text {
-  color: #b7ae9f !important;
-}
-
-html[data-theme="dark"] body.bab-theme-1 h1,
-html[data-theme="dark"] body.bab-theme-1 h2,
-html[data-theme="dark"] body.bab-theme-1 h3,
-html[data-theme="dark"] body.bab-theme-1 .point-heading,
-html[data-theme="dark"] body.bab-theme-2 h1,
-html[data-theme="dark"] body.bab-theme-2 h2,
-html[data-theme="dark"] body.bab-theme-2 h3,
-html[data-theme="dark"] body.bab-theme-2 .point-heading,
-html[data-theme="dark"] body.bab-theme-3 h1,
-html[data-theme="dark"] body.bab-theme-3 h2,
-html[data-theme="dark"] body.bab-theme-3 h3,
-html[data-theme="dark"] body.bab-theme-3 .point-heading {
-  color: #f1eadf !important;
-}
-
-html[data-theme="dark"] body.bab-theme-1 .site-footer,
-html[data-theme="dark"] body.bab-theme-2 .site-footer,
-html[data-theme="dark"] body.bab-theme-3 .site-footer {
-  background: rgba(28, 26, 23, 0.82) !important;
-  border-top: 1px solid rgba(220, 210, 190, 0.10);
-}
-
-/* =========================================================
-   FINAL BAB THEMES DARK OVERRIDE
-   LETAK PALING BAWAH SEKALI
-========================================================= */
-
-html[data-theme="dark"] body.bab-theme-1 .site-header,
-html[data-theme="dark"] body.bab-theme-2 .site-header,
-html[data-theme="dark"] body.bab-theme-3 .site-header {
-  background: rgba(28, 26, 23, 0.92) !important;
-  border-bottom-color: rgba(220, 210, 190, 0.10) !important;
-}
-
-html[data-theme="dark"] body.bab-theme-1 .brand,
-html[data-theme="dark"] body.bab-theme-2 .brand,
-html[data-theme="dark"] body.bab-theme-3 .brand,
-html[data-theme="dark"] body.bab-theme-1 h1,
-html[data-theme="dark"] body.bab-theme-1 h2,
-html[data-theme="dark"] body.bab-theme-1 h3,
-html[data-theme="dark"] body.bab-theme-2 h1,
-html[data-theme="dark"] body.bab-theme-2 h2,
-html[data-theme="dark"] body.bab-theme-2 h3,
-html[data-theme="dark"] body.bab-theme-3 h1,
-html[data-theme="dark"] body.bab-theme-3 h2,
-html[data-theme="dark"] body.bab-theme-3 h3,
-html[data-theme="dark"] body.bab-theme-1 .point-heading,
-html[data-theme="dark"] body.bab-theme-2 .point-heading,
-html[data-theme="dark"] body.bab-theme-3 .point-heading {
-  color: #f1eadf !important;
-}
-
-html[data-theme="dark"] body.bab-theme-1 .lead,
-html[data-theme="dark"] body.bab-theme-2 .lead,
-html[data-theme="dark"] body.bab-theme-3 .lead,
-html[data-theme="dark"] body.bab-theme-1 .point-line,
-html[data-theme="dark"] body.bab-theme-2 .point-line,
-html[data-theme="dark"] body.bab-theme-3 .point-line,
-html[data-theme="dark"] body.bab-theme-1 .footer-text,
-html[data-theme="dark"] body.bab-theme-2 .footer-text,
-html[data-theme="dark"] body.bab-theme-3 .footer-text,
-html[data-theme="dark"] body.bab-theme-1 .preview-answer,
-html[data-theme="dark"] body.bab-theme-2 .preview-answer,
-html[data-theme="dark"] body.bab-theme-3 .preview-answer {
-  color: #b7ae9f !important;
-}
-
-html[data-theme="dark"] body.bab-theme-1 .paper-label,
-html[data-theme="dark"] body.bab-theme-1 .paper-label.small,
-html[data-theme="dark"] body.bab-theme-1 .bab-card-top {
-  background: rgba(82, 179, 150, 0.18) !important;
-  color: #7ecfb8 !important;
-}
-
-html[data-theme="dark"] body.bab-theme-2 .paper-label,
-html[data-theme="dark"] body.bab-theme-2 .paper-label.small,
-html[data-theme="dark"] body.bab-theme-2 .bab-card-top {
-  background: rgba(88, 135, 206, 0.18) !important;
-  color: #9fc0f1 !important;
-}
-
-html[data-theme="dark"] body.bab-theme-3 .paper-label,
-html[data-theme="dark"] body.bab-theme-3 .paper-label.small,
-html[data-theme="dark"] body.bab-theme-3 .bab-card-top {
-  background: rgba(120, 138, 156, 0.18) !important;
-  color: #c2d0dd !important;
-}
-
-html[data-theme="dark"] body.bab-theme-1 .paper-strip.strip-main,
-html[data-theme="dark"] body.bab-theme-2 .paper-strip.strip-main,
-html[data-theme="dark"] body.bab-theme-3 .paper-strip.strip-main {
-  background: linear-gradient(90deg, rgba(212,170,96,0.18), rgba(180,140,60,0.14)) !important;
-  color: #e2b56f !important;
-}
-
-html[data-theme="dark"] body.bab-theme-1 .paper-strip.strip-sub,
-html[data-theme="dark"] body.bab-theme-2 .paper-strip.strip-sub,
-html[data-theme="dark"] body.bab-theme-3 .paper-strip.strip-sub {
-  background: linear-gradient(90deg, rgba(82,179,150,0.18), rgba(82,179,150,0.12)) !important;
-  color: #79d2b8 !important;
-}
-
-html[data-theme="dark"] body.bab-theme-1 .paper-strip.strip-info,
-html[data-theme="dark"] body.bab-theme-2 .paper-strip.strip-info,
-html[data-theme="dark"] body.bab-theme-3 .paper-strip.strip-info {
-  background: linear-gradient(90deg, rgba(59,130,246,0.18), rgba(99,160,255,0.14)) !important;
-  color: #8eb9f7 !important;
-}
-
-html[data-theme="dark"] body.bab-theme-1 .paper-strip.strip-glossary,
-html[data-theme="dark"] body.bab-theme-2 .paper-strip.strip-glossary,
-html[data-theme="dark"] body.bab-theme-3 .paper-strip.strip-glossary {
-  background: linear-gradient(90deg, rgba(139,92,246,0.18), rgba(167,139,250,0.14)) !important;
-  color: #c0aaf8 !important;
-}
-
-html[data-theme="dark"] body.bab-theme-1 .paper-strip.strip-summary,
-html[data-theme="dark"] body.bab-theme-2 .paper-strip.strip-summary,
-html[data-theme="dark"] body.bab-theme-3 .paper-strip.strip-summary {
-  background: linear-gradient(90deg, rgba(244,63,94,0.16), rgba(255,100,130,0.12)) !important;
-  color: #f48ca0 !important;
-}
-
-html[data-theme="dark"] body.bab-theme-1 .paper-board,
-html[data-theme="dark"] body.bab-theme-1 .paper-flap-card,
-html[data-theme="dark"] body.bab-theme-1 .paper-accordion-item,
-html[data-theme="dark"] body.bab-theme-1 .paper-tab,
-html[data-theme="dark"] body.bab-theme-1 .paper-tab-panel,
-html[data-theme="dark"] body.bab-theme-1 .paper-process-card,
-html[data-theme="dark"] body.bab-theme-1 .paper-process-panel,
-html[data-theme="dark"] body.bab-theme-1 .paper-timeline-node,
-html[data-theme="dark"] body.bab-theme-1 .paper-chip,
-html[data-theme="dark"] body.bab-theme-1 .keyword-legend-wrap,
-html[data-theme="dark"] body.bab-theme-1 .mindmap-card,
-html[data-theme="dark"] body.bab-theme-1 .paper-flow-card,
-html[data-theme="dark"] body.bab-theme-1 .org-node,
-html[data-theme="dark"] body.bab-theme-1 .metric-card,
-html[data-theme="dark"] body.bab-theme-1 .editorial-card,
-html[data-theme="dark"] body.bab-theme-1 .audience-card,
-html[data-theme="dark"] body.bab-theme-1 .note-card,
-html[data-theme="dark"] body.bab-theme-1 .value-card,
-html[data-theme="dark"] body.bab-theme-1 .content-block,
-html[data-theme="dark"] body.bab-theme-2 .paper-board,
-html[data-theme="dark"] body.bab-theme-2 .paper-flap-card,
-html[data-theme="dark"] body.bab-theme-2 .paper-accordion-item,
-html[data-theme="dark"] body.bab-theme-2 .paper-tab,
-html[data-theme="dark"] body.bab-theme-2 .paper-tab-panel,
-html[data-theme="dark"] body.bab-theme-2 .paper-process-card,
-html[data-theme="dark"] body.bab-theme-2 .paper-process-panel,
-html[data-theme="dark"] body.bab-theme-2 .paper-timeline-node,
-html[data-theme="dark"] body.bab-theme-2 .paper-chip,
-html[data-theme="dark"] body.bab-theme-2 .keyword-legend-wrap,
-html[data-theme="dark"] body.bab-theme-2 .mindmap-card,
-html[data-theme="dark"] body.bab-theme-2 .paper-flow-card,
-html[data-theme="dark"] body.bab-theme-2 .org-node,
-html[data-theme="dark"] body.bab-theme-2 .metric-card,
-html[data-theme="dark"] body.bab-theme-2 .editorial-card,
-html[data-theme="dark"] body.bab-theme-2 .audience-card,
-html[data-theme="dark"] body.bab-theme-2 .note-card,
-html[data-theme="dark"] body.bab-theme-2 .value-card,
-html[data-theme="dark"] body.bab-theme-2 .content-block,
-html[data-theme="dark"] body.bab-theme-3 .paper-board,
-html[data-theme="dark"] body.bab-theme-3 .paper-flap-card,
-html[data-theme="dark"] body.bab-theme-3 .paper-accordion-item,
-html[data-theme="dark"] body.bab-theme-3 .paper-tab,
-html[data-theme="dark"] body.bab-theme-3 .paper-tab-panel,
-html[data-theme="dark"] body.bab-theme-3 .paper-process-card,
-html[data-theme="dark"] body.bab-theme-3 .paper-process-panel,
-html[data-theme="dark"] body.bab-theme-3 .paper-timeline-node,
-html[data-theme="dark"] body.bab-theme-3 .paper-chip,
-html[data-theme="dark"] body.bab-theme-3 .keyword-legend-wrap,
-html[data-theme="dark"] body.bab-theme-3 .mindmap-card,
-html[data-theme="dark"] body.bab-theme-3 .paper-flow-card,
-html[data-theme="dark"] body.bab-theme-3 .org-node,
-html[data-theme="dark"] body.bab-theme-3 .metric-card,
-html[data-theme="dark"] body.bab-theme-3 .editorial-card,
-html[data-theme="dark"] body.bab-theme-3 .audience-card,
-html[data-theme="dark"] body.bab-theme-3 .note-card,
-html[data-theme="dark"] body.bab-theme-3 .value-card,
-html[data-theme="dark"] body.bab-theme-3 .content-block {
-  background: rgba(31, 29, 26, 0.88) !important;
-  border-color: rgba(220, 210, 190, 0.10) !important;
-  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.22) !important;
-}
-
-html[data-theme="dark"] body.bab-theme-1 .site-footer,
-html[data-theme="dark"] body.bab-theme-2 .site-footer,
-html[data-theme="dark"] body.bab-theme-3 .site-footer {
-  background: rgba(28, 26, 23, 0.82) !important;
-  border-top-color: rgba(220, 210, 190, 0.10) !important;
-}
-
-/* =========================================================
-   FINAL LABEL FIX — BAB INDUK & SUBTOPIK NUMBER (DARK MODE)
-   Letak PALING BAWAH SEKALI
-========================================================= */
-
-html[data-theme="dark"] body.bab-theme-1 .paper-label,
-html[data-theme="dark"] body.bab-theme-1 .paper-label.small,
-html[data-theme="dark"] body.bab-theme-1 .bab-card-top,
-html[data-theme="dark"] body.bab-theme-2 .paper-label,
-html[data-theme="dark"] body.bab-theme-2 .paper-label.small,
-html[data-theme="dark"] body.bab-theme-2 .bab-card-top,
-html[data-theme="dark"] body.bab-theme-3 .paper-label,
-html[data-theme="dark"] body.bab-theme-3 .paper-label.small,
-html[data-theme="dark"] body.bab-theme-3 .bab-card-top {
-  background-image: none !important;
-  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.22) !important;
-}
-
-/* Bab 1 */
-html[data-theme="dark"] body.bab-theme-1 .paper-label,
-html[data-theme="dark"] body.bab-theme-1 .paper-label.small,
-html[data-theme="dark"] body.bab-theme-1 .bab-card-top {
-  background-color: rgba(82, 179, 150, 0.16) !important;
-  color: #99dbc8 !important;
-  border: 1px solid rgba(126, 207, 184, 0.16) !important;
-}
-
-/* Bab 2 */
-html[data-theme="dark"] body.bab-theme-2 .paper-label,
-html[data-theme="dark"] body.bab-theme-2 .paper-label.small,
-html[data-theme="dark"] body.bab-theme-2 .bab-card-top {
-  background-color: rgba(88, 135, 206, 0.16) !important;
-  color: #a9c4f2 !important;
-  border: 1px solid rgba(169, 196, 242, 0.16) !important;
-}
-
-/* Bab 3 */
-html[data-theme="dark"] body.bab-theme-3 .paper-label,
-html[data-theme="dark"] body.bab-theme-3 .paper-label.small,
-html[data-theme="dark"] body.bab-theme-3 .bab-card-top {
-  background-color: rgba(120, 138, 156, 0.16) !important;
-  color: #ccd7e1 !important;
-  border: 1px solid rgba(204, 215, 225, 0.14) !important;
-}
-
-/* =========================================================
-   RICH BAB BACKGROUND THEMES
-   Letak PALING BAWAH style.css
-========================================================= */
-
-/* ---------- Surface kekal lebih menonjol ---------- */
-
-body.bab-theme-1,
-body.bab-theme-2,
-body.bab-theme-3 {
-  background-color: #efe9de;
-}
-
-body.bab-theme-1 .paper-board,
-body.bab-theme-1 .paper-flap-card,
-body.bab-theme-1 .paper-accordion-item,
-body.bab-theme-1 .paper-tab,
-body.bab-theme-1 .paper-tab-panel,
-body.bab-theme-1 .paper-process-card,
-body.bab-theme-1 .paper-process-panel,
-body.bab-theme-1 .paper-timeline-node,
-body.bab-theme-1 .paper-chip,
-body.bab-theme-1 .keyword-legend-wrap,
-body.bab-theme-1 .mindmap-card,
-body.bab-theme-1 .paper-flow-card,
-body.bab-theme-1 .org-node,
-body.bab-theme-1 .metric-card,
-body.bab-theme-1 .editorial-card,
-body.bab-theme-1 .audience-card,
-body.bab-theme-1 .note-card,
-body.bab-theme-1 .value-card,
-body.bab-theme-1 .content-block,
-body.bab-theme-2 .paper-board,
-body.bab-theme-2 .paper-flap-card,
-body.bab-theme-2 .paper-accordion-item,
-body.bab-theme-2 .paper-tab,
-body.bab-theme-2 .paper-tab-panel,
-body.bab-theme-2 .paper-process-card,
-body.bab-theme-2 .paper-process-panel,
-body.bab-theme-2 .paper-timeline-node,
-body.bab-theme-2 .paper-chip,
-body.bab-theme-2 .keyword-legend-wrap,
-body.bab-theme-2 .mindmap-card,
-body.bab-theme-2 .paper-flow-card,
-body.bab-theme-2 .org-node,
-body.bab-theme-2 .metric-card,
-body.bab-theme-2 .editorial-card,
-body.bab-theme-2 .audience-card,
-body.bab-theme-2 .note-card,
-body.bab-theme-2 .value-card,
-body.bab-theme-2 .content-block,
-body.bab-theme-3 .paper-board,
-body.bab-theme-3 .paper-flap-card,
-body.bab-theme-3 .paper-accordion-item,
-body.bab-theme-3 .paper-tab,
-body.bab-theme-3 .paper-tab-panel,
-body.bab-theme-3 .paper-process-card,
-body.bab-theme-3 .paper-process-panel,
-body.bab-theme-3 .paper-timeline-node,
-body.bab-theme-3 .paper-chip,
-body.bab-theme-3 .keyword-legend-wrap,
-body.bab-theme-3 .mindmap-card,
-body.bab-theme-3 .paper-flow-card,
-body.bab-theme-3 .org-node,
-body.bab-theme-3 .metric-card,
-body.bab-theme-3 .editorial-card,
-body.bab-theme-3 .audience-card,
-body.bab-theme-3 .note-card,
-body.bab-theme-3 .value-card,
-body.bab-theme-3 .content-block {
-  background: rgba(255, 252, 247, 0.88);
-  border-color: rgba(92, 110, 132, 0.14);
-  box-shadow: 0 16px 36px rgba(36, 49, 63, 0.12);
-}
-
-/* =========================================================
-   BAB 1 — WARISAN NEGARA BANGSA
-   motif: manuskrip + awan larat + mohor
-========================================================= */
-
-body.bab-theme-1 {
-  background-image:
-    radial-gradient(circle at 8% 12%, rgba(63, 125, 95, 0.18), transparent 0 18%),
-    radial-gradient(circle at 88% 14%, rgba(198, 153, 62, 0.18), transparent 0 16%),
-    radial-gradient(circle at 18% 78%, rgba(110, 78, 53, 0.10), transparent 0 15%),
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='640' height='640' viewBox='0 0 640 640'%3E%3Crect width='640' height='640' fill='none'/%3E%3Cg opacity='0.17'%3E%3Cpath d='M78 96c28-22 58-22 86 0 28 22 58 22 86 0 28-22 58-22 86 0 28 22 58 22 86 0' fill='none' stroke='%23846a3d' stroke-width='3' stroke-linecap='round'/%3E%3Cpath d='M78 148c28-22 58-22 86 0 28 22 58 22 86 0 28-22 58-22 86 0 28 22 58 22 86 0' fill='none' stroke='%23846a3d' stroke-width='3' stroke-linecap='round'/%3E%3Cpath d='M78 200c28-22 58-22 86 0 28 22 58 22 86 0 28-22 58-22 86 0 28 22 58 22 86 0' fill='none' stroke='%23846a3d' stroke-width='3' stroke-linecap='round'/%3E%3Ccircle cx='520' cy='136' r='56' fill='none' stroke='%23506f58' stroke-width='4'/%3E%3Ccircle cx='520' cy='136' r='30' fill='none' stroke='%23506f58' stroke-width='3'/%3E%3Cpath d='M520 80v112M464 136h112' stroke='%23506f58' stroke-width='3'/%3E%3Cpath d='M120 432c22-16 42-24 60-24 20 0 38 8 54 24 16 16 34 24 54 24 18 0 38-8 60-24 22-16 42-24 60-24 20 0 38 8 54 24' fill='none' stroke='%23906f46' stroke-width='3' stroke-linecap='round'/%3E%3Cpath d='M120 486c22-16 42-24 60-24 20 0 38 8 54 24 16 16 34 24 54 24 18 0 38-8 60-24 22-16 42-24 60-24 20 0 38 8 54 24' fill='none' stroke='%23906f46' stroke-width='3' stroke-linecap='round'/%3E%3Cpath d='M84 566c48-18 94-18 142 0 48 18 94 18 142 0 48-18 94-18 142 0' fill='none' stroke='%235d7d6e' stroke-width='3' stroke-linecap='round'/%3E%3C/g%3E%3Cg opacity='0.08'%3E%3Cpath d='M84 280h472M84 306h472M84 332h472M84 358h472' stroke='%236e6151' stroke-width='2' stroke-linecap='round'/%3E%3C/g%3E%3C/svg%3E"),
-    linear-gradient(180deg, #f1eadb 0%, #e7dfcf 100%);
-  background-size:
-    auto,
-    auto,
-    auto,
-    620px 620px,
-    cover;
-  background-position:
-    left top,
-    right top,
-    left bottom,
-    center top,
-    center center;
-  background-repeat:
-    no-repeat,
-    no-repeat,
-    no-repeat,
-    repeat,
-    no-repeat;
-  background-attachment:
-    fixed,
-    fixed,
-    fixed,
-    scroll,
-    scroll;
-}
-
-/* =========================================================
-   BAB 2 — KEBANGKITAN NASIONALISME
-   motif: akhbar + dakwat + editorial structure
-========================================================= */
-
-body.bab-theme-2 {
-  background-image:
-    radial-gradient(circle at 10% 10%, rgba(54, 99, 170, 0.16), transparent 0 18%),
-    radial-gradient(circle at 90% 16%, rgba(48, 130, 108, 0.15), transparent 0 15%),
-    radial-gradient(circle at 22% 82%, rgba(159, 105, 48, 0.10), transparent 0 14%),
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='760' height='640' viewBox='0 0 760 640'%3E%3Crect width='760' height='640' fill='none'/%3E%3Cg opacity='0.16'%3E%3Crect x='40' y='52' width='280' height='180' rx='12' fill='none' stroke='%23476284' stroke-width='3'/%3E%3Cline x1='64' y1='84' x2='296' y2='84' stroke='%23476284' stroke-width='3' stroke-linecap='round'/%3E%3Cline x1='64' y1='114' x2='280' y2='114' stroke='%23476284' stroke-width='3' stroke-linecap='round'/%3E%3Cline x1='64' y1='144' x2='292' y2='144' stroke='%23476284' stroke-width='3' stroke-linecap='round'/%3E%3Cline x1='64' y1='174' x2='250' y2='174' stroke='%23476284' stroke-width='3' stroke-linecap='round'/%3E%3Crect x='378' y='58' width='330' height='164' rx='14' fill='none' stroke='%232f7a67' stroke-width='3'/%3E%3Cpath d='M402 92h282M402 124h250M402 156h268M402 188h210' stroke='%232f7a67' stroke-width='3' stroke-linecap='round'/%3E%3Cpath d='M70 350c42-18 82-18 124 0 42 18 82 18 124 0 42-18 82-18 124 0 42 18 82 18 124 0' fill='none' stroke='%23ad7334' stroke-width='3' stroke-linecap='round'/%3E%3Cpath d='M70 404c42-18 82-18 124 0 42 18 82 18 124 0 42-18 82-18 124 0 42 18 82 18 124 0' fill='none' stroke='%23ad7334' stroke-width='3' stroke-linecap='round'/%3E%3Cpath d='M88 500c60 0 96 18 132 36 36 18 72 36 132 36 60 0 96-18 132-36 36-18 72-36 132-36' fill='none' stroke='%2350776d' stroke-width='3' stroke-linecap='round'/%3E%3C/g%3E%3Cg opacity='0.08'%3E%3Cline x1='0' y1='0' x2='760' y2='640' stroke='%23626d78' stroke-width='2'/%3E%3Cline x1='120' y1='0' x2='760' y2='540' stroke='%23626d78' stroke-width='2'/%3E%3C/g%3E%3C/svg%3E"),
-    linear-gradient(180deg, #efe8dc 0%, #e3dacb 100%);
-  background-size:
-    auto,
-    auto,
-    auto,
-    720px 600px,
-    cover;
-  background-position:
-    left top,
-    right top,
-    left bottom,
-    center top,
-    center center;
-  background-repeat:
-    no-repeat,
-    no-repeat,
-    no-repeat,
-    repeat,
-    no-repeat;
-  background-attachment:
-    fixed,
-    fixed,
-    fixed,
-    scroll,
-    scroll;
-}
-
-/* =========================================================
-   BAB 3 — KONFLIK DUNIA & PENDUDUKAN JEPUN
-   motif: peta perang + laluan + dokumen strategi
-========================================================= */
-
-body.bab-theme-3 {
-  background-image:
-    radial-gradient(circle at 10% 10%, rgba(79, 104, 132, 0.18), transparent 0 18%),
-    radial-gradient(circle at 88% 14%, rgba(114, 128, 84, 0.16), transparent 0 16%),
-    radial-gradient(circle at 20% 84%, rgba(148, 90, 72, 0.12), transparent 0 15%),
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='760' height='660' viewBox='0 0 760 660'%3E%3Crect width='760' height='660' fill='none'/%3E%3Cg opacity='0.16'%3E%3Cpath d='M78 120c48-30 110-42 172-30 32 6 58 4 92-8 34-12 64-16 104-8 36 8 74 24 114 48' fill='none' stroke='%23576780' stroke-width='3' stroke-linecap='round'/%3E%3Cpath d='M98 200c58 16 118 22 178 12 38-6 70-2 110 10 38 12 84 18 138 10' fill='none' stroke='%23576780' stroke-width='3' stroke-linecap='round'/%3E%3Cpath d='M112 296c42-22 88-32 138-28 44 4 80-2 124-20 42-18 86-24 142-18' fill='none' stroke='%23576780' stroke-width='3' stroke-linecap='round'/%3E%3Cpath d='M122 404c26-12 50-18 78-18 30 0 56-8 86-26 30-18 62-28 104-30 38-2 74 6 116 26' fill='none' stroke='%23576780' stroke-width='3' stroke-linecap='round'/%3E%3Cpath d='M184 96l64 24-64 26' fill='none' stroke='%23905d4a' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M402 262l90-34' fill='none' stroke='%23905d4a' stroke-width='4' stroke-linecap='round'/%3E%3Cpath d='M482 228l14 36-38 0' fill='none' stroke='%23905d4a' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='152' cy='228' r='10' fill='none' stroke='%235a6f68' stroke-width='3'/%3E%3Ccircle cx='326' cy='174' r='10' fill='none' stroke='%235a6f68' stroke-width='3'/%3E%3Ccircle cx='564' cy='422' r='10' fill='none' stroke='%235a6f68' stroke-width='3'/%3E%3Crect x='72' y='514' width='272' height='90' rx='14' fill='none' stroke='%235a6f68' stroke-width='3'/%3E%3Cpath d='M102 544h212M102 572h182' stroke='%235a6f68' stroke-width='3' stroke-linecap='round'/%3E%3C/g%3E%3Cg opacity='0.07'%3E%3Cpath d='M0 110h760M0 220h760M0 330h760M0 440h760M0 550h760' stroke='%23656b72' stroke-width='2'/%3E%3Cpath d='M90 0v660M220 0v660M350 0v660M480 0v660M610 0v660' stroke='%23656b72' stroke-width='2'/%3E%3C/g%3E%3C/svg%3E"),
-    linear-gradient(180deg, #ece5d8 0%, #dfd5c6 100%);
+    var(--theme-overlay-1),
+    var(--theme-overlay-2),
+    var(--theme-overlay-3),
+    var(--theme-pattern),
+    var(--theme-gradient);
   background-size:
     auto,
     auto,
@@ -729,118 +59,411 @@ body.bab-theme-3 {
     scroll;
 }
 
-/* ---------- Bezakan header daripada background ---------- */
-
-body.bab-theme-1 .site-header {
-  background: rgba(246, 241, 232, 0.86);
+body[class^="bab-theme-"] .site-header {
+  background: var(--theme-header-bg);
 }
 
-body.bab-theme-2 .site-header {
-  background: rgba(243, 238, 229, 0.86);
+body[class^="bab-theme-"] .site-footer {
+  background: var(--theme-footer-bg);
 }
 
-body.bab-theme-3 .site-header {
-  background: rgba(241, 235, 225, 0.86);
+body[class^="bab-theme-"] .paper-label,
+body[class^="bab-theme-"] .paper-label.small,
+body[class^="bab-theme-"] .bab-card-top {
+  background: var(--theme-label-bg);
+  color: var(--theme-label-color);
 }
 
-/* ---------- Dark mode: background kekal kaya, surface kekal menonjol ---------- */
-
-html[data-theme="dark"] body.bab-theme-1 .paper-board,
-html[data-theme="dark"] body.bab-theme-1 .paper-flap-card,
-html[data-theme="dark"] body.bab-theme-1 .paper-accordion-item,
-html[data-theme="dark"] body.bab-theme-1 .paper-tab,
-html[data-theme="dark"] body.bab-theme-1 .paper-tab-panel,
-html[data-theme="dark"] body.bab-theme-1 .paper-process-card,
-html[data-theme="dark"] body.bab-theme-1 .paper-process-panel,
-html[data-theme="dark"] body.bab-theme-1 .paper-timeline-node,
-html[data-theme="dark"] body.bab-theme-1 .paper-chip,
-html[data-theme="dark"] body.bab-theme-1 .keyword-legend-wrap,
-html[data-theme="dark"] body.bab-theme-1 .mindmap-card,
-html[data-theme="dark"] body.bab-theme-1 .paper-flow-card,
-html[data-theme="dark"] body.bab-theme-1 .org-node,
-html[data-theme="dark"] body.bab-theme-1 .metric-card,
-html[data-theme="dark"] body.bab-theme-1 .editorial-card,
-html[data-theme="dark"] body.bab-theme-1 .audience-card,
-html[data-theme="dark"] body.bab-theme-1 .note-card,
-html[data-theme="dark"] body.bab-theme-1 .value-card,
-html[data-theme="dark"] body.bab-theme-1 .content-block,
-html[data-theme="dark"] body.bab-theme-2 .paper-board,
-html[data-theme="dark"] body.bab-theme-2 .paper-flap-card,
-html[data-theme="dark"] body.bab-theme-2 .paper-accordion-item,
-html[data-theme="dark"] body.bab-theme-2 .paper-tab,
-html[data-theme="dark"] body.bab-theme-2 .paper-tab-panel,
-html[data-theme="dark"] body.bab-theme-2 .paper-process-card,
-html[data-theme="dark"] body.bab-theme-2 .paper-process-panel,
-html[data-theme="dark"] body.bab-theme-2 .paper-timeline-node,
-html[data-theme="dark"] body.bab-theme-2 .paper-chip,
-html[data-theme="dark"] body.bab-theme-2 .keyword-legend-wrap,
-html[data-theme="dark"] body.bab-theme-2 .mindmap-card,
-html[data-theme="dark"] body.bab-theme-2 .paper-flow-card,
-html[data-theme="dark"] body.bab-theme-2 .org-node,
-html[data-theme="dark"] body.bab-theme-2 .metric-card,
-html[data-theme="dark"] body.bab-theme-2 .editorial-card,
-html[data-theme="dark"] body.bab-theme-2 .audience-card,
-html[data-theme="dark"] body.bab-theme-2 .note-card,
-html[data-theme="dark"] body.bab-theme-2 .value-card,
-html[data-theme="dark"] body.bab-theme-2 .content-block,
-html[data-theme="dark"] body.bab-theme-3 .paper-board,
-html[data-theme="dark"] body.bab-theme-3 .paper-flap-card,
-html[data-theme="dark"] body.bab-theme-3 .paper-accordion-item,
-html[data-theme="dark"] body.bab-theme-3 .paper-tab,
-html[data-theme="dark"] body.bab-theme-3 .paper-tab-panel,
-html[data-theme="dark"] body.bab-theme-3 .paper-process-card,
-html[data-theme="dark"] body.bab-theme-3 .paper-process-panel,
-html[data-theme="dark"] body.bab-theme-3 .paper-timeline-node,
-html[data-theme="dark"] body.bab-theme-3 .paper-chip,
-html[data-theme="dark"] body.bab-theme-3 .keyword-legend-wrap,
-html[data-theme="dark"] body.bab-theme-3 .mindmap-card,
-html[data-theme="dark"] body.bab-theme-3 .paper-flow-card,
-html[data-theme="dark"] body.bab-theme-3 .org-node,
-html[data-theme="dark"] body.bab-theme-3 .metric-card,
-html[data-theme="dark"] body.bab-theme-3 .editorial-card,
-html[data-theme="dark"] body.bab-theme-3 .audience-card,
-html[data-theme="dark"] body.bab-theme-3 .note-card,
-html[data-theme="dark"] body.bab-theme-3 .value-card,
-html[data-theme="dark"] body.bab-theme-3 .content-block {
-  background: rgba(29, 27, 24, 0.88) !important;
-  border-color: rgba(220, 210, 190, 0.12) !important;
-  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.24) !important;
+body[class^="bab-theme-"] .paper-board,
+body[class^="bab-theme-"] .paper-flap-card,
+body[class^="bab-theme-"] .paper-accordion-item,
+body[class^="bab-theme-"] .paper-tab,
+body[class^="bab-theme-"] .paper-tab-panel,
+body[class^="bab-theme-"] .paper-process-card,
+body[class^="bab-theme-"] .paper-process-panel,
+body[class^="bab-theme-"] .paper-timeline-node,
+body[class^="bab-theme-"] .paper-chip,
+body[class^="bab-theme-"] .keyword-legend-wrap,
+body[class^="bab-theme-"] .mindmap-card,
+body[class^="bab-theme-"] .paper-flow-card,
+body[class^="bab-theme-"] .org-node,
+body[class^="bab-theme-"] .metric-card,
+body[class^="bab-theme-"] .editorial-card,
+body[class^="bab-theme-"] .audience-card,
+body[class^="bab-theme-"] .note-card,
+body[class^="bab-theme-"] .value-card,
+body[class^="bab-theme-"] .content-block,
+body[class^="bab-theme-"] .current-focus-card,
+body[class^="bab-theme-"] .search-wrap,
+body[class^="bab-theme-"] .search-results,
+body[class^="bab-theme-"] .search-empty {
+  background: var(--theme-surface-bg);
+  border-color: var(--theme-surface-border);
+  box-shadow: var(--theme-surface-shadow);
 }
 
-html[data-theme="dark"] body.bab-theme-1 .site-header,
-html[data-theme="dark"] body.bab-theme-2 .site-header,
-html[data-theme="dark"] body.bab-theme-3 .site-header {
-  background: rgba(24, 23, 20, 0.90) !important;
+/* =========================================================
+   DARK MODE — semua bab automatik ikut
+========================================================= */
+
+html[data-theme="dark"] body[class^="bab-theme-"] {
+  --theme-surface-bg: rgba(29, 27, 24, 0.88);
+  --theme-surface-border: rgba(220, 210, 190, 0.12);
+  --theme-surface-shadow: 0 18px 42px rgba(0, 0, 0, 0.24);
+
+  --theme-header-bg: rgba(24, 23, 20, 0.90);
+  --theme-footer-bg: rgba(28, 26, 23, 0.82);
+
+  color: #ddd8cc;
 }
 
-/* ---------- Mobile: corak kekal ada tapi lebih ringan ---------- */
+html[data-theme="dark"] body[class^="bab-theme-"] .brand,
+html[data-theme="dark"] body[class^="bab-theme-"] h1,
+html[data-theme="dark"] body[class^="bab-theme-"] h2,
+html[data-theme="dark"] body[class^="bab-theme-"] h3,
+html[data-theme="dark"] body[class^="bab-theme-"] .point-heading {
+  color: #f1eadf !important;
+}
+
+html[data-theme="dark"] body[class^="bab-theme-"] .lead,
+html[data-theme="dark"] body[class^="bab-theme-"] .point-line,
+html[data-theme="dark"] body[class^="bab-theme-"] .preview-answer,
+html[data-theme="dark"] body[class^="bab-theme-"] .footer-text,
+html[data-theme="dark"] body[class^="bab-theme-"] .site-nav a,
+html[data-theme="dark"] body[class^="bab-theme-"] .search-input,
+html[data-theme="dark"] body[class^="bab-theme-"] .emoji-point-list span:last-child {
+  color: #b7ae9f !important;
+}
+
+html[data-theme="dark"] body[class^="bab-theme-"] .site-header {
+  border-bottom-color: rgba(220, 210, 190, 0.10) !important;
+  backdrop-filter: blur(14px);
+}
+
+html[data-theme="dark"] body[class^="bab-theme-"] .site-footer {
+  border-top-color: rgba(220, 210, 190, 0.10) !important;
+}
+
+html[data-theme="dark"] body[class^="bab-theme-"] .nav-toggle,
+html[data-theme="dark"] body[class^="bab-theme-"] .display-fab {
+  background: #24211d !important;
+  color: #ece5d8 !important;
+  border: 1px solid rgba(220, 210, 190, 0.12) !important;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.24);
+}
+
+html[data-theme="dark"] body[class^="bab-theme-"] .paper-label,
+html[data-theme="dark"] body[class^="bab-theme-"] .paper-label.small,
+html[data-theme="dark"] body[class^="bab-theme-"] .bab-card-top {
+  background-image: none !important;
+  background-color: rgba(var(--theme-accent-rgb, 98, 126, 168), 0.16) !important;
+  color: var(--theme-label-dark-color, #b9ccef) !important;
+  border: 1px solid rgba(var(--theme-accent-rgb, 185, 204, 239), 0.16) !important;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.22) !important;
+}
+
+/* Strip dark mode automatik */
+html[data-theme="dark"] body[class^="bab-theme-"] .paper-strip.strip-main {
+  background: linear-gradient(90deg, rgba(212,170,96,0.18), rgba(180,140,60,0.14)) !important;
+  color: #e2b56f !important;
+}
+
+html[data-theme="dark"] body[class^="bab-theme-"] .paper-strip.strip-sub {
+  background: linear-gradient(90deg, rgba(82,179,150,0.18), rgba(82,179,150,0.12)) !important;
+  color: #79d2b8 !important;
+}
+
+html[data-theme="dark"] body[class^="bab-theme-"] .paper-strip.strip-info {
+  background: linear-gradient(90deg, rgba(59,130,246,0.18), rgba(99,160,255,0.14)) !important;
+  color: #8eb9f7 !important;
+}
+
+html[data-theme="dark"] body[class^="bab-theme-"] .paper-strip.strip-glossary {
+  background: linear-gradient(90deg, rgba(139,92,246,0.18), rgba(167,139,250,0.14)) !important;
+  color: #c0aaf8 !important;
+}
+
+html[data-theme="dark"] body[class^="bab-theme-"] .paper-strip.strip-summary {
+  background: linear-gradient(90deg, rgba(244,63,94,0.16), rgba(255,100,130,0.12)) !important;
+  color: #f48ca0 !important;
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
 
 @media (max-width: 760px) {
-  body.bab-theme-1 {
-    background-size: auto, auto, auto, 420px 420px, cover;
-  }
-
-  body.bab-theme-2 {
-    background-size: auto, auto, auto, 500px 420px, cover;
-  }
-
-  body.bab-theme-3 {
+  body[class^="bab-theme-"] {
     background-size: auto, auto, auto, 500px 430px, cover;
-  }
-
-  body.bab-theme-1,
-  body.bab-theme-2,
-  body.bab-theme-3 {
     background-attachment: scroll, scroll, scroll, scroll, scroll;
   }
 }
 
 /* =========================================================
-   RESTORE WAR BLOCK CHIPS
-   Letak PALING BAWAH SEKALI
+   BAB 1 — WARISAN NEGARA BANGSA
 ========================================================= */
 
-/* Light mode */
+body.bab-theme-1 {
+  --theme-accent-rgb: 82, 179, 150;
+  --theme-label-bg: linear-gradient(90deg, #e5efdf, #d7e9cf);
+  --theme-label-color: #315649;
+  --theme-label-dark-color: #99dbc8;
+
+  --theme-bg-solid: #efe9de;
+  --theme-overlay-1: radial-gradient(circle at 8% 12%, rgba(63, 125, 95, 0.18), transparent 0 18%);
+  --theme-overlay-2: radial-gradient(circle at 88% 14%, rgba(198, 153, 62, 0.18), transparent 0 16%);
+  --theme-overlay-3: radial-gradient(circle at 18% 78%, rgba(110, 78, 53, 0.10), transparent 0 15%);
+  --theme-pattern: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='640' height='640' viewBox='0 0 640 640'%3E%3Crect width='640' height='640' fill='none'/%3E%3Cg opacity='0.17'%3E%3Cpath d='M78 96c28-22 58-22 86 0 28 22 58 22 86 0 28-22 58-22 86 0 28 22 58 22 86 0' fill='none' stroke='%23846a3d' stroke-width='3' stroke-linecap='round'/%3E%3Cpath d='M78 148c28-22 58-22 86 0 28 22 58 22 86 0 28-22 58-22 86 0 28 22 58 22 86 0' fill='none' stroke='%23846a3d' stroke-width='3' stroke-linecap='round'/%3E%3Cpath d='M78 200c28-22 58-22 86 0 28 22 58 22 86 0 28-22 58-22 86 0 28 22 58 22 86 0' fill='none' stroke='%23846a3d' stroke-width='3' stroke-linecap='round'/%3E%3Ccircle cx='520' cy='136' r='56' fill='none' stroke='%23506f58' stroke-width='4'/%3E%3Ccircle cx='520' cy='136' r='30' fill='none' stroke='%23506f58' stroke-width='3'/%3E%3Cpath d='M520 80v112M464 136h112' stroke='%23506f58' stroke-width='3'/%3E%3Cpath d='M120 432c22-16 42-24 60-24 20 0 38 8 54 24 16 16 34 24 54 24 18 0 38-8 60-24 22-16 42-24 60-24 20 0 38 8 54 24' fill='none' stroke='%23906f46' stroke-width='3' stroke-linecap='round'/%3E%3Cpath d='M120 486c22-16 42-24 60-24 20 0 38 8 54 24 16 16 34 24 54 24 18 0 38-8 60-24 22-16 42-24 60-24 20 0 38 8 54 24' fill='none' stroke='%23906f46' stroke-width='3' stroke-linecap='round'/%3E%3Cpath d='M84 566c48-18 94-18 142 0 48 18 94 18 142 0 48-18 94-18 142 0' fill='none' stroke='%235d7d6e' stroke-width='3' stroke-linecap='round'/%3E%3C/g%3E%3Cg opacity='0.08'%3E%3Cpath d='M84 280h472M84 306h472M84 332h472M84 358h472' stroke='%236e6151' stroke-width='2' stroke-linecap='round'/%3E%3C/g%3E%3C/svg%3E");
+  --theme-gradient: linear-gradient(180deg, #f1eadb 0%, #e7dfcf 100%);
+}
+
+html[data-theme="dark"] body.bab-theme-1 {
+  --theme-overlay-1: radial-gradient(circle at 8% 12%, rgba(82, 179, 150, 0.10), transparent 0 18%);
+  --theme-overlay-2: radial-gradient(circle at 88% 14%, rgba(212, 170, 96, 0.10), transparent 0 16%);
+  --theme-overlay-3: radial-gradient(circle at 18% 78%, rgba(118, 92, 68, 0.08), transparent 0 15%);
+  --theme-pattern: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='640' height='640' viewBox='0 0 640 640'%3E%3Crect width='640' height='640' fill='none'/%3E%3Cg opacity='0.09'%3E%3Cpath d='M78 96c28-22 58-22 86 0 28 22 58 22 86 0 28-22 58-22 86 0 28 22 58 22 86 0' fill='none' stroke='%23b79b6a' stroke-width='3' stroke-linecap='round'/%3E%3Ccircle cx='520' cy='136' r='56' fill='none' stroke='%237abca9' stroke-width='4'/%3E%3Ccircle cx='520' cy='136' r='30' fill='none' stroke='%237abca9' stroke-width='3'/%3E%3C/g%3E%3C/svg%3E");
+  --theme-gradient: linear-gradient(180deg, #1c1a18 0%, #171512 100%);
+}
+
+/* =========================================================
+   BAB 2 — KEBANGKITAN NASIONALISME
+========================================================= */
+
+body.bab-theme-2 {
+  --theme-accent-rgb: 88, 135, 206;
+  --theme-label-bg: linear-gradient(90deg, #dbe8f4, #cdddf0);
+  --theme-label-color: #294d80;
+  --theme-label-dark-color: #a9c4f2;
+
+  --theme-bg-solid: #efe8dc;
+  --theme-overlay-1: radial-gradient(circle at 10% 10%, rgba(54, 99, 170, 0.16), transparent 0 18%);
+  --theme-overlay-2: radial-gradient(circle at 90% 16%, rgba(48, 130, 108, 0.15), transparent 0 15%);
+  --theme-overlay-3: radial-gradient(circle at 22% 82%, rgba(159, 105, 48, 0.10), transparent 0 14%);
+  --theme-pattern: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='760' height='640' viewBox='0 0 760 640'%3E%3Crect width='760' height='640' fill='none'/%3E%3Cg opacity='0.16'%3E%3Crect x='40' y='52' width='280' height='180' rx='12' fill='none' stroke='%23476284' stroke-width='3'/%3E%3Cline x1='64' y1='84' x2='296' y2='84' stroke='%23476284' stroke-width='3' stroke-linecap='round'/%3E%3Cline x1='64' y1='114' x2='280' y2='114' stroke='%23476284' stroke-width='3' stroke-linecap='round'/%3E%3Cline x1='64' y1='144' x2='292' y2='144' stroke='%23476284' stroke-width='3' stroke-linecap='round'/%3E%3Cline x1='64' y1='174' x2='250' y2='174' stroke='%23476284' stroke-width='3' stroke-linecap='round'/%3E%3Crect x='378' y='58' width='330' height='164' rx='14' fill='none' stroke='%232f7a67' stroke-width='3'/%3E%3Cpath d='M402 92h282M402 124h250M402 156h268M402 188h210' stroke='%232f7a67' stroke-width='3' stroke-linecap='round'/%3E%3Cpath d='M70 350c42-18 82-18 124 0 42 18 82 18 124 0 42-18 82-18 124 0 42 18 82 18 124 0' fill='none' stroke='%23ad7334' stroke-width='3' stroke-linecap='round'/%3E%3Cpath d='M70 404c42-18 82-18 124 0 42 18 82 18 124 0 42-18 82-18 124 0 42 18 82 18 124 0' fill='none' stroke='%23ad7334' stroke-width='3' stroke-linecap='round'/%3E%3Cpath d='M88 500c60 0 96 18 132 36 36 18 72 36 132 36 60 0 96-18 132-36 36-18 72-36 132-36' fill='none' stroke='%2350776d' stroke-width='3' stroke-linecap='round'/%3E%3C/g%3E%3Cg opacity='0.08'%3E%3Cline x1='0' y1='0' x2='760' y2='640' stroke='%23626d78' stroke-width='2'/%3E%3Cline x1='120' y1='0' x2='760' y2='540' stroke='%23626d78' stroke-width='2'/%3E%3C/g%3E%3C/svg%3E");
+  --theme-gradient: linear-gradient(180deg, #efe8dc 0%, #e3dacb 100%);
+}
+
+html[data-theme="dark"] body.bab-theme-2 {
+  --theme-overlay-1: radial-gradient(circle at 10% 10%, rgba(88, 135, 206, 0.10), transparent 0 18%);
+  --theme-overlay-2: radial-gradient(circle at 90% 16%, rgba(82, 179, 150, 0.08), transparent 0 15%);
+  --theme-overlay-3: radial-gradient(circle at 22% 82%, rgba(180, 132, 86, 0.08), transparent 0 14%);
+  --theme-pattern: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='760' height='640' viewBox='0 0 760 640'%3E%3Crect width='760' height='640' fill='none'/%3E%3Cg opacity='0.09'%3E%3Crect x='40' y='52' width='280' height='180' rx='12' fill='none' stroke='%23b6c4d4' stroke-width='3'/%3E%3Crect x='378' y='58' width='330' height='164' rx='14' fill='none' stroke='%2378bdae' stroke-width='3'/%3E%3Cpath d='M70 350c42-18 82-18 124 0 42 18 82 18 124 0 42-18 82-18 124 0 42 18 82 18 124 0' fill='none' stroke='%23d1a16b' stroke-width='3' stroke-linecap='round'/%3E%3C/g%3E%3C/svg%3E");
+  --theme-gradient: linear-gradient(180deg, #1c1a18 0%, #171512 100%);
+}
+
+/* =========================================================
+   BAB 3 — KONFLIK DUNIA & PENDUDUKAN JEPUN
+========================================================= */
+
+body.bab-theme-3 {
+  --theme-accent-rgb: 120, 138, 156;
+  --theme-label-bg: linear-gradient(90deg, #dde4ea, #d0d9e2);
+  --theme-label-color: #41576c;
+  --theme-label-dark-color: #ccd7e1;
+
+  --theme-bg-solid: #ece5d8;
+  --theme-overlay-1: radial-gradient(circle at 10% 10%, rgba(79, 104, 132, 0.18), transparent 0 18%);
+  --theme-overlay-2: radial-gradient(circle at 88% 14%, rgba(114, 128, 84, 0.16), transparent 0 16%);
+  --theme-overlay-3: radial-gradient(circle at 20% 84%, rgba(148, 90, 72, 0.12), transparent 0 15%);
+  --theme-pattern: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='760' height='660' viewBox='0 0 760 660'%3E%3Crect width='760' height='660' fill='none'/%3E%3Cg opacity='0.16'%3E%3Cpath d='M78 120c48-30 110-42 172-30 32 6 58 4 92-8 34-12 64-16 104-8 36 8 74 24 114 48' fill='none' stroke='%23576780' stroke-width='3' stroke-linecap='round'/%3E%3Cpath d='M98 200c58 16 118 22 178 12 38-6 70-2 110 10 38 12 84 18 138 10' fill='none' stroke='%23576780' stroke-width='3' stroke-linecap='round'/%3E%3Cpath d='M112 296c42-22 88-32 138-28 44 4 80-2 124-20 42-18 86-24 142-18' fill='none' stroke='%23576780' stroke-width='3' stroke-linecap='round'/%3E%3Cpath d='M122 404c26-12 50-18 78-18 30 0 56-8 86-26 30-18 62-28 104-30 38-2 74 6 116 26' fill='none' stroke='%23576780' stroke-width='3' stroke-linecap='round'/%3E%3Cpath d='M184 96l64 24-64 26' fill='none' stroke='%23905d4a' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M402 262l90-34' fill='none' stroke='%23905d4a' stroke-width='4' stroke-linecap='round'/%3E%3Cpath d='M482 228l14 36-38 0' fill='none' stroke='%23905d4a' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='152' cy='228' r='10' fill='none' stroke='%235a6f68' stroke-width='3'/%3E%3Ccircle cx='326' cy='174' r='10' fill='none' stroke='%235a6f68' stroke-width='3'/%3E%3Ccircle cx='564' cy='422' r='10' fill='none' stroke='%235a6f68' stroke-width='3'/%3E%3Crect x='72' y='514' width='272' height='90' rx='14' fill='none' stroke='%235a6f68' stroke-width='3'/%3E%3Cpath d='M102 544h212M102 572h182' stroke='%235a6f68' stroke-width='3' stroke-linecap='round'/%3E%3C/g%3E%3Cg opacity='0.07'%3E%3Cpath d='M0 110h760M0 220h760M0 330h760M0 440h760M0 550h760' stroke='%23656b72' stroke-width='2'/%3E%3Cpath d='M90 0v660M220 0v660M350 0v660M480 0v660M610 0v660' stroke='%23656b72' stroke-width='2'/%3E%3C/g%3E%3C/svg%3E");
+  --theme-gradient: linear-gradient(180deg, #ece5d8 0%, #dfd5c6 100%);
+}
+
+html[data-theme="dark"] body.bab-theme-3 {
+  --theme-overlay-1: radial-gradient(circle at 10% 10%, rgba(120, 138, 156, 0.12), transparent 0 18%);
+  --theme-overlay-2: radial-gradient(circle at 88% 14%, rgba(136, 148, 98, 0.10), transparent 0 16%);
+  --theme-overlay-3: radial-gradient(circle at 20% 84%, rgba(176, 108, 88, 0.08), transparent 0 15%);
+  --theme-pattern: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='760' height='660' viewBox='0 0 760 660'%3E%3Crect width='760' height='660' fill='none'/%3E%3Cg opacity='0.09'%3E%3Cpath d='M78 120c48-30 110-42 172-30 32 6 58 4 92-8 34-12 64-16 104-8 36 8 74 24 114 48' fill='none' stroke='%23b4c3cf' stroke-width='3' stroke-linecap='round'/%3E%3Cpath d='M184 96l64 24-64 26' fill='none' stroke='%23d29a79' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='152' cy='228' r='10' fill='none' stroke='%2395b8aa' stroke-width='3'/%3E%3C/g%3E%3C/svg%3E");
+  --theme-gradient: linear-gradient(180deg, #1c1a18 0%, #171512 100%);
+}
+
+/* =========================================================
+   BAB 4 — ERA PERALIHAN KUASA BRITISH DI NEGARA KITA
+========================================================= */
+
+body.bab-theme-4 {
+  --theme-accent-rgb: 98, 126, 168;
+  --theme-label-bg: linear-gradient(90deg, #e2e7ef, #d5dde8);
+  --theme-label-color: #465d77;
+  --theme-label-dark-color: #b9ccef;
+
+  --theme-bg-solid: #eee6d8;
+  --theme-overlay-1: radial-gradient(circle at 10% 12%, rgba(84, 103, 132, 0.16), transparent 0 18%);
+  --theme-overlay-2: radial-gradient(circle at 88% 14%, rgba(58, 112, 104, 0.14), transparent 0 16%);
+  --theme-overlay-3: radial-gradient(circle at 18% 84%, rgba(145, 108, 62, 0.10), transparent 0 14%);
+  --theme-pattern: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='760' height='660' viewBox='0 0 760 660'%3E%3Crect width='760' height='660' fill='none'/%3E%3Cg opacity='0.16'%3E%3Crect x='54' y='56' width='272' height='172' rx='14' fill='none' stroke='%23566a84' stroke-width='3'/%3E%3Cpath d='M86 92h208M86 124h176M86 156h196M86 188h148' stroke='%23566a84' stroke-width='3' stroke-linecap='round'/%3E%3Ccircle cx='622' cy='128' r='54' fill='none' stroke='%237b6442' stroke-width='4'/%3E%3Ccircle cx='622' cy='128' r='30' fill='none' stroke='%237b6442' stroke-width='3'/%3E%3Cpath d='M592 128h60M622 98v60' stroke='%237b6442' stroke-width='3' stroke-linecap='round'/%3E%3Crect x='394' y='282' width='280' height='156' rx='14' fill='none' stroke='%234f7a6f' stroke-width='3'/%3E%3Cpath d='M426 316h216M426 348h194M426 380h208M426 412h152' stroke='%234f7a6f' stroke-width='3' stroke-linecap='round'/%3E%3Cpath d='M104 330c44 0 74 16 104 32 30 16 60 32 104 32 44 0 74-16 104-32 30-16 60-32 104-32' fill='none' stroke='%23a1763f' stroke-width='3' stroke-linecap='round'/%3E%3Cpath d='M104 392c44 0 74 16 104 32 30 16 60 32 104 32 44 0 74-16 104-32 30-16 60-32 104-32' fill='none' stroke='%23a1763f' stroke-width='3' stroke-linecap='round'/%3E%3Cpath d='M120 528h520' stroke='%236d665b' stroke-width='3' stroke-dasharray='10 12' stroke-linecap='round'/%3E%3Cpath d='M206 496l48 32-48 32' fill='none' stroke='%23905d4a' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M440 496l48 32-48 32' fill='none' stroke='%23905d4a' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/g%3E%3Cg opacity='0.07'%3E%3Cpath d='M0 120h760M0 240h760M0 360h760M0 480h760M0 600h760' stroke='%236b706f' stroke-width='2'/%3E%3Cpath d='M100 0v660M240 0v660M380 0v660M520 0v660M660 0v660' stroke='%236b706f' stroke-width='2'/%3E%3C/g%3E%3C/svg%3E");
+  --theme-gradient: linear-gradient(180deg, #efe7d9 0%, #e2d7c8 100%);
+}
+
+html[data-theme="dark"] body.bab-theme-4 {
+  --theme-overlay-1: radial-gradient(circle at 10% 12%, rgba(98, 126, 168, 0.11), transparent 0 18%);
+  --theme-overlay-2: radial-gradient(circle at 88% 14%, rgba(86, 158, 145, 0.09), transparent 0 16%);
+  --theme-overlay-3: radial-gradient(circle at 18% 84%, rgba(176, 130, 78, 0.08), transparent 0 14%);
+  --theme-pattern: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='760' height='660' viewBox='0 0 760 660'%3E%3Crect width='760' height='660' fill='none'/%3E%3Cg opacity='0.09'%3E%3Crect x='54' y='56' width='272' height='172' rx='14' fill='none' stroke='%23b5c3d4' stroke-width='3'/%3E%3Cpath d='M86 92h208M86 124h176M86 156h196M86 188h148' stroke='%23b5c3d4' stroke-width='3' stroke-linecap='round'/%3E%3Ccircle cx='622' cy='128' r='54' fill='none' stroke='%23c89a64' stroke-width='4'/%3E%3Crect x='394' y='282' width='280' height='156' rx='14' fill='none' stroke='%2376b3a7' stroke-width='3'/%3E%3Cpath d='M120 528h520' stroke='%23969a99' stroke-width='3' stroke-dasharray='10 12' stroke-linecap='round'/%3E%3Cpath d='M206 496l48 32-48 32' fill='none' stroke='%23d29a79' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M440 496l48 32-48 32' fill='none' stroke='%23d29a79' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/g%3E%3C/svg%3E");
+  --theme-gradient: linear-gradient(180deg, #1c1a18 0%, #171512 100%);
+}
+
+/* =========================================================
+   BAB 5 — PERSEKUTUAN TANAH MELAYU 1948
+========================================================= */
+
+body.bab-theme-5 {
+  --theme-accent-rgb: 74, 132, 124;
+  --theme-label-bg: linear-gradient(90deg, #dcece7, #cfe3dc);
+  --theme-label-color: #315f57;
+  --theme-label-dark-color: #9dd8cf;
+
+  --theme-bg-solid: #ece5d8;
+  --theme-overlay-1: radial-gradient(circle at 12% 12%, rgba(74, 132, 124, 0.16), transparent 0 18%);
+  --theme-overlay-2: radial-gradient(circle at 88% 16%, rgba(181, 143, 78, 0.12), transparent 0 16%);
+  --theme-overlay-3: radial-gradient(circle at 22% 82%, rgba(104, 118, 148, 0.08), transparent 0 14%);
+  --theme-pattern: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='760' height='620' viewBox='0 0 760 620'%3E%3Crect width='760' height='620' fill='none'/%3E%3Cg opacity='0.15'%3E%3Crect x='72' y='74' width='252' height='152' rx='14' fill='none' stroke='%234b6f69' stroke-width='3'/%3E%3Cpath d='M102 108h194M102 140h164M102 172h184' stroke='%234b6f69' stroke-width='3' stroke-linecap='round'/%3E%3Cpath d='M400 132h238M400 164h198M400 196h218' stroke='%23907a4a' stroke-width='3' stroke-linecap='round'/%3E%3Ccircle cx='578' cy='432' r='58' fill='none' stroke='%23547492' stroke-width='4'/%3E%3Cpath d='M548 432h60M578 402v60' stroke='%23547492' stroke-width='3'/%3E%3C/g%3E%3C/svg%3E");
+  --theme-gradient: linear-gradient(180deg, #efe8db 0%, #e1d7c7 100%);
+}
+
+html[data-theme="dark"] body.bab-theme-5 {
+  --theme-overlay-1: radial-gradient(circle at 12% 12%, rgba(110, 185, 174, 0.10), transparent 0 18%);
+  --theme-overlay-2: radial-gradient(circle at 88% 16%, rgba(201, 162, 96, 0.08), transparent 0 16%);
+  --theme-overlay-3: radial-gradient(circle at 22% 82%, rgba(130, 152, 186, 0.08), transparent 0 14%);
+  --theme-pattern: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='760' height='620' viewBox='0 0 760 620'%3E%3Crect width='760' height='620' fill='none'/%3E%3Cg opacity='0.09'%3E%3Crect x='72' y='74' width='252' height='152' rx='14' fill='none' stroke='%2399d0c7' stroke-width='3'/%3E%3Cpath d='M400 132h238M400 164h198M400 196h218' stroke='%23d0af78' stroke-width='3' stroke-linecap='round'/%3E%3Ccircle cx='578' cy='432' r='58' fill='none' stroke='%23abc0d7' stroke-width='4'/%3E%3C/g%3E%3C/svg%3E");
+  --theme-gradient: linear-gradient(180deg, #1c1a18 0%, #171512 100%);
+}
+
+/* =========================================================
+   BAB 6 — ANCAMAN KOMUNIS & DARURAT
+========================================================= */
+
+body.bab-theme-6 {
+  --theme-accent-rgb: 132, 70, 70;
+  --theme-label-bg: linear-gradient(90deg, #efdede, #e5d2d2);
+  --theme-label-color: #6f3e3e;
+  --theme-label-dark-color: #e2b3b3;
+
+  --theme-bg-solid: #ece4d9;
+  --theme-overlay-1: radial-gradient(circle at 10% 10%, rgba(132, 70, 70, 0.16), transparent 0 18%);
+  --theme-overlay-2: radial-gradient(circle at 88% 16%, rgba(104, 124, 92, 0.10), transparent 0 16%);
+  --theme-overlay-3: radial-gradient(circle at 18% 84%, rgba(90, 108, 136, 0.08), transparent 0 14%);
+  --theme-pattern: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='760' height='640' viewBox='0 0 760 640'%3E%3Crect width='760' height='640' fill='none'/%3E%3Cg opacity='0.14'%3E%3Cpath d='M84 120h272M84 156h232M84 192h252' stroke='%23714a4a' stroke-width='3' stroke-linecap='round'/%3E%3Cpath d='M404 110l74 38-74 38' fill='none' stroke='%235f7287' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='590' cy='206' r='52' fill='none' stroke='%235f7287' stroke-width='4'/%3E%3Crect x='106' y='364' width='244' height='128' rx='14' fill='none' stroke='%23714a4a' stroke-width='3'/%3E%3Cpath d='M402 420h230M402 454h188' stroke='%238f7f50' stroke-width='3' stroke-linecap='round'/%3E%3C/g%3E%3C/svg%3E");
+  --theme-gradient: linear-gradient(180deg, #eee5d8 0%, #dfd3c4 100%);
+}
+
+html[data-theme="dark"] body.bab-theme-6 {
+  --theme-overlay-1: radial-gradient(circle at 10% 10%, rgba(176, 104, 104, 0.10), transparent 0 18%);
+  --theme-overlay-2: radial-gradient(circle at 88% 16%, rgba(126, 148, 112, 0.08), transparent 0 16%);
+  --theme-overlay-3: radial-gradient(circle at 18% 84%, rgba(132, 152, 188, 0.08), transparent 0 14%);
+  --theme-pattern: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='760' height='640' viewBox='0 0 760 640'%3E%3Crect width='760' height='640' fill='none'/%3E%3Cg opacity='0.09'%3E%3Cpath d='M84 120h272M84 156h232M84 192h252' stroke='%23d0a7a7' stroke-width='3' stroke-linecap='round'/%3E%3Cpath d='M404 110l74 38-74 38' fill='none' stroke='%23b0bfd0' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='590' cy='206' r='52' fill='none' stroke='%23b0bfd0' stroke-width='4'/%3E%3C/g%3E%3C/svg%3E");
+  --theme-gradient: linear-gradient(180deg, #1b1917 0%, #161412 100%);
+}
+
+/* =========================================================
+   BAB 7 — USAHA KE ARAH KEMERDEKAAN
+========================================================= */
+
+body.bab-theme-7 {
+  --theme-accent-rgb: 106, 88, 170;
+  --theme-label-bg: linear-gradient(90deg, #e8e3f5, #ddd7ef);
+  --theme-label-color: #584892;
+  --theme-label-dark-color: #c5b8f2;
+
+  --theme-bg-solid: #efe7dc;
+  --theme-overlay-1: radial-gradient(circle at 10% 12%, rgba(106, 88, 170, 0.15), transparent 0 18%);
+  --theme-overlay-2: radial-gradient(circle at 88% 14%, rgba(76, 138, 122, 0.10), transparent 0 16%);
+  --theme-overlay-3: radial-gradient(circle at 22% 82%, rgba(182, 142, 82, 0.08), transparent 0 14%);
+  --theme-pattern: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='760' height='620' viewBox='0 0 760 620'%3E%3Crect width='760' height='620' fill='none'/%3E%3Cg opacity='0.15'%3E%3Ccircle cx='170' cy='158' r='66' fill='none' stroke='%235e4ea0' stroke-width='4'/%3E%3Cpath d='M138 158h64M170 126v64' stroke='%235e4ea0' stroke-width='3'/%3E%3Cpath d='M338 118h274M338 154h238M338 190h256' stroke='%23706c86' stroke-width='3' stroke-linecap='round'/%3E%3Crect x='88' y='352' width='268' height='144' rx='16' fill='none' stroke='%234c7f72' stroke-width='3'/%3E%3Cpath d='M424 402c42-18 84-18 126 0 42 18 84 18 126 0' fill='none' stroke='%23a67b44' stroke-width='3' stroke-linecap='round'/%3E%3C/g%3E%3C/svg%3E");
+  --theme-gradient: linear-gradient(180deg, #f0e8dc 0%, #e1d6c8 100%);
+}
+
+html[data-theme="dark"] body.bab-theme-7 {
+  --theme-overlay-1: radial-gradient(circle at 10% 12%, rgba(156, 136, 220, 0.10), transparent 0 18%);
+  --theme-overlay-2: radial-gradient(circle at 88% 14%, rgba(98, 174, 152, 0.08), transparent 0 16%);
+  --theme-overlay-3: radial-gradient(circle at 22% 82%, rgba(198, 160, 98, 0.08), transparent 0 14%);
+  --theme-pattern: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='760' height='620' viewBox='0 0 760 620'%3E%3Crect width='760' height='620' fill='none'/%3E%3Cg opacity='0.09'%3E%3Ccircle cx='170' cy='158' r='66' fill='none' stroke='%23c5b8f2' stroke-width='4'/%3E%3Cpath d='M338 118h274M338 154h238M338 190h256' stroke='%23b5b8c7' stroke-width='3' stroke-linecap='round'/%3E%3Crect x='88' y='352' width='268' height='144' rx='16' fill='none' stroke='%2393d6c6' stroke-width='3'/%3E%3C/g%3E%3C/svg%3E");
+  --theme-gradient: linear-gradient(180deg, #1c1a18 0%, #171512 100%);
+}
+
+/* =========================================================
+   BAB 8 — PILIHAN RAYA
+========================================================= */
+
+body.bab-theme-8 {
+  --theme-accent-rgb: 58, 124, 176;
+  --theme-label-bg: linear-gradient(90deg, #deedf6, #d2e3ef);
+  --theme-label-color: #2f6087;
+  --theme-label-dark-color: #a7d0ee;
+
+  --theme-bg-solid: #ece6da;
+  --theme-overlay-1: radial-gradient(circle at 12% 10%, rgba(58, 124, 176, 0.16), transparent 0 18%);
+  --theme-overlay-2: radial-gradient(circle at 90% 16%, rgba(64, 132, 110, 0.10), transparent 0 16%);
+  --theme-overlay-3: radial-gradient(circle at 18% 84%, rgba(176, 142, 82, 0.08), transparent 0 14%);
+  --theme-pattern: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='760' height='620' viewBox='0 0 760 620'%3E%3Crect width='760' height='620' fill='none'/%3E%3Cg opacity='0.15'%3E%3Crect x='86' y='88' width='126' height='86' rx='12' fill='none' stroke='%233c75aa' stroke-width='3'/%3E%3Cpath d='M116 130h66' stroke='%233c75aa' stroke-width='3' stroke-linecap='round'/%3E%3Crect x='280' y='70' width='332' height='132' rx='16' fill='none' stroke='%23556a7d' stroke-width='3'/%3E%3Cpath d='M310 108h270M310 144h214' stroke='%23556a7d' stroke-width='3' stroke-linecap='round'/%3E%3Cpath d='M112 404h498' stroke='%23907a48' stroke-width='3' stroke-dasharray='10 12' stroke-linecap='round'/%3E%3Ccircle cx='170' cy='404' r='16' fill='none' stroke='%234d7b6f' stroke-width='4'/%3E%3Ccircle cx='370' cy='404' r='16' fill='none' stroke='%234d7b6f' stroke-width='4'/%3E%3Ccircle cx='570' cy='404' r='16' fill='none' stroke='%234d7b6f' stroke-width='4'/%3E%3C/g%3E%3C/svg%3E");
+  --theme-gradient: linear-gradient(180deg, #efe8db 0%, #dfd4c5 100%);
+}
+
+html[data-theme="dark"] body.bab-theme-8 {
+  --theme-overlay-1: radial-gradient(circle at 12% 10%, rgba(98, 176, 228, 0.10), transparent 0 18%);
+  --theme-overlay-2: radial-gradient(circle at 90% 16%, rgba(102, 182, 156, 0.08), transparent 0 16%);
+  --theme-overlay-3: radial-gradient(circle at 18% 84%, rgba(198, 160, 102, 0.08), transparent 0 14%);
+  --theme-pattern: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='760' height='620' viewBox='0 0 760 620'%3E%3Crect width='760' height='620' fill='none'/%3E%3Cg opacity='0.09'%3E%3Crect x='86' y='88' width='126' height='86' rx='12' fill='none' stroke='%23a9d3ef' stroke-width='3'/%3E%3Crect x='280' y='70' width='332' height='132' rx='16' fill='none' stroke='%23b8c0cd' stroke-width='3'/%3E%3Cpath d='M112 404h498' stroke='%23d1b37c' stroke-width='3' stroke-dasharray='10 12' stroke-linecap='round'/%3E%3Ccircle cx='170' cy='404' r='16' fill='none' stroke='%2394d7c7' stroke-width='4'/%3E%3Ccircle cx='370' cy='404' r='16' fill='none' stroke='%2394d7c7' stroke-width='4'/%3E%3Ccircle cx='570' cy='404' r='16' fill='none' stroke='%2394d7c7' stroke-width='4'/%3E%3C/g%3E%3C/svg%3E");
+  --theme-gradient: linear-gradient(180deg, #1c1a18 0%, #171512 100%);
+}
+
+/* =========================================================
+   BAB 9 — PERLEMBAGAAN PERSEKUTUAN TANAH MELAYU 1957
+========================================================= */
+
+body.bab-theme-9 {
+  --theme-accent-rgb: 52, 120, 116;
+  --theme-label-bg: linear-gradient(90deg, #dcece8, #d0e3de);
+  --theme-label-color: #2e5e59;
+  --theme-label-dark-color: #9fddd4;
+
+  --theme-bg-solid: #ece5d8;
+  --theme-overlay-1: radial-gradient(circle at 10% 12%, rgba(52, 120, 116, 0.16), transparent 0 18%);
+  --theme-overlay-2: radial-gradient(circle at 88% 14%, rgba(102, 120, 170, 0.10), transparent 0 16%);
+  --theme-overlay-3: radial-gradient(circle at 20% 84%, rgba(176, 134, 84, 0.08), transparent 0 14%);
+  --theme-pattern: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='760' height='640' viewBox='0 0 760 640'%3E%3Crect width='760' height='640' fill='none'/%3E%3Cg opacity='0.15'%3E%3Crect x='74' y='78' width='286' height='156' rx='14' fill='none' stroke='%23417b73' stroke-width='3'/%3E%3Cpath d='M108 116h218M108 150h176M108 184h198' stroke='%23417b73' stroke-width='3' stroke-linecap='round'/%3E%3Ccircle cx='572' cy='152' r='62' fill='none' stroke='%235c7395' stroke-width='4'/%3E%3Ccircle cx='572' cy='152' r='34' fill='none' stroke='%235c7395' stroke-width='3'/%3E%3Cpath d='M120 444c44-18 88-18 132 0 44 18 88 18 132 0 44-18 88-18 132 0' fill='none' stroke='%239f7b46' stroke-width='3' stroke-linecap='round'/%3E%3C/g%3E%3C/svg%3E");
+  --theme-gradient: linear-gradient(180deg, #efe7da 0%, #ded3c4 100%);
+}
+
+html[data-theme="dark"] body.bab-theme-9 {
+  --theme-overlay-1: radial-gradient(circle at 10% 12%, rgba(90, 176, 168, 0.10), transparent 0 18%);
+  --theme-overlay-2: radial-gradient(circle at 88% 14%, rgba(134, 156, 212, 0.08), transparent 0 16%);
+  --theme-overlay-3: radial-gradient(circle at 20% 84%, rgba(198, 160, 102, 0.08), transparent 0 14%);
+  --theme-pattern: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='760' height='640' viewBox='0 0 760 640'%3E%3Crect width='760' height='640' fill='none'/%3E%3Cg opacity='0.09'%3E%3Crect x='74' y='78' width='286' height='156' rx='14' fill='none' stroke='%2397ddd3' stroke-width='3'/%3E%3Ccircle cx='572' cy='152' r='62' fill='none' stroke='%23b5c4e8' stroke-width='4'/%3E%3Cpath d='M120 444c44-18 88-18 132 0 44 18 88 18 132 0 44-18 88-18 132 0' fill='none' stroke='%23d0b17c' stroke-width='3' stroke-linecap='round'/%3E%3C/g%3E%3C/svg%3E");
+  --theme-gradient: linear-gradient(180deg, #1c1a18 0%, #171512 100%);
+}
+
+/* =========================================================
+   BAB 10 — PEMASYHURAN KEMERDEKAAN
+========================================================= */
+
+body.bab-theme-10 {
+  --theme-accent-rgb: 62, 132, 118;
+  --theme-label-bg: linear-gradient(90deg, #dcefe8, #d1e6de);
+  --theme-label-color: #2f6358;
+  --theme-label-dark-color: #a4e0d2;
+
+  --theme-bg-solid: #eee7da;
+  --theme-overlay-1: radial-gradient(circle at 10% 10%, rgba(62, 132, 118, 0.16), transparent 0 18%);
+  --theme-overlay-2: radial-gradient(circle at 88% 14%, rgba(196, 152, 76, 0.12), transparent 0 16%);
+  --theme-overlay-3: radial-gradient(circle at 18% 84%, rgba(86, 110, 158, 0.08), transparent 0 14%);
+  --theme-pattern: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='760' height='640' viewBox='0 0 760 640'%3E%3Crect width='760' height='640' fill='none'/%3E%3Cg opacity='0.15'%3E%3Cpath d='M106 126h230M106 162h194M106 198h212' stroke='%23418173' stroke-width='3' stroke-linecap='round'/%3E%3Cpath d='M406 118c40-28 86-28 126 0M406 162c40-28 86-28 126 0' fill='none' stroke='%23c08e44' stroke-width='3' stroke-linecap='round'/%3E%3Ccircle cx='168' cy='432' r='54' fill='none' stroke='%235c7394' stroke-width='4'/%3E%3Cpath d='M140 432h56M168 404v56' stroke='%235c7394' stroke-width='3'/%3E%3Crect x='384' y='372' width='248' height='132' rx='16' fill='none' stroke='%23418173' stroke-width='3'/%3E%3C/g%3E%3C/svg%3E");
+  --theme-gradient: linear-gradient(180deg, #f0e8db 0%, #e0d5c6 100%);
+}
+
+html[data-theme="dark"] body.bab-theme-10 {
+  --theme-overlay-1: radial-gradient(circle at 10% 10%, rgba(98, 182, 166, 0.10), transparent 0 18%);
+  --theme-overlay-2: radial-gradient(circle at 88% 14%, rgba(224, 182, 104, 0.08), transparent 0 16%);
+  --theme-overlay-3: radial-gradient(circle at 18% 84%, rgba(132, 154, 206, 0.08), transparent 0 14%);
+  --theme-pattern: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='760' height='640' viewBox='0 0 760 640'%3E%3Crect width='760' height='640' fill='none'/%3E%3Cg opacity='0.09'%3E%3Cpath d='M106 126h230M106 162h194M106 198h212' stroke='%239fe2d3' stroke-width='3' stroke-linecap='round'/%3E%3Cpath d='M406 118c40-28 86-28 126 0M406 162c40-28 86-28 126 0' fill='none' stroke='%23d9b36f' stroke-width='3' stroke-linecap='round'/%3E%3Ccircle cx='168' cy='432' r='54' fill='none' stroke='%23b9c8e6' stroke-width='4'/%3E%3Crect x='384' y='372' width='248' height='132' rx='16' fill='none' stroke='%239fe2d3' stroke-width='3'/%3E%3C/g%3E%3C/svg%3E");
+  --theme-gradient: linear-gradient(180deg, #1c1a18 0%, #171512 100%);
+}
+
+/* =========================================================
+   RESTORE WAR BLOCK CHIPS
+   Kekalkan supaya Bab 3 tidak rosak
+========================================================= */
+
 body .paper-chip.bloc-chip-central {
   color: #334155 !important;
   background: linear-gradient(135deg, #f8fafc, #e2e8f0) !important;
@@ -865,7 +488,6 @@ body .paper-chip.bloc-chip-allies {
   border-color: rgba(29, 78, 216, 0.20) !important;
 }
 
-/* Dark mode */
 html[data-theme="dark"] body .paper-chip.bloc-chip-central {
   color: #94a3b8 !important;
   background: linear-gradient(135deg, rgba(30,40,55,0.92), rgba(25,35,50,0.92)) !important;
@@ -888,4 +510,4 @@ html[data-theme="dark"] body .paper-chip.bloc-chip-allies {
   color: #93c5fd !important;
   background: linear-gradient(135deg, rgba(20,35,65,0.92), rgba(15,30,60,0.92)) !important;
   border-color: rgba(147,197,253,0.20) !important;
-}
+                                     }
