@@ -47,6 +47,12 @@
   max-width: 62ch;
 }
 
+.paper-divider {
+  border: none;
+  border-top: 1px dashed rgba(92, 110, 132, 0.18);
+  margin: 1.1rem 0;
+}
+
 .paper-strip {
   display: inline-flex;
   align-items: center;
