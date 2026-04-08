@@ -868,7 +868,9 @@ document.addEventListener("DOMContentLoaded", function () {
     function togglePlay() {
       if (audio.paused) {
         audio.play(); setPlaying(true);
-        if (!hasPlayed) { hasPlayed = true; refreshSticky(); }
+        if (!hasPlayed) { hasPlayed = true; }
+        if (dismissed) { dismissed = false; }
+        refreshSticky();
       } else {
         audio.pause(); setPlaying(false);
       }
@@ -897,12 +899,11 @@ document.addEventListener("DOMContentLoaded", function () {
     });
     stickyTrack.addEventListener('click', function(e) { seekFromClick(e, stickyTrack); });
 
-    // --- Close / dismiss — remove from DOM entirely so nothing can re-show it ---
+    // --- Close / dismiss — hide sticky but keep alive so next play can reshow it ---
     var stickyObserver = null;
     stickyCloseBtn.addEventListener('click', function() {
       dismissed = true;
-      if (stickyObserver) { stickyObserver.disconnect(); stickyObserver = null; }
-      sticky.remove();
+      refreshSticky();
     });
 
     // --- Audio events ---
@@ -913,7 +914,6 @@ document.addEventListener("DOMContentLoaded", function () {
     // --- Show sticky only when player is ABOVE viewport (scrolled past) ---
     if ('IntersectionObserver' in window) {
       stickyObserver = new IntersectionObserver(function(entries) {
-        if (dismissed) return;
         var entry = entries[0];
         isScrolledPast = !entry.isIntersecting && entry.boundingClientRect.top < 0;
         refreshSticky();
