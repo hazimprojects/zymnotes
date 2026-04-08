@@ -84,6 +84,17 @@
     body.dark-mode .project-status-note {
       color: #c7baaa;
     }
+
+    .project-status-list {
+      margin: 0.45rem 0 0 0;
+      padding-left: 1.1rem;
+      font-size: 0.87rem;
+      color: #7b6d59;
+      line-height: 1.6;
+      list-style: disc;
+    }
+    .project-status-list li { margin-bottom: 0.1rem; }
+    body.dark-mode .project-status-list { color: #c7baaa; }
   </style>
 </head>
 <body>
@@ -124,10 +135,10 @@
 
           <div class="project-status-card" aria-live="polite">
             <div class="project-status-label">🔄 Status projek</div>
-            <p id="project-status-text" class="project-status-text">
+            <div id="project-status-text" class="project-status-text">
               Projek ini dikemas kini dari semasa ke semasa.
-              <span class="project-status-note">Sedang memuatkan tarikh kemaskini terakhir laman...</span>
-            </p>
+              <span class="project-status-note">Sedang memuatkan maklumat kemaskini...</span>
+            </div>
           </div>
 
           <div class="hero-actions">
@@ -242,37 +253,27 @@
       if (!target) return;
 
       try {
-        const response = await fetch('https://api.github.com/repos/hazimprojects/hazimedu/commits?per_page=1', {
-          headers: {
-            'Accept': 'application/vnd.github+json'
-          }
+        const res = await fetch('data/updates.json?v=1');
+        if (!res.ok) throw new Error();
+        const json = await res.json();
+        const latest = json.entries?.[0];
+        if (!latest) throw new Error();
+
+        const formattedDate = new Date(latest.date).toLocaleDateString('ms-MY', {
+          day: 'numeric', month: 'long', year: 'numeric'
         });
-
-        if (!response.ok) {
-          throw new Error('Gagal mendapatkan data commit');
-        }
-
-        const data = await response.json();
-        const isoDate = data?.[0]?.commit?.committer?.date;
-
-        if (!isoDate) {
-          throw new Error('Tarikh commit tidak ditemui');
-        }
-
-        const formattedDate = new Date(isoDate).toLocaleDateString('ms-MY', {
-          day: 'numeric',
-          month: 'long',
-          year: 'numeric'
-        });
+        const items = (latest.items || []).slice(0, 5);
+        const listItems = items.map(i => `<li>${i}</li>`).join('');
 
         target.innerHTML = `
           Projek ini dikemas kini dari semasa ke semasa.
-          <span class="project-status-note">Kemaskini terakhir laman: <span class="project-status-date">${formattedDate}</span></span>
+          <span class="project-status-note">Kemaskini terakhir: <span class="project-status-date">${formattedDate}</span></span>
+          ${listItems ? `<ul class="project-status-list">${listItems}</ul>` : ''}
         `;
-      } catch (error) {
+      } catch {
         target.innerHTML = `
           Projek ini dikemas kini dari semasa ke semasa, walaupun ada masa pembaharuan berjalan lebih perlahan.
-          <span class="project-status-note">Tarikh automatik tidak dapat dimuatkan sekarang.</span>
+          <span class="project-status-note">Maklumat kemas kini tidak dapat dimuatkan sekarang.</span>
         `;
       }
     }
