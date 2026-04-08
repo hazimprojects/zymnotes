@@ -821,26 +821,27 @@ document.addEventListener("DOMContentLoaded", function () {
       timeEl.textContent = fmt(audio.currentTime) + ' / ' + fmt(audio.duration);
       trackFill.style.width = (audio.duration ? (audio.currentTime / audio.duration) * 100 : 0) + '%';
     }
+    function setPlaying(playing) {
+      playBtn.classList.toggle('is-playing', playing);
+      playBtn.setAttribute('aria-label', playing ? 'Jeda audio' : 'Main audio');
+    }
 
     playBtn.addEventListener('click', function() {
-      if (audio.paused) {
-        audio.play();
-        playBtn.textContent = '⏸';
-        playBtn.setAttribute('aria-label', 'Jeda audio');
-      } else {
-        audio.pause();
-        playBtn.textContent = '▶';
-        playBtn.setAttribute('aria-label', 'Main audio');
-      }
+      if (audio.paused) { audio.play(); setPlaying(true); }
+      else { audio.pause(); setPlaying(false); }
+    });
+
+    player.querySelectorAll('.audio-skip-btn').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var secs = parseInt(btn.getAttribute('data-skip'), 10);
+        audio.currentTime = Math.max(0, Math.min(audio.duration || 0, audio.currentTime + secs));
+        updateTime();
+      });
     });
 
     audio.addEventListener('timeupdate', updateTime);
     audio.addEventListener('loadedmetadata', updateTime);
-    audio.addEventListener('ended', function() {
-      playBtn.textContent = '▶';
-      playBtn.setAttribute('aria-label', 'Main audio');
-      updateTime();
-    });
+    audio.addEventListener('ended', function() { setPlaying(false); updateTime(); });
 
     track.addEventListener('click', function(e) {
       if (!audio.duration) return;
