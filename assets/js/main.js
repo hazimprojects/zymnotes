@@ -799,3 +799,53 @@ document.addEventListener("DOMContentLoaded", function () {
   `;
   document.head.appendChild(style);
 })();
+
+// =========================
+// AUDIO PLAYER
+// =========================
+(function setupAudioPlayers() {
+  document.querySelectorAll('.note-audio-player').forEach(function(player) {
+    var audio = player.querySelector('.audio-src');
+    var playBtn = player.querySelector('.audio-play-btn');
+    var trackFill = player.querySelector('.audio-track-fill');
+    var track = player.querySelector('.audio-track');
+    var timeEl = player.querySelector('.audio-time');
+    if (!audio || !playBtn) return;
+
+    function fmt(s) {
+      if (!isFinite(s)) return '--:--';
+      var m = Math.floor(s / 60), sec = Math.floor(s % 60);
+      return m + ':' + (sec < 10 ? '0' : '') + sec;
+    }
+    function updateTime() {
+      timeEl.textContent = fmt(audio.currentTime) + ' / ' + fmt(audio.duration);
+      trackFill.style.width = (audio.duration ? (audio.currentTime / audio.duration) * 100 : 0) + '%';
+    }
+
+    playBtn.addEventListener('click', function() {
+      if (audio.paused) {
+        audio.play();
+        playBtn.textContent = '⏸';
+        playBtn.setAttribute('aria-label', 'Jeda audio');
+      } else {
+        audio.pause();
+        playBtn.textContent = '▶';
+        playBtn.setAttribute('aria-label', 'Main audio');
+      }
+    });
+
+    audio.addEventListener('timeupdate', updateTime);
+    audio.addEventListener('loadedmetadata', updateTime);
+    audio.addEventListener('ended', function() {
+      playBtn.textContent = '▶';
+      playBtn.setAttribute('aria-label', 'Main audio');
+      updateTime();
+    });
+
+    track.addEventListener('click', function(e) {
+      if (!audio.duration) return;
+      var rect = track.getBoundingClientRect();
+      audio.currentTime = ((e.clientX - rect.left) / rect.width) * audio.duration;
+    });
+  });
+})();
