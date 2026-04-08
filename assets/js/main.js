@@ -131,7 +131,11 @@ document.addEventListener("DOMContentLoaded", function () {
   function getHeaderOffset() {
     const header = document.querySelector(".site-header");
     const headerHeight = header ? header.getBoundingClientRect().height : 72;
-    return Math.round(headerHeight + 12);
+    const sticky = document.querySelector(".audio-sticky");
+    const stickyHeight = (sticky && sticky.classList.contains("is-visible"))
+      ? sticky.getBoundingClientRect().height
+      : 0;
+    return Math.round(headerHeight + stickyHeight + 12);
   }
 
   function waitUntilScrollReaches(targetTop, callback) {
