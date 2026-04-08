@@ -897,10 +897,12 @@ document.addEventListener("DOMContentLoaded", function () {
     });
     stickyTrack.addEventListener('click', function(e) { seekFromClick(e, stickyTrack); });
 
-    // --- Close / dismiss button ---
+    // --- Close / dismiss — remove from DOM entirely so nothing can re-show it ---
+    var stickyObserver = null;
     stickyCloseBtn.addEventListener('click', function() {
       dismissed = true;
-      refreshSticky();
+      if (stickyObserver) { stickyObserver.disconnect(); stickyObserver = null; }
+      sticky.remove();
     });
 
     // --- Audio events ---
@@ -910,12 +912,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // --- Show sticky only when player is ABOVE viewport (scrolled past) ---
     if ('IntersectionObserver' in window) {
-      new IntersectionObserver(function(entries) {
+      stickyObserver = new IntersectionObserver(function(entries) {
+        if (dismissed) return;
         var entry = entries[0];
-        // boundingClientRect.top < 0 means element top is above viewport
         isScrolledPast = !entry.isIntersecting && entry.boundingClientRect.top < 0;
         refreshSticky();
-      }, { threshold: 0 }).observe(player);
+      }, { threshold: 0 });
+      stickyObserver.observe(player);
     }
   });
 })();
