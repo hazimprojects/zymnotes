@@ -126,3 +126,75 @@ with open('data/updates.json', 'w', encoding='utf-8') as f:
 
 print('Generated data/updates.json:')
 print(json.dumps({'entries': entries}, ensure_ascii=False, indent=2))
+
+
+# ── Sitemap ──────────────────────────────────────────
+
+def write_sitemap():
+    BASE = 'https://hazimedu.com'
+    today = datetime.now(timezone.utc).strftime('%Y-%m-%d')
+
+    # All indexable pages with their priority and changefreq
+    pages = [
+        (f'{BASE}/',           '1.0', 'weekly'),
+        (f'{BASE}/about.html', '0.5', 'monthly'),
+        (f'{BASE}/notes/',     '0.9', 'weekly'),
+        # Chapter overview pages
+        (f'{BASE}/notes/bab-1.html', '0.8', 'monthly'),
+        (f'{BASE}/notes/bab-2.html', '0.8', 'monthly'),
+        (f'{BASE}/notes/bab-3.html', '0.8', 'monthly'),
+        (f'{BASE}/notes/bab-4.html', '0.8', 'monthly'),
+        # Subtopic pages — Bab 1
+        (f'{BASE}/notes/bab-1-1.html', '0.7', 'weekly'),
+        (f'{BASE}/notes/bab-1-2.html', '0.7', 'weekly'),
+        (f'{BASE}/notes/bab-1-3.html', '0.7', 'weekly'),
+        (f'{BASE}/notes/bab-1-4.html', '0.7', 'weekly'),
+        # Subtopic pages — Bab 2
+        (f'{BASE}/notes/bab-2-1.html', '0.7', 'weekly'),
+        (f'{BASE}/notes/bab-2-2.html', '0.7', 'weekly'),
+        (f'{BASE}/notes/bab-2-3.html', '0.7', 'weekly'),
+        (f'{BASE}/notes/bab-2-4.html', '0.7', 'weekly'),
+        (f'{BASE}/notes/bab-2-5.html', '0.7', 'weekly'),
+        (f'{BASE}/notes/bab-2-6.html', '0.7', 'weekly'),
+        (f'{BASE}/notes/bab-2-7.html', '0.7', 'weekly'),
+        (f'{BASE}/notes/bab-2-8.html', '0.7', 'weekly'),
+        # Subtopic pages — Bab 3
+        (f'{BASE}/notes/bab-3-1.html', '0.7', 'weekly'),
+        (f'{BASE}/notes/bab-3-2.html', '0.7', 'weekly'),
+        (f'{BASE}/notes/bab-3-3.html', '0.7', 'weekly'),
+        (f'{BASE}/notes/bab-3-4.html', '0.7', 'weekly'),
+        (f'{BASE}/notes/bab-3-5.html', '0.7', 'weekly'),
+        (f'{BASE}/notes/bab-3-6.html', '0.7', 'weekly'),
+        (f'{BASE}/notes/bab-3-7.html', '0.7', 'weekly'),
+        (f'{BASE}/notes/bab-3-8.html', '0.7', 'weekly'),
+        (f'{BASE}/notes/bab-3-9.html', '0.7', 'weekly'),
+        # Subtopic pages — Bab 4
+        (f'{BASE}/notes/bab-4-1.html', '0.7', 'weekly'),
+        (f'{BASE}/notes/bab-4-2.html', '0.7', 'weekly'),
+        (f'{BASE}/notes/bab-4-3.html', '0.7', 'weekly'),
+        (f'{BASE}/notes/bab-4-4.html', '0.7', 'weekly'),
+        (f'{BASE}/notes/bab-4-5.html', '0.7', 'weekly'),
+        (f'{BASE}/notes/bab-4-6.html', '0.7', 'weekly'),
+        (f'{BASE}/notes/bab-4-7.html', '0.7', 'weekly'),
+    ]
+
+    url_entries = '\n'.join(
+        f'  <url>\n    <loc>{loc}</loc>\n    <lastmod>{today}</lastmod>'
+        f'\n    <changefreq>{freq}</changefreq>\n    <priority>{pri}</priority>\n  </url>'
+        for loc, pri, freq in pages
+    )
+
+    sitemap = (
+        '<?xml version="1.0" encoding="UTF-8"?>\n'
+        '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+        f'{url_entries}\n'
+        '</urlset>\n'
+    )
+
+    with open('sitemap.xml', 'w', encoding='utf-8') as f:
+        f.write(sitemap)
+
+    print(f'Generated sitemap.xml with {len(pages)} URLs (lastmod: {today})')
+
+
+write_sitemap()
