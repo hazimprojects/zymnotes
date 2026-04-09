@@ -4,12 +4,19 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Learning Lab 1.1 · Negara Bangsa Alam Melayu · Hazim EduHub</title>
-  <meta name="description" content="Learning Lab interaktif untuk Sejarah Tingkatan 4 Bab 1.1: Latar Belakang Negara Bangsa Sebelum Kedatangan Barat." />
+  <meta
+    name="description"
+    content="Learning Lab interaktif untuk Sejarah Tingkatan 4 Bab 1.1: Latar Belakang Negara Bangsa Sebelum Kedatangan Barat."
+  />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
   <link rel="stylesheet" href="../assets/css/style.css?v=36" />
 
+  <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZTQB7MML49"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -19,72 +26,490 @@
     gtag("js", new Date());
     gtag("config", "G-ZTQB7MML49");
   </script>
+
+  <style>
+    .lab-compact-page {
+      min-height: 100svh;
+      display: flex;
+      flex-direction: column;
+      background:
+        radial-gradient(circle at top, rgba(219, 234, 254, 0.25), transparent 42%),
+        linear-gradient(155deg, #f7f4ee, #ede8de);
+    }
+
+    .lab-compact-topbar {
+      position: sticky;
+      top: 0;
+      z-index: 30;
+      backdrop-filter: blur(10px);
+      background: rgba(247, 244, 238, 0.82);
+      border-bottom: 1px solid rgba(92, 110, 132, 0.1);
+    }
+
+    .lab-compact-topbar-inner {
+      width: min(1100px, calc(100% - 1.25rem));
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.8rem;
+      padding: 0.7rem 0;
+    }
+
+    .lab-compact-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.38rem;
+      padding: 0.5rem 0.78rem;
+      border-radius: 999px;
+      text-decoration: none;
+      background: rgba(92, 110, 132, 0.06);
+      border: 1px solid rgba(92, 110, 132, 0.14);
+      color: #24313f;
+      font-size: 0.8rem;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .lab-compact-topmeta {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      min-width: 0;
+      flex: 1;
+    }
+
+    .lab-compact-kicker {
+      margin: 0;
+      font-size: 0.68rem;
+      font-weight: 900;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: #2f7a67;
+    }
+
+    .lab-compact-title {
+      margin: 0.08rem 0 0;
+      font-size: 1rem;
+      line-height: 1.15;
+      color: #24313f;
+      font-weight: 900;
+    }
+
+    .lab-compact-spacer {
+      width: 110px;
+      flex-shrink: 0;
+    }
+
+    .lab-compact-main {
+      flex: 1;
+      display: flex;
+      align-items: stretch;
+      justify-content: center;
+      padding: 0.85rem 0.75rem 1rem;
+    }
+
+    .lab-compact-shell {
+      width: min(1180px, 100%);
+      display: grid;
+      grid-template-columns: minmax(260px, 320px) minmax(0, 560px);
+      justify-content: center;
+      gap: 1rem;
+      align-items: start;
+    }
+
+    .lab-compact-side {
+      display: grid;
+      gap: 0.75rem;
+      align-self: start;
+    }
+
+    .lab-compact-card {
+      padding: 0.9rem 1rem;
+      border-radius: 22px;
+      background: rgba(255, 253, 248, 0.96);
+      border: 1px solid rgba(92, 110, 132, 0.1);
+      box-shadow: 0 16px 34px rgba(36, 49, 63, 0.08);
+    }
+
+    .lab-compact-card h1,
+    .lab-compact-card h2,
+    .lab-compact-card h3,
+    .lab-compact-card p {
+      margin-top: 0;
+    }
+
+    .lab-compact-headline {
+      margin-bottom: 0.7rem;
+    }
+
+    .lab-compact-headline h1 {
+      margin: 0 0 0.28rem;
+      font-size: 1.28rem;
+      line-height: 1.15;
+      color: #24313f;
+      letter-spacing: -0.02em;
+    }
+
+    .lab-compact-headline p {
+      margin: 0;
+      font-size: 0.82rem;
+      line-height: 1.58;
+      color: #5d6a79;
+      font-weight: 700;
+    }
+
+    .lab-compact-points {
+      display: grid;
+      gap: 0.42rem;
+      margin: 0;
+    }
+
+    .lab-compact-point {
+      padding: 0.52rem 0.66rem;
+      border-radius: 12px;
+      background: rgba(92, 110, 132, 0.04);
+      border: 1px solid rgba(92, 110, 132, 0.08);
+      font-size: 0.76rem;
+      line-height: 1.45;
+      color: #5d6a79;
+      font-weight: 700;
+    }
+
+    .lab-compact-links {
+      display: grid;
+      gap: 0.48rem;
+    }
+
+    .lab-compact-link {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.42rem;
+      width: 100%;
+      padding: 0.82rem 0.95rem;
+      border-radius: 999px;
+      text-decoration: none;
+      font-size: 0.84rem;
+      font-weight: 800;
+    }
+
+    .lab-compact-link.primary {
+      background: #2f7a67;
+      color: #fff;
+    }
+
+    .lab-compact-link.secondary {
+      background: rgba(92, 110, 132, 0.06);
+      color: #5d6a79;
+      border: 1.5px solid rgba(92, 110, 132, 0.18);
+    }
+
+    .lab-compact-game {
+      min-width: 0;
+    }
+
+    .lab-compact-game .learning-lab-card {
+      min-height: calc(100svh - 6.2rem);
+      padding: 0.95rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+
+    .lab-compact-game .learning-lab-top {
+      margin-bottom: 0.75rem;
+    }
+
+    .lab-compact-game .learning-lab-title {
+      font-size: 1.04rem;
+      margin-top: 0.14rem;
+    }
+
+    .lab-compact-game .learning-lab-desc {
+      font-size: 0.78rem;
+      line-height: 1.5;
+    }
+
+    .lab-compact-game .learning-lab-stat {
+      font-size: 0.68rem;
+      padding: 0.38rem 0.55rem;
+    }
+
+    .lab-compact-game .learning-lab-kingdom {
+      padding: 0.72rem;
+    }
+
+    .lab-compact-game .learning-lab-question {
+      padding: 0.9rem;
+    }
+
+    .lab-compact-game .learning-lab-prompt {
+      font-size: 0.87rem;
+      line-height: 1.58;
+      margin-bottom: 0.72rem;
+    }
+
+    .lab-compact-game .learning-lab-help {
+      font-size: 0.73rem;
+      margin-bottom: 0.56rem;
+    }
+
+    .lab-compact-game .learning-lab-option,
+    .lab-compact-game .learning-lab-order-item {
+      padding: 0.68rem 0.82rem;
+      font-size: 0.8rem;
+    }
+
+    .lab-compact-game .learning-lab-btn {
+      padding: 0.82rem 0.95rem;
+      font-size: 0.84rem;
+    }
+
+    .lab-compact-floating {
+      position: fixed;
+      right: 14px;
+      bottom: 18px;
+      z-index: 60;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 0.48rem;
+    }
+
+    .lab-compact-floating .learning-menu {
+      position: relative;
+    }
+
+    .lab-compact-floating .learning-menu-main {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      border: none;
+      font-size: 1.15rem;
+      cursor: pointer;
+      color: #fff;
+      background: linear-gradient(135deg, #6d63ff, #8b5cf6);
+      box-shadow: 0 10px 24px rgba(61, 38, 135, 0.28);
+      transition: transform 0.2s ease;
+    }
+
+    .lab-compact-floating .learning-menu-main:hover {
+      transform: scale(1.06);
+    }
+
+    .lab-compact-floating .learning-menu-panel {
+      position: absolute;
+      right: 0;
+      bottom: 64px;
+      min-width: 170px;
+      padding: 0.55rem;
+      border-radius: 16px;
+      background: rgba(255, 253, 248, 0.98);
+      border: 1px solid rgba(92, 110, 132, 0.12);
+      box-shadow: 0 16px 30px rgba(36, 49, 63, 0.14);
+      display: flex;
+      flex-direction: column;
+      gap: 0.42rem;
+      opacity: 0;
+      pointer-events: none;
+      transform: translateY(8px);
+      transition: all 0.22s ease;
+    }
+
+    .lab-compact-floating .learning-menu.is-open .learning-menu-panel {
+      opacity: 1;
+      pointer-events: auto;
+      transform: translateY(0);
+    }
+
+    .lab-compact-floating .learning-menu-item {
+      display: inline-flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 0.42rem;
+      width: 100%;
+      padding: 0.68rem 0.78rem;
+      border-radius: 12px;
+      text-decoration: none;
+      background: rgba(92, 110, 132, 0.05);
+      border: 1px solid rgba(92, 110, 132, 0.08);
+      color: #24313f;
+      font-size: 0.8rem;
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+    .lab-compact-floating .learning-menu-note {
+      padding: 0.48rem 0.7rem;
+      border-radius: 14px;
+      background: rgba(255, 253, 248, 0.96);
+      border: 1px solid rgba(92, 110, 132, 0.12);
+      box-shadow: 0 12px 24px rgba(36, 49, 63, 0.08);
+      font-size: 0.72rem;
+      font-weight: 800;
+      color: #5d6a79;
+      max-width: 170px;
+      text-align: right;
+    }
+
+    @media (max-width: 980px) {
+      .lab-compact-main {
+        padding-top: 0.75rem;
+      }
+
+      .lab-compact-shell {
+        grid-template-columns: 1fr;
+        max-width: 620px;
+      }
+
+      .lab-compact-side {
+        order: 2;
+      }
+
+      .lab-compact-game {
+        order: 1;
+      }
+
+      .lab-compact-game .learning-lab-card {
+        min-height: auto;
+      }
+
+      .lab-compact-spacer {
+        display: none;
+      }
+
+      .lab-compact-topbar-inner {
+        justify-content: space-between;
+      }
+
+      .lab-compact-topmeta {
+        align-items: flex-start;
+        text-align: left;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .lab-compact-topbar-inner {
+        width: min(100%, calc(100% - 1rem));
+        padding: 0.62rem 0;
+      }
+
+      .lab-compact-back {
+        padding: 0.48rem 0.7rem;
+        font-size: 0.76rem;
+      }
+
+      .lab-compact-title {
+        font-size: 0.92rem;
+      }
+
+      .lab-compact-main {
+        padding: 0.6rem 0.55rem 0.9rem;
+      }
+
+      .lab-compact-card {
+        padding: 0.82rem 0.85rem;
+        border-radius: 18px;
+      }
+
+      .lab-compact-headline h1 {
+        font-size: 1.12rem;
+      }
+
+      .lab-compact-floating {
+        right: 12px;
+        bottom: 14px;
+      }
+
+      .lab-compact-floating .learning-menu-main {
+        width: 48px;
+        height: 48px;
+      }
+
+      .lab-compact-floating .learning-menu-note {
+        display: none;
+      }
+    }
+
+    [data-theme="dark"] .lab-compact-page {
+      background:
+        radial-gradient(circle at top, rgba(76, 96, 150, 0.18), transparent 42%),
+        linear-gradient(155deg, #1f1a18, #171311);
+    }
+
+    [data-theme="dark"] .lab-compact-topbar {
+      background: rgba(24, 20, 18, 0.82);
+      border-bottom-color: rgba(220, 210, 190, 0.1);
+    }
+
+    [data-theme="dark"] .lab-compact-back,
+    [data-theme="dark"] .lab-compact-card,
+    [data-theme="dark"] .lab-compact-floating .learning-menu-panel,
+    [data-theme="dark"] .lab-compact-floating .learning-menu-note {
+      background: rgba(36, 34, 32, 0.96);
+      border-color: rgba(220, 210, 190, 0.12);
+      color: #e8e0d4;
+    }
+
+    [data-theme="dark"] .lab-compact-headline p,
+    [data-theme="dark"] .lab-compact-point,
+    [data-theme="dark"] .lab-compact-floating .learning-menu-note {
+      color: #b8aea1;
+    }
+
+    [data-theme="dark"] .lab-compact-link.secondary,
+    [data-theme="dark"] .lab-compact-floating .learning-menu-item {
+      background: rgba(255, 255, 255, 0.04);
+      color: #e8e0d4;
+      border-color: rgba(220, 210, 190, 0.1);
+    }
+  </style>
 </head>
 <body class="bab-theme-1">
-  <header class="site-header">
-    <div class="container nav-wrap">
-      <a class="brand" href="../index.html">Hazim EduHub</a>
-      <button class="nav-toggle" aria-label="Buka menu" aria-expanded="false">☰</button>
-      <nav class="site-nav">
-        <a href="../index.html">Utama</a>
-        <a href="index.html">Nota</a>
-        <a href="../about.html">Tentang</a>
-      </nav>
-    </div>
-  </header>
+  <div class="lab-compact-page">
+    <header class="lab-compact-topbar">
+      <div class="lab-compact-topbar-inner">
+        <a class="lab-compact-back" href="bab-1-1.html">← Nota 1.1</a>
 
-  <main>
-    <section class="section page-hero note-hero papercraft-hero">
-      <div class="container narrow">
-        <div class="paper-label">Learning Lab · Bab 1</div>
-        <p class="eyebrow">Subtopik 1.1</p>
-        <h1>🎮 Learning Lab 1.1</h1>
-        <p class="lead">
-          Uji kefahaman anda tentang <span class="kw kw-istilah">negara bangsa</span> di
-          <span class="kw kw-tempat">Alam Melayu</span> melalui aktiviti interaktif yang santai,
-          visual, dan rapat dengan gaya fikir <span class="kw kw-istilah">SPM</span>.
-        </p>
-
-        <div class="hero-actions">
-          <a class="btn btn-secondary" href="bab-1-1.html">← Kembali ke Nota 1.1</a>
-          <a class="btn btn-primary" href="#lab-mula">Mula Learning Lab</a>
+        <div class="lab-compact-topmeta">
+          <p class="lab-compact-kicker">Learning Lab · Bab 1</p>
+          <p class="lab-compact-title">Subtopik 1.1 · Negara Bangsa Alam Melayu</p>
         </div>
+
+        <div class="lab-compact-spacer" aria-hidden="true"></div>
       </div>
-    </section>
+    </header>
 
-    <section class="section note-section">
-      <div class="container narrow">
-        <article class="paper-board master-summary-paper reveal-on-scroll">
-          <div class="paper-strip strip-summary">Ringkasan Learning Lab</div>
-          <div class="paper-chip-list">
-            <div class="paper-chip paper-chip-sentence"><span class="chip-icon">🧠</span>Fokus pada <span class="kw kw-istilah">fakta penting</span> tanpa mengganggu aliran nota utama.</div>
-            <div class="paper-chip paper-chip-sentence"><span class="chip-icon">🎯</span>Soalan dibina supaya pelajar biasa dengan gaya fikir <span class="kw kw-istilah">SPM</span>.</div>
-            <div class="paper-chip paper-chip-sentence"><span class="chip-icon">🏗️</span>Setiap jawapan betul membantu anda membina visual <span class="kw kw-kerajaan">kerajaan</span>.</div>
-            <div class="paper-chip paper-chip-sentence"><span class="chip-icon">🔁</span>Boleh diulang berkali-kali untuk pengukuhan.</div>
-          </div>
-        </article>
+    <main class="lab-compact-main">
+      <div class="lab-compact-shell">
+        <aside class="lab-compact-side">
+          <article class="lab-compact-card">
+            <div class="lab-compact-headline">
+              <h1>🎮 Bina Negara Bangsa</h1>
+              <p>
+                Uji kefahaman anda secara santai, pantas dan lebih fokus tanpa mengganggu aliran nota utama.
+              </p>
+            </div>
 
-        <section class="note-subsection reveal-on-scroll">
-          <article class="paper-flap-card">
-            <div class="flap-top">💡 Cara Guna</div>
-            <div class="flap-body">
-              <ul class="emoji-point-list">
-                <li><span class="emoji-bullet">1️⃣</span><span>Baca soalan dengan teliti.</span></li>
-                <li><span class="emoji-bullet">2️⃣</span><span>Pilih jawapan yang paling tepat.</span></li>
-                <li><span class="emoji-bullet">3️⃣</span><span>Semak penerangan dan tip selepas menjawab.</span></li>
-                <li><span class="emoji-bullet">4️⃣</span><span>Ulang semula jika mahu lebih mantap.</span></li>
-              </ul>
+            <div class="lab-compact-points">
+              <div class="lab-compact-point">🧠 Fokus pada fakta yang paling kerap mengelirukan pelajar.</div>
+              <div class="lab-compact-point">🎯 Soalan dibina rapat dengan gaya fikir SPM.</div>
+              <div class="lab-compact-point">🏗️ Jawapan betul membantu membina visual kerajaan sedikit demi sedikit.</div>
+              <div class="lab-compact-point">🔁 Boleh diulang terus untuk pengukuhan segera.</div>
             </div>
           </article>
-        </section>
 
-        <section id="lab-mula" class="note-subsection reveal-on-scroll">
-          <div class="section-heading">
-            <div class="paper-label small">Aktiviti Interaktif</div>
-            <h2>🏛️ Bina Negara Bangsa</h2>
-            <p>Aktiviti ini membantu mengukuhkan subtopik 1.1 melalui soalan objektif, pilih dua isi, lengkapkan fakta, susun urutan dan mini SPM.</p>
-          </div>
+          <article class="lab-compact-card">
+            <div class="lab-compact-links">
+              <a class="lab-compact-link secondary" href="bab-1-1.html">📖 Kembali ke Nota 1.1</a>
+              <a class="lab-compact-link primary" href="bab-1-2.html">➡️ Seterusnya: 1.2</a>
+            </div>
+          </article>
+        </aside>
 
+        <section class="lab-compact-game">
           <div class="learning-lab-shell" data-learning-lab="1-1">
             <div class="learning-lab-card">
               <div class="learning-lab-top">
@@ -177,56 +602,70 @@
             </div>
           </div>
         </section>
-
-        <section class="note-subsection reveal-on-scroll">
-          <article class="paper-board summary-paper conclusion-paper reveal-on-scroll">
-            <div class="paper-strip strip-summary">📚 Selepas Siap</div>
-            <h2>Teruskan pengukuhan dengan nota utama</h2>
-
-            <div class="paper-chip-list">
-              <div class="paper-chip">📖 semak semula nota 1.1</div>
-              <div class="paper-chip">📝 cuba jawab secara lisan</div>
-              <div class="paper-chip">🔁 ulang semula learning lab</div>
-            </div>
-
-            <p class="point-line">Aktiviti ini membantu pengukuhan, tetapi nota utama masih menjadi rujukan teras untuk pemahaman penuh.</p>
-
-            <div class="hero-actions">
-              <a class="btn btn-secondary" href="bab-1-1.html">Kembali ke Nota 1.1</a>
-              <a class="btn btn-primary" href="bab-1-2.html">Seterusnya: 1.2</a>
-            </div>
-          </article>
-        </section>
       </div>
-    </section>
-  </main>
+    </main>
 
-  <footer class="site-footer">
-    <div class="container footer-wrap">
-      <div>
-        <p class="footer-brand">Hazim EduHub</p>
-        <p class="footer-text">Projek peribadi pendidikan yang membina nota visual, mesra telefon dan lebih mudah diikuti.</p>
+    <div class="lab-compact-floating">
+      <div class="learning-menu" data-learning-menu>
+        <button class="learning-menu-main" aria-label="Menu pembelajaran">✨</button>
+
+        <div class="learning-menu-panel">
+          <a href="bab-1-1.html" class="learning-menu-item">📖 Nota</a>
+          <button class="learning-menu-item" type="button" data-action="restart-lab">🎮 Main Semula</button>
+          <button class="learning-menu-item" type="button" data-action="top">⬆️ Ke atas</button>
+        </div>
       </div>
-      <div class="footer-links">
-        <a href="../index.html">Utama</a>
-        <a href="index.html">Nota</a>
-        <a href="../about.html">Tentang</a>
-        <a href="mailto:hello@hazimedu.com">hello@hazimedu.com</a>
-      </div>
+
+      <div class="learning-menu-note">Akses pantas tanpa ganggu tumpuan.</div>
     </div>
-    <div class="footer-bottom">
-      <p>&copy; 2026 Hazim EduHub. Semua hak cipta terpelihara.</p>
-    </div>
-  </footer>
-
-  <div class="learning-lab-floating" data-learning-actions>
-    <a class="learning-lab-fab" href="bab-1-1.html" aria-label="Kembali ke nota">📖</a>
-    <button class="learning-lab-fab" type="button" data-learning-action="lab" aria-label="Pergi ke permainan">🎮</button>
-    <button class="learning-lab-fab" type="button" data-learning-action="top" aria-label="Kembali ke atas">⬆️</button>
-    <div class="learning-lab-fab-note">Gunakan page ini untuk latihan tanpa mengganggu aliran nota.</div>
   </div>
 
   <script src="../assets/js/subtopic-lab.js?v=1"></script>
   <script src="../assets/js/main.js?v=39"></script>
+  <script>
+    (function () {
+      const menu = document.querySelector("[data-learning-menu]");
+      const menuBtn = menu?.querySelector(".learning-menu-main");
+      const topBtn = menu?.querySelector('[data-action="top"]');
+      const restartBtn = menu?.querySelector('[data-action="restart-lab"]');
+      const startBtn = document.querySelector('[data-lab-action="start"]');
+      const restartGameBtn = document.querySelector('[data-lab-action="restart"]');
+
+      if (menu && menuBtn) {
+        menuBtn.addEventListener("click", function () {
+          menu.classList.toggle("is-open");
+        });
+
+        document.addEventListener("click", function (event) {
+          if (!menu.contains(event.target)) {
+            menu.classList.remove("is-open");
+          }
+        });
+      }
+
+      if (topBtn) {
+        topBtn.addEventListener("click", function () {
+          window.scrollTo({ top: 0, behavior: "smooth" });
+          menu?.classList.remove("is-open");
+        });
+      }
+
+      if (restartBtn) {
+        restartBtn.addEventListener("click", function () {
+          if (restartGameBtn && !restartGameBtn.closest(".is-hidden")) {
+            restartGameBtn.click();
+          } else if (startBtn && !startBtn.closest(".is-hidden")) {
+            startBtn.click();
+          } else if (startBtn) {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+            setTimeout(function () {
+              startBtn.click();
+            }, 180);
+          }
+          menu?.classList.remove("is-open");
+        });
+      }
+    })();
+  </script>
 </body>
 </html>
