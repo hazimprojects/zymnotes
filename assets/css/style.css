@@ -6,7 +6,7 @@
 
 @import url("base.css?v=2");       /* :root variables, dark mode tokens, body/reset/containers */
 @import url("layout.css?v=1");     /* Header, nav, dark mode fab, typography, footer, animations */
-@import url("ui.css?v=1");         /* Buttons, cards, homepage, hero, search, org-chart, interaction */
+@import url("ui.css?v=2");         /* Buttons, cards, homepage, hero, search, org-chart, interaction */
 @import url("paper.css?v=7");      /* Paper labels, boards, chips, accordion, steps, bab overview */
 @import url("keywords.css?v=1");   /* Keyword highlights (Bab 1/2/3), bloc identity, keyword legend */
 @import url("responsive.css?v=2"); /* All @media queries + spacing fixes */

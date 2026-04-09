@@ -922,3 +922,155 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 })();
+
+// =========================
+// NOTE PAGE: SPARKLE MENU + READING PROGRESS
+// =========================
+(function setupNoteFeatures() {
+  var THEME_KEY = 'hazimedu-theme';
+
+  function getCurrentTheme() {
+    return document.documentElement.getAttribute('data-theme') || 'light';
+  }
+
+  function toggleTheme() {
+    var next = getCurrentTheme() === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', next);
+    localStorage.setItem(THEME_KEY, next);
+    // Sync all display-fab buttons (including nav)
+    document.querySelectorAll('.display-fab').forEach(function(btn) {
+      btn.textContent = next === 'dark' ? '🌙' : '☀️';
+    });
+    return next;
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    // Only run on note content pages
+    if (!document.querySelector('.note-section')) return;
+
+    // --- Hide nav dark mode button on content pages (moves into sparkle menu) ---
+    document.querySelectorAll('.display-fab').forEach(function(btn) {
+      btn.style.display = 'none';
+    });
+
+    // --- Reading Progress Bar ---
+    var bar = document.createElement('div');
+    bar.className = 'note-reading-bar';
+    document.body.appendChild(bar);
+
+    function updateProgress() {
+      var scrollTop = window.scrollY || window.pageYOffset;
+      var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      var pct = docHeight > 0 ? Math.min(100, (scrollTop / docHeight) * 100) : 0;
+      bar.style.width = pct + '%';
+    }
+
+    window.addEventListener('scroll', updateProgress, { passive: true });
+    updateProgress();
+
+    // --- Build sparkle menu items ---
+    var items = [];
+
+    // Dark mode item (always)
+    var dmEmoji = getCurrentTheme() === 'dark' ? '🌙' : '☀️';
+    items.push({ emoji: dmEmoji, tooltip: 'Mod paparan', type: 'darkmode' });
+
+    // Audio item (if audio player exists)
+    var audioEl = document.querySelector('.note-audio-player .audio-src');
+    if (audioEl) {
+      items.push({ emoji: '🎧', tooltip: 'Main audio', type: 'audio' });
+    }
+
+    // Lab item (if learning lab entry exists)
+    var labLinkEl = document.querySelector('#learning-lab-entry .btn[href]');
+    if (labLinkEl) {
+      items.push({ emoji: '🎮', tooltip: 'Learning Lab', type: 'lab', href: labLinkEl.getAttribute('href') });
+    }
+
+    // --- Inject sparkle menu DOM ---
+    var wrap = document.createElement('div');
+    wrap.className = 'note-sparkle-wrap';
+
+    var itemsContainer = document.createElement('div');
+    itemsContainer.className = 'note-sparkle-items';
+
+    items.forEach(function(item) {
+      var el;
+      if (item.type === 'lab') {
+        el = document.createElement('a');
+        el.href = item.href;
+      } else {
+        el = document.createElement('button');
+        el.type = 'button';
+      }
+      el.className = 'note-sparkle-item';
+      el.setAttribute('aria-label', item.tooltip);
+      el.setAttribute('data-tooltip', item.tooltip);
+      el.setAttribute('data-sparkle-type', item.type);
+      el.textContent = item.emoji;
+      itemsContainer.appendChild(el);
+    });
+
+    var fab = document.createElement('button');
+    fab.className = 'note-sparkle-fab';
+    fab.type = 'button';
+    fab.setAttribute('aria-label', 'Menu pembelajaran');
+    fab.textContent = '✨';
+
+    wrap.appendChild(itemsContainer);
+    wrap.appendChild(fab);
+    document.body.appendChild(wrap);
+
+    // --- Toggle open/close ---
+    fab.addEventListener('click', function(e) {
+      e.stopPropagation();
+      wrap.classList.toggle('is-open');
+    });
+
+    document.addEventListener('click', function(e) {
+      if (!wrap.contains(e.target)) {
+        wrap.classList.remove('is-open');
+      }
+    });
+
+    // --- Wire item actions ---
+    itemsContainer.addEventListener('click', function(e) {
+      var btn = e.target.closest('[data-sparkle-type]');
+      if (!btn) return;
+      var type = btn.getAttribute('data-sparkle-type');
+
+      if (type === 'darkmode') {
+        var next = toggleTheme();
+        btn.textContent = next === 'dark' ? '🌙' : '☀️';
+        wrap.classList.remove('is-open');
+      }
+
+      if (type === 'audio' && audioEl) {
+        if (audioEl.paused) {
+          audioEl.play();
+        } else {
+          audioEl.pause();
+        }
+        wrap.classList.remove('is-open');
+      }
+
+      if (type === 'lab') {
+        wrap.classList.remove('is-open');
+      }
+    });
+
+    // Sync audio button emoji with playback state
+    if (audioEl) {
+      var audioBtn = itemsContainer.querySelector('[data-sparkle-type="audio"]');
+      audioEl.addEventListener('play', function() {
+        if (audioBtn) audioBtn.textContent = '⏸️';
+      });
+      audioEl.addEventListener('pause', function() {
+        if (audioBtn) audioBtn.textContent = '🎧';
+      });
+      audioEl.addEventListener('ended', function() {
+        if (audioBtn) audioBtn.textContent = '🎧';
+      });
+    }
+  });
+})();
