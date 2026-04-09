@@ -298,8 +298,14 @@
     state.multiSelected = [];
     state.locked = false;
     feedbackWrap.classList.add('is-hidden');
+    feedbackWrap.classList.remove('is-peeking');
     feedbackBox.classList.remove('is-wrong');
     checkBtn.classList.remove('is-disabled');
+    // Reset peek bar state
+    var peekBtn  = document.getElementById('lab-feedback-peek-btn');
+    var peekHint = document.getElementById('lab-feedback-peek-hint');
+    if (peekBtn)  peekBtn.textContent  = '🔽';
+    if (peekHint) peekHint.textContent = 'Sembunyikan';
   }
 
   function currentQuestion() {

@@ -520,8 +520,12 @@
 
     /* ======================================
        FEEDBACK — BOTTOM-SHEET OVERLAY (mobile)
-       Slides up from bottom, no page scroll needed
+       Slides up from bottom; collapsible via peek bar
        ====================================== */
+
+    /* Peek bar: hidden on desktop, flex on mobile */
+    .lab-feedback-peek-bar { display: none; }
+
     @media (max-width: 899px) {
       .lab-compact-game .learning-lab-stage[data-lab-feedback-wrap] {
         display: grid !important;
@@ -529,7 +533,7 @@
         position: fixed;
         bottom: 0; left: 0; right: 0;
         z-index: 45;
-        padding: 0.85rem 0.95rem 1.15rem;
+        padding: 0 0.95rem 1.15rem;
         background: rgba(247, 244, 238, 0.97);
         border-top: 1px solid rgba(92, 110, 132, 0.13);
         border-radius: 22px 22px 0 0;
@@ -546,8 +550,46 @@
         pointer-events: auto;
       }
 
-      /* Hide sparkle FAB while overlay is open to avoid overlap */
-      .lab-compact-page:has(.learning-lab-stage[data-lab-feedback-wrap]:not(.is-hidden)) .note-sparkle-wrap {
+      /* Peeking: translate down so only the 44px peek bar remains visible */
+      .lab-compact-game .learning-lab-stage[data-lab-feedback-wrap].is-peeking {
+        transform: translateY(calc(100% - 44px));
+      }
+
+      /* Peek bar */
+      .lab-feedback-peek-bar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.4rem;
+        height: 44px;
+        cursor: pointer;
+        user-select: none;
+        -webkit-user-select: none;
+      }
+
+      .lab-feedback-peek-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 30px;
+        height: 30px;
+        border-radius: 8px;
+        border: 1px solid rgba(92, 110, 132, 0.16);
+        background: rgba(92, 110, 132, 0.07);
+        font-size: 0.82rem;
+        cursor: pointer;
+        line-height: 1;
+        flex-shrink: 0;
+      }
+
+      .lab-feedback-peek-hint {
+        font-size: 0.7rem;
+        font-weight: 800;
+        color: #5d6a79;
+      }
+
+      /* Hide sparkle FAB while overlay is fully open (not peeking) */
+      .lab-compact-page:has(.learning-lab-stage[data-lab-feedback-wrap]:not(.is-hidden):not(.is-peeking)) .note-sparkle-wrap {
         opacity: 0;
         pointer-events: none;
         transition: opacity 0.15s;
@@ -557,6 +599,13 @@
         background: rgba(28, 24, 22, 0.97);
         border-top-color: rgba(220, 210, 190, 0.13);
       }
+
+      [data-theme="dark"] .lab-feedback-peek-btn {
+        background: rgba(255, 255, 255, 0.06);
+        border-color: rgba(220, 210, 190, 0.14);
+      }
+
+      [data-theme="dark"] .lab-feedback-peek-hint { color: #b8aea1; }
     }
   </style>
 </head>
@@ -691,6 +740,11 @@
                   </div>
 
                   <div class="learning-lab-stage is-hidden" data-lab-feedback-wrap>
+                    <div class="lab-feedback-peek-bar" id="lab-feedback-peek-bar">
+                      <button type="button" class="lab-feedback-peek-btn" id="lab-feedback-peek-btn">🔽</button>
+                      <span class="lab-feedback-peek-hint" id="lab-feedback-peek-hint">Sembunyikan</span>
+                    </div>
+
                     <div class="learning-lab-feedback" data-lab-feedback-box>
                       <p class="learning-lab-feedback-title" data-lab-feedback-title></p>
                       <p class="learning-lab-feedback-text" data-lab-feedback-text></p>
@@ -800,6 +854,20 @@
         }
         wrap.classList.remove('is-open');
       });
+
+      // Peek toggle — collapse/expand feedback overlay
+      var peekBar  = document.getElementById('lab-feedback-peek-bar');
+      var peekBtn  = document.getElementById('lab-feedback-peek-btn');
+      var peekHint = document.getElementById('lab-feedback-peek-hint');
+      var fbWrap   = document.querySelector('[data-lab-feedback-wrap]');
+
+      if (peekBar && fbWrap) {
+        peekBar.addEventListener('click', function () {
+          var peeking = fbWrap.classList.toggle('is-peeking');
+          peekBtn.textContent  = peeking ? '🔼' : '🔽';
+          peekHint.textContent = peeking ? 'Lihat maklum balas' : 'Sembunyikan';
+        });
+      }
     })();
   </script>
 </body>
