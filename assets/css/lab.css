@@ -423,6 +423,37 @@
   color: #b8aea1;
 }
 
+[data-theme="dark"] .learning-lab-option,
+[data-theme="dark"] .learning-lab-order-item {
+  background: rgba(50, 48, 44, 0.92);
+  border-color: rgba(220, 210, 190, 0.13);
+  color: #e8e0d4;
+}
+
+[data-theme="dark"] .learning-lab-option.is-active {
+  border-color: rgba(47, 122, 103, 0.5);
+  background: rgba(47, 122, 103, 0.16);
+  color: #7dd4be;
+}
+
+[data-theme="dark"] .learning-lab-option.is-correct {
+  border-color: rgba(47, 122, 103, 0.5);
+  background: rgba(47, 122, 103, 0.16);
+  color: #7dd4be;
+}
+
+[data-theme="dark"] .learning-lab-option.is-wrong {
+  border-color: rgba(200, 100, 100, 0.4);
+  background: rgba(180, 80, 80, 0.14);
+  color: #e09090;
+}
+
+[data-theme="dark"] .learning-lab-option.is-muted {
+  border-color: rgba(220, 210, 190, 0.06);
+  background: rgba(220, 210, 190, 0.03);
+  color: rgba(180, 168, 150, 0.38);
+}
+
 @media (max-width: 760px) {
   .learning-lab-floating {
     right: 12px;
