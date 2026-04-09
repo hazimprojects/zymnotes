@@ -265,7 +265,7 @@
       if (!target) return;
 
       try {
-        const res = await fetch('data/updates.json?v=1');
+        const res = await fetch('data/updates.json?v=2');
         if (!res.ok) throw new Error();
         const json = await res.json();
         const latest = json.entries?.[0];
