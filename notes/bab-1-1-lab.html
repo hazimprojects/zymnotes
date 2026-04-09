@@ -195,6 +195,11 @@
       gap: 0.5rem;
     }
 
+    /* CRITICAL: override display:flex for hidden stages — must come after the flex rule */
+    .lab-compact-game [data-lab-screen].is-hidden {
+      display: none !important;
+    }
+
     /* Game screen: question scrolls */
     .lab-compact-game [data-lab-screen="game"] .learning-lab-question {
       flex: 1;
