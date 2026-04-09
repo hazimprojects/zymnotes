@@ -44,10 +44,11 @@ def infer_action(subject):
 
 def parse_file(f):
     """Return (entity_key, friendly_label) or (None, None) to skip."""
-    m = re.match(r'notes/bab-(\d+)-(\d+)-lab\.html$', f)
+    m = re.match(r'(?:notes/bab-(\d+)-(\d+)-lab|lab/bab-(\d+)-(\d+))\.html$', f)
     if m:
-        key = f"lab_{m.group(1)}.{m.group(2)}"
-        label = f"Sejarah T4 — Learning Lab {m.group(1)}.{m.group(2)}"
+        bab, sub = m.group(1) or m.group(3), m.group(2) or m.group(4)
+        key = f"lab_{bab}.{sub}"
+        label = f"Sejarah T4 — Makmal Latihan {bab}.{sub}"
         return key, label
 
     m = re.match(r'notes/bab-(\d+)-(\d+)\.html$', f)

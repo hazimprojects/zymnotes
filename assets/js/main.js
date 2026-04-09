@@ -803,7 +803,7 @@ document.addEventListener("DOMContentLoaded", function () {
     var labHref = document.body.dataset.labHref ||
       (function() { var el = document.querySelector('#learning-lab-entry .btn[href]'); return el ? el.getAttribute('href') : null; })();
     if (labHref) {
-      items.push({ emoji: '🎮', tooltip: 'Learning Lab', type: 'lab', href: labHref });
+      items.push({ emoji: '⚗️', tooltip: 'Makmal Latihan', type: 'lab', href: labHref });
     }
 
     // --- Inject sparkle menu DOM ---
