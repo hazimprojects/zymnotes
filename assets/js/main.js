@@ -799,10 +799,11 @@ document.addEventListener("DOMContentLoaded", function () {
       items.push({ emoji: '🎧', tooltip: 'Main audio', type: 'audio' });
     }
 
-    // Lab item (if learning lab entry exists)
-    var labLinkEl = document.querySelector('#learning-lab-entry .btn[href]');
-    if (labLinkEl) {
-      items.push({ emoji: '🎮', tooltip: 'Learning Lab', type: 'lab', href: labLinkEl.getAttribute('href') });
+    // Lab item — check data-lab-href on body, or fall back to inline entry
+    var labHref = document.body.dataset.labHref ||
+      (function() { var el = document.querySelector('#learning-lab-entry .btn[href]'); return el ? el.getAttribute('href') : null; })();
+    if (labHref) {
+      items.push({ emoji: '🎮', tooltip: 'Learning Lab', type: 'lab', href: labHref });
     }
 
     // --- Inject sparkle menu DOM ---
