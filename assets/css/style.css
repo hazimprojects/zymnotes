@@ -11,3 +11,4 @@
 @import url("keywords.css?v=1");   /* Keyword highlights (Bab 1/2/3), bloc identity, keyword legend */
 @import url("responsive.css?v=2"); /* All @media queries + spacing fixes */
 @import url("themes.css?v=2");     /* Bab visual themes, dark mode overrides, war block chips */
+@import url("lab.css?v=1");        /* Learning Lab, action bar, mini interactive blocks */
