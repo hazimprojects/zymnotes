@@ -1164,12 +1164,9 @@ document.addEventListener("DOMContentLoaded", function () {
     sheet.id = 'hzedu-quote-sheet';
     sheet.innerHTML =
       '<div class="hzedu-quote-inner">' +
-        '<p class="hzedu-quote-sheet-title">\u270D\uFE0F Kata Motivasi Kamu</p>' +
+        '<p class="hzedu-quote-sheet-title">\u270D\uFE0F Kata Motivasi</p>' +
         '<ul class="hzedu-quote-list" id="hzedu-qlist"></ul>' +
-        '<div class="hzedu-quote-add-row">' +
-          '<input class="hzedu-quote-add-input" id="hzedu-qadd" type="text" placeholder="Tambah kata-kata baru..." maxlength="120" />' +
-          '<button class="hzedu-quote-add-btn" id="hzedu-qadd-btn">+</button>' +
-        '</div>' +
+        '<p style="margin:0.35rem 0 0;font-size:0.78rem;color:#9c8e7d">Fungsi tambah kata motivasi baharu ditutup sementara.</p>' +
       '</div>';
     document.body.appendChild(sheet);
 
@@ -1207,20 +1204,6 @@ document.addEventListener("DOMContentLoaded", function () {
       if (e.target === sheet) closeSheet();
     });
 
-    document.getElementById('hzedu-qadd-btn').addEventListener('click', function () {
-      var inp = document.getElementById('hzedu-qadd');
-      var val = inp.value.trim();
-      if (!val) return;
-      var q = getQuotes();
-      if (q.length >= 10) return;
-      q.push(val);
-      saveQuotes(q);
-      inp.value = '';
-      renderList();
-    });
-    document.getElementById('hzedu-qadd').addEventListener('keydown', function (e) {
-      if (e.key === 'Enter') document.getElementById('hzedu-qadd-btn').click();
-    });
   });
 })();
 
