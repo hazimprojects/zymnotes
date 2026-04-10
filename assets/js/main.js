@@ -820,13 +820,12 @@ document.addEventListener("DOMContentLoaded", function () {
         : 'Pindah butang navigasi ke kiri';
     }
 
-    function makeSettingsRow(icon, name, desc, val, type) {
+    function makeSettingsRow(name, desc, val, type) {
       var row = document.createElement('button');
       row.type = 'button';
       row.className = 'note-settings-row';
       row.setAttribute('data-stype', type);
       row.innerHTML =
-        '<span class="note-settings-icon" id="si-' + type + '">' + icon + '</span>' +
         '<span class="note-settings-body">' +
           '<span class="note-settings-name">' + name + '</span>' +
           '<span class="note-settings-desc" id="sd-' + type + '">' + desc + '</span>' +
@@ -839,9 +838,9 @@ document.addEventListener("DOMContentLoaded", function () {
     header.className = 'note-settings-header';
     header.textContent = 'Tetapan';
     panel.appendChild(header);
-    panel.appendChild(makeSettingsRow(dmEmoji(), 'Mod Paparan', 'Tukar antara mod cerah dan gelap', dmEmoji(), 'dm'));
-    panel.appendChild(makeSettingsRow(handEmoji(), 'Mod Tangan', handDesc(), handEmoji(), 'hand'));
-    panel.appendChild(makeSettingsRow('✍️', 'Kata Motivasi', 'Urus kata-kata semangat kamu', '✍️', 'quotes'));
+    panel.appendChild(makeSettingsRow('Mod Paparan', 'Tukar antara mod cerah dan gelap', dmEmoji(), 'dm'));
+    panel.appendChild(makeSettingsRow('Mod Tangan', handDesc(), handEmoji(), 'hand'));
+    panel.appendChild(makeSettingsRow('Kata Motivasi', 'Urus kata-kata semangat kamu', '›', 'quotes'));
 
     // --- Sparkle items: audio (optional) + lab (optional) + ⚙️ (always) ---
     var itemsContainer = document.createElement('div');
@@ -921,11 +920,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
       if (type === 'dm') {
         var next = toggleTheme();
-        var em = next === 'dark' ? '🌙' : '☀️';
-        var icon = document.getElementById('si-dm');
-        var val  = document.getElementById('sv-dm');
-        if (icon) icon.textContent = em;
-        if (val)  val.textContent  = em;
+        var val = document.getElementById('sv-dm');
+        if (val) val.textContent = next === 'dark' ? '🌙' : '☀️';
       }
 
       if (type === 'hand') {
@@ -933,16 +929,12 @@ document.addEventListener("DOMContentLoaded", function () {
         var nextHand = nowLeft ? 'right' : 'left';
         localStorage.setItem('hzedu-hand', nextHand);
         document.body.classList.toggle('hand-left', nextHand === 'left');
-        var hem  = nextHand === 'left' ? '🫲' : '🫱';
-        var hdesc = nextHand === 'left'
-          ? 'Pindah butang navigasi ke kanan'
-          : 'Pindah butang navigasi ke kiri';
-        var hIcon = document.getElementById('si-hand');
         var hVal  = document.getElementById('sv-hand');
         var hDesc = document.getElementById('sd-hand');
-        if (hIcon) hIcon.textContent = hem;
-        if (hVal)  hVal.textContent  = hem;
-        if (hDesc) hDesc.textContent = hdesc;
+        if (hVal)  hVal.textContent  = nextHand === 'left' ? '🫲' : '🫱';
+        if (hDesc) hDesc.textContent = nextHand === 'left'
+          ? 'Pindah butang navigasi ke kanan'
+          : 'Pindah butang navigasi ke kiri';
       }
 
       if (type === 'quotes') {
