@@ -768,7 +768,7 @@ document.addEventListener("DOMContentLoaded", function () {
 })();
 
 // =========================
-// NOTE PAGE: SPARKLE MENU + READING PROGRESS
+// NOTE PAGE: SPARKLE MENU + SETTINGS PANEL
 // =========================
 (function setupNoteFeatures() {
   var THEME_KEY = 'hazimedu-theme';
@@ -781,7 +781,6 @@ document.addEventListener("DOMContentLoaded", function () {
     var next = getCurrentTheme() === 'dark' ? 'light' : 'dark';
     document.documentElement.setAttribute('data-theme', next);
     localStorage.setItem(THEME_KEY, next);
-    // Sync all display-fab buttons (including nav)
     document.querySelectorAll('.display-fab').forEach(function(btn) {
       btn.textContent = next === 'dark' ? '🌙' : '☀️';
     });
@@ -792,133 +791,173 @@ document.addEventListener("DOMContentLoaded", function () {
     // Skip if page already has its own sparkle menu (e.g. lab pages)
     if (document.querySelector('.note-sparkle-wrap')) return;
 
-    // --- Hide nav dark mode button (moves into sparkle menu) ---
+    // Hide nav dark mode button (moved into settings panel)
     document.querySelectorAll('.display-fab').forEach(function(btn) {
       btn.style.display = 'none';
     });
 
-    // --- Build sparkle menu items ---
-    var items = [];
-
-    // Dark mode item (always)
-    var dmEmoji = getCurrentTheme() === 'dark' ? '🌙' : '☀️';
-    items.push({ emoji: dmEmoji, tooltip: 'Mod paparan', type: 'darkmode' });
-
-    // Audio item (if audio player exists)
+    // Detect audio + lab
     var audioEl = document.querySelector('.note-audio-player .audio-src');
-    if (audioEl) {
-      items.push({ emoji: '🎧', tooltip: 'Main audio', type: 'audio' });
-    }
-
-    // Lab item — check data-lab-href on body, or fall back to inline entry
     var labHref = document.body.dataset.labHref ||
-      (function() { var el = document.querySelector('#learning-lab-entry .btn[href]'); return el ? el.getAttribute('href') : null; })();
-    if (labHref) {
-      items.push({ emoji: '⚗️', tooltip: 'Makmal Latihan', type: 'lab', href: labHref });
-    }
+      (function() {
+        var el = document.querySelector('#learning-lab-entry .btn[href]');
+        return el ? el.getAttribute('href') : null;
+      })();
 
-    // Handedness toggle
-    var isLeftHand = localStorage.getItem('hzedu-hand') === 'left';
-    items.push({ emoji: isLeftHand ? '🫲' : '🫱', tooltip: isLeftHand ? 'Mod tangan kanan' : 'Mod tangan kiri', type: 'hand' });
-
-    // --- Inject sparkle menu DOM ---
+    // --- Build sparkle wrap ---
     var wrap = document.createElement('div');
     wrap.className = 'note-sparkle-wrap';
 
+    // --- Settings sub-panel (sits at top of wrap, above sparkle items) ---
+    var panel = document.createElement('div');
+    panel.className = 'note-settings-panel';
+
+    function dmEmoji() { return getCurrentTheme() === 'dark' ? '🌙' : '☀️'; }
+    function handEmoji() { return localStorage.getItem('hzedu-hand') === 'left' ? '🫲' : '🫱'; }
+    function handDesc() {
+      return localStorage.getItem('hzedu-hand') === 'left'
+        ? 'Pindah butang navigasi ke kanan'
+        : 'Pindah butang navigasi ke kiri';
+    }
+
+    function makeSettingsRow(icon, name, desc, val, type) {
+      var row = document.createElement('button');
+      row.type = 'button';
+      row.className = 'note-settings-row';
+      row.setAttribute('data-stype', type);
+      row.innerHTML =
+        '<span class="note-settings-icon" id="si-' + type + '">' + icon + '</span>' +
+        '<span class="note-settings-body">' +
+          '<span class="note-settings-name">' + name + '</span>' +
+          '<span class="note-settings-desc" id="sd-' + type + '">' + desc + '</span>' +
+        '</span>' +
+        '<span class="note-settings-val" id="sv-' + type + '">' + val + '</span>';
+      return row;
+    }
+
+    var header = document.createElement('div');
+    header.className = 'note-settings-header';
+    header.textContent = 'Tetapan';
+    panel.appendChild(header);
+    panel.appendChild(makeSettingsRow(dmEmoji(), 'Mod Paparan', 'Tukar antara mod cerah dan gelap', dmEmoji(), 'dm'));
+    panel.appendChild(makeSettingsRow(handEmoji(), 'Mod Tangan', handDesc(), handEmoji(), 'hand'));
+    panel.appendChild(makeSettingsRow('✍️', 'Kata Motivasi', 'Urus kata-kata semangat kamu', '✍️', 'quotes'));
+
+    // --- Sparkle items: audio (optional) + lab (optional) + ⚙️ (always) ---
     var itemsContainer = document.createElement('div');
     itemsContainer.className = 'note-sparkle-items';
 
-    items.forEach(function(item) {
-      var el;
-      if (item.type === 'lab') {
-        el = document.createElement('a');
-        el.href = item.href;
-      } else {
-        el = document.createElement('button');
-        el.type = 'button';
-      }
+    function makeSparkleItem(emoji, tooltip, type, href) {
+      var el = href ? document.createElement('a') : document.createElement('button');
+      if (href) el.href = href;
+      else el.type = 'button';
       el.className = 'note-sparkle-item';
-      el.setAttribute('aria-label', item.tooltip);
-      el.setAttribute('data-tooltip', item.tooltip);
-      el.setAttribute('data-sparkle-type', item.type);
-      el.textContent = item.emoji;
-      itemsContainer.appendChild(el);
-    });
+      el.setAttribute('aria-label', tooltip);
+      el.setAttribute('data-tooltip', tooltip);
+      el.setAttribute('data-sparkle-type', type);
+      el.textContent = emoji;
+      return el;
+    }
 
+    if (audioEl) itemsContainer.appendChild(makeSparkleItem('🎧', 'Main audio', 'audio'));
+    if (labHref) itemsContainer.appendChild(makeSparkleItem('⚗️', 'Makmal Latihan', 'lab', labHref));
+    itemsContainer.appendChild(makeSparkleItem('⚙️', 'Tetapan', 'settings'));
+
+    // --- FAB ---
     var fab = document.createElement('button');
     fab.className = 'note-sparkle-fab';
     fab.type = 'button';
     fab.setAttribute('aria-label', 'Menu pembelajaran');
     fab.textContent = '✨';
 
+    wrap.appendChild(panel);
     wrap.appendChild(itemsContainer);
     wrap.appendChild(fab);
     document.body.appendChild(wrap);
 
-    // --- Toggle open/close ---
+    // --- Toggle sparkle open/close ---
     fab.addEventListener('click', function(e) {
       e.stopPropagation();
+      var opening = !wrap.classList.contains('is-open');
       wrap.classList.toggle('is-open');
+      if (!opening) panel.classList.remove('is-open');
     });
 
     document.addEventListener('click', function(e) {
       if (!wrap.contains(e.target)) {
         wrap.classList.remove('is-open');
+        panel.classList.remove('is-open');
       }
     });
 
-    // --- Wire item actions ---
+    // --- Sparkle item clicks ---
     itemsContainer.addEventListener('click', function(e) {
       var btn = e.target.closest('[data-sparkle-type]');
       if (!btn) return;
       var type = btn.getAttribute('data-sparkle-type');
 
-      if (type === 'darkmode') {
-        var next = toggleTheme();
-        btn.textContent = next === 'dark' ? '🌙' : '☀️';
-        wrap.classList.remove('is-open');
-      }
-
       if (type === 'audio' && audioEl) {
-        if (audioEl.paused) {
-          audioEl.play();
-        } else {
-          audioEl.pause();
-        }
+        audioEl.paused ? audioEl.play() : audioEl.pause();
         wrap.classList.remove('is-open');
+        panel.classList.remove('is-open');
       }
 
       if (type === 'lab') {
         wrap.classList.remove('is-open');
+        panel.classList.remove('is-open');
+      }
+
+      if (type === 'settings') {
+        e.stopPropagation();
+        panel.classList.toggle('is-open');
+      }
+    });
+
+    // --- Settings panel row clicks ---
+    panel.addEventListener('click', function(e) {
+      var row = e.target.closest('[data-stype]');
+      if (!row) return;
+      var type = row.getAttribute('data-stype');
+
+      if (type === 'dm') {
+        var next = toggleTheme();
+        var em = next === 'dark' ? '🌙' : '☀️';
+        var icon = document.getElementById('si-dm');
+        var val  = document.getElementById('sv-dm');
+        if (icon) icon.textContent = em;
+        if (val)  val.textContent  = em;
       }
 
       if (type === 'hand') {
         var nowLeft = localStorage.getItem('hzedu-hand') === 'left';
-        var next = nowLeft ? 'right' : 'left';
-        localStorage.setItem('hzedu-hand', next);
-        document.body.classList.toggle('hand-left', next === 'left');
-        // Update button emoji + tooltip
-        var handBtn = itemsContainer.querySelector('[data-sparkle-type="hand"]');
-        if (handBtn) {
-          handBtn.textContent = next === 'left' ? '🫲' : '🫱';
-          handBtn.setAttribute('data-tooltip', next === 'left' ? 'Mod tangan kanan' : 'Mod tangan kiri');
-        }
+        var nextHand = nowLeft ? 'right' : 'left';
+        localStorage.setItem('hzedu-hand', nextHand);
+        document.body.classList.toggle('hand-left', nextHand === 'left');
+        var hem  = nextHand === 'left' ? '🫲' : '🫱';
+        var hdesc = nextHand === 'left'
+          ? 'Pindah butang navigasi ke kanan'
+          : 'Pindah butang navigasi ke kiri';
+        var hIcon = document.getElementById('si-hand');
+        var hVal  = document.getElementById('sv-hand');
+        var hDesc = document.getElementById('sd-hand');
+        if (hIcon) hIcon.textContent = hem;
+        if (hVal)  hVal.textContent  = hem;
+        if (hDesc) hDesc.textContent = hdesc;
+      }
+
+      if (type === 'quotes') {
+        document.dispatchEvent(new CustomEvent('hzedu:open-quotes'));
         wrap.classList.remove('is-open');
+        panel.classList.remove('is-open');
       }
     });
 
-    // Sync audio button emoji with playback state
+    // --- Sync audio button emoji with playback ---
     if (audioEl) {
       var audioBtn = itemsContainer.querySelector('[data-sparkle-type="audio"]');
-      audioEl.addEventListener('play', function() {
-        if (audioBtn) audioBtn.textContent = '⏸️';
-      });
-      audioEl.addEventListener('pause', function() {
-        if (audioBtn) audioBtn.textContent = '🎧';
-      });
-      audioEl.addEventListener('ended', function() {
-        if (audioBtn) audioBtn.textContent = '🎧';
-      });
+      audioEl.addEventListener('play',  function() { if (audioBtn) audioBtn.textContent = '⏸️'; });
+      audioEl.addEventListener('pause', function() { if (audioBtn) audioBtn.textContent = '🎧'; });
+      audioEl.addEventListener('ended', function() { if (audioBtn) audioBtn.textContent = '🎧'; });
     }
   });
 })();
@@ -1143,20 +1182,11 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // ── 4. Quote management via sparkle menu ──────────────────────────────────
-  // Attach to existing sparkle — inject ✍️ item and handle sheet
+  // ── 4. Quote management — triggered via settings panel custom event ──────────
   document.addEventListener('DOMContentLoaded', function () {
     // Only on pages that have the sparkle menu
-    var sparkleItems = document.querySelector('.note-sparkle-items');
-    if (!sparkleItems) return;
-
-    // Add ✍️ button
-    var quoteBtn = document.createElement('button');
-    quoteBtn.className = 'note-sparkle-item';
-    quoteBtn.type = 'button';
-    quoteBtn.setAttribute('data-tooltip', 'Kata Motivasi');
-    quoteBtn.textContent = '\u270D\uFE0F';
-    sparkleItems.appendChild(quoteBtn);
+    if (!document.querySelector('.note-sparkle-wrap') &&
+        !document.querySelector('.note-settings-panel')) return;
 
     // Build sheet
     var sheet = document.createElement('div');
@@ -1199,7 +1229,8 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     function closeSheet() { sheet.classList.remove('is-open'); }
 
-    quoteBtn.addEventListener('click', openSheet);
+    // Listen for the custom event dispatched by the settings panel
+    document.addEventListener('hzedu:open-quotes', openSheet);
     sheet.addEventListener('click', function (e) {
       if (e.target === sheet) closeSheet();
     });
@@ -1363,4 +1394,36 @@ document.addEventListener("DOMContentLoaded", function () {
       if (!document.getElementById('pwa-nudge')) setTimeout(tryShow, 1000);
     });
   }
+})();
+
+// ── Brand Logo Injection ───────────────────────────────────────────────────────
+(function () {
+  document.addEventListener('DOMContentLoaded', function () {
+    var style = document.createElement('style');
+    style.textContent =
+      'a.brand{display:inline-flex;align-items:center;gap:0.36em}' +
+      '.footer-brand{display:inline-flex;align-items:center;gap:0.36em}' +
+      '.brand-icon{border-radius:5px;flex-shrink:0;display:block}';
+    document.head.appendChild(style);
+
+    document.querySelectorAll('a.brand').forEach(function (el) {
+      var img = document.createElement('img');
+      img.src = '/icons/icon.svg';
+      img.alt = '';
+      img.width = 22;
+      img.height = 22;
+      img.className = 'brand-icon';
+      el.insertBefore(img, el.firstChild);
+    });
+
+    document.querySelectorAll('.footer-brand').forEach(function (el) {
+      var img = document.createElement('img');
+      img.src = '/icons/icon.svg';
+      img.alt = '';
+      img.width = 18;
+      img.height = 18;
+      img.className = 'brand-icon';
+      el.insertBefore(img, el.firstChild);
+    });
+  });
 })();
