@@ -953,3 +953,244 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 })();
+
+// ── Personal Identity (Phase 1) ───────────────────────────────────────────────
+(function () {
+  var NAME_KEY   = 'hzedu-name';
+  var QUOTES_KEY = 'hzedu-quotes';
+
+  var DEFAULT_QUOTES = [
+    'Sedikit demi sedikit, lama-lama menjadi bukit.',
+    'Ilmu itu cahaya. Semakin kamu belajar, semakin terang jalanmu.',
+    'Ulang kaji hari ini, keyakinan esok hari.',
+    'Setiap minit yang kamu luangkan hari ini adalah pelaburan untuk masa hadapan.',
+    'Bukan soal cerdas atau tidak — soal usaha dan istiqamah.'
+  ];
+
+  // Inject shared styles once
+  var ps = document.createElement('style');
+  ps.textContent = [
+    // Greeting chip on homepage
+    '.hzedu-greeting{display:inline-flex;align-items:center;gap:0.4rem;font-size:0.82rem;font-weight:800;color:#2f7a67;background:rgba(47,122,103,0.08);border:1px solid rgba(47,122,103,0.18);border-radius:999px;padding:0.3rem 0.8rem;margin-bottom:0.7rem;animation:ps-in 0.4s ease forwards}',
+    '[data-theme="dark"] .hzedu-greeting{color:#7dd4be;background:rgba(47,122,103,0.14);border-color:rgba(47,122,103,0.26)}',
+    // Quote banner on note pages
+    '.hzedu-quote{margin:0.9rem 0 0;padding:0.72rem 1rem;border-left:3px solid rgba(47,122,103,0.35);border-radius:0 10px 10px 0;background:rgba(47,122,103,0.05);font-size:0.83rem;font-style:italic;color:#5a4f42;line-height:1.6;animation:ps-in 0.4s ease 0.2s both}',
+    '[data-theme="dark"] .hzedu-quote{background:rgba(47,122,103,0.09);border-left-color:rgba(47,122,103,0.4);color:#b8aea1}',
+    // Name setup card
+    '.hzedu-setup{position:fixed;bottom:0;left:0;right:0;z-index:200;padding:1.2rem 1.25rem 1.6rem;background:rgba(247,244,238,0.97);border-top:1px solid rgba(92,110,132,0.12);box-shadow:0 -8px 30px rgba(70,60,40,0.1);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);transform:translateY(100%);transition:transform 0.35s cubic-bezier(0.34,1.26,0.64,1);max-width:520px;margin:0 auto;border-radius:20px 20px 0 0}',
+    '.hzedu-setup.is-visible{transform:translateY(0)}',
+    '[data-theme="dark"] .hzedu-setup{background:rgba(30,28,26,0.97);border-top-color:rgba(255,255,255,0.07)}',
+    '.hzedu-setup-title{margin:0 0 0.15rem;font-size:1rem;font-weight:900;color:#1e2a34}',
+    '[data-theme="dark"] .hzedu-setup-title{color:#f0e8da}',
+    '.hzedu-setup-sub{margin:0 0 0.9rem;font-size:0.8rem;color:#8c7d6a}',
+    '[data-theme="dark"] .hzedu-setup-sub{color:#a89a8c}',
+    '.hzedu-setup-row{display:flex;gap:0.55rem}',
+    '.hzedu-setup-input{flex:1;padding:0.6rem 0.85rem;border-radius:12px;border:1.5px solid rgba(92,110,132,0.2);background:#fff;font-family:inherit;font-size:0.88rem;font-weight:700;color:#1e2a34;outline:none}',
+    '.hzedu-setup-input:focus{border-color:#2f7a67}',
+    '[data-theme="dark"] .hzedu-setup-input{background:#2a2824;border-color:rgba(220,210,190,0.15);color:#e8e0d4}',
+    '.hzedu-setup-btn{padding:0.6rem 1.1rem;border-radius:12px;background:#2f7a67;color:#fff;border:none;font-family:inherit;font-size:0.88rem;font-weight:800;cursor:pointer}',
+    '.hzedu-setup-close{position:absolute;top:0.9rem;right:1rem;background:none;border:none;font-size:1.1rem;cursor:pointer;color:#9b8f82;line-height:1;padding:0.2rem}',
+    // Quote panel in sparkle
+    '.hzedu-quote-sheet{position:fixed;inset:0;z-index:300;display:flex;flex-direction:column;justify-content:flex-end;background:rgba(0,0,0,0.3);opacity:0;pointer-events:none;transition:opacity 0.25s}',
+    '.hzedu-quote-sheet.is-open{opacity:1;pointer-events:all}',
+    '.hzedu-quote-inner{background:#f7f4ee;border-radius:22px 22px 0 0;padding:1.3rem 1.25rem 2rem;max-height:75dvh;overflow-y:auto;transform:translateY(100%);transition:transform 0.35s cubic-bezier(0.34,1.26,0.64,1)}',
+    '[data-theme="dark"] .hzedu-quote-inner{background:#1e1c1a}',
+    '.hzedu-quote-sheet.is-open .hzedu-quote-inner{transform:translateY(0)}',
+    '.hzedu-quote-sheet-title{margin:0 0 1rem;font-size:1rem;font-weight:900;color:#1e2a34}',
+    '[data-theme="dark"] .hzedu-quote-sheet-title{color:#f0e8da}',
+    '.hzedu-quote-list{list-style:none;margin:0 0 1rem;padding:0;display:flex;flex-direction:column;gap:0.5rem}',
+    '.hzedu-quote-item{display:flex;align-items:flex-start;gap:0.6rem;padding:0.65rem 0.8rem;border-radius:12px;background:rgba(47,122,103,0.06);font-size:0.83rem;font-style:italic;color:#5a4f42;line-height:1.55}',
+    '[data-theme="dark"] .hzedu-quote-item{background:rgba(47,122,103,0.1);color:#b8aea1}',
+    '.hzedu-quote-del{background:none;border:none;font-size:0.9rem;cursor:pointer;color:#c0a090;padding:0;line-height:1;flex-shrink:0;margin-left:auto}',
+    '.hzedu-quote-add-row{display:flex;gap:0.5rem;margin-top:0.6rem}',
+    '.hzedu-quote-add-input{flex:1;padding:0.6rem 0.8rem;border-radius:11px;border:1.5px solid rgba(92,110,132,0.18);background:#fff;font-family:inherit;font-size:0.82rem;font-style:italic;color:#1e2a34;outline:none}',
+    '.hzedu-quote-add-input:focus{border-color:#2f7a67}',
+    '[data-theme="dark"] .hzedu-quote-add-input{background:#2a2824;border-color:rgba(220,210,190,0.14);color:#e8e0d4}',
+    '.hzedu-quote-add-btn{padding:0.6rem 0.9rem;border-radius:11px;background:#2f7a67;color:#fff;border:none;font-family:inherit;font-size:0.82rem;font-weight:800;cursor:pointer}',
+    '@keyframes ps-in{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}'
+  ].join('');
+  document.head.appendChild(ps);
+
+  // ── Helpers ───────────────────────────────────────────────────────────────
+  function getName()   { return localStorage.getItem(NAME_KEY) || ''; }
+  function getQuotes() {
+    try { return JSON.parse(localStorage.getItem(QUOTES_KEY)) || []; }
+    catch (e) { return []; }
+  }
+  function saveQuotes(arr) { localStorage.setItem(QUOTES_KEY, JSON.stringify(arr)); }
+  function pickQuote() {
+    var q = getQuotes();
+    var pool = q.length ? q : DEFAULT_QUOTES;
+    return pool[Math.floor(Math.random() * pool.length)];
+  }
+
+  // ── 1. Homepage greeting ──────────────────────────────────────────────────
+  var isHome = window.location.pathname === '/' ||
+               window.location.pathname.endsWith('/index.html') && !window.location.pathname.includes('/notes/');
+  if (isHome) {
+    document.addEventListener('DOMContentLoaded', function () {
+      var name = getName();
+      if (!name) {
+        // Show name-setup card after 1.8s (first visit feel)
+        setTimeout(showSetupCard, 1800);
+        return;
+      }
+      // Inject greeting before <h1> in .hero-copy
+      var heroCopy = document.querySelector('.hero-copy');
+      if (!heroCopy) return;
+      var h1 = heroCopy.querySelector('h1');
+      if (!h1) return;
+      var chip = document.createElement('div');
+      chip.className = 'hzedu-greeting';
+      chip.textContent = 'Selamat datang semula, ' + name + ' \uD83D\uDC4B';
+      heroCopy.insertBefore(chip, h1);
+    });
+  }
+
+  // ── 2. Name setup card ────────────────────────────────────────────────────
+  function showSetupCard() {
+    if (document.getElementById('hzedu-setup')) return;
+    var card = document.createElement('div');
+    card.className = 'hzedu-setup';
+    card.id = 'hzedu-setup';
+    card.innerHTML =
+      '<button class="hzedu-setup-close" id="hzedu-setup-close" aria-label="Tutup">\u2715</button>' +
+      '<p class="hzedu-setup-title">Siapa nama kamu? \uD83D\uDC4B</p>' +
+      '<p class="hzedu-setup-sub">Nama ini hanya disimpan di peranti kamu sahaja.</p>' +
+      '<div class="hzedu-setup-row">' +
+        '<input class="hzedu-setup-input" id="hzedu-name-input" type="text" placeholder="Nama atau gelaran..." maxlength="30" autocomplete="off" />' +
+        '<button class="hzedu-setup-btn" id="hzedu-name-save">Simpan</button>' +
+      '</div>';
+    document.body.appendChild(card);
+    requestAnimationFrame(function () {
+      requestAnimationFrame(function () { card.classList.add('is-visible'); });
+    });
+
+    document.getElementById('hzedu-setup-close').addEventListener('click', function () {
+      card.classList.remove('is-visible');
+      setTimeout(function () { card.remove(); }, 350);
+    });
+
+    function saveName() {
+      var val = document.getElementById('hzedu-name-input').value.trim();
+      if (!val) return;
+      localStorage.setItem(NAME_KEY, val);
+      card.classList.remove('is-visible');
+      setTimeout(function () {
+        card.remove();
+        // Show greeting immediately
+        var heroCopy = document.querySelector('.hero-copy');
+        if (!heroCopy) return;
+        var h1 = heroCopy.querySelector('h1');
+        if (!h1) return;
+        var chip = document.createElement('div');
+        chip.className = 'hzedu-greeting';
+        chip.textContent = 'Selamat datang, ' + val + ' \uD83D\uDC4B';
+        heroCopy.insertBefore(chip, h1);
+      }, 350);
+    }
+
+    document.getElementById('hzedu-name-save').addEventListener('click', saveName);
+    document.getElementById('hzedu-name-input').addEventListener('keydown', function (e) {
+      if (e.key === 'Enter') saveName();
+    });
+    setTimeout(function () {
+      var inp = document.getElementById('hzedu-name-input');
+      if (inp) inp.focus();
+    }, 400);
+  }
+
+  // ── 3. Motivational quote on note pages ───────────────────────────────────
+  var isNotePage = window.location.pathname.match(/\/notes\/bab-\d+-\d+\.html/);
+  if (isNotePage) {
+    document.addEventListener('DOMContentLoaded', function () {
+      var lead = document.querySelector('.page-hero .lead, .note-hero .lead');
+      if (!lead) return;
+      var quote = pickQuote();
+      var el = document.createElement('p');
+      el.className = 'hzedu-quote';
+      el.textContent = '\u201C' + quote + '\u201D';
+      lead.after(el);
+    });
+  }
+
+  // ── 4. Quote management via sparkle menu ──────────────────────────────────
+  // Attach to existing sparkle — inject ✍️ item and handle sheet
+  document.addEventListener('DOMContentLoaded', function () {
+    // Only on pages that have the sparkle menu
+    var sparkleItems = document.querySelector('.note-sparkle-items');
+    if (!sparkleItems) return;
+
+    // Add ✍️ button
+    var quoteBtn = document.createElement('button');
+    quoteBtn.className = 'note-sparkle-item';
+    quoteBtn.type = 'button';
+    quoteBtn.setAttribute('data-tooltip', 'Kata Motivasi');
+    quoteBtn.textContent = '\u270D\uFE0F';
+    sparkleItems.appendChild(quoteBtn);
+
+    // Build sheet
+    var sheet = document.createElement('div');
+    sheet.className = 'hzedu-quote-sheet';
+    sheet.id = 'hzedu-quote-sheet';
+    sheet.innerHTML =
+      '<div class="hzedu-quote-inner">' +
+        '<p class="hzedu-quote-sheet-title">\u270D\uFE0F Kata Motivasi Kamu</p>' +
+        '<ul class="hzedu-quote-list" id="hzedu-qlist"></ul>' +
+        '<div class="hzedu-quote-add-row">' +
+          '<input class="hzedu-quote-add-input" id="hzedu-qadd" type="text" placeholder="Tambah kata-kata baru..." maxlength="120" />' +
+          '<button class="hzedu-quote-add-btn" id="hzedu-qadd-btn">+</button>' +
+        '</div>' +
+      '</div>';
+    document.body.appendChild(sheet);
+
+    function renderList() {
+      var list = document.getElementById('hzedu-qlist');
+      if (!list) return;
+      var quotes = getQuotes();
+      list.innerHTML = quotes.length
+        ? quotes.map(function (q, i) {
+            return '<li class="hzedu-quote-item">\u201C' + q + '\u201D' +
+              '<button class="hzedu-quote-del" data-idx="' + i + '" aria-label="Padam">\uD83D\uDDD1\uFE0F</button></li>';
+          }).join('')
+        : '<li style="font-size:0.8rem;color:#a89a8c;font-style:normal;padding:0.3rem 0">Tiada kata-kata disimpan lagi.</li>';
+      list.querySelectorAll('.hzedu-quote-del').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var idx = parseInt(btn.getAttribute('data-idx'), 10);
+          var q = getQuotes();
+          q.splice(idx, 1);
+          saveQuotes(q);
+          renderList();
+        });
+      });
+    }
+
+    function openSheet() {
+      renderList();
+      sheet.classList.add('is-open');
+      var wrap = document.querySelector('.note-sparkle-wrap');
+      if (wrap) wrap.classList.remove('is-open');
+    }
+    function closeSheet() { sheet.classList.remove('is-open'); }
+
+    quoteBtn.addEventListener('click', openSheet);
+    sheet.addEventListener('click', function (e) {
+      if (e.target === sheet) closeSheet();
+    });
+
+    document.getElementById('hzedu-qadd-btn').addEventListener('click', function () {
+      var inp = document.getElementById('hzedu-qadd');
+      var val = inp.value.trim();
+      if (!val) return;
+      var q = getQuotes();
+      if (q.length >= 10) return;
+      q.push(val);
+      saveQuotes(q);
+      inp.value = '';
+      renderList();
+    });
+    document.getElementById('hzedu-qadd').addEventListener('keydown', function (e) {
+      if (e.key === 'Enter') document.getElementById('hzedu-qadd-btn').click();
+    });
+  });
+})();

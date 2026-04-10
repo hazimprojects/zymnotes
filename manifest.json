@@ -1,0 +1,34 @@
+{
+  "name": "Hazim EduHub",
+  "short_name": "EduHub",
+  "description": "Ruang ulang kaji digital — nota visual, kemas dan mudah diikuti.",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#f7f4ee",
+  "theme_color": "#2f7a67",
+  "lang": "ms",
+  "categories": ["education"],
+  "icons": [
+    {
+      "src": "/icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-maskable.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    }
+  ],
+  "screenshots": [],
+  "shortcuts": [
+    {
+      "name": "Lihat Nota",
+      "url": "/notes/index.html",
+      "description": "Buka senarai nota"
+    }
+  ]
+}

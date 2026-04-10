@@ -103,6 +103,14 @@
     body.dark-mode .project-status-list,
     [data-theme="dark"] .project-status-list { color: #c7baaa; }
   </style>
+  <link rel="manifest" href="/manifest.json" />
+  <meta name="theme-color" content="#2f7a67" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="EduHub" />
+  <link rel="icon" type="image/svg+xml" href="/icons/icon.svg" />
+  <link rel="apple-touch-icon" href="/icons/icon.svg" />
 </head>
 <body>
   <header class="site-header">
@@ -259,7 +267,7 @@
     </div>
   </footer>
 
-  <script src="assets/js/main.js?v=41"></script>
+  <script src="assets/js/main.js?v=42"></script>
   <script>
     async function loadProjectLastUpdated() {
       const target = document.getElementById('project-status-text');
@@ -292,6 +300,13 @@
     }
 
     loadProjectLastUpdated();
+  </script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function () {
+        navigator.serviceWorker.register('/sw.js');
+      });
+    }
   </script>
 </body>
 </html>
