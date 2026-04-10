@@ -32,23 +32,18 @@
 
     .error-orb-a {
       position: absolute;
-      width: 420px;
-      height: 420px;
+      width: 440px; height: 440px;
       border-radius: 50%;
-      background: radial-gradient(circle, rgba(180, 220, 200, 0.28), transparent 70%);
-      top: -80px;
-      right: -100px;
+      background: radial-gradient(circle, rgba(180,220,200,0.26), transparent 68%);
+      top: -100px; right: -120px;
       pointer-events: none;
     }
-
     .error-orb-b {
       position: absolute;
-      width: 320px;
-      height: 320px;
+      width: 340px; height: 340px;
       border-radius: 50%;
-      background: radial-gradient(circle, rgba(219, 196, 155, 0.22), transparent 70%);
-      bottom: 0;
-      left: -80px;
+      background: radial-gradient(circle, rgba(219,196,155,0.2), transparent 68%);
+      bottom: -40px; left: -100px;
       pointer-events: none;
     }
 
@@ -56,22 +51,37 @@
       position: relative;
       z-index: 1;
       text-align: center;
-      max-width: 440px;
+      max-width: 420px;
     }
 
-    .error-emoji {
-      font-size: 4.2rem;
-      line-height: 1;
-      margin-bottom: 1.2rem;
+    /* ── Illustration ── */
+    .error-illustration {
       display: block;
-      animation: bob 3.6s ease-in-out infinite;
+      width: 220px;
+      margin: 0 auto 1.6rem;
+      animation: float404 4s ease-in-out infinite;
+      filter: drop-shadow(0 12px 20px rgba(70,60,40,0.10));
     }
-
-    @keyframes bob {
+    @keyframes float404 {
       0%, 100% { transform: translateY(0); }
-      50%       { transform: translateY(-8px); }
+      50%       { transform: translateY(-10px); }
     }
 
+    /* dark mode: invert warm tones */
+    [data-theme="dark"] .error-illustration .page-fill    { fill: #2c2a27; }
+    [data-theme="dark"] .error-illustration .cover-fill   { fill: #4a3f32; }
+    [data-theme="dark"] .error-illustration .spine-fill   { fill: #3a3028; }
+    [data-theme="dark"] .error-illustration .line-stroke  { stroke: #3e3a35; }
+    [data-theme="dark"] .error-illustration .dash-stroke  { stroke: #3a3530; }
+    [data-theme="dark"] .error-illustration .mark-fill    { fill: #6e6258; }
+    [data-theme="dark"] .error-illustration .ribbon-fill  { fill: #7a5c40; }
+    [data-theme="dark"] .error-illustration .dot-fill     { fill: #5a5248; }
+    [data-theme="dark"] .error-illustration .title-bar    { fill: #3e3a35; }
+    [data-theme="dark"] .error-illustration .shadow-fill  { fill: rgba(0,0,0,0.18); }
+    [data-theme="dark"] .error-illustration .bubble-fill  { fill: #3a3028; }
+    [data-theme="dark"] .error-illustration .bubble-mark  { fill: #7a6a58; }
+
+    /* ── Badge + text ── */
     .error-code {
       display: inline-block;
       font-size: 0.72rem;
@@ -79,49 +89,44 @@
       letter-spacing: 0.1em;
       text-transform: uppercase;
       color: #2f7a67;
-      background: rgba(47, 122, 103, 0.08);
-      border: 1px solid rgba(47, 122, 103, 0.18);
+      background: rgba(47,122,103,0.08);
+      border: 1px solid rgba(47,122,103,0.18);
       border-radius: 999px;
       padding: 0.28rem 0.75rem;
-      margin-bottom: 1rem;
+      margin-bottom: 0.9rem;
     }
-
     .error-title {
-      font-size: 1.65rem;
+      font-size: 1.6rem;
       font-weight: 900;
       line-height: 1.25;
       color: #1e2a34;
-      margin: 0 0 0.9rem;
+      margin: 0 0 0.85rem;
     }
-
     .error-desc {
-      font-size: 0.95rem;
-      line-height: 1.7;
+      font-size: 0.93rem;
+      line-height: 1.72;
       color: #6b5a3e;
       margin: 0 0 2rem;
     }
-
     .error-actions {
       display: flex;
       flex-wrap: wrap;
       gap: 0.75rem;
       justify-content: center;
     }
-
     .error-hint {
-      margin-top: 2.5rem;
-      font-size: 0.76rem;
-      color: #9b8f82;
+      margin-top: 2.2rem;
+      font-size: 0.75rem;
+      color: #a89a8c;
     }
 
-    /* Dark mode */
     [data-theme="dark"] .error-title { color: #f0e8da; }
     [data-theme="dark"] .error-desc  { color: #c7baaa; }
-    [data-theme="dark"] .error-hint  { color: #7a6f65; }
+    [data-theme="dark"] .error-hint  { color: #6a6058; }
     [data-theme="dark"] .error-code  {
       color: #7dd4be;
-      background: rgba(47, 122, 103, 0.14);
-      border-color: rgba(47, 122, 103, 0.25);
+      background: rgba(47,122,103,0.14);
+      border-color: rgba(47,122,103,0.25);
     }
   </style>
 </head>
@@ -144,12 +149,67 @@
       <div class="error-orb-b" aria-hidden="true"></div>
 
       <div class="error-inner">
-        <span class="error-emoji">🗺️</span>
+
+        <!-- SVG: open notebook, blank right page, floating ? bubble -->
+        <svg class="error-illustration" viewBox="0 0 260 190" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+
+          <!-- Shadow -->
+          <ellipse class="shadow-fill" cx="130" cy="182" rx="88" ry="7" fill="rgba(70,60,40,0.09)"/>
+
+          <!-- Book cover (slight 3-D base) -->
+          <rect class="cover-fill" x="28" y="36" width="204" height="138" rx="5" fill="#8b7355"/>
+
+          <!-- Left page -->
+          <rect class="page-fill" x="32" y="40" width="94" height="130" rx="3" fill="#faf7f2"/>
+
+          <!-- Left page title bar -->
+          <rect class="title-bar" x="42" y="54" width="56" height="6" rx="3" fill="#e2dace"/>
+
+          <!-- Left page ruled lines -->
+          <line class="line-stroke" x1="42" y1="70"  x2="118" y2="70"  stroke="#e8e2d8" stroke-width="1.2"/>
+          <line class="line-stroke" x1="42" y1="81"  x2="118" y2="81"  stroke="#e8e2d8" stroke-width="1.2"/>
+          <line class="line-stroke" x1="42" y1="92"  x2="118" y2="92"  stroke="#e8e2d8" stroke-width="1.2"/>
+          <line class="line-stroke" x1="42" y1="103" x2="118" y2="103" stroke="#e8e2d8" stroke-width="1.2"/>
+          <line class="line-stroke" x1="42" y1="114" x2="108" y2="114" stroke="#e8e2d8" stroke-width="1.2"/>
+          <line class="line-stroke" x1="42" y1="125" x2="114" y2="125" stroke="#e8e2d8" stroke-width="1.2"/>
+          <line class="line-stroke" x1="42" y1="136" x2="100" y2="136" stroke="#e8e2d8" stroke-width="1.2"/>
+
+          <!-- Right page -->
+          <rect class="page-fill" x="134" y="40" width="94" height="130" rx="3" fill="#faf7f2"/>
+
+          <!-- Right page dashed blank lines -->
+          <line class="dash-stroke" x1="144" y1="60"  x2="220" y2="60"  stroke="#ece6dc" stroke-width="1.4" stroke-dasharray="5 4"/>
+          <line class="dash-stroke" x1="144" y1="72"  x2="220" y2="72"  stroke="#ece6dc" stroke-width="1.4" stroke-dasharray="5 4"/>
+          <line class="dash-stroke" x1="144" y1="84"  x2="210" y2="84"  stroke="#ece6dc" stroke-width="1.4" stroke-dasharray="5 4"/>
+          <line class="dash-stroke" x1="144" y1="96"  x2="214" y2="96"  stroke="#ece6dc" stroke-width="1.4" stroke-dasharray="5 4"/>
+          <line class="dash-stroke" x1="144" y1="108" x2="204" y2="108" stroke="#ece6dc" stroke-width="1.4" stroke-dasharray="5 4"/>
+
+          <!-- Spine -->
+          <rect class="spine-fill" x="122" y="36" width="16" height="138" rx="3" fill="#6b5a3e"/>
+          <rect x="124" y="36" width="3" height="138" rx="1" fill="rgba(255,255,255,0.07)"/>
+
+          <!-- Ribbon bookmark -->
+          <path class="ribbon-fill" d="M210 40 L210 74 L203 67 L196 74 L196 40 Z" fill="#e8a87c"/>
+
+          <!-- Floating ? bubble on right page -->
+          <circle class="bubble-fill" cx="181" cy="140" r="22" fill="#fff8ee" stroke="#e8dece" stroke-width="1.5"/>
+          <text class="bubble-mark" x="181" y="148" font-family="Nunito,sans-serif" font-size="22" font-weight="900"
+                fill="#b8a48e" text-anchor="middle">?</text>
+
+          <!-- Decorative dots -->
+          <circle class="dot-fill" cx="18"  cy="68"  r="3.5" fill="#d4c9b0" opacity="0.7"/>
+          <circle class="dot-fill" cx="11"  cy="90"  r="2.2" fill="#d4c9b0" opacity="0.5"/>
+          <circle class="dot-fill" cx="22"  cy="110" r="2"   fill="#c4ddd4" opacity="0.6"/>
+          <circle class="dot-fill" cx="246" cy="56"  r="3"   fill="#c4ddd4" opacity="0.65"/>
+          <circle class="dot-fill" cx="252" cy="78"  r="2"   fill="#d4c9b0" opacity="0.5"/>
+          <circle class="dot-fill" cx="242" cy="100" r="2.5" fill="#c4ddd4" opacity="0.55"/>
+        </svg>
+
         <span class="error-code">404 · Halaman tidak dijumpai</span>
-        <h1 class="error-title">Kawasan ini belum diterokai</h1>
+        <h1 class="error-title">Halaman ini belum ada</h1>
         <p class="error-desc">
-          Seperti penjelajah zaman dahulu yang tiba di tanah yang belum ada petanya —
-          halaman ini tidak wujud, mungkin telah dialihkan, atau sedang dalam pembinaan.
+          Mungkin ia belum dibina lagi, atau alamatnya sedikit berbeza.
+          Koleksi Hazim EduHub sentiasa berkembang — ada banyak yang sedang dalam perancangan.
         </p>
         <div class="error-actions">
           <a class="btn btn-primary" href="/index.html">Kembali ke Utama</a>
