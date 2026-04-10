@@ -1194,3 +1194,161 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 })();
+
+// ── PWA Install Nudge ─────────────────────────────────────────────────────────
+(function () {
+  // Skip if already running as installed PWA
+  if (window.matchMedia('(display-mode: standalone)').matches) return;
+  if (navigator.standalone) return; // iOS standalone check
+
+  var DISMISSED_KEY = 'hzedu-pwa-dismissed-until';
+  var dismissed = localStorage.getItem(DISMISSED_KEY);
+  if (dismissed && Date.now() < parseInt(dismissed, 10)) return;
+
+  var ua        = navigator.userAgent;
+  var isIOS     = /iphone|ipad|ipod/i.test(ua);
+  var isSafari  = isIOS && /safari/i.test(ua) && !/crios|fxios|opios/i.test(ua);
+  var isAndroid = /android/i.test(ua);
+
+  // Only show on platforms that support PWA install
+  if (!isSafari && !isAndroid) return;
+
+  var deferredPrompt = null;
+  if (isAndroid) {
+    window.addEventListener('beforeinstallprompt', function (e) {
+      e.preventDefault();
+      deferredPrompt = e;
+    });
+  }
+
+  // Inject styles
+  var style = document.createElement('style');
+  style.textContent = [
+    '.pwa-nudge{position:fixed;bottom:1rem;left:50%;transform:translateX(-50%) translateY(calc(100% + 1.5rem));z-index:250;width:calc(100% - 2rem);max-width:400px;background:rgba(247,244,238,0.97);border:1px solid rgba(92,110,132,0.13);border-radius:20px;box-shadow:0 8px 32px rgba(70,60,40,0.14);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);padding:1rem 1rem 1rem 0.9rem;display:flex;align-items:flex-start;gap:0.75rem;transition:transform 0.4s cubic-bezier(0.34,1.26,0.64,1),opacity 0.4s ease;opacity:0}',
+    '.pwa-nudge.is-visible{transform:translateX(-50%) translateY(0);opacity:1}',
+    '[data-theme="dark"] .pwa-nudge{background:rgba(28,26,24,0.97);border-color:rgba(255,255,255,0.08);box-shadow:0 8px 32px rgba(0,0,0,0.3)}',
+    '.pwa-nudge-icon{width:40px;height:40px;border-radius:11px;flex-shrink:0;overflow:hidden}',
+    '.pwa-nudge-icon svg{width:40px;height:40px}',
+    '.pwa-nudge-body{flex:1;min-width:0}',
+    '.pwa-nudge-title{margin:0 0 0.12rem;font-size:0.87rem;font-weight:900;color:#1e2a34;line-height:1.2}',
+    '[data-theme="dark"] .pwa-nudge-title{color:#f0e8da}',
+    '.pwa-nudge-sub{margin:0 0 0.65rem;font-size:0.76rem;color:#7b6d59;line-height:1.4}',
+    '[data-theme="dark"] .pwa-nudge-sub{color:#a89a8c}',
+    '.pwa-nudge-ios{margin:0 0 0.65rem;font-size:0.76rem;color:#7b6d59;line-height:1.55;display:flex;align-items:center;gap:0.3rem;flex-wrap:wrap}',
+    '[data-theme="dark"] .pwa-nudge-ios{color:#a89a8c}',
+    '.pwa-nudge-ios-share{display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;background:#2f7a67;border-radius:4px;flex-shrink:0}',
+    '.pwa-nudge-actions{display:flex;gap:0.45rem;align-items:center}',
+    '.pwa-nudge-btn{padding:0.42rem 0.9rem;border-radius:999px;background:#2f7a67;color:#fff;border:none;font-family:inherit;font-size:0.78rem;font-weight:800;cursor:pointer;white-space:nowrap}',
+    '.pwa-nudge-skip{background:none;border:none;font-family:inherit;font-size:0.75rem;color:#9b8f82;cursor:pointer;padding:0.4rem 0.3rem}',
+    '[data-theme="dark"] .pwa-nudge-skip{color:#6a6058}',
+    '.pwa-nudge-close{background:none;border:none;font-size:1rem;color:#a89a8c;cursor:pointer;padding:0.1rem 0.2rem;line-height:1;flex-shrink:0;margin-top:-0.1rem}'
+  ].join('');
+  document.head.appendChild(style);
+
+  function dismiss(days) {
+    var until = Date.now() + (days || 14) * 24 * 60 * 60 * 1000;
+    localStorage.setItem(DISMISSED_KEY, until);
+    var nudge = document.getElementById('pwa-nudge');
+    if (nudge) {
+      nudge.classList.remove('is-visible');
+      setTimeout(function () { nudge.remove(); }, 420);
+    }
+  }
+
+  function buildNudge() {
+    var iconSVG =
+      '<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">' +
+        '<rect width="100" height="100" rx="22" fill="#2f7a67"/>' +
+        '<rect x="18" y="24" width="13" height="52" rx="3" fill="white"/>' +
+        '<rect x="69" y="24" width="13" height="52" rx="3" fill="white"/>' +
+        '<path d="M31 44 Q50 38 69 44 L69 56 Q50 50 31 56 Z" fill="white"/>' +
+        '<circle cx="50" cy="21" r="3.2" fill="rgba(255,255,255,0.55)"/>' +
+        '<circle cx="58" cy="16" r="2" fill="rgba(255,255,255,0.35)"/>' +
+        '<circle cx="42" cy="16" r="2" fill="rgba(255,255,255,0.35)"/>' +
+      '</svg>';
+
+    var nudge = document.createElement('div');
+    nudge.className = 'pwa-nudge';
+    nudge.id = 'pwa-nudge';
+    nudge.setAttribute('role', 'complementary');
+    nudge.setAttribute('aria-label', 'Jemput simpan sebagai app');
+
+    if (isAndroid) {
+      nudge.innerHTML =
+        '<div class="pwa-nudge-icon">' + iconSVG + '</div>' +
+        '<div class="pwa-nudge-body">' +
+          '<p class="pwa-nudge-title">Simpan HazimEdu ke telefon</p>' +
+          '<p class="pwa-nudge-sub">Buka terus dari skrin utama, tanpa perlu ingat alamat web.</p>' +
+          '<div class="pwa-nudge-actions">' +
+            '<button class="pwa-nudge-btn" id="pwa-install-btn">Simpan sebagai app</button>' +
+            '<button class="pwa-nudge-skip" id="pwa-skip-btn">Mungkin lain kali</button>' +
+          '</div>' +
+        '</div>' +
+        '<button class="pwa-nudge-close" id="pwa-close-btn" aria-label="Tutup">\u2715</button>';
+    } else {
+      // iOS — manual instruction
+      var shareIcon =
+        '<span class="pwa-nudge-ios-share">' +
+          '<svg width="11" height="13" viewBox="0 0 11 13" fill="none" xmlns="http://www.w3.org/2000/svg">' +
+            '<path d="M5.5 8.5V1M5.5 1L3 3.5M5.5 1L8 3.5" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>' +
+            '<rect x="1" y="5" width="9" height="7" rx="1.5" stroke="white" stroke-width="1.4"/>' +
+          '</svg>' +
+        '</span>';
+      nudge.innerHTML =
+        '<div class="pwa-nudge-icon">' + iconSVG + '</div>' +
+        '<div class="pwa-nudge-body">' +
+          '<p class="pwa-nudge-title">Simpan HazimEdu ke skrin utama</p>' +
+          '<p class="pwa-nudge-ios">Ketik ' + shareIcon + ' lalu pilih <strong>&ldquo;Add to Home Screen&rdquo;</strong></p>' +
+          '<div class="pwa-nudge-actions">' +
+            '<button class="pwa-nudge-skip" id="pwa-skip-btn">Faham, terima kasih</button>' +
+          '</div>' +
+        '</div>' +
+        '<button class="pwa-nudge-close" id="pwa-close-btn" aria-label="Tutup">\u2715</button>';
+    }
+
+    document.body.appendChild(nudge);
+
+    requestAnimationFrame(function () {
+      requestAnimationFrame(function () { nudge.classList.add('is-visible'); });
+    });
+
+    document.getElementById('pwa-close-btn').addEventListener('click', function () { dismiss(14); });
+    document.getElementById('pwa-skip-btn').addEventListener('click', function () { dismiss(14); });
+
+    if (isAndroid) {
+      document.getElementById('pwa-install-btn').addEventListener('click', function () {
+        if (!deferredPrompt) { dismiss(14); return; }
+        deferredPrompt.prompt();
+        deferredPrompt.userChoice.then(function (result) {
+          if (result.outcome === 'accepted') {
+            localStorage.setItem(DISMISSED_KEY, Date.now() + 365 * 24 * 60 * 60 * 1000);
+          } else {
+            dismiss(14);
+          }
+          deferredPrompt = null;
+          var nudge = document.getElementById('pwa-nudge');
+          if (nudge) { nudge.classList.remove('is-visible'); setTimeout(function () { nudge.remove(); }, 420); }
+        });
+      });
+    }
+  }
+
+  // Show after 7s — enough time to read content, not too intrusive
+  function tryShow() {
+    // For Android, only show if deferredPrompt was captured
+    if (isAndroid && !deferredPrompt) return;
+    buildNudge();
+  }
+
+  // Android: wait for beforeinstallprompt + 7s
+  // iOS Safari: just wait 7s (no prompt event)
+  if (isIOS && isSafari) {
+    setTimeout(buildNudge, 7000);
+  } else {
+    setTimeout(tryShow, 7000);
+    // Also listen in case prompt fires after our timer
+    window.addEventListener('beforeinstallprompt', function () {
+      if (!document.getElementById('pwa-nudge')) setTimeout(tryShow, 1000);
+    });
+  }
+})();
