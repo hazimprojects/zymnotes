@@ -127,6 +127,7 @@
     .feedback-success-panel {
       display: none;
       margin-top: 1rem;
+      scroll-margin-top: 100px;
     }
 
     .feedback-success-panel.is-visible {
@@ -483,7 +484,14 @@
 
             formWrap.classList.add('is-hidden');
             successPanel.classList.add('is-visible');
-            window.scrollTo({ top: formWrap.offsetTop - 120, behavior: 'smooth' });
+
+            requestAnimationFrame(() => {
+              successPanel.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+              });
+            });
+
             return;
           }
 
@@ -503,4 +511,4 @@
     })();
   </script>
 </body>
-</html>
+                    </html>
