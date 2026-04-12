@@ -1,7 +1,7 @@
 {
-  "name": "Hazim EduHub",
+  "name": "HazimEdu",
   "short_name": "HazimEdu",
-  "description": "Ruang ulang kaji digital — nota visual, kemas dan mudah diikuti.",
+  "description": "Platform pendidikan digital yang membina nota visual, kemas dan mesra telefon untuk membantu pelajar belajar dengan lebih jelas dan berkesan.",
   "start_url": "/",
   "display": "standalone",
   "orientation": "portrait",
