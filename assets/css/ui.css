@@ -1389,3 +1389,53 @@ body.hand-left .note-sparkle-item[data-tooltip]::before {
     width: calc(100vw - 1.5rem);
   }
 }
+
+/* ── Sparkle FAB — push above bottom nav on mobile ─────────────────────────── */
+@media (max-width: 760px) {
+  .note-sparkle-wrap {
+    bottom: calc(var(--bottom-nav-h) + var(--safe-bottom) + 0.9rem) !important;
+  }
+}
+
+/* ── Desktop Floating TOC ──────────────────────────────────────────────────── */
+.hz-toc { display: none; }
+
+@media (min-width: 1024px) {
+  .hz-toc {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    position: fixed;
+    top: 50%;
+    right: max(1rem, calc((100vw - 800px) / 2 - 176px));
+    transform: translateY(-50%);
+    width: 156px;
+    max-height: 58vh;
+    overflow-y: auto;
+    z-index: 30;
+    padding: 0.4rem 0;
+    scrollbar-width: none;
+  }
+  .hz-toc::-webkit-scrollbar { display: none; }
+
+  .hz-toc-item {
+    font-size: 0.71rem;
+    font-weight: 600;
+    color: var(--muted);
+    text-decoration: none;
+    padding: 0.24rem 0.65rem;
+    border-left: 2px solid transparent;
+    line-height: 1.4;
+    transition: color 0.15s, border-color 0.15s;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+  }
+  .hz-toc-item:hover { color: var(--ink); }
+  .hz-toc-item.is-active {
+    color: var(--primary);
+    border-left-color: var(--primary);
+    font-weight: 700;
+  }
+}

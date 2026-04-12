@@ -23,7 +23,14 @@
       "purpose": "maskable"
     }
   ],
-  "screenshots": [],
+  "screenshots": [
+    {
+      "src": "/assets/og-image.png",
+      "sizes": "1200x630",
+      "type": "image/png",
+      "label": "HazimEdu — Platform Pendidikan Digital"
+    }
+  ],
   "shortcuts": [
     {
       "name": "Lihat Nota",

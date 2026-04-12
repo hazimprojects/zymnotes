@@ -1,0 +1,103 @@
+/* =========================
+   PRINT STYLES
+   Untuk guru, pelajar, atau sesiapa yang ingin cetak nota
+========================= */
+
+@media print {
+  /* ── Hide UI chrome ─────────────────────────────────────────── */
+  .site-header,
+  .site-footer,
+  .hz-bottom-nav,
+  .note-sparkle-wrap,
+  .note-audio-player,
+  .audio-sticky,
+  .hz-toc,
+  .hero-actions,
+  .search-wrap,
+  .search-results,
+  .search-empty,
+  .pwa-nudge,
+  .feedback-widget,
+  .display-fab,
+  .nav-toggle { display: none !important; }
+
+  /* ── Reset layout ───────────────────────────────────────────── */
+  body {
+    padding: 0 !important;
+    background: white !important;
+    color: black !important;
+    font-size: 11pt;
+    line-height: 1.55;
+    animation: none !important;
+  }
+
+  .container,
+  .container.narrow,
+  .container.note-wide { max-width: 100% !important; padding: 0 !important; }
+
+  /* ── Typography ─────────────────────────────────────────────── */
+  h1, h2, h3, .ink { color: black !important; }
+  h1 { font-size: 18pt; }
+  h2 { font-size: 14pt; }
+  h3 { font-size: 11pt; }
+  .lead { font-size: 10.5pt; color: #333 !important; }
+  .point-line { color: #333 !important; }
+  .muted { color: #555 !important; }
+
+  /* ── Links ──────────────────────────────────────────────────── */
+  a { color: black !important; text-decoration: none !important; }
+  a[href]::after { content: none !important; }
+
+  /* ── Paper components ───────────────────────────────────────── */
+  .paper-board {
+    border: 1px solid #bbb !important;
+    box-shadow: none !important;
+    break-inside: avoid;
+    background: white !important;
+  }
+  .paper-strip {
+    background: #e8e8e8 !important;
+    color: black !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .paper-chip {
+    border: 1px solid #ccc !important;
+    background: white !important;
+  }
+  .paper-label {
+    background: #eee !important;
+    color: #333 !important;
+    border: 1px solid #ccc !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* ── Accordions — expand all for print ─────────────────────── */
+  .accordion-body {
+    max-height: none !important;
+    overflow: visible !important;
+    opacity: 1 !important;
+  }
+  .accordion-trigger::after { display: none !important; }
+
+  /* ── Page breaks ────────────────────────────────────────────── */
+  h1, h2, h3 { break-after: avoid; }
+  .note-subsection { break-inside: avoid; }
+  .paper-board { break-inside: avoid; }
+
+  /* ── Reveal-on-scroll — show all ───────────────────────────── */
+  .reveal-on-scroll { opacity: 1 !important; transform: none !important; }
+
+  /* ── Keywords (print with colour hint) ─────────────────────── */
+  .kw-istilah, .kw-tokoh, .kw-tempat, .kw-tarikh, .kw-kerajaan {
+    font-weight: 700;
+    text-decoration: underline;
+    background: none !important;
+    padding: 0 !important;
+    border-radius: 0 !important;
+  }
+
+  /* ── Chips: keep readable ───────────────────────────────────── */
+  .paper-chip-list { break-inside: avoid; }
+}

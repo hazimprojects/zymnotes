@@ -1288,3 +1288,162 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 })();
+
+// ── Reading Progress Bar (note subtopic pages only) ───────────────────────────
+(function () {
+  var isNotePage = /\/notes\/bab-\d+-\d+\.html$/.test(location.pathname);
+  if (!isNotePage) return;
+  document.addEventListener('DOMContentLoaded', function () {
+    var bar = document.createElement('div');
+    bar.className = 'reading-progress-bar is-active';
+    var header = document.querySelector('.site-header');
+    if (header) header.appendChild(bar);
+    var raf;
+    window.addEventListener('scroll', function () {
+      cancelAnimationFrame(raf);
+      raf = requestAnimationFrame(function () {
+        var scrolled = window.scrollY;
+        var total = document.documentElement.scrollHeight - window.innerHeight;
+        bar.style.width = (total > 0 ? Math.min(scrolled / total * 100, 100) : 0) + '%';
+      });
+    }, { passive: true });
+  });
+})();
+
+// ── Scroll Restoration ────────────────────────────────────────────────────────
+(function () {
+  var key = 'hzedu-scroll-' + location.pathname;
+  window.addEventListener('beforeunload', function () {
+    sessionStorage.setItem(key, window.scrollY);
+  });
+  var saved = parseInt(sessionStorage.getItem(key) || '0', 10);
+  if (saved > 120) {
+    document.addEventListener('DOMContentLoaded', function () {
+      requestAnimationFrame(function () { window.scrollTo(0, saved); });
+    });
+  }
+})();
+
+// ── Swipe Navigation (note subtopic pages) ────────────────────────────────────
+(function () {
+  var isNotePage = /\/notes\/bab-\d+-\d+\.html$/.test(location.pathname);
+  if (!isNotePage) return;
+  var startX = 0, startY = 0;
+  var THRESHOLD = 72, VERTICAL_LIMIT = 50;
+  document.addEventListener('touchstart', function (e) {
+    startX = e.touches[0].clientX;
+    startY = e.touches[0].clientY;
+  }, { passive: true });
+  document.addEventListener('touchend', function (e) {
+    var dx = e.changedTouches[0].clientX - startX;
+    var dy = Math.abs(e.changedTouches[0].clientY - startY);
+    if (dy > VERTICAL_LIMIT || Math.abs(dx) < THRESHOLD) return;
+    var actions = document.querySelectorAll('.hero-actions a.btn');
+    if (!actions.length) return;
+    if (dx < 0 && actions[actions.length - 1]) {
+      location.href = actions[actions.length - 1].href; // swipe left → next
+    } else if (dx > 0 && actions[0]) {
+      location.href = actions[0].href; // swipe right → back/prev
+    }
+  }, { passive: true });
+})();
+
+// ── Keyboard Shortcuts: ← → prev/next on note pages ─────────────────────────
+(function () {
+  var isNotePage = /\/notes\/bab-\d+(-\d+)?\.html$/.test(location.pathname);
+  if (!isNotePage) return;
+  document.addEventListener('keydown', function (e) {
+    if (['INPUT', 'TEXTAREA', 'SELECT'].indexOf(document.activeElement.tagName) !== -1) return;
+    if (e.ctrlKey || e.metaKey || e.altKey) return;
+    var actions = document.querySelectorAll('.hero-actions a.btn');
+    if (!actions.length) return;
+    if (e.key === 'ArrowRight') actions[actions.length - 1].click();
+    if (e.key === 'ArrowLeft')  actions[0].click();
+  });
+})();
+
+// ── Bottom Navigation Bar (mobile) ───────────────────────────────────────────
+(function () {
+  document.addEventListener('DOMContentLoaded', function () {
+    var p = location.pathname;
+    function isActive(href) {
+      var hp = href.replace(/\/?(index\.html)?$/, '').replace(/^\//, '');
+      var pp = p.replace(/\/?(index\.html)?$/, '').replace(/^\//, '');
+      if (href.includes('/notes/') && !href.endsWith('index.html')) {
+        return p.includes('/notes/') && !p.endsWith('index.html');
+      }
+      if (href.includes('/notes/')) return p.includes('/notes/');
+      if (href === '/index.html') return pp === '' || pp === 'index.html';
+      return pp === hp;
+    }
+    var tabs = [
+      { icon: '🏠', label: 'Utama', href: '/index.html' },
+      { icon: '📚', label: 'Nota',  href: '/notes/index.html' },
+      { icon: '🔍', label: 'Cari',  href: null }
+    ];
+    var nav = document.createElement('nav');
+    nav.className = 'hz-bottom-nav';
+    nav.setAttribute('aria-label', 'Navigasi utama');
+    tabs.forEach(function (tab) {
+      var el;
+      if (tab.href) {
+        el = document.createElement('a');
+        el.href = tab.href;
+        if (isActive(tab.href)) el.classList.add('is-active');
+      } else {
+        el = document.createElement('button');
+        el.type = 'button';
+        el.addEventListener('click', function () {
+          var searchInput = document.querySelector('.search-input');
+          if (searchInput) {
+            searchInput.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            setTimeout(function () { searchInput.focus(); }, 280);
+          } else {
+            location.href = '/notes/index.html';
+          }
+        });
+      }
+      el.className = 'hz-bottom-nav-item';
+      el.innerHTML = '<span class="hz-nav-icon">' + tab.icon + '</span><span>' + tab.label + '</span>';
+      nav.appendChild(el);
+    });
+    document.body.appendChild(nav);
+  });
+})();
+
+// ── Desktop Floating TOC (note subtopic pages, wide screens) ─────────────────
+(function () {
+  var isNotePage = /\/notes\/bab-\d+-\d+\.html$/.test(location.pathname);
+  if (!isNotePage) return;
+  document.addEventListener('DOMContentLoaded', function () {
+    if (window.innerWidth < 1024) return;
+    var headings = document.querySelectorAll(
+      '.note-section h2, .note-subsection h2, .note-section h3, .note-subsection h3'
+    );
+    if (headings.length < 3) return;
+    var toc = document.createElement('nav');
+    toc.className = 'hz-toc';
+    toc.setAttribute('aria-label', 'Isi kandungan');
+    var items = [];
+    headings.forEach(function (h, i) {
+      if (!h.id) h.id = 'hz-h-' + i;
+      var a = document.createElement('a');
+      a.href = '#' + h.id;
+      a.className = 'hz-toc-item';
+      a.textContent = h.textContent.trim().replace(/\s+/g, ' ');
+      toc.appendChild(a);
+      items.push(a);
+    });
+    document.body.appendChild(toc);
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          items.forEach(function (it) { it.classList.remove('is-active'); });
+          var active = toc.querySelector('[href="#' + entry.target.id + '"]');
+          if (active) active.classList.add('is-active');
+        }
+      });
+    }, { rootMargin: '-15% 0px -72% 0px' });
+    headings.forEach(function (h) { io.observe(h); });
+  });
+})();
