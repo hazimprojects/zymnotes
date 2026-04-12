@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hazim EduHub · Ruang Ulang Kaji Digital</title>
-  <meta name="description" content="Hazim EduHub ialah ruang ulang kaji digital yang menghimpunkan nota visual, kemas dan mesra telefon untuk membantu pelajar memahami isi penting dengan lebih mudah." />
+  <title>HazimEdu · Platform Pendidikan Digital</title>
+  <meta name="description" content="HazimEdu ialah platform pendidikan digital yang menghimpunkan nota visual, kemas dan mesra telefon untuk membantu pembelajaran yang lebih jelas dan mudah diikuti." />
   <link rel="canonical" href="https://hazimedu.com/" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -115,7 +115,7 @@
 <body>
   <header class="site-header">
     <div class="container nav-wrap">
-      <a class="brand" href="index.html">Hazim EduHub</a>
+      <a class="brand" href="index.html">HazimEdu</a>
       <button class="nav-toggle" aria-label="Buka menu" aria-expanded="false">☰</button>
       <nav class="site-nav">
         <a href="index.html">Utama</a>
@@ -135,11 +135,11 @@
 
       <div class="container hero-grid">
         <div class="hero-copy">
-          <div class="paper-label">Hazim EduHub</div>
-          <p class="eyebrow">Ruang ulang kaji digital</p>
-          <h1>Nota visual yang kemas, jelas dan mudah difahami.</h1>
+          <div class="paper-label">HazimEdu</div>
+          <p class="eyebrow">Platform pembelajaran digital</p>
+          <h1>Ruang pembelajaran digital yang visual, jelas dan mudah difahami.</h1>
           <p class="lead">
-            Hazim EduHub menghimpunkan nota pembelajaran yang disusun dengan teliti — visual, mesra telefon dan disemak dengan baik. Dibina untuk pelajar yang mahu ulang kaji dengan lebih mudah dan lebih berkesan.
+            HazimEdu membina kandungan pembelajaran digital yang disusun teliti — visual, mesra telefon dan disemak dengan baik. Platform ini terbuka untuk semua pengguna, dengan fokus semasa pada Sejarah Tingkatan 4 dan Tingkatan 5.
           </p>
 
           <div class="hero-proof-row">
@@ -150,16 +150,16 @@
           </div>
 
           <div class="project-status-card" aria-live="polite">
-            <div class="project-status-label">🔄 Status projek</div>
+            <div class="project-status-label">🔄 Status platform</div>
             <div id="project-status-text" class="project-status-text">
-              Projek ini dikemas kini dari semasa ke semasa.
+              Platform ini dikemas kini dari semasa ke semasa.
               <span class="project-status-note">Sedang memuatkan maklumat kemaskini...</span>
             </div>
           </div>
 
           <div class="hero-actions">
             <a class="btn btn-primary" href="notes/index.html">Mula belajar</a>
-            <a class="btn btn-secondary" href="about.html">Tentang projek</a>
+            <a class="btn btn-secondary" href="about.html">Tentang HazimEdu</a>
           </div>
         </div>
 
@@ -172,7 +172,7 @@
 
             <p class="preview-label">Koleksi semasa</p>
             <h3>Sejarah Tingkatan 4</h3>
-            <p class="preview-subtopic">Fokus aktif — 4 bab tersedia dengan nota lengkap dan mudah diikuti.</p>
+            <p class="preview-subtopic">Fokus semasa — 6 bab Sejarah tersedia di halaman Nota, dengan kandungan lengkap dan mudah diikuti.</p>
 
             <div class="preview-mini-grid">
               <span>Bab 1<br>Warisan Negara Bangsa</span>
@@ -191,7 +191,7 @@
         <div class="section-heading center-heading">
           <div class="paper-label small">Pilih bab</div>
           <h2>Koleksi nota semasa</h2>
-          <p>Sejarah Tingkatan 4 adalah fokus aktif Hazim EduHub buat masa ini — koleksi akan terus bertambah.</p>
+          <p>Sejarah Tingkatan 4 dan Tingkatan 5 ialah fokus semasa HazimEdu — hab pendidikan digital ini akan terus berkembang ke topik dan subjek lain.</p>
         </div>
 
         <div class="bab-grid">
@@ -252,8 +252,8 @@
   <footer class="site-footer">
     <div class="container footer-wrap">
       <div>
-        <p class="footer-brand">Hazim EduHub</p>
-        <p class="footer-text">Projek peribadi pendidikan yang membina nota visual, mesra telefon dan lebih mudah diikuti.</p>
+        <p class="footer-brand">HazimEdu</p>
+        <p class="footer-text">Platform pendidikan digital yang membina kandungan visual, mesra telefon dan lebih mudah diikuti.</p>
       </div>
       <div class="footer-links">
         <a href="index.html">Utama</a>
@@ -263,7 +263,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <p>&copy; 2026 Hazim EduHub. Semua hak cipta terpelihara.</p>
+      <p>&copy; 2026 HazimEdu. Semua hak cipta terpelihara.</p>
     </div>
   </footer>
 
@@ -287,13 +287,13 @@
         const listItems = items.map(i => `<li>${i}</li>`).join('');
 
         target.innerHTML = `
-          Projek ini dikemas kini dari semasa ke semasa.
+          Platform ini dikemas kini dari semasa ke semasa.
           <span class="project-status-note">Kemaskini terakhir: <span class="project-status-date">${formattedDate}</span></span>
           ${listItems ? `<ul class="project-status-list">${listItems}</ul>` : ''}
         `;
       } catch {
         target.innerHTML = `
-          Projek ini dikemas kini dari semasa ke semasa, walaupun ada masa pembaharuan berjalan lebih perlahan.
+          Platform ini dikemas kini dari semasa ke semasa, walaupun ada masa pembaharuan berjalan lebih perlahan.
           <span class="project-status-note">Maklumat kemas kini tidak dapat dimuatkan sekarang.</span>
         `;
       }
