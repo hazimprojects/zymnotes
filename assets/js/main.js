@@ -128,15 +128,63 @@ document.addEventListener("DOMContentLoaded", function () {
   // =========================
   const accordionTriggers = document.querySelectorAll(".paper-accordion-trigger");
 
+  function getOwnAccordionPanel(item) {
+    return item.querySelector(":scope > .paper-accordion-panel");
+  }
+
+  function getOwnAccordionTrigger(item) {
+    return item.querySelector(":scope > .paper-accordion-trigger");
+  }
+
+  function openAccordionPanel(panel) {
+    panel.classList.add("active");
+    panel.style.overflow = "hidden";
+    panel.style.maxHeight = panel.scrollHeight + "px";
+
+    const onTransitionEnd = function (e) {
+      if (e.target !== panel || e.propertyName !== "max-height") return;
+      if (panel.classList.contains("active")) {
+        panel.style.maxHeight = "none";
+        panel.style.overflow = "visible";
+      }
+      panel.removeEventListener("transitionend", onTransitionEnd);
+    };
+
+    panel.addEventListener("transitionend", onTransitionEnd);
+  }
+
+  function closeAccordionPanel(panel) {
+    if (panel.classList.contains("active")) {
+      if (panel.style.maxHeight === "none" || !panel.style.maxHeight) {
+        panel.style.maxHeight = panel.scrollHeight + "px";
+      }
+
+      panel.style.overflow = "hidden";
+      // force reflow
+      panel.offsetHeight;
+      panel.style.maxHeight = "0px";
+    } else {
+      panel.style.maxHeight = "0px";
+      panel.style.overflow = "hidden";
+    }
+
+    panel.classList.remove("active");
+  }
+
   function setAccordionState(item, open) {
-    const trigger = item.querySelector(":scope > .paper-accordion-trigger");
-    const panel = item.querySelector(":scope > .paper-accordion-panel");
+    const trigger = getOwnAccordionTrigger(item);
+    const panel = getOwnAccordionPanel(item);
     if (!trigger || !panel) return;
 
     item.classList.toggle("is-open", open);
     trigger.classList.toggle("active", open);
     trigger.setAttribute("aria-expanded", open ? "true" : "false");
-    panel.classList.toggle("active", open);
+
+    if (open) {
+      openAccordionPanel(panel);
+    } else {
+      closeAccordionPanel(panel);
+    }
   }
 
   function getHeaderOffset() {
@@ -177,6 +225,37 @@ document.addEventListener("DOMContentLoaded", function () {
 
     rafId = requestAnimationFrame(check);
   }
+
+  function refreshOpenAccordions() {
+    document.querySelectorAll(".paper-accordion-item.is-open").forEach((item) => {
+      const panel = getOwnAccordionPanel(item);
+      if (!panel) return;
+
+      panel.style.maxHeight = "none";
+      const fullHeight = panel.scrollHeight;
+      panel.style.overflow = "hidden";
+      panel.style.maxHeight = fullHeight + "px";
+
+      requestAnimationFrame(() => {
+        if (item.classList.contains("is-open")) {
+          panel.style.maxHeight = "none";
+          panel.style.overflow = "visible";
+        }
+      });
+    });
+  }
+
+  accordionTriggers.forEach((trigger) => {
+    const item = trigger.closest(".paper-accordion-item");
+    const panel = item ? getOwnAccordionPanel(item) : null;
+    if (trigger) {
+      trigger.setAttribute("aria-expanded", item && item.classList.contains("is-open") ? "true" : "false");
+    }
+    if (panel && !item.classList.contains("is-open")) {
+      panel.style.maxHeight = "0px";
+      panel.style.overflow = "hidden";
+    }
+  });
 
   accordionTriggers.forEach((trigger) => {
     trigger.addEventListener("click", () => {
@@ -267,7 +346,7 @@ document.addEventListener("DOMContentLoaded", function () {
         let stillFrames = 0;
         let lastTop = null;
         const REQUIRED_STILL_FRAMES = 10;
-        const MAX_FRAMES = 40;
+        const MAX_FRAMES = 50;
         let frameCount = 0;
 
         function stabilizeOpen() {
@@ -304,6 +383,8 @@ document.addEventListener("DOMContentLoaded", function () {
               top: finalTargetTop,
               behavior: "auto",
             });
+
+            refreshOpenAccordions();
           }
         }
 
@@ -311,6 +392,8 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     });
   });
+
+  window.addEventListener("resize", refreshOpenAccordions);
 
   // =========================
   // PAPER TIMELINE
