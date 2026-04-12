@@ -3,10 +3,11 @@
 ========================= */
 
 @keyframes hzPageIn {
-  from { opacity: 0; transform: translateY(5px); }
-  to   { opacity: 1; transform: translateY(0); }
+  from { opacity: 0; }
+  to   { opacity: 1; }
 }
-/* Apply on <main> not <body> — transforms on body break position:fixed children */
+/* opacity-only on main — no transform, so no stacking context that breaks
+   overflow:hidden + will-change compositing inside accordion items */
 main { animation: hzPageIn 0.18s ease both; }
 
 /* =========================
