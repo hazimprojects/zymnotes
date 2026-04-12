@@ -2,11 +2,11 @@ document.documentElement.classList.add("js-enhanced");
 
 // Apply handedness class before first paint to avoid layout flash
 (function () {
-  if (localStorage.getItem('hzedu-hand') === 'left') {
+  if (localStorage.getItem("hzedu-hand") === "left") {
     document.body
-      ? document.body.classList.add('hand-left')
-      : document.addEventListener('DOMContentLoaded', function () {
-          document.body.classList.add('hand-left');
+      ? document.body.classList.add("hand-left")
+      : document.addEventListener("DOMContentLoaded", function () {
+          document.body.classList.add("hand-left");
         });
   }
 })();
@@ -136,14 +136,21 @@ document.addEventListener("DOMContentLoaded", function () {
     return item.querySelector(":scope > .paper-accordion-trigger");
   }
 
-  function openAccordionPanel(panel) {
+  function animateOpen(panel, item) {
     panel.classList.add("active");
+    item.classList.add("is-open");
+
     panel.style.overflow = "hidden";
-    panel.style.maxHeight = panel.scrollHeight + "px";
+    panel.style.maxHeight = "0px";
+    panel.style.opacity = "1";
+
+    requestAnimationFrame(() => {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    });
 
     const onTransitionEnd = function (e) {
       if (e.target !== panel || e.propertyName !== "max-height") return;
-      if (panel.classList.contains("active")) {
+      if (item.classList.contains("is-open")) {
         panel.style.maxHeight = "none";
         panel.style.overflow = "visible";
       }
@@ -153,22 +160,26 @@ document.addEventListener("DOMContentLoaded", function () {
     panel.addEventListener("transitionend", onTransitionEnd);
   }
 
-  function closeAccordionPanel(panel) {
-    if (panel.classList.contains("active")) {
-      if (panel.style.maxHeight === "none" || !panel.style.maxHeight) {
-        panel.style.maxHeight = panel.scrollHeight + "px";
+  function animateClose(panel, item) {
+    const fullHeight = panel.scrollHeight;
+
+    panel.style.overflow = "hidden";
+    panel.style.maxHeight = fullHeight + "px";
+
+    requestAnimationFrame(() => {
+      panel.style.maxHeight = "0px";
+      panel.style.opacity = "0";
+    });
+
+    const onTransitionEnd = function (e) {
+      if (e.target !== panel || e.propertyName !== "max-height") return;
+      if (!item.classList.contains("is-open")) {
+        panel.classList.remove("active");
       }
+      panel.removeEventListener("transitionend", onTransitionEnd);
+    };
 
-      panel.style.overflow = "hidden";
-      // force reflow
-      panel.offsetHeight;
-      panel.style.maxHeight = "0px";
-    } else {
-      panel.style.maxHeight = "0px";
-      panel.style.overflow = "hidden";
-    }
-
-    panel.classList.remove("active");
+    panel.addEventListener("transitionend", onTransitionEnd);
   }
 
   function setAccordionState(item, open) {
@@ -176,14 +187,14 @@ document.addEventListener("DOMContentLoaded", function () {
     const panel = getOwnAccordionPanel(item);
     if (!trigger || !panel) return;
 
-    item.classList.toggle("is-open", open);
     trigger.classList.toggle("active", open);
     trigger.setAttribute("aria-expanded", open ? "true" : "false");
 
     if (open) {
-      openAccordionPanel(panel);
+      animateOpen(panel, item);
     } else {
-      closeAccordionPanel(panel);
+      item.classList.remove("is-open");
+      animateClose(panel, item);
     }
   }
 
@@ -191,21 +202,20 @@ document.addEventListener("DOMContentLoaded", function () {
     const header = document.querySelector(".site-header");
     const headerHeight = header ? header.getBoundingClientRect().height : 72;
     const sticky = document.querySelector(".audio-sticky");
-    const stickyHeight = (sticky && sticky.classList.contains("is-visible"))
-      ? sticky.getBoundingClientRect().height
-      : 0;
+    const stickyHeight =
+      sticky && sticky.classList.contains("is-visible")
+        ? sticky.getBoundingClientRect().height
+        : 0;
     return Math.round(headerHeight + stickyHeight + 12);
   }
 
   function waitUntilScrollReaches(targetTop, callback) {
-    let rafId = 0;
     let stableFrames = 0;
     const MAX_FRAMES = 90;
     let frameCount = 0;
 
     function check() {
       frameCount += 1;
-
       const distance = Math.abs(window.scrollY - targetTop);
 
       if (distance <= 2) {
@@ -220,10 +230,10 @@ document.addEventListener("DOMContentLoaded", function () {
         return;
       }
 
-      rafId = requestAnimationFrame(check);
+      requestAnimationFrame(check);
     }
 
-    rafId = requestAnimationFrame(check);
+    requestAnimationFrame(check);
   }
 
   function refreshOpenAccordions() {
@@ -232,9 +242,9 @@ document.addEventListener("DOMContentLoaded", function () {
       if (!panel) return;
 
       panel.style.maxHeight = "none";
-      const fullHeight = panel.scrollHeight;
+      const height = panel.scrollHeight;
       panel.style.overflow = "hidden";
-      panel.style.maxHeight = fullHeight + "px";
+      panel.style.maxHeight = height + "px";
 
       requestAnimationFrame(() => {
         if (item.classList.contains("is-open")) {
@@ -248,12 +258,25 @@ document.addEventListener("DOMContentLoaded", function () {
   accordionTriggers.forEach((trigger) => {
     const item = trigger.closest(".paper-accordion-item");
     const panel = item ? getOwnAccordionPanel(item) : null;
+
     if (trigger) {
-      trigger.setAttribute("aria-expanded", item && item.classList.contains("is-open") ? "true" : "false");
+      trigger.setAttribute(
+        "aria-expanded",
+        item && item.classList.contains("is-open") ? "true" : "false"
+      );
     }
+
     if (panel && !item.classList.contains("is-open")) {
       panel.style.maxHeight = "0px";
+      panel.style.opacity = "0";
       panel.style.overflow = "hidden";
+    }
+
+    if (panel && item.classList.contains("is-open")) {
+      panel.classList.add("active");
+      panel.style.maxHeight = "none";
+      panel.style.opacity = "1";
+      panel.style.overflow = "visible";
     }
   });
 
@@ -265,20 +288,20 @@ document.addEventListener("DOMContentLoaded", function () {
 
       const wasOpen = currentItem.classList.contains("is-open");
 
-      // Jika tekan accordion yang sama, tutup seperti biasa
       if (wasOpen) {
         const anchorTop = trigger.getBoundingClientRect().top;
 
         document.documentElement.classList.add("accordion-no-smooth-scroll");
         document.body.classList.add("accordion-no-smooth-scroll");
 
-        accordionGroup.querySelectorAll(":scope > .paper-accordion-item").forEach((item) => {
-          setAccordionState(item, false);
-        });
+        accordionGroup
+          .querySelectorAll(":scope > .paper-accordion-item")
+          .forEach((item) => {
+            setAccordionState(item, false);
+          });
 
         trigger.blur();
 
-        let rafId = 0;
         let stillFrames = 0;
         let lastTop = null;
         const REQUIRED_STILL_FRAMES = 10;
@@ -306,19 +329,17 @@ document.addEventListener("DOMContentLoaded", function () {
           lastTop = adjustedTop;
 
           if (stillFrames < REQUIRED_STILL_FRAMES && frameCount < MAX_FRAMES) {
-            rafId = requestAnimationFrame(stabilizeClose);
+            requestAnimationFrame(stabilizeClose);
           } else {
             document.documentElement.classList.remove("accordion-no-smooth-scroll");
             document.body.classList.remove("accordion-no-smooth-scroll");
-            if (rafId) cancelAnimationFrame(rafId);
           }
         }
 
-        rafId = requestAnimationFrame(stabilizeClose);
+        requestAnimationFrame(stabilizeClose);
         return;
       }
 
-      // 1) Scroll dulu sampai trigger duduk betul-betul bawah nav
       const triggerRect = trigger.getBoundingClientRect();
       const absoluteTop = window.scrollY + triggerRect.top;
       const targetTop = Math.max(0, Math.round(absoluteTop - getHeaderOffset()));
@@ -328,21 +349,21 @@ document.addEventListener("DOMContentLoaded", function () {
         behavior: "smooth",
       });
 
-      // 2) Tunggu scroll benar-benar sampai, baru buka accordion
       waitUntilScrollReaches(targetTop, () => {
         const anchorTop = trigger.getBoundingClientRect().top;
 
         document.documentElement.classList.add("accordion-no-smooth-scroll");
         document.body.classList.add("accordion-no-smooth-scroll");
 
-        accordionGroup.querySelectorAll(":scope > .paper-accordion-item").forEach((item) => {
-          setAccordionState(item, false);
-        });
+        accordionGroup
+          .querySelectorAll(":scope > .paper-accordion-item")
+          .forEach((item) => {
+            setAccordionState(item, false);
+          });
 
         setAccordionState(currentItem, true);
         trigger.blur();
 
-        let rafId = 0;
         let stillFrames = 0;
         let lastTop = null;
         const REQUIRED_STILL_FRAMES = 10;
@@ -370,15 +391,17 @@ document.addEventListener("DOMContentLoaded", function () {
           lastTop = adjustedTop;
 
           if (stillFrames < REQUIRED_STILL_FRAMES && frameCount < MAX_FRAMES) {
-            rafId = requestAnimationFrame(stabilizeOpen);
+            requestAnimationFrame(stabilizeOpen);
           } else {
             document.documentElement.classList.remove("accordion-no-smooth-scroll");
             document.body.classList.remove("accordion-no-smooth-scroll");
-            if (rafId) cancelAnimationFrame(rafId);
 
-            // pastikan posisi akhir tepat di bawah nav
             const finalAbsoluteTop = window.scrollY + trigger.getBoundingClientRect().top;
-            const finalTargetTop = Math.max(0, Math.round(finalAbsoluteTop - getHeaderOffset()));
+            const finalTargetTop = Math.max(
+              0,
+              Math.round(finalAbsoluteTop - getHeaderOffset())
+            );
+
             window.scrollTo({
               top: finalTargetTop,
               behavior: "auto",
@@ -388,7 +411,7 @@ document.addEventListener("DOMContentLoaded", function () {
           }
         }
 
-        rafId = requestAnimationFrame(stabilizeOpen);
+        requestAnimationFrame(stabilizeOpen);
       });
     });
   });
@@ -743,7 +766,6 @@ document.addEventListener("DOMContentLoaded", function () {
     var timeEl = player.querySelector('.audio-time');
     if (!audio || !playBtn) return;
 
-    // --- Create sticky mini player (with close button) ---
     var sticky = document.createElement('div');
     sticky.className = 'audio-sticky';
     sticky.innerHTML =
@@ -764,27 +786,29 @@ document.addEventListener("DOMContentLoaded", function () {
     var stickyTimeEl   = sticky.querySelector('.audio-time');
     var stickyCloseBtn = sticky.querySelector('.audio-sticky-close');
 
-    // --- State flags ---
-    var hasPlayed    = false; // only show sticky after first press
-    var dismissed    = false; // permanently hidden after ✕
-    var isScrolledPast = false; // true only when player is ABOVE viewport
+    var hasPlayed = false;
+    var dismissed = false;
+    var isScrolledPast = false;
 
     function refreshSticky() {
       sticky.classList.toggle('is-visible', !dismissed && hasPlayed && isScrolledPast);
     }
 
-    // --- Shared helpers ---
     function fmt(s) {
       if (!isFinite(s)) return '--:--';
       var m = Math.floor(s / 60), sec = Math.floor(s % 60);
       return m + ':' + (sec < 10 ? '0' : '') + sec;
     }
+
     function updateTime() {
       var t = fmt(audio.currentTime) + ' / ' + fmt(audio.duration);
       var pct = (audio.duration ? (audio.currentTime / audio.duration) * 100 : 0) + '%';
-      timeEl.textContent = t;       trackFill.style.width = pct;
-      stickyTimeEl.textContent = t; stickyFill.style.width = pct;
+      timeEl.textContent = t;
+      trackFill.style.width = pct;
+      stickyTimeEl.textContent = t;
+      stickyFill.style.width = pct;
     }
+
     function setPlaying(on) {
       playBtn.classList.toggle('is-playing', on);
       stickyPlayBtn.classList.toggle('is-playing', on);
@@ -792,55 +816,65 @@ document.addEventListener("DOMContentLoaded", function () {
       playBtn.setAttribute('aria-label', lbl);
       stickyPlayBtn.setAttribute('aria-label', lbl);
     }
+
     function togglePlay() {
       if (audio.paused) {
-        audio.play(); setPlaying(true);
-        if (!hasPlayed) { hasPlayed = true; }
-        if (dismissed) { dismissed = false; }
+        audio.play();
+        setPlaying(true);
+        if (!hasPlayed) hasPlayed = true;
+        if (dismissed) dismissed = false;
         refreshSticky();
       } else {
-        audio.pause(); setPlaying(false);
+        audio.pause();
+        setPlaying(false);
       }
     }
+
     function skip(secs) {
       audio.currentTime = Math.max(0, Math.min(audio.duration || 0, audio.currentTime + secs));
       updateTime();
     }
+
     function seekFromClick(e, el) {
       if (!audio.duration) return;
       var rect = el.getBoundingClientRect();
       audio.currentTime = ((e.clientX - rect.left) / rect.width) * audio.duration;
     }
 
-    // --- Wire main player ---
     playBtn.addEventListener('click', togglePlay);
     player.querySelectorAll('.audio-skip-btn').forEach(function(btn) {
-      btn.addEventListener('click', function() { skip(parseInt(btn.getAttribute('data-skip'), 10)); });
+      btn.addEventListener('click', function() {
+        skip(parseInt(btn.getAttribute('data-skip'), 10));
+      });
     });
-    track.addEventListener('click', function(e) { seekFromClick(e, track); });
+    track.addEventListener('click', function(e) {
+      seekFromClick(e, track);
+    });
 
-    // --- Wire sticky player ---
     stickyPlayBtn.addEventListener('click', togglePlay);
     sticky.querySelectorAll('.audio-skip-btn').forEach(function(btn) {
-      btn.addEventListener('click', function() { skip(parseInt(btn.getAttribute('data-skip'), 10)); });
+      btn.addEventListener('click', function() {
+        skip(parseInt(btn.getAttribute('data-skip'), 10));
+      });
     });
-    stickyTrack.addEventListener('click', function(e) { seekFromClick(e, stickyTrack); });
+    stickyTrack.addEventListener('click', function(e) {
+      seekFromClick(e, stickyTrack);
+    });
 
-    // --- Close / dismiss — hide sticky but keep alive so next play can reshow it ---
-    var stickyObserver = null;
     stickyCloseBtn.addEventListener('click', function() {
       dismissed = true;
       refreshSticky();
     });
 
-    // --- Audio events ---
     audio.addEventListener('timeupdate', updateTime);
     audio.addEventListener('loadedmetadata', updateTime);
-    audio.addEventListener('ended', function() { setPlaying(false); updateTime(); });
+    audio.addEventListener('ended', function() {
+      setPlaying(false);
+      updateTime();
+    });
 
-    // --- Show sticky only when player is ABOVE viewport (scrolled past) ---
     if ('IntersectionObserver' in window) {
-      stickyObserver = new IntersectionObserver(function(entries) {
+      var stickyObserver = new IntersectionObserver(function(entries) {
         var entry = entries[0];
         isScrolledPast = !entry.isIntersecting && entry.boundingClientRect.top < 0;
         refreshSticky();
@@ -871,15 +905,12 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   document.addEventListener('DOMContentLoaded', function() {
-    // Skip if page already has its own sparkle menu (e.g. lab pages)
     if (document.querySelector('.note-sparkle-wrap')) return;
 
-    // Hide nav dark mode button (moved into settings panel)
     document.querySelectorAll('.display-fab').forEach(function(btn) {
       btn.style.display = 'none';
     });
 
-    // Detect audio + lab
     var audioEl = document.querySelector('.note-audio-player .audio-src');
     var labHref = document.body.dataset.labHref ||
       (function() {
@@ -887,11 +918,9 @@ document.addEventListener("DOMContentLoaded", function () {
         return el ? el.getAttribute('href') : null;
       })();
 
-    // --- Build sparkle wrap ---
     var wrap = document.createElement('div');
     wrap.className = 'note-sparkle-wrap';
 
-    // --- Settings sub-panel (sits at top of wrap, above sparkle items) ---
     var panel = document.createElement('div');
     panel.className = 'note-settings-panel';
 
@@ -924,7 +953,6 @@ document.addEventListener("DOMContentLoaded", function () {
     panel.appendChild(makeSettingsRow('Mod Paparan', 'Tukar antara mod cerah dan gelap', dmEmoji(), 'dm'));
     panel.appendChild(makeSettingsRow('Mod Tangan', handDesc(), handEmoji(), 'hand'));
 
-    // --- Sparkle items: audio (optional) + lab (optional) + ⚙️ (always) ---
     var itemsContainer = document.createElement('div');
     itemsContainer.className = 'note-sparkle-items';
 
@@ -944,7 +972,6 @@ document.addEventListener("DOMContentLoaded", function () {
     if (labHref) itemsContainer.appendChild(makeSparkleItem('⚗️', 'Makmal Latihan', 'lab', labHref));
     itemsContainer.appendChild(makeSparkleItem('⚙️', 'Tetapan', 'settings'));
 
-    // --- FAB ---
     var fab = document.createElement('button');
     fab.className = 'note-sparkle-fab';
     fab.type = 'button';
@@ -956,7 +983,6 @@ document.addEventListener("DOMContentLoaded", function () {
     wrap.appendChild(fab);
     document.body.appendChild(wrap);
 
-    // --- Toggle sparkle open/close ---
     fab.addEventListener('click', function(e) {
       e.stopPropagation();
       var opening = !wrap.classList.contains('is-open');
@@ -971,7 +997,6 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
 
-    // --- Sparkle item clicks ---
     itemsContainer.addEventListener('click', function(e) {
       var btn = e.target.closest('[data-sparkle-type]');
       if (!btn) return;
@@ -994,7 +1019,6 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
 
-    // --- Settings panel row clicks ---
     panel.addEventListener('click', function(e) {
       var row = e.target.closest('[data-stype]');
       if (!row) return;
@@ -1020,7 +1044,6 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
 
-    // --- Sync audio button emoji with playback ---
     if (audioEl) {
       var audioBtn = itemsContainer.querySelector('[data-sparkle-type="audio"]');
       audioEl.addEventListener('play',  function() { if (audioBtn) audioBtn.textContent = '⏸️'; });
@@ -1032,13 +1055,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // ── Nota Feedback Widget ──────────────────────────────────────────────────────
 (function () {
-  // Only on subtopic note pages (e.g. /notes/bab-1-1.html)
   if (!window.location.pathname.match(/\/notes\/bab-\d+-\d+\.html/)) return;
 
   var STORAGE_KEY = 'hzfb-' + window.location.pathname;
-  if (localStorage.getItem(STORAGE_KEY)) return; // already voted on this page
+  if (localStorage.getItem(STORAGE_KEY)) return;
 
-  // Inject styles once
   var style = document.createElement('style');
   style.textContent = [
     '.nota-feedback{text-align:center;padding:1.4rem 1rem 0.6rem;opacity:0;animation:nfb-in 0.4s ease 0.5s forwards}',
@@ -1055,13 +1076,11 @@ document.addEventListener("DOMContentLoaded", function () {
   ].join('');
   document.head.appendChild(style);
 
-  // Find the nav section at the bottom of the note
   var navSection = document.querySelector('.note-subsection .hero-actions');
   if (!navSection) return;
   var insertBefore = navSection.closest('.note-subsection');
   if (!insertBefore) return;
 
-  // Build widget
   var widget = document.createElement('div');
   widget.className = 'nota-feedback';
   widget.innerHTML =
@@ -1077,7 +1096,6 @@ document.addEventListener("DOMContentLoaded", function () {
   widget.querySelectorAll('.nota-feedback-btn').forEach(function (btn) {
     btn.addEventListener('click', function () {
       var reaction = btn.getAttribute('data-reaction');
-      // Fire GA4 custom event (GA already on every page)
       if (typeof gtag === 'function') {
         gtag('event', 'nota_reaction', { reaction: reaction, page_path: window.location.pathname });
       }
@@ -1092,9 +1110,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // ── PWA Install Nudge ─────────────────────────────────────────────────────────
 (function () {
-  // Skip if already running as installed PWA
   if (window.matchMedia('(display-mode: standalone)').matches) return;
-  if (navigator.standalone) return; // iOS standalone check
+  if (navigator.standalone) return;
 
   var DISMISSED_KEY = 'hzedu-pwa-dismissed-until';
   var dismissed = localStorage.getItem(DISMISSED_KEY);
@@ -1105,7 +1122,6 @@ document.addEventListener("DOMContentLoaded", function () {
   var isSafari  = isIOS && /safari/i.test(ua) && !/crios|fxios|opios/i.test(ua);
   var isAndroid = /android/i.test(ua);
 
-  // Only show on platforms that support PWA install
   if (!isSafari && !isAndroid) return;
 
   var deferredPrompt = null;
@@ -1116,7 +1132,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // Inject styles
   var style = document.createElement('style');
   style.textContent = [
     '.pwa-nudge{position:fixed;bottom:1rem;left:50%;transform:translateX(-50%) translateY(calc(100% + 1.5rem));z-index:250;width:calc(100% - 2rem);max-width:400px;background:rgba(247,244,238,0.97);border:1px solid rgba(92,110,132,0.13);border-radius:20px;box-shadow:0 8px 32px rgba(70,60,40,0.14);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);padding:1rem 1rem 1rem 0.9rem;display:flex;align-items:flex-start;gap:0.75rem;transition:transform 0.4s cubic-bezier(0.34,1.26,0.64,1),opacity 0.4s ease;opacity:0}',
@@ -1181,7 +1196,6 @@ document.addEventListener("DOMContentLoaded", function () {
         '</div>' +
         '<button class="pwa-nudge-close" id="pwa-close-btn" aria-label="Tutup">\u2715</button>';
     } else {
-      // iOS — manual instruction
       var shareIcon =
         '<span class="pwa-nudge-ios-share">' +
           '<svg width="11" height="13" viewBox="0 0 11 13" fill="none" xmlns="http://www.w3.org/2000/svg">' +
@@ -1228,20 +1242,15 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  // Show after 7s — enough time to read content, not too intrusive
   function tryShow() {
-    // For Android, only show if deferredPrompt was captured
     if (isAndroid && !deferredPrompt) return;
     buildNudge();
   }
 
-  // Android: wait for beforeinstallprompt + 7s
-  // iOS Safari: just wait 7s (no prompt event)
   if (isIOS && isSafari) {
     setTimeout(buildNudge, 7000);
   } else {
     setTimeout(tryShow, 7000);
-    // Also listen in case prompt fires after our timer
     window.addEventListener('beforeinstallprompt', function () {
       if (!document.getElementById('pwa-nudge')) setTimeout(tryShow, 1000);
     });
