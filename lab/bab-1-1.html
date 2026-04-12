@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Makmal Latihan 1.1 · Negara Bangsa Alam Melayu · Hazim EduHub</title>
+  <title>Arkib 1.1 · Negara Bangsa Alam Melayu · Hazim EduHub</title>
   <meta
     name="description"
-    content="Makmal Latihan interaktif untuk Sejarah Tingkatan 4 Bab 1.1: Latar Belakang Negara Bangsa Sebelum Kedatangan Barat."
+    content="Arkib latihan interaktif untuk Sejarah Tingkatan 4 Bab 1.1: Latar Belakang Negara Bangsa Sebelum Kedatangan Barat."
   />
   <meta name="robots" content="noindex, follow" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -39,9 +39,11 @@
       overflow: hidden;
       display: flex;
       flex-direction: column;
+      /* Parchment + subtle cartography grid */
       background:
-        radial-gradient(circle at top, rgba(219, 234, 254, 0.22), transparent 40%),
-        linear-gradient(155deg, #f7f4ee, #ede8de);
+        repeating-linear-gradient(0deg, rgba(110, 75, 25, 0.022) 0px, transparent 1px, transparent 26px, rgba(110, 75, 25, 0.022) 27px),
+        repeating-linear-gradient(90deg, rgba(110, 75, 25, 0.022) 0px, transparent 1px, transparent 26px, rgba(110, 75, 25, 0.022) 27px),
+        linear-gradient(165deg, #f0e6cc 0%, #ebe0c0 50%, #eddfc5 100%);
     }
 
     /* --- TOPBAR --- */
@@ -50,8 +52,8 @@
       z-index: 30;
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
-      background: rgba(247, 244, 238, 0.86);
-      border-bottom: 1px solid rgba(92, 110, 132, 0.1);
+      background: rgba(238, 228, 200, 0.88);
+      border-bottom: 1px solid rgba(100, 70, 28, 0.12);
     }
 
     .lab-compact-topbar-inner {
@@ -92,7 +94,7 @@
       font-weight: 900;
       letter-spacing: 0.05em;
       text-transform: uppercase;
-      color: #2f7a67;
+      color: #7a3e1e;
     }
 
     .lab-compact-title {
@@ -163,11 +165,16 @@
       display: none;
     }
 
-    /* --- BUILDING (small & compact) --- */
+    /* --- BUILDING (small & compact) — blueprint grid aesthetic --- */
     .lab-compact-game .learning-lab-kingdom {
       padding: 0.5rem 0.6rem 0.45rem;
       flex-shrink: 0;
       border-radius: 16px;
+      background:
+        repeating-linear-gradient(0deg, rgba(28, 52, 88, 0.06) 0px, transparent 1px, transparent 20px, rgba(28, 52, 88, 0.06) 21px),
+        repeating-linear-gradient(90deg, rgba(28, 52, 88, 0.06) 0px, transparent 1px, transparent 20px, rgba(28, 52, 88, 0.06) 21px),
+        linear-gradient(160deg, #dce9f5, #cfe1f0);
+      border-color: rgba(28, 52, 88, 0.14);
     }
 
     /* Override inline max-width from JS */
@@ -205,7 +212,7 @@
     }
 
     .lab-notice-header {
-      background: linear-gradient(145deg, #2f7a67 0%, #246155 100%);
+      background: linear-gradient(145deg, #6b3520 0%, #522718 100%);
       padding: 1.3rem 1.2rem 1.15rem;
       text-align: center;
     }
@@ -260,8 +267,8 @@
       align-items: flex-start;
       gap: 0.55rem;
       padding: 0.58rem 0.7rem;
-      background: rgba(47, 122, 103, 0.05);
-      border: 1px solid rgba(47, 122, 103, 0.1);
+      background: rgba(107, 53, 32, 0.05);
+      border: 1px solid rgba(107, 53, 32, 0.12);
       border-radius: 13px;
     }
 
@@ -287,19 +294,19 @@
       padding: 0.88rem 1rem;
       border-radius: 999px;
       border: none;
-      background: linear-gradient(135deg, #2f7a67, #246155);
+      background: linear-gradient(135deg, #7a3e1e, #5e2f14);
       color: #fff;
       font-size: 0.9rem;
       font-weight: 900;
       cursor: pointer;
-      box-shadow: 0 6px 20px rgba(47, 122, 103, 0.28);
+      box-shadow: 0 6px 20px rgba(107, 53, 32, 0.3);
       transition: transform 0.18s cubic-bezier(0.34, 1.56, 0.64, 1),
                   box-shadow 0.18s ease;
     }
 
     .lab-notice-btn:hover {
       transform: translateY(-2px);
-      box-shadow: 0 9px 26px rgba(47, 122, 103, 0.36);
+      box-shadow: 0 9px 26px rgba(107, 53, 32, 0.4);
     }
 
     .lab-notice-screen.is-gone { display: none; }
@@ -310,11 +317,11 @@
     }
 
     [data-theme="dark"] .lab-notice-rule {
-      background: rgba(82, 179, 150, 0.07);
-      border-color: rgba(82, 179, 150, 0.14);
+      background: rgba(180, 110, 50, 0.08);
+      border-color: rgba(180, 110, 50, 0.16);
     }
 
-    [data-theme="dark"] .lab-notice-rule-text { color: #ddd8cc; }
+    [data-theme="dark"] .lab-notice-rule-text { color: #e0ccaa; }
 
     /* --- STAGE: flex column, content fills + scrolls --- */
     .lab-compact-game [data-lab-screen] {
@@ -449,7 +456,7 @@
       font-weight: 800;
     }
 
-    .lab-compact-link.primary { background: #2f7a67; color: #fff; }
+    .lab-compact-link.primary { background: #6b3520; color: #fff; }
 
     .lab-compact-link.secondary {
       background: rgba(92, 110, 132, 0.06);
@@ -491,32 +498,43 @@
       }
     }
 
-    /* --- DARK MODE --- */
+    /* --- DARK MODE — candlelit archive --- */
     [data-theme="dark"] .lab-compact-page {
       background:
-        radial-gradient(circle at top, rgba(76, 96, 150, 0.18), transparent 42%),
-        linear-gradient(155deg, #1f1a18, #171311);
+        repeating-linear-gradient(0deg, rgba(180, 130, 40, 0.022) 0px, transparent 1px, transparent 26px, rgba(180, 130, 40, 0.022) 27px),
+        repeating-linear-gradient(90deg, rgba(180, 130, 40, 0.022) 0px, transparent 1px, transparent 26px, rgba(180, 130, 40, 0.022) 27px),
+        linear-gradient(155deg, #1c130a, #160e06);
     }
 
     [data-theme="dark"] .lab-compact-topbar {
-      background: rgba(24, 20, 18, 0.86);
-      border-bottom-color: rgba(220, 210, 190, 0.1);
+      background: rgba(18, 11, 4, 0.9);
+      border-bottom-color: rgba(180, 140, 60, 0.1);
     }
+
+    [data-theme="dark"] .lab-compact-kicker { color: #c4834a; }
 
     [data-theme="dark"] .lab-compact-back,
     [data-theme="dark"] .lab-compact-card {
-      background: rgba(36, 34, 32, 0.96);
-      border-color: rgba(220, 210, 190, 0.12);
-      color: #e8e0d4;
+      background: rgba(36, 26, 14, 0.96);
+      border-color: rgba(180, 140, 60, 0.12);
+      color: #e8d4b0;
     }
 
     [data-theme="dark"] .lab-compact-headline p,
-    [data-theme="dark"] .lab-compact-point { color: #b8aea1; }
+    [data-theme="dark"] .lab-compact-point { color: #b09070; }
 
     [data-theme="dark"] .lab-compact-link.secondary {
       background: rgba(255, 255, 255, 0.04);
-      color: #e8e0d4;
-      border-color: rgba(220, 210, 190, 0.1);
+      color: #e8d4b0;
+      border-color: rgba(180, 140, 60, 0.1);
+    }
+
+    [data-theme="dark"] .lab-compact-game .learning-lab-kingdom {
+      background:
+        repeating-linear-gradient(0deg, rgba(60, 100, 180, 0.07) 0px, transparent 1px, transparent 20px, rgba(60, 100, 180, 0.07) 21px),
+        repeating-linear-gradient(90deg, rgba(60, 100, 180, 0.07) 0px, transparent 1px, transparent 20px, rgba(60, 100, 180, 0.07) 21px),
+        linear-gradient(160deg, #121e2e, #0d1820);
+      border-color: rgba(60, 100, 180, 0.18);
     }
 
     /* ======================================
@@ -535,8 +553,8 @@
         bottom: 0; left: 0; right: 0;
         z-index: 45;
         padding: 0 0.95rem 1.15rem;
-        background: rgba(247, 244, 238, 0.97);
-        border-top: 1px solid rgba(92, 110, 132, 0.13);
+        background: rgba(235, 224, 198, 0.97);
+        border-top: 1px solid rgba(100, 70, 28, 0.13);
         border-radius: 22px 22px 0 0;
         box-shadow: 0 -8px 32px rgba(36, 49, 63, 0.13);
         backdrop-filter: blur(16px);
@@ -597,8 +615,8 @@
       }
 
       [data-theme="dark"] .lab-compact-game .learning-lab-stage[data-lab-feedback-wrap] {
-        background: rgba(28, 24, 22, 0.97);
-        border-top-color: rgba(220, 210, 190, 0.13);
+        background: rgba(20, 13, 5, 0.97);
+        border-top-color: rgba(180, 140, 60, 0.14);
       }
 
       [data-theme="dark"] .lab-feedback-peek-btn {
@@ -625,7 +643,7 @@
         <a class="lab-compact-back" href="../notes/bab-1-1.html">← Nota 1.1</a>
 
         <div class="lab-compact-topmeta">
-          <p class="lab-compact-kicker">Makmal Latihan · Bab 1</p>
+          <p class="lab-compact-kicker">Arkib · Bab 1</p>
           <p class="lab-compact-title">Subtopik 1.1 · Negara Bangsa Alam Melayu</p>
         </div>
 
@@ -638,7 +656,7 @@
         <aside class="lab-compact-side">
           <article class="lab-compact-card">
             <div class="lab-compact-headline">
-              <h1>⚗️ Bina Negara Bangsa</h1>
+              <h1>📜 Bina Negara Bangsa</h1>
               <p>
                 Uji kefahaman anda secara santai, pantas dan lebih fokus tanpa mengganggu aliran nota utama.
               </p>
@@ -666,8 +684,8 @@
           <div class="lab-notice-screen" id="lab-notice">
             <div class="lab-notice-card">
               <div class="lab-notice-header">
-                <span class="lab-notice-badge">⚗️ Makmal Latihan · Bab 1</span>
-                <span class="lab-notice-icon">🏛️</span>
+                <span class="lab-notice-badge">📜 Arkib · Bab 1</span>
+                <span class="lab-notice-icon">📜</span>
                 <h2 class="lab-notice-title">Bina Negara Bangsa</h2>
                 <p class="lab-notice-sub">Subtopik 1.1 · Sejarah Tingkatan 4</p>
               </div>
@@ -690,7 +708,7 @@
                 </div>
               </div>
               <div class="lab-notice-footer">
-                <button class="lab-notice-btn" id="lab-notice-start">Mula Latihan ⚗️</button>
+                <button class="lab-notice-btn" id="lab-notice-start">Buka Arkib 📜</button>
               </div>
             </div>
           </div>
@@ -722,7 +740,7 @@
                 </div>
 
                 <div class="learning-lab-actions">
-                  <button class="learning-lab-btn" data-lab-action="start">Mula Latihan ⚗️</button>
+                  <button class="learning-lab-btn" data-lab-action="start">Buka Arkib 📜</button>
                 </div>
               </div>
 
@@ -808,7 +826,7 @@
   </div>
 
   <script src="../assets/js/subtopic-lab.js?v=1"></script>
-  <script src="../assets/js/main.js?v=46"></script>
+  <script src="../assets/js/main.js?v=47"></script>
   <script>
     (function () {
       var THEME_KEY = 'hazimedu-theme';
