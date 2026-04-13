@@ -1015,6 +1015,29 @@ body.accordion-no-smooth-scroll {
   color: var(--muted);
 }
 
+
+
+.bab-card-theme-1 { background: linear-gradient(135deg, #fff7ed, #ffe3cf); border-color: rgba(217, 119, 6, 0.25); }
+.bab-card-theme-1 .bab-card-top { background: #ffe8cc; color: #8a4b11; }
+
+.bab-card-theme-2 { background: linear-gradient(135deg, #f0f9ff, #d8f0ff); border-color: rgba(2, 132, 199, 0.24); }
+.bab-card-theme-2 .bab-card-top { background: #d8efff; color: #155e75; }
+
+.bab-card-theme-3 { background: linear-gradient(135deg, #f0fdf4, #d8f8e3); border-color: rgba(22, 163, 74, 0.24); }
+.bab-card-theme-3 .bab-card-top { background: #daf8e6; color: #166534; }
+
+.bab-card-theme-4 { background: linear-gradient(135deg, #f5f3ff, #e8e2ff); border-color: rgba(109, 40, 217, 0.24); }
+.bab-card-theme-4 .bab-card-top { background: #e9e3ff; color: #5b21b6; }
+
+.bab-card-theme-5 { background: linear-gradient(135deg, #fdf2f8, #ffe0ef); border-color: rgba(219, 39, 119, 0.24); }
+.bab-card-theme-5 .bab-card-top { background: #ffe3f0; color: #9d174d; }
+
+.bab-card-theme-6 { background: linear-gradient(135deg, #ecfeff, #cff7fa); border-color: rgba(13, 148, 136, 0.24); }
+.bab-card-theme-6 .bab-card-top { background: #d4f8fa; color: #0f766e; }
+
+.bab-card-theme-7 { background: linear-gradient(135deg, #fefce8, #fdf3c8); border-color: rgba(202, 138, 4, 0.24); }
+.bab-card-theme-7 .bab-card-top { background: #fdf4cc; color: #854d0e; }
+
 .bab-card-disabled {
   opacity: 0.78;
 }
