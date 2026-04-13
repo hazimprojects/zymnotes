@@ -158,6 +158,16 @@ html, body { background-color: var(--paper); }
   color: #7ecfb8;
 }
 
+
+
+[data-theme="dark"] .bab-card-theme-1 { background: linear-gradient(135deg, rgba(95, 50, 13, 0.32), rgba(72, 35, 10, 0.34)); border-color: rgba(251, 146, 60, 0.28); }
+[data-theme="dark"] .bab-card-theme-2 { background: linear-gradient(135deg, rgba(9, 65, 98, 0.32), rgba(8, 48, 72, 0.34)); border-color: rgba(56, 189, 248, 0.28); }
+[data-theme="dark"] .bab-card-theme-3 { background: linear-gradient(135deg, rgba(16, 90, 50, 0.3), rgba(13, 68, 38, 0.34)); border-color: rgba(74, 222, 128, 0.28); }
+[data-theme="dark"] .bab-card-theme-4 { background: linear-gradient(135deg, rgba(62, 33, 126, 0.3), rgba(49, 25, 102, 0.34)); border-color: rgba(167, 139, 250, 0.28); }
+[data-theme="dark"] .bab-card-theme-5 { background: linear-gradient(135deg, rgba(122, 26, 85, 0.28), rgba(92, 20, 63, 0.34)); border-color: rgba(244, 114, 182, 0.28); }
+[data-theme="dark"] .bab-card-theme-6 { background: linear-gradient(135deg, rgba(9, 82, 80, 0.3), rgba(8, 60, 58, 0.34)); border-color: rgba(45, 212, 191, 0.28); }
+[data-theme="dark"] .bab-card-theme-7 { background: linear-gradient(135deg, rgba(118, 86, 8, 0.28), rgba(89, 64, 6, 0.34)); border-color: rgba(250, 204, 21, 0.28); }
+
 [data-theme="dark"] .paper-chip {
   background: rgba(220, 210, 190, 0.05);
   border-color: rgba(220, 210, 190, 0.1);
