@@ -4,7 +4,7 @@ Generate data/updates.json from recent git commits.
 Run from the repo root. Invoked by GitHub Actions on every push to main.
 """
 
-import subprocess, json, re, os
+import subprocess, json, re, os, glob
 from collections import OrderedDict
 from datetime import datetime, timezone
 
@@ -135,49 +135,23 @@ def write_sitemap():
     BASE = 'https://hazimedu.com'
     today = datetime.now(timezone.utc).strftime('%Y-%m-%d')
 
-    # All indexable pages with their priority and changefreq
+    # Core pages
     pages = [
-        (f'{BASE}/',           '1.0', 'weekly'),
+        (f'{BASE}/', '1.0', 'weekly'),
         (f'{BASE}/about.html', '0.5', 'monthly'),
-        (f'{BASE}/notes/',     '0.9', 'weekly'),
-        # Chapter overview pages
-        (f'{BASE}/notes/bab-1.html', '0.8', 'monthly'),
-        (f'{BASE}/notes/bab-2.html', '0.8', 'monthly'),
-        (f'{BASE}/notes/bab-3.html', '0.8', 'monthly'),
-        (f'{BASE}/notes/bab-4.html', '0.8', 'monthly'),
-        # Subtopic pages — Bab 1
-        (f'{BASE}/notes/bab-1-1.html', '0.7', 'weekly'),
-        (f'{BASE}/notes/bab-1-2.html', '0.7', 'weekly'),
-        (f'{BASE}/notes/bab-1-3.html', '0.7', 'weekly'),
-        (f'{BASE}/notes/bab-1-4.html', '0.7', 'weekly'),
-        # Subtopic pages — Bab 2
-        (f'{BASE}/notes/bab-2-1.html', '0.7', 'weekly'),
-        (f'{BASE}/notes/bab-2-2.html', '0.7', 'weekly'),
-        (f'{BASE}/notes/bab-2-3.html', '0.7', 'weekly'),
-        (f'{BASE}/notes/bab-2-4.html', '0.7', 'weekly'),
-        (f'{BASE}/notes/bab-2-5.html', '0.7', 'weekly'),
-        (f'{BASE}/notes/bab-2-6.html', '0.7', 'weekly'),
-        (f'{BASE}/notes/bab-2-7.html', '0.7', 'weekly'),
-        (f'{BASE}/notes/bab-2-8.html', '0.7', 'weekly'),
-        # Subtopic pages — Bab 3
-        (f'{BASE}/notes/bab-3-1.html', '0.7', 'weekly'),
-        (f'{BASE}/notes/bab-3-2.html', '0.7', 'weekly'),
-        (f'{BASE}/notes/bab-3-3.html', '0.7', 'weekly'),
-        (f'{BASE}/notes/bab-3-4.html', '0.7', 'weekly'),
-        (f'{BASE}/notes/bab-3-5.html', '0.7', 'weekly'),
-        (f'{BASE}/notes/bab-3-6.html', '0.7', 'weekly'),
-        (f'{BASE}/notes/bab-3-7.html', '0.7', 'weekly'),
-        (f'{BASE}/notes/bab-3-8.html', '0.7', 'weekly'),
-        (f'{BASE}/notes/bab-3-9.html', '0.7', 'weekly'),
-        # Subtopic pages — Bab 4
-        (f'{BASE}/notes/bab-4-1.html', '0.7', 'weekly'),
-        (f'{BASE}/notes/bab-4-2.html', '0.7', 'weekly'),
-        (f'{BASE}/notes/bab-4-3.html', '0.7', 'weekly'),
-        (f'{BASE}/notes/bab-4-4.html', '0.7', 'weekly'),
-        (f'{BASE}/notes/bab-4-5.html', '0.7', 'weekly'),
-        (f'{BASE}/notes/bab-4-6.html', '0.7', 'weekly'),
-        (f'{BASE}/notes/bab-4-7.html', '0.7', 'weekly'),
+        (f'{BASE}/feedback.html', '0.4', 'monthly'),
+        (f'{BASE}/notes/', '0.9', 'weekly'),
     ]
+
+    note_pages = sorted(glob.glob('notes/bab-*.html'))
+    for path in note_pages:
+        m = re.match(r'^notes/bab-(\d+)(?:-(\d+))?\.html$', path)
+        if not m:
+            continue
+        is_subtopic = bool(m.group(2))
+        priority = '0.7' if is_subtopic else '0.8'
+        changefreq = 'weekly' if is_subtopic else 'monthly'
+        pages.append((f'{BASE}/{path}', priority, changefreq))
 
     url_entries = '\n'.join(
         f'  <url>\n    <loc>{loc}</loc>\n    <lastmod>{today}</lastmod>'
