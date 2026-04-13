@@ -11,13 +11,13 @@
   "categories": ["education"],
   "icons": [
     {
-      "src": "/icons/icon-v3.svg",
+      "src": "/icons/icon-v4.svg",
       "sizes": "any",
       "type": "image/svg+xml",
       "purpose": "any"
     },
     {
-      "src": "/icons/icon-maskable-v3.svg",
+      "src": "/icons/icon-maskable-v4.svg",
       "sizes": "any",
       "type": "image/svg+xml",
       "purpose": "maskable"
