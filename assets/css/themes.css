@@ -9,22 +9,22 @@
 ========================================================= */
 
 body[class^="bab-theme-"] {
-  --theme-bg-solid: #f5f9ff;
-  --theme-overlay-1: radial-gradient(circle at 10% 12%, rgba(96, 152, 228, 0.14), transparent 0 18%);
-  --theme-overlay-2: radial-gradient(circle at 88% 14%, rgba(86, 186, 149, 0.12), transparent 0 16%);
-  --theme-overlay-3: radial-gradient(circle at 18% 84%, rgba(255, 178, 112, 0.09), transparent 0 14%);
+  --theme-bg-solid: #f3f8ff;
+  --theme-overlay-1: radial-gradient(circle at 10% 12%, rgba(111, 167, 248, 0.18), transparent 0 20%);
+  --theme-overlay-2: radial-gradient(circle at 88% 14%, rgba(96, 216, 182, 0.14), transparent 0 18%);
+  --theme-overlay-3: radial-gradient(circle at 18% 84%, rgba(189, 149, 255, 0.14), transparent 0 16%);
   --theme-pattern: none;
-  --theme-gradient: linear-gradient(180deg, #fbfdff 0%, #eff7ff 52%, #eefbf4 100%);
+  --theme-gradient: linear-gradient(180deg, #fcfdff 0%, #f2f7ff 52%, #eefbf9 100%);
 
   --theme-label-bg: linear-gradient(90deg, #e8f2ff, #ddeeff);
   --theme-label-color: #2f567f;
 
-  --theme-surface-bg: rgba(255, 255, 255, 0.90);
+  --theme-surface-bg: linear-gradient(145deg, rgba(255, 255, 255, 0.9), rgba(246, 252, 255, 0.84));
   --theme-surface-border: rgba(92, 110, 132, 0.13);
-  --theme-surface-shadow: 0 16px 36px rgba(36, 49, 63, 0.10);
+  --theme-surface-shadow: 0 18px 40px rgba(36, 49, 63, 0.11);
 
-  --theme-header-bg: rgba(243, 249, 255, 0.86);
-  --theme-footer-bg: rgba(243, 249, 255, 0.74);
+  --theme-header-bg: rgba(255, 255, 255, 0.74);
+  --theme-footer-bg: linear-gradient(135deg, rgba(255, 255, 255, 0.78), rgba(244, 251, 255, 0.72));
 
   background-color: var(--theme-bg-solid);
   background-image:
@@ -61,10 +61,12 @@ body[class^="bab-theme-"] {
 
 body[class^="bab-theme-"] .site-header {
   background: var(--theme-header-bg);
+  backdrop-filter: blur(16px);
 }
 
 body[class^="bab-theme-"] .site-footer {
   background: var(--theme-footer-bg);
+  backdrop-filter: blur(14px);
 }
 
 body[class^="bab-theme-"] .paper-label,
@@ -100,6 +102,12 @@ body[class^="bab-theme-"] .search-empty {
   background: var(--theme-surface-bg);
   border-color: var(--theme-surface-border);
   box-shadow: var(--theme-surface-shadow);
+}
+
+/* Light refresh override supaya semua bab tidak lagi beige-dominant */
+body[class^="bab-theme-"] {
+  --theme-bg-solid: #f3f8ff;
+  --theme-gradient: linear-gradient(180deg, #fcfdff 0%, #f2f7ff 52%, #eefbf9 100%);
 }
 
 /* =========================================================
@@ -457,6 +465,17 @@ html[data-theme="dark"] body.bab-theme-10 {
   --theme-overlay-3: radial-gradient(circle at 18% 84%, rgba(132, 154, 206, 0.08), transparent 0 14%);
   --theme-pattern: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='760' height='640' viewBox='0 0 760 640'%3E%3Crect width='760' height='640' fill='none'/%3E%3Cg opacity='0.09'%3E%3Cpath d='M106 126h230M106 162h194M106 198h212' stroke='%239fe2d3' stroke-width='3' stroke-linecap='round'/%3E%3Cpath d='M406 118c40-28 86-28 126 0M406 162c40-28 86-28 126 0' fill='none' stroke='%23d9b36f' stroke-width='3' stroke-linecap='round'/%3E%3Ccircle cx='168' cy='432' r='54' fill='none' stroke='%23b9c8e6' stroke-width='4'/%3E%3Crect x='384' y='372' width='248' height='132' rx='16' fill='none' stroke='%239fe2d3' stroke-width='3'/%3E%3C/g%3E%3C/svg%3E");
   --theme-gradient: linear-gradient(180deg, #1c1a18 0%, #171512 100%);
+}
+
+/* =========================================================
+   LIGHT REFRESH — paksa tona putih moden untuk semua bab
+========================================================= */
+body[class^="bab-theme-"] {
+  --theme-bg-solid: #f3f8ff !important;
+  --theme-overlay-1: radial-gradient(circle at 10% 12%, rgba(111, 167, 248, 0.18), transparent 0 20%) !important;
+  --theme-overlay-2: radial-gradient(circle at 88% 14%, rgba(96, 216, 182, 0.14), transparent 0 18%) !important;
+  --theme-overlay-3: radial-gradient(circle at 18% 84%, rgba(189, 149, 255, 0.14), transparent 0 16%) !important;
+  --theme-gradient: linear-gradient(180deg, #fcfdff 0%, #f2f7ff 52%, #eefbf9 100%) !important;
 }
 
 /* =========================================================

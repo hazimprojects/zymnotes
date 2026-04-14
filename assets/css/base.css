@@ -1,9 +1,9 @@
 :root {
-  --bg: #f7f4ee;
-  --paper: #fffdf8;
-  --paper-soft: #f4efe4;
-  --paper-warm: #f8f1e3;
-  --paper-note: #fff7d6;
+  --bg: #f2f7ff;
+  --paper: #ffffff;
+  --paper-soft: #f3f8ff;
+  --paper-warm: #f7fbff;
+  --paper-note: #eef6ff;
   --ink: #24313f;
   --muted: #5d6a79;
   --line: rgba(92, 110, 132, 0.16);
@@ -30,6 +30,15 @@
 /* Prevent only horizontal overscroll — keeps pull-to-refresh (swipe down) working */
 html { overscroll-behavior-x: none; }
 html, body { background-color: var(--paper); }
+
+body {
+  background:
+    radial-gradient(circle at 8% 10%, rgba(120, 174, 255, 0.16), transparent 30%),
+    radial-gradient(circle at 88% 16%, rgba(95, 225, 190, 0.14), transparent 26%),
+    radial-gradient(circle at 24% 86%, rgba(179, 151, 255, 0.12), transparent 28%),
+    linear-gradient(180deg, #fbfdff 0%, #f2f7ff 52%, #eefbf7 100%);
+  min-height: 100vh;
+}
 
 /* =========================
    DARK MODE TOKENS — Warm Dim
