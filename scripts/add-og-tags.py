@@ -5,7 +5,7 @@ Run from the /home/user/hazimedu directory.
 """
 import os, re, glob
 
-OG_IMAGE = "https://hazimedu.com/assets/og-image.png"
+OG_IMAGE = "https://hazimedu.com/assets/og-image.png?v=20260414"
 SITE_NAME = "HazimEdu"
 DEFAULT_DESC = "Platform pendidikan digital yang membina nota visual, kemas dan mesra telefon untuk membantu pelajar belajar dengan lebih jelas dan berkesan."
 
@@ -26,6 +26,7 @@ def make_og_block(title, desc, url):
         f'  <meta property="og:description" content="{desc}" />\n'
         f'  <meta property="og:url" content="{url}" />\n'
         f'  <meta property="og:image" content="{OG_IMAGE}" />\n'
+        f'  <meta property="og:image:url" content="{OG_IMAGE}" />\n'
         f'  <meta property="og:image:secure_url" content="{OG_IMAGE}" />\n'
         f'  <meta property="og:image:type" content="image/png" />\n'
         f'  <meta property="og:image:width" content="1424" />\n'
@@ -39,6 +40,7 @@ def make_og_block(title, desc, url):
         f'  <meta name="twitter:title" content="{title}" />\n'
         f'  <meta name="twitter:description" content="{desc}" />\n'
         f'  <meta name="twitter:image" content="{OG_IMAGE}" />\n'
+        f'  <meta name="twitter:image:src" content="{OG_IMAGE}" />\n'
     )
 
 def escape_attr(s):
