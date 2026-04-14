@@ -1015,6 +1015,33 @@ body.accordion-no-smooth-scroll {
   color: var(--muted);
 }
 
+.bab-card-meta {
+  margin-top: 0.7rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.bab-card-time {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #5f5a50;
+}
+
+.bab-status-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+  border: 1px solid rgba(92, 110, 132, 0.18);
+  background: rgba(255, 255, 255, 0.55);
+  color: #3b4f67;
+  font-size: 0.72rem;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
 
 
 .bab-card-theme-1 { background: linear-gradient(135deg, #fff7ed, #ffe3cf); border-color: rgba(217, 119, 6, 0.25); }

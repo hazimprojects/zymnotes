@@ -158,6 +158,16 @@ html, body { background-color: var(--paper); }
   color: #7ecfb8;
 }
 
+[data-theme="dark"] .bab-card-time {
+  color: #d0c5b4;
+}
+
+[data-theme="dark"] .bab-status-badge {
+  background: rgba(220, 210, 190, 0.08);
+  border-color: rgba(220, 210, 190, 0.2);
+  color: #d8ebf7;
+}
+
 
 
 [data-theme="dark"] .bab-card-theme-1 { background: linear-gradient(135deg, rgba(95, 50, 13, 0.32), rgba(72, 35, 10, 0.34)); border-color: rgba(251, 146, 60, 0.28); }
@@ -427,4 +437,3 @@ select {
   backdrop-filter: blur(8px);
   transition: background 0.35s ease;
 }
-
