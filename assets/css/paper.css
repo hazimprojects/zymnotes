@@ -317,9 +317,12 @@
   position: relative;
   padding: 1.1rem;
   border-radius: 28px;
-  background: var(--paper);
-  border: 1px solid var(--line);
-  box-shadow: var(--shadow-medium);
+  background:
+    radial-gradient(circle at 100% -10%, rgba(255, 199, 132, 0.2), transparent 36%),
+    radial-gradient(circle at 0% 105%, rgba(121, 205, 255, 0.16), transparent 34%),
+    var(--paper);
+  border: 1px solid rgba(92, 110, 132, 0.16);
+  box-shadow: 0 14px 30px rgba(36, 49, 63, 0.1);
   transition: background 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
 }
 
@@ -963,9 +966,9 @@ body.accordion-no-smooth-scroll {
 .mindmap-card {
   padding: 0.9rem;
   border-radius: 16px;
-  background: #fffaf0;
-  border: 1px solid rgba(92, 110, 132, 0.12);
-  box-shadow: var(--shadow-soft);
+  background: linear-gradient(145deg, #fffdf6, #eef9ff);
+  border: 1px solid rgba(92, 110, 132, 0.16);
+  box-shadow: 0 10px 24px rgba(36, 49, 63, 0.08);
   font-weight: 700;
   color: var(--ink);
   transition: background 0.35s ease, transform 0.2s ease;
@@ -982,15 +985,14 @@ body.accordion-no-smooth-scroll {
   display: block;
   padding: 1rem;
   border-radius: 20px;
-  background: linear-gradient(135deg, #fffefb, #f5eddc);
-  border: 1px solid rgba(92, 110, 132, 0.12);
-  box-shadow: var(--shadow-soft);
+  border: 1px solid rgba(92, 110, 132, 0.18);
+  box-shadow: 0 12px 28px rgba(36, 49, 63, 0.08);
   transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.35s ease, border-color 0.35s ease;
 }
 
 .bab-card:hover {
-  transform: translateY(-3px) rotate(0.3deg);
-  box-shadow: var(--shadow-medium);
+  transform: translateY(-3px);
+  box-shadow: 0 16px 36px rgba(36, 49, 63, 0.12);
   border-color: rgba(47, 122, 103, 0.22);
 }
 
@@ -999,7 +1001,9 @@ body.accordion-no-smooth-scroll {
   margin-bottom: 0.65rem;
   padding: 0.35rem 0.6rem;
   border-radius: 12px;
-  background: #dfeedd;
+  background: #f5fbff;
+  border: 1px solid rgba(92, 110, 132, 0.1);
+  box-shadow: 0 6px 14px rgba(36, 49, 63, 0.07);
   color: #315649;
   font-size: 0.76rem;
   font-weight: 800;
@@ -1044,22 +1048,22 @@ body.accordion-no-smooth-scroll {
 
 
 
-.bab-card-theme-1 { background: linear-gradient(135deg, #fff7ed, #ffe3cf); border-color: rgba(217, 119, 6, 0.25); }
+.bab-card-theme-1 { background: linear-gradient(150deg, #fff9f2, #ffe9cf); border-color: rgba(217, 119, 6, 0.25); }
 .bab-card-theme-1 .bab-card-top { background: #ffe8cc; color: #8a4b11; }
 
-.bab-card-theme-2 { background: linear-gradient(135deg, #f0f9ff, #d8f0ff); border-color: rgba(2, 132, 199, 0.24); }
+.bab-card-theme-2 { background: linear-gradient(150deg, #f4fbff, #ddf1ff); border-color: rgba(2, 132, 199, 0.24); }
 .bab-card-theme-2 .bab-card-top { background: #d8efff; color: #155e75; }
 
-.bab-card-theme-3 { background: linear-gradient(135deg, #f0fdf4, #d8f8e3); border-color: rgba(22, 163, 74, 0.24); }
+.bab-card-theme-3 { background: linear-gradient(150deg, #f3fff8, #dbf7e8); border-color: rgba(22, 163, 74, 0.24); }
 .bab-card-theme-3 .bab-card-top { background: #daf8e6; color: #166534; }
 
-.bab-card-theme-4 { background: linear-gradient(135deg, #f5f3ff, #e8e2ff); border-color: rgba(109, 40, 217, 0.24); }
+.bab-card-theme-4 { background: linear-gradient(150deg, #faf7ff, #ebe1ff); border-color: rgba(109, 40, 217, 0.24); }
 .bab-card-theme-4 .bab-card-top { background: #e9e3ff; color: #5b21b6; }
 
-.bab-card-theme-5 { background: linear-gradient(135deg, #fdf2f8, #ffe0ef); border-color: rgba(219, 39, 119, 0.24); }
+.bab-card-theme-5 { background: linear-gradient(150deg, #fff7fc, #ffe5f3); border-color: rgba(219, 39, 119, 0.24); }
 .bab-card-theme-5 .bab-card-top { background: #ffe3f0; color: #9d174d; }
 
-.bab-card-theme-6 { background: linear-gradient(135deg, #ecfeff, #cff7fa); border-color: rgba(13, 148, 136, 0.24); }
+.bab-card-theme-6 { background: linear-gradient(150deg, #f2fdff, #d7f5fb); border-color: rgba(13, 148, 136, 0.24); }
 .bab-card-theme-6 .bab-card-top { background: #d4f8fa; color: #0f766e; }
 
 .bab-card-theme-7 { background: linear-gradient(135deg, #fefce8, #fdf3c8); border-color: rgba(202, 138, 4, 0.24); }
@@ -1080,9 +1084,9 @@ body.accordion-no-smooth-scroll {
 .paper-flow-card {
   padding: 0.7rem 0.85rem;
   border-radius: 14px;
-  background: #fffaf0;
-  border: 1px solid rgba(92, 110, 132, 0.12);
-  box-shadow: var(--shadow-soft);
+  background: linear-gradient(145deg, #fffdf6, #eef9ff);
+  border: 1px solid rgba(92, 110, 132, 0.16);
+  box-shadow: 0 10px 24px rgba(36, 49, 63, 0.08);
   font-weight: 700;
   transition: background 0.35s ease, transform 0.2s ease;
 }
