@@ -1,9 +1,9 @@
 :root {
-  --bg: #f7f4ee;
-  --paper: #fffdf8;
-  --paper-soft: #f4efe4;
-  --paper-warm: #f8f1e3;
-  --paper-note: #fff7d6;
+  --bg: #f4f9ff;
+  --paper: #ffffff;
+  --paper-soft: #f2f8ff;
+  --paper-warm: #eef6ff;
+  --paper-note: #fff9dd;
   --ink: #24313f;
   --muted: #5d6a79;
   --line: rgba(92, 110, 132, 0.16);
@@ -411,7 +411,7 @@ select {
 }
 
 .section-soft {
-  background: rgba(255, 251, 244, 0.6);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.74), rgba(242, 249, 255, 0.74));
   backdrop-filter: blur(8px);
   transition: background 0.35s ease;
 }

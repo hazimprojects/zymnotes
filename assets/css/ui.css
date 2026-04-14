@@ -83,7 +83,7 @@
 .content-block {
   padding: 1.05rem;
   border-radius: var(--radius);
-  background: rgba(255, 253, 248, 0.88);
+  background: rgba(255, 255, 255, 0.9);
   border: 1px solid var(--line);
   box-shadow: var(--shadow-soft);
   transition: background 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease, transform 0.2s ease;
@@ -376,7 +376,7 @@
   gap: 1rem;
   padding: 1.35rem;
   border-radius: 24px;
-  background: linear-gradient(135deg, rgba(255,253,248,0.96), rgba(245,239,228,0.96));
+  background: linear-gradient(135deg, rgba(255,253,248,0.96), rgba(237,246,255,0.96));
   border: 1px solid rgba(92,110,132,0.12);
   box-shadow: var(--shadow-medium);
   transition: background 0.35s ease, border-color 0.35s ease;
@@ -388,7 +388,7 @@
 }
 
 .paper-preview-panel {
-  background: rgba(255, 253, 248, 0.94);
+  background: rgba(255, 255, 255, 0.95);
 }
 
 .preview-subtopic {
@@ -402,7 +402,7 @@
 }
 
 .homepage-focus-section .paper-board {
-  background: linear-gradient(135deg, #fffdf8, #f7f0e1);
+  background: linear-gradient(135deg, #ffffff, #edf6ff);
 }
 
 
@@ -585,7 +585,7 @@
 .org-node {
   display: inline-flex; align-items: center; justify-content: center;
   min-height: 54px; padding: 0.85rem 1rem; border-radius: 18px;
-  background: rgba(255, 253, 248, 0.85); border: 1px solid rgba(92, 110, 132, 0.1);
+  background: rgba(255, 255, 255, 0.88); border: 1px solid rgba(92, 110, 132, 0.1);
   box-shadow: var(--shadow-soft); font-weight: 700; line-height: 1.35;
   transition: background 0.35s ease, transform 0.2s ease;
 }
@@ -639,7 +639,7 @@
 
 .feature-illustration-card,
 .inline-illustration-card {
-  background: var(--surface, #fffdf8);
+  background: var(--surface, #ffffff);
   border: 1px solid rgba(92, 110, 132, 0.14);
   border-radius: 24px;
   box-shadow: 0 12px 28px rgba(36, 49, 63, 0.08);
@@ -784,7 +784,7 @@
   gap: 0.4rem;
   padding: 0.45rem 0.75rem;
   border-radius: 999px;
-  background: rgba(255, 253, 248, 0.88);
+  background: rgba(255, 255, 255, 0.9);
   border: 1px solid rgba(92, 110, 132, 0.12);
   font-size: 0.78rem;
   font-weight: 800;
@@ -937,7 +937,7 @@
   gap: 0.35rem;
   padding: 0.38rem 0.7rem;
   border-radius: 999px;
-  background: rgba(255, 253, 248, 0.92);
+  background: rgba(255, 255, 255, 0.93);
   border: 1px solid rgba(92, 110, 132, 0.1);
   font-size: 0.74rem;
   font-weight: 800;
@@ -963,7 +963,7 @@
   height: 76px;
   padding: 0 1rem;
   border-radius: 24px;
-  background: rgba(255, 253, 248, 0.9);
+  background: rgba(255, 255, 255, 0.91);
   border: 1px solid rgba(92, 110, 132, 0.12);
   font-size: 0.9rem;
   font-weight: 800;
@@ -1026,7 +1026,7 @@
   gap: 0.45rem;
   padding: 0.44rem 0.82rem;
   border-radius: 999px;
-  background: rgba(255, 253, 248, 0.94);
+  background: rgba(255, 255, 255, 0.95);
   border: 1px solid rgba(92, 110, 132, 0.1);
   font-size: 0.76rem;
   font-weight: 800;
@@ -1169,7 +1169,7 @@
   width: 44px; height: 44px;
   border-radius: 50%;
   border: 1px solid rgba(92, 110, 132, 0.13);
-  background: rgba(255, 253, 248, 0.97);
+  background: rgba(255, 255, 255, 0.97);
   box-shadow: 0 6px 18px rgba(36, 49, 63, 0.12), 0 2px 6px rgba(36, 49, 63, 0.07);
   cursor: pointer;
   display: flex; align-items: center; justify-content: center;
@@ -1182,7 +1182,7 @@
 }
 .note-sparkle-item svg { width: 20px; height: 20px; pointer-events: none; }
 .note-sparkle-item:hover {
-  background: rgba(255, 253, 248, 1);
+  background: rgba(255, 255, 255, 1);
   box-shadow: 0 8px 22px rgba(36, 49, 63, 0.17), 0 2px 8px rgba(36, 49, 63, 0.1);
 }
 
