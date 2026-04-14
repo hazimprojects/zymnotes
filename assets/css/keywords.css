@@ -14,24 +14,20 @@
   -webkit-box-decoration-break: clone;
 }
 
-/* Bab 1 / Global asas */
+/* Global keyword palette (unik untuk semua bab) */
 .kw-tokoh { color: #9f1239; background: rgba(255, 228, 230, 0.92); }
-.kw-masa { color: #1d4ed8; background: rgba(219, 234, 254, 0.92); }
+.kw-masa { color: #1e40af; background: rgba(219, 234, 254, 0.92); }
+.kw-tahun { color: #075985; background: rgba(224, 242, 254, 0.94); }
 .kw-tempat { color: #166534; background: rgba(220, 252, 231, 0.92); }
-.kw-konsep { color: #c2410c; background: rgba(255, 237, 213, 0.94); }
+.kw-konsep { color: #9a3412; background: rgba(255, 237, 213, 0.94); }
 .kw-kerajaan { color: #6d28d9; background: rgba(237, 233, 254, 0.94); }
 .kw-istilah { color: #0f766e; background: rgba(204, 251, 241, 0.94); }
-
-/* Tambahan global baharu */
-.kw-pentadbiran { color: #b35c1e; background: rgba(255, 230, 207, 0.94); }
-.kw-perjanjian { color: #b35c1e; background: rgba(255, 230, 207, 0.94); }
-
-/* Bab 2 / Global lanjutan */
-.kw-tahun { color: #3458b2; background: rgba(219, 232, 255, 0.94); }
-.kw-peristiwa { color: #b35c1e; background: rgba(255, 230, 207, 0.94); }
-.kw-gerakan { color: #7c35b2; background: rgba(242, 222, 252, 0.94); }
-.kw-pertubuhan { color: #5f3eb2; background: rgba(231, 222, 252, 0.94); }
-.kw-karya { color: #2f7f86; background: rgba(217, 243, 244, 0.94); }
+.kw-pentadbiran { color: #92400e; background: rgba(254, 243, 199, 0.94); }
+.kw-perjanjian { color: #be185d; background: rgba(252, 231, 243, 0.94); }
+.kw-peristiwa { color: #b45309; background: rgba(254, 249, 195, 0.94); }
+.kw-gerakan { color: #7e22ce; background: rgba(243, 232, 255, 0.94); }
+.kw-pertubuhan { color: #4338ca; background: rgba(224, 231, 255, 0.94); }
+.kw-karya { color: #0e7490; background: rgba(207, 250, 254, 0.94); }
 
 .paper-chip .kw,
 .point-line .kw,
@@ -56,194 +52,25 @@ html[data-theme="dark"] .kw-tokoh {
   background: rgba(110, 28, 50, 0.34);
 }
 
-html[data-theme="dark"] .kw-masa,
-html[data-theme="dark"] .kw-tahun {
-  color: #a9c4f2;
-  background: rgba(42, 66, 132, 0.34);
-}
+html[data-theme="dark"] .kw-masa { color: #a9c4f2; background: rgba(42, 66, 132, 0.34); }
+html[data-theme="dark"] .kw-tahun { color: #8ecae6; background: rgba(8, 47, 73, 0.34); }
 
 html[data-theme="dark"] .kw-tempat {
   color: #9dd8b0;
   background: rgba(24, 78, 48, 0.34);
 }
 
-html[data-theme="dark"] .kw-konsep,
-html[data-theme="dark"] .kw-peristiwa,
-html[data-theme="dark"] .kw-pentadbiran,
-html[data-theme="dark"] .kw-perjanjian {
-  color: #efb483;
-  background: rgba(110, 60, 18, 0.34);
-}
+html[data-theme="dark"] .kw-konsep { color: #fdba74; background: rgba(124, 45, 18, 0.34); }
+html[data-theme="dark"] .kw-pentadbiran { color: #facc15; background: rgba(113, 63, 18, 0.34); }
+html[data-theme="dark"] .kw-perjanjian { color: #f9a8d4; background: rgba(131, 24, 67, 0.34); }
+html[data-theme="dark"] .kw-peristiwa { color: #fcd34d; background: rgba(120, 53, 15, 0.34); }
 
-html[data-theme="dark"] .kw-kerajaan,
-html[data-theme="dark"] .kw-gerakan,
-html[data-theme="dark"] .kw-pertubuhan {
-  color: #c8aff7;
-  background: rgba(72, 34, 120, 0.34);
-}
+html[data-theme="dark"] .kw-kerajaan { color: #c4b5fd; background: rgba(76, 29, 149, 0.34); }
+html[data-theme="dark"] .kw-gerakan { color: #d8b4fe; background: rgba(88, 28, 135, 0.34); }
+html[data-theme="dark"] .kw-pertubuhan { color: #a5b4fc; background: rgba(49, 46, 129, 0.34); }
 
-html[data-theme="dark"] .kw-istilah,
-html[data-theme="dark"] .kw-karya {
-  color: #86ddd4;
-  background: rgba(14, 90, 82, 0.34);
-}
-
-/* =========================
-   KEYWORD HIGHLIGHT — BAB 3
-========================= */
-
-.kw-b3-tokoh { color: #9f1239; background: rgba(255, 228, 230, 0.92); }
-.kw-b3-tahun { color: #3458b2; background: rgba(219, 232, 255, 0.94); }
-.kw-b3-tempat { color: #166534; background: rgba(220, 252, 231, 0.92); }
-.kw-b3-peristiwa { color: #b35c1e; background: rgba(255, 230, 207, 0.94); }
-.kw-b3-ideologi { color: #7c35b2; background: rgba(242, 222, 252, 0.94); }
-.kw-b3-pertubuhan { color: #5f3eb2; background: rgba(231, 222, 252, 0.94); }
-.kw-b3-perjanjian { color: #2f7f86; background: rgba(217, 243, 244, 0.94); }
-.kw-b3-istilah { color: #0f766e; background: rgba(204, 251, 241, 0.94); }
-.kw-b3-karya { color: #92400e; background: rgba(254, 243, 199, 0.94); }
-
-[class^="kw-b3-"] {
-  font-size: inherit;
-  line-height: inherit;
-  font-weight: 700;
-  box-decoration-break: clone;
-  -webkit-box-decoration-break: clone;
-}
-
-/* =========================
-   KEYWORD HIGHLIGHT — BAB 4
-========================= */
-
-.kw-b4-tokoh {
-  color: #9f1239;
-  background: rgba(255, 228, 230, 0.92);
-}
-
-.kw-b4-masa {
-  color: #3458b2;
-  background: rgba(219, 232, 255, 0.94);
-}
-
-.kw-b4-tempat {
-  color: #166534;
-  background: rgba(220, 252, 231, 0.92);
-}
-
-.kw-b4-pentadbiran {
-  color: #b35c1e;
-  background: rgba(255, 230, 207, 0.94);
-}
-
-.kw-b4-pertubuhan {
-  color: #6d28d9;
-  background: rgba(237, 233, 254, 0.94);
-}
-
-.kw-b4-istilah {
-  color: #0f766e;
-  background: rgba(204, 251, 241, 0.94);
-}
-
-[class^="kw-b4-"] {
-  font-size: inherit;
-  line-height: inherit;
-  font-weight: 700;
-  box-decoration-break: clone;
-  -webkit-box-decoration-break: clone;
-}
-
-.paper-chip .kw-b4-tokoh,
-.paper-chip .kw-b4-masa,
-.paper-chip .kw-b4-tempat,
-.paper-chip .kw-b4-pentadbiran,
-.paper-chip .kw-b4-pertubuhan,
-.paper-chip .kw-b4-istilah,
-.point-line .kw-b4-tokoh,
-.point-line .kw-b4-masa,
-.point-line .kw-b4-tempat,
-.point-line .kw-b4-pentadbiran,
-.point-line .kw-b4-pertubuhan,
-.point-line .kw-b4-istilah,
-.lead .kw-b4-tokoh,
-.lead .kw-b4-masa,
-.lead .kw-b4-tempat,
-.lead .kw-b4-pentadbiran,
-.lead .kw-b4-pertubuhan,
-.lead .kw-b4-istilah,
-.emoji-point-list .kw-b4-tokoh,
-.emoji-point-list .kw-b4-masa,
-.emoji-point-list .kw-b4-tempat,
-.emoji-point-list .kw-b4-pentadbiran,
-.emoji-point-list .kw-b4-pertubuhan,
-.emoji-point-list .kw-b4-istilah,
-.answer-paper .kw-b4-tokoh,
-.answer-paper .kw-b4-masa,
-.answer-paper .kw-b4-tempat,
-.answer-paper .kw-b4-pentadbiran,
-.answer-paper .kw-b4-pertubuhan,
-.answer-paper .kw-b4-istilah,
-.paper-kingdom .kw-b4-tokoh,
-.paper-kingdom .kw-b4-masa,
-.paper-kingdom .kw-b4-tempat,
-.paper-kingdom .kw-b4-pentadbiran,
-.paper-kingdom .kw-b4-pertubuhan,
-.paper-kingdom .kw-b4-istilah,
-.paper-timeline-panel .kw-b4-tokoh,
-.paper-timeline-panel .kw-b4-masa,
-.paper-timeline-panel .kw-b4-tempat,
-.paper-timeline-panel .kw-b4-pentadbiran,
-.paper-timeline-panel .kw-b4-pertubuhan,
-.paper-timeline-panel .kw-b4-istilah,
-.paper-accordion-panel .kw-b4-tokoh,
-.paper-accordion-panel .kw-b4-masa,
-.paper-accordion-panel .kw-b4-tempat,
-.paper-accordion-panel .kw-b4-pentadbiran,
-.paper-accordion-panel .kw-b4-pertubuhan,
-.paper-accordion-panel .kw-b4-istilah,
-.keyword-legend-item .kw-b4-tokoh,
-.keyword-legend-item .kw-b4-masa,
-.keyword-legend-item .kw-b4-tempat,
-.keyword-legend-item .kw-b4-pentadbiran,
-.keyword-legend-item .kw-b4-pertubuhan,
-.keyword-legend-item .kw-b4-istilah {
-  font-size: inherit;
-  line-height: inherit;
-  font-weight: 700;
-}
-
-/* =========================
-   KEYWORD HIGHLIGHT — BAB 4 (DARK MODE)
-========================= */
-
-html[data-theme="dark"] .kw-b4-tokoh {
-  color: #f2a7bb;
-  background: rgba(110, 28, 50, 0.34);
-}
-
-html[data-theme="dark"] .kw-b4-masa {
-  color: #a9c4f2;
-  background: rgba(42, 66, 132, 0.34);
-}
-
-html[data-theme="dark"] .kw-b4-tempat {
-  color: #9dd8b0;
-  background: rgba(24, 78, 48, 0.34);
-}
-
-html[data-theme="dark"] .kw-b4-pentadbiran {
-  color: #efb483;
-  background: rgba(110, 60, 18, 0.34);
-}
-
-html[data-theme="dark"] .kw-b4-pertubuhan {
-  color: #c8aff7;
-  background: rgba(72, 34, 120, 0.34);
-}
-
-html[data-theme="dark"] .kw-b4-istilah {
-  color: #86ddd4;
-  background: rgba(14, 90, 82, 0.34);
-}
+html[data-theme="dark"] .kw-istilah { color: #86ddd4; background: rgba(14, 90, 82, 0.34); }
+html[data-theme="dark"] .kw-karya { color: #67e8f9; background: rgba(21, 94, 117, 0.34); }
 
 /* =========================
    IDENTITI BLOK PERANG
@@ -380,10 +207,6 @@ html[data-theme="dark"] .kw-b4-istilah {
   gap: 0.5rem 0.6rem;
 }
 
-.keyword-legend-grid-bab2 {
-  gap: 0.52rem 0.62rem;
-}
-
 .keyword-legend-item {
   display: inline-flex;
   align-items: center;
@@ -397,8 +220,7 @@ html[data-theme="dark"] .kw-b4-istilah {
 }
 
 .keyword-legend-item .kw,
-.keyword-legend-item [class^="kw-b3-"],
-.keyword-legend-item [class^="kw-b4-"] {
+.keyword-legend-item [class^="kw-"] {
   display: inline;
   font-size: 0.92rem;
   line-height: 1.3;
