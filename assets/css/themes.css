@@ -9,22 +9,22 @@
 ========================================================= */
 
 body[class^="bab-theme-"] {
-  --theme-bg-solid: #efe9de;
-  --theme-overlay-1: radial-gradient(circle at 10% 12%, rgba(80, 110, 130, 0.14), transparent 0 18%);
-  --theme-overlay-2: radial-gradient(circle at 88% 14%, rgba(95, 120, 90, 0.12), transparent 0 16%);
-  --theme-overlay-3: radial-gradient(circle at 18% 84%, rgba(150, 100, 70, 0.08), transparent 0 14%);
+  --theme-bg-solid: #f5f9ff;
+  --theme-overlay-1: radial-gradient(circle at 10% 12%, rgba(96, 152, 228, 0.14), transparent 0 18%);
+  --theme-overlay-2: radial-gradient(circle at 88% 14%, rgba(86, 186, 149, 0.12), transparent 0 16%);
+  --theme-overlay-3: radial-gradient(circle at 18% 84%, rgba(255, 178, 112, 0.09), transparent 0 14%);
   --theme-pattern: none;
-  --theme-gradient: linear-gradient(180deg, #f3ece0 0%, #e6dccb 100%);
+  --theme-gradient: linear-gradient(180deg, #fbfdff 0%, #eff7ff 52%, #eefbf4 100%);
 
-  --theme-label-bg: linear-gradient(90deg, #e3e8ef, #d8dfe8);
-  --theme-label-color: #445b74;
+  --theme-label-bg: linear-gradient(90deg, #e8f2ff, #ddeeff);
+  --theme-label-color: #2f567f;
 
-  --theme-surface-bg: rgba(255, 252, 247, 0.90);
-  --theme-surface-border: rgba(92, 110, 132, 0.14);
-  --theme-surface-shadow: 0 16px 36px rgba(36, 49, 63, 0.12);
+  --theme-surface-bg: rgba(255, 255, 255, 0.90);
+  --theme-surface-border: rgba(92, 110, 132, 0.13);
+  --theme-surface-shadow: 0 16px 36px rgba(36, 49, 63, 0.10);
 
-  --theme-header-bg: rgba(243, 238, 229, 0.86);
-  --theme-footer-bg: rgba(243, 238, 229, 0.74);
+  --theme-header-bg: rgba(243, 249, 255, 0.86);
+  --theme-footer-bg: rgba(243, 249, 255, 0.74);
 
   background-color: var(--theme-bg-solid);
   background-image:
