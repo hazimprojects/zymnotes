@@ -42,6 +42,96 @@
   </script>
 
   <style>
+    body.homepage-vibrant {
+      background:
+        radial-gradient(circle at 8% 10%, rgba(255, 156, 99, 0.18), transparent 28%),
+        radial-gradient(circle at 90% 14%, rgba(81, 186, 255, 0.2), transparent 30%),
+        radial-gradient(circle at 50% 88%, rgba(120, 228, 174, 0.2), transparent 34%),
+        linear-gradient(180deg, #fffdf7 0%, #fff8ef 45%, #f7fbff 100%);
+    }
+
+    body.homepage-vibrant .hero {
+      background: linear-gradient(135deg, rgba(255, 228, 179, 0.22), rgba(195, 240, 255, 0.16));
+      border-bottom: 1px solid rgba(92, 110, 132, 0.08);
+    }
+
+    body.homepage-vibrant .metric-card {
+      border: 1px solid rgba(92, 110, 132, 0.2);
+      background: linear-gradient(145deg, rgba(255, 255, 255, 0.9), rgba(255, 249, 237, 0.86));
+    }
+
+    .emoji-tagline {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      margin-top: 0.3rem;
+      font-size: 0.9rem;
+      color: #5c4f3d;
+      font-weight: 700;
+    }
+
+    .metric-icon {
+      display: inline-flex;
+      width: 2.1rem;
+      height: 2.1rem;
+      align-items: center;
+      justify-content: center;
+      border-radius: 999px;
+      margin-bottom: 0.55rem;
+      font-size: 1.1rem;
+      background: rgba(255, 255, 255, 0.82);
+      border: 1px solid rgba(92, 110, 132, 0.14);
+      box-shadow: 0 6px 16px rgba(36, 49, 63, 0.08);
+    }
+
+    .color-chip-row {
+      display: flex;
+      gap: 0.45rem;
+      margin-top: 0.8rem;
+      flex-wrap: wrap;
+    }
+
+    .color-chip {
+      padding: 0.3rem 0.65rem;
+      border-radius: 999px;
+      font-size: 0.73rem;
+      font-weight: 800;
+      letter-spacing: 0.02em;
+      color: #403628;
+      border: 1px solid rgba(92, 110, 132, 0.14);
+      background: #fff;
+    }
+
+    .chip-1 { background: #ffe9d3; }
+    .chip-2 { background: #d9f5ff; }
+    .chip-3 { background: #def8e4; }
+    .chip-4 { background: #f0e4ff; }
+
+    body.dark-mode.homepage-vibrant,
+    [data-theme="dark"] body.homepage-vibrant {
+      background:
+        radial-gradient(circle at 8% 10%, rgba(255, 156, 99, 0.1), transparent 30%),
+        radial-gradient(circle at 90% 14%, rgba(81, 186, 255, 0.1), transparent 30%),
+        radial-gradient(circle at 50% 88%, rgba(120, 228, 174, 0.1), transparent 32%),
+        linear-gradient(180deg, #1d1b18 0%, #171614 100%);
+    }
+
+    body.dark-mode .emoji-tagline,
+    [data-theme="dark"] .emoji-tagline { color: #ddccb2; }
+
+    body.dark-mode .metric-icon,
+    [data-theme="dark"] .metric-icon {
+      background: rgba(255, 255, 255, 0.08);
+      border-color: rgba(255, 255, 255, 0.16);
+    }
+
+    body.dark-mode .color-chip,
+    [data-theme="dark"] .color-chip {
+      color: #f3eadc;
+      border-color: rgba(255,255,255,0.12);
+      background: rgba(255,255,255,0.06);
+    }
+
     .project-status-card {
       margin-top: 1rem;
       padding: 0.95rem 1rem;
@@ -138,10 +228,10 @@
   <link rel="icon" type="image/svg+xml" href="/icons/icon.svg" />
   <link rel="apple-touch-icon" href="/icons/icon.svg" />
 </head>
-<body>
+<body class="homepage-vibrant">
   <header class="site-header">
     <div class="container nav-wrap">
-      <a class="brand" href="index.html">HazimEdu</a>
+      <a class="brand" href="index.html">🌈 HazimEdu</a>
       <button class="nav-toggle" aria-label="Buka menu" aria-expanded="false">☰</button>
       <nav class="site-nav">
         <a href="index.html">Utama</a>
@@ -163,7 +253,8 @@
         <div class="hero-copy">
           <div class="paper-label">HazimEdu</div>
           <p class="eyebrow">Platform pendidikan digital</p>
-          <h1>Ulang kaji dengan cara yang lebih jelas, lebih kemas dan lebih mudah diikuti.</h1>
+          <h1>🎓 Ulang kaji dengan cara yang lebih jelas, lebih kemas dan lebih mudah diikuti.</h1>
+          <p class="emoji-tagline">✨ Belajar lebih seronok · 🚀 lebih fokus · 🧠 lebih mudah faham</p>
           <p class="lead">
             HazimEdu membina nota pembelajaran digital yang visual, mesra telefon dan disusun dengan teliti untuk membantu pelajar memahami isi penting dengan lebih yakin. Fokus semasa ialah <strong>Sejarah Tingkatan 4</strong>, sebelum bergerak seterusnya ke <strong>Sejarah Tingkatan 5</strong> dan kandungan lain yang berkaitan secara berperingkat.
           </p>
@@ -201,12 +292,12 @@
             <p class="preview-subtopic">Fokus aktif — 6 bab tersedia dengan nota lengkap, visual dan mudah diikuti.</p>
 
             <div class="preview-mini-grid">
-              <span>Bab 1<br>Warisan Negara Bangsa</span>
-              <span>Bab 2<br>Kebangkitan Nasionalisme</span>
-              <span>Bab 3<br>Konflik Dunia &amp; Pendudukan Jepun</span>
-              <span>Bab 4<br>Era Peralihan Kuasa British</span>
-              <span>Bab 5<br>Persekutuan Tanah Melayu 1948</span>
-              <span>Bab 6<br>Ancaman Komunis &amp; Darurat</span>
+              <span>🏛️ Bab 1<br>Warisan Negara Bangsa</span>
+              <span>🔥 Bab 2<br>Kebangkitan Nasionalisme</span>
+              <span>🌍 Bab 3<br>Konflik Dunia &amp; Pendudukan Jepun</span>
+              <span>⚖️ Bab 4<br>Era Peralihan Kuasa British</span>
+              <span>🤝 Bab 5<br>Persekutuan Tanah Melayu 1948</span>
+              <span>🛡️ Bab 6<br>Ancaman Komunis &amp; Darurat</span>
             </div>
 
             <p class="preview-subtopic">Langkah seterusnya: <strong>Sejarah Tingkatan 5</strong>, sebelum diperluaskan kepada kandungan lain yang berkaitan secara berperingkat.</p>
@@ -220,7 +311,7 @@
       <div class="container">
         <div class="section-heading center-heading">
           <div class="paper-label small">Pilih bab</div>
-          <h2>Koleksi nota semasa</h2>
+          <h2>📘 Koleksi nota semasa</h2>
           <p>Sejarah Tingkatan 4 ialah fokus aktif HazimEdu buat masa ini. Enam bab kini tersedia sebagai asas koleksi nota semasa, sebelum berkembang ke Sejarah Tingkatan 5 dan kandungan lain yang berkaitan secara berperingkat.</p>
         </div>
 
@@ -268,23 +359,33 @@
     <section class="section section-soft">
       <div class="container metrics-grid">
         <article class="metric-card">
+          <span class="metric-icon">🧩</span>
           <h3>Nota visual yang kemas</h3>
           <p>Setiap halaman disusun supaya isi penting lebih mudah dibaca, terutama pada telefon pintar dan skrin kecil.</p>
         </article>
 
         <article class="metric-card">
+          <span class="metric-icon">🎧</span>
           <h3>Audio nota disediakan</h3>
           <p>Beberapa subtopik kini dilengkapi audio sokongan untuk membantu pengguna mendengar sambil membaca semasa ulang kaji.</p>
         </article>
 
         <article class="metric-card">
+          <span class="metric-icon">📚</span>
           <h3>Fokus jelas pada Sejarah Tingkatan 4</h3>
           <p>HazimEdu sedang mengukuhkan kandungan Sejarah Tingkatan 4 sebagai fokus semasa, dengan 6 bab yang kini tersedia secara berperingkat.</p>
         </article>
 
         <article class="metric-card">
+          <span class="metric-icon">🌟</span>
           <h3>Arah seterusnya kandungan HazimEdu</h3>
           <p>Selepas Sejarah Tingkatan 4, HazimEdu akan bergerak ke Sejarah Tingkatan 5 sebelum diperluaskan kepada kandungan lain yang berkaitan tanpa tergesa-gesa.</p>
+          <div class="color-chip-row">
+            <span class="color-chip chip-1">Visual</span>
+            <span class="color-chip chip-2">Interaktif</span>
+            <span class="color-chip chip-3">Mesra Telefon</span>
+            <span class="color-chip chip-4">Bertahap</span>
+          </div>
         </article>
       </div>
     </section>
