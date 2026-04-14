@@ -471,11 +471,18 @@ html[data-theme="dark"] body.bab-theme-10 {
    LIGHT REFRESH — paksa tona putih moden untuk semua bab
 ========================================================= */
 body[class^="bab-theme-"] {
-  --theme-bg-solid: #f3f8ff !important;
-  --theme-overlay-1: radial-gradient(circle at 10% 12%, rgba(111, 167, 248, 0.18), transparent 0 20%) !important;
-  --theme-overlay-2: radial-gradient(circle at 88% 14%, rgba(96, 216, 182, 0.14), transparent 0 18%) !important;
-  --theme-overlay-3: radial-gradient(circle at 18% 84%, rgba(189, 149, 255, 0.14), transparent 0 16%) !important;
-  --theme-gradient: linear-gradient(180deg, #fcfdff 0%, #f2f7ff 52%, #eefbf9 100%) !important;
+  --theme-bg-solid: #f7faff !important;
+  --theme-overlay-1: radial-gradient(circle at 10% 12%, rgba(111, 167, 248, 0.14), transparent 0 20%) !important;
+  --theme-overlay-2: radial-gradient(circle at 88% 14%, rgba(96, 216, 182, 0.10), transparent 0 18%) !important;
+  --theme-overlay-3: radial-gradient(circle at 18% 84%, rgba(189, 149, 255, 0.10), transparent 0 16%) !important;
+  --theme-pattern: none !important;
+  --theme-gradient: linear-gradient(180deg, #ffffff 0%, #f8fbff 52%, #f4fbff 100%) !important;
+  --theme-label-bg: linear-gradient(90deg, #edf5ff, #e4f0ff) !important;
+  --theme-label-color: #315a86 !important;
+  --theme-surface-bg: linear-gradient(145deg, rgba(255, 255, 255, 0.96), rgba(247, 251, 255, 0.92)) !important;
+  --theme-surface-border: rgba(92, 110, 132, 0.16) !important;
+  --theme-header-bg: rgba(255, 255, 255, 0.86) !important;
+  --theme-footer-bg: linear-gradient(135deg, rgba(255, 255, 255, 0.90), rgba(246, 251, 255, 0.84)) !important;
 }
 
 /* =========================================================
