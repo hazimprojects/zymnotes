@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<!--
+================================================================================
+  TEMPLATE RASMI: HALAMAN INDUK BAB — HazimEdu
+================================================================================
+  Versi    : 1.0
+  Lokasi   : _templates/nota-bab.html
+  Tujuan   : Template universal untuk halaman induk bab/unit merentasi semua
+             subjek (Sejarah, Matematik, Sains, BM, dll.)
+
+  CARA GUNA:
+  1. Salin fail ini ke folder nota subjek (cth: notes/bab-1.html, notes/unit-3.html)
+  2. Gantikan semua placeholder [[...]] dengan nilai sebenar
+  3. Tambah kad subtopik (bab-card) dalam blok [C] mengikut bilangan subtopik
+  4. Kemaskini blok Susunan Pembelajaran [D] mengikut bilangan subtopik
+  5. Simpan dan semak di browser
+
+  PLACEHOLDER YANG PERLU DIGANTI:
+  [[X]]               → Nombor bab/unit, cth: 1, 2, 7
+  [[BAB_LABEL]]       → Label bab, cth: Bab 1, Unit 3, Topik 2
+  [[TAJUK_BAB]]       → Tajuk penuh bab, cth: Warisan Negara Bangsa
+  [[FAIL_INI]]        → Nama fail ini, cth: bab-1.html, unit-3.html
+  [[FAIL_SUBTOPIK_1]] → Fail subtopik pertama, cth: bab-1-1.html
+  [[KOD_PERTAMA]]     → Kod subtopik pertama, cth: 1.1
+  [[SUBJEK_THEME]]    → Kelas tema, cth: bab-theme-1, sains-theme-3
+  [[SUBJEK_NAMA]]     → Nama subjek, cth: Sejarah, Matematik
+  [[TINGKATAN]]       → Tingkatan, cth: 4, 5
+  [[OG_IMAGE_V]]      → Versi OG image, cth: 20260414
+  [[CSS_V]]           → Versi CSS terkini, cth: 54
+  [[JS_V]]            → Versi JS terkini, cth: 55
+
+  PERBEZAAN DARI TEMPLATE SUBTOPIK:
+  • Hero TIADA kelas note-hero (hanya page-hero papercraft-hero)
+  • Hero TIADA eyebrow, TIADA audio, TIADA hero-actions
+  • H1 format: "[[BAB_LABEL]] · [[TAJUK_BAB]]" — TIADA nombor subtopik
+  • paper-label dalam hero → "[[BAB_LABEL]] Induk" atau subjek
+  • Kandungan utama: Sinopsis + Grid kad subtopik + Susunan pembelajaran
+  • BreadcrumbList hanya 3 tahap (bukan 4)
+
+  NOTA UNTUK SUBJEK BAHARU:
+  • Tambah kelas bab-card yang sesuai dalam assets/css/paper.css jika perlu
+  • Tambah kelas tema baharu dalam assets/css/themes.css
+================================================================================
+-->
+<html lang="ms">
+<head>
+  <!-- ═══════════════════════════════════════════════════════════════════════
+       META ASAS
+       ═══════════════════════════════════════════════════════════════════════ -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>[[BAB_LABEL]] · [[TAJUK_BAB]] · HazimEdu</title>
+  <meta name="description" content="Halaman induk [[BAB_LABEL]] [[SUBJEK_NAMA]] Tingkatan [[TINGKATAN]]: [[TAJUK_BAB]]." />
+  <link rel="canonical" href="https://hazimedu.com/notes/[[FAIL_INI]]" />
+
+  <!-- ═══════════════════════════════════════════════════════════════════════
+       OPEN GRAPH
+       ═══════════════════════════════════════════════════════════════════════ -->
+  <meta property="og:title" content="[[BAB_LABEL]] · [[TAJUK_BAB]] · HazimEdu" />
+  <meta property="og:description" content="Halaman induk [[BAB_LABEL]] [[SUBJEK_NAMA]] Tingkatan [[TINGKATAN]]: [[TAJUK_BAB]]." />
+  <meta property="og:url" content="https://hazimedu.com/notes/[[FAIL_INI]]" />
+  <meta property="og:image" content="https://hazimedu.com/assets/og-image.png?v=[[OG_IMAGE_V]]" />
+  <meta property="og:image:url" content="https://hazimedu.com/assets/og-image.png?v=[[OG_IMAGE_V]]" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:secure_url" content="https://hazimedu.com/assets/og-image.png?v=[[OG_IMAGE_V]]" />
+  <meta property="og:image:width" content="1424" />
+  <meta property="og:image:height" content="748" />
+  <meta property="og:image:alt" content="HazimEdu — Platform Pendidikan Digital" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="HazimEdu" />
+  <meta property="og:locale" content="ms_MY" />
+
+  <!-- ═══════════════════════════════════════════════════════════════════════
+       TWITTER CARD
+       ═══════════════════════════════════════════════════════════════════════ -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="[[BAB_LABEL]] · [[TAJUK_BAB]] · HazimEdu" />
+  <meta name="twitter:description" content="Halaman induk [[BAB_LABEL]] [[SUBJEK_NAMA]] Tingkatan [[TINGKATAN]]: [[TAJUK_BAB]]." />
+  <meta name="twitter:image" content="https://hazimedu.com/assets/og-image.png?v=[[OG_IMAGE_V]]" />
+  <meta name="twitter:image:src" content="https://hazimedu.com/assets/og-image.png?v=[[OG_IMAGE_V]]" />
+
+  <!-- ═══════════════════════════════════════════════════════════════════════
+       FONTS
+       ═══════════════════════════════════════════════════════════════════════ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- ═══════════════════════════════════════════════════════════════════════
+       CSS
+       ═══════════════════════════════════════════════════════════════════════ -->
+  <link rel="stylesheet" href="../assets/css/style.css?v=[[CSS_V]]" />
+
+  <!-- ═══════════════════════════════════════════════════════════════════════
+       GOOGLE ANALYTICS
+       ═══════════════════════════════════════════════════════════════════════ -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZTQB7MML49"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag("js", new Date());
+    gtag("config", "G-ZTQB7MML49");
+  </script>
+
+  <!-- ═══════════════════════════════════════════════════════════════════════
+       PWA
+       ═══════════════════════════════════════════════════════════════════════ -->
+  <link rel="manifest" href="/manifest.json" />
+  <meta name="theme-color" content="#2f7a67" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="HazimEdu" />
+  <link rel="icon" type="image/svg+xml" href="/icons/icon.svg" />
+  <link rel="apple-touch-icon" href="/icons/icon.svg" />
+</head>
+
+<!-- Halaman bab TIADA data-lab-href kerana tiada kuiz untuk bab induk -->
+<body class="[[SUBJEK_THEME]]">
+
+  <!-- ═══════════════════════════════════════════════════════════════════════
+       NAVIGASI ATAS
+       ═══════════════════════════════════════════════════════════════════════ -->
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="../index.html">HazimEdu</a>
+      <button class="nav-toggle" aria-label="Buka menu" aria-expanded="false">☰</button>
+      <nav class="site-nav">
+        <a href="../index.html">Utama</a>
+        <a href="index.html">Nota</a>
+        <a href="../about.html">Tentang</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ═══════════════════════════════════════════════════════════════════
+         [1] HERO SECTION — BAB INDUK
+         PERBEZAAN dari hero subtopik:
+         • TIADA kelas note-hero
+         • TIADA eyebrow
+         • paper-label → "[[BAB_LABEL]] Induk" atau nama subjek
+         • H1 → "[[BAB_LABEL]] · [[TAJUK_BAB]]" — format dengan "·"
+         • Keyword legend ada (sama seperti subtopik) untuk warna dalam sinopsis
+         • TIADA hero-actions (butang diletakkan di bawah kandungan)
+         ═══════════════════════════════════════════════════════════════════ -->
+    <section class="section page-hero papercraft-hero">
+      <div class="container narrow">
+
+        <div class="paper-label">[[BAB_LABEL]] Induk</div>
+        <h1>[[BAB_LABEL]] · [[TAJUK_BAB]]</h1>
+
+        <p class="lead">
+          <!-- Tulis satu atau dua ayat gambaran keseluruhan bab ini. -->
+          [[TEKS PENERANGAN RINGKAS BAB INI]]
+        </p>
+
+        <!-- Keyword legend — sama seperti subtopik dalam bab ini -->
+        <div class="keyword-legend-wrap">
+          <p class="keyword-legend-title">Warna kata kunci</p>
+          <div class="keyword-legend-grid">
+            <!-- GANTI mengikut keperluan bab — konsisten dengan semua subtopik dalam bab ini -->
+            <span class="keyword-legend-item"><span class="kw kw-tokoh">Tokoh / Pemerintah</span></span>
+            <span class="keyword-legend-item"><span class="kw kw-tahun">Tahun / Tarikh</span></span>
+            <span class="keyword-legend-item"><span class="kw kw-tempat">Tempat / Wilayah</span></span>
+            <span class="keyword-legend-item"><span class="kw kw-peristiwa">Peristiwa</span></span>
+            <span class="keyword-legend-item"><span class="kw kw-pertubuhan">Pertubuhan</span></span>
+            <span class="keyword-legend-item"><span class="kw kw-perjanjian">Perjanjian / Undang-undang</span></span>
+            <span class="keyword-legend-item"><span class="kw kw-istilah">Istilah Penting</span></span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <!-- /HERO -->
+
+
+    <!-- ═══════════════════════════════════════════════════════════════════
+         [2] KANDUNGAN BAB
+         ═══════════════════════════════════════════════════════════════════ -->
+    <section class="section note-section">
+      <div class="container narrow">
+
+
+        <!-- ─────────────────────────────────────────────────────────────
+             [A] SINOPSIS BAB
+             Ringkasan 4–5 idea utama yang akan dipelajari dalam bab ini.
+             Guna sebagai "gambaran besar" sebelum masuk ke subtopik.
+             strip-summary: "Sinopsis [[BAB_LABEL]]"
+             ───────────────────────────────────────────────────────────── -->
+        <article class="paper-board master-summary-paper reveal-on-scroll">
+          <div class="paper-strip strip-summary">Sinopsis [[BAB_LABEL]]</div>
+          <div class="paper-chip-list">
+
+            <div class="paper-chip paper-chip-sentence">
+              <span class="chip-icon"><!-- emoji --></span>
+              <!-- Idea utama pertama -->
+            </div>
+
+            <div class="paper-chip paper-chip-sentence">
+              <span class="chip-icon"><!-- emoji --></span>
+              <!-- Idea utama kedua -->
+            </div>
+
+            <div class="paper-chip paper-chip-sentence">
+              <span class="chip-icon"><!-- emoji --></span>
+              <!-- Idea utama ketiga -->
+            </div>
+
+            <div class="paper-chip paper-chip-sentence">
+              <span class="chip-icon"><!-- emoji --></span>
+              <!-- Idea utama keempat -->
+            </div>
+
+            <!-- Tambah sehingga 5 chip -->
+
+          </div>
+        </article>
+        <!-- /SINOPSIS -->
+
+
+        <!-- ─────────────────────────────────────────────────────────────
+             [B] TAJUK GRID SUBTOPIK
+             section-heading dengan label "Subtopik [[BAB_LABEL]]"
+             ───────────────────────────────────────────────────────────── -->
+        <section class="note-subsection reveal-on-scroll">
+          <div class="section-heading">
+            <div class="paper-label small">Subtopik [[BAB_LABEL]]</div>
+            <h2>📚 Pilih subtopik</h2>
+            <p>Mulakan bacaan mengikut urutan supaya isi lebih mudah difahami.</p>
+          </div>
+
+          <!-- ─────────────────────────────────────────────────────────
+               [C] GRID KAD SUBTOPIK
+               Salin blok <a class="bab-card"> untuk setiap subtopik.
+               Tajuk h3 → tajuk subtopik
+               p       → huraian ringkas satu ayat tentang isi subtopik
+               ───────────────────────────────────────────────────────── -->
+          <div class="bab-grid">
+
+            <a class="bab-card" href="[[FAIL_SUBTOPIK_1]]">
+              <div class="bab-card-top">[[X]].1</div>
+              <h3>[[Tajuk Subtopik 1]]</h3>
+              <p>[[Huraian ringkas satu ayat tentang isi subtopik 1.]]</p>
+            </a>
+
+            <a class="bab-card" href="[[FAIL_SUBTOPIK_2]]">
+              <div class="bab-card-top">[[X]].2</div>
+              <h3>[[Tajuk Subtopik 2]]</h3>
+              <p>[[Huraian ringkas satu ayat tentang isi subtopik 2.]]</p>
+            </a>
+
+            <a class="bab-card" href="[[FAIL_SUBTOPIK_3]]">
+              <div class="bab-card-top">[[X]].3</div>
+              <h3>[[Tajuk Subtopik 3]]</h3>
+              <p>[[Huraian ringkas satu ayat tentang isi subtopik 3.]]</p>
+            </a>
+
+            <!-- SALIN BLOK DI ATAS UNTUK SUBTOPIK TAMBAHAN -->
+
+          </div>
+          <!-- /GRID KAD SUBTOPIK -->
+
+        </section>
+
+
+        <!-- ─────────────────────────────────────────────────────────────
+             [D] SUSUNAN PEMBELAJARAN (PILIHAN tapi disyorkan)
+             Panduan urutan membaca untuk pembaca.
+             Guna emoji nombor 1️⃣ 2️⃣ 3️⃣ mengikut bilangan subtopik.
+             ───────────────────────────────────────────────────────────── -->
+        <section class="note-subsection reveal-on-scroll">
+          <article class="paper-board info-paper">
+            <div class="paper-strip strip-info">Susunan Pembelajaran</div>
+            <ul class="emoji-point-list">
+              <li>
+                <span class="emoji-bullet">1️⃣</span>
+                <span>Mulakan dengan <span class="kw kw-masa">[[X]].1</span> untuk [[tujuan subtopik 1]].</span>
+              </li>
+              <li>
+                <span class="emoji-bullet">2️⃣</span>
+                <span>Teruskan ke <span class="kw kw-masa">[[X]].2</span> untuk [[tujuan subtopik 2]].</span>
+              </li>
+              <li>
+                <span class="emoji-bullet">3️⃣</span>
+                <span>Baca <span class="kw kw-masa">[[X]].3</span> untuk [[tujuan subtopik 3]].</span>
+              </li>
+              <!-- Tambah mengikut bilangan subtopik -->
+            </ul>
+          </article>
+        </section>
+        <!-- /SUSUNAN PEMBELAJARAN -->
+
+
+        <!-- ─────────────────────────────────────────────────────────────
+             [E] NAVIGASI BAWAH
+             Butang utama: buka subtopik pertama
+             Butang kedua: kembali ke halaman senarai nota
+             ───────────────────────────────────────────────────────────── -->
+        <section class="note-subsection">
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="[[FAIL_SUBTOPIK_1]]">Buka [[KOD_PERTAMA]]</a>
+            <a class="btn btn-secondary" href="index.html">Kembali ke Nota</a>
+          </div>
+        </section>
+        <!-- /NAVIGASI -->
+
+
+      </div>
+    </section>
+    <!-- /KANDUNGAN BAB -->
+
+  </main>
+
+
+  <!-- ═══════════════════════════════════════════════════════════════════════
+       FOOTER
+       ═══════════════════════════════════════════════════════════════════════ -->
+  <footer class="site-footer">
+    <div class="container footer-wrap">
+      <div>
+        <p class="footer-brand">HazimEdu</p>
+        <p class="footer-text">
+          Platform pendidikan digital yang membina kandungan visual, mesra telefon dan lebih mudah diikuti.
+        </p>
+      </div>
+      <div class="footer-links">
+        <a href="../index.html">Utama</a>
+        <a href="index.html">Nota</a>
+        <a href="../about.html">Tentang</a>
+        <a href="../feedback.html">Maklum Balas</a>
+        <a href="mailto:hello@hazimedu.com">hello@hazimedu.com</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 HazimEdu. Semua hak cipta terpelihara.</p>
+    </div>
+  </footer>
+
+  <!-- ═══════════════════════════════════════════════════════════════════════
+       JAVASCRIPT
+       ═══════════════════════════════════════════════════════════════════════ -->
+  <script src="../assets/js/main.js?v=[[JS_V]]"></script>
+
+  <!-- ═══════════════════════════════════════════════════════════════════════
+       STRUCTURED DATA — 3 tahap sahaja (bukan 4 seperti halaman subtopik)
+       ═══════════════════════════════════════════════════════════════════════ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "HazimEdu", "item": "https://hazimedu.com/"},
+      {"@type": "ListItem", "position": 2, "name": "Nota", "item": "https://hazimedu.com/notes/"},
+      {"@type": "ListItem", "position": 3, "name": "[[BAB_LABEL]] · [[TAJUK_BAB]]", "item": "https://hazimedu.com/notes/[[FAIL_INI]]"}
+    ]
+  }
+  </script>
+
+</body>
+</html>

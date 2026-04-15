@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<!--
+================================================================================
+  TEMPLATE RASMI: HALAMAN NOTA SUBTOPIK — HazimEdu
+================================================================================
+  Versi    : 1.0
+  Lokasi   : _templates/nota-subtopik.html
+  Tujuan   : Template universal untuk semua halaman nota subtopik merentasi
+             semua subjek (Sejarah, Matematik, Sains, BM, dll.)
+
+  CARA GUNA:
+  1. Salin fail ini ke folder nota subjek anda (contoh: notes/bab-1-1.html)
+  2. Gantikan semua placeholder [[...]] dengan nilai sebenar
+  3. Padamkan blok HTML yang tidak diperlukan (ditanda PILIHAN)
+  4. Simpan dan semak di browser
+
+  PLACEHOLDER YANG PERLU DIGANTI:
+  [[X.X]]              → Kod subtopik, cth: 1.1, 2.3, 7.4
+  [[X]]                → Nombor bab/unit sahaja, cth: 1, 2, 7
+  [[TAJUK_SUBTOPIK]]   → Tajuk lengkap subtopik, cth: Maksud Nasionalisme
+  [[TAJUK_BAB]]        → Tajuk bab/unit, cth: Kebangkitan Nasionalisme
+  [[BAB_LABEL]]        → Label bab, cth: Bab 1, Unit 3, Topik 2
+  [[SUBTOPIK_LABEL]]   → Label subtopik, cth: Subtopik 1.1, Subtopik 3.2
+  [[BAB_URL]]          → URL halaman bab induk, cth: bab-1.html, unit-3.html
+  [[FAIL_INI]]         → Nama fail ini tanpa laluan, cth: bab-1-1.html
+  [[FAIL_SEBELUM]]     → Fail subtopik sebelum, cth: bab-1.html (induk)
+  [[FAIL_SETERUSNYA]]  → Fail subtopik seterusnya, cth: bab-1-2.html
+  [[KOD_SETERUSNYA]]   → Kod subtopik seterusnya, cth: 1.2
+  [[FAIL_QUIZ]]        → Fail kuiz berkaitan, cth: bab-1-1.html
+  [[SUBJEK_THEME]]     → Kelas tema badan, cth: bab-theme-1, sains-theme-2
+  [[SUBJEK_NAMA]]      → Nama subjek, cth: Sejarah, Matematik, Sains
+  [[TINGKATAN]]        → Tingkatan, cth: 4, 5
+  [[AUDIO_SRC]]        → Laluan fail audio, cth: ../assets/audio/bab-1-1.mp3
+  [[OG_IMAGE_V]]       → Versi OG image, cth: 20260414
+  [[CSS_V]]            → Versi CSS terkini, cth: 54
+  [[JS_V]]             → Versi JS terkini, cth: 55
+
+  NOTA UNTUK SUBJEK BAHARU:
+  • Tambah kelas tema baharu dalam assets/css/themes.css
+    (salin blok .bab-theme-1 dan ubah nama serta warna)
+  • Pastikan kelas keyword (kw-*) yang digunakan wujud dalam assets/css/keywords.css
+
+  PERATURAN WAJIB:
+  • H1 MESTI dalam format "X.X Tajuk" — TIADA emoji dalam H1
+  • keyword-legend-title MESTI "Warna kata kunci" — TIADA perkataan "global"
+  • Blok Fokus (D) WAJIB ada di setiap halaman
+  • Ringkasan (B) MESTI ada id="mula-nota"
+  • Audio player WAJIB ada jika fail audio tersedia
+  • Setiap halaman MESTI ada BreadcrumbList JSON-LD di bawah
+================================================================================
+-->
+<html lang="ms">
+<head>
+  <!-- ═══════════════════════════════════════════════════════════════════════
+       META ASAS — urutan ini adalah standard, jangan ubah
+       ═══════════════════════════════════════════════════════════════════════ -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>[[X.X]] [[TAJUK_SUBTOPIK]] · HazimEdu</title>
+  <meta name="description" content="Nota interaktif [[SUBJEK_NAMA]] Tingkatan [[TINGKATAN]] [[BAB_LABEL]] [[X.X]]: [[TAJUK_SUBTOPIK]]." />
+  <link rel="canonical" href="https://hazimedu.com/notes/[[FAIL_INI]]" />
+
+  <!-- ═══════════════════════════════════════════════════════════════════════
+       OPEN GRAPH — untuk pratonton apabila dikongsi di media sosial
+       ═══════════════════════════════════════════════════════════════════════ -->
+  <meta property="og:title" content="[[X.X]] [[TAJUK_SUBTOPIK]] · HazimEdu" />
+  <meta property="og:description" content="Nota interaktif [[SUBJEK_NAMA]] Tingkatan [[TINGKATAN]] [[BAB_LABEL]] [[X.X]]: [[TAJUK_SUBTOPIK]]." />
+  <meta property="og:url" content="https://hazimedu.com/notes/[[FAIL_INI]]" />
+  <meta property="og:image" content="https://hazimedu.com/assets/og-image.png?v=[[OG_IMAGE_V]]" />
+  <meta property="og:image:url" content="https://hazimedu.com/assets/og-image.png?v=[[OG_IMAGE_V]]" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:secure_url" content="https://hazimedu.com/assets/og-image.png?v=[[OG_IMAGE_V]]" />
+  <meta property="og:image:width" content="1424" />
+  <meta property="og:image:height" content="748" />
+  <meta property="og:image:alt" content="HazimEdu — Platform Pendidikan Digital" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="HazimEdu" />
+  <meta property="og:locale" content="ms_MY" />
+
+  <!-- ═══════════════════════════════════════════════════════════════════════
+       TWITTER CARD
+       ═══════════════════════════════════════════════════════════════════════ -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="[[X.X]] [[TAJUK_SUBTOPIK]] · HazimEdu" />
+  <meta name="twitter:description" content="Nota interaktif [[SUBJEK_NAMA]] Tingkatan [[TINGKATAN]] [[BAB_LABEL]] [[X.X]]: [[TAJUK_SUBTOPIK]]." />
+  <meta name="twitter:image" content="https://hazimedu.com/assets/og-image.png?v=[[OG_IMAGE_V]]" />
+  <meta name="twitter:image:src" content="https://hazimedu.com/assets/og-image.png?v=[[OG_IMAGE_V]]" />
+
+  <!-- ═══════════════════════════════════════════════════════════════════════
+       FONTS
+       ═══════════════════════════════════════════════════════════════════════ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- ═══════════════════════════════════════════════════════════════════════
+       CSS — sentiasa guna versi terkini (semak assets/css/style.css)
+       ═══════════════════════════════════════════════════════════════════════ -->
+  <link rel="stylesheet" href="../assets/css/style.css?v=[[CSS_V]]" />
+
+  <!-- ═══════════════════════════════════════════════════════════════════════
+       GOOGLE ANALYTICS
+       ═══════════════════════════════════════════════════════════════════════ -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZTQB7MML49"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag("js", new Date());
+    gtag("config", "G-ZTQB7MML49");
+  </script>
+
+  <!-- ═══════════════════════════════════════════════════════════════════════
+       PWA — WAJIB ada di setiap halaman, jangan ubah
+       ═══════════════════════════════════════════════════════════════════════ -->
+  <link rel="manifest" href="/manifest.json" />
+  <meta name="theme-color" content="#2f7a67" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="HazimEdu" />
+  <link rel="icon" type="image/svg+xml" href="/icons/icon.svg" />
+  <link rel="apple-touch-icon" href="/icons/icon.svg" />
+</head>
+
+<!--
+  [[SUBJEK_THEME]] → kelas tema warna bab/unit (cth: bab-theme-1, sains-theme-2)
+  data-lab-href    → laluan fail kuiz LAB untuk subtopik ini (buang jika tiada kuiz)
+  data-lab-emoji   → emoji ikon untuk butang LAB (lalai: 🧩)
+-->
+<body class="[[SUBJEK_THEME]]" data-lab-href="../quiz/[[FAIL_QUIZ]]" data-lab-emoji="🧩">
+
+  <!-- ═══════════════════════════════════════════════════════════════════════
+       NAVIGASI ATAS — JANGAN UBAH struktur ini
+       ═══════════════════════════════════════════════════════════════════════ -->
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="../index.html">HazimEdu</a>
+      <button class="nav-toggle" aria-label="Buka menu" aria-expanded="false">☰</button>
+      <nav class="site-nav">
+        <a href="../index.html">Utama</a>
+        <a href="index.html">Nota</a>
+        <a href="../about.html">Tentang</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ═══════════════════════════════════════════════════════════════════
+         [1] HERO SECTION
+         PERATURAN:
+         • paper-label  → "[[BAB_LABEL]] · [[TAJUK_BAB]]"
+         • eyebrow      → "[[SUBTOPIK_LABEL]] [[X.X]]"
+         • h1           → "[[X.X]] [[TAJUK_SUBTOPIK]]" — TIADA emoji
+         • lead         → satu perenggan penerangan ringkas (guna kw spans)
+         • keyword-legend-title → "Warna kata kunci" (TIADA perkataan "global")
+         • Pilih kelas kw yang relevan untuk bab/unit ini sahaja
+         ═══════════════════════════════════════════════════════════════════ -->
+    <section class="section page-hero note-hero papercraft-hero">
+      <div class="container narrow">
+
+        <div class="paper-label">[[BAB_LABEL]] · [[TAJUK_BAB]]</div>
+        <p class="eyebrow">[[SUBTOPIK_LABEL]] [[X.X]]</p>
+        <h1>[[X.X]] [[TAJUK_SUBTOPIK]]</h1>
+
+        <p class="lead">
+          <!-- Tulis satu atau dua ayat penerangan ringkas. Gunakan <span class="kw kw-*">
+               untuk kata kunci utama supaya warna legend yang ditunjukkan di bawah
+               dapat dilihat dalam teks. -->
+          [[TEKS PENERANGAN RINGKAS SUBTOPIK INI]]
+        </p>
+
+        <!-- KEYWORD LEGEND
+             Pilih kelas kw yang digunakan dalam kandungan bab ini.
+             Untuk setiap bab/unit, pastikan set kelas adalah KONSISTEN
+             merentasi semua subtopik dalam bab yang sama.
+
+             Kelas keyword tersedia (dalam keywords.css):
+             kw-tokoh       → Tokoh / Pemimpin / Pemerintah
+             kw-masa        → Masa / Proses / Tarikh (guna kw-tahun untuk tarikh spesifik)
+             kw-tahun       → Tahun / Tarikh spesifik
+             kw-tempat      → Tempat / Wilayah / Negeri
+             kw-peristiwa   → Peristiwa bersejarah
+             kw-konsep      → Konsep / Undang-undang / Prinsip
+             kw-kerajaan    → Kerajaan / Entiti Politik / Organisasi rasmi
+             kw-istilah     → Istilah penting / Kosa kata teknikal
+             kw-gerakan     → Ideologi / Gerakan / Aliran
+             kw-pertubuhan  → Pertubuhan / Pasukan / Badan
+             kw-perjanjian  → Perjanjian / Undang-undang bertulis / Cadangan
+             kw-karya       → Karya / Penerbitan / Akhbar
+             kw-pentadbiran → Pentadbiran / Perlembagaan / Dasar
+
+             PANDUAN: Gunakan 5–8 item. Terlalu sedikit = tidak informatif.
+                      Terlalu banyak = mengelirukan. -->
+        <div class="keyword-legend-wrap">
+          <p class="keyword-legend-title">Warna kata kunci</p>
+          <div class="keyword-legend-grid">
+            <!-- GANTI item di bawah mengikut keperluan bab -->
+            <span class="keyword-legend-item"><span class="kw kw-tokoh">Tokoh / Pemerintah</span></span>
+            <span class="keyword-legend-item"><span class="kw kw-tahun">Tahun / Tarikh</span></span>
+            <span class="keyword-legend-item"><span class="kw kw-tempat">Tempat / Wilayah</span></span>
+            <span class="keyword-legend-item"><span class="kw kw-peristiwa">Peristiwa</span></span>
+            <span class="keyword-legend-item"><span class="kw kw-pertubuhan">Pertubuhan</span></span>
+            <span class="keyword-legend-item"><span class="kw kw-perjanjian">Perjanjian / Undang-undang</span></span>
+            <span class="keyword-legend-item"><span class="kw kw-istilah">Istilah Penting</span></span>
+          </div>
+        </div>
+
+        <div class="hero-actions">
+          <a class="btn btn-secondary" href="[[BAB_URL]]">Kembali ke [[BAB_LABEL]]</a>
+          <a class="btn btn-primary" href="#mula-nota">Mula baca</a>
+        </div>
+
+      </div>
+    </section>
+    <!-- /HERO -->
+
+
+    <!-- ═══════════════════════════════════════════════════════════════════
+         [2] KANDUNGAN UTAMA
+         Lalai: container narrow (max ~700px). Guna note-section-wide +
+         container note-wide HANYA jika kandungan memerlukan lebar penuh
+         (carta org, jadual perbandingan lebar). Kalau ragu, guna narrow.
+         ═══════════════════════════════════════════════════════════════════ -->
+    <section class="section note-section">
+      <div class="container narrow">
+
+
+        <!-- ─────────────────────────────────────────────────────────────
+             [A] AUDIO PLAYER (PILIHAN — ada jika fail audio tersedia)
+             Buang blok ini jika tiada audio untuk subtopik ini.
+             Jika audio belum siap, boleh tinggalkan dengan src kosong —
+             player akan dipaparkan tapi butang main tidak berfungsi.
+             ───────────────────────────────────────────────────────────── -->
+        <div class="note-audio-player">
+          <audio class="audio-src" src="[[AUDIO_SRC]]" preload="metadata"></audio>
+          <p class="audio-label">🎧 Audio Nota</p>
+          <p class="audio-desc">
+            Dengar audio ini sambil membaca nota untuk pengulangkajian yang lebih berkesan.
+            <span class="audio-disclaimer">
+              Harap maklum, audio mungkin mengandungi penerangan ringkas — nota adalah rujukan utama.
+            </span>
+          </p>
+          <div class="audio-controls">
+            <button class="audio-skip-btn" data-skip="-10" aria-label="Undur 10 saat">« 10s</button>
+            <button class="audio-play-btn" aria-label="Main audio"></button>
+            <button class="audio-skip-btn" data-skip="10" aria-label="Maju 10 saat">10s »</button>
+            <div class="audio-track">
+              <div class="audio-track-fill"></div>
+            </div>
+            <span class="audio-time">0:00 / --:--</span>
+          </div>
+        </div>
+        <!-- /AUDIO -->
+
+
+        <!-- ─────────────────────────────────────────────────────────────
+             [B] RINGKASAN
+             WAJIB ada. id="mula-nota" adalah anchor untuk butang "Mula baca".
+             Isi 3–5 ayat ringkasan utama subtopik ini.
+             Setiap chip = satu idea/fakta utama, ditulis sebagai ayat penuh.
+             ───────────────────────────────────────────────────────────── -->
+        <article id="mula-nota" class="paper-board master-summary-paper reveal-on-scroll">
+          <div class="paper-strip strip-summary">Ringkasan [[X.X]]</div>
+          <div class="paper-chip-list">
+
+            <div class="paper-chip paper-chip-sentence">
+              <span class="chip-icon"><!-- emoji relevan --></span>
+              <!-- Fakta/idea utama pertama -->
+            </div>
+
+            <div class="paper-chip paper-chip-sentence">
+              <span class="chip-icon"><!-- emoji relevan --></span>
+              <!-- Fakta/idea utama kedua -->
+            </div>
+
+            <div class="paper-chip paper-chip-sentence">
+              <span class="chip-icon"><!-- emoji relevan --></span>
+              <!-- Fakta/idea utama ketiga -->
+            </div>
+
+            <!-- Tambah sehingga 5 chip jika perlu -->
+
+          </div>
+        </article>
+        <!-- /RINGKASAN -->
+
+
+        <!-- ─────────────────────────────────────────────────────────────
+             [C] SOALAN UTAMA
+             WAJIB ada. Satu soalan utama yang merangkumi keseluruhan subtopik.
+             flap-top SENTIASA "❓ Soalan Utama"
+             answer-paper: 2–3 jawapan ringkas (point-line)
+             ───────────────────────────────────────────────────────────── -->
+        <section class="note-subsection reveal-on-scroll">
+          <article class="paper-flap-card">
+            <div class="flap-top">❓ Soalan Utama</div>
+            <div class="flap-body">
+              <p class="point-heading">[[SOALAN UTAMA SUBTOPIK INI?]]</p>
+              <div class="answer-paper">
+                <p class="point-line">💡 [[Jawapan utama / inti pati]]</p>
+                <p class="point-line">📌 [[Huraian lanjut atau poin kedua]]</p>
+                <!-- Tambah sehingga 3 point-line -->
+              </div>
+            </div>
+          </article>
+        </section>
+        <!-- /SOALAN UTAMA -->
+
+
+        <!-- ─────────────────────────────────────────────────────────────
+             [D] FOKUS — WAJIB ADA DI SETIAP HALAMAN
+             Tunjukkan 2–5 perkara/bahagian utama yang akan dibincangkan.
+             Ini berfungsi seperti "peta kandungan" untuk pembaca.
+
+             PERATURAN:
+             • paper-strip: "📌 Fokus [[X.X]]" — emoji MESTI 📌, TIADA "utama"
+             • Setiap paper-kingdom = satu perkara utama, bernombor emoji
+             • Boleh tambah satu ayat intro sebelum grid (PILIHAN)
+             ───────────────────────────────────────────────────────────── -->
+        <section class="note-subsection reveal-on-scroll">
+          <article class="paper-board">
+            <div class="paper-strip strip-sub">📌 Fokus [[X.X]]</div>
+
+            <!-- PILIHAN: tambah ayat intro ringkas di sini -->
+            <!-- <p class="point-line">📌 [[Tajuk subtopik]] boleh difahami melalui [[N]] perkara utama:</p> -->
+
+            <div class="paper-grid compact-kingdom-grid">
+              <article class="paper-kingdom">1️⃣ [[Perkara Utama Pertama]]</article>
+              <article class="paper-kingdom">2️⃣ [[Perkara Utama Kedua]]</article>
+              <article class="paper-kingdom">3️⃣ [[Perkara Utama Ketiga]]</article>
+              <!-- Tambah sehingga 5 item -->
+            </div>
+          </article>
+        </section>
+        <!-- /FOKUS -->
+
+
+        <!-- ─────────────────────────────────────────────────────────────
+             [E] BAHAGIAN KANDUNGAN — ULANG MENGIKUT KEPERLUAN
+             Setiap bahagian menggunakan section-heading + paper-board(s).
+
+             PERATURAN LABEL (paper-label small):
+             • Jika kandungan ada urutan/turutan → "Bahagian Pertama",
+               "Bahagian Kedua", "Bahagian Ketiga" dll.
+             • Jika kandungan adalah topik bebas → label tematik deskriptif
+               (cth: "Sebab-sebab", "Kesan", "Tokoh Penting")
+             • JANGAN gabungkan kedua-dua dalam satu halaman
+
+             PILIHAN KOMPONEN DALAM paper-board:
+             paper-chip-list   → senarai fakta ringkas (chip-chip)
+             emoji-point-list  → senarai bertanda emoji (ul > li)
+             paper-process-grid → pilih antara 2–4 proses/langkah
+             paper-timeline    → urutan kronologi
+             paper-steps       → langkah berurutan dengan anak panah
+             paper-accordion   → butiran panjang (lihat peraturan accordion)
+             info-paper        → maklumat tambahan/info kotak
+             ───────────────────────────────────────────────────────────── -->
+
+        <!-- CONTOH: Bahagian kandungan PERTAMA -->
+        <section class="note-subsection reveal-on-scroll">
+          <div class="section-heading">
+            <div class="paper-label small">[[Label Bahagian]]</div>
+            <h2><!-- emoji pilihan --> [[Tajuk Bahagian Pertama]]</h2>
+          </div>
+
+          <article class="paper-board">
+            <!-- Isi kandungan bahagian ini -->
+            <ul class="emoji-point-list">
+              <li><span class="emoji-bullet">📌</span><span>[[Fakta/poin pertama]]</span></li>
+              <li><span class="emoji-bullet">📌</span><span>[[Fakta/poin kedua]]</span></li>
+            </ul>
+          </article>
+
+          <!-- ACCORDION — Gunakan HANYA jika:
+               ✅ Ada 3 atau lebih item
+               ✅ Setiap item perlu huraian panjang (>2 baris)
+               ✅ Item adalah sejajar/setara (cth: tokoh, ciri, peristiwa)
+               ✅ Pengguna tidak perlu baca semua sekaligus
+
+               JANGAN guna accordion jika:
+               ❌ Item kurang dari 3
+               ❌ Kandungan ringkas (guna paper-chip-list sahaja)
+               ❌ Kandungan berurutan/kronologi (guna paper-timeline)
+               ❌ Fakta yang perlu dibaca semua sekaligus
+
+               PERATURAN FORMAT:
+               • paper-accordion-no → emoji nombor 1️⃣ 2️⃣ 3️⃣ (KONSISTEN, bukan campuran ikon)
+               • data-accordion ID → unik, guna format: acc-[kata-kunci]
+               • Panel boleh ada: paper-chip-list, emoji-point-list, point-line -->
+          <div class="paper-accordion">
+
+            <article class="paper-accordion-item">
+              <button class="paper-accordion-trigger" data-accordion="acc-[[id-unik-1]]">
+                <span class="paper-accordion-no">1️⃣</span>
+                <span class="paper-accordion-title">[[Tajuk Item Pertama]]</span>
+              </button>
+              <div id="acc-[[id-unik-1]]" class="paper-accordion-panel">
+                <p class="point-line">📌 [[Huraian item pertama]]</p>
+                <div class="paper-chip-list">
+                  <div class="paper-chip">[[butiran]]</div>
+                  <div class="paper-chip">[[butiran]]</div>
+                </div>
+              </div>
+            </article>
+
+            <article class="paper-accordion-item">
+              <button class="paper-accordion-trigger" data-accordion="acc-[[id-unik-2]]">
+                <span class="paper-accordion-no">2️⃣</span>
+                <span class="paper-accordion-title">[[Tajuk Item Kedua]]</span>
+              </button>
+              <div id="acc-[[id-unik-2]]" class="paper-accordion-panel">
+                <p class="point-line">📌 [[Huraian item kedua]]</p>
+              </div>
+            </article>
+
+            <article class="paper-accordion-item">
+              <button class="paper-accordion-trigger" data-accordion="acc-[[id-unik-3]]">
+                <span class="paper-accordion-no">3️⃣</span>
+                <span class="paper-accordion-title">[[Tajuk Item Ketiga]]</span>
+              </button>
+              <div id="acc-[[id-unik-3]]" class="paper-accordion-panel">
+                <p class="point-line">📌 [[Huraian item ketiga]]</p>
+              </div>
+            </article>
+
+          </div>
+          <!-- /ACCORDION -->
+
+        </section>
+        <!-- /BAHAGIAN KANDUNGAN PERTAMA -->
+
+
+        <!-- SALIN BLOK DI ATAS UNTUK BAHAGIAN KANDUNGAN SETERUSNYA -->
+        <!-- Bahagian Kedua, Ketiga, dll. -->
+
+
+        <!-- ─────────────────────────────────────────────────────────────
+             [F] MAKLUMAT TAMBAHAN (PILIHAN)
+             Guna untuk fakta menarik, definisi istilah, atau info latar.
+             Pilih strip mengikut jenis:
+             • strip-info     → info konteks / latar belakang
+             • strip-glossary → definisi / maksud istilah
+             ───────────────────────────────────────────────────────────── -->
+        <!-- <section class="note-subsection reveal-on-scroll">
+          <article class="paper-board info-paper reveal-on-scroll">
+            <div class="paper-strip strip-info">🔍 Info Tambahan</div>
+            <p class="point-line">📌 [[Maklumat tambahan]]</p>
+          </article>
+        </section> -->
+        <!-- /MAKLUMAT TAMBAHAN -->
+
+
+        <!-- ─────────────────────────────────────────────────────────────
+             [G] KESIMPULAN — WAJIB ADA
+             PERATURAN:
+             • strip-summary: "🎯 Kesimpulan"
+             • 2–4 poin utama (chip atau point-line)
+             • WAJIB ada satu ayat refleksi/nilai (🇲🇾 atau kaitan semasa)
+             ───────────────────────────────────────────────────────────── -->
+        <section class="note-subsection reveal-on-scroll">
+          <article class="paper-board summary-paper conclusion-paper">
+            <div class="paper-strip strip-summary">🎯 Kesimpulan</div>
+
+            <div class="paper-chip-list">
+              <div class="paper-chip">[[Poin kesimpulan pertama]]</div>
+              <div class="paper-chip">[[Poin kesimpulan kedua]]</div>
+              <div class="paper-chip">[[Poin kesimpulan ketiga]]</div>
+            </div>
+
+            <p class="point-line">💡 [[Ayat rumusan keseluruhan subtopik]]</p>
+
+            <!-- Ayat refleksi/nilai — WAJIB ada -->
+            <p class="point-line">🇲🇾 [[Ayat refleksi/nilai atau kaitan dengan kehidupan/negara hari ini]]</p>
+
+          </article>
+        </section>
+        <!-- /KESIMPULAN -->
+
+
+        <!-- ─────────────────────────────────────────────────────────────
+             [H] NAVIGASI BAWAH — WAJIB ADA
+             Butang pertama: kembali ke halaman bab/induk
+             Butang kedua: ke subtopik seterusnya
+             Jika ini subtopik TERAKHIR dalam bab, tukar butang kedua
+             kepada "Kembali ke Bab X" atau halaman ulangkaji.
+             ───────────────────────────────────────────────────────────── -->
+        <section class="note-subsection">
+          <div class="hero-actions">
+            <a class="btn btn-secondary" href="[[FAIL_SEBELUM]]">Kembali ke [[BAB_LABEL]]</a>
+            <a class="btn btn-primary" href="[[FAIL_SETERUSNYA]]">Seterusnya: [[KOD_SETERUSNYA]]</a>
+          </div>
+        </section>
+        <!-- /NAVIGASI -->
+
+
+      </div>
+    </section>
+    <!-- /KANDUNGAN UTAMA -->
+
+  </main>
+
+
+  <!-- ═══════════════════════════════════════════════════════════════════════
+       FOOTER — JANGAN UBAH, seragam merentasi semua halaman
+       ═══════════════════════════════════════════════════════════════════════ -->
+  <footer class="site-footer">
+    <div class="container footer-wrap">
+      <div>
+        <p class="footer-brand">HazimEdu</p>
+        <p class="footer-text">
+          Platform pendidikan digital yang membina kandungan visual, mesra telefon dan lebih mudah diikuti.
+        </p>
+      </div>
+      <div class="footer-links">
+        <a href="../index.html">Utama</a>
+        <a href="index.html">Nota</a>
+        <a href="../about.html">Tentang</a>
+        <a href="../feedback.html">Maklum Balas</a>
+        <a href="mailto:hello@hazimedu.com">hello@hazimedu.com</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 HazimEdu. Semua hak cipta terpelihara.</p>
+    </div>
+  </footer>
+
+  <!-- ═══════════════════════════════════════════════════════════════════════
+       JAVASCRIPT — sentiasa guna versi terkini
+       ═══════════════════════════════════════════════════════════════════════ -->
+  <script src="../assets/js/main.js?v=[[JS_V]]"></script>
+
+  <!-- ═══════════════════════════════════════════════════════════════════════
+       STRUCTURED DATA (JSON-LD) — WAJIB ADA untuk SEO
+       Kemaskini nama dan URL mengikut halaman ini.
+       ═══════════════════════════════════════════════════════════════════════ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "HazimEdu", "item": "https://hazimedu.com/"},
+      {"@type": "ListItem", "position": 2, "name": "Nota", "item": "https://hazimedu.com/notes/"},
+      {"@type": "ListItem", "position": 3, "name": "[[BAB_LABEL]] · [[TAJUK_BAB]]", "item": "https://hazimedu.com/notes/[[BAB_URL]]"},
+      {"@type": "ListItem", "position": 4, "name": "[[X.X]] [[TAJUK_SUBTOPIK]] · HazimEdu", "item": "https://hazimedu.com/notes/[[FAIL_INI]]"}
+    ]
+  }
+  </script>
+
+</body>
+</html>
