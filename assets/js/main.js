@@ -146,7 +146,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     requestAnimationFrame(() => {
       panel.style.maxHeight = panel.scrollHeight + "px";
-      panel.style.opacity = "1"; // guard: close rAF may have fired first and set opacity:0
+      panel.style.opacity = "1";
     });
 
     const onTransitionEnd = function (e) {
@@ -168,7 +168,6 @@ document.addEventListener("DOMContentLoaded", function () {
     panel.style.maxHeight = fullHeight + "px";
 
     requestAnimationFrame(() => {
-      // Guard: if the item was re-opened before this rAF fired, skip close animation
       if (!item.classList.contains("is-open")) {
         panel.style.maxHeight = "0px";
         panel.style.opacity = "0";
@@ -1718,5 +1717,19 @@ var HZ_ICONS = (function () {
       });
     }, { rootMargin: '-15% 0px -72% 0px' });
     headings.forEach(function (h) { io.observe(h); });
+  });
+})();
+
+
+// =========================
+// SERVICE WORKER REGISTRATION
+// =========================
+(function () {
+  if (!('serviceWorker' in navigator)) return;
+
+  window.addEventListener('load', function () {
+    navigator.serviceWorker.register('/sw.js').catch(function (error) {
+      console.warn('Service worker registration failed:', error);
+    });
   });
 })();

@@ -1,9 +1,9 @@
 :root {
-  --bg: #f7f4ee;
-  --paper: #fffdf8;
-  --paper-soft: #f4efe4;
-  --paper-warm: #f8f1e3;
-  --paper-note: #fff7d6;
+  --bg: #f7faff;
+  --paper: #ffffff;
+  --paper-soft: #f7faff;
+  --paper-warm: #f8fbff;
+  --paper-note: #f2f8ff;
   --ink: #24313f;
   --muted: #5d6a79;
   --line: rgba(92, 110, 132, 0.16);
@@ -30,6 +30,15 @@
 /* Prevent only horizontal overscroll — keeps pull-to-refresh (swipe down) working */
 html { overscroll-behavior-x: none; }
 html, body { background-color: var(--paper); }
+
+body {
+  background:
+    radial-gradient(circle at 8% 10%, rgba(120, 174, 255, 0.13), transparent 30%),
+    radial-gradient(circle at 88% 16%, rgba(95, 225, 190, 0.10), transparent 26%),
+    radial-gradient(circle at 24% 86%, rgba(179, 151, 255, 0.10), transparent 28%),
+    linear-gradient(180deg, #ffffff 0%, #f8fbff 52%, #f4fbff 100%);
+  min-height: 100vh;
+}
 
 /* =========================
    DARK MODE TOKENS — Warm Dim
@@ -158,6 +167,26 @@ html, body { background-color: var(--paper); }
   color: #7ecfb8;
 }
 
+[data-theme="dark"] .bab-card-time {
+  color: #d0c5b4;
+}
+
+[data-theme="dark"] .bab-status-badge {
+  background: rgba(220, 210, 190, 0.08);
+  border-color: rgba(220, 210, 190, 0.2);
+  color: #d8ebf7;
+}
+
+
+
+[data-theme="dark"] .bab-card-theme-1 { background: linear-gradient(135deg, rgba(95, 50, 13, 0.32), rgba(72, 35, 10, 0.34)); border-color: rgba(251, 146, 60, 0.28); }
+[data-theme="dark"] .bab-card-theme-2 { background: linear-gradient(135deg, rgba(9, 65, 98, 0.32), rgba(8, 48, 72, 0.34)); border-color: rgba(56, 189, 248, 0.28); }
+[data-theme="dark"] .bab-card-theme-3 { background: linear-gradient(135deg, rgba(16, 90, 50, 0.3), rgba(13, 68, 38, 0.34)); border-color: rgba(74, 222, 128, 0.28); }
+[data-theme="dark"] .bab-card-theme-4 { background: linear-gradient(135deg, rgba(62, 33, 126, 0.3), rgba(49, 25, 102, 0.34)); border-color: rgba(167, 139, 250, 0.28); }
+[data-theme="dark"] .bab-card-theme-5 { background: linear-gradient(135deg, rgba(122, 26, 85, 0.28), rgba(92, 20, 63, 0.34)); border-color: rgba(244, 114, 182, 0.28); }
+[data-theme="dark"] .bab-card-theme-6 { background: linear-gradient(135deg, rgba(9, 82, 80, 0.3), rgba(8, 60, 58, 0.34)); border-color: rgba(45, 212, 191, 0.28); }
+[data-theme="dark"] .bab-card-theme-7 { background: linear-gradient(135deg, rgba(118, 86, 8, 0.28), rgba(89, 64, 6, 0.34)); border-color: rgba(250, 204, 21, 0.28); }
+
 [data-theme="dark"] .paper-chip {
   background: rgba(220, 210, 190, 0.05);
   border-color: rgba(220, 210, 190, 0.1);
@@ -268,57 +297,35 @@ html, body { background-color: var(--paper); }
   color: #6fcfb5;
 }
 
-/* Keyword highlights light — Bab 1 */
+/* Keyword highlights light — Global */
 .kw-tokoh { color: #9f1239; background: rgba(255, 228, 230, 0.92); }
-.kw-masa { color: #1d4ed8; background: rgba(219, 234, 254, 0.92); }
+.kw-masa { color: #1e40af; background: rgba(219, 234, 254, 0.92); }
+.kw-tahun { color: #075985; background: rgba(224, 242, 254, 0.94); }
 .kw-tempat { color: #166534; background: rgba(220, 252, 231, 0.92); }
-.kw-konsep { color: #c2410c; background: rgba(255, 237, 213, 0.94); }
+.kw-konsep { color: #9a3412; background: rgba(255, 237, 213, 0.94); }
 .kw-kerajaan { color: #6d28d9; background: rgba(237, 233, 254, 0.94); }
 .kw-istilah { color: #0f766e; background: rgba(204, 251, 241, 0.94); }
+.kw-pentadbiran { color: #92400e; background: rgba(254, 243, 199, 0.94); }
+.kw-perjanjian { color: #be185d; background: rgba(252, 231, 243, 0.94); }
+.kw-peristiwa { color: #b45309; background: rgba(254, 249, 195, 0.94); }
+.kw-gerakan { color: #7e22ce; background: rgba(243, 232, 255, 0.94); }
+.kw-pertubuhan { color: #4338ca; background: rgba(224, 231, 255, 0.94); }
+.kw-karya { color: #0e7490; background: rgba(207, 250, 254, 0.94); }
 
-/* Keyword highlights light — Bab 2 */
-.kw-tahun { color: #3458b2; background: rgba(219, 232, 255, 0.94); }
-.kw-peristiwa { color: #b35c1e; background: rgba(255, 230, 207, 0.94); }
-.kw-gerakan { color: #7c35b2; background: rgba(242, 222, 252, 0.94); }
-.kw-pertubuhan { color: #5f3eb2; background: rgba(231, 222, 252, 0.94); }
-.kw-karya { color: #2f7f86; background: rgba(217, 243, 244, 0.94); }
-
-/* Keyword highlights light — Bab 3 */
-.kw-b3-tokoh { color: #9f1239; background: rgba(255, 228, 230, 0.92); }
-.kw-b3-tahun { color: #3458b2; background: rgba(219, 232, 255, 0.94); }
-.kw-b3-tempat { color: #166534; background: rgba(220, 252, 231, 0.92); }
-.kw-b3-peristiwa { color: #b35c1e; background: rgba(255, 230, 207, 0.94); }
-.kw-b3-ideologi { color: #7c35b2; background: rgba(242, 222, 252, 0.94); }
-.kw-b3-pertubuhan { color: #5f3eb2; background: rgba(231, 222, 252, 0.94); }
-.kw-b3-perjanjian { color: #2f7f86; background: rgba(217, 243, 244, 0.94); }
-.kw-b3-istilah { color: #0f766e; background: rgba(204, 251, 241, 0.94); }
-.kw-b3-karya { color: #92400e; background: rgba(254, 243, 199, 0.94); }
-
-/* Keyword highlights dark — Bab 1 */
+/* Keyword highlights dark — Global */
 [data-theme="dark"] .kw-tokoh { color: #e8828f; background: rgba(232, 130, 143, 0.12); }
 [data-theme="dark"] .kw-masa { color: #82a8e0; background: rgba(130, 168, 224, 0.12); }
+[data-theme="dark"] .kw-tahun { color: #8ecae6; background: rgba(8, 47, 73, 0.34); }
 [data-theme="dark"] .kw-tempat { color: #7ec49a; background: rgba(126, 196, 154, 0.12); }
-[data-theme="dark"] .kw-konsep { color: #e0a070; background: rgba(224, 160, 112, 0.12); }
-[data-theme="dark"] .kw-kerajaan { color: #b09ae0; background: rgba(176, 154, 224, 0.12); }
+[data-theme="dark"] .kw-konsep { color: #fdba74; background: rgba(124, 45, 18, 0.34); }
+[data-theme="dark"] .kw-kerajaan { color: #c4b5fd; background: rgba(76, 29, 149, 0.34); }
 [data-theme="dark"] .kw-istilah { color: #5ec4b4; background: rgba(94, 196, 180, 0.12); }
-
-/* Keyword highlights dark — Bab 2 */
-[data-theme="dark"] .kw-tahun { color: #82a8e0; background: rgba(130, 168, 224, 0.12); }
-[data-theme="dark"] .kw-peristiwa { color: #e0a070; background: rgba(224, 160, 112, 0.12); }
-[data-theme="dark"] .kw-gerakan { color: #c89ee0; background: rgba(200, 158, 224, 0.12); }
-[data-theme="dark"] .kw-pertubuhan { color: #b09ae0; background: rgba(176, 154, 224, 0.12); }
-[data-theme="dark"] .kw-karya { color: #60c4cc; background: rgba(96, 196, 204, 0.12); }
-
-/* Keyword highlights dark — Bab 3 */
-[data-theme="dark"] .kw-b3-tokoh { color: #e8828f; background: rgba(232, 130, 143, 0.12); }
-[data-theme="dark"] .kw-b3-tahun { color: #82a8e0; background: rgba(130, 168, 224, 0.12); }
-[data-theme="dark"] .kw-b3-tempat { color: #7ec49a; background: rgba(126, 196, 154, 0.12); }
-[data-theme="dark"] .kw-b3-peristiwa { color: #e0a070; background: rgba(224, 160, 112, 0.12); }
-[data-theme="dark"] .kw-b3-ideologi { color: #c89ee0; background: rgba(200, 158, 224, 0.12); }
-[data-theme="dark"] .kw-b3-pertubuhan { color: #b09ae0; background: rgba(176, 154, 224, 0.12); }
-[data-theme="dark"] .kw-b3-perjanjian { color: #60c4cc; background: rgba(96, 196, 204, 0.12); }
-[data-theme="dark"] .kw-b3-istilah { color: #5ec4b4; background: rgba(94, 196, 180, 0.12); }
-[data-theme="dark"] .kw-b3-karya { color: #d4aa60; background: rgba(212, 170, 96, 0.12); }
+[data-theme="dark"] .kw-pentadbiran { color: #facc15; background: rgba(113, 63, 18, 0.34); }
+[data-theme="dark"] .kw-perjanjian { color: #f9a8d4; background: rgba(131, 24, 67, 0.34); }
+[data-theme="dark"] .kw-peristiwa { color: #fcd34d; background: rgba(120, 53, 15, 0.34); }
+[data-theme="dark"] .kw-gerakan { color: #d8b4fe; background: rgba(88, 28, 135, 0.34); }
+[data-theme="dark"] .kw-pertubuhan { color: #a5b4fc; background: rgba(49, 46, 129, 0.34); }
+[data-theme="dark"] .kw-karya { color: #67e8f9; background: rgba(21, 94, 117, 0.34); }
 
 /* Bloc dark */
 [data-theme="dark"] .bloc-central { color: #94a3b8; background: rgba(226, 232, 240, 0.1); }
@@ -417,4 +424,3 @@ select {
   backdrop-filter: blur(8px);
   transition: background 0.35s ease;
 }
-

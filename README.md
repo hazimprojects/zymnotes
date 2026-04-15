@@ -1,40 +1,90 @@
-# Hazim EduHub
+# HazimEdu
 
-Hazim EduHub ialah projek peribadi pendidikan dari Malaysia yang membina nota visual, kemas dan mesra telefon untuk membantu pelajar memahami isi penting dengan lebih mudah.
+HazimEdu ialah **platform pendidikan digital tempatan** yang membina kandungan pembelajaran visual, mesra telefon dan lebih mudah diikuti untuk membantu pengguna belajar dengan lebih yakin.
 
-Fokus semasa projek ini ialah **Sejarah Tingkatan 4**, khususnya bab-bab yang sarat dengan fakta dan sering dianggap sukar jika hanya bergantung pada buku teks biasa. Projek ini juga dirancang supaya berguna kepada pelajar, guru dan ibu bapa yang mahukan bahan rujukan yang lebih tersusun dan mudah diikuti.
+Fokus semasa HazimEdu ialah **Sejarah Tingkatan 4**, dengan peluasan kandungan ke **Sejarah Tingkatan 5** dan bidang lain secara berperingkat. Platform ini dibina untuk menjadikan pengalaman ulang kaji lebih jelas, lebih tersusun dan lebih dekat dengan cara pelajar hari ini membaca serta belajar melalui skrin.
 
-## Matlamat Projek
+---
 
-Hazim EduHub dibina dengan beberapa keutamaan utama:
+## Gambaran Ringkas
 
-- menyediakan nota yang lebih jelas, visual dan teratur
-- menjadikan bahan ulang kaji lebih mesra telefon pintar
-- membantu pelajar memahami isi penting tanpa menghilangkan konteks utama
-- membina pengalaman membaca yang lebih ringan tetapi tetap lengkap
-- menghasilkan bahan yang kemas, matang dan meyakinkan
+HazimEdu bermula daripada keperluan untuk menjadikan kandungan silibus yang padat lebih mudah didekati tanpa mengorbankan isi penting. Ia tidak cuba menggantikan buku teks sepenuhnya, tetapi berfungsi sebagai **bahan sokongan pembelajaran digital** yang lebih:
+
+- visual
+- tersusun
+- mesra telefon
+- mudah diteroka
+- sesuai untuk ulang kaji berperingkat
+
+Platform ini sesuai untuk:
+
+- **pelajar** yang mahu nota yang lebih mudah dibaca
+- **guru** yang mahu bahan sokongan tambahan
+- **ibu bapa** yang mahu rujukan yang lebih jelas untuk membantu anak belajar
+
+---
 
 ## Fokus Kandungan Semasa
 
-Setakat ini, projek memberi tumpuan kepada **Sejarah Tingkatan 4** dengan struktur berikut:
+Setakat ini, kandungan aktif tertumpu pada **Sejarah Tingkatan 4** dengan struktur berikut:
 
-- **Bab 1 · Warisan Negara Bangsa**  
-  merangkumi halaman utama bab dan subhalaman 1.1 hingga 1.4
+### Bab 1 · Warisan Negara Bangsa
+- halaman utama bab
+- subtopik 1.1 hingga 1.4
 
-- **Bab 2 · Kebangkitan Nasionalisme**  
-  merangkumi halaman utama bab dan subhalaman 2.1 hingga 2.8
+### Bab 2 · Kebangkitan Nasionalisme
+- halaman utama bab
+- subtopik 2.1 hingga 2.8
 
-- **Bab 3 · Konflik Dunia dan Pendudukan Jepun di Negara Kita**  
-  merangkumi halaman utama bab dan subhalaman 3.1 hingga 3.9
+### Bab 3 · Konflik Dunia dan Pendudukan Jepun di Negara Kita
+- halaman utama bab
+- subtopik 3.1 hingga 3.9
 
-## Ciri-ciri Utama
+### Bab 4 · Era Peralihan Kuasa British di Negara Kita
+- halaman utama bab
+- subtopik 4.1 hingga 4.7
 
-- susun atur nota yang lebih visual
-- reka bentuk yang mesra telefon
-- penggunaan blok isi, rumusan, glosari dan info tambahan
-- penekanan pada aliran bacaan yang jelas
-- sistem highlight kata kunci mengikut kategori
-- gaya nota yang sesuai untuk ulang kaji pelajar
+### Bab 5 · Persekutuan Tanah Melayu 1948
+- halaman utama bab
+- subtopik 5.1 hingga 5.4
+
+### Bab 6 · Ancaman Komunis dan Perisytiharan Darurat
+- halaman utama bab
+- subtopik 6.1 hingga 6.4
+
+---
+
+## Ciri-ciri Utama Platform
+
+HazimEdu kini bukan sekadar himpunan nota statik. Repo semasa sudah merangkumi beberapa lapisan pengalaman pengguna yang lebih matang.
+
+### Kandungan & Pembacaan
+- nota visual yang lebih kemas dan terarah
+- hierarki isi yang jelas untuk topik yang padat
+- blok rumusan, info tambahan, glosari dan susunan bacaan
+- kandungan yang mesra telefon pintar
+
+### Pengalaman Ulang Kaji
+- audio nota untuk beberapa subtopik
+- sticky mini audio player
+- reading progress bar pada halaman subtopik
+- swipe navigation untuk pengguna mudah alih
+- pintasan papan kekunci pada halaman nota
+
+### Navigasi & Carian
+- carian dalaman untuk koleksi nota
+- global search overlay
+- desktop floating table of contents untuk halaman tertentu
+- mobile bottom navigation
+- sparkle utility menu pada halaman nota terpilih
+
+### Visual & Identiti
+- dark mode
+- sistem tema visual yang lebih modular
+- identiti jenama HazimEdu yang lebih konsisten
+- struktur halaman yang semakin menghampiri bentuk platform pembelajaran sebenar
+
+---
 
 ## Struktur Projek
 
@@ -42,10 +92,25 @@ Setakat ini, projek memberi tumpuan kepada **Sejarah Tingkatan 4** dengan strukt
 hazimedu/
 ├── index.html
 ├── about.html
+├── feedback.html
+├── thank-you.html
 ├── README.md
+├── manifest.json
+├── sw.js
+├── data/
+│   └── updates.json
 ├── assets/
 │   ├── css/
-│   │   └── style.css
+│   │   ├── style.css
+│   │   ├── base.css
+│   │   ├── layout.css
+│   │   ├── ui.css
+│   │   ├── paper.css
+│   │   ├── keywords.css
+│   │   ├── responsive.css
+│   │   ├── themes.css
+│   │   ├── lab.css
+│   │   └── print.css
 │   └── js/
 │       └── main.js
 └── notes/
@@ -73,172 +138,148 @@ hazimedu/
     ├── bab-3-6.html
     ├── bab-3-7.html
     ├── bab-3-8.html
-    └── bab-3-9.html```
-
-## Struktur Kandungan Nota
-
-Folder notes/ mengandungi halaman berikut:
-
-notes/index.html — halaman utama koleksi nota
-
-
-Bab 1 · Warisan Negara Bangsa
-
-notes/bab-1.html
-
-notes/bab-1-1.html
-
-notes/bab-1-2.html
-
-notes/bab-1-3.html
-
-notes/bab-1-4.html
-
-
-Bab 2 · Kebangkitan Nasionalisme
-
-notes/bab-2.html
-
-notes/bab-2-1.html
-
-notes/bab-2-2.html
-
-notes/bab-2-3.html
-
-notes/bab-2-4.html
-
-notes/bab-2-5.html
-
-notes/bab-2-6.html
-
-notes/bab-2-7.html
-
-notes/bab-2-8.html
-
-
-Bab 3 · Konflik Dunia dan Pendudukan Jepun di Negara Kita
-
-notes/bab-3.html
-
-notes/bab-3-1.html
-
-notes/bab-3-2.html
-
-notes/bab-3-3.html
-
-notes/bab-3-4.html
-
-notes/bab-3-5.html
-
-notes/bab-3-6.html
-
-notes/bab-3-7.html
-
-notes/bab-3-8.html
-
-notes/bab-3-9.html
-
+    ├── bab-3-9.html
+    ├── bab-4.html
+    ├── bab-4-1.html
+    ├── bab-4-2.html
+    ├── bab-4-3.html
+    ├── bab-4-4.html
+    ├── bab-4-5.html
+    ├── bab-4-6.html
+    ├── bab-4-7.html
+    ├── bab-5.html
+    ├── bab-5-1.html
+    ├── bab-5-2.html
+    ├── bab-5-3.html
+    ├── bab-5-4.html
+    ├── bab-6.html
+    ├── bab-6-1.html
+    ├── bab-6-2.html
+    ├── bab-6-3.html
+    └── bab-6-4.html
+```
+---
 
 ## Teknologi Digunakan
 
-Projek ini dibina menggunakan:
+HazimEdu dibina sebagai laman statik yang ringan tetapi semakin kaya dari sudut pengalaman pengguna.
 
-HTML
+### Asas
+- HTML
+- CSS
+- JavaScript
+- Google Fonts (Nunito)
 
-CSS
+### Frontend Architecture
+- CSS modular melalui `style.css` sebagai master stylesheet
+- Import fail berasingan seperti:
+  - `base.css`
+  - `layout.css`
+  - `ui.css`
+  - `paper.css`
+  - `responsive.css`
+  - `themes.css`
+  - `lab.css`
+  - `print.css`
 
-JavaScript
+### Interaksi UI
+- dark mode
+- carian dalaman
+- global search overlay
+- mobile bottom navigation
+- sticky audio player
+- sparkle utility menu
+- reading progress bar
+- desktop floating TOC
+- swipe dan keyboard navigation
 
-Google Fonts (Nunito)
+### Sokongan Platform
+- Web App Manifest
+- service worker
+- PWA install nudge
+- Google Analytics
 
-
-Ia merupakan laman statik yang ringan, mudah diselenggara dan mudah dihoskan.
+---
 
 ## Prinsip Reka Bentuk
 
-Hazim EduHub menekankan beberapa prinsip reka bentuk:
+HazimEdu dibina dengan beberapa prinsip utama:
 
-jelas — isi penting mudah dikenal pasti
+### 1. Jelas
+Isi penting perlu mudah dikenal pasti walaupun topik padat dan sarat fakta.
 
-konsisten — setiap bab menggunakan identiti visual yang sama
+### 2. Visual tetapi berfungsi
+Warna, blok, label dan komponen visual digunakan untuk membantu kefahaman, bukan sekadar hiasan.
 
-mesra pelajar — tidak terlalu padat atau meletihkan
+### 3. Mesra telefon
+Halaman dirancang supaya selesa dibaca pada skrin kecil kerana itu ialah peranti utama ramai pengguna.
 
-mesra telefon — sesuai dibaca pada skrin kecil
+### 4. Tersusun
+Setiap bab dibina dengan aliran yang konsisten supaya pengguna tidak terasa hilang arah.
 
-profesional tetapi santai — sesuai untuk ulang kaji harian
+### 5. Berkembang secara terkawal
+HazimEdu dikembangkan secara berperingkat dengan keutamaan kepada kualiti kandungan dan pengalaman pembelajaran.
 
+---
 
-## Status Projek
+## Status Semasa
 
-Projek ini masih dalam proses pembangunan dan penambahbaikan secara berperingkat.
+HazimEdu sedang berkembang dengan arah yang semakin jelas sebagai **platform pendidikan digital**, bukan sekadar laman nota biasa.
 
-Beberapa kandungan mungkin akan terus diperhalus dari semasa ke semasa, termasuk:
+Status semasa yang boleh dikenal pasti daripada repo:
 
-ketepatan istilah
+- jenama utama telah bergerak ke **HazimEdu**
+- kandungan Sejarah Tingkatan 4 kini meliputi **Bab 1 hingga Bab 6**
+- pengalaman pengguna telah diperkaya dengan audio, carian, navigation tools dan komponen UX tambahan
+- struktur frontend kini lebih modular dan lebih sesuai untuk perkembangan masa depan
 
-susunan isi
-
-reka bentuk blok nota
-
-kebolehbacaan pada telefon
-
-penambahan bab atau subjek baharu
-
+---
 
 ## Cara Guna
 
-1. Buka fail index.html untuk halaman utama.
+1. Buka `index.html` untuk halaman utama platform  
+2. Masuk ke `notes/index.html` untuk melihat koleksi nota semasa  
+3. Pilih bab atau subtopik yang ingin dibaca  
+4. Gunakan carian untuk mencari istilah, tokoh, konsep atau topik tertentu  
+5. Pada halaman nota terpilih, gunakan audio, navigation aids dan reading tools yang tersedia  
 
+---
 
-2. Masuk ke bahagian notes/ untuk melihat koleksi nota.
+## Arah Perkembangan
 
+HazimEdu dibina dengan potensi untuk berkembang lebih jauh daripada fokus semasa.
 
-3. Pilih bab atau subtopik yang ingin dibaca.
+Antara arah pengembangan yang selari dengan repo dan positioning semasa:
 
+- peluasan kandungan ke **Sejarah Tingkatan 5**
+- pengembangan audio ke lebih banyak bab
+- pengukuhan struktur kandungan KSSM yang lebih luas
+- penambahan elemen ulang kaji yang lebih interaktif
+- penambahbaikan konsistensi identiti visual dan pengalaman platform
 
-4. Gunakan nota sebagai bahan ulang kaji, rujukan atau sokongan pengajaran.
+---
 
+## Kedudukan Platform
 
+HazimEdu tidak diposisikan sebagai pengganti tunggal kepada buku teks atau sumber rasmi. Sebaliknya, ia berfungsi sebagai:
 
-## Cadangan Penambahbaikan Masa Depan
+- platform pembelajaran digital
+- bahan sokongan ulang kaji
+- ruang pembacaan yang lebih mesra pengguna
+- lapisan visual dan navigasi tambahan untuk membantu pelajar memahami kandungan silibus dengan lebih yakin
 
-Antara arah yang boleh dikembangkan kemudian:
+---
 
-penambahan lebih banyak bab Sejarah Tingkatan 4
+## Hubungi
 
-perluasan ke subjek lain
+**HazimEdu**  
+Malaysia  
+Email: **hello@hazimedu.com**
 
-mod carian atau penapisan nota
-
-versi cetakan atau PDF
-
-penambahbaikan aksesibiliti
-
-lebih banyak elemen ulang kaji interaktif
-
-
-## Tentang Projek
-
-Hazim EduHub bukan sekadar laman nota biasa. Ia ialah usaha untuk membina ruang ulang kaji yang:
-
-lebih dekat dengan cara pelajar belajar hari ini
-
-lebih tersusun daripada nota ringkas biasa
-
-lebih mudah diakses berbanding nota fizikal tradisional
-
-tetap menjaga integriti isi dan struktur pembelajaran
-
+---
 
 ## Lesen
 
 Belum ditetapkan secara rasmi.
 
-Jika projek ini ingin dibuka untuk penggunaan awam, pengedaran atau sumbangan komuniti, bahagian lesen boleh dikemas kini kemudian.
-
-Hubungi
-
-Hazim EduHub
-Malaysia
-Email: hello@hazimedu.com
+Jika HazimEdu ingin dibuka untuk penggunaan awam yang lebih luas, pengedaran semula, atau sumbangan komuniti pada masa hadapan, bahagian lesen boleh dikemas kini kemudian.

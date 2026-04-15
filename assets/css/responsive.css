@@ -141,7 +141,7 @@
 
   .keyword-legend-wrap { padding: 0.8rem 0.85rem; border-radius: 18px; }
   .keyword-legend-title { font-size: 0.84rem; margin-bottom: 0.55rem; }
-  .keyword-legend-grid, .keyword-legend-grid-bab2 { gap: 0.45rem 0.5rem; }
+  .keyword-legend-grid { gap: 0.45rem 0.5rem; }
   .keyword-legend-item .kw { font-size: 0.88rem; padding: 0.07rem 0.32rem; border-radius: 0.38rem; }
 
   .paper-accordion-trigger { padding: 0.95rem 1rem; }
