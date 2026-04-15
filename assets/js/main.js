@@ -1641,7 +1641,7 @@ var HZ_ICONS = (function () {
   if (!('serviceWorker' in navigator)) return;
 
   window.addEventListener('load', function () {
-    navigator.serviceWorker.register('/sw.js').catch(function (error) {
+    navigator.serviceWorker.register('/sw.js?v=11').catch(function (error) {
       console.warn('Service worker registration failed:', error);
     });
   });
