@@ -1,5 +1,5 @@
 /* =========================
-   MASTER STYLESHEET — v51
+   MASTER STYLESHEET — v52
    Import fail-specific files here.
    HTML files reference style.css — no change needed there.
 ========================= */
@@ -10,6 +10,6 @@
 @import url("paper.css?v=8");      /* Paper labels, boards, chips, accordion, steps, bab overview */
 @import url("keywords.css?v=1");   /* Keyword highlights (Bab 1/2/3), bloc identity, keyword legend */
 @import url("responsive.css?v=3"); /* All @media queries + spacing fixes */
-@import url("themes.css?v=4");     /* Bab visual themes, dark mode overrides, war block chips */
+@import url("themes.css?v=5");     /* Bab visual themes, dark mode overrides, war block chips */
 @import url("lab.css?v=2");        /* Learning Lab, action bar, mini interactive blocks */
 @import url("print.css") print;    /* Print styles (Ctrl+P) */
