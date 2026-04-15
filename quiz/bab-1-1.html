@@ -36,7 +36,7 @@
     href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap"
     rel="stylesheet"
   />
-  <link rel="stylesheet" href="../assets/css/style.css?v=52" />
+  <link rel="stylesheet" href="../assets/css/style.css?v=53" />
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZTQB7MML49"></script>
@@ -590,7 +590,7 @@
   <link rel="icon" type="image/svg+xml" href="/icons/icon.svg" />
   <link rel="apple-touch-icon" href="/icons/icon.svg" />
 </head>
-<body class="bab-theme-1 no-bottom-nav quiz-page">
+<body class="bab-theme-1 quiz-page">
   <header class="site-header">
     <div class="container nav-wrap">
       <a class="brand" href="../index.html">HazimEdu</a>
@@ -782,7 +782,6 @@
     <!-- Emoji-only sparkle dock (reuses shared .note-sparkle-* CSS from ui.css) -->
     <div class="note-sparkle-wrap fab-corner-br" id="lab-sparkle-wrap">
       <div class="note-sparkle-items" id="lab-sparkle-items">
-        <button class="note-sparkle-item" type="button" data-tooltip="Mod paparan" id="lab-dm-btn">☀️</button>
         <button class="note-sparkle-item" type="button" data-tooltip="Cuba Semula" id="lab-restart-btn">🔄</button>
         <a class="note-sparkle-item" href="../notes/bab-1-1.html" data-tooltip="Nota 1.1">📖</a>
       </div>
@@ -791,13 +790,11 @@
   </div>
 
   <script src="../assets/js/subtopic-lab.js?v=1"></script>
-  <script src="../assets/js/main.js?v=52"></script>
+  <script src="../assets/js/main.js?v=53"></script>
   <script>
     (function () {
-      var THEME_KEY = 'hazimedu-theme';
       var wrap = document.getElementById('lab-sparkle-wrap');
       var fab  = document.getElementById('lab-sparkle-fab');
-      var dmBtn = document.getElementById('lab-dm-btn');
       var restartBtn = document.getElementById('lab-restart-btn');
 
       // ── Draggable corner FAB (same behaviour as note pages) ─────────────
@@ -866,9 +863,6 @@
         });
       }
 
-      // Sync dark mode emoji on load
-      dmBtn.textContent = (document.documentElement.getAttribute('data-theme') || 'light') === 'dark' ? '🌙' : '☀️';
-
       // Toggle open/close (only when not dragging)
       fab.addEventListener('click', function (e) {
         e.stopPropagation();
@@ -877,15 +871,6 @@
       });
       document.addEventListener('click', function (e) {
         if (!wrap.contains(e.target)) wrap.classList.remove('is-open');
-      });
-
-      // Dark mode
-      dmBtn.addEventListener('click', function () {
-        var next = (document.documentElement.getAttribute('data-theme') || 'light') === 'dark' ? 'light' : 'dark';
-        document.documentElement.setAttribute('data-theme', next);
-        localStorage.setItem(THEME_KEY, next);
-        dmBtn.textContent = next === 'dark' ? '🌙' : '☀️';
-        wrap.classList.remove('is-open');
       });
 
       // Restart lab
