@@ -923,7 +923,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     if (audioEl) itemsContainer.appendChild(makeSparkleItem('🎧', 'Main audio', 'audio'));
-    if (labHref) itemsContainer.appendChild(makeSparkleItem('🏛', 'Arkib', 'lab', labHref));
+    if (labHref) itemsContainer.appendChild(makeSparkleItem('🧩', 'Kuiz', 'lab', labHref));
 
     var fab = document.createElement('button');
     fab.className = 'note-sparkle-fab';
