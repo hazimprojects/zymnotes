@@ -7,7 +7,7 @@
   <!-- Open Graph -->
   <meta property="og:title" content="Kuiz 1.1 · Negara Bangsa Alam Melayu · HazimEdu" />
   <meta property="og:description" content="Kuiz interaktif untuk Sejarah Tingkatan 4 Bab 1.1: Latar Belakang Negara Bangsa Sebelum Kedatangan Barat." />
-  <meta property="og:url" content="https://hazimedu.com/lab/bab-1-1.html" />
+  <meta property="og:url" content="https://hazimedu.com/quiz/bab-1-1.html" />
   <meta property="og:image" content="https://hazimedu.com/assets/og-image.png?v=20260414" />
   <meta property="og:image:url" content="https://hazimedu.com/assets/og-image.png?v=20260414" />
   <meta property="og:image:type" content="image/png" />
@@ -51,109 +51,36 @@
 
   <style>
     /* ======================================
-       LAB PAGE — MOBILE-FIRST, NO PAGE SCROLL
+       QUIZ PAGE — MOBILE-FIRST
        ====================================== */
 
     .lab-compact-page {
-      height: 100dvh;
-      max-height: 100dvh;
-      overflow: hidden;
+      min-height: calc(100dvh - 72px);
+      overflow: visible;
       display: flex;
       flex-direction: column;
-      /* Parchment + subtle cartography grid */
-      background:
-        repeating-linear-gradient(0deg, rgba(110, 75, 25, 0.022) 0px, transparent 1px, transparent 26px, rgba(110, 75, 25, 0.022) 27px),
-        repeating-linear-gradient(90deg, rgba(110, 75, 25, 0.022) 0px, transparent 1px, transparent 26px, rgba(110, 75, 25, 0.022) 27px),
-        linear-gradient(165deg, #f0e6cc 0%, #ebe0c0 50%, #eddfc5 100%);
-    }
-
-    /* --- TOPBAR --- */
-    .lab-compact-topbar {
-      flex-shrink: 0;
-      z-index: 30;
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      background: rgba(238, 228, 200, 0.88);
-      border-bottom: 1px solid rgba(100, 70, 28, 0.12);
-    }
-
-    .lab-compact-topbar-inner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 0.7rem;
-      padding: 0.6rem 1rem;
-      max-width: 1100px;
-      margin: 0 auto;
-    }
-
-    .lab-compact-back {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.32rem;
-      padding: 0.42rem 0.68rem;
-      border-radius: 999px;
-      text-decoration: none;
-      background: rgba(92, 110, 132, 0.06);
-      border: 1px solid rgba(92, 110, 132, 0.14);
-      color: #24313f;
-      font-size: 0.77rem;
-      font-weight: 800;
-      white-space: nowrap;
-      flex-shrink: 0;
-    }
-
-    .lab-compact-topmeta {
-      flex: 1;
-      text-align: center;
-      min-width: 0;
-    }
-
-    .lab-compact-kicker {
-      margin: 0;
-      font-size: 0.65rem;
-      font-weight: 900;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-      color: #7a3e1e;
-    }
-
-    .lab-compact-title {
-      margin: 0.05rem 0 0;
-      font-size: 0.88rem;
-      line-height: 1.2;
-      color: #24313f;
-      font-weight: 900;
-    }
-
-    .lab-compact-spacer {
-      width: 90px;
-      flex-shrink: 0;
+      padding-bottom: calc(80px + env(safe-area-inset-bottom));
+      background: var(--page-bg, linear-gradient(180deg, #f5f2eb, #ece7dd));
     }
 
     /* --- MAIN AREA --- */
     .lab-compact-main {
-      flex: 1;
-      min-height: 0;
-      overflow: hidden;
       display: flex;
-      padding: 0.65rem 0.75rem 0.7rem;
+      padding: 0.65rem 0.75rem 0;
       justify-content: center;
     }
 
     /* --- SHELL (single column, mobile-first) --- */
     .lab-compact-shell {
       width: 100%;
-      max-width: 520px;
+      max-width: 1100px;
       display: flex;
       flex-direction: column;
-      min-height: 0;
+      gap: 0.72rem;
     }
 
     /* --- SIDEBAR (hidden on mobile) --- */
-    .lab-compact-side {
-      display: none;
-    }
+    .lab-compact-side { display: grid; gap: 0.72rem; }
 
     /* --- GAME SECTION --- */
     .lab-compact-game {
@@ -507,8 +434,6 @@
         align-content: start;
       }
 
-      .lab-compact-spacer { display: block; }
-
       .lab-compact-game .learning-lab-top {
         display: flex;
       }
@@ -520,21 +445,8 @@
     }
 
     /* --- DARK MODE — candlelit archive --- */
-    [data-theme="dark"] .lab-compact-page {
-      background:
-        repeating-linear-gradient(0deg, rgba(180, 130, 40, 0.022) 0px, transparent 1px, transparent 26px, rgba(180, 130, 40, 0.022) 27px),
-        repeating-linear-gradient(90deg, rgba(180, 130, 40, 0.022) 0px, transparent 1px, transparent 26px, rgba(180, 130, 40, 0.022) 27px),
-        linear-gradient(155deg, #1c130a, #160e06);
-    }
+    [data-theme="dark"] .lab-compact-page { background: var(--page-bg, #0e151e); }
 
-    [data-theme="dark"] .lab-compact-topbar {
-      background: rgba(18, 11, 4, 0.9);
-      border-bottom-color: rgba(180, 140, 60, 0.1);
-    }
-
-    [data-theme="dark"] .lab-compact-kicker { color: #c4834a; }
-
-    [data-theme="dark"] .lab-compact-back,
     [data-theme="dark"] .lab-compact-card {
       background: rgba(36, 26, 14, 0.96);
       border-color: rgba(180, 140, 60, 0.12);
@@ -657,22 +569,33 @@
   <link rel="icon" type="image/svg+xml" href="/icons/icon.svg" />
   <link rel="apple-touch-icon" href="/icons/icon.svg" />
 </head>
-<body class="bab-theme-1 no-bottom-nav">
+<body class="bab-theme-1">
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="../index.html">HazimEdu</a>
+      <button class="nav-toggle" aria-label="Buka menu" aria-expanded="false">☰</button>
+      <nav class="site-nav">
+        <a href="../index.html">Utama</a>
+        <a href="../notes/index.html">Nota</a>
+        <a href="../about.html">Tentang</a>
+      </nav>
+    </div>
+  </header>
   <div class="lab-compact-page">
-    <header class="lab-compact-topbar">
-      <div class="lab-compact-topbar-inner">
-        <a class="lab-compact-back" href="../notes/bab-1-1.html">← Nota 1.1</a>
-
-        <div class="lab-compact-topmeta">
-          <p class="lab-compact-kicker">Kuiz · Bab 1</p>
-          <p class="lab-compact-title">Subtopik 1.1 · Negara Bangsa Alam Melayu</p>
+    <section class="section page-hero note-hero papercraft-hero">
+      <div class="container narrow">
+        <div class="paper-label">Kuiz Bab 1</div>
+        <p class="eyebrow">Subtopik 1.1</p>
+        <h1>🧩 Bina Negara Bangsa</h1>
+        <p class="lead">Kuiz interaktif untuk uji kefahaman fakta penting Sejarah Tingkatan 4 secara pantas dan fokus.</p>
+        <div class="hero-actions">
+          <a class="btn btn-secondary" href="../notes/bab-1-1.html">Kembali ke Nota 1.1</a>
+          <a class="btn btn-primary" href="#kuiz-utama">Mula Kuiz</a>
         </div>
-
-        <div class="lab-compact-spacer" aria-hidden="true"></div>
       </div>
-    </header>
+    </section>
 
-    <main class="lab-compact-main">
+    <main class="lab-compact-main" id="kuiz-utama">
       <div class="lab-compact-shell">
         <aside class="lab-compact-side">
           <article class="lab-compact-card">
