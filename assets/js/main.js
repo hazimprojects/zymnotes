@@ -900,7 +900,11 @@ document.addEventListener("DOMContentLoaded", function () {
         var el = document.querySelector('#learning-lab-entry .btn[href]');
         return el ? el.getAttribute('href') : null;
       })();
-    var labEmoji = document.body.dataset.labEmoji || '🧩';
+    var labEmojiRaw = document.body.dataset.labEmoji || '🧩';
+    var labEmoji = labEmojiRaw;
+    if (labHref && /(?:^|\/)quiz\/bab-1-1\.html(?:$|[?#])/.test(labHref)) {
+      labEmoji = '🧩';
+    }
 
     // Only show sparkle if there's at least one item
     if (!audioEl && !labHref) return;
