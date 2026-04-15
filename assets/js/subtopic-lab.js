@@ -4,7 +4,7 @@
 
   const PARTS = {
     asas:    { label: "Tapak Kerajaan",        color: "#8a7158", emoji: "🏗️" },
-    tiang:   { label: "Tiang Pentadbiran",     color: "#6a7b5a", emoji: "🏛️" },
+    tiang:   { label: "Tiang Pentadbiran",     color: "#6a7b5a", emoji: "🧩" },
     dinding: { label: "Dinding Kedaulatan",    color: "#c8a96b", emoji: "🧱" },
     bumbung: { label: "Bumbung Undang-undang", color: "#3e5f8a", emoji: "🏠" },
     puncak:  { label: "Puncak Kegemilangan",   color: "#2f7a67", emoji: "✨" },

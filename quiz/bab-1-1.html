@@ -55,8 +55,8 @@
        ====================================== */
 
     .lab-compact-page {
-      height: calc(100dvh - 72px);
-      overflow: hidden;
+      min-height: calc(100dvh - 72px);
+      overflow: visible;
       display: flex;
       flex-direction: column;
       padding-bottom: calc(12px + env(safe-area-inset-bottom));
@@ -65,8 +65,8 @@
 
     /* --- MAIN AREA --- */
     .lab-compact-main {
-      flex: 1;
-      min-height: 0;
+      flex: 1 1 auto;
+      min-height: auto;
       display: flex;
       padding: 0.65rem 0.75rem 0.25rem;
       justify-content: center;
@@ -105,7 +105,7 @@
       display: flex;
       flex-direction: column;
       min-height: 0;
-      overflow: hidden;
+      overflow: visible;
       padding: 0.8rem 0.8rem 0.75rem;
       border-radius: 22px;
     }
@@ -563,12 +563,12 @@
 
     @media (max-width: 899px) {
       body.quiz-page {
-        height: 100dvh;
-        overflow: hidden;
+        min-height: 100dvh;
+        overflow-y: auto;
       }
 
       body.quiz-page .lab-compact-page {
-        height: calc(100dvh - 72px);
+        min-height: calc(100dvh - 72px);
       }
 
       body.quiz-page .lab-compact-page > .section.page-hero {
