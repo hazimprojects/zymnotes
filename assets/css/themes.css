@@ -8,7 +8,7 @@
    THEME CORE — semua bab guna rangka sama
 ========================================================= */
 
-body[class^="bab-theme-"] {
+body[class*="bab-theme-"] {
   --theme-bg-solid: #f3f8ff;
   --theme-overlay-1: radial-gradient(circle at 10% 12%, rgba(111, 167, 248, 0.18), transparent 0 20%);
   --theme-overlay-2: radial-gradient(circle at 88% 14%, rgba(96, 216, 182, 0.14), transparent 0 18%);
@@ -59,53 +59,53 @@ body[class^="bab-theme-"] {
     scroll;
 }
 
-body[class^="bab-theme-"] .site-header {
+body[class*="bab-theme-"] .site-header {
   background: var(--theme-header-bg);
   backdrop-filter: blur(16px);
 }
 
-body[class^="bab-theme-"] .site-footer {
+body[class*="bab-theme-"] .site-footer {
   background: var(--theme-footer-bg);
   backdrop-filter: blur(14px);
 }
 
-body[class^="bab-theme-"] .paper-label,
-body[class^="bab-theme-"] .paper-label.small,
-body[class^="bab-theme-"] .bab-card-top {
+body[class*="bab-theme-"] .paper-label,
+body[class*="bab-theme-"] .paper-label.small,
+body[class*="bab-theme-"] .bab-card-top {
   background: var(--theme-label-bg);
   color: var(--theme-label-color);
 }
 
-body[class^="bab-theme-"] .paper-board,
-body[class^="bab-theme-"] .paper-flap-card,
-body[class^="bab-theme-"] .paper-accordion-item,
-body[class^="bab-theme-"] .paper-tab,
-body[class^="bab-theme-"] .paper-tab-panel,
-body[class^="bab-theme-"] .paper-process-card,
-body[class^="bab-theme-"] .paper-process-panel,
-body[class^="bab-theme-"] .paper-timeline-node,
-body[class^="bab-theme-"] .paper-chip,
-body[class^="bab-theme-"] .keyword-legend-wrap,
-body[class^="bab-theme-"] .mindmap-card,
-body[class^="bab-theme-"] .paper-flow-card,
-body[class^="bab-theme-"] .org-node,
-body[class^="bab-theme-"] .metric-card,
-body[class^="bab-theme-"] .editorial-card,
-body[class^="bab-theme-"] .audience-card,
-body[class^="bab-theme-"] .note-card,
-body[class^="bab-theme-"] .value-card,
-body[class^="bab-theme-"] .content-block,
-body[class^="bab-theme-"] .current-focus-card,
-body[class^="bab-theme-"] .search-wrap,
-body[class^="bab-theme-"] .search-results,
-body[class^="bab-theme-"] .search-empty {
+body[class*="bab-theme-"] .paper-board,
+body[class*="bab-theme-"] .paper-flap-card,
+body[class*="bab-theme-"] .paper-accordion-item,
+body[class*="bab-theme-"] .paper-tab,
+body[class*="bab-theme-"] .paper-tab-panel,
+body[class*="bab-theme-"] .paper-process-card,
+body[class*="bab-theme-"] .paper-process-panel,
+body[class*="bab-theme-"] .paper-timeline-node,
+body[class*="bab-theme-"] .paper-chip,
+body[class*="bab-theme-"] .keyword-legend-wrap,
+body[class*="bab-theme-"] .mindmap-card,
+body[class*="bab-theme-"] .paper-flow-card,
+body[class*="bab-theme-"] .org-node,
+body[class*="bab-theme-"] .metric-card,
+body[class*="bab-theme-"] .editorial-card,
+body[class*="bab-theme-"] .audience-card,
+body[class*="bab-theme-"] .note-card,
+body[class*="bab-theme-"] .value-card,
+body[class*="bab-theme-"] .content-block,
+body[class*="bab-theme-"] .current-focus-card,
+body[class*="bab-theme-"] .search-wrap,
+body[class*="bab-theme-"] .search-results,
+body[class*="bab-theme-"] .search-empty {
   background: var(--theme-surface-bg);
   border-color: var(--theme-surface-border);
   box-shadow: var(--theme-surface-shadow);
 }
 
 /* Light refresh override supaya semua bab tidak lagi beige-dominant */
-body[class^="bab-theme-"] {
+body[class*="bab-theme-"] {
   --theme-bg-solid: #f3f8ff;
   --theme-gradient: linear-gradient(180deg, #fcfdff 0%, #f2f7ff 52%, #eefbf9 100%);
 }
@@ -114,7 +114,7 @@ body[class^="bab-theme-"] {
    DARK MODE — semua bab automatik ikut
 ========================================================= */
 
-html[data-theme="dark"] body[class^="bab-theme-"] {
+html[data-theme="dark"] body[class*="bab-theme-"] {
   --theme-bg-solid: #0D0F1A;
   --theme-surface-bg: rgba(21, 24, 41, 0.88);
   --theme-surface-border: rgba(129, 140, 248, 0.12);
@@ -126,44 +126,44 @@ html[data-theme="dark"] body[class^="bab-theme-"] {
   color: #E0E7FF;
 }
 
-html[data-theme="dark"] body[class^="bab-theme-"] .brand,
-html[data-theme="dark"] body[class^="bab-theme-"] h1,
-html[data-theme="dark"] body[class^="bab-theme-"] h2,
-html[data-theme="dark"] body[class^="bab-theme-"] h3,
-html[data-theme="dark"] body[class^="bab-theme-"] .point-heading {
+html[data-theme="dark"] body[class*="bab-theme-"] .brand,
+html[data-theme="dark"] body[class*="bab-theme-"] h1,
+html[data-theme="dark"] body[class*="bab-theme-"] h2,
+html[data-theme="dark"] body[class*="bab-theme-"] h3,
+html[data-theme="dark"] body[class*="bab-theme-"] .point-heading {
   color: #EEF2FF !important;
 }
 
-html[data-theme="dark"] body[class^="bab-theme-"] .lead,
-html[data-theme="dark"] body[class^="bab-theme-"] .point-line,
-html[data-theme="dark"] body[class^="bab-theme-"] .preview-answer,
-html[data-theme="dark"] body[class^="bab-theme-"] .footer-text,
-html[data-theme="dark"] body[class^="bab-theme-"] .site-nav a,
-html[data-theme="dark"] body[class^="bab-theme-"] .search-input,
-html[data-theme="dark"] body[class^="bab-theme-"] .emoji-point-list span:last-child {
+html[data-theme="dark"] body[class*="bab-theme-"] .lead,
+html[data-theme="dark"] body[class*="bab-theme-"] .point-line,
+html[data-theme="dark"] body[class*="bab-theme-"] .preview-answer,
+html[data-theme="dark"] body[class*="bab-theme-"] .footer-text,
+html[data-theme="dark"] body[class*="bab-theme-"] .site-nav a,
+html[data-theme="dark"] body[class*="bab-theme-"] .search-input,
+html[data-theme="dark"] body[class*="bab-theme-"] .emoji-point-list span:last-child {
   color: #94A3B8 !important;
 }
 
-html[data-theme="dark"] body[class^="bab-theme-"] .site-header {
+html[data-theme="dark"] body[class*="bab-theme-"] .site-header {
   border-bottom-color: rgba(129, 140, 248, 0.12) !important;
   backdrop-filter: blur(14px);
 }
 
-html[data-theme="dark"] body[class^="bab-theme-"] .site-footer {
+html[data-theme="dark"] body[class*="bab-theme-"] .site-footer {
   border-top-color: rgba(129, 140, 248, 0.10) !important;
 }
 
-html[data-theme="dark"] body[class^="bab-theme-"] .nav-toggle,
-html[data-theme="dark"] body[class^="bab-theme-"] .display-fab {
+html[data-theme="dark"] body[class*="bab-theme-"] .nav-toggle,
+html[data-theme="dark"] body[class*="bab-theme-"] .display-fab {
   background: #1A1D2E !important;
   color: #C7D2FE !important;
   border: 1px solid rgba(129, 140, 248, 0.14) !important;
   box-shadow: 0 12px 28px rgba(0, 0, 0, 0.28);
 }
 
-html[data-theme="dark"] body[class^="bab-theme-"] .paper-label,
-html[data-theme="dark"] body[class^="bab-theme-"] .paper-label.small,
-html[data-theme="dark"] body[class^="bab-theme-"] .bab-card-top {
+html[data-theme="dark"] body[class*="bab-theme-"] .paper-label,
+html[data-theme="dark"] body[class*="bab-theme-"] .paper-label.small,
+html[data-theme="dark"] body[class*="bab-theme-"] .bab-card-top {
   background-image: none !important;
   background-color: rgba(var(--theme-accent-rgb, 98, 126, 168), 0.16) !important;
   color: var(--theme-label-dark-color, #b9ccef) !important;
@@ -172,71 +172,71 @@ html[data-theme="dark"] body[class^="bab-theme-"] .bab-card-top {
 }
 
 /* Paper board & chip dark */
-html[data-theme="dark"] body[class^="bab-theme-"] .paper-board,
-html[data-theme="dark"] body[class^="bab-theme-"] .paper-flap-card,
-html[data-theme="dark"] body[class^="bab-theme-"] .paper-accordion-item,
-html[data-theme="dark"] body[class^="bab-theme-"] .paper-tab,
-html[data-theme="dark"] body[class^="bab-theme-"] .paper-tab-panel,
-html[data-theme="dark"] body[class^="bab-theme-"] .paper-process-card,
-html[data-theme="dark"] body[class^="bab-theme-"] .paper-timeline-node,
-html[data-theme="dark"] body[class^="bab-theme-"] .paper-step,
-html[data-theme="dark"] body[class^="bab-theme-"] .paper-kingdom,
-html[data-theme="dark"] body[class^="bab-theme-"] .mindmap-card,
-html[data-theme="dark"] body[class^="bab-theme-"] .paper-flow-card,
-html[data-theme="dark"] body[class^="bab-theme-"] .org-node {
+html[data-theme="dark"] body[class*="bab-theme-"] .paper-board,
+html[data-theme="dark"] body[class*="bab-theme-"] .paper-flap-card,
+html[data-theme="dark"] body[class*="bab-theme-"] .paper-accordion-item,
+html[data-theme="dark"] body[class*="bab-theme-"] .paper-tab,
+html[data-theme="dark"] body[class*="bab-theme-"] .paper-tab-panel,
+html[data-theme="dark"] body[class*="bab-theme-"] .paper-process-card,
+html[data-theme="dark"] body[class*="bab-theme-"] .paper-timeline-node,
+html[data-theme="dark"] body[class*="bab-theme-"] .paper-step,
+html[data-theme="dark"] body[class*="bab-theme-"] .paper-kingdom,
+html[data-theme="dark"] body[class*="bab-theme-"] .mindmap-card,
+html[data-theme="dark"] body[class*="bab-theme-"] .paper-flow-card,
+html[data-theme="dark"] body[class*="bab-theme-"] .org-node {
   background: rgba(21, 24, 41, 0.88) !important;
   border-color: rgba(129, 140, 248, 0.12) !important;
 }
 
-html[data-theme="dark"] body[class^="bab-theme-"] .paper-chip {
+html[data-theme="dark"] body[class*="bab-theme-"] .paper-chip {
   background: rgba(129, 140, 248, 0.07) !important;
   border-color: rgba(129, 140, 248, 0.14) !important;
   color: #C7D2FE !important;
 }
 
-html[data-theme="dark"] body[class^="bab-theme-"] .paper-accordion-trigger:hover {
+html[data-theme="dark"] body[class*="bab-theme-"] .paper-accordion-trigger:hover {
   background: rgba(129, 140, 248, 0.05) !important;
 }
 
-html[data-theme="dark"] body[class^="bab-theme-"] .keyword-legend-wrap {
+html[data-theme="dark"] body[class*="bab-theme-"] .keyword-legend-wrap {
   background: rgba(21, 24, 41, 0.65) !important;
 }
 
-html[data-theme="dark"] body[class^="bab-theme-"] .metric-card,
-html[data-theme="dark"] body[class^="bab-theme-"] .content-block,
-html[data-theme="dark"] body[class^="bab-theme-"] .note-card {
+html[data-theme="dark"] body[class*="bab-theme-"] .metric-card,
+html[data-theme="dark"] body[class*="bab-theme-"] .content-block,
+html[data-theme="dark"] body[class*="bab-theme-"] .note-card {
   background: rgba(21, 24, 41, 0.85) !important;
   border-color: rgba(129, 140, 248, 0.12) !important;
 }
 
-html[data-theme="dark"] body[class^="bab-theme-"] .answer-paper,
-html[data-theme="dark"] body[class^="bab-theme-"] .paper-process-panel {
+html[data-theme="dark"] body[class*="bab-theme-"] .answer-paper,
+html[data-theme="dark"] body[class*="bab-theme-"] .paper-process-panel {
   background: rgba(21, 24, 41, 0.55) !important;
   border-color: rgba(129, 140, 248, 0.14) !important;
 }
 
 /* Strip dark mode automatik */
-html[data-theme="dark"] body[class^="bab-theme-"] .paper-strip.strip-main {
+html[data-theme="dark"] body[class*="bab-theme-"] .paper-strip.strip-main {
   background: linear-gradient(90deg, rgba(212,170,96,0.18), rgba(180,140,60,0.14)) !important;
   color: #e2b56f !important;
 }
 
-html[data-theme="dark"] body[class^="bab-theme-"] .paper-strip.strip-sub {
+html[data-theme="dark"] body[class*="bab-theme-"] .paper-strip.strip-sub {
   background: linear-gradient(90deg, rgba(82,179,150,0.18), rgba(82,179,150,0.12)) !important;
   color: #79d2b8 !important;
 }
 
-html[data-theme="dark"] body[class^="bab-theme-"] .paper-strip.strip-info {
+html[data-theme="dark"] body[class*="bab-theme-"] .paper-strip.strip-info {
   background: linear-gradient(90deg, rgba(59,130,246,0.18), rgba(99,160,255,0.14)) !important;
   color: #8eb9f7 !important;
 }
 
-html[data-theme="dark"] body[class^="bab-theme-"] .paper-strip.strip-glossary {
+html[data-theme="dark"] body[class*="bab-theme-"] .paper-strip.strip-glossary {
   background: linear-gradient(90deg, rgba(139,92,246,0.18), rgba(167,139,250,0.14)) !important;
   color: #c0aaf8 !important;
 }
 
-html[data-theme="dark"] body[class^="bab-theme-"] .paper-strip.strip-summary {
+html[data-theme="dark"] body[class*="bab-theme-"] .paper-strip.strip-summary {
   background: linear-gradient(90deg, rgba(244,63,94,0.16), rgba(255,100,130,0.12)) !important;
   color: #f48ca0 !important;
 }
@@ -246,7 +246,7 @@ html[data-theme="dark"] body[class^="bab-theme-"] .paper-strip.strip-summary {
 ========================================================= */
 
 @media (max-width: 760px) {
-  body[class^="bab-theme-"] {
+  body[class*="bab-theme-"] {
     background-size: auto, auto, auto, 500px 430px, cover;
     background-attachment: scroll, scroll, scroll, scroll, scroll;
   }
@@ -515,7 +515,7 @@ html[data-theme="dark"] body.bab-theme-10 {
 /* =========================================================
    LIGHT REFRESH — paksa tona putih moden untuk semua bab
 ========================================================= */
-body[class^="bab-theme-"] {
+body[class*="bab-theme-"] {
   --theme-bg-solid: #f7faff !important;
   --theme-overlay-1: radial-gradient(circle at 10% 12%, rgba(111, 167, 248, 0.14), transparent 0 20%) !important;
   --theme-overlay-2: radial-gradient(circle at 88% 14%, rgba(96, 216, 182, 0.10), transparent 0 18%) !important;
@@ -531,7 +531,7 @@ body[class^="bab-theme-"] {
 }
 
 /* Pastikan dark mode kekal dominan walaupun light refresh guna !important */
-html[data-theme="dark"] body[class^="bab-theme-"] {
+html[data-theme="dark"] body[class*="bab-theme-"] {
   --theme-bg-solid: #0D0F1A !important;
   --theme-overlay-1: radial-gradient(circle at 10% 12%, rgba(99, 102, 241, 0.12), transparent 0 35%) !important;
   --theme-overlay-2: radial-gradient(circle at 88% 14%, rgba(34, 211, 238, 0.08), transparent 0 30%) !important;
