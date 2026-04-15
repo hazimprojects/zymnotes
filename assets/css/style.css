@@ -1,12 +1,12 @@
 /* =========================
-   MASTER STYLESHEET — v48
+   MASTER STYLESHEET — v49
    Import fail-specific files here.
    HTML files reference style.css — no change needed there.
 ========================= */
 
 @import url("base.css?v=4");       /* :root variables, dark mode tokens, body/reset/containers */
-@import url("layout.css?v=7");     /* Header, nav, dark mode fab, typography, footer, animations */
-@import url("ui.css?v=7");         /* Buttons, cards, homepage, hero, search, org-chart, interaction */
+@import url("layout.css?v=8");     /* Header, nav, dark mode fab, typography, footer, animations */
+@import url("ui.css?v=8");         /* Buttons, cards, homepage, hero, search, org-chart, interaction */
 @import url("paper.css?v=8");      /* Paper labels, boards, chips, accordion, steps, bab overview */
 @import url("keywords.css?v=1");   /* Keyword highlights (Bab 1/2/3), bloc identity, keyword legend */
 @import url("responsive.css?v=3"); /* All @media queries + spacing fixes */

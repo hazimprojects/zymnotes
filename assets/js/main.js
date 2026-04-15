@@ -911,7 +911,7 @@ document.addEventListener("DOMContentLoaded", function () {
     var itemsContainer = document.createElement('div');
     itemsContainer.className = 'note-sparkle-items';
 
-    function makeSparkleItem(svgIcon, tooltip, type, href) {
+    function makeSparkleItem(content, tooltip, type, href) {
       var el = href ? document.createElement('a') : document.createElement('button');
       if (href) { el.href = href; }
       else { el.type = 'button'; }
@@ -919,18 +919,18 @@ document.addEventListener("DOMContentLoaded", function () {
       el.setAttribute('aria-label', tooltip);
       el.setAttribute('data-tooltip', tooltip);
       el.setAttribute('data-sparkle-type', type);
-      el.innerHTML = svgIcon;
+      el.textContent = content;
       return el;
     }
 
-    if (audioEl) itemsContainer.appendChild(makeSparkleItem(HZ_ICONS.audio, 'Main audio', 'audio'));
-    if (labHref) itemsContainer.appendChild(makeSparkleItem(HZ_ICONS.archive, 'Arkib', 'lab', labHref));
+    if (audioEl) itemsContainer.appendChild(makeSparkleItem('🎧', 'Main audio', 'audio'));
+    if (labHref) itemsContainer.appendChild(makeSparkleItem('🏛', 'Arkib', 'lab', labHref));
 
     var fab = document.createElement('button');
     fab.className = 'note-sparkle-fab';
     fab.type = 'button';
     fab.setAttribute('aria-label', 'Menu pembelajaran');
-    fab.innerHTML = HZ_ICONS.sparkle;
+    fab.textContent = '✨';
 
     wrap.appendChild(itemsContainer);
     wrap.appendChild(fab);
@@ -1033,9 +1033,9 @@ document.addEventListener("DOMContentLoaded", function () {
     // ── Audio Icon Sync ───────────────────────────────────────────────
     if (audioEl) {
       var audioBtn = itemsContainer.querySelector('[data-sparkle-type="audio"]');
-      audioEl.addEventListener('play',  function() { if (audioBtn) audioBtn.innerHTML = HZ_ICONS.audioPause; });
-      audioEl.addEventListener('pause', function() { if (audioBtn) audioBtn.innerHTML = HZ_ICONS.audio; });
-      audioEl.addEventListener('ended', function() { if (audioBtn) audioBtn.innerHTML = HZ_ICONS.audio; });
+      audioEl.addEventListener('play',  function() { if (audioBtn) audioBtn.textContent = '⏸️'; });
+      audioEl.addEventListener('pause', function() { if (audioBtn) audioBtn.textContent = '🎧'; });
+      audioEl.addEventListener('ended', function() { if (audioBtn) audioBtn.textContent = '🎧'; });
     }
   });
 })();
@@ -1298,27 +1298,95 @@ document.addEventListener("DOMContentLoaded", function () {
 })();
 
 
-// ── Swipe Navigation (note subtopic pages) ────────────────────────────────────
+// ── Swipe Navigation (note pages) — follow-finger with slide animation ────────
 (function () {
   var isNotePage = /\/notes\/bab-\d+-\d+\.html$/.test(location.pathname);
   if (!isNotePage) return;
-  var startX = 0, startY = 0;
-  var THRESHOLD = 72, VERTICAL_LIMIT = 50;
+
+  var THRESHOLD = 68, VERTICAL_LIMIT = 45;
+  var startX = 0, startY = 0, tracking = false;
+  var mainEl = null;
+
+  // ── Page entrance animation (plays on new page after a swipe) ────────────
+  document.addEventListener('DOMContentLoaded', function () {
+    mainEl = document.querySelector('main');
+    if (!mainEl) return;
+    var dir = sessionStorage.getItem('hz-swipe-dir');
+    if (!dir) return;
+    sessionStorage.removeItem('hz-swipe-dir');
+    // Slide in from the side the swipe came from
+    var fromX = dir === 'right' ? '28vw' : '-28vw';
+    mainEl.style.transform = 'translateX(' + fromX + ')';
+    mainEl.style.opacity = '0.5';
+    mainEl.style.transition = 'none';
+    requestAnimationFrame(function () {
+      requestAnimationFrame(function () {
+        mainEl.style.transition = 'transform 0.3s cubic-bezier(0.25, 0.9, 0.4, 1), opacity 0.22s ease';
+        mainEl.style.transform = '';
+        mainEl.style.opacity = '';
+        setTimeout(function () { mainEl.style.transition = ''; }, 350);
+      });
+    });
+  });
+
+  // ── Touch tracking ───────────────────────────────────────────────────────
   document.addEventListener('touchstart', function (e) {
+    if (e.touches.length !== 1) { tracking = false; return; }
     startX = e.touches[0].clientX;
     startY = e.touches[0].clientY;
+    tracking = true;
+    if (mainEl) mainEl.style.transition = 'none';
   }, { passive: true });
+
+  document.addEventListener('touchmove', function (e) {
+    if (!tracking || !mainEl) return;
+    var dx = e.touches[0].clientX - startX;
+    var dy = Math.abs(e.touches[0].clientY - startY);
+    if (dy > VERTICAL_LIMIT) {
+      tracking = false;
+      mainEl.style.transition = 'transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1)';
+      mainEl.style.transform = '';
+      return;
+    }
+    // Resist: follows finger at 35% ratio
+    mainEl.style.transform = 'translateX(' + (dx * 0.35) + 'px)';
+  }, { passive: true });
+
   document.addEventListener('touchend', function (e) {
+    if (!tracking || !mainEl) return;
+    tracking = false;
     var dx = e.changedTouches[0].clientX - startX;
     var dy = Math.abs(e.changedTouches[0].clientY - startY);
-    if (dy > VERTICAL_LIMIT || Math.abs(dx) < THRESHOLD) return;
-    var actions = document.querySelectorAll('.hero-actions a.btn');
-    if (!actions.length) return;
-    if (dx < 0 && actions[actions.length - 1]) {
-      location.href = actions[actions.length - 1].href; // swipe left → next
-    } else if (dx > 0 && actions[0]) {
-      location.href = actions[0].href; // swipe right → back/prev
+
+    if (dy > VERTICAL_LIMIT || Math.abs(dx) < THRESHOLD) {
+      // Not a swipe — spring back
+      mainEl.style.transition = 'transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1)';
+      mainEl.style.transform = '';
+      return;
     }
+
+    // Find prev/next href
+    var actions = document.querySelectorAll('.hero-actions a.btn');
+    var href = dx < 0
+      ? (actions[actions.length - 1] ? actions[actions.length - 1].href : null)
+      : (actions[0] ? actions[0].href : null);
+
+    if (!href) {
+      // No page in this direction — spring back
+      mainEl.style.transition = 'transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1)';
+      mainEl.style.transform = '';
+      return;
+    }
+
+    // Store direction so next page knows which side to enter from
+    // swipe left (dx<0) → next page enters from right
+    sessionStorage.setItem('hz-swipe-dir', dx < 0 ? 'right' : 'left');
+
+    // Slide current page off screen, then navigate
+    mainEl.style.transition = 'transform 0.2s ease-in, opacity 0.2s ease';
+    mainEl.style.transform = 'translateX(' + (dx < 0 ? '-32vw' : '32vw') + ')';
+    mainEl.style.opacity = '0';
+    setTimeout(function () { location.href = href; }, 195);
   }, { passive: true });
 })();
 
@@ -1557,7 +1625,9 @@ var HZ_ICONS = (function () {
 
 // ── Bottom Navigation Bar (mobile) ───────────────────────────────────────────
 (function () {
+  if (document.body && document.body.classList.contains('no-bottom-nav')) return;
   document.addEventListener('DOMContentLoaded', function () {
+    if (document.body.classList.contains('no-bottom-nav')) return;
     var p = location.pathname;
     function isActive(href) {
       var hp = href.replace(/\/?(index\.html)?$/, '').replace(/^\//, '');

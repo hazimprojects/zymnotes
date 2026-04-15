@@ -32,7 +32,7 @@
     href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap"
     rel="stylesheet"
   />
-  <link rel="stylesheet" href="../assets/css/style.css?v=48" />
+  <link rel="stylesheet" href="../assets/css/style.css?v=49" />
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZTQB7MML49"></script>
@@ -653,7 +653,7 @@
   <link rel="icon" type="image/svg+xml" href="/icons/icon.svg" />
   <link rel="apple-touch-icon" href="/icons/icon.svg" />
 </head>
-<body class="bab-theme-1">
+<body class="bab-theme-1 no-bottom-nav">
   <div class="lab-compact-page">
     <header class="lab-compact-topbar">
       <div class="lab-compact-topbar-inner">
@@ -832,18 +832,18 @@
     </main>
 
     <!-- Emoji-only sparkle dock (reuses shared .note-sparkle-* CSS from ui.css) -->
-    <div class="note-sparkle-wrap" id="lab-sparkle-wrap">
+    <div class="note-sparkle-wrap fab-corner-br" id="lab-sparkle-wrap">
       <div class="note-sparkle-items" id="lab-sparkle-items">
         <button class="note-sparkle-item" type="button" data-tooltip="Mod paparan" id="lab-dm-btn">☀️</button>
         <button class="note-sparkle-item" type="button" data-tooltip="Cuba Semula" id="lab-restart-btn">🔄</button>
         <a class="note-sparkle-item" href="../notes/bab-1-1.html" data-tooltip="Nota 1.1">📖</a>
       </div>
-      <button class="note-sparkle-fab" type="button" id="lab-sparkle-fab" aria-label="Menu Lab">✨</button>
+      <button class="note-sparkle-fab" type="button" id="lab-sparkle-fab" aria-label="Menu Arkib">✨</button>
     </div>
   </div>
 
   <script src="../assets/js/subtopic-lab.js?v=1"></script>
-  <script src="../assets/js/main.js?v=51"></script>
+  <script src="../assets/js/main.js?v=52"></script>
   <script>
     (function () {
       var THEME_KEY = 'hazimedu-theme';
@@ -851,6 +851,58 @@
       var fab  = document.getElementById('lab-sparkle-fab');
       var dmBtn = document.getElementById('lab-dm-btn');
       var restartBtn = document.getElementById('lab-restart-btn');
+
+      // ── Draggable corner FAB (same behaviour as note pages) ─────────────
+      var FAB_KEY = 'hzedu-fab-corner';
+      var corner = localStorage.getItem(FAB_KEY) || 'br';
+      wrap.classList.remove('fab-corner-br');
+      wrap.classList.add('fab-corner-' + corner);
+
+      function snapLabCorner(c) {
+        ['br','bl','tr','tl'].forEach(function(cc) { wrap.classList.remove('fab-corner-' + cc); });
+        wrap.style.cssText = '';
+        corner = c;
+        localStorage.setItem(FAB_KEY, corner);
+        wrap.classList.add('fab-corner-' + corner);
+      }
+      var isDragging = false, didDrag = false, dsx, dsy, wsl, wst;
+      fab.addEventListener('pointerdown', function(e) {
+        isDragging = true; didDrag = false;
+        dsx = e.clientX; dsy = e.clientY;
+        var r = wrap.getBoundingClientRect(); wsl = r.left; wst = r.top;
+        fab.setPointerCapture(e.pointerId);
+      });
+      fab.addEventListener('pointermove', function(e) {
+        if (!isDragging) return;
+        var dx = e.clientX - dsx, dy = e.clientY - dsy;
+        if (!didDrag && Math.hypot(dx, dy) < 8) return;
+        if (!didDrag) {
+          didDrag = true;
+          wrap.classList.add('is-dragging');
+          wrap.classList.remove('is-open');
+          ['br','bl','tr','tl'].forEach(function(cc) { wrap.classList.remove('fab-corner-' + cc); });
+        }
+        var vw = window.innerWidth, vh = window.innerHeight;
+        var r = wrap.getBoundingClientRect();
+        var nx = Math.max(0, Math.min(vw - r.width,  wsl + dx));
+        var ny = Math.max(0, Math.min(vh - r.height, wst + dy));
+        wrap.style.position = 'fixed';
+        wrap.style.left = nx + 'px'; wrap.style.top = ny + 'px';
+        wrap.style.right = 'auto'; wrap.style.bottom = 'auto';
+      });
+      fab.addEventListener('pointerup', function() {
+        if (!isDragging) return;
+        isDragging = false; wrap.classList.remove('is-dragging');
+        if (!didDrag) return;
+        var r = wrap.getBoundingClientRect();
+        var cx = r.left + r.width / 2, cy = r.top + r.height / 2;
+        snapLabCorner((cy < window.innerHeight / 2 ? 't' : 'b') + (cx < window.innerWidth / 2 ? 'l' : 'r'));
+      });
+      fab.addEventListener('pointercancel', function() {
+        if (!isDragging) return;
+        isDragging = false; wrap.classList.remove('is-dragging');
+        if (didDrag) snapLabCorner(corner);
+      });
       var noticeScreen = document.getElementById('lab-notice');
       var gameShell = document.getElementById('lab-game-shell');
       var noticeStartBtn = document.getElementById('lab-notice-start');
@@ -869,9 +921,10 @@
       // Sync dark mode emoji on load
       dmBtn.textContent = (document.documentElement.getAttribute('data-theme') || 'light') === 'dark' ? '🌙' : '☀️';
 
-      // Toggle open/close
+      // Toggle open/close (only when not dragging)
       fab.addEventListener('click', function (e) {
         e.stopPropagation();
+        if (didDrag) return;
         wrap.classList.toggle('is-open');
       });
       document.addEventListener('click', function (e) {

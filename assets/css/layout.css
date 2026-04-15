@@ -34,6 +34,12 @@
 
 .hz-bottom-nav { display: none; }
 
+/* Pages that suppress the bottom nav (e.g. full-screen lab pages) */
+body.no-bottom-nav .hz-bottom-nav { display: none !important; }
+@media (max-width: 760px) {
+  body.no-bottom-nav { padding-bottom: 0 !important; }
+}
+
 @media (max-width: 760px) {
   .hz-bottom-nav {
     display: flex;

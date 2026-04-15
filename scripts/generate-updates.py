@@ -48,7 +48,7 @@ def parse_file(f):
     if m:
         bab, sub = m.group(1) or m.group(3), m.group(2) or m.group(4)
         key = f"lab_{bab}.{sub}"
-        label = f"Sejarah T4 — Makmal Latihan {bab}.{sub}"
+        label = f"Sejarah T4 — Arkib Latihan {bab}.{sub}"
         return key, label
 
     m = re.match(r'notes/bab-(\d+)-(\d+)\.html$', f)
