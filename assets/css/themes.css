@@ -115,6 +115,7 @@ body[class^="bab-theme-"] {
 ========================================================= */
 
 html[data-theme="dark"] body[class^="bab-theme-"] {
+  --theme-bg-solid: #0D0F1A;
   --theme-surface-bg: rgba(21, 24, 41, 0.88);
   --theme-surface-border: rgba(129, 140, 248, 0.12);
   --theme-surface-shadow: 0 18px 42px rgba(0, 0, 0, 0.32);
@@ -168,6 +169,50 @@ html[data-theme="dark"] body[class^="bab-theme-"] .bab-card-top {
   color: var(--theme-label-dark-color, #b9ccef) !important;
   border: 1px solid rgba(var(--theme-accent-rgb, 185, 204, 239), 0.16) !important;
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.22) !important;
+}
+
+/* Paper board & chip dark */
+html[data-theme="dark"] body[class^="bab-theme-"] .paper-board,
+html[data-theme="dark"] body[class^="bab-theme-"] .paper-flap-card,
+html[data-theme="dark"] body[class^="bab-theme-"] .paper-accordion-item,
+html[data-theme="dark"] body[class^="bab-theme-"] .paper-tab,
+html[data-theme="dark"] body[class^="bab-theme-"] .paper-tab-panel,
+html[data-theme="dark"] body[class^="bab-theme-"] .paper-process-card,
+html[data-theme="dark"] body[class^="bab-theme-"] .paper-timeline-node,
+html[data-theme="dark"] body[class^="bab-theme-"] .paper-step,
+html[data-theme="dark"] body[class^="bab-theme-"] .paper-kingdom,
+html[data-theme="dark"] body[class^="bab-theme-"] .mindmap-card,
+html[data-theme="dark"] body[class^="bab-theme-"] .paper-flow-card,
+html[data-theme="dark"] body[class^="bab-theme-"] .org-node {
+  background: rgba(21, 24, 41, 0.88) !important;
+  border-color: rgba(129, 140, 248, 0.12) !important;
+}
+
+html[data-theme="dark"] body[class^="bab-theme-"] .paper-chip {
+  background: rgba(129, 140, 248, 0.07) !important;
+  border-color: rgba(129, 140, 248, 0.14) !important;
+  color: #C7D2FE !important;
+}
+
+html[data-theme="dark"] body[class^="bab-theme-"] .paper-accordion-trigger:hover {
+  background: rgba(129, 140, 248, 0.05) !important;
+}
+
+html[data-theme="dark"] body[class^="bab-theme-"] .keyword-legend-wrap {
+  background: rgba(21, 24, 41, 0.65) !important;
+}
+
+html[data-theme="dark"] body[class^="bab-theme-"] .metric-card,
+html[data-theme="dark"] body[class^="bab-theme-"] .content-block,
+html[data-theme="dark"] body[class^="bab-theme-"] .note-card {
+  background: rgba(21, 24, 41, 0.85) !important;
+  border-color: rgba(129, 140, 248, 0.12) !important;
+}
+
+html[data-theme="dark"] body[class^="bab-theme-"] .answer-paper,
+html[data-theme="dark"] body[class^="bab-theme-"] .paper-process-panel {
+  background: rgba(21, 24, 41, 0.55) !important;
+  border-color: rgba(129, 140, 248, 0.14) !important;
 }
 
 /* Strip dark mode automatik */
