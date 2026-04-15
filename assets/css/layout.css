@@ -9,9 +9,10 @@
   top: 0;
   z-index: 40;
   overflow: hidden; /* contains reading progress bar */
-  background: rgba(255, 255, 255, 0.78);
-  backdrop-filter: blur(14px);
-  border-bottom: 1px solid rgba(92, 110, 132, 0.12);
+  background: rgba(255, 255, 255, 0.84);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(79, 70, 229, 0.10);
   transition: background 0.35s ease, border-color 0.35s ease;
 }
 
@@ -21,7 +22,7 @@
   bottom: 0; left: 0;
   height: 2.5px;
   width: 0%;
-  background: var(--primary);
+  background: linear-gradient(90deg, var(--primary), var(--accent, #06B6D4));
   transition: width 80ms linear;
   pointer-events: none;
   opacity: 0;
@@ -82,8 +83,8 @@ body.no-bottom-nav .hz-bottom-nav { display: none !important; }
 }
 
 [data-theme="dark"] .hz-bottom-nav {
-  background: rgba(26, 25, 22, 0.94);
-  border-top-color: rgba(255, 255, 255, 0.07);
+  background: rgba(13, 15, 26, 0.96);
+  border-top-color: rgba(129, 140, 248, 0.12);
 }
 
 
@@ -232,8 +233,8 @@ h3 {
 
 .site-footer {
   padding: 1.8rem 0 2.6rem;
-  border-top: 1px solid rgba(92,110,132,0.12);
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.76), rgba(245, 251, 255, 0.7));
+  border-top: 1px solid rgba(79, 70, 229, 0.10);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.80), rgba(240, 241, 255, 0.72));
   backdrop-filter: blur(10px);
   transition: background 0.35s ease, border-color 0.35s ease;
 }
