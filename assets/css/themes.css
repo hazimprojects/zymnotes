@@ -530,6 +530,22 @@ body[class^="bab-theme-"] {
   --theme-footer-bg: linear-gradient(135deg, rgba(255, 255, 255, 0.90), rgba(246, 251, 255, 0.84)) !important;
 }
 
+/* Pastikan dark mode kekal dominan walaupun light refresh guna !important */
+html[data-theme="dark"] body[class^="bab-theme-"] {
+  --theme-bg-solid: #0D0F1A !important;
+  --theme-overlay-1: radial-gradient(circle at 10% 12%, rgba(99, 102, 241, 0.12), transparent 0 35%) !important;
+  --theme-overlay-2: radial-gradient(circle at 88% 14%, rgba(34, 211, 238, 0.08), transparent 0 30%) !important;
+  --theme-overlay-3: radial-gradient(circle at 18% 84%, rgba(129, 140, 248, 0.10), transparent 0 26%) !important;
+  --theme-pattern: none !important;
+  --theme-gradient: linear-gradient(180deg, #0D0F1A 0%, #0A0C16 100%) !important;
+  --theme-label-bg: linear-gradient(90deg, rgba(99, 102, 241, 0.26), rgba(129, 140, 248, 0.22)) !important;
+  --theme-label-color: #C7D2FE !important;
+  --theme-surface-bg: rgba(21, 24, 41, 0.88) !important;
+  --theme-surface-border: rgba(129, 140, 248, 0.12) !important;
+  --theme-header-bg: rgba(13, 15, 26, 0.92) !important;
+  --theme-footer-bg: rgba(13, 15, 26, 0.84) !important;
+}
+
 /* =========================================================
    RESTORE WAR BLOCK CHIPS
    Kekalkan supaya Bab 3 tidak rosak
