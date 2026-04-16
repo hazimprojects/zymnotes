@@ -1,8 +1,8 @@
 {
   "style_css": "61",
   "main_js": "63",
-  "manifest": "2",
-  "sw_cache": "21",
+  "manifest": "3",
+  "sw_cache": "22",
   "css": {
     "base": "5",
     "layout": "9",

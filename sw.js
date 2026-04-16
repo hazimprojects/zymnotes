@@ -6,7 +6,7 @@
    - Everything else: network-first
 */
 
-const CACHE = 'hzedu-v21';
+const CACHE = 'hzedu-v22';
 
 const PRECACHE_URLS = [
   '/',
@@ -16,7 +16,7 @@ const PRECACHE_URLS = [
   '/assets/js/main.js?v=63',
   '/icons/icon.svg',
   '/icons/icon-maskable.svg',
-  '/manifest.json?v=2'
+  '/manifest.json?v=3'
 ];
 
 // ── Install: precache core assets ─────────────────────────────────────────
