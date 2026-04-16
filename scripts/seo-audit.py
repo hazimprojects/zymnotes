@@ -22,7 +22,7 @@ def check_html(path: str) -> list[str]:
 
     if '<title>' not in html:
         issues.append('missing <title>')
-    if not re.search(r'<meta\s+name="description"\s+content="[^"]*"\s*/?>', html, re.DOTALL):
+    if not re.search(r'<meta\b(?=[^>]*\bname="description")(?=[^>]*\bcontent="[^"]+")[^>]*>', html, re.DOTALL):
         issues.append('missing meta description')
     if 'rel="canonical"' not in html and path != '404.html':
         issues.append('missing canonical')
