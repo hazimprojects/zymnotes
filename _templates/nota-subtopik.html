@@ -3,10 +3,16 @@
 ================================================================================
   TEMPLATE RASMI: HALAMAN NOTA SUBTOPIK — HazimEdu
 ================================================================================
-  Versi    : 2.2
+  Versi    : 2.3
   Lokasi   : _templates/nota-subtopik.html
   Tujuan   : Template universal untuk semua halaman nota subtopik merentasi
              semua subjek (Sejarah, Matematik, Sains, BM, dll.)
+
+  KEMAS KINI v2.3:
+  • Title dan meta description diselaraskan dengan format SEO penuh halaman semasa
+  • Placeholder versi aset (CSS, JS, manifest, canvas.js) dihapuskan — semua hardcode
+  • data-lab-href pada <body> ditandakan PILIHAN dengan panduan penggunaan
+  • data-cv-title: panduan dikemaskan — elakkan emoji hiasan, gunakan teks bersih
 
   KEMAS KINI v2.2:
   • Diselaraskan ikut format page subtopik semasa dalam repo
@@ -44,10 +50,10 @@
   [[TINGKATAN]]           → Tingkatan, cth: 4, 5
   [[AUDIO_SRC]]           → Laluan fail audio, cth: ../assets/audio/bab-1-1.mp3
   [[OG_IMAGE_V]]          → Versi OG image, cth: 20260414
-  [[CSS_V]]               → Versi CSS terkini
-  [[JS_V]]                → Versi JS terkini
-  [[MANIFEST_V]]          → Versi manifest
-  [[CANVAS_JS_V]]         → Versi canvas.js terkini
+
+  VERSI ASET (diurus manual — tidak perlu diganti):
+  Versi CSS, JS, manifest, dan canvas.js sudah hardcode dalam template.
+  Kemaskini nilai ?v= secara terus apabila fail aset berubah.
 
   NOTA UNTUK SUBJEK BAHARU:
   • Tambah kelas tema baharu dalam assets/css/themes.css
@@ -71,13 +77,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <title>[[TAJUK_SUBTOPIK]] · HazimEdu</title>
-  <meta name="description" content="Nota interaktif [[SUBJEK_NAMA]] Tingkatan [[TINGKATAN]] [[BAB_LABEL]] [[SUBTOPIK_LABEL]]: [[TAJUK_SUBTOPIK]]." />
+  <!-- Untuk subjek bukan-Sejarah: tukar "Bab" kepada "Unit", "Topik", dll. -->
+  <title>Nota [[SUBJEK_NAMA]] Tingkatan [[TINGKATAN]] Bab [[X.X]]: [[TAJUK_SUBTOPIK]] | HazimEdu</title>
+  <meta name="description" content="Nota [[SUBJEK_NAMA]] Tingkatan [[TINGKATAN]] Bab [[X.X]] ([[TAJUK_BAB]]): [[TAJUK_SUBTOPIK]]. Ringkasan padat untuk ulang kaji SPM." />
   <link rel="canonical" href="https://hazimedu.com/notes/[[FAIL_INI]]" />
 
   <!-- Open Graph -->
-  <meta property="og:title" content="[[TAJUK_SUBTOPIK]] · HazimEdu" />
-  <meta property="og:description" content="Nota interaktif [[SUBJEK_NAMA]] Tingkatan [[TINGKATAN]] [[BAB_LABEL]] [[SUBTOPIK_LABEL]]: [[TAJUK_SUBTOPIK]]." />
+  <meta property="og:title" content="Nota [[SUBJEK_NAMA]] Tingkatan [[TINGKATAN]] Bab [[X.X]]: [[TAJUK_SUBTOPIK]] | HazimEdu" />
+  <meta property="og:description" content="Nota [[SUBJEK_NAMA]] Tingkatan [[TINGKATAN]] Bab [[X.X]] ([[TAJUK_BAB]]): [[TAJUK_SUBTOPIK]]. Ringkasan padat untuk ulang kaji SPM." />
   <meta property="og:url" content="https://hazimedu.com/notes/[[FAIL_INI]]" />
   <meta property="og:image" content="https://hazimedu.com/assets/og-image.png?v=[[OG_IMAGE_V]]" />
   <meta property="og:image:url" content="https://hazimedu.com/assets/og-image.png?v=[[OG_IMAGE_V]]" />
@@ -92,8 +99,8 @@
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="[[TAJUK_SUBTOPIK]] · HazimEdu" />
-  <meta name="twitter:description" content="Nota interaktif [[SUBJEK_NAMA]] Tingkatan [[TINGKATAN]] [[BAB_LABEL]] [[SUBTOPIK_LABEL]]: [[TAJUK_SUBTOPIK]]." />
+  <meta name="twitter:title" content="Nota [[SUBJEK_NAMA]] Tingkatan [[TINGKATAN]] Bab [[X.X]]: [[TAJUK_SUBTOPIK]] | HazimEdu" />
+  <meta name="twitter:description" content="Nota [[SUBJEK_NAMA]] Tingkatan [[TINGKATAN]] Bab [[X.X]] ([[TAJUK_BAB]]): [[TAJUK_SUBTOPIK]]. Ringkasan padat untuk ulang kaji SPM." />
   <meta name="twitter:image" content="https://hazimedu.com/assets/og-image.png?v=[[OG_IMAGE_V]]" />
   <meta name="twitter:image:src" content="https://hazimedu.com/assets/og-image.png?v=[[OG_IMAGE_V]]" />
 
@@ -128,6 +135,8 @@
   <link rel="apple-touch-icon" href="/icons/icon.svg" />
 </head>
 
+<!-- PILIHAN: Buang data-lab-href dan data-lab-emoji jika tiada kuiz untuk subtopik ini.
+     Jika ada kuiz, gantikan [[FAIL_QUIZ]] dengan nama fail kuiz (cth: bab-1-1.html). -->
 <body class="[[SUBJEK_THEME]]" data-lab-href="../quiz/[[FAIL_QUIZ]]" data-lab-emoji="🧩">
 
   <header class="site-header">
@@ -513,7 +522,7 @@
   <!-- JavaScript -->
   <script src="../assets/js/main.js?v=56"></script>
   <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.3/Sortable.min.js"></script>
-  <script src="../assets/js/canvas.js?v=[[CANVAS_JS_V]]"></script>
+  <script src="../assets/js/canvas.js?v=1"></script>
 
   <!-- Structured Data -->
   <script type="application/ld+json">
