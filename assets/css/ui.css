@@ -1254,8 +1254,83 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 3px;
+  gap: 8px;
   flex-shrink: 0;
+}
+
+/* ── FAB Row (positions controls beside FAB) ─────────────────────── */
+.sparkle-fab-row {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+/* ── Audio Side Controls ─────────────────────────────────────────── */
+.sparkle-audio-controls {
+  position: absolute;
+  right: calc(100% + 10px);
+  top: 50%;
+  transform: translateY(-50%) translateX(14px);
+  display: flex;
+  flex-direction: row;
+  gap: 6px;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.26s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+/* Left-corner variant: controls appear on the RIGHT */
+.note-sparkle-wrap.fab-corner-bl .sparkle-audio-controls,
+.note-sparkle-wrap.fab-corner-tl .sparkle-audio-controls {
+  right: auto;
+  left: calc(100% + 10px);
+  transform: translateY(-50%) translateX(-14px);
+}
+.note-sparkle-wrap.controls-open .sparkle-audio-controls {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(-50%) translateX(0);
+}
+/* Left-corner open state */
+.note-sparkle-wrap.fab-corner-bl.controls-open .sparkle-audio-controls,
+.note-sparkle-wrap.fab-corner-tl.controls-open .sparkle-audio-controls {
+  transform: translateY(-50%) translateX(0);
+}
+
+/* ── Control Buttons ─────────────────────────────────────────────── */
+.sparkle-ctrl-btn {
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  border: 1px solid rgba(92, 110, 132, 0.13);
+  background: rgba(255, 253, 248, 0.97);
+  box-shadow: 0 4px 12px rgba(36, 49, 63, 0.12), 0 1px 4px rgba(36, 49, 63, 0.07);
+  font-size: 0.85rem;
+  line-height: 1;
+  cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+  transition: transform 0.12s ease, background 0.12s ease;
+}
+.sparkle-ctrl-btn:hover {
+  background: rgba(255, 253, 248, 1);
+  box-shadow: 0 6px 16px rgba(36, 49, 63, 0.16);
+}
+.sparkle-ctrl-btn:active { transform: scale(0.88); }
+
+/* Staggered entrance */
+.note-sparkle-wrap.controls-open .sparkle-ctrl-btn:nth-child(1) { transition-delay: 0ms; }
+.note-sparkle-wrap.controls-open .sparkle-ctrl-btn:nth-child(2) { transition-delay: 35ms; }
+.note-sparkle-wrap.controls-open .sparkle-ctrl-btn:nth-child(3) { transition-delay: 70ms; }
+.note-sparkle-wrap.controls-open .sparkle-ctrl-btn:nth-child(4) { transition-delay: 105ms; }
+
+[data-theme="dark"] .sparkle-ctrl-btn {
+  background: rgba(36, 34, 32, 0.96);
+  border-color: rgba(220, 210, 190, 0.12);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.28);
+}
+[data-theme="dark"] .sparkle-ctrl-btn:hover {
+  background: rgba(48, 46, 44, 0.98);
 }
 
 /* ── FAB Inner (positions ring around FAB) ───────────────────────── */
@@ -1310,6 +1385,7 @@
   .note-sparkle-fab-inner { width: 48px; height: 48px; }
   .sparkle-audio-ring { width: 62px; height: 62px; }
   .sparkle-audio-ring svg { width: 62px; height: 62px; }
+  .sparkle-ctrl-btn { width: 32px; height: 32px; font-size: 0.78rem; }
 }
 
 /* =========================

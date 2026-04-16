@@ -868,8 +868,36 @@ document.addEventListener("DOMContentLoaded", function () {
     fabGroup.appendChild(fabInner);
     fabGroup.appendChild(countdownEl);
 
+    // ── Audio Side Controls ───────────────────────────────────────────
+    function makeCtrlBtn(icon, action) {
+      var btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'sparkle-ctrl-btn';
+      btn.setAttribute('data-ctrl', action);
+      btn.setAttribute('aria-label', action);
+      btn.textContent = icon;
+      return btn;
+    }
+
+    var ctrlStop     = makeCtrlBtn('⏹', 'stop');
+    var ctrlBack     = makeCtrlBtn('⏪', 'skip-back');
+    var ctrlPlayPause = makeCtrlBtn('⏸', 'play-pause');
+    var ctrlFwd      = makeCtrlBtn('⏩', 'skip-fwd');
+
+    var audioControls = document.createElement('div');
+    audioControls.className = 'sparkle-audio-controls';
+    audioControls.appendChild(ctrlStop);
+    audioControls.appendChild(ctrlBack);
+    audioControls.appendChild(ctrlPlayPause);
+    audioControls.appendChild(ctrlFwd);
+
+    var fabRow = document.createElement('div');
+    fabRow.className = 'sparkle-fab-row';
+    fabRow.appendChild(audioControls);
+    fabRow.appendChild(fabGroup);
+
     wrap.appendChild(itemsContainer);
-    wrap.appendChild(fabGroup);
+    wrap.appendChild(fabRow);
     document.body.appendChild(wrap);
 
     // ── Corner Position ───────────────────────────────────────────────
@@ -941,15 +969,22 @@ document.addEventListener("DOMContentLoaded", function () {
       if (didDrag) snapToCorner(corner);
     });
 
-    // ── Menu Toggle (tap only) ────────────────────────────────────────
+    // ── Menu / Controls Toggle (tap only) ────────────────────────────
     fab.addEventListener('click', function(e) {
       e.stopPropagation();
       if (didDrag) return;
-      wrap.classList.toggle('is-open');
+      if (wrap.classList.contains('audio-active')) {
+        wrap.classList.toggle('controls-open');
+      } else {
+        wrap.classList.toggle('is-open');
+      }
     });
 
     document.addEventListener('click', function(e) {
-      if (!wrap.contains(e.target)) wrap.classList.remove('is-open');
+      if (!wrap.contains(e.target)) {
+        wrap.classList.remove('is-open');
+        wrap.classList.remove('controls-open');
+      }
     });
 
     // ── Item Actions ──────────────────────────────────────────────────
@@ -984,27 +1019,52 @@ document.addEventListener("DOMContentLoaded", function () {
         countdownEl.textContent = fmtRemaining();
       }
 
+      function stopAudio() {
+        audioEl.pause();
+        audioEl.currentTime = 0;
+        fab.textContent = '✨';
+        wrap.classList.remove('audio-active');
+        wrap.classList.remove('controls-open');
+        progCircle.setAttribute('stroke-dashoffset', '0');
+        countdownEl.textContent = '';
+        ctrlPlayPause.textContent = '⏸';
+        if (audioBtn) audioBtn.textContent = '🎧';
+      }
+
       audioEl.addEventListener('timeupdate', updateRing);
 
       audioEl.addEventListener('play', function() {
         fab.textContent = '🎧';
         wrap.classList.add('audio-active');
         wrap.classList.remove('is-open');
+        ctrlPlayPause.textContent = '⏸';
         countdownEl.textContent = fmtRemaining();
         if (audioBtn) audioBtn.textContent = '⏸️';
       });
 
       audioEl.addEventListener('pause', function() {
-        fab.textContent = '⏸️';
+        ctrlPlayPause.textContent = '▶';
         if (audioBtn) audioBtn.textContent = '🎧';
+        // FAB stays 🎧, ring stays visible
       });
 
-      audioEl.addEventListener('ended', function() {
-        fab.textContent = '✨';
-        wrap.classList.remove('audio-active');
-        progCircle.setAttribute('stroke-dashoffset', '0');
-        countdownEl.textContent = '';
-        if (audioBtn) audioBtn.textContent = '🎧';
+      audioEl.addEventListener('ended', stopAudio);
+
+      // ── Control button actions ──────────────────────────────────────
+      audioControls.addEventListener('click', function(e) {
+        var btn = e.target.closest('[data-ctrl]');
+        if (!btn) return;
+        e.stopPropagation();
+        var action = btn.getAttribute('data-ctrl');
+        if (action === 'stop') {
+          stopAudio();
+        } else if (action === 'skip-back') {
+          audioEl.currentTime = Math.max(0, audioEl.currentTime - 10);
+        } else if (action === 'skip-fwd') {
+          audioEl.currentTime = Math.min(audioEl.duration || 0, audioEl.currentTime + 10);
+        } else if (action === 'play-pause') {
+          audioEl.paused ? audioEl.play() : audioEl.pause();
+        }
       });
     }
   });
