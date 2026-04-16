@@ -879,10 +879,10 @@ document.addEventListener("DOMContentLoaded", function () {
       return btn;
     }
 
-    var ctrlStop     = makeCtrlBtn('⏹', 'stop');
-    var ctrlBack     = makeCtrlBtn('⏪', 'skip-back');
-    var ctrlPlayPause = makeCtrlBtn('⏸', 'play-pause');
-    var ctrlFwd      = makeCtrlBtn('⏩', 'skip-fwd');
+    var ctrlStop     = makeCtrlBtn('■',   'stop');
+    var ctrlBack     = makeCtrlBtn('−10', 'skip-back');
+    var ctrlPlayPause = makeCtrlBtn('∥',  'play-pause');
+    var ctrlFwd      = makeCtrlBtn('+10', 'skip-fwd');
 
     var audioControls = document.createElement('div');
     audioControls.className = 'sparkle-audio-controls';
@@ -1027,7 +1027,7 @@ document.addEventListener("DOMContentLoaded", function () {
         wrap.classList.remove('controls-open');
         progCircle.setAttribute('stroke-dashoffset', '0');
         countdownEl.textContent = '';
-        ctrlPlayPause.textContent = '⏸';
+        ctrlPlayPause.textContent = '∥';
         if (audioBtn) audioBtn.textContent = '🎧';
       }
 
@@ -1037,7 +1037,7 @@ document.addEventListener("DOMContentLoaded", function () {
         fab.textContent = '🎧';
         wrap.classList.add('audio-active');
         wrap.classList.remove('is-open');
-        ctrlPlayPause.textContent = '⏸';
+        ctrlPlayPause.textContent = '∥';
         countdownEl.textContent = fmtRemaining();
         if (audioBtn) audioBtn.textContent = '⏸️';
       });

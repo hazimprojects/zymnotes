@@ -1317,6 +1317,13 @@
   box-shadow: 0 6px 16px rgba(36, 49, 63, 0.16);
 }
 .sparkle-ctrl-btn:active { transform: scale(0.88); }
+.sparkle-ctrl-btn[data-ctrl="skip-back"],
+.sparkle-ctrl-btn[data-ctrl="skip-fwd"] {
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
 
 /* Staggered entrance */
 .note-sparkle-wrap.controls-open .sparkle-ctrl-btn:nth-child(1) { transition-delay: 0ms; }
