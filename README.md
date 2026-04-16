@@ -245,6 +245,27 @@ Status semasa yang boleh dikenal pasti daripada repo:
 
 ---
 
+## Deploy / Release Ringkas
+
+Untuk elak cache versi aset tidak selari antara halaman HTML dan service worker, gunakan aliran berikut:
+
+1. Kemaskini versi dalam `data/asset-versions.json` (sumber kebenaran tunggal):
+   - `style_css`
+   - `main_js`
+   - `manifest`
+2. Jalankan:
+   ```bash
+   python3 scripts/sync-asset-versions.py
+   ```
+3. Skrip akan:
+   - kemas kini semua rujukan `style.css?v=`, `main.js?v=`, dan `manifest.json?v=` dalam fail HTML;
+   - kemas kini entri berkaitan dalam `PRECACHE_URLS` di `sw.js`.
+4. Commit perubahan yang terhasil (`*.html`, `sw.js`, dan/atau `data/asset-versions.json`).
+
+Nota CI: workflow `.github/workflows/update-status.yml` turut menjalankan skrip ini secara automatik sebelum langkah commit.
+
+---
+
 ## Arah Perkembangan
 
 HazimEdu dibina dengan potensi untuk berkembang lebih jauh daripada fokus semasa.
