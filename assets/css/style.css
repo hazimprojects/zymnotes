@@ -6,8 +6,8 @@
 
 @import url("base.css?v=5");       /* :root variables, dark mode tokens, body/reset/containers */
 @import url("layout.css?v=9");     /* Header, nav, dark mode fab, typography, footer, animations */
-@import url("ui.css?v=9");         /* Buttons, cards, homepage, hero, search, org-chart, interaction */
-@import url("paper.css?v=8");      /* Paper labels, boards, chips, accordion, steps, bab overview */
+@import url("ui.css?v=10");        /* Buttons, cards, homepage, hero, search, org-chart, interaction */
+@import url("paper.css?v=9");      /* Paper labels, boards, chips, accordion, steps, bab overview */
 @import url("keywords.css?v=1");   /* Keyword highlights (Bab 1/2/3), bloc identity, keyword legend */
 @import url("responsive.css?v=3"); /* All @media queries + spacing fixes */
 @import url("themes.css?v=6");     /* Bab visual themes, dark mode overrides, war block chips */
