@@ -6,14 +6,14 @@
    - Everything else: network-first
 */
 
-const CACHE = 'hzedu-v15';
+const CACHE = 'hzedu-v16';
 
 const PRECACHE_URLS = [
   '/',
   '/index.html',
   '/notes/index.html',
-  '/assets/css/style.css?v=55',
-  '/assets/js/main.js?v=57',
+  '/assets/css/style.css?v=56',
+  '/assets/js/main.js?v=58',
   '/icons/favicon.svg',
   '/icons/icon-192.png',
   '/manifest.json?v=2'
