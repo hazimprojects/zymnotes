@@ -1249,30 +1249,56 @@
   .note-sparkle-item[data-tooltip]::before { display: none; }
 }
 
-/* ── FAB Group (button + ring) ───────────────────────────────────── */
+/* ── FAB Group (button + countdown) ─────────────────────────────── */
 .note-sparkle-fab-group {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 6px;
+  gap: 3px;
   flex-shrink: 0;
 }
 
-/* ── Audio Progress Ring ─────────────────────────────────────────── */
-.sparkle-audio-ring {
-  width: 44px; height: 44px;
-  display: none;
-  align-items: center;
-  justify-content: center;
+/* ── FAB Inner (positions ring around FAB) ───────────────────────── */
+.note-sparkle-fab-inner {
+  position: relative;
+  width: 52px; height: 52px;
   flex-shrink: 0;
 }
+
+/* ── Audio Progress Ring (around FAB) ────────────────────────────── */
+.sparkle-audio-ring {
+  position: absolute;
+  top: 50%; left: 50%;
+  width: 68px; height: 68px;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
 .note-sparkle-wrap.audio-active .sparkle-audio-ring {
-  display: flex;
+  opacity: 1;
 }
 .sparkle-audio-ring svg {
-  width: 44px; height: 44px;
+  width: 68px; height: 68px;
   transform: rotate(-90deg);
   overflow: visible;
+}
+
+/* ── Countdown Text ──────────────────────────────────────────────── */
+.sparkle-audio-countdown {
+  font-size: 0.62rem;
+  font-weight: 700;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-variant-numeric: tabular-nums;
+  color: rgba(109, 99, 255, 0.75);
+  letter-spacing: 0.02em;
+  line-height: 1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  white-space: nowrap;
+}
+.note-sparkle-wrap.audio-active .sparkle-audio-countdown {
+  opacity: 1;
 }
 
 /* Suppress idle pulse when audio is active */
@@ -1281,8 +1307,9 @@
 }
 
 @media (max-width: 640px) {
-  .sparkle-audio-ring { width: 40px; height: 40px; }
-  .sparkle-audio-ring svg { width: 40px; height: 40px; }
+  .note-sparkle-fab-inner { width: 48px; height: 48px; }
+  .sparkle-audio-ring { width: 62px; height: 62px; }
+  .sparkle-audio-ring svg { width: 62px; height: 62px; }
 }
 
 /* =========================

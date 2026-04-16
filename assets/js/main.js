@@ -813,14 +813,14 @@ document.addEventListener("DOMContentLoaded", function () {
     fab.setAttribute('aria-label', 'Menu pembelajaran');
     fab.textContent = '✨';
 
-    // ── Audio Progress Ring ───────────────────────────────────────────
-    var CIRC = 2 * Math.PI * 18;
+    // ── Audio Progress Ring (around FAB) ──────────────────────────────
+    var CIRC = 2 * Math.PI * 30;
     var svgNS = 'http://www.w3.org/2000/svg';
     var ringDiv = document.createElement('div');
     ringDiv.className = 'sparkle-audio-ring';
 
     var ringsvg = document.createElementNS(svgNS, 'svg');
-    ringsvg.setAttribute('viewBox', '0 0 44 44');
+    ringsvg.setAttribute('viewBox', '0 0 68 68');
     ringsvg.setAttribute('aria-hidden', 'true');
 
     var ringDefs = document.createElementNS(svgNS, 'defs');
@@ -836,15 +836,15 @@ document.addEventListener("DOMContentLoaded", function () {
     ringDefs.appendChild(grad); ringsvg.appendChild(ringDefs);
 
     var trackCircle = document.createElementNS(svgNS, 'circle');
-    trackCircle.setAttribute('cx', '22'); trackCircle.setAttribute('cy', '22');
-    trackCircle.setAttribute('r', '18'); trackCircle.setAttribute('fill', 'none');
+    trackCircle.setAttribute('cx', '34'); trackCircle.setAttribute('cy', '34');
+    trackCircle.setAttribute('r', '30'); trackCircle.setAttribute('fill', 'none');
     trackCircle.setAttribute('stroke', 'rgba(109,99,255,0.18)');
     trackCircle.setAttribute('stroke-width', '3.5');
     ringsvg.appendChild(trackCircle);
 
     var progCircle = document.createElementNS(svgNS, 'circle');
-    progCircle.setAttribute('cx', '22'); progCircle.setAttribute('cy', '22');
-    progCircle.setAttribute('r', '18'); progCircle.setAttribute('fill', 'none');
+    progCircle.setAttribute('cx', '34'); progCircle.setAttribute('cy', '34');
+    progCircle.setAttribute('r', '30'); progCircle.setAttribute('fill', 'none');
     progCircle.setAttribute('stroke', 'url(#sparkleRingGrad)');
     progCircle.setAttribute('stroke-width', '3.5');
     progCircle.setAttribute('stroke-linecap', 'round');
@@ -853,10 +853,20 @@ document.addEventListener("DOMContentLoaded", function () {
     ringsvg.appendChild(progCircle);
     ringDiv.appendChild(ringsvg);
 
+    // ── Countdown text (below FAB) ────────────────────────────────────
+    var countdownEl = document.createElement('span');
+    countdownEl.className = 'sparkle-audio-countdown';
+    countdownEl.setAttribute('aria-hidden', 'true');
+
+    var fabInner = document.createElement('div');
+    fabInner.className = 'note-sparkle-fab-inner';
+    fabInner.appendChild(fab);
+    fabInner.appendChild(ringDiv);
+
     var fabGroup = document.createElement('div');
     fabGroup.className = 'note-sparkle-fab-group';
-    fabGroup.appendChild(fab);
-    fabGroup.appendChild(ringDiv);
+    fabGroup.appendChild(fabInner);
+    fabGroup.appendChild(countdownEl);
 
     wrap.appendChild(itemsContainer);
     wrap.appendChild(fabGroup);
@@ -960,10 +970,18 @@ document.addEventListener("DOMContentLoaded", function () {
     if (audioEl) {
       var audioBtn = itemsContainer.querySelector('[data-sparkle-type="audio"]');
 
+      function fmtRemaining() {
+        if (!isFinite(audioEl.duration)) return '';
+        var rem = Math.max(0, Math.ceil(audioEl.duration - audioEl.currentTime));
+        var m = Math.floor(rem / 60), s = rem % 60;
+        return m + ':' + (s < 10 ? '0' : '') + s;
+      }
+
       function updateRing() {
         if (!audioEl.duration) return;
         progCircle.setAttribute('stroke-dashoffset',
           CIRC * (audioEl.currentTime / audioEl.duration));
+        countdownEl.textContent = fmtRemaining();
       }
 
       audioEl.addEventListener('timeupdate', updateRing);
@@ -972,6 +990,7 @@ document.addEventListener("DOMContentLoaded", function () {
         fab.textContent = '🎧';
         wrap.classList.add('audio-active');
         wrap.classList.remove('is-open');
+        countdownEl.textContent = fmtRemaining();
         if (audioBtn) audioBtn.textContent = '⏸️';
       });
 
@@ -984,6 +1003,7 @@ document.addEventListener("DOMContentLoaded", function () {
         fab.textContent = '✨';
         wrap.classList.remove('audio-active');
         progCircle.setAttribute('stroke-dashoffset', '0');
+        countdownEl.textContent = '';
         if (audioBtn) audioBtn.textContent = '🎧';
       });
     }
