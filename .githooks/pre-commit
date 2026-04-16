@@ -1,0 +1,12 @@
+#!/bin/sh
+# Auto-bump asset versions for any tracked CSS/JS files in this commit.
+# Install once: git config core.hooksPath .githooks
+
+set -e
+
+python3 scripts/bump-versions.py --staged
+python3 scripts/sync-asset-versions.py
+
+# Re-stage any files that were updated by the scripts
+git add data/asset-versions.json assets/css/style.css sw.js
+git add $(git ls-files --modified "*.html" 2>/dev/null) 2>/dev/null || true

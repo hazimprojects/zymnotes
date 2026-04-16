@@ -1,5 +1,16 @@
 {
-  "style_css": "55",
-  "main_js": "57",
-  "manifest": "2"
+  "style_css": "56",
+  "main_js": "58",
+  "manifest": "2",
+  "sw_cache": "16",
+  "css": {
+    "base": "5",
+    "layout": "9",
+    "ui": "10",
+    "paper": "9",
+    "keywords": "1",
+    "responsive": "3",
+    "themes": "6",
+    "lab": "2"
+  }
 }
