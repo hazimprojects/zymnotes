@@ -1,18 +1,19 @@
 /* Hazim EduHub — Service Worker
    Strategy:
    - Core assets (CSS, JS, fonts): cache-first
+   - Google Fonts (cross-origin): cache-first with opaque response
    - HTML pages: network-first, fallback to cache
    - Everything else: network-first
 */
 
-const CACHE = 'hzedu-v13';
+const CACHE = 'hzedu-v14';
 
 const PRECACHE_URLS = [
   '/',
   '/index.html',
   '/notes/index.html',
   '/assets/css/style.css?v=55',
-  '/assets/js/main.js?v=56',
+  '/assets/js/main.js?v=57',
   '/icons/icon.svg',
   '/manifest.json?v=2'
 ];
@@ -46,8 +47,26 @@ self.addEventListener('activate', function (e) {
 self.addEventListener('fetch', function (e) {
   var url = e.request.url;
 
-  // Skip non-GET and cross-origin requests
+  // Skip non-GET requests
   if (e.request.method !== 'GET') return;
+
+  // Cache Google Fonts (CSS and font files) — cache-first
+  var isGoogleFonts = url.startsWith('https://fonts.googleapis.com/') ||
+                      url.startsWith('https://fonts.gstatic.com/');
+  if (isGoogleFonts) {
+    e.respondWith(
+      caches.match(e.request).then(function (cached) {
+        return cached || fetch(e.request).then(function (res) {
+          var clone = res.clone();
+          caches.open(CACHE).then(function (c) { c.put(e.request, clone); });
+          return res;
+        });
+      })
+    );
+    return;
+  }
+
+  // Skip other cross-origin requests
   if (!url.startsWith(self.location.origin)) return;
 
   var isHTML = e.request.headers.get('accept') &&
