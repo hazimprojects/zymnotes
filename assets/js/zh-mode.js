@@ -407,14 +407,20 @@
     popup.setAttribute("role", "dialog");
     popup.innerHTML =
       '<div class="zh-selection-main"></div>' +
-      '<label class="zh-selection-edit-wrap">✍️ Edit' +
-        '<input type="text" class="zh-selection-edit" autocomplete="off" />' +
-      "</label>" +
-      '<div class="zh-selection-status" aria-live="polite"></div>' +
-      '<button type="button" class="zh-help-toggle zh-selection-help-toggle" aria-expanded="false">❓ Help</button>' +
-      '<div class="zh-selection-help" hidden>Pilih teks untuk semak glosari dahulu, kemudian internet jika tiada padanan. Anda boleh edit terjemahan sebelum simpan ke nota. 先查词汇表，若无结果再查网络；保存前可自行编辑翻译。</div>' +
-      '<div class="zh-selection-actions">' +
-        '<button type="button" class="zh-selection-save">💾 Simpan</button>' +
+      '<div class="zh-selection-actions zh-selection-actions--compact">' +
+        '<button type="button" class="zh-selection-edit-toggle" aria-expanded="false">✍️ Edit</button>' +
+      "</div>" +
+      '<div class="zh-selection-expanded" hidden>' +
+        '<label class="zh-selection-edit-wrap">✍️ Edit' +
+          '<input type="text" class="zh-selection-edit" autocomplete="off" />' +
+        "</label>" +
+        '<div class="zh-selection-status" aria-live="polite"></div>' +
+        '<button type="button" class="zh-help-toggle zh-selection-help-toggle" aria-expanded="false">❓ Help</button>' +
+        '<div class="zh-selection-help" hidden>Pilih teks untuk semak glosari dahulu, kemudian internet jika tiada padanan. Anda boleh edit terjemahan sebelum simpan ke nota. 先查词汇表，若无结果再查网络；保存前可自行编辑翻译。</div>' +
+        '<div class="zh-selection-actions zh-selection-actions--expanded">' +
+          '<button type="button" class="zh-selection-save">💾 Simpan</button>' +
+          '<button type="button" class="zh-selection-done">Selesai</button>' +
+        "</div>" +
       "</div>";
     document.body.appendChild(popup);
 
@@ -422,9 +428,12 @@
     var currentTranslation = "";
     var lookupRequestId = 0;
     var isCoarsePointer = !!(window.matchMedia && window.matchMedia("(pointer: coarse)").matches);
+    var expandedPanel = popup.querySelector(".zh-selection-expanded");
     var editInput = popup.querySelector(".zh-selection-edit");
     var statusEl = popup.querySelector(".zh-selection-status");
     var saveBtn = popup.querySelector(".zh-selection-save");
+    var editToggleBtn = popup.querySelector(".zh-selection-edit-toggle");
+    var doneBtn = popup.querySelector(".zh-selection-done");
     var selectionHelpToggle = popup.querySelector(".zh-selection-help-toggle");
     var selectionHelpText = popup.querySelector(".zh-selection-help");
 
@@ -436,9 +445,33 @@
       });
     }
 
+    function setExpandedState(expanded) {
+      popup.classList.toggle("zh-selection-popup--expanded", expanded);
+      popup.classList.toggle("zh-selection-popup--compact", !expanded);
+      editToggleBtn.setAttribute("aria-expanded", expanded ? "true" : "false");
+      expandedPanel.hidden = !expanded;
+      if (!expanded) {
+        selectionHelpToggle.setAttribute("aria-expanded", "false");
+        selectionHelpText.hidden = true;
+      }
+    }
+
+    editToggleBtn.addEventListener("click", function () {
+      setExpandedState(true);
+      editInput.focus();
+      editInput.select();
+    });
+
+    doneBtn.addEventListener("click", function () {
+      setExpandedState(false);
+    });
+
+    setExpandedState(false);
+
     function hidePopup() {
       popup.classList.remove("zh-selection-popup--visible");
       popup.classList.remove("zh-selection-popup--mobile");
+      setExpandedState(false);
     }
 
     function saveSelectionNote() {
@@ -470,6 +503,7 @@
       currentTranslation = zh;
       editInput.value = zh;
       saveBtn.disabled = !zh;
+      setExpandedState(false);
 
       statusEl.textContent = sourceTag || "";
       popup.querySelector(".zh-selection-main").innerHTML =
