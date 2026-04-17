@@ -444,6 +444,11 @@ html[data-theme="dark"] .zh-disclaimer-toast {
   cursor: default;
 }
 
+.paper-chip.zh-chip-can-flip {
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
 .paper-chip .zh-chip-inner {
   display: flex;
   flex-direction: column;
@@ -464,6 +469,14 @@ html[data-theme="dark"] .zh-disclaimer-toast {
   line-height: 1.35;
   word-break: break-word;
   opacity: 0.95;
+}
+
+.paper-chip.zh-chip-can-flip:not(.zh-chip-flipped):not(.zh-chip-inline) .zh-chip-translation {
+  display: none;
+}
+
+.paper-chip.zh-chip-can-flip.zh-chip-flipped .zh-chip-primary {
+  opacity: 0.58;
 }
 
 .paper-chip.zh-chip-inline .zh-chip-inner {

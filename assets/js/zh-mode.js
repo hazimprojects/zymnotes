@@ -18,6 +18,10 @@
   var applyRequestId = 0;
   var ZH_MODE_GLOSSARY = "glossary";
   var ZH_MODE_EXPLAIN = "explain";
+  var CHIP_DISPLAY_INLINE = "inline";
+  var CHIP_DISPLAY_STACKED = "stacked";
+  var CHIP_TOUCH_CLICK_DELAY_MS = 360;
+  var chipInteractionsBound = false;
 
   var OVERLY_GENERAL_TERMS = new Set([
     "bahasa", "politik", "agama", "kampung", "rakyat",
@@ -81,6 +85,38 @@
     var mode = (el.getAttribute("data-zh-mode") || "").trim().toLowerCase();
     if (mode === ZH_MODE_GLOSSARY || mode === ZH_MODE_EXPLAIN) return mode;
     return fallbackMode || ZH_MODE_EXPLAIN;
+  }
+
+  function getChipDisplayMode(chip, fallbackMode) {
+    if (!chip || !chip.getAttribute) return fallbackMode || CHIP_DISPLAY_STACKED;
+    var value = (
+      chip.getAttribute("data-chip-display-mode") ||
+      chip.getAttribute("data-zh-display-mode") ||
+      ""
+    ).trim().toLowerCase();
+    if (value === CHIP_DISPLAY_INLINE || value === CHIP_DISPLAY_STACKED) return value;
+    return fallbackMode || CHIP_DISPLAY_STACKED;
+  }
+
+  function shouldDebugChipFlip() {
+    if (window.__HZ_CHIP_DEBUG__ === true) return true;
+    return localStorage.getItem("hzedu-chip-debug") === "1";
+  }
+
+  function reportChipFlipIssue(chip, reason, meta) {
+    if (!window.__HZ_CHIP_FLIP_LOGS__) window.__HZ_CHIP_FLIP_LOGS__ = [];
+    var payload = {
+      ts: Date.now(),
+      reason: reason,
+      chipText: chip && chip.textContent ? chip.textContent.trim().slice(0, 220) : "",
+      chipId: chip && chip.getAttribute ? (chip.getAttribute("data-zh-unit-id") || "") : "",
+      mode: chip && chip.getAttribute ? (chip.getAttribute("data-zh-mode") || "") : "",
+      meta: meta || {}
+    };
+    window.__HZ_CHIP_FLIP_LOGS__.push(payload);
+    if (shouldDebugChipFlip()) {
+      console.warn("[HzEdu] chip flip issue:", payload);
+    }
   }
 
   function hasZhUnitId(el) {
@@ -343,6 +379,11 @@
   }
 
   function setupChipFlips(gl, comprehension) {
+    bindChipInteractions();
+    document.querySelectorAll(".paper-chip-list").forEach(function (listEl) {
+      listEl.classList.add("zh-chip-list-ready");
+    });
+
     var chips = document.querySelectorAll(".paper-chip");
     chips.forEach(function (chip) {
       var hasLegacyFlipMarkup =
@@ -371,21 +412,54 @@
       var sourceNode = chip.cloneNode(true);
       sourceNode.querySelectorAll(".kw-zh-ann").forEach(function (ann) { ann.remove(); });
       var sourceText = sourceNode.textContent ? sourceNode.textContent.trim() : "";
-      if (!sourceText || sourceText.length < 3 || sourceText.length > 320) return;
+      if (!sourceText || sourceText.length < 3 || sourceText.length > 320) {
+        reportChipFlipIssue(chip, "conditional-render", { hasLegacyFlipMarkup: hasLegacyFlipMarkup });
+        return;
+      }
 
       var backContent = buildChipBackContent(chip, sourceText, gl, comprehension);
-      if (!backContent || !backContent.text || !backContent.text.trim()) return;
+      if (!backContent || !backContent.text || !backContent.text.trim()) {
+        var reason = hasLegacyFlipMarkup ? "legacy-markup" : "data-shape-not-uniform";
+        reportChipFlipIssue(chip, reason, { sourceText: sourceText.slice(0, 160) });
+        return;
+      }
 
       var hasSentenceClass = chip.classList.contains("paper-chip-sentence");
       var mode = getElementZhMode(chip, hasSentenceClass ? ZH_MODE_EXPLAIN : ZH_MODE_GLOSSARY);
-      var renderInline = mode === ZH_MODE_GLOSSARY && !isSentenceLikeChip(sourceText);
+      var displayMode = getChipDisplayMode(
+        chip,
+        mode === ZH_MODE_GLOSSARY && !isSentenceLikeChip(sourceText) ? CHIP_DISPLAY_INLINE : CHIP_DISPLAY_STACKED
+      );
+      var canFlipAttr = chip.getAttribute("data-chip-can-flip");
+      var canFlip = canFlipAttr === null ? displayMode === CHIP_DISPLAY_STACKED : canFlipAttr !== "false";
+      var renderInline = displayMode === CHIP_DISPLAY_INLINE;
 
       chip.classList.add("zh-chip-flip-ready", "zh-chip-translated");
       if (renderInline) chip.classList.add("zh-chip-inline");
+      chip.classList.toggle("zh-chip-can-flip", !!canFlip);
       chip.setAttribute("data-zh-bm", sourceText);
       chip.setAttribute("data-zh-cn", backContent.text);
       chip.setAttribute("data-zh-mode-label", backContent.modeLabel);
       chip.setAttribute("data-zh-fallback-label", backContent.fallbackLabel || "");
+      chip.setAttribute("data-chip-can-flip", canFlip ? "true" : "false");
+      chip.setAttribute("data-chip-display-mode", displayMode);
+
+      chip.__zhChipState = {
+        canFlip: canFlip,
+        translation: backContent.text,
+        displayMode: displayMode,
+        isFlipped: false
+      };
+
+      if (canFlip) {
+        chip.setAttribute("role", "button");
+        chip.setAttribute("tabindex", "0");
+        chip.setAttribute("aria-pressed", "false");
+      } else {
+        chip.removeAttribute("role");
+        chip.removeAttribute("tabindex");
+        chip.removeAttribute("aria-pressed");
+      }
 
       var translationHtml = renderInline
         ? '<span class="zh-chip-translation-inline" lang="zh-Hans">（' + escapeHtml(backContent.text) + '）</span>'
@@ -418,6 +492,66 @@
       chip.removeAttribute("data-zh-cn");
       chip.removeAttribute("data-zh-mode-label");
       chip.removeAttribute("data-zh-fallback-label");
+      chip.removeAttribute("data-chip-display-mode");
+      chip.removeAttribute("role");
+      chip.removeAttribute("tabindex");
+      chip.removeAttribute("aria-pressed");
+      chip.__zhChipState = null;
+    });
+    document.querySelectorAll(".paper-chip-list.zh-chip-list-ready").forEach(function (listEl) {
+      listEl.classList.remove("zh-chip-list-ready");
+    });
+  }
+
+  function toggleChipFlip(chip, triggerType) {
+    if (!chip || !chip.classList || !chip.classList.contains("paper-chip")) return;
+    var state = chip.__zhChipState;
+    if (!state) {
+      reportChipFlipIssue(chip, "missing-state", { triggerType: triggerType });
+      return;
+    }
+    if (!state.translation || !state.translation.trim()) {
+      reportChipFlipIssue(chip, "data-shape-not-uniform", { triggerType: triggerType });
+      return;
+    }
+    if (!state.canFlip || state.displayMode !== CHIP_DISPLAY_STACKED) {
+      reportChipFlipIssue(chip, "flip-disabled", {
+        triggerType: triggerType,
+        displayMode: state.displayMode,
+        canFlip: state.canFlip
+      });
+      return;
+    }
+
+    state.isFlipped = !state.isFlipped;
+    chip.classList.toggle("zh-chip-flipped", state.isFlipped);
+    chip.setAttribute("aria-pressed", state.isFlipped ? "true" : "false");
+  }
+
+  function bindChipInteractions() {
+    if (chipInteractionsBound) return;
+    chipInteractionsBound = true;
+
+    document.addEventListener("touchend", function (event) {
+      var chip = event.target && event.target.closest ? event.target.closest(".paper-chip.zh-chip-translated") : null;
+      if (!chip) return;
+      chip.__zhLastTouchTs = Date.now();
+      toggleChipFlip(chip, "touchend");
+    }, { passive: true });
+
+    document.addEventListener("click", function (event) {
+      var chip = event.target && event.target.closest ? event.target.closest(".paper-chip.zh-chip-translated") : null;
+      if (!chip) return;
+      if (chip.__zhLastTouchTs && Date.now() - chip.__zhLastTouchTs < CHIP_TOUCH_CLICK_DELAY_MS) return;
+      toggleChipFlip(chip, "click");
+    });
+
+    document.addEventListener("keydown", function (event) {
+      if (event.key !== "Enter" && event.key !== " ") return;
+      var chip = event.target && event.target.closest ? event.target.closest(".paper-chip.zh-chip-translated") : null;
+      if (!chip) return;
+      event.preventDefault();
+      toggleChipFlip(chip, "keyboard");
     });
   }
 
