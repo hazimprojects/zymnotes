@@ -19,6 +19,11 @@
   var ZH_MODE_GLOSSARY = "glossary";
   var ZH_MODE_EXPLAIN = "explain";
 
+  var OVERLY_GENERAL_TERMS = new Set([
+    "bahasa", "politik", "agama", "kampung", "rakyat",
+    "masyarakat", "penduduk", "bandar", "kawasan"
+  ]);
+
   // ── Helpers ──────────────────────────────────────────────
 
   function isZhMode() {
@@ -243,46 +248,50 @@
     return false;
   }
 
-  function translateTextByGlossary(text, gl) {
-    if (shouldSkipChipTranslation(text)) return text;
+  function buildGlossaryFallback(text, gl) {
+    if (!text || shouldSkipChipTranslation(text)) return null;
 
-    var translated = text;
-    var keys = Object.keys(gl).filter(function (k) { return typeof gl[k] === 'string'; }).sort(function (a, b) { return b.length - a.length; });
+    var cleanText = normalize(text.replace(/[\uD83C-\uDBFF\uDC00-\uDFFF]|\u00a9|\u00ae|[\u2000-\u3300]/g, "").replace(/^[\s📌💡📖🔍⬆️]+/, ""));
+    if (!cleanText || cleanText.length < 2) return null;
 
-    for (var i = 0; i < keys.length; i++) {
-      var key = keys[i];
-      if (!key || key.length < 2) continue;
-      var escaped = key.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-      var rx = new RegExp(escaped, "gi");
-      translated = translated.replace(rx, function (term) {
-        return term + " (" + gl[key] + ")";
-      });
+    // Exact match
+    if (gl[cleanText] && typeof gl[cleanText] === "string") {
+      return { modeLabel: "词汇注释", text: gl[cleanText], fallbackLabel: "" };
     }
 
-    return translated;
-  }
+    // Partial match — collect BM = 中文 pairs, skip overly-general terms
+    var keys = Object.keys(gl)
+      .filter(function (k) {
+        return typeof gl[k] === "string" && !OVERLY_GENERAL_TERMS.has(normalize(k)) && k.length > 2;
+      })
+      .sort(function (a, b) { return b.length - a.length; });
 
-  function buildGlossaryFallback(text, gl) {
-    var translated = translateTextByGlossary(text, gl);
-    if (!translated || translated === text) return null;
-    return {
-      modeLabel: "Terjemahan istilah",
-      text: translated,
-      fallbackLabel: ""
-    };
+    var pairs = [];
+    var seen = new Set();
+    for (var i = 0; i < keys.length; i++) {
+      var nk = normalize(keys[i]);
+      if (cleanText.indexOf(nk) !== -1 && !seen.has(nk)) {
+        pairs.push(keys[i] + " = " + gl[keys[i]]);
+        seen.add(nk);
+        if (pairs.length >= 3) break;
+      }
+    }
+
+    if (pairs.length === 0) return null;
+    return { modeLabel: "词汇注释", text: pairs.join(" · "), fallbackLabel: "" };
   }
 
   function buildExplainFallback(unit) {
     if (!unit || typeof unit !== "object") return null;
     var focusPhrase = typeof unit.bm_focus_phrase === "string" ? unit.bm_focus_phrase.trim() : "";
-    var summaryParts = ["Penjelasan ayat belum tersedia"];
+    var summaryParts = ["句意解析尚未提供"];
     if (focusPhrase) {
-      summaryParts.push("Ringkasan fokus (BM): " + focusPhrase);
+      summaryParts.push("BM重点摘要：" + focusPhrase);
     }
     return {
-      modeLabel: "Penjelasan maksud ayat",
+      modeLabel: "句意解析",
       text: summaryParts.join(" · "),
-      fallbackLabel: focusPhrase ? "Ringkasan fokus sahaja" : ""
+      fallbackLabel: focusPhrase ? "仅提供BM重点摘要" : ""
     };
   }
 
@@ -296,7 +305,7 @@
     if (mode === ZH_MODE_EXPLAIN) {
       if (unit && typeof unit.zh_explain === "string" && unit.zh_explain.trim()) {
         return {
-          modeLabel: "Penjelasan maksud ayat",
+          modeLabel: "句意解析",
           text: unit.zh_explain.trim(),
           fallbackLabel: ""
         };
@@ -307,7 +316,7 @@
     if (mode === ZH_MODE_GLOSSARY) {
       if (unit && typeof unit.glossary_zh === "string" && unit.glossary_zh.trim()) {
         return {
-          modeLabel: "Terjemahan istilah",
+          modeLabel: "词汇注释",
           text: unit.glossary_zh.trim(),
           fallbackLabel: ""
         };
@@ -359,7 +368,7 @@
       chip.classList.add("zh-chip-flip-ready");
       chip.setAttribute("tabindex", "0");
       chip.setAttribute("role", "button");
-      chip.setAttribute("aria-label", "Klik untuk flip dan lihat terjemahan Cina");
+      chip.setAttribute("aria-label", "点击翻转查看中文解析");
       chip.setAttribute("data-zh-bm", sourceText);
       chip.setAttribute("data-zh-cn", backContent.text);
       chip.setAttribute("data-zh-mode-label", backContent.modeLabel);
@@ -444,19 +453,39 @@
     document.querySelectorAll(".zh-comprehension-panel").forEach(function (panel) { panel.remove(); });
   }
 
+  function makePanelToggleable(panel) {
+    var toggle = panel.querySelector(".zh-panel-toggle");
+    var body = panel.querySelector(".zh-panel-body");
+    if (!toggle || !body) return;
+    toggle.addEventListener("click", function () {
+      var isOpen = !body.hidden;
+      body.hidden = isOpen;
+      toggle.setAttribute("aria-expanded", isOpen ? "false" : "true");
+      panel.classList.toggle("zh-panel-open", !isOpen);
+      panel.classList.toggle("zh-panel-collapsed", isOpen);
+      var chevron = toggle.querySelector(".zh-panel-chevron");
+      if (chevron) chevron.textContent = isOpen ? "▼" : "▲";
+    });
+  }
+
   function renderComprehensionPanels(map, gl) {
     function appendGlossaryPanel(sourceEl, sourceText) {
       var glossaryFallback = buildGlossaryFallback(sourceText, gl);
       if (!glossaryFallback) return;
 
       var glossaryPanel = document.createElement("aside");
-      glossaryPanel.className = "zh-comprehension-panel";
+      glossaryPanel.className = "zh-comprehension-panel zh-panel-collapsed";
       glossaryPanel.setAttribute("lang", "zh-Hans");
-      glossaryPanel.setAttribute("aria-label", "Panel terjemahan istilah");
+      glossaryPanel.setAttribute("aria-label", "词汇注释面板");
       glossaryPanel.innerHTML =
-        '<p class="zh-comprehension-title">🈶 Terjemahan istilah · 术语速查</p>' +
-        '<p class="zh-comprehension-explain">' + escapeHtml(glossaryFallback.text) + "</p>";
+        '<button class="zh-panel-toggle" aria-expanded="false">' +
+          '🈶 词汇注释 · 术语速查 <span class="zh-panel-chevron">▼</span>' +
+        '</button>' +
+        '<div class="zh-panel-body" hidden>' +
+          '<p class="zh-comprehension-explain">' + escapeHtml(glossaryFallback.text) + "</p>" +
+        '</div>';
       sourceEl.insertAdjacentElement("afterend", glossaryPanel);
+      makePanelToggleable(glossaryPanel);
     }
 
     removeComprehensionPanels();
@@ -483,29 +512,89 @@
       });
       var explainText = unit && unit.zh_explain && unit.zh_explain.trim()
         ? unit.zh_explain.trim()
-        : (fallback ? fallback.text : "Penjelasan ayat belum tersedia.");
+        : (fallback ? fallback.text : "句意解析尚未提供。");
 
-      var panel = document.createElement("aside");
-      panel.className = "zh-comprehension-panel";
-      panel.setAttribute("lang", "zh-Hans");
-      panel.setAttribute("aria-label", "Panel sokongan faham ayat");
-      panel.innerHTML =
-        '<p class="zh-comprehension-title">🧠 Penjelasan maksud ayat · 中文辅助理解</p>' +
-        ('<p class="zh-comprehension-explain">' + escapeHtml(explainText) + "</p>") +
+      var bodyHTML =
+        '<p class="zh-comprehension-explain">' + escapeHtml(explainText) + "</p>" +
         (unit && unit.zh_explain && unit.zh_explain.trim() && keyPoints.length
           ? ('<ul class="zh-comprehension-points">' + keyPoints.map(function (item) {
               return "<li>" + escapeHtml(item) + "</li>";
             }).join("") + "</ul>")
           : "") +
         (((unit && unit.bm_focus_phrase) || sourceText)
-          ? ('<p class="zh-comprehension-focus"><span>Ringkasan fokus (BM):</span> <strong>' + escapeHtml((unit && unit.bm_focus_phrase) || sourceText) + "</strong></p>")
-          : '<p class="zh-comprehension-focus"><span>Ringkasan fokus (BM):</span> <strong>Belum tersedia.</strong></p>');
+          ? ('<p class="zh-comprehension-focus"><span>BM重点摘要：</span> <strong>' + escapeHtml((unit && unit.bm_focus_phrase) || sourceText) + "</strong></p>")
+          : '<p class="zh-comprehension-focus"><span>BM重点摘要：</span> <strong>尚未提供</strong></p>');
+
+      var panel = document.createElement("aside");
+      panel.className = "zh-comprehension-panel zh-panel-collapsed";
+      panel.setAttribute("lang", "zh-Hans");
+      panel.setAttribute("aria-label", "句意解析面板");
+      panel.innerHTML =
+        '<button class="zh-panel-toggle" aria-expanded="false">' +
+          '🧠 句意解析 · 中文辅助理解 <span class="zh-panel-chevron">▼</span>' +
+        '</button>' +
+        '<div class="zh-panel-body" hidden>' + bodyHTML + '</div>';
 
       sourceEl.insertAdjacentElement("afterend", panel);
+      makePanelToggleable(panel);
 
       if (!unit || !unit.zh_explain || !unit.zh_explain.trim()) {
         appendGlossaryPanel(sourceEl, (unit && unit.bm_focus_phrase) || sourceText);
       }
+    });
+  }
+
+  // ── Orphan Heading Annotation ────────────────────────────
+
+  function annotateOrphanHeadings(gl) {
+    document.querySelectorAll(".point-heading:not([data-zh-unit-id])").forEach(function (el) {
+      if (el.querySelector(".zh-heading-toggle")) return;
+
+      var rawText = el.textContent || "";
+      // Strip leading emoji / symbols to get meaningful text
+      var cleanText = normalize(rawText.replace(/[\uD83C-\uDBFF\uDC00-\uDFFF]|[\u2600-\u27BF]|[\u{1F000}-\u{1FFFF}]|[📌💡📖🔍⬆️]/gu, "").replace(/^[^a-zA-ZÀ-ÿ]+/, ""));
+      if (!cleanText || cleanText.length < 3) return;
+
+      var result = buildGlossaryFallback(cleanText, gl);
+      if (!result || !result.text) return;
+
+      var toggleBtn = document.createElement("button");
+      toggleBtn.type = "button";
+      toggleBtn.className = "zh-heading-toggle";
+      toggleBtn.setAttribute("aria-expanded", "false");
+      toggleBtn.setAttribute("aria-label", "中文词汇注释");
+      toggleBtn.textContent = "中";
+
+      var annSpan = document.createElement("span");
+      annSpan.className = "zh-heading-ann";
+      annSpan.setAttribute("hidden", "");
+      annSpan.setAttribute("aria-hidden", "true");
+      annSpan.setAttribute("lang", "zh-Hans");
+      annSpan.textContent = result.text;
+
+      toggleBtn.addEventListener("click", function (e) {
+        e.stopPropagation();
+        var isOpen = !annSpan.hasAttribute("hidden");
+        if (isOpen) {
+          annSpan.setAttribute("hidden", "");
+          toggleBtn.setAttribute("aria-expanded", "false");
+        } else {
+          annSpan.removeAttribute("hidden");
+          toggleBtn.setAttribute("aria-expanded", "true");
+        }
+      });
+
+      el.classList.add("zh-heading-has-ann");
+      el.appendChild(toggleBtn);
+      el.appendChild(annSpan);
+    });
+  }
+
+  function removeOrphanAnnotations() {
+    document.querySelectorAll(".zh-heading-toggle").forEach(function (el) { el.remove(); });
+    document.querySelectorAll(".zh-heading-ann").forEach(function (el) { el.remove(); });
+    document.querySelectorAll(".zh-heading-has-ann").forEach(function (el) {
+      el.classList.remove("zh-heading-has-ann");
     });
   }
 
@@ -520,13 +609,13 @@
     toast.setAttribute("role", "status");
     toast.setAttribute("aria-live", "polite");
     toast.innerHTML =
-      '<span class="zh-disclaimer-icon">中</span>' +
-      '<div class="zh-disclaimer-content">' +
-        '<span class="zh-disclaimer-text">中文 ON · Terjemahan istilah + penjelasan ayat</span>' +
-        '<button class="zh-help-toggle zh-disclaimer-help-toggle" type="button" aria-expanded="false">❓ Help</button>' +
-        '<span class="zh-disclaimer-help" hidden>Mod Bahasa Cina aktif. “Terjemahan istilah” ialah bantuan cepat pada kata kunci/chip. “Penjelasan maksud ayat” pula menerangkan maksud keseluruhan ayat penting. Jika data ayat tiada, sistem papar notis “Penjelasan ayat belum tersedia” bersama ringkasan fokus BM.</span>' +
+      '<span class=”zh-disclaimer-icon”>中</span>' +
+      '<div class=”zh-disclaimer-content”>' +
+        '<span class=”zh-disclaimer-text”>中文模式已开启 · 词汇注释 + 句意解析</span>' +
+        '<button class=”zh-help-toggle zh-disclaimer-help-toggle” type=”button” aria-expanded=”false”>❓ 说明</button>' +
+        '<span class=”zh-disclaimer-help” hidden>中文辅助模式已启动。点击纸片（chip）可翻转查看词汇注释。点击句意解析面板标题可展开或收起中文解析。点击句子旁的「中」按钮可查看词汇提示。BM用词仍须熟记，因为考试须以马来文作答。</span>' +
       "</div>" +
-      '<button class="zh-disclaimer-close" type="button" aria-label="Tutup">✕</button>';
+      '<button class=”zh-disclaimer-close” type=”button” aria-label=”关闭”>✕</button>';
 
     document.body.appendChild(toast);
 
@@ -582,6 +671,7 @@
         annotateKeywords(merged);
         setupChipFlips(merged, comprehension);
         renderComprehensionPanels(comprehension, merged);
+        annotateOrphanHeadings(merged);
         if (!opts.silentDisclaimer) {
           showDisclaimer();
         }
@@ -591,6 +681,7 @@
       removeAnnotations();
       resetChipFlips();
       removeComprehensionPanels();
+      removeOrphanAnnotations();
     }
   }
 
@@ -645,6 +736,7 @@
         annotateKeywords(merged);
         setupChipFlips(merged, comprehension);
         renderComprehensionPanels(comprehension, merged);
+        annotateOrphanHeadings(merged);
       });
     }
   });
