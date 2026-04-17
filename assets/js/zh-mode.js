@@ -463,9 +463,32 @@
         isFlipped: false
       };
 
-      // Translation: Chinese only in brackets, no BM repetition
-      var translationHtml =
-        '<span class="zh-chip-translation" lang="zh-Hans">（' + escapeHtml(backContent.text) + '）</span>';
+      // Build translation HTML based on content type:
+      //   • Multiple vocab pairs  → labeled "bm = 中文" list below the BM text
+      //   • Long explain text     → readable block below the BM text
+      //   • Single pair / short   → inline （中文） appended to the BM text
+      var translationHtml;
+      var hasPairs = backContent.pairs && backContent.pairs.length > 1;
+      var isLongExplain = !hasPairs && backContent.text && backContent.text.length > 28;
+
+      if (hasPairs) {
+        var pairsHtml = backContent.pairs.map(function (p) {
+          return (
+            '<span class="zh-pair-item">' +
+              '<span class="zh-pair-bm">' + escapeHtml(p.bm) + '</span>' +
+              '<span class="zh-pair-eq"> = </span>' +
+              '<span class="zh-pair-zh" lang="zh-Hans">' + escapeHtml(p.zh) + '</span>' +
+            '</span>'
+          );
+        }).join('');
+        translationHtml = '<span class="zh-chip-translation zh-chip-translation-pairs" lang="zh-Hans">' + pairsHtml + '</span>';
+        chip.classList.add("zh-chip-has-pairs");
+      } else if (isLongExplain) {
+        translationHtml = '<span class="zh-chip-translation zh-chip-translation-explain" lang="zh-Hans">' + escapeHtml(backContent.text) + '</span>';
+        chip.classList.add("zh-chip-has-explain");
+      } else {
+        translationHtml = '<span class="zh-chip-translation" lang="zh-Hans">（' + escapeHtml(backContent.text) + '）</span>';
+      }
 
       chip.innerHTML =
         '<span class="zh-chip-inner">' +
@@ -489,7 +512,7 @@
       if (chip.__zhOriginalHTML) {
         chip.innerHTML = chip.__zhOriginalHTML;
       }
-      chip.classList.remove("zh-chip-flip-ready", "zh-chip-flipped", "zh-chip-translated", "zh-chip-inline");
+      chip.classList.remove("zh-chip-flip-ready", "zh-chip-flipped", "zh-chip-translated", "zh-chip-inline", "zh-chip-has-pairs", "zh-chip-has-explain");
       chip.removeAttribute("data-zh-bm");
       chip.removeAttribute("data-zh-cn");
       chip.removeAttribute("data-zh-mode-label");
@@ -660,6 +683,125 @@
     });
   }
 
+  // ── Raw Text Annotation (difficult words in plain text) ──
+
+  function annotateRawText(gl) {
+    if (!gl) return;
+
+    // Build sorted term list: length-descending, min 4 chars, skip overly-general
+    var terms = Object.keys(gl)
+      .filter(function (k) {
+        return typeof gl[k] === "string"
+          && !OVERLY_GENERAL_TERMS.has(normalize(k))
+          && k.length >= 4;
+      })
+      .sort(function (a, b) { return b.length - a.length; });
+
+    if (terms.length === 0) return;
+
+    // Build single regex from all terms (longest first = precedence)
+    var escaped = terms.map(function (t) {
+      return t.replace(/[-[\]{}()*+?.,\\^$|#]/g, "\\$&");
+    });
+    var re = new RegExp("\\b(" + escaped.join("|") + ")\\b", "gi");
+
+    // Selectors to skip (already handled elsewhere, or structural)
+    var SKIP = ".kw,.paper-chip,code,pre,.kw-zh-ann,.zh-chip-translation,.zh-raw-ann,.zh-heading-ann,script,style,nav,header,footer,.keyword-legend-item,.zh-comprehension-panel";
+
+    var contentArea = document.querySelector(".note-section") || document.body;
+
+    // Collect text nodes first (can't modify DOM while walking)
+    var walker = document.createTreeWalker(
+      contentArea,
+      NodeFilter.SHOW_TEXT,
+      {
+        acceptNode: function (node) {
+          var p = node.parentElement;
+          if (!p) return NodeFilter.FILTER_REJECT;
+          if (p.closest(SKIP)) return NodeFilter.FILTER_REJECT;
+          return NodeFilter.FILTER_ACCEPT;
+        }
+      }
+    );
+    var textNodes = [];
+    var n;
+    while ((n = walker.nextNode())) {
+      if (n.nodeValue && n.nodeValue.trim()) textNodes.push(n);
+    }
+
+    textNodes.forEach(function (textNode) {
+      var text = textNode.nodeValue;
+      re.lastIndex = 0;
+      if (!re.test(text)) { re.lastIndex = 0; return; }
+      re.lastIndex = 0;
+
+      var parts = [];
+      var lastIdx = 0;
+      var m;
+      while ((m = re.exec(text)) !== null) {
+        var matchedTerm = m[1];
+        var zh = gl[normalize(matchedTerm)] || gl[matchedTerm.toLowerCase()];
+        if (!zh) continue;
+
+        if (m.index > lastIdx) {
+          parts.push(document.createTextNode(text.slice(lastIdx, m.index)));
+        }
+
+        var span = document.createElement("span");
+        span.className = "zh-raw-ann kw-zh-annotated";
+        span.appendChild(document.createTextNode(matchedTerm));
+
+        var ann = document.createElement("span");
+        ann.className = "kw-zh-ann";
+        ann.setAttribute("lang", "zh-Hans");
+        ann.setAttribute("aria-hidden", "true");
+        ann.textContent = zh;
+        span.appendChild(ann);
+
+        (function (s) {
+          var handler = function (e) {
+            e.stopPropagation();
+            s.classList.toggle("kw-zh-open");
+          };
+          s.__zhKwHandler = handler;
+          s.addEventListener("click", handler);
+        })(span);
+
+        parts.push(span);
+        lastIdx = m.index + matchedTerm.length;
+      }
+
+      if (parts.length === 0) return;
+      if (lastIdx < text.length) {
+        parts.push(document.createTextNode(text.slice(lastIdx)));
+      }
+
+      var frag = document.createDocumentFragment();
+      parts.forEach(function (p) { frag.appendChild(p); });
+      textNode.parentNode.replaceChild(frag, textNode);
+    });
+  }
+
+  function removeRawAnnotations() {
+    document.querySelectorAll(".zh-raw-ann").forEach(function (span) {
+      if (span.__zhKwHandler) {
+        span.removeEventListener("click", span.__zhKwHandler);
+        span.__zhKwHandler = null;
+      }
+      // Replace span with its original BM text (first text child node)
+      var bmText = "";
+      for (var i = 0; i < span.childNodes.length; i++) {
+        if (span.childNodes[i].nodeType === Node.TEXT_NODE) {
+          bmText = span.childNodes[i].nodeValue;
+          break;
+        }
+      }
+      if (span.parentNode) {
+        span.parentNode.replaceChild(document.createTextNode(bmText), span);
+      }
+    });
+  }
+
   // ── Orphan Text Annotation ───────────────────────────────
 
   function annotateOrphanText(gl) {
@@ -820,6 +962,7 @@
         var merged = getMergedGlossary();
         var comprehension = getComprehensionMap();
         annotateKeywords(merged);
+        annotateRawText(merged);
         setupChipFlips(merged, comprehension);
         renderComprehensionPanels(comprehension, merged);
         annotateOrphanText(merged);
@@ -830,6 +973,7 @@
     } else {
       document.documentElement.removeAttribute("data-lang-mode");
       removeAnnotations();
+      removeRawAnnotations();
       resetChipFlips();
       removeComprehensionPanels();
       removeOrphanAnnotations();
@@ -885,6 +1029,7 @@
         var merged = getMergedGlossary();
         var comprehension = getComprehensionMap();
         annotateKeywords(merged);
+        annotateRawText(merged);
         setupChipFlips(merged, comprehension);
         renderComprehensionPanels(comprehension, merged);
         annotateOrphanText(merged);

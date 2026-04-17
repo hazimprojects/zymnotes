@@ -753,3 +753,99 @@ html[data-theme="dark"][data-lang-mode="zh"] .zh-heading-ann:not([hidden]) {
 body.sparkle-panel-open .zh-disclaimer-toast {
   bottom: var(--floating-bottom-offset-avoid-sparkle);
 }
+
+/* ── Multi-pair chip: column layout ─────────────────────────────────────── */
+.paper-chip.zh-chip-has-pairs .zh-chip-inner,
+.paper-chip.zh-chip-has-explain .zh-chip-inner {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.paper-chip .zh-chip-translation-pairs,
+.paper-chip .zh-chip-translation-explain {
+  display: none;
+}
+
+.paper-chip.zh-chip-flipped .zh-chip-translation-pairs {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2em;
+  margin-top: 0.28em;
+}
+
+.paper-chip.zh-chip-flipped .zh-chip-translation-explain {
+  display: block;
+  margin-top: 0.3em;
+  font-size: 0.82em;
+  line-height: 1.5;
+  color: #9a3412;
+  font-family: "PingFang SC", "Microsoft YaHei", "Noto Sans SC", system-ui, sans-serif;
+}
+
+.zh-pair-item {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.22em;
+  flex-wrap: nowrap;
+}
+
+.zh-pair-bm {
+  font-weight: 700;
+  font-size: 0.8em;
+  opacity: 0.6;
+  color: inherit;
+}
+
+.zh-pair-eq {
+  opacity: 0.38;
+  font-size: 0.72em;
+}
+
+.zh-pair-zh {
+  color: #9a3412;
+  font-weight: 600;
+  font-size: 0.85em;
+  font-family: "PingFang SC", "Microsoft YaHei", "Noto Sans SC", system-ui, sans-serif;
+}
+
+html[data-theme="dark"] .zh-pair-zh,
+html[data-theme="dark"] .paper-chip.zh-chip-flipped .zh-chip-translation-explain {
+  color: #fdba74;
+}
+
+/* ── Raw text annotations (zh-raw-ann) ──────────────────────────────────── */
+html[data-lang-mode="zh"] .zh-raw-ann {
+  cursor: pointer;
+  text-decoration-line: underline;
+  text-decoration-style: dotted;
+  text-decoration-color: rgba(185, 28, 28, 0.42);
+  text-underline-offset: 2px;
+  display: inline;
+}
+
+html[data-lang-mode="zh"] .zh-raw-ann.kw-zh-open {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  vertical-align: bottom;
+  line-height: 1.15;
+  text-decoration: none;
+}
+
+html[data-lang-mode="zh"] .zh-raw-ann .kw-zh-ann {
+  display: none;
+}
+
+html[data-lang-mode="zh"] .zh-raw-ann.kw-zh-open .kw-zh-ann {
+  display: block;
+  font-size: 0.62em;
+  font-weight: 600;
+  color: #b91c1c;
+  white-space: nowrap;
+  line-height: 1.2;
+  font-family: "PingFang SC", "Microsoft YaHei", "Noto Sans SC", system-ui, sans-serif;
+}
+
+html[data-theme="dark"][data-lang-mode="zh"] .zh-raw-ann.kw-zh-open .kw-zh-ann {
+  color: #fdba74;
+}

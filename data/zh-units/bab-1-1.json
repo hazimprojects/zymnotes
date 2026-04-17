@@ -147,74 +147,76 @@
     {
       "source_id": "bab-1-1-u01",
       "bm_original": "📌 Berlaku secara:",
-      "zh_explain": "考试要点：掌握此点，答题时引用关键词汇。",
-      "key_points_zh": [
-        "考试须用BM作答，掌握本句的关键词与内容。"
-      ],
-      "bm_focus_phrase": "📌 Berlaku secara:"
+      "zh_explain": "此句列出重要条件或原因，答题时须完整列举。",
+      "key_points_zh": [],
+      "bm_focus_phrase": ""
     },
     {
       "source_id": "bab-1-1-u02",
       "bm_original": "📌 Antara kerajaan yang membuktikan kewujudan awal negara bangsa:",
-      "zh_explain": "考试要点：掌握此点，答题时引用关键词汇。",
+      "zh_explain": "negara bangsa（民族国家）；kerajaan（政府）——此句列出关键条件，答题须完整呈现所有要点。",
       "key_points_zh": [
-        "考试须用BM作答，掌握本句的关键词与内容。"
+        "negara bangsa = 民族国家",
+        "kerajaan = 政府",
+        "bangsa = 民族",
+        "raja = 国王"
       ],
-      "bm_focus_phrase": "📌 Antara kerajaan yang membuktikan kewujudan awal negara bangsa:"
+      "bm_focus_phrase": ""
     },
     {
       "source_id": "bab-1-1-u03",
       "bm_original": "📌 Ciri-ciri ini kemudiannya diwarisi oleh:",
-      "zh_explain": "考试要点：掌握此点，答题时引用关键词汇。",
-      "key_points_zh": [
-        "考试须用BM作答，掌握本句的关键词与内容。"
-      ],
-      "bm_focus_phrase": "📌 Ciri-ciri ini kemudiannya diwarisi oleh:"
+      "zh_explain": "此句列出重要条件或原因，答题时须完整列举。",
+      "key_points_zh": [],
+      "bm_focus_phrase": ""
     },
     {
       "source_id": "bab-1-1-u04",
       "bm_original": "📖 Contoh: Raja Champa dianggap suci dan dikaitkan dengan Dewa Siva .",
-      "zh_explain": "历史例证：此例可用作答题证据，记住王国名称与关键细节。",
+      "zh_explain": "champa（占婆）；raja（国王）——此句以历史为证，答题时引用相关例子更具说服力。",
       "key_points_zh": [
-        "考试须用BM作答，掌握本句的关键词与内容。"
+        "champa = 占婆",
+        "raja = 国王"
       ],
-      "bm_focus_phrase": "📖 Contoh: Raja Champa dianggap suci dan dikaitkan dengan Dewa Siva ."
+      "bm_focus_phrase": ""
     },
     {
       "source_id": "bab-1-1-u05",
       "bm_original": "📌 Undang-undang ini:",
-      "zh_explain": "考试要点：掌握此点，答题时引用关键词汇。",
+      "zh_explain": "undang-undang（法律）——此句列出关键条件，答题须完整呈现所有要点。",
       "key_points_zh": [
-        "考试须用BM作答，掌握本句的关键词与内容。"
+        "undang-undang = 法律"
       ],
-      "bm_focus_phrase": "📌 Undang-undang ini:"
+      "bm_focus_phrase": ""
     },
     {
       "source_id": "bab-1-1-u06",
       "bm_original": "📖 Contoh: Kerajaan Majapahit mengamalkan undang-undang Kutara Manawa .",
-      "zh_explain": "历史例证：此例可用作答题证据，记住王国名称与关键细节。",
+      "zh_explain": "undang-undang（法律）；majapahit（满者伯夷）——此句以历史为证，答题时引用相关例子更具说服力。",
       "key_points_zh": [
-        "考试须用BM作答，掌握本句的关键词与内容。"
+        "undang-undang = 法律",
+        "majapahit = 满者伯夷",
+        "kerajaan = 政府",
+        "raja = 国王"
       ],
-      "bm_focus_phrase": "📖 Contoh: Kerajaan Majapahit mengamalkan undang-undang Kutara Manawa ."
+      "bm_focus_phrase": ""
     },
     {
       "source_id": "bab-1-1-u07",
       "bm_original": "💡 Tujuannya untuk menunjukkan kesetiaan kepada pemerintah.",
-      "zh_explain": "重要结论：考试必背此句，背熟BM原句后用BM完整作答。",
+      "zh_explain": "kesetiaan（忠诚）；tujuan（目的）——此句是本节关键结论，理解这些词汇有助掌握核心论点。",
       "key_points_zh": [
-        "考试须用BM作答，掌握本句的关键词与内容。"
+        "kesetiaan = 忠诚",
+        "tujuan = 目的"
       ],
-      "bm_focus_phrase": "💡 Tujuannya untuk menunjukkan kesetiaan kepada pemerintah."
+      "bm_focus_phrase": ""
     },
     {
       "source_id": "bab-1-1-u08",
       "bm_original": "💡 Maksud keseluruhan: kemenangan yang gemilang / bercahaya .",
-      "zh_explain": "重要结论：考试必背此句，背熟BM原句后用BM完整作答。",
-      "key_points_zh": [
-        "考试须用BM作答，掌握本句的关键词与内容。"
-      ],
-      "bm_focus_phrase": "💡 Maksud keseluruhan: kemenangan yang gemilang / bercahaya ."
+      "zh_explain": "此句是本节重要结论，理解其历史意义后用BM完整表达。",
+      "key_points_zh": [],
+      "bm_focus_phrase": ""
     }
   ]
 }

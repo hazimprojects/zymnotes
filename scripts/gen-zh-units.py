@@ -22,9 +22,11 @@ overly = set(
     for item in raw.get('_audit', {}).get('overly_general', [])
 )
 GL: dict[str, str] = {}
-for e in raw.get('terms', []):
-    bm = e.get('bm', '').strip().lower()
-    zh = e.get('zh', '').strip()
+for bm, zh in raw.items():
+    if bm.startswith('_'):
+        continue
+    bm = bm.strip().lower()
+    zh = zh.strip() if isinstance(zh, str) else ''
     if bm and zh and bm not in overly and len(bm) > 2:
         GL[bm] = zh
 
@@ -53,28 +55,36 @@ def elem_type(text: str) -> str:
     if '📌' in prefix: return 'keypoint'
     return 'info'
 
-TMPL = {
-    'insight':  '重要结论：{v}考试必背此句，背熟BM原句后用BM完整作答。',
-    'example':  '历史例证：{v}此例可用作答题证据，记住王国名称与关键细节。',
-    'keypoint': '考试要点：{v}掌握此点，答题时引用关键词汇。',
-    'info':     '内容解析：{v}理解此句含义，记住主要词汇。',
+TMPL_VOCAB = {
+    'insight':  '{vocab_intro}——此句是本节关键结论，理解这些词汇有助掌握核心论点。',
+    'example':  '{vocab_intro}——此句以历史为证，答题时引用相关例子更具说服力。',
+    'keypoint': '{vocab_intro}——此句列出关键条件，答题须完整呈现所有要点。',
+    'info':     '{vocab_intro}——理解这些词汇在马来历史中的含义与作用。',
+}
+
+TMPL_NOVOCAB = {
+    'insight':  '此句是本节重要结论，理解其历史意义后用BM完整表达。',
+    'example':  '此句提供具体历史例子，答题时可引用作为证据。',
+    'keypoint': '此句列出重要条件或原因，答题时须完整列举。',
+    'info':     '理解此句在历史发展中的含义与作用。',
 }
 
 def build_unit(stem: str, idx: int, text: str, vb: list) -> dict:
-    sid  = f'{stem}-u{idx:02d}'
-    et   = elem_type(text)
-    vstr = '、'.join(f'{b}（{z}）' for b, z in vb[:2])
-    explain = TMPL[et].format(v=vstr + '——' if vstr else '')
-    kp: list[str] = []
+    sid = f'{stem}-u{idx:02d}'
+    et  = elem_type(text)
     if vb:
-        kp.append('词汇：' + '；'.join(f'{b} = {z}' for b, z in vb[:3]) + '。')
-    kp.append('考试须用BM作答，掌握本句的关键词与内容。')
+        vocab_intro = '；'.join(f'{b}（{z}）' for b, z in vb[:2])
+        explain = TMPL_VOCAB[et].format(vocab_intro=vocab_intro)
+        kp: list[str] = [f'{b} = {z}' for b, z in vb[:4]]
+    else:
+        explain = TMPL_NOVOCAB[et]
+        kp = []
     return {
-        'source_id':     sid,
-        'bm_original':   text[:300],
-        'zh_explain':    explain,
-        'key_points_zh': kp,
-        'bm_focus_phrase': text[:140],
+        'source_id':       sid,
+        'bm_original':     text[:300],
+        'zh_explain':      explain,
+        'key_points_zh':   kp,
+        'bm_focus_phrase': '',
     }
 
 # ── Patterns ──────────────────────────────────────────────────────────────────
