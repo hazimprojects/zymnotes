@@ -646,23 +646,23 @@
         return typeof item === "string" && item.trim();
       }) : [];
       var sourceText = (sourceEl.textContent || "").trim();
-      var fallback = buildExplainFallback({
-        bm_focus_phrase: (unit && unit.bm_focus_phrase) || sourceText
-      });
       var explainText = unit && unit.zh_explain && unit.zh_explain.trim()
         ? unit.zh_explain.trim()
-        : (fallback ? fallback.text : "句意解析尚未提供。");
+        : null;
+
+      // No zh_explain → skip 🧠 panel entirely; only show vocabulary panel
+      if (!explainText) {
+        appendGlossaryPanel(sourceEl, sourceText);
+        return;
+      }
 
       var bodyHTML =
         '<p class="zh-comprehension-explain">' + escapeHtml(explainText) + "</p>" +
-        (unit && unit.zh_explain && unit.zh_explain.trim() && keyPoints.length
+        (keyPoints.length
           ? ('<ul class="zh-comprehension-points">' + keyPoints.map(function (item) {
               return "<li>" + escapeHtml(item) + "</li>";
             }).join("") + "</ul>")
-          : "") +
-        (((unit && unit.bm_focus_phrase) || sourceText)
-          ? ('<p class="zh-comprehension-focus"><span>BM重点摘要：</span> <strong>' + escapeHtml((unit && unit.bm_focus_phrase) || sourceText) + "</strong></p>")
-          : '<p class="zh-comprehension-focus"><span>BM重点摘要：</span> <strong>尚未提供</strong></p>');
+          : "");
 
       var panel = document.createElement("aside");
       panel.className = "zh-comprehension-panel zh-panel-collapsed";
@@ -676,10 +676,7 @@
 
       sourceEl.insertAdjacentElement("afterend", panel);
       makePanelToggleable(panel);
-
-      if (!unit || !unit.zh_explain || !unit.zh_explain.trim()) {
-        appendGlossaryPanel(sourceEl, (unit && unit.bm_focus_phrase) || sourceText);
-      }
+      appendGlossaryPanel(sourceEl, sourceText);
     });
   }
 
