@@ -14,6 +14,7 @@
   var glossary = null;
   var annotated = false;
   var legacyControlsInitialized = false;
+  var applyRequestId = 0;
 
   // ── Helpers ──────────────────────────────────────────────
 
@@ -233,12 +234,15 @@
 
   function applyZhMode(active, options) {
     var opts = options || {};
+    var requestId = ++applyRequestId;
     localStorage.setItem(LANG_KEY, active ? "zh" : "ms");
     updateLegacyToggleButtons(active);
 
     if (active) {
       document.documentElement.setAttribute("data-lang-mode", "zh");
       loadGlossary().then(function () {
+        if (requestId !== applyRequestId) return;
+        if (!isZhMode()) return;
         var merged = getMergedGlossary();
         annotateKeywords(merged);
         setupChipFlips(merged);
