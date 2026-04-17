@@ -1,13 +1,13 @@
 {
-  "style_css": "68",
-  "main_js": "68",
+  "style_css": "69",
+  "main_js": "69",
   "zh_mode_js": "1",
   "manifest": "3",
-  "sw_cache": "32",
+  "sw_cache": "33",
   "css": {
     "base": "5",
     "layout": "9",
-    "ui": "16",
+    "ui": "17",
     "paper": "10",
     "keywords": "7",
     "responsive": "3",
