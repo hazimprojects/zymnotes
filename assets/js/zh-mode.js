@@ -275,13 +275,14 @@
     var drawer = document.createElement("aside");
     drawer.className = "zh-glossary-drawer";
     drawer.innerHTML =
-      '<button type="button" class="zh-glossary-toggle" aria-expanded="false">📝 Nota Terjemahan</button>' +
+      '<button type="button" class="zh-glossary-toggle" aria-expanded="false">📝 Nota</button>' +
       '<div class="zh-glossary-panel" aria-hidden="true">' +
         '<div class="zh-glossary-head">' +
-          "<strong>Nota Terjemahan Peribadi / 个人翻译笔记</strong>" +
+          "<strong>📝 Nota Peribadi</strong>" +
           '<button type="button" class="zh-glossary-close" aria-label="Tutup">✕</button>' +
         "</div>" +
-        '<p class="zh-glossary-help">Simpan istilah penting untuk ulang kaji; anda boleh ubah terjemahan ikut konteks. 可保存重点词语，并按语境自行修改翻译。</p>' +
+        '<button type="button" class="zh-help-toggle" aria-expanded="false">❓ Help</button>' +
+        '<p class="zh-glossary-help" hidden>Simpan istilah penting untuk ulang kaji; anda boleh ubah terjemahan ikut konteks. 可保存重点词语，并按语境自行修改翻译。</p>' +
         '<div class="zh-glossary-list"></div>' +
       "</div>";
 
@@ -290,6 +291,16 @@
     var toggleBtn = drawer.querySelector(".zh-glossary-toggle");
     var closeBtn = drawer.querySelector(".zh-glossary-close");
     var panel = drawer.querySelector(".zh-glossary-panel");
+    var helpToggle = drawer.querySelector(".zh-help-toggle");
+    var helpText = drawer.querySelector(".zh-glossary-help");
+
+    if (helpToggle && helpText) {
+      helpToggle.addEventListener("click", function () {
+        var expanded = helpToggle.getAttribute("aria-expanded") === "true";
+        helpToggle.setAttribute("aria-expanded", expanded ? "false" : "true");
+        helpText.hidden = expanded;
+      });
+    }
 
     function openDrawer() {
       if (!isZhMode()) return;
@@ -351,10 +362,24 @@
     toast.setAttribute("aria-live", "polite");
     toast.innerHTML =
       '<span class="zh-disclaimer-icon">中</span>' +
-      '<span class="zh-disclaimer-text">Mod Bahasa Cina aktif. Pilih teks untuk terjemahan segera (glosari/internet), boleh edit sebelum simpan. 中文模式已开启：选中文字可即时翻译（词汇表/网络），可编辑后保存。</span>' +
+      '<div class="zh-disclaimer-content">' +
+        '<span class="zh-disclaimer-text">中文 ON · Pilih teks</span>' +
+        '<button class="zh-help-toggle zh-disclaimer-help-toggle" type="button" aria-expanded="false">❓ Help</button>' +
+        '<span class="zh-disclaimer-help" hidden>Mod Bahasa Cina aktif. Pilih teks untuk terjemahan segera (glosari/internet), boleh edit sebelum simpan. 中文模式已开启：选中文字可即时翻译（词汇表/网络），可编辑后保存。</span>' +
+      "</div>" +
       '<button class="zh-disclaimer-close" type="button" aria-label="Tutup">✕</button>';
 
     document.body.appendChild(toast);
+
+    var helpToggle = toast.querySelector(".zh-disclaimer-help-toggle");
+    var helpText = toast.querySelector(".zh-disclaimer-help");
+    if (helpToggle && helpText) {
+      helpToggle.addEventListener("click", function () {
+        var expanded = helpToggle.getAttribute("aria-expanded") === "true";
+        helpToggle.setAttribute("aria-expanded", expanded ? "false" : "true");
+        helpText.hidden = expanded;
+      });
+    }
 
     toast.querySelector(".zh-disclaimer-close").addEventListener("click", function () {
       toast.classList.add("zh-toast-hide");
@@ -382,12 +407,14 @@
     popup.setAttribute("role", "dialog");
     popup.innerHTML =
       '<div class="zh-selection-main"></div>' +
-      '<label class="zh-selection-edit-wrap">Terjemahan (boleh edit) / 翻译（可编辑）' +
+      '<label class="zh-selection-edit-wrap">✍️ Edit' +
         '<input type="text" class="zh-selection-edit" autocomplete="off" />' +
       "</label>" +
       '<div class="zh-selection-status" aria-live="polite"></div>' +
+      '<button type="button" class="zh-help-toggle zh-selection-help-toggle" aria-expanded="false">❓ Help</button>' +
+      '<div class="zh-selection-help" hidden>Pilih teks untuk semak glosari dahulu, kemudian internet jika tiada padanan. Anda boleh edit terjemahan sebelum simpan ke nota. 先查词汇表，若无结果再查网络；保存前可自行编辑翻译。</div>' +
       '<div class="zh-selection-actions">' +
-        '<button type="button" class="zh-selection-save">Simpan Nota / 保存</button>' +
+        '<button type="button" class="zh-selection-save">💾 Simpan</button>' +
       "</div>";
     document.body.appendChild(popup);
 
@@ -398,6 +425,16 @@
     var editInput = popup.querySelector(".zh-selection-edit");
     var statusEl = popup.querySelector(".zh-selection-status");
     var saveBtn = popup.querySelector(".zh-selection-save");
+    var selectionHelpToggle = popup.querySelector(".zh-selection-help-toggle");
+    var selectionHelpText = popup.querySelector(".zh-selection-help");
+
+    if (selectionHelpToggle && selectionHelpText) {
+      selectionHelpToggle.addEventListener("click", function () {
+        var expanded = selectionHelpToggle.getAttribute("aria-expanded") === "true";
+        selectionHelpToggle.setAttribute("aria-expanded", expanded ? "false" : "true");
+        selectionHelpText.hidden = expanded;
+      });
+    }
 
     function hidePopup() {
       popup.classList.remove("zh-selection-popup--visible");
@@ -477,22 +514,22 @@
       positionPopupFromSelection(selection);
 
       if (zh) {
-        setSelectionResult(selectedText, zh, "Sumber: Glosari · 来源：词汇表");
+        setSelectionResult(selectedText, zh, "📘 Glosari");
         return;
       }
 
-      setSelectionResult(selectedText, "", "Mencari terjemahan internet... 正在网络查询...");
+      setSelectionResult(selectedText, "", "🌐 Cari...");
       var requestId = ++lookupRequestId;
       saveBtn.disabled = true;
 
       fetchOnlineTranslation(selectedText).then(function (onlineZh) {
         if (requestId !== lookupRequestId) return;
         if (!onlineZh) {
-          setSelectionResult(selectedText, "", "Tiada padanan internet. Sila isi sendiri. 网络无匹配，请手动填写。");
+          setSelectionResult(selectedText, "", "⚠️ Tiada padanan · isi manual");
           saveBtn.disabled = true;
           return;
         }
-        setSelectionResult(selectedText, onlineZh, "Sumber: Internet (boleh edit) · 来源：网络（可编辑）");
+        setSelectionResult(selectedText, onlineZh, "🌐 Internet (edit)");
       });
     }
 

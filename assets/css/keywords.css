@@ -404,6 +404,14 @@ html[data-theme="dark"] .zh-selection-popup::after {
   opacity: 0;
 }
 
+.zh-disclaimer-content {
+  display: flex;
+  flex: 1;
+  min-width: 0;
+  flex-direction: column;
+  gap: 0.28rem;
+}
+
 .zh-toast-show {
   transform: translateX(-50%) translateY(0);
   opacity: 1;
@@ -430,8 +438,27 @@ html[data-theme="dark"] .zh-selection-popup::after {
 }
 
 .zh-disclaimer-text {
-  flex: 1;
   color: #d6d3d1;
+  font-size: 0.8rem;
+  line-height: 1.25;
+}
+
+.zh-disclaimer-help {
+  color: #d6d3d1;
+  font-size: 0.75rem;
+  line-height: 1.35;
+}
+
+.zh-help-toggle {
+  align-self: flex-start;
+  border: 1px solid rgba(250, 250, 249, 0.18);
+  border-radius: 999px;
+  padding: 0.14rem 0.42rem;
+  background: rgba(255, 255, 255, 0.08);
+  color: inherit;
+  font-size: 0.68rem;
+  font-weight: 700;
+  cursor: pointer;
 }
 
 .zh-disclaimer-close {
@@ -544,8 +571,8 @@ html[data-theme="dark"] .zh-disclaimer-toast {
 .zh-selection-edit-wrap {
   display: block;
   margin-top: 0.5rem;
-  font-size: 0.72rem;
-  opacity: 0.85;
+  font-size: 0.67rem;
+  opacity: 0.78;
 }
 
 .zh-selection-edit {
@@ -561,8 +588,15 @@ html[data-theme="dark"] .zh-disclaimer-toast {
 
 .zh-selection-status {
   margin-top: 0.35rem;
-  font-size: 0.72rem;
-  opacity: 0.75;
+  font-size: 0.66rem;
+  opacity: 0.72;
+}
+
+.zh-selection-help {
+  margin-top: 0.35rem;
+  font-size: 0.68rem;
+  line-height: 1.35;
+  opacity: 0.82;
 }
 
 .zh-selection-save {
@@ -621,7 +655,7 @@ html[data-theme="dark"] .zh-selection-edit {
   padding: 0.48rem 0.72rem;
   font-weight: 700;
   cursor: pointer;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.07);
 }
 
 .zh-glossary-panel {
@@ -636,7 +670,7 @@ html[data-theme="dark"] .zh-selection-edit {
   border: 1px solid rgba(220, 38, 38, 0.18);
   border-radius: 16px;
   padding: 0.88rem;
-  box-shadow: 0 12px 34px rgba(0, 0, 0, 0.16);
+  box-shadow: 0 9px 22px rgba(0, 0, 0, 0.14);
   opacity: 0;
   transform: translateY(8px);
   pointer-events: none;
@@ -678,9 +712,10 @@ body.sparkle-panel-open .zh-glossary-drawer {
 }
 
 .zh-glossary-help {
-  margin: 0 0 0.72rem;
+  margin: 0.35rem 0 0.72rem;
   color: #57534e;
-  font-size: 0.86rem;
+  font-size: 0.76rem;
+  line-height: 1.4;
 }
 
 .zh-glossary-item {
@@ -688,7 +723,7 @@ body.sparkle-panel-open .zh-glossary-drawer {
   align-items: center;
   justify-content: space-between;
   gap: 0.7rem;
-  border: 1px dashed rgba(220, 38, 38, 0.24);
+  border: 1px solid rgba(220, 38, 38, 0.2);
   border-radius: 11px;
   padding: 0.5rem 0.6rem;
   margin-bottom: 0.5rem;
@@ -749,4 +784,64 @@ html[data-theme="dark"] .zh-glossary-zh {
 html[data-theme="dark"] .zh-glossary-delete {
   background: rgba(248, 113, 113, 0.16);
   color: #fecaca;
+}
+
+/* =========================
+   MOD BAHASA CINA — UI MINIMAL
+========================= */
+
+html[data-zh-ui="minimal"] .zh-mode-fab.is-active {
+  background: rgba(185, 28, 28, 0.08);
+  border-color: rgba(185, 28, 28, 0.2);
+  color: #b91c1c;
+}
+
+html[data-theme="dark"][data-zh-ui="minimal"] .zh-mode-fab.is-active {
+  background: rgba(239, 68, 68, 0.12);
+  border-color: rgba(239, 68, 68, 0.26);
+  color: #fca5a5;
+}
+
+html[data-zh-ui="minimal"] .zh-disclaimer-toast {
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.16);
+}
+
+html[data-zh-ui="minimal"] .zh-disclaimer-icon {
+  background: rgba(185, 28, 28, 0.16);
+  color: #fecaca;
+}
+
+html[data-zh-ui="minimal"] .zh-selection-popup {
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.22);
+}
+
+html[data-zh-ui="minimal"] .zh-selection-zh {
+  color: #fda4af;
+}
+
+html[data-theme="dark"][data-zh-ui="minimal"] .zh-selection-zh {
+  color: #b91c1c;
+}
+
+html[data-zh-ui="minimal"] .zh-selection-edit-wrap,
+html[data-zh-ui="minimal"] .zh-selection-status,
+html[data-zh-ui="minimal"] .zh-help-toggle {
+  font-size: 0.62rem;
+  letter-spacing: 0.01em;
+}
+
+html[data-zh-ui="minimal"] .zh-glossary-toggle {
+  border-color: rgba(185, 28, 28, 0.18);
+  color: #7f1d1d;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+html[data-zh-ui="minimal"] .zh-glossary-panel {
+  border-color: rgba(185, 28, 28, 0.16);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+}
+
+html[data-zh-ui="minimal"] .zh-glossary-item {
+  border-style: solid;
+  border-color: rgba(185, 28, 28, 0.18);
 }
