@@ -64,9 +64,9 @@
 
   function lookupTerm(text, gl) {
     var key = normalize(text);
-    if (gl[key]) return gl[key];
+    if (gl[key] && typeof gl[key] === 'string') return gl[key];
     // Partial match: find glossary key contained within the text
-    var keys = Object.keys(gl).sort(function (a, b) { return b.length - a.length; });
+    var keys = Object.keys(gl).filter(function (k) { return typeof gl[k] === 'string'; }).sort(function (a, b) { return b.length - a.length; });
     for (var i = 0; i < keys.length; i++) {
       if (key.indexOf(keys[i]) !== -1 && keys[i].length > 2) {
         return gl[keys[i]];
@@ -88,6 +88,7 @@
       ann.className = "kw-zh-ann";
       ann.textContent = zh;
       ann.setAttribute("aria-hidden", "true");
+      ann.setAttribute("lang", "zh-Hans");
       span.classList.add("kw-zh-annotated");
       span.appendChild(ann);
     });
@@ -105,7 +106,7 @@
 
   function translateTextByGlossary(text, gl) {
     var translated = text;
-    var keys = Object.keys(gl).sort(function (a, b) { return b.length - a.length; });
+    var keys = Object.keys(gl).filter(function (k) { return typeof gl[k] === 'string'; }).sort(function (a, b) { return b.length - a.length; });
 
     for (var i = 0; i < keys.length; i++) {
       var key = keys[i];
@@ -337,10 +338,6 @@
     injectFabButtons();
   }
 
-  function openGlossaryNotes() {
-    return false;
-  }
-
   function shouldUseSparkleForZhControls() {
     return /\/notes\//.test(window.location.pathname) && !window.__HZ_ZH_LEGACY_REQUESTED;
   }
@@ -376,7 +373,6 @@
       applyZhMode(!!active, options || {});
       return isZhMode();
     },
-    openGlossaryNotes: openGlossaryNotes,
     initLegacyControls: function () {
       window.__HZ_ZH_LEGACY_REQUESTED = true;
       initLegacyControls();

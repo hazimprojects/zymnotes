@@ -100,4 +100,14 @@
 
   /* ── Chips: keep readable ───────────────────────────────────── */
   .paper-chip-list { break-inside: avoid; }
+
+  /* ZH mode annotations — tunjukkan semasa cetak */
+  html[data-lang-mode="zh"] .kw.kw-zh-annotated { display: inline !important; }
+  html[data-lang-mode="zh"] .kw-zh-ann {
+    display: inline !important;
+    font-size: 0.72em;
+    font-family: "PingFang SC", "Microsoft YaHei", "Noto Sans SC", sans-serif;
+    opacity: 1 !important;
+    color: #333 !important;
+  }
 }

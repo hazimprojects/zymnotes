@@ -2,7 +2,7 @@
   "_meta": {
     "language": "zh-Hans",
     "description": "Glosari istilah Sejarah Tingkatan 4 — Bahasa Melayu ke Bahasa Cina Ringkas (简体中文). Istilah berdasarkan terminologi standard buku teks sejarah Malaysia versi Cina.",
-    "version": "1",
+    "version": "2",
     "feedback_url": "/feedback.html"
   },
 
@@ -142,5 +142,22 @@
   "pengaruh": "影响",
   "pelabuhan": "港口",
   "bandar": "城市",
-  "kawasan": "地区"
+  "kawasan": "地区",
+
+  "champa": "占婆",
+  "angkor": "吴哥",
+
+  "negara merdeka": "独立国家",
+  "simbolik": "象征性的",
+  "penulisan": "写作/著述",
+  "penerbitan": "出版",
+  "berperingkat": "循序渐进",
+  "perpaduan antara kaum": "各族团结",
+  "negara islam": "伊斯兰国家",
+
+  "criminal intelligence department": "刑事情报部",
+  "political intelligence bureau": "政治情报局",
+
+  "empayar uthmaniyah": "奥斯曼帝国",
+  "pan-islamisme": "泛伊斯兰主义"
 }

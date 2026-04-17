@@ -19,6 +19,18 @@ HTML_PATTERNS = {
     "manifest.json?v=": "manifest",
 }
 
+# Tokens that appear in HTML <link rel="preload"> tags for individual CSS files
+CSS_PRELOAD_PATTERNS = {
+    "base.css?v=":       "base",
+    "layout.css?v=":     "layout",
+    "ui.css?v=":         "ui",
+    "paper.css?v=":      "paper",
+    "keywords.css?v=":   "keywords",
+    "responsive.css?v=": "responsive",
+    "themes.css?v=":     "themes",
+    "lab.css?v=":        "lab",
+}
+
 # CSS filenames that appear in style.css @import lines
 CSS_IMPORT_MAP = {
     "base.css":       "base",
@@ -50,6 +62,12 @@ def sync_html_files(versions: dict) -> list[Path]:
             updated = re.sub(
                 rf"({re.escape(token)})[^\"'\s>]+",
                 rf"\g<1>{versions[key]}",
+                updated,
+            )
+        for token, key in CSS_PRELOAD_PATTERNS.items():
+            updated = re.sub(
+                rf"({re.escape(token)})[^\"'\s>]+",
+                rf"\g<1>{versions['css'][key]}",
                 updated,
             )
         if updated != original:
