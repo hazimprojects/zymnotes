@@ -1019,7 +1019,6 @@ document.addEventListener("DOMContentLoaded", function () {
         '<p class="audio-notice-text">Aksi Mod Bahasa Cina</p>' +
         '<div class="audio-notice-footer">' +
           '<button class="audio-notice-dismiss" type="button" data-zh-action="toggle"></button>' +
-          '<button class="audio-notice-dismiss" type="button" data-zh-action="notes">Nota Terjemahan</button>' +
         '</div>';
       document.body.appendChild(zhPanel);
 
@@ -1036,19 +1035,6 @@ document.addEventListener("DOMContentLoaded", function () {
           zhModeApi.toggle();
           refreshZhPanel();
           return;
-        }
-        if (action === 'notes') {
-          if (!zhModeApi.isActive()) {
-            zhModeApi.setActive(true);
-          }
-          zhModeApi.openGlossaryNotes();
-          zhPanel.classList.add('is-leaving');
-          setTimeout(function () {
-            if (zhPanel) {
-              zhPanel.remove();
-              zhPanel = null;
-            }
-          }, 200);
         }
       });
 

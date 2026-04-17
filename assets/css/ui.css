@@ -1477,6 +1477,23 @@
   box-shadow: 0 8px 32px rgba(0,0,0,0.32);
 }
 
+@media (max-width: 560px) {
+  .audio-notice-sheet {
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+  }
+
+  .audio-notice-text {
+    min-width: 0;
+  }
+
+  .audio-notice-footer {
+    width: 100%;
+    justify-content: flex-end;
+  }
+}
+
 /* =========================
    GLOBAL SEARCH OVERLAY
 ========================= */
