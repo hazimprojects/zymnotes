@@ -245,13 +245,17 @@
     };
   }
 
-  function buildExplainFallback(text, gl) {
-    var translated = translateTextByGlossary(text, gl);
-    if (!translated || translated === text) return null;
+  function buildExplainFallback(unit) {
+    if (!unit || typeof unit !== "object") return null;
+    var focusPhrase = typeof unit.bm_focus_phrase === "string" ? unit.bm_focus_phrase.trim() : "";
+    var summaryParts = ["Penjelasan ayat belum tersedia"];
+    if (focusPhrase) {
+      summaryParts.push("Ringkasan fokus (BM): " + focusPhrase);
+    }
     return {
       modeLabel: "Penjelasan maksud ayat",
-      text: translated,
-      fallbackLabel: "Istilah sahaja"
+      text: summaryParts.join(" · "),
+      fallbackLabel: focusPhrase ? "Ringkasan fokus sahaja" : ""
     };
   }
 
@@ -270,7 +274,7 @@
           fallbackLabel: ""
         };
       }
-      return buildExplainFallback(sourceText, gl);
+      return buildExplainFallback(unit);
     }
 
     if (mode === ZH_MODE_GLOSSARY) {
@@ -414,6 +418,20 @@
   }
 
   function renderComprehensionPanels(map, gl) {
+    function appendGlossaryPanel(sourceEl, sourceText) {
+      var glossaryFallback = buildGlossaryFallback(sourceText, gl);
+      if (!glossaryFallback) return;
+
+      var glossaryPanel = document.createElement("aside");
+      glossaryPanel.className = "zh-comprehension-panel";
+      glossaryPanel.setAttribute("lang", "zh-Hans");
+      glossaryPanel.setAttribute("aria-label", "Panel terjemahan istilah");
+      glossaryPanel.innerHTML =
+        '<p class="zh-comprehension-title">🈶 Terjemahan istilah · 术语速查</p>' +
+        '<p class="zh-comprehension-explain">' + escapeHtml(glossaryFallback.text) + "</p>";
+      sourceEl.insertAdjacentElement("afterend", glossaryPanel);
+    }
+
     removeComprehensionPanels();
     if (!isZhMode()) return;
 
@@ -426,17 +444,7 @@
 
       if (mode === ZH_MODE_GLOSSARY) {
         var sourceText = (sourceEl.textContent || "").trim();
-        var glossaryFallback = buildGlossaryFallback(unit.bm_focus_phrase || sourceText, gl);
-        if (!glossaryFallback) return;
-
-        var glossaryPanel = document.createElement("aside");
-        glossaryPanel.className = "zh-comprehension-panel";
-        glossaryPanel.setAttribute("lang", "zh-Hans");
-        glossaryPanel.setAttribute("aria-label", "Panel terjemahan istilah");
-        glossaryPanel.innerHTML =
-          '<p class="zh-comprehension-title">🈶 Terjemahan istilah · 术语速查</p>' +
-          '<p class="zh-comprehension-explain">' + escapeHtml(glossaryFallback.text) + "</p>";
-        sourceEl.insertAdjacentElement("afterend", glossaryPanel);
+        appendGlossaryPanel(sourceEl, unit.bm_focus_phrase || sourceText);
         return;
       }
 
@@ -450,17 +458,25 @@
       panel.setAttribute("aria-label", "Panel sokongan faham ayat");
       panel.innerHTML =
         '<p class="zh-comprehension-title">🧠 Penjelasan maksud ayat · 中文辅助理解</p>' +
-        '<p class="zh-comprehension-explain">' + escapeHtml(unit.zh_explain || "") + "</p>" +
-        (keyPoints.length
+        (unit.zh_explain && unit.zh_explain.trim()
+          ? ('<p class="zh-comprehension-explain">' + escapeHtml(unit.zh_explain) + "</p>")
+          : '<p class="zh-comprehension-explain">Penjelasan ayat belum tersedia.</p>') +
+        (unit.zh_explain && unit.zh_explain.trim() && keyPoints.length
           ? ('<ul class="zh-comprehension-points">' + keyPoints.map(function (item) {
               return "<li>" + escapeHtml(item) + "</li>";
             }).join("") + "</ul>")
           : "") +
         (unit.bm_focus_phrase
-          ? ('<p class="zh-comprehension-focus"><span>Frasa BM fokus:</span> <strong>' + escapeHtml(unit.bm_focus_phrase) + "</strong></p>")
-          : "");
+          ? ('<p class="zh-comprehension-focus"><span>Ringkasan fokus (BM):</span> <strong>' + escapeHtml(unit.bm_focus_phrase) + "</strong></p>")
+          : (!unit.zh_explain || !unit.zh_explain.trim()
+            ? '<p class="zh-comprehension-focus"><span>Ringkasan fokus (BM):</span> <strong>Belum tersedia.</strong></p>'
+            : ""));
 
       sourceEl.insertAdjacentElement("afterend", panel);
+
+      if (!unit.zh_explain || !unit.zh_explain.trim()) {
+        appendGlossaryPanel(sourceEl, unit.bm_focus_phrase || (sourceEl.textContent || "").trim());
+      }
     });
   }
 
@@ -479,7 +495,7 @@
       '<div class="zh-disclaimer-content">' +
         '<span class="zh-disclaimer-text">中文 ON · Terjemahan istilah + penjelasan ayat</span>' +
         '<button class="zh-help-toggle zh-disclaimer-help-toggle" type="button" aria-expanded="false">❓ Help</button>' +
-        '<span class="zh-disclaimer-help" hidden>Mod Bahasa Cina aktif. “Terjemahan istilah” ialah bantuan cepat pada kata kunci/chip. “Penjelasan maksud ayat” pula menerangkan maksud keseluruhan ayat penting. Jika data ayat tiada, sistem papar “Istilah sahaja”.</span>' +
+        '<span class="zh-disclaimer-help" hidden>Mod Bahasa Cina aktif. “Terjemahan istilah” ialah bantuan cepat pada kata kunci/chip. “Penjelasan maksud ayat” pula menerangkan maksud keseluruhan ayat penting. Jika data ayat tiada, sistem papar notis “Penjelasan ayat belum tersedia” bersama ringkasan fokus BM.</span>' +
       "</div>" +
       '<button class="zh-disclaimer-close" type="button" aria-label="Tutup">✕</button>';
 
