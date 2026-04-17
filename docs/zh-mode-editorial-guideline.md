@@ -96,3 +96,38 @@ Setiap perubahan kandungan ZH perlu melalui **dua lapisan review**:
 ### Kriteria lulus
 - Perubahan hanya boleh diluluskan apabila **kedua-dua reviewer memberi sign-off**.
 - Jika ada konflik, keputusan fakta oleh reviewer subjek sejarah mengatasi pilihan gaya bahasa.
+
+## 7) Konvensyen markup ZH explain dalam `notes/*.html`
+
+### Komponen sasaran (selain `.paper-chip`)
+Untuk rollout explain inline, elemen berikut dianggap sasaran utama:
+- `.point-heading`
+- `.point-line`
+- blok rumusan/kesimpulan seperti `.summary-paper`, `.conclusion-paper`, `.master-summary-paper`
+- blok formula (jika digunakan): `.formula-block`
+
+### Bila guna `data-zh-mode="explain"`
+Gunakan `data-zh-mode="explain"` pada ayat/heading yang:
+- mengandungi **soalan fokus** subtopik,
+- ayat **fokus bab** (ringkasan konteks subtopik),
+- ayat **kesimpulan/rumusan** yang menjadi idea teras untuk ulang kaji.
+
+Elakkan meletakkan `data-zh-mode="explain"` pada setiap ayat fakta kecil; utamakan ayat berimpak tinggi untuk kefahaman.
+
+### Di mana letak `data-zh-unit-id`
+- Letak `data-zh-unit-id` **pada elemen sasaran itu sendiri**, bukan pada parent wrapper umum.
+- Setiap `data-zh-unit-id` mesti unik dalam satu fail.
+- Konvensyen nama disyorkan:
+  - `bX-Y-soalan-heading`
+  - `bX-Y-soalan-line-1`, `bX-Y-soalan-line-2`
+  - `bX-Y-fokus-line`
+  - `bX-Y-conclusion-board`, `bX-Y-conclusion-line`
+  - `bX-Y-rumusan-*`
+
+Contoh:
+
+```html
+<p class="point-heading" data-zh-mode="explain" data-zh-unit-id="b2-7-soalan-heading">...</p>
+<p class="point-line" data-zh-mode="explain" data-zh-unit-id="b2-7-fokus-line">...</p>
+<article class="paper-board summary-paper conclusion-paper" data-zh-mode="explain" data-zh-unit-id="b2-7-conclusion-board">...</article>
+```

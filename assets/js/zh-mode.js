@@ -78,6 +78,33 @@
     return fallbackMode || ZH_MODE_EXPLAIN;
   }
 
+  function hasZhUnitId(el) {
+    if (!el || !el.getAttribute) return false;
+    var sourceId = (el.getAttribute("data-zh-unit-id") || "").trim();
+    return !!sourceId;
+  }
+
+  function getZhExplainTargets() {
+    var selector = [
+      ".point-heading[data-zh-unit-id]",
+      ".point-line[data-zh-unit-id]",
+      ".formula-block[data-zh-unit-id]",
+      ".summary-paper[data-zh-unit-id]",
+      ".conclusion-paper[data-zh-unit-id]",
+      ".master-summary-paper[data-zh-unit-id]",
+      "[data-zh-unit-id]"
+    ].join(", ");
+
+    var seen = new WeakSet();
+    return Array.prototype.slice.call(document.querySelectorAll(selector)).filter(function (el) {
+      if (!hasZhUnitId(el)) return false;
+      if (seen.has(el)) return false;
+      seen.add(el);
+      if (el.classList && el.classList.contains("paper-chip")) return false;
+      return true;
+    });
+  }
+
   // ── Glossary Loading ─────────────────────────────────────
 
   function loadGlossary() {
@@ -435,22 +462,28 @@
     removeComprehensionPanels();
     if (!isZhMode()) return;
 
-    document.querySelectorAll("[data-zh-unit-id]").forEach(function (sourceEl) {
+    getZhExplainTargets().forEach(function (sourceEl) {
       var mode = getElementZhMode(sourceEl, ZH_MODE_EXPLAIN);
       var sourceId = sourceEl.getAttribute("data-zh-unit-id");
       if (!sourceId) return;
       var unit = map[sourceId];
-      if (!unit) return;
 
       if (mode === ZH_MODE_GLOSSARY) {
-        var sourceText = (sourceEl.textContent || "").trim();
-        appendGlossaryPanel(sourceEl, unit.bm_focus_phrase || sourceText);
+        var glossarySourceText = (sourceEl.textContent || "").trim();
+        appendGlossaryPanel(sourceEl, (unit && unit.bm_focus_phrase) || glossarySourceText);
         return;
       }
 
-      var keyPoints = Array.isArray(unit.key_points_zh) ? unit.key_points_zh.filter(function (item) {
+      var keyPoints = Array.isArray(unit && unit.key_points_zh) ? unit.key_points_zh.filter(function (item) {
         return typeof item === "string" && item.trim();
       }) : [];
+      var sourceText = (sourceEl.textContent || "").trim();
+      var fallback = buildExplainFallback({
+        bm_focus_phrase: (unit && unit.bm_focus_phrase) || sourceText
+      });
+      var explainText = unit && unit.zh_explain && unit.zh_explain.trim()
+        ? unit.zh_explain.trim()
+        : (fallback ? fallback.text : "Penjelasan ayat belum tersedia.");
 
       var panel = document.createElement("aside");
       panel.className = "zh-comprehension-panel";
@@ -458,24 +491,20 @@
       panel.setAttribute("aria-label", "Panel sokongan faham ayat");
       panel.innerHTML =
         '<p class="zh-comprehension-title">🧠 Penjelasan maksud ayat · 中文辅助理解</p>' +
-        (unit.zh_explain && unit.zh_explain.trim()
-          ? ('<p class="zh-comprehension-explain">' + escapeHtml(unit.zh_explain) + "</p>")
-          : '<p class="zh-comprehension-explain">Penjelasan ayat belum tersedia.</p>') +
-        (unit.zh_explain && unit.zh_explain.trim() && keyPoints.length
+        ('<p class="zh-comprehension-explain">' + escapeHtml(explainText) + "</p>") +
+        (unit && unit.zh_explain && unit.zh_explain.trim() && keyPoints.length
           ? ('<ul class="zh-comprehension-points">' + keyPoints.map(function (item) {
               return "<li>" + escapeHtml(item) + "</li>";
             }).join("") + "</ul>")
           : "") +
-        (unit.bm_focus_phrase
-          ? ('<p class="zh-comprehension-focus"><span>Ringkasan fokus (BM):</span> <strong>' + escapeHtml(unit.bm_focus_phrase) + "</strong></p>")
-          : (!unit.zh_explain || !unit.zh_explain.trim()
-            ? '<p class="zh-comprehension-focus"><span>Ringkasan fokus (BM):</span> <strong>Belum tersedia.</strong></p>'
-            : ""));
+        (((unit && unit.bm_focus_phrase) || sourceText)
+          ? ('<p class="zh-comprehension-focus"><span>Ringkasan fokus (BM):</span> <strong>' + escapeHtml((unit && unit.bm_focus_phrase) || sourceText) + "</strong></p>")
+          : '<p class="zh-comprehension-focus"><span>Ringkasan fokus (BM):</span> <strong>Belum tersedia.</strong></p>');
 
       sourceEl.insertAdjacentElement("afterend", panel);
 
-      if (!unit.zh_explain || !unit.zh_explain.trim()) {
-        appendGlossaryPanel(sourceEl, unit.bm_focus_phrase || (sourceEl.textContent || "").trim());
+      if (!unit || !unit.zh_explain || !unit.zh_explain.trim()) {
+        appendGlossaryPanel(sourceEl, (unit && unit.bm_focus_phrase) || sourceText);
       }
     });
   }

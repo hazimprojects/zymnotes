@@ -1,10 +1,52 @@
 {
   "meta": {
     "language": "zh-Hans",
-    "description": "Rollout awal panel Faham Ayat untuk subtopik 2.8 dan 3.7.",
-    "version": 1
+    "description": "Rollout awal panel Faham Ayat untuk subtopik 2.7, 2.8 dan 3.7.",
+    "version": 2
   },
   "units": [
+    {
+      "source_id": "b2-7-soalan-heading",
+      "bm_original": "Bagaimanakah nasionalisme berkembang dalam kalangan rakyat di negara kita sebelum merdeka?",
+      "zh_explain": "这题要求说明：在独立之前，本地人民的民族主义是如何逐步发展起来的。",
+      "key_points_zh": ["聚焦“如何发展”", "可按渠道分段作答", "时间背景是独立前"],
+      "bm_focus_phrase": "berkembang dalam kalangan rakyat"
+    },
+    {
+      "source_id": "b2-7-soalan-line-1",
+      "bm_original": "💡 Perkembangan nasionalisme dapat dilihat melalui tiga saluran utama:",
+      "zh_explain": "民族主义的发展可以通过三个主要渠道来理解，这是本节的答题主框架。",
+      "key_points_zh": ["三大渠道是主线", "先记框架再记例子", "适合当分点开头句"],
+      "bm_focus_phrase": "tiga saluran utama"
+    },
+    {
+      "source_id": "b2-7-soalan-line-2",
+      "bm_original": "📌 Golongan intelektual berpendidikan agama, Inggeris dan Melayu menjadi pelopor kesedaran nasionalisme di Tanah Melayu.",
+      "zh_explain": "受宗教、英文与马来文教育的知识分子，成为马来亚民族意识觉醒的先驱。",
+      "key_points_zh": ["知识分子是核心推动者", "三类教育背景需点出", "可连接报刊与社团行动"],
+      "bm_focus_phrase": "pelopor kesedaran nasionalisme"
+    },
+    {
+      "source_id": "b2-7-fokus-line",
+      "bm_original": "Golongan intelektual Melayu memainkan peranan penting dalam membangkitkan kesedaran nasionalisme melalui penulisan dan penubuhan persatuan. Subtopik ini membincangkan tiga saluran perjuangan mereka:",
+      "zh_explain": "马来知识分子通过写作与组织社团激发民族意识；本节将围绕他们的三种斗争渠道展开。",
+      "key_points_zh": ["写作与社团是两大手段", "核心是‘意识觉醒’", "后文按三渠道展开"],
+      "bm_focus_phrase": "tiga saluran perjuangan"
+    },
+    {
+      "source_id": "b2-7-conclusion-board",
+      "bm_original": "Kesimpulan 2.7",
+      "zh_explain": "这是2.7小节总结，用来整合知识分子与组织对民族主义发展的贡献。",
+      "key_points_zh": ["回顾主线", "串联人物与渠道", "可作段落结尾模板"],
+      "bm_focus_phrase": "Kesimpulan"
+    },
+    {
+      "source_id": "b2-7-conclusion-line",
+      "bm_original": "💡 Sumbangan tokoh dan organisasi ini telah mencetuskan semangat nasionalisme sebelum Perang Dunia Kedua dan menjadi asas kepada gerakan kemerdekaan yang lebih besar selepasnya.",
+      "zh_explain": "这些人物与组织的贡献在二战前点燃了民族主义，并成为后来更大独立运动的重要基础。",
+      "key_points_zh": ["连接‘战前民族主义’与‘战后独立运动’", "强调历史延续性", "适合结论句"],
+      "bm_focus_phrase": "asas kepada gerakan kemerdekaan"
+    },
     {
       "source_id": "b2-8-soalan-heading",
       "bm_original": "Apakah kesan yang dapat dilihat daripada perkembangan nasionalisme di negara kita?",
@@ -67,6 +109,13 @@
       "zh_explain": "民族主义的发展受多种因素推动，属于‘原因题’常见切入句。",
       "key_points_zh": ["可对应内因与外因", "常接‘idea dari Barat dan Asia’", "用于解释为何会兴起"],
       "bm_focus_phrase": "dipengaruhi oleh"
+    },
+    {
+      "source_id": "b2-8-rumusan-saluran",
+      "bm_original": "📌 Nasionalis di negara kita menggunakan:",
+      "zh_explain": "这句在总结本地民族主义者所采用的主要动员渠道与斗争方式。",
+      "key_points_zh": ["后接教育、写作、社团", "属于方法题框架句", "可用于串联前面小节"],
+      "bm_focus_phrase": "menggunakan"
     },
     {
       "source_id": "b2-8-rumusan-kesan",
