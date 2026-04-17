@@ -123,8 +123,28 @@
   function setupChipFlips(gl) {
     var chips = document.querySelectorAll(".paper-chip");
     chips.forEach(function (chip) {
-      if (chip.classList.contains("zh-chip-flip-ready")) return;
-      if (chip.querySelector(".zh-chip-inner")) return;
+      var hasLegacyFlipMarkup =
+        chip.classList.contains("zh-chip-flip-ready") ||
+        !!chip.querySelector(".zh-chip-inner") ||
+        !!chip.getAttribute("data-zh-bm") ||
+        !!chip.getAttribute("data-zh-cn");
+
+      if (hasLegacyFlipMarkup) {
+        if (chip.__zhFlipHandlers) {
+          chip.removeEventListener("click", chip.__zhFlipHandlers.click);
+          chip.removeEventListener("keydown", chip.__zhFlipHandlers.keydown);
+          chip.__zhFlipHandlers = null;
+        }
+        if (chip.__zhOriginalHTML) {
+          chip.innerHTML = chip.__zhOriginalHTML;
+        }
+        chip.classList.remove("zh-chip-flip-ready", "zh-chip-flipped");
+        chip.removeAttribute("tabindex");
+        chip.removeAttribute("role");
+        chip.removeAttribute("aria-label");
+        chip.removeAttribute("data-zh-bm");
+        chip.removeAttribute("data-zh-cn");
+      }
 
       if (!chip.__zhOriginalHTML) {
         chip.__zhOriginalHTML = chip.innerHTML;
@@ -174,7 +194,16 @@
   }
 
   function resetChipFlips() {
-    document.querySelectorAll(".paper-chip.zh-chip-flip-ready").forEach(function (chip) {
+    document.querySelectorAll(".paper-chip").forEach(function (chip) {
+      var shouldReset =
+        !!chip.__zhOriginalHTML ||
+        chip.classList.contains("zh-chip-flip-ready") ||
+        !!chip.querySelector(".zh-chip-inner") ||
+        !!chip.getAttribute("data-zh-bm") ||
+        !!chip.getAttribute("data-zh-cn");
+
+      if (!shouldReset) return;
+
       if (chip.__zhFlipHandlers) {
         chip.removeEventListener("click", chip.__zhFlipHandlers.click);
         chip.removeEventListener("keydown", chip.__zhFlipHandlers.keydown);
