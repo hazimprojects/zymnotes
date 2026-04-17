@@ -1,0 +1,38 @@
+{
+  "meta": {
+    "source_file": "notes/bab-1-4.html",
+    "rollout": "gelombang-1"
+  },
+  "units": [
+    {
+      "source_id": "bab-1-4-soalan-heading",
+      "bm_original": "Bagaimanakah hubungan antara pemerintah dan rakyat dalam Kesultanan Melayu Melaka?",
+      "zh_explain": "这道问题引导学生先判断核心概念，再说明历史根据。",
+      "key_points_zh": [
+        "先锁定题目关键词。",
+        "回答时要有立场与证据。"
+      ],
+      "bm_focus_phrase": "Bagaimanakah hubungan antara pemerintah dan rakyat dalam Kesultanan Melayu Melaka?"
+    },
+    {
+      "source_id": "bab-1-4-soalan-line-1",
+      "bm_original": "💡 Hubungan antara pemerintah dan rakyat dalam Kesultanan Melayu Melaka berasaskan konsep waadat, iaitu perjanjian antara pemerintah dan rakyat.",
+      "zh_explain": "这句是对主问题的核心答案，概括本小节最重要的因果与结论。",
+      "key_points_zh": [
+        "抓住主语、动作与结果。",
+        "可用一句话复述大意。"
+      ],
+      "bm_focus_phrase": "💡 Hubungan antara pemerintah dan rakyat dalam Kesultanan Melayu Melaka berasaskan konsep waadat, iaitu perjanjian antara pemerintah dan rakyat."
+    },
+    {
+      "source_id": "bab-1-4-fokus-line",
+      "bm_original": "Dalam Kesultanan Melayu Melaka, hubungan antara pemerintah dan rakyat didasari oleh konsep waadat yang bersifat timbal balik dan saling melengkapi. Subtopik ini menjelaskan struktur masyarakat dan jenis-jenis hubungan yang wujud:",
+      "zh_explain": "这句说明本课范围与学习路线，帮助学生建立章节地图。",
+      "key_points_zh": [
+        "先看本节讨论范围。",
+        "记住将要展开的重点项目。"
+      ],
+      "bm_focus_phrase": "Subtopik ini membincangkan"
+    }
+  ]
+}

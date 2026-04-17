@@ -58,6 +58,8 @@ def validate_file(path: Path) -> list[str]:
 
     units = list(unit_iter(payload))
     if not units:
+        if isinstance(payload, dict) and isinstance(payload.get("files"), list):
+            return issues
         issues.append(f"{path}: tiada unit ditemui (jangkaan: list root atau objek dengan kunci 'units').")
         return issues
 

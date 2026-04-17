@@ -1,0 +1,38 @@
+{
+  "meta": {
+    "source_file": "notes/bab-2-6.html",
+    "rollout": "gelombang-1"
+  },
+  "units": [
+    {
+      "source_id": "bab-2-6-soalan-heading",
+      "bm_original": "Apa yang menyebabkan semangat nasionalisme semakin kuat pada abad ke-20?",
+      "zh_explain": "这道问题引导学生先判断核心概念，再说明历史根据。",
+      "key_points_zh": [
+        "先锁定题目关键词。",
+        "回答时要有立场与证据。"
+      ],
+      "bm_focus_phrase": "Apa yang menyebabkan semangat nasionalisme semakin kuat pada abad ke-20?"
+    },
+    {
+      "source_id": "bab-2-6-soalan-line-1",
+      "bm_original": "💡 Banyak faktor dalaman dan luaran seperti agama, pendidikan, penulisan, media dan pengaruh antarabangsa telah mencetuskan kesedaran rakyat untuk bangkit menentang penjajahan.",
+      "zh_explain": "这句是对主问题的核心答案，概括本小节最重要的因果与结论。",
+      "key_points_zh": [
+        "抓住主语、动作与结果。",
+        "可用一句话复述大意。"
+      ],
+      "bm_focus_phrase": "💡 Banyak faktor dalaman dan luaran seperti agama, pendidikan, penulisan, media dan pengaruh antarabangsa telah mencetuskan kesedaran rakyat untuk bangkit menentang penjajahan."
+    },
+    {
+      "source_id": "bab-2-6-fokus-line",
+      "bm_original": "Nasionalisme Melayu pada abad ke-20 didorong oleh pelbagai faktor dalaman dan luaran yang saling berkaitan. Subtopik ini membincangkan enam faktor utama yang mendorong kemunculan dan perkembangan nasionalisme Melayu:",
+      "zh_explain": "这句说明本课范围与学习路线，帮助学生建立章节地图。",
+      "key_points_zh": [
+        "先看本节讨论范围。",
+        "记住将要展开的重点项目。"
+      ],
+      "bm_focus_phrase": "Subtopik ini membincangkan"
+    }
+  ]
+}

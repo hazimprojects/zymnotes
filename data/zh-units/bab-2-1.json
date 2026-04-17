@@ -1,0 +1,38 @@
+{
+  "meta": {
+    "source_file": "notes/bab-2-1.html",
+    "rollout": "gelombang-1"
+  },
+  "units": [
+    {
+      "source_id": "bab-2-1-soalan-heading",
+      "bm_original": "Apa itu nasionalisme? Kenapa penting kita memahaminya?",
+      "zh_explain": "这道问题引导学生先判断核心概念，再说明历史根据。",
+      "key_points_zh": [
+        "先锁定题目关键词。",
+        "回答时要有立场与证据。"
+      ],
+      "bm_focus_phrase": "Apa itu nasionalisme? Kenapa penting kita memahaminya?"
+    },
+    {
+      "source_id": "bab-2-1-soalan-line-1",
+      "bm_original": "💡 Nasionalisme ialah perasaan cinta yang mendalam terhadap bangsa dan negara.",
+      "zh_explain": "这句是对主问题的核心答案，概括本小节最重要的因果与结论。",
+      "key_points_zh": [
+        "抓住主语、动作与结果。",
+        "可用一句话复述大意。"
+      ],
+      "bm_focus_phrase": "💡 Nasionalisme ialah perasaan cinta yang mendalam terhadap bangsa dan negara."
+    },
+    {
+      "source_id": "bab-2-1-fokus-line",
+      "bm_original": "Nasionalisme merupakan satu kesedaran yang mendorong sesuatu bangsa untuk mempertahankan dan membebaskan diri daripada penguasaan asing. Subtopik ini membincangkan definisi, faktor yang mempengaruhi maknanya, pandangan tokoh ilmuwan, dan matlamat perjuangannya:",
+      "zh_explain": "这句说明本课范围与学习路线，帮助学生建立章节地图。",
+      "key_points_zh": [
+        "先看本节讨论范围。",
+        "记住将要展开的重点项目。"
+      ],
+      "bm_focus_phrase": "Subtopik ini membincangkan"
+    }
+  ]
+}

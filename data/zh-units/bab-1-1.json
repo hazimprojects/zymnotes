@@ -1,0 +1,38 @@
+{
+  "meta": {
+    "source_file": "notes/bab-1-1.html",
+    "rollout": "gelombang-1"
+  },
+  "units": [
+    {
+      "source_id": "bab-1-1-soalan-heading",
+      "bm_original": "Adakah konsep negara bangsa hanya wujud selepas kedatangan Barat?",
+      "zh_explain": "这道问题引导学生先判断核心概念，再说明历史根据。",
+      "key_points_zh": [
+        "先锁定题目关键词。",
+        "回答时要有立场与证据。"
+      ],
+      "bm_focus_phrase": "Adakah konsep negara bangsa hanya wujud selepas kedatangan Barat?"
+    },
+    {
+      "source_id": "bab-1-1-soalan-line-1",
+      "bm_original": "💡 Tidak. Asas negara bangsa telah wujud lebih awal di Alam Melayu melalui kemunculan kerajaan yang kuat dan berpengaruh.",
+      "zh_explain": "这句是对主问题的核心答案，概括本小节最重要的因果与结论。",
+      "key_points_zh": [
+        "抓住主语、动作与结果。",
+        "可用一句话复述大意。"
+      ],
+      "bm_focus_phrase": "💡 Tidak. Asas negara bangsa telah wujud lebih awal di Alam Melayu melalui kemunculan kerajaan yang kuat dan berpengaruh."
+    },
+    {
+      "source_id": "bab-1-1-fokus-line",
+      "bm_original": "Negara bangsa di Alam Melayu telah wujud sebelum kedatangan Barat melalui proses pembentukan yang berperingkat. Subtopik ini membincangkan unsur-unsur asas pembentukan negara bangsa dan kesinambungannya dalam kerajaan-kerajaan Melayu:",
+      "zh_explain": "这句说明本课范围与学习路线，帮助学生建立章节地图。",
+      "key_points_zh": [
+        "先看本节讨论范围。",
+        "记住将要展开的重点项目。"
+      ],
+      "bm_focus_phrase": "Subtopik ini membincangkan"
+    }
+  ]
+}

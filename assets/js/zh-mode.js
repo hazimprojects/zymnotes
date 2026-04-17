@@ -39,6 +39,21 @@
     return parts.length > 1 ? "../data/zh-comprehension.json" : "data/zh-comprehension.json";
   }
 
+  function resolveComprehensionIndexPath() {
+    var parts = window.location.pathname.split("/").filter(Boolean);
+    return parts.length > 1 ? "../data/zh-units/index.json" : "data/zh-units/index.json";
+  }
+
+  function resolveComprehensionUnitPath(fileName) {
+    if (!fileName || typeof fileName !== "string") return null;
+    if (/^https?:\/\//i.test(fileName)) return fileName;
+    var trimmed = fileName.replace(/^\.?\//, "");
+    var parts = window.location.pathname.split("/").filter(Boolean);
+    var prefix = parts.length > 1 ? "../" : "";
+    if (trimmed.indexOf("data/") === 0) return prefix + trimmed;
+    return prefix + "data/zh-units/" + trimmed;
+  }
+
   function getMergedGlossary() {
     return glossary || {};
   }
@@ -81,22 +96,61 @@
 
   function loadComprehensionData() {
     if (comprehensionMap !== null) return Promise.resolve(comprehensionMap);
-    return fetch(resolveComprehensionPath())
-      .then(function (res) { return res.ok ? res.json() : {}; })
-      .then(function (data) {
+
+    function mergeUnits(mapped, payload) {
+      var units = Array.isArray(payload) ? payload : (Array.isArray(payload && payload.units) ? payload.units : []);
+      units.forEach(function (unit) {
+        if (!unit || typeof unit !== "object") return;
+        if (!unit.source_id || typeof unit.source_id !== "string") return;
+        mapped[unit.source_id] = unit;
+      });
+    }
+
+    function loadLegacyComprehension(mapped) {
+      return fetch(resolveComprehensionPath())
+        .then(function (res) { return res.ok ? res.json() : {}; })
+        .then(function (data) {
+          mergeUnits(mapped, data);
+          return mapped;
+        })
+        .catch(function () { return mapped; });
+    }
+
+    return fetch(resolveComprehensionIndexPath())
+      .then(function (res) { return res.ok ? res.json() : null; })
+      .then(function (indexPayload) {
         var mapped = {};
-        var units = Array.isArray(data) ? data : (Array.isArray(data.units) ? data.units : []);
-        units.forEach(function (unit) {
-          if (!unit || typeof unit !== "object") return;
-          if (!unit.source_id || typeof unit.source_id !== "string") return;
-          mapped[unit.source_id] = unit;
-        });
-        comprehensionMap = mapped;
-        return comprehensionMap;
+        var fileList = [];
+        if (Array.isArray(indexPayload)) {
+          fileList = indexPayload;
+        } else if (indexPayload && Array.isArray(indexPayload.files)) {
+          fileList = indexPayload.files;
+        }
+
+        var requests = fileList
+          .map(resolveComprehensionUnitPath)
+          .filter(function (path) { return typeof path === "string" && path; })
+          .map(function (path) {
+            return fetch(path)
+              .then(function (res) { return res.ok ? res.json() : null; })
+              .catch(function () { return null; });
+          });
+
+        return Promise.all(requests)
+          .then(function (payloads) {
+            payloads.forEach(function (payload) {
+              if (!payload) return;
+              mergeUnits(mapped, payload);
+            });
+            return loadLegacyComprehension(mapped);
+          });
       })
       .catch(function () {
-        comprehensionMap = {};
-        return {};
+        return loadLegacyComprehension({});
+      })
+      .then(function (mapped) {
+        comprehensionMap = mapped;
+        return comprehensionMap;
       });
   }
 
