@@ -126,7 +126,13 @@
       if (chip.classList.contains("zh-chip-flip-ready")) return;
       if (chip.querySelector(".zh-chip-inner")) return;
 
-      var sourceText = chip.textContent ? chip.textContent.trim() : "";
+      if (!chip.__zhOriginalHTML) {
+        chip.__zhOriginalHTML = chip.innerHTML;
+      }
+
+      var sourceNode = chip.cloneNode(true);
+      sourceNode.querySelectorAll(".kw-zh-ann").forEach(function (ann) { ann.remove(); });
+      var sourceText = sourceNode.textContent ? sourceNode.textContent.trim() : "";
       if (!sourceText || sourceText.length < 3 || sourceText.length > 320) return;
 
       var translatedText = translateTextByGlossary(sourceText, gl);
@@ -150,21 +156,33 @@
         chip.classList.toggle("zh-chip-flipped");
       }
 
-      chip.addEventListener("click", toggleFlip);
-      chip.addEventListener("keydown", function (e) {
+      function onKeydown(e) {
         if (e.key === "Enter" || e.key === " ") {
           e.preventDefault();
           toggleFlip();
         }
-      });
+      }
+
+      chip.__zhFlipHandlers = {
+        click: toggleFlip,
+        keydown: onKeydown
+      };
+
+      chip.addEventListener("click", chip.__zhFlipHandlers.click);
+      chip.addEventListener("keydown", chip.__zhFlipHandlers.keydown);
     });
   }
 
   function resetChipFlips() {
     document.querySelectorAll(".paper-chip.zh-chip-flip-ready").forEach(function (chip) {
-      var bm = chip.getAttribute("data-zh-bm");
-      if (bm) {
-        chip.textContent = bm;
+      if (chip.__zhFlipHandlers) {
+        chip.removeEventListener("click", chip.__zhFlipHandlers.click);
+        chip.removeEventListener("keydown", chip.__zhFlipHandlers.keydown);
+        chip.__zhFlipHandlers = null;
+      }
+
+      if (chip.__zhOriginalHTML) {
+        chip.innerHTML = chip.__zhOriginalHTML;
       }
       chip.classList.remove("zh-chip-flip-ready", "zh-chip-flipped");
       chip.removeAttribute("tabindex");
