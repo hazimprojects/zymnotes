@@ -104,7 +104,27 @@
 
   // ── Paper Chip Flip Translation ──────────────────────────
 
+  function shouldSkipChipTranslation(text) {
+    if (!text) return true;
+    var trimmed = text.trim();
+    if (!trimmed) return true;
+
+    // Jangan terjemah chip yang sensitif (data korban/kematian)
+    if (/terkorban|terbunuh|tercedera|hilang|jumlah/i.test(trimmed)) return true;
+
+    // Jangan terjemah nama individu (gelaran lazim)
+    if (/(^|\s)(Dato['’]?|Datuk|Tun|Tunku|Tan Sri|Dr\.?|Haji|Sheikh|Syed|Sayyid)\s+/i.test(trimmed)) return true;
+
+    // Heuristik nama: sekurang-kurangnya dua perkataan berhuruf besar
+    var plain = trimmed.replace(/^[^A-Za-zÀ-ÿ]+/, "");
+    if (/^[A-Z][\w'.-]+(?:\s+[A-Z][\w'.-]+){1,4}$/.test(plain)) return true;
+
+    return false;
+  }
+
   function translateTextByGlossary(text, gl) {
+    if (shouldSkipChipTranslation(text)) return text;
+
     var translated = text;
     var keys = Object.keys(gl).filter(function (k) { return typeof gl[k] === 'string'; }).sort(function (a, b) { return b.length - a.length; });
 
