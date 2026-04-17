@@ -961,7 +961,6 @@
         annotateKeywords(merged);
         annotateRawText(merged);
         setupChipFlips(merged, comprehension);
-        renderComprehensionPanels(comprehension, merged);
         annotateOrphanText(merged);
         if (!opts.silentDisclaimer) {
           showDisclaimer();
@@ -1028,7 +1027,6 @@
         annotateKeywords(merged);
         annotateRawText(merged);
         setupChipFlips(merged, comprehension);
-        renderComprehensionPanels(comprehension, merged);
         annotateOrphanText(merged);
       });
     }
