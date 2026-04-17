@@ -828,8 +828,10 @@ document.addEventListener("DOMContentLoaded", function () {
 (function setupNoteFeatures() {
   document.addEventListener('DOMContentLoaded', function() {
     if (document.querySelector('.note-sparkle-wrap')) return;
+    if (!/\/notes\//.test(window.location.pathname)) return;
 
     var audioEl = document.querySelector('.note-audio-player .audio-src');
+    var zhModeApi = window.HzZhMode || null;
 
     var NOTICE_KEY = 'hzaudio-notice' + window.location.pathname;
     var noticeShown = false;
@@ -880,7 +882,10 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // Only show sparkle if there's at least one item
-    if (!audioEl && !labHref) return;
+    if (!audioEl && !labHref && !zhModeApi) {
+      document.dispatchEvent(new CustomEvent('hz:zh-legacy-controls'));
+      return;
+    }
 
     var wrap = document.createElement('div');
     wrap.className = 'note-sparkle-wrap';
@@ -902,6 +907,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (audioEl) itemsContainer.appendChild(makeSparkleItem('🎧', 'Main audio', 'audio'));
     if (labHref) itemsContainer.appendChild(makeSparkleItem(labEmoji, 'Kuiz', 'lab', labHref));
+    if (zhModeApi) itemsContainer.appendChild(makeSparkleItem('华', 'Mod Cina', 'zh-mode'));
 
     var fab = document.createElement('button');
     fab.className = 'note-sparkle-fab';
@@ -996,6 +1002,53 @@ document.addEventListener("DOMContentLoaded", function () {
     wrap.appendChild(fabRow);
     document.body.appendChild(wrap);
 
+    var zhPanel = null;
+    function ensureZhPanel() {
+      if (zhPanel || !zhModeApi) return zhPanel;
+      zhPanel = document.createElement('div');
+      zhPanel.className = 'audio-notice-sheet';
+      zhPanel.innerHTML =
+        '<span class="audio-notice-icon">华</span>' +
+        '<p class="audio-notice-text">Aksi Mod Cina</p>' +
+        '<div class="audio-notice-footer">' +
+          '<button class="audio-notice-dismiss" type="button" data-zh-action="toggle"></button>' +
+          '<button class="audio-notice-dismiss" type="button" data-zh-action="notes">Nota Terjemahan</button>' +
+        '</div>';
+      document.body.appendChild(zhPanel);
+
+      function refreshZhPanel() {
+        var toggleBtn = zhPanel.querySelector('[data-zh-action="toggle"]');
+        if (!toggleBtn) return;
+        toggleBtn.textContent = zhModeApi.isActive() ? 'Nyahaktif Mod Cina' : 'Aktifkan Mod Cina';
+      }
+
+      zhPanel.addEventListener('click', function (e) {
+        var action = e.target && e.target.getAttribute && e.target.getAttribute('data-zh-action');
+        if (!action) return;
+        if (action === 'toggle') {
+          zhModeApi.toggle();
+          refreshZhPanel();
+          return;
+        }
+        if (action === 'notes') {
+          if (!zhModeApi.isActive()) {
+            zhModeApi.setActive(true);
+          }
+          zhModeApi.openGlossaryNotes();
+          zhPanel.classList.add('is-leaving');
+          setTimeout(function () {
+            if (zhPanel) {
+              zhPanel.remove();
+              zhPanel = null;
+            }
+          }, 200);
+        }
+      });
+
+      refreshZhPanel();
+      return zhPanel;
+    }
+
     // ── Corner Position ───────────────────────────────────────────────
     var FAB_KEY = 'hzedu-fab-corner';
     var corner = localStorage.getItem(FAB_KEY) || 'br';
@@ -1081,6 +1134,15 @@ document.addEventListener("DOMContentLoaded", function () {
         wrap.classList.remove('is-open');
         wrap.classList.remove('controls-open');
       }
+      if (zhPanel && !zhPanel.contains(e.target)) {
+        zhPanel.classList.add('is-leaving');
+        setTimeout(function () {
+          if (zhPanel) {
+            zhPanel.remove();
+            zhPanel = null;
+          }
+        }, 200);
+      }
     });
 
     // ── Item Actions ──────────────────────────────────────────────────
@@ -1095,6 +1157,13 @@ document.addEventListener("DOMContentLoaded", function () {
       }
       if (type === 'lab') {
         wrap.classList.remove('is-open');
+      }
+      if (type === 'zh-mode' && zhModeApi) {
+        wrap.classList.remove('is-open');
+        var panel = ensureZhPanel();
+        if (panel) {
+          panel.classList.remove('is-leaving');
+        }
       }
     });
 

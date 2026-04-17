@@ -17,6 +17,8 @@
   var customGlossary = {};
   var onlineTranslateCache = {};
   var annotated = false;
+  var glossaryDrawerApi = null;
+  var legacyControlsInitialized = false;
 
   // ── Helpers ──────────────────────────────────────────────
 
@@ -269,6 +271,7 @@
   }
 
   function initGlossaryDrawer() {
+    if (glossaryDrawerApi) return glossaryDrawerApi;
     var drawer = document.createElement("aside");
     drawer.className = "zh-glossary-drawer";
     drawer.innerHTML =
@@ -326,6 +329,14 @@
         setupChipFlips(merged);
       }
     });
+
+    glossaryDrawerApi = {
+      open: openDrawer,
+      close: closeDrawer,
+      drawer: drawer
+    };
+
+    return glossaryDrawerApi;
   }
 
   // ── Disclaimer Toast ─────────────────────────────────────
@@ -511,29 +522,35 @@
 
   // ── Mode Application ─────────────────────────────────────
 
-  function applyZhMode(active) {
+  function updateLegacyToggleButtons(active) {
+    document.querySelectorAll(".zh-mode-fab").forEach(function (btn) {
+      btn.setAttribute("aria-pressed", active ? "true" : "false");
+      btn.classList.toggle("is-active", active);
+    });
+  }
+
+  function applyZhMode(active, options) {
+    var opts = options || {};
     localStorage.setItem(LANG_KEY, active ? "zh" : "ms");
+    updateLegacyToggleButtons(active);
 
     if (active) {
       document.documentElement.setAttribute("data-lang-mode", "zh");
-      document.querySelectorAll(".zh-mode-fab").forEach(function (btn) {
-        btn.setAttribute("aria-pressed", "true");
-        btn.classList.add("is-active");
-      });
       loadGlossary().then(function () {
         var merged = getMergedGlossary();
         annotateKeywords(merged);
         setupChipFlips(merged);
-        showDisclaimer();
+        if (!opts.silentDisclaimer) {
+          showDisclaimer();
+        }
       });
     } else {
       document.documentElement.removeAttribute("data-lang-mode");
-      document.querySelectorAll(".zh-mode-fab").forEach(function (btn) {
-        btn.setAttribute("aria-pressed", "false");
-        btn.classList.remove("is-active");
-      });
       removeAnnotations();
       resetChipFlips();
+      if (glossaryDrawerApi) {
+        glossaryDrawerApi.close();
+      }
     }
   }
 
@@ -564,13 +581,31 @@
     });
   }
 
+  function initLegacyControls() {
+    if (legacyControlsInitialized) return;
+    legacyControlsInitialized = true;
+    injectFabButtons();
+    initGlossaryDrawer();
+  }
+
+  function openGlossaryNotes() {
+    var drawerApi = initGlossaryDrawer();
+    drawerApi.open();
+  }
+
+  function shouldUseSparkleForZhControls() {
+    return /\/notes\//.test(window.location.pathname) && !window.__HZ_ZH_LEGACY_REQUESTED;
+  }
+
   // ── Init ─────────────────────────────────────────────────
 
   document.addEventListener("DOMContentLoaded", function () {
     loadCustomGlossary();
-    injectFabButtons();
-    initGlossaryDrawer();
     initSelectionTranslation();
+
+    if (!shouldUseSparkleForZhControls()) {
+      initLegacyControls();
+    }
 
     if (isZhMode()) {
       loadGlossary().then(function () {
@@ -580,4 +615,27 @@
       });
     }
   });
+
+  document.addEventListener("hz:zh-legacy-controls", function () {
+    window.__HZ_ZH_LEGACY_REQUESTED = true;
+    initLegacyControls();
+  });
+
+  window.HzZhMode = {
+    isActive: isZhMode,
+    toggle: function () {
+      applyZhMode(!isZhMode());
+      return isZhMode();
+    },
+    setActive: function (active, options) {
+      applyZhMode(!!active, options || {});
+      return isZhMode();
+    },
+    openGlossaryNotes: openGlossaryNotes,
+    initLegacyControls: function () {
+      window.__HZ_ZH_LEGACY_REQUESTED = true;
+      initLegacyControls();
+    },
+    showDisclaimer: showDisclaimer
+  };
 })();
