@@ -514,13 +514,29 @@ html[data-theme="dark"] .paper-chip.zh-chip-flipped {
 }
 
 .zh-comprehension-focus {
-  margin: 0.45rem 0 0;
-  font-size: 0.76rem;
+  margin: 0.55rem 0 0;
+  padding: 0.4rem 0.6rem;
+  font-size: 0.85rem;
   color: #7f1d1d;
+  background: rgba(185, 28, 28, 0.07);
+  border-left: 3px solid #b91c1c;
+  border-radius: 0 4px 4px 0;
+  line-height: 1.5;
 }
 
 .zh-comprehension-focus span {
-  font-weight: 600;
+  font-size: 0.72rem;
+  font-weight: 700;
+  opacity: 0.65;
+  display: block;
+  margin-bottom: 0.15rem;
+  letter-spacing: 0.02em;
+}
+
+.zh-comprehension-focus strong {
+  font-weight: 800;
+  font-size: 1em;
+  color: #7f1d1d;
 }
 
 html[data-theme="dark"] .zh-comprehension-panel {
@@ -532,6 +548,15 @@ html[data-theme="dark"] .zh-comprehension-title,
 html[data-theme="dark"] .zh-comprehension-explain,
 html[data-theme="dark"] .zh-comprehension-points,
 html[data-theme="dark"] .zh-comprehension-focus {
+  color: #fecaca;
+}
+
+html[data-theme="dark"] .zh-comprehension-focus {
+  background: rgba(248, 113, 113, 0.1);
+  border-left-color: #f87171;
+}
+
+html[data-theme="dark"] .zh-comprehension-focus strong {
   color: #fecaca;
 }
 
@@ -624,6 +649,39 @@ html[data-lang-mode="zh"] .zh-heading-ann:not([hidden]) {
   color: #b91c1c;
   font-family: "PingFang SC", "Microsoft YaHei", "Noto Sans SC", system-ui, sans-serif;
   opacity: 0.88;
+}
+
+/* 句中词汇 structured annotation — BM prominent, Chinese secondary */
+.zh-ann-label {
+  font-weight: 600;
+  opacity: 0.65;
+  margin-right: 0.15em;
+  font-size: 0.9em;
+}
+
+.zh-ann-pair {
+  white-space: nowrap;
+}
+
+.zh-ann-bm {
+  font-weight: 800;
+  font-size: 1em;
+  color: inherit;
+}
+
+.zh-ann-zh {
+  font-size: 0.85em;
+  opacity: 0.72;
+  font-weight: 500;
+  font-family: "PingFang SC", "Microsoft YaHei", "Noto Sans SC", system-ui, sans-serif;
+}
+
+.zh-ann-sep {
+  opacity: 0.35;
+}
+
+.zh-glossary-pairs {
+  line-height: 1.7;
 }
 
 html[data-theme="dark"][data-lang-mode="zh"] .zh-heading-has-ann .zh-heading-toggle {
