@@ -579,105 +579,10 @@
     });
   }
 
-  // ── Faham Ayat Panel ────────────────────────────────────
+  // ── Legacy zh panels cleanup (disabled) ─────────────────
 
   function removeComprehensionPanels() {
     document.querySelectorAll(".zh-comprehension-panel").forEach(function (panel) { panel.remove(); });
-  }
-
-  function makePanelToggleable(panel) {
-    var toggle = panel.querySelector(".zh-panel-toggle");
-    var body = panel.querySelector(".zh-panel-body");
-    if (!toggle || !body) return;
-    toggle.addEventListener("click", function () {
-      var isOpen = !body.hidden;
-      body.hidden = isOpen;
-      toggle.setAttribute("aria-expanded", isOpen ? "false" : "true");
-      panel.classList.toggle("zh-panel-open", !isOpen);
-      panel.classList.toggle("zh-panel-collapsed", isOpen);
-      var chevron = toggle.querySelector(".zh-panel-chevron");
-      if (chevron) chevron.textContent = isOpen ? "▼" : "▲";
-    });
-  }
-
-  function renderComprehensionPanels(map, gl) {
-    function appendGlossaryPanel(sourceEl, sourceText) {
-      var glossaryFallback = buildGlossaryFallback(sourceText, gl);
-      if (!glossaryFallback) return;
-
-      var glossaryPanel = document.createElement("aside");
-      glossaryPanel.className = "zh-comprehension-panel zh-panel-collapsed";
-      glossaryPanel.setAttribute("lang", "zh-Hans");
-      glossaryPanel.setAttribute("aria-label", "词汇注释面板");
-      var glBodyHTML;
-      if (glossaryFallback.pairs && glossaryFallback.pairs.length > 0) {
-        glBodyHTML = '<p class="zh-comprehension-explain zh-glossary-pairs">' +
-          glossaryFallback.pairs.map(function (p) {
-            return '<span class="zh-ann-pair"><strong class="zh-ann-bm">' + escapeHtml(p.bm) + '</strong><span class="zh-ann-zh">（' + escapeHtml(p.zh) + '）</span></span>';
-          }).join('<span class="zh-ann-sep"> · </span>') + '</p>';
-      } else {
-        glBodyHTML = '<p class="zh-comprehension-explain">' + escapeHtml(glossaryFallback.text) + "</p>";
-      }
-      glossaryPanel.innerHTML =
-        '<button class="zh-panel-toggle" aria-expanded="false">' +
-          '🈶 词汇注释 · 术语速查 <span class="zh-panel-chevron">▼</span>' +
-        '</button>' +
-        '<div class="zh-panel-body" hidden>' + glBodyHTML + '</div>';
-      sourceEl.insertAdjacentElement("afterend", glossaryPanel);
-      makePanelToggleable(glossaryPanel);
-    }
-
-    removeComprehensionPanels();
-    if (!isZhMode()) return;
-
-    getZhExplainTargets().forEach(function (sourceEl) {
-      var mode = getElementZhMode(sourceEl, ZH_MODE_EXPLAIN);
-      var sourceId = sourceEl.getAttribute("data-zh-unit-id");
-      if (!sourceId) return;
-      var unit = map[sourceId];
-
-      if (mode === ZH_MODE_GLOSSARY) {
-        var glossarySourceText = (sourceEl.textContent || "").trim();
-        appendGlossaryPanel(sourceEl, (unit && unit.bm_focus_phrase) || glossarySourceText);
-        return;
-      }
-
-      var keyPoints = Array.isArray(unit && unit.key_points_zh) ? unit.key_points_zh.filter(function (item) {
-        return typeof item === "string" && item.trim();
-      }) : [];
-      var sourceText = (sourceEl.textContent || "").trim();
-      var explainText = unit && unit.zh_explain && unit.zh_explain.trim()
-        ? unit.zh_explain.trim()
-        : null;
-
-      // No zh_explain → skip 🧠 panel entirely; only show vocabulary panel
-      if (!explainText) {
-        appendGlossaryPanel(sourceEl, sourceText);
-        return;
-      }
-
-      var bodyHTML =
-        '<p class="zh-comprehension-explain">' + escapeHtml(explainText) + "</p>" +
-        (keyPoints.length
-          ? ('<ul class="zh-comprehension-points">' + keyPoints.map(function (item) {
-              return "<li>" + escapeHtml(item) + "</li>";
-            }).join("") + "</ul>")
-          : "");
-
-      var panel = document.createElement("aside");
-      panel.className = "zh-comprehension-panel zh-panel-collapsed";
-      panel.setAttribute("lang", "zh-Hans");
-      panel.setAttribute("aria-label", "句意解析面板");
-      panel.innerHTML =
-        '<button class="zh-panel-toggle" aria-expanded="false">' +
-          '🧠 句意解析 · 中文辅助理解 <span class="zh-panel-chevron">▼</span>' +
-        '</button>' +
-        '<div class="zh-panel-body" hidden>' + bodyHTML + '</div>';
-
-      sourceEl.insertAdjacentElement("afterend", panel);
-      makePanelToggleable(panel);
-      appendGlossaryPanel(sourceEl, sourceText);
-    });
   }
 
   // ── Raw Text Annotation (difficult words in plain text) ──
@@ -901,9 +806,9 @@
     toast.innerHTML =
       '<span class=”zh-disclaimer-icon”>中</span>' +
       '<div class=”zh-disclaimer-content”>' +
-        '<span class=”zh-disclaimer-text”>中文模式已开启 · 词汇注释 + 句意解析</span>' +
+        '<span class=”zh-disclaimer-text”>中文模式已开启 · 词汇注释</span>' +
         '<button class=”zh-help-toggle zh-disclaimer-help-toggle” type=”button” aria-expanded=”false”>❓ 说明</button>' +
-        '<span class=”zh-disclaimer-help” hidden>中文辅助模式已启动。点击纸片（chip）可翻转查看词汇注释。点击句意解析面板标题可展开或收起中文解析。点击句子旁的「中」按钮可查看词汇提示。BM用词仍须熟记，因为考试须以马来文作答。</span>' +
+        '<span class=”zh-disclaimer-help” hidden>中文辅助模式已启动。点击纸片（chip）可翻转查看词汇注释。点击句子旁的「中」按钮可查看词汇提示。BM用词仍须熟记，因为考试须以马来文作答。</span>' +
       "</div>" +
       '<button class=”zh-disclaimer-close” type=”button” aria-label=”关闭”>✕</button>';
 
