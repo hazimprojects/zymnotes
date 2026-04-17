@@ -8,7 +8,7 @@
 @import url("layout.css?v=9");     /* Header, nav, dark mode fab, typography, footer, animations */
 @import url("ui.css?v=15");        /* Buttons, cards, homepage, hero, search, org-chart, interaction */
 @import url("paper.css?v=10");      /* Paper labels, boards, chips, accordion, steps, bab overview */
-@import url("keywords.css?v=1");   /* Keyword highlights (Bab 1/2/3), bloc identity, keyword legend */
+@import url("keywords.css?v=2");   /* Keyword highlights, bloc identity, keyword legend, zh-mode annotations */
 @import url("responsive.css?v=3"); /* All @media queries + spacing fixes */
 @import url("themes.css?v=6");     /* Bab visual themes, dark mode overrides, war block chips */
 @import url("lab.css?v=2");        /* Learning Lab, action bar, mini interactive blocks */

@@ -256,3 +256,193 @@ html[data-theme="dark"] .paper-chip.bloc-chip-allies {
   background: linear-gradient(135deg, rgba(20, 35, 65, 0.92), rgba(15, 30, 60, 0.92)) !important;
   border-color: rgba(147, 197, 253, 0.20) !important;
 }
+
+/* =========================
+   MOD BAHASA CINA (中文模式)
+========================= */
+
+/* FAB toggle button — base styles (mirrors .display-fab from layout.css) */
+.zh-mode-fab {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 12px;
+  border: 1px solid var(--line-strong);
+  background: var(--paper);
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 800;
+  line-height: 1;
+  flex-shrink: 0;
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.zh-mode-fab:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-soft);
+}
+
+/* FAB toggle button — active state (red tint) */
+.zh-mode-fab.is-active {
+  background: rgba(220, 38, 38, 0.10);
+  border-color: rgba(220, 38, 38, 0.30);
+  color: #dc2626;
+}
+
+html[data-theme="dark"] .zh-mode-fab.is-active {
+  background: rgba(239, 68, 68, 0.18);
+  border-color: rgba(239, 68, 68, 0.38);
+  color: #f87171;
+}
+
+/* Keyword annotation — hidden by default */
+.kw-zh-ann {
+  display: none;
+}
+
+/* When mode is active, annotated keywords stack vertically */
+html[data-lang-mode="zh"] .kw.kw-zh-annotated {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  vertical-align: bottom;
+  line-height: 1.15;
+}
+
+html[data-lang-mode="zh"] .kw-zh-ann {
+  display: block;
+  font-size: 0.6em;
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  color: inherit;
+  opacity: 0.78;
+  margin-top: 0.06em;
+  pointer-events: none;
+  user-select: none;
+}
+
+html[data-theme="dark"][data-lang-mode="zh"] .kw-zh-ann {
+  opacity: 0.88;
+}
+
+/* Text selection translation popup */
+.zh-selection-popup {
+  position: absolute;
+  z-index: 9999;
+  padding: 0.38rem 0.75rem;
+  border-radius: 10px;
+  background: #1c1917;
+  color: #fafaf9;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.28);
+  pointer-events: none;
+  opacity: 0;
+  transform: translateY(4px);
+  transition: opacity 0.18s ease, transform 0.18s ease;
+  white-space: nowrap;
+}
+
+.zh-selection-popup::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -6px;
+  transform: translateX(-50%);
+  border: 6px solid transparent;
+  border-top-color: #1c1917;
+  border-bottom: 0;
+}
+
+.zh-selection-popup--visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+html[data-theme="dark"] .zh-selection-popup {
+  background: #f5f5f4;
+  color: #1c1917;
+}
+
+html[data-theme="dark"] .zh-selection-popup::after {
+  border-top-color: #f5f5f4;
+}
+
+/* Disclaimer toast */
+.zh-disclaimer-toast {
+  position: fixed;
+  bottom: calc(1rem + env(safe-area-inset-bottom));
+  left: 50%;
+  transform: translateX(-50%) translateY(calc(100% + 2rem));
+  z-index: 9998;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.7rem;
+  max-width: min(520px, calc(100vw - 2rem));
+  padding: 0.9rem 1rem;
+  border-radius: 16px;
+  background: #1c1917;
+  color: #fafaf9;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.22);
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.35s ease;
+  opacity: 0;
+}
+
+.zh-toast-show {
+  transform: translateX(-50%) translateY(0);
+  opacity: 1;
+}
+
+.zh-toast-hide {
+  transform: translateX(-50%) translateY(calc(100% + 2rem));
+  opacity: 0;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.zh-disclaimer-icon {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.8rem;
+  height: 1.8rem;
+  border-radius: 8px;
+  background: rgba(220, 38, 38, 0.22);
+  color: #fca5a5;
+  font-size: 0.88rem;
+  font-weight: 800;
+}
+
+.zh-disclaimer-text {
+  flex: 1;
+  color: #d6d3d1;
+}
+
+.zh-disclaimer-close {
+  flex-shrink: 0;
+  background: none;
+  border: none;
+  color: #78716c;
+  font-size: 0.88rem;
+  cursor: pointer;
+  padding: 0.1rem 0.2rem;
+  line-height: 1;
+  transition: color 0.15s;
+}
+
+.zh-disclaimer-close:hover {
+  color: #fafaf9;
+}
+
+html[data-theme="dark"] .zh-disclaimer-toast {
+  background: #292524;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.45);
+}

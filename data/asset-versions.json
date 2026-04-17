@@ -1,14 +1,15 @@
 {
-  "style_css": "62",
+  "style_css": "63",
   "main_js": "65",
+  "zh_mode_js": "1",
   "manifest": "3",
-  "sw_cache": "24",
+  "sw_cache": "25",
   "css": {
     "base": "5",
     "layout": "9",
     "ui": "15",
     "paper": "10",
-    "keywords": "1",
+    "keywords": "2",
     "responsive": "3",
     "themes": "6",
     "lab": "2"
