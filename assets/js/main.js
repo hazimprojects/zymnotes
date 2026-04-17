@@ -890,6 +890,13 @@ document.addEventListener("DOMContentLoaded", function () {
     var wrap = document.createElement('div');
     wrap.className = 'note-sparkle-wrap';
 
+    function syncSparklePanelState() {
+      var hasOpenPanel =
+        wrap.classList.contains('is-open') ||
+        wrap.classList.contains('controls-open');
+      document.body.classList.toggle('sparkle-panel-open', hasOpenPanel);
+    }
+
     var itemsContainer = document.createElement('div');
     itemsContainer.className = 'note-sparkle-items';
 
@@ -1087,6 +1094,7 @@ document.addEventListener("DOMContentLoaded", function () {
         didDrag = true;
         wrap.classList.add('is-dragging');
         wrap.classList.remove('is-open');
+        syncSparklePanelState();
         ['br','bl','tr','tl'].forEach(function(cc) { wrap.classList.remove('fab-corner-' + cc); });
       }
       var vw = window.innerWidth, vh = window.innerHeight;
@@ -1127,12 +1135,14 @@ document.addEventListener("DOMContentLoaded", function () {
       } else {
         wrap.classList.toggle('is-open');
       }
+      syncSparklePanelState();
     });
 
     document.addEventListener('click', function(e) {
       if (!wrap.contains(e.target)) {
         wrap.classList.remove('is-open');
         wrap.classList.remove('controls-open');
+        syncSparklePanelState();
       }
       if (zhPanel && !zhPanel.contains(e.target)) {
         zhPanel.classList.add('is-leaving');
@@ -1154,12 +1164,15 @@ document.addEventListener("DOMContentLoaded", function () {
         showAudioNotice();
         audioEl.paused ? audioEl.play() : audioEl.pause();
         wrap.classList.remove('is-open');
+        syncSparklePanelState();
       }
       if (type === 'lab') {
         wrap.classList.remove('is-open');
+        syncSparklePanelState();
       }
       if (type === 'zh-mode' && zhModeApi) {
         wrap.classList.remove('is-open');
+        syncSparklePanelState();
         var panel = ensureZhPanel();
         if (panel) {
           panel.classList.remove('is-leaving');
@@ -1191,6 +1204,7 @@ document.addEventListener("DOMContentLoaded", function () {
         fab.textContent = '✨';
         wrap.classList.remove('audio-active');
         wrap.classList.remove('controls-open');
+        syncSparklePanelState();
         progCircle.setAttribute('stroke-dashoffset', '0');
         countdownEl.textContent = '';
         ctrlPlayPause.classList.remove('is-paused');
@@ -1203,6 +1217,7 @@ document.addEventListener("DOMContentLoaded", function () {
         fab.textContent = '🎧';
         wrap.classList.add('audio-active');
         wrap.classList.remove('is-open');
+        syncSparklePanelState();
         ctrlPlayPause.classList.remove('is-paused');
         countdownEl.textContent = fmtRemaining();
         if (audioBtn) audioBtn.textContent = '⏸️';

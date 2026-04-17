@@ -298,6 +298,14 @@ html[data-theme="dark"] .zh-mode-fab.is-active {
 }
 
 /* Keyword annotation — hidden by default */
+:root {
+  --z-floating: 60;
+  --z-toast: 70;
+  --z-overlay: 300;
+  --floating-bottom-offset: calc(var(--bottom-nav-h, 56px) + var(--safe-bottom, env(safe-area-inset-bottom, 0px)) + 0.9rem);
+  --floating-bottom-offset-avoid-sparkle: calc(var(--floating-bottom-offset) + 4.25rem);
+}
+
 .kw-zh-ann {
   display: none;
 }
@@ -332,7 +340,7 @@ html[data-theme="dark"][data-lang-mode="zh"] .kw-zh-ann {
 /* Text selection translation popup */
 .zh-selection-popup {
   position: absolute;
-  z-index: 9999;
+  z-index: var(--z-toast);
   padding: 0.38rem 0.75rem;
   border-radius: 10px;
   background: #1c1917;
@@ -377,10 +385,10 @@ html[data-theme="dark"] .zh-selection-popup::after {
 /* Disclaimer toast */
 .zh-disclaimer-toast {
   position: fixed;
-  bottom: calc(1rem + env(safe-area-inset-bottom));
+  bottom: calc(1rem + var(--safe-bottom, env(safe-area-inset-bottom, 0px)));
   left: 50%;
   transform: translateX(-50%) translateY(calc(100% + 2rem));
-  z-index: 9998;
+  z-index: var(--z-toast);
   display: flex;
   align-items: flex-start;
   gap: 0.7rem;
@@ -495,6 +503,7 @@ html[data-theme="dark"] .zh-disclaimer-toast {
   width: min(92vw, 430px);
   max-width: min(92vw, 430px);
   left: 50%;
+  bottom: var(--floating-bottom-offset);
   transform: translateX(-50%);
   border-radius: 14px;
 }
@@ -598,9 +607,10 @@ html[data-theme="dark"] .zh-selection-edit {
 /* Personal glossary drawer */
 .zh-glossary-drawer {
   position: fixed;
-  right: 1rem;
-  bottom: calc(1rem + env(safe-area-inset-bottom));
-  z-index: 9997;
+  left: 1rem;
+  right: auto;
+  bottom: calc(1rem + var(--safe-bottom, env(safe-area-inset-bottom, 0px)));
+  z-index: var(--z-floating);
 }
 
 .zh-glossary-toggle {
@@ -616,7 +626,8 @@ html[data-theme="dark"] .zh-selection-edit {
 
 .zh-glossary-panel {
   position: absolute;
-  right: 0;
+  left: 0;
+  right: auto;
   bottom: calc(100% + 0.5rem);
   width: min(370px, calc(100vw - 2rem));
   max-height: 55vh;
@@ -630,6 +641,19 @@ html[data-theme="dark"] .zh-selection-edit {
   transform: translateY(8px);
   pointer-events: none;
   transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+@media (max-width: 760px) {
+  .zh-disclaimer-toast,
+  .zh-glossary-drawer {
+    bottom: var(--floating-bottom-offset);
+  }
+}
+
+body.sparkle-panel-open .zh-disclaimer-toast,
+body.sparkle-panel-open .zh-selection-popup--mobile,
+body.sparkle-panel-open .zh-glossary-drawer {
+  bottom: var(--floating-bottom-offset-avoid-sparkle);
 }
 
 .zh-glossary-drawer.is-open .zh-glossary-panel {
