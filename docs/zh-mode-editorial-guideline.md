@@ -79,6 +79,29 @@ Selain semakan unit, glosari juga wajib lulus lint:
 python3 scripts/check-zh-glossary.py
 ```
 
+Semakan padanan coverage ID antara `notes/*.html` dan unit ZH juga wajib lulus:
+
+```bash
+python3 scripts/check-zh-coverage.py
+```
+
+Skrip ini akan:
+- ekstrak semua `data-zh-unit-id` daripada fail `notes/*.html`,
+- ekstrak semua `source_id` daripada `data/zh-units/*.json`,
+- lapor ID hilang / berlebihan,
+- kesan konflik `source_id` pendua merentas fail unit,
+- keluarkan liputan ringkas per bab (peratus rollout).
+
+### Checklist QA pra-release (ZH rollout)
+
+Sebelum release kandungan ZH, jalankan set semakan berikut mengikut turutan:
+
+```bash
+python3 scripts/check-zh-units.py && \
+python3 scripts/check-zh-glossary.py && \
+python3 scripts/check-zh-coverage.py
+```
+
 Rujuk panduan khusus glosari di `docs/zh-glossary-editorial-guideline.md`.
 
 ## 6) Proses review 2 lapis (wajib)
