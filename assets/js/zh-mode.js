@@ -335,30 +335,33 @@
     return null;
   }
 
+  function isSentenceLikeChip(sourceText) {
+    if (!sourceText) return false;
+    if (/[.!?;:]/.test(sourceText)) return true;
+    var words = sourceText.trim().split(/\s+/).filter(Boolean);
+    return words.length > 6;
+  }
+
   function setupChipFlips(gl, comprehension) {
     var chips = document.querySelectorAll(".paper-chip");
     chips.forEach(function (chip) {
       var hasLegacyFlipMarkup =
         chip.classList.contains("zh-chip-flip-ready") ||
+        chip.classList.contains("zh-chip-translated") ||
         !!chip.querySelector(".zh-chip-inner") ||
+        !!chip.querySelector(".zh-chip-primary") ||
         !!chip.getAttribute("data-zh-bm") ||
         !!chip.getAttribute("data-zh-cn");
 
       if (hasLegacyFlipMarkup) {
-        if (chip.__zhFlipHandlers) {
-          chip.removeEventListener("click", chip.__zhFlipHandlers.click);
-          chip.removeEventListener("keydown", chip.__zhFlipHandlers.keydown);
-          chip.__zhFlipHandlers = null;
-        }
         if (chip.__zhOriginalHTML) {
           chip.innerHTML = chip.__zhOriginalHTML;
         }
-        chip.classList.remove("zh-chip-flip-ready", "zh-chip-flipped");
-        chip.removeAttribute("tabindex");
-        chip.removeAttribute("role");
-        chip.removeAttribute("aria-label");
+        chip.classList.remove("zh-chip-flip-ready", "zh-chip-flipped", "zh-chip-translated", "zh-chip-inline");
         chip.removeAttribute("data-zh-bm");
         chip.removeAttribute("data-zh-cn");
+        chip.removeAttribute("data-zh-mode-label");
+        chip.removeAttribute("data-zh-fallback-label");
       }
 
       if (!chip.__zhOriginalHTML) {
@@ -371,56 +374,28 @@
       if (!sourceText || sourceText.length < 3 || sourceText.length > 320) return;
 
       var backContent = buildChipBackContent(chip, sourceText, gl, comprehension);
-      if (!backContent || !backContent.text) return;
+      if (!backContent || !backContent.text || !backContent.text.trim()) return;
 
-      chip.classList.add("zh-chip-flip-ready");
-      chip.setAttribute("tabindex", "0");
-      chip.setAttribute("role", "button");
-      chip.setAttribute("aria-label", "点击翻转查看中文解析");
+      var hasSentenceClass = chip.classList.contains("paper-chip-sentence");
+      var mode = getElementZhMode(chip, hasSentenceClass ? ZH_MODE_EXPLAIN : ZH_MODE_GLOSSARY);
+      var renderInline = mode === ZH_MODE_GLOSSARY && !isSentenceLikeChip(sourceText);
+
+      chip.classList.add("zh-chip-flip-ready", "zh-chip-translated");
+      if (renderInline) chip.classList.add("zh-chip-inline");
       chip.setAttribute("data-zh-bm", sourceText);
       chip.setAttribute("data-zh-cn", backContent.text);
       chip.setAttribute("data-zh-mode-label", backContent.modeLabel);
-      chip.setAttribute("data-zh-fallback-label", backContent.fallbackLabel);
+      chip.setAttribute("data-zh-fallback-label", backContent.fallbackLabel || "");
+
+      var translationHtml = renderInline
+        ? '<span class="zh-chip-translation-inline" lang="zh-Hans">（' + escapeHtml(backContent.text) + '）</span>'
+        : '<span class="zh-chip-translation" lang="zh-Hans">' + escapeHtml(backContent.text) + '</span>';
 
       chip.innerHTML =
         '<span class="zh-chip-inner">' +
-          '<span class="zh-chip-front">' + escapeHtml(sourceText) + "</span>" +
-          '<span class="zh-chip-back">' +
-            '<strong>' + escapeHtml(backContent.modeLabel) + ":</strong> " +
-            escapeHtml(backContent.text) +
-            (backContent.fallbackLabel ? (' <em>(' + escapeHtml(backContent.fallbackLabel) + ")</em>") : "") +
-          "</span>" +
-        "</span>";
-
-      function toggleFlip() {
-        if (!isZhMode()) return;
-        var inner = chip.querySelector(".zh-chip-inner");
-        if (inner) {
-          inner.classList.add("zh-chip-fading");
-          setTimeout(function () {
-            if (!chip.isConnected) return;
-            chip.classList.toggle("zh-chip-flipped");
-            inner.classList.remove("zh-chip-fading");
-          }, 140);
-        } else {
-          chip.classList.toggle("zh-chip-flipped");
-        }
-      }
-
-      function onKeydown(e) {
-        if (e.key === "Enter" || e.key === " ") {
-          e.preventDefault();
-          toggleFlip();
-        }
-      }
-
-      chip.__zhFlipHandlers = {
-        click: toggleFlip,
-        keydown: onKeydown
-      };
-
-      chip.addEventListener("click", chip.__zhFlipHandlers.click);
-      chip.addEventListener("keydown", chip.__zhFlipHandlers.keydown);
+          '<span class="zh-chip-primary">' + chip.__zhOriginalHTML + '</span>' +
+          translationHtml +
+        '</span>';
     });
   }
 
@@ -435,19 +410,10 @@
 
       if (!shouldReset) return;
 
-      if (chip.__zhFlipHandlers) {
-        chip.removeEventListener("click", chip.__zhFlipHandlers.click);
-        chip.removeEventListener("keydown", chip.__zhFlipHandlers.keydown);
-        chip.__zhFlipHandlers = null;
-      }
-
       if (chip.__zhOriginalHTML) {
         chip.innerHTML = chip.__zhOriginalHTML;
       }
-      chip.classList.remove("zh-chip-flip-ready", "zh-chip-flipped");
-      chip.removeAttribute("tabindex");
-      chip.removeAttribute("role");
-      chip.removeAttribute("aria-label");
+      chip.classList.remove("zh-chip-flip-ready", "zh-chip-flipped", "zh-chip-translated", "zh-chip-inline");
       chip.removeAttribute("data-zh-bm");
       chip.removeAttribute("data-zh-cn");
       chip.removeAttribute("data-zh-mode-label");
