@@ -544,15 +544,14 @@
     });
   }
 
-  // ── Orphan Heading Annotation ────────────────────────────
+  // ── Orphan Text Annotation ───────────────────────────────
 
-  function annotateOrphanHeadings(gl) {
-    document.querySelectorAll(".point-heading:not([data-zh-unit-id])").forEach(function (el) {
+  function annotateOrphanText(gl) {
+    var EMOJI_STRIP_RE = /[\uD83C-\uDBFF\uDC00-\uDFFF]|[\u2600-\u27BF]|[\u{1F000}-\u{1FFFF}]|[📌💡📖🔍⬆️]/gu;
+
+    function attachToggle(el, rawText) {
       if (el.querySelector(".zh-heading-toggle")) return;
-
-      var rawText = el.textContent || "";
-      // Strip leading emoji / symbols to get meaningful text
-      var cleanText = normalize(rawText.replace(/[\uD83C-\uDBFF\uDC00-\uDFFF]|[\u2600-\u27BF]|[\u{1F000}-\u{1FFFF}]|[📌💡📖🔍⬆️]/gu, "").replace(/^[^a-zA-ZÀ-ÿ]+/, ""));
+      var cleanText = normalize(rawText.replace(EMOJI_STRIP_RE, "").replace(/^[^a-zA-ZÀ-ÿ]+/, ""));
       if (!cleanText || cleanText.length < 3) return;
 
       var result = buildGlossaryFallback(cleanText, gl);
@@ -587,6 +586,29 @@
       el.classList.add("zh-heading-has-ann");
       el.appendChild(toggleBtn);
       el.appendChild(annSpan);
+    }
+
+    // Block-level text elements
+    var blockSel = [
+      ".point-heading:not([data-zh-unit-id])",
+      ".point-line:not([data-zh-unit-id])",
+      ".lead:not([data-zh-unit-id])",
+      ".paper-process-panel",
+      ".paper-timeline-panel > p"
+    ].join(", ");
+
+    document.querySelectorAll(blockSel).forEach(function (el) {
+      attachToggle(el, (el.textContent || "").trim());
+    });
+
+    // emoji-point-list: text lives in the last <span> of each <li>
+    document.querySelectorAll(".emoji-point-list li").forEach(function (li) {
+      if (li.querySelector(".zh-heading-toggle")) return;
+      var spans = li.querySelectorAll("span");
+      if (spans.length < 2) return;
+      var textSpan = spans[spans.length - 1];
+      if (!textSpan || textSpan.classList.contains("emoji-bullet")) return;
+      attachToggle(li, (textSpan.textContent || "").trim());
     });
   }
 
@@ -671,7 +693,7 @@
         annotateKeywords(merged);
         setupChipFlips(merged, comprehension);
         renderComprehensionPanels(comprehension, merged);
-        annotateOrphanHeadings(merged);
+        annotateOrphanText(merged);
         if (!opts.silentDisclaimer) {
           showDisclaimer();
         }
@@ -736,7 +758,7 @@
         annotateKeywords(merged);
         setupChipFlips(merged, comprehension);
         renderComprehensionPanels(comprehension, merged);
-        annotateOrphanHeadings(merged);
+        annotateOrphanText(merged);
       });
     }
   });
