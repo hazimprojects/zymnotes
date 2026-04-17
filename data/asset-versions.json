@@ -1,9 +1,9 @@
 {
   "style_css": "68",
-  "main_js": "67",
+  "main_js": "68",
   "zh_mode_js": "1",
   "manifest": "3",
-  "sw_cache": "31",
+  "sw_cache": "32",
   "css": {
     "base": "5",
     "layout": "9",
