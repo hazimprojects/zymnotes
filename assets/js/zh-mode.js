@@ -11,7 +11,11 @@
 (function () {
   var LANG_KEY = "hzedu-lang-mode";
   var DISCLAIMER_KEY = "hzedu-zh-disclaimer-shown";
+  var CUSTOM_GLOSSARY_KEY = "hzedu-zh-custom-glossary";
+  var TRANSLATE_ENDPOINT = "https://api.mymemory.translated.net/get";
   var glossary = null;
+  var customGlossary = {};
+  var onlineTranslateCache = {};
   var annotated = false;
 
   // ── Helpers ──────────────────────────────────────────────
@@ -27,6 +31,48 @@
   function resolveGlossaryPath() {
     var parts = window.location.pathname.split("/").filter(Boolean);
     return parts.length > 1 ? "../data/zh-glossary.json" : "data/zh-glossary.json";
+  }
+
+  function loadCustomGlossary() {
+    try {
+      var raw = localStorage.getItem(CUSTOM_GLOSSARY_KEY);
+      customGlossary = raw ? JSON.parse(raw) : {};
+    } catch (err) {
+      customGlossary = {};
+    }
+    return customGlossary;
+  }
+
+  function saveCustomGlossary(data) {
+    customGlossary = data || {};
+    localStorage.setItem(CUSTOM_GLOSSARY_KEY, JSON.stringify(customGlossary));
+  }
+
+  function getMergedGlossary() {
+    var merged = {};
+    var key;
+    if (glossary) {
+      for (key in glossary) {
+        if (Object.prototype.hasOwnProperty.call(glossary, key)) {
+          merged[key] = glossary[key];
+        }
+      }
+    }
+    for (key in customGlossary) {
+      if (Object.prototype.hasOwnProperty.call(customGlossary, key)) {
+        merged[key] = customGlossary[key];
+      }
+    }
+    return merged;
+  }
+
+  function escapeHtml(str) {
+    return String(str)
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/\"/g, "&quot;")
+      .replace(/'/g, "&#39;");
   }
 
   // ── Glossary Loading ─────────────────────────────────────
@@ -45,15 +91,51 @@
       });
   }
 
+  function cleanTranslatedText(text, original) {
+    if (!text) return "";
+    var cleaned = String(text).trim()
+      .replace(/\[.*?\]/g, "")
+      .replace(/\s+/g, " ");
+    if (!cleaned) return "";
+    if (normalize(cleaned) === normalize(original)) return "";
+    return cleaned;
+  }
+
+  function fetchOnlineTranslation(text) {
+    var normalizedText = normalize(text);
+    if (onlineTranslateCache[normalizedText]) {
+      return Promise.resolve(onlineTranslateCache[normalizedText]);
+    }
+
+    var url = TRANSLATE_ENDPOINT +
+      "?q=" + encodeURIComponent(text) +
+      "&langpair=ms|zh-CN";
+
+    return fetch(url)
+      .then(function (res) { return res.ok ? res.json() : null; })
+      .then(function (payload) {
+        if (!payload || !payload.responseData) return "";
+        var raw = payload.responseData.translatedText || "";
+        var translated = cleanTranslatedText(raw, text);
+        if (translated) {
+          onlineTranslateCache[normalizedText] = translated;
+        }
+        return translated;
+      })
+      .catch(function () {
+        return "";
+      });
+  }
+
   // ── Keyword Annotation ───────────────────────────────────
 
   function lookupTerm(text, gl) {
     var key = normalize(text);
     if (gl[key]) return gl[key];
     // Partial match: find glossary key contained within the text
-    var keys = Object.keys(gl);
+    var keys = Object.keys(gl).sort(function (a, b) { return b.length - a.length; });
     for (var i = 0; i < keys.length; i++) {
-      if (key.indexOf(keys[i]) !== -1 && keys[i].length > 3) {
+      if (key.indexOf(keys[i]) !== -1 && keys[i].length > 2) {
         return gl[keys[i]];
       }
     }
@@ -65,11 +147,8 @@
     annotated = true;
     var spans = document.querySelectorAll(".kw");
     spans.forEach(function (span) {
-      // Skip keyword legend labels — they contain category names, not real terms
       if (span.closest(".keyword-legend-item")) return;
-      // Skip spans that already have child elements (complex nested content)
       if (span.children.length > 0) return;
-      // data-zh override takes priority over glossary lookup
       var zh = span.getAttribute("data-zh") || lookupTerm(span.textContent, gl);
       if (!zh) return;
       var ann = document.createElement("span");
@@ -89,6 +168,166 @@
     annotated = false;
   }
 
+  // ── Paper Chip Flip Translation ──────────────────────────
+
+  function translateTextByGlossary(text, gl) {
+    var translated = text;
+    var keys = Object.keys(gl).sort(function (a, b) { return b.length - a.length; });
+
+    for (var i = 0; i < keys.length; i++) {
+      var key = keys[i];
+      if (!key || key.length < 2) continue;
+      var escaped = key.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+      var rx = new RegExp(escaped, "gi");
+      translated = translated.replace(rx, function (term) {
+        return term + " (" + gl[key] + ")";
+      });
+    }
+
+    return translated;
+  }
+
+  function setupChipFlips(gl) {
+    var chips = document.querySelectorAll(".paper-chip");
+    chips.forEach(function (chip) {
+      if (chip.classList.contains("zh-chip-flip-ready")) return;
+      if (chip.querySelector(".zh-chip-inner")) return;
+
+      var sourceText = chip.textContent ? chip.textContent.trim() : "";
+      if (!sourceText || sourceText.length < 3 || sourceText.length > 320) return;
+
+      var translatedText = translateTextByGlossary(sourceText, gl);
+      if (!translatedText || translatedText === sourceText) return;
+
+      chip.classList.add("zh-chip-flip-ready");
+      chip.setAttribute("tabindex", "0");
+      chip.setAttribute("role", "button");
+      chip.setAttribute("aria-label", "Klik untuk flip dan lihat terjemahan Cina");
+      chip.setAttribute("data-zh-bm", sourceText);
+      chip.setAttribute("data-zh-cn", translatedText);
+
+      chip.innerHTML =
+        '<span class="zh-chip-inner">' +
+          '<span class="zh-chip-front">' + escapeHtml(sourceText) + "</span>" +
+          '<span class="zh-chip-back">' + escapeHtml(translatedText) + "</span>" +
+        "</span>";
+
+      function toggleFlip() {
+        if (!isZhMode()) return;
+        chip.classList.toggle("zh-chip-flipped");
+      }
+
+      chip.addEventListener("click", toggleFlip);
+      chip.addEventListener("keydown", function (e) {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          toggleFlip();
+        }
+      });
+    });
+  }
+
+  function resetChipFlips() {
+    document.querySelectorAll(".paper-chip.zh-chip-flip-ready").forEach(function (chip) {
+      var bm = chip.getAttribute("data-zh-bm");
+      if (bm) {
+        chip.textContent = bm;
+      }
+      chip.classList.remove("zh-chip-flip-ready", "zh-chip-flipped");
+      chip.removeAttribute("tabindex");
+      chip.removeAttribute("role");
+      chip.removeAttribute("aria-label");
+      chip.removeAttribute("data-zh-bm");
+      chip.removeAttribute("data-zh-cn");
+    });
+  }
+
+  // ── Editable Glossary Drawer ─────────────────────────────
+
+  function renderCustomGlossaryList() {
+    var list = document.querySelector(".zh-glossary-list");
+    if (!list) return;
+
+    var keys = Object.keys(customGlossary);
+    if (keys.length === 0) {
+      list.innerHTML = '<p class="zh-glossary-empty">Belum ada nota lagi. Pilih teks dan tekan “Simpan Nota / 保存”. 目前还没有笔记，选中文字后点保存。</p>';
+      return;
+    }
+
+    keys.sort();
+    list.innerHTML = keys.map(function (key) {
+      return (
+        '<div class="zh-glossary-item" data-key="' + escapeHtml(key) + '">' +
+          '<div class="zh-glossary-main">' +
+            '<span class="zh-glossary-ms">' + escapeHtml(key) + '</span>' +
+            '<span class="zh-glossary-zh">' + escapeHtml(customGlossary[key]) + "</span>" +
+          "</div>" +
+          '<button type="button" class="zh-glossary-delete" data-delete="' + escapeHtml(key) + '">Buang</button>' +
+        "</div>"
+      );
+    }).join("");
+  }
+
+  function initGlossaryDrawer() {
+    var drawer = document.createElement("aside");
+    drawer.className = "zh-glossary-drawer";
+    drawer.innerHTML =
+      '<button type="button" class="zh-glossary-toggle" aria-expanded="false">📝 Nota Terjemahan</button>' +
+      '<div class="zh-glossary-panel" aria-hidden="true">' +
+        '<div class="zh-glossary-head">' +
+          "<strong>Nota Terjemahan Peribadi / 个人翻译笔记</strong>" +
+          '<button type="button" class="zh-glossary-close" aria-label="Tutup">✕</button>' +
+        "</div>" +
+        '<p class="zh-glossary-help">Simpan istilah penting untuk ulang kaji; anda boleh ubah terjemahan ikut konteks. 可保存重点词语，并按语境自行修改翻译。</p>' +
+        '<div class="zh-glossary-list"></div>' +
+      "</div>";
+
+    document.body.appendChild(drawer);
+
+    var toggleBtn = drawer.querySelector(".zh-glossary-toggle");
+    var closeBtn = drawer.querySelector(".zh-glossary-close");
+    var panel = drawer.querySelector(".zh-glossary-panel");
+
+    function openDrawer() {
+      if (!isZhMode()) return;
+      drawer.classList.add("is-open");
+      toggleBtn.setAttribute("aria-expanded", "true");
+      panel.setAttribute("aria-hidden", "false");
+      renderCustomGlossaryList();
+    }
+
+    function closeDrawer() {
+      drawer.classList.remove("is-open");
+      toggleBtn.setAttribute("aria-expanded", "false");
+      panel.setAttribute("aria-hidden", "true");
+    }
+
+    toggleBtn.addEventListener("click", function () {
+      if (drawer.classList.contains("is-open")) {
+        closeDrawer();
+      } else {
+        openDrawer();
+      }
+    });
+
+    closeBtn.addEventListener("click", closeDrawer);
+
+    drawer.addEventListener("click", function (e) {
+      var deleteKey = e.target && e.target.getAttribute && e.target.getAttribute("data-delete");
+      if (!deleteKey) return;
+      delete customGlossary[deleteKey];
+      saveCustomGlossary(customGlossary);
+      renderCustomGlossaryList();
+      if (isZhMode()) {
+        var merged = getMergedGlossary();
+        removeAnnotations();
+        annotateKeywords(merged);
+        resetChipFlips();
+        setupChipFlips(merged);
+      }
+    });
+  }
+
   // ── Disclaimer Toast ─────────────────────────────────────
 
   function showDisclaimer() {
@@ -101,7 +340,7 @@
     toast.setAttribute("aria-live", "polite");
     toast.innerHTML =
       '<span class="zh-disclaimer-icon">中</span>' +
-      '<span class="zh-disclaimer-text">Mod Bahasa Cina diaktifkan. Terjemahan ini adalah panduan untuk memudahkan pemahaman istilah sejarah. Pelajar tetap perlu menguasai dan menjawab soalan peperiksaan dalam Bahasa Melayu.</span>' +
+      '<span class="zh-disclaimer-text">Mod Bahasa Cina aktif. Pilih teks untuk terjemahan segera (glosari/internet), boleh edit sebelum simpan. 中文模式已开启：选中文字可即时翻译（词汇表/网络），可编辑后保存。</span>' +
       '<button class="zh-disclaimer-close" type="button" aria-label="Tutup">✕</button>';
 
     document.body.appendChild(toast);
@@ -116,9 +355,8 @@
         toast.classList.add("zh-toast-hide");
         setTimeout(function () { toast.remove(); }, 300);
       }
-    }, 8000);
+    }, 8500);
 
-    // Trigger entrance animation
     requestAnimationFrame(function () {
       requestAnimationFrame(function () { toast.classList.add("zh-toast-show"); });
     });
@@ -130,14 +368,90 @@
     var popup = document.createElement("div");
     popup.className = "zh-selection-popup";
     popup.setAttribute("aria-hidden", "true");
-    popup.setAttribute("role", "tooltip");
+    popup.setAttribute("role", "dialog");
+    popup.innerHTML =
+      '<div class="zh-selection-main"></div>' +
+      '<label class="zh-selection-edit-wrap">Terjemahan (boleh edit) / 翻译（可编辑）' +
+        '<input type="text" class="zh-selection-edit" autocomplete="off" />' +
+      "</label>" +
+      '<div class="zh-selection-status" aria-live="polite"></div>' +
+      '<div class="zh-selection-actions">' +
+        '<button type="button" class="zh-selection-save">Simpan Nota / 保存</button>' +
+      "</div>";
     document.body.appendChild(popup);
+
+    var currentSelection = "";
+    var currentTranslation = "";
+    var lookupRequestId = 0;
+    var isCoarsePointer = !!(window.matchMedia && window.matchMedia("(pointer: coarse)").matches);
+    var editInput = popup.querySelector(".zh-selection-edit");
+    var statusEl = popup.querySelector(".zh-selection-status");
+    var saveBtn = popup.querySelector(".zh-selection-save");
 
     function hidePopup() {
       popup.classList.remove("zh-selection-popup--visible");
+      popup.classList.remove("zh-selection-popup--mobile");
     }
 
-    function handleSelectionEnd(e) {
+    function saveSelectionNote() {
+      var editedTranslation = editInput.value.trim();
+      if (!currentSelection || !editedTranslation) return;
+      currentTranslation = editedTranslation;
+      customGlossary[normalize(currentSelection)] = currentTranslation;
+      saveCustomGlossary(customGlossary);
+      renderCustomGlossaryList();
+
+      var merged = getMergedGlossary();
+      removeAnnotations();
+      annotateKeywords(merged);
+      resetChipFlips();
+      setupChipFlips(merged);
+
+      popup.classList.add("zh-selection-popup--saved");
+      setTimeout(function () {
+        popup.classList.remove("zh-selection-popup--saved");
+      }, 900);
+    }
+
+    popup.querySelector(".zh-selection-save").addEventListener("click", function () {
+      saveSelectionNote();
+    });
+
+    function setSelectionResult(selectedText, zh, sourceTag) {
+      currentSelection = selectedText;
+      currentTranslation = zh;
+      editInput.value = zh;
+      saveBtn.disabled = !zh;
+
+      statusEl.textContent = sourceTag || "";
+      popup.querySelector(".zh-selection-main").innerHTML =
+        '<span class="zh-selection-ms">' + escapeHtml(selectedText) + '</span>' +
+        '<span class="zh-selection-arrow">→</span>' +
+        '<span class="zh-selection-zh">' + escapeHtml(zh || "—") + "</span>";
+    }
+
+    function positionPopupFromSelection(selection) {
+      if (isCoarsePointer) {
+        popup.classList.add("zh-selection-popup--mobile");
+        popup.style.left = "50%";
+        popup.style.top = "auto";
+        popup.style.bottom = "max(6.2rem, calc(env(safe-area-inset-bottom) + 5.6rem))";
+        return;
+      }
+
+      popup.classList.remove("zh-selection-popup--mobile");
+      popup.style.bottom = "auto";
+      var range = selection.getRangeAt(0);
+      var rect = range.getBoundingClientRect();
+      var scrollY = window.scrollY || document.documentElement.scrollTop;
+      var popupWidth = popup.offsetWidth || 220;
+      var left = rect.left + (rect.width / 2) - (popupWidth / 2);
+      left = Math.max(8, Math.min(left, window.innerWidth - popupWidth - 8));
+      popup.style.left = left + "px";
+      popup.style.top = (rect.top + scrollY - popup.offsetHeight - 12) + "px";
+    }
+
+    function handleSelectionEnd() {
       if (!isZhMode() || !glossary) { hidePopup(); return; }
 
       var selection = window.getSelection();
@@ -146,32 +460,43 @@
       var selectedText = selection.toString().trim();
       if (selectedText.length < 2 || selectedText.length > 80) { hidePopup(); return; }
 
-      var zh = lookupTerm(selectedText, glossary);
-      if (!zh) { hidePopup(); return; }
-
-      var range = selection.getRangeAt(0);
-      var rect = range.getBoundingClientRect();
-      var scrollY = window.scrollY || document.documentElement.scrollTop;
-
-      popup.textContent = zh;
+      var mergedGlossary = getMergedGlossary();
+      var zh = lookupTerm(selectedText, mergedGlossary);
       popup.classList.add("zh-selection-popup--visible");
+      positionPopupFromSelection(selection);
 
-      // Position above the selection
-      var popupWidth = popup.offsetWidth || 120;
-      var left = rect.left + (rect.width / 2) - (popupWidth / 2);
-      left = Math.max(8, Math.min(left, window.innerWidth - popupWidth - 8));
-      popup.style.left = left + "px";
-      popup.style.top = (rect.top + scrollY - popup.offsetHeight - 10) + "px";
+      if (zh) {
+        setSelectionResult(selectedText, zh, "Sumber: Glosari · 来源：词汇表");
+        return;
+      }
+
+      setSelectionResult(selectedText, "", "Mencari terjemahan internet... 正在网络查询...");
+      var requestId = ++lookupRequestId;
+      saveBtn.disabled = true;
+
+      fetchOnlineTranslation(selectedText).then(function (onlineZh) {
+        if (requestId !== lookupRequestId) return;
+        if (!onlineZh) {
+          setSelectionResult(selectedText, "", "Tiada padanan internet. Sila isi sendiri. 网络无匹配，请手动填写。");
+          saveBtn.disabled = true;
+          return;
+        }
+        setSelectionResult(selectedText, onlineZh, "Sumber: Internet (boleh edit) · 来源：网络（可编辑）");
+      });
     }
+
+    editInput.addEventListener("input", function () {
+      saveBtn.disabled = !editInput.value.trim();
+    });
 
     document.addEventListener("mouseup", function (e) {
       if (e.target.closest && e.target.closest(".zh-selection-popup")) return;
-      setTimeout(function () { handleSelectionEnd(e); }, 10);
+      setTimeout(function () { handleSelectionEnd(); }, 20);
     });
 
     document.addEventListener("touchend", function (e) {
       if (e.target.closest && e.target.closest(".zh-selection-popup")) return;
-      setTimeout(function () { handleSelectionEnd(e); }, 200);
+      setTimeout(function () { handleSelectionEnd(); }, 420);
     });
 
     document.addEventListener("mousedown", function (e) {
@@ -195,8 +520,10 @@
         btn.setAttribute("aria-pressed", "true");
         btn.classList.add("is-active");
       });
-      loadGlossary().then(function (gl) {
-        annotateKeywords(gl);
+      loadGlossary().then(function () {
+        var merged = getMergedGlossary();
+        annotateKeywords(merged);
+        setupChipFlips(merged);
         showDisclaimer();
       });
     } else {
@@ -206,6 +533,7 @@
         btn.classList.remove("is-active");
       });
       removeAnnotations();
+      resetChipFlips();
     }
   }
 
@@ -227,7 +555,6 @@
         applyZhMode(!isZhMode());
       });
 
-      // Insert before .nav-toggle (dark mode FAB will be injected after by main.js)
       var navToggle = nav.querySelector(".nav-toggle");
       if (navToggle) {
         nav.insertBefore(btn, navToggle);
@@ -240,12 +567,16 @@
   // ── Init ─────────────────────────────────────────────────
 
   document.addEventListener("DOMContentLoaded", function () {
+    loadCustomGlossary();
     injectFabButtons();
+    initGlossaryDrawer();
     initSelectionTranslation();
 
     if (isZhMode()) {
-      loadGlossary().then(function (gl) {
-        annotateKeywords(gl);
+      loadGlossary().then(function () {
+        var merged = getMergedGlossary();
+        annotateKeywords(merged);
+        setupChipFlips(merged);
       });
     }
   });

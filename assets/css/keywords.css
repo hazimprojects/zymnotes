@@ -446,3 +446,283 @@ html[data-theme="dark"] .zh-disclaimer-toast {
   background: #292524;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.45);
 }
+
+/* Zh chip flip cards */
+.paper-chip.zh-chip-flip-ready {
+  position: relative;
+  perspective: 900px;
+  cursor: pointer;
+}
+
+.paper-chip .zh-chip-inner {
+  position: relative;
+  display: block;
+  min-height: 1.45em;
+  transition: transform 0.45s ease;
+  transform-style: preserve-3d;
+}
+
+.paper-chip.zh-chip-flipped .zh-chip-inner {
+  transform: rotateX(180deg);
+}
+
+.paper-chip .zh-chip-front,
+.paper-chip .zh-chip-back {
+  display: block;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.paper-chip .zh-chip-back {
+  position: absolute;
+  inset: 0;
+  transform: rotateX(180deg);
+  color: #b91c1c;
+  font-weight: 700;
+}
+
+/* Selection popup (enhanced) */
+.zh-selection-popup {
+  min-width: 220px;
+  max-width: min(92vw, 360px);
+  padding: 0.55rem 0.75rem;
+  border-radius: 12px;
+  white-space: normal;
+}
+
+.zh-selection-popup--mobile {
+  position: fixed;
+  width: min(92vw, 430px);
+  max-width: min(92vw, 430px);
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 14px;
+}
+
+.zh-selection-popup--mobile.zh-selection-popup--visible {
+  transform: translateX(-50%);
+}
+
+.zh-selection-popup--mobile::after {
+  display: none;
+}
+
+.zh-selection-main {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  flex-wrap: wrap;
+}
+
+.zh-selection-ms {
+  color: #e7e5e4;
+  font-weight: 600;
+}
+
+.zh-selection-arrow {
+  opacity: 0.7;
+}
+
+.zh-selection-zh {
+  color: #fca5a5;
+  font-weight: 800;
+}
+
+.zh-selection-actions {
+  margin-top: 0.5rem;
+}
+
+.zh-selection-edit-wrap {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 0.72rem;
+  opacity: 0.85;
+}
+
+.zh-selection-edit {
+  width: 100%;
+  margin-top: 0.22rem;
+  border: 1px solid rgba(231, 229, 228, 0.34);
+  border-radius: 8px;
+  padding: 0.34rem 0.48rem;
+  background: rgba(255, 255, 255, 0.07);
+  color: #fafaf9;
+  font-size: 0.85rem;
+}
+
+.zh-selection-status {
+  margin-top: 0.35rem;
+  font-size: 0.72rem;
+  opacity: 0.75;
+}
+
+.zh-selection-save {
+  border: 0;
+  border-radius: 9px;
+  padding: 0.3rem 0.58rem;
+  background: rgba(248, 113, 113, 0.22);
+  color: #fff;
+  font-size: 0.78rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.zh-selection-save:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.zh-selection-popup--saved .zh-selection-save {
+  background: rgba(34, 197, 94, 0.28);
+}
+
+html[data-theme="dark"] .zh-selection-ms {
+  color: #292524;
+}
+
+html[data-theme="dark"] .zh-selection-zh {
+  color: #991b1b;
+}
+
+html[data-theme="dark"] .zh-selection-save {
+  background: rgba(127, 29, 29, 0.14);
+  color: #1c1917;
+}
+
+html[data-theme="dark"] .zh-selection-edit {
+  border-color: rgba(41, 37, 36, 0.25);
+  background: rgba(0, 0, 0, 0.06);
+  color: #1c1917;
+}
+
+/* Personal glossary drawer */
+.zh-glossary-drawer {
+  position: fixed;
+  right: 1rem;
+  bottom: calc(1rem + env(safe-area-inset-bottom));
+  z-index: 9997;
+}
+
+.zh-glossary-toggle {
+  border: 1px solid rgba(220, 38, 38, 0.22);
+  background: #fff;
+  color: #7f1d1d;
+  border-radius: 12px;
+  padding: 0.48rem 0.72rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+}
+
+.zh-glossary-panel {
+  position: absolute;
+  right: 0;
+  bottom: calc(100% + 0.5rem);
+  width: min(370px, calc(100vw - 2rem));
+  max-height: 55vh;
+  overflow: auto;
+  background: #fff;
+  border: 1px solid rgba(220, 38, 38, 0.18);
+  border-radius: 16px;
+  padding: 0.88rem;
+  box-shadow: 0 12px 34px rgba(0, 0, 0, 0.16);
+  opacity: 0;
+  transform: translateY(8px);
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.zh-glossary-drawer.is-open .zh-glossary-panel {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.zh-glossary-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.7rem;
+  margin-bottom: 0.35rem;
+}
+
+.zh-glossary-close {
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.zh-glossary-help {
+  margin: 0 0 0.72rem;
+  color: #57534e;
+  font-size: 0.86rem;
+}
+
+.zh-glossary-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.7rem;
+  border: 1px dashed rgba(220, 38, 38, 0.24);
+  border-radius: 11px;
+  padding: 0.5rem 0.6rem;
+  margin-bottom: 0.5rem;
+}
+
+.zh-glossary-main {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  min-width: 0;
+}
+
+.zh-glossary-ms {
+  font-size: 0.82rem;
+  color: #57534e;
+}
+
+.zh-glossary-zh {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #991b1b;
+}
+
+.zh-glossary-delete {
+  border: 0;
+  border-radius: 8px;
+  padding: 0.25rem 0.45rem;
+  background: rgba(153, 27, 27, 0.08);
+  color: #7f1d1d;
+  cursor: pointer;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.zh-glossary-empty {
+  margin: 0;
+  color: #78716c;
+  font-size: 0.88rem;
+}
+
+html[data-theme="dark"] .zh-glossary-toggle,
+html[data-theme="dark"] .zh-glossary-panel {
+  background: #1c1917;
+  color: #f5f5f4;
+  border-color: rgba(248, 113, 113, 0.25);
+}
+
+html[data-theme="dark"] .zh-glossary-help,
+html[data-theme="dark"] .zh-glossary-ms,
+html[data-theme="dark"] .zh-glossary-empty {
+  color: #d6d3d1;
+}
+
+html[data-theme="dark"] .zh-glossary-zh {
+  color: #fda4af;
+}
+
+html[data-theme="dark"] .zh-glossary-delete {
+  background: rgba(248, 113, 113, 0.16);
+  color: #fecaca;
+}
