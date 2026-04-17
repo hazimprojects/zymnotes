@@ -1009,39 +1009,6 @@ document.addEventListener("DOMContentLoaded", function () {
     wrap.appendChild(fabRow);
     document.body.appendChild(wrap);
 
-    var zhPanel = null;
-    function ensureZhPanel() {
-      if (zhPanel || !zhModeApi) return zhPanel;
-      zhPanel = document.createElement('div');
-      zhPanel.className = 'audio-notice-sheet';
-      zhPanel.innerHTML =
-        '<span class="audio-notice-icon">华</span>' +
-        '<p class="audio-notice-text">Aksi Mod Bahasa Cina</p>' +
-        '<div class="audio-notice-footer">' +
-          '<button class="audio-notice-dismiss" type="button" data-zh-action="toggle"></button>' +
-        '</div>';
-      document.body.appendChild(zhPanel);
-
-      function refreshZhPanel() {
-        var toggleBtn = zhPanel.querySelector('[data-zh-action="toggle"]');
-        if (!toggleBtn) return;
-        toggleBtn.textContent = zhModeApi.isActive() ? 'Nyahaktif Mod Bahasa Cina' : 'Aktifkan Mod Bahasa Cina';
-      }
-
-      zhPanel.addEventListener('click', function (e) {
-        var action = e.target && e.target.getAttribute && e.target.getAttribute('data-zh-action');
-        if (!action) return;
-        if (action === 'toggle') {
-          zhModeApi.toggle();
-          refreshZhPanel();
-          return;
-        }
-      });
-
-      refreshZhPanel();
-      return zhPanel;
-    }
-
     // ── Corner Position ───────────────────────────────────────────────
     var FAB_KEY = 'hzedu-fab-corner';
     var corner = localStorage.getItem(FAB_KEY) || 'br';
@@ -1130,15 +1097,6 @@ document.addEventListener("DOMContentLoaded", function () {
         wrap.classList.remove('controls-open');
         syncSparklePanelState();
       }
-      if (zhPanel && !zhPanel.contains(e.target) && !wrap.contains(e.target)) {
-        zhPanel.classList.add('is-leaving');
-        setTimeout(function () {
-          if (zhPanel) {
-            zhPanel.remove();
-            zhPanel = null;
-          }
-        }, 200);
-      }
     });
 
     // ── Item Actions ──────────────────────────────────────────────────
@@ -1157,12 +1115,9 @@ document.addEventListener("DOMContentLoaded", function () {
         syncSparklePanelState();
       }
       if (type === 'zh-mode' && zhModeApi) {
+        zhModeApi.toggle();
         wrap.classList.remove('is-open');
         syncSparklePanelState();
-        var panel = ensureZhPanel();
-        if (panel) {
-          panel.classList.remove('is-leaving');
-        }
       }
     });
 
