@@ -573,6 +573,25 @@ document.addEventListener("DOMContentLoaded", function () {
     { title: "4.5 · Reaksi Penduduk Tempatan terhadap Penyerahan Sarawak", tag: "Subtopik 4.5", href: "bab-4-5.html" },
     { title: "4.6 · Penyerahan Sabah kepada Kerajaan British", tag: "Subtopik 4.6", href: "bab-4-6.html" },
     { title: "4.7 · Reaksi Penduduk Tempatan terhadap Penyerahan Sabah", tag: "Subtopik 4.7", href: "bab-4-7.html" },
+
+    { title: "Bab 5 · Persekutuan Tanah Melayu 1948", tag: "Bab Induk", href: "bab-5.html" },
+    { title: "5.1 · Latar Belakang Penubuhan Persekutuan Tanah Melayu 1948", tag: "Subtopik 5.1", href: "bab-5-1.html" },
+    { title: "5.2 · Faktor Penubuhan Persekutuan Tanah Melayu 1948", tag: "Subtopik 5.2", href: "bab-5-2.html" },
+    { title: "5.3 · Ciri-ciri Persekutuan Tanah Melayu 1948", tag: "Subtopik 5.3", href: "bab-5-3.html" },
+    { title: "5.4 · Kesan Penubuhan Persekutuan Tanah Melayu 1948", tag: "Subtopik 5.4", href: "bab-5-4.html" },
+
+    { title: "Bab 6 · Ancaman Komunis dan Perisytiharan Darurat", tag: "Bab Induk", href: "bab-6.html" },
+    { title: "6.1 · Kemasukan Pengaruh Komunis di Negara Kita", tag: "Subtopik 6.1", href: "bab-6-1.html" },
+    { title: "6.2 · Ancaman Komunis di Negara Kita", tag: "Subtopik 6.2", href: "bab-6-2.html" },
+    { title: "6.3 · Usaha Menangani Ancaman Komunis", tag: "Subtopik 6.3", href: "bab-6-3.html" },
+    { title: "6.4 · Kesan Zaman Darurat terhadap Negara Kita", tag: "Subtopik 6.4", href: "bab-6-4.html" },
+
+    { title: "Bab 7 · Usaha Ke Arah Kemerdekaan", tag: "Bab Induk", href: "bab-7.html" },
+    { title: "7.1 · Latar Belakang Idea Negara Merdeka", tag: "Subtopik 7.1", href: "bab-7-1.html" },
+    { title: "7.2 · Jawatankuasa Hubungan Antara Kaum (CLC)", tag: "Subtopik 7.2", href: "bab-7-2.html" },
+    { title: "7.3 · Sistem Ahli", tag: "Subtopik 7.3", href: "bab-7-3.html" },
+    { title: "7.4 · Sistem Pendidikan Kebangsaan", tag: "Subtopik 7.4", href: "bab-7-4.html" },
+    { title: "7.5 · Penubuhan Parti Politik", tag: "Subtopik 7.5", href: "bab-7-5.html" },
   ];
 
   let INDEX = null;
@@ -1481,7 +1500,13 @@ var HZ_ICONS = (function () {
     { title: '6.1 · Kemasukan Pengaruh Komunis di Negara Kita', tag: 'Subtopik 6.1', href: 'bab-6-1.html' },
     { title: '6.2 · Ancaman Komunis di Negara Kita', tag: 'Subtopik 6.2', href: 'bab-6-2.html' },
     { title: '6.3 · Usaha Menangani Ancaman Komunis', tag: 'Subtopik 6.3', href: 'bab-6-3.html' },
-    { title: '6.4 · Kesan Zaman Darurat terhadap Negara Kita', tag: 'Subtopik 6.4', href: 'bab-6-4.html' }
+    { title: '6.4 · Kesan Zaman Darurat terhadap Negara Kita', tag: 'Subtopik 6.4', href: 'bab-6-4.html' },
+    { title: 'Bab 7 · Usaha Ke Arah Kemerdekaan', tag: 'Bab Induk', href: 'bab-7.html' },
+    { title: '7.1 · Latar Belakang Idea Negara Merdeka', tag: 'Subtopik 7.1', href: 'bab-7-1.html' },
+    { title: '7.2 · Jawatankuasa Hubungan Antara Kaum (CLC)', tag: 'Subtopik 7.2', href: 'bab-7-2.html' },
+    { title: '7.3 · Sistem Ahli', tag: 'Subtopik 7.3', href: 'bab-7-3.html' },
+    { title: '7.4 · Sistem Pendidikan Kebangsaan', tag: 'Subtopik 7.4', href: 'bab-7-4.html' },
+    { title: '7.5 · Penubuhan Parti Politik', tag: 'Subtopik 7.5', href: 'bab-7-5.html' }
   ];
 
   var overlay, searchInput, resultsEl, emptyMsgEl;
