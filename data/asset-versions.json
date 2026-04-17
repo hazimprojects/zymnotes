@@ -1,7 +1,7 @@
 {
   "style_css": "70",
   "main_js": "70",
-  "zh_mode_js": "1",
+  "zh_mode_js": "2",
   "manifest": "3",
   "sw_cache": "35",
   "css": {

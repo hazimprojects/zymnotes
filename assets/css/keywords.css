@@ -438,38 +438,49 @@ html[data-theme="dark"] .zh-disclaimer-toast {
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.45);
 }
 
-/* Zh chip flip cards */
+/* Zh chip flip cards — adaptive sizing */
 .paper-chip.zh-chip-flip-ready {
-  position: relative;
-  perspective: 900px;
   cursor: pointer;
 }
 
 .paper-chip .zh-chip-inner {
-  position: relative;
   display: block;
-  min-height: 1.45em;
-  transition: transform 0.45s ease;
-  transform-style: preserve-3d;
+  transition: opacity 0.14s ease;
 }
 
-.paper-chip.zh-chip-flipped .zh-chip-inner {
-  transform: rotateX(180deg);
+.paper-chip .zh-chip-inner.zh-chip-fading {
+  opacity: 0;
 }
 
-.paper-chip .zh-chip-front,
-.paper-chip .zh-chip-back {
+.paper-chip .zh-chip-front {
   display: block;
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
 }
 
 .paper-chip .zh-chip-back {
-  position: absolute;
-  inset: 0;
-  transform: rotateX(180deg);
+  display: none;
   color: #b91c1c;
   font-weight: 700;
+  word-break: break-word;
+}
+
+/* Flipped: tunjuk back, sembunyi front */
+.paper-chip.zh-chip-flipped .zh-chip-front {
+  display: none;
+}
+
+.paper-chip.zh-chip-flipped .zh-chip-back {
+  display: block;
+}
+
+/* Isyarat visual — chip merah muda semasa dalam mod Cina */
+.paper-chip.zh-chip-flipped {
+  border-color: rgba(185, 28, 28, 0.28);
+  background: rgba(255, 242, 242, 0.98);
+}
+
+html[data-theme="dark"] .paper-chip.zh-chip-flipped {
+  border-color: rgba(248, 113, 113, 0.28);
+  background: rgba(60, 20, 20, 0.55);
 }
 
 @media (max-width: 760px) {

@@ -14,8 +14,9 @@ STYLE_FILE = ROOT / "assets" / "css" / "style.css"
 
 # Tokens that appear in HTML <link> / <script> tags
 HTML_PATTERNS = {
-    "style.css?v=":   "style_css",
-    "main.js?v=":     "main_js",
+    "style.css?v=":     "style_css",
+    "main.js?v=":       "main_js",
+    "zh-mode.js?v=":    "zh_mode_js",
     "manifest.json?v=": "manifest",
 }
 

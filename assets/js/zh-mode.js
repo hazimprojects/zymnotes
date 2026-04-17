@@ -194,7 +194,17 @@
 
       function toggleFlip() {
         if (!isZhMode()) return;
-        chip.classList.toggle("zh-chip-flipped");
+        var inner = chip.querySelector(".zh-chip-inner");
+        if (inner) {
+          inner.classList.add("zh-chip-fading");
+          setTimeout(function () {
+            if (!chip.isConnected) return;
+            chip.classList.toggle("zh-chip-flipped");
+            inner.classList.remove("zh-chip-fading");
+          }, 140);
+        } else {
+          chip.classList.toggle("zh-chip-flipped");
+        }
       }
 
       function onKeydown(e) {
