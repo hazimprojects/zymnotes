@@ -306,12 +306,12 @@
       return {
         modeLabel: "词汇注释",
         pairs: [{ bm: cleanText, zh: exactZh }],
-        text: exactZh + "（" + cleanText + "）",
+        text: exactZh,
         fallbackLabel: ""
       };
     }
 
-    // Partial match — collect BM→中文 pairs, skip overly-general terms, max 8
+    // Partial match — collect BM→中文 pairs, skip overly-general terms, max 4
     var keys = Object.keys(gl)
       .filter(function (k) {
         return typeof gl[k] === "string" && !OVERLY_GENERAL_TERMS.has(normalize(k)) && k.length > 2;
@@ -325,13 +325,14 @@
       if (cleanText.indexOf(nk) !== -1 && !seen.has(nk)) {
         pairs.push({ bm: keys[i], zh: gl[keys[i]] });
         seen.add(nk);
-        if (pairs.length >= 8) break;
+        if (pairs.length >= 4) break;
       }
     }
 
     if (pairs.length === 0) return null;
 
-    var textStr = pairs.map(function (p) { return p.zh + "（" + p.bm + "）"; }).join(" · ");
+    // Chinese only — no BM repetition
+    var textStr = pairs.map(function (p) { return p.zh; }).join(" · ");
     return { modeLabel: "词汇注释", pairs: pairs, text: textStr, fallbackLabel: "" };
   }
 
@@ -443,62 +444,28 @@
         return;
       }
 
-      var hasSentenceClass = chip.classList.contains("paper-chip-sentence");
-      var mode = getElementZhMode(chip, hasSentenceClass ? ZH_MODE_EXPLAIN : ZH_MODE_GLOSSARY);
-      var displayMode = getChipDisplayMode(
-        chip,
-        mode === ZH_MODE_GLOSSARY && !isSentenceLikeChip(sourceText) ? CHIP_DISPLAY_INLINE : CHIP_DISPLAY_STACKED
-      );
-      var canFlipAttr = chip.getAttribute("data-chip-can-flip");
-      var canFlip = canFlipAttr === null ? displayMode === CHIP_DISPLAY_STACKED : canFlipAttr !== "false";
-      var renderInline = displayMode === CHIP_DISPLAY_INLINE;
-
-      chip.classList.add("zh-chip-flip-ready", "zh-chip-translated");
-      if (renderInline) chip.classList.add("zh-chip-inline");
-      chip.classList.toggle("zh-chip-can-flip", !!canFlip);
+      // All chips use the same model: original visible, translation hidden until tap
+      chip.classList.add("zh-chip-flip-ready", "zh-chip-translated", "zh-chip-can-flip");
       chip.setAttribute("data-zh-bm", sourceText);
       chip.setAttribute("data-zh-cn", backContent.text);
       chip.setAttribute("data-zh-mode-label", backContent.modeLabel);
       chip.setAttribute("data-zh-fallback-label", backContent.fallbackLabel || "");
-      chip.setAttribute("data-chip-can-flip", canFlip ? "true" : "false");
-      chip.setAttribute("data-chip-display-mode", displayMode);
+      chip.setAttribute("data-chip-can-flip", "true");
+      chip.setAttribute("data-chip-display-mode", CHIP_DISPLAY_STACKED);
+      chip.setAttribute("role", "button");
+      chip.setAttribute("tabindex", "0");
+      chip.setAttribute("aria-pressed", "false");
 
       chip.__zhChipState = {
-        canFlip: canFlip,
+        canFlip: true,
         translation: backContent.text,
-        displayMode: displayMode,
+        displayMode: CHIP_DISPLAY_STACKED,
         isFlipped: false
       };
 
-      if (canFlip) {
-        chip.setAttribute("role", "button");
-        chip.setAttribute("tabindex", "0");
-        chip.setAttribute("aria-pressed", "false");
-      } else {
-        chip.removeAttribute("role");
-        chip.removeAttribute("tabindex");
-        chip.removeAttribute("aria-pressed");
-      }
-
-      // Rich pairs HTML for stacked chips; inline chips use simple bracketed format
-      var translationInnerHTML;
-      if (!renderInline && backContent.pairs && backContent.pairs.length > 0) {
-        translationInnerHTML = backContent.pairs.map(function (p) {
-          return '<span class="zh-ann-pair"><strong class="zh-ann-bm">' + escapeHtml(p.bm) + '</strong><span class="zh-ann-zh">（' + escapeHtml(p.zh) + '）</span></span>';
-        }).join('<span class="zh-ann-sep"> · </span>');
-        if (backContent.fallbackLabel) {
-          translationInnerHTML += ' <em class="zh-chip-fallback">（' + escapeHtml(backContent.fallbackLabel) + '）</em>';
-        }
-      } else {
-        translationInnerHTML = escapeHtml(backContent.text);
-        if (!renderInline && backContent.fallbackLabel) {
-          translationInnerHTML += ' <em class="zh-chip-fallback">（' + escapeHtml(backContent.fallbackLabel) + '）</em>';
-        }
-      }
-
-      var translationHtml = renderInline
-        ? '<span class="zh-chip-translation-inline" lang="zh-Hans">（' + escapeHtml(backContent.text) + '）</span>'
-        : '<span class="zh-chip-translation" lang="zh-Hans">' + translationInnerHTML + '</span>';
+      // Translation: Chinese only in brackets, no BM repetition
+      var translationHtml =
+        '<span class="zh-chip-translation" lang="zh-Hans">（' + escapeHtml(backContent.text) + '）</span>';
 
       chip.innerHTML =
         '<span class="zh-chip-inner">' +
@@ -549,10 +516,9 @@
       reportChipFlipIssue(chip, "data-shape-not-uniform", { triggerType: triggerType });
       return;
     }
-    if (!state.canFlip || state.displayMode !== CHIP_DISPLAY_STACKED) {
+    if (!state.canFlip) {
       reportChipFlipIssue(chip, "flip-disabled", {
         triggerType: triggerType,
-        displayMode: state.displayMode,
         canFlip: state.canFlip
       });
       return;

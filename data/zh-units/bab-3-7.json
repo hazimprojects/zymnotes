@@ -1,0 +1,602 @@
+{
+  "meta": {
+    "source_file": "notes/bab-3-7.html",
+    "rollout": "gelombang-2"
+  },
+  "units": [
+    {
+      "source_id": "bab-3-7-u01",
+      "bm_original": "💡 Penentangan terhadap Jepun dapat dilihat melalui tujuh bentuk utama:",
+      "zh_explain": "重要结论：考试必背此句，背熟BM原句后用BM完整作答。",
+      "key_points_zh": [
+        "考试须用BM作答，掌握本句的关键词与内容。"
+      ],
+      "bm_focus_phrase": "💡 Penentangan terhadap Jepun dapat dilihat melalui tujuh bentuk utama:"
+    },
+    {
+      "source_id": "bab-3-7-u02",
+      "bm_original": "💡 Rejimen Askar Melayu menjadi benteng pertahanan penting dalam menentang kemaraan tentera Jepun.",
+      "zh_explain": "重要结论：考试必背此句，背熟BM原句后用BM完整作答。",
+      "key_points_zh": [
+        "考试须用BM作答，掌握本句的关键词与内容。"
+      ],
+      "bm_focus_phrase": "💡 Rejimen Askar Melayu menjadi benteng pertahanan penting dalam menentang kemaraan tentera Jepun."
+    },
+    {
+      "source_id": "bab-3-7-u03",
+      "bm_original": "📌 Batalion Kedua Rejimen Askar Melayu bersama tentera British:",
+      "zh_explain": "考试要点：掌握此点，答题时引用关键词汇。",
+      "key_points_zh": [
+        "考试须用BM作答，掌握本句的关键词与内容。"
+      ],
+      "bm_focus_phrase": "📌 Batalion Kedua Rejimen Askar Melayu bersama tentera British:"
+    },
+    {
+      "source_id": "bab-3-7-u04",
+      "bm_original": "📌 Dalam pertempuran di Singapura , Askar Melayu bersama tentera British menunjukkan semangat juang yang tinggi.",
+      "zh_explain": "考试要点：掌握此点，答题时引用关键词汇。",
+      "key_points_zh": [
+        "考试须用BM作答，掌握本句的关键词与内容。"
+      ],
+      "bm_focus_phrase": "📌 Dalam pertempuran di Singapura , Askar Melayu bersama tentera British menunjukkan semangat juang yang tinggi."
+    },
+    {
+      "source_id": "bab-3-7-u05",
+      "bm_original": "📌 Berjuang habis-habisan di Bukit Candu, Singapura .",
+      "zh_explain": "考试要点：掌握此点，答题时引用关键词汇。",
+      "key_points_zh": [
+        "考试须用BM作答，掌握本句的关键词与内容。"
+      ],
+      "bm_focus_phrase": "📌 Berjuang habis-habisan di Bukit Candu, Singapura ."
+    },
+    {
+      "source_id": "bab-3-7-u06",
+      "bm_original": "💡 Beliau menjadi lambang keberanian dan keperwiraan askar Melayu dalam menentang Jepun.",
+      "zh_explain": "重要结论：考试必背此句，背熟BM原句后用BM完整作答。",
+      "key_points_zh": [
+        "考试须用BM作答，掌握本句的关键词与内容。"
+      ],
+      "bm_focus_phrase": "💡 Beliau menjadi lambang keberanian dan keperwiraan askar Melayu dalam menentang Jepun."
+    },
+    {
+      "source_id": "bab-3-7-u07",
+      "bm_original": "📌 Menyelamatkan hampir 2000 tentera Bersekutu yang terperangkap di pantai Johor.",
+      "zh_explain": "考试要点：掌握此点，答题时引用关键词汇。",
+      "key_points_zh": [
+        "考试须用BM作答，掌握本句的关键词与内容。"
+      ],
+      "bm_focus_phrase": "📌 Menyelamatkan hampir 2000 tentera Bersekutu yang terperangkap di pantai Johor."
+    },
+    {
+      "source_id": "bab-3-7-u08",
+      "bm_original": "📌 Menunjukkan keberanian dalam pertempuran di Pasir Panjang .",
+      "zh_explain": "考试要点：掌握此点，答题时引用关键词汇。",
+      "key_points_zh": [
+        "考试须用BM作答，掌握本句的关键词与内容。"
+      ],
+      "bm_focus_phrase": "📌 Menunjukkan keberanian dalam pertempuran di Pasir Panjang ."
+    },
+    {
+      "source_id": "bab-3-7-u09",
+      "bm_original": "💡 Perjuangan mereka membuktikan kesanggupan berkorban demi tanah air.",
+      "zh_explain": "重要结论：考试必背此句，背熟BM原句后用BM完整作答。",
+      "key_points_zh": [
+        "考试须用BM作答，掌握本句的关键词与内容。"
+      ],
+      "bm_focus_phrase": "💡 Perjuangan mereka membuktikan kesanggupan berkorban demi tanah air."
+    },
+    {
+      "source_id": "bab-3-7-u10",
+      "bm_original": "💡 MPAJA merupakan gerakan gerila anti-Jepun yang penting di Tanah Melayu.",
+      "zh_explain": "重要结论：考试必背此句，背熟BM原句后用BM完整作答。",
+      "key_points_zh": [
+        "考试须用BM作答，掌握本句的关键词与内容。"
+      ],
+      "bm_focus_phrase": "💡 MPAJA merupakan gerakan gerila anti-Jepun yang penting di Tanah Melayu."
+    },
+    {
+      "source_id": "bab-3-7-u11",
+      "bm_original": "📌 Kekejaman Jepun menyebabkan ramai rakyat, terutama orang Cina, menjadi mangsa penindasan.",
+      "zh_explain": "考试要点：掌握此点，答题时引用关键词汇。",
+      "key_points_zh": [
+        "考试须用BM作答，掌握本句的关键词与内容。"
+      ],
+      "bm_focus_phrase": "📌 Kekejaman Jepun menyebabkan ramai rakyat, terutama orang Cina, menjadi mangsa penindasan."
+    },
+    {
+      "source_id": "bab-3-7-u12",
+      "bm_original": "📌 Ramai daripada mereka berlindung di bawah Parti Komunis Malaya (PKM) .",
+      "zh_explain": "考试要点：掌握此点，答题时引用关键词汇。",
+      "key_points_zh": [
+        "考试须用BM作答，掌握本句的关键词与内容。"
+      ],
+      "bm_focus_phrase": "📌 Ramai daripada mereka berlindung di bawah Parti Komunis Malaya (PKM) ."
+    },
+    {
+      "source_id": "bab-3-7-u13",
+      "bm_original": "📌 PKM kemudian menubuhkan Malayan People’s Anti-Japanese Army (MPAJA) .",
+      "zh_explain": "考试要点：掌握此点，答题时引用关键词汇。",
+      "key_points_zh": [
+        "考试须用BM作答，掌握本句的关键词与内容。"
+      ],
+      "bm_focus_phrase": "📌 PKM kemudian menubuhkan Malayan People’s Anti-Japanese Army (MPAJA) ."
+    },
+    {
+      "source_id": "bab-3-7-u14",
+      "bm_original": "📌 Seramai 165 anggota PKM diberi latihan di Sekolah Latihan Khas, Singapura .",
+      "zh_explain": "考试要点：掌握此点，答题时引用关键词汇。",
+      "key_points_zh": [
+        "考试须用BM作答，掌握本句的关键词与内容。"
+      ],
+      "bm_focus_phrase": "📌 Seramai 165 anggota PKM diberi latihan di Sekolah Latihan Khas, Singapura ."
+    },
+    {
+      "source_id": "bab-3-7-u15",
+      "bm_original": "📌 Mereka dilatih dalam:",
+      "zh_explain": "考试要点：掌握此点，答题时引用关键词汇。",
+      "key_points_zh": [
+        "考试须用BM作答，掌握本句的关键词与内容。"
+      ],
+      "bm_focus_phrase": "📌 Mereka dilatih dalam:"
+    },
+    {
+      "source_id": "bab-3-7-u16",
+      "bm_original": "📌 MPAJA mempunyai 8 rejimen yang beroperasi di seluruh Tanah Melayu .",
+      "zh_explain": "考试要点：掌握此点，答题时引用关键词汇。",
+      "key_points_zh": [
+        "考试须用BM作答，掌握本句的关键词与内容。"
+      ],
+      "bm_focus_phrase": "📌 MPAJA mempunyai 8 rejimen yang beroperasi di seluruh Tanah Melayu ."
+    },
+    {
+      "source_id": "bab-3-7-u17",
+      "bm_original": "📌 Bantuan yang diterima termasuk:",
+      "zh_explain": "考试要点：掌握此点，答题时引用关键词汇。",
+      "key_points_zh": [
+        "考试须用BM作答，掌握本句的关键词与内容。"
+      ],
+      "bm_focus_phrase": "📌 Bantuan yang diterima termasuk:"
+    },
+    {
+      "source_id": "bab-3-7-u18",
+      "bm_original": "💡 Kerjasama ini menjadikan MPAJA lebih kuat dan lebih bersedia menentang Jepun.",
+      "zh_explain": "重要结论：考试必背此句，背熟BM原句后用BM完整作答。",
+      "key_points_zh": [
+        "考试须用BM作答，掌握本句的关键词与内容。"
+      ],
+      "bm_focus_phrase": "💡 Kerjasama ini menjadikan MPAJA lebih kuat dan lebih bersedia menentang Jepun."
+    },
+    {
+      "source_id": "bab-3-7-u19",
+      "bm_original": "💡 Selain PKM, gerila Cina yang dipimpin oleh Kuomintang (KMT) juga menentang Jepun.",
+      "zh_explain": "重要结论：考试必背此句，背熟BM原句后用BM完整作答。",
+      "key_points_zh": [
+        "考试须用BM作答，掌握本句的关键词与内容。"
+      ],
+      "bm_focus_phrase": "💡 Selain PKM, gerila Cina yang dipimpin oleh Kuomintang (KMT) juga menentang Jepun."
+    },
+    {
+      "source_id": "bab-3-7-u20",
+      "bm_original": "📌 Gerakan ini aktif di:",
+      "zh_explain": "考试要点：掌握此点，答题时引用关键词汇。",
+      "key_points_zh": [
+        "考试须用BM作答，掌握本句的关键词与内容。"
+      ],
+      "bm_focus_phrase": "📌 Gerakan ini aktif di:"
+    },
+    {
+      "source_id": "bab-3-7-u21",
+      "bm_original": "📌 Mereka menubuhkan Overseas Chinese Anti-Japanese Army (OCAJA) yang dikenali sebagai Tentera Bintang Satu .",
+      "zh_explain": "考试要点：掌握此点，答题时引用关键词汇。",
+      "key_points_zh": [
+        "考试须用BM作答，掌握本句的关键词与内容。"
+      ],
+      "bm_focus_phrase": "📌 Mereka menubuhkan Overseas Chinese Anti-Japanese Army (OCAJA) yang dikenali sebagai Tentera Bintang Satu ."
+    },
+    {
+      "source_id": "bab-3-7-u22",
+      "bm_original": "📌 KMT kemudian bersetuju bekerjasama dengan MPAJA.",
+      "zh_explain": "考试要点：掌握此点，答题时引用关键词汇。",
+      "key_points_zh": [
+        "考试须用BM作答，掌握本句的关键词与内容。"
+      ],
+      "bm_focus_phrase": "📌 KMT kemudian bersetuju bekerjasama dengan MPAJA."
+    },
+    {
+      "source_id": "bab-3-7-u23",
+      "bm_original": "💡 Kesannya, MPAJA muncul sebagai gerakan anti-Jepun yang terbesar di Tanah Melayu.",
+      "zh_explain": "重要结论：考试必背此句，背熟BM原句后用BM完整作答。",
+      "key_points_zh": [
+        "考试须用BM作答，掌握本句的关键词与内容。"
+      ],
+      "bm_focus_phrase": "💡 Kesannya, MPAJA muncul sebagai gerakan anti-Jepun yang terbesar di Tanah Melayu."
+    },
+    {
+      "source_id": "bab-3-7-u24",
+      "bm_original": "📌 Jepun bertindak menggunakan pasukan Melayu untuk menentang MPAJA.",
+      "zh_explain": "考试要点：掌握此点，答题时引用关键词汇。",
+      "key_points_zh": [
+        "考试须用BM作答，掌握本句的关键词与内容。"
+      ],
+      "bm_focus_phrase": "📌 Jepun bertindak menggunakan pasukan Melayu untuk menentang MPAJA."
+    },
+    {
+      "source_id": "bab-3-7-u25",
+      "bm_original": "📌 Tindakan ini menyebabkan ketegangan antara orang Melayu dan Cina meningkat.",
+      "zh_explain": "考试要点：掌握此点，答题时引用关键词汇。",
+      "key_points_zh": [
+        "考试须用BM作答，掌握本句的关键词与内容。"
+      ],
+      "bm_focus_phrase": "📌 Tindakan ini menyebabkan ketegangan antara orang Melayu dan Cina meningkat."
+    },
+    {
+      "source_id": "bab-3-7-u26",
+      "bm_original": "💡 Force 136 ialah unit khas British yang ditubuhkan untuk menentang pendudukan 🇯🇵 Jepun secara gerila di Tanah Melayu .",
+      "zh_explain": "重要结论：考试必背此句，背熟BM原句后用BM完整作答。",
+      "key_points_zh": [
+        "考试须用BM作答，掌握本句的关键词与内容。"
+      ],
+      "bm_focus_phrase": "💡 Force 136 ialah unit khas British yang ditubuhkan untuk menentang pendudukan 🇯🇵 Jepun secara gerila di Tanah Melayu ."
+    },
+    {
+      "source_id": "bab-3-7-u27",
+      "bm_original": "📌 SEAC kemudian membentuk unit khas yang dikenali sebagai Force 136 .",
+      "zh_explain": "考试要点：掌握此点，答题时引用关键词汇。",
+      "key_points_zh": [
+        "考试须用BM作答，掌握本句的关键词与内容。"
+      ],
+      "bm_focus_phrase": "📌 SEAC kemudian membentuk unit khas yang dikenali sebagai Force 136 ."
+    },
+    {
+      "source_id": "bab-3-7-u28",
+      "bm_original": "📌 Anggota Force 136 mendapat latihan di India dan Sri Lanka .",
+      "zh_explain": "考试要点：掌握此点，答题时引用关键词汇。",
+      "key_points_zh": [
+        "考试须用BM作答，掌握本句的关键词与内容。"
+      ],
+      "bm_focus_phrase": "📌 Anggota Force 136 mendapat latihan di India dan Sri Lanka ."
+    },
+    {
+      "source_id": "bab-3-7-u29",
+      "bm_original": "📌 Mereka kemudian dihantar ke Tanah Melayu melalui:",
+      "zh_explain": "考试要点：掌握此点，答题时引用关键词汇。",
+      "key_points_zh": [
+        "考试须用BM作答，掌握本句的关键词与内容。"
+      ],
+      "bm_focus_phrase": "📌 Mereka kemudian dihantar ke Tanah Melayu melalui:"
+    },
+    {
+      "source_id": "bab-3-7-u30",
+      "bm_original": "📌 Tujuan mereka ialah:",
+      "zh_explain": "考试要点：掌握此点，答题时引用关键词汇。",
+      "key_points_zh": [
+        "考试须用BM作答，掌握本句的关键词与内容。"
+      ],
+      "bm_focus_phrase": "📌 Tujuan mereka ialah:"
+    },
+    {
+      "source_id": "bab-3-7-u31",
+      "bm_original": "📌 Antara anggota terawal Force 136 di Tanah Melayu ialah:",
+      "zh_explain": "考试要点：掌握此点，答题时引用关键词汇。",
+      "key_points_zh": [
+        "考试须用BM作答，掌握本句的关键词与内容。"
+      ],
+      "bm_focus_phrase": "📌 Antara anggota terawal Force 136 di Tanah Melayu ialah:"
+    },
+    {
+      "source_id": "bab-3-7-u32",
+      "bm_original": "📌 Tengku Mahmood Mahyiddeen ialah pemimpin pasukan Melayu Force 136 .",
+      "zh_explain": "考试要点：掌握此点，答题时引用关键词汇。",
+      "key_points_zh": [
+        "考试须用BM作答，掌握本句的关键词与内容。"
+      ],
+      "bm_focus_phrase": "📌 Tengku Mahmood Mahyiddeen ialah pemimpin pasukan Melayu Force 136 ."
+    },
+    {
+      "source_id": "bab-3-7-u33",
+      "bm_original": "📌 Beliau menerima jolokan “Harimau Malaya” kerana mengelolakan siaran radio dari India yang diberikan nama Suara Harimau Malaya .",
+      "zh_explain": "考试要点：掌握此点，答题时引用关键词汇。",
+      "key_points_zh": [
+        "考试须用BM作答，掌握本句的关键词与内容。"
+      ],
+      "bm_focus_phrase": "📌 Beliau menerima jolokan “Harimau Malaya” kerana mengelolakan siaran radio dari India yang diberikan nama Suara Harimau Malaya ."
+    },
+    {
+      "source_id": "bab-3-7-u34",
+      "bm_original": "📌 Beliau juga menyeru orang Melayu supaya menentang tentera Jepun dan tali barutnya.",
+      "zh_explain": "考试要点：掌握此点，答题时引用关键词汇。",
+      "key_points_zh": [
+        "考试须用BM作答，掌握本句的关键词与内容。"
+      ],
+      "bm_focus_phrase": "📌 Beliau juga menyeru orang Melayu supaya menentang tentera Jepun dan tali barutnya."
+    },
+    {
+      "source_id": "bab-3-7-u35",
+      "bm_original": "📌 Force 136 berjaya membentuk beberapa pasukan gerila Melayu di kawasan tertentu.",
+      "zh_explain": "考试要点：掌握此点，答题时引用关键词汇。",
+      "key_points_zh": [
+        "考试须用BM作答，掌握本句的关键词与内容。"
+      ],
+      "bm_focus_phrase": "📌 Force 136 berjaya membentuk beberapa pasukan gerila Melayu di kawasan tertentu."
+    },
+    {
+      "source_id": "bab-3-7-u36",
+      "bm_original": "📌 Force 136 dan pertubuhan gerila Melayu bekerjasama untuk menentang Jepun dengan menjalankan aktiviti rahsia di Tanah Melayu.",
+      "zh_explain": "考试要点：掌握此点，答题时引用关键词汇。",
+      "key_points_zh": [
+        "考试须用BM作答，掌握本句的关键词与内容。"
+      ],
+      "bm_focus_phrase": "📌 Force 136 dan pertubuhan gerila Melayu bekerjasama untuk menentang Jepun dengan menjalankan aktiviti rahsia di Tanah Melayu."
+    },
+    {
+      "source_id": "bab-3-7-u37",
+      "bm_original": "📌 Antara aktivitinya termasuk:",
+      "zh_explain": "考试要点：掌握此点，答题时引用关键词汇。",
+      "key_points_zh": [
+        "考试须用BM作答，掌握本句的关键词与内容。"
+      ],
+      "bm_focus_phrase": "📌 Antara aktivitinya termasuk:"
+    },
+    {
+      "source_id": "bab-3-7-u38",
+      "bm_original": "📌 Operasi Zipper ialah serangan secara besar-besaran untuk menawan semula Tanah Melayu pada tahun 1945 .",
+      "zh_explain": "考试要点：掌握此点，答题时引用关键词汇。",
+      "key_points_zh": [
+        "考试须用BM作答，掌握本句的关键词与内容。"
+      ],
+      "bm_focus_phrase": "📌 Operasi Zipper ialah serangan secara besar-besaran untuk menawan semula Tanah Melayu pada tahun 1945 ."
+    },
+    {
+      "source_id": "bab-3-7-u39",
+      "bm_original": "📌 Kegiatan anti-Jepun turut digerakkan secara individu seperti oleh Gurchan Singh .",
+      "zh_explain": "考试要点：掌握此点，答题时引用关键词汇。",
+      "key_points_zh": [
+        "考试须用BM作答，掌握本句的关键词与内容。"
+      ],
+      "bm_focus_phrase": "📌 Kegiatan anti-Jepun turut digerakkan secara individu seperti oleh Gurchan Singh ."
+    },
+    {
+      "source_id": "bab-3-7-u40",
+      "bm_original": "📌 Beliau menentang pendudukan tentera Jepun dengan cara menyebarkan risalah dan propaganda menggunakan nama samaran “Lion of Malaya” .",
+      "zh_explain": "考试要点：掌握此点，答题时引用关键词汇。",
+      "key_points_zh": [
+        "考试须用BM作答，掌握本句的关键词与内容。"
+      ],
+      "bm_focus_phrase": "📌 Beliau menentang pendudukan tentera Jepun dengan cara menyebarkan risalah dan propaganda menggunakan nama samaran “Lion of Malaya” ."
+    },
+    {
+      "source_id": "bab-3-7-u41",
+      "bm_original": "📌 Risalah penentangan yang dihasilkannya diedarkan secara teratur dan berkesan untuk memberitahu penduduk tentang fakta sebenar perang dan pendudukan tentera Jepun.",
+      "zh_explain": "考试要点：掌握此点，答题时引用关键词汇。",
+      "key_points_zh": [
+        "考试须用BM作答，掌握本句的关键词与内容。"
+      ],
+      "bm_focus_phrase": "📌 Risalah penentangan yang dihasilkannya diedarkan secara teratur dan berkesan untuk memberitahu penduduk tentang fakta sebenar perang dan p"
+    },
+    {
+      "source_id": "bab-3-7-u42",
+      "bm_original": "📌 Tindakan beliau:",
+      "zh_explain": "考试要点：掌握此点，答题时引用关键词汇。",
+      "key_points_zh": [
+        "考试须用BM作答，掌握本句的关键词与内容。"
+      ],
+      "bm_focus_phrase": "📌 Tindakan beliau:"
+    },
+    {
+      "source_id": "bab-3-7-u43",
+      "bm_original": "📌 Beliau ditangkap oleh Kempeitai selepas dikhianati, namun berjaya melarikan diri ke Burma sehingga perang tamat.",
+      "zh_explain": "考试要点：掌握此点，答题时引用关键词汇。",
+      "key_points_zh": [
+        "考试须用BM作答，掌握本句的关键词与内容。"
+      ],
+      "bm_focus_phrase": "📌 Beliau ditangkap oleh Kempeitai selepas dikhianati, namun berjaya melarikan diri ke Burma sehingga perang tamat."
+    },
+    {
+      "source_id": "bab-3-7-u44",
+      "bm_original": "📌 Sybil Kathigasu atau Sybil Medan Daly ialah seorang jururawat yang terkenal dengan keberanian dan kecekalan membantu mangsa perang serta gerila anti-Jepun di Perak.",
+      "zh_explain": "考试要点：掌握此点，答题时引用关键词汇。",
+      "key_points_zh": [
+        "考试须用BM作答，掌握本句的关键词与内容。"
+      ],
+      "bm_focus_phrase": "📌 Sybil Kathigasu atau Sybil Medan Daly ialah seorang jururawat yang terkenal dengan keberanian dan kecekalan membantu mangsa perang serta g"
+    },
+    {
+      "source_id": "bab-3-7-u45",
+      "bm_original": "📌 Sybil dan suaminya, Dr. Abdon Clement Kathigasu , mengendalikan sebuah klinik di Ipoh sebelum perang sehingga kedatangan Jepun.",
+      "zh_explain": "考试要点：掌握此点，答题时引用关键词汇。",
+      "key_points_zh": [
+        "考试须用BM作答，掌握本句的关键词与内容。"
+      ],
+      "bm_focus_phrase": "📌 Sybil dan suaminya, Dr. Abdon Clement Kathigasu , mengendalikan sebuah klinik di Ipoh sebelum perang sehingga kedatangan Jepun."
+    },
+    {
+      "source_id": "bab-3-7-u46",
+      "bm_original": "📌 Semasa pendudukan Jepun, pasangan ini memberikan bantuan ubat-ubatan dan perkhidmatan perubatan kepada gerila anti-Jepun.",
+      "zh_explain": "考试要点：掌握此点，答题时引用关键词汇。",
+      "key_points_zh": [
+        "考试须用BM作答，掌握本句的关键词与内容。"
+      ],
+      "bm_focus_phrase": "📌 Semasa pendudukan Jepun, pasangan ini memberikan bantuan ubat-ubatan dan perkhidmatan perubatan kepada gerila anti-Jepun."
+    },
+    {
+      "source_id": "bab-3-7-u47",
+      "bm_original": "📌 Sumbangan beliau:",
+      "zh_explain": "考试要点：掌握此点，答题时引用关键词汇。",
+      "key_points_zh": [
+        "考试须用BM作答，掌握本句的关键词与内容。"
+      ],
+      "bm_focus_phrase": "📌 Sumbangan beliau:"
+    },
+    {
+      "source_id": "bab-3-7-u48",
+      "bm_original": "📌 Sybil dan suaminya ditangkap oleh tentera Jepun apabila kegiatan mereka terbongkar.",
+      "zh_explain": "考试要点：掌握此点，答题时引用关键词汇。",
+      "key_points_zh": [
+        "考试须用BM作答，掌握本句的关键词与内容。"
+      ],
+      "bm_focus_phrase": "📌 Sybil dan suaminya ditangkap oleh tentera Jepun apabila kegiatan mereka terbongkar."
+    },
+    {
+      "source_id": "bab-3-7-u49",
+      "bm_original": "📌 Semasa berada dalam tahanan, penyeksaan demi penyeksaan dilakukan oleh tentera Jepun sehingga menyebabkan kematian suaminya.",
+      "zh_explain": "考试要点：掌握此点，答题时引用关键词汇。",
+      "key_points_zh": [
+        "考试须用BM作答，掌握本句的关键词与内容。"
+      ],
+      "bm_focus_phrase": "📌 Semasa berada dalam tahanan, penyeksaan demi penyeksaan dilakukan oleh tentera Jepun sehingga menyebabkan kematian suaminya."
+    },
+    {
+      "source_id": "bab-3-7-u50",
+      "bm_original": "📌 Selepas tentera Jepun menyerah kalah, Sybil dibebaskan dan diterbangkan ke Britain untuk menerima rawatan perubatan.",
+      "zh_explain": "考试要点：掌握此点，答题时引用关键词汇。",
+      "key_points_zh": [
+        "考试须用BM作答，掌握本句的关键词与内容。"
+      ],
+      "bm_focus_phrase": "📌 Selepas tentera Jepun menyerah kalah, Sybil dibebaskan dan diterbangkan ke Britain untuk menerima rawatan perubatan."
+    },
+    {
+      "source_id": "bab-3-7-u51",
+      "bm_original": "💡 Operasi Semut ialah siri operasi peninjauan yang dilakukan oleh Unit Khas Z Australia sebagai sebahagian daripada kempen tentera Bersekutu menentang Jepun di Sarawak.",
+      "zh_explain": "重要结论：考试必背此句，背熟BM原句后用BM完整作答。",
+      "key_points_zh": [
+        "考试须用BM作答，掌握本句的关键词与内容。"
+      ],
+      "bm_focus_phrase": "💡 Operasi Semut ialah siri operasi peninjauan yang dilakukan oleh Unit Khas Z Australia sebagai sebahagian daripada kempen tentera Bersekutu"
+    },
+    {
+      "source_id": "bab-3-7-u52",
+      "bm_original": "📌 Operasi tersebut dilaksanakan oleh Jabatan Peninjauan Perkhidmatan Australia atau Australian Services Reconnaissance Department (SRD) untuk mengumpulkan risikan dan melatih orang tempatan melancarkan perang gerila melawan Jepun.",
+      "zh_explain": "考试要点：掌握此点，答题时引用关键词汇。",
+      "key_points_zh": [
+        "考试须用BM作答，掌握本句的关键词与内容。"
+      ],
+      "bm_focus_phrase": "📌 Operasi tersebut dilaksanakan oleh Jabatan Peninjauan Perkhidmatan Australia atau Australian Services Reconnaissance Department (SRD) untu"
+    },
+    {
+      "source_id": "bab-3-7-u53",
+      "bm_original": "📌 Anggota ini terdiri daripada tentera 🇦🇺 Australia , 🇬🇧 British dan 🇳🇿 New Zealand .",
+      "zh_explain": "考试要点：掌握此点，答题时引用关键词汇。",
+      "key_points_zh": [
+        "考试须用BM作答，掌握本句的关键词与内容。"
+      ],
+      "bm_focus_phrase": "📌 Anggota ini terdiri daripada tentera 🇦🇺 Australia , 🇬🇧 British dan 🇳🇿 New Zealand ."
+    },
+    {
+      "source_id": "bab-3-7-u54",
+      "bm_original": "📌 Rekrut tempatan yang dikenali sebagai gerila Semut antaranya diambil daripada orang:",
+      "zh_explain": "考试要点：掌握此点，答题时引用关键词汇。",
+      "key_points_zh": [
+        "考试须用BM作答，掌握本句的关键词与内容。"
+      ],
+      "bm_focus_phrase": "📌 Rekrut tempatan yang dikenali sebagai gerila Semut antaranya diambil daripada orang:"
+    },
+    {
+      "source_id": "bab-3-7-u55",
+      "bm_original": "💡 Kepakaran gerila Semut penting dalam usaha merancang taktikal perang gerila menentang tentera Jepun kerana sebagai penduduk tempatan, mereka mengetahui selok-belok bumi Sarawak.",
+      "zh_explain": "重要结论：考试必背此句，背熟BM原句后用BM完整作答。",
+      "key_points_zh": [
+        "考试须用BM作答，掌握本句的关键词与内容。"
+      ],
+      "bm_focus_phrase": "💡 Kepakaran gerila Semut penting dalam usaha merancang taktikal perang gerila menentang tentera Jepun kerana sebagai penduduk tempatan, mere"
+    },
+    {
+      "source_id": "bab-3-7-u56",
+      "bm_original": "📌 Pemberontakan Jesselton juga dikenali sebagai pemberontakan Double Tenth , iaitu penentangan terhadap pendudukan tentera Jepun di Sabah yang diketuai oleh Albert Kwok .",
+      "zh_explain": "考试要点：掌握此点，答题时引用关键词汇。",
+      "key_points_zh": [
+        "考试须用BM作答，掌握本句的关键词与内容。"
+      ],
+      "bm_focus_phrase": "📌 Pemberontakan Jesselton juga dikenali sebagai pemberontakan Double Tenth , iaitu penentangan terhadap pendudukan tentera Jepun di Sabah ya"
+    },
+    {
+      "source_id": "bab-3-7-u57",
+      "bm_original": "📌 Sasaran serangan:",
+      "zh_explain": "考试要点：掌握此点，答题时引用关键词汇。",
+      "key_points_zh": [
+        "考试须用BM作答，掌握本句的关键词与内容。"
+      ],
+      "bm_focus_phrase": "📌 Sasaran serangan:"
+    },
+    {
+      "source_id": "bab-3-7-u58",
+      "bm_original": "📌 Kawasan serangan:",
+      "zh_explain": "考试要点：掌握此点，答题时引用关键词汇。",
+      "key_points_zh": [
+        "考试须用BM作答，掌握本句的关键词与内容。"
+      ],
+      "bm_focus_phrase": "📌 Kawasan serangan:"
+    },
+    {
+      "source_id": "bab-3-7-u59",
+      "bm_original": "📌 Tentera Jepun kemudian melancarkan serangan balas dengan pantas dan kejam.",
+      "zh_explain": "考试要点：掌握此点，答题时引用关键词汇。",
+      "key_points_zh": [
+        "考试须用BM作答，掌握本句的关键词与内容。"
+      ],
+      "bm_focus_phrase": "📌 Tentera Jepun kemudian melancarkan serangan balas dengan pantas dan kejam."
+    },
+    {
+      "source_id": "bab-3-7-u60",
+      "bm_original": "📌 Perkampungan di pesisiran pantai diserang dan dibom. Beratus-ratus orang disoal siasat dan diseksa sehingga mati dalam usaha mencari pemimpin dan anggota pemberontak.",
+      "zh_explain": "考试要点：掌握此点，答题时引用关键词汇。",
+      "key_points_zh": [
+        "考试须用BM作答，掌握本句的关键词与内容。"
+      ],
+      "bm_focus_phrase": "📌 Perkampungan di pesisiran pantai diserang dan dibom. Beratus-ratus orang disoal siasat dan diseksa sehingga mati dalam usaha mencari pemim"
+    },
+    {
+      "source_id": "bab-3-7-u61",
+      "bm_original": "📌 Beliau bersama 175 orang lain kemudiannya dihukum bunuh di Petagas , manakala 131 orang lagi dipenjarakan di Labuan .",
+      "zh_explain": "考试要点：掌握此点，答题时引用关键词汇。",
+      "key_points_zh": [
+        "考试须用BM作答，掌握本句的关键词与内容。"
+      ],
+      "bm_focus_phrase": "📌 Beliau bersama 175 orang lain kemudiannya dihukum bunuh di Petagas , manakala 131 orang lagi dipenjarakan di Labuan ."
+    },
+    {
+      "source_id": "bab-3-7-u62",
+      "bm_original": "📌 Selain itu, terdapat pasukan gerila anti-Jepun yang dipimpin oleh Datu Mustapha Datu Harun .",
+      "zh_explain": "考试要点：掌握此点，答题时引用关键词汇。",
+      "key_points_zh": [
+        "考试须用BM作答，掌握本句的关键词与内容。"
+      ],
+      "bm_focus_phrase": "📌 Selain itu, terdapat pasukan gerila anti-Jepun yang dipimpin oleh Datu Mustapha Datu Harun ."
+    },
+    {
+      "source_id": "bab-3-7-u63",
+      "bm_original": "✊ Rakyat daripada pelbagai kaum dan latar belakang bangkit menentang 🇯🇵 Jepun melalui perjuangan bersenjata, perang gerila, kerjasama dengan pihak luar dan penentangan individu.",
+      "zh_explain": "内容解析：理解此句含义，记住主要词汇。",
+      "key_points_zh": [
+        "考试须用BM作答，掌握本句的关键词与内容。"
+      ],
+      "bm_focus_phrase": "✊ Rakyat daripada pelbagai kaum dan latar belakang bangkit menentang 🇯🇵 Jepun melalui perjuangan bersenjata, perang gerila, kerjasama dengan"
+    },
+    {
+      "source_id": "bab-3-7-u64",
+      "bm_original": "🪖 Di Tanah Melayu , perjuangan digerakkan oleh Rejimen Askar Melayu , MPAJA , Force 136 dan gerila lain.",
+      "zh_explain": "内容解析：理解此句含义，记住主要词汇。",
+      "key_points_zh": [
+        "考试须用BM作答，掌握本句的关键词与内容。"
+      ],
+      "bm_focus_phrase": "🪖 Di Tanah Melayu , perjuangan digerakkan oleh Rejimen Askar Melayu , MPAJA , Force 136 dan gerila lain."
+    },
+    {
+      "source_id": "bab-3-7-u65",
+      "bm_original": "👤 Penentangan individu pula dapat dilihat melalui keberanian Gurchan Singh dan Sybil Kathigasu .",
+      "zh_explain": "内容解析：理解此句含义，记住主要词汇。",
+      "key_points_zh": [
+        "考试须用BM作答，掌握本句的关键词与内容。"
+      ],
+      "bm_focus_phrase": "👤 Penentangan individu pula dapat dilihat melalui keberanian Gurchan Singh dan Sybil Kathigasu ."
+    },
+    {
+      "source_id": "bab-3-7-u66",
+      "bm_original": "🐜 Di Sarawak dan Sabah , penentangan terserlah melalui Operasi Semut dan Pemberontakan Jesselton .",
+      "zh_explain": "内容解析：理解此句含义，记住主要词汇。",
+      "key_points_zh": [
+        "考试须用BM作答，掌握本句的关键词与内容。"
+      ],
+      "bm_focus_phrase": "🐜 Di Sarawak dan Sabah , penentangan terserlah melalui Operasi Semut dan Pemberontakan Jesselton ."
+    }
+  ]
+}
