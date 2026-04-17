@@ -2,6 +2,14 @@
    BUTTONS
 ========================= */
 
+:root {
+  --z-floating: 60;
+  --z-toast: 70;
+  --z-overlay: 300;
+  --floating-bottom-offset: calc(var(--bottom-nav-h, 56px) + var(--safe-bottom, env(safe-area-inset-bottom, 0px)) + 0.9rem);
+  --floating-bottom-offset-avoid-sparkle: calc(var(--floating-bottom-offset) + 4.25rem);
+}
+
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
@@ -1099,7 +1107,7 @@
 .note-sparkle-wrap {
   position: fixed;
   right: 14px; bottom: 18px; left: auto; top: auto;
-  z-index: 60;
+  z-index: var(--z-floating);
   display: flex; flex-direction: column;
   align-items: flex-end; gap: 0.52rem;
   user-select: none; touch-action: none;
@@ -1127,7 +1135,7 @@
 @media (max-width: 760px) {
   .note-sparkle-wrap.fab-corner-br,
   .note-sparkle-wrap.fab-corner-bl {
-    bottom: calc(var(--bottom-nav-h) + var(--safe-bottom) + 0.9rem);
+    bottom: var(--floating-bottom-offset);
   }
 }
 
@@ -1416,10 +1424,10 @@
 .audio-notice-sheet {
   position: fixed;
   left: 1rem; right: 1rem;
-  bottom: calc(var(--bottom-nav-h, 56px) + var(--safe-bottom, 0px) + 0.85rem);
+  bottom: var(--floating-bottom-offset);
   max-width: 400px;
   margin: 0 auto;
-  z-index: 55;
+  z-index: var(--z-toast);
   background: var(--paper);
   border: 1px solid rgba(92, 110, 132, 0.1);
   border-radius: 1rem;
@@ -1474,7 +1482,7 @@
 ========================= */
 
 .hz-search-overlay {
-  position: fixed; inset: 0; z-index: 300;
+  position: fixed; inset: 0; z-index: var(--z-overlay);
   background: rgba(0, 0, 0, 0.48);
   backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px);
   display: none; align-items: flex-end; justify-content: center;
