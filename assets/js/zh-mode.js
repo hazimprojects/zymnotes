@@ -829,8 +829,6 @@
 
     function attachToggle(el, rawText) {
       if (el.querySelector(".zh-heading-toggle")) return;
-      // Skip elements that already have keyword spans — those get per-word click annotations
-      if (el.querySelector(".kw")) return;
       var cleanText = normalize(rawText.replace(EMOJI_STRIP_RE, "").replace(/^[^a-zA-ZÀ-ÿ]+/, ""));
       if (!cleanText || cleanText.length < 3) return;
 
