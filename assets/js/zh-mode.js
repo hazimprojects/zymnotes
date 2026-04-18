@@ -395,6 +395,55 @@
     };
   }
 
+  function stripChipDecorations(text) {
+    return String(text || "")
+      .replace(/[\u{1F300}-\u{1FAFF}\u{2600}-\u{27BF}]/gu, "")
+      .replace(/[“”"「」]/g, "")
+      .replace(/\s+/g, " ")
+      .trim();
+  }
+
+  function normalizeZhExplain(text, gl) {
+    if (typeof text !== "string") return "";
+    var raw = text.trim();
+    if (!raw) return "";
+
+    // Pattern: "X。这是Y的中文要义。"
+    var meaningMatch = raw.match(/^(.+?)。这是.+?的中文要义。?$/);
+    if (meaningMatch && meaningMatch[1]) {
+      return stripChipDecorations(meaningMatch[1]) + "。";
+    }
+
+    // Pattern: "本点涉及「Y」，是本节的重要知识点，考试时需掌握其背景与意义。"
+    var pointMatch = raw.match(/^本点涉及「(.+?)」，是本节的重要知识点，考试时需掌握其背景与意义。?$/);
+    if (pointMatch && pointMatch[1]) {
+      var pointSource = stripChipDecorations(pointMatch[1]);
+      var pointBm = pointSource.toLowerCase();
+      if (gl && gl[pointBm] && typeof gl[pointBm] === "string") {
+        return gl[pointBm].trim().replace(/。?$/, "。");
+      }
+      var glossaryFallback = buildGlossaryFallback(pointSource, gl);
+      if (glossaryFallback && typeof glossaryFallback.text === "string" && glossaryFallback.text.trim()) {
+        return glossaryFallback.text.trim().replace(/。?$/, "。");
+      }
+      return raw;
+    }
+
+    // Pattern: "「Y」—— 此项核心概念为Z，是本章考试重点，需结合史实加以说明。"
+    var coreMatch = raw.match(/^「.+?」——\s*此项核心概念为(.+?)，是本章考试重点，需结合史实加以说明。?$/);
+    if (coreMatch && coreMatch[1]) {
+      return stripChipDecorations(coreMatch[1]).replace(/。?$/, "。");
+    }
+
+    // If still verbose phrase slipped through, keep only first sentence to stay concise.
+    if (/本章考试重点|本节的重要知识点|中文要义/.test(raw)) {
+      var firstSentence = raw.split(/[。!?]/)[0];
+      return stripChipDecorations(firstSentence).replace(/。?$/, "。");
+    }
+
+    return raw;
+  }
+
   function buildChipBackContent(chip, sourceText, gl, comprehension) {
     var hasSentenceClass = chip.classList.contains("paper-chip-sentence");
     var defaultMode = hasSentenceClass ? ZH_MODE_EXPLAIN : ZH_MODE_GLOSSARY;
@@ -407,7 +456,7 @@
       if (unit && typeof unit.zh_explain === "string" && unit.zh_explain.trim()) {
         return {
           modeLabel: "句意解析",
-          text: unit.zh_explain.trim(),
+          text: normalizeZhExplain(unit.zh_explain.trim(), gl),
           fallbackLabel: ""
         };
       }

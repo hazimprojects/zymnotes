@@ -31,6 +31,7 @@ RULES: list[tuple[str, list[str]]] = [
     ("assets/css/lab.css",        ["css.lab",        "style_css", "sw_cache"]),
     ("assets/css/style.css",      ["style_css",      "sw_cache"]),
     ("assets/js/main.js",         ["main_js",        "sw_cache"]),
+    ("assets/js/zh-mode.js",      ["zh_mode_js",     "sw_cache"]),
     ("assets/js/subtopic-lab.js", ["sw_cache"]),
     ("sw.js",                     ["sw_cache"]),
     ("manifest.json",             ["manifest",       "sw_cache"]),

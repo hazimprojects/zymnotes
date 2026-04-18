@@ -47,7 +47,7 @@ CSS_IMPORT_MAP = {
 
 def load_versions() -> dict:
     raw = json.loads(VERSIONS_FILE.read_text(encoding="utf-8"))
-    required_top = {"style_css", "main_js", "manifest", "sw_cache", "css"}
+    required_top = {"style_css", "main_js", "zh_mode_js", "manifest", "sw_cache", "css"}
     missing = sorted(required_top - set(raw))
     if missing:
         raise ValueError(f"Missing keys in {VERSIONS_FILE}: {', '.join(missing)}")
@@ -117,6 +117,8 @@ def sync_service_worker(versions: dict) -> bool:
                        rf"\g<1>{versions['style_css']}", block)
     new_block = re.sub(r"(/assets/js/main\.js\?v=)[^\"']+",
                        rf"\g<1>{versions['main_js']}", new_block)
+    new_block = re.sub(r"(/assets/js/zh-mode\.js\?v=)[^\"']+",
+                       rf"\g<1>{versions['zh_mode_js']}", new_block)
     new_block = re.sub(r"(/manifest\.json\?v=)[^\"']+",
                        rf"\g<1>{versions['manifest']}", new_block)
     updated = updated.replace(block, new_block)
