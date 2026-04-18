@@ -36,7 +36,7 @@
     {
       "source_id": "bab-1-1-chip-1",
       "bm_original": "Asas negara bangsa telah wujud di Alam Melayu sebelum kedatangan Barat.",
-      "zh_explain": "民族国家的基础在西方人到来之前已存在于马来世界。",
+      "zh_explain": "基础。Wujud = 存在。Sebelum kedatangan Barat = 西方人到来之前。",
       "key_points_zh": [
         "Asas = 基础。Wujud = 存在。Sebelum kedatangan Barat = 西方人到来之前。"
       ],
@@ -45,7 +45,7 @@
     {
       "source_id": "bab-1-1-chip-2",
       "bm_original": "Pembentukannya berlaku secara berperingkat dan mengambil masa yang panjang.",
-      "zh_explain": "国家的形成不是一夜之间的，而是经历漫长岁月、一步一步发展起来的。这解释了「过程」而不是单一事件。",
+      "zh_explain": "形成/建立过程。Berperingkat = 逐步地、阶段性地。",
       "key_points_zh": [
         "Pembentukan = 形成/建立过程。Berperingkat = 逐步地、阶段性地。"
       ],
@@ -54,7 +54,7 @@
     {
       "source_id": "bab-1-1-chip-3",
       "bm_original": "Negara bangsa Alam Melayu terbina melalui raja, undang-undang, wilayah pengaruh dan rakyat.",
-      "zh_explain": "马来世界的民族国家通过四大支柱建立：国王（统治权）、法律（制度）、势力范围（领土）、子民（人民效忠）。这四者缺一不可。",
+      "zh_explain": "四大要素：Raja（国王）、Undang-undang（法律）、Wilayah pengaruh（势力范围）、Rakyat（子民；人民）。",
       "key_points_zh": [
         "四大要素：Raja（国王）、Undang-undang（法律）、Wilayah pengaruh（势力范围）、Rakyat（子民/人民）。"
       ],
@@ -63,7 +63,7 @@
     {
       "source_id": "bab-1-1-chip-4",
       "bm_original": "Ciri-ciri ini diwarisi dan diteruskan oleh kerajaan seterusnya.",
-      "zh_explain": "这四大特征被后来的王国继承延续，证明了历史的连贯性。这是「kesinambungan」（延续性）论点的核心证据。",
+      "zh_explain": "被继承。Diteruskan = 被延续。这两个词说明历史不中断。",
       "key_points_zh": [
         "Diwarisi = 被继承。Diteruskan = 被延续。这两个词说明历史不中断。"
       ],
@@ -211,7 +211,7 @@
     {
       "source_id": "bab-1-1-extra-1",
       "bm_original": "🏛️ sistem pentadbiran",
-      "zh_explain": "「行政制度」是马来苏丹国四大核心要素之一，确保国家有序运作。",
+      "zh_explain": "🏛️ 行政制度。",
       "key_points_zh": [
         "Sistem Pentadbiran = 行政制度"
       ],
@@ -220,7 +220,7 @@
     {
       "source_id": "bab-1-1-extra-2",
       "bm_original": "🤝 bantuan para pembesar",
-      "zh_explain": "「来自贵族的协助」—— 贵族（Pembesar）为苏丹提供军事、行政与财政支持，是封建体制的核心纽带。",
+      "zh_explain": "🤝 来自贵族的协助。",
       "key_points_zh": [
         "Bantuan Para Pembesar = 来自贵族的协助"
       ],
@@ -229,7 +229,7 @@
     {
       "source_id": "bab-1-1-extra-3",
       "bm_original": "👥 ketaatan rakyat",
-      "zh_explain": "人民/子民。这是👥 ketaatan rakyat的中文要义。",
+      "zh_explain": "👥 人民/子民。",
       "key_points_zh": [
         "Rakyat = 人民/子民"
       ],
@@ -238,7 +238,7 @@
     {
       "source_id": "bab-1-1-extra-4",
       "bm_original": "🛡️ keamanan kerajaan",
-      "zh_explain": "「王国的和平」（Keamanan Kerajaan）是统治者的首要责任，也是良政的体现。",
+      "zh_explain": "🛡️ 王国/政府。",
       "key_points_zh": [
         "Kerajaan = 王国/政府"
       ],
@@ -247,7 +247,7 @@
     {
       "source_id": "bab-1-1-extra-5",
       "bm_original": "😊 kesejahteraan rakyat",
-      "zh_explain": "「人民的福祉」（Kesejahteraan Rakyat）是统治者的核心职责，体现了waadat（统治者与人民的社会契约）。",
+      "zh_explain": "😊 人民/子民。",
       "key_points_zh": [
         "Rakyat = 人民/子民"
       ],
@@ -256,7 +256,7 @@
     {
       "source_id": "bab-1-1-extra-6",
       "bm_original": "⚖️ kelancaran pentadbiran",
-      "zh_explain": "「行政的顺畅运作」说明有效的行政管理（Pentadbiran）是国家稳定的关键。",
+      "zh_explain": "⚖️ 行政管理。",
       "key_points_zh": [
         "Pentadbiran = 行政管理"
       ],
@@ -265,7 +265,7 @@
     {
       "source_id": "bab-1-1-extra-7",
       "bm_original": "🌍 terpakai di seluruh wilayah pengaruh",
-      "zh_explain": "",
+      "zh_explain": "🌍 势力范围/领土。",
       "key_points_zh": [
         "Wilayah Pengaruh = 势力范围/领土"
       ],
@@ -274,7 +274,7 @@
     {
       "source_id": "bab-1-1-extra-8",
       "bm_original": "📘 menjadi panduan dalam pentadbiran",
-      "zh_explain": "",
+      "zh_explain": "📘 行政管理。",
       "key_points_zh": [
         "Pentadbiran = 行政管理"
       ],
@@ -283,21 +283,21 @@
     {
       "source_id": "bab-1-1-extra-9",
       "bm_original": "✔️ menerima",
-      "zh_explain": "",
+      "zh_explain": "✔️ ✔️ 接受。",
       "key_points_zh": [],
       "bm_focus_phrase": "✔️ menerima"
     },
     {
       "source_id": "bab-1-1-extra-10",
       "bm_original": "✔️ mengakui",
-      "zh_explain": "",
+      "zh_explain": "✔️ ✔️ 承认。",
       "key_points_zh": [],
       "bm_focus_phrase": "✔️ mengakui"
     },
     {
       "source_id": "bab-1-1-extra-11",
       "bm_original": "✔️ mematuhi pemerintahan raja",
-      "zh_explain": "「mematuhi pemerintahan raja」—— 统治/政权与国王的结合，是本节的关键概念。",
+      "zh_explain": "✔️ 统治/政权；国王。",
       "key_points_zh": [
         "Pemerintahan = 统治/政权",
         "Raja = 国王"
@@ -307,35 +307,35 @@
     {
       "source_id": "bab-1-1-extra-12",
       "bm_original": "🌊 Sungai Mekong",
-      "zh_explain": "",
+      "zh_explain": "🌊 Sungai Mekong。",
       "key_points_zh": [],
       "bm_focus_phrase": "🌊 Sungai Mekong"
     },
     {
       "source_id": "bab-1-1-extra-13",
       "bm_original": "🌊 Teluk Cam Ranh",
-      "zh_explain": "",
+      "zh_explain": "🌊 Teluk Cam Ranh。",
       "key_points_zh": [],
       "bm_focus_phrase": "🌊 Teluk Cam Ranh"
     },
     {
       "source_id": "bab-1-1-extra-14",
       "bm_original": "🌏 Selatan Myanmar",
-      "zh_explain": "",
+      "zh_explain": "🌏 Selatan Myanmar。",
       "key_points_zh": [],
       "bm_focus_phrase": "🌏 Selatan Myanmar"
     },
     {
       "source_id": "bab-1-1-extra-15",
       "bm_original": "📍 Segenting Kra",
-      "zh_explain": "",
+      "zh_explain": "📍 Segenting Kra。",
       "key_points_zh": [],
       "bm_focus_phrase": "📍 Segenting Kra"
     },
     {
       "source_id": "bab-1-1-extra-16",
       "bm_original": "🤝 setia kepada raja",
-      "zh_explain": "国王。这是🤝 setia kepada raja的中文要义。",
+      "zh_explain": "🤝 国王。",
       "key_points_zh": [
         "Raja = 国王"
       ],
@@ -344,42 +344,42 @@
     {
       "source_id": "bab-1-1-extra-17",
       "bm_original": "🚫 tidak menderhaka",
-      "zh_explain": "",
+      "zh_explain": "🚫 🚫 不 menderhaka。",
       "key_points_zh": [],
       "bm_focus_phrase": "🚫 tidak menderhaka"
     },
     {
       "source_id": "bab-1-1-extra-18",
       "bm_original": "🧪 upacara persetiaan",
-      "zh_explain": "",
+      "zh_explain": "🧪 upacara persetiaan。",
       "key_points_zh": [],
       "bm_focus_phrase": "🧪 upacara persetiaan"
     },
     {
       "source_id": "bab-1-1-extra-19",
       "bm_original": "💧 meminum air sumpah",
-      "zh_explain": "",
+      "zh_explain": "💧 meminum air sumpah。",
       "key_points_zh": [],
       "bm_focus_phrase": "💧 meminum air sumpah"
     },
     {
       "source_id": "bab-1-1-extra-20",
       "bm_original": "✨ Sri = bercahaya",
-      "zh_explain": "",
+      "zh_explain": "✨ Sri = bercahaya。",
       "key_points_zh": [],
       "bm_focus_phrase": "✨ Sri = bercahaya"
     },
     {
       "source_id": "bab-1-1-extra-21",
       "bm_original": "🏆 Vijaya = kemenangan",
-      "zh_explain": "",
+      "zh_explain": "🏆 Vijaya = kemenangan。",
       "key_points_zh": [],
       "bm_focus_phrase": "🏆 Vijaya = kemenangan"
     },
     {
       "source_id": "bab-1-1-extra-22",
       "bm_original": "🏛️ memperkukuh kerajaan Srivijaya",
-      "zh_explain": "",
+      "zh_explain": "🏛️ 王国/政府；三佛齐王国。",
       "key_points_zh": [
         "Kerajaan = 王国/政府",
         "Srivijaya = 三佛齐王国"
@@ -389,7 +389,7 @@
     {
       "source_id": "bab-1-1-extra-23",
       "bm_original": "👑 menguatkan Kesultanan Melayu Melaka",
-      "zh_explain": "",
+      "zh_explain": "👑 马六甲苏丹国。",
       "key_points_zh": [
         "Kesultanan Melayu Melaka = 马六甲苏丹国"
       ],
@@ -398,7 +398,7 @@
     {
       "source_id": "bab-1-1-extra-24",
       "bm_original": "📜 diteruskan oleh Kesultanan Johor-Riau",
-      "zh_explain": "",
+      "zh_explain": "📜 苏丹；柔佛-廖内王国。",
       "key_points_zh": [
         "Sultan = 苏丹",
         "Johor-Riau = 柔佛-廖内王国"
@@ -408,7 +408,7 @@
     {
       "source_id": "bab-1-1-extra-25",
       "bm_original": "❤️ berbangga dengan warisan sejarah",
-      "zh_explain": "",
+      "zh_explain": "❤️ 遗产/传承。",
       "key_points_zh": [
         "Warisan = 遗产/传承"
       ],
@@ -417,7 +417,7 @@
     {
       "source_id": "bab-1-1-extra-26",
       "bm_original": "🤝 bekerjasama mempertahankan kedaulatan negara",
-      "zh_explain": "",
+      "zh_explain": "🤝 主权。",
       "key_points_zh": [
         "Kedaulatan = 主权"
       ],
@@ -426,7 +426,7 @@
     {
       "source_id": "bab-1-1-extra-27",
       "bm_original": "🛡️ menghargai sistem negara bangsa yang diwarisi",
-      "zh_explain": "",
+      "zh_explain": "🛡️ 民族国家。",
       "key_points_zh": [
         "Negara Bangsa = 民族国家"
       ],
