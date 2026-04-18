@@ -52,7 +52,7 @@ TMPL_VOCAB = {
     'insight':  '{vocab_intro}——此句是本节关键结论，理解这些词汇有助掌握核心论点。',
     'example':  '{vocab_intro}——此句以历史为证，答题时引用相关例子更具说服力。',
     'keypoint': '{vocab_intro}——此句列出关键条件，答题须完整呈现所有要点。',
-    'info':     '{vocab_intro}——理解这些词汇在马来历史中的含义与作用。',
+    'info':     '{vocab_intro}',
 }
 
 TMPL_NOVOCAB = {
