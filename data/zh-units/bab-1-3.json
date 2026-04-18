@@ -508,6 +508,990 @@
         "raja = 国王"
       ],
       "bm_focus_phrase": ""
+    },
+    {
+      "source_id": "bab-1-3-extra-1",
+      "bm_original": "📊 berhierarki",
+      "zh_explain": "等级制度/阶层。这是📊 berhierarki的中文要义。",
+      "key_points_zh": [
+        "Hierarki = 等级制度/阶层",
+        "考试写法：📊 berhierarki"
+      ],
+      "bm_focus_phrase": "📊 berhierarki"
+    },
+    {
+      "source_id": "bab-1-3-extra-2",
+      "bm_original": "⚖️ tersusun",
+      "zh_explain": "本点涉及「⚖️ tersusun」，是本节的重要知识点，考试时需掌握其背景与意义。",
+      "key_points_zh": [
+        "考试写法：⚖️ tersusun"
+      ],
+      "bm_focus_phrase": "⚖️ tersusun"
+    },
+    {
+      "source_id": "bab-1-3-extra-3",
+      "bm_original": "👑 berpusat kepada sultan",
+      "zh_explain": "「berpusat kepada sultan」即「苏丹」，是本节重要考试概念，需掌握其历史背景。",
+      "key_points_zh": [
+        "Sultan = 苏丹",
+        "考试写法：👑 berpusat kepada sultan"
+      ],
+      "bm_focus_phrase": "👑 berpusat kepada sultan"
+    },
+    {
+      "source_id": "bab-1-3-extra-4",
+      "bm_original": "🏛️ pemerintahan",
+      "zh_explain": "统治/政权。这是🏛️ pemerintahan的中文要义。",
+      "key_points_zh": [
+        "Pemerintahan = 统治/政权",
+        "考试写法：🏛️ pemerintahan"
+      ],
+      "bm_focus_phrase": "🏛️ pemerintahan"
+    },
+    {
+      "source_id": "bab-1-3-extra-5",
+      "bm_original": "⚔️ peperangan",
+      "zh_explain": "本点涉及「⚔️ peperangan」，是本节的重要知识点，考试时需掌握其背景与意义。",
+      "key_points_zh": [
+        "考试写法：⚔️ peperangan"
+      ],
+      "bm_focus_phrase": "⚔️ peperangan"
+    },
+    {
+      "source_id": "bab-1-3-extra-6",
+      "bm_original": "🤝 hubungan diplomatik",
+      "zh_explain": "本点涉及「🤝 hubungan diplomatik」，是本节的重要知识点，考试时需掌握其背景与意义。",
+      "key_points_zh": [
+        "考试写法：🤝 hubungan diplomatik"
+      ],
+      "bm_focus_phrase": "🤝 hubungan diplomatik"
+    },
+    {
+      "source_id": "bab-1-3-extra-7",
+      "bm_original": "🕌 agama",
+      "zh_explain": "本点涉及「🕌 agama」，是本节的重要知识点，考试时需掌握其背景与意义。",
+      "key_points_zh": [
+        "此为重要考试知识点，需熟记内容与意义。"
+      ],
+      "bm_focus_phrase": "🕌 agama"
+    },
+    {
+      "source_id": "bab-1-3-extra-8",
+      "bm_original": "1️⃣ Bendahara",
+      "zh_explain": "宰相（Bendahara）。这是1️⃣ Bendahara的中文要义。",
+      "key_points_zh": [
+        "Bendahara = 宰相（Bendahara）",
+        "考试写法：1️⃣ Bendahara"
+      ],
+      "bm_focus_phrase": "1️⃣ Bendahara"
+    },
+    {
+      "source_id": "bab-1-3-extra-9",
+      "bm_original": "2️⃣ Penghulu Bendahari",
+      "zh_explain": "「2️⃣ Penghulu Bendahari」即「村长」，是本节重要考试概念，需掌握其历史背景。",
+      "key_points_zh": [
+        "Penghulu = 村长",
+        "考试写法：2️⃣ Penghulu Bendahari"
+      ],
+      "bm_focus_phrase": "2️⃣ Penghulu Bendahari"
+    },
+    {
+      "source_id": "bab-1-3-extra-10",
+      "bm_original": "3️⃣ Temenggung",
+      "zh_explain": "警政大臣（Temenggung）。这是3️⃣ Temenggung的中文要义。",
+      "key_points_zh": [
+        "Temenggung = 警政大臣（Temenggung）",
+        "考试写法：3️⃣ Temenggung"
+      ],
+      "bm_focus_phrase": "3️⃣ Temenggung"
+    },
+    {
+      "source_id": "bab-1-3-extra-11",
+      "bm_original": "4️⃣ Laksamana",
+      "zh_explain": "海军元帅（Laksamana）。这是4️⃣ Laksamana的中文要义。",
+      "key_points_zh": [
+        "Laksamana = 海军元帅（Laksamana）",
+        "考试写法：4️⃣ Laksamana"
+      ],
+      "bm_focus_phrase": "4️⃣ Laksamana"
+    },
+    {
+      "source_id": "bab-1-3-extra-12",
+      "bm_original": "🚢 Syahbandar",
+      "zh_explain": "「Syahbandar」是本节重要的专有名词，考试时需能正确书写并说明其历史意义。",
+      "key_points_zh": [
+        "考试写法：🚢 Syahbandar"
+      ],
+      "bm_focus_phrase": "🚢 Syahbandar"
+    },
+    {
+      "source_id": "bab-1-3-extra-13",
+      "bm_original": "📢 Bentara",
+      "zh_explain": "「Bentara」是本节重要的专有名词，考试时需能正确书写并说明其历史意义。",
+      "key_points_zh": [
+        "此为重要考试知识点，需熟记内容与意义。"
+      ],
+      "bm_focus_phrase": "📢 Bentara"
+    },
+    {
+      "source_id": "bab-1-3-extra-14",
+      "bm_original": "💼 Orang Kaya",
+      "zh_explain": "「Orang Kaya」是本节重要的专有名词，考试时需能正确书写并说明其历史意义。",
+      "key_points_zh": [
+        "考试写法：💼 Orang Kaya"
+      ],
+      "bm_focus_phrase": "💼 Orang Kaya"
+    },
+    {
+      "source_id": "bab-1-3-extra-15",
+      "bm_original": "⚔️ Hulubalang",
+      "zh_explain": "「Hulubalang」是本节重要的专有名词，考试时需能正确书写并说明其历史意义。",
+      "key_points_zh": [
+        "考试写法：⚔️ Hulubalang"
+      ],
+      "bm_focus_phrase": "⚔️ Hulubalang"
+    },
+    {
+      "source_id": "bab-1-3-extra-16",
+      "bm_original": "🏡 Penghulu",
+      "zh_explain": "村长。这是🏡 Penghulu的中文要义。",
+      "key_points_zh": [
+        "Penghulu = 村长"
+      ],
+      "bm_focus_phrase": "🏡 Penghulu"
+    },
+    {
+      "source_id": "bab-1-3-extra-17",
+      "bm_original": "1️⃣ Pentadbiran Pusat",
+      "zh_explain": "「1️⃣ Pentadbiran Pusat」即「行政管理」，是本节重要考试概念，需掌握其历史背景。",
+      "key_points_zh": [
+        "Pentadbiran = 行政管理",
+        "考试写法：1️⃣ Pentadbiran Pusat"
+      ],
+      "bm_focus_phrase": "1️⃣ Pentadbiran Pusat"
+    },
+    {
+      "source_id": "bab-1-3-extra-18",
+      "bm_original": "2️⃣ Pentadbiran Jajahan",
+      "zh_explain": "「2️⃣ Pentadbiran Jajahan」即「行政管理」，是本节重要考试概念，需掌握其历史背景。",
+      "key_points_zh": [
+        "Pentadbiran = 行政管理",
+        "考试写法：2️⃣ Pentadbiran Jajahan"
+      ],
+      "bm_focus_phrase": "2️⃣ Pentadbiran Jajahan"
+    },
+    {
+      "source_id": "bab-1-3-extra-19",
+      "bm_original": "🤝 kerjasama",
+      "zh_explain": "本点涉及「🤝 kerjasama」，是本节的重要知识点，考试时需掌握其背景与意义。",
+      "key_points_zh": [
+        "考试写法：🤝 kerjasama"
+      ],
+      "bm_focus_phrase": "🤝 kerjasama"
+    },
+    {
+      "source_id": "bab-1-3-extra-20",
+      "bm_original": "🧠 persefahaman",
+      "zh_explain": "本点涉及「🧠 persefahaman」，是本节的重要知识点，考试时需掌握其背景与意义。",
+      "key_points_zh": [
+        "考试写法：🧠 persefahaman"
+      ],
+      "bm_focus_phrase": "🧠 persefahaman"
+    },
+    {
+      "source_id": "bab-1-3-extra-21",
+      "bm_original": "⚖️ permuafakatan",
+      "zh_explain": "本点涉及「⚖️ permuafakatan」，是本节的重要知识点，考试时需掌握其背景与意义。",
+      "key_points_zh": [
+        "考试写法：⚖️ permuafakatan"
+      ],
+      "bm_focus_phrase": "⚖️ permuafakatan"
+    },
+    {
+      "source_id": "bab-1-3-extra-22",
+      "bm_original": "✔️ pentadbiran lebih sempurna",
+      "zh_explain": "「pentadbiran lebih sempurna」即「行政管理」，是本节重要考试概念，需掌握其历史背景。",
+      "key_points_zh": [
+        "Pentadbiran = 行政管理",
+        "考试写法：✔️ pentadbiran lebih sempurna"
+      ],
+      "bm_focus_phrase": "✔️ pentadbiran lebih sempurna"
+    },
+    {
+      "source_id": "bab-1-3-extra-23",
+      "bm_original": "✔️ elak penyalahgunaan kuasa",
+      "zh_explain": "本点涉及「✔️ elak penyalahgunaan kuasa」，是本节的重要知识点，考试时需掌握其背景与意义。",
+      "key_points_zh": [
+        "考试写法：✔️ elak penyalahgunaan kuasa"
+      ],
+      "bm_focus_phrase": "✔️ elak penyalahgunaan kuasa"
+    },
+    {
+      "source_id": "bab-1-3-extra-24",
+      "bm_original": "✔️ wujud kestabilan politik",
+      "zh_explain": "本点涉及「✔️ wujud kestabilan politik」，是本节的重要知识点，考试时需掌握其背景与意义。",
+      "key_points_zh": [
+        "考试写法：✔️ wujud kestabilan politik"
+      ],
+      "bm_focus_phrase": "✔️ wujud kestabilan politik"
+    },
+    {
+      "source_id": "bab-1-3-extra-25",
+      "bm_original": "🏛️ ketua pentadbir",
+      "zh_explain": "本点涉及「🏛️ ketua pentadbir」，是本节的重要知识点，考试时需掌握其背景与意义。",
+      "key_points_zh": [
+        "考试写法：🏛️ ketua pentadbir"
+      ],
+      "bm_focus_phrase": "🏛️ ketua pentadbir"
+    },
+    {
+      "source_id": "bab-1-3-extra-26",
+      "bm_original": "⚔️ ketua turus angkatan tentera",
+      "zh_explain": "本点涉及「⚔️ ketua turus angkatan tentera」，是本节的重要知识点，考试时需掌握其背景与意义。",
+      "key_points_zh": [
+        "考试写法：⚔️ ketua turus angkatan tentera"
+      ],
+      "bm_focus_phrase": "⚔️ ketua turus angkatan tentera"
+    },
+    {
+      "source_id": "bab-1-3-extra-27",
+      "bm_original": "🧠 penasihat sultan",
+      "zh_explain": "苏丹。这是🧠 penasihat sultan的中文要义。",
+      "key_points_zh": [
+        "Sultan = 苏丹",
+        "考试写法：🧠 penasihat sultan"
+      ],
+      "bm_focus_phrase": "🧠 penasihat sultan"
+    },
+    {
+      "source_id": "bab-1-3-extra-28",
+      "bm_original": "👑 pemangku sultan",
+      "zh_explain": "苏丹。这是👑 pemangku sultan的中文要义。",
+      "key_points_zh": [
+        "Sultan = 苏丹",
+        "考试写法：👑 pemangku sultan"
+      ],
+      "bm_focus_phrase": "👑 pemangku sultan"
+    },
+    {
+      "source_id": "bab-1-3-extra-29",
+      "bm_original": "👑 Sultan Muzaffar Shah",
+      "zh_explain": "「Sultan Muzaffar Shah」即「苏丹」，是本节重要考试概念，需掌握其历史背景。",
+      "key_points_zh": [
+        "Sultan = 苏丹",
+        "考试写法：👑 Sultan Muzaffar Shah"
+      ],
+      "bm_focus_phrase": "👑 Sultan Muzaffar Shah"
+    },
+    {
+      "source_id": "bab-1-3-extra-30",
+      "bm_original": "👑 Sultan Mansur Shah",
+      "zh_explain": "「Sultan Mansur Shah」即「苏丹」，是本节重要考试概念，需掌握其历史背景。",
+      "key_points_zh": [
+        "Sultan = 苏丹",
+        "考试写法：👑 Sultan Mansur Shah"
+      ],
+      "bm_focus_phrase": "👑 Sultan Mansur Shah"
+    },
+    {
+      "source_id": "bab-1-3-extra-31",
+      "bm_original": "👑 Sultan Alauddin Riayat Shah",
+      "zh_explain": "「Sultan Alauddin Riayat Shah」即「苏丹」，是本节重要考试概念，需掌握其历史背景。",
+      "key_points_zh": [
+        "Sultan = 苏丹",
+        "考试写法：👑 Sultan Alauddin Riayat Shah"
+      ],
+      "bm_focus_phrase": "👑 Sultan Alauddin Riayat Shah"
+    },
+    {
+      "source_id": "bab-1-3-extra-32",
+      "bm_original": "👑 Sultan Mahmud Shah",
+      "zh_explain": "「Sultan Mahmud Shah」即「苏丹」，是本节重要考试概念，需掌握其历史背景。",
+      "key_points_zh": [
+        "Sultan = 苏丹",
+        "考试写法：👑 Sultan Mahmud Shah"
+      ],
+      "bm_focus_phrase": "👑 Sultan Mahmud Shah"
+    },
+    {
+      "source_id": "bab-1-3-extra-33",
+      "bm_original": "🛳️ perdagangan",
+      "zh_explain": "贸易。这是🛳️ perdagangan的中文要义。",
+      "key_points_zh": [
+        "Perdagangan = 贸易",
+        "考试写法：🛳️ perdagangan"
+      ],
+      "bm_focus_phrase": "🛳️ perdagangan"
+    },
+    {
+      "source_id": "bab-1-3-extra-34",
+      "bm_original": "💰 cukai",
+      "zh_explain": "税收。这是💰 cukai的中文要义。",
+      "key_points_zh": [
+        "Cukai = 税收"
+      ],
+      "bm_focus_phrase": "💰 cukai"
+    },
+    {
+      "source_id": "bab-1-3-extra-35",
+      "bm_original": "🎁 ufti dari wilayah taklukan & naungan",
+      "zh_explain": "「ufti dari wilayah taklukan & naungan」—— 此项核心概念为进贡/朝贡，是本章考试重点，需结合史实加以说明。",
+      "key_points_zh": [
+        "Ufti = 进贡/朝贡",
+        "考试写法：🎁 ufti dari wilayah taklukan & naungan"
+      ],
+      "bm_focus_phrase": "🎁 ufti dari wilayah taklukan & naungan"
+    },
+    {
+      "source_id": "bab-1-3-extra-36",
+      "bm_original": "💰 Penghulu Bendahari → urus perbendaharaan",
+      "zh_explain": "「Penghulu Bendahari → urus perbendaharaan」—— 此项核心概念为村长，是本章考试重点，需结合史实加以说明。",
+      "key_points_zh": [
+        "Penghulu = 村长",
+        "Bendahara = 宰相（Bendahara）",
+        "考试写法：💰 Penghulu Bendahari → urus perbendaharaan"
+      ],
+      "bm_focus_phrase": "💰 Penghulu Bendahari → urus perbendaharaan"
+    },
+    {
+      "source_id": "bab-1-3-extra-37",
+      "bm_original": "🚢 Syahbandar → kutip cukai di pelabuhan",
+      "zh_explain": "「Syahbandar → kutip cukai di pelabuhan」—— 此项核心概念为税收，是本章考试重点，需结合史实加以说明。",
+      "key_points_zh": [
+        "Cukai = 税收",
+        "Pelabuhan = 港口",
+        "考试写法：🚢 Syahbandar → kutip cukai di pelabuhan"
+      ],
+      "bm_focus_phrase": "🚢 Syahbandar → kutip cukai di pelabuhan"
+    },
+    {
+      "source_id": "bab-1-3-extra-38",
+      "bm_original": "🏡 Pembesar lain → kutip cukai di kawasan pegangan",
+      "zh_explain": "「Pembesar lain → kutip cukai di kawasan pegangan」—— 此项核心概念为贵族/高官，是本章考试重点，需结合史实加以说明。",
+      "key_points_zh": [
+        "Pembesar = 贵族/高官",
+        "Cukai = 税收",
+        "考试写法：🏡 Pembesar lain → kutip cukai di kawasan pegangan"
+      ],
+      "bm_focus_phrase": "🏡 Pembesar lain → kutip cukai di kawasan pegangan"
+    },
+    {
+      "source_id": "bab-1-3-extra-39",
+      "bm_original": "⚔️ membeli senjata",
+      "zh_explain": "本点涉及「⚔️ membeli senjata」，是本节的重要知识点，考试时需掌握其背景与意义。",
+      "key_points_zh": [
+        "考试写法：⚔️ membeli senjata"
+      ],
+      "bm_focus_phrase": "⚔️ membeli senjata"
+    },
+    {
+      "source_id": "bab-1-3-extra-40",
+      "bm_original": "🏰 membina istana",
+      "zh_explain": "宫殿。这是🏰 membina istana的中文要义。",
+      "key_points_zh": [
+        "Istana = 宫殿",
+        "考试写法：🏰 membina istana"
+      ],
+      "bm_focus_phrase": "🏰 membina istana"
+    },
+    {
+      "source_id": "bab-1-3-extra-41",
+      "bm_original": "🌍 wilayah",
+      "zh_explain": "本点涉及「🌍 wilayah」，是本节的重要知识点，考试时需掌握其背景与意义。",
+      "key_points_zh": [
+        "此为重要考试知识点，需熟记内容与意义。"
+      ],
+      "bm_focus_phrase": "🌍 wilayah"
+    },
+    {
+      "source_id": "bab-1-3-extra-42",
+      "bm_original": "🌊 sungai",
+      "zh_explain": "本点涉及「🌊 sungai」，是本节的重要知识点，考试时需掌握其背景与意义。",
+      "key_points_zh": [
+        "此为重要考试知识点，需熟记内容与意义。"
+      ],
+      "bm_focus_phrase": "🌊 sungai"
+    },
+    {
+      "source_id": "bab-1-3-extra-43",
+      "bm_original": "🏝️ pulau",
+      "zh_explain": "本点涉及「🏝️ pulau」，是本节的重要知识点，考试时需掌握其背景与意义。",
+      "key_points_zh": [
+        "此为重要考试知识点，需熟记内容与意义。"
+      ],
+      "bm_focus_phrase": "🏝️ pulau"
+    },
+    {
+      "source_id": "bab-1-3-extra-44",
+      "bm_original": "🌆 darat",
+      "zh_explain": "本点涉及「🌆 darat」，是本节的重要知识点，考试时需掌握其背景与意义。",
+      "key_points_zh": [
+        "此为重要考试知识点，需熟记内容与意义。"
+      ],
+      "bm_focus_phrase": "🌆 darat"
+    },
+    {
+      "source_id": "bab-1-3-extra-45",
+      "bm_original": "🌊 laut",
+      "zh_explain": "本点涉及「🌊 laut」，是本节的重要知识点，考试时需掌握其背景与意义。",
+      "key_points_zh": [
+        "此为重要考试知识点，需熟记内容与意义。"
+      ],
+      "bm_focus_phrase": "🌊 laut"
+    },
+    {
+      "source_id": "bab-1-3-extra-46",
+      "bm_original": "🛡️ Temenggung → menjaga keselamatan kota",
+      "zh_explain": "「Temenggung → menjaga keselamatan kota」—— 此项核心概念为警政大臣（Temenggung），是本章考试重点，需结合史实加以说明。",
+      "key_points_zh": [
+        "Temenggung = 警政大臣（Temenggung）",
+        "考试写法：🛡️ Temenggung → menjaga keselamatan kota"
+      ],
+      "bm_focus_phrase": "🛡️ Temenggung → menjaga keselamatan kota"
+    },
+    {
+      "source_id": "bab-1-3-extra-47",
+      "bm_original": "⚔️ Laksamana → panglima angkatan laut",
+      "zh_explain": "「Laksamana → panglima angkatan laut」—— 此项核心概念为海军元帅（Laksamana），是本章考试重点，需结合史实加以说明。",
+      "key_points_zh": [
+        "Laksamana = 海军元帅（Laksamana）",
+        "考试写法：⚔️ Laksamana → panglima angkatan laut"
+      ],
+      "bm_focus_phrase": "⚔️ Laksamana → panglima angkatan laut"
+    },
+    {
+      "source_id": "bab-1-3-extra-48",
+      "bm_original": "🏡 daerah",
+      "zh_explain": "本点涉及「🏡 daerah」，是本节的重要知识点，考试时需掌握其背景与意义。",
+      "key_points_zh": [
+        "此为重要考试知识点，需熟记内容与意义。"
+      ],
+      "bm_focus_phrase": "🏡 daerah"
+    },
+    {
+      "source_id": "bab-1-3-extra-49",
+      "bm_original": "🏘️ kampung",
+      "zh_explain": "本点涉及「🏘️ kampung」，是本节的重要知识点，考试时需掌握其背景与意义。",
+      "key_points_zh": [
+        "此为重要考试知识点，需熟记内容与意义。"
+      ],
+      "bm_focus_phrase": "🏘️ kampung"
+    },
+    {
+      "source_id": "bab-1-3-extra-50",
+      "bm_original": "🛡️ menjaga keamanan",
+      "zh_explain": "本点涉及「🛡️ menjaga keamanan」，是本节的重要知识点，考试时需掌握其背景与意义。",
+      "key_points_zh": [
+        "考试写法：🛡️ menjaga keamanan"
+      ],
+      "bm_focus_phrase": "🛡️ menjaga keamanan"
+    },
+    {
+      "source_id": "bab-1-3-extra-51",
+      "bm_original": "💰 mengutip cukai",
+      "zh_explain": "税收。这是💰 mengutip cukai的中文要义。",
+      "key_points_zh": [
+        "Cukai = 税收",
+        "考试写法：💰 mengutip cukai"
+      ],
+      "bm_focus_phrase": "💰 mengutip cukai"
+    },
+    {
+      "source_id": "bab-1-3-extra-52",
+      "bm_original": "👑 Sultan",
+      "zh_explain": "苏丹。这是👑 Sultan的中文要义。",
+      "key_points_zh": [
+        "Sultan = 苏丹"
+      ],
+      "bm_focus_phrase": "👑 Sultan"
+    },
+    {
+      "source_id": "bab-1-3-extra-53",
+      "bm_original": "🤝 Pembesar Berempat",
+      "zh_explain": "贵族/高官。这是🤝 Pembesar Berempat的中文要义。",
+      "key_points_zh": [
+        "Pembesar = 贵族/高官",
+        "考试写法：🤝 Pembesar Berempat"
+      ],
+      "bm_focus_phrase": "🤝 Pembesar Berempat"
+    },
+    {
+      "source_id": "bab-1-3-extra-54",
+      "bm_original": "🧠 kebijaksanaan pemerintah",
+      "zh_explain": "「kebijaksanaan pemerintah」即「统治者」，是本节重要考试概念，需掌握其历史背景。",
+      "key_points_zh": [
+        "Pemerintah = 统治者",
+        "考试写法：🧠 kebijaksanaan pemerintah"
+      ],
+      "bm_focus_phrase": "🧠 kebijaksanaan pemerintah"
+    },
+    {
+      "source_id": "bab-1-3-extra-55",
+      "bm_original": "📊 agihan tugas yang jelas",
+      "zh_explain": "本点涉及「📊 agihan tugas yang jelas」，是本节的重要知识点，考试时需掌握其背景与意义。",
+      "key_points_zh": [
+        "考试写法：📊 agihan tugas yang jelas"
+      ],
+      "bm_focus_phrase": "📊 agihan tugas yang jelas"
+    },
+    {
+      "source_id": "bab-1-3-extra-56",
+      "bm_original": "⚖️ pentadbiran yang sistematik",
+      "zh_explain": "「pentadbiran yang sistematik」即「行政管理」，是本节重要考试概念，需掌握其历史背景。",
+      "key_points_zh": [
+        "Pentadbiran = 行政管理",
+        "考试写法：⚖️ pentadbiran yang sistematik"
+      ],
+      "bm_focus_phrase": "⚖️ pentadbiran yang sistematik"
+    },
+    {
+      "source_id": "bab-1-3-extra-57",
+      "bm_original": "🏛️ Melaka muncul sebagai empayar yang unggul",
+      "zh_explain": "「Melaka muncul sebagai empayar yang unggul」是本节重要的专有名词，考试时需能正确书写并说明其历史意义。",
+      "key_points_zh": [
+        "考试写法：🏛️ Melaka muncul sebagai empayar yang unggul"
+      ],
+      "bm_focus_phrase": "🏛️ Melaka muncul sebagai empayar yang unggul"
+    },
+    {
+      "source_id": "bab-1-3-extra-58",
+      "bm_original": "🤝 setiap pembesar memainkan peranan penting",
+      "zh_explain": "「setiap pembesar memainkan peranan penting」—— 此项核心概念为贵族/高官，是本章考试重点，需结合史实加以说明。",
+      "key_points_zh": [
+        "Pembesar = 贵族/高官",
+        "Peranan = 角色/作用",
+        "考试写法：🤝 setiap pembesar memainkan peranan penting"
+      ],
+      "bm_focus_phrase": "🤝 setiap pembesar memainkan peranan penting"
+    },
+    {
+      "source_id": "bab-1-3-extra-59",
+      "bm_original": "📈 pentadbiran berjalan lancar dan berkesan",
+      "zh_explain": "「pentadbiran berjalan lancar dan berkesan」—— 此项核心概念为行政管理，是本章考试重点，需结合史实加以说明。",
+      "key_points_zh": [
+        "Pentadbiran = 行政管理",
+        "Kesan = 影响/后果",
+        "考试写法：📈 pentadbiran berjalan lancar dan berkesan"
+      ],
+      "bm_focus_phrase": "📈 pentadbiran berjalan lancar dan berkesan"
+    },
+    {
+      "source_id": "bab-1-3-extra-60",
+      "bm_original": "📘 Hukum Kanun Melaka",
+      "zh_explain": "「Hukum Kanun Melaka」即「马六甲法典」，是本节重要考试概念，需掌握其历史背景。",
+      "key_points_zh": [
+        "Hukum Kanun Melaka = 马六甲法典",
+        "考试写法：📘 Hukum Kanun Melaka"
+      ],
+      "bm_focus_phrase": "📘 Hukum Kanun Melaka"
+    },
+    {
+      "source_id": "bab-1-3-extra-61",
+      "bm_original": "🌊 Undang-Undang Laut Melaka",
+      "zh_explain": "「Undang-Undang Laut Melaka」即「马六甲海事法」，是本节重要考试概念，需掌握其历史背景。",
+      "key_points_zh": [
+        "Undang-Undang Laut Melaka = 马六甲海事法",
+        "考试写法：🌊 Undang-Undang Laut Melaka"
+      ],
+      "bm_focus_phrase": "🌊 Undang-Undang Laut Melaka"
+    },
+    {
+      "source_id": "bab-1-3-extra-62",
+      "bm_original": "🛡️ menjamin keselamatan",
+      "zh_explain": "本点涉及「🛡️ menjamin keselamatan」，是本节的重要知识点，考试时需掌握其背景与意义。",
+      "key_points_zh": [
+        "考试写法：🛡️ menjamin keselamatan"
+      ],
+      "bm_focus_phrase": "🛡️ menjamin keselamatan"
+    },
+    {
+      "source_id": "bab-1-3-extra-63",
+      "bm_original": "😊 memastikan kesejahteraan",
+      "zh_explain": "本点涉及「😊 memastikan kesejahteraan」，是本节的重要知识点，考试时需掌握其背景与意义。",
+      "key_points_zh": [
+        "考试写法：😊 memastikan kesejahteraan"
+      ],
+      "bm_focus_phrase": "😊 memastikan kesejahteraan"
+    },
+    {
+      "source_id": "bab-1-3-extra-64",
+      "bm_original": "📈 memakmurkan kerajaan",
+      "zh_explain": "「memakmurkan kerajaan」即「王国/政府」，是本节重要考试概念，需掌握其历史背景。",
+      "key_points_zh": [
+        "Kerajaan = 王国/政府",
+        "考试写法：📈 memakmurkan kerajaan"
+      ],
+      "bm_focus_phrase": "📈 memakmurkan kerajaan"
+    },
+    {
+      "source_id": "bab-1-3-extra-65",
+      "bm_original": "⚖️ jenayah",
+      "zh_explain": "本点涉及「⚖️ jenayah」，是本节的重要知识点，考试时需掌握其背景与意义。",
+      "key_points_zh": [
+        "此为重要考试知识点，需熟记内容与意义。"
+      ],
+      "bm_focus_phrase": "⚖️ jenayah"
+    },
+    {
+      "source_id": "bab-1-3-extra-66",
+      "bm_original": "👑 kuasa sultan & pembesar",
+      "zh_explain": "「kuasa sultan & pembesar」—— 苏丹与贵族/高官的结合，是本节的关键概念。",
+      "key_points_zh": [
+        "Sultan = 苏丹",
+        "Pembesar = 贵族/高官",
+        "考试写法：👑 kuasa sultan & pembesar"
+      ],
+      "bm_focus_phrase": "👑 kuasa sultan & pembesar"
+    },
+    {
+      "source_id": "bab-1-3-extra-67",
+      "bm_original": "👨‍👩‍👧 kekeluargaan",
+      "zh_explain": "本点涉及「👨‍👩‍👧 kekeluargaan」，是本节的重要知识点，考试时需掌握其背景与意义。",
+      "key_points_zh": [
+        "考试写法：👨‍👩‍👧 kekeluargaan"
+      ],
+      "bm_focus_phrase": "👨‍👩‍👧 kekeluargaan"
+    },
+    {
+      "source_id": "bab-1-3-extra-68",
+      "bm_original": "💰 ekonomi",
+      "zh_explain": "经济。这是💰 ekonomi的中文要义。",
+      "key_points_zh": [
+        "Ekonomi = 经济"
+      ],
+      "bm_focus_phrase": "💰 ekonomi"
+    },
+    {
+      "source_id": "bab-1-3-extra-69",
+      "bm_original": "📖 Fasal 5.1 → Membunuh tanpa pengetahuan raja/pembesar → hukuman bunuh",
+      "zh_explain": "「Fasal 5.1 → Membunuh tanpa pengetahuan raja/pembesar → hukuman bunuh」—— 此项核心概念为橡胶，是本章考试重点，需结合史实加以说明。",
+      "key_points_zh": [
+        "Getah = 橡胶",
+        "Raja = 国王",
+        "Pembesar = 贵族/高官",
+        "考试写法：📖 Fasal 5.1 → Membunuh tanpa pengetahuan raja/pemb..."
+      ],
+      "bm_focus_phrase": "📖 Fasal 5.1 → Membunuh tanpa pengetahuan raja/pembesar → hukuman bunuh"
+    },
+    {
+      "source_id": "bab-1-3-extra-70",
+      "bm_original": "📖 Fasal 4 → Ingkar arahan & memalsukan titah sultan → hukuman bunuh",
+      "zh_explain": "「Fasal 4 → Ingkar arahan & memalsukan titah sultan → hukuman bunuh」—— 此项核心概念为苏丹，是本章考试重点，需结合史实加以说明。",
+      "key_points_zh": [
+        "Sultan = 苏丹",
+        "考试写法：📖 Fasal 4 → Ingkar arahan & memalsukan titah sulta..."
+      ],
+      "bm_focus_phrase": "📖 Fasal 4 → Ingkar arahan & memalsukan titah sultan → hukuman bunuh"
+    },
+    {
+      "source_id": "bab-1-3-extra-71",
+      "bm_original": "📖 Fasal 1 → menjelaskan tugas Sultan, Bendahara, Temenggung dan Penghulu Bendahari",
+      "zh_explain": "本点说明：苏丹在马来西亚历史中的重要作用。考试需掌握其背景、过程与影响。",
+      "key_points_zh": [
+        "Sultan = 苏丹",
+        "Bendahara = 宰相（Bendahara）",
+        "Temenggung = 警政大臣（Temenggung）",
+        "Penghulu = 村长"
+      ],
+      "bm_focus_phrase": "📖 Fasal 1 → menjelaskan tugas Sultan, Bendahara, Temenggung dan Penghulu Bendahari"
+    },
+    {
+      "source_id": "bab-1-3-extra-72",
+      "bm_original": "✍️ Sultan berkuasa melantik pembesar",
+      "zh_explain": "「Sultan berkuasa melantik pembesar」—— 此项核心概念为苏丹，是本章考试重点，需结合史实加以说明。",
+      "key_points_zh": [
+        "Sultan = 苏丹",
+        "Pembesar = 贵族/高官",
+        "考试写法：✍️ Sultan berkuasa melantik pembesar"
+      ],
+      "bm_focus_phrase": "✍️ Sultan berkuasa melantik pembesar"
+    },
+    {
+      "source_id": "bab-1-3-extra-73",
+      "bm_original": "📖 Fasal 26 → perkahwinan memerlukan 4 orang saksi, jika tidak cukup minimum 2 orang",
+      "zh_explain": "「Fasal 26 → perkahwinan memerlukan 4 orang saksi, jika tidak cukup minimum 2 orang」是本节重要的专有名词，考试时需能正确书写并说明其历史意义。",
+      "key_points_zh": [
+        "考试写法：📖 Fasal 26 → perkahwinan memerlukan 4 orang saksi,..."
+      ],
+      "bm_focus_phrase": "📖 Fasal 26 → perkahwinan memerlukan 4 orang saksi, jika tidak cukup minimum 2 orang"
+    },
+    {
+      "source_id": "bab-1-3-extra-74",
+      "bm_original": "🚫 hamba abdi tidak boleh jadi saksi",
+      "zh_explain": "「hamba abdi tidak boleh jadi saksi」—— 此项核心概念为奴隶，是本章考试重点，需结合史实加以说明。",
+      "key_points_zh": [
+        "Hamba = 奴隶",
+        "考试写法：🚫 hamba abdi tidak boleh jadi saksi"
+      ],
+      "bm_focus_phrase": "🚫 hamba abdi tidak boleh jadi saksi"
+    },
+    {
+      "source_id": "bab-1-3-extra-75",
+      "bm_original": "🚫 wanita tidak boleh jadi saksi",
+      "zh_explain": "本点涉及「🚫 wanita tidak boleh jadi saksi」，是本节的重要知识点，考试时需掌握其背景与意义。",
+      "key_points_zh": [
+        "考试写法：🚫 wanita tidak boleh jadi saksi"
+      ],
+      "bm_focus_phrase": "🚫 wanita tidak boleh jadi saksi"
+    },
+    {
+      "source_id": "bab-1-3-extra-76",
+      "bm_original": "📖 Fasal 30 → riba diharamkan",
+      "zh_explain": "「Fasal 30 → riba diharamkan」是本节重要的专有名词，考试时需能正确书写并说明其历史意义。",
+      "key_points_zh": [
+        "考试写法：📖 Fasal 30 → riba diharamkan"
+      ],
+      "bm_focus_phrase": "📖 Fasal 30 → riba diharamkan"
+    },
+    {
+      "source_id": "bab-1-3-extra-77",
+      "bm_original": "🧠 peniaga mesti akil baligh",
+      "zh_explain": "本点涉及「🧠 peniaga mesti akil baligh」，是本节的重要知识点，考试时需掌握其背景与意义。",
+      "key_points_zh": [
+        "考试写法：🧠 peniaga mesti akil baligh"
+      ],
+      "bm_focus_phrase": "🧠 peniaga mesti akil baligh"
+    },
+    {
+      "source_id": "bab-1-3-extra-78",
+      "bm_original": "😌 peniaga mesti siuman",
+      "zh_explain": "本点涉及「😌 peniaga mesti siuman」，是本节的重要知识点，考试时需掌握其背景与意义。",
+      "key_points_zh": [
+        "考试写法：😌 peniaga mesti siuman"
+      ],
+      "bm_focus_phrase": "😌 peniaga mesti siuman"
+    },
+    {
+      "source_id": "bab-1-3-extra-79",
+      "bm_original": "🗣️ perlu melafazkan niat jual beli",
+      "zh_explain": "本点涉及「🗣️ perlu melafazkan niat jual beli」，是本节的重要知识点，考试时需掌握其背景与意义。",
+      "key_points_zh": [
+        "考试写法：🗣️ perlu melafazkan niat jual beli"
+      ],
+      "bm_focus_phrase": "🗣️ perlu melafazkan niat jual beli"
+    },
+    {
+      "source_id": "bab-1-3-extra-80",
+      "bm_original": "👑 titah",
+      "zh_explain": "本点涉及「👑 titah」，是本节的重要知识点，考试时需掌握其背景与意义。",
+      "key_points_zh": [
+        "此为重要考试知识点，需熟记内容与意义。"
+      ],
+      "bm_focus_phrase": "👑 titah"
+    },
+    {
+      "source_id": "bab-1-3-extra-81",
+      "bm_original": "😠 murka",
+      "zh_explain": "本点涉及「😠 murka」，是本节的重要知识点，考试时需掌握其背景与意义。",
+      "key_points_zh": [
+        "此为重要考试知识点，需熟记内容与意义。"
+      ],
+      "bm_focus_phrase": "😠 murka"
+    },
+    {
+      "source_id": "bab-1-3-extra-82",
+      "bm_original": "🎁 kurnia",
+      "zh_explain": "本点涉及「🎁 kurnia」，是本节的重要知识点，考试时需掌握其背景与意义。",
+      "key_points_zh": [
+        "此为重要考试知识点，需熟记内容与意义。"
+      ],
+      "bm_focus_phrase": "🎁 kurnia"
+    },
+    {
+      "source_id": "bab-1-3-extra-83",
+      "bm_original": "✨ anugerah",
+      "zh_explain": "本点涉及「✨ anugerah」，是本节的重要知识点，考试时需掌握其背景与意义。",
+      "key_points_zh": [
+        "此为重要考试知识点，需熟记内容与意义。"
+      ],
+      "bm_focus_phrase": "✨ anugerah"
+    },
+    {
+      "source_id": "bab-1-3-extra-84",
+      "bm_original": "⚓ peranan nakhoda",
+      "zh_explain": "角色/作用。这是⚓ peranan nakhoda的中文要义。",
+      "key_points_zh": [
+        "Peranan = 角色/作用",
+        "考试写法：⚓ peranan nakhoda"
+      ],
+      "bm_focus_phrase": "⚓ peranan nakhoda"
+    },
+    {
+      "source_id": "bab-1-3-extra-85",
+      "bm_original": "🌊 pelayaran",
+      "zh_explain": "本点涉及「🌊 pelayaran」，是本节的重要知识点，考试时需掌握其背景与意义。",
+      "key_points_zh": [
+        "考试写法：🌊 pelayaran"
+      ],
+      "bm_focus_phrase": "🌊 pelayaran"
+    },
+    {
+      "source_id": "bab-1-3-extra-86",
+      "bm_original": "⚖️ jenayah di laut",
+      "zh_explain": "本点涉及「⚖️ jenayah di laut」，是本节的重要知识点，考试时需掌握其背景与意义。",
+      "key_points_zh": [
+        "考试写法：⚖️ jenayah di laut"
+      ],
+      "bm_focus_phrase": "⚖️ jenayah di laut"
+    },
+    {
+      "source_id": "bab-1-3-extra-87",
+      "bm_original": "💰 percukaian",
+      "zh_explain": "税收。这是💰 percukaian的中文要义。",
+      "key_points_zh": [
+        "Cukai = 税收",
+        "考试写法：💰 percukaian"
+      ],
+      "bm_focus_phrase": "💰 percukaian"
+    },
+    {
+      "source_id": "bab-1-3-extra-88",
+      "bm_original": "📖 Fasal 13.1 → Nakhoda diberi keutamaan berniaga selama 4 hari",
+      "zh_explain": "「Fasal 13.1 → Nakhoda diberi keutamaan berniaga selama 4 hari」是本节重要的专有名词，考试时需能正确书写并说明其历史意义。",
+      "key_points_zh": [
+        "考试写法：📖 Fasal 13.1 → Nakhoda diberi keutamaan berniaga s..."
+      ],
+      "bm_focus_phrase": "📖 Fasal 13.1 → Nakhoda diberi keutamaan berniaga selama 4 hari"
+    },
+    {
+      "source_id": "bab-1-3-extra-89",
+      "bm_original": "📖 Fasal 13.3 → Jika ubah laluan perlu bermesyuarat dengan semua",
+      "zh_explain": "「Fasal 13.3 → Jika ubah laluan perlu bermesyuarat dengan semua」是本节重要的专有名词，考试时需能正确书写并说明其历史意义。",
+      "key_points_zh": [
+        "考试写法：📖 Fasal 13.3 → Jika ubah laluan perlu bermesyuarat..."
+      ],
+      "bm_focus_phrase": "📖 Fasal 13.3 → Jika ubah laluan perlu bermesyuarat dengan semua"
+    },
+    {
+      "source_id": "bab-1-3-extra-90",
+      "bm_original": "🧭 Jurumudi",
+      "zh_explain": "「Jurumudi」是本节重要的专有名词，考试时需能正确书写并说明其历史意义。",
+      "key_points_zh": [
+        "此为重要考试知识点，需熟记内容与意义。"
+      ],
+      "bm_focus_phrase": "🧭 Jurumudi"
+    },
+    {
+      "source_id": "bab-1-3-extra-91",
+      "bm_original": "🌊 Malim",
+      "zh_explain": "「Malim」是本节重要的专有名词，考试时需能正确书写并说明其历史意义。",
+      "key_points_zh": [
+        "此为重要考试知识点，需熟记内容与意义。"
+      ],
+      "bm_focus_phrase": "🌊 Malim"
+    },
+    {
+      "source_id": "bab-1-3-extra-92",
+      "bm_original": "🪨 Jurubatu",
+      "zh_explain": "「Jurubatu」是本节重要的专有名词，考试时需能正确书写并说明其历史意义。",
+      "key_points_zh": [
+        "此为重要考试知识点，需熟记内容与意义。"
+      ],
+      "bm_focus_phrase": "🪨 Jurubatu"
+    },
+    {
+      "source_id": "bab-1-3-extra-93",
+      "bm_original": "📖 Fasal 9 → Malim mesti mahir tentang ombak, arus, bulan dan bintang",
+      "zh_explain": "「Fasal 9 → Malim mesti mahir tentang ombak, arus, bulan dan bintang」是本节重要的专有名词，考试时需能正确书写并说明其历史意义。",
+      "key_points_zh": [
+        "考试写法：📖 Fasal 9 → Malim mesti mahir tentang ombak, arus,..."
+      ],
+      "bm_focus_phrase": "📖 Fasal 9 → Malim mesti mahir tentang ombak, arus, bulan dan bintang"
+    },
+    {
+      "source_id": "bab-1-3-extra-94",
+      "bm_original": "💥 Jika cuai hingga menyebabkan kemalangan → hukuman bunuh",
+      "zh_explain": "「Jika cuai hingga menyebabkan kemalangan → hukuman bunuh」是本节重要的专有名词，考试时需能正确书写并说明其历史意义。",
+      "key_points_zh": [
+        "考试写法：💥 Jika cuai hingga menyebabkan kemalangan → hukuma..."
+      ],
+      "bm_focus_phrase": "💥 Jika cuai hingga menyebabkan kemalangan → hukuman bunuh"
+    },
+    {
+      "source_id": "bab-1-3-extra-95",
+      "bm_original": "📖 Fasal 5 → Membunuh di atas kapal → hukuman mati",
+      "zh_explain": "「Fasal 5 → Membunuh di atas kapal → hukuman mati」是本节重要的专有名词，考试时需能正确书写并说明其历史意义。",
+      "key_points_zh": [
+        "考试写法：📖 Fasal 5 → Membunuh di atas kapal → hukuman mati"
+      ],
+      "bm_focus_phrase": "📖 Fasal 5 → Membunuh di atas kapal → hukuman mati"
+    },
+    {
+      "source_id": "bab-1-3-extra-96",
+      "bm_original": "🚢 cukai perjalanan",
+      "zh_explain": "税收。这是🚢 cukai perjalanan的中文要义。",
+      "key_points_zh": [
+        "Cukai = 税收",
+        "考试写法：🚢 cukai perjalanan"
+      ],
+      "bm_focus_phrase": "🚢 cukai perjalanan"
+    },
+    {
+      "source_id": "bab-1-3-extra-97",
+      "bm_original": "📦 hasil perniagaan",
+      "zh_explain": "本点涉及「📦 hasil perniagaan」，是本节的重要知识点，考试时需掌握其背景与意义。",
+      "key_points_zh": [
+        "考试写法：📦 hasil perniagaan"
+      ],
+      "bm_focus_phrase": "📦 hasil perniagaan"
+    },
+    {
+      "source_id": "bab-1-3-extra-98",
+      "bm_original": "📖 Fasal 6.3 → Jika penumpang turun awal sebelum sampai, perlu bayar 1/10 daripada hasil",
+      "zh_explain": "「Fasal 6.3 → Jika penumpang turun awal sebelum sampai, perlu bayar 1/10 daripada hasil」是本节重要的专有名词，考试时需能正确书写并说明其历史意义。",
+      "key_points_zh": [
+        "考试写法：📖 Fasal 6.3 → Jika penumpang turun awal sebelum sa..."
+      ],
+      "bm_focus_phrase": "📖 Fasal 6.3 → Jika penumpang turun awal sebelum sampai, perlu bayar 1/10 daripada hasil"
+    },
+    {
+      "source_id": "bab-1-3-extra-99",
+      "bm_original": "🏛️ sistem pentadbiran yang tersusun",
+      "zh_explain": "「sistem pentadbiran yang tersusun」—— 此项核心概念为有序的行政制度，是本章考试重点，需结合史实加以说明。",
+      "key_points_zh": [
+        "Sistem Pentadbiran Yang Tersusun = 有序的行政制度",
+        "考试写法：🏛️ sistem pentadbiran yang tersusun"
+      ],
+      "bm_focus_phrase": "🏛️ sistem pentadbiran yang tersusun"
+    },
+    {
+      "source_id": "bab-1-3-extra-100",
+      "bm_original": "📜 undang-undang yang sistematik",
+      "zh_explain": "「undang-undang yang sistematik」即「法律」，是本节重要考试概念，需掌握其历史背景。",
+      "key_points_zh": [
+        "Undang-Undang = 法律",
+        "考试写法：📜 undang-undang yang sistematik"
+      ],
+      "bm_focus_phrase": "📜 undang-undang yang sistematik"
+    },
+    {
+      "source_id": "bab-1-3-extra-101",
+      "bm_original": "✔️ pentadbiran berjalan lancar",
+      "zh_explain": "「pentadbiran berjalan lancar」即「行政管理」，是本节重要考试概念，需掌握其历史背景。",
+      "key_points_zh": [
+        "Pentadbiran = 行政管理",
+        "考试写法：✔️ pentadbiran berjalan lancar"
+      ],
+      "bm_focus_phrase": "✔️ pentadbiran berjalan lancar"
+    },
+    {
+      "source_id": "bab-1-3-extra-102",
+      "bm_original": "✔️ keselamatan terjamin",
+      "zh_explain": "本点涉及「✔️ keselamatan terjamin」，是本节的重要知识点，考试时需掌握其背景与意义。",
+      "key_points_zh": [
+        "考试写法：✔️ keselamatan terjamin"
+      ],
+      "bm_focus_phrase": "✔️ keselamatan terjamin"
+    },
+    {
+      "source_id": "bab-1-3-extra-103",
+      "bm_original": "✔️ rakyat hidup harmoni",
+      "zh_explain": "「rakyat hidup harmoni」即「人民/子民」，是本节重要考试概念，需掌握其历史背景。",
+      "key_points_zh": [
+        "Rakyat = 人民/子民",
+        "考试写法：✔️ rakyat hidup harmoni"
+      ],
+      "bm_focus_phrase": "✔️ rakyat hidup harmoni"
     }
   ]
 }

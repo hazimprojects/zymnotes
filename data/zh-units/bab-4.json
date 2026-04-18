@@ -1,0 +1,68 @@
+{
+  "meta": {
+    "source_file": "notes/bab-4.html",
+    "rollout": "gelombang-1"
+  },
+  "units": [
+    {
+      "source_id": "bab-4-synopsis-1",
+      "bm_original": "British Military Administration (BMA) diperkenalkan di negara kita selepas tamatnya Perang Dunia Kedua.",
+      "zh_explain": "二战结束后（1945年8月），英国在马来亚重新建立统治，首先推行英国军事管制（BMA）。这是日本投降后到英国正式文官政府恢复之间的过渡期行政机构。",
+      "key_points_zh": [
+        "BMA = British Military Administration（英国军事管制局），1945年9月至1946年4月",
+        "背景：日本投降（1945年8月15日）→ 英军重返马来亚 → 临时军事管制",
+        "BMA的绰号：「Black Market Administration」（黑市管制），因为当时物资匮乏、黑市横行",
+        "答题关键：BMA是战后英国重建殖民统治的第一步，之后才推行马来亚联盟（Malayan Union）"
+      ],
+      "bm_focus_phrase": "BMA diperkenalkan di negara kita selepas tamatnya Perang Dunia Kedua."
+    },
+    {
+      "source_id": "bab-4-synopsis-2",
+      "bm_original": "Selepas itu, British melaksanakan Malayan Union di Tanah Melayu.",
+      "zh_explain": "英国军事管制结束后，英国于1946年推行马来亚联盟（Malayan Union）计划。这一方案大幅削弱马来苏丹的权力，并赋予非马来人公民权，引发马来人强烈不满。",
+      "key_points_zh": [
+        "Malayan Union = 马来亚联盟，1946年4月1日正式推行",
+        "主要特征：① 苏丹主权大幅削减 ② 设立联邦公民权（包含非马来人） ③ 由英国总督统治",
+        "推行方式：英国代表麦克迈克尔爵士（Sir Harold MacMichael）前往各州游说苏丹签约",
+        "结果：引发马来人史无前例的抗议，成立UMNO（巫统）进行有组织抵制"
+      ],
+      "bm_focus_phrase": "British melaksanakan Malayan Union di Tanah Melayu."
+    },
+    {
+      "source_id": "bab-4-synopsis-3",
+      "bm_original": "Pelaksanaan Malayan Union mencetuskan bantahan besar-besaran daripada penduduk tempatan hingga British menggantikannya dengan Persekutuan Tanah Melayu 1948.",
+      "zh_explain": "马来亚联盟方案遭到马来人的大规模抵制，尤以巫统（UMNO）的有组织抗议最为有力，迫使英国撤销该方案，改以1948年马来亚联合邦取而代之。",
+      "key_points_zh": [
+        "Bantahan besar-besaran = 大规模抗议，马来人首次展示有组织的政治力量",
+        "UMNO（巫统）于1946年5月11日成立，由拿督翁（Dato' Onn Jaafar）领导，主导抵制运动",
+        "抗议方式：罢黜仪式、大型集会、向英国政府递交请愿书",
+        "结果：Malayan Union被废除 → 1948年推行Persekutuan Tanah Melayu（马来亚联合邦）"
+      ],
+      "bm_focus_phrase": "Bantahan besar-besaran mencetuskan penggantian Malayan Union dengan Persekutuan Tanah Melayu 1948."
+    },
+    {
+      "source_id": "bab-4-synopsis-4",
+      "bm_original": "Di Sarawak, tindakan Vyner Brooke menyerahkan negeri itu kepada British mencetuskan reaksi menyokong dan menentang, namun majoriti penduduk tempatan menentangnya.",
+      "zh_explain": "砂拉越白人拉者冯纳·布鲁克（Vyner Brooke）将砂拉越移交英国（1946年），引发了支持与反对两种截然不同的反应，但多数本地居民，尤其是马来人，强烈反对这一决定。",
+      "key_points_zh": [
+        "Vyner Brooke = 砂拉越第三代白人拉者，1946年7月1日将砂拉越割让给英国",
+        "支持者：部分人认为英国统治更稳定，有助于经济发展",
+        "反对者：马来人（尤其是年轻知识分子）认为这是出卖主权，Anthony Brooke（侄子）也反对",
+        "极端反应：1949年，Rosli Dhoby刺杀英国总督Stewart，显示反对情绪之激烈"
+      ],
+      "bm_focus_phrase": "Tindakan Vyner Brooke menyerahkan Sarawak kepada British mencetuskan reaksi menyokong dan menentang."
+    },
+    {
+      "source_id": "bab-4-synopsis-5",
+      "bm_original": "Di Sabah, British pula berjaya mengambil alih negeri itu daripada Syarikat Borneo Utara British (SBUB) tanpa penentangan yang besar.",
+      "zh_explain": "沙巴的情况与砂拉越不同——英国从北婆罗洲英国特许公司（SBUB）接管沙巴的过程相对顺利，本地居民反对声音较少，因此英国得以顺利将其纳入直辖殖民地。",
+      "key_points_zh": [
+        "SBUB = Syarikat Borneo Utara British（北婆罗洲英国特许公司），管理沙巴逾60年",
+        "1946年7月15日，沙巴正式成为英国直辖殖民地（Crown Colony）",
+        "原因：SBUB因二战期间损失惨重，无力重建，主动移交英国",
+        "对比：砂拉越有强烈抗议，沙巴则相对平静 — 此对比是考试常考点"
+      ],
+      "bm_focus_phrase": "British berjaya mengambil alih Sabah daripada SBUB tanpa penentangan yang besar."
+    }
+  ]
+}

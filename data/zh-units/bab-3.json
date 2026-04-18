@@ -1,0 +1,56 @@
+{
+  "meta": {
+    "source_file": "notes/bab-3.html",
+    "rollout": "gelombang-1"
+  },
+  "units": [
+    {
+      "source_id": "bab-3-synopsis-1",
+      "bm_original": "Konflik dunia yang merangkumi Perang Dunia Pertama dan Perang Dunia Kedua tercetus akibat perkembangan imperialisme dan nasionalisme dalam persaingan merebut kuasa politik dan ekonomi.",
+      "zh_explain": "两次世界大战的爆发，根源在于帝国主义扩张与民族主义情绪之间的激烈碰撞，各列强为争夺政治霸权和经济资源而展开竞争，最终酿成全球冲突。",
+      "key_points_zh": [
+        "Imperialisme = 帝国主义（列强争夺殖民地）+ Nasionalisme = 民族主义（各民族争取独立）",
+        "Persaingan merebut kuasa politik dan ekonomi = 争夺政治和经济权力，是战争的根本原因",
+        "答题框架：帝国主义 + 民族主义 → 政治经济竞争 → 世界大战爆发",
+        "考试重点：第一次世界大战（1914-1918）和第二次世界大战（1939-1945）的起因对比"
+      ],
+      "bm_focus_phrase": "Perang dunia tercetus akibat imperialisme dan nasionalisme dalam persaingan merebut kuasa politik dan ekonomi."
+    },
+    {
+      "source_id": "bab-3-synopsis-2",
+      "bm_original": "Perang dunia bermula di Eropah, kemudian merebak ke Asia Pasifik.",
+      "zh_explain": "两次世界大战均以欧洲为起点，随后扩展至亚太地区。第二次世界大战更因日本在亚太的军事扩张，直接波及马来亚，改变了东南亚的历史进程。",
+      "key_points_zh": [
+        "Bermula di Eropah = 起源于欧洲（WWI：奥匈帝国刺杀事件；WWII：德国入侵波兰）",
+        "Merebak ke Asia Pasifik = 蔓延至亚太地区，尤其是日本于1941年12月袭击珍珠港",
+        "对马来亚的影响：日本南进（1941年12月8日）→ 占领马来亚（1942-1945）",
+        "考试关键词：Asia Pasifik = 亚太地区，是本章从世界史转向马来亚史的关键节点"
+      ],
+      "bm_focus_phrase": "Perang dunia bermula di Eropah, kemudian merebak ke Asia Pasifik."
+    },
+    {
+      "source_id": "bab-3-synopsis-3",
+      "bm_original": "Pemerintahan tentera Jepun di negara kita telah mencetuskan tindak balas rakyat terhadap pendudukan asing.",
+      "zh_explain": "日本军事统治期间（1942-1945）的残酷政策，激起了马来亚人民的强烈反抗。不同族群以不同方式回应这场外来占领，形成了各具特色的抵抗运动。",
+      "key_points_zh": [
+        "Pemerintahan tentera Jepun = 日本军事统治（1942年2月15日-1945年8月）",
+        "Tindak balas rakyat = 人民的回应，包括：马来人的个别抵抗、华人的MPAJA游击队、英军的Force 136",
+        "Pendudukan asing = 外来占领，日本统治被视为侵略行为",
+        "考试重点：各族群对日本占领的不同反应及其原因"
+      ],
+      "bm_focus_phrase": "Pemerintahan tentera Jepun mencetuskan tindak balas rakyat terhadap pendudukan asing."
+    },
+    {
+      "source_id": "bab-3-synopsis-4",
+      "bm_original": "Pendudukan Jepun turut menyemarakkan perkembangan nasionalisme tempatan.",
+      "zh_explain": "日本占领（1942-1945）客观上成为马来亚民族主义的催化剂。日本的「亚洲人的亚洲」口号，加上英国威信的崩溃，大大激发了本地民众争取独立的意识。",
+      "key_points_zh": [
+        "Menyemarakkan = 激发/推动，说明日本占领有「催化」民族主义的客观效果",
+        "日本的作用：① 打破英国「无敌」神话 ② 扶植马来民族主义团体（如KRIS） ③ 口号「Asia untuk orang Asia」",
+        "Nasionalisme tempatan = 本地民族主义，经日本占领后更为激进，直接推动战后独立运动",
+        "答题关键：日本占领是民族主义发展的重要转折点（titik perubahan）"
+      ],
+      "bm_focus_phrase": "Pendudukan Jepun menyemarakkan perkembangan nasionalisme tempatan."
+    }
+  ]
+}

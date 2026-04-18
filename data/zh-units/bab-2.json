@@ -1,0 +1,55 @@
+{
+  "meta": {
+    "source_file": "notes/bab-2.html",
+    "rollout": "gelombang-1"
+  },
+  "units": [
+    {
+      "source_id": "bab-2-synopsis-1",
+      "bm_original": "Perkembangan idea nasionalisme di Barat telah mempengaruhi kebangkitan nasionalisme di Asia dan Asia Tenggara, termasuk di negara kita.",
+      "zh_explain": "西方的民族主义思想（如法国大革命、美国独立精神）传播至亚洲及东南亚，点燃了包括马来亚在内的民族意识觉醒。这是民族主义传播的全球背景。",
+      "key_points_zh": [
+        "Nasionalisme di Barat = 西方民族主义（法国大革命1789年、美国独立1776年为主要源头）",
+        "Mempengaruhi = 影响，说明这是外部因素（faktor luar）推动的觉醒",
+        "Asia Tenggara = 东南亚，包括印尼、越南、缅甸等国的民族主义运动也相互影响",
+        "答题框架：西方思想 → 影响亚洲 → 影响马来亚，形成三层传播链"
+      ],
+      "bm_focus_phrase": "Perkembangan nasionalisme di Barat mempengaruhi kebangkitan nasionalisme di Asia Tenggara."
+    },
+    {
+      "source_id": "bab-2-synopsis-2",
+      "bm_original": "Gerakan nasionalisme berkembang seiring dengan matlamat perjuangan, cara gerakan disusun, ketokohan pemimpin nasionalis dan pengaruh pelbagai faktor.",
+      "zh_explain": "民族主义运动的发展，受到斗争目标、组织方式、民族主义领袖的魅力以及各种内外因素的共同影响，形成了一个多维度的历史过程。",
+      "key_points_zh": [
+        "Matlamat perjuangan = 斗争目标（早期：改革；后期：kemerdekaan独立）",
+        "Cara gerakan disusun = 运动组织方式（通过报纸、组织、政党等渠道）",
+        "Ketokohan pemimpin nasionalis = 民族主义领袖的影响力（如Za'aba、Ibrahim Yaakob等）",
+        "Pengaruh pelbagai faktor = 多种因素的影响（内外因素、日本占领的催化作用等）"
+      ],
+      "bm_focus_phrase": "Gerakan nasionalisme berkembang melalui matlamat perjuangan, ketokohan pemimpin dan pelbagai faktor."
+    },
+    {
+      "source_id": "bab-2-synopsis-3",
+      "bm_original": "Bab ini menghimpunkan perkembangan nasionalisme dari sudut maksud, idea, perkembangan wilayah, kesedaran di negara kita, faktor kemunculan dan kesannya.",
+      "zh_explain": "本章从六个维度系统梳理民族主义：定义、思想理念、地域扩展、国内民族意识、兴起因素及其影响，构建完整的学习框架。",
+      "key_points_zh": [
+        "六大维度：① Maksud（定义）② Idea（理念）③ Perkembangan wilayah（地域发展）④ Kesedaran（意识觉醒）⑤ Faktor kemunculan（兴起因素）⑥ Kesan（影响/后果）",
+        "学习顺序：先理解定义 → 再看地域发展 → 最后看因素与影响",
+        "考试提示：每个维度都可能出独立题目，需分别掌握"
+      ],
+      "bm_focus_phrase": "Bab ini menghimpunkan perkembangan nasionalisme dari sudut maksud, idea, faktor kemunculan dan kesannya."
+    },
+    {
+      "source_id": "bab-2-synopsis-4",
+      "bm_original": "Perkembangan nasionalisme seterusnya memberikan kesan penting kepada usaha membina tamadun bangsa dan negara.",
+      "zh_explain": "民族主义运动的发展，对构建国家和民族文明产生了深远影响，最终推动了马来亚走向独立，并塑造了现代马来西亚的国家认同。",
+      "key_points_zh": [
+        "Kesan penting = 重要影响，涵盖政治、经济、社会三个层面",
+        "Membina tamadun bangsa = 构建民族文明，包括语言、文化、教育的发展",
+        "Membina negara = 国家建设，最终目标是kemerdekaan（独立）",
+        "答题关键：民族主义的影响 → 独立运动 → 建国基础"
+      ],
+      "bm_focus_phrase": "Perkembangan nasionalisme memberikan kesan penting kepada usaha membina tamadun bangsa dan negara."
+    }
+  ]
+}

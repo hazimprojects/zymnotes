@@ -2,11 +2,17 @@
   "meta": {
     "description": "Senarai unit pemahaman BM→ZH mengikut fail bab.",
     "rollout_plan": {
-      "gelombang_1": "10 subtopik pertama (bab-1-1 hingga bab-2-6)",
-      "gelombang_2": "Baki subtopik bab lain selepas semakan QA"
+      "gelombang_1": "Semua subtopik dan sinopsis bab 1-7"
     }
   },
   "files": [
+    "bab-1.json",
+    "bab-2.json",
+    "bab-3.json",
+    "bab-4.json",
+    "bab-5.json",
+    "bab-6.json",
+    "bab-7.json",
     "bab-1-1.json",
     "bab-1-2.json",
     "bab-1-3.json",
@@ -16,6 +22,37 @@
     "bab-2-3.json",
     "bab-2-4.json",
     "bab-2-5.json",
-    "bab-2-6.json"
+    "bab-2-6.json",
+    "bab-2-7.json",
+    "bab-2-8.json",
+    "bab-3-1.json",
+    "bab-3-2.json",
+    "bab-3-3.json",
+    "bab-3-4.json",
+    "bab-3-5.json",
+    "bab-3-6.json",
+    "bab-3-7.json",
+    "bab-3-8.json",
+    "bab-3-9.json",
+    "bab-4-1.json",
+    "bab-4-2.json",
+    "bab-4-3.json",
+    "bab-4-4.json",
+    "bab-4-5.json",
+    "bab-4-6.json",
+    "bab-4-7.json",
+    "bab-5-1.json",
+    "bab-5-2.json",
+    "bab-5-3.json",
+    "bab-5-4.json",
+    "bab-6-1.json",
+    "bab-6-2.json",
+    "bab-6-3.json",
+    "bab-6-4.json",
+    "bab-7-1.json",
+    "bab-7-2.json",
+    "bab-7-3.json",
+    "bab-7-4.json",
+    "bab-7-5.json"
   ]
 }
