@@ -22,6 +22,8 @@
   var CHIP_DISPLAY_STACKED = "stacked";
   var CHIP_TOUCH_CLICK_DELAY_MS = 360;
   var chipInteractionsBound = false;
+  var sentenceTranslationCache = Object.create(null);
+  var sentenceTranslationInflight = Object.create(null);
 
   var OVERLY_GENERAL_TERMS = new Set([
     "bahasa", "politik", "agama", "kampung", "rakyat",
@@ -78,6 +80,47 @@
       .replace(/>/g, "&gt;")
       .replace(/\"/g, "&quot;")
       .replace(/'/g, "&#39;");
+  }
+
+  function parseGoogleTranslatePayload(payload) {
+    if (!Array.isArray(payload) || !Array.isArray(payload[0])) return "";
+    var translated = payload[0]
+      .map(function (segment) {
+        return Array.isArray(segment) && typeof segment[0] === "string" ? segment[0] : "";
+      })
+      .join("")
+      .trim();
+    return translated;
+  }
+
+  function fetchSentenceTranslation(bmText) {
+    var clean = typeof bmText === "string" ? bmText.trim() : "";
+    if (!clean) return Promise.resolve("");
+
+    if (sentenceTranslationCache[clean]) {
+      return Promise.resolve(sentenceTranslationCache[clean]);
+    }
+    if (sentenceTranslationInflight[clean]) {
+      return sentenceTranslationInflight[clean];
+    }
+
+    var endpoint = "https://translate.googleapis.com/translate_a/single"
+      + "?client=gtx&sl=ms&tl=zh-CN&dt=t&q=" + encodeURIComponent(clean);
+
+    sentenceTranslationInflight[clean] = fetch(endpoint)
+      .then(function (res) { return res.ok ? res.json() : null; })
+      .then(function (payload) {
+        var translated = parseGoogleTranslatePayload(payload);
+        if (translated) sentenceTranslationCache[clean] = translated;
+        return translated;
+      })
+      .catch(function () { return ""; })
+      .then(function (translated) {
+        delete sentenceTranslationInflight[clean];
+        return translated;
+      });
+
+    return sentenceTranslationInflight[clean];
   }
 
   function getElementZhMode(el, fallbackMode) {
@@ -734,8 +777,50 @@
 
   // ── Orphan Text Annotation ───────────────────────────────
 
-  function annotateOrphanText(gl) {
+  function buildPointExplainText(rawText, unit, gl) {
+    var unitSentence = unit && typeof unit.bm_original === "string" ? unit.bm_original.trim() : "";
+    var sourceSentence = unitSentence || rawText;
+
+    return fetchSentenceTranslation(sourceSentence).then(function (translatedText) {
+      if (translatedText) return translatedText;
+
+      if (unit && typeof unit.zh_explain === "string" && unit.zh_explain.trim()) {
+        return unit.zh_explain.trim();
+      }
+
+      var fallback = buildGlossaryFallback(rawText, gl);
+      if (!fallback || !fallback.text) return "";
+
+      if (Array.isArray(fallback.pairs) && fallback.pairs.length > 0) {
+        var zhTerms = fallback.pairs
+          .map(function (pair) { return pair && pair.zh ? pair.zh.trim() : ""; })
+          .filter(Boolean);
+        if (zhTerms.length > 0) {
+          return "该要点相关词汇：" + zhTerms.join("、") + "。";
+        }
+      }
+
+      return fallback.text.trim();
+    });
+  }
+
+  function annotateOrphanText(gl, comprehension) {
     var EMOJI_STRIP_RE = /[\uD83C-\uDBFF\uDC00-\uDFFF]|[\u2600-\u27BF]|[\u{1F000}-\u{1FFFF}]|[📌💡📖🔍⬆️]/gu;
+    var mappedComprehension = comprehension || {};
+
+    function resolveUnit(el) {
+      if (!el || !el.getAttribute) return null;
+      var directId = (el.getAttribute("data-zh-unit-id") || "").trim();
+      if (directId && mappedComprehension[directId]) return mappedComprehension[directId];
+
+      var nested = el.querySelector ? el.querySelector("[data-zh-unit-id]") : null;
+      if (nested && nested.getAttribute) {
+        var nestedId = (nested.getAttribute("data-zh-unit-id") || "").trim();
+        if (nestedId && mappedComprehension[nestedId]) return mappedComprehension[nestedId];
+      }
+
+      return null;
+    }
 
     function attachToggle(el, rawText) {
       if (el.querySelector(".zh-heading-toggle")) return;
@@ -744,14 +829,12 @@
       var cleanText = normalize(rawText.replace(EMOJI_STRIP_RE, "").replace(/^[^a-zA-ZÀ-ÿ]+/, ""));
       if (!cleanText || cleanText.length < 3) return;
 
-      var result = buildGlossaryFallback(cleanText, gl);
-      if (!result || !result.text) return;
-
+      var unit = resolveUnit(el);
       var toggleBtn = document.createElement("button");
       toggleBtn.type = "button";
       toggleBtn.className = "zh-heading-toggle";
       toggleBtn.setAttribute("aria-expanded", "false");
-      toggleBtn.setAttribute("aria-label", "中文词汇注释");
+      toggleBtn.setAttribute("aria-label", "中文句意解析");
       toggleBtn.textContent = "中";
 
       var annSpan = document.createElement("span");
@@ -759,16 +842,17 @@
       annSpan.setAttribute("hidden", "");
       annSpan.setAttribute("aria-hidden", "true");
       annSpan.setAttribute("lang", "zh-Hans");
+      annSpan.textContent = "正在加载中文整句翻译…";
 
-      if (result.pairs && result.pairs.length > 0) {
-        var annHTML = '<span class="zh-ann-label">词汇：</span>';
-        annHTML += result.pairs.map(function (p) {
-          return '<span class="zh-ann-pair"><strong class="zh-ann-bm">' + escapeHtml(p.bm) + '</strong><span class="zh-ann-zh">（' + escapeHtml(p.zh) + '）</span></span>';
-        }).join('<span class="zh-ann-sep"> · </span>');
-        annSpan.innerHTML = annHTML;
-      } else {
-        annSpan.textContent = result.text;
-      }
+      var explanationReady = false;
+      var explanationPromise = buildPointExplainText(cleanText, unit, gl).then(function (explanationText) {
+        var finalText = explanationText && explanationText.trim()
+          ? explanationText.trim()
+          : "暂时无法获取完整翻译，请稍后再试。";
+        annSpan.textContent = finalText;
+        explanationReady = true;
+        return finalText;
+      });
 
       toggleBtn.addEventListener("click", function (e) {
         e.stopPropagation();
@@ -779,6 +863,14 @@
         } else {
           annSpan.removeAttribute("hidden");
           toggleBtn.setAttribute("aria-expanded", "true");
+          if (!explanationReady) {
+            annSpan.textContent = "正在加载中文整句翻译…";
+            explanationPromise.then(function () {
+              if (!annSpan.hasAttribute("hidden")) {
+                annSpan.removeAttribute("hidden");
+              }
+            });
+          }
         }
       });
 
@@ -789,9 +881,9 @@
 
     // Block-level text elements
     var blockSel = [
-      ".point-heading:not([data-zh-unit-id])",
-      ".point-line:not([data-zh-unit-id])",
-      ".lead:not([data-zh-unit-id])",
+      ".point-heading",
+      ".point-line",
+      ".lead",
       ".paper-process-panel",
       ".paper-timeline-panel > p",
       ".conclusion-paper h2",
@@ -894,7 +986,7 @@
         annotateKeywords(merged);
         annotateRawText(merged);
         setupChipFlips(merged, comprehension);
-        annotateOrphanText(merged);
+        annotateOrphanText(merged, comprehension);
         if (!opts.silentDisclaimer) {
           showDisclaimer();
         }
@@ -960,7 +1052,7 @@
         annotateKeywords(merged);
         annotateRawText(merged);
         setupChipFlips(merged, comprehension);
-        annotateOrphanText(merged);
+        annotateOrphanText(merged, comprehension);
       });
     }
   });
