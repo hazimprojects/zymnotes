@@ -309,7 +309,19 @@
     if (sentenceTranslationInFlight[sourceText]) {
       return sentenceTranslationInFlight[sourceText];
     }
-    sentenceTranslationInFlight[sourceText] = Promise.resolve("")
+    var endpoint = "https://translate.googleapis.com/translate_a/single" +
+      "?client=gtx" +
+      "&sl=ms" +
+      "&tl=zh-CN" +
+      "&dt=t" +
+      "&q=" + encodeURIComponent(sourceText);
+
+    sentenceTranslationInFlight[sourceText] = fetch(endpoint)
+      .then(function (res) { return res.ok ? res.json() : null; })
+      .then(function (payload) {
+        var translated = parseGoogleTranslateSentence(payload);
+        return translated || "";
+      })
       .then(function (translated) {
         var finalText = translated && translated.trim() ? translated.trim() : "";
         sentenceTranslationCache[sourceText] = finalText;
@@ -428,16 +440,10 @@
   function buildExplainFallback(sourceText, gl) {
     var textForTranslate = typeof sourceText === "string" ? sourceText.trim() : "";
     if (!textForTranslate) return null;
-    if (sentenceTranslationCache[textForTranslate] || sentenceTranslationCache[normalize(textForTranslate)]) {
-      return {
-        modeLabel: "句意解析",
-        text: sentenceTranslationCache[textForTranslate] || sentenceTranslationCache[normalize(textForTranslate)],
-        fallbackLabel: ""
-      };
-    }
+    var cached = sentenceTranslationCache[textForTranslate] || sentenceTranslationCache[normalize(textForTranslate)];
     return {
-      modeLabel: "句意解析",
-      text: "正在载入完整翻译…",
+      modeLabel: "Google Translate",
+      text: cached || "…",
       fallbackLabel: "",
       autoTranslate: true,
       autoTranslateSource: textForTranslate
@@ -507,59 +513,7 @@
   }
 
   function buildChipBackContent(chip, sourceText, gl, comprehension) {
-    var hasSentenceClass = chip.classList.contains("paper-chip-sentence");
-    var defaultMode = hasSentenceClass ? ZH_MODE_EXPLAIN : ZH_MODE_GLOSSARY;
-    var mode = getElementZhMode(chip, defaultMode);
-    var sourceId = chip.getAttribute("data-zh-unit-id");
-    var unit = sourceId ? comprehension[sourceId] : null;
-    var looksLikeLongSentence = isSentenceLikeChip(sourceText) && sourceText.length >= 36;
-
-    if (mode === ZH_MODE_EXPLAIN) {
-      if (unit && typeof unit.translate === "string" && unit.translate.trim()) {
-        var normalizedExplain = normalizeZhExplain(unit.translate.trim(), gl);
-        return {
-          modeLabel: "句意解析",
-          text: normalizedExplain,
-          fallbackLabel: ""
-        };
-      }
-      return buildExplainFallback(sourceText, gl);
-    }
-
-    if (mode === ZH_MODE_GLOSSARY) {
-      if (
-        looksLikeLongSentence &&
-        unit &&
-        typeof unit.translate === "string" &&
-        unit.translate.trim()
-      ) {
-        var normalizedGlossaryExplain = normalizeZhExplain(unit.translate.trim(), gl);
-        return {
-          modeLabel: "句意解析",
-          text: normalizedGlossaryExplain,
-          fallbackLabel: ""
-        };
-      }
-
-      if (unit && typeof unit.glossary_zh === "string" && unit.glossary_zh.trim()) {
-        return {
-          modeLabel: "句意解析",
-          text: "正在载入完整翻译…",
-          fallbackLabel: "",
-          autoTranslate: true,
-          autoTranslateSource: sourceText
-        };
-      }
-      return {
-        modeLabel: "句意解析",
-        text: "正在载入完整翻译…",
-        fallbackLabel: "",
-        autoTranslate: true,
-        autoTranslateSource: sourceText
-      };
-    }
-
-    return null;
+    return buildExplainFallback(sourceText, gl);
   }
 
   function isSentenceLikeChip(sourceText) {
@@ -694,9 +648,15 @@
 
       if (backContent.autoTranslate && backContent.autoTranslateSource) {
         fetchSentenceTranslation(backContent.autoTranslateSource).then(function (translated) {
+          var translatedText = translated && translated.trim() ? translated.trim() : "";
+          chip.setAttribute("data-zh-cn", translatedText);
+          if (chip.__zhChipState) {
+            chip.__zhChipState.translation = translatedText;
+          }
           var explainNode = chip.querySelector(".zh-chip-explain-text");
-          if (!explainNode) return;
-          explainNode.textContent = translated && translated.trim() ? translated.trim() : "暂无中文整句翻译。";
+          if (explainNode) explainNode.textContent = translatedText;
+          var inlineNode = chip.querySelector(".zh-chip-short-inline");
+          if (inlineNode) inlineNode.textContent = "（" + translatedText + "）";
         });
       }
 
@@ -918,12 +878,9 @@
     } else if (typeof rawText === "string" && rawText.trim()) {
       sentenceSource = rawText.trim();
     }
-
-    if (unit && typeof unit.translate === "string" && unit.translate.trim()) {
-      var normalizedExplain = normalizeZhExplain(unit.translate.trim(), gl);
-      return Promise.resolve(normalizedExplain);
-    }
-    return Promise.resolve("");
+    return fetchSentenceTranslation(sentenceSource).then(function (translated) {
+      return translated && translated.trim() ? translated.trim() : "";
+    });
   }
 
   function annotateOrphanText(gl, comprehension) {
@@ -976,10 +933,10 @@
           if (annSpan.dataset.status === "idle") {
             annSpan.dataset.status = "loading";
             buildPointExplainText(cleanText, unit, gl).then(function (explanationText) {
-              annSpan.textContent = explanationText || "暂无中文整句翻译。";
+              annSpan.textContent = explanationText || "";
               annSpan.dataset.status = "done";
             }).catch(function () {
-              annSpan.textContent = "暂无中文整句翻译。";
+              annSpan.textContent = "";
               annSpan.dataset.status = "done";
             });
           }
@@ -1095,8 +1052,6 @@
         if (!isZhMode()) return;
         var merged = getMergedGlossary();
         var comprehension = getComprehensionMap();
-        annotateKeywords(merged);
-        annotateRawText(merged);
         setupChipFlips(merged, comprehension);
         annotateOrphanText(merged, comprehension);
         if (!opts.silentDisclaimer) {
@@ -1161,8 +1116,6 @@
       Promise.all([loadGlossary(), loadComprehensionData(), loadSentenceTranslationMap()]).then(function () {
         var merged = getMergedGlossary();
         var comprehension = getComprehensionMap();
-        annotateKeywords(merged);
-        annotateRawText(merged);
         setupChipFlips(merged, comprehension);
         annotateOrphanText(merged, comprehension);
       });
