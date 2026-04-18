@@ -22,6 +22,8 @@
   var CHIP_DISPLAY_STACKED = "stacked";
   var CHIP_TOUCH_CLICK_DELAY_MS = 360;
   var chipInteractionsBound = false;
+  var sentenceTranslationCache = Object.create(null);
+  var sentenceTranslationInFlight = Object.create(null);
 
   var OVERLY_GENERAL_TERMS = new Set([
     "bahasa", "politik", "agama", "kampung", "rakyat",
@@ -235,6 +237,49 @@
       }
     }
     return null;
+  }
+
+  function parseGoogleTranslateSentence(payload) {
+    if (!Array.isArray(payload) || !Array.isArray(payload[0])) return "";
+    return payload[0]
+      .map(function (part) {
+        return Array.isArray(part) && typeof part[0] === "string" ? part[0] : "";
+      })
+      .join("")
+      .trim();
+  }
+
+  function fetchSentenceTranslation(text) {
+    var sourceText = typeof text === "string" ? text.trim() : "";
+    if (!sourceText) return Promise.resolve("");
+    if (sentenceTranslationCache[sourceText] !== undefined) {
+      return Promise.resolve(sentenceTranslationCache[sourceText]);
+    }
+    if (sentenceTranslationInFlight[sourceText]) {
+      return sentenceTranslationInFlight[sourceText];
+    }
+
+    var endpoint = "https://translate.googleapis.com/translate_a/single?client=gtx&sl=ms&tl=zh-CN&dt=t&q=" + encodeURIComponent(sourceText);
+    sentenceTranslationInFlight[sourceText] = fetch(endpoint)
+      .then(function (res) {
+        if (!res.ok) return "";
+        return res.json()
+          .then(parseGoogleTranslateSentence)
+          .catch(function () { return ""; });
+      })
+      .catch(function () { return ""; })
+      .then(function (translated) {
+        var finalText = translated && translated.trim() ? translated.trim() : "";
+        sentenceTranslationCache[sourceText] = finalText;
+        delete sentenceTranslationInFlight[sourceText];
+        return finalText;
+      }, function () {
+        delete sentenceTranslationInFlight[sourceText];
+        sentenceTranslationCache[sourceText] = "";
+        return "";
+      });
+
+    return sentenceTranslationInFlight[sourceText];
   }
 
   function annotateKeywords(gl) {
@@ -735,23 +780,33 @@
   // ── Orphan Text Annotation ───────────────────────────────
 
   function buildPointExplainText(rawText, unit, gl) {
-    if (unit && typeof unit.zh_explain === "string" && unit.zh_explain.trim()) {
-      return unit.zh_explain.trim();
+    var sentenceSource = "";
+    if (unit && typeof unit.bm_original === "string" && unit.bm_original.trim()) {
+      sentenceSource = unit.bm_original.trim();
+    } else if (typeof rawText === "string" && rawText.trim()) {
+      sentenceSource = rawText.trim();
     }
 
-    var fallback = buildGlossaryFallback(rawText, gl);
-    if (!fallback || !fallback.text) return "";
-
-    if (Array.isArray(fallback.pairs) && fallback.pairs.length > 0) {
-      var zhTerms = fallback.pairs
-        .map(function (pair) { return pair && pair.zh ? pair.zh.trim() : ""; })
-        .filter(Boolean);
-      if (zhTerms.length > 0) {
-        return "该要点说明：" + zhTerms.join("、") + "。";
+    return fetchSentenceTranslation(sentenceSource).then(function (sentenceTranslation) {
+      if (sentenceTranslation) return sentenceTranslation;
+      if (unit && typeof unit.zh_explain === "string" && unit.zh_explain.trim()) {
+        return unit.zh_explain.trim();
       }
-    }
 
-    return fallback.text.trim();
+      var fallback = buildGlossaryFallback(rawText, gl);
+      if (!fallback || !fallback.text) return "";
+
+      if (Array.isArray(fallback.pairs) && fallback.pairs.length > 0) {
+        var zhTerms = fallback.pairs
+          .map(function (pair) { return pair && pair.zh ? pair.zh.trim() : ""; })
+          .filter(Boolean);
+        if (zhTerms.length > 0) {
+          return "该要点说明：" + zhTerms.join("、") + "。";
+        }
+      }
+
+      return fallback.text.trim();
+    });
   }
 
   function annotateOrphanText(gl, comprehension) {
@@ -780,9 +835,6 @@
       if (!cleanText || cleanText.length < 3) return;
 
       var unit = resolveUnit(el);
-      var explanationText = buildPointExplainText(cleanText, unit, gl);
-      if (!explanationText) return;
-
       var toggleBtn = document.createElement("button");
       toggleBtn.type = "button";
       toggleBtn.className = "zh-heading-toggle";
@@ -795,8 +847,7 @@
       annSpan.setAttribute("hidden", "");
       annSpan.setAttribute("aria-hidden", "true");
       annSpan.setAttribute("lang", "zh-Hans");
-
-      annSpan.textContent = explanationText;
+      annSpan.dataset.status = "idle";
 
       toggleBtn.addEventListener("click", function (e) {
         e.stopPropagation();
@@ -807,6 +858,17 @@
         } else {
           annSpan.removeAttribute("hidden");
           toggleBtn.setAttribute("aria-expanded", "true");
+          if (annSpan.dataset.status === "idle") {
+            annSpan.dataset.status = "loading";
+            annSpan.textContent = "正在生成整句翻译…";
+            buildPointExplainText(cleanText, unit, gl).then(function (explanationText) {
+              annSpan.textContent = explanationText || "暂无中文整句翻译。";
+              annSpan.dataset.status = "done";
+            }).catch(function () {
+              annSpan.textContent = "暂无中文整句翻译。";
+              annSpan.dataset.status = "done";
+            });
+          }
         }
       });
 
