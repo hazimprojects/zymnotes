@@ -681,7 +681,7 @@
     var re = new RegExp("\\b(" + escaped.join("|") + ")\\b", "gi");
 
     // Selectors to skip (already handled elsewhere, or structural)
-    var SKIP = ".kw,.paper-chip,code,pre,.kw-zh-ann,.zh-chip-translation,.zh-raw-ann,.zh-heading-ann,script,style,nav,header,footer,.keyword-legend-item,.zh-comprehension-panel";
+    var SKIP = ".kw,.paper-chip,.paper-kingdom,code,pre,.kw-zh-ann,.zh-chip-translation,.zh-raw-ann,.zh-heading-ann,script,style,nav,header,footer,.keyword-legend-item,.zh-comprehension-panel";
 
     var contentArea = document.querySelector(".note-section") || document.body;
 
