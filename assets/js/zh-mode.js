@@ -1152,13 +1152,13 @@
     toast.setAttribute("role", "status");
     toast.setAttribute("aria-live", "polite");
     toast.innerHTML =
-      '<span class=”zh-disclaimer-icon”>中</span>' +
-      '<div class=”zh-disclaimer-content”>' +
-        '<span class=”zh-disclaimer-text”>中文模式已开启 · 词汇注释</span>' +
-        '<button class=”zh-help-toggle zh-disclaimer-help-toggle” type=”button” aria-expanded=”false”>❓ 说明</button>' +
-        '<span class=”zh-disclaimer-help” hidden>中文辅助模式已启动。点击纸片（chip）可翻转查看词汇注释。点击句子旁的「中」按钮可查看词汇提示。BM用词仍须熟记，因为考试须以马来文作答。</span>' +
+      '<span class="zh-disclaimer-icon">中</span>' +
+      '<div class="zh-disclaimer-content">' +
+        '<span class="zh-disclaimer-text">Mod Bahasa Cina aktif · versi awal bantuan belajar</span>' +
+        '<button class="zh-help-toggle zh-disclaimer-help-toggle" type="button" aria-expanded="false">❓ Makluman</button>' +
+        '<span class="zh-disclaimer-help" hidden>Fungsi ini diperkenalkan untuk memudahkan pelajar memahami isi penting. Oleh sebab masih di peringkat awal, sesetengah padanan istilah atau konteks ayat mungkin belum tepat sepenuhnya. Gunakan sebagai bantuan kefahaman, dan jadikan nota BM sebagai rujukan utama.</span>' +
       "</div>" +
-      '<button class=”zh-disclaimer-close” type=”button” aria-label=”关闭”>✕</button>';
+      '<button class="zh-disclaimer-close" type="button" aria-label="Tutup makluman">✕</button>';
 
     document.body.appendChild(toast);
 
@@ -1236,7 +1236,7 @@
       var btn = document.createElement("button");
       btn.type = "button";
       btn.className = "zh-mode-fab";
-      btn.setAttribute("aria-label", "Mod Bahasa Cina (中文模式)");
+      btn.setAttribute("aria-label", "Mod Bahasa Cina (versi awal)");
       btn.setAttribute("aria-pressed", isZhMode() ? "true" : "false");
       btn.textContent = "华";
       if (isZhMode()) btn.classList.add("is-active");

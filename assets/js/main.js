@@ -914,7 +914,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (audioEl) itemsContainer.appendChild(makeSparkleItem('🎧', 'Main audio', 'audio'));
     if (labHref) itemsContainer.appendChild(makeSparkleItem(labEmoji, 'Kuiz', 'lab', labHref));
-    if (zhModeApi) itemsContainer.appendChild(makeSparkleItem('华', 'Mod Bahasa Cina', 'zh-mode'));
+    if (zhModeApi) itemsContainer.appendChild(makeSparkleItem('华', 'Mod Bahasa Cina (Versi Awal)', 'zh-mode'));
 
     var fab = document.createElement('button');
     fab.className = 'note-sparkle-fab';
