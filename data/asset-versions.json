@@ -1,7 +1,7 @@
 {
   "style_css": "80",
   "main_js": "71",
-  "zh_mode_js": "3",
+  "zh_mode_js": "4",
   "manifest": "3",
   "sw_cache": "45",
   "css": {
@@ -9,7 +9,7 @@
     "layout": "9",
     "ui": "17",
     "paper": "10",
-    "keywords": "18",
+    "keywords": "19",
     "responsive": "3",
     "themes": "6",
     "lab": "2"

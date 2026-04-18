@@ -502,8 +502,36 @@ html[data-theme="dark"] .zh-disclaimer-toast {
   display: inline;
 }
 
+.paper-chip .zh-chip-short-inline {
+  display: inline;
+}
+
+.paper-chip .zh-chip-full-sentence-wrap {
+  display: block;
+  margin-top: 0.3rem;
+  padding-top: 0.24rem;
+  border-top: 1px dashed rgba(154, 52, 18, 0.32);
+  line-height: 1.5;
+}
+
+.paper-chip .zh-chip-full-sentence-label {
+  font-size: 0.76em;
+  font-weight: 800;
+  opacity: 0.72;
+  margin-right: 0.3em;
+}
+
+.paper-chip .zh-chip-full-sentence {
+  display: inline;
+  font-weight: 650;
+}
+
 html[data-theme="dark"] .paper-chip .zh-chip-translation {
   color: #fdba74;
+}
+
+html[data-theme="dark"] .paper-chip .zh-chip-full-sentence-wrap {
+  border-top-color: rgba(253, 186, 116, 0.35);
 }
 
 /* Chip back structure: BM context (small, muted) + Chinese content */

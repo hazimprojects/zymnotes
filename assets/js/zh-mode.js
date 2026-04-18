@@ -356,6 +356,7 @@
     var mode = getElementZhMode(chip, defaultMode);
     var sourceId = chip.getAttribute("data-zh-unit-id");
     var unit = sourceId ? comprehension[sourceId] : null;
+    var looksLikeLongSentence = isSentenceLikeChip(sourceText) && sourceText.length >= 36;
 
     if (mode === ZH_MODE_EXPLAIN) {
       if (unit && typeof unit.zh_explain === "string" && unit.zh_explain.trim()) {
@@ -370,9 +371,20 @@
 
     if (mode === ZH_MODE_GLOSSARY) {
       if (unit && typeof unit.glossary_zh === "string" && unit.glossary_zh.trim()) {
+        var glossaryText = unit.glossary_zh.trim();
+        var fullSentenceZh = "";
+        if (
+          looksLikeLongSentence &&
+          typeof unit.zh_explain === "string" &&
+          unit.zh_explain.trim() &&
+          unit.zh_explain.trim() !== glossaryText
+        ) {
+          fullSentenceZh = unit.zh_explain.trim();
+        }
         return {
           modeLabel: "词汇注释",
-          text: unit.glossary_zh.trim(),
+          text: glossaryText,
+          fullSentenceZh: fullSentenceZh,
           fallbackLabel: ""
         };
       }
@@ -471,6 +483,16 @@
       var hasPairs = backContent.pairs && backContent.pairs.length > 1;
       var isLongExplain = !hasPairs && backContent.text && backContent.text.length > 28;
 
+      var hasFullSentence = typeof backContent.fullSentenceZh === "string" && !!backContent.fullSentenceZh.trim();
+      var fullSentenceHtml = hasFullSentence
+        ? (
+          '<span class="zh-chip-full-sentence-wrap">' +
+            '<span class="zh-chip-full-sentence-label">整句：</span>' +
+            '<span class="zh-chip-full-sentence" lang="zh-Hans">' + escapeHtml(backContent.fullSentenceZh.trim()) + '</span>' +
+          '</span>'
+        )
+        : "";
+
       if (hasPairs) {
         var pairsHtml = backContent.pairs.map(function (p) {
           return (
@@ -481,13 +503,19 @@
             '</span>'
           );
         }).join('');
-        translationHtml = '<span class="zh-chip-translation zh-chip-translation-pairs" lang="zh-Hans">' + pairsHtml + '</span>';
+        translationHtml = '<span class="zh-chip-translation zh-chip-translation-pairs" lang="zh-Hans">' + pairsHtml + fullSentenceHtml + '</span>';
         chip.classList.add("zh-chip-has-pairs");
       } else if (isLongExplain) {
-        translationHtml = '<span class="zh-chip-translation zh-chip-translation-explain" lang="zh-Hans">' + escapeHtml(backContent.text) + '</span>';
+        translationHtml = (
+          '<span class="zh-chip-translation zh-chip-translation-explain" lang="zh-Hans">' +
+            '<span class="zh-chip-explain-text">' + escapeHtml(backContent.text) + '</span>' +
+            fullSentenceHtml +
+          '</span>'
+        );
         chip.classList.add("zh-chip-has-explain");
       } else {
-        translationHtml = '<span class="zh-chip-translation" lang="zh-Hans">（' + escapeHtml(backContent.text) + '）</span>';
+        var shortContent = '<span class="zh-chip-short-inline">（' + escapeHtml(backContent.text) + '）</span>';
+        translationHtml = '<span class="zh-chip-translation" lang="zh-Hans">' + shortContent + fullSentenceHtml + '</span>';
       }
 
       chip.innerHTML =
