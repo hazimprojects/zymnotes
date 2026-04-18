@@ -229,7 +229,7 @@
     {
       "source_id": "bab-1-1-extra-3",
       "bm_original": "👥 ketaatan rakyat",
-      "zh_explain": "人民/子民。这是👥 ketaatan rakyat的中文要义。",
+      "zh_explain": "要点说明：Rakyat = 人民/子民。",
       "key_points_zh": [
         "Rakyat = 人民/子民"
       ],
@@ -265,7 +265,7 @@
     {
       "source_id": "bab-1-1-extra-7",
       "bm_original": "🌍 terpakai di seluruh wilayah pengaruh",
-      "zh_explain": "",
+      "zh_explain": "Wilayah Pengaruh = 势力范围/领土。",
       "key_points_zh": [
         "Wilayah Pengaruh = 势力范围/领土"
       ],
@@ -274,7 +274,7 @@
     {
       "source_id": "bab-1-1-extra-8",
       "bm_original": "📘 menjadi panduan dalam pentadbiran",
-      "zh_explain": "",
+      "zh_explain": "Pentadbiran = 行政管理。",
       "key_points_zh": [
         "Pentadbiran = 行政管理"
       ],
@@ -283,14 +283,14 @@
     {
       "source_id": "bab-1-1-extra-9",
       "bm_original": "✔️ menerima",
-      "zh_explain": "",
+      "zh_explain": "要点说明：️ menerima（本项为历史术语，保留马来文原词并说明其含义）。",
       "key_points_zh": [],
       "bm_focus_phrase": "✔️ menerima"
     },
     {
       "source_id": "bab-1-1-extra-10",
       "bm_original": "✔️ mengakui",
-      "zh_explain": "",
+      "zh_explain": "要点说明：️ mengakui（本项为历史术语，保留马来文原词并说明其含义）。",
       "key_points_zh": [],
       "bm_focus_phrase": "✔️ mengakui"
     },
@@ -307,35 +307,35 @@
     {
       "source_id": "bab-1-1-extra-12",
       "bm_original": "🌊 Sungai Mekong",
-      "zh_explain": "",
+      "zh_explain": "人物名称：Sungai Mekong（历史人物姓名保留原文，不作直译）。",
       "key_points_zh": [],
       "bm_focus_phrase": "🌊 Sungai Mekong"
     },
     {
       "source_id": "bab-1-1-extra-13",
       "bm_original": "🌊 Teluk Cam Ranh",
-      "zh_explain": "",
+      "zh_explain": "人物名称：Teluk Cam Ranh（历史人物姓名保留原文，不作直译）。",
       "key_points_zh": [],
       "bm_focus_phrase": "🌊 Teluk Cam Ranh"
     },
     {
       "source_id": "bab-1-1-extra-14",
       "bm_original": "🌏 Selatan Myanmar",
-      "zh_explain": "",
+      "zh_explain": "人物名称：Selatan Myanmar（历史人物姓名保留原文，不作直译）。",
       "key_points_zh": [],
       "bm_focus_phrase": "🌏 Selatan Myanmar"
     },
     {
       "source_id": "bab-1-1-extra-15",
       "bm_original": "📍 Segenting Kra",
-      "zh_explain": "",
+      "zh_explain": "人物名称：Segenting Kra（历史人物姓名保留原文，不作直译）。",
       "key_points_zh": [],
       "bm_focus_phrase": "📍 Segenting Kra"
     },
     {
       "source_id": "bab-1-1-extra-16",
       "bm_original": "🤝 setia kepada raja",
-      "zh_explain": "国王。这是🤝 setia kepada raja的中文要义。",
+      "zh_explain": "要点说明：Raja = 国王。",
       "key_points_zh": [
         "Raja = 国王"
       ],
@@ -344,42 +344,42 @@
     {
       "source_id": "bab-1-1-extra-17",
       "bm_original": "🚫 tidak menderhaka",
-      "zh_explain": "",
+      "zh_explain": "要点说明：tidak menderhaka（本项为历史术语，保留马来文原词并说明其含义）。",
       "key_points_zh": [],
       "bm_focus_phrase": "🚫 tidak menderhaka"
     },
     {
       "source_id": "bab-1-1-extra-18",
       "bm_original": "🧪 upacara persetiaan",
-      "zh_explain": "",
+      "zh_explain": "要点说明：upacara persetiaan（本项为历史术语，保留马来文原词并说明其含义）。",
       "key_points_zh": [],
       "bm_focus_phrase": "🧪 upacara persetiaan"
     },
     {
       "source_id": "bab-1-1-extra-19",
       "bm_original": "💧 meminum air sumpah",
-      "zh_explain": "",
+      "zh_explain": "要点说明：meminum air sumpah（本项为历史术语，保留马来文原词并说明其含义）。",
       "key_points_zh": [],
       "bm_focus_phrase": "💧 meminum air sumpah"
     },
     {
       "source_id": "bab-1-1-extra-20",
       "bm_original": "✨ Sri = bercahaya",
-      "zh_explain": "",
+      "zh_explain": "要点说明：Sri = bercahaya（本项为历史术语，保留马来文原词并说明其含义）。",
       "key_points_zh": [],
       "bm_focus_phrase": "✨ Sri = bercahaya"
     },
     {
       "source_id": "bab-1-1-extra-21",
       "bm_original": "🏆 Vijaya = kemenangan",
-      "zh_explain": "",
+      "zh_explain": "要点说明：Vijaya = kemenangan（本项为历史术语，保留马来文原词并说明其含义）。",
       "key_points_zh": [],
       "bm_focus_phrase": "🏆 Vijaya = kemenangan"
     },
     {
       "source_id": "bab-1-1-extra-22",
       "bm_original": "🏛️ memperkukuh kerajaan Srivijaya",
-      "zh_explain": "",
+      "zh_explain": "Kerajaan = 王国/政府；Srivijaya = 三佛齐王国。",
       "key_points_zh": [
         "Kerajaan = 王国/政府",
         "Srivijaya = 三佛齐王国"
@@ -389,7 +389,7 @@
     {
       "source_id": "bab-1-1-extra-23",
       "bm_original": "👑 menguatkan Kesultanan Melayu Melaka",
-      "zh_explain": "",
+      "zh_explain": "Kesultanan Melayu Melaka = 马六甲苏丹国。",
       "key_points_zh": [
         "Kesultanan Melayu Melaka = 马六甲苏丹国"
       ],
@@ -398,7 +398,7 @@
     {
       "source_id": "bab-1-1-extra-24",
       "bm_original": "📜 diteruskan oleh Kesultanan Johor-Riau",
-      "zh_explain": "",
+      "zh_explain": "Sultan = 苏丹；Johor-Riau = 柔佛-廖内王国。",
       "key_points_zh": [
         "Sultan = 苏丹",
         "Johor-Riau = 柔佛-廖内王国"
@@ -408,7 +408,7 @@
     {
       "source_id": "bab-1-1-extra-25",
       "bm_original": "❤️ berbangga dengan warisan sejarah",
-      "zh_explain": "",
+      "zh_explain": "Warisan = 遗产/传承。",
       "key_points_zh": [
         "Warisan = 遗产/传承"
       ],
@@ -417,7 +417,7 @@
     {
       "source_id": "bab-1-1-extra-26",
       "bm_original": "🤝 bekerjasama mempertahankan kedaulatan negara",
-      "zh_explain": "",
+      "zh_explain": "Kedaulatan = 主权。",
       "key_points_zh": [
         "Kedaulatan = 主权"
       ],
@@ -426,7 +426,7 @@
     {
       "source_id": "bab-1-1-extra-27",
       "bm_original": "🛡️ menghargai sistem negara bangsa yang diwarisi",
-      "zh_explain": "",
+      "zh_explain": "Negara Bangsa = 民族国家。",
       "key_points_zh": [
         "Negara Bangsa = 民族国家"
       ],

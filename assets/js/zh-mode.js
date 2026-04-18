@@ -279,12 +279,10 @@
       if (!bmOriginal) return;
 
       var zhExplain = typeof unit.zh_explain === "string" ? normalizeZhExplain(unit.zh_explain, getMergedGlossary()) : "";
-      var glossaryZh = typeof unit.glossary_zh === "string" ? unit.glossary_zh.trim() : "";
-      var bestLocalTranslation = zhExplain || glossaryZh;
-      if (!bestLocalTranslation) return;
+      if (!zhExplain) return;
 
-      sentenceTranslationCache[bmOriginal] = bestLocalTranslation;
-      sentenceTranslationCache[normalize(bmOriginal)] = bestLocalTranslation;
+      sentenceTranslationCache[bmOriginal] = zhExplain;
+      sentenceTranslationCache[normalize(bmOriginal)] = zhExplain;
     });
   }
 
@@ -311,16 +309,7 @@
     if (sentenceTranslationInFlight[sourceText]) {
       return sentenceTranslationInFlight[sourceText];
     }
-
-    var endpoint = "https://translate.googleapis.com/translate_a/single?client=gtx&sl=ms&tl=zh-CN&dt=t&q=" + encodeURIComponent(sourceText);
-    sentenceTranslationInFlight[sourceText] = fetch(endpoint)
-      .then(function (res) {
-        if (!res.ok) return "";
-        return res.json()
-          .then(parseGoogleTranslateSentence)
-          .catch(function () { return ""; });
-      })
-      .catch(function () { return ""; })
+    sentenceTranslationInFlight[sourceText] = Promise.resolve("")
       .then(function (translated) {
         var finalText = translated && translated.trim() ? translated.trim() : "";
         sentenceTranslationCache[sourceText] = finalText;
@@ -446,14 +435,6 @@
         fallbackLabel: ""
       };
     }
-    var glossaryFallback = buildGlossaryFallback(textForTranslate, gl);
-    if (glossaryFallback && glossaryFallback.text && glossaryFallback.text.trim()) {
-      return {
-        modeLabel: "句意解析",
-        text: "该要点说明：" + glossaryFallback.text.trim().replace(/。?$/, "。"),
-        fallbackLabel: ""
-      };
-    }
     return {
       modeLabel: "句意解析",
       text: "正在载入完整翻译…",
@@ -546,24 +527,21 @@
       }
 
       if (unit && typeof unit.glossary_zh === "string" && unit.glossary_zh.trim()) {
-        var glossaryText = unit.glossary_zh.trim();
-        var fullSentenceZh = "";
-        if (
-          looksLikeLongSentence &&
-          typeof unit.zh_explain === "string" &&
-          unit.zh_explain.trim() &&
-          unit.zh_explain.trim() !== glossaryText
-        ) {
-          fullSentenceZh = unit.zh_explain.trim();
-        }
         return {
-          modeLabel: "词汇注释",
-          text: glossaryText,
-          fullSentenceZh: fullSentenceZh,
-          fallbackLabel: ""
+          modeLabel: "句意解析",
+          text: "正在载入完整翻译…",
+          fallbackLabel: "",
+          autoTranslate: true,
+          autoTranslateSource: sourceText
         };
       }
-      return buildGlossaryFallback(sourceText, gl);
+      return {
+        modeLabel: "句意解析",
+        text: "正在载入完整翻译…",
+        fallbackLabel: "",
+        autoTranslate: true,
+        autoTranslateSource: sourceText
+      };
     }
 
     return null;
@@ -923,10 +901,6 @@
       return Promise.resolve(normalizeZhExplain(unit.zh_explain.trim(), gl));
     }
 
-    if (unit && typeof unit.glossary_zh === "string" && unit.glossary_zh.trim()) {
-      return Promise.resolve("该要点说明：" + unit.glossary_zh.trim().replace(/。?$/, "。"));
-    }
-
     var sentenceSource = "";
     if (unit && typeof unit.bm_original === "string" && unit.bm_original.trim()) {
       sentenceSource = unit.bm_original.trim();
@@ -936,20 +910,7 @@
 
     return fetchSentenceTranslation(sentenceSource).then(function (sentenceTranslation) {
       if (sentenceTranslation) return sentenceTranslation;
-
-      var fallback = buildGlossaryFallback(rawText, gl);
-      if (!fallback || !fallback.text) return "";
-
-      if (Array.isArray(fallback.pairs) && fallback.pairs.length > 0) {
-        var zhTerms = fallback.pairs
-          .map(function (pair) { return pair && pair.zh ? pair.zh.trim() : ""; })
-          .filter(Boolean);
-        if (zhTerms.length > 0) {
-          return "该要点说明：" + zhTerms.join("、") + "。";
-        }
-      }
-
-      return fallback.text.trim();
+      return "";
     });
   }
 
