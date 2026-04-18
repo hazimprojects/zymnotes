@@ -24,6 +24,7 @@
   var chipInteractionsBound = false;
   var sentenceTranslationCache = Object.create(null);
   var sentenceTranslationInFlight = Object.create(null);
+  var ENTITY_WARNING_LABEL = "⚠︎ Entiti dikekalkan (BM asal).";
 
   var OVERLY_GENERAL_TERMS = new Set([
     "bahasa", "politik", "agama", "kampung", "rakyat",
@@ -80,6 +81,149 @@
       .replace(/>/g, "&gt;")
       .replace(/\"/g, "&quot;")
       .replace(/'/g, "&#39;");
+  }
+
+  function escapeRegExp(str) {
+    return String(str || "").replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  }
+
+  function uniqueByLengthDesc(items) {
+    return Array.from(new Set(items.filter(Boolean))).sort(function (a, b) {
+      return b.length - a.length;
+    });
+  }
+
+  function extractProtectedEntities(text, glossaryMeta) {
+    var sourceText = typeof text === "string" ? text : "";
+    if (!sourceText.trim()) {
+      return { protectedText: "", placeholderMap: {}, placeholders: [] };
+    }
+
+    var PERSON_TITLES = [
+      "Tun", "Tunku", "Tuanku", "Datuk", "Dato", "Dato'", "Dato’", "Tan Sri",
+      "Puan Sri", "Datin", "Datuk Seri", "Dato' Seri", "Yang di-Pertuan",
+      "Dr", "Dr.", "Prof", "Profesor", "Haji", "Hajah", "Syed", "Sayyid"
+    ];
+    var ORG_TERMS = [
+      "Kementerian", "Persekutuan", "Majlis", "Jabatan", "Universiti", "Sekolah",
+      "Bank", "Suruhanjaya", "Pertubuhan", "Lembaga", "Dewan", "Mahkamah",
+      "Parlimen", "Kerajaan", "Angkatan", "Institut", "Pejabat"
+    ];
+    var PLACE_OR_HISTORICAL_TERMS = [
+      "Tanah Melayu", "Alam Melayu", "Kesultanan Melayu Melaka", "Selat Melaka",
+      "Bumi Putera", "Yang di-Pertuan Agong", "Raja-raja Melayu"
+    ];
+
+    var segments = [];
+    function pushMatch(matchText, index) {
+      if (!matchText || typeof index !== "number" || index < 0) return;
+      var cleaned = matchText.trim();
+      if (!cleaned) return;
+      segments.push({ start: index, end: index + matchText.length, text: cleaned });
+    }
+
+    function collectByRegex(re) {
+      var m;
+      re.lastIndex = 0;
+      while ((m = re.exec(sourceText)) !== null) {
+        pushMatch(m[0], m.index);
+      }
+    }
+
+    var personTitlePattern = new RegExp(
+      "\\b(?:" + PERSON_TITLES.map(escapeRegExp).join("|") + ")\\s+" +
+      "[A-Z][\\w'’.-]+(?:\\s+(?:bin|binti)\\s+[A-Z][\\w'’.-]+)?(?:\\s+[A-Z][\\w'’.-]+){0,4}\\b",
+      "g"
+    );
+    collectByRegex(personTitlePattern);
+    collectByRegex(/\b[A-Z][\w'’.-]+(?:\s+[A-Z][\w'’.-]+)?\s+(?:bin|binti)\s+[A-Z][\w'’.-]+(?:\s+[A-Z][\w'’.-]+){0,3}\b/g);
+
+    var orgPattern = new RegExp(
+      "\\b(?:" + ORG_TERMS.map(escapeRegExp).join("|") + ")\\s+" +
+      "(?:[A-Z][\\w'’.-]*|di|dan|Malaysia|Negara|Negeri|Kebangsaan|Islam|Melayu|Pertama|Kedua|Ketiga|Keempat)(?:\\s+(?:[A-Z][\\w'’.-]*|di|dan|Malaysia|Negara|Negeri|Kebangsaan|Islam|Melayu|Pertama|Kedua|Ketiga|Keempat)){0,8}",
+      "g"
+    );
+    collectByRegex(orgPattern);
+
+    uniqueByLengthDesc(PLACE_OR_HISTORICAL_TERMS).forEach(function (term) {
+      var re = new RegExp("\\b" + escapeRegExp(term) + "\\b", "gi");
+      var m;
+      while ((m = re.exec(sourceText)) !== null) {
+        pushMatch(m[0], m.index);
+      }
+    });
+
+    var glossaryKeys = glossaryMeta && typeof glossaryMeta === "object" ? Object.keys(glossaryMeta) : [];
+    var glossaryPhrases = glossaryKeys.filter(function (key) {
+      if (!key || key.length < 5) return false;
+      return /\b(kementerian|persekutuan|majlis|kesultanan|negeri|tanah|raja|agong)\b/i.test(key);
+    });
+    uniqueByLengthDesc(glossaryPhrases).forEach(function (phrase) {
+      var re = new RegExp("\\b" + escapeRegExp(phrase) + "\\b", "gi");
+      var m;
+      while ((m = re.exec(sourceText)) !== null) {
+        pushMatch(m[0], m.index);
+      }
+    });
+
+    segments.sort(function (a, b) {
+      if (a.start !== b.start) return a.start - b.start;
+      return b.end - a.end;
+    });
+
+    var merged = [];
+    segments.forEach(function (seg) {
+      var prev = merged[merged.length - 1];
+      if (!prev || seg.start >= prev.end) {
+        merged.push(seg);
+      }
+    });
+
+    if (merged.length === 0) {
+      return { protectedText: sourceText, placeholderMap: {}, placeholders: [] };
+    }
+
+    var protectedText = "";
+    var cursor = 0;
+    var placeholderMap = {};
+    var placeholders = [];
+    merged.forEach(function (seg, idx) {
+      var placeholder = "__HZ_ENT_" + String(idx + 1).padStart(3, "0") + "__";
+      placeholders.push(placeholder);
+      placeholderMap[placeholder] = sourceText.slice(seg.start, seg.end);
+      protectedText += sourceText.slice(cursor, seg.start) + placeholder;
+      cursor = seg.end;
+    });
+    protectedText += sourceText.slice(cursor);
+
+    return { protectedText: protectedText, placeholderMap: placeholderMap, placeholders: placeholders };
+  }
+
+  function restoreProtectedEntities(translatedText, entitiesPayload) {
+    var translated = typeof translatedText === "string" ? translatedText : "";
+    var payload = entitiesPayload || {};
+    var placeholders = Array.isArray(payload.placeholders) ? payload.placeholders : [];
+    var placeholderMap = payload.placeholderMap || {};
+
+    if (placeholders.length === 0) {
+      return { text: translated, stable: true };
+    }
+
+    for (var i = 0; i < placeholders.length; i++) {
+      if (translated.indexOf(placeholders[i]) === -1) {
+        return { text: "", stable: false };
+      }
+    }
+
+    var restored = translated;
+    placeholders.forEach(function (placeholder) {
+      var original = placeholderMap[placeholder];
+      if (typeof original !== "string") return;
+      var placeholderRe = new RegExp(escapeRegExp(placeholder), "g");
+      restored = restored.replace(placeholderRe, original);
+    });
+
+    return { text: restored, stable: true };
   }
 
   function getElementZhMode(el, fallbackMode) {
@@ -395,12 +539,15 @@
     var textForTranslate = typeof sourceText === "string" ? sourceText.trim() : "";
     if (!textForTranslate) return null;
     var cached = sentenceTranslationCache[textForTranslate] || sentenceTranslationCache[normalize(textForTranslate)];
+    var entitiesPayload = extractProtectedEntities(textForTranslate, gl);
     return {
       modeLabel: "Google Translate",
       text: cached || "…",
       fallbackLabel: "",
       autoTranslate: true,
-      autoTranslateSource: textForTranslate
+      autoTranslateSource: entitiesPayload.protectedText || textForTranslate,
+      autoTranslateEntities: entitiesPayload,
+      autoTranslateOriginal: textForTranslate
     };
   }
 
@@ -603,14 +750,20 @@
       if (backContent.autoTranslate && backContent.autoTranslateSource) {
         fetchSentenceTranslation(backContent.autoTranslateSource).then(function (translated) {
           var translatedText = translated && translated.trim() ? translated.trim() : "";
-          chip.setAttribute("data-zh-cn", translatedText);
+          var restored = restoreProtectedEntities(translatedText, backContent.autoTranslateEntities);
+          var finalText = restored.stable && restored.text && restored.text.trim()
+            ? restored.text.trim()
+            : ((backContent.autoTranslateOriginal || sourceText || "").trim());
+          var hasFallbackWarning = !restored.stable;
+          chip.setAttribute("data-zh-cn", finalText);
+          chip.setAttribute("data-zh-fallback-label", hasFallbackWarning ? ENTITY_WARNING_LABEL : "");
           if (chip.__zhChipState) {
-            chip.__zhChipState.translation = translatedText;
+            chip.__zhChipState.translation = finalText;
           }
           var explainNode = chip.querySelector(".zh-chip-explain-text");
-          if (explainNode) explainNode.textContent = translatedText;
+          if (explainNode) explainNode.textContent = hasFallbackWarning ? (finalText + " " + ENTITY_WARNING_LABEL) : finalText;
           var inlineNode = chip.querySelector(".zh-chip-short-inline");
-          if (inlineNode) inlineNode.textContent = "（" + translatedText + "）";
+          if (inlineNode) inlineNode.textContent = "（" + finalText + (hasFallbackWarning ? " · ⚠︎" : "") + "）";
         });
       }
 
@@ -832,8 +985,22 @@
     } else if (typeof rawText === "string" && rawText.trim()) {
       sentenceSource = rawText.trim();
     }
-    return fetchSentenceTranslation(sentenceSource).then(function (translated) {
-      return translated && translated.trim() ? translated.trim() : "";
+    var entitiesPayload = extractProtectedEntities(sentenceSource, gl);
+    var sourceForTranslate = entitiesPayload.protectedText || sentenceSource;
+
+    return fetchSentenceTranslation(sourceForTranslate).then(function (translated) {
+      var translatedText = translated && translated.trim() ? translated.trim() : "";
+      var restored = restoreProtectedEntities(translatedText, entitiesPayload);
+      if (!restored.stable) {
+        return {
+          text: sentenceSource,
+          warning: ENTITY_WARNING_LABEL
+        };
+      }
+      return {
+        text: restored.text && restored.text.trim() ? restored.text.trim() : "",
+        warning: ""
+      };
     });
   }
 
@@ -887,7 +1054,9 @@
           if (annSpan.dataset.status === "idle") {
             annSpan.dataset.status = "loading";
             buildPointExplainText(cleanText, unit, gl).then(function (explanationText) {
-              annSpan.textContent = explanationText || "";
+              var text = explanationText && explanationText.text ? explanationText.text : "";
+              var warning = explanationText && explanationText.warning ? explanationText.warning : "";
+              annSpan.textContent = warning ? (text + " " + warning) : text;
               annSpan.dataset.status = "done";
             }).catch(function () {
               annSpan.textContent = "";
