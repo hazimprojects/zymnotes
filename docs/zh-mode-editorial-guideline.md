@@ -41,12 +41,32 @@ Dokumen ini menetapkan standard penulisan, semakan kualiti, dan aliran review un
 - **Dilarang** terjemah perkataan demi perkataan jika menukar maksud sejarah.
 - **Dilarang** terjemah frasa teknikal BM kepada frasa ZH yang kedengaran semula jadi tetapi lari konteks KSSM.
 - **Dilarang** menghilangkan unsur sebab-akibat, tempoh masa, atau pelaku sejarah.
+- **Dilarang** menterjemah entiti nama khas (orang, institusi, gelaran rasmi, akronim) sehingga nama asal hilang.
 
 ### Prinsip pembetulan
 - Jika literal mengelirukan, gunakan parafrasa ringkas yang mengekalkan maksud asal.
 - Jika istilah BM perlu dikekalkan untuk konteks peperiksaan, simpan dalam `bm_focus_phrase`.
 
-## 4) Checklist QA per unit
+## 4) Guardrail Google Translate (wajib untuk mod auto-translate)
+
+Memandangkan mod ini masih menggunakan Google Translate, layer guardrail berikut **mesti** aktif supaya output tidak menukar nama khas kepada terjemahan Cina yang tidak sesuai:
+
+1. **Entity placeholder (sebelum panggilan API)**  
+   Teks entiti penting diganti dengan placeholder sementara, contohnya:
+   - Nama individu (termasuk pola `bin/binti`).
+   - Nama institusi/organisasi rasmi.
+   - Frasa sejarah rasmi (contoh: *Persekutuan Tanah Melayu*).
+   - Akronim huruf besar (contoh: UMNO, PKMM).
+2. **Entity restore (selepas terjemahan API)**  
+   Placeholder dipulihkan kepada teks asal BM/EN/AR supaya ejaan rasmi kekal.
+3. **Fail-safe**  
+   Jika placeholder hilang atau rosak selepas terjemahan API, sistem perlu fallback kepada ayat asal + label amaran entiti.
+4. **Semakan manual reviewer**  
+   Reviewer perlu semak bahawa nama orang/institusi kekal tepat pada output sebenar UI, bukan hanya dalam data.
+
+> Rujukan implementasi semasa: `assets/js/zh-mode.js` (fungsi `extractProtectedEntities`, `restoreProtectedEntities`).
+
+## 5) Checklist QA per unit
 
 Semua unit mesti lulus checklist berikut sebelum merge:
 
@@ -54,8 +74,9 @@ Semua unit mesti lulus checklist berikut sebelum merge:
 - [ ] **Isi penting jelas**: Adakah fakta utama (siapa/apa/bila/mengapa/kesan) jelas?
 - [ ] **Frasa BM sasaran kekal**: Adakah frasa penting BM disimpan pada `bm_focus_phrase`?
 - [ ] **Istilah konsisten dengan glosari**: Adakah istilah utama selaras dengan `data/zh-glossary.json`?
+- [ ] **Entiti nama khas kekal**: Nama orang, institusi, gelaran, akronim tidak diterjemah secara literal.
 
-## 5) Semakan statik minimum
+## 6) Semakan statik minimum
 
 Gunakan skrip semakan statik untuk mengesan unit yang belum lengkap medan wajib:
 
@@ -104,7 +125,7 @@ python3 scripts/check-zh-coverage.py
 
 Rujuk panduan khusus glosari di `docs/zh-glossary-editorial-guideline.md`.
 
-## 6) Proses review 2 lapis (wajib)
+## 7) Proses review 2 lapis (wajib)
 
 Setiap perubahan kandungan ZH perlu melalui **dua lapisan review**:
 
@@ -120,7 +141,7 @@ Setiap perubahan kandungan ZH perlu melalui **dua lapisan review**:
 - Perubahan hanya boleh diluluskan apabila **kedua-dua reviewer memberi sign-off**.
 - Jika ada konflik, keputusan fakta oleh reviewer subjek sejarah mengatasi pilihan gaya bahasa.
 
-## 7) Konvensyen markup ZH explain dalam `notes/*.html`
+## 8) Konvensyen markup ZH explain dalam `notes/*.html`
 
 ### Komponen sasaran (selain `.paper-chip`)
 Untuk rollout explain inline, elemen berikut dianggap sasaran utama:

@@ -113,6 +113,15 @@
       "Tanah Melayu", "Alam Melayu", "Kesultanan Melayu Melaka", "Selat Melaka",
       "Bumi Putera", "Yang di-Pertuan Agong", "Raja-raja Melayu"
     ];
+    var OFFICIAL_TERMS_TO_PRESERVE = [
+      "Persekutuan Tanah Melayu", "Negeri-negeri Selat", "Negeri-negeri Melayu Bersekutu",
+      "Negeri-negeri Melayu Tidak Bersekutu", "Suruhanjaya Reid", "Malayan Union",
+      "Majlis Raja-raja", "Yang di-Pertuan Agong", "Rukun Negara", "Piagam Madinah"
+    ];
+    var COMMON_SENTENCE_STARTERS = new Set([
+      "Pada", "Di", "Dalam", "Bagi", "Untuk", "Semasa", "Apabila", "Namun",
+      "Kemudian", "Seterusnya", "Selain", "Walau", "Jika", "Maka", "Sejak"
+    ]);
 
     var segments = [];
     function pushMatch(matchText, index) {
@@ -165,6 +174,33 @@
         pushMatch(m[0], m.index);
       }
     });
+
+    uniqueByLengthDesc(OFFICIAL_TERMS_TO_PRESERVE).forEach(function (term) {
+      var re = new RegExp("\\b" + escapeRegExp(term) + "\\b", "gi");
+      var m;
+      while ((m = re.exec(sourceText)) !== null) {
+        pushMatch(m[0], m.index);
+      }
+    });
+
+    // Preserve uppercase acronym blocks (e.g. UMNO, PKMM, MBSA).
+    collectByRegex(/\b[A-Z]{2,}(?:-[A-Z]{2,})?\b/g);
+
+    // Preserve quoted official names/titles to avoid awkward literal translations.
+    collectByRegex(/["“”'‘’](.{2,80}?)["“”'‘’]/g);
+
+    // Preserve multi-word proper names even when no honorific is present.
+    var properNamePattern = /\b([A-Z][\w'’.-]{2,})(?:\s+(?:al-|Al-)?[A-Z][\w'’.-]{2,}){1,4}\b/g;
+    var pm;
+    while ((pm = properNamePattern.exec(sourceText)) !== null) {
+      var phrase = pm[0] || "";
+      var firstToken = phrase.split(/\s+/)[0] || "";
+      if (COMMON_SENTENCE_STARTERS.has(firstToken)) continue;
+      if (/\b(?:Malaysia|Melayu|Islam|Negara|Negeri|Kerajaan)\b/.test(phrase) && phrase.split(/\s+/).length < 3) {
+        continue;
+      }
+      pushMatch(phrase, pm.index);
+    }
 
     segments.sort(function (a, b) {
       if (a.start !== b.start) return a.start - b.start;
