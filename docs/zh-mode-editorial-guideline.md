@@ -42,10 +42,12 @@ Dokumen ini menetapkan standard penulisan, semakan kualiti, dan aliran review un
 - **Dilarang** terjemah frasa teknikal BM kepada frasa ZH yang kedengaran semula jadi tetapi lari konteks KSSM.
 - **Dilarang** menghilangkan unsur sebab-akibat, tempoh masa, atau pelaku sejarah.
 - **Dilarang** menterjemah entiti nama khas (orang, institusi, gelaran rasmi, akronim) sehingga nama asal hilang.
+- **Dilarang** “mencinakan” nama khas (contoh nama Sultan, Raja, institusi diraja) walaupun dalam format bantuan `asal（中文）`.
 
 ### Prinsip pembetulan
 - Jika literal mengelirukan, gunakan parafrasa ringkas yang mengekalkan maksud asal.
 - Jika istilah BM perlu dikekalkan untuk konteks peperiksaan, simpan dalam `bm_focus_phrase`.
+- Untuk nama khas, kekalkan bentuk asal sepenuhnya (tanpa transliterasi/terjemahan Cina tambahan).
 
 ## 4) Guardrail Google Translate (wajib untuk mod auto-translate)
 
@@ -300,8 +302,8 @@ Panduan ini khusus untuk **Bab 1** dan perlu dijadikan rujukan utama semasa pros
 - hamba abdi（奴仆）
 
 #### Istilah jawatan / peranan tradisional
-- sultan（苏丹）
-- raja（国王 / 君主）
+- sultan
+- raja
 - Bendahara（宰相 / 首席大臣）
 - Penghulu Bendahari（财政总管）
 - Temenggung（治安与防务长官）
@@ -785,7 +787,7 @@ Kekal seperti asal.
 
 > Walaupun ini nama khas Bab 1/2.5, jika muncul semula tetap elok kekal dengan bantuan Cina.
 
-- Kesultanan Melayu Melaka（马六甲马来苏丹国）
+- Kesultanan Melayu Melaka
 - Syarikat Hindia Timur Inggeris (SHTI)（英国东印度公司）
 - Malayan Civil Service (MCS)（马来亚文官服务）
 - Dasar Desentralisasi（分权政策）
@@ -794,7 +796,7 @@ Kekal seperti asal.
 - Madrasah al-Attas（阿塔斯宗教学校）
 - Madrasah al-Masyhur（马斯胡尔宗教学校）
 - Madrasah al-Idrisiyah（伊德里西亚宗教学校）
-- Sultan Idris Training College (SITC)（苏丹依德理斯师范学院）
+- Sultan Idris Training College (SITC)
 - Malay College Kuala Kangsar (MCKK)（瓜拉江沙马来学院）
 - Raffles Institution（莱佛士书院）
 - Jawi Peranakan（爪夷土生刊物）
@@ -1678,7 +1680,7 @@ Kekal seperti asal.
 - Kertas Putih 6724（6724号白皮书）
 - Cession Bill（割让法案）
 - Majlis Negeri（州议会）
-- Majlis Raja-Raja（马来统治者会议）
+- Majlis Raja-Raja
 - Majlis Eksekutif（行政议会）
 - Majlis Perundangan Malayan Union（马来亚联盟立法议会）
 - Circular No. 9 / Pekeliling No. 9/1946（第9号通令）
@@ -2012,7 +2014,7 @@ Kekal seperti asal.
 - Hari Hartal Se-Malaya（全马来亚大罢市日）
 - dekolonisasi（非殖民化）
 - kewarganegaraan（公民权）
-- rakyat Raja（王属子民）
+- rakyat Raja
 - rakyat British（英籍臣民）
 - naturalised（归化人士）
 - Raja Berperlembagaan（君主立宪君主）
