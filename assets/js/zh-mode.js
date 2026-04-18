@@ -24,6 +24,7 @@
   var chipInteractionsBound = false;
   var sentenceTranslationCache = Object.create(null);
   var sentenceTranslationInFlight = Object.create(null);
+  var sentenceTranslationMap = null;
 
   var OVERLY_GENERAL_TERMS = new Set([
     "bahasa", "politik", "agama", "kampung", "rakyat",
@@ -63,6 +64,11 @@
     var prefix = parts.length > 1 ? "../" : "";
     if (trimmed.indexOf("data/") === 0) return prefix + trimmed;
     return prefix + "data/zh-units/" + trimmed;
+  }
+
+  function resolveSentenceTranslationPath() {
+    var parts = window.location.pathname.split("/").filter(Boolean);
+    return parts.length > 1 ? "../data/zh-chip-sentences.json" : "data/zh-chip-sentences.json";
   }
 
   function getMergedGlossary() {
@@ -220,7 +226,31 @@
       })
       .then(function (mapped) {
         comprehensionMap = mapped;
+        seedSentenceTranslationCacheFromComprehension(comprehensionMap);
         return comprehensionMap;
+      });
+  }
+
+  function loadSentenceTranslationMap() {
+    if (sentenceTranslationMap !== null) return Promise.resolve(sentenceTranslationMap);
+    return fetch(resolveSentenceTranslationPath())
+      .then(function (res) { return res.ok ? res.json() : {}; })
+      .then(function (data) {
+        sentenceTranslationMap = data && typeof data === "object" ? data : {};
+        Object.keys(sentenceTranslationMap).forEach(function (sourceText) {
+          var translated = sentenceTranslationMap[sourceText];
+          if (typeof translated !== "string") return;
+          var cleanSource = sourceText.trim();
+          var cleanTranslated = translated.trim();
+          if (!cleanSource || !cleanTranslated) return;
+          sentenceTranslationCache[cleanSource] = cleanTranslated;
+          sentenceTranslationCache[normalize(cleanSource)] = cleanTranslated;
+        });
+        return sentenceTranslationMap;
+      })
+      .catch(function () {
+        sentenceTranslationMap = {};
+        return sentenceTranslationMap;
       });
   }
 
@@ -239,6 +269,25 @@
     return null;
   }
 
+  function seedSentenceTranslationCacheFromComprehension(mapped) {
+    if (!mapped || typeof mapped !== "object") return;
+    Object.keys(mapped).forEach(function (sourceId) {
+      var unit = mapped[sourceId];
+      if (!unit || typeof unit !== "object") return;
+
+      var bmOriginal = typeof unit.bm_original === "string" ? unit.bm_original.trim() : "";
+      if (!bmOriginal) return;
+
+      var zhExplain = typeof unit.zh_explain === "string" ? normalizeZhExplain(unit.zh_explain, getMergedGlossary()) : "";
+      var glossaryZh = typeof unit.glossary_zh === "string" ? unit.glossary_zh.trim() : "";
+      var bestLocalTranslation = zhExplain || glossaryZh;
+      if (!bestLocalTranslation) return;
+
+      sentenceTranslationCache[bmOriginal] = bestLocalTranslation;
+      sentenceTranslationCache[normalize(bmOriginal)] = bestLocalTranslation;
+    });
+  }
+
   function parseGoogleTranslateSentence(payload) {
     if (!Array.isArray(payload) || !Array.isArray(payload[0])) return "";
     return payload[0]
@@ -254,6 +303,10 @@
     if (!sourceText) return Promise.resolve("");
     if (sentenceTranslationCache[sourceText] !== undefined) {
       return Promise.resolve(sentenceTranslationCache[sourceText]);
+    }
+    var normalizedSource = normalize(sourceText);
+    if (sentenceTranslationCache[normalizedSource] !== undefined) {
+      return Promise.resolve(sentenceTranslationCache[normalizedSource]);
     }
     if (sentenceTranslationInFlight[sourceText]) {
       return sentenceTranslationInFlight[sourceText];
@@ -271,11 +324,13 @@
       .then(function (translated) {
         var finalText = translated && translated.trim() ? translated.trim() : "";
         sentenceTranslationCache[sourceText] = finalText;
+        sentenceTranslationCache[normalizedSource] = finalText;
         delete sentenceTranslationInFlight[sourceText];
         return finalText;
       }, function () {
         delete sentenceTranslationInFlight[sourceText];
         sentenceTranslationCache[sourceText] = "";
+        sentenceTranslationCache[normalizedSource] = "";
         return "";
       });
 
@@ -381,12 +436,27 @@
     return { modeLabel: "词汇注释", pairs: pairs, text: textStr, fallbackLabel: "" };
   }
 
-  function buildExplainFallback(sourceText) {
+  function buildExplainFallback(sourceText, gl) {
     var textForTranslate = typeof sourceText === "string" ? sourceText.trim() : "";
     if (!textForTranslate) return null;
+    if (sentenceTranslationCache[textForTranslate] || sentenceTranslationCache[normalize(textForTranslate)]) {
+      return {
+        modeLabel: "句意解析",
+        text: sentenceTranslationCache[textForTranslate] || sentenceTranslationCache[normalize(textForTranslate)],
+        fallbackLabel: ""
+      };
+    }
+    var glossaryFallback = buildGlossaryFallback(textForTranslate, gl);
+    if (glossaryFallback && glossaryFallback.text && glossaryFallback.text.trim()) {
+      return {
+        modeLabel: "句意解析",
+        text: "该要点说明：" + glossaryFallback.text.trim().replace(/。?$/, "。"),
+        fallbackLabel: ""
+      };
+    }
     return {
       modeLabel: "句意解析",
-      text: "正在生成整句翻译…",
+      text: "正在载入完整翻译…",
       fallbackLabel: "",
       autoTranslate: true,
       autoTranslateSource: textForTranslate
@@ -458,10 +528,23 @@
           fallbackLabel: ""
         };
       }
-      return buildExplainFallback(sourceText);
+      return buildExplainFallback(sourceText, gl);
     }
 
     if (mode === ZH_MODE_GLOSSARY) {
+      if (
+        looksLikeLongSentence &&
+        unit &&
+        typeof unit.zh_explain === "string" &&
+        unit.zh_explain.trim()
+      ) {
+        return {
+          modeLabel: "句意解析",
+          text: normalizeZhExplain(unit.zh_explain.trim(), gl),
+          fallbackLabel: ""
+        };
+      }
+
       if (unit && typeof unit.glossary_zh === "string" && unit.glossary_zh.trim()) {
         var glossaryText = unit.glossary_zh.trim();
         var fullSentenceZh = "";
@@ -623,6 +706,7 @@
           explainNode.textContent = translated && translated.trim() ? translated.trim() : "暂无中文整句翻译。";
         });
       }
+
     });
   }
 
@@ -835,6 +919,14 @@
   // ── Orphan Text Annotation ───────────────────────────────
 
   function buildPointExplainText(rawText, unit, gl) {
+    if (unit && typeof unit.zh_explain === "string" && unit.zh_explain.trim()) {
+      return Promise.resolve(normalizeZhExplain(unit.zh_explain.trim(), gl));
+    }
+
+    if (unit && typeof unit.glossary_zh === "string" && unit.glossary_zh.trim()) {
+      return Promise.resolve("该要点说明：" + unit.glossary_zh.trim().replace(/。?$/, "。"));
+    }
+
     var sentenceSource = "";
     if (unit && typeof unit.bm_original === "string" && unit.bm_original.trim()) {
       sentenceSource = unit.bm_original.trim();
@@ -844,9 +936,6 @@
 
     return fetchSentenceTranslation(sentenceSource).then(function (sentenceTranslation) {
       if (sentenceTranslation) return sentenceTranslation;
-      if (unit && typeof unit.zh_explain === "string" && unit.zh_explain.trim()) {
-        return unit.zh_explain.trim();
-      }
 
       var fallback = buildGlossaryFallback(rawText, gl);
       if (!fallback || !fallback.text) return "";
@@ -913,7 +1002,6 @@
           toggleBtn.setAttribute("aria-expanded", "true");
           if (annSpan.dataset.status === "idle") {
             annSpan.dataset.status = "loading";
-            annSpan.textContent = "正在生成整句翻译…";
             buildPointExplainText(cleanText, unit, gl).then(function (explanationText) {
               annSpan.textContent = explanationText || "暂无中文整句翻译。";
               annSpan.dataset.status = "done";
@@ -1029,7 +1117,7 @@
 
     if (active) {
       document.documentElement.setAttribute("data-lang-mode", "zh");
-      Promise.all([loadGlossary(), loadComprehensionData()]).then(function () {
+      Promise.all([loadGlossary(), loadComprehensionData(), loadSentenceTranslationMap()]).then(function () {
         if (requestId !== applyRequestId) return;
         if (!isZhMode()) return;
         var merged = getMergedGlossary();
@@ -1097,7 +1185,7 @@
     }
 
     if (isZhMode()) {
-      Promise.all([loadGlossary(), loadComprehensionData()]).then(function () {
+      Promise.all([loadGlossary(), loadComprehensionData(), loadSentenceTranslationMap()]).then(function () {
         var merged = getMergedGlossary();
         var comprehension = getComprehensionMap();
         annotateKeywords(merged);
