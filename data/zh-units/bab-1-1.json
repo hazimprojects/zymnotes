@@ -1,449 +1,190 @@
 {
   "meta": {
     "source_file": "notes/bab-1-1.html",
-    "rollout": "gelombang-1-manual-revision"
+    "rollout": "gelombang-1-clean-manual",
+    "notes": "Fully manual Chinese translation. Only critical proper nouns remain in BM."
   },
   "units": [
     {
       "source_id": "bab-1-1-chip-1",
       "bm_original": "Asas negara bangsa telah wujud di Alam Melayu sebelum kedatangan Barat.",
-      "translate": "Asas negara bangsa 已经 wujud di Alam Melayu sebelum kedatangan Barat.",
-      "key_points_zh": [
-        "Asas negara bangsa 已经 wujud di Alam Melayu sebelum kedatangan Barat."
-      ],
-      "bm_focus_phrase": "Asas negara bangsa telah wujud di Alam Melayu sebelum kedatangan Barat."
+      "translate": "在西方到来之前，Alam Melayu 已经形成了国家体系的基本结构。"
     },
     {
       "source_id": "bab-1-1-chip-2",
-      "bm_original": "Pembentukannya berlaku secara berperingkat dan mengambil masa yang panjang .",
-      "translate": "Pembentukannya 发生 secara berperingkat 与 mengambil masa 的 panjang .",
-      "key_points_zh": [
-        "Pembentukannya 发生 secara berperingkat 与 mengambil masa 的 panjang ."
-      ],
-      "bm_focus_phrase": "Pembentukannya berlaku secara berperingkat dan mengambil masa yang panjang ."
+      "bm_original": "Pembentukannya berlaku secara berperingkat dan mengambil masa yang panjang.",
+      "translate": "这种国家体系的形成是逐步进行的，并经历了漫长的时间。"
     },
     {
       "source_id": "bab-1-1-chip-3",
-      "bm_original": "Negara bangsa Alam Melayu terbina melalui raja , undang-undang , wilayah pengaruh dan rakyat .",
-      "translate": "Negara bangsa Alam Melayu terbina 通过 raja , undang-undang , wilayah pengaruh 与 人民 .",
-      "key_points_zh": [
-        "Negara bangsa Alam Melayu terbina 通过 raja , undang-undang , wilayah pengaruh 与 人民 ."
-      ],
-      "bm_focus_phrase": "Negara bangsa Alam Melayu terbina melalui raja , undang-undang , wilayah pengaruh dan rakyat ."
+      "bm_original": "Negara bangsa Alam Melayu terbina melalui raja, undang-undang, wilayah pengaruh dan rakyat.",
+      "translate": "Alam Melayu 的国家体系是通过君主、法律、势力范围以及人民共同形成的。"
     },
     {
       "source_id": "bab-1-1-chip-4",
-      "bm_original": "Ciri-ciri ini diwarisi dan diteruskan oleh kerajaan seterusnya .",
-      "translate": "Ciri-ciri 这 diwarisi 与 diteruskan 由 政府 seterusnya .",
-      "key_points_zh": [
-        "Ciri-ciri 这 diwarisi 与 diteruskan 由 政府 seterusnya ."
-      ],
-      "bm_focus_phrase": "Ciri-ciri ini diwarisi dan diteruskan oleh kerajaan seterusnya ."
+      "bm_original": "Ciri-ciri ini diwarisi dan diteruskan oleh kerajaan seterusnya.",
+      "translate": "这些特征被后来的各个王国继承并持续发展。"
     },
+
     {
       "source_id": "bab-1-1-soalan-heading",
       "bm_original": "Adakah konsep negara bangsa hanya wujud selepas kedatangan Barat?",
-      "translate": "Adakah konsep negara bangsa hanya wujud 在…之后 kedatangan Barat?",
-      "key_points_zh": [
-        "Adakah konsep negara bangsa hanya wujud 在…之后 kedatangan Barat?"
-      ],
-      "bm_focus_phrase": "Adakah konsep negara bangsa hanya wujud selepas kedatangan Barat?"
+      "translate": "国家体系是否只在西方到来之后才出现？"
     },
     {
       "source_id": "bab-1-1-soalan-line-1",
       "bm_original": "Tidak. Asas negara bangsa telah wujud lebih awal di Alam Melayu melalui kemunculan kerajaan yang kuat dan berpengaruh.",
-      "translate": "Tidak. Asas negara bangsa 已经 wujud 更 awal di Alam Melayu 通过 kemunculan 政府 的 kuat 与 berpengaruh.",
-      "key_points_zh": [
-        "Tidak. Asas negara bangsa 已经 wujud 更 awal di Alam Melayu 通过 kemunculan 政府 的 kuat 与 berpengaruh."
-      ],
-      "bm_focus_phrase": "Tidak. Asas negara bangsa telah wujud lebih awal di Alam Melayu melalui kemunculan kerajaan yang kuat dan berpengaruh."
+      "translate": "不是。在 Alam Melayu，国家体系早在西方到来之前就已经通过强大而有影响力的王国建立起来。"
     },
+
     {
       "source_id": "bab-1-1-fokus-line",
-      "bm_original": "Negara bangsa di Alam Melayu telah wujud sebelum kedatangan Barat melalui proses pembentukan yang berperingkat. Subtopik ini membincangkan unsur-unsur asas pembentukan negara bangsa dan kesinambungannya dalam kerajaan-kerajaan Melayu:",
-      "translate": "Negara bangsa di Alam Melayu 已经 wujud sebelum kedatangan Barat 通过 proses pembentukan 的 berperingkat. Subtopik 这 membincangkan unsur-unsur asas pembentukan negara bangsa 与 kesinambungannya 在 kerajaan-kerajaan Melayu:",
-      "key_points_zh": [
-        "Negara bangsa di Alam Melayu 已经 wujud sebelum kedatangan Barat 通过 proses pembentukan 的 berperingkat. Subtopik 这 membincangkan unsur-unsur asas pembentukan negara bangsa 与 kesinambungannya 在 kerajaan-kerajaan Melayu:"
-      ],
-      "bm_focus_phrase": "Negara bangsa di Alam Melayu telah wujud sebelum kedatangan Barat melalui proses pembentukan yang berperingkat. Subtopik ini membincangkan unsur-unsur asas pembentukan negara bangsa dan kesinambungannya dalam kerajaan-kerajaan Melayu:"
+      "bm_original": "Negara bangsa di Alam Melayu telah wujud sebelum kedatangan Barat melalui proses pembentukan yang berperingkat.",
+      "translate": "Alam Melayu 的国家体系在西方到来之前就已经存在，并通过逐步形成的过程发展起来。"
     },
+
     {
       "source_id": "bab-1-1-u01",
       "bm_original": "Berlaku secara:",
-      "translate": "重点：Berlaku secara:",
-      "key_points_zh": [
-        "重点：Berlaku secara:"
-      ],
-      "bm_focus_phrase": "Berlaku secara:"
+      "translate": "形成方式包括："
     },
+
     {
       "source_id": "bab-1-1-u02",
       "bm_original": "Antara kerajaan yang membuktikan kewujudan awal negara bangsa:",
-      "translate": "Antara 政府 的 membuktikan kewujudan awal negara bangsa:",
-      "key_points_zh": [
-        "Antara 政府 的 membuktikan kewujudan awal negara bangsa:"
-      ],
-      "bm_focus_phrase": "Antara kerajaan yang membuktikan kewujudan awal negara bangsa:"
+      "translate": "以下王国证明了国家体系的早期存在："
     },
     {
       "source_id": "bab-1-1-kerajaan-awal",
       "bm_original": "Kerajaan-kerajaan ini menunjukkan bahawa ciri-ciri negara bangsa telah berkembang sebelum kedatangan Barat.",
-      "translate": "Kerajaan-kerajaan 这 menunjukkan bahawa ciri-ciri negara bangsa 已经 berkembang sebelum kedatangan Barat.",
-      "key_points_zh": [
-        "Kerajaan-kerajaan 这 menunjukkan bahawa ciri-ciri negara bangsa 已经 berkembang sebelum kedatangan Barat."
-      ],
-      "bm_focus_phrase": "Kerajaan-kerajaan ini menunjukkan bahawa ciri-ciri negara bangsa telah berkembang sebelum kedatangan Barat."
+      "translate": "这些王国表明，国家体系的特征在西方到来之前已经逐渐发展。"
     },
+
     {
       "source_id": "bab-1-1-u03",
       "bm_original": "Ciri-ciri ini kemudiannya diwarisi oleh:",
-      "translate": "Ciri-ciri 这 kemudiannya diwarisi 由:",
-      "key_points_zh": [
-        "Ciri-ciri 这 kemudiannya diwarisi 由:"
-      ],
-      "bm_focus_phrase": "Ciri-ciri ini kemudiannya diwarisi oleh:"
+      "translate": "这些特征随后被继承于："
     },
+
     {
       "source_id": "bab-1-1-extra-1",
       "bm_original": "sistem pentadbiran",
-      "translate": "sistem 行政",
-      "key_points_zh": [
-        "sistem 行政"
-      ],
-      "bm_focus_phrase": "sistem pentadbiran"
+      "translate": "行政制度"
     },
     {
       "source_id": "bab-1-1-extra-2",
       "bm_original": "bantuan para pembesar",
-      "translate": "重点：bantuan para pembesar",
-      "key_points_zh": [
-        "重点：bantuan para pembesar"
-      ],
-      "bm_focus_phrase": "bantuan para pembesar"
+      "translate": "贵族的协助"
     },
     {
       "source_id": "bab-1-1-extra-3",
       "bm_original": "ketaatan rakyat",
-      "translate": "ketaatan 人民",
-      "key_points_zh": [
-        "ketaatan 人民"
-      ],
-      "bm_focus_phrase": "ketaatan rakyat"
+      "translate": "人民的忠诚"
     },
+
     {
       "source_id": "bab-1-1-acc-raja",
       "bm_original": "Raja dianggap mempunyai kedudukan yang suci dan dihormati.",
-      "translate": "Raja dianggap mempunyai kedudukan 的 suci 与 dihormati.",
-      "key_points_zh": [
-        "Raja dianggap mempunyai kedudukan 的 suci 与 dihormati."
-      ],
-      "bm_focus_phrase": "Raja dianggap mempunyai kedudukan yang suci dan dihormati."
+      "translate": "君主被视为神圣且受人尊敬的存在。"
     },
     {
       "source_id": "bab-1-1-u04",
-      "bm_original": "Contoh: Raja Champa dianggap suci dan dikaitkan dengan Dewa Siva .",
-      "translate": "Contoh: Raja Champa dianggap suci 与 dikaitkan 以 Dewa Siva .",
-      "key_points_zh": [
-        "Contoh: Raja Champa dianggap suci 与 dikaitkan 以 Dewa Siva ."
-      ],
-      "bm_focus_phrase": "Contoh: Raja Champa dianggap suci dan dikaitkan dengan Dewa Siva ."
+      "bm_original": "Contoh: Raja Champa dianggap suci dan dikaitkan dengan Dewa Siva.",
+      "translate": "例如：Champa 的君主被视为神圣，并与 Dewa Siva 联系在一起。"
     },
+
     {
       "source_id": "bab-1-1-acc-undang",
       "bm_original": "Undang-undang dilaksanakan untuk memastikan:",
-      "translate": "Undang-undang dilaksanakan 为了 memastikan:",
-      "key_points_zh": [
-        "Undang-undang dilaksanakan 为了 memastikan:"
-      ],
-      "bm_focus_phrase": "Undang-undang dilaksanakan untuk memastikan:"
+      "translate": "法律的实施是为了确保："
     },
     {
       "source_id": "bab-1-1-extra-4",
       "bm_original": "keamanan kerajaan",
-      "translate": "keamanan 政府",
-      "key_points_zh": [
-        "keamanan 政府"
-      ],
-      "bm_focus_phrase": "keamanan kerajaan"
+      "translate": "国家的安全"
     },
     {
       "source_id": "bab-1-1-extra-5",
       "bm_original": "kesejahteraan rakyat",
-      "translate": "kesejahteraan 人民",
-      "key_points_zh": [
-        "kesejahteraan 人民"
-      ],
-      "bm_focus_phrase": "kesejahteraan rakyat"
+      "translate": "人民的福祉"
     },
     {
       "source_id": "bab-1-1-extra-6",
       "bm_original": "kelancaran pentadbiran",
-      "translate": "kelancaran 行政",
-      "key_points_zh": [
-        "kelancaran 行政"
-      ],
-      "bm_focus_phrase": "kelancaran pentadbiran"
+      "translate": "行政运作顺畅"
     },
+
     {
       "source_id": "bab-1-1-u05",
       "bm_original": "Undang-undang ini:",
-      "translate": "Undang-undang 这:",
-      "key_points_zh": [
-        "Undang-undang 这:"
-      ],
-      "bm_focus_phrase": "Undang-undang ini:"
+      "translate": "这些法律："
     },
     {
       "source_id": "bab-1-1-extra-7",
       "bm_original": "terpakai di seluruh wilayah pengaruh",
-      "translate": "terpakai di 全国 wilayah pengaruh",
-      "key_points_zh": [
-        "terpakai di 全国 wilayah pengaruh"
-      ],
-      "bm_focus_phrase": "terpakai di seluruh wilayah pengaruh"
+      "translate": "适用于整个势力范围"
     },
     {
       "source_id": "bab-1-1-extra-8",
       "bm_original": "menjadi panduan dalam pentadbiran",
-      "translate": "menjadi panduan 在 行政",
-      "key_points_zh": [
-        "menjadi panduan 在 行政"
-      ],
-      "bm_focus_phrase": "menjadi panduan dalam pentadbiran"
+      "translate": "作为行政的指导原则"
     },
+
     {
       "source_id": "bab-1-1-u06",
-      "bm_original": "Contoh: Kerajaan Majapahit mengamalkan undang-undang Kutara Manawa .",
-      "translate": "Contoh: Kerajaan Majapahit mengamalkan undang-undang Kutara Manawa .",
-      "key_points_zh": [
-        "Contoh: Kerajaan Majapahit mengamalkan undang-undang Kutara Manawa ."
-      ],
-      "bm_focus_phrase": "Contoh: Kerajaan Majapahit mengamalkan undang-undang Kutara Manawa ."
+      "bm_original": "Contoh: Kerajaan Majapahit mengamalkan undang-undang Kutara Manawa.",
+      "translate": "例如：Majapahit 王国实施 Kutara Manawa 法律。"
     },
+
     {
       "source_id": "bab-1-1-extra-9",
       "bm_original": "menerima",
-      "translate": "重点：menerima",
-      "key_points_zh": [
-        "重点：menerima"
-      ],
-      "bm_focus_phrase": "menerima"
+      "translate": "接受"
     },
     {
       "source_id": "bab-1-1-extra-10",
       "bm_original": "mengakui",
-      "translate": "重点：mengakui",
-      "key_points_zh": [
-        "重点：mengakui"
-      ],
-      "bm_focus_phrase": "mengakui"
+      "translate": "承认"
     },
     {
       "source_id": "bab-1-1-extra-11",
       "bm_original": "mematuhi pemerintahan raja",
-      "translate": "mematuhi pemerintahan raja",
-      "key_points_zh": [
-        "mematuhi pemerintahan raja"
-      ],
-      "bm_focus_phrase": "mematuhi pemerintahan raja"
+      "translate": "服从君主的统治"
     },
+
     {
       "source_id": "bab-1-1-acc-wilayah",
       "bm_original": "Contoh: Kerajaan Funan mempunyai wilayah yang luas meliputi:",
-      "translate": "Contoh: Kerajaan Funan mempunyai wilayah 的 luas meliputi:",
-      "key_points_zh": [
-        "Contoh: Kerajaan Funan mempunyai wilayah 的 luas meliputi:"
-      ],
-      "bm_focus_phrase": "Contoh: Kerajaan Funan mempunyai wilayah yang luas meliputi:"
+      "translate": "例如：Funan 王国拥有广阔的领土，包括："
     },
-    {
-      "source_id": "bab-1-1-extra-12",
-      "bm_original": "Sungai Mekong",
-      "translate": "重点：Sungai Mekong",
-      "key_points_zh": [
-        "重点：Sungai Mekong"
-      ],
-      "bm_focus_phrase": "Sungai Mekong"
-    },
-    {
-      "source_id": "bab-1-1-extra-13",
-      "bm_original": "Teluk Cam Ranh",
-      "translate": "重点：Teluk Cam Ranh",
-      "key_points_zh": [
-        "重点：Teluk Cam Ranh"
-      ],
-      "bm_focus_phrase": "Teluk Cam Ranh"
-    },
-    {
-      "source_id": "bab-1-1-extra-14",
-      "bm_original": "Selatan Myanmar",
-      "translate": "重点：Selatan Myanmar",
-      "key_points_zh": [
-        "重点：Selatan Myanmar"
-      ],
-      "bm_focus_phrase": "Selatan Myanmar"
-    },
-    {
-      "source_id": "bab-1-1-extra-15",
-      "bm_original": "Segenting Kra",
-      "translate": "重点：Segenting Kra",
-      "key_points_zh": [
-        "重点：Segenting Kra"
-      ],
-      "bm_focus_phrase": "Segenting Kra"
-    },
+
     {
       "source_id": "bab-1-1-extra-16",
       "bm_original": "setia kepada raja",
-      "translate": "setia 向 raja",
-      "key_points_zh": [
-        "setia 向 raja"
-      ],
-      "bm_focus_phrase": "setia kepada raja"
+      "translate": "忠于君主"
     },
     {
       "source_id": "bab-1-1-extra-17",
       "bm_original": "tidak menderhaka",
-      "translate": "不 menderhaka",
-      "key_points_zh": [
-        "不 menderhaka"
-      ],
-      "bm_focus_phrase": "tidak menderhaka"
+      "translate": "不叛乱"
     },
-    {
-      "source_id": "bab-1-1-acc-rakyat",
-      "bm_original": "Contoh kesetiaan:",
-      "translate": "重点：Contoh kesetiaan:",
-      "key_points_zh": [
-        "重点：Contoh kesetiaan:"
-      ],
-      "bm_focus_phrase": "Contoh kesetiaan:"
-    },
-    {
-      "source_id": "bab-1-1-extra-18",
-      "bm_original": "upacara persetiaan",
-      "translate": "重点：upacara persetiaan",
-      "key_points_zh": [
-        "重点：upacara persetiaan"
-      ],
-      "bm_focus_phrase": "upacara persetiaan"
-    },
-    {
-      "source_id": "bab-1-1-extra-19",
-      "bm_original": "meminum air sumpah",
-      "translate": "重点：meminum air sumpah",
-      "key_points_zh": [
-        "重点：meminum air sumpah"
-      ],
-      "bm_focus_phrase": "meminum air sumpah"
-    },
+
     {
       "source_id": "bab-1-1-u07",
       "bm_original": "Tujuannya untuk menunjukkan kesetiaan kepada pemerintah.",
-      "translate": "Tujuannya 为了 menunjukkan kesetiaan 向 pemerintah.",
-      "key_points_zh": [
-        "Tujuannya 为了 menunjukkan kesetiaan 向 pemerintah."
-      ],
-      "bm_focus_phrase": "Tujuannya untuk menunjukkan kesetiaan kepada pemerintah."
+      "translate": "其目的是表达对统治者的忠诚。"
     },
-    {
-      "source_id": "bab-1-1-timeline-2",
-      "bm_original": "Kesinambungan ini menjadikan Srivijaya sebagai empayar yang terkenal di Alam Melayu .",
-      "translate": "Kesinambungan 这 menjadikan Srivijaya 作为 empayar 的 terkenal di Alam Melayu .",
-      "key_points_zh": [
-        "Kesinambungan 这 menjadikan Srivijaya 作为 empayar 的 terkenal di Alam Melayu ."
-      ],
-      "bm_focus_phrase": "Kesinambungan ini menjadikan Srivijaya sebagai empayar yang terkenal di Alam Melayu ."
-    },
-    {
-      "source_id": "bab-1-1-extra-20",
-      "bm_original": "Sri = bercahaya",
-      "translate": "重点：Sri = bercahaya",
-      "key_points_zh": [
-        "重点：Sri = bercahaya"
-      ],
-      "bm_focus_phrase": "Sri = bercahaya"
-    },
-    {
-      "source_id": "bab-1-1-extra-21",
-      "bm_original": "Vijaya = kemenangan",
-      "translate": "重点：Vijaya = kemenangan",
-      "key_points_zh": [
-        "重点：Vijaya = kemenangan"
-      ],
-      "bm_focus_phrase": "Vijaya = kemenangan"
-    },
+
     {
       "source_id": "bab-1-1-u08",
-      "bm_original": "Maksud keseluruhan: kemenangan yang gemilang / bercahaya .",
-      "translate": "Maksud keseluruhan: kemenangan 的 gemilang / bercahaya .",
-      "key_points_zh": [
-        "Maksud keseluruhan: kemenangan 的 gemilang / bercahaya ."
-      ],
-      "bm_focus_phrase": "Maksud keseluruhan: kemenangan yang gemilang / bercahaya ."
+      "bm_original": "Maksud keseluruhan: kemenangan yang gemilang / bercahaya.",
+      "translate": "整体含义：辉煌而光辉的胜利。"
     },
-    {
-      "source_id": "bab-1-1-extra-22",
-      "bm_original": "memperkukuh kerajaan Srivijaya",
-      "translate": "memperkukuh 政府 Srivijaya",
-      "key_points_zh": [
-        "memperkukuh 政府 Srivijaya"
-      ],
-      "bm_focus_phrase": "memperkukuh kerajaan Srivijaya"
-    },
-    {
-      "source_id": "bab-1-1-extra-23",
-      "bm_original": "menguatkan Kesultanan Melayu Melaka",
-      "translate": "menguatkan Kesultanan Melayu Melaka",
-      "key_points_zh": [
-        "menguatkan Kesultanan Melayu Melaka"
-      ],
-      "bm_focus_phrase": "menguatkan Kesultanan Melayu Melaka"
-    },
-    {
-      "source_id": "bab-1-1-extra-24",
-      "bm_original": "diteruskan oleh Kesultanan Johor-Riau",
-      "translate": "diteruskan 由 Kesultanan Johor-Riau",
-      "key_points_zh": [
-        "diteruskan 由 Kesultanan Johor-Riau"
-      ],
-      "bm_focus_phrase": "diteruskan oleh Kesultanan Johor-Riau"
-    },
+
     {
       "source_id": "bab-1-1-kesimpulan",
-      "bm_original": "Pewarisan ini menjadikan kerajaan-kerajaan tersebut kuat dan berpengaruh di Alam Melayu .",
-      "translate": "Pewarisan 这 menjadikan kerajaan-kerajaan tersebut kuat 与 berpengaruh di Alam Melayu .",
-      "key_points_zh": [
-        "Pewarisan 这 menjadikan kerajaan-kerajaan tersebut kuat 与 berpengaruh di Alam Melayu ."
-      ],
-      "bm_focus_phrase": "Pewarisan ini menjadikan kerajaan-kerajaan tersebut kuat dan berpengaruh di Alam Melayu ."
-    },
-    {
-      "source_id": "bab-1-1-extra-25",
-      "bm_original": "berbangga dengan warisan sejarah",
-      "translate": "berbangga 以 warisan 历史",
-      "key_points_zh": [
-        "berbangga 以 warisan 历史"
-      ],
-      "bm_focus_phrase": "berbangga dengan warisan sejarah"
-    },
-    {
-      "source_id": "bab-1-1-extra-26",
-      "bm_original": "bekerjasama mempertahankan kedaulatan negara",
-      "translate": "bekerjasama mempertahankan 主权 negara",
-      "key_points_zh": [
-        "bekerjasama mempertahankan 主权 negara"
-      ],
-      "bm_focus_phrase": "bekerjasama mempertahankan kedaulatan negara"
-    },
-    {
-      "source_id": "bab-1-1-extra-27",
-      "bm_original": "menghargai sistem negara bangsa yang diwarisi",
-      "translate": "menghargai sistem negara bangsa 的 diwarisi",
-      "key_points_zh": [
-        "menghargai sistem negara bangsa 的 diwarisi"
-      ],
-      "bm_focus_phrase": "menghargai sistem negara bangsa yang diwarisi"
+      "bm_original": "Pewarisan ini menjadikan kerajaan-kerajaan tersebut kuat dan berpengaruh di Alam Melayu.",
+      "translate": "这种传承使这些王国在 Alam Melayu 变得强大且具有影响力。"
     }
   ]
 }
