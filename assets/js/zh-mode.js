@@ -592,7 +592,7 @@
   }
 
   function buildExplainFallback(sourceText, gl) {
-    var textForTranslate = typeof sourceText === "string" ? sourceText.trim() : "";
+    var textForTranslate = stripCorruptedZhLeadPrefix(typeof sourceText === "string" ? sourceText : "");
     if (!textForTranslate) return null;
     var cached = sentenceTranslationCache[textForTranslate] || sentenceTranslationCache[normalize(textForTranslate)];
     var entitiesPayload = extractProtectedEntities(textForTranslate, gl);
@@ -615,9 +615,17 @@
       .trim();
   }
 
+  function stripCorruptedZhLeadPrefix(text) {
+    if (typeof text !== "string") return "";
+    return text
+      .replace(/^\s*['"“”‘’`「」\[\]（）()]*\s*重点\s*[：:]\s*/u, "")
+      .replace(/^\s+/, "")
+      .trim();
+  }
+
   function normalizeZhExplain(text, gl) {
     if (typeof text !== "string") return "";
-    var raw = text.trim();
+    var raw = stripCorruptedZhLeadPrefix(text);
     if (!raw) return "";
 
     // Pattern: "X。这是Y的中文要义。"
@@ -750,8 +758,8 @@
     var chipId = chip && chip.getAttribute ? (chip.getAttribute("data-zh-unit-id") || "").trim() : "";
     var unit = chipId && comprehension && comprehension[chipId] ? comprehension[chipId] : null;
     var bmSource = unit && typeof unit.bm_original === "string" && unit.bm_original.trim()
-      ? unit.bm_original.trim()
-      : sourceText;
+      ? stripCorruptedZhLeadPrefix(unit.bm_original)
+      : stripCorruptedZhLeadPrefix(sourceText);
     var curated = unit && typeof unit.translate === "string" ? normalizeZhExplain(unit.translate, gl) : "";
 
     if (isUsableCuratedZhText(curated, gl, bmSource)) {
@@ -761,7 +769,7 @@
         fallbackLabel: ""
       };
     }
-    return buildExplainFallback(sourceText, gl);
+    return buildExplainFallback(bmSource, gl);
   }
 
   function isSentenceLikeChip(sourceText) {
@@ -1128,9 +1136,9 @@
   function buildPointExplainText(rawText, unit, gl) {
     var sentenceSource = "";
     if (unit && typeof unit.bm_original === "string" && unit.bm_original.trim()) {
-      sentenceSource = unit.bm_original.trim();
+      sentenceSource = stripCorruptedZhLeadPrefix(unit.bm_original);
     } else if (typeof rawText === "string" && rawText.trim()) {
-      sentenceSource = rawText.trim();
+      sentenceSource = stripCorruptedZhLeadPrefix(rawText);
     }
 
     var curated = unit && typeof unit.translate === "string"
