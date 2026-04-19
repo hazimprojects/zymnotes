@@ -684,6 +684,38 @@
     return hits >= 3;
   }
 
+  function hasCodeMixedGrammarArtifacts(text) {
+    if (typeof text !== "string") return false;
+    var raw = text.trim();
+    if (!raw) return false;
+    if (!/[\u4e00-\u9fff]/.test(raw)) return false;
+
+    // Corak campuran BM + partikel CN yang lazim muncul dari terjemahan rosak.
+    if (/\b(?:yang|dan|di|ke|daripada|kepada|oleh|untuk|dengan|kerana|namun|selepas|masalah|penduduk|penyerahan)\b[\s,.;:]+(?:的|在|由|向|给|因|作为)\b/i.test(raw)) {
+      return true;
+    }
+    if (/(?:的|在|由|向|给|因|作为)[\s,.;:]+(?:yang|dan|di|ke|daripada|kepada|oleh|untuk|dengan|kerana|namun|selepas|masalah|penduduk|penyerahan)\b/i.test(raw)) {
+      return true;
+    }
+    if (/给\/向|在…之后/.test(raw)) return true;
+
+    return false;
+  }
+
+  function hasTooMuchMalayInMixedSentence(text) {
+    if (typeof text !== "string") return false;
+    var raw = text.trim();
+    if (!raw) return false;
+    if (!/[\u4e00-\u9fff]/.test(raw)) return false;
+
+    var zhCount = (raw.match(/[\u4e00-\u9fff]/g) || []).length;
+    var latinTokens = raw.match(/[A-Za-z][A-Za-z'’.-]*/g) || [];
+    if (latinTokens.length < 8) return false;
+
+    // Jika token latin jauh lebih banyak berbanding aksara Cina, ia hampir pasti code-mixed.
+    return latinTokens.length > Math.max(zhCount * 0.7, 10);
+  }
+
   function isUsableCuratedZhText(text, gl, bmSource) {
     if (typeof text !== "string") return false;
     var raw = text.trim();
@@ -693,6 +725,8 @@
     var zhCount = (raw.match(/[\u4e00-\u9fff]/g) || []).length;
     if (zhCount < 4) return false;
     if (looksMalayHeavy(raw)) return false;
+    if (hasCodeMixedGrammarArtifacts(raw)) return false;
+    if (hasTooMuchMalayInMixedSentence(raw)) return false;
 
     // Ensure protected entities (if any) are retained for historical names/acronyms.
     if (typeof bmSource === "string" && bmSource.trim()) {
