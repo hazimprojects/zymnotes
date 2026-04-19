@@ -2,7 +2,7 @@
   "meta": {
     "source_file": "notes/bab-1-3.html",
     "rollout": "gelombang-1-clean-manual",
-    "notes": "Fully manual Chinese translation for Bab 1.3. Matched against actual data-zh-unit-id in HTML. Only critical proper nouns are retained in BM."
+    "notes": "Fully manual Chinese translation for Bab 1.3. Matched against actual data-zh-unit-id in HTML. Added missing ids for the Sistem Pentadbiran opening lines."
   },
   "units": [
     {
@@ -49,22 +49,21 @@
     },
 
     {
+      "source_id": "bab-1-3-u02a",
+      "bm_original": "Kesultanan Melayu Melaka mempunyai sistem pentadbiran yang lengkap, tersusun dan sistematik.",
+      "translate": "Kesultanan Melayu Melaka 拥有完整、有序且系统化的行政制度。"
+    },
+    {
+      "source_id": "bab-1-3-u02b",
+      "bm_original": "Sistem ini dikenali sebagai Sistem Pembesar Empat Lipatan.",
+      "translate": "这个制度称为 Sistem Pembesar Empat Lipatan（四层级大臣制度）。"
+    },
+    {
       "source_id": "bab-1-3-u02",
       "bm_original": "Sistem ini memastikan pentadbiran berjalan lancar dan teratur.",
       "translate": "这个制度确保行政顺利且有条理地运作。"
     },
 
-{
-  "source_id": "bab-1-3-u02a",
-  "bm_original": "Kesultanan Melayu Melaka mempunyai sistem pentadbiran yang lengkap, tersusun dan sistematik.",
-  "translate": "Kesultanan Melayu Melaka 拥有完整、有序且系统化的行政制度。"
-},
-{
-  "source_id": "bab-1-3-u02b",
-  "bm_original": "Sistem ini dikenali sebagai Sistem Pembesar Empat Lipatan.",
-  "translate": "这个制度称为 Sistem Pembesar Empat Lipatan。"
-}
-    
     {
       "source_id": "bab-1-3-u03",
       "bm_original": "Sistem pentadbiran Melaka bersifat:",
