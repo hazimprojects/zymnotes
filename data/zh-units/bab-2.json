@@ -1,40 +1,32 @@
 {
   "meta": {
     "source_file": "notes/bab-2.html",
-    "rollout": "gelombang-1-manual-revision"
+    "rollout": "gelombang-1-clean-manual",
+    "notes": "Fully manual Chinese translation for Bab 2 summary page. Matched against actual data-zh-unit-id in HTML."
   },
   "units": [
     {
       "source_id": "bab-2-synopsis-1",
-      "bm_original": "Perkembangan idea nasionalisme di Barat telah mempengaruhi kebangkitan nasionalisme di Asia dan Asia Tenggara , termasuk di negara kita .",
-      "translate": "Perkembangan idea 民族主义 di Barat 已经 mempengaruhi kebangkitan 民族主义 di Asia 与 Asia Tenggara , termasuk di negara kita .",
-      "key_points_zh": [
-        "Perkembangan idea 民族主义 di Barat 已经 mempengaruhi kebangkitan 民族主义 di Asia 与 Asia Tenggara , termasuk di negara kita ."
-      ],
-      "bm_focus_phrase": "Perkembangan idea nasionalisme di Barat telah mempengaruhi kebangkitan nasionalisme di Asia dan Asia Tenggara , termasuk di negara kita ."
+      "bm_original": "Perkembangan idea nasionalisme di Barat telah mempengaruhi kebangkitan nasionalisme di Asia dan Asia Tenggara, termasuk di negara kita.",
+      "translate": "西方民族主义思想的发展，影响了亚洲与东南亚民族主义的兴起，也包括我国。"
     },
     {
       "source_id": "bab-2-synopsis-2",
       "bm_original": "Gerakan nasionalisme berkembang seiring dengan matlamat perjuangan, cara gerakan disusun, ketokohan pemimpin nasionalis dan pengaruh pelbagai faktor.",
-      "translate": "Gerakan 民族主义 berkembang seiring 以 matlamat 斗争, cara gerakan disusun, ketokohan 领袖 nasionalis 与 pengaruh pelbagai 因素.",
-      "key_points_zh": [
-        "Gerakan 民族主义 berkembang seiring 以 matlamat 斗争, cara gerakan disusun, ketokohan 领袖 nasionalis 与 pengaruh pelbagai 因素."
-      ],
-      "bm_focus_phrase": "Gerakan nasionalisme berkembang seiring dengan matlamat perjuangan, cara gerakan disusun, ketokohan pemimpin nasionalis dan pengaruh pelbagai faktor."
+      "translate": "民族主义运动的发展，与斗争目标、运动组织方式、民族主义领袖的影响力，以及各种因素的推动密切相关。"
     },
     {
       "source_id": "bab-2-synopsis-3",
-      "bm_original": "Bab ini menghimpunkan perkembangan nasionalisme dari sudut maksud , idea, perkembangan wilayah, kesedaran di negara kita, faktor kemunculan dan kesannya.",
-      "translate": "Bab 这 menghimpunkan perkembangan 民族主义 dari sudut maksud , idea, perkembangan wilayah, kesedaran di negara kita, 因素 kemunculan 与 kesannya.",
-      "key_points_zh": [
-        "Bab 这 menghimpunkan perkembangan 民族主义 dari sudut maksud , idea, perkembangan wilayah, kesedaran di negara kita, 因素 kemunculan 与 kesannya."
-      ],
-      "bm_focus_phrase": "Bab ini menghimpunkan perkembangan nasionalisme dari sudut maksud , idea, perkembangan wilayah, kesedaran di negara kita, faktor kemunculan dan kesannya."
+      "bm_original": "Bab ini menghimpunkan perkembangan nasionalisme dari sudut maksud, idea, perkembangan wilayah, kesedaran di negara kita, faktor kemunculan dan kesannya.",
+      "translate": "本章综合说明民族主义的发展，包括其含义、思想演变、区域发展、我国的民族意识觉醒、兴起因素以及所带来的影响。"
     },
     {
       "source_id": "bab-2-synopsis-4",
       "bm_original": "Perkembangan nasionalisme seterusnya memberikan kesan penting kepada usaha membina tamadun bangsa dan negara.",
-      "translate": "Perkembangan 民族主义 seterusnya memberikan 影响 penting 向 usaha membina tamadun bangsa 与 negara.",
+      "translate": "民族主义的发展，进一步对民族与国家文明的建设产生了重要影响。"
+    }
+  ]
+}      "translate": "Perkembangan 民族主义 seterusnya memberikan 影响 penting 向 usaha membina tamadun bangsa 与 negara.",
       "key_points_zh": [
         "Perkembangan 民族主义 seterusnya memberikan 影响 penting 向 usaha membina tamadun bangsa 与 negara."
       ],
