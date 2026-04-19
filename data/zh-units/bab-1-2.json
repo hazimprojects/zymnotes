@@ -2,101 +2,372 @@
   "meta": {
     "source_file": "notes/bab-1-2.html",
     "rollout": "gelombang-1-clean-manual",
-    "notes": "Fully manual Chinese translation. Only essential proper nouns retained."
+    "notes": "Fully manual Chinese translation for Bab 1.2. Only critical proper nouns are retained in BM. Matched against all data-zh-unit-id in HTML."
   },
   "units": [
     {
-      "source_id": "bab-1-2-chip-1",
-      "bm_original": "Kesultanan Melayu Melaka mempunyai ciri-ciri negara bangsa yang jelas dan sistematik.",
-      "translate": "Kesultanan Melayu Melaka 拥有明确且系统化的国家体系特征。"
+      "source_id": "bab-1-2-u13",
+      "bm_original": "Kesultanan Melayu Melaka mempunyai sistem pemerintahan yang tersusun dan lengkap.",
+      "translate": "Kesultanan Melayu Melaka 拥有完整且有序的统治制度。"
     },
     {
-      "source_id": "bab-1-2-chip-2",
-      "bm_original": "Ciri-ciri ini menjadikan Melaka sebagai sebuah kerajaan yang kuat dan berdaulat.",
-      "translate": "这些特征使 Melaka 成为一个强大且具有主权的王国。"
+      "source_id": "bab-1-2-u14",
+      "bm_original": "Negara bangsa Melaka terbina melalui enam ciri utama yang saling melengkapi.",
+      "translate": "Melaka 的国家体系是通过六项彼此相辅相成的主要特征建立起来的。"
     },
     {
-      "source_id": "bab-1-2-chip-3",
-      "bm_original": "Empat unsur utama negara bangsa diterapkan dengan jelas dalam pentadbiran Melaka.",
-      "translate": "国家体系的四个主要要素在 Melaka 的行政体系中得到清晰体现。"
+      "source_id": "bab-1-2-u15",
+      "bm_original": "Ciri-ciri ini membuktikan kekuatan Melaka sebagai kerajaan yang berdaulat sebelum kedatangan Barat.",
+      "translate": "这些特征证明，在西方到来之前，Melaka 已经是一个强大而拥有主权的王国。"
     },
     {
-      "source_id": "bab-1-2-chip-4",
-      "bm_original": "Kesultanan ini menjadi asas kepada pembentukan negara bangsa moden di Malaysia.",
-      "translate": "该王朝成为马来西亚现代国家体系形成的重要基础。"
+      "source_id": "bab-1-2-u16",
+      "bm_original": "Warisan ini turut menjadi panduan kepada pembentukan negara bangsa Malaysia masa kini.",
+      "translate": "这项历史传承也成为今日马来西亚国家体系形成的重要指南。"
     },
 
     {
       "source_id": "bab-1-2-soalan-heading",
-      "bm_original": "Apakah keistimewaan Kesultanan Melayu Melaka dalam pembinaan negara bangsa?",
-      "translate": "Kesultanan Melayu Melaka 在国家体系建设方面有什么特殊之处？"
+      "bm_original": "Apakah ciri-ciri negara bangsa yang terdapat dalam Kesultanan Melayu Melaka?",
+      "translate": "Kesultanan Melayu Melaka 具备哪些国家体系特征？"
     },
     {
       "source_id": "bab-1-2-soalan-line-1",
-      "bm_original": "Kesultanan Melayu Melaka berjaya membentuk sistem pentadbiran, undang-undang dan hubungan rakyat yang tersusun.",
-      "translate": "Kesultanan Melayu Melaka 成功建立了完善的行政制度、法律体系以及人民关系结构。"
+      "bm_original": "Kesultanan Melayu Melaka mempunyai sistem pemerintahan yang tersusun dan lengkap, yang menunjukkan pembentukan negara bangsa yang kukuh sebelum kedatangan Barat.",
+      "translate": "Kesultanan Melayu Melaka 拥有完整而有序的统治制度，这显示在西方到来之前，一个稳固的国家体系已经形成。"
     },
 
     {
       "source_id": "bab-1-2-fokus-line",
-      "bm_original": "Subtopik ini membincangkan ciri-ciri negara bangsa dalam Kesultanan Melayu Melaka.",
-      "translate": "本小节将探讨 Kesultanan Melayu Melaka 所具备的国家体系特征。"
+      "bm_original": "Kesultanan Melayu Melaka merupakan contoh pembentukan negara bangsa yang kukuh di Alam Melayu. Subtopik ini menghuraikan ciri-ciri utama yang membuktikan Melaka sebagai sebuah negara bangsa yang berdaulat:",
+      "translate": "Kesultanan Melayu Melaka 是 Alam Melayu 中稳固国家体系形成的典范。本小节将说明证明 Melaka 是一个拥有主权的国家体系的主要特征："
     },
 
+    {
+      "source_id": "bab-1-2-extra-1",
+      "bm_original": "bantuan para pembesar",
+      "translate": "贵族的协助"
+    },
+    {
+      "source_id": "bab-1-2-extra-2",
+      "bm_original": "sistem pentadbiran yang tersusun",
+      "translate": "有序的行政制度"
+    },
     {
       "source_id": "bab-1-2-u01",
-      "bm_original": "Ciri-ciri negara bangsa:",
-      "translate": "国家体系的主要特征："
+      "bm_original": "Sistem pentadbiran yang teratur menjadikan Melaka sebagai empayar yang terkenal.",
+      "translate": "完善而有序的行政制度使 Melaka 成为著名的帝国。"
     },
 
     {
-      "source_id": "bab-1-2-raja",
-      "bm_original": "Sultan sebagai pemerintah tertinggi.",
-      "translate": "苏丹是最高统治者。"
+      "source_id": "bab-1-2-extra-3",
+      "bm_original": "taat setia kepada Sultan",
+      "translate": "忠于苏丹"
     },
     {
-      "source_id": "bab-1-2-raja-2",
-      "bm_original": "Sultan dibantu oleh pembesar dalam pentadbiran.",
-      "translate": "苏丹在治理国家时由贵族协助。"
+      "source_id": "bab-1-2-extra-4",
+      "bm_original": "mematuhi undang-undang",
+      "translate": "遵守法律"
+    },
+    {
+      "source_id": "bab-1-2-extra-5",
+      "bm_original": "orang Melayu",
+      "translate": "马来人"
+    },
+    {
+      "source_id": "bab-1-2-extra-6",
+      "bm_original": "Orang Laut",
+      "translate": "Orang Laut"
+    },
+    {
+      "source_id": "bab-1-2-extra-7",
+      "bm_original": "rakyat merdeka",
+      "translate": "自由民"
+    },
+    {
+      "source_id": "bab-1-2-extra-8",
+      "bm_original": "hamba",
+      "translate": "奴隶"
+    },
+    {
+      "source_id": "bab-1-2-extra-9",
+      "bm_original": "Sultan menjamin kesejahteraan rakyat",
+      "translate": "苏丹保障人民的福祉"
+    },
+    {
+      "source_id": "bab-1-2-extra-10",
+      "bm_original": "rakyat mengakui kekuasaan sultan",
+      "translate": "人民承认苏丹的权力"
+    },
+    {
+      "source_id": "bab-1-2-u02",
+      "bm_original": "Hubungan timbal balik ini mewujudkan persefahaman dan kestabilan politik.",
+      "translate": "这种互相依存的关系建立了理解与政治稳定。"
+    },
+    {
+      "source_id": "bab-1-2-extra-11",
+      "bm_original": "Sultan & Pembesar → Golongan Pemerintah",
+      "translate": "苏丹与贵族 → 统治阶层"
+    },
+    {
+      "source_id": "bab-1-2-extra-12",
+      "bm_original": "Rakyat → Golongan Diperintah",
+      "translate": "人民 → 被统治阶层"
     },
 
     {
-      "source_id": "bab-1-2-undang",
-      "bm_original": "Undang-undang digunakan untuk memastikan keamanan dan kesejahteraan.",
-      "translate": "法律用于维护国家安全与社会稳定。"
+      "source_id": "bab-1-2-extra-13",
+      "bm_original": "hak mutlak sultan mengawal rakyat dan wilayah",
+      "translate": "苏丹对人民和领土拥有绝对权力"
     },
     {
-      "source_id": "bab-1-2-undang-2",
-      "bm_original": "Undang-undang penting termasuk Hukum Kanun Melaka dan Undang-undang Laut Melaka.",
-      "translate": "重要法律包括 Hukum Kanun Melaka 和 Undang-undang Laut Melaka。"
-    },
-
-    {
-      "source_id": "bab-1-2-wilayah",
-      "bm_original": "Wilayah pengaruh merangkumi kawasan yang luas.",
-      "translate": "其势力范围覆盖广大的地区。"
+      "source_id": "bab-1-2-extra-14",
+      "bm_original": "bebas daripada campur tangan kuasa asing",
+      "translate": "不受外国势力干预"
     },
     {
-      "source_id": "bab-1-2-wilayah-2",
-      "bm_original": "Wilayah ini menunjukkan kekuatan dan pengaruh kerajaan.",
-      "translate": "这些领土体现了王国的实力与影响力。"
+      "source_id": "bab-1-2-u03",
+      "bm_original": "Hubungan ini mengukuhkan kedudukan Melaka sebagai kerajaan berdaulat.",
+      "translate": "这种关系巩固了 Melaka 作为主权王国的地位。"
     },
 
     {
-      "source_id": "bab-1-2-rakyat",
-      "bm_original": "Rakyat setia kepada pemerintah dan tidak menderhaka.",
-      "translate": "人民忠于统治者，并不会叛乱。"
+      "source_id": "bab-1-2-extra-15",
+      "bm_original": "menerima",
+      "translate": "接受"
     },
     {
-      "source_id": "bab-1-2-rakyat-2",
-      "bm_original": "Kesetiaan ini penting untuk kestabilan kerajaan.",
-      "translate": "这种忠诚对于国家稳定至关重要。"
+      "source_id": "bab-1-2-extra-16",
+      "bm_original": "mengakui",
+      "translate": "承认"
+    },
+    {
+      "source_id": "bab-1-2-extra-17",
+      "bm_original": "mematuhi pemerintahan sultan",
+      "translate": "服从苏丹的统治"
+    },
+    {
+      "source_id": "bab-1-2-extra-18",
+      "bm_original": "Semenanjung Tanah Melayu",
+      "translate": "Semenanjung Tanah Melayu"
+    },
+    {
+      "source_id": "bab-1-2-extra-19",
+      "bm_original": "Pantai timur Sumatera",
+      "translate": "苏门答腊东海岸"
+    },
+    {
+      "source_id": "bab-1-2-extra-20",
+      "bm_original": "penaklukan",
+      "translate": "征服"
+    },
+    {
+      "source_id": "bab-1-2-extra-21",
+      "bm_original": "naungan",
+      "translate": "庇护关系"
+    },
+    {
+      "source_id": "bab-1-2-extra-22",
+      "bm_original": "perkahwinan",
+      "translate": "联姻"
+    },
+    {
+      "source_id": "bab-1-2-u04",
+      "bm_original": "Wilayah yang luas membuktikan kewibawaan pemerintah.",
+      "translate": "广阔的领土证明了统治者的威望与权威。"
+    },
+    {
+      "source_id": "bab-1-2-u05",
+      "bm_original": "Diperoleh melalui peperangan.",
+      "translate": "通过战争取得。"
+    },
+    {
+      "source_id": "bab-1-2-extra-23",
+      "bm_original": "Pahang",
+      "translate": "Pahang"
+    },
+    {
+      "source_id": "bab-1-2-extra-24",
+      "bm_original": "Kuala Linggi",
+      "translate": "Kuala Linggi"
+    },
+    {
+      "source_id": "bab-1-2-extra-25",
+      "bm_original": "Kelantan",
+      "translate": "Kelantan"
+    },
+    {
+      "source_id": "bab-1-2-extra-26",
+      "bm_original": "Rokan",
+      "translate": "Rokan"
+    },
+    {
+      "source_id": "bab-1-2-extra-27",
+      "bm_original": "Inderagiri",
+      "translate": "Inderagiri"
+    },
+    {
+      "source_id": "bab-1-2-extra-28",
+      "bm_original": "Kampar",
+      "translate": "Kampar"
+    },
+    {
+      "source_id": "bab-1-2-u06",
+      "bm_original": "Menerima ketuanan Melaka melalui perkahwinan atau persahabatan.",
+      "translate": "通过联姻或友好关系接受 Melaka 的宗主地位。"
+    },
+    {
+      "source_id": "bab-1-2-extra-29",
+      "bm_original": "Lingga",
+      "translate": "Lingga"
+    },
+    {
+      "source_id": "bab-1-2-extra-30",
+      "bm_original": "Patani",
+      "translate": "Patani"
+    },
+    {
+      "source_id": "bab-1-2-extra-31",
+      "bm_original": "Kedah",
+      "translate": "Kedah"
+    },
+    {
+      "source_id": "bab-1-2-u07",
+      "bm_original": "Contoh: Kerajaan Majapahit menghadiahkan Siantan kepada Sultan Mansur Shah kerana perkahwinan diraja.",
+      "translate": "例如：Majapahit 因王室联姻而将 Siantan 赠予 Sultan Mansur Shah。"
     },
 
     {
-      "source_id": "bab-1-2-kesimpulan",
-      "bm_original": "Kesultanan Melayu Melaka menjadi model penting dalam pembentukan negara bangsa.",
-      "translate": "Kesultanan Melayu Melaka 成为国家体系形成的重要典范。"
+      "source_id": "bab-1-2-extra-32",
+      "bm_original": "Hukum Kanun Melaka",
+      "translate": "Hukum Kanun Melaka"
+    },
+    {
+      "source_id": "bab-1-2-extra-33",
+      "bm_original": "Undang-undang Laut Melaka",
+      "translate": "Undang-undang Laut Melaka"
+    },
+    {
+      "source_id": "bab-1-2-extra-34",
+      "bm_original": "mengukuhkan kerajaan",
+      "translate": "巩固王国"
+    },
+    {
+      "source_id": "bab-1-2-extra-35",
+      "bm_original": "melindungi rakyat",
+      "translate": "保护人民"
+    },
+    {
+      "source_id": "bab-1-2-extra-36",
+      "bm_original": "memastikan pentadbiran berjalan lancar",
+      "translate": "确保行政顺利运作"
+    },
+    {
+      "source_id": "bab-1-2-u08",
+      "bm_original": "Undang-undang ini menjadikan Melaka sebuah kerajaan yang unggul dan sistematik.",
+      "translate": "这些法律使 Melaka 成为一个卓越而有系统的王国。"
+    },
+
+    {
+      "source_id": "bab-1-2-extra-37",
+      "bm_original": "kedaulatan pemerintah",
+      "translate": "统治者的主权"
+    },
+    {
+      "source_id": "bab-1-2-extra-38",
+      "bm_original": "keagungan kerajaan",
+      "translate": "王国的威严与荣耀"
+    },
+    {
+      "source_id": "bab-1-2-extra-39",
+      "bm_original": "adat istiadat",
+      "translate": "礼仪制度"
+    },
+    {
+      "source_id": "bab-1-2-extra-40",
+      "bm_original": "penggunaan warna diraja",
+      "translate": "王室颜色的使用"
+    },
+    {
+      "source_id": "bab-1-2-extra-41",
+      "bm_original": "nobat",
+      "translate": "nobat"
+    },
+    {
+      "source_id": "bab-1-2-extra-42",
+      "bm_original": "regalia",
+      "translate": "regalia"
+    },
+    {
+      "source_id": "bab-1-2-extra-43",
+      "bm_original": "cap mohor",
+      "translate": "cap mohor"
+    },
+    {
+      "source_id": "bab-1-2-u09",
+      "bm_original": "Cap mohor digunakan untuk mengesahkan arahan rasmi sultan.",
+      "translate": "cap mohor 用于确认苏丹的正式命令。"
+    },
+
+    {
+      "source_id": "bab-1-2-extra-44",
+      "bm_original": "kerajaan",
+      "translate": "王国"
+    },
+    {
+      "source_id": "bab-1-2-extra-45",
+      "bm_original": "rakyat",
+      "translate": "人民"
+    },
+    {
+      "source_id": "bab-1-2-extra-46",
+      "bm_original": "kedaulatan",
+      "translate": "主权"
+    },
+    {
+      "source_id": "bab-1-2-extra-47",
+      "bm_original": "wilayah pengaruh",
+      "translate": "势力范围"
+    },
+    {
+      "source_id": "bab-1-2-extra-48",
+      "bm_original": "undang-undang",
+      "translate": "法律"
+    },
+    {
+      "source_id": "bab-1-2-extra-49",
+      "bm_original": "lambang kebesaran",
+      "translate": "王权象征"
+    },
+    {
+      "source_id": "bab-1-2-u10",
+      "bm_original": "Ciri-ciri ini menjadikan Melaka sebagai kerajaan yang kuat dan gemilang.",
+      "translate": "这些特征使 Melaka 成为一个强大而辉煌的王国。"
+    },
+    {
+      "source_id": "bab-1-2-u11",
+      "bm_original": "Ia membuktikan bahawa asas negara bangsa telah wujud sebelum kedatangan Barat.",
+      "translate": "这证明国家体系的基础早在西方到来之前已经存在。"
+    },
+    {
+      "source_id": "bab-1-2-u12",
+      "bm_original": "Ciri-ciri ini juga menjadi panduan kepada pembentukan negara bangsa Malaysia pada masa kini.",
+      "translate": "这些特征也成为今日马来西亚国家体系形成的重要指南。"
+    },
+    {
+      "source_id": "bab-1-2-extra-50",
+      "bm_original": "bersatu padu",
+      "translate": "团结一致"
+    },
+    {
+      "source_id": "bab-1-2-extra-51",
+      "bm_original": "mempertahankan kedaulatan negara",
+      "translate": "维护国家主权"
+    },
+    {
+      "source_id": "bab-1-2-extra-52",
+      "bm_original": "menghargai warisan sejarah bangsa",
+      "translate": "珍惜民族的历史传承"
     }
   ]
 }
