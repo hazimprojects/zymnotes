@@ -367,11 +367,14 @@
   function loadComprehensionData() {
     if (comprehensionMap !== null) return Promise.resolve(comprehensionMap);
 
-    function mergeUnits(mapped, payload) {
+    function mergeUnits(mapped, payload, options) {
+      var opts = options || {};
+      var overwrite = opts.overwrite !== false;
       var units = Array.isArray(payload) ? payload : (Array.isArray(payload && payload.units) ? payload.units : []);
       units.forEach(function (unit) {
         if (!unit || typeof unit !== "object") return;
         if (!unit.source_id || typeof unit.source_id !== "string") return;
+        if (!overwrite && Object.prototype.hasOwnProperty.call(mapped, unit.source_id)) return;
         mapped[unit.source_id] = unit;
       });
     }
@@ -380,7 +383,7 @@
       return fetch(resolveComprehensionPath())
         .then(function (res) { return res.ok ? res.json() : {}; })
         .then(function (data) {
-          mergeUnits(mapped, data);
+          mergeUnits(mapped, data, { overwrite: false });
           return mapped;
         })
         .catch(function () { return mapped; });
@@ -410,8 +413,11 @@
           .then(function (payloads) {
             payloads.forEach(function (payload) {
               if (!payload) return;
-              mergeUnits(mapped, payload);
+              mergeUnits(mapped, payload, { overwrite: true });
             });
+            if (Object.keys(mapped).length > 0) {
+              return mapped;
+            }
             return loadLegacyComprehension(mapped);
           });
       })
