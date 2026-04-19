@@ -25,6 +25,18 @@
   var sentenceTranslationCache = Object.create(null);
   var sentenceTranslationInFlight = Object.create(null);
   var ENTITY_WARNING_LABEL = "⚠︎ Entiti dikekalkan (BM asal).";
+  var HARD_PROTECTED_ENTITIES = [
+    "Raja-raja Melayu", "Majlis Raja-raja",
+    "Sultan Johor", "Sultan Selangor", "Sultan Kedah", "Raja Perlis", "Sultan Perak",
+    "Sultan Pahang", "Sultan Kelantan", "Sultan Terengganu",
+    "Tuanku Permaisuri Perak", "Raja Perempuan Kelsom",
+    "Sir Harold MacMichael", "H.C. Willan", "Frank Swettenham", "Roland Braddell",
+    "Cecil Clementi Smith", "Richard Winstedt", "Frederick Weld", "George Maxwell",
+    "Dato’ Onn Jaafar", "Dato' Onn Jaafar", "Dato’ Nik Ahmad Kamil", "Za’ba", "Za'ba",
+    "Tunku Abdul Rahman", "Dato’ Panglima Bukit Gantang", "Dato' Panglima Bukit Gantang",
+    "Utusan Melayu", "Majlis", "Warta Negara",
+    "Persekutuan Tanah Melayu", "Malayan Union", "Tanah Melayu"
+  ];
 
   var OVERLY_GENERAL_TERMS = new Set([
     "bahasa", "politik", "agama", "kampung", "rakyat",
@@ -176,6 +188,14 @@
     });
 
     uniqueByLengthDesc(OFFICIAL_TERMS_TO_PRESERVE).forEach(function (term) {
+      var re = new RegExp("\\b" + escapeRegExp(term) + "\\b", "gi");
+      var m;
+      while ((m = re.exec(sourceText)) !== null) {
+        pushMatch(m[0], m.index);
+      }
+    });
+
+    uniqueByLengthDesc(HARD_PROTECTED_ENTITIES).forEach(function (term) {
       var re = new RegExp("\\b" + escapeRegExp(term) + "\\b", "gi");
       var m;
       while ((m = re.exec(sourceText)) !== null) {
