@@ -1,7 +1,7 @@
 """
 add-og-tags.py
 Adds Open Graph + Twitter Card meta tags to all ZymNotes HTML files.
-Run from the /home/user/hazimedu directory.
+Run from the /home/user/zymnotes directory.
 """
 import os, re, glob
 
