@@ -6,7 +6,7 @@
    - Everything else: network-first
 */
 
-const CACHE = 'zym-v73';
+const CACHE = 'zym-v74';
 
 const PRECACHE_URLS = [
   '/',
