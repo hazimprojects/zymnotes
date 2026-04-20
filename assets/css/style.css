@@ -10,6 +10,6 @@
 @import url("paper.css?v=10");      /* Paper labels, boards, chips, accordion, steps, bab overview */
 @import url("keywords.css?v=21");   /* Keyword highlights, bloc identity, keyword legend, zh-mode annotations */
 @import url("responsive.css?v=3"); /* All @media queries + spacing fixes */
-@import url("themes.css?v=6");     /* Bab visual themes, dark mode overrides, war block chips */
+@import url("themes.css?v=7");     /* Bab visual themes, dark mode overrides, war block chips */
 @import url("lab.css?v=2");        /* Learning Lab, action bar, mini interactive blocks */
 @import url("print.css") print;    /* Print styles (Ctrl+P) */

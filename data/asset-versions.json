@@ -1,9 +1,9 @@
 {
-  "style_css": "82",
-  "main_js": "74",
+  "style_css": "83",
+  "main_js": "75",
   "zh_mode_js": "25",
   "manifest": "4",
-  "sw_cache": "70",
+  "sw_cache": "71",
   "css": {
     "base": "5",
     "layout": "9",
@@ -11,7 +11,7 @@
     "paper": "10",
     "keywords": "21",
     "responsive": "3",
-    "themes": "6",
+    "themes": "7",
     "lab": "2"
   }
 }
