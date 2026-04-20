@@ -1,719 +1,695 @@
 {
   "meta": {
     "source_file": "notes/bab-2-4.html",
-    "rollout": "gelombang-1-manual-revision"
+    "rollout": "gelombang-1-clean-manual",
+    "notes": "Fully manual Chinese translation for Bab 2.4. Completed against current HTML and includes proposed ids for missing translatable content."
   },
   "units": [
     {
       "source_id": "bab-2-4-u28",
-      "bm_original": "Di Asia Tenggara , semangat nasionalisme muncul akibat penjajahan Barat.",
-      "translate": "Di Asia Tenggara , semangat 民族主义 muncul akibat penjajahan Barat.",
-      "key_points_zh": [
-        "Di Asia Tenggara , semangat 民族主义 muncul akibat penjajahan Barat."
-      ],
-      "bm_focus_phrase": "Di Asia Tenggara , semangat nasionalisme muncul akibat penjajahan Barat."
+      "bm_original": "Di Asia Tenggara, semangat nasionalisme muncul akibat penjajahan Barat.",
+      "translate": "在东南亚，民族主义精神因西方殖民统治而兴起。"
     },
     {
       "source_id": "bab-2-4-u29",
       "bm_original": "Gerakan ini bertujuan membebaskan negara daripada penjajahan, mempertahankan kedaulatan dan membina jati diri bangsa.",
-      "translate": "Gerakan 这 bertujuan membebaskan negara daripada penjajahan, mempertahankan 主权 与 membina jati diri bangsa.",
-      "key_points_zh": [
-        "Gerakan 这 bertujuan membebaskan negara daripada penjajahan, mempertahankan 主权 与 membina jati diri bangsa."
-      ],
-      "bm_focus_phrase": "Gerakan ini bertujuan membebaskan negara daripada penjajahan, mempertahankan kedaulatan dan membina jati diri bangsa."
+      "translate": "这场运动旨在使国家摆脱殖民统治、维护主权，并建立民族身份认同。"
     },
     {
       "source_id": "bab-2-4-u30",
-      "bm_original": "Perkembangan nasionalisme dapat dilihat di Filipina , Burma , Vietnam dan Indonesia .",
-      "translate": "Perkembangan 民族主义 dapat dilihat di Filipina , Burma , Vietnam 与 Indonesia .",
-      "key_points_zh": [
-        "Perkembangan 民族主义 dapat dilihat di Filipina , Burma , Vietnam 与 Indonesia ."
-      ],
-      "bm_focus_phrase": "Perkembangan nasionalisme dapat dilihat di Filipina , Burma , Vietnam dan Indonesia ."
+      "bm_original": "Perkembangan nasionalisme dapat dilihat di Filipina, Burma, Vietnam dan Indonesia.",
+      "translate": "民族主义的发展可见于 Filipina、Burma、Vietnam 和 Indonesia。"
     },
     {
       "source_id": "bab-2-4-u31",
       "bm_original": "Thailand pula melaksanakan pembaharuan untuk mengekalkan kemerdekaannya daripada penjajahan Barat.",
-      "translate": "Thailand pula melaksanakan pembaharuan 为了 mengekalkan kemerdekaannya daripada penjajahan Barat.",
-      "key_points_zh": [
-        "Thailand pula melaksanakan pembaharuan 为了 mengekalkan kemerdekaannya daripada penjajahan Barat."
-      ],
-      "bm_focus_phrase": "Thailand pula melaksanakan pembaharuan untuk mengekalkan kemerdekaannya daripada penjajahan Barat."
+      "translate": "至于 Thailand，则通过改革来维持自身不受西方殖民统治。"
     },
+
     {
       "source_id": "bab-2-4-soalan-heading",
       "bm_original": "Bagaimana nasionalisme muncul di Asia Tenggara?",
-      "translate": "Bagaimana 民族主义 muncul di Asia Tenggara?",
-      "key_points_zh": [
-        "Bagaimana 民族主义 muncul di Asia Tenggara?"
-      ],
-      "bm_focus_phrase": "Bagaimana nasionalisme muncul di Asia Tenggara?"
+      "translate": "民族主义是如何在东南亚出现的？"
     },
     {
       "source_id": "bab-2-4-soalan-line-1",
-      "bm_original": "Di rantau Asia Tenggara , semangat nasionalisme muncul akibat penjajahan Barat.",
-      "translate": "Di rantau Asia Tenggara , semangat 民族主义 muncul akibat penjajahan Barat.",
-      "key_points_zh": [
-        "Di rantau Asia Tenggara , semangat 民族主义 muncul akibat penjajahan Barat."
-      ],
-      "bm_focus_phrase": "Di rantau Asia Tenggara , semangat nasionalisme muncul akibat penjajahan Barat."
+      "bm_original": "Di rantau Asia Tenggara, semangat nasionalisme muncul akibat penjajahan Barat.",
+      "translate": "在东南亚地区，民族主义精神是因西方殖民统治而兴起的。"
     },
     {
       "source_id": "bab-2-4-u01",
       "bm_original": "Gerakan ini bertujuan untuk:",
-      "translate": "Gerakan 这 bertujuan 为了:",
-      "key_points_zh": [
-        "Gerakan 这 bertujuan 为了:"
-      ],
-      "bm_focus_phrase": "Gerakan ini bertujuan untuk:"
+      "translate": "这场运动的目标是："
     },
     {
       "source_id": "bab-2-4-extra-1",
       "bm_original": "Membebaskan negara daripada penjajahan",
-      "translate": "重点：Membebaskan negara daripada penjajahan",
-      "key_points_zh": [
-        "重点：Membebaskan negara daripada penjajahan"
-      ],
-      "bm_focus_phrase": "Membebaskan negara daripada penjajahan"
+      "translate": "使国家摆脱殖民统治"
     },
     {
       "source_id": "bab-2-4-extra-2",
       "bm_original": "Mempertahankan kedaulatan negara",
-      "translate": "Mempertahankan 主权 negara",
-      "key_points_zh": [
-        "Mempertahankan 主权 negara"
-      ],
-      "bm_focus_phrase": "Mempertahankan kedaulatan negara"
+      "translate": "维护国家主权"
     },
     {
       "source_id": "bab-2-4-extra-3",
       "bm_original": "Membina identiti dan jati diri bangsa",
-      "translate": "Membina identiti 与 jati diri bangsa",
-      "key_points_zh": [
-        "Membina identiti 与 jati diri bangsa"
-      ],
-      "bm_focus_phrase": "Membina identiti dan jati diri bangsa"
+      "translate": "建立民族认同与自我意识"
     },
+
     {
       "source_id": "bab-2-4-fokus-line",
       "bm_original": "Nasionalisme di Asia Tenggara tercetus sebagai reaksi terhadap penjajahan kuasa Barat yang berlaku pada abad ke-19. Subtopik ini meneliti perkembangan nasionalisme di lima negara Asia Tenggara:",
-      "translate": "民族主义 di Asia Tenggara tercetus 作为 reaksi 针对 penjajahan kuasa Barat 的 发生 于 abad ke-19. Subtopik 这 meneliti perkembangan 民族主义 di lima negara Asia Tenggara:",
-      "key_points_zh": [
-        "民族主义 di Asia Tenggara tercetus 作为 reaksi 针对 penjajahan kuasa Barat 的 发生 于 abad ke-19. Subtopik 这 meneliti perkembangan 民族主义 di lima negara Asia Tenggara:"
-      ],
-      "bm_focus_phrase": "Nasionalisme di Asia Tenggara tercetus sebagai reaksi terhadap penjajahan kuasa Barat yang berlaku pada abad ke-19. Subtopik ini meneliti perkembangan nasionalisme di lima negara Asia Tenggara:"
+      "translate": "东南亚的民族主义，是对十九世纪西方列强殖民统治的一种反应。本小节将探讨东南亚五个国家的民族主义发展："
     },
     {
+      "source_id": "bab-2-4-extra-46",
+      "bm_original": "Filipina",
+      "translate": "Filipina"
+    },
+    {
+      "source_id": "bab-2-4-extra-47",
+      "bm_original": "Burma",
+      "translate": "Burma"
+    },
+    {
+      "source_id": "bab-2-4-extra-48",
+      "bm_original": "Vietnam",
+      "translate": "Vietnam"
+    },
+    {
+      "source_id": "bab-2-4-extra-49",
+      "bm_original": "Indonesia",
+      "translate": "Indonesia"
+    },
+    {
+      "source_id": "bab-2-4-extra-50",
+      "bm_original": "Thailand",
+      "translate": "Thailand"
+    },
+
+    {
       "source_id": "bab-2-4-u02",
-      "bm_original": "Nasionalisme di Filipina bermula untuk menamatkan penjajahan Sepanyol .",
-      "translate": "民族主义 di Filipina bermula 为了 menamatkan penjajahan Sepanyol .",
-      "key_points_zh": [
-        "民族主义 di Filipina bermula 为了 menamatkan penjajahan Sepanyol ."
-      ],
-      "bm_focus_phrase": "Nasionalisme di Filipina bermula untuk menamatkan penjajahan Sepanyol ."
+      "bm_original": "Nasionalisme di Filipina bermula untuk menamatkan penjajahan Sepanyol.",
+      "translate": "Filipina 的民族主义起初是为了结束 Sepanyol 的殖民统治。"
+    },
+    {
+      "source_id": "bab-2-4-u32",
+      "bm_original": "Gerakan ini diterajui oleh:",
+      "translate": "这场运动由以下人物领导："
     },
     {
       "source_id": "bab-2-4-extra-4",
       "bm_original": "José Rizal",
-      "translate": "重点：José Rizal",
-      "key_points_zh": [
-        "重点：José Rizal"
-      ],
-      "bm_focus_phrase": "José Rizal"
+      "translate": "José Rizal"
     },
     {
       "source_id": "bab-2-4-extra-5",
       "bm_original": "Andres Bonifacio",
-      "translate": "重点：Andres Bonifacio",
-      "key_points_zh": [
-        "重点：Andres Bonifacio"
-      ],
-      "bm_focus_phrase": "Andres Bonifacio"
+      "translate": "Andres Bonifacio"
     },
     {
       "source_id": "bab-2-4-extra-6",
       "bm_original": "Emilio Aguinaldo",
-      "translate": "重点：Emilio Aguinaldo",
-      "key_points_zh": [
-        "重点：Emilio Aguinaldo"
-      ],
-      "bm_focus_phrase": "Emilio Aguinaldo"
+      "translate": "Emilio Aguinaldo"
+    },
+
+    {
+      "source_id": "bab-2-4-u33",
+      "bm_original": "Gerakan ini dipimpin oleh José Rizal.",
+      "translate": "这场运动由 José Rizal 领导。"
     },
     {
       "source_id": "bab-2-4-u03",
       "bm_original": "Matlamat gerakan ini:",
-      "translate": "Matlamat gerakan 这:",
-      "key_points_zh": [
-        "Matlamat gerakan 这:"
-      ],
-      "bm_focus_phrase": "Matlamat gerakan ini:"
+      "translate": "这场运动的目标："
     },
     {
       "source_id": "bab-2-4-extra-7",
       "bm_original": "Filipina dijadikan sebahagian wilayah Sepanyol",
-      "translate": "Filipina dijadikan 部分 wilayah Sepanyol",
-      "key_points_zh": [
-        "Filipina dijadikan 部分 wilayah Sepanyol"
-      ],
-      "bm_focus_phrase": "Filipina dijadikan sebahagian wilayah Sepanyol"
+      "translate": "让 Filipina 成为 Sepanyol 的一部分领土"
     },
     {
       "source_id": "bab-2-4-extra-8",
       "bm_original": "Hak yang sama diberikan kepada rakyat Filipina seperti rakyat Sepanyol",
-      "translate": "Hak 的 sama diberikan 向 人民 Filipina seperti 人民 Sepanyol",
-      "key_points_zh": [
-        "Hak 的 sama diberikan 向 人民 Filipina seperti 人民 Sepanyol"
-      ],
-      "bm_focus_phrase": "Hak yang sama diberikan kepada rakyat Filipina seperti rakyat Sepanyol"
+      "translate": "给予 Filipina 人民与 Sepanyol 人民相同的权利"
     },
+    {
+      "source_id": "bab-2-4-u34",
+      "bm_original": "Rizal menubuhkan Liga Filipina pada 1892 untuk menuntut perubahan politik, ekonomi dan sosial.",
+      "translate": "Rizal 于 1892 年成立 Liga Filipina，以争取政治、经济和社会改革。"
+    },
+    {
+      "source_id": "bab-2-4-u35",
+      "bm_original": "Namun usaha ini tidak berjaya.",
+      "translate": "然而，这项努力并没有成功。"
+    },
+
+    {
+      "source_id": "bab-2-4-u36",
+      "bm_original": "Kegagalan Gerakan Propaganda membawa kepada gerakan radikal.",
+      "translate": "Gerakan Propaganda 的失败，促使更激进的运动兴起。"
+    },
+    {
+      "source_id": "bab-2-4-u37",
+      "bm_original": "Andres Bonifacio menubuhkan Katipunan, sebuah gerakan revolusi rahsia.",
+      "translate": "Andres Bonifacio 成立了 Katipunan，一个秘密革命组织。"
+    },
+    {
+      "source_id": "bab-2-4-u38",
+      "bm_original": "Akhbar Kalayan digunakan untuk menyebarkan idea revolusi.",
+      "translate": "报纸 Kalayan 被用来传播革命思想。"
+    },
+    {
+      "source_id": "bab-2-4-u39",
+      "bm_original": "Pada 1896, Bonifacio dan Aguinaldo melancarkan Revolusi Filipina.",
+      "translate": "1896年，Bonifacio 与 Aguinaldo 发动了 Revolusi Filipina。"
+    },
+    {
+      "source_id": "bab-2-4-u40",
+      "bm_original": "Namun, konflik dalaman menyebabkan usaha mereka gagal.",
+      "translate": "然而，内部冲突导致他们的努力失败。"
+    },
+
     {
       "source_id": "bab-2-4-u04",
       "bm_original": "Aguinaldo bekerjasama dengan Amerika Syarikat dan berjaya mengusir Sepanyol.",
-      "translate": "Aguinaldo bekerjasama 以 Amerika Syarikat 与 成功 mengusir Sepanyol.",
-      "key_points_zh": [
-        "Aguinaldo bekerjasama 以 Amerika Syarikat 与 成功 mengusir Sepanyol."
-      ],
-      "bm_focus_phrase": "Aguinaldo bekerjasama dengan Amerika Syarikat dan berjaya mengusir Sepanyol."
+      "translate": "Aguinaldo 与 Amerika Syarikat 合作，并成功驱逐了 Sepanyol。"
     },
+    {
+      "source_id": "bab-2-4-u41",
+      "bm_original": "Pada 1899, Aguinaldo mengisytiharkan kemerdekaan Filipina.",
+      "translate": "1899年，Aguinaldo 宣布 Filipina 独立。"
+    },
+    {
+      "source_id": "bab-2-4-u42",
+      "bm_original": "Namun, kemerdekaan tersebut tidak diiktiraf oleh Amerika Syarikat.",
+      "translate": "然而，这项独立并未获得 Amerika Syarikat 承认。"
+    },
+    {
+      "source_id": "bab-2-4-u43",
+      "bm_original": "Filipina kemudian diletakkan di bawah penguasaan Amerika Syarikat.",
+      "translate": "随后，Filipina 被置于 Amerika Syarikat 的控制之下。"
+    },
+
     {
       "source_id": "bab-2-4-u05",
       "bm_original": "Golongan nasionalis menukar strategi kepada saluran diplomasi dan politik sederhana.",
-      "translate": "Golongan nasionalis menukar strategi 向 saluran diplomasi 与 政治 sederhana.",
-      "key_points_zh": [
-        "Golongan nasionalis menukar strategi 向 saluran diplomasi 与 政治 sederhana."
-      ],
-      "bm_focus_phrase": "Golongan nasionalis menukar strategi kepada saluran diplomasi dan politik sederhana."
+      "translate": "民族主义者后来将策略转向外交途径和温和政治。"
     },
     {
+      "source_id": "bab-2-4-u44",
+      "bm_original": "Pada 1907, Sergio Osmena dilantik sebagai pemimpin Parti Nasionalis dalam Dewan Perhimpunan Filipina.",
+      "translate": "1907年，Sergio Osmena 被任命为 Filipina 议会中 Parti Nasionalis 的领导人。"
+    },
+    {
+      "source_id": "bab-2-4-u45",
+      "bm_original": "Perjuangan kemerdekaan diteruskan sehingga Perang Dunia Kedua.",
+      "translate": "独立斗争持续到第二次世界大战时期。"
+    },
+
+    {
       "source_id": "bab-2-4-u06",
-      "bm_original": "Nasionalisme di Burma menentang penjajahan British .",
-      "translate": "民族主义 di Burma 反对 penjajahan British .",
-      "key_points_zh": [
-        "民族主义 di Burma 反对 penjajahan British ."
-      ],
-      "bm_focus_phrase": "Nasionalisme di Burma menentang penjajahan British ."
+      "bm_original": "Nasionalisme di Burma menentang penjajahan British.",
+      "translate": "Burma 的民族主义运动，是为了反抗 British 的殖民统治。"
+    },
+    {
+      "source_id": "bab-2-4-u46",
+      "bm_original": "Gerakan ini dipimpin oleh golongan kelas menengah, siswazah universiti, sami Buddha dan petani.",
+      "translate": "这场运动由中产阶级、大学毕业生、佛教僧侣和农民领导。"
     },
     {
       "source_id": "bab-2-4-extra-9",
       "bm_original": "golongan kelas menengah & siswazah universiti (Thakin)",
-      "translate": "重点：golongan kelas menengah & siswazah universiti (Thakin)",
-      "key_points_zh": [
-        "重点：golongan kelas menengah & siswazah universiti (Thakin)"
-      ],
-      "bm_focus_phrase": "golongan kelas menengah & siswazah universiti (Thakin)"
+      "translate": "中产阶级与大学毕业生（Thakin）"
     },
     {
       "source_id": "bab-2-4-extra-10",
       "bm_original": "sami Buddha (pongyi)",
-      "translate": "重点：sami Buddha (pongyi)",
-      "key_points_zh": [
-        "重点：sami Buddha (pongyi)"
-      ],
-      "bm_focus_phrase": "sami Buddha (pongyi)"
+      "translate": "佛教僧侣（pongyi）"
     },
     {
       "source_id": "bab-2-4-extra-11",
       "bm_original": "golongan petani",
-      "translate": "重点：golongan petani",
-      "key_points_zh": [
-        "重点：golongan petani"
-      ],
-      "bm_focus_phrase": "golongan petani"
+      "translate": "农民阶层"
+    },
+
+    {
+      "source_id": "bab-2-4-u47",
+      "bm_original": "Pada 1906, Persatuan Belia Buddha ditubuhkan untuk melindungi agama Buddha serta mengekalkan pendidikan dan budaya Burma.",
+      "translate": "1906年，Persatuan Belia Buddha 成立，目的是保护佛教，并维护 Burma 的教育与文化。"
     },
     {
+      "source_id": "bab-2-4-u48",
+      "bm_original": "Isu Kasut digunakan untuk meniup semangat nasionalisme apabila orang British memakai kasut dalam kuil Buddha.",
+      "translate": "当 British 人穿鞋进入佛寺时，Isu Kasut 被用来激发民族主义情绪。"
+    },
+    {
+      "source_id": "bab-2-4-u49",
+      "bm_original": "Tindakan ini dianggap mencemarkan kesucian agama dan membangkitkan kemarahan rakyat.",
+      "translate": "这种行为被视为亵渎宗教圣洁，因此激起了人民的愤怒。"
+    },
+
+    {
       "source_id": "bab-2-4-u07",
-      "bm_original": "Persatuan Belia Buddha kemudian diambil alih oleh U Ba Pe .",
-      "translate": "协会 Belia Buddha kemudian diambil alih 由 U Ba Pe .",
-      "key_points_zh": [
-        "协会 Belia Buddha kemudian diambil alih 由 U Ba Pe ."
-      ],
-      "bm_focus_phrase": "Persatuan Belia Buddha kemudian diambil alih oleh U Ba Pe ."
+      "bm_original": "Persatuan Belia Buddha kemudian diambil alih oleh U Ba Pe.",
+      "translate": "随后，Persatuan Belia Buddha 被 U Ba Pe 接管。"
     },
     {
       "source_id": "bab-2-4-u08",
       "bm_original": "Namanya diubah menjadi Majlis Persatuan Am Kesatuan Burma dan mula memperjuangkan isu bangsa Burma.",
-      "translate": "Namanya diubah menjadi Majlis 协会 Am Kesatuan Burma 与 mula memperjuangkan isu bangsa Burma.",
-      "key_points_zh": [
-        "Namanya diubah menjadi Majlis 协会 Am Kesatuan Burma 与 mula memperjuangkan isu bangsa Burma."
-      ],
-      "bm_focus_phrase": "Namanya diubah menjadi Majlis Persatuan Am Kesatuan Burma dan mula memperjuangkan isu bangsa Burma."
+      "translate": "其名称后来改为 Majlis Persatuan Am Kesatuan Burma，并开始争取 Burma 民族的权益。"
+    },
+    {
+      "source_id": "bab-2-4-u50",
+      "bm_original": "Pada 1920, Revolusi Pelajar berlaku untuk menuntut penubuhan universiti tempatan.",
+      "translate": "1920年，Revolusi Pelajar 爆发，要求建立本地大学。"
+    },
+    {
+      "source_id": "bab-2-4-u51",
+      "bm_original": "Pada 1930–1932, Pemberontakan Saya San tercetus.",
+      "translate": "1930至1932年间，Pemberontakan Saya San 爆发。"
+    },
+    {
+      "source_id": "bab-2-4-u52",
+      "bm_original": "Pemberontakan ini diketuai oleh Saya San, seorang bekas pongyi, dan disokong oleh petani yang terbeban cukai.",
+      "translate": "这场起义由前僧侣 Saya San 领导，并获得受税负压迫的农民支持。"
+    },
+
+    {
+      "source_id": "bab-2-4-u53",
+      "bm_original": "Pada 1935, Perlembagaan Burma diperkenalkan dan Burma dipisahkan dari India.",
+      "translate": "1935年，Perlembagaan Burma 被推行，而 Burma 也从 India 分离出来。"
     },
     {
       "source_id": "bab-2-4-u09",
       "bm_original": "Keadaan ini meningkatkan tuntutan untuk berkerajaan sendiri.",
-      "translate": "Keadaan 这 提升 tuntutan 为了 berkerajaan sendiri.",
-      "key_points_zh": [
-        "Keadaan 这 提升 tuntutan 为了 berkerajaan sendiri."
-      ],
-      "bm_focus_phrase": "Keadaan ini meningkatkan tuntutan untuk berkerajaan sendiri."
+      "translate": "这使得人民要求自治的呼声进一步上升。"
     },
     {
       "source_id": "bab-2-4-u10",
       "bm_original": "Golongan Thakin menubuhkan Parti Do Bama Asiayone (Kami Orang Burma).",
-      "translate": "Golongan Thakin 成立 Parti Do Bama Asiayone (Kami Orang Burma).",
-      "key_points_zh": [
-        "Golongan Thakin 成立 Parti Do Bama Asiayone (Kami Orang Burma)."
-      ],
-      "bm_focus_phrase": "Golongan Thakin menubuhkan Parti Do Bama Asiayone (Kami Orang Burma)."
+      "translate": "Thakin 群体成立了 Parti Do Bama Asiayone（我们是 Burma 人）。"
     },
     {
       "source_id": "bab-2-4-extra-12",
       "bm_original": "Aung San",
-      "translate": "重点：Aung San",
-      "key_points_zh": [
-        "重点：Aung San"
-      ],
-      "bm_focus_phrase": "Aung San"
+      "translate": "Aung San"
     },
     {
       "source_id": "bab-2-4-extra-13",
       "bm_original": "Kyaw Nein",
-      "translate": "重点：Kyaw Nein",
-      "key_points_zh": [
-        "重点：Kyaw Nein"
-      ],
-      "bm_focus_phrase": "Kyaw Nein"
+      "translate": "Kyaw Nein"
     },
     {
       "source_id": "bab-2-4-extra-14",
       "bm_original": "U Nu",
-      "translate": "重点：U Nu",
-      "key_points_zh": [
-        "重点：U Nu"
-      ],
-      "bm_focus_phrase": "U Nu"
+      "translate": "U Nu"
     },
     {
+      "source_id": "bab-2-4-u54",
+      "bm_original": "Mereka menggelarkan diri sebagai Thakin yang bermaksud tuan, untuk menegaskan bahawa orang Burma mesti bertuankan orang Burma.",
+      "translate": "他们自称为 Thakin，意为“主人”，以强调 Burma 人必须由 Burma 人自己领导。"
+    },
+    {
+      "source_id": "bab-2-4-u55",
+      "bm_original": "Pada 1937, Dr. Ba Maw menang pilihan raya dan menjadi Perdana Menteri pertama Burma.",
+      "translate": "1937年，Dr. Ba Maw 赢得选举，并成为 Burma 第一任首相。"
+    },
+    {
+      "source_id": "bab-2-4-u56",
+      "bm_original": "Isu Kasut menjadi simbol penghinaan terhadap agama Buddha oleh penjajah.",
+      "translate": "Isu Kasut 成为殖民者侮辱佛教的象征。"
+    },
+
+    {
       "source_id": "bab-2-4-u11",
-      "bm_original": "Nasionalisme di Vietnam muncul akibat perubahan sosiopolitik dan sosioekonomi selepas penjajahan Perancis , terutama selepas Perang Dunia Pertama .",
-      "translate": "民族主义 di Vietnam muncul akibat perubahan sosiopolitik 与 sosioekonomi 在…之后 penjajahan Perancis , terutama 在…之后 Perang Dunia Pertama .",
-      "key_points_zh": [
-        "民族主义 di Vietnam muncul akibat perubahan sosiopolitik 与 sosioekonomi 在…之后 penjajahan Perancis , terutama 在…之后 Perang Dunia Pertama ."
-      ],
-      "bm_focus_phrase": "Nasionalisme di Vietnam muncul akibat perubahan sosiopolitik dan sosioekonomi selepas penjajahan Perancis , terutama selepas Perang Dunia Pertama ."
+      "bm_original": "Nasionalisme di Vietnam muncul akibat perubahan sosiopolitik dan sosioekonomi selepas penjajahan Perancis, terutama selepas Perang Dunia Pertama.",
+      "translate": "Vietnam 的民族主义，是在 Perancis 殖民统治后，尤其是第一次世界大战之后社会政治与社会经济变化下出现的。"
     },
     {
       "source_id": "bab-2-4-u12",
       "bm_original": "Pada awalnya, gerakan dipimpin oleh golongan bangsawan dan golongan mandarin yang mahu memulihkan sistem pemerintahan beraja.",
-      "translate": "Pada awalnya, gerakan dipimpin 由 golongan bangsawan 与 golongan mandarin 的 mahu memulihkan sistem pemerintahan beraja.",
-      "key_points_zh": [
-        "Pada awalnya, gerakan dipimpin 由 golongan bangsawan 与 golongan mandarin 的 mahu memulihkan sistem pemerintahan beraja."
-      ],
-      "bm_focus_phrase": "Pada awalnya, gerakan dipimpin oleh golongan bangsawan dan golongan mandarin yang mahu memulihkan sistem pemerintahan beraja."
+      "translate": "起初，这场运动由贵族和 mandarin 阶层领导，他们希望恢复君主政体。"
     },
     {
       "source_id": "bab-2-4-u13",
       "bm_original": "Namun, kepimpinan kemudian diambil alih oleh golongan intelektual muda yang membawa gerakan anti-Perancis.",
-      "translate": "Namun, kepimpinan kemudian diambil alih 由 golongan intelektual muda 的 membawa gerakan anti-Perancis.",
-      "key_points_zh": [
-        "Namun, kepimpinan kemudian diambil alih 由 golongan intelektual muda 的 membawa gerakan anti-Perancis."
-      ],
-      "bm_focus_phrase": "Namun, kepimpinan kemudian diambil alih oleh golongan intelektual muda yang membawa gerakan anti-Perancis."
+      "translate": "然而，领导权后来转移到年轻知识分子手中，他们推动了反 Perancis 运动。"
     },
     {
       "source_id": "bab-2-4-u14",
       "bm_original": "Idea nasionalisme disebarkan melalui akhbar seperti:",
-      "translate": "Idea 民族主义 disebarkan 通过 报章 seperti:",
-      "key_points_zh": [
-        "Idea 民族主义 disebarkan 通过 报章 seperti:"
-      ],
-      "bm_focus_phrase": "Idea nasionalisme disebarkan melalui akhbar seperti:"
+      "translate": "民族主义思想通过以下报纸传播："
     },
     {
       "source_id": "bab-2-4-extra-15",
       "bm_original": "Tribune Indigène",
-      "translate": "重点：Tribune Indigène",
-      "key_points_zh": [
-        "重点：Tribune Indigène"
-      ],
-      "bm_focus_phrase": "Tribune Indigène"
+      "translate": "Tribune Indigène"
     },
     {
       "source_id": "bab-2-4-extra-16",
       "bm_original": "La Cloche Fêlée",
-      "translate": "重点：La Cloche Fêlée",
-      "key_points_zh": [
-        "重点：La Cloche Fêlée"
-      ],
-      "bm_focus_phrase": "La Cloche Fêlée"
+      "translate": "La Cloche Fêlée"
+    },
+    {
+      "source_id": "bab-2-4-u57",
+      "bm_original": "Akhbar ini mengkritik penindasan Perancis dan menuntut hak rakyat Vietnam.",
+      "translate": "这些报纸批评 Perancis 的压迫，并要求保障 Vietnam 人民的权利。"
     },
     {
       "source_id": "bab-2-4-u15",
-      "bm_original": "Selepas Perang Dunia Pertama , muncul dua aliran:",
-      "translate": "重点：Selepas Perang Dunia Pertama , muncul dua aliran:",
-      "key_points_zh": [
-        "重点：Selepas Perang Dunia Pertama , muncul dua aliran:"
-      ],
-      "bm_focus_phrase": "Selepas Perang Dunia Pertama , muncul dua aliran:"
+      "bm_original": "Selepas Perang Dunia Pertama, muncul dua aliran:",
+      "translate": "第一次世界大战后，出现了两种主要路线："
     },
     {
       "source_id": "bab-2-4-extra-17",
       "bm_original": "Parti Viet Nam Quoc Dang Dang (VNQDD)",
-      "translate": "重点：Parti Viet Nam Quoc Dang Dang (VNQDD)",
-      "key_points_zh": [
-        "重点：Parti Viet Nam Quoc Dang Dang (VNQDD)"
-      ],
-      "bm_focus_phrase": "Parti Viet Nam Quoc Dang Dang (VNQDD)"
+      "translate": "Parti Viet Nam Quoc Dang Dang（VNQDD）"
     },
     {
       "source_id": "bab-2-4-extra-18",
       "bm_original": "Nguyen Thai Hoc",
-      "translate": "重点：Nguyen Thai Hoc",
-      "key_points_zh": [
-        "重点：Nguyen Thai Hoc"
-      ],
-      "bm_focus_phrase": "Nguyen Thai Hoc"
+      "translate": "Nguyen Thai Hoc"
     },
     {
       "source_id": "bab-2-4-extra-19",
       "bm_original": "memperjuangkan demokrasi, nasionalisme & sosialisme",
-      "translate": "memperjuangkan demokrasi, 民族主义 & sosialisme",
-      "key_points_zh": [
-        "memperjuangkan demokrasi, 民族主义 & sosialisme"
-      ],
-      "bm_focus_phrase": "memperjuangkan demokrasi, nasionalisme & sosialisme"
+      "translate": "争取民主、民族主义与社会主义"
     },
     {
       "source_id": "bab-2-4-extra-20",
       "bm_original": "Parti Komunis Vietnam (PKV)",
-      "translate": "重点：Parti Komunis Vietnam (PKV)",
-      "key_points_zh": [
-        "重点：Parti Komunis Vietnam (PKV)"
-      ],
-      "bm_focus_phrase": "Parti Komunis Vietnam (PKV)"
+      "translate": "Parti Komunis Vietnam（PKV）"
     },
     {
       "source_id": "bab-2-4-extra-21",
       "bm_original": "Ho Chi Minh",
-      "translate": "重点：Ho Chi Minh",
-      "key_points_zh": [
-        "重点：Ho Chi Minh"
-      ],
-      "bm_focus_phrase": "Ho Chi Minh"
+      "translate": "Ho Chi Minh"
     },
     {
+      "source_id": "bab-2-4-u58",
+      "bm_original": "Pada 1930, VNQDD melancarkan pemberontakan untuk menubuhkan republik Vietnam.",
+      "translate": "1930年，VNQDD 发动起义，试图建立 Vietnam 共和国。"
+    },
+    {
+      "source_id": "bab-2-4-u59",
+      "bm_original": "Perancis bertindak balas dan Nguyen Thai Hoc dihukum bunuh.",
+      "translate": "Perancis 随后镇压，并处死了 Nguyen Thai Hoc。"
+    },
+    {
+      "source_id": "bab-2-4-u60",
+      "bm_original": "Ho Chi Minh meneruskan perjuangan melalui PKV.",
+      "translate": "此后，Ho Chi Minh 继续通过 PKV 推动斗争。"
+    },
+    {
+      "source_id": "bab-2-4-u61",
+      "bm_original": "Pada September 1945, Republik Demokratik Vietnam ditubuhkan di Hanoi.",
+      "translate": "1945年9月，Republik Demokratik Vietnam 在 Hanoi 成立。"
+    },
+    {
+      "source_id": "bab-2-4-u62",
+      "bm_original": "Ho Chi Minh dilantik sebagai presiden pertama.",
+      "translate": "Ho Chi Minh 被任命为第一任总统。"
+    },
+    {
+      "source_id": "bab-2-4-u63",
+      "bm_original": "Vietnam Selatan (Saigon) masih di bawah pengaruh Perancis dan Amerika Syarikat.",
+      "translate": "南 Vietnam（Saigon）仍处于 Perancis 与 Amerika Syarikat 的影响之下。"
+    },
+    {
+      "source_id": "bab-2-4-u64",
+      "bm_original": "Pada 1976, Vietnam akhirnya bersatu sepenuhnya.",
+      "translate": "到 1976 年，Vietnam 最终实现完全统一。"
+    },
+    {
+      "source_id": "bab-2-4-u65",
+      "bm_original": "Golongan Mandarin ialah pembesar yang mendapat pendidikan Confucius.",
+      "translate": "Golongan Mandarin 指接受儒家教育的官员阶层。"
+    },
+
+    {
       "source_id": "bab-2-4-u16",
-      "bm_original": "Nasionalisme di Indonesia bermula daripada isu pendidikan akibat dasar penjajah Belanda .",
-      "translate": "民族主义 di Indonesia bermula daripada isu pendidikan akibat dasar penjajah Belanda .",
-      "key_points_zh": [
-        "民族主义 di Indonesia bermula daripada isu pendidikan akibat dasar penjajah Belanda ."
-      ],
-      "bm_focus_phrase": "Nasionalisme di Indonesia bermula daripada isu pendidikan akibat dasar penjajah Belanda ."
+      "bm_original": "Nasionalisme di Indonesia bermula daripada isu pendidikan akibat dasar penjajah Belanda.",
+      "translate": "Indonesia 的民族主义，起源于 Belanda 殖民政策下所引发的教育问题。"
+    },
+    {
+      "source_id": "bab-2-4-u66",
+      "bm_original": "Raden Adjeng Kartini ialah tokoh wanita penting dalam perkembangan nasionalisme Indonesia.",
+      "translate": "Raden Adjeng Kartini 是 Indonesia 民族主义发展中的重要女性人物。"
+    },
+    {
+      "source_id": "bab-2-4-u67",
+      "bm_original": "Kartini menulis surat kepada rakan-rakan Eropah.",
+      "translate": "Kartini 曾写信给她的欧洲朋友。"
+    },
+    {
+      "source_id": "bab-2-4-u68",
+      "bm_original": "Isi surat beliau diterbitkan dalam buku:",
+      "translate": "她的书信内容后来被出版成书："
     },
     {
       "source_id": "bab-2-4-extra-22",
-      "bm_original": "Hilang Gelap Terbitlah Terang ( 1911 )",
-      "translate": "重点：Hilang Gelap Terbitlah Terang ( 1911 )",
-      "key_points_zh": [
-        "重点：Hilang Gelap Terbitlah Terang ( 1911 )"
-      ],
-      "bm_focus_phrase": "Hilang Gelap Terbitlah Terang ( 1911 )"
+      "bm_original": "Hilang Gelap Terbitlah Terang (1911)",
+      "translate": "Hilang Gelap Terbitlah Terang（1911）"
     },
     {
       "source_id": "bab-2-4-extra-23",
       "bm_original": "Letters of a Javanese Princess",
-      "translate": "重点：Letters of a Javanese Princess",
-      "key_points_zh": [
-        "重点：Letters of a Javanese Princess"
-      ],
-      "bm_focus_phrase": "Letters of a Javanese Princess"
+      "translate": "Letters of a Javanese Princess"
     },
     {
       "source_id": "bab-2-4-u17",
       "bm_original": "Penulisan beliau mendedahkan diskriminasi penjajah Belanda dan kemunduran rakyat Indonesia.",
-      "translate": "Penulisan beliau mendedahkan diskriminasi penjajah Belanda 与 kemunduran 人民 Indonesia.",
-      "key_points_zh": [
-        "Penulisan beliau mendedahkan diskriminasi penjajah Belanda 与 kemunduran 人民 Indonesia."
-      ],
-      "bm_focus_phrase": "Penulisan beliau mendedahkan diskriminasi penjajah Belanda dan kemunduran rakyat Indonesia."
+      "translate": "她的 writings 揭露了 Belanda 殖民者的歧视，以及 Indonesia 人民的落后处境。"
     },
     {
       "source_id": "bab-2-4-u18",
       "bm_original": "Pertubuhan penting:",
-      "translate": "重点：Pertubuhan penting:",
-      "key_points_zh": [
-        "重点：Pertubuhan penting:"
-      ],
-      "bm_focus_phrase": "Pertubuhan penting:"
+      "translate": "重要组织包括："
     },
     {
       "source_id": "bab-2-4-extra-24",
       "bm_original": "Muhammadiyah – mempertahankan Islam daripada sekularisme Barat",
-      "translate": "重点：Muhammadiyah – mempertahankan Islam daripada sekularisme Barat",
-      "key_points_zh": [
-        "重点：Muhammadiyah – mempertahankan Islam daripada sekularisme Barat"
-      ],
-      "bm_focus_phrase": "Muhammadiyah – mempertahankan Islam daripada sekularisme Barat"
+      "translate": "Muhammadiyah——捍卫伊斯兰，抵御西方世俗主义"
     },
     {
       "source_id": "bab-2-4-u19",
       "bm_original": "Kemudian muncul parti politik seperti:",
-      "translate": "Kemudian muncul parti 政治 seperti:",
-      "key_points_zh": [
-        "Kemudian muncul parti 政治 seperti:"
-      ],
-      "bm_focus_phrase": "Kemudian muncul parti politik seperti:"
+      "translate": "后来也出现了以下政党："
     },
     {
       "source_id": "bab-2-4-extra-25",
       "bm_original": "Sarekat Islam (SI)",
-      "translate": "重点：Sarekat Islam (SI)",
-      "key_points_zh": [
-        "重点：Sarekat Islam (SI)"
-      ],
-      "bm_focus_phrase": "Sarekat Islam (SI)"
+      "translate": "Sarekat Islam（SI）"
     },
     {
       "source_id": "bab-2-4-extra-26",
       "bm_original": "Partai Komunis Indonesia (PKI)",
-      "translate": "重点：Partai Komunis Indonesia (PKI)",
-      "key_points_zh": [
-        "重点：Partai Komunis Indonesia (PKI)"
-      ],
-      "bm_focus_phrase": "Partai Komunis Indonesia (PKI)"
+      "translate": "Partai Komunis Indonesia（PKI）"
     },
     {
       "source_id": "bab-2-4-extra-27",
       "bm_original": "Partai Nasionalis Indonesia (PNI)",
-      "translate": "重点：Partai Nasionalis Indonesia (PNI)",
-      "key_points_zh": [
-        "重点：Partai Nasionalis Indonesia (PNI)"
-      ],
-      "bm_focus_phrase": "Partai Nasionalis Indonesia (PNI)"
+      "translate": "Partai Nasionalis Indonesia（PNI）"
+    },
+    {
+      "source_id": "bab-2-4-u69",
+      "bm_original": "PNI dipimpin oleh Soekarno dan menjadi parti yang berpengaruh.",
+      "translate": "PNI 由 Soekarno 领导，并成为极具影响力的政党。"
+    },
+    {
+      "source_id": "bab-2-4-u70",
+      "bm_original": "Kongres Pemuda Indonesia melahirkan ikrar:",
+      "translate": "Kongres Pemuda Indonesia 提出了以下誓言："
     },
     {
       "source_id": "bab-2-4-extra-28",
       "bm_original": "satu tanah air",
-      "translate": "重点：satu tanah air",
-      "key_points_zh": [
-        "重点：satu tanah air"
-      ],
-      "bm_focus_phrase": "satu tanah air"
+      "translate": "一个祖国"
     },
     {
       "source_id": "bab-2-4-extra-29",
       "bm_original": "satu bangsa",
-      "translate": "重点：satu bangsa",
-      "key_points_zh": [
-        "重点：satu bangsa"
-      ],
-      "bm_focus_phrase": "satu bangsa"
+      "translate": "一个民族"
     },
     {
       "source_id": "bab-2-4-extra-30",
       "bm_original": "satu bahasa",
-      "translate": "重点：satu bahasa",
-      "key_points_zh": [
-        "重点：satu bahasa"
-      ],
-      "bm_focus_phrase": "satu bahasa"
+      "translate": "一种语言"
     },
+    {
+      "source_id": "bab-2-4-u71",
+      "bm_original": "Soekarno menubuhkan PPPKI, iaitu gabungan parti-parti politik untuk menyatukan perjuangan kemerdekaan.",
+      "translate": "Soekarno 成立了 PPPKI，这是一个联合各政党的组织，用以统一独立斗争。"
+    },
+
     {
       "source_id": "bab-2-4-u20",
       "bm_original": "Thailand berbeza daripada negara lain kerana tidak dijajah oleh Barat.",
-      "translate": "Thailand berbeza daripada negara lain 因为 不 dijajah 由 Barat.",
-      "key_points_zh": [
-        "Thailand berbeza daripada negara lain 因为 不 dijajah 由 Barat."
-      ],
-      "bm_focus_phrase": "Thailand berbeza daripada negara lain kerana tidak dijajah oleh Barat."
+      "translate": "Thailand 与其他国家不同，因为它没有被西方殖民。"
+    },
+    {
+      "source_id": "bab-2-4-u72",
+      "bm_original": "Matlamat nasionalisme Thailand ialah mempertahankan kedaulatan negara.",
+      "translate": "Thailand 民族主义的目标，是维护国家主权。"
+    },
+    {
+      "source_id": "bab-2-4-u73",
+      "bm_original": "Raja Mongkut menjalinkan hubungan diplomatik dengan kuasa Barat seperti British, Amerika Syarikat dan Perancis.",
+      "translate": "Raja Mongkut 与 British、Amerika Syarikat 和 Perancis 等西方国家建立了外交关系。"
     },
     {
       "source_id": "bab-2-4-u21",
       "bm_original": "Thailand melaksanakan pemodenan dalam:",
-      "translate": "Thailand melaksanakan pemodenan 在:",
-      "key_points_zh": [
-        "Thailand melaksanakan pemodenan 在:"
-      ],
-      "bm_focus_phrase": "Thailand melaksanakan pemodenan dalam:"
+      "translate": "Thailand 在以下方面推行现代化："
     },
     {
       "source_id": "bab-2-4-extra-31",
       "bm_original": "pentadbiran",
-      "translate": "行政",
-      "key_points_zh": [
-        "行政"
-      ],
-      "bm_focus_phrase": "pentadbiran"
+      "translate": "行政"
     },
     {
       "source_id": "bab-2-4-extra-32",
       "bm_original": "pendidikan",
-      "translate": "重点：pendidikan",
-      "key_points_zh": [
-        "重点：pendidikan"
-      ],
-      "bm_focus_phrase": "pendidikan"
+      "translate": "教育"
     },
     {
       "source_id": "bab-2-4-extra-33",
       "bm_original": "ketenteraan",
-      "translate": "重点：ketenteraan",
-      "key_points_zh": [
-        "重点：ketenteraan"
-      ],
-      "bm_focus_phrase": "ketenteraan"
+      "translate": "军事"
     },
     {
       "source_id": "bab-2-4-u22",
       "bm_original": "Raja Mongkut membawa masuk 80 orang penasihat Barat untuk melatih pegawai tempatan.",
-      "translate": "Raja Mongkut membawa masuk 80 orang penasihat Barat 为了 melatih pegawai 本地.",
-      "key_points_zh": [
-        "Raja Mongkut membawa masuk 80 orang penasihat Barat 为了 melatih pegawai 本地."
-      ],
-      "bm_focus_phrase": "Raja Mongkut membawa masuk 80 orang penasihat Barat untuk melatih pegawai tempatan."
+      "translate": "Raja Mongkut 引进了 80 名西方顾问，以训练本地官员。"
     },
     {
       "source_id": "bab-2-4-extra-34",
       "bm_original": "Penasihat Britain – kewangan, pelabuhan, polis",
-      "translate": "重点：Penasihat Britain – kewangan, pelabuhan, polis",
-      "key_points_zh": [
-        "重点：Penasihat Britain – kewangan, pelabuhan, polis"
-      ],
-      "bm_focus_phrase": "Penasihat Britain – kewangan, pelabuhan, polis"
+      "translate": "British 顾问——财政、港口与警务"
     },
     {
       "source_id": "bab-2-4-extra-35",
       "bm_original": "Penasihat Amerika – kastam",
-      "translate": "重点：Penasihat Amerika – kastam",
-      "key_points_zh": [
-        "重点：Penasihat Amerika – kastam"
-      ],
-      "bm_focus_phrase": "Penasihat Amerika – kastam"
+      "translate": "Amerika 顾问——海关事务"
     },
     {
       "source_id": "bab-2-4-extra-36",
       "bm_original": "Penasihat Perancis – ketenteraan",
-      "translate": "重点：Penasihat Perancis – ketenteraan",
-      "key_points_zh": [
-        "重点：Penasihat Perancis – ketenteraan"
-      ],
-      "bm_focus_phrase": "Penasihat Perancis – ketenteraan"
+      "translate": "Perancis 顾问——军事事务"
+    },
+    {
+      "source_id": "bab-2-4-u74",
+      "bm_original": "Raja Chulalongkorn meneruskan pemodenan bagi memastikan Thailand kekal bebas daripada penjajahan Barat, khususnya British.",
+      "translate": "Raja Chulalongkorn 继续推动现代化，以确保 Thailand 继续不受西方殖民，尤其是 British 的控制。"
     },
     {
       "source_id": "bab-2-4-u23",
       "bm_original": "Pemerintahan Raja Vajiravudh yang lemah mencetuskan ketidakpuasan rakyat.",
-      "translate": "Pemerintahan Raja Vajiravudh 的 lemah mencetuskan ketidakpuasan 人民.",
-      "key_points_zh": [
-        "Pemerintahan Raja Vajiravudh 的 lemah mencetuskan ketidakpuasan 人民."
-      ],
-      "bm_focus_phrase": "Pemerintahan Raja Vajiravudh yang lemah mencetuskan ketidakpuasan rakyat."
+      "translate": "Raja Vajiravudh 软弱的统治引起了人民的不满。"
     },
     {
       "source_id": "bab-2-4-u24",
       "bm_original": "Politik negara lebih dikuasai oleh kerabat diraja Thailand.",
-      "translate": "Politik negara 更 dikuasai 由 kerabat diraja Thailand.",
-      "key_points_zh": [
-        "Politik negara 更 dikuasai 由 kerabat diraja Thailand."
-      ],
-      "bm_focus_phrase": "Politik negara lebih dikuasai oleh kerabat diraja Thailand."
+      "translate": "国家政治更受 Thailand 王室成员控制。"
     },
     {
       "source_id": "bab-2-4-u25",
       "bm_original": "Golongan reformis menubuhkan Parti Rakyat yang dipimpin oleh:",
-      "translate": "Golongan reformis 成立 Parti 人民 的 dipimpin 由:",
-      "key_points_zh": [
-        "Golongan reformis 成立 Parti 人民 的 dipimpin 由:"
-      ],
-      "bm_focus_phrase": "Golongan reformis menubuhkan Parti Rakyat yang dipimpin oleh:"
+      "translate": "改革派成立了 Parti Rakyat，由以下人物领导："
     },
     {
       "source_id": "bab-2-4-extra-37",
       "bm_original": "Nai Pridi Phanomyong",
-      "translate": "重点：Nai Pridi Phanomyong",
-      "key_points_zh": [
-        "重点：Nai Pridi Phanomyong"
-      ],
-      "bm_focus_phrase": "Nai Pridi Phanomyong"
+      "translate": "Nai Pridi Phanomyong"
     },
     {
       "source_id": "bab-2-4-extra-38",
       "bm_original": "Field Marshal Phibulsongkram",
-      "translate": "重点：Field Marshal Phibulsongkram",
-      "key_points_zh": [
-        "重点：Field Marshal Phibulsongkram"
-      ],
-      "bm_focus_phrase": "Field Marshal Phibulsongkram"
+      "translate": "Field Marshal Phibulsongkram"
+    },
+    {
+      "source_id": "bab-2-4-u75",
+      "bm_original": "Pada 1932, Revolusi Thai dilancarkan.",
+      "translate": "1932年，Revolusi Thai 爆发。"
     },
     {
       "source_id": "bab-2-4-extra-39",
       "bm_original": "menamatkan sistem raja berkuasa mutlak",
-      "translate": "menamatkan sistem raja berkuasa mutlak",
-      "key_points_zh": [
-        "menamatkan sistem raja berkuasa mutlak"
-      ],
-      "bm_focus_phrase": "menamatkan sistem raja berkuasa mutlak"
+      "translate": "终结君主专制制度"
     },
     {
       "source_id": "bab-2-4-extra-40",
       "bm_original": "menggantikan dengan raja berperlembagaan",
-      "translate": "menggantikan 以 raja berperlembagaan",
-      "key_points_zh": [
-        "menggantikan 以 raja berperlembagaan"
-      ],
-      "bm_focus_phrase": "menggantikan dengan raja berperlembagaan"
+      "translate": "改为君主立宪制度"
+    },
+    {
+      "source_id": "bab-2-4-u76",
+      "bm_original": "Raja diletakkan pada kedudukan tertinggi, namun tidak mencampuri urusan kerajaan yang dikendalikan oleh Perdana Menteri yang dilantik rakyat.",
+      "translate": "国王仍处于最高地位，但不直接干预政府事务，而政府由人民任命的首相管理。"
     },
     {
       "source_id": "bab-2-4-u26",
       "bm_original": "Rakyat tidak puas hati dengan penguasaan ekonomi oleh kapitalis Barat dan orang Cina.",
-      "translate": "人民 不 puas hati 以 penguasaan ekonomi 由 kapitalis Barat 与 orang Cina.",
-      "key_points_zh": [
-        "人民 不 puas hati 以 penguasaan ekonomi 由 kapitalis Barat 与 orang Cina."
-      ],
-      "bm_focus_phrase": "Rakyat tidak puas hati dengan penguasaan ekonomi oleh kapitalis Barat dan orang Cina."
+      "translate": "人民对西方资本家和华人控制经济感到不满。"
     },
+    {
+      "source_id": "bab-2-4-u77",
+      "bm_original": "Phibulsongkram memperkenalkan undang-undang baharu untuk menyekat dominasi ekonomi oleh kapitalis dan menggalakkan peribumi terlibat dalam perniagaan.",
+      "translate": "Phibulsongkram 推出了新法律，以限制资本家的经济垄断，并鼓励本地人民参与商业活动。"
+    },
+    {
+      "source_id": "bab-2-4-u78",
+      "bm_original": "Semasa Perang Dunia Kedua, Thailand bekerjasama dengan Jepun supaya tidak dijajah.",
+      "translate": "在第二次世界大战期间，Thailand 与 Jepun 合作，以避免遭受殖民。"
+    },
+    {
+      "source_id": "bab-2-4-u79",
+      "bm_original": "Thailand juga berusaha mendapatkan semula wilayah di Indochina dan negeri utara Tanah Melayu.",
+      "translate": "Thailand 也试图重新取得 Indochina 和 Tanah Melayu 北部的一些地区。"
+    },
+
     {
       "source_id": "bab-2-4-extra-41",
       "bm_original": "Filipina – revolusi menentang Sepanyol, kemudian dijajah Amerika",
-      "translate": "Filipina – revolusi 反对 Sepanyol, kemudian dijajah Amerika",
-      "key_points_zh": [
-        "Filipina – revolusi 反对 Sepanyol, kemudian dijajah Amerika"
-      ],
-      "bm_focus_phrase": "Filipina – revolusi menentang Sepanyol, kemudian dijajah Amerika"
+      "translate": "Filipina——发动革命反抗 Sepanyol，后来又被 Amerika 殖民"
     },
     {
       "source_id": "bab-2-4-extra-42",
       "bm_original": "Burma – perjuangan golongan pongyi, pelajar dan Thakin menentang British",
-      "translate": "Burma – 斗争 golongan pongyi, pelajar 与 Thakin 反对 British",
-      "key_points_zh": [
-        "Burma – 斗争 golongan pongyi, pelajar 与 Thakin 反对 British"
-      ],
-      "bm_focus_phrase": "Burma – perjuangan golongan pongyi, pelajar dan Thakin menentang British"
+      "translate": "Burma——由 pongyi、学生和 Thakin 群体领导反抗 British"
     },
     {
       "source_id": "bab-2-4-extra-43",
       "bm_original": "Vietnam – gerakan nasionalisme dan komunisme menentang Perancis",
-      "translate": "Vietnam – gerakan 民族主义 与 komunisme 反对 Perancis",
-      "key_points_zh": [
-        "Vietnam – gerakan 民族主义 与 komunisme 反对 Perancis"
-      ],
-      "bm_focus_phrase": "Vietnam – gerakan nasionalisme dan komunisme menentang Perancis"
+      "translate": "Vietnam——民族主义与共产主义运动共同反抗 Perancis"
     },
     {
       "source_id": "bab-2-4-extra-44",
       "bm_original": "Indonesia – pendidikan, politik dan Islam memacu kemerdekaan daripada Belanda",
-      "translate": "Indonesia – pendidikan, 政治 与 Islam memacu 独立 daripada Belanda",
-      "key_points_zh": [
-        "Indonesia – pendidikan, 政治 与 Islam memacu 独立 daripada Belanda"
-      ],
-      "bm_focus_phrase": "Indonesia – pendidikan, politik dan Islam memacu kemerdekaan daripada Belanda"
+      "translate": "Indonesia——教育、政治与伊斯兰力量共同推动摆脱 Belanda 的独立"
     },
     {
       "source_id": "bab-2-4-extra-45",
       "bm_original": "Thailand – mempertahankan kemerdekaan melalui diplomasi dan pemodenan",
-      "translate": "Thailand – mempertahankan 独立 通过 diplomasi 与 pemodenan",
-      "key_points_zh": [
-        "Thailand – mempertahankan 独立 通过 diplomasi 与 pemodenan"
-      ],
-      "bm_focus_phrase": "Thailand – mempertahankan kemerdekaan melalui diplomasi dan pemodenan"
+      "translate": "Thailand——通过外交与现代化来维护独立"
     },
     {
       "source_id": "bab-2-4-u27",
       "bm_original": "Pengajaran: Sumbangan pemimpin nasionalisme perlu diteladani sebagai inspirasi mempertahankan kedaulatan bangsa dan negara.",
-      "translate": "Pengajaran: Sumbangan 领袖 民族主义 perlu diteladani 作为 inspirasi mempertahankan 主权 bangsa 与 negara.",
-      "key_points_zh": [
-        "Pengajaran: Sumbangan 领袖 民族主义 perlu diteladani 作为 inspirasi mempertahankan 主权 bangsa 与 negara."
-      ],
-      "bm_focus_phrase": "Pengajaran: Sumbangan pemimpin nasionalisme perlu diteladani sebagai inspirasi mempertahankan kedaulatan bangsa dan negara."
+      "translate": "启示：民族主义领袖的贡献应成为我们维护民族与国家主权的榜样与灵感。"
+    },
+
+    {
+      "source_id": "bab-2-4-u80",
+      "bm_original": "Subtopik ini menerangkan bagaimana nasionalisme berkembang di Asia Tenggara sebagai tindak balas terhadap penjajahan Barat. Gerakan ini muncul untuk membebaskan negara daripada penjajahan, mempertahankan kedaulatan dan membina identiti bangsa.",
+      "translate": "本小节说明民族主义如何在东南亚发展起来，作为对西方殖民统治的一种回应。这场运动的出现，是为了摆脱殖民统治、维护主权，并建立民族认同。"
+    },
+    {
+      "source_id": "bab-2-4-u81",
+      "bm_original": "Nasionalisme di Asia Tenggara berkembang melalui kesedaran menuntut kemerdekaan dan mempertahankan kedaulatan negara.",
+      "translate": "东南亚民族主义的发展，源于人民争取独立并维护国家主权的觉醒。"
     }
   ]
 }
