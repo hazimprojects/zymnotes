@@ -1,4 +1,4 @@
-/* Hazim EduHub — Service Worker
+/* ZymNotes — Service Worker
    Strategy:
    - Core assets (CSS, JS, fonts): cache-first
    - Google Fonts (cross-origin): cache-first with opaque response

@@ -1,12 +1,12 @@
 """
 add-og-tags.py
-Adds Open Graph + Twitter Card meta tags to all HazimEdu HTML files.
+Adds Open Graph + Twitter Card meta tags to all ZymNotes HTML files.
 Run from the /home/user/hazimedu directory.
 """
 import os, re, glob
 
-OG_IMAGE = "https://hazimedu.com/assets/og-image.png?v=20260414"
-SITE_NAME = "HazimEdu"
+OG_IMAGE = "https://zymnotes.com/assets/og-image.png?v=20260414"
+SITE_NAME = "ZymNotes"
 DEFAULT_DESC = "Platform pendidikan digital yang membina nota visual, kemas dan mesra telefon untuk membantu pelajar belajar dengan lebih jelas dan berkesan."
 
 # Gather all HTML files (exclude scripts/)
@@ -31,7 +31,7 @@ def make_og_block(title, desc, url):
         f'  <meta property="og:image:type" content="image/png" />\n'
         f'  <meta property="og:image:width" content="1424" />\n'
         f'  <meta property="og:image:height" content="748" />\n'
-        f'  <meta property="og:image:alt" content="HazimEdu — Platform Pendidikan Digital" />\n'
+        f'  <meta property="og:image:alt" content="ZymNotes — Platform Pendidikan Digital" />\n'
         f'  <meta property="og:type" content="website" />\n'
         f'  <meta property="og:site_name" content="{SITE_NAME}" />\n'
         f'  <meta property="og:locale" content="ms_MY" />\n'
@@ -74,13 +74,13 @@ for filepath in HTML_FILES:
     # Special case: 404.html
     if canonical is None:
         if '404' in filepath:
-            canonical = 'https://hazimedu.com/404.html'
+            canonical = 'https://zymnotes.com/404.html'
             if not desc_raw:
-                desc = "Halaman tidak dijumpai — kembali ke HazimEdu untuk meneruskan pembelajaran."
+                desc = "Halaman tidak dijumpai — kembali ke ZymNotes untuk meneruskan pembelajaran."
         else:
             # Derive from path
             clean = filepath.replace('\\', '/')
-            canonical = f'https://hazimedu.com/{clean}'
+            canonical = f'https://zymnotes.com/{clean}'
 
     og_block = make_og_block(title, desc, canonical)
 

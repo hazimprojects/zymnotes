@@ -15,7 +15,7 @@ document.documentElement.classList.add("js-enhanced");
 // DARK MODE TOGGLE
 // =========================
 (function () {
-  const KEY = "hazimedu-theme";
+  const KEY = "zymnotes-theme";
 
   function getTheme() {
     return (
@@ -1331,7 +1331,7 @@ var HZ_NOTES_SEARCH_PAGES = [
       nudge.innerHTML =
         '<div class="pwa-nudge-icon">' + iconSVG + '</div>' +
         '<div class="pwa-nudge-body">' +
-          '<p class="pwa-nudge-title">Simpan HazimEdu ke telefon</p>' +
+          '<p class="pwa-nudge-title">Simpan ZymNotes ke telefon</p>' +
           '<p class="pwa-nudge-sub">Buka terus dari skrin utama, tanpa perlu ingat alamat web.</p>' +
           '<div class="pwa-nudge-actions">' +
             '<button class="pwa-nudge-btn" id="pwa-install-btn">Simpan sebagai app</button>' +
@@ -1350,7 +1350,7 @@ var HZ_NOTES_SEARCH_PAGES = [
       nudge.innerHTML =
         '<div class="pwa-nudge-icon">' + iconSVG + '</div>' +
         '<div class="pwa-nudge-body">' +
-          '<p class="pwa-nudge-title">Simpan HazimEdu ke skrin utama</p>' +
+          '<p class="pwa-nudge-title">Simpan ZymNotes ke skrin utama</p>' +
           '<p class="pwa-nudge-ios">Ketik ' + shareIcon + ' lalu pilih <strong>&ldquo;Add to Home Screen&rdquo;</strong></p>' +
           '<div class="pwa-nudge-actions">' +
             '<button class="pwa-nudge-skip" id="pwa-skip-btn">Faham, terima kasih</button>' +
@@ -1662,7 +1662,7 @@ var HZ_ICONS = (function () {
       if (href === '/index.html') return pp === '' || pp === 'index.html';
       return pp === hp;
     }
-    var isDark = (document.documentElement.getAttribute('data-theme') || localStorage.getItem('hazimedu-theme') || 'light') === 'dark';
+    var isDark = (document.documentElement.getAttribute('data-theme') || localStorage.getItem('zymnotes-theme') || 'light') === 'dark';
     var tabs = [
       { icon: HZ_ICONS.home,   label: 'Utama', href: '/index.html' },
       { icon: HZ_ICONS.notes,  label: 'Nota',  href: '/notes/index.html' },
@@ -1690,7 +1690,7 @@ var HZ_ICONS = (function () {
             var current = document.documentElement.getAttribute('data-theme') || 'light';
             var next = current === 'dark' ? 'light' : 'dark';
             document.documentElement.setAttribute('data-theme', next);
-            localStorage.setItem('hazimedu-theme', next);
+            localStorage.setItem('zymnotes-theme', next);
             document.querySelectorAll('.display-fab').forEach(function (b) {
               b.textContent = next === 'dark' ? '🌙' : '☀️';
             });

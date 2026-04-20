@@ -2,7 +2,7 @@
 
 ## Tujuan dokumen
 
-Dokumen ini disediakan sebagai tapak asas untuk penggunaan ilustrasi pendidikan dalam Hazim EduHub, bermula dengan **Bab 1: Warisan Negara Bangsa**.
+Dokumen ini disediakan sebagai tapak asas untuk penggunaan ilustrasi pendidikan dalam ZymNotes, bermula dengan **Bab 1: Warisan Negara Bangsa**.
 
 Matlamat utama penggunaan ilustrasi dalam projek ini bukan untuk menghias halaman semata-mata, tetapi untuk:
 
@@ -10,15 +10,15 @@ Matlamat utama penggunaan ilustrasi dalam projek ini bukan untuk menghias halama
 - mengurangkan rasa padat ketika membaca nota
 - menjadikan pengalaman membaca lebih hidup, ringan dan mesra telefon
 - menyokong kefahaman tanpa mengganggu aliran teks
-- membina identiti visual Hazim EduHub yang konsisten dari bab ke bab
+- membina identiti visual ZymNotes yang konsisten dari bab ke bab
 
 Dokumen ini juga berfungsi sebagai panduan dalaman supaya ilustrasi yang dibina selepas ini mempunyai arah yang sama dan tidak dimasukkan secara rawak.
 
 ---
 
-## Prinsip umum ilustrasi Hazim EduHub
+## Prinsip umum ilustrasi ZymNotes
 
-Ilustrasi dalam Hazim EduHub mesti membantu pembelajaran. Ia bukan sekadar dekorasi.
+Ilustrasi dalam ZymNotes mesti membantu pembelajaran. Ia bukan sekadar dekorasi.
 
 ### Prinsip utama
 
@@ -38,7 +38,7 @@ Ilustrasi dalam Hazim EduHub mesti membantu pembelajaran. Ia bukan sekadar dekor
    - tidak terlalu banyak dalam satu subtopik
    - tidak terlalu sarat dengan label atau teks
 
-4. **Ilustrasi mesti konsisten dengan identiti Hazim EduHub**
+4. **Ilustrasi mesti konsisten dengan identiti ZymNotes**
    - kemas
    - moden
    - mesra pelajar
@@ -128,7 +128,7 @@ Bagi setiap subtopik, penggunaan ilustrasi dicadangkan seperti berikut:
 
 ## Komponen ilustrasi yang akan digunakan
 
-Untuk fasa awal, Hazim EduHub hanya akan menggunakan dua jenis komponen ilustrasi.
+Untuk fasa awal, ZymNotes hanya akan menggunakan dua jenis komponen ilustrasi.
 
 ### 1. Feature Illustration Card
 Digunakan untuk ilustrasi utama bersaiz sederhana dalam sesuatu subtopik.
@@ -362,7 +362,7 @@ Selepas ilustrasi dimasukkan ke dalam subtopik 1.4, penilaian boleh dibuat berda
 2. Adakah ilustrasi membantu pelajar membayangkan konsep?
 3. Adakah visual itu membantu, atau hanya cantik?
 4. Adakah halaman menjadi lebih serabut?
-5. Adakah ilustrasi terasa serasi dengan identiti Hazim EduHub?
+5. Adakah ilustrasi terasa serasi dengan identiti ZymNotes?
 6. Adakah pelajar lebih mudah memahami hubungan antara pemerintah dan rakyat selepas melihat ilustrasi?
 
 Jika jawapan kepada majoriti soalan ini positif, maka pendekatan ini boleh diteruskan.
@@ -388,14 +388,14 @@ Fokus pada:
 ## 3. Bina satu standard komponen tetap dalam CSS / HTML
 Supaya ilustrasi selepas ini boleh dimasukkan dengan cara yang seragam
 
-## 4. Mulakan bank ilustrasi Hazim EduHub
+## 4. Mulakan bank ilustrasi ZymNotes
 Supaya semua ilustrasi yang telah siap boleh dirujuk semula dan digunakan dengan konsisten
 
 ---
 
 # Rumusan dokumen
 
-Bab 1 ialah tempat terbaik untuk memulakan sistem ilustrasi pendidikan dalam Hazim EduHub.
+Bab 1 ialah tempat terbaik untuk memulakan sistem ilustrasi pendidikan dalam ZymNotes.
 
 Subtopik 1.4 dipilih sebagai subtopik ujian kerana:
 - jelas
@@ -405,4 +405,4 @@ Subtopik 1.4 dipilih sebagai subtopik ujian kerana:
 
 Pendekatan yang dipilih bukan memasukkan gambar secara banyak, tetapi menggunakan ilustrasi secara terkawal dan strategik supaya pembacaan menjadi lebih hidup, lebih ringan dan lebih berkesan.
 
-Jika pendekatan ini berjaya, ia boleh menjadi asas kepada penggunaan ilustrasi dalam bab-bab seterusnya dan membantu Hazim EduHub berkembang daripada koleksi nota visual kepada ruang pembelajaran digital yang lebih lengkap.
+Jika pendekatan ini berjaya, ia boleh menjadi asas kepada penggunaan ilustrasi dalam bab-bab seterusnya dan membantu ZymNotes berkembang daripada koleksi nota visual kepada ruang pembelajaran digital yang lebih lengkap.

@@ -1,14 +1,14 @@
-# HazimEdu
+# ZymNotes
 
-HazimEdu ialah **platform pendidikan digital tempatan** yang membina kandungan pembelajaran visual, mesra telefon dan lebih mudah diikuti untuk membantu pengguna belajar dengan lebih yakin.
+ZymNotes ialah **platform pendidikan digital tempatan** yang membina kandungan pembelajaran visual, mesra telefon dan lebih mudah diikuti untuk membantu pengguna belajar dengan lebih yakin.
 
-Fokus semasa HazimEdu ialah **Sejarah Tingkatan 4**, dengan peluasan kandungan ke **Sejarah Tingkatan 5** dan bidang lain secara berperingkat. Platform ini dibina untuk menjadikan pengalaman ulang kaji lebih jelas, lebih tersusun dan lebih dekat dengan cara pelajar hari ini membaca serta belajar melalui skrin.
+Fokus semasa ZymNotes ialah **Sejarah Tingkatan 4**, dengan peluasan kandungan ke **Sejarah Tingkatan 5** dan bidang lain secara berperingkat. Platform ini dibina untuk menjadikan pengalaman ulang kaji lebih jelas, lebih tersusun dan lebih dekat dengan cara pelajar hari ini membaca serta belajar melalui skrin.
 
 ---
 
 ## Gambaran Ringkas
 
-HazimEdu bermula daripada keperluan untuk menjadikan kandungan silibus yang padat lebih mudah didekati tanpa mengorbankan isi penting. Ia tidak cuba menggantikan buku teks sepenuhnya, tetapi berfungsi sebagai **bahan sokongan pembelajaran digital** yang lebih:
+ZymNotes bermula daripada keperluan untuk menjadikan kandungan silibus yang padat lebih mudah didekati tanpa mengorbankan isi penting. Ia tidak cuba menggantikan buku teks sepenuhnya, tetapi berfungsi sebagai **bahan sokongan pembelajaran digital** yang lebih:
 
 - visual
 - tersusun
@@ -56,7 +56,7 @@ Setakat ini, kandungan aktif tertumpu pada **Sejarah Tingkatan 4** dengan strukt
 
 ## Ciri-ciri Utama Platform
 
-HazimEdu kini bukan sekadar himpunan nota statik. Repo semasa sudah merangkumi beberapa lapisan pengalaman pengguna yang lebih matang.
+ZymNotes kini bukan sekadar himpunan nota statik. Repo semasa sudah merangkumi beberapa lapisan pengalaman pengguna yang lebih matang.
 
 ### Kandungan & Pembacaan
 - nota visual yang lebih kemas dan terarah
@@ -81,7 +81,7 @@ HazimEdu kini bukan sekadar himpunan nota statik. Repo semasa sudah merangkumi b
 ### Visual & Identiti
 - dark mode
 - sistem tema visual yang lebih modular
-- identiti jenama HazimEdu yang lebih konsisten
+- identiti jenama ZymNotes yang lebih konsisten
 - struktur halaman yang semakin menghampiri bentuk platform pembelajaran sebenar
 
 ---
@@ -89,7 +89,7 @@ HazimEdu kini bukan sekadar himpunan nota statik. Repo semasa sudah merangkumi b
 ## Struktur Projek
 
 ```text
-hazimedu/
+zymnotes/
 ├── index.html
 ├── about.html
 ├── feedback.html
@@ -162,7 +162,7 @@ hazimedu/
 
 ## Teknologi Digunakan
 
-HazimEdu dibina sebagai laman statik yang ringan tetapi semakin kaya dari sudut pengalaman pengguna.
+ZymNotes dibina sebagai laman statik yang ringan tetapi semakin kaya dari sudut pengalaman pengguna.
 
 ### Asas
 - HTML
@@ -203,7 +203,7 @@ HazimEdu dibina sebagai laman statik yang ringan tetapi semakin kaya dari sudut 
 
 ## Prinsip Reka Bentuk
 
-HazimEdu dibina dengan beberapa prinsip utama:
+ZymNotes dibina dengan beberapa prinsip utama:
 
 ### 1. Jelas
 Isi penting perlu mudah dikenal pasti walaupun topik padat dan sarat fakta.
@@ -218,17 +218,17 @@ Halaman dirancang supaya selesa dibaca pada skrin kecil kerana itu ialah peranti
 Setiap bab dibina dengan aliran yang konsisten supaya pengguna tidak terasa hilang arah.
 
 ### 5. Berkembang secara terkawal
-HazimEdu dikembangkan secara berperingkat dengan keutamaan kepada kualiti kandungan dan pengalaman pembelajaran.
+ZymNotes dikembangkan secara berperingkat dengan keutamaan kepada kualiti kandungan dan pengalaman pembelajaran.
 
 ---
 
 ## Status Semasa
 
-HazimEdu sedang berkembang dengan arah yang semakin jelas sebagai **platform pendidikan digital**, bukan sekadar laman nota biasa.
+ZymNotes sedang berkembang dengan arah yang semakin jelas sebagai **platform pendidikan digital**, bukan sekadar laman nota biasa.
 
 Status semasa yang boleh dikenal pasti daripada repo:
 
-- jenama utama telah bergerak ke **HazimEdu**
+- jenama utama telah bergerak ke **ZymNotes**
 - kandungan Sejarah Tingkatan 4 kini meliputi **Bab 1 hingga Bab 6**
 - pengalaman pengguna telah diperkaya dengan audio, carian, navigation tools dan komponen UX tambahan
 - struktur frontend kini lebih modular dan lebih sesuai untuk perkembangan masa depan
@@ -268,7 +268,7 @@ Nota CI: workflow `.github/workflows/update-status.yml` turut menjalankan skrip 
 
 ## Arah Perkembangan
 
-HazimEdu dibina dengan potensi untuk berkembang lebih jauh daripada fokus semasa.
+ZymNotes dibina dengan potensi untuk berkembang lebih jauh daripada fokus semasa.
 
 Antara arah pengembangan yang selari dengan repo dan positioning semasa:
 
@@ -282,7 +282,7 @@ Antara arah pengembangan yang selari dengan repo dan positioning semasa:
 
 ## Kedudukan Platform
 
-HazimEdu tidak diposisikan sebagai pengganti tunggal kepada buku teks atau sumber rasmi. Sebaliknya, ia berfungsi sebagai:
+ZymNotes tidak diposisikan sebagai pengganti tunggal kepada buku teks atau sumber rasmi. Sebaliknya, ia berfungsi sebagai:
 
 - platform pembelajaran digital
 - bahan sokongan ulang kaji
@@ -293,9 +293,9 @@ HazimEdu tidak diposisikan sebagai pengganti tunggal kepada buku teks atau sumbe
 
 ## Hubungi
 
-**HazimEdu**  
+**ZymNotes**  
 Malaysia  
-Email: **hello@hazimedu.com**
+Email: **hello@zymnotes.com**
 
 ---
 
@@ -303,4 +303,4 @@ Email: **hello@hazimedu.com**
 
 Belum ditetapkan secara rasmi.
 
-Jika HazimEdu ingin dibuka untuk penggunaan awam yang lebih luas, pengedaran semula, atau sumbangan komuniti pada masa hadapan, bahagian lesen boleh dikemas kini kemudian.
+Jika ZymNotes ingin dibuka untuk penggunaan awam yang lebih luas, pengedaran semula, atau sumbangan komuniti pada masa hadapan, bahagian lesen boleh dikemas kini kemudian.

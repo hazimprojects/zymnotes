@@ -132,7 +132,7 @@ print(json.dumps({'entries': entries}, ensure_ascii=False, indent=2))
 # ── Sitemap ──────────────────────────────────────────
 
 def write_sitemap():
-    BASE = 'https://hazimedu.com'
+    BASE = 'https://zymnotes.com'
     today = datetime.now(timezone.utc).strftime('%Y-%m-%d')
 
     # Core pages

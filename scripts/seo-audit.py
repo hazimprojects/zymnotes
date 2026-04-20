@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Simple SEO QA checks for HazimEdu static pages."""
+"""Simple SEO QA checks for ZymNotes static pages."""
 
 from __future__ import annotations
 
@@ -9,7 +9,7 @@ import re
 import sys
 import xml.etree.ElementTree as ET
 
-BASE = 'https://hazimedu.com/'
+BASE = 'https://zymnotes.com/'
 
 
 def read(path: str) -> str:

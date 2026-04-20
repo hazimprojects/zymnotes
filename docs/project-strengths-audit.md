@@ -1,4 +1,4 @@
-# Semakan Kekuatan Projek Hazim EduHub
+# Semakan Kekuatan Projek ZymNotes
 
 Tarikh semakan: 2026-04-10
 
@@ -39,7 +39,7 @@ Projek ini menunjukkan asas produk pendidikan yang **matang**, bukan sekadar kol
    - `data/updates.json` menunjukkan kemaskini harian terkini (2026-04-08 hingga 2026-04-10), menandakan projek hidup dan berkembang.
 
 ## Kata-kata motivasi
-Hazim EduHub sudah berada di landasan yang betul. Teruskan langkah kecil yang konsisten — setiap kemas kini yang kemas hari ini akan jadi manfaat besar untuk pelajar esok. Fokus pada kualiti, kekalkan niat bantu orang belajar, dan projek ini insya-Allah akan terus berkembang dengan baik.
+ZymNotes sudah berada di landasan yang betul. Teruskan langkah kecil yang konsisten — setiap kemas kini yang kemas hari ini akan jadi manfaat besar untuk pelajar esok. Fokus pada kualiti, kekalkan niat bantu orang belajar, dan projek ini insya-Allah akan terus berkembang dengan baik.
 
 ## Nota semasa
 Cadangan fungsi tambahan ditutup sementara supaya fokus kekal pada penstabilan kandungan sedia ada.
