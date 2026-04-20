@@ -13,12 +13,12 @@ const PRECACHE_URLS = [
   '/index.html',
   '/notes/index.html',
   '/assets/css/style.css?v=83',
-  '/assets/js/main.js?v=76',
+  '/assets/js/main.js?v=77',
   '/assets/js/zh-mode.js?v=25',
   '/data/zh-glossary.json',
   '/icons/icon.svg?v=3',
   '/icons/icon-maskable.svg?v=3',
-  '/manifest.json?v=6'
+  '/manifest.json?v=7'
 ];
 
 // ── Install: precache core assets ─────────────────────────────────────────
