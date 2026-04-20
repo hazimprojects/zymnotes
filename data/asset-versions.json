@@ -4,9 +4,9 @@
   "zh_mode_js": "25",
   "manifest": "6",
   "sw_cache": "73",
-  "icon": "2",
-  "icon_maskable": "2",
-  "logo": "2",
+  "icon": "3",
+  "icon_maskable": "3",
+  "logo": "3",
   "css": {
     "base": "5",
     "layout": "9",

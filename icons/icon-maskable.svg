@@ -7,10 +7,15 @@
   </defs>
   <!-- Full square bg — Android applies its own mask shape -->
   <rect width="100" height="100" fill="url(#bg)"/>
-  <!-- Z mark kept within inner 80% safe zone (x:10-90, y:10-90) -->
-  <path d="M22 29L78 29L22 71L78 71"
-        fill="none" stroke="white" stroke-width="9"
+  <!-- ZN mark within inner 80% safe zone -->
+  <!-- Z -->
+  <path d="M18 28L46 28L18 68L46 68"
+        fill="none" stroke="white" stroke-width="8.5"
         stroke-linecap="round" stroke-linejoin="round"/>
-  <circle cx="78" cy="29" r="7" fill="#FF9B6A"/>
-  <circle cx="22" cy="71" r="5.5" fill="#6ADBB8"/>
+  <!-- N -->
+  <path d="M54 68L54 28L82 68L82 28"
+        fill="none" stroke="white" stroke-width="8.5"
+        stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="46" cy="28" r="6.5" fill="#FF9B6A"/>
+  <circle cx="54" cy="68" r="5"   fill="#6ADBB8"/>
 </svg>

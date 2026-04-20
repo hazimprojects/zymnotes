@@ -1,5 +1,5 @@
-<svg viewBox="0 0 200 44" xmlns="http://www.w3.org/2000/svg">
-  <!-- Icon mark — nested SVG preserves its own coordinate space -->
+<svg viewBox="0 0 210 44" xmlns="http://www.w3.org/2000/svg">
+  <!-- ZN icon mark -->
   <svg x="0" y="0" width="44" height="44" viewBox="0 0 100 100">
     <defs>
       <linearGradient id="logo-bg" x1="0" y1="0" x2="1" y2="1">
@@ -8,14 +8,16 @@
       </linearGradient>
     </defs>
     <rect width="100" height="100" rx="22" fill="url(#logo-bg)"/>
-    <path d="M22 29L78 29L22 71L78 71"
-          fill="none" stroke="white" stroke-width="9"
+    <path d="M18 28L46 28L18 68L46 68"
+          fill="none" stroke="white" stroke-width="8.5"
           stroke-linecap="round" stroke-linejoin="round"/>
-    <circle cx="78" cy="29" r="7" fill="#FF9B6A"/>
-    <circle cx="22" cy="71" r="5.5" fill="#6ADBB8"/>
+    <path d="M54 68L54 28L82 68L82 28"
+          fill="none" stroke="white" stroke-width="8.5"
+          stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="46" cy="28" r="6.5" fill="#FF9B6A"/>
+    <circle cx="54" cy="68" r="5"   fill="#6ADBB8"/>
   </svg>
-
-  <!-- Wordmark: "Zym" violet + "Notes" dark -->
+  <!-- Wordmark -->
   <text x="54" y="22"
         font-family="'Plus Jakarta Sans', 'Inter', system-ui, sans-serif"
         font-size="25" font-weight="800"
