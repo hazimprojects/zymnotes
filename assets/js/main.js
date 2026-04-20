@@ -1264,7 +1264,7 @@ var HZ_NOTES_SEARCH_PAGES = [
 
     document.querySelectorAll('a.brand').forEach(function (el) {
       var img = document.createElement('img');
-      img.src = '/icons/icon.svg';
+      img.src = '/icons/icon.svg?v=2';
       img.alt = '';
       img.width = 22;
       img.height = 22;
@@ -1274,7 +1274,7 @@ var HZ_NOTES_SEARCH_PAGES = [
 
     document.querySelectorAll('.footer-brand').forEach(function (el) {
       var img = document.createElement('img');
-      img.src = '/icons/icon.svg';
+      img.src = '/icons/icon.svg?v=2';
       img.alt = '';
       img.width = 18;
       img.height = 18;
@@ -1603,7 +1603,7 @@ var HZ_ICONS = (function () {
   if (!('serviceWorker' in navigator)) return;
 
   window.addEventListener('load', function () {
-    navigator.serviceWorker.register('/sw.js?v=14').catch(function (error) {
+    navigator.serviceWorker.register('/sw.js?v=15').catch(function (error) {
       console.warn('Service worker registration failed:', error);
     });
   });

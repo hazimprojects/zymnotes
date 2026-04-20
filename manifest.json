@@ -11,19 +11,19 @@
   "categories": ["education"],
   "icons": [
     {
-      "src": "/icons/icon.svg",
+      "src": "/icons/icon.svg?v=2",
       "sizes": "any",
       "type": "image/svg+xml",
       "purpose": "any"
     },
     {
-      "src": "/icons/icon.svg",
+      "src": "/icons/icon.svg?v=2",
       "sizes": "any",
       "type": "image/svg+xml",
       "purpose": "any"
     },
     {
-      "src": "/icons/icon-maskable.svg",
+      "src": "/icons/icon-maskable.svg?v=2",
       "sizes": "any",
       "type": "image/svg+xml",
       "purpose": "maskable"
@@ -31,7 +31,7 @@
   ],
   "screenshots": [
     {
-      "src": "/assets/og-image.png",
+      "src": "/assets/og-image.png?v=20260420",
       "sizes": "1200x630",
       "type": "image/png",
       "label": "ZymNotes — Platform Pendidikan Digital"
