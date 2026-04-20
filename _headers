@@ -33,6 +33,6 @@
 /data/*
   Cache-Control: public, max-age=3600
 
-# Open Graph image — force fresh fetch when URL version changes
+# Open Graph image — avoid stale social previews
 /assets/og-image.png
-  Cache-Control: public, max-age=300, must-revalidate
+  Cache-Control: public, max-age=0, no-cache, must-revalidate

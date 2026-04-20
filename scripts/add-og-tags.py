@@ -5,7 +5,7 @@ Run from the /home/user/zymnotes directory.
 """
 import os, re, glob
 
-OG_IMAGE = "https://zymnotes.com/assets/og-image.png?v=20260420"
+OG_IMAGE = "https://zymnotes.com/assets/og-image.png?v=20260420c"
 SITE_NAME = "ZymNotes"
 DEFAULT_DESC = "Nota ulang kaji visual yang kemas, mesra telefon dan mudah difahami — dibina untuk pelajar generasi baharu."
 
