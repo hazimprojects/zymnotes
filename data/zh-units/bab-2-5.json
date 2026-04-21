@@ -1,476 +1,399 @@
 {
   "meta": {
     "source_file": "notes/bab-2-5.html",
-    "rollout": "gelombang-1-manual-revision"
+    "rollout": "gelombang-1-clean-manual",
+    "notes": "Fully manual Chinese translation for Bab 2.5. Completed to match the updated HTML with added data-zh-unit-id."
   },
   "units": [
     {
       "source_id": "bab-2-5-u15",
-      "bm_original": "Kesedaran nasionalisme di negara kita telah bermula sejak zaman Kesultanan Melayu Melaka .",
-      "translate": "Kesedaran 民族主义 di negara kita 已经 bermula sejak zaman Kesultanan Melayu Melaka .",
-      "key_points_zh": [
-        "Kesedaran 民族主义 di negara kita 已经 bermula sejak zaman Kesultanan Melayu Melaka ."
-      ],
-      "bm_focus_phrase": "Kesedaran nasionalisme di negara kita telah bermula sejak zaman Kesultanan Melayu Melaka ."
+      "bm_original": "Kesedaran nasionalisme di negara kita telah bermula sejak zaman Kesultanan Melayu Melaka.",
+      "translate": "我国的民族主义意识，其实早在 Kesultanan Melayu Melaka 时期就已经开始出现。"
     },
     {
       "source_id": "bab-2-5-u16",
       "bm_original": "Perjuangan awal dapat dilihat melalui usaha sultan dan tokoh tempatan mempertahankan wilayah daripada kuasa asing.",
-      "translate": "斗争 awal dapat dilihat 通过 usaha sultan 与 tokoh 本地 mempertahankan wilayah daripada kuasa asing.",
-      "key_points_zh": [
-        "斗争 awal dapat dilihat 通过 usaha sultan 与 tokoh 本地 mempertahankan wilayah daripada kuasa asing."
-      ],
-      "bm_focus_phrase": "Perjuangan awal dapat dilihat melalui usaha sultan dan tokoh tempatan mempertahankan wilayah daripada kuasa asing."
+      "translate": "早期的斗争可以从苏丹与本地领袖捍卫领土、抵抗外来势力的努力中看出来。"
     },
     {
       "source_id": "bab-2-5-u17",
-      "bm_original": "Pada abad ke-20, kesedaran ini berkembang melalui Gerakan Islah , penulisan, akhbar dan pertubuhan.",
-      "translate": "Pada abad ke-20, kesedaran 这 berkembang 通过 Gerakan Islah , penulisan, 报章 与 pertubuhan.",
-      "key_points_zh": [
-        "Pada abad ke-20, kesedaran 这 berkembang 通过 Gerakan Islah , penulisan, 报章 与 pertubuhan."
-      ],
-      "bm_focus_phrase": "Pada abad ke-20, kesedaran ini berkembang melalui Gerakan Islah , penulisan, akhbar dan pertubuhan."
+      "bm_original": "Pada abad ke-20, kesedaran ini berkembang melalui Gerakan Islah, penulisan, akhbar dan pertubuhan.",
+      "translate": "进入二十世纪后，这种意识通过 Gerakan Islah、写作、报刊和组织运动进一步发展。"
     },
     {
       "source_id": "bab-2-5-u18",
       "bm_original": "Kesedaran inilah yang akhirnya menjadi asas kepada perjuangan kebangsaan dan kemerdekaan negara.",
-      "translate": "Kesedaran inilah 的 akhirnya menjadi asas 向 斗争 kebangsaan 与 独立 negara.",
-      "key_points_zh": [
-        "Kesedaran inilah 的 akhirnya menjadi asas 向 斗争 kebangsaan 与 独立 negara."
-      ],
-      "bm_focus_phrase": "Kesedaran inilah yang akhirnya menjadi asas kepada perjuangan kebangsaan dan kemerdekaan negara."
+      "translate": "正是这种意识，最终成为民族斗争与国家独立的基础。"
     },
+
+    {
+      "source_id": "bab-2-5-u19",
+      "bm_original": "Subtopik ini menerangkan bahawa kesedaran nasionalisme di negara kita tidak bermula hanya pada zaman penjajahan British, tetapi telah dapat dikesan sejak zaman Kesultanan Melayu Melaka lagi. Kesedaran ini berkembang melalui perjuangan sultan, tokoh tempatan, gerakan agama, penulisan dan pertubuhan.",
+      "translate": "本小节说明，我国的民族主义意识并不是只在 British 殖民时期才开始，而是早在 Kesultanan Melayu Melaka 时期就已经可以看见。这种意识后来通过苏丹、本地领袖、宗教改革运动、写作与组织活动而不断发展。"
+    },
+
     {
       "source_id": "bab-2-5-soalan-heading",
       "bm_original": "Bilakah semangat nasionalisme sebenarnya bermula di tanah air kita? Adakah hanya semasa zaman penjajahan British?",
-      "translate": "Bilakah semangat 民族主义 sebenarnya bermula di tanah air kita? Adakah hanya semasa zaman penjajahan British?",
-      "key_points_zh": [
-        "Bilakah semangat 民族主义 sebenarnya bermula di tanah air kita? Adakah hanya semasa zaman penjajahan British?"
-      ],
-      "bm_focus_phrase": "Bilakah semangat nasionalisme sebenarnya bermula di tanah air kita? Adakah hanya semasa zaman penjajahan British?"
+      "translate": "我国的民族主义精神究竟从什么时候开始？是不是只有在 British 殖民时期才出现？"
     },
     {
       "source_id": "bab-2-5-soalan-line-1",
       "bm_original": "Sebenarnya, kesedaran nasionalisme di negara kita telah mula muncul sejak zaman Kesultanan Melayu Melaka lagi.",
-      "translate": "Sebenarnya, kesedaran 民族主义 di negara kita 已经 mula muncul sejak zaman Kesultanan Melayu Melaka lagi.",
-      "key_points_zh": [
-        "Sebenarnya, kesedaran 民族主义 di negara kita 已经 mula muncul sejak zaman Kesultanan Melayu Melaka lagi."
-      ],
-      "bm_focus_phrase": "Sebenarnya, kesedaran nasionalisme di negara kita telah mula muncul sejak zaman Kesultanan Melayu Melaka lagi."
+      "translate": "其实，我国的民族主义意识早在 Kesultanan Melayu Melaka 时期就已经开始出现。"
     },
+
     {
       "source_id": "bab-2-5-fokus-line",
       "bm_original": "Perjuangan menentang penjajahan di Tanah Melayu mempunyai sejarah yang panjang bermula dari zaman Kesultanan Melayu Melaka. Subtopik ini menelusuri perkembangan nasionalisme Melayu melalui lima peringkat perjuangan:",
-      "translate": "斗争 反对 penjajahan di Tanah Melayu mempunyai 历史 的 panjang bermula dari zaman Kesultanan Melayu Melaka. Subtopik 这 menelusuri perkembangan 民族主义 Melayu 通过 lima peringkat 斗争:",
-      "key_points_zh": [
-        "斗争 反对 penjajahan di Tanah Melayu mempunyai 历史 的 panjang bermula dari zaman Kesultanan Melayu Melaka. Subtopik 这 menelusuri perkembangan 民族主义 Melayu 通过 lima peringkat 斗争:"
-      ],
-      "bm_focus_phrase": "Perjuangan menentang penjajahan di Tanah Melayu mempunyai sejarah yang panjang bermula dari zaman Kesultanan Melayu Melaka. Subtopik ini menelusuri perkembangan nasionalisme Melayu melalui lima peringkat perjuangan:"
+      "translate": "Tanah Melayu 反抗殖民统治的斗争历史十分悠久，可追溯到 Kesultanan Melayu Melaka 时期。本小节将通过五个阶段来梳理马来民族主义的发展："
     },
+    {
+      "source_id": "bab-2-5-extra-32",
+      "bm_original": "Zaman Kesultanan Melayu Melaka",
+      "translate": "Kesultanan Melayu Melaka 时期"
+    },
+    {
+      "source_id": "bab-2-5-extra-33",
+      "bm_original": "Penentangan Bersenjata terhadap British",
+      "translate": "对 British 的武装反抗"
+    },
+    {
+      "source_id": "bab-2-5-extra-34",
+      "bm_original": "Gerakan Islah Agama",
+      "translate": "Gerakan Islah 宗教改革运动"
+    },
+    {
+      "source_id": "bab-2-5-extra-35",
+      "bm_original": "Perjuangan Melalui Penulisan & Akhbar",
+      "translate": "通过写作与报刊展开斗争"
+    },
+    {
+      "source_id": "bab-2-5-extra-36",
+      "bm_original": "Pertubuhan Sosioekonomi",
+      "translate": "社会经济组织运动"
+    },
+
     {
       "source_id": "bab-2-5-u01",
       "bm_original": "Kesedaran nasionalisme dapat dikesan sejak zaman:",
-      "translate": "Kesedaran 民族主义 dapat dikesan sejak zaman:",
-      "key_points_zh": [
-        "Kesedaran 民族主义 dapat dikesan sejak zaman:"
-      ],
-      "bm_focus_phrase": "Kesedaran nasionalisme dapat dikesan sejak zaman:"
+      "translate": "民族主义意识可以追溯到以下时期："
     },
     {
       "source_id": "bab-2-5-extra-1",
       "bm_original": "Sultan Muzaffar Shah",
-      "translate": "Sultan Muzaffar Shah",
-      "key_points_zh": [
-        "Sultan Muzaffar Shah"
-      ],
-      "bm_focus_phrase": "Sultan Muzaffar Shah"
+      "translate": "Sultan Muzaffar Shah"
     },
     {
       "source_id": "bab-2-5-extra-2",
       "bm_original": "Sultan Mahmud Shah",
-      "translate": "Sultan Mahmud Shah",
-      "key_points_zh": [
-        "Sultan Mahmud Shah"
-      ],
-      "bm_focus_phrase": "Sultan Mahmud Shah"
+      "translate": "Sultan Mahmud Shah"
+    },
+    {
+      "source_id": "bab-2-5-u20",
+      "bm_original": "Setelah Portugis menawan Melaka, Sultan Mahmud Shah berusaha mendapatkan semula Melaka.",
+      "translate": "在 Portugis 攻占 Melaka 之后，Sultan Mahmud Shah 曾努力夺回 Melaka。"
     },
     {
       "source_id": "bab-2-5-u02",
       "bm_original": "Baginda melancarkan tiga kali serangan untuk menawan semula Melaka, namun semuanya gagal.",
-      "translate": "Baginda melancarkan tiga kali serangan 为了 menawan semula Melaka, namun semuanya 失败.",
-      "key_points_zh": [
-        "Baginda melancarkan tiga kali serangan 为了 menawan semula Melaka, namun semuanya 失败."
-      ],
-      "bm_focus_phrase": "Baginda melancarkan tiga kali serangan untuk menawan semula Melaka, namun semuanya gagal."
+      "translate": "他一共发动了三次进攻，试图重新夺回 Melaka，但最终都失败了。"
     },
+
     {
       "source_id": "bab-2-5-u03",
-      "bm_original": "Sultan Abdullah Mukarram Shah dari Kedah menentang Syarikat Hindia Timur Inggeris (SHTI) .",
-      "translate": "Sultan Abdullah Mukarram Shah dari Kedah 反对 Syarikat Hindia Timur Inggeris (SHTI) .",
-      "key_points_zh": [
-        "Sultan Abdullah Mukarram Shah dari Kedah 反对 Syarikat Hindia Timur Inggeris (SHTI) ."
-      ],
-      "bm_focus_phrase": "Sultan Abdullah Mukarram Shah dari Kedah menentang Syarikat Hindia Timur Inggeris (SHTI) ."
+      "bm_original": "Sultan Abdullah Mukarram Shah dari Kedah menentang Syarikat Hindia Timur Inggeris (SHTI).",
+      "translate": "来自 Kedah 的 Sultan Abdullah Mukarram Shah 反抗 Syarikat Hindia Timur Inggeris（SHTI）。"
+    },
+    {
+      "source_id": "bab-2-5-u21",
+      "bm_original": "Baginda berusaha mendapatkan semula Pulau Pinang, yang merupakan sebahagian wilayah Kedah.",
+      "translate": "他曾努力尝试取回 Pulau Pinang，因为那原本是 Kedah 的一部分领土。"
     },
     {
       "source_id": "bab-2-5-u04",
       "bm_original": "Perjuangan baginda merupakan antara yang terawal menentang British di negara ini.",
-      "translate": "斗争 baginda merupakan 其中 的 terawal 反对 British di negara 这.",
-      "key_points_zh": [
-        "斗争 baginda merupakan 其中 的 terawal 反对 British di negara 这."
-      ],
-      "bm_focus_phrase": "Perjuangan baginda merupakan antara yang terawal menentang British di negara ini."
+      "translate": "他的斗争可说是本国最早反抗 British 的斗争之一。"
     },
+
     {
       "source_id": "bab-2-5-u05",
       "bm_original": "Penentangan terhadap penjajah turut dipimpin oleh tokoh tempatan di pelbagai negeri.",
-      "translate": "反对 针对 penjajah turut dipimpin 由 tokoh 本地 di pelbagai 州.",
-      "key_points_zh": [
-        "反对 针对 penjajah turut dipimpin 由 tokoh 本地 di pelbagai 州."
-      ],
-      "bm_focus_phrase": "Penentangan terhadap penjajah turut dipimpin oleh tokoh tempatan di pelbagai negeri."
+      "translate": "对抗殖民者的斗争也由各州的本地领袖所领导。"
     },
     {
       "source_id": "bab-2-5-u06",
       "bm_original": "Walaupun perjuangan mereka bersifat setempat, semangat mereka mencerminkan nasionalisme yang kuat.",
-      "translate": "Walaupun 斗争 mereka bersifat setempat, semangat mereka mencerminkan 民族主义 的 kuat.",
-      "key_points_zh": [
-        "Walaupun 斗争 mereka bersifat setempat, semangat mereka mencerminkan 民族主义 的 kuat."
-      ],
-      "bm_focus_phrase": "Walaupun perjuangan mereka bersifat setempat, semangat mereka mencerminkan nasionalisme yang kuat."
+      "translate": "虽然他们的斗争多属地方性质，但他们所展现的精神体现了强烈的民族主义意识。"
+    },
+    {
+      "source_id": "bab-2-5-u22",
+      "bm_original": "Tokoh penting termasuk:",
+      "translate": "重要人物包括："
+    },
+    {
+      "source_id": "bab-2-5-extra-37",
+      "bm_original": "Penghulu Dol Said",
+      "translate": "Penghulu Dol Said"
+    },
+    {
+      "source_id": "bab-2-5-extra-38",
+      "bm_original": "Dato' Maharaja Lela",
+      "translate": "Dato' Maharaja Lela"
+    },
+    {
+      "source_id": "bab-2-5-extra-39",
+      "bm_original": "Dato' Bahaman",
+      "translate": "Dato' Bahaman"
+    },
+    {
+      "source_id": "bab-2-5-extra-40",
+      "bm_original": "Rentap",
+      "translate": "Rentap"
+    },
+    {
+      "source_id": "bab-2-5-extra-41",
+      "bm_original": "Mat Salleh",
+      "translate": "Mat Salleh"
+    },
+    {
+      "source_id": "bab-2-5-extra-42",
+      "bm_original": "Tok Janggut",
+      "translate": "Tok Janggut"
+    },
+    {
+      "source_id": "bab-2-5-extra-43",
+      "bm_original": "Haji Abdul Rahman Limbong",
+      "translate": "Haji Abdul Rahman Limbong"
     },
     {
       "source_id": "bab-2-5-u07",
       "bm_original": "Mereka menentang ancaman luar dan berjuang untuk mendaulatkan wilayah masing-masing.",
-      "translate": "Mereka 反对 ancaman luar 与 berjuang 为了 mendaulatkan wilayah masing-masing.",
-      "key_points_zh": [
-        "Mereka 反对 ancaman luar 与 berjuang 为了 mendaulatkan wilayah masing-masing."
-      ],
-      "bm_focus_phrase": "Mereka menentang ancaman luar dan berjuang untuk mendaulatkan wilayah masing-masing."
+      "translate": "他们反抗外来威胁，并为维护各自地区的主权而奋斗。"
     },
+    {
+      "source_id": "bab-2-5-u23",
+      "bm_original": "Tindak balas penjajah sangat keras, menyebabkan gerakan selepas itu bergerak dengan lebih sederhana.",
+      "translate": "殖民者的镇压非常严厉，因此后来的运动开始转向更温和的方式。"
+    },
+
     {
       "source_id": "bab-2-5-u08",
       "bm_original": "Sejak awal abad ke-20, Gerakan Islah membangkitkan kesedaran melalui pembaharuan pemikiran Islam.",
-      "translate": "Sejak awal abad ke-20, Gerakan Islah membangkitkan kesedaran 通过 pembaharuan pemikiran Islam.",
-      "key_points_zh": [
-        "Sejak awal abad ke-20, Gerakan Islah membangkitkan kesedaran 通过 pembaharuan pemikiran Islam."
-      ],
-      "bm_focus_phrase": "Sejak awal abad ke-20, Gerakan Islah membangkitkan kesedaran melalui pembaharuan pemikiran Islam."
+      "translate": "从二十世纪初开始，Gerakan Islah 通过伊斯兰思想改革唤起了民族意识。"
+    },
+    {
+      "source_id": "bab-2-5-u24",
+      "bm_original": "Gerakan ini dipelopori oleh:",
+      "translate": "这场运动由以下人物倡导："
     },
     {
       "source_id": "bab-2-5-extra-3",
       "bm_original": "Sheikh Muhammad Tahir Jalaluddin",
-      "translate": "重点：Sheikh Muhammad Tahir Jalaluddin",
-      "key_points_zh": [
-        "重点：Sheikh Muhammad Tahir Jalaluddin"
-      ],
-      "bm_focus_phrase": "Sheikh Muhammad Tahir Jalaluddin"
+      "translate": "Sheikh Muhammad Tahir Jalaluddin"
     },
     {
       "source_id": "bab-2-5-extra-4",
       "bm_original": "Haji Abbas Mohd Taha",
-      "translate": "重点：Haji Abbas Mohd Taha",
-      "key_points_zh": [
-        "重点：Haji Abbas Mohd Taha"
-      ],
-      "bm_focus_phrase": "Haji Abbas Mohd Taha"
+      "translate": "Haji Abbas Mohd Taha"
     },
     {
       "source_id": "bab-2-5-extra-5",
       "bm_original": "Syed Sheikh al-Hadi",
-      "translate": "重点：Syed Sheikh al-Hadi",
-      "key_points_zh": [
-        "重点：Syed Sheikh al-Hadi"
-      ],
-      "bm_focus_phrase": "Syed Sheikh al-Hadi"
+      "translate": "Syed Sheikh al-Hadi"
     },
     {
       "source_id": "bab-2-5-u09",
       "bm_original": "Mereka menyeru masyarakat supaya:",
-      "translate": "Mereka menyeru 社会 supaya:",
-      "key_points_zh": [
-        "Mereka menyeru 社会 supaya:"
-      ],
-      "bm_focus_phrase": "Mereka menyeru masyarakat supaya:"
+      "translate": "他们呼吁社会："
     },
     {
       "source_id": "bab-2-5-extra-6",
       "bm_original": "memurnikan akidah",
-      "translate": "重点：memurnikan akidah",
-      "key_points_zh": [
-        "重点：memurnikan akidah"
-      ],
-      "bm_focus_phrase": "memurnikan akidah"
+      "translate": "净化信仰"
     },
     {
       "source_id": "bab-2-5-extra-7",
       "bm_original": "meningkatkan pendidikan",
-      "translate": "提升 pendidikan",
-      "key_points_zh": [
-        "提升 pendidikan"
-      ],
-      "bm_focus_phrase": "meningkatkan pendidikan"
+      "translate": "提升教育"
     },
     {
       "source_id": "bab-2-5-extra-8",
       "bm_original": "melakukan pembaharuan dalam masyarakat",
-      "translate": "melakukan pembaharuan 在 社会",
-      "key_points_zh": [
-        "melakukan pembaharuan 在 社会"
-      ],
-      "bm_focus_phrase": "melakukan pembaharuan dalam masyarakat"
+      "translate": "推动社会改革"
     },
+
     {
       "source_id": "bab-2-5-u10",
       "bm_original": "Tokoh wartawan dan penulis memainkan peranan besar dalam menyebarkan kesedaran kebangsaan.",
-      "translate": "Tokoh wartawan 与 penulis memainkan peranan besar 在 menyebarkan kesedaran kebangsaan.",
-      "key_points_zh": [
-        "Tokoh wartawan 与 penulis memainkan peranan besar 在 menyebarkan kesedaran kebangsaan."
-      ],
-      "bm_focus_phrase": "Tokoh wartawan dan penulis memainkan peranan besar dalam menyebarkan kesedaran kebangsaan."
+      "translate": "记者与作家在传播民族意识方面发挥了重大作用。"
+    },
+    {
+      "source_id": "bab-2-5-u25",
+      "bm_original": "Antara tokoh penting:",
+      "translate": "重要人物包括："
     },
     {
       "source_id": "bab-2-5-extra-9",
       "bm_original": "Zainal Abidin Ahmad (Za'ba)",
-      "translate": "Zainal Abidin Ahmad (Za'ba)",
-      "key_points_zh": [
-        "Zainal Abidin Ahmad (Za'ba)"
-      ],
-      "bm_focus_phrase": "Zainal Abidin Ahmad (Za'ba)"
+      "translate": "Zainal Abidin Ahmad（Za'ba）"
     },
     {
       "source_id": "bab-2-5-extra-10",
       "bm_original": "Muhammad Rakawi Yusuf",
-      "translate": "重点：Muhammad Rakawi Yusuf",
-      "key_points_zh": [
-        "重点：Muhammad Rakawi Yusuf"
-      ],
-      "bm_focus_phrase": "Muhammad Rakawi Yusuf"
+      "translate": "Muhammad Rakawi Yusuf"
     },
     {
       "source_id": "bab-2-5-extra-11",
       "bm_original": "Abdul Rahim Kajai",
-      "translate": "重点：Abdul Rahim Kajai",
-      "key_points_zh": [
-        "重点：Abdul Rahim Kajai"
-      ],
-      "bm_focus_phrase": "Abdul Rahim Kajai"
+      "translate": "Abdul Rahim Kajai"
     },
     {
       "source_id": "bab-2-5-extra-12",
       "bm_original": "Hajah Zainon Munshi Sulaiman (Ibu Zain)",
-      "translate": "Hajah Zainon Munshi Sulaiman (Ibu Zain)",
-      "key_points_zh": [
-        "Hajah Zainon Munshi Sulaiman (Ibu Zain)"
-      ],
-      "bm_focus_phrase": "Hajah Zainon Munshi Sulaiman (Ibu Zain)"
+      "translate": "Hajah Zainon Munshi Sulaiman（Ibu Zain）"
     },
     {
       "source_id": "bab-2-5-extra-13",
       "bm_original": "Fatimah Yaakub",
-      "translate": "重点：Fatimah Yaakub",
-      "key_points_zh": [
-        "重点：Fatimah Yaakub"
-      ],
-      "bm_focus_phrase": "Fatimah Yaakub"
+      "translate": "Fatimah Yaakub"
     },
     {
       "source_id": "bab-2-5-u11",
       "bm_original": "Melalui penulisan mereka, pelbagai isu diketengahkan seperti:",
-      "translate": "重点：Melalui penulisan mereka, pelbagai isu diketengahkan seperti:",
-      "key_points_zh": [
-        "重点：Melalui penulisan mereka, pelbagai isu diketengahkan seperti:"
-      ],
-      "bm_focus_phrase": "Melalui penulisan mereka, pelbagai isu diketengahkan seperti:"
+      "translate": "通过他们的 writings，许多重要议题被提出，例如："
     },
     {
       "source_id": "bab-2-5-extra-14",
       "bm_original": "keadilan sosial",
-      "translate": "重点：keadilan sosial",
-      "key_points_zh": [
-        "重点：keadilan sosial"
-      ],
-      "bm_focus_phrase": "keadilan sosial"
+      "translate": "社会公正"
     },
     {
       "source_id": "bab-2-5-extra-15",
       "bm_original": "penindasan penjajah",
-      "translate": "重点：penindasan penjajah",
-      "key_points_zh": [
-        "重点：penindasan penjajah"
-      ],
-      "bm_focus_phrase": "penindasan penjajah"
+      "translate": "殖民压迫"
     },
     {
       "source_id": "bab-2-5-extra-16",
       "bm_original": "jati diri bangsa",
-      "translate": "重点：jati diri bangsa",
-      "key_points_zh": [
-        "重点：jati diri bangsa"
-      ],
-      "bm_focus_phrase": "jati diri bangsa"
+      "translate": "民族身份认同"
     },
+
     {
       "source_id": "bab-2-5-u12",
       "bm_original": "Golongan berpendidikan Inggeris dan Melayu turut memimpin gerakan melalui pertubuhan.",
-      "translate": "Golongan berpendidikan Inggeris 与 Melayu turut memimpin gerakan 通过 pertubuhan.",
-      "key_points_zh": [
-        "Golongan berpendidikan Inggeris 与 Melayu turut memimpin gerakan 通过 pertubuhan."
-      ],
-      "bm_focus_phrase": "Golongan berpendidikan Inggeris dan Melayu turut memimpin gerakan melalui pertubuhan."
+      "translate": "受 English 与 Malay 教育的群体，也通过组织来领导这场运动。"
+    },
+    {
+      "source_id": "bab-2-5-u26",
+      "bm_original": "Tokoh penting termasuk:",
+      "translate": "重要人物包括："
     },
     {
       "source_id": "bab-2-5-extra-17",
       "bm_original": "Ibrahim Haji Yaakob",
-      "translate": "重点：Ibrahim Haji Yaakob",
-      "key_points_zh": [
-        "重点：Ibrahim Haji Yaakob"
-      ],
-      "bm_focus_phrase": "Ibrahim Haji Yaakob"
+      "translate": "Ibrahim Haji Yaakob"
     },
     {
       "source_id": "bab-2-5-extra-18",
       "bm_original": "Ishak Haji Muhammad",
-      "translate": "重点：Ishak Haji Muhammad",
-      "key_points_zh": [
-        "重点：Ishak Haji Muhammad"
-      ],
-      "bm_focus_phrase": "Ishak Haji Muhammad"
+      "translate": "Ishak Haji Muhammad"
     },
     {
       "source_id": "bab-2-5-extra-19",
       "bm_original": "Ahmad Boestamam",
-      "translate": "重点：Ahmad Boestamam",
-      "key_points_zh": [
-        "重点：Ahmad Boestamam"
-      ],
-      "bm_focus_phrase": "Ahmad Boestamam"
+      "translate": "Ahmad Boestamam"
     },
     {
       "source_id": "bab-2-5-extra-20",
       "bm_original": "Burhanuddin al-Helmi",
-      "translate": "重点：Burhanuddin al-Helmi",
-      "key_points_zh": [
-        "重点：Burhanuddin al-Helmi"
-      ],
-      "bm_focus_phrase": "Burhanuddin al-Helmi"
+      "translate": "Burhanuddin al-Helmi"
     },
     {
       "source_id": "bab-2-5-u13",
       "bm_original": "Walaupun menghadapi pelbagai cabaran seperti:",
-      "translate": "重点：Walaupun menghadapi pelbagai cabaran seperti:",
-      "key_points_zh": [
-        "重点：Walaupun menghadapi pelbagai cabaran seperti:"
-      ],
-      "bm_focus_phrase": "Walaupun menghadapi pelbagai cabaran seperti:"
+      "translate": "虽然他们面对各种挑战，例如："
     },
     {
       "source_id": "bab-2-5-extra-21",
       "bm_original": "kekangan kewangan",
-      "translate": "重点：kekangan kewangan",
-      "key_points_zh": [
-        "重点：kekangan kewangan"
-      ],
-      "bm_focus_phrase": "kekangan kewangan"
+      "translate": "资金限制"
     },
     {
       "source_id": "bab-2-5-extra-22",
       "bm_original": "undang-undang penjajah yang menyekat",
-      "translate": "undang-undang penjajah 的 menyekat",
-      "key_points_zh": [
-        "undang-undang penjajah 的 menyekat"
-      ],
-      "bm_focus_phrase": "undang-undang penjajah yang menyekat"
+      "translate": "殖民者的限制性法律"
     },
     {
       "source_id": "bab-2-5-extra-23",
       "bm_original": "pengawasan pemerintah",
-      "translate": "重点：pengawasan pemerintah",
-      "key_points_zh": [
-        "重点：pengawasan pemerintah"
-      ],
-      "bm_focus_phrase": "pengawasan pemerintah"
+      "translate": "当局监控"
+    },
+    {
+      "source_id": "bab-2-5-u27",
+      "bm_original": "Mereka terus berusaha menyedarkan masyarakat tentang kepentingan kebebasan dan kemerdekaan.",
+      "translate": "尽管如此，他们仍持续努力唤醒社会，认识自由与独立的重要性。"
+    },
+
+    {
+      "source_id": "bab-2-5-u28",
+      "bm_original": "Kesedaran nasionalisme di negara kita telah lama wujud dalam pemikiran dan perjuangan tokoh tempatan.",
+      "translate": "我国的民族主义意识，早已存在于本地领袖的思想与斗争之中。"
+    },
+    {
+      "source_id": "bab-2-5-u29",
+      "bm_original": "Kesedaran ini lahir daripada pelbagai golongan seperti:",
+      "translate": "这种意识来自不同群体，例如："
     },
     {
       "source_id": "bab-2-5-extra-24",
       "bm_original": "Sultan & pembesar",
-      "translate": "Sultan & pembesar",
-      "key_points_zh": [
-        "Sultan & pembesar"
-      ],
-      "bm_focus_phrase": "Sultan & pembesar"
+      "translate": "苏丹与贵族官员"
     },
     {
       "source_id": "bab-2-5-extra-25",
       "bm_original": "Tokoh agama",
-      "translate": "重点：Tokoh agama",
-      "key_points_zh": [
-        "重点：Tokoh agama"
-      ],
-      "bm_focus_phrase": "Tokoh agama"
+      "translate": "宗教人物"
     },
     {
       "source_id": "bab-2-5-extra-26",
       "bm_original": "Wartawan & penulis",
-      "translate": "重点：Wartawan & penulis",
-      "key_points_zh": [
-        "重点：Wartawan & penulis"
-      ],
-      "bm_focus_phrase": "Wartawan & penulis"
+      "translate": "记者与作家"
     },
     {
       "source_id": "bab-2-5-extra-27",
       "bm_original": "Guru & pendidik",
-      "translate": "重点：Guru & pendidik",
-      "key_points_zh": [
-        "重点：Guru & pendidik"
-      ],
-      "bm_focus_phrase": "Guru & pendidik"
+      "translate": "教师与教育工作者"
     },
     {
       "source_id": "bab-2-5-extra-28",
       "bm_original": "Rakyat biasa yang berani menentang penjajahan",
-      "translate": "人民 biasa 的 berani 反对 penjajahan",
-      "key_points_zh": [
-        "人民 biasa 的 berani 反对 penjajahan"
-      ],
-      "bm_focus_phrase": "Rakyat biasa yang berani menentang penjajahan"
+      "translate": "勇于反抗殖民统治的普通人民"
+    },
+    {
+      "source_id": "bab-2-5-u30",
+      "bm_original": "Perjuangan ini dizahirkan dalam pelbagai bentuk:",
+      "translate": "这场斗争通过多种形式表现出来："
     },
     {
       "source_id": "bab-2-5-extra-29",
       "bm_original": "gerakan setempat menentang kuasa luar",
-      "translate": "gerakan setempat 反对 kuasa luar",
-      "key_points_zh": [
-        "gerakan setempat 反对 kuasa luar"
-      ],
-      "bm_focus_phrase": "gerakan setempat menentang kuasa luar"
+      "translate": "地方性反抗外来势力的运动"
     },
     {
       "source_id": "bab-2-5-extra-30",
       "bm_original": "penulisan & akhbar yang menyebarkan idea nasionalisme",
-      "translate": "penulisan & 报章 的 menyebarkan idea 民族主义",
-      "key_points_zh": [
-        "penulisan & 报章 的 menyebarkan idea 民族主义"
-      ],
-      "bm_focus_phrase": "penulisan & akhbar yang menyebarkan idea nasionalisme"
+      "translate": "通过写作与报刊传播民族主义思想"
     },
     {
       "source_id": "bab-2-5-extra-31",
       "bm_original": "pertubuhan & persatuan yang membina kesedaran massa",
-      "translate": "pertubuhan & 协会 的 membina kesedaran massa",
-      "key_points_zh": [
-        "pertubuhan & 协会 的 membina kesedaran massa"
-      ],
-      "bm_focus_phrase": "pertubuhan & persatuan yang membina kesedaran massa"
+      "translate": "建立群众觉醒的组织与协会"
     },
     {
       "source_id": "bab-2-5-u14",
       "bm_original": "Kesedaran ini akhirnya menjadi asas kepada perjuangan kebangsaan yang membawa kepada kemerdekaan negara.",
-      "translate": "Kesedaran 这 akhirnya menjadi asas 向 斗争 kebangsaan 的 membawa 向 独立 negara.",
-      "key_points_zh": [
-        "Kesedaran 这 akhirnya menjadi asas 向 斗争 kebangsaan 的 membawa 向 独立 negara."
-      ],
-      "bm_focus_phrase": "Kesedaran ini akhirnya menjadi asas kepada perjuangan kebangsaan yang membawa kepada kemerdekaan negara."
+      "translate": "这种意识最终成为民族斗争的基础，并推动国家走向独立。"
     }
   ]
 }
