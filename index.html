@@ -501,6 +501,15 @@
 
   <script src="assets/js/main.js?v=77"></script>
   <script>
+    function escapeHtml(value) {
+      return String(value)
+        .replaceAll('&', '&amp;')
+        .replaceAll('<', '&lt;')
+        .replaceAll('>', '&gt;')
+        .replaceAll('"', '&quot;')
+        .replaceAll("'", '&#39;');
+    }
+
     async function loadProjectLastUpdated() {
       const target = document.getElementById('project-status-text');
       if (!target) return;
@@ -515,8 +524,8 @@
         const formattedDate = new Date(latest.date).toLocaleDateString('ms-MY', {
           day: 'numeric', month: 'long', year: 'numeric'
         });
-        const items = (latest.items || []).slice(0, 5);
-        const listItems = items.map(i => `<li>${i}</li>`).join('');
+        const items = (latest.items || []).slice(0, 8);
+        const listItems = items.map(i => `<li>${escapeHtml(i)}</li>`).join('');
 
         target.innerHTML = `
           ZymNotes dikemas kini dari semasa ke semasa.
