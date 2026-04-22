@@ -1,92 +1,73 @@
 # ZymNotes
 
-ZymNotes ialah **laman nota ulang kaji visual** yang kemas, mesra telefon dan mudah difahami untuk pelajar generasi baharu.
+**ZymNotes** ialah platform nota ulang kaji digital untuk pelajar Malaysia, dibina dengan identiti baharu: **nota yang jelas, visual, mesra telefon, dan bertunjangkan buku teks KSSM**.
 
-Fokus semasa ZymNotes ialah **Sejarah Tingkatan 4**, dengan peluasan kandungan ke **Sejarah Tingkatan 5** dan bidang lain secara berperingkat. Platform ini dibina untuk menjadikan pengalaman ulang kaji lebih jelas, lebih tersusun dan lebih dekat dengan cara pelajar hari ini membaca serta belajar melalui skrin.
-
----
-
-## Gambaran Ringkas
-
-ZymNotes bermula daripada keperluan untuk menjadikan kandungan silibus yang padat lebih mudah didekati tanpa mengorbankan isi penting. Ia tidak cuba menggantikan buku teks sepenuhnya, tetapi berfungsi sebagai **bahan sokongan pembelajaran digital** yang lebih:
-
-- visual
-- tersusun
-- mesra telefon
-- mudah diteroka
-- sesuai untuk ulang kaji berperingkat
-
-Platform ini sesuai untuk:
-
-- **pelajar** yang mahu nota yang lebih mudah dibaca
-- **guru** yang mahu bahan sokongan tambahan
-- **ibu bapa** yang mahu rujukan yang lebih jelas untuk membantu anak belajar
+> Tagline semasa: **"Nota Ulang Kaji Generasi Baharu"**.
 
 ---
 
-## Fokus Kandungan Semasa
+## Identiti Terkini
 
-Setakat ini, kandungan aktif tertumpu pada **Sejarah Tingkatan 4** dengan struktur berikut:
+ZymNotes kini diposisikan sebagai:
 
-### Bab 1 · Warisan Negara Bangsa
-- halaman utama bab
-- subtopik 1.1 hingga 1.4
+- **platform sokongan pembelajaran**, bukan pengganti buku teks;
+- **ruang bacaan berstruktur** untuk topik yang padat;
+- **pengalaman ulang kaji moden** yang menggabungkan nota, audio, carian, dan bantuan bahasa.
 
-### Bab 2 · Kebangkitan Nasionalisme
-- halaman utama bab
-- subtopik 2.1 hingga 2.8
+Nada dan arah brand semasa menekankan:
 
-### Bab 3 · Konflik Dunia dan Pendudukan Jepun di Negara Kita
-- halaman utama bab
-- subtopik 3.1 hingga 3.9
-
-### Bab 4 · Era Peralihan Kuasa British di Negara Kita
-- halaman utama bab
-- subtopik 4.1 hingga 4.7
-
-### Bab 5 · Persekutuan Tanah Melayu 1948
-- halaman utama bab
-- subtopik 5.1 hingga 5.4
-
-### Bab 6 · Ancaman Komunis dan Perisytiharan Darurat
-- halaman utama bab
-- subtopik 6.1 hingga 6.4
+1. **Kejelasan isi** — kandungan disusun semula supaya mudah diikuti.
+2. **Reka bentuk berfungsi** — visual membantu pemahaman, bukan hiasan semata-mata.
+3. **Mobile-first** — pengalaman utama dioptimumkan untuk telefon pintar.
+4. **Pertumbuhan berperingkat** — kualiti kandungan didahulukan berbanding kuantiti.
 
 ---
 
-## Ciri-ciri Utama Platform
+## Skop Kandungan Semasa (Aktif)
 
-ZymNotes kini bukan sekadar himpunan nota statik. Repo semasa sudah merangkumi beberapa lapisan pengalaman pengguna yang lebih matang.
+Fokus aktif semasa ialah **Sejarah Tingkatan 4 (KSSM)**:
 
-### Kandungan & Pembacaan
-- nota visual yang lebih kemas dan terarah
-- hierarki isi yang jelas untuk topik yang padat
-- blok rumusan, info tambahan, glosari dan susunan bacaan
-- kandungan yang mesra telefon pintar
+- **Bab 1** · Warisan Negara Bangsa
+- **Bab 2** · Kebangkitan Nasionalisme
+- **Bab 3** · Konflik Dunia dan Pendudukan Jepun di Negara Kita
+- **Bab 4** · Era Peralihan Kuasa British di Negara Kita
+- **Bab 5** · Persekutuan Tanah Melayu 1948
+- **Bab 6** · Ancaman Komunis dan Perisytiharan Darurat
+- **Bab 7** · Usaha ke Arah Kemerdekaan
 
-### Pengalaman Ulang Kaji
-- audio nota untuk beberapa subtopik
-- sticky mini audio player
-- reading progress bar pada halaman subtopik
-- swipe navigation untuk pengguna mudah alih
-- pintasan papan kekunci pada halaman nota
-
-### Navigasi & Carian
-- carian dalaman untuk koleksi nota
-- global search overlay
-- desktop floating table of contents untuk halaman tertentu
-- mobile bottom navigation
-- sparkle utility menu pada halaman nota terpilih
-
-### Visual & Identiti
-- dark mode
-- sistem tema visual yang lebih modular
-- identiti jenama ZymNotes yang lebih konsisten
-- struktur halaman yang semakin menghampiri bentuk platform pembelajaran sebenar
+Setiap bab mempunyai halaman bab utama dan pecahan subtopik (contoh: `bab-4-1.html`, `bab-4-2.html`, dan seterusnya).
 
 ---
 
-## Struktur Projek
+## Ciri Utama Platform
+
+### 1) Pengalaman Nota
+- susunan nota berhierarki (tajuk, poin, rumusan, glosari);
+- komponen "paper-style" untuk pembacaan lebih fokus;
+- kata kunci visual untuk membezakan idea utama dan sokongan.
+
+### 2) Pembelajaran Interaktif Ringan
+- carian dalaman pada halaman koleksi nota;
+- global search overlay;
+- progress indicator untuk bacaan subtopik;
+- pintasan papan kekunci dan swipe navigation (halaman tertentu).
+
+### 3) Audio & Sokongan Akses
+- audio nota tersedia untuk set subtopik terpilih;
+- sticky mini audio player untuk pengalaman dengar + baca.
+
+### 4) Mod Bahasa Cina (ZH Mode)
+- sokongan unit kandungan ZH melalui `data/zh-units/`;
+- glosari dwibahasa melalui `data/zh-glossary.json`;
+- skrip audit/generasi untuk menjaga kualiti istilah dan liputan.
+
+### 5) Keupayaan Web App
+- PWA manifest + service worker;
+- strategi versioning aset untuk kurangkan isu cache tidak sepadan.
+
+---
+
+## Struktur Repo (Terkini)
 
 ```text
 zymnotes/
@@ -94,11 +75,16 @@ zymnotes/
 ├── about.html
 ├── feedback.html
 ├── thank-you.html
-├── README.md
+├── 404.html
 ├── manifest.json
 ├── sw.js
-├── data/
-│   └── updates.json
+├── README.md
+├── notes/
+│   ├── index.html
+│   ├── bab-1.html ... bab-7.html
+│   └── bab-*-*.html (subtopik)
+├── quiz/
+│   └── bab-1-1.html
 ├── assets/
 │   ├── css/
 │   │   ├── style.css
@@ -111,190 +97,102 @@ zymnotes/
 │   │   ├── themes.css
 │   │   ├── lab.css
 │   │   └── print.css
-│   └── js/
-│       └── main.js
-└── notes/
-    ├── index.html
-    ├── bab-1.html
-    ├── bab-1-1.html
-    ├── bab-1-2.html
-    ├── bab-1-3.html
-    ├── bab-1-4.html
-    ├── bab-2.html
-    ├── bab-2-1.html
-    ├── bab-2-2.html
-    ├── bab-2-3.html
-    ├── bab-2-4.html
-    ├── bab-2-5.html
-    ├── bab-2-6.html
-    ├── bab-2-7.html
-    ├── bab-2-8.html
-    ├── bab-3.html
-    ├── bab-3-1.html
-    ├── bab-3-2.html
-    ├── bab-3-3.html
-    ├── bab-3-4.html
-    ├── bab-3-5.html
-    ├── bab-3-6.html
-    ├── bab-3-7.html
-    ├── bab-3-8.html
-    ├── bab-3-9.html
-    ├── bab-4.html
-    ├── bab-4-1.html
-    ├── bab-4-2.html
-    ├── bab-4-3.html
-    ├── bab-4-4.html
-    ├── bab-4-5.html
-    ├── bab-4-6.html
-    ├── bab-4-7.html
-    ├── bab-5.html
-    ├── bab-5-1.html
-    ├── bab-5-2.html
-    ├── bab-5-3.html
-    ├── bab-5-4.html
-    ├── bab-6.html
-    ├── bab-6-1.html
-    ├── bab-6-2.html
-    ├── bab-6-3.html
-    └── bab-6-4.html
+│   ├── js/
+│   │   ├── main.js
+│   │   ├── zh-mode.js
+│   │   └── subtopic-lab.js
+│   ├── audio/
+│   └── og-image.png
+├── data/
+│   ├── asset-versions.json
+│   ├── updates.json
+│   ├── zh-glossary.json
+│   ├── zh-chip-sentences.json
+│   ├── zh-comprehension.json
+│   └── zh-units/
+├── scripts/
+│   ├── sync-asset-versions.py
+│   ├── bump-versions.py
+│   ├── add-og-tags.py
+│   ├── generate-updates.py
+│   └── check-zh-*.py / gen-zh-*.py / regen-zh-units.py
+├── docs/
+│   ├── zh-mode-editorial-guideline.md
+│   ├── zh-glossary-editorial-guideline.md
+│   └── (dokumen audit/perancangan)
+├── _templates/
+│   ├── nota-bab.html
+│   └── nota-subtopik.html
+├── icons/
+├── robots.txt
+├── sitemap.xml
+└── _headers
 ```
----
-
-## Teknologi Digunakan
-
-ZymNotes dibina sebagai laman statik yang ringan tetapi semakin kaya dari sudut pengalaman pengguna.
-
-### Asas
-- HTML
-- CSS
-- JavaScript
-- Google Fonts (Nunito)
-
-### Frontend Architecture
-- CSS modular melalui `style.css` sebagai master stylesheet
-- Import fail berasingan seperti:
-  - `base.css`
-  - `layout.css`
-  - `ui.css`
-  - `paper.css`
-  - `responsive.css`
-  - `themes.css`
-  - `lab.css`
-  - `print.css`
-
-### Interaksi UI
-- dark mode
-- carian dalaman
-- global search overlay
-- mobile bottom navigation
-- sticky audio player
-- sparkle utility menu
-- reading progress bar
-- desktop floating TOC
-- swipe dan keyboard navigation
-
-### Sokongan Platform
-- Web App Manifest
-- service worker
-- PWA install nudge
-- Google Analytics
 
 ---
 
-## Prinsip Reka Bentuk
+## Stack Teknologi
 
-ZymNotes dibina dengan beberapa prinsip utama:
-
-### 1. Jelas
-Isi penting perlu mudah dikenal pasti walaupun topik padat dan sarat fakta.
-
-### 2. Visual tetapi berfungsi
-Warna, blok, label dan komponen visual digunakan untuk membantu kefahaman, bukan sekadar hiasan.
-
-### 3. Mesra telefon
-Halaman dirancang supaya selesa dibaca pada skrin kecil kerana itu ialah peranti utama ramai pengguna.
-
-### 4. Tersusun
-Setiap bab dibina dengan aliran yang konsisten supaya pengguna tidak terasa hilang arah.
-
-### 5. Berkembang secara terkawal
-ZymNotes dikembangkan secara berperingkat dengan keutamaan kepada kualiti kandungan dan pengalaman pembelajaran.
+- **Frontend:** HTML, CSS, JavaScript (vanilla)
+- **Typography:** Google Fonts (Plus Jakarta Sans)
+- **App shell:** Service Worker + Manifest (PWA)
+- **Analitik:** Google Analytics (`gtag`)
+- **Automasi kandungan:** Python scripts untuk versioning aset, SEO tags, update feed, dan pipeline ZH mode
 
 ---
 
-## Status Semasa
+## Aliran Kerja Disyorkan (Versioning Aset)
 
-ZymNotes sedang berkembang dengan arah yang semakin jelas sebagai **laman nota ulang kaji generasi baharu**, bukan sekadar laman nota biasa.
+Sumber kebenaran utama versi aset ialah `data/asset-versions.json`.
 
-Status semasa yang boleh dikenal pasti daripada repo:
-
-- jenama utama telah bergerak ke **ZymNotes**
-- kandungan Sejarah Tingkatan 4 kini meliputi **Bab 1 hingga Bab 6**
-- pengalaman pengguna telah diperkaya dengan audio, carian, navigation tools dan komponen UX tambahan
-- struktur frontend kini lebih modular dan lebih sesuai untuk perkembangan masa depan
-
----
-
-## Cara Guna
-
-1. Buka `index.html` untuk halaman utama platform  
-2. Masuk ke `notes/index.html` untuk melihat koleksi nota semasa  
-3. Pilih bab atau subtopik yang ingin dibaca  
-4. Gunakan carian untuk mencari istilah, tokoh, konsep atau topik tertentu  
-5. Pada halaman nota terpilih, gunakan audio, navigation aids dan reading tools yang tersedia  
-
----
-
-## Deploy / Release Ringkas
-
-Untuk elak cache versi aset tidak selari antara halaman HTML dan service worker, gunakan aliran berikut:
-
-1. Kemaskini versi dalam `data/asset-versions.json` (sumber kebenaran tunggal):
-   - `style_css`
-   - `main_js`
-   - `manifest`
+### Langkah ringkas
+1. Kemas kini nilai versi dalam `data/asset-versions.json`.
 2. Jalankan:
    ```bash
    python3 scripts/sync-asset-versions.py
    ```
-3. Skrip akan:
-   - kemas kini semua rujukan `style.css?v=`, `main.js?v=`, dan `manifest.json?v=` dalam fail HTML;
-   - kemas kini entri berkaitan dalam `PRECACHE_URLS` di `sw.js`.
-4. Commit perubahan yang terhasil (`*.html`, `sw.js`, dan/atau `data/asset-versions.json`).
-
-Nota CI: workflow `.github/workflows/update-status.yml` turut menjalankan skrip ini secara automatik sebelum langkah commit.
+3. Semak perubahan pada fail HTML dan `sw.js`.
+4. Commit semua fail berkaitan agar cache web konsisten.
 
 ---
 
-## Arah Perkembangan
+## Cara Jalankan Secara Lokal
 
-ZymNotes dibina dengan potensi untuk berkembang lebih jauh daripada fokus semasa.
+Disebabkan projek ini laman statik, anda boleh:
 
-Antara arah pengembangan yang selari dengan repo dan positioning semasa:
-
-- peluasan kandungan ke **Sejarah Tingkatan 5**
-- pengembangan audio ke lebih banyak bab
-- pengukuhan struktur kandungan KSSM yang lebih luas
-- penambahan elemen ulang kaji yang lebih interaktif
-- penambahbaikan konsistensi identiti visual dan pengalaman platform
+1. Buka `index.html` terus di pelayar; atau
+2. Guna local static server (disyorkan untuk ujian service worker/PWA), contohnya:
+   ```bash
+   python3 -m http.server 8080
+   ```
+   kemudian buka `http://localhost:8080`.
 
 ---
 
-## Kedudukan Platform
+## Peta Halaman Utama
 
-ZymNotes tidak diposisikan sebagai pengganti tunggal kepada buku teks atau sumber rasmi. Sebaliknya, ia berfungsi sebagai:
+- `index.html` — landing/utama
+- `notes/index.html` — direktori nota + carian
+- `about.html` — naratif platform & latar pengasas
+- `feedback.html` — borang maklum balas
+- `thank-you.html` — halaman selepas hantar maklum balas
 
-- platform pembelajaran digital
-- bahan sokongan ulang kaji
-- ruang pembacaan yang lebih mesra pengguna
-- lapisan visual dan navigasi tambahan untuk membantu pelajar memahami kandungan silibus dengan lebih yakin
+---
+
+## Roadmap Ringkas
+
+Keutamaan perkembangan seterusnya:
+
+- pengukuhan kualiti kandungan Bab 1–7;
+- peluasan audio ke lebih banyak subtopik;
+- penambahbaikan konsistensi istilah dalam ZH mode;
+- peluasan kandungan ke skop KSSM lain secara terkawal.
 
 ---
 
 ## Hubungi
 
-**ZymNotes**  
-Malaysia  
+**ZymNotes (Malaysia)**  
 Email: **hello@zymnotes.com**
 
 ---
@@ -303,4 +201,4 @@ Email: **hello@zymnotes.com**
 
 Belum ditetapkan secara rasmi.
 
-Jika ZymNotes ingin dibuka untuk penggunaan awam yang lebih luas, pengedaran semula, atau sumbangan komuniti pada masa hadapan, bahagian lesen boleh dikemas kini kemudian.
+Jika projek dibuka untuk pengedaran/sumbangan awam pada skala lebih luas, fail lesen akan ditambah kemudian.
