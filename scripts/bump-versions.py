@@ -32,6 +32,9 @@ RULES: list[tuple[str, list[str]]] = [
     ("assets/css/style.css",      ["style_css",      "sw_cache"]),
     ("assets/js/main.js",         ["main_js",        "sw_cache"]),
     ("assets/js/zh-mode.js",      ["zh_mode_js",     "sw_cache"]),
+    ("data/zh-glossary.json",     ["sw_cache"]),
+    ("data/zh-comprehension.json", ["sw_cache"]),
+    ("data/zh-units/index.json",  ["sw_cache"]),
     ("assets/js/subtopic-lab.js", ["sw_cache"]),
     ("sw.js",                     ["sw_cache"]),
     ("manifest.json",             ["manifest",       "sw_cache"]),
@@ -96,11 +99,16 @@ def main() -> None:
     versions = json.loads(VERSIONS_FILE.read_text(encoding="utf-8"))
     keys_to_bump: set[str] = set()
 
+    zh_units_prefix = "data/zh-units/"
     for f in changed:
+        matched = False
         for pattern, keys in RULES:
             if f == pattern:
                 keys_to_bump.update(keys)
+                matched = True
                 break
+        if not matched and f.startswith(zh_units_prefix) and f.endswith(".json"):
+            keys_to_bump.add("sw_cache")
 
     if not keys_to_bump:
         print("No version-tracked assets changed.")
