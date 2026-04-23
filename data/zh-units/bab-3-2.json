@@ -1,1617 +1,1618 @@
 {
   "meta": {
     "source_file": "notes/bab-3-2.html",
-    "rollout": "gelombang-1-manual-revision"
+    "rollout": "gelombang-1-ms-zh-regenerated",
+    "notes": "Translate fields regenerated from bm_original (ms→zh-CN) for fluent Simplified Chinese; proper names follow translator output—verify against BM notes."
   },
   "units": [
     {
       "source_id": "bab-3-2-u48",
       "bm_original": "Perang Dunia Pertama tercetus akibat persaingan kuasa imperialis , pembentukan pakatan ketenteraan dan krisis di Rantau Balkan .",
-      "translate": "释义：Perang Dunia Pertama tercetus akibat persaingan kuasa imperialis , pembentukan pakatan ketenteraan和krisis di Rantau Balkan .（原文：Perang Dunia Pertama tercetus akibat persaingan kuasa imperialis , pembentukan pakatan ketenteraan dan krisis di Rantau Balkan .）",
+      "translate": "第一次世界大战是帝国主义权力竞争、军事同盟的形成和巴尔干危机的结果。",
       "key_points_zh": [
-        "Perang Dunia Pertama tercetus akibat persaingan kuasa imperialis , pembentukan pakatan ketenteraan和krisis di Rantau Balkan ."
+        "第一次世界大战是帝国主义权力竞争、军事同盟的形成和巴尔干危机的结果。"
       ],
       "bm_focus_phrase": "Perang Dunia Pertama tercetus akibat persaingan kuasa imperialis , pembentukan pakatan ketenteraan dan krisis di Rantau Balkan ."
     },
     {
       "source_id": "bab-3-2-u49",
       "bm_original": "Perang bermula pada 1914 dan berakhir pada 1918 , tetapi kesannya berlarutan hingga mencetuskan ketegangan baharu.",
-      "translate": "释义：Perang bermula 于 1914和berakhir 于 1918 , tetapi kesannya berlarutan hingga mencetuskan ketegangan baharu.（原文：Perang bermula pada 1914 dan berakhir pada 1918 , tetapi kesannya berlarutan hingga mencetuskan ketegangan baharu.）",
+      "translate": "战争于 1914 年开始，于 1918 年结束，但其影响持续存在，造成了新的紧张局势。",
       "key_points_zh": [
-        "Perang bermula 于 1914和berakhir 于 1918 , tetapi kesannya berlarutan hingga mencetuskan ketegangan baharu."
+        "战争于 1914 年开始，于 1918 年结束，但其影响持续存在，造成了新的紧张局势。"
       ],
       "bm_focus_phrase": "Perang bermula pada 1914 dan berakhir pada 1918 , tetapi kesannya berlarutan hingga mencetuskan ketegangan baharu."
     },
     {
       "source_id": "bab-3-2-u50",
       "bm_original": "Selepas perang, Persidangan Damai Paris , Deklarasi 14 Perkara dan Perjanjian Versailles membentuk susunan dunia baharu.",
-      "translate": "释义：Selepas perang, Persidangan Damai Paris , Deklarasi 14 Perkara和Perjanjian Versailles membentuk susunan dunia baharu.（原文：Selepas perang, Persidangan Damai Paris , Deklarasi 14 Perkara dan Perjanjian Versailles membentuk susunan dunia baharu.）",
+      "translate": "战后，巴黎和会、十四条宣言和凡尔赛条约塑造了世界新秩序。",
       "key_points_zh": [
-        "Selepas perang, Persidangan Damai Paris , Deklarasi 14 Perkara和Perjanjian Versailles membentuk susunan dunia baharu."
+        "战后，巴黎和会、十四条宣言和凡尔赛条约塑造了世界新秩序。"
       ],
       "bm_focus_phrase": "Selepas perang, Persidangan Damai Paris , Deklarasi 14 Perkara dan Perjanjian Versailles membentuk susunan dunia baharu."
     },
     {
       "source_id": "bab-3-2-u51",
       "bm_original": "Walaupun perang berlaku jauh di Eropah , Tanah Melayu turut menerima kesan politik dan ekonomi.",
-      "translate": "Walaupun perang 发生 jauh di Eropah , Tanah Melayu turut menerima 影响 政治和ekonomi.",
+      "translate": "虽然战争发生在遥远的欧洲，但马来亚也受到了政治和经济的影响。",
       "key_points_zh": [
-        "Walaupun perang 发生 jauh di Eropah , Tanah Melayu turut menerima 影响 政治和ekonomi."
+        "虽然战争发生在遥远的欧洲，但马来亚也受到了政治和经济的影响。"
       ],
       "bm_focus_phrase": "Walaupun perang berlaku jauh di Eropah , Tanah Melayu turut menerima kesan politik dan ekonomi."
     },
     {
       "source_id": "bab-3-2-u01",
       "bm_original": "Perkembangan nasionalisme di Eropah serta persaingan imperialis antara kuasa besar telah mencetuskan dua peperangan besar dunia, iaitu Perang Dunia Pertama ( 1914–1918 ) dan Perang Dunia Kedua ( 1939–1945 ).",
-      "translate": "Perkembangan 民族主义 di Eropah 以及 persaingan imperialis 其中 kuasa besar 已经 mencetuskan dua peperangan besar dunia, iaitu Perang Dunia Pertama ( 1914–1918 )和第二次世界大战 ( 1939–1945 ).",
+      "translate": "欧洲民族主义的发展以及大国之间的帝国主义竞争引发了两次世界大战，即第一次世界大战（1914-1918）和第二次世界大战（1939-1945）。",
       "key_points_zh": [
-        "Perkembangan 民族主义 di Eropah 以及 persaingan imperialis 其中 kuasa besar 已经 mencetuskan dua peperangan besar dunia, iaitu Perang Dunia Pertama ( 1914–1918 )和第二次世界大战 ( 1939–1945 )."
+        "欧洲民族主义的发展以及大国之间的帝国主义竞争引发了两次世界大战，即第一次世界大战（1914-1918）和第二次世界大战（1939-1945）。"
       ],
       "bm_focus_phrase": "Perkembangan nasionalisme di Eropah serta persaingan imperialis antara kuasa besar telah mencetuskan dua peperangan besar dunia, iaitu Perang Dunia Pertama ( 1914–1918 ) dan Perang Dunia Kedua ( 1939–1945 )."
     },
     {
       "source_id": "bab-3-2-u02",
       "bm_original": "Kedua-dua peperangan ini membawa kesan besar kepada dunia, termasuk Tanah Melayu .",
-      "translate": "Kedua-dua peperangan 这 membawa 影响 besar 向 dunia, termasuk Tanah Melayu .",
+      "translate": "这两场战争给包括马来亚在内的世界带来了巨大的影响。",
       "key_points_zh": [
-        "Kedua-dua peperangan 这 membawa 影响 besar 向 dunia, termasuk Tanah Melayu ."
+        "这两场战争给包括马来亚在内的世界带来了巨大的影响。"
       ],
       "bm_focus_phrase": "Kedua-dua peperangan ini membawa kesan besar kepada dunia, termasuk Tanah Melayu ."
     },
     {
       "source_id": "bab-3-2-u03",
       "bm_original": "Perang Dunia Pertama tercetus akibat tiga faktor utama, iaitu:",
-      "translate": "Perang Dunia Pertama tercetus akibat tiga 因素 主要, iaitu:",
+      "translate": "第一次世界大战的爆发主要有以下三个因素：",
       "key_points_zh": [
-        "Perang Dunia Pertama tercetus akibat tiga 因素 主要, iaitu:"
+        "第一次世界大战的爆发主要有以下三个因素："
       ],
       "bm_focus_phrase": "Perang Dunia Pertama tercetus akibat tiga faktor utama, iaitu:"
     },
     {
       "source_id": "bab-3-2-extra-1",
       "bm_original": "persaingan kuasa imperialis",
-      "translate": "释义：重点：persaingan kuasa imperialis（原文：persaingan kuasa imperialis）",
+      "translate": "帝国主义权力竞争",
       "key_points_zh": [
-        "重点：persaingan kuasa imperialis"
+        "帝国主义权力竞争"
       ],
       "bm_focus_phrase": "persaingan kuasa imperialis"
     },
     {
       "source_id": "bab-3-2-extra-2",
       "bm_original": "pakatan ketenteraan",
-      "translate": "释义：重点：pakatan ketenteraan（原文：pakatan ketenteraan）",
+      "translate": "军事联盟",
       "key_points_zh": [
-        "重点：pakatan ketenteraan"
+        "军事联盟"
       ],
       "bm_focus_phrase": "pakatan ketenteraan"
     },
     {
       "source_id": "bab-3-2-extra-3",
       "bm_original": "krisis di Rantau Balkan",
-      "translate": "释义：重点：krisis di Rantau Balkan（原文：krisis di Rantau Balkan）",
+      "translate": "巴尔干危机",
       "key_points_zh": [
-        "重点：krisis di Rantau Balkan"
+        "巴尔干危机"
       ],
       "bm_focus_phrase": "krisis di Rantau Balkan"
     },
     {
       "source_id": "bab-3-2-u04",
       "bm_original": "Bahan mentah yang menjadi rebutan termasuk:",
-      "translate": "释义：Bahan mentah 的 menjadi rebutan termasuk:（原文：Bahan mentah yang menjadi rebutan termasuk:）",
+      "translate": "可供争夺的原材料包括：",
       "key_points_zh": [
-        "Bahan mentah 的 menjadi rebutan termasuk:"
+        "可供争夺的原材料包括："
       ],
       "bm_focus_phrase": "Bahan mentah yang menjadi rebutan termasuk:"
     },
     {
       "source_id": "bab-3-2-extra-4",
       "bm_original": "arang batu",
-      "translate": "释义：重点：arang batu（原文：arang batu）",
+      "translate": "煤炭",
       "key_points_zh": [
-        "重点：arang batu"
+        "煤炭"
       ],
       "bm_focus_phrase": "arang batu"
     },
     {
       "source_id": "bab-3-2-extra-5",
       "bm_original": "petroleum",
-      "translate": "释义：重点：petroleum（原文：petroleum）",
+      "translate": "石油",
       "key_points_zh": [
-        "重点：petroleum"
+        "石油"
       ],
       "bm_focus_phrase": "petroleum"
     },
     {
       "source_id": "bab-3-2-extra-6",
       "bm_original": "bijih timah",
-      "translate": "释义：重点：bijih timah（原文：bijih timah）",
+      "translate": "锡矿",
       "key_points_zh": [
-        "重点：bijih timah"
+        "锡矿"
       ],
       "bm_focus_phrase": "bijih timah"
     },
     {
       "source_id": "bab-3-2-u05",
       "bm_original": "Persaingan ini menimbulkan permusuhan antara kuasa besar seperti Perancis dan Jerman .",
-      "translate": "Persaingan 这 menimbulkan permusuhan 其中 kuasa besar seperti Perancis和Jerman .",
+      "translate": "这种竞争导致了法国、德国等大国之间的敌意。",
       "key_points_zh": [
-        "Persaingan 这 menimbulkan permusuhan 其中 kuasa besar seperti Perancis和Jerman ."
+        "这种竞争导致了法国、德国等大国之间的敌意。"
       ],
       "bm_focus_phrase": "Persaingan ini menimbulkan permusuhan antara kuasa besar seperti Perancis dan Jerman ."
     },
     {
       "source_id": "bab-3-2-u06",
       "bm_original": "Permusuhan antara negara Eropah membawa kepada pembentukan dua pakatan utama:",
-      "translate": "Permusuhan 其中 negara Eropah membawa 向 pembentukan dua pakatan 主要:",
+      "translate": "欧洲国家之间的敌意导致了两个主要联盟的形成：",
       "key_points_zh": [
-        "Permusuhan 其中 negara Eropah membawa 向 pembentukan dua pakatan 主要:"
+        "欧洲国家之间的敌意导致了两个主要联盟的形成："
       ],
       "bm_focus_phrase": "Permusuhan antara negara Eropah membawa kepada pembentukan dua pakatan utama:"
     },
     {
       "source_id": "bab-3-2-extra-7",
       "bm_original": "Kuasa Tengah",
-      "translate": "释义：重点：Kuasa Tengah（原文：Kuasa Tengah）",
+      "translate": "中等功率",
       "key_points_zh": [
-        "重点：Kuasa Tengah"
+        "中等功率"
       ],
       "bm_focus_phrase": "Kuasa Tengah"
     },
     {
       "source_id": "bab-3-2-extra-8",
       "bm_original": "Pakatan Bertiga",
-      "translate": "释义：重点：Pakatan Bertiga（原文：Pakatan Bertiga）",
+      "translate": "三方联盟",
       "key_points_zh": [
-        "重点：Pakatan Bertiga"
+        "三方联盟"
       ],
       "bm_focus_phrase": "Pakatan Bertiga"
     },
     {
       "source_id": "bab-3-2-u07",
       "bm_original": "Negara-negara dalam pakatan ini mula:",
-      "translate": "释义：Negara-negara 在 pakatan 这 mula:（原文：Negara-negara dalam pakatan ini mula:）",
+      "translate": "该联盟的国家开始：",
       "key_points_zh": [
-        "Negara-negara 在 pakatan 这 mula:"
+        "该联盟的国家开始："
       ],
       "bm_focus_phrase": "Negara-negara dalam pakatan ini mula:"
     },
     {
       "source_id": "bab-3-2-extra-9",
       "bm_original": "menghasilkan senjata moden",
-      "translate": "释义：重点：menghasilkan senjata moden（原文：menghasilkan senjata moden）",
+      "translate": "生产现代武器",
       "key_points_zh": [
-        "重点：menghasilkan senjata moden"
+        "生产现代武器"
       ],
       "bm_focus_phrase": "menghasilkan senjata moden"
     },
     {
       "source_id": "bab-3-2-extra-10",
       "bm_original": "bersedia untuk berperang",
-      "translate": "释义：bersedia以求berperang（原文：bersedia untuk berperang）",
+      "translate": "准备战斗",
       "key_points_zh": [
-        "bersedia以求berperang"
+        "准备战斗"
       ],
       "bm_focus_phrase": "bersedia untuk berperang"
     },
     {
       "source_id": "bab-3-2-extra-11",
       "bm_original": "mempertahankan kepentingan masing-masing",
-      "translate": "释义：重点：mempertahankan kepentingan masing-masing（原文：mempertahankan kepentingan masing-masing）",
+      "translate": "维护彼此的利益",
       "key_points_zh": [
-        "重点：mempertahankan kepentingan masing-masing"
+        "维护彼此的利益"
       ],
       "bm_focus_phrase": "mempertahankan kepentingan masing-masing"
     },
     {
       "source_id": "bab-3-2-u08",
       "bm_original": "Peristiwa ini mencetuskan rangkaian konflik yang akhirnya membawa kepada perang besar di Eropah.",
-      "translate": "释义：Peristiwa 这 mencetuskan rangkaian konflik 的 akhirnya membawa 向 perang besar di Eropah.（原文：Peristiwa ini mencetuskan rangkaian konflik yang akhirnya membawa kepada perang besar di Eropah.）",
+      "translate": "这一事件引发了一系列冲突，最终导致了欧洲的一场大战。",
       "key_points_zh": [
-        "Peristiwa 这 mencetuskan rangkaian konflik 的 akhirnya membawa 向 perang besar di Eropah."
+        "这一事件引发了一系列冲突，最终导致了欧洲的一场大战。"
       ],
       "bm_focus_phrase": "Peristiwa ini mencetuskan rangkaian konflik yang akhirnya membawa kepada perang besar di Eropah."
     },
     {
       "source_id": "bab-3-2-extra-12",
       "bm_original": "Jerman",
-      "translate": "释义：重点：Jerman（原文：Jerman）",
+      "translate": "德国",
       "key_points_zh": [
-        "重点：Jerman"
+        "德国"
       ],
       "bm_focus_phrase": "Jerman"
     },
     {
       "source_id": "bab-3-2-extra-13",
       "bm_original": "Britain",
-      "translate": "释义：重点：Britain（原文：Britain）",
+      "translate": "英国",
       "key_points_zh": [
-        "重点：Britain"
+        "英国"
       ],
       "bm_focus_phrase": "Britain"
     },
     {
       "source_id": "bab-3-2-extra-14",
       "bm_original": "Kuasa Tengah",
-      "translate": "释义：重点：Kuasa Tengah（原文：Kuasa Tengah）",
+      "translate": "中等功率",
       "key_points_zh": [
-        "重点：Kuasa Tengah"
+        "中等功率"
       ],
       "bm_focus_phrase": "Kuasa Tengah"
     },
     {
       "source_id": "bab-3-2-u09",
       "bm_original": "Kuasa Tengah terdiri daripada negara yang mahu mengekalkan empayar masing-masing dan terlibat dalam konflik akibat persaingan imperialis.",
-      "translate": "释义：Kuasa Tengah terdiri daripada negara 的 mahu mengekalkan empayar masing-masing和terlibat 在 konflik akibat persaingan imperialis.（原文：Kuasa Tengah terdiri daripada negara yang mahu mengekalkan empayar masing-masing dan terlibat dalam konflik akibat persaingan imperialis.）",
+      "translate": "中等强国由那些想要维持各自帝国并因帝国主义竞争而卷入冲突的国家组成。",
       "key_points_zh": [
-        "Kuasa Tengah terdiri daripada negara 的 mahu mengekalkan empayar masing-masing和terlibat 在 konflik akibat persaingan imperialis."
+        "中等强国由那些想要维持各自帝国并因帝国主义竞争而卷入冲突的国家组成。"
       ],
       "bm_focus_phrase": "Kuasa Tengah terdiri daripada negara yang mahu mengekalkan empayar masing-masing dan terlibat dalam konflik akibat persaingan imperialis."
     },
     {
       "source_id": "bab-3-2-extra-15",
       "bm_original": "bab-3-2-extra-15",
-      "translate": "释义：重点：bab-3-2-extra-15（原文：bab-3-2-extra-15）",
+      "translate": "第3-2章-额外-15",
       "key_points_zh": [
-        "重点：bab-3-2-extra-15"
+        "第3-2章-额外-15"
       ],
       "bm_focus_phrase": "bab-3-2-extra-15"
     },
     {
       "source_id": "bab-3-2-extra-16",
       "bm_original": "Jerman",
-      "translate": "释义：重点：Jerman（原文：Jerman）",
+      "translate": "德国",
       "key_points_zh": [
-        "重点：Jerman"
+        "德国"
       ],
       "bm_focus_phrase": "Jerman"
     },
     {
       "source_id": "bab-3-2-extra-17",
       "bm_original": "Austria-Hungary",
-      "translate": "释义：重点：Austria-Hungary（原文：Austria-Hungary）",
+      "translate": "奥匈帝国",
       "key_points_zh": [
-        "重点：Austria-Hungary"
+        "奥匈帝国"
       ],
       "bm_focus_phrase": "Austria-Hungary"
     },
     {
       "source_id": "bab-3-2-u10",
       "bm_original": "Kemudian disertai oleh:",
-      "translate": "释义：Kemudian disertai 由:（原文：Kemudian disertai oleh:）",
+      "translate": "然后加入：",
       "key_points_zh": [
-        "Kemudian disertai 由:"
+        "然后加入："
       ],
       "bm_focus_phrase": "Kemudian disertai oleh:"
     },
     {
       "source_id": "bab-3-2-extra-18",
       "bm_original": "Bulgaria",
-      "translate": "释义：重点：Bulgaria（原文：Bulgaria）",
+      "translate": "保加利亚",
       "key_points_zh": [
-        "重点：Bulgaria"
+        "保加利亚"
       ],
       "bm_focus_phrase": "Bulgaria"
     },
     {
       "source_id": "bab-3-2-extra-19",
       "bm_original": "Empayar Uthmaniyah",
-      "translate": "释义：重点：Empayar Uthmaniyah（原文：Empayar Uthmaniyah）",
+      "translate": "奥斯曼帝国",
       "key_points_zh": [
-        "重点：Empayar Uthmaniyah"
+        "奥斯曼帝国"
       ],
       "bm_focus_phrase": "Empayar Uthmaniyah"
     },
     {
       "source_id": "bab-3-2-u11",
       "bm_original": "Pada awalnya melibatkan 🇩🇪 Jerman , 🇦🇹 Austria-Hungary dan 🇮🇹 Itali .",
-      "translate": "释义：Pada awalnya melibatkan 🇩🇪 Jerman , 🇦🇹 Austria-Hungary和🇮🇹 Itali .（原文：Pada awalnya melibatkan 🇩🇪 Jerman , 🇦🇹 Austria-Hungary dan 🇮🇹 Itali .）",
+      "translate": "最初涉及🇩🇪德国、🇦🇹奥匈帝国和🇮🇹意大利。",
       "key_points_zh": [
-        "Pada awalnya melibatkan 🇩🇪 Jerman , 🇦🇹 Austria-Hungary和🇮🇹 Itali ."
+        "最初涉及🇩🇪德国、🇦🇹奥匈帝国和🇮🇹意大利。"
       ],
       "bm_focus_phrase": "Pada awalnya melibatkan 🇩🇪 Jerman , 🇦🇹 Austria-Hungary dan 🇮🇹 Itali ."
     },
     {
       "source_id": "bab-3-2-extra-20",
       "bm_original": "bab-3-2-extra-20",
-      "translate": "释义：重点：bab-3-2-extra-20（原文：bab-3-2-extra-20）",
+      "translate": "第3-2章-额外-20",
       "key_points_zh": [
-        "重点：bab-3-2-extra-20"
+        "第3-2章-额外-20"
       ],
       "bm_focus_phrase": "bab-3-2-extra-20"
     },
     {
       "source_id": "bab-3-2-extra-21",
       "bm_original": "bab-3-2-extra-21",
-      "translate": "释义：重点：bab-3-2-extra-21（原文：bab-3-2-extra-21）",
+      "translate": "第3-2-额外-21章",
       "key_points_zh": [
-        "重点：bab-3-2-extra-21"
+        "第3-2-额外-21章"
       ],
       "bm_focus_phrase": "bab-3-2-extra-21"
     },
     {
       "source_id": "bab-3-2-extra-22",
       "bm_original": "bab-3-2-extra-22",
-      "translate": "释义：重点：bab-3-2-extra-22（原文：bab-3-2-extra-22）",
+      "translate": "第3-2章-额外-22",
       "key_points_zh": [
-        "重点：bab-3-2-extra-22"
+        "第3-2章-额外-22"
       ],
       "bm_focus_phrase": "bab-3-2-extra-22"
     },
     {
       "source_id": "bab-3-2-u12",
       "bm_original": "Namun, 🇮🇹 Itali kemudian berpaling tadah dan menyertai Pakatan Bertiga .",
-      "translate": "释义：Namun, 🇮🇹 Itali kemudian berpaling tadah和menyertai Pakatan Bertiga .（原文：Namun, 🇮🇹 Itali kemudian berpaling tadah dan menyertai Pakatan Bertiga .）",
+      "translate": "然而，🇮🇹意大利随后叛逃并加入了三国同盟。",
       "key_points_zh": [
-        "Namun, 🇮🇹 Itali kemudian berpaling tadah和menyertai Pakatan Bertiga ."
+        "然而，🇮🇹意大利随后叛逃并加入了三国同盟。"
       ],
       "bm_focus_phrase": "Namun, 🇮🇹 Itali kemudian berpaling tadah dan menyertai Pakatan Bertiga ."
     },
     {
       "source_id": "bab-3-2-extra-23",
       "bm_original": "bab-3-2-extra-23",
-      "translate": "释义：重点：bab-3-2-extra-23（原文：bab-3-2-extra-23）",
+      "translate": "第3-2-额外-23章",
       "key_points_zh": [
-        "重点：bab-3-2-extra-23"
+        "第3-2-额外-23章"
       ],
       "bm_focus_phrase": "bab-3-2-extra-23"
     },
     {
       "source_id": "bab-3-2-extra-24",
       "bm_original": "bab-3-2-extra-24",
-      "translate": "释义：重点：bab-3-2-extra-24（原文：bab-3-2-extra-24）",
+      "translate": "第3-2-额外-24章",
       "key_points_zh": [
-        "重点：bab-3-2-extra-24"
+        "第3-2-额外-24章"
       ],
       "bm_focus_phrase": "bab-3-2-extra-24"
     },
     {
       "source_id": "bab-3-2-u13",
       "bm_original": "Pakatan ini lemah kerana kedudukan geografi yang mencabar dan matlamat yang tidak sepenuhnya seragam.",
-      "translate": "Pakatan 这 lemah 因为 kedudukan geografi 的 mencabar和matlamat 的 不 sepenuhnya seragam.",
+      "translate": "由于具有挑战性的地理位置和不完全统一的目标，这些联盟很弱。",
       "key_points_zh": [
-        "Pakatan 这 lemah 因为 kedudukan geografi 的 mencabar和matlamat 的 不 sepenuhnya seragam."
+        "由于具有挑战性的地理位置和不完全统一的目标，这些联盟很弱。"
       ],
       "bm_focus_phrase": "Pakatan ini lemah kerana kedudukan geografi yang mencabar dan matlamat yang tidak sepenuhnya seragam."
     },
     {
       "source_id": "bab-3-2-u14",
       "bm_original": "Empayar Uthmaniyah pula menyertai perang untuk mempertahankan wilayahnya dan kepentingan dunia Islam.",
-      "translate": "释义：Empayar Uthmaniyah pula menyertai perang以求mempertahankan wilayahnya和kepentingan dunia Islam.（原文：Empayar Uthmaniyah pula menyertai perang untuk mempertahankan wilayahnya dan kepentingan dunia Islam.）",
+      "translate": "奥斯曼帝国加入战争是为了保卫自己的领土和伊斯兰世界的利益。",
       "key_points_zh": [
-        "Empayar Uthmaniyah pula menyertai perang以求mempertahankan wilayahnya和kepentingan dunia Islam."
+        "奥斯曼帝国加入战争是为了保卫自己的领土和伊斯兰世界的利益。"
       ],
       "bm_focus_phrase": "Empayar Uthmaniyah pula menyertai perang untuk mempertahankan wilayahnya dan kepentingan dunia Islam."
     },
     {
       "source_id": "bab-3-2-extra-25",
       "bm_original": "bab-3-2-extra-25",
-      "translate": "释义：重点：bab-3-2-extra-25（原文：bab-3-2-extra-25）",
+      "translate": "第3-2章-额外-25",
       "key_points_zh": [
-        "重点：bab-3-2-extra-25"
+        "第3-2章-额外-25"
       ],
       "bm_focus_phrase": "bab-3-2-extra-25"
     },
     {
       "source_id": "bab-3-2-extra-26",
       "bm_original": "Pakatan Bertiga",
-      "translate": "释义：重点：Pakatan Bertiga（原文：Pakatan Bertiga）",
+      "translate": "三方联盟",
       "key_points_zh": [
-        "重点：Pakatan Bertiga"
+        "三方联盟"
       ],
       "bm_focus_phrase": "Pakatan Bertiga"
     },
     {
       "source_id": "bab-3-2-u15",
       "bm_original": "Pakatan Bertiga dibentuk untuk mengimbangi ancaman Kuasa Tengah .",
-      "translate": "释义：Pakatan Bertiga dibentuk以求mengimbangi ancaman Kuasa Tengah .（原文：Pakatan Bertiga dibentuk untuk mengimbangi ancaman Kuasa Tengah .）",
+      "translate": "三国同盟的成立是为了平衡同盟国的威胁。",
       "key_points_zh": [
-        "Pakatan Bertiga dibentuk以求mengimbangi ancaman Kuasa Tengah ."
+        "三国同盟的成立是为了平衡同盟国的威胁。"
       ],
       "bm_focus_phrase": "Pakatan Bertiga dibentuk untuk mengimbangi ancaman Kuasa Tengah ."
     },
     {
       "source_id": "bab-3-2-extra-27",
       "bm_original": "bab-3-2-extra-27",
-      "translate": "释义：重点：bab-3-2-extra-27（原文：bab-3-2-extra-27）",
+      "translate": "第3-2-额外-27章",
       "key_points_zh": [
-        "重点：bab-3-2-extra-27"
+        "第3-2-额外-27章"
       ],
       "bm_focus_phrase": "bab-3-2-extra-27"
     },
     {
       "source_id": "bab-3-2-extra-28",
       "bm_original": "bab-3-2-extra-28",
-      "translate": "释义：重点：bab-3-2-extra-28（原文：bab-3-2-extra-28）",
+      "translate": "第3-2-额外-28章",
       "key_points_zh": [
-        "重点：bab-3-2-extra-28"
+        "第3-2-额外-28章"
       ],
       "bm_focus_phrase": "bab-3-2-extra-28"
     },
     {
       "source_id": "bab-3-2-extra-29",
       "bm_original": "Britain",
-      "translate": "释义：重点：Britain（原文：Britain）",
+      "translate": "英国",
       "key_points_zh": [
-        "重点：Britain"
+        "英国"
       ],
       "bm_focus_phrase": "Britain"
     },
     {
       "source_id": "bab-3-2-extra-30",
       "bm_original": "Perancis",
-      "translate": "释义：重点：Perancis（原文：Perancis）",
+      "translate": "法语",
       "key_points_zh": [
-        "重点：Perancis"
+        "法语"
       ],
       "bm_focus_phrase": "Perancis"
     },
     {
       "source_id": "bab-3-2-extra-31",
       "bm_original": "Rusia",
-      "translate": "释义：重点：Rusia（原文：Rusia）",
+      "translate": "俄罗斯",
       "key_points_zh": [
-        "重点：Rusia"
+        "俄罗斯"
       ],
       "bm_focus_phrase": "Rusia"
     },
     {
       "source_id": "bab-3-2-u16",
       "bm_original": "Disokong oleh:",
-      "translate": "释义：Disokong 由:（原文：Disokong oleh:）",
+      "translate": "支持者：",
       "key_points_zh": [
-        "Disokong 由:"
+        "支持者："
       ],
       "bm_focus_phrase": "Disokong oleh:"
     },
     {
       "source_id": "bab-3-2-extra-32",
       "bm_original": "Serbia",
-      "translate": "释义：重点：Serbia（原文：Serbia）",
+      "translate": "塞尔维亚",
       "key_points_zh": [
-        "重点：Serbia"
+        "塞尔维亚"
       ],
       "bm_focus_phrase": "Serbia"
     },
     {
       "source_id": "bab-3-2-extra-33",
       "bm_original": "Portugal",
-      "translate": "释义：重点：Portugal（原文：Portugal）",
+      "translate": "葡萄牙",
       "key_points_zh": [
-        "重点：Portugal"
+        "葡萄牙"
       ],
       "bm_focus_phrase": "Portugal"
     },
     {
       "source_id": "bab-3-2-extra-34",
       "bm_original": "Itali",
-      "translate": "释义：重点：Itali（原文：Itali）",
+      "translate": "意大利",
       "key_points_zh": [
-        "重点：Itali"
+        "意大利"
       ],
       "bm_focus_phrase": "Itali"
     },
     {
       "source_id": "bab-3-2-extra-35",
       "bm_original": "Greece",
-      "translate": "释义：重点：Greece（原文：Greece）",
+      "translate": "希腊",
       "key_points_zh": [
-        "重点：Greece"
+        "希腊"
       ],
       "bm_focus_phrase": "Greece"
     },
     {
       "source_id": "bab-3-2-extra-36",
       "bm_original": "Romania",
-      "translate": "释义：重点：Romania（原文：Romania）",
+      "translate": "罗马尼亚",
       "key_points_zh": [
-        "重点：Romania"
+        "罗马尼亚"
       ],
       "bm_focus_phrase": "Romania"
     },
     {
       "source_id": "bab-3-2-extra-37",
       "bm_original": "Perancis",
-      "translate": "释义：重点：Perancis（原文：Perancis）",
+      "translate": "法语",
       "key_points_zh": [
-        "重点：Perancis"
+        "法语"
       ],
       "bm_focus_phrase": "Perancis"
     },
     {
       "source_id": "bab-3-2-extra-38",
       "bm_original": "Rusia",
-      "translate": "释义：重点：Rusia（原文：Rusia）",
+      "translate": "俄罗斯",
       "key_points_zh": [
-        "重点：Rusia"
+        "俄罗斯"
       ],
       "bm_focus_phrase": "Rusia"
     },
     {
       "source_id": "bab-3-2-u17",
       "bm_original": "Britain menyertai pakatan ini pada 1907 .",
-      "translate": "释义：Britain menyertai pakatan 这 于 1907 .（原文：Britain menyertai pakatan ini pada 1907 .）",
+      "translate": "英国于 1907 年加入这个联盟。",
       "key_points_zh": [
-        "Britain menyertai pakatan 这 于 1907 ."
+        "英国于 1907 年加入这个联盟。"
       ],
       "bm_focus_phrase": "Britain menyertai pakatan ini pada 1907 ."
     },
     {
       "source_id": "bab-3-2-extra-39",
       "bm_original": "bab-3-2-extra-39",
-      "translate": "释义：重点：bab-3-2-extra-39（原文：bab-3-2-extra-39）",
+      "translate": "第3-2-额外-39章",
       "key_points_zh": [
-        "重点：bab-3-2-extra-39"
+        "第3-2-额外-39章"
       ],
       "bm_focus_phrase": "bab-3-2-extra-39"
     },
     {
       "source_id": "bab-3-2-u18",
       "bm_original": "Pakatan ini mempunyai lebih banyak tanah jajahan dan sumber.",
-      "translate": "释义：Pakatan 这 mempunyai 更 banyak tanah jajahan和sumber.（原文：Pakatan ini mempunyai lebih banyak tanah jajahan dan sumber.）",
+      "translate": "这个联盟拥有更多的殖民地和资源。",
       "key_points_zh": [
-        "Pakatan 这 mempunyai 更 banyak tanah jajahan和sumber."
+        "这个联盟拥有更多的殖民地和资源。"
       ],
       "bm_focus_phrase": "Pakatan ini mempunyai lebih banyak tanah jajahan dan sumber."
     },
     {
       "source_id": "bab-3-2-u19",
       "bm_original": "Amerika Syarikat membantu pada akhir perang, tetapi bukan anggota rasmi pakatan.",
-      "translate": "释义：Amerika Syarikat membantu 于 akhir perang, tetapi bukan anggota rasmi pakatan.（原文：Amerika Syarikat membantu pada akhir perang, tetapi bukan anggota rasmi pakatan.）",
+      "translate": "美国在战争结束时提供了帮助，但不是该联盟的正式成员。",
       "key_points_zh": [
-        "Amerika Syarikat membantu 于 akhir perang, tetapi bukan anggota rasmi pakatan."
+        "美国在战争结束时提供了帮助，但不是该联盟的正式成员。"
       ],
       "bm_focus_phrase": "Amerika Syarikat membantu pada akhir perang, tetapi bukan anggota rasmi pakatan."
     },
     {
       "source_id": "bab-3-2-extra-40",
       "bm_original": "bab-3-2-extra-40",
-      "translate": "释义：重点：bab-3-2-extra-40（原文：bab-3-2-extra-40）",
+      "translate": "第3-2章-额外-40",
       "key_points_zh": [
-        "重点：bab-3-2-extra-40"
+        "第3-2章-额外-40"
       ],
       "bm_focus_phrase": "bab-3-2-extra-40"
     },
     {
       "source_id": "bab-3-2-u20",
       "bm_original": "Perang Dunia Pertama bermula daripada konflik antara 🇦🇹🇭🇺 Austria-Hungary dan 🇷🇸 Serbia , tetapi kemudian merebak apabila kuasa-kuasa dalam pakatan ketenteraan turut campur tangan.",
-      "translate": "Perang Dunia Pertama bermula daripada konflik 其中 🇦🇹🇭🇺 Austria-Hungary和🇷🇸 Serbia , tetapi kemudian merebak apabila kuasa-kuasa 在 pakatan ketenteraan turut campur tangan.",
+      "translate": "第一次世界大战始于🇦🇹🇭🇺奥匈帝国和🇷🇸塞尔维亚之间的冲突，但随着军事联盟列强的介入而蔓延。",
       "key_points_zh": [
-        "Perang Dunia Pertama bermula daripada konflik 其中 🇦🇹🇭🇺 Austria-Hungary和🇷🇸 Serbia , tetapi kemudian merebak apabila kuasa-kuasa 在 pakatan ketenteraan turut campur tangan."
+        "第一次世界大战始于🇦🇹🇭🇺奥匈帝国和🇷🇸塞尔维亚之间的冲突，但随着军事联盟列强的介入而蔓延。"
       ],
       "bm_focus_phrase": "Perang Dunia Pertama bermula daripada konflik antara 🇦🇹🇭🇺 Austria-Hungary dan 🇷🇸 Serbia , tetapi kemudian merebak apabila kuasa-kuasa dalam pakatan ketenteraan turut campur tangan."
     },
     {
       "source_id": "bab-3-2-extra-41",
       "bm_original": "bab-3-2-extra-41",
-      "translate": "释义：重点：bab-3-2-extra-41（原文：bab-3-2-extra-41）",
+      "translate": "第3-2-额外-41章",
       "key_points_zh": [
-        "重点：bab-3-2-extra-41"
+        "第3-2-额外-41章"
       ],
       "bm_focus_phrase": "bab-3-2-extra-41"
     },
     {
       "source_id": "bab-3-2-extra-42",
       "bm_original": "bab-3-2-extra-42",
-      "translate": "释义：重点：bab-3-2-extra-42（原文：bab-3-2-extra-42）",
+      "translate": "第3-2-额外-42章",
       "key_points_zh": [
-        "重点：bab-3-2-extra-42"
+        "第3-2-额外-42章"
       ],
       "bm_focus_phrase": "bab-3-2-extra-42"
     },
     {
       "source_id": "bab-3-2-extra-43",
       "bm_original": "Austria-Hungary",
-      "translate": "释义：重点：Austria-Hungary（原文：Austria-Hungary）",
+      "translate": "奥匈帝国",
       "key_points_zh": [
-        "重点：Austria-Hungary"
+        "奥匈帝国"
       ],
       "bm_focus_phrase": "Austria-Hungary"
     },
     {
       "source_id": "bab-3-2-extra-44",
       "bm_original": "Serbia",
-      "translate": "释义：重点：Serbia（原文：Serbia）",
+      "translate": "塞尔维亚",
       "key_points_zh": [
-        "重点：Serbia"
+        "塞尔维亚"
       ],
       "bm_focus_phrase": "Serbia"
     },
     {
       "source_id": "bab-3-2-extra-45",
       "bm_original": "mahu membalas pembunuhan Archduke Ferdinand",
-      "translate": "释义：重点：mahu membalas pembunuhan Archduke Ferdinand（原文：mahu membalas pembunuhan Archduke Ferdinand）",
+      "translate": "想要为斐迪南大公的谋杀报仇",
       "key_points_zh": [
-        "重点：mahu membalas pembunuhan Archduke Ferdinand"
+        "想要为斐迪南大公的谋杀报仇"
       ],
       "bm_focus_phrase": "mahu membalas pembunuhan Archduke Ferdinand"
     },
     {
       "source_id": "bab-3-2-extra-46",
       "bm_original": "mendapat sokongan daripada Jerman",
-      "translate": "释义：获得 sokongan daripada Jerman（原文：mendapat sokongan daripada Jerman）",
+      "translate": "来自德国的支持",
       "key_points_zh": [
-        "获得 sokongan daripada Jerman"
+        "来自德国的支持"
       ],
       "bm_focus_phrase": "mendapat sokongan daripada Jerman"
     },
     {
       "source_id": "bab-3-2-extra-47",
       "bm_original": "Rusia",
-      "translate": "释义：重点：Rusia（原文：Rusia）",
+      "translate": "俄罗斯",
       "key_points_zh": [
-        "重点：Rusia"
+        "俄罗斯"
       ],
       "bm_focus_phrase": "Rusia"
     },
     {
       "source_id": "bab-3-2-extra-48",
       "bm_original": "Serbia",
-      "translate": "释义：重点：Serbia（原文：Serbia）",
+      "translate": "塞尔维亚",
       "key_points_zh": [
-        "重点：Serbia"
+        "塞尔维亚"
       ],
       "bm_focus_phrase": "Serbia"
     },
     {
       "source_id": "bab-3-2-extra-49",
       "bm_original": "Rusia menyokong bangsa Slav di Serbia",
-      "translate": "释义：重点：Rusia menyokong bangsa Slav di Serbia（原文：Rusia menyokong bangsa Slav di Serbia）",
+      "translate": "俄罗斯支持塞尔维亚的斯拉夫人",
       "key_points_zh": [
-        "重点：Rusia menyokong bangsa Slav di Serbia"
+        "俄罗斯支持塞尔维亚的斯拉夫人"
       ],
       "bm_focus_phrase": "Rusia menyokong bangsa Slav di Serbia"
     },
     {
       "source_id": "bab-3-2-extra-50",
       "bm_original": "Rusia menentang tindakan Austria-Hungary",
-      "translate": "释义：Rusia 反对 tindakan Austria-Hungary（原文：Rusia menentang tindakan Austria-Hungary）",
+      "translate": "俄罗斯反对奥匈帝国的行动",
       "key_points_zh": [
-        "Rusia 反对 tindakan Austria-Hungary"
+        "俄罗斯反对奥匈帝国的行动"
       ],
       "bm_focus_phrase": "Rusia menentang tindakan Austria-Hungary"
     },
     {
       "source_id": "bab-3-2-extra-51",
       "bm_original": "Jerman",
-      "translate": "释义：重点：Jerman（原文：Jerman）",
+      "translate": "德国",
       "key_points_zh": [
-        "重点：Jerman"
+        "德国"
       ],
       "bm_focus_phrase": "Jerman"
     },
     {
       "source_id": "bab-3-2-extra-52",
       "bm_original": "Rusia",
-      "translate": "释义：重点：Rusia（原文：Rusia）",
+      "translate": "俄罗斯",
       "key_points_zh": [
-        "重点：Rusia"
+        "俄罗斯"
       ],
       "bm_focus_phrase": "Rusia"
     },
     {
       "source_id": "bab-3-2-extra-53",
       "bm_original": "mahu mempertahankan Austria-Hungary",
-      "translate": "释义：重点：mahu mempertahankan Austria-Hungary（原文：mahu mempertahankan Austria-Hungary）",
+      "translate": "想保卫奥匈帝国",
       "key_points_zh": [
-        "重点：mahu mempertahankan Austria-Hungary"
+        "想保卫奥匈帝国"
       ],
       "bm_focus_phrase": "mahu mempertahankan Austria-Hungary"
     },
     {
       "source_id": "bab-3-2-extra-54",
       "bm_original": "mahu menyerang lebih awal sebelum Rusia sempat bersiap",
-      "translate": "释义：mahu menyerang 更 awal sebelum Rusia sempat bersiap（原文：mahu menyerang lebih awal sebelum Rusia sempat bersiap）",
+      "translate": "想在俄罗斯有时间准备之前尽早发动进攻",
       "key_points_zh": [
-        "mahu menyerang 更 awal sebelum Rusia sempat bersiap"
+        "想在俄罗斯有时间准备之前尽早发动进攻"
       ],
       "bm_focus_phrase": "mahu menyerang lebih awal sebelum Rusia sempat bersiap"
     },
     {
       "source_id": "bab-3-2-extra-55",
       "bm_original": "Jerman",
-      "translate": "释义：重点：Jerman（原文：Jerman）",
+      "translate": "德国",
       "key_points_zh": [
-        "重点：Jerman"
+        "德国"
       ],
       "bm_focus_phrase": "Jerman"
     },
     {
       "source_id": "bab-3-2-extra-56",
       "bm_original": "Perancis",
-      "translate": "释义：重点：Perancis（原文：Perancis）",
+      "translate": "法语",
       "key_points_zh": [
-        "重点：Perancis"
+        "法语"
       ],
       "bm_focus_phrase": "Perancis"
     },
     {
       "source_id": "bab-3-2-extra-57",
       "bm_original": "Rusia dan Perancis merupakan sekutu",
-      "translate": "释义：Rusia和Perancis merupakan sekutu（原文：Rusia dan Perancis merupakan sekutu）",
+      "translate": "俄罗斯和法国是盟友",
       "key_points_zh": [
-        "Rusia和Perancis merupakan sekutu"
+        "俄罗斯和法国是盟友"
       ],
       "bm_focus_phrase": "Rusia dan Perancis merupakan sekutu"
     },
     {
       "source_id": "bab-3-2-extra-58",
       "bm_original": "Jerman bimbang diserang dari dua arah",
-      "translate": "释义：重点：Jerman bimbang diserang dari dua arah（原文：Jerman bimbang diserang dari dua arah）",
+      "translate": "德国担心受到两个方向的攻击",
       "key_points_zh": [
-        "重点：Jerman bimbang diserang dari dua arah"
+        "德国担心受到两个方向的攻击"
       ],
       "bm_focus_phrase": "Jerman bimbang diserang dari dua arah"
     },
     {
       "source_id": "bab-3-2-extra-59",
       "bm_original": "mahu melumpuhkan Perancis terlebih dahulu sebelum memberi tumpuan kepada Rusia",
-      "translate": "释义：mahu melumpuhkan Perancis terlebih dahulu sebelum memberi tumpuan 向 Rusia（原文：mahu melumpuhkan Perancis terlebih dahulu sebelum memberi tumpuan kepada Rusia）",
+      "translate": "想先削弱法国，然后再集中精力对付俄罗斯",
       "key_points_zh": [
-        "mahu melumpuhkan Perancis terlebih dahulu sebelum memberi tumpuan 向 Rusia"
+        "想先削弱法国，然后再集中精力对付俄罗斯"
       ],
       "bm_focus_phrase": "mahu melumpuhkan Perancis terlebih dahulu sebelum memberi tumpuan kepada Rusia"
     },
     {
       "source_id": "bab-3-2-u21",
       "bm_original": "Rancangan ini dikenali sebagai Pelan Schlieffen .",
-      "translate": "释义：Rancangan 这 dikenali 作为 Pelan Schlieffen .（原文：Rancangan ini dikenali sebagai Pelan Schlieffen .）",
+      "translate": "该计划被称为施利芬计划。",
       "key_points_zh": [
-        "Rancangan 这 dikenali 作为 Pelan Schlieffen ."
+        "该计划被称为施利芬计划。"
       ],
       "bm_focus_phrase": "Rancangan ini dikenali sebagai Pelan Schlieffen ."
     },
     {
       "source_id": "bab-3-2-extra-60",
       "bm_original": "Britain",
-      "translate": "释义：重点：Britain（原文：Britain）",
+      "translate": "英国",
       "key_points_zh": [
-        "重点：Britain"
+        "英国"
       ],
       "bm_focus_phrase": "Britain"
     },
     {
       "source_id": "bab-3-2-extra-61",
       "bm_original": "Jerman",
-      "translate": "释义：重点：Jerman（原文：Jerman）",
+      "translate": "德国",
       "key_points_zh": [
-        "重点：Jerman"
+        "德国"
       ],
       "bm_focus_phrase": "Jerman"
     },
     {
       "source_id": "bab-3-2-extra-62",
       "bm_original": "Britain marah kerana Jerman melanggar kedaulatan Belgium",
-      "translate": "Britain marah 因为 Jerman melanggar 主权 Belgium",
+      "translate": "英国对德国侵犯比利时主权感到愤怒",
       "key_points_zh": [
-        "Britain marah 因为 Jerman melanggar 主权 Belgium"
+        "英国对德国侵犯比利时主权感到愤怒"
       ],
       "bm_focus_phrase": "Britain marah kerana Jerman melanggar kedaulatan Belgium"
     },
     {
       "source_id": "bab-3-2-extra-63",
       "bm_original": "Belgium ialah negara berkecuali yang dijamin oleh perjanjian antarabangsa",
-      "translate": "Belgium 是 negara berkecuali 的 dijamin 由 协议 antarabangsa",
+      "translate": "比利时是受国际条约保障的中立国家",
       "key_points_zh": [
-        "Belgium 是 negara berkecuali 的 dijamin 由 协议 antarabangsa"
+        "比利时是受国际条约保障的中立国家"
       ],
       "bm_focus_phrase": "Belgium ialah negara berkecuali yang dijamin oleh perjanjian antarabangsa"
     },
     {
       "source_id": "bab-3-2-extra-64",
       "bm_original": "Empayar Uthmaniyah",
-      "translate": "释义：重点：Empayar Uthmaniyah（原文：Empayar Uthmaniyah）",
+      "translate": "奥斯曼帝国",
       "key_points_zh": [
-        "重点：Empayar Uthmaniyah"
+        "奥斯曼帝国"
       ],
       "bm_focus_phrase": "Empayar Uthmaniyah"
     },
     {
       "source_id": "bab-3-2-extra-65",
       "bm_original": "Kuasa Tengah",
-      "translate": "释义：重点：Kuasa Tengah（原文：Kuasa Tengah）",
+      "translate": "中等功率",
       "key_points_zh": [
-        "重点：Kuasa Tengah"
+        "中等功率"
       ],
       "bm_focus_phrase": "Kuasa Tengah"
     },
     {
       "source_id": "bab-3-2-extra-66",
       "bm_original": "mahu mempertahankan wilayah sendiri",
-      "translate": "释义：重点：mahu mempertahankan wilayah sendiri（原文：mahu mempertahankan wilayah sendiri）",
+      "translate": "想要保卫自己的领土",
       "key_points_zh": [
-        "重点：mahu mempertahankan wilayah sendiri"
+        "想要保卫自己的领土"
       ],
       "bm_focus_phrase": "mahu mempertahankan wilayah sendiri"
     },
     {
       "source_id": "bab-3-2-extra-67",
       "bm_original": "bekerjasama dengan Jerman menentang musuh bersama",
-      "translate": "释义：bekerjasama 以 Jerman 反对 musuh bersama（原文：bekerjasama dengan Jerman menentang musuh bersama）",
+      "translate": "与德国合作对抗共同的敌人",
       "key_points_zh": [
-        "bekerjasama 以 Jerman 反对 musuh bersama"
+        "与德国合作对抗共同的敌人"
       ],
       "bm_focus_phrase": "bekerjasama dengan Jerman menentang musuh bersama"
     },
     {
       "source_id": "bab-3-2-extra-68",
       "bm_original": "Itali",
-      "translate": "释义：重点：Itali（原文：Itali）",
+      "translate": "意大利",
       "key_points_zh": [
-        "重点：Itali"
+        "意大利"
       ],
       "bm_focus_phrase": "Itali"
     },
     {
       "source_id": "bab-3-2-extra-69",
       "bm_original": "Pakatan Bertiga",
-      "translate": "释义：重点：Pakatan Bertiga（原文：Pakatan Bertiga）",
+      "translate": "三方联盟",
       "key_points_zh": [
-        "重点：Pakatan Bertiga"
+        "三方联盟"
       ],
       "bm_focus_phrase": "Pakatan Bertiga"
     },
     {
       "source_id": "bab-3-2-extra-70",
       "bm_original": "walaupun asalnya bersama Kuasa Tengah, Itali berpaling tadah",
-      "translate": "释义：重点：walaupun asalnya bersama Kuasa Tengah, Itali berpaling tadah（原文：walaupun asalnya bersama Kuasa Tengah, Itali berpaling tadah）",
+      "translate": "尽管意大利最初是同盟国的盟友，但后来却叛逃了",
       "key_points_zh": [
-        "重点：walaupun asalnya bersama Kuasa Tengah, Itali berpaling tadah"
+        "尽管意大利最初是同盟国的盟友，但后来却叛逃了"
       ],
       "bm_focus_phrase": "walaupun asalnya bersama Kuasa Tengah, Itali berpaling tadah"
     },
     {
       "source_id": "bab-3-2-extra-71",
       "bm_original": "Britain dan Perancis menjanjikan wilayah kepada Itali",
-      "translate": "释义：Britain和Perancis menjanjikan wilayah 向 Itali（原文：Britain dan Perancis menjanjikan wilayah kepada Itali）",
+      "translate": "英国和法国向意大利承诺领土",
       "key_points_zh": [
-        "Britain和Perancis menjanjikan wilayah 向 Itali"
+        "英国和法国向意大利承诺领土"
       ],
       "bm_focus_phrase": "Britain dan Perancis menjanjikan wilayah kepada Itali"
     },
     {
       "source_id": "bab-3-2-extra-72",
       "bm_original": "Amerika Syarikat",
-      "translate": "释义：重点：Amerika Syarikat（原文：Amerika Syarikat）",
+      "translate": "美国",
       "key_points_zh": [
-        "重点：Amerika Syarikat"
+        "美国"
       ],
       "bm_focus_phrase": "Amerika Syarikat"
     },
     {
       "source_id": "bab-3-2-extra-73",
       "bm_original": "Pakatan Bertiga",
-      "translate": "释义：重点：Pakatan Bertiga（原文：Pakatan Bertiga）",
+      "translate": "三方联盟",
       "key_points_zh": [
-        "重点：Pakatan Bertiga"
+        "三方联盟"
       ],
       "bm_focus_phrase": "Pakatan Bertiga"
     },
     {
       "source_id": "bab-3-2-extra-74",
       "bm_original": "marah selepas kapal dagangnya diserang oleh kapal selam Jerman",
-      "translate": "marah 在……之后 kapal dagangnya diserang 由 kapal selam Jerman",
+      "translate": "他的商船遭到德国潜艇袭击后感到愤怒",
       "key_points_zh": [
-        "marah 在……之后 kapal dagangnya diserang 由 kapal selam Jerman"
+        "他的商船遭到德国潜艇袭击后感到愤怒"
       ],
       "bm_focus_phrase": "marah selepas kapal dagangnya diserang oleh kapal selam Jerman"
     },
     {
       "source_id": "bab-3-2-extra-75",
       "bm_original": "mahu mempertahankan demokrasi dunia",
-      "translate": "释义：重点：mahu mempertahankan demokrasi dunia（原文：mahu mempertahankan demokrasi dunia）",
+      "translate": "想要捍卫世界民主",
       "key_points_zh": [
-        "重点：mahu mempertahankan demokrasi dunia"
+        "想要捍卫世界民主"
       ],
       "bm_focus_phrase": "mahu mempertahankan demokrasi dunia"
     },
     {
       "source_id": "bab-3-2-u22",
       "bm_original": "Negara lain yang turut terlibat termasuk:",
-      "translate": "释义：Negara lain 的 turut terlibat termasuk:（原文：Negara lain yang turut terlibat termasuk:）",
+      "translate": "其他参与的国家包括：",
       "key_points_zh": [
-        "Negara lain 的 turut terlibat termasuk:"
+        "其他参与的国家包括："
       ],
       "bm_focus_phrase": "Negara lain yang turut terlibat termasuk:"
     },
     {
       "source_id": "bab-3-2-extra-76",
       "bm_original": "Bulgaria",
-      "translate": "释义：重点：Bulgaria（原文：Bulgaria）",
+      "translate": "保加利亚",
       "key_points_zh": [
-        "重点：Bulgaria"
+        "保加利亚"
       ],
       "bm_focus_phrase": "Bulgaria"
     },
     {
       "source_id": "bab-3-2-extra-77",
       "bm_original": "Portugal",
-      "translate": "释义：重点：Portugal（原文：Portugal）",
+      "translate": "葡萄牙",
       "key_points_zh": [
-        "重点：Portugal"
+        "葡萄牙"
       ],
       "bm_focus_phrase": "Portugal"
     },
     {
       "source_id": "bab-3-2-extra-78",
       "bm_original": "Romania",
-      "translate": "释义：重点：Romania（原文：Romania）",
+      "translate": "罗马尼亚",
       "key_points_zh": [
-        "重点：Romania"
+        "罗马尼亚"
       ],
       "bm_focus_phrase": "Romania"
     },
     {
       "source_id": "bab-3-2-extra-79",
       "bm_original": "Greece",
-      "translate": "释义：重点：Greece（原文：Greece）",
+      "translate": "希腊",
       "key_points_zh": [
-        "重点：Greece"
+        "希腊"
       ],
       "bm_focus_phrase": "Greece"
     },
     {
       "source_id": "bab-3-2-u23",
       "bm_original": "Namun, buku teks lebih menumpukan kepada kuasa besar dan peristiwa utama sahaja.",
-      "translate": "Namun, buku teks 更 menumpukan 向 kuasa besar和peristiwa 主要 sahaja.",
+      "translate": "然而，教科书更多地只关注超级大国和重大事件。",
       "key_points_zh": [
-        "Namun, buku teks 更 menumpukan 向 kuasa besar和peristiwa 主要 sahaja."
+        "然而，教科书更多地只关注超级大国和重大事件。"
       ],
       "bm_focus_phrase": "Namun, buku teks lebih menumpukan kepada kuasa besar dan peristiwa utama sahaja."
     },
     {
       "source_id": "bab-3-2-u24",
       "bm_original": "Perang Dunia Pertama berakhir pada 1918 selepas kemasukan 🇺🇸 Amerika Syarikat membantu Pakatan Bertiga .",
-      "translate": "Perang Dunia Pertama berakhir 于 1918 在……之后 kemasukan 🇺🇸 Amerika Syarikat membantu Pakatan Bertiga .",
+      "translate": "1918年，美国加入三国同盟，第一次世界大战结束。",
       "key_points_zh": [
-        "Perang Dunia Pertama berakhir 于 1918 在……之后 kemasukan 🇺🇸 Amerika Syarikat membantu Pakatan Bertiga ."
+        "1918年，美国加入三国同盟，第一次世界大战结束。"
       ],
       "bm_focus_phrase": "Perang Dunia Pertama berakhir pada 1918 selepas kemasukan 🇺🇸 Amerika Syarikat membantu Pakatan Bertiga ."
     },
     {
       "source_id": "bab-3-2-extra-80",
       "bm_original": "bab-3-2-extra-80",
-      "translate": "释义：重点：bab-3-2-extra-80（原文：bab-3-2-extra-80）",
+      "translate": "第3-2章-额外-80",
       "key_points_zh": [
-        "重点：bab-3-2-extra-80"
+        "第3-2章-额外-80"
       ],
       "bm_focus_phrase": "bab-3-2-extra-80"
     },
     {
       "source_id": "bab-3-2-extra-81",
       "bm_original": "bab-3-2-extra-81",
-      "translate": "释义：重点：bab-3-2-extra-81（原文：bab-3-2-extra-81）",
+      "translate": "第3-2-额外-81章",
       "key_points_zh": [
-        "重点：bab-3-2-extra-81"
+        "第3-2-额外-81章"
       ],
       "bm_focus_phrase": "bab-3-2-extra-81"
     },
     {
       "source_id": "bab-3-2-u25",
       "bm_original": "Kuasa Tengah akhirnya tewas dan dunia mula merancang perdamaian baharu.",
-      "translate": "释义：Kuasa Tengah akhirnya tewas和dunia mula merancang perdamaian baharu.（原文：Kuasa Tengah akhirnya tewas dan dunia mula merancang perdamaian baharu.）",
+      "translate": "中等强国最终被击败，世界开始规划新的和平。",
       "key_points_zh": [
-        "Kuasa Tengah akhirnya tewas和dunia mula merancang perdamaian baharu."
+        "中等强国最终被击败，世界开始规划新的和平。"
       ],
       "bm_focus_phrase": "Kuasa Tengah akhirnya tewas dan dunia mula merancang perdamaian baharu."
     },
     {
       "source_id": "bab-3-2-extra-82",
       "bm_original": "bab-3-2-extra-82",
-      "translate": "释义：重点：bab-3-2-extra-82（原文：bab-3-2-extra-82）",
+      "translate": "第3-2-额外-82章",
       "key_points_zh": [
-        "重点：bab-3-2-extra-82"
+        "第3-2-额外-82章"
       ],
       "bm_focus_phrase": "bab-3-2-extra-82"
     },
     {
       "source_id": "bab-3-2-extra-83",
       "bm_original": "18 Januari 1919",
-      "translate": "释义：重点：18 Januari 1919（原文：18 Januari 1919）",
+      "translate": "1919 年 1 月 18 日",
       "key_points_zh": [
-        "重点：18 Januari 1919"
+        "1919 年 1 月 18 日"
       ],
       "bm_focus_phrase": "18 Januari 1919"
     },
     {
       "source_id": "bab-3-2-u26",
       "bm_original": "Negara-negara pemenang bertemu untuk membincangkan syarat perdamaian.",
-      "translate": "释义：Negara-negara pemenang bertemu以求membincangkan syarat perdamaian.（原文：Negara-negara pemenang bertemu untuk membincangkan syarat perdamaian.）",
+      "translate": "战胜国开会讨论和平条款。",
       "key_points_zh": [
-        "Negara-negara pemenang bertemu以求membincangkan syarat perdamaian."
+        "战胜国开会讨论和平条款。"
       ],
       "bm_focus_phrase": "Negara-negara pemenang bertemu untuk membincangkan syarat perdamaian."
     },
     {
       "source_id": "bab-3-2-u27",
       "bm_original": "Prinsip utama deklarasi ini ialah:",
-      "translate": "Prinsip 主要 deklarasi 这 是:",
+      "translate": "本宣言的主要原则是：",
       "key_points_zh": [
-        "Prinsip 主要 deklarasi 这 是:"
+        "本宣言的主要原则是："
       ],
       "bm_focus_phrase": "Prinsip utama deklarasi ini ialah:"
     },
     {
       "source_id": "bab-3-2-extra-84",
       "bm_original": "rakyat berhak menentukan masa depan negara sendiri",
-      "translate": "释义：人民 berhak menentukan masa depan negara sendiri（原文：rakyat berhak menentukan masa depan negara sendiri）",
+      "translate": "人民有权利决定自己国家的未来",
       "key_points_zh": [
-        "人民 berhak menentukan masa depan negara sendiri"
+        "人民有权利决定自己国家的未来"
       ],
       "bm_focus_phrase": "rakyat berhak menentukan masa depan negara sendiri"
     },
     {
       "source_id": "bab-3-2-extra-85",
       "bm_original": "sempadan negara perlu berdasarkan bangsa",
-      "translate": "释义：重点：sempadan negara perlu berdasarkan bangsa（原文：sempadan negara perlu berdasarkan bangsa）",
+      "translate": "国家边界需要以种族为基础",
       "key_points_zh": [
-        "重点：sempadan negara perlu berdasarkan bangsa"
+        "国家边界需要以种族为基础"
       ],
       "bm_focus_phrase": "sempadan negara perlu berdasarkan bangsa"
     },
     {
       "source_id": "bab-3-2-extra-86",
       "bm_original": "perdamaian perlu dicapai secara adil",
-      "translate": "释义：重点：perdamaian perlu dicapai secara adil（原文：perdamaian perlu dicapai secara adil）",
+      "translate": "和平必须公平实现",
       "key_points_zh": [
-        "重点：perdamaian perlu dicapai secara adil"
+        "和平必须公平实现"
       ],
       "bm_focus_phrase": "perdamaian perlu dicapai secara adil"
     },
     {
       "source_id": "bab-3-2-extra-87",
       "bm_original": "28 Jun 1919",
-      "translate": "释义：重点：28 Jun 1919（原文：28 Jun 1919）",
+      "translate": "1919 年 6 月 28 日",
       "key_points_zh": [
-        "重点：28 Jun 1919"
+        "1919 年 6 月 28 日"
       ],
       "bm_focus_phrase": "28 Jun 1919"
     },
     {
       "source_id": "bab-3-2-u28",
       "bm_original": "Ditandatangani antara 🇩🇪 Jerman dengan kuasa pemenang perang.",
-      "translate": "释义：Ditandatangani 其中 🇩🇪 Jerman 以 kuasa pemenang perang.（原文：Ditandatangani antara 🇩🇪 Jerman dengan kuasa pemenang perang.）",
+      "translate": "🇩🇪德国与战争战胜国签署。",
       "key_points_zh": [
-        "Ditandatangani 其中 🇩🇪 Jerman 以 kuasa pemenang perang."
+        "🇩🇪德国与战争战胜国签署。"
       ],
       "bm_focus_phrase": "Ditandatangani antara 🇩🇪 Jerman dengan kuasa pemenang perang."
     },
     {
       "source_id": "bab-3-2-extra-88",
       "bm_original": "bab-3-2-extra-88",
-      "translate": "释义：重点：bab-3-2-extra-88（原文：bab-3-2-extra-88）",
+      "translate": "第3-2章-额外-88",
       "key_points_zh": [
-        "重点：bab-3-2-extra-88"
+        "第3-2章-额外-88"
       ],
       "bm_focus_phrase": "bab-3-2-extra-88"
     },
     {
       "source_id": "bab-3-2-u29",
       "bm_original": "Kesan terhadap Jerman:",
-      "translate": "影响 针对 Jerman:",
+      "translate": "对德国的影响：",
       "key_points_zh": [
-        "影响 针对 Jerman:"
+        "对德国的影响："
       ],
       "bm_focus_phrase": "Kesan terhadap Jerman:"
     },
     {
       "source_id": "bab-3-2-extra-89",
       "bm_original": "dipersalahkan atas kemusnahan perang",
-      "translate": "释义：重点：dipersalahkan atas kemusnahan perang（原文：dipersalahkan atas kemusnahan perang）",
+      "translate": "被指责为战争的破坏",
       "key_points_zh": [
-        "重点：dipersalahkan atas kemusnahan perang"
+        "被指责为战争的破坏"
       ],
       "bm_focus_phrase": "dipersalahkan atas kemusnahan perang"
     },
     {
       "source_id": "bab-3-2-extra-90",
       "bm_original": "dipaksa membayar pampasan yang besar",
-      "translate": "释义：dipaksa membayar pampasan 的 besar（原文：dipaksa membayar pampasan yang besar）",
+      "translate": "被迫支付巨额赔偿",
       "key_points_zh": [
-        "dipaksa membayar pampasan 的 besar"
+        "被迫支付巨额赔偿"
       ],
       "bm_focus_phrase": "dipaksa membayar pampasan yang besar"
     },
     {
       "source_id": "bab-3-2-extra-91",
       "bm_original": "jumlah tenteranya dikurangkan",
-      "translate": "释义：重点：jumlah tenteranya dikurangkan（原文：jumlah tenteranya dikurangkan）",
+      "translate": "他的军队人数减少了",
       "key_points_zh": [
-        "重点：jumlah tenteranya dikurangkan"
+        "他的军队人数减少了"
       ],
       "bm_focus_phrase": "jumlah tenteranya dikurangkan"
     },
     {
       "source_id": "bab-3-2-extra-92",
       "bm_original": "tanah jajahan dirampas dan diserahkan kepada negara lain",
-      "translate": "释义：tanah jajahan dirampas和diserahkan 向 negara lain（原文：tanah jajahan dirampas dan diserahkan kepada negara lain）",
+      "translate": "殖民地被夺取并移交给其他国家",
       "key_points_zh": [
-        "tanah jajahan dirampas和diserahkan 向 negara lain"
+        "殖民地被夺取并移交给其他国家"
       ],
       "bm_focus_phrase": "tanah jajahan dirampas dan diserahkan kepada negara lain"
     },
     {
       "source_id": "bab-3-2-u30",
       "bm_original": "Kesan penting lain ialah Liga Bangsa-Bangsa ditubuhkan untuk mengelakkan peperangan baharu.",
-      "translate": "影响 penting lain 是 Liga Bangsa-Bangsa ditubuhkan以求mengelakkan peperangan baharu.",
+      "translate": "另一个重要影响是国际联盟的成立是为了防止新的战争。",
       "key_points_zh": [
-        "影响 penting lain 是 Liga Bangsa-Bangsa ditubuhkan以求mengelakkan peperangan baharu."
+        "另一个重要影响是国际联盟的成立是为了防止新的战争。"
       ],
       "bm_focus_phrase": "Kesan penting lain ialah Liga Bangsa-Bangsa ditubuhkan untuk mengelakkan peperangan baharu."
     },
     {
       "source_id": "bab-3-2-extra-93",
       "bm_original": "kuasa Eropah mula lemah",
-      "translate": "释义：重点：kuasa Eropah mula lemah（原文：kuasa Eropah mula lemah）",
+      "translate": "欧洲力量开始衰弱",
       "key_points_zh": [
-        "重点：kuasa Eropah mula lemah"
+        "欧洲力量开始衰弱"
       ],
       "bm_focus_phrase": "kuasa Eropah mula lemah"
     },
     {
       "source_id": "bab-3-2-extra-94",
       "bm_original": "Amerika Syarikat muncul sebagai kuasa besar",
-      "translate": "释义：Amerika Syarikat muncul 作为 kuasa besar（原文：Amerika Syarikat muncul sebagai kuasa besar）",
+      "translate": "美国成为超级大国",
       "key_points_zh": [
-        "Amerika Syarikat muncul 作为 kuasa besar"
+        "美国成为超级大国"
       ],
       "bm_focus_phrase": "Amerika Syarikat muncul sebagai kuasa besar"
     },
     {
       "source_id": "bab-3-2-extra-95",
       "bm_original": "Jerman menanggung rasa tidak puas hati",
-      "translate": "释义：Jerman menanggung rasa 不 puas hati（原文：Jerman menanggung rasa tidak puas hati）",
+      "translate": "德国不满",
       "key_points_zh": [
-        "Jerman menanggung rasa 不 puas hati"
+        "德国不满"
       ],
       "bm_focus_phrase": "Jerman menanggung rasa tidak puas hati"
     },
     {
       "source_id": "bab-3-2-u31",
       "bm_original": "Keadaan ini akhirnya menjadi salah satu sebab yang membawa kepada Perang Dunia Kedua .",
-      "translate": "Keadaan 这 akhirnya menjadi salah satu sebab 的 membawa 向 第二次世界大战 .",
+      "translate": "这种情况最终成为导致第二次世界大战的原因之一。",
       "key_points_zh": [
-        "Keadaan 这 akhirnya menjadi salah satu sebab 的 membawa 向 第二次世界大战 ."
+        "这种情况最终成为导致第二次世界大战的原因之一。"
       ],
       "bm_focus_phrase": "Keadaan ini akhirnya menjadi salah satu sebab yang membawa kepada Perang Dunia Kedua ."
     },
     {
       "source_id": "bab-3-2-u32",
       "bm_original": "Perang Dunia Pertama membawa perubahan besar kepada dunia dari segi:",
-      "translate": "释义：Perang Dunia Pertama membawa perubahan besar 向 dunia dari segi:（原文：Perang Dunia Pertama membawa perubahan besar kepada dunia dari segi:）",
+      "translate": "第一次世界大战给世界带来了以下巨大变化：",
       "key_points_zh": [
-        "Perang Dunia Pertama membawa perubahan besar 向 dunia dari segi:"
+        "第一次世界大战给世界带来了以下巨大变化："
       ],
       "bm_focus_phrase": "Perang Dunia Pertama membawa perubahan besar kepada dunia dari segi:"
     },
     {
       "source_id": "bab-3-2-extra-96",
       "bm_original": "pemerintahan",
-      "translate": "释义：重点：pemerintahan（原文：pemerintahan）",
+      "translate": "政府",
       "key_points_zh": [
-        "重点：pemerintahan"
+        "政府"
       ],
       "bm_focus_phrase": "pemerintahan"
     },
     {
       "source_id": "bab-3-2-extra-97",
       "bm_original": "sempadan negara",
-      "translate": "释义：重点：sempadan negara（原文：sempadan negara）",
+      "translate": "国界",
       "key_points_zh": [
-        "重点：sempadan negara"
+        "国界"
       ],
       "bm_focus_phrase": "sempadan negara"
     },
     {
       "source_id": "bab-3-2-extra-98",
       "bm_original": "politik antarabangsa",
-      "translate": "释义：政治 antarabangsa（原文：politik antarabangsa）",
+      "translate": "国际政治",
       "key_points_zh": [
-        "政治 antarabangsa"
+        "国际政治"
       ],
       "bm_focus_phrase": "politik antarabangsa"
     },
     {
       "source_id": "bab-3-2-extra-99",
       "bm_original": "kedudukan Tanah Melayu",
-      "translate": "释义：重点：kedudukan Tanah Melayu（原文：kedudukan Tanah Melayu）",
+      "translate": "马来亚的立场",
       "key_points_zh": [
-        "重点：kedudukan Tanah Melayu"
+        "马来亚的立场"
       ],
       "bm_focus_phrase": "kedudukan Tanah Melayu"
     },
     {
       "source_id": "bab-3-2-u33",
       "bm_original": "Banyak sistem monarki di Eropah runtuh selepas perang.",
-      "translate": "释义：Banyak sistem monarki di Eropah runtuh 在……之后 perang.（原文：Banyak sistem monarki di Eropah runtuh selepas perang.）",
+      "translate": "欧洲的许多君主制体系在战后崩溃了。",
       "key_points_zh": [
-        "Banyak sistem monarki di Eropah runtuh 在……之后 perang."
+        "欧洲的许多君主制体系在战后崩溃了。"
       ],
       "bm_focus_phrase": "Banyak sistem monarki di Eropah runtuh selepas perang."
     },
     {
       "source_id": "bab-3-2-extra-100",
       "bm_original": "Jerman → Kaiser Wilhelm II turun takhta dan melarikan diri ke Belanda",
-      "translate": "释义：Jerman → Kaiser Wilhelm II turun takhta和melarikan diri ke Belanda（原文：Jerman → Kaiser Wilhelm II turun takhta dan melarikan diri ke Belanda）",
+      "translate": "德国 → 德皇威廉二世退位并逃往荷兰",
       "key_points_zh": [
-        "Jerman → Kaiser Wilhelm II turun takhta和melarikan diri ke Belanda"
+        "德国 → 德皇威廉二世退位并逃往荷兰"
       ],
       "bm_focus_phrase": "Jerman → Kaiser Wilhelm II turun takhta dan melarikan diri ke Belanda"
     },
     {
       "source_id": "bab-3-2-extra-101",
       "bm_original": "Jerman → digantikan dengan Republik Jerman",
-      "translate": "释义：Jerman → digantikan 以 Republik Jerman（原文：Jerman → digantikan dengan Republik Jerman）",
+      "translate": "德国 → 被德意志共和国取代",
       "key_points_zh": [
-        "Jerman → digantikan 以 Republik Jerman"
+        "德国 → 被德意志共和国取代"
       ],
       "bm_focus_phrase": "Jerman → digantikan dengan Republik Jerman"
     },
     {
       "source_id": "bab-3-2-extra-102",
       "bm_original": "Austria-Hungary → Dinasti Habsburg tamat apabila wilayah-wilayahnya memberontak",
-      "translate": "释义：重点：Austria-Hungary → Dinasti Habsburg tamat apabila wilayah-wilayahnya memberontak（原文：Austria-Hungary → Dinasti Habsburg tamat apabila wilayah-wilayahnya memberontak）",
+      "translate": "奥匈帝国 → 哈布斯堡王朝因各省叛乱而结束",
       "key_points_zh": [
-        "重点：Austria-Hungary → Dinasti Habsburg tamat apabila wilayah-wilayahnya memberontak"
+        "奥匈帝国 → 哈布斯堡王朝因各省叛乱而结束"
       ],
       "bm_focus_phrase": "Austria-Hungary → Dinasti Habsburg tamat apabila wilayah-wilayahnya memberontak"
     },
     {
       "source_id": "bab-3-2-extra-103",
       "bm_original": "Rusia → Tsar Nicholas II digulingkan",
-      "translate": "释义：重点：Rusia → Tsar Nicholas II digulingkan（原文：Rusia → Tsar Nicholas II digulingkan）",
+      "translate": "俄罗斯 → 沙皇尼古拉二世被推翻",
       "key_points_zh": [
-        "重点：Rusia → Tsar Nicholas II digulingkan"
+        "俄罗斯 → 沙皇尼古拉二世被推翻"
       ],
       "bm_focus_phrase": "Rusia → Tsar Nicholas II digulingkan"
     },
     {
       "source_id": "bab-3-2-extra-104",
       "bm_original": "Rusia → lahir kerajaan komunis pertama di dunia di bawah Vladimir Lenin",
-      "translate": "释义：Rusia → lahir 政府 komunis pertama di dunia di bawah Vladimir Lenin（原文：Rusia → lahir kerajaan komunis pertama di dunia di bawah Vladimir Lenin）",
+      "translate": "俄罗斯 → 在弗拉基米尔·列宁领导下诞生了世界上第一个共产主义政府",
       "key_points_zh": [
-        "Rusia → lahir 政府 komunis pertama di dunia di bawah Vladimir Lenin"
+        "俄罗斯 → 在弗拉基米尔·列宁领导下诞生了世界上第一个共产主义政府"
       ],
       "bm_focus_phrase": "Rusia → lahir kerajaan komunis pertama di dunia di bawah Vladimir Lenin"
     },
     {
       "source_id": "bab-3-2-extra-105",
       "bm_original": "Empayar Uthmaniyah → Sultan Mehmed VI digulingkan",
-      "translate": "释义：Empayar Uthmaniyah → Sultan Mehmed VI digulingkan（原文：Empayar Uthmaniyah → Sultan Mehmed VI digulingkan）",
+      "translate": "奥斯曼帝国 → 苏丹穆罕默德六世被推翻",
       "key_points_zh": [
-        "Empayar Uthmaniyah → Sultan Mehmed VI digulingkan"
+        "奥斯曼帝国 → 苏丹穆罕默德六世被推翻"
       ],
       "bm_focus_phrase": "Empayar Uthmaniyah → Sultan Mehmed VI digulingkan"
     },
     {
       "source_id": "bab-3-2-extra-106",
       "bm_original": "Turki → lahir Republik Turki di bawah Mustafa Kemal Atatürk",
-      "translate": "释义：重点：Turki → lahir Republik Turki di bawah Mustafa Kemal Atatürk（原文：Turki → lahir Republik Turki di bawah Mustafa Kemal Atatürk）",
+      "translate": "土耳其 → 在穆斯塔法·凯末尔·阿塔图尔克 (Mustafa Kemal Atatürk) 统治下成立土耳其共和国",
       "key_points_zh": [
-        "重点：Turki → lahir Republik Turki di bawah Mustafa Kemal Atatürk"
+        "土耳其 → 在穆斯塔法·凯末尔·阿塔图尔克 (Mustafa Kemal Atatürk) 统治下成立土耳其共和国"
       ],
       "bm_focus_phrase": "Turki → lahir Republik Turki di bawah Mustafa Kemal Atatürk"
     },
     {
       "source_id": "bab-3-2-u34",
       "bm_original": "Sistem lama digantikan dengan republik, revolusi dan ideologi baharu.",
-      "translate": "释义：Sistem lama digantikan 以 republik, revolusi和ideologi baharu.（原文：Sistem lama digantikan dengan republik, revolusi dan ideologi baharu.）",
+      "translate": "旧的制度被新的共和、革命和意识形态所取代。",
       "key_points_zh": [
-        "Sistem lama digantikan 以 republik, revolusi和ideologi baharu."
+        "旧的制度被新的共和、革命和意识形态所取代。"
       ],
       "bm_focus_phrase": "Sistem lama digantikan dengan republik, revolusi dan ideologi baharu."
     },
     {
       "source_id": "bab-3-2-u35",
       "bm_original": "Perpecahan empayar besar melahirkan banyak negara baharu.",
-      "translate": "释义：重点：Perpecahan empayar besar melahirkan banyak negara baharu.（原文：Perpecahan empayar besar melahirkan banyak negara baharu.）",
+      "translate": "伟大帝国的瓦解催生了许多新的国家。",
       "key_points_zh": [
-        "重点：Perpecahan empayar besar melahirkan banyak negara baharu."
+        "伟大帝国的瓦解催生了许多新的国家。"
       ],
       "bm_focus_phrase": "Perpecahan empayar besar melahirkan banyak negara baharu."
     },
     {
       "source_id": "bab-3-2-extra-107",
       "bm_original": "Austria",
-      "translate": "释义：重点：Austria（原文：Austria）",
+      "translate": "奥地利",
       "key_points_zh": [
-        "重点：Austria"
+        "奥地利"
       ],
       "bm_focus_phrase": "Austria"
     },
     {
       "source_id": "bab-3-2-extra-108",
       "bm_original": "Hungary",
-      "translate": "释义：重点：Hungary（原文：Hungary）",
+      "translate": "匈牙利",
       "key_points_zh": [
-        "重点：Hungary"
+        "匈牙利"
       ],
       "bm_focus_phrase": "Hungary"
     },
     {
       "source_id": "bab-3-2-extra-109",
       "bm_original": "Czechoslovakia",
-      "translate": "释义：重点：Czechoslovakia（原文：Czechoslovakia）",
+      "translate": "捷克斯洛伐克",
       "key_points_zh": [
-        "重点：Czechoslovakia"
+        "捷克斯洛伐克"
       ],
       "bm_focus_phrase": "Czechoslovakia"
     },
     {
       "source_id": "bab-3-2-extra-110",
       "bm_original": "Yugoslavia",
-      "translate": "释义：重点：Yugoslavia（原文：Yugoslavia）",
+      "translate": "南斯拉夫",
       "key_points_zh": [
-        "重点：Yugoslavia"
+        "南斯拉夫"
       ],
       "bm_focus_phrase": "Yugoslavia"
     },
     {
       "source_id": "bab-3-2-extra-111",
       "bm_original": "Poland",
-      "translate": "释义：重点：Poland（原文：Poland）",
+      "translate": "波兰",
       "key_points_zh": [
-        "重点：Poland"
+        "波兰"
       ],
       "bm_focus_phrase": "Poland"
     },
     {
       "source_id": "bab-3-2-extra-112",
       "bm_original": "Estonia",
-      "translate": "释义：重点：Estonia（原文：Estonia）",
+      "translate": "爱沙尼亚",
       "key_points_zh": [
-        "重点：Estonia"
+        "爱沙尼亚"
       ],
       "bm_focus_phrase": "Estonia"
     },
     {
       "source_id": "bab-3-2-extra-113",
       "bm_original": "Latvia",
-      "translate": "释义：重点：Latvia（原文：Latvia）",
+      "translate": "拉脱维亚",
       "key_points_zh": [
-        "重点：Latvia"
+        "拉脱维亚"
       ],
       "bm_focus_phrase": "Latvia"
     },
     {
       "source_id": "bab-3-2-extra-114",
       "bm_original": "Lithuania",
-      "translate": "释义：重点：Lithuania（原文：Lithuania）",
+      "translate": "立陶宛",
       "key_points_zh": [
-        "重点：Lithuania"
+        "立陶宛"
       ],
       "bm_focus_phrase": "Lithuania"
     },
     {
       "source_id": "bab-3-2-extra-115",
       "bm_original": "Lebanon",
-      "translate": "释义：重点：Lebanon（原文：Lebanon）",
+      "translate": "黎巴嫩",
       "key_points_zh": [
-        "重点：Lebanon"
+        "黎巴嫩"
       ],
       "bm_focus_phrase": "Lebanon"
     },
     {
       "source_id": "bab-3-2-extra-116",
       "bm_original": "Syria",
-      "translate": "释义：重点：Syria（原文：Syria）",
+      "translate": "叙利亚",
       "key_points_zh": [
-        "重点：Syria"
+        "叙利亚"
       ],
       "bm_focus_phrase": "Syria"
     },
     {
       "source_id": "bab-3-2-extra-117",
       "bm_original": "Iraq",
-      "translate": "释义：重点：Iraq（原文：Iraq）",
+      "translate": "伊拉克",
       "key_points_zh": [
-        "重点：Iraq"
+        "伊拉克"
       ],
       "bm_focus_phrase": "Iraq"
     },
     {
       "source_id": "bab-3-2-u36",
       "bm_original": "Banyak sempadan negara moden hari ini terbentuk selepas Perang Dunia Pertama .",
-      "translate": "Banyak sempadan negara moden hari 这 terbentuk 在……之后 Perang Dunia Pertama .",
+      "translate": "当今许多现代国家的边界​​都是在第一次世界大战后形成的。",
       "key_points_zh": [
-        "Banyak sempadan negara moden hari 这 terbentuk 在……之后 Perang Dunia Pertama ."
+        "当今许多现代国家的边界​​都是在第一次世界大战后形成的。"
       ],
       "bm_focus_phrase": "Banyak sempadan negara moden hari ini terbentuk selepas Perang Dunia Pertama ."
     },
     {
       "source_id": "bab-3-2-u37",
       "bm_original": "Walaupun perang berlaku jauh di Eropah , Tanah Melayu tetap menerima kesannya.",
-      "translate": "释义：Walaupun perang 发生 jauh di Eropah , Tanah Melayu tetap menerima kesannya.（原文：Walaupun perang berlaku jauh di Eropah , Tanah Melayu tetap menerima kesannya.）",
+      "translate": "尽管战争发生在遥远的欧洲，但马来亚仍然受到了影响。",
       "key_points_zh": [
-        "Walaupun perang 发生 jauh di Eropah , Tanah Melayu tetap menerima kesannya."
+        "尽管战争发生在遥远的欧洲，但马来亚仍然受到了影响。"
       ],
       "bm_focus_phrase": "Walaupun perang berlaku jauh di Eropah , Tanah Melayu tetap menerima kesannya."
     },
     {
       "source_id": "bab-3-2-u38",
       "bm_original": "Raja-raja Melayu diminta menyatakan sokongan kepada British .",
-      "translate": "释义：Raja-raja Melayu diminta menyatakan sokongan 向 British .（原文：Raja-raja Melayu diminta menyatakan sokongan kepada British .）",
+      "translate": "马来统治者被要求表达对英国人的支持。",
       "key_points_zh": [
-        "Raja-raja Melayu diminta menyatakan sokongan 向 British ."
+        "马来统治者被要求表达对英国人的支持。"
       ],
       "bm_focus_phrase": "Raja-raja Melayu diminta menyatakan sokongan kepada British ."
     },
     {
       "source_id": "bab-3-2-u39",
       "bm_original": "British turut meluluskan tiga undang-undang penting semasa perang:",
-      "translate": "释义：重点：British turut meluluskan tiga undang-undang penting semasa perang:（原文：British turut meluluskan tiga undang-undang penting semasa perang:）",
+      "translate": "英国还在战争期间通过了三项重要法律：",
       "key_points_zh": [
-        "重点：British turut meluluskan tiga undang-undang penting semasa perang:"
+        "英国还在战争期间通过了三项重要法律："
       ],
       "bm_focus_phrase": "British turut meluluskan tiga undang-undang penting semasa perang:"
     },
     {
       "source_id": "bab-3-2-u40",
       "bm_original": "To Vest in the High Commissioner Exceptional Power in Time of Public Emergency Enactment 1914",
-      "translate": "释义：重点：To Vest in the High Commissioner Exceptional Power in Time of Public Emergency Enactment 1914（原文：To Vest in the High Commissioner Exceptional Power in Time of Public Emergency Enactment 1914）",
+      "translate": "1914 年公共紧急状态法赋予高级专员特殊权力",
       "key_points_zh": [
-        "重点：To Vest in the High Commissioner Exceptional Power in Time of Public Emergency Enactment 1914"
+        "1914 年公共紧急状态法赋予高级专员特殊权力"
       ],
       "bm_focus_phrase": "To Vest in the High Commissioner Exceptional Power in Time of Public Emergency Enactment 1914"
     },
     {
       "source_id": "bab-3-2-extra-118",
       "bm_original": "bab-3-2-extra-118",
-      "translate": "释义：重点：bab-3-2-extra-118（原文：bab-3-2-extra-118）",
+      "translate": "第3-2章-额外-118",
       "key_points_zh": [
-        "重点：bab-3-2-extra-118"
+        "第3-2章-额外-118"
       ],
       "bm_focus_phrase": "bab-3-2-extra-118"
     },
     {
       "source_id": "bab-3-2-u41",
       "bm_original": "Trading With Enemy Enactment 1914",
-      "translate": "释义：重点：Trading With Enemy Enactment 1914（原文：Trading With Enemy Enactment 1914）",
+      "translate": "1914 年与敌贸易法",
       "key_points_zh": [
-        "重点：Trading With Enemy Enactment 1914"
+        "1914 年与敌贸易法"
       ],
       "bm_focus_phrase": "Trading With Enemy Enactment 1914"
     },
     {
       "source_id": "bab-3-2-extra-119",
       "bm_original": "bab-3-2-extra-119",
-      "translate": "释义：重点：bab-3-2-extra-119（原文：bab-3-2-extra-119）",
+      "translate": "第3-2章-额外-119",
       "key_points_zh": [
-        "重点：bab-3-2-extra-119"
+        "第3-2章-额外-119"
       ],
       "bm_focus_phrase": "bab-3-2-extra-119"
     },
     {
       "source_id": "bab-3-2-u42",
       "bm_original": "Naval and Military News (Emergency) Enactment 1914",
-      "translate": "释义：重点：Naval and Military News (Emergency) Enactment 1914（原文：Naval and Military News (Emergency) Enactment 1914）",
+      "translate": "1914 年海军和军事新闻（紧急）法案",
       "key_points_zh": [
-        "重点：Naval and Military News (Emergency) Enactment 1914"
+        "1914 年海军和军事新闻（紧急）法案"
       ],
       "bm_focus_phrase": "Naval and Military News (Emergency) Enactment 1914"
     },
     {
       "source_id": "bab-3-2-extra-120",
       "bm_original": "bab-3-2-extra-120",
-      "translate": "释义：重点：bab-3-2-extra-120（原文：bab-3-2-extra-120）",
+      "translate": "第3-2章-额外-120",
       "key_points_zh": [
-        "重点：bab-3-2-extra-120"
+        "第3-2章-额外-120"
       ],
       "bm_focus_phrase": "bab-3-2-extra-120"
     },
     {
       "source_id": "bab-3-2-u43",
       "bm_original": "Ekonomi negeri-negeri Melayu dimanipulasi untuk membantu British membiayai peperangan.",
-      "translate": "释义：Ekonomi negeri-negeri Melayu dimanipulasi以求membantu British membiayai peperangan.（原文：Ekonomi negeri-negeri Melayu dimanipulasi untuk membantu British membiayai peperangan.）",
+      "translate": "马来各邦的经济受到操纵，以帮助英国为战争提供资金。",
       "key_points_zh": [
-        "Ekonomi negeri-negeri Melayu dimanipulasi以求membantu British membiayai peperangan."
+        "马来各邦的经济受到操纵，以帮助英国为战争提供资金。"
       ],
       "bm_focus_phrase": "Ekonomi negeri-negeri Melayu dimanipulasi untuk membantu British membiayai peperangan."
     },
     {
       "source_id": "bab-3-2-u44",
       "bm_original": "Hasil utama yang digunakan ialah:",
-      "translate": "Hasil 主要 的 digunakan 是:",
+      "translate": "使用的主要结果是：",
       "key_points_zh": [
-        "Hasil 主要 的 digunakan 是:"
+        "使用的主要结果是："
       ],
       "bm_focus_phrase": "Hasil utama yang digunakan ialah:"
     },
     {
       "source_id": "bab-3-2-extra-121",
       "bm_original": "bijih timah",
-      "translate": "释义：重点：bijih timah（原文：bijih timah）",
+      "translate": "锡矿",
       "key_points_zh": [
-        "重点：bijih timah"
+        "锡矿"
       ],
       "bm_focus_phrase": "bijih timah"
     },
     {
       "source_id": "bab-3-2-extra-122",
       "bm_original": "getah",
-      "translate": "释义：重点：getah（原文：getah）",
+      "translate": "橡皮",
       "key_points_zh": [
-        "重点：getah"
+        "橡皮"
       ],
       "bm_focus_phrase": "getah"
     },
     {
       "source_id": "bab-3-2-u45",
       "bm_original": "Perang Dunia Pertama berpunca daripada:",
-      "translate": "释义：重点：Perang Dunia Pertama berpunca daripada:（原文：Perang Dunia Pertama berpunca daripada:）",
+      "translate": "第一次世界大战的起因是：",
       "key_points_zh": [
-        "重点：Perang Dunia Pertama berpunca daripada:"
+        "第一次世界大战的起因是："
       ],
       "bm_focus_phrase": "Perang Dunia Pertama berpunca daripada:"
     },
     {
       "source_id": "bab-3-2-extra-123",
       "bm_original": "persaingan kuasa imperialis",
-      "translate": "释义：重点：persaingan kuasa imperialis（原文：persaingan kuasa imperialis）",
+      "translate": "帝国主义权力竞争",
       "key_points_zh": [
-        "重点：persaingan kuasa imperialis"
+        "帝国主义权力竞争"
       ],
       "bm_focus_phrase": "persaingan kuasa imperialis"
     },
     {
       "source_id": "bab-3-2-extra-124",
       "bm_original": "pakatan ketenteraan",
-      "translate": "释义：重点：pakatan ketenteraan（原文：pakatan ketenteraan）",
+      "translate": "军事联盟",
       "key_points_zh": [
-        "重点：pakatan ketenteraan"
+        "军事联盟"
       ],
       "bm_focus_phrase": "pakatan ketenteraan"
     },
     {
       "source_id": "bab-3-2-extra-125",
       "bm_original": "krisis di Rantau Balkan",
-      "translate": "释义：重点：krisis di Rantau Balkan（原文：krisis di Rantau Balkan）",
+      "translate": "巴尔干危机",
       "key_points_zh": [
-        "重点：krisis di Rantau Balkan"
+        "巴尔干危机"
       ],
       "bm_focus_phrase": "krisis di Rantau Balkan"
     },
     {
       "source_id": "bab-3-2-u46",
       "bm_original": "Peperangan ini membawa kesan besar seperti:",
-      "translate": "释义：Peperangan 这 membawa 影响 besar seperti:（原文：Peperangan ini membawa kesan besar seperti:）",
+      "translate": "这场战争带来了巨大的影响，例如：",
       "key_points_zh": [
-        "Peperangan 这 membawa 影响 besar seperti:"
+        "这场战争带来了巨大的影响，例如："
       ],
       "bm_focus_phrase": "Peperangan ini membawa kesan besar seperti:"
     },
     {
       "source_id": "bab-3-2-extra-126",
       "bm_original": "keruntuhan empayar beraja",
-      "translate": "释义：keruntuhan empayar beraja（原文：keruntuhan empayar beraja）",
+      "translate": "君主政体的崩溃",
       "key_points_zh": [
-        "keruntuhan empayar beraja"
+        "君主政体的崩溃"
       ],
       "bm_focus_phrase": "keruntuhan empayar beraja"
     },
     {
       "source_id": "bab-3-2-extra-127",
       "bm_original": "kemunculan negara baharu",
-      "translate": "释义：重点：kemunculan negara baharu（原文：kemunculan negara baharu）",
+      "translate": "新国家的出现",
       "key_points_zh": [
-        "重点：kemunculan negara baharu"
+        "新国家的出现"
       ],
       "bm_focus_phrase": "kemunculan negara baharu"
     },
     {
       "source_id": "bab-3-2-extra-128",
       "bm_original": "perubahan politik dan ekonomi di Tanah Melayu",
-      "translate": "释义：perubahan 政治和ekonomi di Tanah Melayu（原文：perubahan politik dan ekonomi di Tanah Melayu）",
+      "translate": "马来亚的政治和经济变革",
       "key_points_zh": [
-        "perubahan 政治和ekonomi di Tanah Melayu"
+        "马来亚的政治和经济变革"
       ],
       "bm_focus_phrase": "perubahan politik dan ekonomi di Tanah Melayu"
     },
     {
       "source_id": "bab-3-2-u47",
       "bm_original": "Perang Dunia Pertama memberi pengajaran bahawa keamanan dunia amat penting. Namun, dunia gagal mengekalkan keamanan itu sepenuhnya, lalu Perang Dunia Kedua tercetus kira-kira 20 tahun kemudian.",
-      "translate": "Perang Dunia Pertama memberi pengajaran bahawa keamanan dunia amat penting. Namun, dunia 失败 mengekalkan keamanan 那 sepenuhnya, lalu 第二次世界大战 tercetus kira-kira 20 年 kemudian.",
+      "translate": "第一次世界大战告诉我们世界和平的重要性。然而世界未能完全维持和平，大约20年后第二次世界大战爆发。",
       "key_points_zh": [
-        "Perang Dunia Pertama memberi pengajaran bahawa keamanan dunia amat penting. Namun, dunia 失败 mengekalkan keamanan 那 sepenuhnya, lalu 第二次世界大战 tercetus kira-kira 20 年 kemudian."
+        "第一次世界大战告诉我们世界和平的重要性。然而世界未能完全维持和平，大约20年后第二次世界大战爆发。"
       ],
       "bm_focus_phrase": "Perang Dunia Pertama memberi pengajaran bahawa keamanan dunia amat penting. Namun, dunia gagal mengekalkan keamanan itu sepenuhnya, lalu Perang Dunia Kedua tercetus kira-kira 20 tahun kemudian."
     }

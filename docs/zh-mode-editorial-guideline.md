@@ -8,6 +8,15 @@ python3 scripts/enrich-zh-unit-translations.py data/zh-units/bab-X.json
 
 Skrip ini membungkus label pendek sebagai `释义：…（原文：…）` supaya semakan kualiti minimum (≥4 aksara Cina) dipenuhi; kemudian editor boleh menggantinya dengan ayat Cina penuh yang lebih lancar.
 
+**Jana semula ayat penuh daripada `bm_original` (contoh Bab 3):** skrip berasingan memanggil API terjemahan luar talian semasa penyuntingan repo (bukan semasa mod paparan pelajar):
+
+```bash
+pip install deep-translator   # sekali sahaja
+python3 scripts/regen-bab3-zh-translates.py
+```
+
+Hasilnya perlu **disemak manusia** untuk nama khas (Sultan, jawatan, ejaan rasmi) supaya selari dengan nota BM.
+
 ## Pengharaman Terjemahan (Wajib)
 Dalam teks Cina yang disunting, kategori berikut **hendaklah dikekalkan** dalam bentuk asal (BM / ejaan asal), dan jika perlu boleh diringi ringkasan Cina dalam kurungan:
 
