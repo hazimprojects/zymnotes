@@ -1,636 +1,637 @@
 {
   "meta": {
     "source_file": "notes/bab-3-1.html",
-    "rollout": "gelombang-1-manual-revision"
+    "rollout": "gelombang-1-ms-zh-regenerated",
+    "notes": "Translate fields regenerated from bm_original (ms→zh-CN) for fluent Simplified Chinese; proper names follow translator output—verify against BM notes."
   },
   "units": [
     {
       "source_id": "bab-3-1-u23",
       "bm_original": "Nasionalisme di negara kita berkembang daripada penentangan orang Melayu terhadap campur tangan British .",
-      "translate": "民族主义 di negara kita berkembang daripada 反对 orang Melayu 针对 campur tangan British .",
+      "translate": "我国的民族主义源于马来人反对英国干预。",
       "key_points_zh": [
-        "民族主义 di negara kita berkembang daripada 反对 orang Melayu 针对 campur tangan British ."
+        "我国的民族主义源于马来人反对英国干预。"
       ],
       "bm_focus_phrase": "Nasionalisme di negara kita berkembang daripada penentangan orang Melayu terhadap campur tangan British ."
     },
     {
       "source_id": "bab-3-1-u24",
       "bm_original": "Perkembangannya turut dipengaruhi oleh semangat Pan-Islamisme dan kebangkitan Empayar Uthmaniyah .",
-      "translate": "释义：Perkembangannya turut dipengaruhi 由 semangat Pan-Islamisme和kebangkitan Empayar Uthmaniyah .（原文：Perkembangannya turut dipengaruhi oleh semangat Pan-Islamisme dan kebangkitan Empayar Uthmaniyah .）",
+      "translate": "它的发展也受到泛伊斯兰精神和奥斯曼帝国崛起的影响。",
       "key_points_zh": [
-        "Perkembangannya turut dipengaruhi 由 semangat Pan-Islamisme和kebangkitan Empayar Uthmaniyah ."
+        "它的发展也受到泛伊斯兰精神和奥斯曼帝国崛起的影响。"
       ],
       "bm_focus_phrase": "Perkembangannya turut dipengaruhi oleh semangat Pan-Islamisme dan kebangkitan Empayar Uthmaniyah ."
     },
     {
       "source_id": "bab-3-1-u25",
       "bm_original": "Apabila penentangan terbuka ditekan, masyarakat Melayu menukar strategi kepada penulisan dan penerbitan .",
-      "translate": "Apabila 反对 terbuka ditekan, 社会 Melayu menukar strategi 向 penulisan和penerbitan .",
+      "translate": "当公开的反对被镇压后，马来社区改变了写作和出版的策略。",
       "key_points_zh": [
-        "Apabila 反对 terbuka ditekan, 社会 Melayu menukar strategi 向 penulisan和penerbitan ."
+        "当公开的反对被镇压后，马来社区改变了写作和出版的策略。"
       ],
       "bm_focus_phrase": "Apabila penentangan terbuka ditekan, masyarakat Melayu menukar strategi kepada penulisan dan penerbitan ."
     },
     {
       "source_id": "bab-3-1-u26",
       "bm_original": "Idea nasionalisme kemudian disampaikan secara simbolik , berlapik dan tersirat melalui akhbar serta karya kreatif.",
-      "translate": "Idea 民族主义 kemudian disampaikan secara simbolik , berlapik和tersirat借助报章 以及 karya kreatif.",
+      "translate": "然后，民族主义思想通过报纸和创意作品进行象征性、层次化和暗示性的传达。",
       "key_points_zh": [
-        "Idea 民族主义 kemudian disampaikan secara simbolik , berlapik和tersirat借助报章 以及 karya kreatif."
+        "然后，民族主义思想通过报纸和创意作品进行象征性、层次化和暗示性的传达。"
       ],
       "bm_focus_phrase": "Idea nasionalisme kemudian disampaikan secara simbolik , berlapik dan tersirat melalui akhbar serta karya kreatif."
     },
     {
       "source_id": "bab-3-1-u01",
       "bm_original": "Nasionalisme di negara kita bermula daripada penentangan orang Melayu terhadap campur tangan British.",
-      "translate": "民族主义 di negara kita bermula daripada 反对 orang Melayu 针对 campur tangan British.",
+      "translate": "我国的民族主义始于马来人反对英国干涉。",
       "key_points_zh": [
-        "民族主义 di negara kita bermula daripada 反对 orang Melayu 针对 campur tangan British."
+        "我国的民族主义始于马来人反对英国干涉。"
       ],
       "bm_focus_phrase": "Nasionalisme di negara kita bermula daripada penentangan orang Melayu terhadap campur tangan British."
     },
     {
       "source_id": "bab-3-1-u02",
       "bm_original": "Perkembangannya turut dipengaruhi oleh gerakan Islam antarabangsa, penulisan, penerbitan dan usaha masyarakat Melayu menentang penjajahan secara bijaksana.",
-      "translate": "Perkembangannya turut dipengaruhi 由 gerakan Islam antarabangsa, penulisan, penerbitan和usaha 社会 Melayu 反对 penjajahan secara bijaksana.",
+      "translate": "它的发展也受到国际伊斯兰运动、写作、出版以及马来社会明智地反对殖民主义的努力的影响。",
       "key_points_zh": [
-        "Perkembangannya turut dipengaruhi 由 gerakan Islam antarabangsa, penulisan, penerbitan和usaha 社会 Melayu 反对 penjajahan secara bijaksana."
+        "它的发展也受到国际伊斯兰运动、写作、出版以及马来社会明智地反对殖民主义的努力的影响。"
       ],
       "bm_focus_phrase": "Perkembangannya turut dipengaruhi oleh gerakan Islam antarabangsa, penulisan, penerbitan dan usaha masyarakat Melayu menentang penjajahan secara bijaksana."
     },
     {
       "source_id": "bab-3-1-u03",
       "bm_original": "Dengan persetujuan raja-raja Melayu, British memperkenalkan:",
-      "translate": "释义：Dengan persetujuan raja-raja Melayu, British memperkenalkan:（原文：Dengan persetujuan raja-raja Melayu, British memperkenalkan:）",
+      "translate": "经马来国王同意，英国人提出：",
       "key_points_zh": [
-        "Dengan persetujuan raja-raja Melayu, British memperkenalkan:"
+        "经马来国王同意，英国人提出："
       ],
       "bm_focus_phrase": "Dengan persetujuan raja-raja Melayu, British memperkenalkan:"
     },
     {
       "source_id": "bab-3-1-extra-1",
       "bm_original": "Enakmen Undang-Undang Islam 1904",
-      "translate": "释义：重点：Enakmen Undang-Undang Islam 1904（原文：Enakmen Undang-Undang Islam 1904）",
+      "translate": "1904 年颁布伊斯兰法",
       "key_points_zh": [
-        "重点：Enakmen Undang-Undang Islam 1904"
+        "1904 年颁布伊斯兰法"
       ],
       "bm_focus_phrase": "Enakmen Undang-Undang Islam 1904"
     },
     {
       "source_id": "bab-3-1-u04",
       "bm_original": "British turut menubuhkan dua badan penyiasat:",
-      "translate": "释义：British turut 成立 dua badan penyiasat:（原文：British turut menubuhkan dua badan penyiasat:）",
+      "translate": "英国还设立了两个调查机构：",
       "key_points_zh": [
-        "British turut 成立 dua badan penyiasat:"
+        "英国还设立了两个调查机构："
       ],
       "bm_focus_phrase": "British turut menubuhkan dua badan penyiasat:"
     },
     {
       "source_id": "bab-3-1-extra-2",
       "bm_original": "Criminal Intelligence Department (CID)",
-      "translate": "释义：重点：Criminal Intelligence Department (CID)（原文：Criminal Intelligence Department (CID)）",
+      "translate": "刑事情报部 (CID)",
       "key_points_zh": [
-        "重点：Criminal Intelligence Department (CID)"
+        "刑事情报部 (CID)"
       ],
       "bm_focus_phrase": "Criminal Intelligence Department (CID)"
     },
     {
       "source_id": "bab-3-1-extra-3",
       "bm_original": "Political Intelligence Bureau (PIB)",
-      "translate": "释义：重点：Political Intelligence Bureau (PIB)（原文：Political Intelligence Bureau (PIB)）",
+      "translate": "政治情报局 (PIB)",
       "key_points_zh": [
-        "重点：Political Intelligence Bureau (PIB)"
+        "政治情报局 (PIB)"
       ],
       "bm_focus_phrase": "Political Intelligence Bureau (PIB)"
     },
     {
       "source_id": "bab-3-1-u05",
       "bm_original": "Tujuannya untuk:",
-      "translate": "释义：Tujuannya 为了:（原文：Tujuannya untuk:）",
+      "translate": "目的是：",
       "key_points_zh": [
-        "Tujuannya 为了:"
+        "目的是："
       ],
       "bm_focus_phrase": "Tujuannya untuk:"
     },
     {
       "source_id": "bab-3-1-extra-4",
       "bm_original": "memantau kegiatan politik",
-      "translate": "释义：memantau kegiatan 政治（原文：memantau kegiatan politik）",
+      "translate": "监督政治活动",
       "key_points_zh": [
-        "memantau kegiatan 政治"
+        "监督政治活动"
       ],
       "bm_focus_phrase": "memantau kegiatan politik"
     },
     {
       "source_id": "bab-3-1-extra-5",
       "bm_original": "menyekat pengaruh gerakan Islam",
-      "translate": "释义：重点：menyekat pengaruh gerakan Islam（原文：menyekat pengaruh gerakan Islam）",
+      "translate": "阻止伊斯兰运动的影响",
       "key_points_zh": [
-        "重点：menyekat pengaruh gerakan Islam"
+        "阻止伊斯兰运动的影响"
       ],
       "bm_focus_phrase": "menyekat pengaruh gerakan Islam"
     },
     {
       "source_id": "bab-3-1-extra-6",
       "bm_original": "mengawal kebangkitan nasionalisme",
-      "translate": "mengawal kebangkitan 民族主义",
+      "translate": "控制民族主义的兴起",
       "key_points_zh": [
-        "mengawal kebangkitan 民族主义"
+        "控制民族主义的兴起"
       ],
       "bm_focus_phrase": "mengawal kebangkitan nasionalisme"
     },
     {
       "source_id": "bab-3-1-u06",
       "bm_original": "Penentangan Tok Janggut di Pasir Puteh, Kelantan lahir daripada gabungan:",
-      "translate": "释义：反对 Tok Janggut di Pasir Puteh, Kelantan lahir daripada gabungan:（原文：Penentangan Tok Janggut di Pasir Puteh, Kelantan lahir daripada gabungan:）",
+      "translate": "吉兰丹州巴西布地 (Pasir Puteh) 的 Tok Janggut 抵抗运动诞生于以下因素的结合：",
       "key_points_zh": [
-        "反对 Tok Janggut di Pasir Puteh, Kelantan lahir daripada gabungan:"
+        "吉兰丹州巴西布地 (Pasir Puteh) 的 Tok Janggut 抵抗运动诞生于以下因素的结合："
       ],
       "bm_focus_phrase": "Penentangan Tok Janggut di Pasir Puteh, Kelantan lahir daripada gabungan:"
     },
     {
       "source_id": "bab-3-1-extra-7",
       "bm_original": "semangat mempertahankan agama Islam",
-      "translate": "释义：重点：semangat mempertahankan agama Islam（原文：semangat mempertahankan agama Islam）",
+      "translate": "捍卫伊斯兰教的精神",
       "key_points_zh": [
-        "重点：semangat mempertahankan agama Islam"
+        "捍卫伊斯兰教的精神"
       ],
       "bm_focus_phrase": "semangat mempertahankan agama Islam"
     },
     {
       "source_id": "bab-3-1-extra-8",
       "bm_original": "kesedaran menentang penjajahan Barat",
-      "translate": "释义：kesedaran 反对 penjajahan Barat（原文：kesedaran menentang penjajahan Barat）",
+      "translate": "反对西方殖民主义的意识",
       "key_points_zh": [
-        "kesedaran 反对 penjajahan Barat"
+        "反对西方殖民主义的意识"
       ],
       "bm_focus_phrase": "kesedaran menentang penjajahan Barat"
     },
     {
       "source_id": "bab-3-1-extra-9",
       "bm_original": "penolakan terhadap cukai British",
-      "translate": "释义：penolakan 针对 cukai British（原文：penolakan terhadap cukai British）",
+      "translate": "拒绝英国税收",
       "key_points_zh": [
-        "penolakan 针对 cukai British"
+        "拒绝英国税收"
       ],
       "bm_focus_phrase": "penolakan terhadap cukai British"
     },
     {
       "source_id": "bab-3-1-extra-10",
       "bm_original": "bantahan terhadap sikap angkuh British",
-      "translate": "抗议 针对 sikap angkuh British",
+      "translate": "抗议英国人的傲慢",
       "key_points_zh": [
-        "抗议 针对 sikap angkuh British"
+        "抗议英国人的傲慢"
       ],
       "bm_focus_phrase": "bantahan terhadap sikap angkuh British"
     },
     {
       "source_id": "bab-3-1-u07",
       "bm_original": "Penduduk Melayu pula memberi sokongan kepada Empayar Uthmaniyah kerana dianggap sebagai:",
-      "translate": "Penduduk Melayu pula memberi sokongan 向 Empayar Uthmaniyah 因为 dianggap 作为:",
+      "translate": "另一方面，马来人支持奥斯曼帝国，因为它被认为是：",
       "key_points_zh": [
-        "Penduduk Melayu pula memberi sokongan 向 Empayar Uthmaniyah 因为 dianggap 作为:"
+        "另一方面，马来人支持奥斯曼帝国，因为它被认为是："
       ],
       "bm_focus_phrase": "Penduduk Melayu pula memberi sokongan kepada Empayar Uthmaniyah kerana dianggap sebagai:"
     },
     {
       "source_id": "bab-3-1-extra-11",
       "bm_original": "pelindung umat Islam",
-      "translate": "释义：重点：pelindung umat Islam（原文：pelindung umat Islam）",
+      "translate": "穆斯林的保护者",
       "key_points_zh": [
-        "重点：pelindung umat Islam"
+        "穆斯林的保护者"
       ],
       "bm_focus_phrase": "pelindung umat Islam"
     },
     {
       "source_id": "bab-3-1-extra-12",
       "bm_original": "penaung Mekah dan Madinah",
-      "translate": "释义：penaung Mekah和Madinah（原文：penaung Mekah dan Madinah）",
+      "translate": "麦加和麦地那的守护神",
       "key_points_zh": [
-        "penaung Mekah和Madinah"
+        "麦加和麦地那的守护神"
       ],
       "bm_focus_phrase": "penaung Mekah dan Madinah"
     },
     {
       "source_id": "bab-3-1-extra-13",
       "bm_original": "11 November 1914",
-      "translate": "释义：重点：11 November 1914（原文：11 November 1914）",
+      "translate": "1914 年 11 月 11 日",
       "key_points_zh": [
-        "重点：11 November 1914"
+        "1914 年 11 月 11 日"
       ],
       "bm_focus_phrase": "11 November 1914"
     },
     {
       "source_id": "bab-3-1-u08",
       "bm_original": "Empayar Uthmaniyah mengeluarkan fatwa jihad yang menyeru umat Islam bangkit menentang penjajahan Barat.",
-      "translate": "释义：Empayar Uthmaniyah mengeluarkan fatwa jihad 的 menyeru umat Islam bangkit 反对 penjajahan Barat.（原文：Empayar Uthmaniyah mengeluarkan fatwa jihad yang menyeru umat Islam bangkit menentang penjajahan Barat.）",
+      "translate": "奥斯曼帝国发布圣战令，号召穆斯林奋起反抗西方殖民主义。",
       "key_points_zh": [
-        "Empayar Uthmaniyah mengeluarkan fatwa jihad 的 menyeru umat Islam bangkit 反对 penjajahan Barat."
+        "奥斯曼帝国发布圣战令，号召穆斯林奋起反抗西方殖民主义。"
       ],
       "bm_focus_phrase": "Empayar Uthmaniyah mengeluarkan fatwa jihad yang menyeru umat Islam bangkit menentang penjajahan Barat."
     },
     {
       "source_id": "bab-3-1-u09",
       "bm_original": "Kegiatan politik orang Melayu dihalang oleh undang-undang British seperti:",
-      "translate": "释义：Kegiatan 政治 orang Melayu dihalang 由 undang-undang British seperti:（原文：Kegiatan politik orang Melayu dihalang oleh undang-undang British seperti:）",
+      "translate": "英国法律禁止马来人的政治活动，例如：",
       "key_points_zh": [
-        "Kegiatan 政治 orang Melayu dihalang 由 undang-undang British seperti:"
+        "英国法律禁止马来人的政治活动，例如："
       ],
       "bm_focus_phrase": "Kegiatan politik orang Melayu dihalang oleh undang-undang British seperti:"
     },
     {
       "source_id": "bab-3-1-extra-14",
       "bm_original": "Publishing and Book Enactment 1915",
-      "translate": "释义：重点：Publishing and Book Enactment 1915（原文：Publishing and Book Enactment 1915）",
+      "translate": "1915 年出版和书籍颁布",
       "key_points_zh": [
-        "重点：Publishing and Book Enactment 1915"
+        "1915 年出版和书籍颁布"
       ],
       "bm_focus_phrase": "Publishing and Book Enactment 1915"
     },
     {
       "source_id": "bab-3-1-extra-15",
       "bm_original": "The Seditious Publication (Prohibition) Enactment 1919",
-      "translate": "释义：重点：The Seditious Publication (Prohibition) Enactment 1919（原文：The Seditious Publication (Prohibition) Enactment 1919）",
+      "translate": "1919 年煽动性出版物（禁止）法案",
       "key_points_zh": [
-        "重点：The Seditious Publication (Prohibition) Enactment 1919"
+        "1919 年煽动性出版物（禁止）法案"
       ],
       "bm_focus_phrase": "The Seditious Publication (Prohibition) Enactment 1919"
     },
     {
       "source_id": "bab-3-1-u10",
       "bm_original": "Undang-undang ini menyebabkan orang Melayu:",
-      "translate": "释义：Undang-undang 这 menyebabkan orang Melayu:（原文：Undang-undang ini menyebabkan orang Melayu:）",
+      "translate": "该法律促使马来人：",
       "key_points_zh": [
-        "Undang-undang 这 menyebabkan orang Melayu:"
+        "该法律促使马来人："
       ],
       "bm_focus_phrase": "Undang-undang ini menyebabkan orang Melayu:"
     },
     {
       "source_id": "bab-3-1-extra-16",
       "bm_original": "tidak boleh menyuarakan pendapat politik secara terbuka",
-      "translate": "不 可以 menyuarakan pendapat 政治 secara terbuka",
+      "translate": "不能公开发表政治观点",
       "key_points_zh": [
-        "不 可以 menyuarakan pendapat 政治 secara terbuka"
+        "不能公开发表政治观点"
       ],
       "bm_focus_phrase": "tidak boleh menyuarakan pendapat politik secara terbuka"
     },
     {
       "source_id": "bab-3-1-extra-17",
       "bm_original": "tidak bebas menulis tentang perjuangan nasionalisme secara langsung",
-      "translate": "不 bebas menulis tentang 斗争 民族主义 secara langsung",
+      "translate": "不能自由地直接写民族主义斗争",
       "key_points_zh": [
-        "不 bebas menulis tentang 斗争 民族主义 secara langsung"
+        "不能自由地直接写民族主义斗争"
       ],
       "bm_focus_phrase": "tidak bebas menulis tentang perjuangan nasionalisme secara langsung"
     },
     {
       "source_id": "bab-3-1-u11",
       "bm_original": "Oleh itu, akhbar dan majalah menjadi medium penting untuk menyampaikan idea secara simbolik dan tersirat.",
-      "translate": "Oleh 那, 报章和majalah menjadi medium penting以求menyampaikan idea secara simbolik和tersirat.",
+      "translate": "因此，报纸杂志成为象征性、含蓄地传达思想的重要媒介。",
       "key_points_zh": [
-        "Oleh 那, 报章和majalah menjadi medium penting以求menyampaikan idea secara simbolik和tersirat."
+        "因此，报纸杂志成为象征性、含蓄地传达思想的重要媒介。"
       ],
       "bm_focus_phrase": "Oleh itu, akhbar dan majalah menjadi medium penting untuk menyampaikan idea secara simbolik dan tersirat."
     },
     {
       "source_id": "bab-3-1-u12",
       "bm_original": "Akhbar Melayu mula menyiarkan karya yang membawa mesej nasionalisme secara tersirat.",
-      "translate": "报章 Melayu mula menyiarkan karya 的 membawa mesej 民族主义 secara tersirat.",
+      "translate": "马来报纸开始发表隐含民族主义信息的作品。",
       "key_points_zh": [
-        "报章 Melayu mula menyiarkan karya 的 membawa mesej 民族主义 secara tersirat."
+        "马来报纸开始发表隐含民族主义信息的作品。"
       ],
       "bm_focus_phrase": "Akhbar Melayu mula menyiarkan karya yang membawa mesej nasionalisme secara tersirat."
     },
     {
       "source_id": "bab-3-1-extra-18",
       "bm_original": "Utusan Melayu",
-      "translate": "释义：重点：Utusan Melayu（原文：Utusan Melayu）",
+      "translate": "马来特使",
       "key_points_zh": [
-        "重点：Utusan Melayu"
+        "马来特使"
       ],
       "bm_focus_phrase": "Utusan Melayu"
     },
     {
       "source_id": "bab-3-1-extra-19",
       "bm_original": "Lembaga Melayu",
-      "translate": "释义：重点：Lembaga Melayu（原文：Lembaga Melayu）",
+      "translate": "马来委员会",
       "key_points_zh": [
-        "重点：Lembaga Melayu"
+        "马来委员会"
       ],
       "bm_focus_phrase": "Lembaga Melayu"
     },
     {
       "source_id": "bab-3-1-extra-20",
       "bm_original": "Lidah Teruna",
-      "translate": "释义：重点：Lidah Teruna（原文：Lidah Teruna）",
+      "translate": "特尔纳的舌头",
       "key_points_zh": [
-        "重点：Lidah Teruna"
+        "特尔纳的舌头"
       ],
       "bm_focus_phrase": "Lidah Teruna"
     },
     {
       "source_id": "bab-3-1-extra-21",
       "bm_original": "Pengasuh",
-      "translate": "释义：重点：Pengasuh（原文：Pengasuh）",
+      "translate": "保姆",
       "key_points_zh": [
-        "重点：Pengasuh"
+        "保姆"
       ],
       "bm_focus_phrase": "Pengasuh"
     },
     {
       "source_id": "bab-3-1-u13",
       "bm_original": "Cerita Tekukur ( 1920 )",
-      "translate": "释义：重点：Cerita Tekukur ( 1920 )（原文：Cerita Tekukur ( 1920 )）",
+      "translate": "测量故事 (1920)",
       "key_points_zh": [
-        "重点：Cerita Tekukur ( 1920 )"
+        "测量故事 (1920)"
       ],
       "bm_focus_phrase": "Cerita Tekukur ( 1920 )"
     },
     {
       "source_id": "bab-3-1-u14",
       "bm_original": "Salah satu karya simbolik yang terkenal ialah Cerita Tekukur .",
-      "translate": "释义：Salah satu karya simbolik 的 terkenal 是 Cerita Tekukur .（原文：Salah satu karya simbolik yang terkenal ialah Cerita Tekukur .）",
+      "translate": "著名的象征性作品之一是《Cerita Tekukur》。",
       "key_points_zh": [
-        "Salah satu karya simbolik 的 terkenal 是 Cerita Tekukur ."
+        "著名的象征性作品之一是《Cerita Tekukur》。"
       ],
       "bm_focus_phrase": "Salah satu karya simbolik yang terkenal ialah Cerita Tekukur ."
     },
     {
       "source_id": "bab-3-1-u15",
       "bm_original": "Karya ini:",
-      "translate": "释义：Karya 这:（原文：Karya ini:）",
+      "translate": "这项工作：",
       "key_points_zh": [
-        "Karya 这:"
+        "这项工作："
       ],
       "bm_focus_phrase": "Karya ini:"
     },
     {
       "source_id": "bab-3-1-extra-22",
       "bm_original": "menggunakan haiwan sebagai lambang",
-      "translate": "释义：menggunakan haiwan 作为 lambang（原文：menggunakan haiwan sebagai lambang）",
+      "translate": "使用动物作为符号",
       "key_points_zh": [
-        "menggunakan haiwan 作为 lambang"
+        "使用动物作为符号"
       ],
       "bm_focus_phrase": "menggunakan haiwan sebagai lambang"
     },
     {
       "source_id": "bab-3-1-extra-23",
       "bm_original": "menyampaikan mesej politik secara halus",
-      "translate": "释义：menyampaikan mesej 政治 secara halus（原文：menyampaikan mesej politik secara halus）",
+      "translate": "传达微妙的政治信息",
       "key_points_zh": [
-        "menyampaikan mesej 政治 secara halus"
+        "传达微妙的政治信息"
       ],
       "bm_focus_phrase": "menyampaikan mesej politik secara halus"
     },
     {
       "source_id": "bab-3-1-extra-24",
       "bm_original": "mengelakkan sekatan British",
-      "translate": "释义：重点：mengelakkan sekatan British（原文：mengelakkan sekatan British）",
+      "translate": "躲避英国的封锁",
       "key_points_zh": [
-        "重点：mengelakkan sekatan British"
+        "躲避英国的封锁"
       ],
       "bm_focus_phrase": "mengelakkan sekatan British"
     },
     {
       "source_id": "bab-3-1-u16",
       "bm_original": "Dalam karya ini terdapat rujukan kepada:",
-      "translate": "释义：Dalam karya 这 terdapat rujukan 向:（原文：Dalam karya ini terdapat rujukan kepada:）",
+      "translate": "在这项工作中，参考了：",
       "key_points_zh": [
-        "Dalam karya 这 terdapat rujukan 向:"
+        "在这项工作中，参考了："
       ],
       "bm_focus_phrase": "Dalam karya ini terdapat rujukan kepada:"
     },
     {
       "source_id": "bab-3-1-extra-25",
       "bm_original": "1874",
-      "translate": "释义：重点：1874（原文：1874）",
+      "translate": "1874年",
       "key_points_zh": [
-        "重点：1874"
+        "1874年"
       ],
       "bm_focus_phrase": "1874"
     },
     {
       "source_id": "bab-3-1-extra-26",
       "bm_original": "1909",
-      "translate": "释义：重点：1909（原文：1909）",
+      "translate": "1909年",
       "key_points_zh": [
-        "重点：1909"
+        "1909年"
       ],
       "bm_focus_phrase": "1909"
     },
     {
       "source_id": "bab-3-1-u17",
       "bm_original": "Tahun-tahun ini merujuk kepada negeri-negeri Melayu yang jatuh ke tangan British.",
-      "translate": "释义：Tahun-tahun 这 merujuk 向 negeri-negeri Melayu 的 jatuh ke tangan British.（原文：Tahun-tahun ini merujuk kepada negeri-negeri Melayu yang jatuh ke tangan British.）",
+      "translate": "这些年份指的是落入英国手中的马来州属。",
       "key_points_zh": [
-        "Tahun-tahun 这 merujuk 向 negeri-negeri Melayu 的 jatuh ke tangan British."
+        "这些年份指的是落入英国手中的马来州属。"
       ],
       "bm_focus_phrase": "Tahun-tahun ini merujuk kepada negeri-negeri Melayu yang jatuh ke tangan British."
     },
     {
       "source_id": "bab-3-1-u18",
       "bm_original": "Burung tekukur melambangkan nasib tanah air yang asalnya bebas tetapi akhirnya terkurung dalam “sangkar emas”.",
-      "translate": "释义：Burung tekukur melambangkan nasib tanah air 的 asalnya bebas tetapi akhirnya terkurung 在 “sangkar emas”.（原文：Burung tekukur melambangkan nasib tanah air yang asalnya bebas tetapi akhirnya terkurung dalam “sangkar emas”.）",
+      "translate": "特库库尔鸟象征着原本自由却被囚禁在“金笼”里的祖国的命运。",
       "key_points_zh": [
-        "Burung tekukur melambangkan nasib tanah air 的 asalnya bebas tetapi akhirnya terkurung 在 “sangkar emas”."
+        "特库库尔鸟象征着原本自由却被囚禁在“金笼”里的祖国的命运。"
       ],
       "bm_focus_phrase": "Burung tekukur melambangkan nasib tanah air yang asalnya bebas tetapi akhirnya terkurung dalam “sangkar emas”."
     },
     {
       "source_id": "bab-3-1-u19",
       "bm_original": "Keadaan ini menunjukkan kebijaksanaan nasionalis awal menggunakan penulisan kreatif untuk meneruskan perjuangan.",
-      "translate": "Keadaan 这 menunjukkan kebijaksanaan nasionalis awal menggunakan penulisan kreatif以求meneruskan 斗争.",
+      "translate": "这种情况显示了早期民族主义者利用创造性写作继续斗争的智慧。",
       "key_points_zh": [
-        "Keadaan 这 menunjukkan kebijaksanaan nasionalis awal menggunakan penulisan kreatif以求meneruskan 斗争."
+        "这种情况显示了早期民族主义者利用创造性写作继续斗争的智慧。"
       ],
       "bm_focus_phrase": "Keadaan ini menunjukkan kebijaksanaan nasionalis awal menggunakan penulisan kreatif untuk meneruskan perjuangan."
     },
     {
       "source_id": "bab-3-1-u20",
       "bm_original": "Kesedaran nasionalisme sebelum Perang Dunia berkembang secara berperingkat dan berhati-hati.",
-      "translate": "Kesedaran 民族主义 sebelum Perang Dunia berkembang secara berperingkat和berhati-hati.",
+      "translate": "战前的民族主义意识是逐渐而谨慎地发展起来的。",
       "key_points_zh": [
-        "Kesedaran 民族主义 sebelum Perang Dunia berkembang secara berperingkat和berhati-hati."
+        "战前的民族主义意识是逐渐而谨慎地发展起来的。"
       ],
       "bm_focus_phrase": "Kesedaran nasionalisme sebelum Perang Dunia berkembang secara berperingkat dan berhati-hati."
     },
     {
       "source_id": "bab-3-1-u21",
       "bm_original": "Walaupun ditekan oleh undang-undang British, masyarakat Melayu tetap meneruskan perjuangan melalui:",
-      "translate": "Walaupun ditekan 由 undang-undang British, 社会 Melayu tetap meneruskan 斗争 通过:",
+      "translate": "尽管受到英国法律的压力，马来社区仍然通过以下方式继续抗争：",
       "key_points_zh": [
-        "Walaupun ditekan 由 undang-undang British, 社会 Melayu tetap meneruskan 斗争 通过:"
+        "尽管受到英国法律的压力，马来社区仍然通过以下方式继续抗争："
       ],
       "bm_focus_phrase": "Walaupun ditekan oleh undang-undang British, masyarakat Melayu tetap meneruskan perjuangan melalui:"
     },
     {
       "source_id": "bab-3-1-extra-27",
       "bm_original": "penulisan kreatif",
-      "translate": "释义：重点：penulisan kreatif（原文：penulisan kreatif）",
+      "translate": "创意写作",
       "key_points_zh": [
-        "重点：penulisan kreatif"
+        "创意写作"
       ],
       "bm_focus_phrase": "penulisan kreatif"
     },
     {
       "source_id": "bab-3-1-extra-28",
       "bm_original": "akhbar dan penerbitan",
-      "translate": "释义：报章和penerbitan（原文：akhbar dan penerbitan）",
+      "translate": "报纸和出版物",
       "key_points_zh": [
-        "报章和penerbitan"
+        "报纸和出版物"
       ],
       "bm_focus_phrase": "akhbar dan penerbitan"
     },
     {
       "source_id": "bab-3-1-extra-29",
       "bm_original": "penyampaian idea secara simbolik dan tersirat",
-      "translate": "释义：penyampaian idea secara simbolik和tersirat（原文：penyampaian idea secara simbolik dan tersirat）",
+      "translate": "象征性和含蓄地传达思想",
       "key_points_zh": [
-        "penyampaian idea secara simbolik和tersirat"
+        "象征性和含蓄地传达思想"
       ],
       "bm_focus_phrase": "penyampaian idea secara simbolik dan tersirat"
     },
     {
       "source_id": "bab-3-1-u22",
       "bm_original": "Hal ini membuktikan bahawa nasionalisme awal di negara kita berkembang melalui kebijaksanaan, keberanian dan kesedaran politik masyarakat Melayu.",
-      "translate": "这证明我国早期的民族主义，是在马来社会的智慧、勇气与政治觉醒之下发展起来的。",
+      "translate": "这证明我国早期的民族主义是通过马来社群的智慧、勇气和政治意识而发展起来的。",
       "key_points_zh": [
-        "这证明我国早期的民族主义，是在马来社会的智慧、勇气与政治觉醒之下发展起来的。"
+        "这证明我国早期的民族主义是通过马来社群的智慧、勇气和政治意识而发展起来的。"
       ],
       "bm_focus_phrase": "Hal ini membuktikan bahawa nasionalisme awal di negara kita berkembang melalui kebijaksanaan, keberanian dan kesedaran politik masyarakat Melayu."
     },
     {
       "source_id": "bab-3-1-u27",
       "bm_original": "Subtopik ini menerangkan bagaimana nasionalisme mula berkembang di Tanah Melayu sebelum tercetusnya perang dunia. Perkembangan ini bermula daripada penentangan terhadap campur tangan British, dipengaruhi oleh gerakan Islam antarabangsa, dan diteruskan secara bijaksana melalui penulisan serta penerbitan.",
-      "translate": "本小节说明在世界大战爆发前，民族主义如何在马来亚萌芽。这一发展始于对英国干预的反抗，受到国际伊斯兰运动影响，并通过写作与出版以明智方式延续。",
+      "translate": "本副主题解释了二战爆发前民族主义如何在马来亚开始发展。这一发展始于对英国干预的抵制，受到国际伊斯兰运动的影响，并通过写作和出版谨慎地继续下去。",
       "key_points_zh": [
-        "本小节说明在世界大战爆发前，民族主义如何在马来亚萌芽。这一发展始于对英国干预的反抗，受到国际伊斯兰运动影响，并通过写作与出版以明智方式延续。"
+        "本副主题解释了二战爆发前民族主义如何在马来亚开始发展。这一发展始于对英国干预的抵制，受到国际伊斯兰运动的影响，并通过写作和出版谨慎地继续下去。"
       ],
       "bm_focus_phrase": "Subtopik ini menerangkan bagaimana nasionalisme mula berkembang di Tanah Melayu sebelum tercetusnya perang dunia."
     },
     {
       "source_id": "bab-3-1-u28",
       "bm_original": "Bagaimanakah nasionalisme mula berkembang di Tanah Melayu sebelum tercetusnya Perang Dunia?",
-      "translate": "在世界大战爆发前，民族主义是如何在马来亚开始发展的？",
+      "translate": "第二次世界大战爆发之前，马来亚的民族主义是如何开始发展的？",
       "key_points_zh": [
-        "在世界大战爆发前，民族主义是如何在马来亚开始发展的？"
+        "第二次世界大战爆发之前，马来亚的民族主义是如何开始发展的？"
       ],
       "bm_focus_phrase": "Bagaimanakah nasionalisme mula berkembang di Tanah Melayu sebelum tercetusnya Perang Dunia?"
     },
     {
       "source_id": "bab-3-1-u29",
       "bm_original": "Nasionalisme di negara kita berkembang secara berperingkat sebelum menjadi gerakan yang lebih terancang. Subtopik ini menelusuri tiga fasa perkembangan awal nasionalisme:",
-      "translate": "我国的民族主义分阶段发展，之后才成为更有组织的运动。本小节探讨早期民族主义发展的三个阶段：",
+      "translate": "我国的民族主义在成为更有组织的运动之前是逐渐发展起来的。本子主题追溯了民族主义早期发展的三个阶段：",
       "key_points_zh": [
-        "我国的民族主义分阶段发展，之后才成为更有组织的运动。本小节探讨早期民族主义发展的三个阶段："
+        "我国的民族主义在成为更有组织的运动之前是逐渐发展起来的。本子主题追溯了民族主义早期发展的三个阶段："
       ],
       "bm_focus_phrase": "Nasionalisme di negara kita berkembang secara berperingkat sebelum menjadi gerakan yang lebih terancang."
     },
     {
       "source_id": "bab-3-1-extra-30",
       "bm_original": "1️⃣ Kesedaran awal nasionalisme",
-      "translate": "重点：1️⃣ 民族主义的初步觉醒",
+      "translate": "1️⃣ 早期的民族主义意识",
       "key_points_zh": [
-        "重点：1️⃣ 民族主义的初步觉醒"
+        "1️⃣ 早期的民族主义意识"
       ],
       "bm_focus_phrase": "Kesedaran awal nasionalisme"
     },
     {
       "source_id": "bab-3-1-extra-31",
       "bm_original": "2️⃣ Penindasan dan strategi baharu",
-      "translate": "重点：2️⃣ 镇压与新策略",
+      "translate": "2️⃣ 压制和新策略",
       "key_points_zh": [
-        "重点：2️⃣ 镇压与新策略"
+        "2️⃣ 压制和新策略"
       ],
       "bm_focus_phrase": "Penindasan dan strategi baharu"
     },
     {
       "source_id": "bab-3-1-extra-32",
       "bm_original": "3️⃣ Nasionalisme secara berselindung",
-      "translate": "重点：3️⃣ 隐蔽的民族主义表达",
+      "translate": "3️⃣ 伪装的民族主义",
       "key_points_zh": [
-        "重点：3️⃣ 隐蔽的民族主义表达"
+        "3️⃣ 伪装的民族主义"
       ],
       "bm_focus_phrase": "Nasionalisme secara berselindung"
     },
     {
       "source_id": "bab-3-1-u30",
       "bm_original": "Campur tangan British ditentang secara terbuka oleh orang Melayu.",
-      "translate": "马来人公开反对英国的干预。",
+      "translate": "英国的干预遭到马来人的公开反对。",
       "key_points_zh": [
-        "马来人公开反对英国的干预。"
+        "英国的干预遭到马来人的公开反对。"
       ],
       "bm_focus_phrase": "Campur tangan British ditentang secara terbuka oleh orang Melayu."
     },
     {
       "source_id": "bab-3-1-u31",
       "bm_original": "Namun, penentangan ini menerima tindak balas keras daripada British.",
-      "translate": "然而，这一反抗遭到了英国的严厉回应。",
+      "translate": "然而，这种抵抗遭到了英国人的严厉回应。",
       "key_points_zh": [
-        "然而，这一反抗遭到了英国的严厉回应。"
+        "然而，这种抵抗遭到了英国人的严厉回应。"
       ],
       "bm_focus_phrase": "penentangan ini menerima tindak balas keras daripada British"
     },
     {
       "source_id": "bab-3-1-u32",
       "bm_original": "British bimbang akan pengaruh gerakan Islam dari Timur Tengah, khususnya semangat Pan-Islamisme dan kebangkitan Empayar Uthmaniyah.",
-      "translate": "英国担心来自中东的伊斯兰运动影响，尤其是泛伊斯兰主义精神与奥斯曼帝国的复兴。",
+      "translate": "英国人担心来自中东的伊斯兰运动的影响，尤其是泛伊斯兰主义精神和奥斯曼帝国的崛起。",
       "key_points_zh": [
-        "英国担心来自中东的伊斯兰运动影响，尤其是泛伊斯兰主义精神与奥斯曼帝国的复兴。"
+        "英国人担心来自中东的伊斯兰运动的影响，尤其是泛伊斯兰主义精神和奥斯曼帝国的崛起。"
       ],
       "bm_focus_phrase": "British bimbang akan pengaruh gerakan Islam dari Timur Tengah"
     },
     {
       "source_id": "bab-3-1-u33",
       "bm_original": "Undang-undang ini melarang penerbitan yang mengandungi unsur politik dan agama tanpa izin sultan.",
-      "translate": "这项法律禁止未经苏丹许可、含有政治与宗教内容的出版物。",
+      "translate": "该法禁止未经苏丹许可出版含有政治和宗教内容的出版物。",
       "key_points_zh": [
-        "这项法律禁止未经苏丹许可、含有政治与宗教内容的出版物。"
+        "该法禁止未经苏丹许可出版含有政治和宗教内容的出版物。"
       ],
       "bm_focus_phrase": "melarang penerbitan yang mengandungi unsur politik dan agama tanpa izin sultan"
     },
     {
       "source_id": "bab-3-1-u34",
       "bm_original": "Penentangan Tok Janggut akhirnya gagal akibat tindakan keras British.",
-      "translate": "东章谷的反抗最终因英国的强硬手段而失败。",
+      "translate": "托克·江古特的反抗最终因英国的镇压而失败。",
       "key_points_zh": [
-        "东章谷的反抗最终因英国的强硬手段而失败。"
+        "托克·江古特的反抗最终因英国的镇压而失败。"
       ],
       "bm_focus_phrase": "Penentangan Tok Janggut akhirnya gagal akibat tindakan keras British"
     },
     {
       "source_id": "bab-3-1-u35",
       "bm_original": "Keadaan ini menyebabkan masyarakat Melayu menyusun strategi baharu melalui penulisan dan penerbitan.",
-      "translate": "这一情况促使马来社会通过写作与出版筹划新策略。",
+      "translate": "这种情况促使马来社会通过写作和出版制定新的策略。",
       "key_points_zh": [
-        "这一情况促使马来社会通过写作与出版筹划新策略。"
+        "这种情况促使马来社会通过写作和出版制定新的策略。"
       ],
       "bm_focus_phrase": "masyarakat Melayu menyusun strategi baharu melalui penulisan dan penerbitan"
     },
     {
       "source_id": "bab-3-1-u36",
       "bm_original": "Perjuangan tidak lagi dilakukan secara terbuka, tetapi disampaikan secara berlapik dan tersirat.",
-      "translate": "斗争不再公开进行，而是以委婉、含蓄的方式传达。",
+      "translate": "斗争不再是公开进行，而是以分层、隐性的方式传达。",
       "key_points_zh": [
-        "斗争不再公开进行，而是以委婉、含蓄的方式传达。"
+        "斗争不再是公开进行，而是以分层、隐性的方式传达。"
       ],
       "bm_focus_phrase": "disampaikan secara berlapik dan tersirat"
     },
     {
       "source_id": "bab-3-1-u37",
       "bm_original": "Antara akhbar yang terlibat:",
-      "translate": "其中涉及的报章包括：",
+      "translate": "涉及的报纸包括：",
       "key_points_zh": [
-        "其中涉及的报章包括："
+        "涉及的报纸包括："
       ],
       "bm_focus_phrase": "Antara akhbar yang terlibat"
     },
     {
       "source_id": "bab-3-1-u38",
       "bm_original": "Semangat inilah yang menjadi asas kepada perkembangan nasionalisme yang lebih tersusun pada peringkat seterusnya.",
-      "translate": "正是这种精神，成为下一阶段更有组织的民族主义发展的基础。",
+      "translate": "这种精神是下一阶段发展更有组织的民族主义的基础。",
       "key_points_zh": [
-        "正是这种精神，成为下一阶段更有组织的民族主义发展的基础。"
+        "这种精神是下一阶段发展更有组织的民族主义的基础。"
       ],
       "bm_focus_phrase": "asas kepada perkembangan nasionalisme yang lebih tersusun"
     }

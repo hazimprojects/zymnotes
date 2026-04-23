@@ -1,645 +1,646 @@
 {
   "meta": {
     "source_file": "notes/bab-3-8.html",
-    "rollout": "gelombang-1-manual-revision"
+    "rollout": "gelombang-1-ms-zh-regenerated",
+    "notes": "Translate fields regenerated from bm_original (ms→zh-CN) for fluent Simplified Chinese; proper names follow translator output—verify against BM notes."
   },
   "units": [
     {
       "source_id": "bab-3-8-extra-1",
       "bm_original": "Jepun",
-      "translate": "释义：重点：Jepun（原文：Jepun）",
+      "translate": "日本",
       "key_points_zh": [
-        "重点：Jepun"
+        "日本"
       ],
       "bm_focus_phrase": "Jepun"
     },
     {
       "source_id": "bab-3-8-u44",
       "bm_original": "Pendudukan Jepun membawa perkembangan nasionalisme tempatan melalui semangat antipenjajah, keyakinan bahawa kuasa Eropah boleh ditewaskan, dan peluang politik yang muncul semasa pendudukan.",
-      "translate": "Pendudukan Jepun membawa perkembangan 民族主义 本地借助semangat antipenjajah, keyakinan bahawa kuasa Eropah 可以 ditewaskan,和peluang 政治 的 muncul semasa pendudukan.",
+      "translate": "日本的占领通过反殖民热情、欧洲列强可能被击败的信念以及占领期间出现的政治机会，导致了当地民族主义的发展。",
       "key_points_zh": [
-        "Pendudukan Jepun membawa perkembangan 民族主义 本地借助semangat antipenjajah, keyakinan bahawa kuasa Eropah 可以 ditewaskan,和peluang 政治 的 muncul semasa pendudukan."
+        "日本的占领通过反殖民热情、欧洲列强可能被击败的信念以及占领期间出现的政治机会，导致了当地民族主义的发展。"
       ],
       "bm_focus_phrase": "Pendudukan Jepun membawa perkembangan nasionalisme tempatan melalui semangat antipenjajah, keyakinan bahawa kuasa Eropah boleh ditewaskan, dan peluang politik yang muncul semasa pendudukan."
     },
     {
       "source_id": "bab-3-8-u45",
       "bm_original": "Di Tanah Melayu, perjuangan kemerdekaan orang Melayu berkembang melalui KMM , penglibatan dalam Giyu Gun dan Giyu Tai , serta penubuhan KRIS sebelum perjuangan diteruskan oleh PKMM .",
-      "translate": "Di Tanah Melayu, 斗争 独立 orang Melayu berkembang借助KMM , penglibatan 在 Giyu Gun和Giyu Tai , 以及 成立 KRIS sebelum 斗争 diteruskan 由 PKMM .",
+      "translate": "在马来亚，争取马来人独立的斗争是通过KMM、参与机友军和机友台以及KRIS的建立而发展起来的，然后才由PKMM继续斗争。",
       "key_points_zh": [
-        "Di Tanah Melayu, 斗争 独立 orang Melayu berkembang借助KMM , penglibatan 在 Giyu Gun和Giyu Tai , 以及 成立 KRIS sebelum 斗争 diteruskan 由 PKMM ."
+        "在马来亚，争取马来人独立的斗争是通过KMM、参与机友军和机友台以及KRIS的建立而发展起来的，然后才由PKMM继续斗争。"
       ],
       "bm_focus_phrase": "Di Tanah Melayu, perjuangan kemerdekaan orang Melayu berkembang melalui KMM , penglibatan dalam Giyu Gun dan Giyu Tai , serta penubuhan KRIS sebelum perjuangan diteruskan oleh PKMM ."
     },
     {
       "source_id": "bab-3-8-u46",
       "bm_original": "Di Sarawak dan Sabah, peluang memegang jawatan lebih tinggi dan penubuhan pertubuhan baharu menimbulkan keyakinan politik untuk mentadbir sendiri selepas perang.",
-      "translate": "Di Sarawak和Sabah, peluang memegang jawatan 更 tinggi和成立 pertubuhan baharu menimbulkan keyakinan 政治以求mentadbir sendiri 在……之后 perang.",
+      "translate": "在砂拉越和沙巴，担任公职的机会更高，新组织的建立创造了战后自我管理的政治信心。",
       "key_points_zh": [
-        "Di Sarawak和Sabah, peluang memegang jawatan 更 tinggi和成立 pertubuhan baharu menimbulkan keyakinan 政治以求mentadbir sendiri 在……之后 perang."
+        "在砂拉越和沙巴，担任公职的机会更高，新组织的建立创造了战后自我管理的政治信心。"
       ],
       "bm_focus_phrase": "Di Sarawak dan Sabah, peluang memegang jawatan lebih tinggi dan penubuhan pertubuhan baharu menimbulkan keyakinan politik untuk mentadbir sendiri selepas perang."
     },
     {
       "source_id": "bab-3-8-u01",
       "bm_original": "Pendudukan Jepun meninggalkan kesan besar terhadap kehidupan masyarakat di negara kita dan dasar pemerintahan Jepun membawa perkembangan nasionalisme dalam kalangan penduduk tempatan.",
-      "translate": "Pendudukan Jepun meninggalkan 影响 besar 针对 kehidupan 社会 di negara kita和dasar pemerintahan Jepun membawa perkembangan 民族主义 在 kalangan penduduk 本地.",
+      "translate": "日本的占领给我国人民的生活带来了很大的影响，日本政府的政策导致了当地民众民族主义的发展。",
       "key_points_zh": [
-        "Pendudukan Jepun meninggalkan 影响 besar 针对 kehidupan 社会 di negara kita和dasar pemerintahan Jepun membawa perkembangan 民族主义 在 kalangan penduduk 本地."
+        "日本的占领给我国人民的生活带来了很大的影响，日本政府的政策导致了当地民众民族主义的发展。"
       ],
       "bm_focus_phrase": "Pendudukan Jepun meninggalkan kesan besar terhadap kehidupan masyarakat di negara kita dan dasar pemerintahan Jepun membawa perkembangan nasionalisme dalam kalangan penduduk tempatan."
     },
     {
       "source_id": "bab-3-8-u02",
       "bm_original": "Antara kesan pentingnya ialah perkembangan semangat antipenjajah, perjuangan menuntut kemerdekaan dalam kalangan orang Melayu, serta kesedaran politik di Sarawak dan Sabah.",
-      "translate": "Antara 影响 pentingnya 是 perkembangan semangat antipenjajah, 斗争 menuntut 独立 在 kalangan orang Melayu, 以及 kesedaran 政治 di Sarawak和Sabah.",
+      "translate": "其中重要影响包括反殖民主义的发展、马来人争取独立的斗争以及砂拉越和沙巴的政治意识。",
       "key_points_zh": [
-        "Antara 影响 pentingnya 是 perkembangan semangat antipenjajah, 斗争 menuntut 独立 在 kalangan orang Melayu, 以及 kesedaran 政治 di Sarawak和Sabah."
+        "其中重要影响包括反殖民主义的发展、马来人争取独立的斗争以及砂拉越和沙巴的政治意识。"
       ],
       "bm_focus_phrase": "Antara kesan pentingnya ialah perkembangan semangat antipenjajah, perjuangan menuntut kemerdekaan dalam kalangan orang Melayu, serta kesedaran politik di Sarawak dan Sabah."
     },
     {
       "source_id": "bab-3-8-u03",
       "bm_original": "Perkembangan nasionalisme tempatan semasa pendudukan Jepun dapat dilihat melalui tiga aspek utama:",
-      "translate": "Perkembangan 民族主义 本地 semasa pendudukan Jepun dapat dilihat借助tiga aspek 主要:",
+      "translate": "日治时期本土民族主义的发展主要可以从三个方面来看：",
       "key_points_zh": [
-        "Perkembangan 民族主义 本地 semasa pendudukan Jepun dapat dilihat借助tiga aspek 主要:"
+        "日治时期本土民族主义的发展主要可以从三个方面来看："
       ],
       "bm_focus_phrase": "Perkembangan nasionalisme tempatan semasa pendudukan Jepun dapat dilihat melalui tiga aspek utama:"
     },
     {
       "source_id": "bab-3-8-extra-2",
       "bm_original": "1️⃣ perkembangan semangat antipenjajah 💥",
-      "translate": "释义：重点：1️⃣ perkembangan semangat antipenjajah 💥（原文：1️⃣ perkembangan semangat antipenjajah 💥）",
+      "translate": "1️⃣反殖民精神的发展💥",
       "key_points_zh": [
-        "重点：1️⃣ perkembangan semangat antipenjajah 💥"
+        "1️⃣反殖民精神的发展💥"
       ],
       "bm_focus_phrase": "1️⃣ perkembangan semangat antipenjajah 💥"
     },
     {
       "source_id": "bab-3-8-extra-3",
       "bm_original": "2️⃣ perjuangan menuntut kemerdekaan dalam kalangan orang Melayu 🇲🇾",
-      "translate": "2️⃣ 斗争 menuntut 独立 在 kalangan orang Melayu 🇲🇾",
+      "translate": "2️⃣马来人争取独立的斗争🇲🇾",
       "key_points_zh": [
-        "2️⃣ 斗争 menuntut 独立 在 kalangan orang Melayu 🇲🇾"
+        "2️⃣马来人争取独立的斗争🇲🇾"
       ],
       "bm_focus_phrase": "2️⃣ perjuangan menuntut kemerdekaan dalam kalangan orang Melayu 🇲🇾"
     },
     {
       "source_id": "bab-3-8-extra-4",
       "bm_original": "3️⃣ kesedaran politik di Sarawak dan Sabah 🌳🌊",
-      "translate": "释义：3️⃣ kesedaran 政治 di Sarawak和Sabah 🌳🌊（原文：3️⃣ kesedaran politik di Sarawak dan Sabah 🌳🌊）",
+      "translate": "3️⃣砂拉越和沙巴的政治意识🌳🌊",
       "key_points_zh": [
-        "3️⃣ kesedaran 政治 di Sarawak和Sabah 🌳🌊"
+        "3️⃣砂拉越和沙巴的政治意识🌳🌊"
       ],
       "bm_focus_phrase": "3️⃣ kesedaran politik di Sarawak dan Sabah 🌳🌊"
     },
     {
       "source_id": "bab-3-8-u04",
       "bm_original": "Pendudukan Jepun di Tanah Melayu berlaku ketika bibit-bibit kesedaran nasionalisme mula berkembang sebelum Perang Dunia Kedua .",
-      "translate": "Pendudukan Jepun di Tanah Melayu 发生 ketika bibit-bibit kesedaran 民族主义 mula berkembang sebelum 第二次世界大战 .",
+      "translate": "日本占领马来亚是在第二次世界大战前民族主义的种子开始生长的时候发生的。",
       "key_points_zh": [
-        "Pendudukan Jepun di Tanah Melayu 发生 ketika bibit-bibit kesedaran 民族主义 mula berkembang sebelum 第二次世界大战 ."
+        "日本占领马来亚是在第二次世界大战前民族主义的种子开始生长的时候发生的。"
       ],
       "bm_focus_phrase": "Pendudukan Jepun di Tanah Melayu berlaku ketika bibit-bibit kesedaran nasionalisme mula berkembang sebelum Perang Dunia Kedua ."
     },
     {
       "source_id": "bab-3-8-u05",
       "bm_original": "Jepun menggunakan slogan dan konsep seperti:",
-      "translate": "释义：Jepun menggunakan slogan和konsep seperti:（原文：Jepun menggunakan slogan dan konsep seperti:）",
+      "translate": "日本使用的口号和概念包括：",
       "key_points_zh": [
-        "Jepun menggunakan slogan和konsep seperti:"
+        "日本使用的口号和概念包括："
       ],
       "bm_focus_phrase": "Jepun menggunakan slogan dan konsep seperti:"
     },
     {
       "source_id": "bab-3-8-extra-5",
       "bm_original": "“Asia untuk Asia”",
-      "translate": "释义：“Asia以求Asia”（原文：“Asia untuk Asia”）",
+      "translate": "“亚洲为了亚洲”",
       "key_points_zh": [
-        "“Asia以求Asia”"
+        "“亚洲为了亚洲”"
       ],
       "bm_focus_phrase": "“Asia untuk Asia”"
     },
     {
       "source_id": "bab-3-8-extra-6",
       "bm_original": "“Lingkungan Sekemakmuran Asia Timur Raya”",
-      "translate": "释义：重点：“Lingkungan Sekemakmuran Asia Timur Raya”（原文：“Lingkungan Sekemakmuran Asia Timur Raya”）",
+      "translate": "“大东亚联合体”",
       "key_points_zh": [
-        "重点：“Lingkungan Sekemakmuran Asia Timur Raya”"
+        "“大东亚联合体”"
       ],
       "bm_focus_phrase": "“Lingkungan Sekemakmuran Asia Timur Raya”"
     },
     {
       "source_id": "bab-3-8-u06",
       "bm_original": "Konsep ini menekankan:",
-      "translate": "释义：Konsep 这 menekankan:（原文：Konsep ini menekankan:）",
+      "translate": "这个概念强调：",
       "key_points_zh": [
-        "Konsep 这 menekankan:"
+        "这个概念强调："
       ],
       "bm_focus_phrase": "Konsep ini menekankan:"
     },
     {
       "source_id": "bab-3-8-extra-7",
       "bm_original": "kebebasan negara Asia",
-      "translate": "释义：重点：kebebasan negara Asia（原文：kebebasan negara Asia）",
+      "translate": "亚洲国家的自由",
       "key_points_zh": [
-        "重点：kebebasan negara Asia"
+        "亚洲国家的自由"
       ],
       "bm_focus_phrase": "kebebasan negara Asia"
     },
     {
       "source_id": "bab-3-8-extra-8",
       "bm_original": "menentukan kemajuan sendiri",
-      "translate": "释义：重点：menentukan kemajuan sendiri（原文：menentukan kemajuan sendiri）",
+      "translate": "决定自己的进步",
       "key_points_zh": [
-        "重点：menentukan kemajuan sendiri"
+        "决定自己的进步"
       ],
       "bm_focus_phrase": "menentukan kemajuan sendiri"
     },
     {
       "source_id": "bab-3-8-extra-9",
       "bm_original": "meningkatkan persaudaraan sejagat",
-      "translate": "释义：提升 persaudaraan sejagat（原文：meningkatkan persaudaraan sejagat）",
+      "translate": "增进普遍兄弟情谊",
       "key_points_zh": [
-        "提升 persaudaraan sejagat"
+        "增进普遍兄弟情谊"
       ],
       "bm_focus_phrase": "meningkatkan persaudaraan sejagat"
     },
     {
       "source_id": "bab-3-8-u07",
       "bm_original": "Konsep ini selari dengan perjuangan sebahagian daripada golongan nasionalis di Tanah Melayu, terutama Kesatuan Melayu Muda (KMM) .",
-      "translate": "Konsep 这 selari 以 斗争 部分 daripada golongan nasionalis di Tanah Melayu, terutama Kesatuan Melayu Muda (KMM) .",
+      "translate": "这个概念与马来亚一些民族主义团体，特别是马来青年联盟（KMM）的斗争是一致的。",
       "key_points_zh": [
-        "Konsep 这 selari 以 斗争 部分 daripada golongan nasionalis di Tanah Melayu, terutama Kesatuan Melayu Muda (KMM) ."
+        "这个概念与马来亚一些民族主义团体，特别是马来青年联盟（KMM）的斗争是一致的。"
       ],
       "bm_focus_phrase": "Konsep ini selari dengan perjuangan sebahagian daripada golongan nasionalis di Tanah Melayu, terutama Kesatuan Melayu Muda (KMM) ."
     },
     {
       "source_id": "bab-3-8-u08",
       "bm_original": "KMM bekerjasama dengan Jepun dan berharap Jepun dapat memberikan kemerdekaan kepada Tanah Melayu.",
-      "translate": "KMM bekerjasama 以 Jepun和berharap Jepun dapat memberikan 独立 向 Tanah Melayu.",
+      "translate": "KMM与日本合作，希望日本能够给予马来亚独立。",
       "key_points_zh": [
-        "KMM bekerjasama 以 Jepun和berharap Jepun dapat memberikan 独立 向 Tanah Melayu."
+        "KMM与日本合作，希望日本能够给予马来亚独立。"
       ],
       "bm_focus_phrase": "KMM bekerjasama dengan Jepun dan berharap Jepun dapat memberikan kemerdekaan kepada Tanah Melayu."
     },
     {
       "source_id": "bab-3-8-u09",
       "bm_original": "Kejayaan tentera Jepun mengalahkan 🇬🇧 British menyedarkan orang tempatan bahawa orang Asia juga mampu mengalahkan orang Eropah yang dianggap kuasa besar.",
-      "translate": "Kejayaan tentera Jepun mengalahkan 🇬🇧 British menyedarkan orang 本地 bahawa orang Asia 也 mampu mengalahkan orang Eropah 的 dianggap kuasa besar.",
+      "translate": "日本军队击败英国🇬🇧的成功让当地人意识到亚洲人也有能力击败被视为超级大国的欧洲人。",
       "key_points_zh": [
-        "Kejayaan tentera Jepun mengalahkan 🇬🇧 British menyedarkan orang 本地 bahawa orang Asia 也 mampu mengalahkan orang Eropah 的 dianggap kuasa besar."
+        "日本军队击败英国🇬🇧的成功让当地人意识到亚洲人也有能力击败被视为超级大国的欧洲人。"
       ],
       "bm_focus_phrase": "Kejayaan tentera Jepun mengalahkan 🇬🇧 British menyedarkan orang tempatan bahawa orang Asia juga mampu mengalahkan orang Eropah yang dianggap kuasa besar."
     },
     {
       "source_id": "bab-3-8-extra-10",
       "bm_original": "bab-3-8-extra-10",
-      "translate": "释义：重点：bab-3-8-extra-10（原文：bab-3-8-extra-10）",
+      "translate": "第3-8-额外-10章",
       "key_points_zh": [
-        "重点：bab-3-8-extra-10"
+        "第3-8-额外-10章"
       ],
       "bm_focus_phrase": "bab-3-8-extra-10"
     },
     {
       "source_id": "bab-3-8-u10",
       "bm_original": "Kesedaran ini telah menyemarakkan semangat antipenjajah dan menambahkan keyakinan rakyat tempatan.",
-      "translate": "Kesedaran 这 已经 menyemarakkan semangat antipenjajah和menambahkan keyakinan 人民 本地.",
+      "translate": "这种意识激发了当地人民的反殖民精神，增强了信心。",
       "key_points_zh": [
-        "Kesedaran 这 已经 menyemarakkan semangat antipenjajah和menambahkan keyakinan 人民 本地."
+        "这种意识激发了当地人民的反殖民精神，增强了信心。"
       ],
       "bm_focus_phrase": "Kesedaran ini telah menyemarakkan semangat antipenjajah dan menambahkan keyakinan rakyat tempatan."
     },
     {
       "source_id": "bab-3-8-u11",
       "bm_original": "Langkah awal tentera Jepun membangkitkan nasionalisme dalam kalangan orang Melayu ialah dengan membebaskan ahli KMM yang dipenjarakan oleh British.",
-      "translate": "步骤 awal tentera Jepun membangkitkan 民族主义 在 kalangan orang Melayu 是 以 membebaskan ahli KMM 的 dipenjarakan 由 British.",
+      "translate": "日本军队煽动马来人民族主义的第一步就是释放被英国人囚禁的马来亚共产党成员。",
       "key_points_zh": [
-        "步骤 awal tentera Jepun membangkitkan 民族主义 在 kalangan orang Melayu 是 以 membebaskan ahli KMM 的 dipenjarakan 由 British."
+        "日本军队煽动马来人民族主义的第一步就是释放被英国人囚禁的马来亚共产党成员。"
       ],
       "bm_focus_phrase": "Langkah awal tentera Jepun membangkitkan nasionalisme dalam kalangan orang Melayu ialah dengan membebaskan ahli KMM yang dipenjarakan oleh British."
     },
     {
       "source_id": "bab-3-8-u12",
       "bm_original": "Pentadbiran tentera Jepun memberikan ruang kepada kegiatan politik KMM kerana memerlukan sokongan masyarakat tempatan.",
-      "translate": "行政 tentera Jepun memberikan ruang 向 kegiatan 政治 KMM 因为 memerlukan sokongan 社会 本地.",
+      "translate": "日本军政府为KMM的政治活动提供了空间，因为它需要当地社会的支持。",
       "key_points_zh": [
-        "行政 tentera Jepun memberikan ruang 向 kegiatan 政治 KMM 因为 memerlukan sokongan 社会 本地."
+        "日本军政府为KMM的政治活动提供了空间，因为它需要当地社会的支持。"
       ],
       "bm_focus_phrase": "Pentadbiran tentera Jepun memberikan ruang kepada kegiatan politik KMM kerana memerlukan sokongan masyarakat tempatan."
     },
     {
       "source_id": "bab-3-8-u13",
       "bm_original": "Hal ini berlaku kerana tindakan pemimpinnya menuntut kemerdekaan daripada Jepun.",
-      "translate": "Hal 这 发生 因为 tindakan pemimpinnya menuntut 独立 daripada Jepun.",
+      "translate": "发生这种情况是因为其领导人要求从日本独立的行动。",
       "key_points_zh": [
-        "Hal 这 发生 因为 tindakan pemimpinnya menuntut 独立 daripada Jepun."
+        "发生这种情况是因为其领导人要求从日本独立的行动。"
       ],
       "bm_focus_phrase": "Hal ini berlaku kerana tindakan pemimpinnya menuntut kemerdekaan daripada Jepun."
     },
     {
       "source_id": "bab-3-8-u14",
       "bm_original": "Pemimpin KMM sedar bahawa Jepun tidak akan memberikan kemerdekaan kepada Tanah Melayu, walaupun KMM telah membantu tentera Jepun dalam peperangan dengan British.",
-      "translate": "领袖 KMM sedar bahawa Jepun 不 将会 memberikan 独立 向 Tanah Melayu, walaupun KMM 已经 membantu tentera Jepun 在 peperangan 以 British.",
+      "translate": "KMM领导人知道日本不会给予马来亚独立，尽管KMM在与英国的战争中帮助了日本军队。",
       "key_points_zh": [
-        "领袖 KMM sedar bahawa Jepun 不 将会 memberikan 独立 向 Tanah Melayu, walaupun KMM 已经 membantu tentera Jepun 在 peperangan 以 British."
+        "KMM领导人知道日本不会给予马来亚独立，尽管KMM在与英国的战争中帮助了日本军队。"
       ],
       "bm_focus_phrase": "Pemimpin KMM sedar bahawa Jepun tidak akan memberikan kemerdekaan kepada Tanah Melayu, walaupun KMM telah membantu tentera Jepun dalam peperangan dengan British."
     },
     {
       "source_id": "bab-3-8-u15",
       "bm_original": "Perjuangan mendapatkan kemerdekaan diteruskan dengan taktik dan strategi baharu.",
-      "translate": "斗争 取得 独立 diteruskan 以 taktik和strategi baharu.",
+      "translate": "争取独立的斗争以新的策略和战略继续进行。",
       "key_points_zh": [
-        "斗争 取得 独立 diteruskan 以 taktik和strategi baharu."
+        "争取独立的斗争以新的策略和战略继续进行。"
       ],
       "bm_focus_phrase": "Perjuangan mendapatkan kemerdekaan diteruskan dengan taktik dan strategi baharu."
     },
     {
       "source_id": "bab-3-8-u16",
       "bm_original": "Anggota KMM dalam organisasi ketenteraan yang ditubuhkan oleh tentera Jepun, iaitu:",
-      "translate": "释义：Anggota KMM 在 organisasi ketenteraan 的 ditubuhkan 由 tentera Jepun, iaitu:（原文：Anggota KMM dalam organisasi ketenteraan yang ditubuhkan oleh tentera Jepun, iaitu:）",
+      "translate": "日本陆军建立的军事组织中的KMM成员，即：",
       "key_points_zh": [
-        "Anggota KMM 在 organisasi ketenteraan 的 ditubuhkan 由 tentera Jepun, iaitu:"
+        "日本陆军建立的军事组织中的KMM成员，即："
       ],
       "bm_focus_phrase": "Anggota KMM dalam organisasi ketenteraan yang ditubuhkan oleh tentera Jepun, iaitu:"
     },
     {
       "source_id": "bab-3-8-extra-11",
       "bm_original": "Giyu Gun",
-      "translate": "释义：重点：Giyu Gun（原文：Giyu Gun）",
+      "translate": "义游郡",
       "key_points_zh": [
-        "重点：Giyu Gun"
+        "义游郡"
       ],
       "bm_focus_phrase": "Giyu Gun"
     },
     {
       "source_id": "bab-3-8-extra-12",
       "bm_original": "Giyu Tai",
-      "translate": "释义：重点：Giyu Tai（原文：Giyu Tai）",
+      "translate": "义勇大",
       "key_points_zh": [
-        "重点：Giyu Tai"
+        "义勇大"
       ],
       "bm_focus_phrase": "Giyu Tai"
     },
     {
       "source_id": "bab-3-8-u17",
       "bm_original": "Mereka menyertai gerakan bawah tanah menentang Jepun, tetapi pada masa yang sama bekerjasama dengan pentadbiran tentera Jepun.",
-      "translate": "Mereka menyertai gerakan bawah tanah 反对 Jepun, tetapi 于 masa 的 sama bekerjasama 以 行政 tentera Jepun.",
+      "translate": "他们参与地下抗日运动，但同时与日本军政府合作。",
       "key_points_zh": [
-        "Mereka menyertai gerakan bawah tanah 反对 Jepun, tetapi 于 masa 的 sama bekerjasama 以 行政 tentera Jepun."
+        "他们参与地下抗日运动，但同时与日本军政府合作。"
       ],
       "bm_focus_phrase": "Mereka menyertai gerakan bawah tanah menentang Jepun, tetapi pada masa yang sama bekerjasama dengan pentadbiran tentera Jepun."
     },
     {
       "source_id": "bab-3-8-u18",
       "bm_original": "Giyu Gun atau Pembela Tanah Air (PETA) ialah pasukan tentera sukarela yang ditubuhkan untuk membantu Jepun mempertahankan Tanah Melayu. Ibrahim Haji Yaakob mengetuai Giyu Gun sebagai Leftenan Kolonel .",
-      "translate": "Giyu Gun atau Pembela Tanah Air (PETA) 是 pasukan tentera sukarela 的 ditubuhkan以求membantu Jepun mempertahankan Tanah Melayu. Ibrahim Haji Yaakob mengetuai Giyu Gun 作为 Leftenan Kolonel .",
+      "translate": "祖国卫士 (PETA) 是一支志愿军，旨在帮助日本保卫马来亚。易卜拉欣·哈吉·雅各布 (Ibrahim Haji Yaakob) 担任基尤·贡 (Giyu Gun) 中校。",
       "key_points_zh": [
-        "Giyu Gun atau Pembela Tanah Air (PETA) 是 pasukan tentera sukarela 的 ditubuhkan以求membantu Jepun mempertahankan Tanah Melayu. Ibrahim Haji Yaakob mengetuai Giyu Gun 作为 Leftenan Kolonel ."
+        "祖国卫士 (PETA) 是一支志愿军，旨在帮助日本保卫马来亚。易卜拉欣·哈吉·雅各布 (Ibrahim Haji Yaakob) 担任基尤·贡 (Giyu Gun) 中校。"
       ],
       "bm_focus_phrase": "Giyu Gun atau Pembela Tanah Air (PETA) ialah pasukan tentera sukarela yang ditubuhkan untuk membantu Jepun mempertahankan Tanah Melayu. Ibrahim Haji Yaakob mengetuai Giyu Gun sebagai Leftenan Kolonel ."
     },
     {
       "source_id": "bab-3-8-u19",
       "bm_original": "Giyu Tai ialah pasukan yang membantu pertahanan pesisiran pantai dan menjaga ketenteraman awam. Onan Haji Siraj mengetuai Giyu Tai sebagai Leftenan Kolonel .",
-      "translate": "Giyu Tai 是 pasukan 的 membantu pertahanan pesisiran pantai和menjaga ketenteraman awam. Onan Haji Siraj mengetuai Giyu Tai 作为 Leftenan Kolonel .",
+      "translate": "义勇队是一支帮助海防、维护社会治安的力量。奥南·哈吉·西拉杰 (Onan Haji Siraj) 担任基尤泰 (Giyu Tai) 中校。",
       "key_points_zh": [
-        "Giyu Tai 是 pasukan 的 membantu pertahanan pesisiran pantai和menjaga ketenteraman awam. Onan Haji Siraj mengetuai Giyu Tai 作为 Leftenan Kolonel ."
+        "义勇队是一支帮助海防、维护社会治安的力量。奥南·哈吉·西拉杰 (Onan Haji Siraj) 担任基尤泰 (Giyu Tai) 中校。"
       ],
       "bm_focus_phrase": "Giyu Tai ialah pasukan yang membantu pertahanan pesisiran pantai dan menjaga ketenteraman awam. Onan Haji Siraj mengetuai Giyu Tai sebagai Leftenan Kolonel ."
     },
     {
       "source_id": "bab-3-8-u20",
       "bm_original": "Dengan sokongan tentera Jepun, tokoh-tokoh berikut menubuhkan Kesatuan Rakyat Indonesia Semenanjung (KRIS) :",
-      "translate": "Dengan sokongan tentera Jepun, tokoh-tokoh berikut 成立 Kesatuan 人民 Indonesia Semenanjung (KRIS) :",
+      "translate": "在日军的支持下，以下人物成立了印度尼西亚半岛人民联盟（KRIS）：",
       "key_points_zh": [
-        "Dengan sokongan tentera Jepun, tokoh-tokoh berikut 成立 Kesatuan 人民 Indonesia Semenanjung (KRIS) :"
+        "在日军的支持下，以下人物成立了印度尼西亚半岛人民联盟（KRIS）："
       ],
       "bm_focus_phrase": "Dengan sokongan tentera Jepun, tokoh-tokoh berikut menubuhkan Kesatuan Rakyat Indonesia Semenanjung (KRIS) :"
     },
     {
       "source_id": "bab-3-8-extra-13",
       "bm_original": "Dr. Burhanuddin al-Helmi",
-      "translate": "释义：重点：Dr. Burhanuddin al-Helmi（原文：Dr. Burhanuddin al-Helmi）",
+      "translate": "Burhanuddin al-Helmi 博士",
       "key_points_zh": [
-        "重点：Dr. Burhanuddin al-Helmi"
+        "Burhanuddin al-Helmi 博士"
       ],
       "bm_focus_phrase": "Dr. Burhanuddin al-Helmi"
     },
     {
       "source_id": "bab-3-8-extra-14",
       "bm_original": "Ibrahim Haji Yaakob",
-      "translate": "释义：重点：Ibrahim Haji Yaakob（原文：Ibrahim Haji Yaakob）",
+      "translate": "易卜拉欣·哈吉·雅各布",
       "key_points_zh": [
-        "重点：Ibrahim Haji Yaakob"
+        "易卜拉欣·哈吉·雅各布"
       ],
       "bm_focus_phrase": "Ibrahim Haji Yaakob"
     },
     {
       "source_id": "bab-3-8-extra-15",
       "bm_original": "Onan Haji Siraj",
-      "translate": "释义：Onan Haji Siraj（原文：Onan Haji Siraj）",
+      "translate": "奥南·哈吉·西拉吉",
       "key_points_zh": [
-        "Onan Haji Siraj"
+        "奥南·哈吉·西拉吉"
       ],
       "bm_focus_phrase": "Onan Haji Siraj"
     },
     {
       "source_id": "bab-3-8-extra-16",
       "bm_original": "bekas pemimpin KMM yang lain",
-      "translate": "释义：bekas 领袖 KMM 的 lain（原文：bekas pemimpin KMM yang lain）",
+      "translate": "其他前 KMM 领导人",
       "key_points_zh": [
-        "bekas 领袖 KMM 的 lain"
+        "其他前 KMM 领导人"
       ],
       "bm_focus_phrase": "bekas pemimpin KMM yang lain"
     },
     {
       "source_id": "bab-3-8-u21",
       "bm_original": "Jepun merestui matlamat KRIS untuk mencapai kemerdekaan Tanah Melayu bersama-sama dengan Indonesia melalui semangat “Asia untuk Asia” .",
-      "translate": "Jepun merestui matlamat KRIS以求mencapai 独立 Tanah Melayu bersama-sama 以 Indonesia借助semangat “Asia以求Asia” .",
+      "translate": "日本赞同KRIS的目标，即通过“亚洲为了亚洲”的精神与印度尼西亚一起实现马来亚独立。",
       "key_points_zh": [
-        "Jepun merestui matlamat KRIS以求mencapai 独立 Tanah Melayu bersama-sama 以 Indonesia借助semangat “Asia以求Asia” ."
+        "日本赞同KRIS的目标，即通过“亚洲为了亚洲”的精神与印度尼西亚一起实现马来亚独立。"
       ],
       "bm_focus_phrase": "Jepun merestui matlamat KRIS untuk mencapai kemerdekaan Tanah Melayu bersama-sama dengan Indonesia melalui semangat “Asia untuk Asia” ."
     },
     {
       "source_id": "bab-3-8-u22",
       "bm_original": "Jepun memaklumkan kepada KRIS bahawa rancangan untuk Tanah Melayu merdeka bersama-sama dengan Indonesia tidak dapat dilaksanakan.",
-      "translate": "Jepun memaklumkan 向 KRIS bahawa rancangan以求Tanah Melayu merdeka bersama-sama 以 Indonesia 不 dapat dilaksanakan.",
+      "translate": "日本告知KRIS，马来亚与印度尼西亚一起独立的计划无法实施。",
       "key_points_zh": [
-        "Jepun memaklumkan 向 KRIS bahawa rancangan以求Tanah Melayu merdeka bersama-sama 以 Indonesia 不 dapat dilaksanakan."
+        "日本告知KRIS，马来亚与印度尼西亚一起独立的计划无法实施。"
       ],
       "bm_focus_phrase": "Jepun memaklumkan kepada KRIS bahawa rancangan untuk Tanah Melayu merdeka bersama-sama dengan Indonesia tidak dapat dilaksanakan."
     },
     {
       "source_id": "bab-3-8-u23",
       "bm_original": "Walaupun perjuangan menuntut kemerdekaan tidak berjaya semasa pendudukan Jepun, perjuangan bagi mencapai matlamat KRIS diteruskan selepas pendudukan Jepun melalui penubuhan Parti Kebangsaan Melayu Malaya (PKMM) .",
-      "translate": "Walaupun 斗争 menuntut 独立 不 成功 semasa pendudukan Jepun, 斗争 bagi mencapai matlamat KRIS diteruskan 在……之后 pendudukan Jepun借助成立 Parti Kebangsaan Melayu Malaya (PKMM) .",
+      "translate": "尽管在日本占领期间争取独立的斗争并不成功，但在日本占领之后，通过成立马来西亚马来民族党（PKMM），实现KRIS目标的斗争仍在继续。",
       "key_points_zh": [
-        "Walaupun 斗争 menuntut 独立 不 成功 semasa pendudukan Jepun, 斗争 bagi mencapai matlamat KRIS diteruskan 在……之后 pendudukan Jepun借助成立 Parti Kebangsaan Melayu Malaya (PKMM) ."
+        "尽管在日本占领期间争取独立的斗争并不成功，但在日本占领之后，通过成立马来西亚马来民族党（PKMM），实现KRIS目标的斗争仍在继续。"
       ],
       "bm_focus_phrase": "Walaupun perjuangan menuntut kemerdekaan tidak berjaya semasa pendudukan Jepun, perjuangan bagi mencapai matlamat KRIS diteruskan selepas pendudukan Jepun melalui penubuhan Parti Kebangsaan Melayu Malaya (PKMM) ."
     },
     {
       "source_id": "bab-3-8-u24",
       "bm_original": "PKMM ialah parti politik pertama yang ditubuhkan selepas zaman pendudukan Jepun.",
-      "translate": "PKMM 是 parti 政治 pertama 的 ditubuhkan 在……之后 zaman pendudukan Jepun.",
+      "translate": "PKMM是日本占领后成立的第一个政党。",
       "key_points_zh": [
-        "PKMM 是 parti 政治 pertama 的 ditubuhkan 在……之后 zaman pendudukan Jepun."
+        "PKMM是日本占领后成立的第一个政党。"
       ],
       "bm_focus_phrase": "PKMM ialah parti politik pertama yang ditubuhkan selepas zaman pendudukan Jepun."
     },
     {
       "source_id": "bab-3-8-u25",
       "bm_original": "Pendudukan Jepun juga membawa kesedaran politik dalam kalangan masyarakat tempatan di Sarawak dan Sabah.",
-      "translate": "Pendudukan Jepun 也 membawa kesedaran 政治 在 kalangan 社会 本地 di Sarawak和Sabah.",
+      "translate": "日本的占领也提高了砂拉越和沙巴当地社区的政治意识。",
       "key_points_zh": [
-        "Pendudukan Jepun 也 membawa kesedaran 政治 在 kalangan 社会 本地 di Sarawak和Sabah."
+        "日本的占领也提高了砂拉越和沙巴当地社区的政治意识。"
       ],
       "bm_focus_phrase": "Pendudukan Jepun juga membawa kesedaran politik dalam kalangan masyarakat tempatan di Sarawak dan Sabah."
     },
     {
       "source_id": "bab-3-8-u26",
       "bm_original": "Kegiatan penduduk di Sarawak dikawal melalui persatuan yang ditaja oleh tentera Jepun, manakala di Sabah pula muncul pertubuhan yang menyuntik kesedaran berpolitik selepas pendudukan Jepun.",
-      "translate": "Kegiatan penduduk di Sarawak dikawal借助协会 的 ditaja 由 tentera Jepun, manakala di Sabah pula muncul pertubuhan 的 menyuntik kesedaran berpolitik 在……之后 pendudukan Jepun.",
+      "translate": "砂拉越人民的活动受到日本军队主办的协会的控制，而沙巴则有日本占领后注入政治意识的组织。",
       "key_points_zh": [
-        "Kegiatan penduduk di Sarawak dikawal借助协会 的 ditaja 由 tentera Jepun, manakala di Sabah pula muncul pertubuhan 的 menyuntik kesedaran berpolitik 在……之后 pendudukan Jepun."
+        "砂拉越人民的活动受到日本军队主办的协会的控制，而沙巴则有日本占领后注入政治意识的组织。"
       ],
       "bm_focus_phrase": "Kegiatan penduduk di Sarawak dikawal melalui persatuan yang ditaja oleh tentera Jepun, manakala di Sabah pula muncul pertubuhan yang menyuntik kesedaran berpolitik selepas pendudukan Jepun."
     },
     {
       "source_id": "bab-3-8-u27",
       "bm_original": "Kegiatan penduduk di Sarawak dikawal melalui persatuan yang ditaja oleh tentera Jepun.",
-      "translate": "Kegiatan penduduk di Sarawak dikawal借助协会 的 ditaja 由 tentera Jepun.",
+      "translate": "砂拉越人民的活动受到日本军队赞助的协会的控制。",
       "key_points_zh": [
-        "Kegiatan penduduk di Sarawak dikawal借助协会 的 ditaja 由 tentera Jepun."
+        "砂拉越人民的活动受到日本军队赞助的协会的控制。"
       ],
       "bm_focus_phrase": "Kegiatan penduduk di Sarawak dikawal melalui persatuan yang ditaja oleh tentera Jepun."
     },
     {
       "source_id": "bab-3-8-u28",
       "bm_original": "Contohnya, persatuan Cina digabungkan menjadi Kakeo Kokokai .",
-      "translate": "释义：Contohnya, 协会 Cina digabungkan menjadi Kakeo Kokokai .（原文：Contohnya, persatuan Cina digabungkan menjadi Kakeo Kokokai .）",
+      "translate": "例如，华人协会并入Kakeo Kokokai。",
       "key_points_zh": [
-        "Contohnya, 协会 Cina digabungkan menjadi Kakeo Kokokai ."
+        "例如，华人协会并入Kakeo Kokokai。"
       ],
       "bm_focus_phrase": "Contohnya, persatuan Cina digabungkan menjadi Kakeo Kokokai ."
     },
     {
       "source_id": "bab-3-8-u29",
       "bm_original": "Berikutan kekurangan pegawai Jepun, orang Melayu dan Iban diberikan jawatan dan kuasa yang lebih tinggi sebagai pegawai daerah yang sebelumnya hanya disandang oleh pegawai British.",
-      "translate": "Berikutan kekurangan pegawai Jepun, orang Melayu和Iban diberikan jawatan和kuasa 的 更 tinggi 作为 pegawai daerah 的 sebelumnya hanya disandang 由 pegawai British.",
+      "translate": "由于日本军官短缺，马来人和伊班人获得了更高的职位和权力，成为地区官员，而这些职位和权力以前只由英国军官担任。",
       "key_points_zh": [
-        "Berikutan kekurangan pegawai Jepun, orang Melayu和Iban diberikan jawatan和kuasa 的 更 tinggi 作为 pegawai daerah 的 sebelumnya hanya disandang 由 pegawai British."
+        "由于日本军官短缺，马来人和伊班人获得了更高的职位和权力，成为地区官员，而这些职位和权力以前只由英国军官担任。"
       ],
       "bm_focus_phrase": "Berikutan kekurangan pegawai Jepun, orang Melayu dan Iban diberikan jawatan dan kuasa yang lebih tinggi sebagai pegawai daerah yang sebelumnya hanya disandang oleh pegawai British."
     },
     {
       "source_id": "bab-3-8-u30",
       "bm_original": "Menjawat jawatan tinggi turut memberikan kesedaran dan keyakinan kepada pegawai tempatan untuk menjalankan tugas penting.",
-      "translate": "Menjawat jawatan tinggi turut memberikan kesedaran和keyakinan 向 pegawai 本地以求menjalankan tugas penting.",
+      "translate": "身居高位也赋予地方官员执行重要任务的意识和信心。",
       "key_points_zh": [
-        "Menjawat jawatan tinggi turut memberikan kesedaran和keyakinan 向 pegawai 本地以求menjalankan tugas penting."
+        "身居高位也赋予地方官员执行重要任务的意识和信心。"
       ],
       "bm_focus_phrase": "Menjawat jawatan tinggi turut memberikan kesedaran dan keyakinan kepada pegawai tempatan untuk menjalankan tugas penting."
     },
     {
       "source_id": "bab-3-8-u31",
       "bm_original": "Kesedaran politik melalui pengalaman semasa pendudukan Jepun menjadikan peribumi Sarawak lebih yakin untuk berkerajaan sendiri selepas Perang Dunia Kedua.",
-      "translate": "Kesedaran 政治借助pengalaman semasa pendudukan Jepun menjadikan peribumi Sarawak 更 yakin以求berkerajaan sendiri 在……之后 第二次世界大战.",
+      "translate": "日本占领期间的政治意识使砂拉越人在第二次世界大战后更有信心统治自己。",
       "key_points_zh": [
-        "Kesedaran 政治借助pengalaman semasa pendudukan Jepun menjadikan peribumi Sarawak 更 yakin以求berkerajaan sendiri 在……之后 第二次世界大战."
+        "日本占领期间的政治意识使砂拉越人在第二次世界大战后更有信心统治自己。"
       ],
       "bm_focus_phrase": "Kesedaran politik melalui pengalaman semasa pendudukan Jepun menjadikan peribumi Sarawak lebih yakin untuk berkerajaan sendiri selepas Perang Dunia Kedua."
     },
     {
       "source_id": "bab-3-8-u32",
       "bm_original": "Pemimpin tempatan yang dilantik menjadi Pegawai Daerah pada zaman pendudukan Jepun di Sarawak ialah:",
-      "translate": "领袖 本地 的 dilantik menjadi Pegawai Daerah 于 zaman pendudukan Jepun di Sarawak 是:",
+      "translate": "日本占领砂拉越期间被任命为地区官员的当地领导人是：",
       "key_points_zh": [
-        "领袖 本地 的 dilantik menjadi Pegawai Daerah 于 zaman pendudukan Jepun di Sarawak 是:"
+        "日本占领砂拉越期间被任命为地区官员的当地领导人是："
       ],
       "bm_focus_phrase": "Pemimpin tempatan yang dilantik menjadi Pegawai Daerah pada zaman pendudukan Jepun di Sarawak ialah:"
     },
     {
       "source_id": "bab-3-8-extra-17",
       "bm_original": "Abang Haji Openg – Kuching",
-      "translate": "释义：重点：Abang Haji Openg – Kuching（原文：Abang Haji Openg – Kuching）",
+      "translate": "Haji Openg 弟兄 – 古晋",
       "key_points_zh": [
-        "重点：Abang Haji Openg – Kuching"
+        "Haji Openg 弟兄 – 古晋"
       ],
       "bm_focus_phrase": "Abang Haji Openg – Kuching"
     },
     {
       "source_id": "bab-3-8-extra-18",
       "bm_original": "Empenit Adam – Simanggang",
-      "translate": "释义：重点：Empenit Adam – Simanggang（原文：Empenit Adam – Simanggang）",
+      "translate": "Empenit Adam – 四芒岗",
       "key_points_zh": [
-        "重点：Empenit Adam – Simanggang"
+        "Empenit Adam – 四芒岗"
       ],
       "bm_focus_phrase": "Empenit Adam – Simanggang"
     },
     {
       "source_id": "bab-3-8-extra-19",
       "bm_original": "Satem – Lawas",
-      "translate": "释义：重点：Satem – Lawas（原文：Satem – Lawas）",
+      "translate": "萨特姆 - 老",
       "key_points_zh": [
-        "重点：Satem – Lawas"
+        "萨特姆 - 老"
       ],
       "bm_focus_phrase": "Satem – Lawas"
     },
     {
       "source_id": "bab-3-8-u33",
       "bm_original": "Kakeo Kokokai ialah Persatuan Cina Seberang Laut anjuran Jepun yang menggabungkan persatuan Cina yang merangkumi dialek, daerah dan nama keluarga di bawah satu pertubuhan. Pertubuhan ini diasaskan di Kuching serta mempunyai cawangan di bandar utama yang didiami oleh orang Cina seperti di Sibu.",
-      "translate": "Kakeo Kokokai 是 协会 Cina Seberang Laut anjuran Jepun 的 menggabungkan 协会 Cina 的 merangkumi dialek, daerah和nama keluarga di bawah satu pertubuhan. Pertubuhan 这 diasaskan di Kuching 以及 mempunyai cawangan di bandar 主要 的 didiami 由 orang Cina seperti di Sibu.",
+      "translate": "挂尾公会是日本主办的一个将涵盖方言、地区、姓氏的华人社团合并于一个组织之下的华侨华人社团。该组织成立于古晋，并在诗巫等华人居住的主要城市设有分支机构。",
       "key_points_zh": [
-        "Kakeo Kokokai 是 协会 Cina Seberang Laut anjuran Jepun 的 menggabungkan 协会 Cina 的 merangkumi dialek, daerah和nama keluarga di bawah satu pertubuhan. Pertubuhan 这 diasaskan di Kuching 以及 mempunyai cawangan di bandar 主要 的 didiami 由 orang Cina seperti di Sibu."
+        "挂尾公会是日本主办的一个将涵盖方言、地区、姓氏的华人社团合并于一个组织之下的华侨华人社团。该组织成立于古晋，并在诗巫等华人居住的主要城市设有分支机构。"
       ],
       "bm_focus_phrase": "Kakeo Kokokai ialah Persatuan Cina Seberang Laut anjuran Jepun yang menggabungkan persatuan Cina yang merangkumi dialek, daerah dan nama keluarga di bawah satu pertubuhan. Pertubuhan ini diasaskan di Kuching serta mempunyai cawangan di bandar utama yang didiami oleh orang Cina seperti di Sibu."
     },
     {
       "source_id": "bab-3-8-u34",
       "bm_original": "Pendudukan Jepun juga menyuntik kesedaran berpolitik dalam kalangan masyarakat setempat di Sabah.",
-      "translate": "Pendudukan Jepun 也 menyuntik kesedaran berpolitik 在 kalangan 社会 setempat di Sabah.",
+      "translate": "日本的占领也给沙巴当地社区注入了政治意识。",
       "key_points_zh": [
-        "Pendudukan Jepun 也 menyuntik kesedaran berpolitik 在 kalangan 社会 setempat di Sabah."
+        "日本的占领也给沙巴当地社区注入了政治意识。"
       ],
       "bm_focus_phrase": "Pendudukan Jepun juga menyuntik kesedaran berpolitik dalam kalangan masyarakat setempat di Sabah."
     },
     {
       "source_id": "bab-3-8-u35",
       "bm_original": "Beberapa pertubuhan ditubuhkan selepas pendudukan Jepun seperti Parti Kebangsaan Melayu Labuan (PKML) .",
-      "translate": "释义：Beberapa pertubuhan ditubuhkan 在……之后 pendudukan Jepun seperti Parti Kebangsaan Melayu Labuan (PKML) .（原文：Beberapa pertubuhan ditubuhkan selepas pendudukan Jepun seperti Parti Kebangsaan Melayu Labuan (PKML) .）",
+      "translate": "日本占领后成立了一些组织，例如纳闽马来民族党（PKML）。",
       "key_points_zh": [
-        "Beberapa pertubuhan ditubuhkan 在……之后 pendudukan Jepun seperti Parti Kebangsaan Melayu Labuan (PKML) ."
+        "日本占领后成立了一些组织，例如纳闽马来民族党（PKML）。"
       ],
       "bm_focus_phrase": "Beberapa pertubuhan ditubuhkan selepas pendudukan Jepun seperti Parti Kebangsaan Melayu Labuan (PKML) ."
     },
     {
       "source_id": "bab-3-8-u36",
       "bm_original": "PKML ditubuhkan oleh:",
-      "translate": "释义：PKML ditubuhkan 由:（原文：PKML ditubuhkan oleh:）",
+      "translate": "PKML 的成立者：",
       "key_points_zh": [
-        "PKML ditubuhkan 由:"
+        "PKML 的成立者："
       ],
       "bm_focus_phrase": "PKML ditubuhkan oleh:"
     },
     {
       "source_id": "bab-3-8-extra-20",
       "bm_original": "Tengku Noordin",
-      "translate": "释义：Tengku Noordin（原文：Tengku Noordin）",
+      "translate": "东姑努丁",
       "key_points_zh": [
-        "Tengku Noordin"
+        "东姑努丁"
       ],
       "bm_focus_phrase": "Tengku Noordin"
     },
     {
       "source_id": "bab-3-8-extra-21",
       "bm_original": "Abu Bakar",
-      "translate": "释义：重点：Abu Bakar（原文：Abu Bakar）",
+      "translate": "阿布伯克尔",
       "key_points_zh": [
-        "重点：Abu Bakar"
+        "阿布伯克尔"
       ],
       "bm_focus_phrase": "Abu Bakar"
     },
     {
       "source_id": "bab-3-8-extra-22",
       "bm_original": "Zakaria Gunn",
-      "translate": "释义：重点：Zakaria Gunn（原文：Zakaria Gunn）",
+      "translate": "扎卡里亚·冈恩",
       "key_points_zh": [
-        "重点：Zakaria Gunn"
+        "扎卡里亚·冈恩"
       ],
       "bm_focus_phrase": "Zakaria Gunn"
     },
     {
       "source_id": "bab-3-8-u37",
       "bm_original": "Penubuhan ini berdasarkan idea Harun Aminurrashid , nasionalis Tanah Melayu.",
-      "translate": "释义：Penubuhan 这 berdasarkan idea Harun Aminurrashid , nasionalis Tanah Melayu.（原文：Penubuhan ini berdasarkan idea Harun Aminurrashid , nasionalis Tanah Melayu.）",
+      "translate": "这个机构是基于马来亚民族主义者哈伦·阿米努拉希德（Harun Aminurrashid）的想法而建立的。",
       "key_points_zh": [
-        "Penubuhan 这 berdasarkan idea Harun Aminurrashid , nasionalis Tanah Melayu."
+        "这个机构是基于马来亚民族主义者哈伦·阿米努拉希德（Harun Aminurrashid）的想法而建立的。"
       ],
       "bm_focus_phrase": "Penubuhan ini berdasarkan idea Harun Aminurrashid , nasionalis Tanah Melayu."
     },
     {
       "source_id": "bab-3-8-u38",
       "bm_original": "Di bahagian pantai timur Sabah, Parti Kebangsaan Melayu Tawau ditubuhkan.",
-      "translate": "释义：重点：Di bahagian pantai timur Sabah, Parti Kebangsaan Melayu Tawau ditubuhkan.（原文：Di bahagian pantai timur Sabah, Parti Kebangsaan Melayu Tawau ditubuhkan.）",
+      "translate": "在沙巴东海岸，斗湖马来民族党成立。",
       "key_points_zh": [
-        "重点：Di bahagian pantai timur Sabah, Parti Kebangsaan Melayu Tawau ditubuhkan."
+        "在沙巴东海岸，斗湖马来民族党成立。"
       ],
       "bm_focus_phrase": "Di bahagian pantai timur Sabah, Parti Kebangsaan Melayu Tawau ditubuhkan."
     },
     {
       "source_id": "bab-3-8-u39",
       "bm_original": "Parti ini dipengerusikan oleh Orang Kaya-Kaya Abu Bakar .",
-      "translate": "释义：Parti 这 dipengerusikan 由 Orang Kaya-Kaya Abu Bakar .（原文：Parti ini dipengerusikan oleh Orang Kaya-Kaya Abu Bakar .）",
+      "translate": "该党由原住民卡亚卡亚阿布巴卡 (Orang Kaya-Kaya Abu Bakar) 担任主席。",
       "key_points_zh": [
-        "Parti 这 dipengerusikan 由 Orang Kaya-Kaya Abu Bakar ."
+        "该党由原住民卡亚卡亚阿布巴卡 (Orang Kaya-Kaya Abu Bakar) 担任主席。"
       ],
       "bm_focus_phrase": "Parti ini dipengerusikan oleh Orang Kaya-Kaya Abu Bakar ."
     },
     {
       "source_id": "bab-3-8-u40",
       "bm_original": "Pendudukan Jepun telah mempercepat perkembangan nasionalisme tempatan di negara kita.",
-      "translate": "Pendudukan Jepun 已经 mempercepat perkembangan 民族主义 本地 di negara kita.",
+      "translate": "日本的占领加速了我国本土民族主义的发展。",
       "key_points_zh": [
-        "Pendudukan Jepun 已经 mempercepat perkembangan 民族主义 本地 di negara kita."
+        "日本的占领加速了我国本土民族主义的发展。"
       ],
       "bm_focus_phrase": "Pendudukan Jepun telah mempercepat perkembangan nasionalisme tempatan di negara kita."
     },
     {
       "source_id": "bab-3-8-u41",
       "bm_original": "Antara kesan utamanya ialah:",
-      "translate": "释义：Antara 影响 utamanya 是:（原文：Antara kesan utamanya ialah:）",
+      "translate": "主要影响包括：",
       "key_points_zh": [
-        "Antara 影响 utamanya 是:"
+        "主要影响包括："
       ],
       "bm_focus_phrase": "Antara kesan utamanya ialah:"
     },
     {
       "source_id": "bab-3-8-extra-23",
       "bm_original": "semangat antipenjajah semakin meningkat",
-      "translate": "释义：重点：semangat antipenjajah semakin meningkat（原文：semangat antipenjajah semakin meningkat）",
+      "translate": "反殖民主义日益高涨",
       "key_points_zh": [
-        "重点：semangat antipenjajah semakin meningkat"
+        "反殖民主义日益高涨"
       ],
       "bm_focus_phrase": "semangat antipenjajah semakin meningkat"
     },
     {
       "source_id": "bab-3-8-extra-24",
       "bm_original": "rakyat menjadi lebih yakin terhadap kebolehan sendiri",
-      "translate": "人民 menjadi 更 yakin 针对 kebolehan sendiri",
+      "translate": "人们对自己的能力变得更加自信",
       "key_points_zh": [
-        "人民 menjadi 更 yakin 针对 kebolehan sendiri"
+        "人们对自己的能力变得更加自信"
       ],
       "bm_focus_phrase": "rakyat menjadi lebih yakin terhadap kebolehan sendiri"
     },
     {
       "source_id": "bab-3-8-extra-25",
       "bm_original": "perjuangan kemerdekaan diteruskan dengan lebih tersusun selepas Jepun menyerah kalah",
-      "translate": "斗争 独立 diteruskan 以 更 tersusun 在……之后 Jepun menyerah kalah",
+      "translate": "日本投降后，争取独立的斗争更加有组织地继续进行",
       "key_points_zh": [
-        "斗争 独立 diteruskan 以 更 tersusun 在……之后 Jepun menyerah kalah"
+        "日本投降后，争取独立的斗争更加有组织地继续进行"
       ],
       "bm_focus_phrase": "perjuangan kemerdekaan diteruskan dengan lebih tersusun selepas Jepun menyerah kalah"
     },
     {
       "source_id": "bab-3-8-u42",
       "bm_original": "Pengalaman melihat British ditewaskan, peluang politik semasa pendudukan Jepun dan kesedaran baharu dalam kalangan rakyat telah menguatkan keinginan untuk bebas daripada penjajahan.",
-      "translate": "Pengalaman melihat British ditewaskan, peluang 政治 semasa pendudukan Jepun和kesedaran baharu 在 kalangan 人民 已经 menguatkan keinginan以求bebas daripada penjajahan.",
+      "translate": "英国战败的经历、日占时期的政治机遇以及民众的新意识，更加坚定了摆脱殖民主义的愿望。",
       "key_points_zh": [
-        "Pengalaman melihat British ditewaskan, peluang 政治 semasa pendudukan Jepun和kesedaran baharu 在 kalangan 人民 已经 menguatkan keinginan以求bebas daripada penjajahan."
+        "英国战败的经历、日占时期的政治机遇以及民众的新意识，更加坚定了摆脱殖民主义的愿望。"
       ],
       "bm_focus_phrase": "Pengalaman melihat British ditewaskan, peluang politik semasa pendudukan Jepun dan kesedaran baharu dalam kalangan rakyat telah menguatkan keinginan untuk bebas daripada penjajahan."
     },
     {
       "source_id": "bab-3-8-u43",
       "bm_original": "Pendudukan Jepun membuktikan bahawa walaupun rakyat hidup dalam kesengsaraan, pengalaman tersebut akhirnya membangkitkan keberanian dan keyakinan untuk memperjuangkan kemerdekaan di Tanah Melayu, Sarawak dan Sabah.",
-      "translate": "Pendudukan Jepun membuktikan bahawa walaupun 人民 hidup 在 kesengsaraan, pengalaman tersebut akhirnya membangkitkan keberanian和keyakinan以求memperjuangkan 独立 di Tanah Melayu, Sarawak和Sabah.",
+      "translate": "日本的占领证明，尽管人民生活在苦难中，但这段经历最终激发了马来亚、砂拉越和沙巴争取独立的勇气和信心。",
       "key_points_zh": [
-        "Pendudukan Jepun membuktikan bahawa walaupun 人民 hidup 在 kesengsaraan, pengalaman tersebut akhirnya membangkitkan keberanian和keyakinan以求memperjuangkan 独立 di Tanah Melayu, Sarawak和Sabah."
+        "日本的占领证明，尽管人民生活在苦难中，但这段经历最终激发了马来亚、砂拉越和沙巴争取独立的勇气和信心。"
       ],
       "bm_focus_phrase": "Pendudukan Jepun membuktikan bahawa walaupun rakyat hidup dalam kesengsaraan, pengalaman tersebut akhirnya membangkitkan keberanian dan keyakinan untuk memperjuangkan kemerdekaan di Tanah Melayu, Sarawak dan Sabah."
     }
