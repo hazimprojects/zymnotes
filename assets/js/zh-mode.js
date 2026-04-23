@@ -23,10 +23,8 @@
   var CHIP_TOUCH_CLICK_DELAY_MS = 360;
   var chipInteractionsBound = false;
   var ENTITY_WARNING_LABEL = "⚠︎ Entiti dikekalkan (BM asal).";
-  /** When JSON lacks vetted Chinese — no machine translation at runtime. */
-  var MANUAL_ZH_PENDING_TITLE = "【中文释义待补全】";
-  var MANUAL_ZH_PENDING_HINT =
-    "请先以马来文原文为准；人名、地名、组织名与专用术语保留原文更利于准确作答。可点击文内彩色关键词查看中英对照。";
+  /** Short Chinese-only placeholder when no curated translate and no glossary hits. */
+  var ZH_FALLBACK_PLACEHOLDER = "（暂无中文释义。）";
   var HARD_PROTECTED_ENTITIES = [
     "Raja-raja Melayu", "Majlis Raja-raja",
     "Sultan Johor", "Sultan Selangor", "Sultan Kedah", "Raja Perlis", "Sultan Perak",
@@ -547,32 +545,22 @@
     return { modeLabel: "词汇注释", pairs: pairs, text: textStr, fallbackLabel: "" };
   }
 
+  /**
+   * When curated JSON is missing: never show BM duplicate or long “pending” banners —
+   * only glossary Chinese hits or a short Chinese-only placeholder.
+   */
   function buildManualFallbackExplain(sourceText, gl) {
     var textForUse = stripCorruptedZhLeadPrefix(typeof sourceText === "string" ? sourceText : "");
     if (!textForUse) return null;
 
     var vocab = buildGlossaryFallback(textForUse, gl);
     if (vocab && vocab.pairs && vocab.pairs.length > 0) {
-      var parts = vocab.pairs.map(function (p) {
-        return p.bm + "（" + p.zh + "）";
-      });
-      return {
-        modeLabel: "关键词辅助",
-        text:
-          MANUAL_ZH_PENDING_TITLE +
-          "\n" +
-          MANUAL_ZH_PENDING_HINT +
-          "\n\n重点词：" +
-          parts.join("；") +
-          "。",
-        fallbackLabel: ""
-      };
+      return vocab;
     }
 
-    var excerpt = textForUse.length > 420 ? textForUse.slice(0, 417) + "…" : textForUse;
     return {
       modeLabel: "Belum disunting",
-      text: MANUAL_ZH_PENDING_TITLE + "\n" + MANUAL_ZH_PENDING_HINT + "\n\n" + excerpt,
+      text: ZH_FALLBACK_PLACEHOLDER,
       fallbackLabel: ""
     };
   }
@@ -1127,8 +1115,8 @@
       return Promise.resolve({ text: manual.text.trim(), warning: "" });
     }
     return Promise.resolve({
-      text: sentenceSource,
-      warning: ENTITY_WARNING_LABEL
+      text: ZH_FALLBACK_PLACEHOLDER,
+      warning: ""
     });
   }
 
