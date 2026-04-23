@@ -22,9 +22,11 @@
   var CHIP_DISPLAY_STACKED = "stacked";
   var CHIP_TOUCH_CLICK_DELAY_MS = 360;
   var chipInteractionsBound = false;
-  var sentenceTranslationCache = Object.create(null);
-  var sentenceTranslationInFlight = Object.create(null);
   var ENTITY_WARNING_LABEL = "⚠︎ Entiti dikekalkan (BM asal).";
+  /** Shown when unit JSON has no usable manual Chinese yet (Google Translate disabled). */
+  var MANUAL_ZH_PENDING_TITLE = "【中文释义待补全】";
+  var MANUAL_ZH_PENDING_HINT =
+    "请先以马来文原文为准；人名、地名、组织名与专用术语保留原文更利于准确作答。可点击文内彩色关键词查看中英对照。";
   var HARD_PROTECTED_ENTITIES = [
     "Raja-raja Melayu", "Majlis Raja-raja",
     "Sultan Johor", "Sultan Selangor", "Sultan Kedah", "Raja Perlis", "Sultan Perak",
@@ -446,58 +448,6 @@
   }
 
 
-  function parseGoogleTranslateSentence(payload) {
-    if (!Array.isArray(payload) || !Array.isArray(payload[0])) return "";
-    return payload[0]
-      .map(function (part) {
-        return Array.isArray(part) && typeof part[0] === "string" ? part[0] : "";
-      })
-      .join("")
-      .trim();
-  }
-
-  function fetchSentenceTranslation(text) {
-    var sourceText = typeof text === "string" ? text.trim() : "";
-    if (!sourceText) return Promise.resolve("");
-    if (sentenceTranslationCache[sourceText] !== undefined) {
-      return Promise.resolve(sentenceTranslationCache[sourceText]);
-    }
-    var normalizedSource = normalize(sourceText);
-    if (sentenceTranslationCache[normalizedSource] !== undefined) {
-      return Promise.resolve(sentenceTranslationCache[normalizedSource]);
-    }
-    if (sentenceTranslationInFlight[sourceText]) {
-      return sentenceTranslationInFlight[sourceText];
-    }
-    var endpoint = "https://translate.googleapis.com/translate_a/single" +
-      "?client=gtx" +
-      "&sl=ms" +
-      "&tl=zh-CN" +
-      "&dt=t" +
-      "&q=" + encodeURIComponent(sourceText);
-
-    sentenceTranslationInFlight[sourceText] = fetch(endpoint)
-      .then(function (res) { return res.ok ? res.json() : null; })
-      .then(function (payload) {
-        var translated = parseGoogleTranslateSentence(payload);
-        return translated || "";
-      })
-      .then(function (translated) {
-        var finalText = translated && translated.trim() ? translated.trim() : "";
-        sentenceTranslationCache[sourceText] = finalText;
-        sentenceTranslationCache[normalizedSource] = finalText;
-        delete sentenceTranslationInFlight[sourceText];
-        return finalText;
-      }, function () {
-        delete sentenceTranslationInFlight[sourceText];
-        sentenceTranslationCache[sourceText] = "";
-        sentenceTranslationCache[normalizedSource] = "";
-        return "";
-      });
-
-    return sentenceTranslationInFlight[sourceText];
-  }
-
   function annotateKeywords(gl) {
     if (annotated) return;
     annotated = true;
@@ -597,19 +547,37 @@
     return { modeLabel: "词汇注释", pairs: pairs, text: textStr, fallbackLabel: "" };
   }
 
-  function buildExplainFallback(sourceText, gl) {
-    var textForTranslate = stripCorruptedZhLeadPrefix(typeof sourceText === "string" ? sourceText : "");
-    if (!textForTranslate) return null;
-    var cached = sentenceTranslationCache[textForTranslate] || sentenceTranslationCache[normalize(textForTranslate)];
-    var entitiesPayload = extractProtectedEntities(textForTranslate, gl);
+  /**
+   * When JSON has no curated Chinese, do not call machine translation.
+   * Offer glossary-based hints plus BM excerpt so names/terms stay accurate.
+   */
+  function buildManualFallbackExplain(sourceText, gl) {
+    var textForUse = stripCorruptedZhLeadPrefix(typeof sourceText === "string" ? sourceText : "");
+    if (!textForUse) return null;
+
+    var vocab = buildGlossaryFallback(textForUse, gl);
+    if (vocab && vocab.pairs && vocab.pairs.length > 0) {
+      var parts = vocab.pairs.map(function (p) {
+        return p.bm + "（" + p.zh + "）";
+      });
+      return {
+        modeLabel: "关键词辅助",
+        text:
+          MANUAL_ZH_PENDING_TITLE +
+          "\n" +
+          MANUAL_ZH_PENDING_HINT +
+          "\n\n重点词：" +
+          parts.join("；") +
+          "。",
+        fallbackLabel: ""
+      };
+    }
+
+    var excerpt = textForUse.length > 420 ? textForUse.slice(0, 417) + "…" : textForUse;
     return {
-      modeLabel: "Google Translate",
-      text: cached || "…",
-      fallbackLabel: "",
-      autoTranslate: true,
-      autoTranslateSource: entitiesPayload.protectedText || textForTranslate,
-      autoTranslateEntities: entitiesPayload,
-      autoTranslateOriginal: textForTranslate
+      modeLabel: "Belum disunting",
+      text: MANUAL_ZH_PENDING_TITLE + "\n" + MANUAL_ZH_PENDING_HINT + "\n\n" + excerpt,
+      fallbackLabel: ""
     };
   }
 
@@ -736,6 +704,9 @@
     if (!raw) return false;
     if (isTemplateLikeZhExplain(raw)) return false;
 
+    // Reject obvious machine-translation debris (English inside ZH strings).
+    if (/[\u4e00-\u9fff]/.test(raw) && /\binvolved\b/i.test(raw)) return false;
+
     var zhCount = (raw.match(/[\u4e00-\u9fff]/g) || []).length;
     if (zhCount < 4) return false;
     if (looksMalayHeavy(raw)) return false;
@@ -775,7 +746,7 @@
         fallbackLabel: ""
       };
     }
-    return buildExplainFallback(bmSource, gl);
+    return buildManualFallbackExplain(bmSource || sourceText || "", gl);
   }
 
   function isSentenceLikeChip(sourceText) {
@@ -908,27 +879,8 @@
           translationHtml +
         '</span>';
 
-      if (backContent.autoTranslate && backContent.autoTranslateSource) {
-        fetchSentenceTranslation(backContent.autoTranslateSource).then(function (translated) {
-          var translatedText = translated && translated.trim() ? translated.trim() : "";
-          var restored = restoreProtectedEntities(translatedText, backContent.autoTranslateEntities);
-          var finalText = restored.stable && restored.text && restored.text.trim()
-            ? restored.text.trim()
-            : ((backContent.autoTranslateOriginal || sourceText || "").trim());
-          var hasFallbackWarning = !restored.stable;
-          chip.setAttribute("data-zh-cn", finalText);
-          chip.setAttribute("data-zh-fallback-label", hasFallbackWarning ? ENTITY_WARNING_LABEL : "");
-          if (chip.__zhChipState) {
-            chip.__zhChipState.translation = finalText;
-          }
-          var explainNode = chip.querySelector(".zh-chip-explain-text");
-          if (explainNode) explainNode.textContent = hasFallbackWarning ? (finalText + " " + ENTITY_WARNING_LABEL) : finalText;
-          var inlineNode = chip.querySelector(".zh-chip-short-inline");
-          if (inlineNode) inlineNode.textContent = "（" + finalText + (hasFallbackWarning ? " · ⚠︎" : "") + "）";
-        });
-      }
-
     });
+
   }
 
   function resetChipFlips() {
@@ -1157,22 +1109,13 @@
       });
     }
 
-    var entitiesPayload = extractProtectedEntities(sentenceSource, gl);
-    var sourceForTranslate = entitiesPayload.protectedText || sentenceSource;
-
-    return fetchSentenceTranslation(sourceForTranslate).then(function (translated) {
-      var translatedText = translated && translated.trim() ? translated.trim() : "";
-      var restored = restoreProtectedEntities(translatedText, entitiesPayload);
-      if (!restored.stable) {
-        return {
-          text: sentenceSource,
-          warning: ENTITY_WARNING_LABEL
-        };
-      }
-      return {
-        text: restored.text && restored.text.trim() ? restored.text.trim() : "",
-        warning: ""
-      };
+    var manual = buildManualFallbackExplain(sentenceSource, gl);
+    if (manual && manual.text && manual.text.trim()) {
+      return Promise.resolve({ text: manual.text.trim(), warning: "" });
+    }
+    return Promise.resolve({
+      text: sentenceSource,
+      warning: ENTITY_WARNING_LABEL
     });
   }
 
