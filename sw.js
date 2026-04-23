@@ -6,7 +6,7 @@
    - Everything else: network-first
 */
 
-const CACHE = 'zym-v104';
+const CACHE = 'zym-v105';
 
 const PRECACHE_URLS = [
   '/',
@@ -14,7 +14,7 @@ const PRECACHE_URLS = [
   '/offline.html',
   '/notes/index.html',
   '/assets/css/style.css?v=83',
-  '/assets/js/main.js?v=90',
+  '/assets/js/main.js?v=91',
   '/assets/js/zh-mode.js?v=36',
   '/data/zh-glossary.json',
   '/data/zh-comprehension.json',
