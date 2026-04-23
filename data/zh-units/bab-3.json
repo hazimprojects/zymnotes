@@ -2,36 +2,34 @@
   "meta": {
     "source_file": "notes/bab-3.html",
     "rollout": "gelombang-1-clean-manual",
-    "notes": "Fully manual Chinese translation for Bab 3 parent page. Completed to match the upgraded HTML with added data-zh-unit-id."
+    "notes": "Simplified Chinese (Malaysia) for Bab 3 hub page; kekalkan nama khas BM/Latin yang lazim dalam peperiksaan."
   },
   "units": [
     {
       "source_id": "bab-3-intro-1",
       "bm_original": "Bab ini membincangkan konflik dunia yang merangkumi Perang Dunia Pertama dan Perang Dunia Kedua, perkembangan perang ke Asia Pasifik, serta kesan pendudukan Jepun terhadap rakyat dan perkembangan nasionalisme di negara kita.",
-      "translate": "本章讨论世界冲突，包括 Perang Dunia Pertama 和 Perang Dunia Kedua、战争扩展到 Asia Pasifik，以及 Jepun 占领对人民和我国民族主义发展的影响。"
+      "translate": "本章讨论世界冲突，涵盖第一次世界大战与第二次世界大战、战争向亚太地区扩展，以及日本（Jepun）占领对我国人民与民族主义发展的影响。"
     },
-
     {
       "source_id": "bab-3-synopsis-1",
       "bm_original": "Konflik dunia yang merangkumi Perang Dunia Pertama dan Perang Dunia Kedua tercetus akibat perkembangan imperialisme dan nasionalisme dalam persaingan merebut kuasa politik dan ekonomi.",
-      "translate": "涵盖 Perang Dunia Pertama 和 Perang Dunia Kedua 的世界冲突，是在 imperialisme 与 nasionalisme 发展下，为争夺政治与经济权力而爆发的。"
+      "translate": "涵盖两次世界大战的全球冲突，是在帝国主义与民族主义抬头、列强争夺政治与经济霸权的过程中爆发的。"
     },
     {
       "source_id": "bab-3-synopsis-2",
       "bm_original": "Perang dunia bermula di Eropah, kemudian merebak ke Asia Pasifik.",
-      "translate": "世界大战先从 Eropah 爆发，随后蔓延到 Asia Pasifik。"
+      "translate": "世界大战先在欧洲爆发，随后蔓延到亚太地区。"
     },
     {
       "source_id": "bab-3-synopsis-3",
       "bm_original": "Pemerintahan tentera Jepun di negara kita telah mencetuskan tindak balas rakyat terhadap pendudukan asing.",
-      "translate": "Jepun 在我国的军政统治，引发了人民对外来占领的反应。"
+      "translate": "日本在我国实行的军政统治，引发了人民对外来占领的反抗与回应。"
     },
     {
       "source_id": "bab-3-synopsis-4",
       "bm_original": "Pendudukan Jepun turut menyemarakkan perkembangan nasionalisme tempatan.",
-      "translate": "Jepun 的占领也进一步激发了本土民族主义的发展。"
+      "translate": "日本占领也进一步推动了本土民族主义运动的发展。"
     },
-
     {
       "source_id": "bab-3-heading-1",
       "bm_original": "Pilih subtopik",
@@ -40,20 +38,18 @@
     {
       "source_id": "bab-3-subintro-1",
       "bm_original": "Bab ini membawa murid memahami situasi sebelum perang, konflik dunia, pendudukan Jepun, perjuangan rakyat dan keadaan negara selepas kekalahan Jepun.",
-      "translate": "本章引导学生理解战前局势、世界冲突、Jepun 占领、人民抗争，以及 Jepun 战败后的国家局势。"
+      "translate": "本章引导学生理解战前局势、世界冲突、日本占领、人民抗争，以及日本战败后我国的政治与社会局面。"
     },
-
     {
       "source_id": "bab-3-card-31-title",
       "bm_original": "Nasionalisme di Negara Kita Sebelum Perang Dunia",
-      "translate": "我国在世界大战前的民族主义"
+      "translate": "世界大战前我国的民族主义"
     },
     {
       "source_id": "bab-3-card-31-desc",
       "bm_original": "Kesedaran nasionalisme di negara kita sebelum tercetusnya konflik dunia.",
-      "translate": "我国在世界冲突爆发前的民族主义觉醒。"
+      "translate": "世界冲突爆发前，我国民族意识的觉醒与酝酿。"
     },
-
     {
       "source_id": "bab-3-card-32-title",
       "bm_original": "Latar Belakang Perang Dunia",
@@ -62,115 +58,107 @@
     {
       "source_id": "bab-3-card-32-desc",
       "bm_original": "Punca dan faktor utama yang membawa kepada konflik dunia.",
-      "translate": "导致世界冲突发生的原因与主要因素。"
+      "translate": "促成世界冲突爆发的主要原因与关键因素。"
     },
-
     {
       "source_id": "bab-3-card-33-title",
       "bm_original": "Perang Dunia Kedua",
-      "translate": "Perang Dunia Kedua"
+      "translate": "第二次世界大战"
     },
     {
       "source_id": "bab-3-card-33-desc",
       "bm_original": "Perkembangan Perang Dunia Kedua dan kuasa-kuasa yang terlibat.",
-      "translate": "第二次世界大战的发展过程，以及参战的各方势力。"
+      "translate": "第二次世界大战的进程，以及参战的主要国家与阵营。"
     },
-
     {
       "source_id": "bab-3-card-34-title",
       "bm_original": "Perang Dunia Kedua di Asia Pasifik",
-      "translate": "Asia Pasifik 的 Perang Dunia Kedua"
+      "translate": "亚太地区的第二次世界大战"
     },
     {
       "source_id": "bab-3-card-34-desc",
       "bm_original": "Perkembangan perang apabila konflik meluas ke rantau Asia Pasifik.",
-      "translate": "当冲突扩大到 Asia Pasifik 地区时，战争的发展情况。"
+      "translate": "当战火扩展到亚太地区时，战争形势的发展与转折。"
     },
-
     {
       "source_id": "bab-3-card-35-title",
       "bm_original": "Faktor Kedatangan Jepun ke Negara Kita",
-      "translate": "Jepun 来到我国的因素"
+      "translate": "日本势力进入我国的主要因素"
     },
     {
       "source_id": "bab-3-card-35-desc",
       "bm_original": "Sebab-sebab kedatangan Jepun ke Tanah Melayu dan wilayah sekitarnya.",
-      "translate": "Jepun 来到 Tanah Melayu 及周边地区的原因。"
+      "translate": "日本向马来亚（Tanah Melayu）及周边地区推进的背景与原因。"
     },
-
     {
       "source_id": "bab-3-card-36-title",
       "bm_original": "Dasar Pendudukan Jepun di Negara Kita",
-      "translate": "Jepun 在我国的占领政策"
+      "translate": "日本占领时期在我国推行的政策"
     },
     {
       "source_id": "bab-3-card-36-desc",
       "bm_original": "Dasar pemerintahan tentera Jepun dan kesannya terhadap kehidupan rakyat.",
-      "translate": "Jepun 军政统治的政策，以及它对人民生活的影响。"
+      "translate": "日本军政统治的各项政策，以及对人民日常生活与社会的影响。"
     },
-
     {
       "source_id": "bab-3-card-37-title",
       "bm_original": "Perjuangan Rakyat Menentang Pendudukan Jepun",
-      "translate": "人民反抗 Jepun 占领的斗争"
+      "translate": "人民反抗日本占领的斗争"
     },
     {
       "source_id": "bab-3-card-37-desc",
       "bm_original": "Bentuk penentangan rakyat tempatan terhadap pendudukan Jepun.",
-      "translate": "本地人民反抗 Jepun 占领的各种形式。"
+      "translate": "本地社会反抗日本军事占领的主要方式与表现。"
     },
-
     {
       "source_id": "bab-3-card-38-title",
       "bm_original": "Perkembangan Gerakan Nasionalisme Tempatan dan Pendudukan Jepun",
-      "translate": "本地民族主义运动的发展与 Jepun 占领"
+      "translate": "本土民族主义运动与日本占领的关系"
     },
     {
       "source_id": "bab-3-card-38-desc",
       "bm_original": "Hubungan antara pendudukan Jepun dengan perkembangan gerakan nasionalisme tempatan.",
-      "translate": "Jepun 占领与本地民族主义运动发展之间的关系。"
+      "translate": "说明日本占领如何与本土民族主义政治意识的变化相互牵动。"
     },
-
     {
       "source_id": "bab-3-card-39-title",
       "bm_original": "Keadaan Negara Kita Selepas Kekalahan Jepun",
-      "translate": "Jepun 战败后我国的局势"
+      "translate": "日本战败后我国的局势"
     },
     {
       "source_id": "bab-3-card-39-desc",
       "bm_original": "Keadaan politik dan keselamatan negara selepas Jepun menyerah kalah.",
-      "translate": "Jepun 投降后我国在政治与安全方面的局势。"
+      "translate": "日本投降后，我国在政治秩序与社会治安方面所面临的局面。"
     },
-
     {
       "source_id": "bab-3-order-1",
       "bm_original": "Mulakan dengan 3.1 untuk melihat perkembangan nasionalisme di negara kita sebelum perang dunia.",
-      "translate": "先从 3.1 开始，了解我国在世界大战前的民族主义发展。"
+      "translate": "建议从 3.1 读起，认识世界大战前我国民族主义的发展脉络。"
     },
     {
       "source_id": "bab-3-order-2",
       "bm_original": "Teruskan ke 3.2 dan 3.3 untuk memahami latar belakang serta perkembangan Perang Dunia Kedua.",
-      "translate": "接着阅读 3.2 和 3.3，以理解 Perang Dunia Kedua 的背景和发展。"
+      "translate": "接着阅读 3.2 与 3.3，掌握第二次世界大战的背景与战争进程。"
     },
     {
       "source_id": "bab-3-order-3",
       "bm_original": "Baca 3.4 dan 3.5 bagi melihat bagaimana perang merebak ke Asia Pasifik dan membawa kepada kedatangan Jepun ke negara kita.",
-      "translate": "阅读 3.4 和 3.5，了解战争如何扩展到 Asia Pasifik，并导致 Jepun 来到我国。"
+      "translate": "阅读 3.4 与 3.5，了解战火如何烧至亚太，以及日本势力如何进入我国。"
     },
     {
       "source_id": "bab-3-order-4",
       "bm_original": "Masuk ke 3.6 untuk memahami dasar pemerintahan tentera Jepun.",
-      "translate": "接着进入 3.6，理解 Jepun 军政统治的政策。"
+      "translate": "进入 3.6，理解日本军政统治的具体政策与施行方式。"
     },
     {
       "source_id": "bab-3-order-5",
       "bm_original": "Teruskan dengan 3.7 dan 3.8 untuk meneliti perjuangan rakyat serta perkembangan nasionalisme tempatan.",
-      "translate": "再继续看 3.7 和 3.8，探讨人民的斗争以及本地民族主义的发展。"
+      "translate": "继续研读 3.7 与 3.8，分析人民抗争与本土民族主义在占领时期的变化。"
     },
     {
       "source_id": "bab-3-order-6",
       "bm_original": "Akhiri dengan 3.9 untuk melihat keadaan negara selepas kekalahan Jepun.",
-      "translate": "最后以 3.9 收尾，了解 Jepun 战败后我国的局势。"
+      "translate": "最后以 3.9 作结，认识日本战败后我国政治与社会的重组与动荡。"
     }
   ]
 }
