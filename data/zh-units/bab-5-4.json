@@ -1,564 +1,565 @@
 {
   "meta": {
     "source_file": "notes/bab-5-4.html",
-    "rollout": "gelombang-1-manual-revision"
+    "rollout": "gelombang-1-ms-zh-regenerated",
+    "notes": "Translate fields regenerated from bm_original (ms→zh-CN) for fluent Simplified Chinese; proper names follow translator output—verify against BM notes."
   },
   "units": [
     {
       "source_id": "bab-5-4-u23",
       "bm_original": "Persekutuan Tanah Melayu 1948 berjaya mengembalikan kedudukan Raja-raja Melayu yang terjejas semasa Malayan Union .",
-      "translate": "Persekutuan Tanah Melayu 1948 成功 mengembalikan kedudukan Raja-raja Melayu 的 terjejas semasa Malayan Union .",
+      "translate": "1948年马来亚联合邦成功恢复了马来亚联邦时期受到影响的马来国王的地位。",
       "key_points_zh": [
-        "Persekutuan Tanah Melayu 1948 成功 mengembalikan kedudukan Raja-raja Melayu 的 terjejas semasa Malayan Union ."
+        "1948年马来亚联合邦成功恢复了马来亚联邦时期受到影响的马来国王的地位。"
       ],
       "bm_focus_phrase": "Persekutuan Tanah Melayu 1948 berjaya mengembalikan kedudukan Raja-raja Melayu yang terjejas semasa Malayan Union ."
     },
     {
       "source_id": "bab-5-4-u24",
       "bm_original": "Persekutuan ini turut menjaga kedudukan istimewa orang Melayu sambil mengiktiraf kepentingan sah kaum lain .",
-      "translate": "Persekutuan 这 turut menjaga kedudukan istimewa orang Melayu sambil mengiktiraf kepentingan sah kaum lain .",
+      "translate": "这个联合会也维护马来人的特殊地位，同时承认其他种族的合法利益。",
       "key_points_zh": [
-        "Persekutuan 这 turut menjaga kedudukan istimewa orang Melayu sambil mengiktiraf kepentingan sah kaum lain ."
+        "这个联合会也维护马来人的特殊地位，同时承认其他种族的合法利益。"
       ],
       "bm_focus_phrase": "Persekutuan ini turut menjaga kedudukan istimewa orang Melayu sambil mengiktiraf kepentingan sah kaum lain ."
     },
     {
       "source_id": "bab-5-4-u25",
       "bm_original": "Penubuhannya membuka ruang kewarganegaraan kepada orang bukan Melayu dalam kerangka politik yang lebih tersusun.",
-      "translate": "Penubuhannya membuka ruang 公民权 向 orang bukan Melayu 在 kerangka 政治 的 更 tersusun.",
+      "translate": "它的成立在一个更加结构化的政治框架中为非马来人提供了公民身份的空间。",
       "key_points_zh": [
-        "Penubuhannya membuka ruang 公民权 向 orang bukan Melayu 在 kerangka 政治 的 更 tersusun."
+        "它的成立在一个更加结构化的政治框架中为非马来人提供了公民身份的空间。"
       ],
       "bm_focus_phrase": "Penubuhannya membuka ruang kewarganegaraan kepada orang bukan Melayu dalam kerangka politik yang lebih tersusun."
     },
     {
       "source_id": "bab-5-4-u26",
       "bm_original": "Ia juga membuka jalan ke arah kerjasama kaum melalui Jawatankuasa Hubungan Antara Kaum (CLC) dan menjadi asas penting kepada kemerdekaan negara.",
-      "translate": "Ia 也 membuka jalan ke arah kerjasama kaum 通过 Jawatankuasa Hubungan Antara Kaum (CLC) 与 menjadi asas penting 向 独立 negara.",
+      "translate": "它还为通过种族关系委员会（CLC）进行种族合作铺平了道路，成为国家独立的重要基础。",
       "key_points_zh": [
-        "Ia 也 membuka jalan ke arah kerjasama kaum 通过 Jawatankuasa Hubungan Antara Kaum (CLC) 与 menjadi asas penting 向 独立 negara."
+        "它还为通过种族关系委员会（CLC）进行种族合作铺平了道路，成为国家独立的重要基础。"
       ],
       "bm_focus_phrase": "Ia juga membuka jalan ke arah kerjasama kaum melalui Jawatankuasa Hubungan Antara Kaum (CLC) dan menjadi asas penting kepada kemerdekaan negara."
     },
     {
       "source_id": "bab-5-4-u01",
       "bm_original": "Persekutuan Tanah Melayu 1948 membawa kesan besar kepada negara kita kerana berjaya mengembalikan kedudukan Raja-raja Melayu , menjaga kedudukan istimewa orang Melayu, membuka ruang kewarganegaraan dan mewujudkan kerjasama antara kaum.",
-      "translate": "Persekutuan Tanah Melayu 1948 membawa 影响 besar 向 negara kita 因为 成功 mengembalikan kedudukan Raja-raja Melayu , menjaga kedudukan istimewa orang Melayu, membuka ruang 公民权 与 mewujudkan kerjasama 其中 kaum.",
+      "translate": "1948年的马来亚联邦，成功地恢复了马来君主的地位，维护了马来人的特殊地位，开放了公民权的空间，创造了种族间的合作，对我国产生了巨大的影响。",
       "key_points_zh": [
-        "Persekutuan Tanah Melayu 1948 membawa 影响 besar 向 negara kita 因为 成功 mengembalikan kedudukan Raja-raja Melayu , menjaga kedudukan istimewa orang Melayu, membuka ruang 公民权 与 mewujudkan kerjasama 其中 kaum."
+        "1948年的马来亚联邦，成功地恢复了马来君主的地位，维护了马来人的特殊地位，开放了公民权的空间，创造了种族间的合作，对我国产生了巨大的影响。"
       ],
       "bm_focus_phrase": "Persekutuan Tanah Melayu 1948 membawa kesan besar kepada negara kita kerana berjaya mengembalikan kedudukan Raja-raja Melayu , menjaga kedudukan istimewa orang Melayu, membuka ruang kewarganegaraan dan mewujudkan kerjasama antara kaum."
     },
     {
       "source_id": "bab-5-4-u02",
       "bm_original": "Kesan ini menunjukkan bahawa Persekutuan Tanah Melayu 1948 bukan sekadar menggantikan Malayan Union , tetapi menjadi asas penting kepada pembinaan negara yang lebih stabil dan tersusun.",
-      "translate": "影响 这 menunjukkan bahawa Persekutuan Tanah Melayu 1948 bukan sekadar menggantikan Malayan Union , tetapi menjadi asas penting 向 pembinaan negara 的 更 stabil 与 tersusun.",
+      "translate": "这一效应表明，1948年马来亚联合邦不仅取代了马来亚联邦，而且成为建设一个更加稳定和有组织的国家的重要基础。",
       "key_points_zh": [
-        "影响 这 menunjukkan bahawa Persekutuan Tanah Melayu 1948 bukan sekadar menggantikan Malayan Union , tetapi menjadi asas penting 向 pembinaan negara 的 更 stabil 与 tersusun."
+        "这一效应表明，1948年马来亚联合邦不仅取代了马来亚联邦，而且成为建设一个更加稳定和有组织的国家的重要基础。"
       ],
       "bm_focus_phrase": "Kesan ini menunjukkan bahawa Persekutuan Tanah Melayu 1948 bukan sekadar menggantikan Malayan Union , tetapi menjadi asas penting kepada pembinaan negara yang lebih stabil dan tersusun."
     },
     {
       "source_id": "bab-5-4-u03",
       "bm_original": "Kesan penubuhan Persekutuan Tanah Melayu 1948 dapat dilihat melalui empat aspek utama:",
-      "translate": "影响 成立 Persekutuan Tanah Melayu 1948 dapat dilihat 通过 empat aspek 主要:",
+      "translate": "1948年马来亚联邦成立的影响主要可以从四个方面来看：",
       "key_points_zh": [
-        "影响 成立 Persekutuan Tanah Melayu 1948 dapat dilihat 通过 empat aspek 主要:"
+        "1948年马来亚联邦成立的影响主要可以从四个方面来看："
       ],
       "bm_focus_phrase": "Kesan penubuhan Persekutuan Tanah Melayu 1948 dapat dilihat melalui empat aspek utama:"
     },
     {
       "source_id": "bab-5-4-extra-1",
       "bm_original": "1️⃣ mengembalikan kedudukan Raja-raja Melayu 👑",
-      "translate": "1️⃣ mengembalikan kedudukan Raja-raja Melayu 👑",
+      "translate": "1️⃣恢复马来国王的地位👑",
       "key_points_zh": [
-        "1️⃣ mengembalikan kedudukan Raja-raja Melayu 👑"
+        "1️⃣恢复马来国王的地位👑"
       ],
       "bm_focus_phrase": "1️⃣ mengembalikan kedudukan Raja-raja Melayu 👑"
     },
     {
       "source_id": "bab-5-4-extra-2",
       "bm_original": "2️⃣ menjaga kedudukan istimewa orang Melayu 🛡️",
-      "translate": "重点：2️⃣ menjaga kedudukan istimewa orang Melayu 🛡️",
+      "translate": "2️⃣保护马来人的特殊地位🛡️",
       "key_points_zh": [
-        "重点：2️⃣ menjaga kedudukan istimewa orang Melayu 🛡️"
+        "2️⃣保护马来人的特殊地位🛡️"
       ],
       "bm_focus_phrase": "2️⃣ menjaga kedudukan istimewa orang Melayu 🛡️"
     },
     {
       "source_id": "bab-5-4-extra-3",
       "bm_original": "3️⃣ membuka ruang kewarganegaraan 🪪",
-      "translate": "3️⃣ membuka ruang 公民权 🪪",
+      "translate": "3️⃣开放公民空间🪪",
       "key_points_zh": [
-        "3️⃣ membuka ruang 公民权 🪪"
+        "3️⃣开放公民空间🪪"
       ],
       "bm_focus_phrase": "3️⃣ membuka ruang kewarganegaraan 🪪"
     },
     {
       "source_id": "bab-5-4-extra-4",
       "bm_original": "4️⃣ mewujudkan kerjasama kaum 🤝",
-      "translate": "重点：4️⃣ mewujudkan kerjasama kaum 🤝",
+      "translate": "4️⃣ 创造种族合作🤝",
       "key_points_zh": [
-        "重点：4️⃣ mewujudkan kerjasama kaum 🤝"
+        "4️⃣ 创造种族合作🤝"
       ],
       "bm_focus_phrase": "4️⃣ mewujudkan kerjasama kaum 🤝"
     },
     {
       "source_id": "bab-5-4-u04",
       "bm_original": "Persekutuan Tanah Melayu 1948 telah mengembalikan semula kuasa Raja-raja Melayu yang terjejas semasa pelaksanaan Malayan Union .",
-      "translate": "Persekutuan Tanah Melayu 1948 已经 mengembalikan semula kuasa Raja-raja Melayu 的 terjejas semasa pelaksanaan Malayan Union .",
+      "translate": "1948年马来亚联邦恢复了在马来亚联邦实施过程中受到影响的马来统治者的权力。",
       "key_points_zh": [
-        "Persekutuan Tanah Melayu 1948 已经 mengembalikan semula kuasa Raja-raja Melayu 的 terjejas semasa pelaksanaan Malayan Union ."
+        "1948年马来亚联邦恢复了在马来亚联邦实施过程中受到影响的马来统治者的权力。"
       ],
       "bm_focus_phrase": "Persekutuan Tanah Melayu 1948 telah mengembalikan semula kuasa Raja-raja Melayu yang terjejas semasa pelaksanaan Malayan Union ."
     },
     {
       "source_id": "bab-5-4-u05",
       "bm_original": "Antara bukti pentingnya ialah penubuhan:",
-      "translate": "Antara bukti pentingnya 是 成立:",
+      "translate": "重要证据包括：",
       "key_points_zh": [
-        "Antara bukti pentingnya 是 成立:"
+        "重要证据包括："
       ],
       "bm_focus_phrase": "Antara bukti pentingnya ialah penubuhan:"
     },
     {
       "source_id": "bab-5-4-extra-5",
       "bm_original": "Majlis Raja-Raja",
-      "translate": "Majlis Raja-Raja",
+      "translate": "国王会议",
       "key_points_zh": [
-        "Majlis Raja-Raja"
+        "国王会议"
       ],
       "bm_focus_phrase": "Majlis Raja-Raja"
     },
     {
       "source_id": "bab-5-4-u06",
       "bm_original": "Majlis ini diwujudkan melalui peruntukan dalam:",
-      "translate": "Majlis 这 diwujudkan 通过 peruntukan 在:",
+      "translate": "该委员会是根据以下条款设立的：",
       "key_points_zh": [
-        "Majlis 这 diwujudkan 通过 peruntukan 在:"
+        "该委员会是根据以下条款设立的："
       ],
       "bm_focus_phrase": "Majlis ini diwujudkan melalui peruntukan dalam:"
     },
     {
       "source_id": "bab-5-4-extra-6",
       "bm_original": "Perjanjian Persekutuan Tanah Melayu 1948",
-      "translate": "重点：Perjanjian Persekutuan Tanah Melayu 1948",
+      "translate": "1948 年马来亚联邦协议",
       "key_points_zh": [
-        "重点：Perjanjian Persekutuan Tanah Melayu 1948"
+        "1948 年马来亚联邦协议"
       ],
       "bm_focus_phrase": "Perjanjian Persekutuan Tanah Melayu 1948"
     },
     {
       "source_id": "bab-5-4-extra-7",
       "bm_original": "dipengerusikan oleh seorang daripada Raja-raja Melayu",
-      "translate": "dipengerusikan 由 seorang daripada Raja-raja Melayu",
+      "translate": "由一位马来国王担任主席",
       "key_points_zh": [
-        "dipengerusikan 由 seorang daripada Raja-raja Melayu"
+        "由一位马来国王担任主席"
       ],
       "bm_focus_phrase": "dipengerusikan oleh seorang daripada Raja-raja Melayu"
     },
     {
       "source_id": "bab-5-4-extra-8",
       "bm_original": "dianggotai oleh sembilan orang Raja Melayu",
-      "translate": "dianggotai 由 sembilan orang Raja Melayu",
+      "translate": "由九位马来国王组成",
       "key_points_zh": [
-        "dianggotai 由 sembilan orang Raja Melayu"
+        "由九位马来国王组成"
       ],
       "bm_focus_phrase": "dianggotai oleh sembilan orang Raja Melayu"
     },
     {
       "source_id": "bab-5-4-u07",
       "bm_original": "Selain itu, Pesuruhjaya Tinggi perlu memastikan bahawa Raja-raja Melayu dirujuk dalam perkara yang berada dalam bidang kuasa kerajaan Persekutuan.",
-      "translate": "Selain 那, Pesuruhjaya Tinggi perlu memastikan bahawa Raja-raja Melayu dirujuk 在 perkara 的 berada 在 bidang kuasa 政府 Persekutuan.",
+      "translate": "此外，高级专员需要确保在联邦政府管辖范围内的事务上征求马来统治者的意见。",
       "key_points_zh": [
-        "Selain 那, Pesuruhjaya Tinggi perlu memastikan bahawa Raja-raja Melayu dirujuk 在 perkara 的 berada 在 bidang kuasa 政府 Persekutuan."
+        "此外，高级专员需要确保在联邦政府管辖范围内的事务上征求马来统治者的意见。"
       ],
       "bm_focus_phrase": "Selain itu, Pesuruhjaya Tinggi perlu memastikan bahawa Raja-raja Melayu dirujuk dalam perkara yang berada dalam bidang kuasa kerajaan Persekutuan."
     },
     {
       "source_id": "bab-5-4-u08",
       "bm_original": "Hal ini membuktikan bahawa kedudukan Raja-raja Melayu dipulihkan semula sebagai tonggak pemerintahan negeri-negeri Melayu.",
-      "translate": "Hal 这 membuktikan bahawa kedudukan Raja-raja Melayu dipulihkan semula 作为 tonggak pemerintahan negeri-negeri Melayu.",
+      "translate": "这证明马来国王的地位被恢复为马来国家政府的支柱。",
       "key_points_zh": [
-        "Hal 这 membuktikan bahawa kedudukan Raja-raja Melayu dipulihkan semula 作为 tonggak pemerintahan negeri-negeri Melayu."
+        "这证明马来国王的地位被恢复为马来国家政府的支柱。"
       ],
       "bm_focus_phrase": "Hal ini membuktikan bahawa kedudukan Raja-raja Melayu dipulihkan semula sebagai tonggak pemerintahan negeri-negeri Melayu."
     },
     {
       "source_id": "bab-5-4-u09",
       "bm_original": "Pembentukan Persekutuan Tanah Melayu 1948 mengiktiraf:",
-      "translate": "重点：Pembentukan Persekutuan Tanah Melayu 1948 mengiktiraf:",
+      "translate": "1948 年马来亚联邦的成立承认：",
       "key_points_zh": [
-        "重点：Pembentukan Persekutuan Tanah Melayu 1948 mengiktiraf:"
+        "1948 年马来亚联邦的成立承认："
       ],
       "bm_focus_phrase": "Pembentukan Persekutuan Tanah Melayu 1948 mengiktiraf:"
     },
     {
       "source_id": "bab-5-4-extra-9",
       "bm_original": "kedudukan istimewa orang Melayu",
-      "translate": "重点：kedudukan istimewa orang Melayu",
+      "translate": "马来人的特殊地位",
       "key_points_zh": [
-        "重点：kedudukan istimewa orang Melayu"
+        "马来人的特殊地位"
       ],
       "bm_focus_phrase": "kedudukan istimewa orang Melayu"
     },
     {
       "source_id": "bab-5-4-extra-10",
       "bm_original": "kepentingan sah kaum lain",
-      "translate": "重点：kepentingan sah kaum lain",
+      "translate": "其他种族的合法利益",
       "key_points_zh": [
-        "重点：kepentingan sah kaum lain"
+        "其他种族的合法利益"
       ],
       "bm_focus_phrase": "kepentingan sah kaum lain"
     },
     {
       "source_id": "bab-5-4-u10",
       "bm_original": "Pengiktirafan ini penting kerana dapat:",
-      "translate": "Pengiktirafan 这 penting 因为 dapat:",
+      "translate": "这种认可很重要，因为它可以：",
       "key_points_zh": [
-        "Pengiktirafan 这 penting 因为 dapat:"
+        "这种认可很重要，因为它可以："
       ],
       "bm_focus_phrase": "Pengiktirafan ini penting kerana dapat:"
     },
     {
       "source_id": "bab-5-4-extra-11",
       "bm_original": "melindungi hak orang Melayu sebagai penduduk asal",
-      "translate": "melindungi 权利 orang Melayu 作为 penduduk asal",
+      "translate": "保护马来人作为原住民的权利",
       "key_points_zh": [
-        "melindungi 权利 orang Melayu 作为 penduduk asal"
+        "保护马来人作为原住民的权利"
       ],
       "bm_focus_phrase": "melindungi hak orang Melayu sebagai penduduk asal"
     },
     {
       "source_id": "bab-5-4-extra-12",
       "bm_original": "pada masa yang sama mengambil kira hak kaum lain dalam negara",
-      "translate": "于 masa 的 sama mengambil kira 权利 kaum lain 在 negara",
+      "translate": "同时考虑到国内其他种族的权利",
       "key_points_zh": [
-        "于 masa 的 sama mengambil kira 权利 kaum lain 在 negara"
+        "同时考虑到国内其他种族的权利"
       ],
       "bm_focus_phrase": "pada masa yang sama mengambil kira hak kaum lain dalam negara"
     },
     {
       "source_id": "bab-5-4-u11",
       "bm_original": "Ini menunjukkan bahawa Persekutuan Tanah Melayu 1948 cuba mewujudkan keseimbangan antara hak orang Melayu dengan kepentingan masyarakat lain.",
-      "translate": "Ini menunjukkan bahawa Persekutuan Tanah Melayu 1948 cuba mewujudkan keseimbangan 其中 权利 orang Melayu 以 kepentingan 社会 lain.",
+      "translate": "这表明1948年马来亚联邦试图在马来人的权利和其他族群的利益之间建立平衡。",
       "key_points_zh": [
-        "Ini menunjukkan bahawa Persekutuan Tanah Melayu 1948 cuba mewujudkan keseimbangan 其中 权利 orang Melayu 以 kepentingan 社会 lain."
+        "这表明1948年马来亚联邦试图在马来人的权利和其他族群的利益之间建立平衡。"
       ],
       "bm_focus_phrase": "Ini menunjukkan bahawa Persekutuan Tanah Melayu 1948 cuba mewujudkan keseimbangan antara hak orang Melayu dengan kepentingan masyarakat lain."
     },
     {
       "source_id": "bab-5-4-u12",
       "bm_original": "Penubuhan Persekutuan Tanah Melayu 1948 turut membuka ruang kepada:",
-      "translate": "Penubuhan Persekutuan Tanah Melayu 1948 turut membuka ruang 向:",
+      "translate": "1948 年马来亚联邦的成立也为以下领域开辟了空间：",
       "key_points_zh": [
-        "Penubuhan Persekutuan Tanah Melayu 1948 turut membuka ruang 向:"
+        "1948 年马来亚联邦的成立也为以下领域开辟了空间："
       ],
       "bm_focus_phrase": "Penubuhan Persekutuan Tanah Melayu 1948 turut membuka ruang kepada:"
     },
     {
       "source_id": "bab-5-4-extra-13",
       "bm_original": "orang bukan Melayu",
-      "translate": "重点：orang bukan Melayu",
+      "translate": "非马来人",
       "key_points_zh": [
-        "重点：orang bukan Melayu"
+        "非马来人"
       ],
       "bm_focus_phrase": "orang bukan Melayu"
     },
     {
       "source_id": "bab-5-4-extra-14",
       "bm_original": "untuk menjadi warganegara",
-      "translate": "为了 menjadi warganegara",
+      "translate": "成为公民",
       "key_points_zh": [
-        "为了 menjadi warganegara"
+        "成为公民"
       ],
       "bm_focus_phrase": "untuk menjadi warganegara"
     },
     {
       "source_id": "bab-5-4-u13",
       "bm_original": "Pada masa yang sama:",
-      "translate": "Pada masa 的 sama:",
+      "translate": "同时：",
       "key_points_zh": [
-        "Pada masa 的 sama:"
+        "同时："
       ],
       "bm_focus_phrase": "Pada masa yang sama:"
     },
     {
       "source_id": "bab-5-4-extra-15",
       "bm_original": "orang Melayu diiktiraf sebagai penduduk asal",
-      "translate": "orang Melayu diiktiraf 作为 penduduk asal",
+      "translate": "马来人被视为原始人口",
       "key_points_zh": [
-        "orang Melayu diiktiraf 作为 penduduk asal"
+        "马来人被视为原始人口"
       ],
       "bm_focus_phrase": "orang Melayu diiktiraf sebagai penduduk asal"
     },
     {
       "source_id": "bab-5-4-extra-16",
       "bm_original": "dan diberikan kedudukan istimewa",
-      "translate": "与 diberikan kedudukan istimewa",
+      "translate": "并给予特殊的地位",
       "key_points_zh": [
-        "与 diberikan kedudukan istimewa"
+        "并给予特殊的地位"
       ],
       "bm_focus_phrase": "dan diberikan kedudukan istimewa"
     },
     {
       "source_id": "bab-5-4-u14",
       "bm_original": "Langkah ini penting kerana ia menjadi asas kepada pembentukan masyarakat yang lebih tersusun dari segi taraf kerakyatan dan kedudukan politik.",
-      "translate": "步骤 这 penting 因为 ia menjadi asas 向 pembentukan 社会 的 更 tersusun dari segi taraf kerakyatan 与 kedudukan 政治.",
+      "translate": "这一步很重要，因为它成为在公民身份和政治立场方面形成更有组织的社会的基础。",
       "key_points_zh": [
-        "步骤 这 penting 因为 ia menjadi asas 向 pembentukan 社会 的 更 tersusun dari segi taraf kerakyatan 与 kedudukan 政治."
+        "这一步很重要，因为它成为在公民身份和政治立场方面形成更有组织的社会的基础。"
       ],
       "bm_focus_phrase": "Langkah ini penting kerana ia menjadi asas kepada pembentukan masyarakat yang lebih tersusun dari segi taraf kerakyatan dan kedudukan politik."
     },
     {
       "source_id": "bab-5-4-u15",
       "bm_original": "Kerjasama antara kaum amat penting dalam usaha memupuk perpaduan.",
-      "translate": "Kerjasama 其中 kaum amat penting 在 usaha memupuk perpaduan.",
+      "translate": "种族之间的合作对于促进团结非常重要。",
       "key_points_zh": [
-        "Kerjasama 其中 kaum amat penting 在 usaha memupuk perpaduan."
+        "种族之间的合作对于促进团结非常重要。"
       ],
       "bm_focus_phrase": "Kerjasama antara kaum amat penting dalam usaha memupuk perpaduan."
     },
     {
       "source_id": "bab-5-4-u16",
       "bm_original": "Persekutuan Tanah Melayu 1948 membuka jalan ke arah kerjasama kaum melalui penubuhan:",
-      "translate": "Persekutuan Tanah Melayu 1948 membuka jalan ke arah kerjasama kaum 通过 成立:",
+      "translate": "1948 年，马来亚联邦通过建立以下机构，为种族合作铺平了道路：",
       "key_points_zh": [
-        "Persekutuan Tanah Melayu 1948 membuka jalan ke arah kerjasama kaum 通过 成立:"
+        "1948 年，马来亚联邦通过建立以下机构，为种族合作铺平了道路："
       ],
       "bm_focus_phrase": "Persekutuan Tanah Melayu 1948 membuka jalan ke arah kerjasama kaum melalui penubuhan:"
     },
     {
       "source_id": "bab-5-4-extra-17",
       "bm_original": "Jawatankuasa Hubungan Antara Kaum",
-      "translate": "重点：Jawatankuasa Hubungan Antara Kaum",
+      "translate": "种族关系委员会",
       "key_points_zh": [
-        "重点：Jawatankuasa Hubungan Antara Kaum"
+        "种族关系委员会"
       ],
       "bm_focus_phrase": "Jawatankuasa Hubungan Antara Kaum"
     },
     {
       "source_id": "bab-5-4-extra-18",
       "bm_original": "Communities Liaison Committee (CLC)",
-      "translate": "重点：Communities Liaison Committee (CLC)",
+      "translate": "社区联络委员会 (CLC)",
       "key_points_zh": [
-        "重点：Communities Liaison Committee (CLC)"
+        "社区联络委员会 (CLC)"
       ],
       "bm_focus_phrase": "Communities Liaison Committee (CLC)"
     },
     {
       "source_id": "bab-5-4-u17",
       "bm_original": "Kebanyakan cadangan CLC kemudiannya dimasukkan ke dalam:",
-      "translate": "Kebanyakan 建议 CLC kemudiannya dimasukkan ke 在:",
+      "translate": "大多数 CLC 建议随后被纳入：",
       "key_points_zh": [
-        "Kebanyakan 建议 CLC kemudiannya dimasukkan ke 在:"
+        "大多数 CLC 建议随后被纳入："
       ],
       "bm_focus_phrase": "Kebanyakan cadangan CLC kemudiannya dimasukkan ke dalam:"
     },
     {
       "source_id": "bab-5-4-extra-19",
       "bm_original": "usul perundangan yang diluluskan oleh Majlis Perundangan Persekutuan",
-      "translate": "usul perundangan 的 diluluskan 由 Majlis Perundangan Persekutuan",
+      "translate": "联邦立法委员会批准的立法提案",
       "key_points_zh": [
-        "usul perundangan 的 diluluskan 由 Majlis Perundangan Persekutuan"
+        "联邦立法委员会批准的立法提案"
       ],
       "bm_focus_phrase": "usul perundangan yang diluluskan oleh Majlis Perundangan Persekutuan"
     },
     {
       "source_id": "bab-5-4-u18",
       "bm_original": "Jawatankuasa ini berjaya:",
-      "translate": "Jawatankuasa 这 成功:",
+      "translate": "委员会成功：",
       "key_points_zh": [
-        "Jawatankuasa 这 成功:"
+        "委员会成功："
       ],
       "bm_focus_phrase": "Jawatankuasa ini berjaya:"
     },
     {
       "source_id": "bab-5-4-extra-20",
       "bm_original": "memupuk persefahaman antara pemimpin pelbagai kaum",
-      "translate": "memupuk persefahaman 其中 领袖 pelbagai kaum",
+      "translate": "促进不同种族领袖之间的了解",
       "key_points_zh": [
-        "memupuk persefahaman 其中 领袖 pelbagai kaum"
+        "促进不同种族领袖之间的了解"
       ],
       "bm_focus_phrase": "memupuk persefahaman antara pemimpin pelbagai kaum"
     },
     {
       "source_id": "bab-5-4-extra-21",
       "bm_original": "mewujudkan asas kerjasama politik yang lebih baik",
-      "translate": "mewujudkan asas kerjasama 政治 的 更 baik",
+      "translate": "为更好的政治合作奠定基础",
       "key_points_zh": [
-        "mewujudkan asas kerjasama 政治 的 更 baik"
+        "为更好的政治合作奠定基础"
       ],
       "bm_focus_phrase": "mewujudkan asas kerjasama politik yang lebih baik"
     },
     {
       "source_id": "bab-5-4-u19",
       "bm_original": "Persekutuan Tanah Melayu 1948 menjadi langkah penting yang merintis jalan kepada pembentukan:",
-      "translate": "Persekutuan Tanah Melayu 1948 menjadi 步骤 penting 的 merintis jalan 向 pembentukan:",
+      "translate": "1948 年马来亚联邦是重要的一步，为以下国家的形成铺平了道路：",
       "key_points_zh": [
-        "Persekutuan Tanah Melayu 1948 menjadi 步骤 penting 的 merintis jalan 向 pembentukan:"
+        "1948 年马来亚联邦是重要的一步，为以下国家的形成铺平了道路："
       ],
       "bm_focus_phrase": "Persekutuan Tanah Melayu 1948 menjadi langkah penting yang merintis jalan kepada pembentukan:"
     },
     {
       "source_id": "bab-5-4-extra-22",
       "bm_original": "Perlembagaan Tanah Melayu 1957",
-      "translate": "重点：Perlembagaan Tanah Melayu 1957",
+      "translate": "1957年马来亚宪法",
       "key_points_zh": [
-        "重点：Perlembagaan Tanah Melayu 1957"
+        "1957年马来亚宪法"
       ],
       "bm_focus_phrase": "Perlembagaan Tanah Melayu 1957"
     },
     {
       "source_id": "bab-5-4-extra-23",
       "bm_original": "yang akhirnya membawa kepada kemerdekaan negara",
-      "translate": "的 akhirnya membawa 向 独立 negara",
+      "translate": "最终导致国家独立",
       "key_points_zh": [
-        "的 akhirnya membawa 向 独立 negara"
+        "最终导致国家独立"
       ],
       "bm_focus_phrase": "yang akhirnya membawa kepada kemerdekaan negara"
     },
     {
       "source_id": "bab-5-4-u20",
       "bm_original": "Penubuhan Persekutuan Tanah Melayu 1948 membawa kesan yang besar kepada negara kita kerana:",
-      "translate": "Penubuhan Persekutuan Tanah Melayu 1948 membawa 影响 的 besar 向 negara kita 因为:",
+      "translate": "1948年马来亚联邦的成立对我国产生了很大的影响，因为：",
       "key_points_zh": [
-        "Penubuhan Persekutuan Tanah Melayu 1948 membawa 影响 的 besar 向 negara kita 因为:"
+        "1948年马来亚联邦的成立对我国产生了很大的影响，因为："
       ],
       "bm_focus_phrase": "Penubuhan Persekutuan Tanah Melayu 1948 membawa kesan yang besar kepada negara kita kerana:"
     },
     {
       "source_id": "bab-5-4-extra-24",
       "bm_original": "mengembalikan kedudukan Raja-raja Melayu",
-      "translate": "mengembalikan kedudukan Raja-raja Melayu",
+      "translate": "恢复马来国王的地位",
       "key_points_zh": [
-        "mengembalikan kedudukan Raja-raja Melayu"
+        "恢复马来国王的地位"
       ],
       "bm_focus_phrase": "mengembalikan kedudukan Raja-raja Melayu"
     },
     {
       "source_id": "bab-5-4-extra-25",
       "bm_original": "menjaga kedudukan istimewa orang Melayu",
-      "translate": "重点：menjaga kedudukan istimewa orang Melayu",
+      "translate": "维持马来人的特殊地位",
       "key_points_zh": [
-        "重点：menjaga kedudukan istimewa orang Melayu"
+        "维持马来人的特殊地位"
       ],
       "bm_focus_phrase": "menjaga kedudukan istimewa orang Melayu"
     },
     {
       "source_id": "bab-5-4-extra-26",
       "bm_original": "membuka ruang kewarganegaraan kepada orang bukan Melayu",
-      "translate": "membuka ruang 公民权 向 orang bukan Melayu",
+      "translate": "向非马来人开放公民身份空间",
       "key_points_zh": [
-        "membuka ruang 公民权 向 orang bukan Melayu"
+        "向非马来人开放公民身份空间"
       ],
       "bm_focus_phrase": "membuka ruang kewarganegaraan kepada orang bukan Melayu"
     },
     {
       "source_id": "bab-5-4-extra-27",
       "bm_original": "mewujudkan kerjasama dan perpaduan antara kaum",
-      "translate": "mewujudkan kerjasama 与 perpaduan 其中 kaum",
+      "translate": "建立种族之间的合作与团结",
       "key_points_zh": [
-        "mewujudkan kerjasama 与 perpaduan 其中 kaum"
+        "建立种族之间的合作与团结"
       ],
       "bm_focus_phrase": "mewujudkan kerjasama dan perpaduan antara kaum"
     },
     {
       "source_id": "bab-5-4-u21",
       "bm_original": "Perjanjian ini menunjukkan bahawa kestabilan negara hanya dapat dicapai melalui:",
-      "translate": "Perjanjian 这 menunjukkan bahawa kestabilan negara hanya dapat dicapai 通过:",
+      "translate": "该协议表明，国家稳定只能通过以下方式实现：",
       "key_points_zh": [
-        "Perjanjian 这 menunjukkan bahawa kestabilan negara hanya dapat dicapai 通过:"
+        "该协议表明，国家稳定只能通过以下方式实现："
       ],
       "bm_focus_phrase": "Perjanjian ini menunjukkan bahawa kestabilan negara hanya dapat dicapai melalui:"
     },
     {
       "source_id": "bab-5-4-extra-28",
       "bm_original": "kepimpinan Raja-raja Melayu",
-      "translate": "kepimpinan Raja-raja Melayu",
+      "translate": "马来国王的领导",
       "key_points_zh": [
-        "kepimpinan Raja-raja Melayu"
+        "马来国王的领导"
       ],
       "bm_focus_phrase": "kepimpinan Raja-raja Melayu"
     },
     {
       "source_id": "bab-5-4-extra-29",
       "bm_original": "kebijaksanaan pemimpin tempatan",
-      "translate": "kebijaksanaan 领袖 本地",
+      "translate": "当地领导人的智慧",
       "key_points_zh": [
-        "kebijaksanaan 领袖 本地"
+        "当地领导人的智慧"
       ],
       "bm_focus_phrase": "kebijaksanaan pemimpin tempatan"
     },
     {
       "source_id": "bab-5-4-extra-30",
       "bm_original": "kerjasama antara rakyat pelbagai kaum",
-      "translate": "kerjasama 其中 人民 pelbagai kaum",
+      "translate": "不同种族的人之间的合作",
       "key_points_zh": [
-        "kerjasama 其中 人民 pelbagai kaum"
+        "不同种族的人之间的合作"
       ],
       "bm_focus_phrase": "kerjasama antara rakyat pelbagai kaum"
     },
     {
       "source_id": "bab-5-4-u22",
       "bm_original": "Oleh itu, gabungan kuat antara rakyat, pemimpin dan institusi Raja berjaya menggagalkan rancangan British yang boleh melemahkan kedudukan orang Melayu dan mengubah struktur politik Tanah Melayu secara tidak adil.",
-      "translate": "Oleh 那, gabungan kuat 其中 人民, 领袖 与 institusi Raja 成功 menggagalkan rancangan British 的 可以 melemahkan kedudukan orang Melayu 与 mengubah struktur 政治 Tanah Melayu secara 不 adil.",
+      "translate": "因此，人民、领导人和国王机构之间的强有力的联合成功地挫败了英国可能削弱马来人地位并不公平地改变马来亚政治结构的计划。",
       "key_points_zh": [
-        "Oleh 那, gabungan kuat 其中 人民, 领袖 与 institusi Raja 成功 menggagalkan rancangan British 的 可以 melemahkan kedudukan orang Melayu 与 mengubah struktur 政治 Tanah Melayu secara 不 adil."
+        "因此，人民、领导人和国王机构之间的强有力的联合成功地挫败了英国可能削弱马来人地位并不公平地改变马来亚政治结构的计划。"
       ],
       "bm_focus_phrase": "Oleh itu, gabungan kuat antara rakyat, pemimpin dan institusi Raja berjaya menggagalkan rancangan British yang boleh melemahkan kedudukan orang Melayu dan mengubah struktur politik Tanah Melayu secara tidak adil."
     },
     {
       "source_id": "bab-5-4-u27",
       "bm_original": "Persekutuan Tanah Melayu 1948 terbentuk hasil kerjasama erat antara Raja-raja Melayu , UMNO dan pihak British .",
-      "translate": "Persekutuan Tanah Melayu 1948 terbentuk hasil kerjasama erat 其中 Raja-raja Melayu , UMNO 与 pihak British .",
+      "translate": "马来亚联邦于 1948 年成立，是马来统治者、巫统和英国密切合作的结果。",
       "key_points_zh": [
-        "Persekutuan Tanah Melayu 1948 terbentuk hasil kerjasama erat 其中 Raja-raja Melayu , UMNO 与 pihak British ."
+        "马来亚联邦于 1948 年成立，是马来统治者、巫统和英国密切合作的结果。"
       ],
       "bm_focus_phrase": "Persekutuan Tanah Melayu 1948 terbentuk hasil kerjasama erat antara Raja-raja Melayu , UMNO dan pihak British ."
     },
     {
       "source_id": "bab-5-4-u28",
       "bm_original": "Kerjasama ini berjaya menggantikan Malayan Union yang ditolak oleh rakyat dengan satu bentuk pentadbiran baharu yang lebih menghormati kedudukan Raja-raja Melayu dan orang Melayu.",
-      "translate": "Kerjasama 这 成功 menggantikan Malayan Union 的 ditolak 由 人民 以 satu bentuk 行政 baharu 的 更 menghormati kedudukan Raja-raja Melayu 与 orang Melayu.",
+      "translate": "这种合作成功地以更加尊重马来国王和马来人民立场的新行政形式取代了被人民拒绝的马来亚联邦。",
       "key_points_zh": [
-        "Kerjasama 这 成功 menggantikan Malayan Union 的 ditolak 由 人民 以 satu bentuk 行政 baharu 的 更 menghormati kedudukan Raja-raja Melayu 与 orang Melayu."
+        "这种合作成功地以更加尊重马来国王和马来人民立场的新行政形式取代了被人民拒绝的马来亚联邦。"
       ],
       "bm_focus_phrase": "Kerjasama ini berjaya menggantikan Malayan Union yang ditolak oleh rakyat dengan satu bentuk pentadbiran baharu yang lebih menghormati kedudukan Raja-raja Melayu dan orang Melayu."
     },
     {
       "source_id": "bab-5-4-u29",
       "bm_original": "Melalui Persekutuan Tanah Melayu 1948 , kedudukan Raja-raja Melayu dipulihkan semula, kedudukan orang Melayu diiktiraf dan dipelihara, orang bukan Melayu diberi ruang menjadi warganegara dan asas kerjasama antara kaum mula diperkukuhkan.",
-      "translate": "Melalui Persekutuan Tanah Melayu 1948 , kedudukan Raja-raja Melayu dipulihkan semula, kedudukan orang Melayu diiktiraf 与 dipelihara, orang bukan Melayu diberi ruang menjadi warganegara 与 asas kerjasama 其中 kaum mula diperkukuhkan.",
+      "translate": "通过1948年的马来亚联邦，马来统治者的地位得到恢复，马来人的地位得到承认和保留，非马来人获得成为公民的空间，种族间合作的基础得到加强。",
       "key_points_zh": [
-        "Melalui Persekutuan Tanah Melayu 1948 , kedudukan Raja-raja Melayu dipulihkan semula, kedudukan orang Melayu diiktiraf 与 dipelihara, orang bukan Melayu diberi ruang menjadi warganegara 与 asas kerjasama 其中 kaum mula diperkukuhkan."
+        "通过1948年的马来亚联邦，马来统治者的地位得到恢复，马来人的地位得到承认和保留，非马来人获得成为公民的空间，种族间合作的基础得到加强。"
       ],
       "bm_focus_phrase": "Melalui Persekutuan Tanah Melayu 1948 , kedudukan Raja-raja Melayu dipulihkan semula, kedudukan orang Melayu diiktiraf dan dipelihara, orang bukan Melayu diberi ruang menjadi warganegara dan asas kerjasama antara kaum mula diperkukuhkan."
     },
     {
       "source_id": "bab-5-4-u30",
       "bm_original": "British juga kembali mengiktiraf dasar menaungi negeri-negeri Melayu seperti sebelum Perang Dunia Kedua .",
-      "translate": "British 也 kembali mengiktiraf dasar menaungi negeri-negeri Melayu seperti sebelum 第二次世界大战 .",
+      "translate": "英国人也承认像第二次世界大战前一样庇护马来国家的政策。",
       "key_points_zh": [
-        "British 也 kembali mengiktiraf dasar menaungi negeri-negeri Melayu seperti sebelum 第二次世界大战 ."
+        "英国人也承认像第二次世界大战前一样庇护马来国家的政策。"
       ],
       "bm_focus_phrase": "British juga kembali mengiktiraf dasar menaungi negeri-negeri Melayu seperti sebelum Perang Dunia Kedua ."
     },
     {
       "source_id": "bab-5-4-u31",
       "bm_original": "Perkembangan ini membuktikan bahawa perjuangan politik yang tersusun, kebijaksanaan pemimpin dan kesepakatan rakyat mampu mempertahankan maruah bangsa serta membentuk asas negara yang lebih stabil.",
-      "translate": "Perkembangan 这 membuktikan bahawa 斗争 政治 的 tersusun, kebijaksanaan 领袖 与 kesepakatan 人民 mampu mempertahankan maruah bangsa 以及 membentuk asas negara 的 更 stabil.",
+      "translate": "这一事态发展证明，有组织的政治斗争、领导人的智慧和人民的共识能够捍卫国家的尊严，并为一个更加稳定的国家奠定基础。",
       "key_points_zh": [
-        "Perkembangan 这 membuktikan bahawa 斗争 政治 的 tersusun, kebijaksanaan 领袖 与 kesepakatan 人民 mampu mempertahankan maruah bangsa 以及 membentuk asas negara 的 更 stabil."
+        "这一事态发展证明，有组织的政治斗争、领导人的智慧和人民的共识能够捍卫国家的尊严，并为一个更加稳定的国家奠定基础。"
       ],
       "bm_focus_phrase": "Perkembangan ini membuktikan bahawa perjuangan politik yang tersusun, kebijaksanaan pemimpin dan kesepakatan rakyat mampu mempertahankan maruah bangsa serta membentuk asas negara yang lebih stabil."
     },
     {
       "source_id": "bab-5-4-u32",
       "bm_original": "Selain itu, tolak ansur antara kaum dan kesediaan bekerjasama dalam suasana berunding menjadi unsur penting dalam menjayakan pembentukan Persekutuan Tanah Melayu 1948 dan menyediakan jalan ke arah kemerdekaan negara.",
-      "translate": "Selain 那, tolak ansur 其中 kaum 与 kesediaan bekerjasama 在 suasana berunding menjadi unsur penting 在 menjayakan pembentukan Persekutuan Tanah Melayu 1948 与 menyediakan jalan ke arah 独立 negara.",
+      "translate": "此外，种族之间的宽容以及在谈判气氛中愿意合作的精神成为1948年马来亚联邦成功组建的重要因素，并为国家的独立提供了道路。",
       "key_points_zh": [
-        "Selain 那, tolak ansur 其中 kaum 与 kesediaan bekerjasama 在 suasana berunding menjadi unsur penting 在 menjayakan pembentukan Persekutuan Tanah Melayu 1948 与 menyediakan jalan ke arah 独立 negara."
+        "此外，种族之间的宽容以及在谈判气氛中愿意合作的精神成为1948年马来亚联邦成功组建的重要因素，并为国家的独立提供了道路。"
       ],
       "bm_focus_phrase": "Selain itu, tolak ansur antara kaum dan kesediaan bekerjasama dalam suasana berunding menjadi unsur penting dalam menjayakan pembentukan Persekutuan Tanah Melayu 1948 dan menyediakan jalan ke arah kemerdekaan negara."
     }

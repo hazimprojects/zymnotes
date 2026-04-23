@@ -13,7 +13,8 @@ Skrip ini membungkus label pendek sebagai `释义：…（原文：…）` supay
 ```bash
 pip install deep-translator   # sekali sahaja
 python3 scripts/regen-bab3-zh-translates.py          # Bab 3 sahaja (wrapper)
-python3 scripts/regen-zh-bab-translates.py --bab 4   # Bab 4 (atau --bab 5 …)
+python3 scripts/regen-zh-bab-translates.py --bab 4   # Bab 4
+python3 scripts/regen-zh-bab-translates.py --bab 5   # Bab 5
 ```
 
 Hasilnya perlu **disemak manusia** untuk nama khas (Sultan, jawatan, ejaan rasmi) supaya selari dengan nota BM.

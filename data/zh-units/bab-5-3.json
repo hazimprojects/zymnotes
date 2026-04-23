@@ -1,717 +1,718 @@
 {
   "meta": {
     "source_file": "notes/bab-5-3.html",
-    "rollout": "gelombang-1-manual-revision"
+    "rollout": "gelombang-1-ms-zh-regenerated",
+    "notes": "Translate fields regenerated from bm_original (ms→zh-CN) for fluent Simplified Chinese; proper names follow translator output—verify against BM notes."
   },
   "units": [
     {
       "source_id": "bab-5-3-u34",
       "bm_original": "Perjanjian Persekutuan Tanah Melayu 1948 dirangka oleh Jawatankuasa Kerja dalam tempoh lima bulan dan dibentangkan pada 20 November 1946 .",
-      "translate": "Perjanjian Persekutuan Tanah Melayu 1948 dirangka 由 Jawatankuasa Kerja 在 tempoh lima bulan 与 dibentangkan 于 20 November 1946 .",
+      "translate": "工作委员会在五个月内起草了《1948年马来亚联邦协议》，并于1946年11月20日提交。",
       "key_points_zh": [
-        "Perjanjian Persekutuan Tanah Melayu 1948 dirangka 由 Jawatankuasa Kerja 在 tempoh lima bulan 与 dibentangkan 于 20 November 1946 ."
+        "工作委员会在五个月内起草了《1948年马来亚联邦协议》，并于1946年11月20日提交。"
       ],
       "bm_focus_phrase": "Perjanjian Persekutuan Tanah Melayu 1948 dirangka oleh Jawatankuasa Kerja dalam tempoh lima bulan dan dibentangkan pada 20 November 1946 ."
     },
     {
       "source_id": "bab-5-3-u35",
       "bm_original": "Ciri utama Persekutuan Tanah Melayu 1948 meliputi pentadbiran , kuasa Raja-raja Melayu , perundangan dan kewarganegaraan .",
-      "translate": "Ciri 主要 Persekutuan Tanah Melayu 1948 meliputi 行政 , kuasa Raja-raja Melayu , perundangan 与 公民权 .",
+      "translate": "1948年马来亚联邦的主要特征包括行政管理、马来统治者的权力、立法和公民权。",
       "key_points_zh": [
-        "Ciri 主要 Persekutuan Tanah Melayu 1948 meliputi 行政 , kuasa Raja-raja Melayu , perundangan 与 公民权 ."
+        "1948年马来亚联邦的主要特征包括行政管理、马来统治者的权力、立法和公民权。"
       ],
       "bm_focus_phrase": "Ciri utama Persekutuan Tanah Melayu 1948 meliputi pentadbiran , kuasa Raja-raja Melayu , perundangan dan kewarganegaraan ."
     },
     {
       "source_id": "bab-5-3-u36",
       "bm_original": "Sistem baharu ini memulihkan semula kedudukan Raja-raja Melayu dan lebih menjaga status Tanah Melayu .",
-      "translate": "Sistem baharu 这 memulihkan semula kedudukan Raja-raja Melayu 与 更 menjaga status Tanah Melayu .",
+      "translate": "这个新制度恢复了马来国王的地位并保护了马来亚的地位。",
       "key_points_zh": [
-        "Sistem baharu 这 memulihkan semula kedudukan Raja-raja Melayu 与 更 menjaga status Tanah Melayu ."
+        "这个新制度恢复了马来国王的地位并保护了马来亚的地位。"
       ],
       "bm_focus_phrase": "Sistem baharu ini memulihkan semula kedudukan Raja-raja Melayu dan lebih menjaga status Tanah Melayu ."
     },
     {
       "source_id": "bab-5-3-u37",
       "bm_original": "Syarat kewarganegaraan dalam persekutuan ini diperketatkan berbanding Malayan Union .",
-      "translate": "Syarat 公民权 在 persekutuan 这 diperketatkan berbanding Malayan Union .",
+      "translate": "与马来亚联邦相比，该联邦的公民条件更为严格。",
       "key_points_zh": [
-        "Syarat 公民权 在 persekutuan 这 diperketatkan berbanding Malayan Union ."
+        "与马来亚联邦相比，该联邦的公民条件更为严格。"
       ],
       "bm_focus_phrase": "Syarat kewarganegaraan dalam persekutuan ini diperketatkan berbanding Malayan Union ."
     },
     {
       "source_id": "bab-5-3-u01",
       "bm_original": "Perjanjian Persekutuan Tanah Melayu 1948 dirangka oleh Jawatankuasa Kerja dalam tempoh lima bulan.",
-      "translate": "Perjanjian Persekutuan Tanah Melayu 1948 dirangka 由 Jawatankuasa Kerja 在 tempoh lima bulan.",
+      "translate": "工作委员会在五个月内起草了《1948年马来亚联合邦协定》。",
       "key_points_zh": [
-        "Perjanjian Persekutuan Tanah Melayu 1948 dirangka 由 Jawatankuasa Kerja 在 tempoh lima bulan."
+        "工作委员会在五个月内起草了《1948年马来亚联合邦协定》。"
       ],
       "bm_focus_phrase": "Perjanjian Persekutuan Tanah Melayu 1948 dirangka oleh Jawatankuasa Kerja dalam tempoh lima bulan."
     },
     {
       "source_id": "bab-5-3-u02",
       "bm_original": "Ciri-ciri utama Persekutuan Tanah Melayu 1948 meliputi pentadbiran , kuasa Raja-raja Melayu , perundangan dan kewarganegaraan .",
-      "translate": "Ciri-ciri 主要 Persekutuan Tanah Melayu 1948 meliputi 行政 , kuasa Raja-raja Melayu , perundangan 与 公民权 .",
+      "translate": "1948年马来亚联邦的主要特征包括行政管理、马来统治者的权力、立法和公民权。",
       "key_points_zh": [
-        "Ciri-ciri 主要 Persekutuan Tanah Melayu 1948 meliputi 行政 , kuasa Raja-raja Melayu , perundangan 与 公民权 ."
+        "1948年马来亚联邦的主要特征包括行政管理、马来统治者的权力、立法和公民权。"
       ],
       "bm_focus_phrase": "Ciri-ciri utama Persekutuan Tanah Melayu 1948 meliputi pentadbiran , kuasa Raja-raja Melayu , perundangan dan kewarganegaraan ."
     },
     {
       "source_id": "bab-5-3-u03",
       "bm_original": "Persekutuan Tanah Melayu 1948 dibentuk untuk menggantikan Malayan Union dengan satu sistem baharu yang lebih menjaga kedudukan Raja-raja Melayu , status Tanah Melayu dan syarat kewarganegaraan .",
-      "translate": "Persekutuan Tanah Melayu 1948 dibentuk 为了 menggantikan Malayan Union 以 satu sistem baharu 的 更 menjaga kedudukan Raja-raja Melayu , status Tanah Melayu 与 syarat 公民权 .",
+      "translate": "1948年马来亚联合邦成立，以新制度取代马来亚联邦，以更好地保障马来国王的地位、马来亚的地位和公民条件。",
       "key_points_zh": [
-        "Persekutuan Tanah Melayu 1948 dibentuk 为了 menggantikan Malayan Union 以 satu sistem baharu 的 更 menjaga kedudukan Raja-raja Melayu , status Tanah Melayu 与 syarat 公民权 ."
+        "1948年马来亚联合邦成立，以新制度取代马来亚联邦，以更好地保障马来国王的地位、马来亚的地位和公民条件。"
       ],
       "bm_focus_phrase": "Persekutuan Tanah Melayu 1948 dibentuk untuk menggantikan Malayan Union dengan satu sistem baharu yang lebih menjaga kedudukan Raja-raja Melayu , status Tanah Melayu dan syarat kewarganegaraan ."
     },
     {
       "source_id": "bab-5-3-extra-1",
       "bm_original": "1️⃣ pentadbiran 🏛️",
-      "translate": "1️⃣ 行政 🏛️",
+      "translate": "1️⃣ 行政🏛️",
       "key_points_zh": [
-        "1️⃣ 行政 🏛️"
+        "1️⃣ 行政🏛️"
       ],
       "bm_focus_phrase": "1️⃣ pentadbiran 🏛️"
     },
     {
       "source_id": "bab-5-3-extra-2",
       "bm_original": "2️⃣ kuasa Raja-raja Melayu 👑",
-      "translate": "2️⃣ kuasa Raja-raja Melayu 👑",
+      "translate": "2️⃣马来国王的权力👑",
       "key_points_zh": [
-        "2️⃣ kuasa Raja-raja Melayu 👑"
+        "2️⃣马来国王的权力👑"
       ],
       "bm_focus_phrase": "2️⃣ kuasa Raja-raja Melayu 👑"
     },
     {
       "source_id": "bab-5-3-extra-3",
       "bm_original": "3️⃣ perundangan 📜",
-      "translate": "重点：3️⃣ perundangan 📜",
+      "translate": "3️⃣ 立法📜",
       "key_points_zh": [
-        "重点：3️⃣ perundangan 📜"
+        "3️⃣ 立法📜"
       ],
       "bm_focus_phrase": "3️⃣ perundangan 📜"
     },
     {
       "source_id": "bab-5-3-extra-4",
       "bm_original": "4️⃣ kewarganegaraan 🪪",
-      "translate": "4️⃣ 公民权 🪪",
+      "translate": "4️⃣ 公民权🪪",
       "key_points_zh": [
-        "4️⃣ 公民权 🪪"
+        "4️⃣ 公民权🪪"
       ],
       "bm_focus_phrase": "4️⃣ kewarganegaraan 🪪"
     },
     {
       "source_id": "bab-5-3-u04",
       "bm_original": "Persekutuan dibentuk melalui gabungan:",
-      "translate": "Persekutuan dibentuk 通过 gabungan:",
+      "translate": "联合会由以下机构合并而成：",
       "key_points_zh": [
-        "Persekutuan dibentuk 通过 gabungan:"
+        "联合会由以下机构合并而成："
       ],
       "bm_focus_phrase": "Persekutuan dibentuk melalui gabungan:"
     },
     {
       "source_id": "bab-5-3-extra-5",
       "bm_original": "sembilan buah negeri Melayu",
-      "translate": "sembilan buah 州 Melayu",
+      "translate": "马来九州属",
       "key_points_zh": [
-        "sembilan buah 州 Melayu"
+        "马来九州属"
       ],
       "bm_focus_phrase": "sembilan buah negeri Melayu"
     },
     {
       "source_id": "bab-5-3-extra-6",
       "bm_original": "dua buah Negeri-negeri Selat",
-      "translate": "重点：dua buah Negeri-negeri Selat",
+      "translate": "两个海峡殖民地",
       "key_points_zh": [
-        "重点：dua buah Negeri-negeri Selat"
+        "两个海峡殖民地"
       ],
       "bm_focus_phrase": "dua buah Negeri-negeri Selat"
     },
     {
       "source_id": "bab-5-3-u05",
       "bm_original": "Namun begitu:",
-      "translate": "重点：Namun begitu:",
+      "translate": "尽管如此：",
       "key_points_zh": [
-        "重点：Namun begitu:"
+        "尽管如此："
       ],
       "bm_focus_phrase": "Namun begitu:"
     },
     {
       "source_id": "bab-5-3-extra-7",
       "bm_original": "Singapura kekal sebagai tanah jajahan British yang berasingan",
-      "translate": "Singapura kekal 作为 tanah jajahan British 的 berasingan",
+      "translate": "新加坡仍然是一个独立的英国殖民地",
       "key_points_zh": [
-        "Singapura kekal 作为 tanah jajahan British 的 berasingan"
+        "新加坡仍然是一个独立的英国殖民地"
       ],
       "bm_focus_phrase": "Singapura kekal sebagai tanah jajahan British yang berasingan"
     },
     {
       "source_id": "bab-5-3-u06",
       "bm_original": "Kerajaan Persekutuan diketuai oleh:",
-      "translate": "Kerajaan Persekutuan diketuai 由:",
+      "translate": "联邦政府的领导是：",
       "key_points_zh": [
-        "Kerajaan Persekutuan diketuai 由:"
+        "联邦政府的领导是："
       ],
       "bm_focus_phrase": "Kerajaan Persekutuan diketuai oleh:"
     },
     {
       "source_id": "bab-5-3-extra-8",
       "bm_original": "Pesuruhjaya Tinggi British",
-      "translate": "重点：Pesuruhjaya Tinggi British",
+      "translate": "英国高级专员",
       "key_points_zh": [
-        "重点：Pesuruhjaya Tinggi British"
+        "英国高级专员"
       ],
       "bm_focus_phrase": "Pesuruhjaya Tinggi British"
     },
     {
       "source_id": "bab-5-3-u07",
       "bm_original": "Pesuruhjaya Tinggi British mempunyai:",
-      "translate": "重点：Pesuruhjaya Tinggi British mempunyai:",
+      "translate": "英国高级专员有：",
       "key_points_zh": [
-        "重点：Pesuruhjaya Tinggi British mempunyai:"
+        "英国高级专员有："
       ],
       "bm_focus_phrase": "Pesuruhjaya Tinggi British mempunyai:"
     },
     {
       "source_id": "bab-5-3-extra-9",
       "bm_original": "kuasa eksekutif",
-      "translate": "重点：kuasa eksekutif",
+      "translate": "执行力",
       "key_points_zh": [
-        "重点：kuasa eksekutif"
+        "执行力"
       ],
       "bm_focus_phrase": "kuasa eksekutif"
     },
     {
       "source_id": "bab-5-3-u08",
       "bm_original": "Kerajaan Persekutuan pula bertanggungjawab dalam:",
-      "translate": "Kerajaan Persekutuan pula bertanggungjawab 在:",
+      "translate": "联邦政府负责：",
       "key_points_zh": [
-        "Kerajaan Persekutuan pula bertanggungjawab 在:"
+        "联邦政府负责："
       ],
       "bm_focus_phrase": "Kerajaan Persekutuan pula bertanggungjawab dalam:"
     },
     {
       "source_id": "bab-5-3-extra-10",
       "bm_original": "hal kewangan",
-      "translate": "重点：hal kewangan",
+      "translate": "财务事项",
       "key_points_zh": [
-        "重点：hal kewangan"
+        "财务事项"
       ],
       "bm_focus_phrase": "hal kewangan"
     },
     {
       "source_id": "bab-5-3-extra-11",
       "bm_original": "hal lain yang mempunyai kepentingan bersama",
-      "translate": "hal lain 的 mempunyai kepentingan bersama",
+      "translate": "其他共同关心的事项",
       "key_points_zh": [
-        "hal lain 的 mempunyai kepentingan bersama"
+        "其他共同关心的事项"
       ],
       "bm_focus_phrase": "hal lain yang mempunyai kepentingan bersama"
     },
     {
       "source_id": "bab-5-3-u09",
       "bm_original": "Persekutuan ditubuhkan bagi membantu Pesuruhjaya Tinggi British melalui dua badan utama:",
-      "translate": "Persekutuan ditubuhkan bagi membantu Pesuruhjaya Tinggi British 通过 dua badan 主要:",
+      "translate": "该联合会的成立是为了通过两个主要机构协助英国高级专员：",
       "key_points_zh": [
-        "Persekutuan ditubuhkan bagi membantu Pesuruhjaya Tinggi British 通过 dua badan 主要:"
+        "该联合会的成立是为了通过两个主要机构协助英国高级专员："
       ],
       "bm_focus_phrase": "Persekutuan ditubuhkan bagi membantu Pesuruhjaya Tinggi British melalui dua badan utama:"
     },
     {
       "source_id": "bab-5-3-extra-12",
       "bm_original": "Majlis Mesyuarat Persekutuan",
-      "translate": "重点：Majlis Mesyuarat Persekutuan",
+      "translate": "联邦委员会会议",
       "key_points_zh": [
-        "重点：Majlis Mesyuarat Persekutuan"
+        "联邦委员会会议"
       ],
       "bm_focus_phrase": "Majlis Mesyuarat Persekutuan"
     },
     {
       "source_id": "bab-5-3-extra-13",
       "bm_original": "Majlis Perundangan Persekutuan",
-      "translate": "重点：Majlis Perundangan Persekutuan",
+      "translate": "联邦立法委员会",
       "key_points_zh": [
-        "重点：Majlis Perundangan Persekutuan"
+        "联邦立法委员会"
       ],
       "bm_focus_phrase": "Majlis Perundangan Persekutuan"
     },
     {
       "source_id": "bab-5-3-u10",
       "bm_original": "Majlis Mesyuarat Persekutuan mengandungi:",
-      "translate": "重点：Majlis Mesyuarat Persekutuan mengandungi:",
+      "translate": "联邦议会由以下人员组成：",
       "key_points_zh": [
-        "重点：Majlis Mesyuarat Persekutuan mengandungi:"
+        "联邦议会由以下人员组成："
       ],
       "bm_focus_phrase": "Majlis Mesyuarat Persekutuan mengandungi:"
     },
     {
       "source_id": "bab-5-3-extra-14",
       "bm_original": "ahli rasmi",
-      "translate": "重点：ahli rasmi",
+      "translate": "正式会员",
       "key_points_zh": [
-        "重点：ahli rasmi"
+        "正式会员"
       ],
       "bm_focus_phrase": "ahli rasmi"
     },
     {
       "source_id": "bab-5-3-extra-15",
       "bm_original": "ahli tidak rasmi",
-      "translate": "ahli 不 rasmi",
+      "translate": "非官方成员",
       "key_points_zh": [
-        "ahli 不 rasmi"
+        "非官方成员"
       ],
       "bm_focus_phrase": "ahli tidak rasmi"
     },
     {
       "source_id": "bab-5-3-u11",
       "bm_original": "Pada peringkat awal, ahli tidak rasmi dilantik oleh:",
-      "translate": "Pada peringkat awal, ahli 不 rasmi dilantik 由:",
+      "translate": "在初始阶段，非官方成员由以下人员任命：",
       "key_points_zh": [
-        "Pada peringkat awal, ahli 不 rasmi dilantik 由:"
+        "在初始阶段，非官方成员由以下人员任命："
       ],
       "bm_focus_phrase": "Pada peringkat awal, ahli tidak rasmi dilantik oleh:"
     },
     {
       "source_id": "bab-5-3-extra-16",
       "bm_original": "Pesuruhjaya Tinggi",
-      "translate": "重点：Pesuruhjaya Tinggi",
+      "translate": "高级专员",
       "key_points_zh": [
-        "重点：Pesuruhjaya Tinggi"
+        "高级专员"
       ],
       "bm_focus_phrase": "Pesuruhjaya Tinggi"
     },
     {
       "source_id": "bab-5-3-u12",
       "bm_original": "Ahli Majlis Perundangan Persekutuan pula terdiri daripada:",
-      "translate": "重点：Ahli Majlis Perundangan Persekutuan pula terdiri daripada:",
+      "translate": "联邦立法委员会成员包括：",
       "key_points_zh": [
-        "重点：Ahli Majlis Perundangan Persekutuan pula terdiri daripada:"
+        "联邦立法委员会成员包括："
       ],
       "bm_focus_phrase": "Ahli Majlis Perundangan Persekutuan pula terdiri daripada:"
     },
     {
       "source_id": "bab-5-3-extra-17",
       "bm_original": "pelbagai kaum",
-      "translate": "重点：pelbagai kaum",
+      "translate": "各种种族",
       "key_points_zh": [
-        "重点：pelbagai kaum"
+        "各种种族"
       ],
       "bm_focus_phrase": "pelbagai kaum"
     },
     {
       "source_id": "bab-5-3-u13",
       "bm_original": "Ini menunjukkan pentadbiran Persekutuan mempunyai struktur yang lebih tersusun berbanding Malayan Union .",
-      "translate": "Ini menunjukkan 行政 Persekutuan mempunyai struktur 的 更 tersusun berbanding Malayan Union .",
+      "translate": "这表明与马来亚联邦相比，联邦政府的结构更有组织性。",
       "key_points_zh": [
-        "Ini menunjukkan 行政 Persekutuan mempunyai struktur 的 更 tersusun berbanding Malayan Union ."
+        "这表明与马来亚联邦相比，联邦政府的结构更有组织性。"
       ],
       "bm_focus_phrase": "Ini menunjukkan pentadbiran Persekutuan mempunyai struktur yang lebih tersusun berbanding Malayan Union ."
     },
     {
       "source_id": "bab-5-3-u14",
       "bm_original": "Dalam Persekutuan Tanah Melayu 1948 , kedudukan Raja-raja Melayu dipulihkan semula.",
-      "translate": "Dalam Persekutuan Tanah Melayu 1948 , kedudukan Raja-raja Melayu dipulihkan semula.",
+      "translate": "1948年马来亚联邦恢复马来国王的地位。",
       "key_points_zh": [
-        "Dalam Persekutuan Tanah Melayu 1948 , kedudukan Raja-raja Melayu dipulihkan semula."
+        "1948年马来亚联邦恢复马来国王的地位。"
       ],
       "bm_focus_phrase": "Dalam Persekutuan Tanah Melayu 1948 , kedudukan Raja-raja Melayu dipulihkan semula."
     },
     {
       "source_id": "bab-5-3-extra-18",
       "bm_original": "Majlis Raja-Raja",
-      "translate": "Majlis Raja-Raja",
+      "translate": "国王会议",
       "key_points_zh": [
-        "Majlis Raja-Raja"
+        "国王会议"
       ],
       "bm_focus_phrase": "Majlis Raja-Raja"
     },
     {
       "source_id": "bab-5-3-u15",
       "bm_original": "Pada peringkat negeri pula:",
-      "translate": "Pada peringkat 州 pula:",
+      "translate": "在州一级：",
       "key_points_zh": [
-        "Pada peringkat 州 pula:"
+        "在州一级："
       ],
       "bm_focus_phrase": "Pada peringkat negeri pula:"
     },
     {
       "source_id": "bab-5-3-extra-19",
       "bm_original": "sultan bertanggungjawab mengesahkan rang undang-undang yang diluluskan dalam Dewan Perundangan Negeri",
-      "translate": "sultan bertanggungjawab mengesahkan rang undang-undang 的 diluluskan 在 Dewan Perundangan Negeri",
+      "translate": "苏丹负责批准州立法机关通过的法案",
       "key_points_zh": [
-        "sultan bertanggungjawab mengesahkan rang undang-undang 的 diluluskan 在 Dewan Perundangan Negeri"
+        "苏丹负责批准州立法机关通过的法案"
       ],
       "bm_focus_phrase": "sultan bertanggungjawab mengesahkan rang undang-undang yang diluluskan dalam Dewan Perundangan Negeri"
     },
     {
       "source_id": "bab-5-3-u16",
       "bm_original": "Hal ini menunjukkan kuasa Raja-raja Melayu diiktiraf semula dalam sistem pemerintahan baharu.",
-      "translate": "Hal 这 menunjukkan kuasa Raja-raja Melayu diiktiraf semula 在 sistem pemerintahan baharu.",
+      "translate": "这表明马来国王的权力在新政府体系中再次得到承认。",
       "key_points_zh": [
-        "Hal 这 menunjukkan kuasa Raja-raja Melayu diiktiraf semula 在 sistem pemerintahan baharu."
+        "这表明马来国王的权力在新政府体系中再次得到承认。"
       ],
       "bm_focus_phrase": "Hal ini menunjukkan kuasa Raja-raja Melayu diiktiraf semula dalam sistem pemerintahan baharu."
     },
     {
       "source_id": "bab-5-3-u17",
       "bm_original": "Majlis Perundangan Persekutuan diketuai oleh:",
-      "translate": "Majlis Perundangan Persekutuan diketuai 由:",
+      "translate": "联邦立法委员会的领导是：",
       "key_points_zh": [
-        "Majlis Perundangan Persekutuan diketuai 由:"
+        "联邦立法委员会的领导是："
       ],
       "bm_focus_phrase": "Majlis Perundangan Persekutuan diketuai oleh:"
     },
     {
       "source_id": "bab-5-3-extra-20",
       "bm_original": "Pesuruhjaya Tinggi",
-      "translate": "重点：Pesuruhjaya Tinggi",
+      "translate": "高级专员",
       "key_points_zh": [
-        "重点：Pesuruhjaya Tinggi"
+        "高级专员"
       ],
       "bm_focus_phrase": "Pesuruhjaya Tinggi"
     },
     {
       "source_id": "bab-5-3-u18",
       "bm_original": "Bidang kuasa Majlis Perundangan Persekutuan meliputi:",
-      "translate": "重点：Bidang kuasa Majlis Perundangan Persekutuan meliputi:",
+      "translate": "联邦立法委员会的管辖权包括：",
       "key_points_zh": [
-        "重点：Bidang kuasa Majlis Perundangan Persekutuan meliputi:"
+        "联邦立法委员会的管辖权包括："
       ],
       "bm_focus_phrase": "Bidang kuasa Majlis Perundangan Persekutuan meliputi:"
     },
     {
       "source_id": "bab-5-3-extra-21",
       "bm_original": "hal ehwal luar",
-      "translate": "重点：hal ehwal luar",
+      "translate": "外交",
       "key_points_zh": [
-        "重点：hal ehwal luar"
+        "外交"
       ],
       "bm_focus_phrase": "hal ehwal luar"
     },
     {
       "source_id": "bab-5-3-extra-22",
       "bm_original": "ketenteraman awam",
-      "translate": "重点：ketenteraman awam",
+      "translate": "公安",
       "key_points_zh": [
-        "重点：ketenteraman awam"
+        "公安"
       ],
       "bm_focus_phrase": "ketenteraman awam"
     },
     {
       "source_id": "bab-5-3-extra-23",
       "bm_original": "kehakiman",
-      "translate": "重点：kehakiman",
+      "translate": "司法",
       "key_points_zh": [
-        "重点：kehakiman"
+        "司法"
       ],
       "bm_focus_phrase": "kehakiman"
     },
     {
       "source_id": "bab-5-3-extra-24",
       "bm_original": "perdagangan",
-      "translate": "重点：perdagangan",
+      "translate": "贸易",
       "key_points_zh": [
-        "重点：perdagangan"
+        "贸易"
       ],
       "bm_focus_phrase": "perdagangan"
     },
     {
       "source_id": "bab-5-3-extra-25",
       "bm_original": "komunikasi",
-      "translate": "重点：komunikasi",
+      "translate": "沟通",
       "key_points_zh": [
-        "重点：komunikasi"
+        "沟通"
       ],
       "bm_focus_phrase": "komunikasi"
     },
     {
       "source_id": "bab-5-3-extra-26",
       "bm_original": "percukaian",
-      "translate": "重点：percukaian",
+      "translate": "税收",
       "key_points_zh": [
-        "重点：percukaian"
+        "税收"
       ],
       "bm_focus_phrase": "percukaian"
     },
     {
       "source_id": "bab-5-3-u19",
       "bm_original": "Setiap rang undang-undang pula perlu mendapat:",
-      "translate": "Setiap rang undang-undang pula perlu 获得:",
+      "translate": "每张账单都需要得到：",
       "key_points_zh": [
-        "Setiap rang undang-undang pula perlu 获得:"
+        "每张账单都需要得到："
       ],
       "bm_focus_phrase": "Setiap rang undang-undang pula perlu mendapat:"
     },
     {
       "source_id": "bab-5-3-extra-27",
       "bm_original": "perkenan Raja-raja Melayu",
-      "translate": "perkenan Raja-raja Melayu",
+      "translate": "马来国王的批准",
       "key_points_zh": [
-        "perkenan Raja-raja Melayu"
+        "马来国王的批准"
       ],
       "bm_focus_phrase": "perkenan Raja-raja Melayu"
     },
     {
       "source_id": "bab-5-3-extra-28",
       "bm_original": "melalui Majlis Raja-Raja",
-      "translate": "通过 Majlis Raja-Raja",
+      "translate": "通过国王会议",
       "key_points_zh": [
-        "通过 Majlis Raja-Raja"
+        "通过国王会议"
       ],
       "bm_focus_phrase": "melalui Majlis Raja-Raja"
     },
     {
       "source_id": "bab-5-3-u20",
       "bm_original": "Ini menunjukkan sistem perundangan Persekutuan melibatkan peranan British dan Raja-raja Melayu .",
-      "translate": "Ini menunjukkan sistem perundangan Persekutuan melibatkan peranan British 与 Raja-raja Melayu .",
+      "translate": "这表明联邦法律体系涉及英国和马来国王的角色。",
       "key_points_zh": [
-        "Ini menunjukkan sistem perundangan Persekutuan melibatkan peranan British 与 Raja-raja Melayu ."
+        "这表明联邦法律体系涉及英国和马来国王的角色。"
       ],
       "bm_focus_phrase": "Ini menunjukkan sistem perundangan Persekutuan melibatkan peranan British dan Raja-raja Melayu ."
     },
     {
       "source_id": "bab-5-3-u21",
       "bm_original": "Syarat kewarganegaraan dalam Persekutuan Tanah Melayu 1948 dibahagikan kepada dua cara utama:",
-      "translate": "Syarat 公民权 在 Persekutuan Tanah Melayu 1948 dibahagikan 向 dua cara 主要:",
+      "translate": "1948年马来亚联邦的公民身份条件主要分为两种：",
       "key_points_zh": [
-        "Syarat 公民权 在 Persekutuan Tanah Melayu 1948 dibahagikan 向 dua cara 主要:"
+        "1948年马来亚联邦的公民身份条件主要分为两种："
       ],
       "bm_focus_phrase": "Syarat kewarganegaraan dalam Persekutuan Tanah Melayu 1948 dibahagikan kepada dua cara utama:"
     },
     {
       "source_id": "bab-5-3-extra-29",
       "bm_original": "1️⃣ kewarganegaraan secara kuat kuasa undang-undang ⚖️",
-      "translate": "1️⃣ 公民权 secara kuat kuasa undang-undang ⚖️",
+      "translate": "1️⃣ 依法获得公民身份⚖️",
       "key_points_zh": [
-        "1️⃣ 公民权 secara kuat kuasa undang-undang ⚖️"
+        "1️⃣ 依法获得公民身份⚖️"
       ],
       "bm_focus_phrase": "1️⃣ kewarganegaraan secara kuat kuasa undang-undang ⚖️"
     },
     {
       "source_id": "bab-5-3-extra-30",
       "bm_original": "2️⃣ kewarganegaraan secara pendaftaran 📝",
-      "translate": "2️⃣ 公民权 secara pendaftaran 📝",
+      "translate": "2️⃣ 通过注册获得公民身份📝",
       "key_points_zh": [
-        "2️⃣ 公民权 secara pendaftaran 📝"
+        "2️⃣ 通过注册获得公民身份📝"
       ],
       "bm_focus_phrase": "2️⃣ kewarganegaraan secara pendaftaran 📝"
     },
     {
       "source_id": "bab-5-3-u22",
       "bm_original": "Prinsip jus soli hanya terbuka kepada:",
-      "translate": "Prinsip jus soli hanya terbuka 向:",
+      "translate": "属地主义原则仅适用于：",
       "key_points_zh": [
-        "Prinsip jus soli hanya terbuka 向:"
+        "属地主义原则仅适用于："
       ],
       "bm_focus_phrase": "Prinsip jus soli hanya terbuka kepada:"
     },
     {
       "source_id": "bab-5-3-extra-31",
       "bm_original": "rakyat Raja",
-      "translate": "人民 Raja",
+      "translate": "国王的人",
       "key_points_zh": [
-        "人民 Raja"
+        "国王的人"
       ],
       "bm_focus_phrase": "rakyat Raja"
     },
     {
       "source_id": "bab-5-3-extra-32",
       "bm_original": "rakyat British",
-      "translate": "人民 British",
+      "translate": "英国人",
       "key_points_zh": [
-        "人民 British"
+        "英国人"
       ],
       "bm_focus_phrase": "rakyat British"
     },
     {
       "source_id": "bab-5-3-u23",
       "bm_original": "Bagi pemohon yang lahir di luar negeri ayahnya, ayahnya mestilah:",
-      "translate": "Bagi pemohon 的 lahir di luar 州 ayahnya, ayahnya mestilah:",
+      "translate": "对于在父亲的国家/地区以外出生的申请人，父亲必须：",
       "key_points_zh": [
-        "Bagi pemohon 的 lahir di luar 州 ayahnya, ayahnya mestilah:"
+        "对于在父亲的国家/地区以外出生的申请人，父亲必须："
       ],
       "bm_focus_phrase": "Bagi pemohon yang lahir di luar negeri ayahnya, ayahnya mestilah:"
     },
     {
       "source_id": "bab-5-3-extra-33",
       "bm_original": "rakyat Raja",
-      "translate": "人民 Raja",
+      "translate": "国王的人",
       "key_points_zh": [
-        "人民 Raja"
+        "国王的人"
       ],
       "bm_focus_phrase": "rakyat Raja"
     },
     {
       "source_id": "bab-5-3-extra-34",
       "bm_original": "atau",
-      "translate": "重点：atau",
+      "translate": "或者",
       "key_points_zh": [
-        "重点：atau"
+        "或者"
       ],
       "bm_focus_phrase": "atau"
     },
     {
       "source_id": "bab-5-3-extra-35",
       "bm_original": "rakyat British",
-      "translate": "人民 British",
+      "translate": "英国人",
       "key_points_zh": [
-        "人民 British"
+        "英国人"
       ],
       "bm_focus_phrase": "rakyat British"
     },
     {
       "source_id": "bab-5-3-u24",
       "bm_original": "Selain itu, golongan berikut juga boleh memohon kewarganegaraan:",
-      "translate": "Selain 那, golongan berikut 也 可以 memohon 公民权:",
+      "translate": "此外，以下群体也可以申请公民身份：",
       "key_points_zh": [
-        "Selain 那, golongan berikut 也 可以 memohon 公民权:"
+        "此外，以下群体也可以申请公民身份："
       ],
       "bm_focus_phrase": "Selain itu, golongan berikut juga boleh memohon kewarganegaraan:"
     },
     {
       "source_id": "bab-5-3-extra-36",
       "bm_original": "penduduk asal dari negeri Melayu yang lahir sebelum, semasa atau selepas tarikh Perjanjian Persekutuan Tanah Melayu",
-      "translate": "penduduk asal dari 州 Melayu 的 lahir sebelum, semasa atau 在…之后 日期 Perjanjian Persekutuan Tanah Melayu",
+      "translate": "出生于马来亚联邦协定日期之前、期间或之后的马来州原住民",
       "key_points_zh": [
-        "penduduk asal dari 州 Melayu 的 lahir sebelum, semasa atau 在…之后 日期 Perjanjian Persekutuan Tanah Melayu"
+        "出生于马来亚联邦协定日期之前、期间或之后的马来州原住民"
       ],
       "bm_focus_phrase": "penduduk asal dari negeri Melayu yang lahir sebelum, semasa atau selepas tarikh Perjanjian Persekutuan Tanah Melayu"
     },
     {
       "source_id": "bab-5-3-extra-37",
       "bm_original": "rakyat Raja",
-      "translate": "人民 Raja",
+      "translate": "国王的人",
       "key_points_zh": [
-        "人民 Raja"
+        "国王的人"
       ],
       "bm_focus_phrase": "rakyat Raja"
     },
     {
       "source_id": "bab-5-3-extra-38",
       "bm_original": "mereka yang telah serasi, memahami adat resam dan bertutur bahasa setempat ( naturalised )",
-      "translate": "mereka 的 已经 serasi, memahami adat resam 与 bertutur bahasa setempat ( naturalised )",
+      "translate": "兼容并蓄、了解风俗习惯、讲当地语言的人（入籍）",
       "key_points_zh": [
-        "mereka 的 已经 serasi, memahami adat resam 与 bertutur bahasa setempat ( naturalised )"
+        "兼容并蓄、了解风俗习惯、讲当地语言的人（入籍）"
       ],
       "bm_focus_phrase": "mereka yang telah serasi, memahami adat resam dan bertutur bahasa setempat ( naturalised )"
     },
     {
       "source_id": "bab-5-3-u25",
       "bm_original": "Permohonan ini tertakluk kepada mana-mana undang-undang yang dikuatkuasakan.",
-      "translate": "Permohonan 这 tertakluk 向 mana-mana undang-undang 的 dikuatkuasakan.",
+      "translate": "本申请受任何适用法律的约束。",
       "key_points_zh": [
-        "Permohonan 这 tertakluk 向 mana-mana undang-undang 的 dikuatkuasakan."
+        "本申请受任何适用法律的约束。"
       ],
       "bm_focus_phrase": "Permohonan ini tertakluk kepada mana-mana undang-undang yang dikuatkuasakan."
     },
     {
       "source_id": "bab-5-3-u26",
       "bm_original": "Rakyat Raja → orang Melayu dan Orang Asli yang lahir dan tinggal di negeri Melayu yang mempunyai sultan.",
-      "translate": "人民 Raja → orang Melayu 与 Orang Asli 的 lahir 与 tinggal di 州 Melayu 的 mempunyai sultan.",
+      "translate": "国王的子民→出生并生活在有苏丹的马来国家的马来人和原住民。",
       "key_points_zh": [
-        "人民 Raja → orang Melayu 与 Orang Asli 的 lahir 与 tinggal di 州 Melayu 的 mempunyai sultan."
+        "国王的子民→出生并生活在有苏丹的马来国家的马来人和原住民。"
       ],
       "bm_focus_phrase": "Rakyat Raja → orang Melayu dan Orang Asli yang lahir dan tinggal di negeri Melayu yang mempunyai sultan."
     },
     {
       "source_id": "bab-5-3-u27",
       "bm_original": "Rakyat British → mereka yang lahir di Melaka , Pulau Pinang dan mana-mana tanah jajahan British yang lain.",
-      "translate": "人民 British → mereka 的 lahir di Melaka , Pulau Pinang 与 mana-mana tanah jajahan British 的 lain.",
+      "translate": "英国公民 → 在马六甲、槟城和任何其他英国殖民地出生的人。",
       "key_points_zh": [
-        "人民 British → mereka 的 lahir di Melaka , Pulau Pinang 与 mana-mana tanah jajahan British 的 lain."
+        "英国公民 → 在马六甲、槟城和任何其他英国殖民地出生的人。"
       ],
       "bm_focus_phrase": "Rakyat British → mereka yang lahir di Melaka , Pulau Pinang dan mana-mana tanah jajahan British yang lain."
     },
     {
       "source_id": "bab-5-3-u28",
       "bm_original": "Kewarganegaraan secara pendaftaran diberikan kepada mereka yang:",
-      "translate": "公民权 secara pendaftaran diberikan 向 mereka 的:",
+      "translate": "符合以下条件的人可通过登记获得公民身份：",
       "key_points_zh": [
-        "公民权 secara pendaftaran diberikan 向 mereka 的:"
+        "符合以下条件的人可通过登记获得公民身份："
       ],
       "bm_focus_phrase": "Kewarganegaraan secara pendaftaran diberikan kepada mereka yang:"
     },
     {
       "source_id": "bab-5-3-extra-39",
       "bm_original": "dilahirkan dalam Persekutuan Tanah Melayu",
-      "translate": "dilahirkan 在 Persekutuan Tanah Melayu",
+      "translate": "出生于马来亚联邦",
       "key_points_zh": [
-        "dilahirkan 在 Persekutuan Tanah Melayu"
+        "出生于马来亚联邦"
       ],
       "bm_focus_phrase": "dilahirkan dalam Persekutuan Tanah Melayu"
     },
     {
       "source_id": "bab-5-3-extra-40",
       "bm_original": "bermastautin selama 15 tahun daripada tempoh 20 tahun dari hari permohonannya",
-      "translate": "bermastautin selama 15 年 daripada tempoh 20 年 dari hari permohonannya",
+      "translate": "自申请之日起20年中居住满15年",
       "key_points_zh": [
-        "bermastautin selama 15 年 daripada tempoh 20 年 dari hari permohonannya"
+        "自申请之日起20年中居住满15年"
       ],
       "bm_focus_phrase": "bermastautin selama 15 tahun daripada tempoh 20 tahun dari hari permohonannya"
     },
     {
       "source_id": "bab-5-3-u29",
       "bm_original": "Seseorang pemohon juga perlu:",
-      "translate": "Seseorang pemohon 也 perlu:",
+      "translate": "申请人还必须：",
       "key_points_zh": [
-        "Seseorang pemohon 也 perlu:"
+        "申请人还必须："
       ],
       "bm_focus_phrase": "Seseorang pemohon juga perlu:"
     },
     {
       "source_id": "bab-5-3-extra-41",
       "bm_original": "mempunyai tingkah laku yang baik",
-      "translate": "mempunyai tingkah laku 的 baik",
+      "translate": "有良好的行为",
       "key_points_zh": [
-        "mempunyai tingkah laku 的 baik"
+        "有良好的行为"
       ],
       "bm_focus_phrase": "mempunyai tingkah laku yang baik"
     },
     {
       "source_id": "bab-5-3-extra-42",
       "bm_original": "tiada rekod jenayah",
-      "translate": "重点：tiada rekod jenayah",
+      "translate": "无犯罪记录",
       "key_points_zh": [
-        "重点：tiada rekod jenayah"
+        "无犯罪记录"
       ],
       "bm_focus_phrase": "tiada rekod jenayah"
     },
     {
       "source_id": "bab-5-3-extra-43",
       "bm_original": "menguasai bahasa Melayu dan bahasa Inggeris",
-      "translate": "menguasai bahasa Melayu 与 bahasa Inggeris",
+      "translate": "精通马来语和英语",
       "key_points_zh": [
-        "menguasai bahasa Melayu 与 bahasa Inggeris"
+        "精通马来语和英语"
       ],
       "bm_focus_phrase": "menguasai bahasa Melayu dan bahasa Inggeris"
     },
     {
       "source_id": "bab-5-3-extra-44",
       "bm_original": "bersetuju taat setia kepada Persekutuan Tanah Melayu",
-      "translate": "bersetuju taat setia 向 Persekutuan Tanah Melayu",
+      "translate": "同意效忠马来亚联邦",
       "key_points_zh": [
-        "bersetuju taat setia 向 Persekutuan Tanah Melayu"
+        "同意效忠马来亚联邦"
       ],
       "bm_focus_phrase": "bersetuju taat setia kepada Persekutuan Tanah Melayu"
     },
     {
       "source_id": "bab-5-3-u30",
       "bm_original": "Syarat ini menunjukkan bahawa kewarganegaraan dalam Persekutuan Tanah Melayu 1948 lebih ketat berbanding Malayan Union .",
-      "translate": "Syarat 这 menunjukkan bahawa 公民权 在 Persekutuan Tanah Melayu 1948 更 ketat berbanding Malayan Union .",
+      "translate": "这个条件表明，1948年马来亚联邦的公民身份比马来亚联邦更严格。",
       "key_points_zh": [
-        "Syarat 这 menunjukkan bahawa 公民权 在 Persekutuan Tanah Melayu 1948 更 ketat berbanding Malayan Union ."
+        "这个条件表明，1948年马来亚联邦的公民身份比马来亚联邦更严格。"
       ],
       "bm_focus_phrase": "Syarat ini menunjukkan bahawa kewarganegaraan dalam Persekutuan Tanah Melayu 1948 lebih ketat berbanding Malayan Union ."
     },
     {
       "source_id": "bab-5-3-u31",
       "bm_original": "Persekutuan Tanah Melayu 1948 mempunyai ciri penting dari segi:",
-      "translate": "重点：Persekutuan Tanah Melayu 1948 mempunyai ciri penting dari segi:",
+      "translate": "1948年马来亚联邦有以下重要特点：",
       "key_points_zh": [
-        "重点：Persekutuan Tanah Melayu 1948 mempunyai ciri penting dari segi:"
+        "1948年马来亚联邦有以下重要特点："
       ],
       "bm_focus_phrase": "Persekutuan Tanah Melayu 1948 mempunyai ciri penting dari segi:"
     },
@@ -727,72 +728,72 @@
     {
       "source_id": "bab-5-3-extra-46",
       "bm_original": "kuasa Raja-raja Melayu",
-      "translate": "kuasa Raja-raja Melayu",
+      "translate": "马来国王的权力",
       "key_points_zh": [
-        "kuasa Raja-raja Melayu"
+        "马来国王的权力"
       ],
       "bm_focus_phrase": "kuasa Raja-raja Melayu"
     },
     {
       "source_id": "bab-5-3-extra-47",
       "bm_original": "perundangan",
-      "translate": "重点：perundangan",
+      "translate": "立法",
       "key_points_zh": [
-        "重点：perundangan"
+        "立法"
       ],
       "bm_focus_phrase": "perundangan"
     },
     {
       "source_id": "bab-5-3-extra-48",
       "bm_original": "kewarganegaraan",
-      "translate": "公民权",
+      "translate": "国籍",
       "key_points_zh": [
-        "公民权"
+        "国籍"
       ],
       "bm_focus_phrase": "kewarganegaraan"
     },
     {
       "source_id": "bab-5-3-u32",
       "bm_original": "Melalui perjanjian ini:",
-      "translate": "Melalui 协议 这:",
+      "translate": "通过本协议：",
       "key_points_zh": [
-        "Melalui 协议 这:"
+        "通过本协议："
       ],
       "bm_focus_phrase": "Melalui perjanjian ini:"
     },
     {
       "source_id": "bab-5-3-extra-49",
       "bm_original": "Raja-raja Melayu diberikan semula kedaulatan",
-      "translate": "Raja-raja Melayu diberikan semula 主权",
+      "translate": "马来国王被归还主权",
       "key_points_zh": [
-        "Raja-raja Melayu diberikan semula 主权"
+        "马来国王被归还主权"
       ],
       "bm_focus_phrase": "Raja-raja Melayu diberikan semula kedaulatan"
     },
     {
       "source_id": "bab-5-3-extra-50",
       "bm_original": "Tanah Melayu mendapat taraf naungan",
-      "translate": "Tanah Melayu 获得 taraf naungan",
+      "translate": "马来亚获得赞助地位",
       "key_points_zh": [
-        "Tanah Melayu 获得 taraf naungan"
+        "马来亚获得赞助地位"
       ],
       "bm_focus_phrase": "Tanah Melayu mendapat taraf naungan"
     },
     {
       "source_id": "bab-5-3-extra-51",
       "bm_original": "syarat kewarganegaraan diperketatkan",
-      "translate": "syarat 公民权 diperketatkan",
+      "translate": "公民身份要求收紧",
       "key_points_zh": [
-        "syarat 公民权 diperketatkan"
+        "公民身份要求收紧"
       ],
       "bm_focus_phrase": "syarat kewarganegaraan diperketatkan"
     },
     {
       "source_id": "bab-5-3-u33",
       "bm_original": "Oleh itu, Persekutuan Tanah Melayu 1948 menjadi asas penting kepada pembentukan sistem pentadbiran negara yang lebih tersusun dan lebih menjaga kedudukan Raja-raja Melayu serta kepentingan penduduk tempatan.",
-      "translate": "Oleh 那, Persekutuan Tanah Melayu 1948 menjadi asas penting 向 pembentukan sistem 行政 negara 的 更 tersusun 与 更 menjaga kedudukan Raja-raja Melayu 以及 kepentingan penduduk 本地.",
+      "translate": "因此，1948年的马来亚联邦成为形成更有组织的国家行政体系的重要基础，更好地维护马来统治者的地位和当地民众的利益。",
       "key_points_zh": [
-        "Oleh 那, Persekutuan Tanah Melayu 1948 menjadi asas penting 向 pembentukan sistem 行政 negara 的 更 tersusun 与 更 menjaga kedudukan Raja-raja Melayu 以及 kepentingan penduduk 本地."
+        "因此，1948年的马来亚联邦成为形成更有组织的国家行政体系的重要基础，更好地维护马来统治者的地位和当地民众的利益。"
       ],
       "bm_focus_phrase": "Oleh itu, Persekutuan Tanah Melayu 1948 menjadi asas penting kepada pembentukan sistem pentadbiran negara yang lebih tersusun dan lebih menjaga kedudukan Raja-raja Melayu serta kepentingan penduduk tempatan."
     }

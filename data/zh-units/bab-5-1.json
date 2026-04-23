@@ -1,1311 +1,1312 @@
 {
   "meta": {
     "source_file": "notes/bab-5-1.html",
-    "rollout": "gelombang-1-manual-revision"
+    "rollout": "gelombang-1-ms-zh-regenerated",
+    "notes": "Translate fields regenerated from bm_original (ms→zh-CN) for fluent Simplified Chinese; proper names follow translator output—verify against BM notes."
   },
   "units": [
     {
       "source_id": "bab-5-1-u42",
       "bm_original": "Persekutuan Tanah Melayu 1948 diperkenalkan untuk menggantikan Malayan Union 1946 yang ditolak oleh penduduk tempatan.",
-      "translate": "Persekutuan Tanah Melayu 1948 diperkenalkan 为了 menggantikan Malayan Union 1946 的 ditolak 由 penduduk 本地.",
+      "translate": "1948 年马来亚联邦的成立是为了取代 1946 年马来亚联邦，但遭到当地居民的拒绝。",
       "key_points_zh": [
-        "Persekutuan Tanah Melayu 1948 diperkenalkan 为了 menggantikan Malayan Union 1946 的 ditolak 由 penduduk 本地."
+        "1948 年马来亚联邦的成立是为了取代 1946 年马来亚联邦，但遭到当地居民的拒绝。"
       ],
       "bm_focus_phrase": "Persekutuan Tanah Melayu 1948 diperkenalkan untuk menggantikan Malayan Union 1946 yang ditolak oleh penduduk tempatan."
     },
     {
       "source_id": "bab-5-1-u43",
       "bm_original": "Jawatankuasa Kerja dibentuk untuk merangka asas Perjanjian Persekutuan Tanah Melayu .",
-      "translate": "Jawatankuasa Kerja dibentuk 为了 merangka asas Perjanjian Persekutuan Tanah Melayu .",
+      "translate": "成立了一个工作委员会来起草马来亚联邦协议的基础。",
       "key_points_zh": [
-        "Jawatankuasa Kerja dibentuk 为了 merangka asas Perjanjian Persekutuan Tanah Melayu ."
+        "成立了一个工作委员会来起草马来亚联邦协议的基础。"
       ],
       "bm_focus_phrase": "Jawatankuasa Kerja dibentuk untuk merangka asas Perjanjian Persekutuan Tanah Melayu ."
     },
     {
       "source_id": "bab-5-1-u44",
       "bm_original": "Golongan nasionalis Melayu radikal membantah proses perundingan British yang dianggap tertutup dan tidak demokratik.",
-      "translate": "Golongan nasionalis Melayu radikal membantah proses perundingan British 的 dianggap tertutup 与 不 demokratik.",
+      "translate": "激进的马来民族主义者反对英国的协商程序，他们认为这是封闭的和不民主的。",
       "key_points_zh": [
-        "Golongan nasionalis Melayu radikal membantah proses perundingan British 的 dianggap tertutup 与 不 demokratik."
+        "激进的马来民族主义者反对英国的协商程序，他们认为这是封闭的和不民主的。"
       ],
       "bm_focus_phrase": "Golongan nasionalis Melayu radikal membantah proses perundingan British yang dianggap tertutup dan tidak demokratik."
     },
     {
       "source_id": "bab-5-1-u45",
       "bm_original": "Gabungan PUTERA-AMCJA mengemukakan cadangan alternatif yang dikenali sebagai Perlembagaan Rakyat .",
-      "translate": "Gabungan PUTERA-AMCJA mengemukakan 建议 alternatif 的 dikenali 作为 Perlembagaan 人民 .",
+      "translate": "PUTERA-AMCJA 联盟提出了一项名为“人民宪法”的替代提案。",
       "key_points_zh": [
-        "Gabungan PUTERA-AMCJA mengemukakan 建议 alternatif 的 dikenali 作为 Perlembagaan 人民 ."
+        "PUTERA-AMCJA 联盟提出了一项名为“人民宪法”的替代提案。"
       ],
       "bm_focus_phrase": "Gabungan PUTERA-AMCJA mengemukakan cadangan alternatif yang dikenali sebagai Perlembagaan Rakyat ."
     },
     {
       "source_id": "bab-5-1-u46",
       "bm_original": "Walaupun cadangan ini ditolak oleh British, perjuangan mereka memperlihatkan usaha awal pelbagai golongan rakyat memikirkan bentuk negara merdeka yang lebih adil dan menyeluruh.",
-      "translate": "Walaupun 建议 这 ditolak 由 British, 斗争 mereka memperlihatkan usaha awal pelbagai golongan 人民 memikirkan bentuk negara merdeka 的 更 adil 与 menyeluruh.",
+      "translate": "尽管这一提议遭到了英国人的拒绝，但他们的斗争表明了各个群体为思考更加公正和全面的独立国家形式而做出的初步努力。",
       "key_points_zh": [
-        "Walaupun 建议 这 ditolak 由 British, 斗争 mereka memperlihatkan usaha awal pelbagai golongan 人民 memikirkan bentuk negara merdeka 的 更 adil 与 menyeluruh."
+        "尽管这一提议遭到了英国人的拒绝，但他们的斗争表明了各个群体为思考更加公正和全面的独立国家形式而做出的初步努力。"
       ],
       "bm_focus_phrase": "Walaupun cadangan ini ditolak oleh British, perjuangan mereka memperlihatkan usaha awal pelbagai golongan rakyat memikirkan bentuk negara merdeka yang lebih adil dan menyeluruh."
     },
     {
       "source_id": "bab-5-1-u01",
       "bm_original": "Persekutuan Tanah Melayu 1948 diperkenalkan untuk menggantikan Malayan Union 1946 yang ditolak oleh penduduk tempatan.",
-      "translate": "Persekutuan Tanah Melayu 1948 diperkenalkan 为了 menggantikan Malayan Union 1946 的 ditolak 由 penduduk 本地.",
+      "translate": "1948 年马来亚联邦的成立是为了取代 1946 年马来亚联邦，但遭到当地居民的拒绝。",
       "key_points_zh": [
-        "Persekutuan Tanah Melayu 1948 diperkenalkan 为了 menggantikan Malayan Union 1946 的 ditolak 由 penduduk 本地."
+        "1948 年马来亚联邦的成立是为了取代 1946 年马来亚联邦，但遭到当地居民的拒绝。"
       ],
       "bm_focus_phrase": "Persekutuan Tanah Melayu 1948 diperkenalkan untuk menggantikan Malayan Union 1946 yang ditolak oleh penduduk tempatan."
     },
     {
       "source_id": "bab-5-1-u02",
       "bm_original": "Bagi tujuan itu, satu Jawatankuasa Kerja dibentuk untuk merangka Perjanjian Persekutuan Tanah Melayu .",
-      "translate": "Bagi 目的 那, satu Jawatankuasa Kerja dibentuk 为了 merangka Perjanjian Persekutuan Tanah Melayu .",
+      "translate": "为此，成立了一个工作委员会来起草马来亚联邦协议。",
       "key_points_zh": [
-        "Bagi 目的 那, satu Jawatankuasa Kerja dibentuk 为了 merangka Perjanjian Persekutuan Tanah Melayu ."
+        "为此，成立了一个工作委员会来起草马来亚联邦协议。"
       ],
       "bm_focus_phrase": "Bagi tujuan itu, satu Jawatankuasa Kerja dibentuk untuk merangka Perjanjian Persekutuan Tanah Melayu ."
     },
     {
       "source_id": "bab-5-1-u03",
       "bm_original": "Dalam masa yang sama, golongan nasionalis Melayu radikal dan bukan Melayu turut mengemukakan cadangan alternatif yang dikenali sebagai Perlembagaan Rakyat .",
-      "translate": "Dalam masa 的 sama, golongan nasionalis Melayu radikal 与 bukan Melayu turut mengemukakan 建议 alternatif 的 dikenali 作为 Perlembagaan 人民 .",
+      "translate": "与此同时，激进的马来人和非马来民族主义团体也提出了名为“人民宪法”的替代方案。",
       "key_points_zh": [
-        "Dalam masa 的 sama, golongan nasionalis Melayu radikal 与 bukan Melayu turut mengemukakan 建议 alternatif 的 dikenali 作为 Perlembagaan 人民 ."
+        "与此同时，激进的马来人和非马来民族主义团体也提出了名为“人民宪法”的替代方案。"
       ],
       "bm_focus_phrase": "Dalam masa yang sama, golongan nasionalis Melayu radikal dan bukan Melayu turut mengemukakan cadangan alternatif yang dikenali sebagai Perlembagaan Rakyat ."
     },
     {
       "source_id": "bab-5-1-u04",
       "bm_original": "Latar belakang penubuhan Persekutuan Tanah Melayu 1948 dapat difahami melalui enam perkara utama:",
-      "translate": "Latar belakang 成立 Persekutuan Tanah Melayu 1948 dapat difahami 通过 enam perkara 主要:",
+      "translate": "1948年马来亚联邦成立的背景可以通过六个要点来了解：",
       "key_points_zh": [
-        "Latar belakang 成立 Persekutuan Tanah Melayu 1948 dapat difahami 通过 enam perkara 主要:"
+        "1948年马来亚联邦成立的背景可以通过六个要点来了解："
       ],
       "bm_focus_phrase": "Latar belakang penubuhan Persekutuan Tanah Melayu 1948 dapat difahami melalui enam perkara utama:"
     },
     {
       "source_id": "bab-5-1-extra-1",
       "bm_original": "1️⃣ penubuhan Jawatankuasa Kerja 🏛️",
-      "translate": "1️⃣ 成立 Jawatankuasa Kerja 🏛️",
+      "translate": "1️⃣成立工作委员会🏛️",
       "key_points_zh": [
-        "1️⃣ 成立 Jawatankuasa Kerja 🏛️"
+        "1️⃣成立工作委员会🏛️"
       ],
       "bm_focus_phrase": "1️⃣ penubuhan Jawatankuasa Kerja 🏛️"
     },
     {
       "source_id": "bab-5-1-extra-2",
       "bm_original": "2️⃣ cadangan Jawatankuasa Kerja 📄",
-      "translate": "2️⃣ 建议 Jawatankuasa Kerja 📄",
+      "translate": "2️⃣工作委员会的建议📄",
       "key_points_zh": [
-        "2️⃣ 建议 Jawatankuasa Kerja 📄"
+        "2️⃣工作委员会的建议📄"
       ],
       "bm_focus_phrase": "2️⃣ cadangan Jawatankuasa Kerja 📄"
     },
     {
       "source_id": "bab-5-1-extra-3",
       "bm_original": "3️⃣ gerakan nasionalis Melayu radikal ✊",
-      "translate": "重点：3️⃣ gerakan nasionalis Melayu radikal ✊",
+      "translate": "3️⃣ 激进的马来民族主义运动✊",
       "key_points_zh": [
-        "重点：3️⃣ gerakan nasionalis Melayu radikal ✊"
+        "3️⃣ 激进的马来民族主义运动✊"
       ],
       "bm_focus_phrase": "3️⃣ gerakan nasionalis Melayu radikal ✊"
     },
     {
       "source_id": "bab-5-1-extra-4",
       "bm_original": "4️⃣ gabungan PUTERA-AMCJA 🤝",
-      "translate": "重点：4️⃣ gabungan PUTERA-AMCJA 🤝",
+      "translate": "4️⃣ PUTERA-AMCJA组合🤝",
       "key_points_zh": [
-        "重点：4️⃣ gabungan PUTERA-AMCJA 🤝"
+        "4️⃣ PUTERA-AMCJA组合🤝"
       ],
       "bm_focus_phrase": "4️⃣ gabungan PUTERA-AMCJA 🤝"
     },
     {
       "source_id": "bab-5-1-extra-5",
       "bm_original": "5️⃣ sumbangan nasionalis Melayu radikal 🔥",
-      "translate": "重点：5️⃣ sumbangan nasionalis Melayu radikal 🔥",
+      "translate": "激进马来民族主义者的5️⃣贡献🔥",
       "key_points_zh": [
-        "重点：5️⃣ sumbangan nasionalis Melayu radikal 🔥"
+        "激进马来民族主义者的5️⃣贡献🔥"
       ],
       "bm_focus_phrase": "5️⃣ sumbangan nasionalis Melayu radikal 🔥"
     },
     {
       "source_id": "bab-5-1-extra-6",
       "bm_original": "6️⃣ cadangan PUTERA-AMCJA dan Perlembagaan Rakyat 📜",
-      "translate": "6️⃣ 建议 PUTERA-AMCJA 与 Perlembagaan 人民 📜",
+      "translate": "PUTERA-AMCJA和人民宪法的6️⃣条建议📜",
       "key_points_zh": [
-        "6️⃣ 建议 PUTERA-AMCJA 与 Perlembagaan 人民 📜"
+        "PUTERA-AMCJA和人民宪法的6️⃣条建议📜"
       ],
       "bm_focus_phrase": "6️⃣ cadangan PUTERA-AMCJA dan Perlembagaan Rakyat 📜"
     },
     {
       "source_id": "bab-5-1-u47",
       "bm_original": "25 Julai 1946 → Jawatankuasa Kerja ditubuhkan.",
-      "translate": "重点：25 Julai 1946 → Jawatankuasa Kerja ditubuhkan.",
+      "translate": "1946年7月25日 → 工作委员会成立。",
       "key_points_zh": [
-        "重点：25 Julai 1946 → Jawatankuasa Kerja ditubuhkan."
+        "1946年7月25日 → 工作委员会成立。"
       ],
       "bm_focus_phrase": "25 Julai 1946 → Jawatankuasa Kerja ditubuhkan."
     },
     {
       "source_id": "bab-5-1-u48",
       "bm_original": "Matlamat penubuhan → membincangkan asas Perjanjian Persekutuan Tanah Melayu 1948 .",
-      "translate": "Matlamat 成立 → membincangkan asas Perjanjian Persekutuan Tanah Melayu 1948 .",
+      "translate": "成立的目标→讨论1948年马来亚联邦协议的基础。",
       "key_points_zh": [
-        "Matlamat 成立 → membincangkan asas Perjanjian Persekutuan Tanah Melayu 1948 ."
+        "成立的目标→讨论1948年马来亚联邦协议的基础。"
       ],
       "bm_focus_phrase": "Matlamat penubuhan → membincangkan asas Perjanjian Persekutuan Tanah Melayu 1948 ."
     },
     {
       "source_id": "bab-5-1-u05",
       "bm_original": "Jawatankuasa ini dianggotai oleh tiga kumpulan utama:",
-      "translate": "Jawatankuasa 这 dianggotai 由 tiga kumpulan 主要:",
+      "translate": "该委员会由三个主要小组组成：",
       "key_points_zh": [
-        "Jawatankuasa 这 dianggotai 由 tiga kumpulan 主要:"
+        "该委员会由三个主要小组组成："
       ],
       "bm_focus_phrase": "Jawatankuasa ini dianggotai oleh tiga kumpulan utama:"
     },
     {
       "source_id": "bab-5-1-extra-7",
       "bm_original": "wakil Raja-raja Melayu",
-      "translate": "wakil Raja-raja Melayu",
+      "translate": "马来国王的代表",
       "key_points_zh": [
-        "wakil Raja-raja Melayu"
+        "马来国王的代表"
       ],
       "bm_focus_phrase": "wakil Raja-raja Melayu"
     },
     {
       "source_id": "bab-5-1-extra-8",
       "bm_original": "wakil UMNO",
-      "translate": "wakil UMNO",
+      "translate": "巫统代表",
       "key_points_zh": [
-        "wakil UMNO"
+        "巫统代表"
       ],
       "bm_focus_phrase": "wakil UMNO"
     },
     {
       "source_id": "bab-5-1-extra-9",
       "bm_original": "pegawai kanan British",
-      "translate": "重点：pegawai kanan British",
+      "translate": "英国高级军官",
       "key_points_zh": [
-        "重点：pegawai kanan British"
+        "英国高级军官"
       ],
       "bm_focus_phrase": "pegawai kanan British"
     },
     {
       "source_id": "bab-5-1-u06",
       "bm_original": "Persekutuan → gabungan beberapa buah negeri di bawah satu unit pentadbiran.",
-      "translate": "Persekutuan → gabungan beberapa buah 州 di bawah satu unit 行政.",
+      "translate": "联邦 → 一个行政单位下的多个州的组合。",
       "key_points_zh": [
-        "Persekutuan → gabungan beberapa buah 州 di bawah satu unit 行政."
+        "联邦 → 一个行政单位下的多个州的组合。"
       ],
       "bm_focus_phrase": "Persekutuan → gabungan beberapa buah negeri di bawah satu unit pentadbiran."
     },
     {
       "source_id": "bab-5-1-u07",
       "bm_original": "Pentadbiran kerajaan Persekutuan dibahagikan kepada:",
-      "translate": "行政 政府 Persekutuan dibahagikan 向:",
+      "translate": "联邦政府行政部门分为：",
       "key_points_zh": [
-        "行政 政府 Persekutuan dibahagikan 向:"
+        "联邦政府行政部门分为："
       ],
       "bm_focus_phrase": "Pentadbiran kerajaan Persekutuan dibahagikan kepada:"
     },
     {
       "source_id": "bab-5-1-extra-10",
       "bm_original": "1️⃣ kerajaan pusat",
-      "translate": "1️⃣ 政府 pusat",
+      "translate": "1️⃣中央政府",
       "key_points_zh": [
-        "1️⃣ 政府 pusat"
+        "1️⃣中央政府"
       ],
       "bm_focus_phrase": "1️⃣ kerajaan pusat"
     },
     {
       "source_id": "bab-5-1-extra-11",
       "bm_original": "2️⃣ kerajaan negeri",
-      "translate": "2️⃣ 政府 州",
+      "translate": "2️⃣州政府",
       "key_points_zh": [
-        "2️⃣ 政府 州"
+        "2️⃣州政府"
       ],
       "bm_focus_phrase": "2️⃣ kerajaan negeri"
     },
     {
       "source_id": "bab-5-1-extra-12",
       "bm_original": "1. 👤 Dato’ Onn Jaafar",
-      "translate": "1. 👤 Dato’ Onn Jaafar",
+      "translate": "1. 👤 拿督翁贾法尔",
       "key_points_zh": [
-        "1. 👤 Dato’ Onn Jaafar"
+        "1. 👤 拿督翁贾法尔"
       ],
       "bm_focus_phrase": "1. 👤 Dato’ Onn Jaafar"
     },
     {
       "source_id": "bab-5-1-extra-13",
       "bm_original": "2. 👤 Dato’ Abdul Rahman Mohd Yassin",
-      "translate": "2. 👤 Dato’ Abdul Rahman Mohd Yassin",
+      "translate": "2. 👤 拿督阿都拉曼莫哈末亚辛",
       "key_points_zh": [
-        "2. 👤 Dato’ Abdul Rahman Mohd Yassin"
+        "2. 👤 拿督阿都拉曼莫哈末亚辛"
       ],
       "bm_focus_phrase": "2. 👤 Dato’ Abdul Rahman Mohd Yassin"
     },
     {
       "source_id": "bab-5-1-extra-14",
       "bm_original": "3. 👤 Haji Megat Yunus",
-      "translate": "重点：3. 👤 Haji Megat Yunus",
+      "translate": "3. 👤 朝觐·梅加特·尤努斯",
       "key_points_zh": [
-        "重点：3. 👤 Haji Megat Yunus"
+        "3. 👤 朝觐·梅加特·尤努斯"
       ],
       "bm_focus_phrase": "3. 👤 Haji Megat Yunus"
     },
     {
       "source_id": "bab-5-1-extra-15",
       "bm_original": "1. 👤 A.T. Newboult – Ketua Setiausaha Malayan Union",
-      "translate": "重点：1. 👤 A.T. Newboult – Ketua Setiausaha Malayan Union",
+      "translate": "1. 👤 A.T.纽博特 – 马来亚联盟秘书长",
       "key_points_zh": [
-        "重点：1. 👤 A.T. Newboult – Ketua Setiausaha Malayan Union"
+        "1. 👤 A.T.纽博特 – 马来亚联盟秘书长"
       ],
       "bm_focus_phrase": "1. 👤 A.T. Newboult – Ketua Setiausaha Malayan Union"
     },
     {
       "source_id": "bab-5-1-extra-16",
       "bm_original": "2. 👤 K.K. O’Connor – Peguam Negara Malayan Union",
-      "translate": "2. 👤 K.K. O’Connor – Peguam Negara Malayan Union",
+      "translate": "2. 👤K.K.奥康纳 – 马来亚联邦总检察长",
       "key_points_zh": [
-        "2. 👤 K.K. O’Connor – Peguam Negara Malayan Union"
+        "2. 👤K.K.奥康纳 – 马来亚联邦总检察长"
       ],
       "bm_focus_phrase": "2. 👤 K.K. O’Connor – Peguam Negara Malayan Union"
     },
     {
       "source_id": "bab-5-1-extra-17",
       "bm_original": "3. 👤 W.D. Godsall – Setiausaha Kewangan",
-      "translate": "重点：3. 👤 W.D. Godsall – Setiausaha Kewangan",
+      "translate": "3. 👤 W.D. Godsall – 财政司司长",
       "key_points_zh": [
-        "重点：3. 👤 W.D. Godsall – Setiausaha Kewangan"
+        "3. 👤 W.D. Godsall – 财政司司长"
       ],
       "bm_focus_phrase": "3. 👤 W.D. Godsall – Setiausaha Kewangan"
     },
     {
       "source_id": "bab-5-1-extra-18",
       "bm_original": "4. 👤 Dr. W. Linchan – Ahli MCS (Malayan Civil Service)",
-      "translate": "重点：4. 👤 Dr. W. Linchan – Ahli MCS (Malayan Civil Service)",
+      "translate": "4. 👤 Dr. W. Linchan – MCS（马来亚公务员）成员",
       "key_points_zh": [
-        "重点：4. 👤 Dr. W. Linchan – Ahli MCS (Malayan Civil Service)"
+        "4. 👤 Dr. W. Linchan – MCS（马来亚公务员）成员"
       ],
       "bm_focus_phrase": "4. 👤 Dr. W. Linchan – Ahli MCS (Malayan Civil Service)"
     },
     {
       "source_id": "bab-5-1-extra-19",
       "bm_original": "5. 👤 A. Williams – Ahli MCS",
-      "translate": "重点：5. 👤 A. Williams – Ahli MCS",
+      "translate": "5. 👤 A. Williams – MCS 会员",
       "key_points_zh": [
-        "重点：5. 👤 A. Williams – Ahli MCS"
+        "5. 👤 A. Williams – MCS 会员"
       ],
       "bm_focus_phrase": "5. 👤 A. Williams – Ahli MCS"
     },
     {
       "source_id": "bab-5-1-extra-20",
       "bm_original": "6. 👤 D.C. Watherston – Setiausaha",
-      "translate": "重点：6. 👤 D.C. Watherston – Setiausaha",
+      "translate": "6. 👤 D.C.沃瑟斯顿 – 秘书",
       "key_points_zh": [
-        "重点：6. 👤 D.C. Watherston – Setiausaha"
+        "6. 👤 D.C.沃瑟斯顿 – 秘书"
       ],
       "bm_focus_phrase": "6. 👤 D.C. Watherston – Setiausaha"
     },
     {
       "source_id": "bab-5-1-extra-21",
       "bm_original": "1. 👤 Raja Kamaralzaman Raja Ngah Mansur – Raja Kecil Tengah Perak",
-      "translate": "1. 👤 Raja Kamaralzaman Raja Ngah Mansur – Raja Kecil Tengah Perak",
+      "translate": "1. 👤 King Kamaralzaman Raja Ngah Mansur – 霹雳中部小国王",
       "key_points_zh": [
-        "1. 👤 Raja Kamaralzaman Raja Ngah Mansur – Raja Kecil Tengah Perak"
+        "1. 👤 King Kamaralzaman Raja Ngah Mansur – 霹雳中部小国王"
       ],
       "bm_focus_phrase": "1. 👤 Raja Kamaralzaman Raja Ngah Mansur – Raja Kecil Tengah Perak"
     },
     {
       "source_id": "bab-5-1-extra-22",
       "bm_original": "2. 👤 Dato’ Hamzah Abdullah – Orang Kaya Menteri Besar Selangor",
-      "translate": "2. 👤 Dato’ Hamzah Abdullah – Orang Kaya Menteri Besar Selangor",
+      "translate": "2. 👤 拿督韩查阿都拉 - 雪兰莪州大臣里奇",
       "key_points_zh": [
-        "2. 👤 Dato’ Hamzah Abdullah – Orang Kaya Menteri Besar Selangor"
+        "2. 👤 拿督韩查阿都拉 - 雪兰莪州大臣里奇"
       ],
       "bm_focus_phrase": "2. 👤 Dato’ Hamzah Abdullah – Orang Kaya Menteri Besar Selangor"
     },
     {
       "source_id": "bab-5-1-extra-23",
       "bm_original": "3. 👤 Haji Mohamad Sheriff Osman – Setiausaha Kerajaan Kedah",
-      "translate": "3. 👤 Haji Mohamad Sheriff Osman – Setiausaha Kerajaan Kedah",
+      "translate": "3. 👤 Haji Mohamad 警长奥斯曼 – 吉打州政府秘书",
       "key_points_zh": [
-        "3. 👤 Haji Mohamad Sheriff Osman – Setiausaha Kerajaan Kedah"
+        "3. 👤 Haji Mohamad 警长奥斯曼 – 吉打州政府秘书"
       ],
       "bm_focus_phrase": "3. 👤 Haji Mohamad Sheriff Osman – Setiausaha Kerajaan Kedah"
     },
     {
       "source_id": "bab-5-1-extra-24",
       "bm_original": "4. 👤 Dato’ Nik Ahmad Kamil Mahmud – Dato’ Seri Setia Raja Kelantan",
-      "translate": "4. 👤 Dato’ Nik Ahmad Kamil Mahmud – Dato’ Seri Setia Raja Kelantan",
+      "translate": "4. 👤 拿督尼克艾哈迈德卡米尔马哈茂德 - 吉兰丹拿督斯里塞蒂亚国王",
       "key_points_zh": [
-        "4. 👤 Dato’ Nik Ahmad Kamil Mahmud – Dato’ Seri Setia Raja Kelantan"
+        "4. 👤 拿督尼克艾哈迈德卡米尔马哈茂德 - 吉兰丹拿督斯里塞蒂亚国王"
       ],
       "bm_focus_phrase": "4. 👤 Dato’ Nik Ahmad Kamil Mahmud – Dato’ Seri Setia Raja Kelantan"
     },
     {
       "source_id": "bab-5-1-u08",
       "bm_original": "Terdapat juga pegawai pemerhati dan penasihat undang-undang dalam Jawatankuasa Kerja , iaitu:",
-      "translate": "Terdapat 也 pegawai pemerhati 与 penasihat undang-undang 在 Jawatankuasa Kerja , iaitu:",
+      "translate": "工作委员会中还有观察员和法律顾问，即：",
       "key_points_zh": [
-        "Terdapat 也 pegawai pemerhati 与 penasihat undang-undang 在 Jawatankuasa Kerja , iaitu:"
+        "工作委员会中还有观察员和法律顾问，即："
       ],
       "bm_focus_phrase": "Terdapat juga pegawai pemerhati dan penasihat undang-undang dalam Jawatankuasa Kerja , iaitu:"
     },
     {
       "source_id": "bab-5-1-extra-25",
       "bm_original": "1. 👤 Theodore Adams – Penasihat Raja-raja Melayu",
-      "translate": "1. 👤 Theodore Adams – Penasihat Raja-raja Melayu",
+      "translate": "1. 👤 西奥多·亚当斯 – 马来国王顾问",
       "key_points_zh": [
-        "1. 👤 Theodore Adams – Penasihat Raja-raja Melayu"
+        "1. 👤 西奥多·亚当斯 – 马来国王顾问"
       ],
       "bm_focus_phrase": "1. 👤 Theodore Adams – Penasihat Raja-raja Melayu"
     },
     {
       "source_id": "bab-5-1-extra-26",
       "bm_original": "2. 👤 Roland Braddell – Penasihat Undang-undang UMNO",
-      "translate": "2. 👤 Roland Braddell – Penasihat Undang-undang UMNO",
+      "translate": "2. 👤 Roland Braddell – 巫统法律顾问",
       "key_points_zh": [
-        "2. 👤 Roland Braddell – Penasihat Undang-undang UMNO"
+        "2. 👤 Roland Braddell – 巫统法律顾问"
       ],
       "bm_focus_phrase": "2. 👤 Roland Braddell – Penasihat Undang-undang UMNO"
     },
     {
       "source_id": "bab-5-1-extra-27",
       "bm_original": "3. 👤 Ralph Hone – Pemerhati dan wakil Gabenor Jeneral",
-      "translate": "3. 👤 Ralph Hone – Pemerhati 与 wakil Gabenor Jeneral",
+      "translate": "3. 👤 Ralph Hone – 观察员兼总督代表",
       "key_points_zh": [
-        "3. 👤 Ralph Hone – Pemerhati 与 wakil Gabenor Jeneral"
+        "3. 👤 Ralph Hone – 观察员兼总督代表"
       ],
       "bm_focus_phrase": "3. 👤 Ralph Hone – Pemerhati dan wakil Gabenor Jeneral"
     },
     {
       "source_id": "bab-5-1-u09",
       "bm_original": "Jawatankuasa ini mengemukakan beberapa cadangan utama:",
-      "translate": "Jawatankuasa 这 mengemukakan beberapa 建议 主要:",
+      "translate": "委员会提出了几项关键建议：",
       "key_points_zh": [
-        "Jawatankuasa 这 mengemukakan beberapa 建议 主要:"
+        "委员会提出了几项关键建议："
       ],
       "bm_focus_phrase": "Jawatankuasa ini mengemukakan beberapa cadangan utama:"
     },
     {
       "source_id": "bab-5-1-extra-28",
       "bm_original": "1️⃣ menyatukan semua negeri Melayu dalam satu pentadbiran bersama dua buah Negeri-negeri Selat",
-      "translate": "1️⃣ menyatukan semua 州 Melayu 在 satu 行政 bersama dua buah Negeri-negeri Selat",
+      "translate": "1️⃣ 将所有马来州属与两个海峡殖民地联合为一个政府",
       "key_points_zh": [
-        "1️⃣ menyatukan semua 州 Melayu 在 satu 行政 bersama dua buah Negeri-negeri Selat"
+        "1️⃣ 将所有马来州属与两个海峡殖民地联合为一个政府"
       ],
       "bm_focus_phrase": "1️⃣ menyatukan semua negeri Melayu dalam satu pentadbiran bersama dua buah Negeri-negeri Selat"
     },
     {
       "source_id": "bab-5-1-extra-29",
       "bm_original": "2️⃣ memulihkan kedudukan dan kedaulatan Raja-raja Melayu",
-      "translate": "2️⃣ memulihkan kedudukan 与 主权 Raja-raja Melayu",
+      "translate": "2️⃣恢复马来国王的地位和主权",
       "key_points_zh": [
-        "2️⃣ memulihkan kedudukan 与 主权 Raja-raja Melayu"
+        "2️⃣恢复马来国王的地位和主权"
       ],
       "bm_focus_phrase": "2️⃣ memulihkan kedudukan dan kedaulatan Raja-raja Melayu"
     },
     {
       "source_id": "bab-5-1-extra-30",
       "bm_original": "3️⃣ menjaga kedudukan istimewa orang Melayu dan kepentingan sah kaum lain",
-      "translate": "3️⃣ menjaga kedudukan istimewa orang Melayu 与 kepentingan sah kaum lain",
+      "translate": "3️⃣维护马来人的特殊地位和其他种族的合法利益",
       "key_points_zh": [
-        "3️⃣ menjaga kedudukan istimewa orang Melayu 与 kepentingan sah kaum lain"
+        "3️⃣维护马来人的特殊地位和其他种族的合法利益"
       ],
       "bm_focus_phrase": "3️⃣ menjaga kedudukan istimewa orang Melayu dan kepentingan sah kaum lain"
     },
     {
       "source_id": "bab-5-1-extra-31",
       "bm_original": "4️⃣ menubuhkan Dewan Perundangan Negeri bagi setiap negeri",
-      "translate": "4️⃣ 成立 Dewan Perundangan Negeri bagi setiap 州",
+      "translate": "4️⃣ 为每个州设立州立法机构",
       "key_points_zh": [
-        "4️⃣ 成立 Dewan Perundangan Negeri bagi setiap 州"
+        "4️⃣ 为每个州设立州立法机构"
       ],
       "bm_focus_phrase": "4️⃣ menubuhkan Dewan Perundangan Negeri bagi setiap negeri"
     },
     {
       "source_id": "bab-5-1-extra-32",
       "bm_original": "5️⃣ mengenakan syarat kewarganegaraan yang ketat",
-      "translate": "5️⃣ mengenakan syarat 公民权 的 ketat",
+      "translate": "5️⃣实行严格的公民身份要求",
       "key_points_zh": [
-        "5️⃣ mengenakan syarat 公民权 的 ketat"
+        "5️⃣实行严格的公民身份要求"
       ],
       "bm_focus_phrase": "5️⃣ mengenakan syarat kewarganegaraan yang ketat"
     },
     {
       "source_id": "bab-5-1-u10",
       "bm_original": "Cadangan ini menjadi asas penting kepada pembentukan Perjanjian Persekutuan Tanah Melayu 1948 .",
-      "translate": "Cadangan 这 menjadi asas penting 向 pembentukan Perjanjian Persekutuan Tanah Melayu 1948 .",
+      "translate": "这项建议成为1948年马来亚联邦协议的重要基础。",
       "key_points_zh": [
-        "Cadangan 这 menjadi asas penting 向 pembentukan Perjanjian Persekutuan Tanah Melayu 1948 ."
+        "这项建议成为1948年马来亚联邦协议的重要基础。"
       ],
       "bm_focus_phrase": "Cadangan ini menjadi asas penting kepada pembentukan Perjanjian Persekutuan Tanah Melayu 1948 ."
     },
     {
       "source_id": "bab-5-1-u11",
       "bm_original": "Golongan nasionalis Melayu radikal membidas kerajaan British kerana mengadakan perundingan secara tertutup dengan UMNO .",
-      "translate": "Golongan nasionalis Melayu radikal membidas 政府 British 因为 mengadakan perundingan secara tertutup 以 UMNO .",
+      "translate": "激进的马来民族主义者批评英国政府与巫统进行闭门谈判。",
       "key_points_zh": [
-        "Golongan nasionalis Melayu radikal membidas 政府 British 因为 mengadakan perundingan secara tertutup 以 UMNO ."
+        "激进的马来民族主义者批评英国政府与巫统进行闭门谈判。"
       ],
       "bm_focus_phrase": "Golongan nasionalis Melayu radikal membidas kerajaan British kerana mengadakan perundingan secara tertutup dengan UMNO ."
     },
     {
       "source_id": "bab-5-1-u12",
       "bm_original": "British juga mengetepikan Parti Kebangsaan Melayu Malaya (PKMM) daripada Jawatankuasa Kerja .",
-      "translate": "British 也 mengetepikan Parti Kebangsaan Melayu Malaya (PKMM) daripada Jawatankuasa Kerja .",
+      "translate": "英国人还将马来民族党（PKMM）排除在工作委员会之外。",
       "key_points_zh": [
-        "British 也 mengetepikan Parti Kebangsaan Melayu Malaya (PKMM) daripada Jawatankuasa Kerja ."
+        "英国人还将马来民族党（PKMM）排除在工作委员会之外。"
       ],
       "bm_focus_phrase": "British juga mengetepikan Parti Kebangsaan Melayu Malaya (PKMM) daripada Jawatankuasa Kerja ."
     },
     {
       "source_id": "bab-5-1-u13",
       "bm_original": "Akibatnya, golongan ini bergabung membentuk Pusat Tenaga Rakyat (PUTERA) .",
-      "translate": "Akibatnya, golongan 这 bergabung membentuk Pusat Tenaga 人民 (PUTERA) .",
+      "translate": "结果，这些团体联合起来成立了 Pusat Tenaga Rakyat (PUTERA)。",
       "key_points_zh": [
-        "Akibatnya, golongan 这 bergabung membentuk Pusat Tenaga 人民 (PUTERA) ."
+        "结果，这些团体联合起来成立了 Pusat Tenaga Rakyat (PUTERA)。"
       ],
       "bm_focus_phrase": "Akibatnya, golongan ini bergabung membentuk Pusat Tenaga Rakyat (PUTERA) ."
     },
     {
       "source_id": "bab-5-1-u49",
       "bm_original": "Parti Kebangsaan Melayu Malaya (PKMM) · 👤 dipengerusikan oleh Dr. Burhanuddin al-Helmi",
-      "translate": "Parti Kebangsaan Melayu Malaya (PKMM) · 👤 dipengerusikan 由 Dr. Burhanuddin al-Helmi",
+      "translate": "马来西亚马来民族党 (PKMM) · 👤 由 Burhanuddin al-Helmi 博士担任主席",
       "key_points_zh": [
-        "Parti Kebangsaan Melayu Malaya (PKMM) · 👤 dipengerusikan 由 Dr. Burhanuddin al-Helmi"
+        "马来西亚马来民族党 (PKMM) · 👤 由 Burhanuddin al-Helmi 博士担任主席"
       ],
       "bm_focus_phrase": "Parti Kebangsaan Melayu Malaya (PKMM) · 👤 dipengerusikan oleh Dr. Burhanuddin al-Helmi"
     },
     {
       "source_id": "bab-5-1-u50",
       "bm_original": "Angkatan Pemuda Insaf (API) · 👤 diterajui oleh Ahmad Boestamam sebagai presiden",
-      "translate": "Angkatan Pemuda Insaf (API) · 👤 diterajui 由 Ahmad Boestamam 作为 presiden",
+      "translate": "Angkatan Pemuda Insaf (API) · 👤 由 Ahmad Boestamam 担任主席",
       "key_points_zh": [
-        "Angkatan Pemuda Insaf (API) · 👤 diterajui 由 Ahmad Boestamam 作为 presiden"
+        "Angkatan Pemuda Insaf (API) · 👤 由 Ahmad Boestamam 担任主席"
       ],
       "bm_focus_phrase": "Angkatan Pemuda Insaf (API) · 👤 diterajui oleh Ahmad Boestamam sebagai presiden"
     },
     {
       "source_id": "bab-5-1-u51",
       "bm_original": "Gerakan Angkatan Muda (GERAM) · 👤 diketuai oleh Aziz Ishak dan Abdul Samad Ismail",
-      "translate": "Gerakan Angkatan Muda (GERAM) · 👤 diketuai 由 Aziz Ishak 与 Abdul Samad Ismail",
+      "translate": "青年运动 (GERAM) · 👤 由 Aziz Ishak 和 Abdul Samad Ismail 领导",
       "key_points_zh": [
-        "Gerakan Angkatan Muda (GERAM) · 👤 diketuai 由 Aziz Ishak 与 Abdul Samad Ismail"
+        "青年运动 (GERAM) · 👤 由 Aziz Ishak 和 Abdul Samad Ismail 领导"
       ],
       "bm_focus_phrase": "Gerakan Angkatan Muda (GERAM) · 👤 diketuai oleh Aziz Ishak dan Abdul Samad Ismail"
     },
     {
       "source_id": "bab-5-1-u52",
       "bm_original": "Hizbul Muslimin · 👤 diketuai oleh Abu Bakar al-Baqir",
-      "translate": "Hizbul Muslimin · 👤 diketuai 由 Abu Bakar al-Baqir",
+      "translate": "穆斯林党 · 👤 由 Abu Bakar al-Baqir 领导",
       "key_points_zh": [
-        "Hizbul Muslimin · 👤 diketuai 由 Abu Bakar al-Baqir"
+        "穆斯林党 · 👤 由 Abu Bakar al-Baqir 领导"
       ],
       "bm_focus_phrase": "Hizbul Muslimin · 👤 diketuai oleh Abu Bakar al-Baqir"
     },
     {
       "source_id": "bab-5-1-u53",
       "bm_original": "Barisan Tani Malaya (BATAS) · 👤 diketuai oleh Musa Ahmad",
-      "translate": "Barisan Tani Malaya (BATAS) · 👤 diketuai 由 Musa Ahmad",
+      "translate": "马来亚国阵 (BATAS) · 👤 由慕沙艾哈迈德领导",
       "key_points_zh": [
-        "Barisan Tani Malaya (BATAS) · 👤 diketuai 由 Musa Ahmad"
+        "马来亚国阵 (BATAS) · 👤 由慕沙艾哈迈德领导"
       ],
       "bm_focus_phrase": "Barisan Tani Malaya (BATAS) · 👤 diketuai oleh Musa Ahmad"
     },
     {
       "source_id": "bab-5-1-u54",
       "bm_original": "Angkatan Wanita Sedar (AWAS) · 👤 diketuai oleh Shamsiah Fakeh",
-      "translate": "Angkatan 妇女 Sedar (AWAS) · 👤 diketuai 由 Shamsiah Fakeh",
+      "translate": "Angkatan Wanita Sedar (AWAS) · 👤 由 Shamsiah Fakeh 领导",
       "key_points_zh": [
-        "Angkatan 妇女 Sedar (AWAS) · 👤 diketuai 由 Shamsiah Fakeh"
+        "Angkatan Wanita Sedar (AWAS) · 👤 由 Shamsiah Fakeh 领导"
       ],
       "bm_focus_phrase": "Angkatan Wanita Sedar (AWAS) · 👤 diketuai oleh Shamsiah Fakeh"
     },
     {
       "source_id": "bab-5-1-u14",
       "bm_original": "Golongan bukan Melayu pula menubuhkan All Malaya Council of Joint Action (AMCJA) .",
-      "translate": "Golongan bukan Melayu pula 成立 All Malaya Council of Joint Action (AMCJA) .",
+      "translate": "非马来人成立了全马来亚联合行动理事会（AMCJA）。",
       "key_points_zh": [
-        "Golongan bukan Melayu pula 成立 All Malaya Council of Joint Action (AMCJA) ."
+        "非马来人成立了全马来亚联合行动理事会（AMCJA）。"
       ],
       "bm_focus_phrase": "Golongan bukan Melayu pula menubuhkan All Malaya Council of Joint Action (AMCJA) ."
     },
     {
       "source_id": "bab-5-1-u15",
       "bm_original": "AMCJA berpendapat bahawa British terlalu tunduk kepada tuntutan UMNO dan menganggap penubuhan Jawatankuasa Kerja sebagai tidak demokratik.",
-      "translate": "AMCJA berpendapat bahawa British terlalu tunduk 向 tuntutan UMNO 与 menganggap 成立 Jawatankuasa Kerja 作为 不 demokratik.",
+      "translate": "AMCJA认为英国人过于屈服于巫统的要求，并认为成立工作委员会是不民主的。",
       "key_points_zh": [
-        "AMCJA berpendapat bahawa British terlalu tunduk 向 tuntutan UMNO 与 menganggap 成立 Jawatankuasa Kerja 作为 不 demokratik."
+        "AMCJA认为英国人过于屈服于巫统的要求，并认为成立工作委员会是不民主的。"
       ],
       "bm_focus_phrase": "AMCJA berpendapat bahawa British terlalu tunduk kepada tuntutan UMNO dan menganggap penubuhan Jawatankuasa Kerja sebagai tidak demokratik."
     },
     {
       "source_id": "bab-5-1-u16",
       "bm_original": "AMCJA kemudian bergabung dengan PUTERA .",
-      "translate": "AMCJA kemudian bergabung 以 PUTERA .",
+      "translate": "AMCJA 随后与 PUTERA 合并。",
       "key_points_zh": [
-        "AMCJA kemudian bergabung 以 PUTERA ."
+        "AMCJA 随后与 PUTERA 合并。"
       ],
       "bm_focus_phrase": "AMCJA kemudian bergabung dengan PUTERA ."
     },
     {
       "source_id": "bab-5-1-u55",
       "bm_original": "Pan-Malayan Federation of Trade Union (PMFTU) · 👤 Setiausahanya ialah Chan Loo",
-      "translate": "Pan-Malayan Federation of Trade Union (PMFTU) · 👤 Setiausahanya 是 Chan Loo",
+      "translate": "泛马来亚职工总会 (PMFTU) · 👤 秘书是 Chan Loo",
       "key_points_zh": [
-        "Pan-Malayan Federation of Trade Union (PMFTU) · 👤 Setiausahanya 是 Chan Loo"
+        "泛马来亚职工总会 (PMFTU) · 👤 秘书是 Chan Loo"
       ],
       "bm_focus_phrase": "Pan-Malayan Federation of Trade Union (PMFTU) · 👤 Setiausahanya ialah Chan Loo"
     },
     {
       "source_id": "bab-5-1-u56",
       "bm_original": "Malayan Democratic Union (MDU) · 👤 dipengerusikan oleh John Eber",
-      "translate": "Malayan Democratic Union (MDU) · 👤 dipengerusikan 由 John Eber",
+      "translate": "马来亚民主联盟 (MDU) · 👤 由约翰·埃伯 (John Eber) 担任主席",
       "key_points_zh": [
-        "Malayan Democratic Union (MDU) · 👤 dipengerusikan 由 John Eber"
+        "马来亚民主联盟 (MDU) · 👤 由约翰·埃伯 (John Eber) 担任主席"
       ],
       "bm_focus_phrase": "Malayan Democratic Union (MDU) · 👤 dipengerusikan oleh John Eber"
     },
     {
       "source_id": "bab-5-1-u57",
       "bm_original": "Malayan Indian Congress (MIC) · 👤 diketuai oleh John Thivy sebagai presiden",
-      "translate": "Malayan Indian Congress (MIC) · 👤 diketuai 由 John Thivy 作为 presiden",
+      "translate": "马来亚印度国大党 (MIC) · 👤 由约翰·蒂维 (John Thivy) 领导",
       "key_points_zh": [
-        "Malayan Indian Congress (MIC) · 👤 diketuai 由 John Thivy 作为 presiden"
+        "马来亚印度国大党 (MIC) · 👤 由约翰·蒂维 (John Thivy) 领导"
       ],
       "bm_focus_phrase": "Malayan Indian Congress (MIC) · 👤 diketuai oleh John Thivy sebagai presiden"
     },
     {
       "source_id": "bab-5-1-u17",
       "bm_original": "Gabungan ini menolak Perjanjian Persekutuan kerana:",
-      "translate": "Gabungan 这 menolak Perjanjian Persekutuan 因为:",
+      "translate": "联盟拒绝联邦协议，因为：",
       "key_points_zh": [
-        "Gabungan 这 menolak Perjanjian Persekutuan 因为:"
+        "联盟拒绝联邦协议，因为："
       ],
       "bm_focus_phrase": "Gabungan ini menolak Perjanjian Persekutuan kerana:"
     },
     {
       "source_id": "bab-5-1-extra-33",
       "bm_original": "Jawatankuasa Kerja tidak diwakili oleh semua kaum",
-      "translate": "Jawatankuasa Kerja 不 diwakili 由 semua kaum",
+      "translate": "工作委员会并非由所有种族代表",
       "key_points_zh": [
-        "Jawatankuasa Kerja 不 diwakili 由 semua kaum"
+        "工作委员会并非由所有种族代表"
       ],
       "bm_focus_phrase": "Jawatankuasa Kerja tidak diwakili oleh semua kaum"
     },
     {
       "source_id": "bab-5-1-extra-34",
       "bm_original": "tidak mempunyai wakil bukan Melayu",
-      "translate": "不 mempunyai wakil bukan Melayu",
+      "translate": "没有非马来人代表",
       "key_points_zh": [
-        "不 mempunyai wakil bukan Melayu"
+        "没有非马来人代表"
       ],
       "bm_focus_phrase": "tidak mempunyai wakil bukan Melayu"
     },
     {
       "source_id": "bab-5-1-extra-35",
       "bm_original": "dianggap tidak demokratik",
-      "translate": "dianggap 不 demokratik",
+      "translate": "被认为是不民主的",
       "key_points_zh": [
-        "dianggap 不 demokratik"
+        "被认为是不民主的"
       ],
       "bm_focus_phrase": "dianggap tidak demokratik"
     },
     {
       "source_id": "bab-5-1-extra-36",
       "bm_original": "dilihat mengukuhkan British",
-      "translate": "dilihat 加强 British",
+      "translate": "被视为加强英国",
       "key_points_zh": [
-        "dilihat 加强 British"
+        "被视为加强英国"
       ],
       "bm_focus_phrase": "dilihat mengukuhkan British"
     },
     {
       "source_id": "bab-5-1-extra-37",
       "bm_original": "dianggap bersifat perkauman",
-      "translate": "重点：dianggap bersifat perkauman",
+      "translate": "被认为是种族主义者",
       "key_points_zh": [
-        "重点：dianggap bersifat perkauman"
+        "被认为是种族主义者"
       ],
       "bm_focus_phrase": "dianggap bersifat perkauman"
     },
     {
       "source_id": "bab-5-1-u58",
       "bm_original": "Julai 1947 → cadangan perlembagaan yang telah disemak oleh Jawatankuasa Kerja diumumkan kepada awam.",
-      "translate": "Julai 1947 → 建议 perlembagaan 的 已经 disemak 由 Jawatankuasa Kerja diumumkan 向 awam.",
+      "translate": "1947年7月 → 经工作委员会审议的宪法草案向社会公布。",
       "key_points_zh": [
-        "Julai 1947 → 建议 perlembagaan 的 已经 disemak 由 Jawatankuasa Kerja diumumkan 向 awam."
+        "1947年7月 → 经工作委员会审议的宪法草案向社会公布。"
       ],
       "bm_focus_phrase": "Julai 1947 → cadangan perlembagaan yang telah disemak oleh Jawatankuasa Kerja diumumkan kepada awam."
     },
     {
       "source_id": "bab-5-1-u18",
       "bm_original": "PUTERA-AMCJA menentang cadangan tersebut secara terbuka.",
-      "translate": "PUTERA-AMCJA 反对 建议 tersebut secara terbuka.",
+      "translate": "PUTERA-AMCJA 公开反对该提案。",
       "key_points_zh": [
-        "PUTERA-AMCJA 反对 建议 tersebut secara terbuka."
+        "PUTERA-AMCJA 公开反对该提案。"
       ],
       "bm_focus_phrase": "PUTERA-AMCJA menentang cadangan tersebut secara terbuka."
     },
     {
       "source_id": "bab-5-1-u19",
       "bm_original": "Golongan nasionalis Melayu radikal telah melaungkan perjuangan kemerdekaan sejak penghujung tahun 1930-an .",
-      "translate": "Golongan nasionalis Melayu radikal 已经 melaungkan 斗争 独立 sejak penghujung 年 1930-an .",
+      "translate": "自 20 世纪 30 年代末以来，激进的马来民族主义者一直高呼争取独立的斗争。",
       "key_points_zh": [
-        "Golongan nasionalis Melayu radikal 已经 melaungkan 斗争 独立 sejak penghujung 年 1930-an ."
+        "自 20 世纪 30 年代末以来，激进的马来民族主义者一直高呼争取独立的斗争。"
       ],
       "bm_focus_phrase": "Golongan nasionalis Melayu radikal telah melaungkan perjuangan kemerdekaan sejak penghujung tahun 1930-an ."
     },
     {
       "source_id": "bab-5-1-u20",
       "bm_original": "Matlamat perjuangan mereka ialah:",
-      "translate": "Matlamat 斗争 mereka 是:",
+      "translate": "他们的奋斗目标是：",
       "key_points_zh": [
-        "Matlamat 斗争 mereka 是:"
+        "他们的奋斗目标是："
       ],
       "bm_focus_phrase": "Matlamat perjuangan mereka ialah:"
     },
     {
       "source_id": "bab-5-1-extra-38",
       "bm_original": "membebaskan tanah air daripada penjajahan",
-      "translate": "重点：membebaskan tanah air daripada penjajahan",
+      "translate": "把祖国从殖民主义手中解放出来",
       "key_points_zh": [
-        "重点：membebaskan tanah air daripada penjajahan"
+        "把祖国从殖民主义手中解放出来"
       ],
       "bm_focus_phrase": "membebaskan tanah air daripada penjajahan"
     },
     {
       "source_id": "bab-5-1-extra-39",
       "bm_original": "menyatukan seluruh Tanah Melayu",
-      "translate": "menyatukan 全国 Tanah Melayu",
+      "translate": "团结整个马来亚",
       "key_points_zh": [
-        "menyatukan 全国 Tanah Melayu"
+        "团结整个马来亚"
       ],
       "bm_focus_phrase": "menyatukan seluruh Tanah Melayu"
     },
     {
       "source_id": "bab-5-1-extra-40",
       "bm_original": "enggan berkompromi dengan penjajah untuk mencapai kemerdekaan",
-      "translate": "enggan berkompromi 以 penjajah 为了 mencapai 独立",
+      "translate": "拒绝与殖民主义者妥协以实现独立",
       "key_points_zh": [
-        "enggan berkompromi 以 penjajah 为了 mencapai 独立"
+        "拒绝与殖民主义者妥协以实现独立"
       ],
       "bm_focus_phrase": "enggan berkompromi dengan penjajah untuk mencapai kemerdekaan"
     },
     {
       "source_id": "bab-5-1-extra-41",
       "bm_original": "memperjuangkan hak semua kaum dalam sebuah negara",
-      "translate": "memperjuangkan 权利 semua kaum 在 sebuah negara",
+      "translate": "为一个国家所有种族的权利而奋斗",
       "key_points_zh": [
-        "memperjuangkan 权利 semua kaum 在 sebuah negara"
+        "为一个国家所有种族的权利而奋斗"
       ],
       "bm_focus_phrase": "memperjuangkan hak semua kaum dalam sebuah negara"
     },
     {
       "source_id": "bab-5-1-extra-42",
       "bm_original": "menekankan kebebasan hak bersuara",
-      "translate": "menekankan kebebasan 权利 bersuara",
+      "translate": "强调言论自由",
       "key_points_zh": [
-        "menekankan kebebasan 权利 bersuara"
+        "强调言论自由"
       ],
       "bm_focus_phrase": "menekankan kebebasan hak bersuara"
     },
     {
       "source_id": "bab-5-1-extra-43",
       "bm_original": "menuntut kebebasan berhimpun",
-      "translate": "重点：menuntut kebebasan berhimpun",
+      "translate": "要求集会自由",
       "key_points_zh": [
-        "重点：menuntut kebebasan berhimpun"
+        "要求集会自由"
       ],
       "bm_focus_phrase": "menuntut kebebasan berhimpun"
     },
     {
       "source_id": "bab-5-1-extra-44",
       "bm_original": "memperjuangkan kebebasan menerbitkan akhbar",
-      "translate": "memperjuangkan kebebasan menerbitkan 报章",
+      "translate": "为新闻自由而战",
       "key_points_zh": [
-        "memperjuangkan kebebasan menerbitkan 报章"
+        "为新闻自由而战"
       ],
       "bm_focus_phrase": "memperjuangkan kebebasan menerbitkan akhbar"
     },
     {
       "source_id": "bab-5-1-u21",
       "bm_original": "Ahmad Boestamam menerbitkan Suara Rakyat sebagai wadah membuka minda rakyat ke arah idea bebas dan merdeka.",
-      "translate": "Ahmad Boestamam menerbitkan Suara 人民 作为 wadah membuka minda 人民 ke arah idea bebas 与 merdeka.",
+      "translate": "艾哈迈德·博埃斯塔曼出版《人民之声》作为开启人民思想自由和独立理念的工具。",
       "key_points_zh": [
-        "Ahmad Boestamam menerbitkan Suara 人民 作为 wadah membuka minda 人民 ke arah idea bebas 与 merdeka."
+        "艾哈迈德·博埃斯塔曼出版《人民之声》作为开启人民思想自由和独立理念的工具。"
       ],
       "bm_focus_phrase": "Ahmad Boestamam menerbitkan Suara Rakyat sebagai wadah membuka minda rakyat ke arah idea bebas dan merdeka."
     },
     {
       "source_id": "bab-5-1-u22",
       "bm_original": "Fahaman kebangsaan yang diperjuangkan oleh golongan ini mudah diterima oleh sebahagian rakyat.",
-      "translate": "Fahaman kebangsaan 的 diperjuangkan 由 golongan 这 mudah diterima 由 部分 人民.",
+      "translate": "这个群体所争取的民族理解很容易被一些人接受。",
       "key_points_zh": [
-        "Fahaman kebangsaan 的 diperjuangkan 由 golongan 这 mudah diterima 由 部分 人民."
+        "这个群体所争取的民族理解很容易被一些人接受。"
       ],
       "bm_focus_phrase": "Fahaman kebangsaan yang diperjuangkan oleh golongan ini mudah diterima oleh sebahagian rakyat."
     },
     {
       "source_id": "bab-5-1-u23",
       "bm_original": "PKMM berjaya menubuhkan cawangan di:",
-      "translate": "PKMM 成功 成立 cawangan di:",
+      "translate": "PKMM成功在以下地区设立分行：",
       "key_points_zh": [
-        "PKMM 成功 成立 cawangan di:"
+        "PKMM成功在以下地区设立分行："
       ],
       "bm_focus_phrase": "PKMM berjaya menubuhkan cawangan di:"
     },
     {
       "source_id": "bab-5-1-extra-45",
       "bm_original": "seluruh negeri Perak",
-      "translate": "全国 州 Perak",
+      "translate": "整个霹雳州",
       "key_points_zh": [
-        "全国 州 Perak"
+        "整个霹雳州"
       ],
       "bm_focus_phrase": "seluruh negeri Perak"
     },
     {
       "source_id": "bab-5-1-extra-46",
       "bm_original": "Hulu Langat, Selangor",
-      "translate": "重点：Hulu Langat, Selangor",
+      "translate": "雪兰莪乌鲁冷岳",
       "key_points_zh": [
-        "重点：Hulu Langat, Selangor"
+        "雪兰莪乌鲁冷岳"
       ],
       "bm_focus_phrase": "Hulu Langat, Selangor"
     },
     {
       "source_id": "bab-5-1-extra-47",
       "bm_original": "Temerloh, Pahang",
-      "translate": "重点：Temerloh, Pahang",
+      "translate": "淡马鲁, 彭亨",
       "key_points_zh": [
-        "重点：Temerloh, Pahang"
+        "淡马鲁, 彭亨"
       ],
       "bm_focus_phrase": "Temerloh, Pahang"
     },
     {
       "source_id": "bab-5-1-u59",
       "bm_original": "Julai 1947 → jumlah keahlian PKMM dianggarkan melebihi 53 ribu orang .",
-      "translate": "重点：Julai 1947 → jumlah keahlian PKMM dianggarkan melebihi 53 ribu orang .",
+      "translate": "1947年7月 → PKMM会员总数估计超过5.3万人。",
       "key_points_zh": [
-        "重点：Julai 1947 → jumlah keahlian PKMM dianggarkan melebihi 53 ribu orang ."
+        "1947年7月 → PKMM会员总数估计超过5.3万人。"
       ],
       "bm_focus_phrase": "Julai 1947 → jumlah keahlian PKMM dianggarkan melebihi 53 ribu orang ."
     },
     {
       "source_id": "bab-5-1-u24",
       "bm_original": "Golongan nasionalis Melayu radikal juga memperjuangkan pembelaan terhadap ketidakadilan.",
-      "translate": "Golongan nasionalis Melayu radikal 也 memperjuangkan pembelaan 针对 ketidakadilan.",
+      "translate": "激进的马来民族主义者也为捍卫不公正而斗争。",
       "key_points_zh": [
-        "Golongan nasionalis Melayu radikal 也 memperjuangkan pembelaan 针对 ketidakadilan."
+        "激进的马来民族主义者也为捍卫不公正而斗争。"
       ],
       "bm_focus_phrase": "Golongan nasionalis Melayu radikal juga memperjuangkan pembelaan terhadap ketidakadilan."
     },
     {
       "source_id": "bab-5-1-u25",
       "bm_original": "Mereka berjuang berdasarkan:",
-      "translate": "重点：Mereka berjuang berdasarkan:",
+      "translate": "他们的战斗基于：",
       "key_points_zh": [
-        "重点：Mereka berjuang berdasarkan:"
+        "他们的战斗基于："
       ],
       "bm_focus_phrase": "Mereka berjuang berdasarkan:"
     },
     {
       "source_id": "bab-5-1-extra-48",
       "bm_original": "prinsip",
-      "translate": "重点：prinsip",
+      "translate": "原则",
       "key_points_zh": [
-        "重点：prinsip"
+        "原则"
       ],
       "bm_focus_phrase": "prinsip"
     },
     {
       "source_id": "bab-5-1-extra-49",
       "bm_original": "falsafah perjuangan",
-      "translate": "falsafah 斗争",
+      "translate": "斗争哲学",
       "key_points_zh": [
-        "falsafah 斗争"
+        "斗争哲学"
       ],
       "bm_focus_phrase": "falsafah perjuangan"
     },
     {
       "source_id": "bab-5-1-u26",
       "bm_original": "Para pejuang ini bukan sahaja menjadi tokoh setempat, malah melangkaui sempadan negeri sehingga digelar tokoh politik nasional .",
-      "translate": "Para pejuang 这 bukan sahaja menjadi tokoh setempat, malah melangkaui sempadan 州 sehingga digelar tokoh 政治 nasional .",
+      "translate": "这些战士不仅成为当地人物，甚至超越国界，被称为国家政治人物。",
       "key_points_zh": [
-        "Para pejuang 这 bukan sahaja menjadi tokoh setempat, malah melangkaui sempadan 州 sehingga digelar tokoh 政治 nasional ."
+        "这些战士不仅成为当地人物，甚至超越国界，被称为国家政治人物。"
       ],
       "bm_focus_phrase": "Para pejuang ini bukan sahaja menjadi tokoh setempat, malah melangkaui sempadan negeri sehingga digelar tokoh politik nasional ."
     },
     {
       "source_id": "bab-5-1-u27",
       "bm_original": "Ucapan beliau sempena penerimaan Ijazah Kehormat Doktor Undang-Undang di Konvokesyen Universiti Sains Malaysia pada 23 September 1973 .",
-      "translate": "Ucapan beliau sempena penerimaan Ijazah Kehormat Doktor Undang-Undang di Konvokesyen Universiti Sains Malaysia 于 23 September 1973 .",
+      "translate": "他于 1973 年 9 月 23 日在马来西亚理科大学毕业典礼上接受荣誉法学博士学位时发表的讲话。",
       "key_points_zh": [
-        "Ucapan beliau sempena penerimaan Ijazah Kehormat Doktor Undang-Undang di Konvokesyen Universiti Sains Malaysia 于 23 September 1973 ."
+        "他于 1973 年 9 月 23 日在马来西亚理科大学毕业典礼上接受荣誉法学博士学位时发表的讲话。"
       ],
       "bm_focus_phrase": "Ucapan beliau sempena penerimaan Ijazah Kehormat Doktor Undang-Undang di Konvokesyen Universiti Sains Malaysia pada 23 September 1973 ."
     },
     {
       "source_id": "bab-5-1-u28",
       "bm_original": "Istilah radikal digunakan oleh British kepada golongan ini kerana:",
-      "translate": "Istilah radikal digunakan 由 British 向 golongan 这 因为:",
+      "translate": "英国人使用“激进”一词来形容这一群体，因为：",
       "key_points_zh": [
-        "Istilah radikal digunakan 由 British 向 golongan 这 因为:"
+        "英国人使用“激进”一词来形容这一群体，因为："
       ],
       "bm_focus_phrase": "Istilah radikal digunakan oleh British kepada golongan ini kerana:"
     },
     {
       "source_id": "bab-5-1-extra-50",
       "bm_original": "keberanian mereka menentang British secara terbuka",
-      "translate": "keberanian mereka 反对 British secara terbuka",
+      "translate": "他们公开对抗英国人的勇敢",
       "key_points_zh": [
-        "keberanian mereka 反对 British secara terbuka"
+        "他们公开对抗英国人的勇敢"
       ],
       "bm_focus_phrase": "keberanian mereka menentang British secara terbuka"
     },
     {
       "source_id": "bab-5-1-extra-51",
       "bm_original": "membangkitkan perasaan anti-British melalui penulisan",
-      "translate": "membangkitkan perasaan anti-British 通过 penulisan",
+      "translate": "通过写作煽动反英情绪",
       "key_points_zh": [
-        "membangkitkan perasaan anti-British 通过 penulisan"
+        "通过写作煽动反英情绪"
       ],
       "bm_focus_phrase": "membangkitkan perasaan anti-British melalui penulisan"
     },
     {
       "source_id": "bab-5-1-u29",
       "bm_original": "Dalam bukunya Testament Politik API , Ahmad Boestamam menegaskan bahawa mereka menentang British kerana British menindas golongan nasionalis Melayu radikal.",
-      "translate": "Dalam bukunya Testament Politik API , Ahmad Boestamam menegaskan bahawa mereka 反对 British 因为 British menindas golongan nasionalis Melayu radikal.",
+      "translate": "艾哈迈德·博斯塔曼在他的《API政治遗嘱》一书中声称，他们反对英国，因为英国压迫激进的马来民族主义者。",
       "key_points_zh": [
-        "Dalam bukunya Testament Politik API , Ahmad Boestamam menegaskan bahawa mereka 反对 British 因为 British menindas golongan nasionalis Melayu radikal."
+        "艾哈迈德·博斯塔曼在他的《API政治遗嘱》一书中声称，他们反对英国，因为英国压迫激进的马来民族主义者。"
       ],
       "bm_focus_phrase": "Dalam bukunya Testament Politik API , Ahmad Boestamam menegaskan bahawa mereka menentang British kerana British menindas golongan nasionalis Melayu radikal."
     },
     {
       "source_id": "bab-5-1-u30",
       "bm_original": "Oleh sebab itu, golongan ini terpaksa berhadapan dengan pelbagai bentuk penindasan.",
-      "translate": "Oleh sebab 那, golongan 这 terpaksa berhadapan 以 pelbagai bentuk penindasan.",
+      "translate": "正因为如此，这个群体不得不面对各种形式的压迫。",
       "key_points_zh": [
-        "Oleh sebab 那, golongan 这 terpaksa berhadapan 以 pelbagai bentuk penindasan."
+        "正因为如此，这个群体不得不面对各种形式的压迫。"
       ],
       "bm_focus_phrase": "Oleh sebab itu, golongan ini terpaksa berhadapan dengan pelbagai bentuk penindasan."
     },
     {
       "source_id": "bab-5-1-u31",
       "bm_original": "PUTERA-AMCJA menentang rangka Perjanjian Persekutuan 1948 .",
-      "translate": "PUTERA-AMCJA 反对 rangka Perjanjian Persekutuan 1948 .",
+      "translate": "PUTERA-AMCJA 反对 1948 年联邦协议的框架。",
       "key_points_zh": [
-        "PUTERA-AMCJA 反对 rangka Perjanjian Persekutuan 1948 ."
+        "PUTERA-AMCJA 反对 1948 年联邦协议的框架。"
       ],
       "bm_focus_phrase": "PUTERA-AMCJA menentang rangka Perjanjian Persekutuan 1948 ."
     },
     {
       "source_id": "bab-5-1-u32",
       "bm_original": "Mereka tidak bersetuju dengan Jawatankuasa Kerja kerana hanya diwakili oleh:",
-      "translate": "Mereka 不 bersetuju 以 Jawatankuasa Kerja 因为 hanya diwakili 由:",
+      "translate": "他们不同意工作委员会的观点，因为他们的代表只有：",
       "key_points_zh": [
-        "Mereka 不 bersetuju 以 Jawatankuasa Kerja 因为 hanya diwakili 由:"
+        "他们不同意工作委员会的观点，因为他们的代表只有："
       ],
       "bm_focus_phrase": "Mereka tidak bersetuju dengan Jawatankuasa Kerja kerana hanya diwakili oleh:"
     },
     {
       "source_id": "bab-5-1-extra-52",
       "bm_original": "UMNO",
-      "translate": "UMNO",
+      "translate": "巫统",
       "key_points_zh": [
-        "UMNO"
+        "巫统"
       ],
       "bm_focus_phrase": "UMNO"
     },
     {
       "source_id": "bab-5-1-extra-53",
       "bm_original": "Raja-raja Melayu",
-      "translate": "Raja-raja Melayu",
+      "translate": "马来国王",
       "key_points_zh": [
-        "Raja-raja Melayu"
+        "马来国王"
       ],
       "bm_focus_phrase": "Raja-raja Melayu"
     },
     {
       "source_id": "bab-5-1-extra-54",
       "bm_original": "British",
-      "translate": "重点：British",
+      "translate": "英国人",
       "key_points_zh": [
-        "重点：British"
+        "英国人"
       ],
       "bm_focus_phrase": "British"
     },
     {
       "source_id": "bab-5-1-u33",
       "bm_original": "Oleh itu, mereka mencadangkan satu perlembagaan alternatif yang dikenali sebagai Perlembagaan Rakyat .",
-      "translate": "Oleh 那, mereka mencadangkan satu perlembagaan alternatif 的 dikenali 作为 Perlembagaan 人民 .",
+      "translate": "因此，他们提出了一部替代宪法，称为人民宪法。",
       "key_points_zh": [
-        "Oleh 那, mereka mencadangkan satu perlembagaan alternatif 的 dikenali 作为 Perlembagaan 人民 ."
+        "因此，他们提出了一部替代宪法，称为人民宪法。"
       ],
       "bm_focus_phrase": "Oleh itu, mereka mencadangkan satu perlembagaan alternatif yang dikenali sebagai Perlembagaan Rakyat ."
     },
     {
       "source_id": "bab-5-1-extra-55",
       "bm_original": "kedudukan Bahasa Melayu",
-      "translate": "重点：kedudukan Bahasa Melayu",
+      "translate": "马来语的地位",
       "key_points_zh": [
-        "重点：kedudukan Bahasa Melayu"
+        "马来语的地位"
       ],
       "bm_focus_phrase": "kedudukan Bahasa Melayu"
     },
     {
       "source_id": "bab-5-1-extra-56",
       "bm_original": "pertahanan dan hal ehwal luar negeri",
-      "translate": "pertahanan 与 hal ehwal luar 州",
+      "translate": "国防和外交事务",
       "key_points_zh": [
-        "pertahanan 与 hal ehwal luar 州"
+        "国防和外交事务"
       ],
       "bm_focus_phrase": "pertahanan dan hal ehwal luar negeri"
     },
     {
       "source_id": "bab-5-1-extra-57",
       "bm_original": "syarat kewarganegaraan Tanah Melayu",
-      "translate": "syarat 公民权 Tanah Melayu",
+      "translate": "马来公民身份要求",
       "key_points_zh": [
-        "syarat 公民权 Tanah Melayu"
+        "马来公民身份要求"
       ],
       "bm_focus_phrase": "syarat kewarganegaraan Tanah Melayu"
     },
     {
       "source_id": "bab-5-1-extra-58",
       "bm_original": "bendera dan lagu kebangsaan",
-      "translate": "bendera 与 lagu kebangsaan",
+      "translate": "国旗和国歌",
       "key_points_zh": [
-        "bendera 与 lagu kebangsaan"
+        "国旗和国歌"
       ],
       "bm_focus_phrase": "bendera dan lagu kebangsaan"
     },
     {
       "source_id": "bab-5-1-extra-59",
       "bm_original": "penyatuan Tanah Melayu dengan Singapura",
-      "translate": "penyatuan Tanah Melayu 以 Singapura",
+      "translate": "马来亚与新加坡统一",
       "key_points_zh": [
-        "penyatuan Tanah Melayu 以 Singapura"
+        "马来亚与新加坡统一"
       ],
       "bm_focus_phrase": "penyatuan Tanah Melayu dengan Singapura"
     },
     {
       "source_id": "bab-5-1-extra-60",
       "bm_original": "sebuah kerajaan pusat yang kuat",
-      "translate": "sebuah 政府 pusat 的 kuat",
+      "translate": "强大的中央政府",
       "key_points_zh": [
-        "sebuah 政府 pusat 的 kuat"
+        "强大的中央政府"
       ],
       "bm_focus_phrase": "sebuah kerajaan pusat yang kuat"
     },
     {
       "source_id": "bab-5-1-extra-61",
       "bm_original": "Raja-raja Melayu sebagai Raja Berperlembagaan",
-      "translate": "Raja-raja Melayu 作为 Raja Berperlembagaan",
+      "translate": "马来国王作为立宪君主",
       "key_points_zh": [
-        "Raja-raja Melayu 作为 Raja Berperlembagaan"
+        "马来国王作为立宪君主"
       ],
       "bm_focus_phrase": "Raja-raja Melayu sebagai Raja Berperlembagaan"
     },
     {
       "source_id": "bab-5-1-extra-62",
       "bm_original": "kemajuan politik dan ekonomi orang Melayu",
-      "translate": "kemajuan 政治 与 ekonomi orang Melayu",
+      "translate": "马来人的政治和经济进步",
       "key_points_zh": [
-        "kemajuan 政治 与 ekonomi orang Melayu"
+        "马来人的政治和经济进步"
       ],
       "bm_focus_phrase": "kemajuan politik dan ekonomi orang Melayu"
     },
     {
       "source_id": "bab-5-1-extra-63",
       "bm_original": "adat istiadat dan agama Islam",
-      "translate": "adat istiadat 与 agama Islam",
+      "translate": "伊斯兰教习俗和宗教",
       "key_points_zh": [
-        "adat istiadat 与 agama Islam"
+        "伊斯兰教习俗和宗教"
       ],
       "bm_focus_phrase": "adat istiadat dan agama Islam"
     },
     {
       "source_id": "bab-5-1-extra-64",
       "bm_original": "syarat kewarganegaraan",
-      "translate": "syarat 公民权",
+      "translate": "公民身份要求",
       "key_points_zh": [
-        "syarat 公民权"
+        "公民身份要求"
       ],
       "bm_focus_phrase": "syarat kewarganegaraan"
     },
     {
       "source_id": "bab-5-1-u60",
       "bm_original": "Akhir Mac 1947 → cadangan PUTERA dan AMCJA digabungkan untuk membentuk Perlembagaan Rakyat .",
-      "translate": "Akhir Mac 1947 → 建议 PUTERA 与 AMCJA digabungkan 为了 membentuk Perlembagaan 人民 .",
+      "translate": "1947 年 3 月底 → PUTERA 和 AMCJA 的提案合并，形成了人民宪法。",
       "key_points_zh": [
-        "Akhir Mac 1947 → 建议 PUTERA 与 AMCJA digabungkan 为了 membentuk Perlembagaan 人民 ."
+        "1947 年 3 月底 → PUTERA 和 AMCJA 的提案合并，形成了人民宪法。"
       ],
       "bm_focus_phrase": "Akhir Mac 1947 → cadangan PUTERA dan AMCJA digabungkan untuk membentuk Perlembagaan Rakyat ."
     },
     {
       "source_id": "bab-5-1-u61",
       "bm_original": "Julai 1947 → PUTERA-AMCJA mengadakan pertemuan untuk mengemukakan draf Perlembagaan Rakyat .",
-      "translate": "Julai 1947 → PUTERA-AMCJA mengadakan pertemuan 为了 mengemukakan draf Perlembagaan 人民 .",
+      "translate": "1947年7月 → 人民宪法委员会召开会议，提交人民宪法草案。",
       "key_points_zh": [
-        "Julai 1947 → PUTERA-AMCJA mengadakan pertemuan 为了 mengemukakan draf Perlembagaan 人民 ."
+        "1947年7月 → 人民宪法委员会召开会议，提交人民宪法草案。"
       ],
       "bm_focus_phrase": "Julai 1947 → PUTERA-AMCJA mengadakan pertemuan untuk mengemukakan draf Perlembagaan Rakyat ."
     },
     {
       "source_id": "bab-5-1-extra-65",
       "bm_original": "1️⃣ Tanah Melayu disatukan dengan Singapura",
-      "translate": "1️⃣ Tanah Melayu disatukan 以 Singapura",
+      "translate": "1️⃣ 马来亚与新加坡统一",
       "key_points_zh": [
-        "1️⃣ Tanah Melayu disatukan 以 Singapura"
+        "1️⃣ 马来亚与新加坡统一"
       ],
       "bm_focus_phrase": "1️⃣ Tanah Melayu disatukan dengan Singapura"
     },
     {
       "source_id": "bab-5-1-extra-66",
       "bm_original": "2️⃣ Penubuhan sebuah Dewan Perundangan Pusat dan majlis-majlis negeri yang dipilih bagi seluruh Tanah Melayu",
-      "translate": "2️⃣ Penubuhan sebuah Dewan Perundangan Pusat 与 majlis-majlis 州 的 dipilih bagi 全国 Tanah Melayu",
+      "translate": "2️⃣ 为整个马来亚建立中央立法议会并选举产生州议会",
       "key_points_zh": [
-        "2️⃣ Penubuhan sebuah Dewan Perundangan Pusat 与 majlis-majlis 州 的 dipilih bagi 全国 Tanah Melayu"
+        "2️⃣ 为整个马来亚建立中央立法议会并选举产生州议会"
       ],
       "bm_focus_phrase": "2️⃣ Penubuhan sebuah Dewan Perundangan Pusat dan majlis-majlis negeri yang dipilih bagi seluruh Tanah Melayu"
     },
     {
       "source_id": "bab-5-1-extra-67",
       "bm_original": "3️⃣ Kewarganegaraan yang sama bagi semua orang yang menganggap Tanah Melayu sebagai tempat tinggal tetap dan sanggup mencurahkan kesetiaan tanpa berbelah bahagi",
-      "translate": "3️⃣ 公民权 的 sama bagi semua orang 的 menganggap Tanah Melayu 作为 tempat tinggal tetap 与 sanggup mencurahkan kesetiaan tanpa berbelah bahagi",
+      "translate": "3️⃣ 给予所有以马来亚为永久居住地并愿意全心全意忠诚的人的平等公民权",
       "key_points_zh": [
-        "3️⃣ 公民权 的 sama bagi semua orang 的 menganggap Tanah Melayu 作为 tempat tinggal tetap 与 sanggup mencurahkan kesetiaan tanpa berbelah bahagi"
+        "3️⃣ 给予所有以马来亚为永久居住地并愿意全心全意忠诚的人的平等公民权"
       ],
       "bm_focus_phrase": "3️⃣ Kewarganegaraan yang sama bagi semua orang yang menganggap Tanah Melayu sebagai tempat tinggal tetap dan sanggup mencurahkan kesetiaan tanpa berbelah bahagi"
     },
     {
       "source_id": "bab-5-1-extra-68",
       "bm_original": "4️⃣ Raja-raja Melayu sebagai Raja Berperlembagaan yang bertanggungjawab kepada rakyat dan menerima nasihat melalui Majlis Mesyuarat",
-      "translate": "4️⃣ Raja-raja Melayu 作为 Raja Berperlembagaan 的 bertanggungjawab 向 人民 与 menerima nasihat 通过 Majlis Mesyuarat",
+      "translate": "4️⃣ 马来国王作为立宪国王，对人民负责并通过议会接受建议",
       "key_points_zh": [
-        "4️⃣ Raja-raja Melayu 作为 Raja Berperlembagaan 的 bertanggungjawab 向 人民 与 menerima nasihat 通过 Majlis Mesyuarat"
+        "4️⃣ 马来国王作为立宪国王，对人民负责并通过议会接受建议"
       ],
       "bm_focus_phrase": "4️⃣ Raja-raja Melayu sebagai Raja Berperlembagaan yang bertanggungjawab kepada rakyat dan menerima nasihat melalui Majlis Mesyuarat"
     },
     {
       "source_id": "bab-5-1-extra-69",
       "bm_original": "5️⃣ Hal ehwal agama Islam dan adat istiadat Melayu diketuai sepenuhnya oleh orang Melayu melalui Majlis Khas",
-      "translate": "5️⃣ Hal ehwal agama Islam 与 adat istiadat Melayu diketuai sepenuhnya 由 orang Melayu 通过 Majlis Khas",
+      "translate": "5️⃣伊斯兰宗教事务和马来习俗完全由马来人通过特别理事会领导",
       "key_points_zh": [
-        "5️⃣ Hal ehwal agama Islam 与 adat istiadat Melayu diketuai sepenuhnya 由 orang Melayu 通过 Majlis Khas"
+        "5️⃣伊斯兰宗教事务和马来习俗完全由马来人通过特别理事会领导"
       ],
       "bm_focus_phrase": "5️⃣ Hal ehwal agama Islam dan adat istiadat Melayu diketuai sepenuhnya oleh orang Melayu melalui Majlis Khas"
     },
     {
       "source_id": "bab-5-1-extra-70",
       "bm_original": "6️⃣ Perhatian khas hendaklah diberikan kepada kemajuan politik dan ekonomi orang Melayu",
-      "translate": "6️⃣ Perhatian khas hendaklah diberikan 向 kemajuan 政治 与 ekonomi orang Melayu",
+      "translate": "6️⃣ 应特别关注马来人的政治和经济进步",
       "key_points_zh": [
-        "6️⃣ Perhatian khas hendaklah diberikan 向 kemajuan 政治 与 ekonomi orang Melayu"
+        "6️⃣ 应特别关注马来人的政治和经济进步"
       ],
       "bm_focus_phrase": "6️⃣ Perhatian khas hendaklah diberikan kepada kemajuan politik dan ekonomi orang Melayu"
     },
     {
       "source_id": "bab-5-1-extra-71",
       "bm_original": "7️⃣ Bahasa Melayu hendaklah menjadi bahasa kebangsaan dan bahasa rasmi yang tunggal bagi Tanah Melayu",
-      "translate": "7️⃣ Bahasa Melayu hendaklah menjadi bahasa kebangsaan 与 bahasa rasmi 的 tunggal bagi Tanah Melayu",
+      "translate": "7️⃣ 马来语应该是马来亚的国语和唯一官方语言",
       "key_points_zh": [
-        "7️⃣ Bahasa Melayu hendaklah menjadi bahasa kebangsaan 与 bahasa rasmi 的 tunggal bagi Tanah Melayu"
+        "7️⃣ 马来语应该是马来亚的国语和唯一官方语言"
       ],
       "bm_focus_phrase": "7️⃣ Bahasa Melayu hendaklah menjadi bahasa kebangsaan dan bahasa rasmi yang tunggal bagi Tanah Melayu"
     },
     {
       "source_id": "bab-5-1-extra-72",
       "bm_original": "8️⃣ Hal ehwal luar negeri dan pertahanan hendaklah menjadi tanggungjawab bersama kerajaan Tanah Melayu dan kerajaan British",
-      "translate": "8️⃣ Hal ehwal luar 州 与 pertahanan hendaklah menjadi tanggungjawab bersama 政府 Tanah Melayu 与 政府 British",
+      "translate": "8️⃣外交和国防应由马来亚政府和英国政府共同负责",
       "key_points_zh": [
-        "8️⃣ Hal ehwal luar 州 与 pertahanan hendaklah menjadi tanggungjawab bersama 政府 Tanah Melayu 与 政府 British"
+        "8️⃣外交和国防应由马来亚政府和英国政府共同负责"
       ],
       "bm_focus_phrase": "8️⃣ Hal ehwal luar negeri dan pertahanan hendaklah menjadi tanggungjawab bersama kerajaan Tanah Melayu dan kerajaan British"
     },
     {
       "source_id": "bab-5-1-extra-73",
       "bm_original": "9️⃣ Kewarganegaraan Malaya haruslah dinamakan Melayu",
-      "translate": "9️⃣ 公民权 Malaya haruslah dinamakan Melayu",
+      "translate": "9️⃣ 马来亚公民身份应该称为马来人",
       "key_points_zh": [
-        "9️⃣ 公民权 Malaya haruslah dinamakan Melayu"
+        "9️⃣ 马来亚公民身份应该称为马来人"
       ],
       "bm_focus_phrase": "9️⃣ Kewarganegaraan Malaya haruslah dinamakan Melayu"
     },
     {
       "source_id": "bab-5-1-extra-74",
       "bm_original": "Warna merah dan putih harus dimasukkan sebagai latar belakang bendera kebangsaan Tanah Melayu",
-      "translate": "Warna merah 与 putih harus dimasukkan 作为 latar belakang bendera kebangsaan Tanah Melayu",
+      "translate": "马来亚国旗的背景应包括红色和白色",
       "key_points_zh": [
-        "Warna merah 与 putih harus dimasukkan 作为 latar belakang bendera kebangsaan Tanah Melayu"
+        "马来亚国旗的背景应包括红色和白色"
       ],
       "bm_focus_phrase": "Warna merah dan putih harus dimasukkan sebagai latar belakang bendera kebangsaan Tanah Melayu"
     },
     {
       "source_id": "bab-5-1-u34",
       "bm_original": "British menolak Perlembagaan Rakyat dan menerima Perjanjian Persekutuan Tanah Melayu yang digubal oleh Jawatankuasa Kerja .",
-      "translate": "British menolak Perlembagaan 人民 与 menerima Perjanjian Persekutuan Tanah Melayu 的 digubal 由 Jawatankuasa Kerja .",
+      "translate": "英国拒绝了人民宪法，接受了工作委员会起草的《马来亚联邦协议》。",
       "key_points_zh": [
-        "British menolak Perlembagaan 人民 与 menerima Perjanjian Persekutuan Tanah Melayu 的 digubal 由 Jawatankuasa Kerja ."
+        "英国拒绝了人民宪法，接受了工作委员会起草的《马来亚联邦协议》。"
       ],
       "bm_focus_phrase": "British menolak Perlembagaan Rakyat dan menerima Perjanjian Persekutuan Tanah Melayu yang digubal oleh Jawatankuasa Kerja ."
     },
     {
       "source_id": "bab-5-1-u62",
       "bm_original": "20 September 1947 → PUTERA-AMCJA menganjurkan hartal dan semua peniaga diminta menutup kedai sebagai tanda bantahan.",
-      "translate": "20 September 1947 → PUTERA-AMCJA menganjurkan hartal 与 semua peniaga diminta menutup kedai 作为 tanda 抗议.",
+      "translate": "1947 年 9 月 20 日 → PUTERA-AMCJA 组织了一次集会，要求所有商人关闭商店以示抗议。",
       "key_points_zh": [
-        "20 September 1947 → PUTERA-AMCJA menganjurkan hartal 与 semua peniaga diminta menutup kedai 作为 tanda 抗议."
+        "1947 年 9 月 20 日 → PUTERA-AMCJA 组织了一次集会，要求所有商人关闭商店以示抗议。"
       ],
       "bm_focus_phrase": "20 September 1947 → PUTERA-AMCJA menganjurkan hartal dan semua peniaga diminta menutup kedai sebagai tanda bantahan."
     },
     {
       "source_id": "bab-5-1-u63",
       "bm_original": "20 Oktober 1947 → dipilih sebagai Hari Hartal Se-Malaya .",
-      "translate": "20 Oktober 1947 → dipilih 作为 Hari Hartal Se-Malaya .",
+      "translate": "1947年10月20日 → 被定为马来亚哈塔尔日。",
       "key_points_zh": [
-        "20 Oktober 1947 → dipilih 作为 Hari Hartal Se-Malaya ."
+        "1947年10月20日 → 被定为马来亚哈塔尔日。"
       ],
       "bm_focus_phrase": "20 Oktober 1947 → dipilih sebagai Hari Hartal Se-Malaya ."
     },
     {
       "source_id": "bab-5-1-u35",
       "bm_original": "Dengan sokongan Dewan Perniagaan Cina , hartal dilaksanakan di bandar utama di Tanah Melayu.",
-      "translate": "Dengan sokongan Dewan Perniagaan Cina , hartal dilaksanakan di bandar 主要 di Tanah Melayu.",
+      "translate": "在中华总商会的支持下，哈塔尔在马来亚主要城市推行。",
       "key_points_zh": [
-        "Dengan sokongan Dewan Perniagaan Cina , hartal dilaksanakan di bandar 主要 di Tanah Melayu."
+        "在中华总商会的支持下，哈塔尔在马来亚主要城市推行。"
       ],
       "bm_focus_phrase": "Dengan sokongan Dewan Perniagaan Cina , hartal dilaksanakan di bandar utama di Tanah Melayu."
     },
     {
       "source_id": "bab-5-1-u36",
       "bm_original": "Hartal → tindakan menutup kedai dan memberhentikan semua kegiatan ekonomi oleh peniaga.",
-      "translate": "Hartal → tindakan menutup kedai 与 memberhentikan semua kegiatan ekonomi 由 peniaga.",
+      "translate": "Hartal → 商人关闭商店并停止所有经济活动的行为。",
       "key_points_zh": [
-        "Hartal → tindakan menutup kedai 与 memberhentikan semua kegiatan ekonomi 由 peniaga."
+        "Hartal → 商人关闭商店并停止所有经济活动的行为。"
       ],
       "bm_focus_phrase": "Hartal → tindakan menutup kedai dan memberhentikan semua kegiatan ekonomi oleh peniaga."
     },
     {
       "source_id": "bab-5-1-u37",
       "bm_original": "Protes tanpa keganasan ini dilakukan dengan menutup premis seperti:",
-      "translate": "Protes tanpa keganasan 这 dilakukan 以 menutup premis seperti:",
+      "translate": "这种非暴力抗议是通过关闭以下场所来完成的：",
       "key_points_zh": [
-        "Protes tanpa keganasan 这 dilakukan 以 menutup premis seperti:"
+        "这种非暴力抗议是通过关闭以下场所来完成的："
       ],
       "bm_focus_phrase": "Protes tanpa keganasan ini dilakukan dengan menutup premis seperti:"
     },
     {
       "source_id": "bab-5-1-extra-75",
       "bm_original": "kilang",
-      "translate": "重点：kilang",
+      "translate": "工厂",
       "key_points_zh": [
-        "重点：kilang"
+        "工厂"
       ],
       "bm_focus_phrase": "kilang"
     },
     {
       "source_id": "bab-5-1-extra-76",
       "bm_original": "kedai",
-      "translate": "重点：kedai",
+      "translate": "店铺",
       "key_points_zh": [
-        "重点：kedai"
+        "店铺"
       ],
       "bm_focus_phrase": "kedai"
     },
     {
       "source_id": "bab-5-1-extra-77",
       "bm_original": "sekolah",
-      "translate": "重点：sekolah",
+      "translate": "学校",
       "key_points_zh": [
-        "重点：sekolah"
+        "学校"
       ],
       "bm_focus_phrase": "sekolah"
     },
     {
       "source_id": "bab-5-1-extra-78",
       "bm_original": "pejabat",
-      "translate": "重点：pejabat",
+      "translate": "办公室",
       "key_points_zh": [
-        "重点：pejabat"
+        "办公室"
       ],
       "bm_focus_phrase": "pejabat"
     },
     {
       "source_id": "bab-5-1-extra-79",
       "bm_original": "ladang",
-      "translate": "重点：ladang",
+      "translate": "农场",
       "key_points_zh": [
-        "重点：ladang"
+        "农场"
       ],
       "bm_focus_phrase": "ladang"
     },
     {
       "source_id": "bab-5-1-u38",
       "bm_original": "Penubuhan Persekutuan Tanah Melayu 1948 bermula dengan usaha British menubuhkan Jawatankuasa Kerja bagi menggantikan Malayan Union yang ditolak oleh rakyat.",
-      "translate": "Penubuhan Persekutuan Tanah Melayu 1948 bermula 以 usaha British 成立 Jawatankuasa Kerja bagi menggantikan Malayan Union 的 ditolak 由 人民.",
+      "translate": "1948年马来亚联合邦的成立，始于英国力图成立工作委员会，以取代遭到人民拒绝的马来亚联邦。",
       "key_points_zh": [
-        "Penubuhan Persekutuan Tanah Melayu 1948 bermula 以 usaha British 成立 Jawatankuasa Kerja bagi menggantikan Malayan Union 的 ditolak 由 人民."
+        "1948年马来亚联合邦的成立，始于英国力图成立工作委员会，以取代遭到人民拒绝的马来亚联邦。"
       ],
       "bm_focus_phrase": "Penubuhan Persekutuan Tanah Melayu 1948 bermula dengan usaha British menubuhkan Jawatankuasa Kerja bagi menggantikan Malayan Union yang ditolak oleh rakyat."
     },
     {
       "source_id": "bab-5-1-u39",
       "bm_original": "Namun, Jawatankuasa Kerja tidak diterima oleh golongan nasionalis Melayu radikal dan bukan Melayu kerana:",
-      "translate": "Namun, Jawatankuasa Kerja 不 diterima 由 golongan nasionalis Melayu radikal 与 bukan Melayu 因为:",
+      "translate": "然而，工作委员会没有被激进的马来民族主义者和非马来人接受，因为：",
       "key_points_zh": [
-        "Namun, Jawatankuasa Kerja 不 diterima 由 golongan nasionalis Melayu radikal 与 bukan Melayu 因为:"
+        "然而，工作委员会没有被激进的马来民族主义者和非马来人接受，因为："
       ],
       "bm_focus_phrase": "Namun, Jawatankuasa Kerja tidak diterima oleh golongan nasionalis Melayu radikal dan bukan Melayu kerana:"
     },
     {
       "source_id": "bab-5-1-extra-80",
       "bm_original": "tidak melibatkan semua pihak",
-      "translate": "不 melibatkan semua pihak",
+      "translate": "不涉及各方",
       "key_points_zh": [
-        "不 melibatkan semua pihak"
+        "不涉及各方"
       ],
       "bm_focus_phrase": "tidak melibatkan semua pihak"
     },
     {
       "source_id": "bab-5-1-extra-81",
       "bm_original": "dianggap tidak demokratik",
-      "translate": "dianggap 不 demokratik",
+      "translate": "被认为是不民主的",
       "key_points_zh": [
-        "dianggap 不 demokratik"
+        "被认为是不民主的"
       ],
       "bm_focus_phrase": "dianggap tidak demokratik"
     },
     {
       "source_id": "bab-5-1-extra-82",
       "bm_original": "dilihat mengukuhkan kuasa British",
-      "translate": "dilihat 加强 kuasa British",
+      "translate": "被视为加强英国实力",
       "key_points_zh": [
-        "dilihat 加强 kuasa British"
+        "被视为加强英国实力"
       ],
       "bm_focus_phrase": "dilihat mengukuhkan kuasa British"
     },
     {
       "source_id": "bab-5-1-u40",
       "bm_original": "Oleh itu, gabungan PUTERA-AMCJA mengemukakan Perlembagaan Rakyat sebagai cadangan alternatif.",
-      "translate": "Oleh 那, gabungan PUTERA-AMCJA mengemukakan Perlembagaan 人民 作为 建议 alternatif.",
+      "translate": "因此，PUTERA-AMCJA联盟提出了人民宪法作为替代方案。",
       "key_points_zh": [
-        "Oleh 那, gabungan PUTERA-AMCJA mengemukakan Perlembagaan 人民 作为 建议 alternatif."
+        "因此，PUTERA-AMCJA联盟提出了人民宪法作为替代方案。"
       ],
       "bm_focus_phrase": "Oleh itu, gabungan PUTERA-AMCJA mengemukakan Perlembagaan Rakyat sebagai cadangan alternatif."
     },
     {
       "source_id": "bab-5-1-u41",
       "bm_original": "Walaupun cadangan ini ditolak oleh British, perjuangan mereka membuktikan bahawa pelbagai golongan rakyat telah mula memikirkan bentuk negara merdeka yang lebih adil, demokratik dan menyeluruh.",
-      "translate": "Walaupun 建议 这 ditolak 由 British, 斗争 mereka membuktikan bahawa pelbagai golongan 人民 已经 mula memikirkan bentuk negara merdeka 的 更 adil, demokratik 与 menyeluruh.",
+      "translate": "尽管这一提议遭到了英国人的拒绝，但他们的斗争证明了各族群已经开始思考一个更加公正、民主和全面的独立国家形式。",
       "key_points_zh": [
-        "Walaupun 建议 这 ditolak 由 British, 斗争 mereka membuktikan bahawa pelbagai golongan 人民 已经 mula memikirkan bentuk negara merdeka 的 更 adil, demokratik 与 menyeluruh."
+        "尽管这一提议遭到了英国人的拒绝，但他们的斗争证明了各族群已经开始思考一个更加公正、民主和全面的独立国家形式。"
       ],
       "bm_focus_phrase": "Walaupun cadangan ini ditolak oleh British, perjuangan mereka membuktikan bahawa pelbagai golongan rakyat telah mula memikirkan bentuk negara merdeka yang lebih adil, demokratik dan menyeluruh."
     }

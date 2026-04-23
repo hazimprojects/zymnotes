@@ -1,699 +1,700 @@
 {
   "meta": {
     "source_file": "notes/bab-5-2.html",
-    "rollout": "gelombang-1-manual-revision"
+    "rollout": "gelombang-1-ms-zh-regenerated",
+    "notes": "Translate fields regenerated from bm_original (ms→zh-CN) for fluent Simplified Chinese; proper names follow translator output—verify against BM notes."
   },
   "units": [
     {
       "source_id": "bab-5-2-u34",
       "bm_original": "Persekutuan Tanah Melayu 1948 ditubuhkan secara rasmi pada 1 Februari 1948 selepas Raja-raja Melayu menandatangani Perjanjian Persekutuan Tanah Melayu 1948 .",
-      "translate": "Persekutuan Tanah Melayu 1948 ditubuhkan secara rasmi 于 1 Februari 1948 在…之后 Raja-raja Melayu menandatangani Perjanjian Persekutuan Tanah Melayu 1948 .",
+      "translate": "马来亚统治者签署《1948年马来亚联邦协定》后，1948年马来亚联邦于1948年2月1日正式成立。",
       "key_points_zh": [
-        "Persekutuan Tanah Melayu 1948 ditubuhkan secara rasmi 于 1 Februari 1948 在…之后 Raja-raja Melayu menandatangani Perjanjian Persekutuan Tanah Melayu 1948 ."
+        "马来亚统治者签署《1948年马来亚联邦协定》后，1948年马来亚联邦于1948年2月1日正式成立。"
       ],
       "bm_focus_phrase": "Persekutuan Tanah Melayu 1948 ditubuhkan secara rasmi pada 1 Februari 1948 selepas Raja-raja Melayu menandatangani Perjanjian Persekutuan Tanah Melayu 1948 ."
     },
     {
       "source_id": "bab-5-2-u35",
       "bm_original": "Penubuhannya didorong oleh penentangan orang Melayu terhadap Malayan Union yang dianggap menjejaskan kedudukan Raja-raja Melayu dan orang Melayu.",
-      "translate": "Penubuhannya didorong 由 反对 orang Melayu 针对 Malayan Union 的 dianggap menjejaskan kedudukan Raja-raja Melayu 与 orang Melayu.",
+      "translate": "它的成立是由于马来人反对马来亚联邦，这被认为影响马来国王和马来人的地位。",
       "key_points_zh": [
-        "Penubuhannya didorong 由 反对 orang Melayu 针对 Malayan Union 的 dianggap menjejaskan kedudukan Raja-raja Melayu 与 orang Melayu."
+        "它的成立是由于马来人反对马来亚联邦，这被认为影响马来国王和马来人的地位。"
       ],
       "bm_focus_phrase": "Penubuhannya didorong oleh penentangan orang Melayu terhadap Malayan Union yang dianggap menjejaskan kedudukan Raja-raja Melayu dan orang Melayu."
     },
     {
       "source_id": "bab-5-2-u36",
       "bm_original": "Cadangan Raja-raja Melayu dan UMNO memberi asas kepada pembentukan sistem pentadbiran baharu yang lebih sesuai.",
-      "translate": "Cadangan Raja-raja Melayu 与 UMNO memberi asas 向 pembentukan sistem 行政 baharu 的 更 sesuai.",
+      "translate": "马来统治者和巫统的建议为形成更合适的新行政制度提供了基础。",
       "key_points_zh": [
-        "Cadangan Raja-raja Melayu 与 UMNO memberi asas 向 pembentukan sistem 行政 baharu 的 更 sesuai."
+        "马来统治者和巫统的建议为形成更合适的新行政制度提供了基础。"
       ],
       "bm_focus_phrase": "Cadangan Raja-raja Melayu dan UMNO memberi asas kepada pembentukan sistem pentadbiran baharu yang lebih sesuai."
     },
     {
       "source_id": "bab-5-2-u37",
       "bm_original": "Sokongan pentadbir British pula membantu mengukuhkan usaha ke arah pembentukan persekutuan yang lebih stabil dari sudut politik dan ekonomi.",
-      "translate": "Sokongan pentadbir British pula membantu 加强 usaha ke arah pembentukan persekutuan 的 更 stabil dari sudut 政治 与 ekonomi.",
+      "translate": "英国管理者的支持有助于加强努力，从政治和经济角度建立一个更稳定的联邦。",
       "key_points_zh": [
-        "Sokongan pentadbir British pula membantu 加强 usaha ke arah pembentukan persekutuan 的 更 stabil dari sudut 政治 与 ekonomi."
+        "英国管理者的支持有助于加强努力，从政治和经济角度建立一个更稳定的联邦。"
       ],
       "bm_focus_phrase": "Sokongan pentadbir British pula membantu mengukuhkan usaha ke arah pembentukan persekutuan yang lebih stabil dari sudut politik dan ekonomi."
     },
     {
       "source_id": "bab-5-2-u01",
       "bm_original": "Persekutuan Tanah Melayu 1948 ditubuhkan secara rasmi pada 1 Februari 1948 selepas Raja-raja Melayu menandatangani Perjanjian Persekutuan Tanah Melayu 1948 .",
-      "translate": "Persekutuan Tanah Melayu 1948 ditubuhkan secara rasmi 于 1 Februari 1948 在…之后 Raja-raja Melayu menandatangani Perjanjian Persekutuan Tanah Melayu 1948 .",
+      "translate": "马来亚统治者签署《1948年马来亚联邦协定》后，1948年马来亚联邦于1948年2月1日正式成立。",
       "key_points_zh": [
-        "Persekutuan Tanah Melayu 1948 ditubuhkan secara rasmi 于 1 Februari 1948 在…之后 Raja-raja Melayu menandatangani Perjanjian Persekutuan Tanah Melayu 1948 ."
+        "马来亚统治者签署《1948年马来亚联邦协定》后，1948年马来亚联邦于1948年2月1日正式成立。"
       ],
       "bm_focus_phrase": "Persekutuan Tanah Melayu 1948 ditubuhkan secara rasmi pada 1 Februari 1948 selepas Raja-raja Melayu menandatangani Perjanjian Persekutuan Tanah Melayu 1948 ."
     },
     {
       "source_id": "bab-5-2-u02",
       "bm_original": "Penubuhannya didorong oleh beberapa faktor utama, iaitu penentangan orang Melayu terhadap Malayan Union , cadangan Raja-raja Melayu dan UMNO , serta sokongan pentadbir British .",
-      "translate": "Penubuhannya didorong 由 beberapa 因素 主要, iaitu 反对 orang Melayu 针对 Malayan Union , 建议 Raja-raja Melayu 与 UMNO , 以及 sokongan pentadbir British .",
+      "translate": "它的成立是由几个主要因素推动的，即马来人对马来亚联盟的反对、马来统治者和巫统的提议以及英国行政长官的支持。",
       "key_points_zh": [
-        "Penubuhannya didorong 由 beberapa 因素 主要, iaitu 反对 orang Melayu 针对 Malayan Union , 建议 Raja-raja Melayu 与 UMNO , 以及 sokongan pentadbir British ."
+        "它的成立是由几个主要因素推动的，即马来人对马来亚联盟的反对、马来统治者和巫统的提议以及英国行政长官的支持。"
       ],
       "bm_focus_phrase": "Penubuhannya didorong oleh beberapa faktor utama, iaitu penentangan orang Melayu terhadap Malayan Union , cadangan Raja-raja Melayu dan UMNO , serta sokongan pentadbir British ."
     },
     {
       "source_id": "bab-5-2-u03",
       "bm_original": "Penubuhan Persekutuan Tanah Melayu 1948 lahir daripada gabungan tekanan rakyat, cadangan pemimpin tempatan dan pertimbangan British.",
-      "translate": "Penubuhan Persekutuan Tanah Melayu 1948 lahir daripada gabungan tekanan 人民, 建议 领袖 本地 与 pertimbangan British.",
+      "translate": "1948年，在公众压力、地方领导人的​​建议和英国的考虑下，马来亚联合邦的成立。",
       "key_points_zh": [
-        "Penubuhan Persekutuan Tanah Melayu 1948 lahir daripada gabungan tekanan 人民, 建议 领袖 本地 与 pertimbangan British."
+        "1948年，在公众压力、地方领导人的​​建议和英国的考虑下，马来亚联合邦的成立。"
       ],
       "bm_focus_phrase": "Penubuhan Persekutuan Tanah Melayu 1948 lahir daripada gabungan tekanan rakyat, cadangan pemimpin tempatan dan pertimbangan British."
     },
     {
       "source_id": "bab-5-2-extra-1",
       "bm_original": "1️⃣ penentangan orang Melayu terhadap Malayan Union ✊",
-      "translate": "1️⃣ 反对 orang Melayu 针对 Malayan Union ✊",
+      "translate": "1️⃣马来人反对马来亚联盟✊",
       "key_points_zh": [
-        "1️⃣ 反对 orang Melayu 针对 Malayan Union ✊"
+        "1️⃣马来人反对马来亚联盟✊"
       ],
       "bm_focus_phrase": "1️⃣ penentangan orang Melayu terhadap Malayan Union ✊"
     },
     {
       "source_id": "bab-5-2-extra-2",
       "bm_original": "2️⃣ cadangan Raja-raja Melayu dan UMNO 👑",
-      "translate": "2️⃣ 建议 Raja-raja Melayu 与 UMNO 👑",
+      "translate": "2️⃣ 马来统治者和巫统的推荐👑",
       "key_points_zh": [
-        "2️⃣ 建议 Raja-raja Melayu 与 UMNO 👑"
+        "2️⃣ 马来统治者和巫统的推荐👑"
       ],
       "bm_focus_phrase": "2️⃣ cadangan Raja-raja Melayu dan UMNO 👑"
     },
     {
       "source_id": "bab-5-2-extra-3",
       "bm_original": "3️⃣ sokongan pentadbir British 🇬🇧",
-      "translate": "重点：3️⃣ sokongan pentadbir British 🇬🇧",
+      "translate": "3️⃣ 英国管理员支持🇬🇧",
       "key_points_zh": [
-        "重点：3️⃣ sokongan pentadbir British 🇬🇧"
+        "3️⃣ 英国管理员支持🇬🇧"
       ],
       "bm_focus_phrase": "3️⃣ sokongan pentadbir British 🇬🇧"
     },
     {
       "source_id": "bab-5-2-u04",
       "bm_original": "Orang Melayu, Raja-raja Melayu , cendekiawan Melayu dan UMNO telah berganding bahu menentang pelaksanaan Malayan Union .",
-      "translate": "Orang Melayu, Raja-raja Melayu , cendekiawan Melayu 与 UMNO 已经 berganding bahu 反对 pelaksanaan Malayan Union .",
+      "translate": "马来人、马来统治者、马来知识分子和巫统联手反对马来亚联盟的实施。",
       "key_points_zh": [
-        "Orang Melayu, Raja-raja Melayu , cendekiawan Melayu 与 UMNO 已经 berganding bahu 反对 pelaksanaan Malayan Union ."
+        "马来人、马来统治者、马来知识分子和巫统联手反对马来亚联盟的实施。"
       ],
       "bm_focus_phrase": "Orang Melayu, Raja-raja Melayu , cendekiawan Melayu dan UMNO telah berganding bahu menentang pelaksanaan Malayan Union ."
     },
     {
       "source_id": "bab-5-2-u05",
       "bm_original": "Hal ini berlaku kerana Malayan Union memberi kesan buruk kepada:",
-      "translate": "Hal 这 发生 因为 Malayan Union memberi 影响 buruk 向:",
+      "translate": "发生这种情况是因为马来亚联盟对以下方面产生负面影响：",
       "key_points_zh": [
-        "Hal 这 发生 因为 Malayan Union memberi 影响 buruk 向:"
+        "发生这种情况是因为马来亚联盟对以下方面产生负面影响："
       ],
       "bm_focus_phrase": "Hal ini berlaku kerana Malayan Union memberi kesan buruk kepada:"
     },
     {
       "source_id": "bab-5-2-extra-4",
       "bm_original": "Raja-raja Melayu",
-      "translate": "Raja-raja Melayu",
+      "translate": "马来国王",
       "key_points_zh": [
-        "Raja-raja Melayu"
+        "马来国王"
       ],
       "bm_focus_phrase": "Raja-raja Melayu"
     },
     {
       "source_id": "bab-5-2-extra-5",
       "bm_original": "orang Melayu",
-      "translate": "重点：orang Melayu",
+      "translate": "马来人",
       "key_points_zh": [
-        "重点：orang Melayu"
+        "马来人"
       ],
       "bm_focus_phrase": "orang Melayu"
     },
     {
       "source_id": "bab-5-2-u06",
       "bm_original": "Ahli Parlimen British, iaitu:",
-      "translate": "重点：Ahli Parlimen British, iaitu:",
+      "translate": "英国议会议员，即：",
       "key_points_zh": [
-        "重点：Ahli Parlimen British, iaitu:"
+        "英国议会议员，即："
       ],
       "bm_focus_phrase": "Ahli Parlimen British, iaitu:"
     },
     {
       "source_id": "bab-5-2-extra-6",
       "bm_original": "L.D. Gammans",
-      "translate": "重点：L.D. Gammans",
+      "translate": "L·D·加曼斯",
       "key_points_zh": [
-        "重点：L.D. Gammans"
+        "L·D·加曼斯"
       ],
       "bm_focus_phrase": "L.D. Gammans"
     },
     {
       "source_id": "bab-5-2-extra-7",
       "bm_original": "David Rees Williams",
-      "translate": "重点：David Rees Williams",
+      "translate": "大卫·里斯·威廉姆斯",
       "key_points_zh": [
-        "重点：David Rees Williams"
+        "大卫·里斯·威廉姆斯"
       ],
       "bm_focus_phrase": "David Rees Williams"
     },
     {
       "source_id": "bab-5-2-u07",
       "bm_original": "Selepas kembali ke England , mereka melaporkan hasil tinjauan tersebut kepada Dewan Parlimen British .",
-      "translate": "Selepas kembali ke England , mereka melaporkan hasil tinjauan tersebut 向 Dewan Parlimen British .",
+      "translate": "返回英国后，他们向英国议会下院报告了调查结果。",
       "key_points_zh": [
-        "Selepas kembali ke England , mereka melaporkan hasil tinjauan tersebut 向 Dewan Parlimen British ."
+        "返回英国后，他们向英国议会下院报告了调查结果。"
       ],
       "bm_focus_phrase": "Selepas kembali ke England , mereka melaporkan hasil tinjauan tersebut kepada Dewan Parlimen British ."
     },
     {
       "source_id": "bab-5-2-u08",
       "bm_original": "Gammans menyatakan bahawa jika British meneruskan rancangan Malayan Union , keadaan huru-hara akan berlaku di Tanah Melayu .",
-      "translate": "Gammans menyatakan bahawa jika British meneruskan rancangan Malayan Union , keadaan huru-hara 将会 发生 di Tanah Melayu .",
+      "translate": "加曼斯表示，如果英国继续推行马来亚联邦计划，马来亚将会发生混乱。",
       "key_points_zh": [
-        "Gammans menyatakan bahawa jika British meneruskan rancangan Malayan Union , keadaan huru-hara 将会 发生 di Tanah Melayu ."
+        "加曼斯表示，如果英国继续推行马来亚联邦计划，马来亚将会发生混乱。"
       ],
       "bm_focus_phrase": "Gammans menyatakan bahawa jika British meneruskan rancangan Malayan Union , keadaan huru-hara akan berlaku di Tanah Melayu ."
     },
     {
       "source_id": "bab-5-2-u09",
       "bm_original": "Penentangan yang meluas ini menunjukkan bahawa Malayan Union tidak diterima oleh penduduk tempatan.",
-      "translate": "反对 的 meluas 这 menunjukkan bahawa Malayan Union 不 diterima 由 penduduk 本地.",
+      "translate": "这种广泛的反对表明马来亚联盟不被当地民众接受。",
       "key_points_zh": [
-        "反对 的 meluas 这 menunjukkan bahawa Malayan Union 不 diterima 由 penduduk 本地."
+        "这种广泛的反对表明马来亚联盟不被当地民众接受。"
       ],
       "bm_focus_phrase": "Penentangan yang meluas ini menunjukkan bahawa Malayan Union tidak diterima oleh penduduk tempatan."
     },
     {
       "source_id": "bab-5-2-u10",
       "bm_original": "Ketika pelbagai bantahan sedang dilakukan, usaha untuk menggubal Perjanjian Persekutuan Tanah Melayu telah dimulakan melalui rundingan antara:",
-      "translate": "Ketika pelbagai 抗议 sedang dilakukan, usaha 为了 menggubal Perjanjian Persekutuan Tanah Melayu 已经 dimulakan 通过 rundingan 其中:",
+      "translate": "尽管提出了各种反对意见，但通过以下各方的谈判，开始了颁布《马来亚联邦协定》的努力：",
       "key_points_zh": [
-        "Ketika pelbagai 抗议 sedang dilakukan, usaha 为了 menggubal Perjanjian Persekutuan Tanah Melayu 已经 dimulakan 通过 rundingan 其中:"
+        "尽管提出了各种反对意见，但通过以下各方的谈判，开始了颁布《马来亚联邦协定》的努力："
       ],
       "bm_focus_phrase": "Ketika pelbagai bantahan sedang dilakukan, usaha untuk menggubal Perjanjian Persekutuan Tanah Melayu telah dimulakan melalui rundingan antara:"
     },
     {
       "source_id": "bab-5-2-extra-8",
       "bm_original": "Raja-raja Melayu",
-      "translate": "Raja-raja Melayu",
+      "translate": "马来国王",
       "key_points_zh": [
-        "Raja-raja Melayu"
+        "马来国王"
       ],
       "bm_focus_phrase": "Raja-raja Melayu"
     },
     {
       "source_id": "bab-5-2-extra-9",
       "bm_original": "UMNO",
-      "translate": "UMNO",
+      "translate": "巫统",
       "key_points_zh": [
-        "UMNO"
+        "巫统"
       ],
       "bm_focus_phrase": "UMNO"
     },
     {
       "source_id": "bab-5-2-extra-10",
       "bm_original": "British",
-      "translate": "重点：British",
+      "translate": "英国人",
       "key_points_zh": [
-        "重点：British"
+        "英国人"
       ],
       "bm_focus_phrase": "British"
     },
     {
       "source_id": "bab-5-2-u11",
       "bm_original": "Ini menunjukkan bahawa penentangan orang Melayu menjadi faktor penting yang memaksa British mencari penyelesaian baharu.",
-      "translate": "Ini menunjukkan bahawa 反对 orang Melayu menjadi 因素 penting 的 memaksa British mencari penyelesaian baharu.",
+      "translate": "这表明马来人的反抗成为迫使英国人寻找新解决方案的重要因素。",
       "key_points_zh": [
-        "Ini menunjukkan bahawa 反对 orang Melayu menjadi 因素 penting 的 memaksa British mencari penyelesaian baharu."
+        "这表明马来人的反抗成为迫使英国人寻找新解决方案的重要因素。"
       ],
       "bm_focus_phrase": "Ini menunjukkan bahawa penentangan orang Melayu menjadi faktor penting yang memaksa British mencari penyelesaian baharu."
     },
     {
       "source_id": "bab-5-2-u38",
       "bm_original": "27 Mei 1946 → Malcolm MacDonald , Gabenor Jeneral, dan Sir Edward Gent , Gabenor Malayan Union , mengadakan pertemuan dengan Raja-raja Melayu di Kuala Kangsar .",
-      "translate": "27 Mei 1946 → Malcolm MacDonald , Gabenor Jeneral, 与 Sir Edward Gent , Gabenor Malayan Union , mengadakan pertemuan 以 Raja-raja Melayu di Kuala Kangsar .",
+      "translate": "1946 年 5 月 27 日 → 总督马尔科姆·麦克唐纳 (Malcolm MacDonald) 和马来亚联邦总督爱德华·根特 (Edward Gent) 爵士在瓜拉江沙与马来统治者举行会议。",
       "key_points_zh": [
-        "27 Mei 1946 → Malcolm MacDonald , Gabenor Jeneral, 与 Sir Edward Gent , Gabenor Malayan Union , mengadakan pertemuan 以 Raja-raja Melayu di Kuala Kangsar ."
+        "1946 年 5 月 27 日 → 总督马尔科姆·麦克唐纳 (Malcolm MacDonald) 和马来亚联邦总督爱德华·根特 (Edward Gent) 爵士在瓜拉江沙与马来统治者举行会议。"
       ],
       "bm_focus_phrase": "27 Mei 1946 → Malcolm MacDonald , Gabenor Jeneral, dan Sir Edward Gent , Gabenor Malayan Union , mengadakan pertemuan dengan Raja-raja Melayu di Kuala Kangsar ."
     },
     {
       "source_id": "bab-5-2-u12",
       "bm_original": "Tujuan pertemuan ini ialah untuk mengatasi konflik antara masyarakat Melayu dengan kerajaan British berhubung isu Malayan Union .",
-      "translate": "目的 pertemuan 这 是 为了 mengatasi konflik 其中 社会 Melayu 以 政府 British berhubung isu Malayan Union .",
+      "translate": "这次会议的目的是为了克服马来社群与英国政府在马来亚联邦问题上的矛盾。",
       "key_points_zh": [
-        "目的 pertemuan 这 是 为了 mengatasi konflik 其中 社会 Melayu 以 政府 British berhubung isu Malayan Union ."
+        "这次会议的目的是为了克服马来社群与英国政府在马来亚联邦问题上的矛盾。"
       ],
       "bm_focus_phrase": "Tujuan pertemuan ini ialah untuk mengatasi konflik antara masyarakat Melayu dengan kerajaan British berhubung isu Malayan Union ."
     },
     {
       "source_id": "bab-5-2-extra-11",
       "bm_original": "1️⃣ penubuhan persekutuan bertaraf naungan, bukannya tanah jajahan",
-      "translate": "1️⃣ 成立 persekutuan bertaraf naungan, bukannya tanah jajahan",
+      "translate": "1️⃣建立庇护级联邦，而不是殖民地",
       "key_points_zh": [
-        "1️⃣ 成立 persekutuan bertaraf naungan, bukannya tanah jajahan"
+        "1️⃣建立庇护级联邦，而不是殖民地"
       ],
       "bm_focus_phrase": "1️⃣ penubuhan persekutuan bertaraf naungan, bukannya tanah jajahan"
     },
     {
       "source_id": "bab-5-2-extra-12",
       "bm_original": "2️⃣ satu perjanjian baharu bagi menggantikan Malayan Union",
-      "translate": "2️⃣ satu 协议 baharu bagi menggantikan Malayan Union",
+      "translate": "2️⃣取代马来亚联盟的新协议",
       "key_points_zh": [
-        "2️⃣ satu 协议 baharu bagi menggantikan Malayan Union"
+        "2️⃣取代马来亚联盟的新协议"
       ],
       "bm_focus_phrase": "2️⃣ satu perjanjian baharu bagi menggantikan Malayan Union"
     },
     {
       "source_id": "bab-5-2-extra-13",
       "bm_original": "3️⃣ jawatan Pesuruhjaya Tinggi menggantikan Gabenor",
-      "translate": "重点：3️⃣ jawatan Pesuruhjaya Tinggi menggantikan Gabenor",
+      "translate": "3️⃣ 高级专员取代总督",
       "key_points_zh": [
-        "重点：3️⃣ jawatan Pesuruhjaya Tinggi menggantikan Gabenor"
+        "3️⃣ 高级专员取代总督"
       ],
       "bm_focus_phrase": "3️⃣ jawatan Pesuruhjaya Tinggi menggantikan Gabenor"
     },
     {
       "source_id": "bab-5-2-extra-14",
       "bm_original": "4️⃣ raja mempunyai kuasa dalam perundangan",
-      "translate": "4️⃣ raja mempunyai kuasa 在 perundangan",
+      "translate": "4️⃣国王有立法权",
       "key_points_zh": [
-        "4️⃣ raja mempunyai kuasa 在 perundangan"
+        "4️⃣国王有立法权"
       ],
       "bm_focus_phrase": "4️⃣ raja mempunyai kuasa dalam perundangan"
     },
     {
       "source_id": "bab-5-2-extra-15",
       "bm_original": "5️⃣ perkataan “Negeri-negeri Melayu” mesti muncul dalam persekutuan baharu",
-      "translate": "5️⃣ perkataan “Negeri-negeri Melayu” mesti muncul 在 persekutuan baharu",
+      "translate": "5️⃣新联邦中必须出现“马来国家”字样",
       "key_points_zh": [
-        "5️⃣ perkataan “Negeri-negeri Melayu” mesti muncul 在 persekutuan baharu"
+        "5️⃣新联邦中必须出现“马来国家”字样"
       ],
       "bm_focus_phrase": "5️⃣ perkataan “Negeri-negeri Melayu” mesti muncul dalam persekutuan baharu"
     },
     {
       "source_id": "bab-5-2-u13",
       "bm_original": "Cadangan ini bertujuan memulihkan semula kedudukan politik Raja-raja Melayu dan identiti negeri-negeri Melayu.",
-      "translate": "Cadangan 这 bertujuan memulihkan semula kedudukan 政治 Raja-raja Melayu 与 identiti negeri-negeri Melayu.",
+      "translate": "这项建议旨在恢复马来国王的政治地位和马来国家的身份。",
       "key_points_zh": [
-        "Cadangan 这 bertujuan memulihkan semula kedudukan 政治 Raja-raja Melayu 与 identiti negeri-negeri Melayu."
+        "这项建议旨在恢复马来国王的政治地位和马来国家的身份。"
       ],
       "bm_focus_phrase": "Cadangan ini bertujuan memulihkan semula kedudukan politik Raja-raja Melayu dan identiti negeri-negeri Melayu."
     },
     {
       "source_id": "bab-5-2-u14",
       "bm_original": "Sultan Perak bertindak sebagai jurucakap Raja-raja Melayu .",
-      "translate": "Sultan Perak bertindak 作为 jurucakap Raja-raja Melayu .",
+      "translate": "霹雳州苏丹担任马来国王的发言人。",
       "key_points_zh": [
-        "Sultan Perak bertindak 作为 jurucakap Raja-raja Melayu ."
+        "霹雳州苏丹担任马来国王的发言人。"
       ],
       "bm_focus_phrase": "Sultan Perak bertindak sebagai jurucakap Raja-raja Melayu ."
     },
     {
       "source_id": "bab-5-2-u15",
       "bm_original": "Baginda menjelaskan kepada Sir Edward Gent supaya British menerima terlebih dahulu cadangan pembentukan persekutuan sebelum membincangkan perkara lain.",
-      "translate": "Baginda menjelaskan 向 Sir Edward Gent supaya British menerima terlebih dahulu 建议 pembentukan persekutuan sebelum membincangkan perkara lain.",
+      "translate": "国王陛下向爱德华·根特爵士解释说，英国人应该首先接受组建联邦的提议，然后再讨论其他事宜。",
       "key_points_zh": [
-        "Baginda menjelaskan 向 Sir Edward Gent supaya British menerima terlebih dahulu 建议 pembentukan persekutuan sebelum membincangkan perkara lain."
+        "国王陛下向爱德华·根特爵士解释说，英国人应该首先接受组建联邦的提议，然后再讨论其他事宜。"
       ],
       "bm_focus_phrase": "Baginda menjelaskan kepada Sir Edward Gent supaya British menerima terlebih dahulu cadangan pembentukan persekutuan sebelum membincangkan perkara lain."
     },
     {
       "source_id": "bab-5-2-u16",
       "bm_original": "Gammans dan Rees Williams kemudiannya menyampaikan surat bantahan daripada Sultan Perak di Parlimen British .",
-      "translate": "Gammans 与 Rees Williams kemudiannya menyampaikan surat 抗议 daripada Sultan Perak di Parlimen British .",
+      "translate": "加曼斯和里斯·威廉姆斯随后向英国议会提交了霹雳州苏丹的抗议信。",
       "key_points_zh": [
-        "Gammans 与 Rees Williams kemudiannya menyampaikan surat 抗议 daripada Sultan Perak di Parlimen British ."
+        "加曼斯和里斯·威廉姆斯随后向英国议会提交了霹雳州苏丹的抗议信。"
       ],
       "bm_focus_phrase": "Gammans dan Rees Williams kemudiannya menyampaikan surat bantahan daripada Sultan Perak di Parlimen British ."
     },
     {
       "source_id": "bab-5-2-u17",
       "bm_original": "Kandungan surat ini menunjukkan bahawa persetujuan terhadap Malayan Union diperoleh secara paksaan dan bukan dengan kerelaan Raja-raja Melayu .",
-      "translate": "Kandungan surat 这 menunjukkan bahawa persetujuan 针对 Malayan Union diperoleh secara paksaan 与 bukan 以 kerelaan Raja-raja Melayu .",
+      "translate": "这封信的内容表明，对马来亚联邦的同意是通过胁迫获得的，而不是经过马来统治者的同意。",
       "key_points_zh": [
-        "Kandungan surat 这 menunjukkan bahawa persetujuan 针对 Malayan Union diperoleh secara paksaan 与 bukan 以 kerelaan Raja-raja Melayu ."
+        "这封信的内容表明，对马来亚联邦的同意是通过胁迫获得的，而不是经过马来统治者的同意。"
       ],
       "bm_focus_phrase": "Kandungan surat ini menunjukkan bahawa persetujuan terhadap Malayan Union diperoleh secara paksaan dan bukan dengan kerelaan Raja-raja Melayu ."
     },
     {
       "source_id": "bab-5-2-u18",
       "bm_original": "Pentadbir British turut menyokong konsep persekutuan kerana mereka percaya bentuk ini dapat mewujudkan:",
-      "translate": "Pentadbir British turut menyokong konsep persekutuan 因为 mereka percaya bentuk 这 dapat mewujudkan:",
+      "translate": "英国管理者也支持联邦概念，因为他们相信这种形式可以创造：",
       "key_points_zh": [
-        "Pentadbir British turut menyokong konsep persekutuan 因为 mereka percaya bentuk 这 dapat mewujudkan:"
+        "英国管理者也支持联邦概念，因为他们相信这种形式可以创造："
       ],
       "bm_focus_phrase": "Pentadbir British turut menyokong konsep persekutuan kerana mereka percaya bentuk ini dapat mewujudkan:"
     },
     {
       "source_id": "bab-5-2-extra-16",
       "bm_original": "keamanan",
-      "translate": "重点：keamanan",
+      "translate": "安全",
       "key_points_zh": [
-        "重点：keamanan"
+        "安全"
       ],
       "bm_focus_phrase": "keamanan"
     },
     {
       "source_id": "bab-5-2-extra-17",
       "bm_original": "kestabilan",
-      "translate": "重点：kestabilan",
+      "translate": "稳定",
       "key_points_zh": [
-        "重点：kestabilan"
+        "稳定"
       ],
       "bm_focus_phrase": "kestabilan"
     },
     {
       "source_id": "bab-5-2-extra-18",
       "bm_original": "kemajuan ekonomi",
-      "translate": "重点：kemajuan ekonomi",
+      "translate": "经济进步",
       "key_points_zh": [
-        "重点：kemajuan ekonomi"
+        "经济进步"
       ],
       "bm_focus_phrase": "kemajuan ekonomi"
     },
     {
       "source_id": "bab-5-2-extra-19",
       "bm_original": "Sir Edward Gent",
-      "translate": "Sir Edward Gent",
+      "translate": "爱德华·根特爵士",
       "key_points_zh": [
-        "Sir Edward Gent"
+        "爱德华·根特爵士"
       ],
       "bm_focus_phrase": "Sir Edward Gent"
     },
     {
       "source_id": "bab-5-2-extra-20",
       "bm_original": "Malcolm MacDonald",
-      "translate": "重点：Malcolm MacDonald",
+      "translate": "马尔科姆·麦克唐纳",
       "key_points_zh": [
-        "重点：Malcolm MacDonald"
+        "马尔科姆·麦克唐纳"
       ],
       "bm_focus_phrase": "Malcolm MacDonald"
     },
     {
       "source_id": "bab-5-2-extra-21",
       "bm_original": "Sir Ralph Hone",
-      "translate": "Sir Ralph Hone",
+      "translate": "拉尔夫·霍恩爵士",
       "key_points_zh": [
-        "Sir Ralph Hone"
+        "拉尔夫·霍恩爵士"
       ],
       "bm_focus_phrase": "Sir Ralph Hone"
     },
     {
       "source_id": "bab-5-2-extra-22",
       "bm_original": "Gammans",
-      "translate": "重点：Gammans",
+      "translate": "加曼斯",
       "key_points_zh": [
-        "重点：Gammans"
+        "加曼斯"
       ],
       "bm_focus_phrase": "Gammans"
     },
     {
       "source_id": "bab-5-2-extra-23",
       "bm_original": "A.T. Newboult",
-      "translate": "重点：A.T. Newboult",
+      "translate": "在。纽博尔特",
       "key_points_zh": [
-        "重点：A.T. Newboult"
+        "在。纽博尔特"
       ],
       "bm_focus_phrase": "A.T. Newboult"
     },
     {
       "source_id": "bab-5-2-extra-24",
       "bm_original": "Roland Braddell",
-      "translate": "Roland Braddell",
+      "translate": "罗兰·布拉德尔",
       "key_points_zh": [
-        "Roland Braddell"
+        "罗兰·布拉德尔"
       ],
       "bm_focus_phrase": "Roland Braddell"
     },
     {
       "source_id": "bab-5-2-extra-25",
       "bm_original": "W. Linehan",
-      "translate": "重点：W. Linehan",
+      "translate": "W·莱恩汉",
       "key_points_zh": [
-        "重点：W. Linehan"
+        "W·莱恩汉"
       ],
       "bm_focus_phrase": "W. Linehan"
     },
     {
       "source_id": "bab-5-2-extra-26",
       "bm_original": "Theodore Adams",
-      "translate": "重点：Theodore Adams",
+      "translate": "西奥多·亚当斯",
       "key_points_zh": [
-        "重点：Theodore Adams"
+        "西奥多·亚当斯"
       ],
       "bm_focus_phrase": "Theodore Adams"
     },
     {
       "source_id": "bab-5-2-u19",
       "bm_original": "Sir Ralph Hone mencadangkan supaya British melibatkan Raja-raja Melayu dalam pentadbiran berasaskan perlembagaan.",
-      "translate": "Sir Ralph Hone mencadangkan supaya British melibatkan Raja-raja Melayu 在 行政 berasaskan perlembagaan.",
+      "translate": "拉尔夫·霍恩爵士建议英国让马来统治者参与宪政管理。",
       "key_points_zh": [
-        "Sir Ralph Hone mencadangkan supaya British melibatkan Raja-raja Melayu 在 行政 berasaskan perlembagaan."
+        "拉尔夫·霍恩爵士建议英国让马来统治者参与宪政管理。"
       ],
       "bm_focus_phrase": "Sir Ralph Hone mencadangkan supaya British melibatkan Raja-raja Melayu dalam pentadbiran berasaskan perlembagaan."
     },
     {
       "source_id": "bab-5-2-u20",
       "bm_original": "Antaranya dengan:",
-      "translate": "Antaranya 以:",
+      "translate": "其中有：",
       "key_points_zh": [
-        "Antaranya 以:"
+        "其中有："
       ],
       "bm_focus_phrase": "Antaranya dengan:"
     },
     {
       "source_id": "bab-5-2-extra-27",
       "bm_original": "memberikan kuasa tertentu kepada sultan dalam Majlis Negeri",
-      "translate": "memberikan kuasa tertentu 向 sultan 在 Majlis Negeri",
+      "translate": "赋予苏丹在国务院的一定权力",
       "key_points_zh": [
-        "memberikan kuasa tertentu 向 sultan 在 Majlis Negeri"
+        "赋予苏丹在国务院的一定权力"
       ],
       "bm_focus_phrase": "memberikan kuasa tertentu kepada sultan dalam Majlis Negeri"
     },
     {
       "source_id": "bab-5-2-extra-28",
       "bm_original": "memberikan peranan dalam Majlis Perundangan",
-      "translate": "memberikan peranan 在 Majlis Perundangan",
+      "translate": "在立法会中发挥作用",
       "key_points_zh": [
-        "memberikan peranan 在 Majlis Perundangan"
+        "在立法会中发挥作用"
       ],
       "bm_focus_phrase": "memberikan peranan dalam Majlis Perundangan"
     },
     {
       "source_id": "bab-5-2-u21",
       "bm_original": "Cadangan ini membantu meyakinkan British bahawa persekutuan lebih sesuai berbanding Malayan Union .",
-      "translate": "Cadangan 这 membantu meyakinkan British bahawa persekutuan 更 sesuai berbanding Malayan Union .",
+      "translate": "这一提议帮助英国人相信联邦比马来亚联盟更合适。",
       "key_points_zh": [
-        "Cadangan 这 membantu meyakinkan British bahawa persekutuan 更 sesuai berbanding Malayan Union ."
+        "这一提议帮助英国人相信联邦比马来亚联盟更合适。"
       ],
       "bm_focus_phrase": "Cadangan ini membantu meyakinkan British bahawa persekutuan lebih sesuai berbanding Malayan Union ."
     },
     {
       "source_id": "bab-5-2-u39",
       "bm_original": "Mei 1946 → Sir Edward Gent bertemu dengan wakil UMNO di Pulau Pinang .",
-      "translate": "Mei 1946 → Sir Edward Gent bertemu 以 wakil UMNO di Pulau Pinang .",
+      "translate": "1946 年 5 月 → 爱德华·根特爵士在槟城会见巫统代表。",
       "key_points_zh": [
-        "Mei 1946 → Sir Edward Gent bertemu 以 wakil UMNO di Pulau Pinang ."
+        "1946 年 5 月 → 爱德华·根特爵士在槟城会见巫统代表。"
       ],
       "bm_focus_phrase": "Mei 1946 → Sir Edward Gent bertemu dengan wakil UMNO di Pulau Pinang ."
     },
     {
       "source_id": "bab-5-2-u40",
       "bm_original": "18 Julai 1946 → di King’s House, Kuala Lumpur , British memberi peluang kepada Dato’ Onn Jaafar dan Raja-raja Melayu untuk mengemukakan cadangan balas.",
-      "translate": "18 Julai 1946 → di King’s House, Kuala Lumpur , British memberi peluang 向 Dato’ Onn Jaafar 与 Raja-raja Melayu 为了 mengemukakan 建议 balas.",
+      "translate": "1946 年 7 月 18 日 → 在吉隆坡国王大厦，英国人给了拿督翁贾化尔和马来统治者提交反提案的机会。",
       "key_points_zh": [
-        "18 Julai 1946 → di King’s House, Kuala Lumpur , British memberi peluang 向 Dato’ Onn Jaafar 与 Raja-raja Melayu 为了 mengemukakan 建议 balas."
+        "1946 年 7 月 18 日 → 在吉隆坡国王大厦，英国人给了拿督翁贾化尔和马来统治者提交反提案的机会。"
       ],
       "bm_focus_phrase": "18 Julai 1946 → di King’s House, Kuala Lumpur , British memberi peluang kepada Dato’ Onn Jaafar dan Raja-raja Melayu untuk mengemukakan cadangan balas."
     },
     {
       "source_id": "bab-5-2-u22",
       "bm_original": "Ini menunjukkan British mula mengambil kira pandangan pemimpin tempatan.",
-      "translate": "Ini menunjukkan British mula mengambil kira pandangan 领袖 本地.",
+      "translate": "这表明英国开始考虑当地领导人的意见。",
       "key_points_zh": [
-        "Ini menunjukkan British mula mengambil kira pandangan 领袖 本地."
+        "这表明英国开始考虑当地领导人的意见。"
       ],
       "bm_focus_phrase": "Ini menunjukkan British mula mengambil kira pandangan pemimpin tempatan."
     },
     {
       "source_id": "bab-5-2-u23",
       "bm_original": "British menyedari bahawa pembentukan persekutuan dapat mewujudkan:",
-      "translate": "重点：British menyedari bahawa pembentukan persekutuan dapat mewujudkan:",
+      "translate": "英国人意识到，成立一个联邦可以创造：",
       "key_points_zh": [
-        "重点：British menyedari bahawa pembentukan persekutuan dapat mewujudkan:"
+        "英国人意识到，成立一个联邦可以创造："
       ],
       "bm_focus_phrase": "British menyedari bahawa pembentukan persekutuan dapat mewujudkan:"
     },
     {
       "source_id": "bab-5-2-extra-29",
       "bm_original": "politik yang lebih stabil",
-      "translate": "政治 的 更 stabil",
+      "translate": "政治更加稳定",
       "key_points_zh": [
-        "政治 的 更 stabil"
+        "政治更加稳定"
       ],
       "bm_focus_phrase": "politik yang lebih stabil"
     },
     {
       "source_id": "bab-5-2-extra-30",
       "bm_original": "keyakinan pelabur luar untuk melabur di Tanah Melayu",
-      "translate": "keyakinan pelabur luar 为了 melabur di Tanah Melayu",
+      "translate": "外国投资者对马来亚投资的信心",
       "key_points_zh": [
-        "keyakinan pelabur luar 为了 melabur di Tanah Melayu"
+        "外国投资者对马来亚投资的信心"
       ],
       "bm_focus_phrase": "keyakinan pelabur luar untuk melabur di Tanah Melayu"
     },
     {
       "source_id": "bab-5-2-u24",
       "bm_original": "Keadaan politik yang stabil dianggap penting untuk memulihkan ekonomi selepas perang.",
-      "translate": "Keadaan 政治 的 stabil dianggap penting 为了 memulihkan ekonomi 在…之后 perang.",
+      "translate": "稳定的政治局势被认为对于战后经济复苏至关重要。",
       "key_points_zh": [
-        "Keadaan 政治 的 stabil dianggap penting 为了 memulihkan ekonomi 在…之后 perang."
+        "稳定的政治局势被认为对于战后经济复苏至关重要。"
       ],
       "bm_focus_phrase": "Keadaan politik yang stabil dianggap penting untuk memulihkan ekonomi selepas perang."
     },
     {
       "source_id": "bab-5-2-u25",
       "bm_original": "Pada masa yang sama, British juga perlu melaksanakan dasar dekolonisasi yang disarankan oleh Pertubuhan Bangsa-Bangsa Bersatu (PBB) melalui Piagam Atlantik .",
-      "translate": "Pada masa 的 sama, British 也 perlu melaksanakan dasar dekolonisasi 的 disarankan 由 Pertubuhan Bangsa-Bangsa Bersatu (PBB) 通过 Piagam Atlantik .",
+      "translate": "与此同时，英国还需要执行联合国通过《大西洋宪章》建议的非殖民化政策。",
       "key_points_zh": [
-        "Pada masa 的 sama, British 也 perlu melaksanakan dasar dekolonisasi 的 disarankan 由 Pertubuhan Bangsa-Bangsa Bersatu (PBB) 通过 Piagam Atlantik ."
+        "与此同时，英国还需要执行联合国通过《大西洋宪章》建议的非殖民化政策。"
       ],
       "bm_focus_phrase": "Pada masa yang sama, British juga perlu melaksanakan dasar dekolonisasi yang disarankan oleh Pertubuhan Bangsa-Bangsa Bersatu (PBB) melalui Piagam Atlantik ."
     },
     {
       "source_id": "bab-5-2-u26",
       "bm_original": "Dekolonisasi → proses ke arah berkerajaan sendiri.",
-      "translate": "Dekolonisasi → proses ke arah berkerajaan sendiri.",
+      "translate": "非殖民化→走向自治的进程。",
       "key_points_zh": [
-        "Dekolonisasi → proses ke arah berkerajaan sendiri."
+        "非殖民化→走向自治的进程。"
       ],
       "bm_focus_phrase": "Dekolonisasi → proses ke arah berkerajaan sendiri."
     },
     {
       "source_id": "bab-5-2-u41",
       "bm_original": "Ogos 1941 → Piagam Atlantik diisytiharkan.",
-      "translate": "重点：Ogos 1941 → Piagam Atlantik diisytiharkan.",
+      "translate": "1941 年 8 月 → 大西洋宪章颁布。",
       "key_points_zh": [
-        "重点：Ogos 1941 → Piagam Atlantik diisytiharkan."
+        "1941 年 8 月 → 大西洋宪章颁布。"
       ],
       "bm_focus_phrase": "Ogos 1941 → Piagam Atlantik diisytiharkan."
     },
     {
       "source_id": "bab-5-2-u27",
       "bm_original": "Piagam ini dirangka oleh:",
-      "translate": "Piagam 这 dirangka 由:",
+      "translate": "本章程的起草者：",
       "key_points_zh": [
-        "Piagam 这 dirangka 由:"
+        "本章程的起草者："
       ],
       "bm_focus_phrase": "Piagam ini dirangka oleh:"
     },
     {
       "source_id": "bab-5-2-extra-31",
       "bm_original": "Britain",
-      "translate": "重点：Britain",
+      "translate": "英国",
       "key_points_zh": [
-        "重点：Britain"
+        "英国"
       ],
       "bm_focus_phrase": "Britain"
     },
     {
       "source_id": "bab-5-2-extra-32",
       "bm_original": "Amerika Syarikat",
-      "translate": "重点：Amerika Syarikat",
+      "translate": "美国",
       "key_points_zh": [
-        "重点：Amerika Syarikat"
+        "美国"
       ],
       "bm_focus_phrase": "Amerika Syarikat"
     },
     {
       "source_id": "bab-5-2-u28",
       "bm_original": "Prinsip piagam ini berkaitan dengan matlamat dunia selepas peperangan supaya:",
-      "translate": "Prinsip piagam 这 berkaitan 以 matlamat dunia 在…之后 peperangan supaya:",
+      "translate": "宪章的原则与战后世界的目标相关，因此：",
       "key_points_zh": [
-        "Prinsip piagam 这 berkaitan 以 matlamat dunia 在…之后 peperangan supaya:"
+        "宪章的原则与战后世界的目标相关，因此："
       ],
       "bm_focus_phrase": "Prinsip piagam ini berkaitan dengan matlamat dunia selepas peperangan supaya:"
     },
     {
       "source_id": "bab-5-2-extra-33",
       "bm_original": "tiada lagi peluasan wilayah",
-      "translate": "重点：tiada lagi peluasan wilayah",
+      "translate": "不再扩张领土",
       "key_points_zh": [
-        "重点：tiada lagi peluasan wilayah"
+        "不再扩张领土"
       ],
       "bm_focus_phrase": "tiada lagi peluasan wilayah"
     },
     {
       "source_id": "bab-5-2-u29",
       "bm_original": "Oleh itu, British perlu menunjukkan bahawa mereka sedang bergerak ke arah perubahan pentadbiran yang lebih sesuai.",
-      "translate": "Oleh 那, British perlu menunjukkan bahawa mereka sedang bergerak ke arah perubahan 行政 的 更 sesuai.",
+      "translate": "因此，英国人需要表明他们正在走向更合适的行政变革。",
       "key_points_zh": [
-        "Oleh 那, British perlu menunjukkan bahawa mereka sedang bergerak ke arah perubahan 行政 的 更 sesuai."
+        "因此，英国人需要表明他们正在走向更合适的行政变革。"
       ],
       "bm_focus_phrase": "Oleh itu, British perlu menunjukkan bahawa mereka sedang bergerak ke arah perubahan pentadbiran yang lebih sesuai."
     },
     {
       "source_id": "bab-5-2-u30",
       "bm_original": "Penubuhan Persekutuan Tanah Melayu 1948 didorong oleh tiga faktor utama, iaitu:",
-      "translate": "Penubuhan Persekutuan Tanah Melayu 1948 didorong 由 tiga 因素 主要, iaitu:",
+      "translate": "1948年马来亚联邦的成立是由三个主要因素推动的，即：",
       "key_points_zh": [
-        "Penubuhan Persekutuan Tanah Melayu 1948 didorong 由 tiga 因素 主要, iaitu:"
+        "1948年马来亚联邦的成立是由三个主要因素推动的，即："
       ],
       "bm_focus_phrase": "Penubuhan Persekutuan Tanah Melayu 1948 didorong oleh tiga faktor utama, iaitu:"
     },
     {
       "source_id": "bab-5-2-extra-34",
       "bm_original": "penentangan orang Melayu terhadap Malayan Union",
-      "translate": "反对 orang Melayu 针对 Malayan Union",
+      "translate": "马来人反对马来亚联盟",
       "key_points_zh": [
-        "反对 orang Melayu 针对 Malayan Union"
+        "马来人反对马来亚联盟"
       ],
       "bm_focus_phrase": "penentangan orang Melayu terhadap Malayan Union"
     },
     {
       "source_id": "bab-5-2-extra-35",
       "bm_original": "cadangan Raja-raja Melayu dan UMNO",
-      "translate": "建议 Raja-raja Melayu 与 UMNO",
+      "translate": "马来统治者和巫统的建议",
       "key_points_zh": [
-        "建议 Raja-raja Melayu 与 UMNO"
+        "马来统治者和巫统的建议"
       ],
       "bm_focus_phrase": "cadangan Raja-raja Melayu dan UMNO"
     },
     {
       "source_id": "bab-5-2-extra-36",
       "bm_original": "sokongan pentadbir British",
-      "translate": "重点：sokongan pentadbir British",
+      "translate": "英国管理者的支持",
       "key_points_zh": [
-        "重点：sokongan pentadbir British"
+        "英国管理者的支持"
       ],
       "bm_focus_phrase": "sokongan pentadbir British"
     },
     {
       "source_id": "bab-5-2-u31",
       "bm_original": "Bantahan orang Melayu telah membuka mata British bahawa Malayan Union ditolak oleh penduduk tempatan dari pelbagai lapisan.",
-      "translate": "抗议 orang Melayu 已经 membuka mata British bahawa Malayan Union ditolak 由 penduduk 本地 dari pelbagai lapisan.",
+      "translate": "马来人的抗议让英国人大开眼界，马来亚联邦遭到当地各阶层民众的拒绝。",
       "key_points_zh": [
-        "抗议 orang Melayu 已经 membuka mata British bahawa Malayan Union ditolak 由 penduduk 本地 dari pelbagai lapisan."
+        "马来人的抗议让英国人大开眼界，马来亚联邦遭到当地各阶层民众的拒绝。"
       ],
       "bm_focus_phrase": "Bantahan orang Melayu telah membuka mata British bahawa Malayan Union ditolak oleh penduduk tempatan dari pelbagai lapisan."
     },
     {
       "source_id": "bab-5-2-u32",
       "bm_original": "Pada masa yang sama, cadangan Raja-raja Melayu dan UMNO memberi asas kepada pembentukan satu sistem pentadbiran baharu yang lebih sesuai.",
-      "translate": "Pada masa 的 sama, 建议 Raja-raja Melayu 与 UMNO memberi asas 向 pembentukan satu sistem 行政 baharu 的 更 sesuai.",
+      "translate": "同时，马来统治者和巫统的建议为形成更合适的新行政制度提供了基础。",
       "key_points_zh": [
-        "Pada masa 的 sama, 建议 Raja-raja Melayu 与 UMNO memberi asas 向 pembentukan satu sistem 行政 baharu 的 更 sesuai."
+        "同时，马来统治者和巫统的建议为形成更合适的新行政制度提供了基础。"
       ],
       "bm_focus_phrase": "Pada masa yang sama, cadangan Raja-raja Melayu dan UMNO memberi asas kepada pembentukan satu sistem pentadbiran baharu yang lebih sesuai."
     },
     {
       "source_id": "bab-5-2-u33",
       "bm_original": "Sokongan pentadbir British pula mengukuhkan lagi usaha menubuhkan Persekutuan Tanah Melayu demi mewujudkan kestabilan politik, kemajuan ekonomi dan perubahan pentadbiran selepas perang.",
-      "translate": "Sokongan pentadbir British pula 加强 lagi usaha 成立 Persekutuan Tanah Melayu demi mewujudkan kestabilan 政治, kemajuan ekonomi 与 perubahan 行政 在…之后 perang.",
+      "translate": "英国管理者的支持进一步加强了建立马来亚联邦的努力，以在战后创造政治稳定、经济进步和行政变革。",
       "key_points_zh": [
-        "Sokongan pentadbir British pula 加强 lagi usaha 成立 Persekutuan Tanah Melayu demi mewujudkan kestabilan 政治, kemajuan ekonomi 与 perubahan 行政 在…之后 perang."
+        "英国管理者的支持进一步加强了建立马来亚联邦的努力，以在战后创造政治稳定、经济进步和行政变革。"
       ],
       "bm_focus_phrase": "Sokongan pentadbir British pula mengukuhkan lagi usaha menubuhkan Persekutuan Tanah Melayu demi mewujudkan kestabilan politik, kemajuan ekonomi dan perubahan pentadbiran selepas perang."
     }
