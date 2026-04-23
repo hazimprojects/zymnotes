@@ -23,8 +23,6 @@
   var CHIP_TOUCH_CLICK_DELAY_MS = 360;
   var chipInteractionsBound = false;
   var ENTITY_WARNING_LABEL = "⚠︎ Entiti dikekalkan (BM asal).";
-  /** Short Chinese-only placeholder when no curated translate and no glossary hits (no extra parens — chip UI adds （） for inline). */
-  var ZH_FALLBACK_PLACEHOLDER = "暂无中文释义。";
   var HARD_PROTECTED_ENTITIES = [
     "Raja-raja Melayu", "Majlis Raja-raja",
     "Sultan Johor", "Sultan Selangor", "Sultan Kedah", "Raja Perlis", "Sultan Perak",
@@ -546,8 +544,8 @@
   }
 
   /**
-   * When curated JSON is missing: never show BM duplicate or long “pending” banners —
-   * only glossary Chinese hits or a short Chinese-only placeholder.
+   * Optional glossary-only back for chips when JSON `translate` is empty.
+   * No synthetic placeholder text — editors fix data in JSON instead.
    */
   function buildManualFallbackExplain(sourceText, gl) {
     var textForUse = stripCorruptedZhLeadPrefix(typeof sourceText === "string" ? sourceText : "");
@@ -558,11 +556,7 @@
       return vocab;
     }
 
-    return {
-      modeLabel: "Belum disunting",
-      text: ZH_FALLBACK_PLACEHOLDER,
-      fallbackLabel: ""
-    };
+    return null;
   }
 
   function stripChipDecorations(text) {
@@ -622,69 +616,6 @@
     return raw;
   }
 
-  function isTemplateLikeZhExplain(text) {
-    if (typeof text !== "string") return true;
-    var raw = text.trim();
-    if (!raw) return true;
-    if (/重点词|要点说明|术语说明|条目说明|此句是本节重要结论|本句说明本节核心内容/.test(raw)) {
-      return true;
-    }
-    // Only flag all-lowercase Latin glossaries like "waadat（…）"; keep "Sultan X（…）" etc.
-    if (/^[a-z][a-z\s'-]*（[^）]+）(?:；[a-z][a-z\s'-]*（[^）]+）)*。?$/i.test(raw)) {
-      if (!/[A-Z]/.test(raw)) return true;
-    }
-    return false;
-  }
-
-  function hasCodeMixedGrammarArtifacts(text) {
-    if (typeof text !== "string") return false;
-    var raw = text.trim();
-    if (!raw) return false;
-    if (!/[\u4e00-\u9fff]/.test(raw)) return false;
-
-    // Corak campuran BM + partikel CN yang lazim muncul dari terjemahan rosak.
-    if (/\b(?:yang|dan|di|ke|daripada|kepada|oleh|untuk|dengan|kerana|namun|selepas|masalah|penduduk|penyerahan)\b[\s,.;:]+(?:的|在|由|向|给|因|作为)\b/i.test(raw)) {
-      return true;
-    }
-    if (/(?:的|在|由|向|给|因|作为)[\s,.;:]+(?:yang|dan|di|ke|daripada|kepada|oleh|untuk|dengan|kerana|namun|selepas|masalah|penduduk|penyerahan)\b/i.test(raw)) {
-      return true;
-    }
-    if (/给\/向|在…之后/.test(raw)) return true;
-
-    return false;
-  }
-
-  /**
-   * Use JSON `translate` whenever it exists, except for empty strings, UI
-   * placeholder text, obvious garbage, or legacy auto-gen template stubs.
-   * Do not reject long ms→zh-CN prose for "BM-heavy" or missing acronym substrings.
-   */
-  function isUsableCuratedZhText(text, gl, bmSource) {
-    if (typeof text !== "string") return false;
-    var raw = text.trim();
-    if (!raw) return false;
-
-    if (/暂无中文释义/.test(raw)) return false;
-
-    if (/[\u4e00-\u9fff]/.test(raw) && /\binvolved\b/i.test(raw)) return false;
-    if (/[\u4e00-\u9fff]/.test(raw) && /\bwritings\b/i.test(raw)) return false;
-
-    var zhCount = (raw.match(/[\u4e00-\u9fff]/g) || []).length;
-
-    // Legacy scaffold / tutor-template lines (short only — avoid false positives on real notes).
-    if (raw.length < 220 && isTemplateLikeZhExplain(raw)) return false;
-
-    // Obvious BM+particle junk without enough Chinese to be a deliberate mixed line.
-    if (zhCount < 6 && hasCodeMixedGrammarArtifacts(raw)) return false;
-
-    // Almost no Chinese and not a short proper-noun / label line.
-    if (zhCount < 1) {
-      return /^[\s0-9A-Za-z'’.,\-–—()[\]{}]+$/.test(raw) && raw.length <= 120;
-    }
-
-    return true;
-  }
-
   function buildChipBackContent(chip, sourceText, gl, comprehension) {
     var chipId = chip && chip.getAttribute ? (chip.getAttribute("data-zh-unit-id") || "").trim() : "";
     var unit = chipId && comprehension && comprehension[chipId] ? comprehension[chipId] : null;
@@ -692,8 +623,7 @@
       ? stripCorruptedZhLeadPrefix(unit.bm_original)
       : stripCorruptedZhLeadPrefix(sourceText);
     var curated = unit && typeof unit.translate === "string" ? normalizeZhExplain(unit.translate, gl) : "";
-
-    if (isUsableCuratedZhText(curated, gl, bmSource)) {
+    if (curated && curated.trim()) {
       return {
         modeLabel: "Unit ZH",
         text: curated,
@@ -1067,19 +997,15 @@
     var curated = unit && typeof unit.translate === "string"
       ? normalizeZhExplain(unit.translate, gl)
       : "";
-    if (isUsableCuratedZhText(curated, gl, sentenceSource)) {
+    if (curated && curated.trim()) {
       return Promise.resolve({
         text: curated,
         warning: ""
       });
     }
 
-    var manual = buildManualFallbackExplain(sentenceSource, gl);
-    if (manual && manual.text && manual.text.trim()) {
-      return Promise.resolve({ text: manual.text.trim(), warning: "" });
-    }
     return Promise.resolve({
-      text: ZH_FALLBACK_PLACEHOLDER,
+      text: "",
       warning: ""
     });
   }
