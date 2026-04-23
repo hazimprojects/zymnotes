@@ -1,42 +1,43 @@
 {
   "meta": {
     "source_file": "notes/bab-7.html",
-    "rollout": "gelombang-1-manual-revision"
+    "rollout": "gelombang-1-ms-zh-regenerated",
+    "notes": "Bab 7: translate regenerated from bm_original (ms→zh-CN), then manual term fixes (CLC→族群联络委员会, Sistem Ahli→成员制, Melayu Raya)."
   },
   "units": [
     {
       "source_id": "bab-7-synopsis-1",
       "bm_original": "Kesedaran politik selepas Perang Dunia Kedua mencetuskan aspirasi rakyat untuk mencapai kemerdekaan .",
-      "translate": "Kesedaran 政治 在…之后 第二次世界大战 mencetuskan aspirasi 人民 为了 mencapai 独立 .",
+      "translate": "第二次世界大战后的政治意识引发了人民实现独立的愿望。",
       "key_points_zh": [
-        "Kesedaran 政治 在…之后 第二次世界大战 mencetuskan aspirasi 人民 为了 mencapai 独立 ."
+        "第二次世界大战后的政治意识引发了人民实现独立的愿望。"
       ],
       "bm_focus_phrase": "Kesedaran politik selepas Perang Dunia Kedua mencetuskan aspirasi rakyat untuk mencapai kemerdekaan ."
     },
     {
       "source_id": "bab-7-synopsis-2",
       "bm_original": "Idea negara merdeka dicetuskan oleh pelbagai golongan untuk membentuk negara yang berdaulat .",
-      "translate": "Idea negara merdeka dicetuskan 由 pelbagai golongan 为了 membentuk negara 的 berdaulat .",
+      "translate": "独立国家的想法是由各个团体引发的，以形成一个主权国家。",
       "key_points_zh": [
-        "Idea negara merdeka dicetuskan 由 pelbagai golongan 为了 membentuk negara 的 berdaulat ."
+        "独立国家的想法是由各个团体引发的，以形成一个主权国家。"
       ],
       "bm_focus_phrase": "Idea negara merdeka dicetuskan oleh pelbagai golongan untuk membentuk negara yang berdaulat ."
     },
     {
       "source_id": "bab-7-synopsis-3",
       "bm_original": "Usaha mencapai kemerdekaan dilakukan bagi memenuhi gesaan British supaya perpaduan rakyat berbilang kaum dapat diwujudkan sebagai prasyarat untuk merdeka.",
-      "translate": "Usaha mencapai 独立 dilakukan bagi memenuhi gesaan British supaya perpaduan 人民 berbilang kaum dapat diwujudkan 作为 prasyarat 为了 merdeka.",
+      "translate": "争取独立的努力是为了满足英国的要求，把多种族人民的团结作为独立的先决条件。",
       "key_points_zh": [
-        "Usaha mencapai 独立 dilakukan bagi memenuhi gesaan British supaya perpaduan 人民 berbilang kaum dapat diwujudkan 作为 prasyarat 为了 merdeka."
+        "争取独立的努力是为了满足英国的要求，把多种族人民的团结作为独立的先决条件。"
       ],
       "bm_focus_phrase": "Usaha mencapai kemerdekaan dilakukan bagi memenuhi gesaan British supaya perpaduan rakyat berbilang kaum dapat diwujudkan sebagai prasyarat untuk merdeka."
     },
     {
       "source_id": "bab-7-synopsis-4",
       "bm_original": "Oleh sebab itu, penubuhan Jawatankuasa Hubungan Antara Kaum (CLC) , pembentukan Sistem Ahli dan sistem pendidikan kebangsaan serta kerjasama parti politik dilakukan sebagai usaha ke arah kemerdekaan.",
-      "translate": "Oleh sebab 那, 成立 Jawatankuasa Hubungan Antara Kaum (CLC) , pembentukan Sistem Ahli 与 sistem pendidikan kebangsaan 以及 kerjasama parti 政治 dilakukan 作为 usaha ke arah 独立.",
+      "translate": "为此，成立族群联络委员会（Jawatankuasa Hubungan Antara Kaum，CLC）、推行成员制（Sistem Ahli）与国民教育体系，并加强政党合作，都是迈向独立的重要步骤。",
       "key_points_zh": [
-        "Oleh sebab 那, 成立 Jawatankuasa Hubungan Antara Kaum (CLC) , pembentukan Sistem Ahli 与 sistem pendidikan kebangsaan 以及 kerjasama parti 政治 dilakukan 作为 usaha ke arah 独立."
+        "为此，成立族群联络委员会（Jawatankuasa Hubungan Antara Kaum，CLC）、推行成员制（Sistem Ahli）与国民教育体系，并加强政党合作，都是迈向独立的重要步骤。"
       ],
       "bm_focus_phrase": "Oleh sebab itu, penubuhan Jawatankuasa Hubungan Antara Kaum (CLC) , pembentukan Sistem Ahli dan sistem pendidikan kebangsaan serta kerjasama parti politik dilakukan sebagai usaha ke arah kemerdekaan."
     }

@@ -1,573 +1,574 @@
 {
   "meta": {
     "source_file": "notes/bab-7-3.html",
-    "rollout": "gelombang-1-manual-revision"
+    "rollout": "gelombang-1-ms-zh-regenerated",
+    "notes": "Bab 7: translate regenerated from bm_original (ms→zh-CN), then manual term fixes (CLC→族群联络委员会, Sistem Ahli→成员制, Melayu Raya)."
   },
   "units": [
     {
       "source_id": "bab-7-3-u15",
       "bm_original": "Selepas Perang Dunia Kedua , British menjalankan dasar dekolonisasi dengan menyediakan langkah ke arah berkerajaan sendiri secara beransur-ansur.",
-      "translate": "Selepas 第二次世界大战 , British menjalankan dasar dekolonisasi 以 menyediakan 步骤 ke arah berkerajaan sendiri secara beransur-ansur.",
+      "translate": "第二次世界大战后，英国实行非殖民化政策，逐步迈向自治。",
       "key_points_zh": [
-        "Selepas 第二次世界大战 , British menjalankan dasar dekolonisasi 以 menyediakan 步骤 ke arah berkerajaan sendiri secara beransur-ansur."
+        "第二次世界大战后，英国实行非殖民化政策，逐步迈向自治。"
       ],
       "bm_focus_phrase": "Selepas Perang Dunia Kedua , British menjalankan dasar dekolonisasi dengan menyediakan langkah ke arah berkerajaan sendiri secara beransur-ansur."
     },
     {
       "source_id": "bab-7-3-u16",
       "bm_original": "Kekurangan pegawai tempatan dalam perkhidmatan kerajaan mendorong Dato’ Onn Jaafar meminta lebih banyak peluang pentadbiran diberikan kepada wakil tempatan.",
-      "translate": "Kekurangan pegawai 本地 在 perkhidmatan 政府 mendorong Dato’ Onn Jaafar meminta 更 banyak peluang 行政 diberikan 向 wakil 本地.",
+      "translate": "政府部门缺乏地方官员，促使拿督翁贾法尔要求为地方代表提供更多行政机会。",
       "key_points_zh": [
-        "Kekurangan pegawai 本地 在 perkhidmatan 政府 mendorong Dato’ Onn Jaafar meminta 更 banyak peluang 行政 diberikan 向 wakil 本地."
+        "政府部门缺乏地方官员，促使拿督翁贾法尔要求为地方代表提供更多行政机会。"
       ],
       "bm_focus_phrase": "Kekurangan pegawai tempatan dalam perkhidmatan kerajaan mendorong Dato’ Onn Jaafar meminta lebih banyak peluang pentadbiran diberikan kepada wakil tempatan."
     },
     {
       "source_id": "bab-7-3-u17",
       "bm_original": "Cadangan ini membawa kepada pembentukan Sistem Ahli , iaitu sistem latihan awal yang membolehkan penduduk tempatan belajar mentadbir kerajaan sebelum kemerdekaan dicapai.",
-      "translate": "Cadangan 这 membawa 向 pembentukan Sistem Ahli , iaitu sistem latihan awal 的 membolehkan penduduk 本地 belajar mentadbir 政府 sebelum 独立 dicapai.",
+      "translate": "这一提议促成了成员制（Sistem Ahli）的设立，这是一个初步培训制度，允许当地居民在独立之前学习如何治理政府。",
       "key_points_zh": [
-        "Cadangan 这 membawa 向 pembentukan Sistem Ahli , iaitu sistem latihan awal 的 membolehkan penduduk 本地 belajar mentadbir 政府 sebelum 独立 dicapai."
+        "这一提议促成了成员制（Sistem Ahli）的设立，这是一个初步培训制度，允许当地居民在独立之前学习如何治理政府。"
       ],
       "bm_focus_phrase": "Cadangan ini membawa kepada pembentukan Sistem Ahli , iaitu sistem latihan awal yang membolehkan penduduk tempatan belajar mentadbir kerajaan sebelum kemerdekaan dicapai."
     },
     {
       "source_id": "bab-7-3-u01",
       "bm_original": "Sistem Ahli ialah satu sistem yang melatih penduduk tempatan untuk menerajui pentadbiran Persekutuan Tanah Melayu sebelum British memberikan kemerdekaan.",
-      "translate": "Sistem Ahli 是 satu sistem 的 melatih penduduk 本地 为了 menerajui 行政 Persekutuan Tanah Melayu sebelum British memberikan 独立.",
+      "translate": "成员制是在英国授予独立之前，让当地人学习领导马来亚联合邦（Persekutuan Tanah Melayu）行政的制度。",
       "key_points_zh": [
-        "Sistem Ahli 是 satu sistem 的 melatih penduduk 本地 为了 menerajui 行政 Persekutuan Tanah Melayu sebelum British memberikan 独立."
+        "成员制是在英国授予独立之前，让当地人学习领导马来亚联合邦（Persekutuan Tanah Melayu）行政的制度。"
       ],
       "bm_focus_phrase": "Sistem Ahli ialah satu sistem yang melatih penduduk tempatan untuk menerajui pentadbiran Persekutuan Tanah Melayu sebelum British memberikan kemerdekaan."
     },
     {
       "source_id": "bab-7-3-u02",
       "bm_original": "Sistem ini penting kerana memberi pengalaman mentadbir, memupuk perpaduan kaum dan menyediakan asas ke arah berkerajaan sendiri serta kemerdekaan.",
-      "translate": "Sistem 这 penting 因为 memberi pengalaman mentadbir, memupuk perpaduan kaum 与 menyediakan asas ke arah berkerajaan sendiri 以及 独立.",
+      "translate": "这一制度很重要，因为它提供了治理经验，促进了种族团结，并为自治和独立提供了基础。",
       "key_points_zh": [
-        "Sistem 这 penting 因为 memberi pengalaman mentadbir, memupuk perpaduan kaum 与 menyediakan asas ke arah berkerajaan sendiri 以及 独立."
+        "这一制度很重要，因为它提供了治理经验，促进了种族团结，并为自治和独立提供了基础。"
       ],
       "bm_focus_phrase": "Sistem ini penting kerana memberi pengalaman mentadbir, memupuk perpaduan kaum dan menyediakan asas ke arah berkerajaan sendiri serta kemerdekaan."
     },
     {
       "source_id": "bab-7-3-extra-1",
       "bm_original": "1️⃣ pembentukan Sistem Ahli 🏗️",
-      "translate": "重点：1️⃣ pembentukan Sistem Ahli 🏗️",
+      "translate": "1️⃣会员体系的组建🏗️",
       "key_points_zh": [
-        "重点：1️⃣ pembentukan Sistem Ahli 🏗️"
+        "1️⃣会员体系的组建🏗️"
       ],
       "bm_focus_phrase": "1️⃣ pembentukan Sistem Ahli 🏗️"
     },
     {
       "source_id": "bab-7-3-extra-2",
       "bm_original": "2️⃣ ciri-ciri Sistem Ahli ⚙️",
-      "translate": "重点：2️⃣ ciri-ciri Sistem Ahli ⚙️",
+      "translate": "2️⃣成员制的特点⚙️",
       "key_points_zh": [
-        "重点：2️⃣ ciri-ciri Sistem Ahli ⚙️"
+        "2️⃣成员制的特点⚙️"
       ],
       "bm_focus_phrase": "2️⃣ ciri-ciri Sistem Ahli ⚙️"
     },
     {
       "source_id": "bab-7-3-extra-3",
       "bm_original": "3️⃣ kepentingan Sistem Ahli ke arah kemerdekaan 🇲🇾",
-      "translate": "3️⃣ kepentingan Sistem Ahli ke arah 独立 🇲🇾",
+      "translate": "3️⃣成员制对于独立的重要性🇲🇾",
       "key_points_zh": [
-        "3️⃣ kepentingan Sistem Ahli ke arah 独立 🇲🇾"
+        "3️⃣成员制对于独立的重要性🇲🇾"
       ],
       "bm_focus_phrase": "3️⃣ kepentingan Sistem Ahli ke arah kemerdekaan 🇲🇾"
     },
     {
       "source_id": "bab-7-3-extra-4",
       "bm_original": "1951 ➡️ Sir Henry Gurney , Pesuruhjaya Tinggi British, mengumumkan senarai anggota Sistem Ahli",
-      "translate": "1951 ➡️ Sir Henry Gurney , Pesuruhjaya Tinggi British, mengumumkan senarai anggota Sistem Ahli",
+      "translate": "1951年➡️英国高级专员亨利·格尼爵士公布会员制成员名单",
       "key_points_zh": [
-        "1951 ➡️ Sir Henry Gurney , Pesuruhjaya Tinggi British, mengumumkan senarai anggota Sistem Ahli"
+        "1951年➡️英国高级专员亨利·格尼爵士公布会员制成员名单"
       ],
       "bm_focus_phrase": "1951 ➡️ Sir Henry Gurney , Pesuruhjaya Tinggi British, mengumumkan senarai anggota Sistem Ahli"
     },
     {
       "source_id": "bab-7-3-u03",
       "bm_original": "Sistem Ahli merupakan sistem yang:",
-      "translate": "Sistem Ahli merupakan sistem 的:",
+      "translate": "成员制（Sistem Ahli）是一个制度：",
       "key_points_zh": [
-        "Sistem Ahli merupakan sistem 的:"
+        "成员制（Sistem Ahli）是一个制度："
       ],
       "bm_focus_phrase": "Sistem Ahli merupakan sistem yang:"
     },
     {
       "source_id": "bab-7-3-extra-5",
       "bm_original": "melatih penduduk tempatan menerajui pentadbiran Persekutuan Tanah Melayu",
-      "translate": "melatih penduduk 本地 menerajui 行政 Persekutuan Tanah Melayu",
+      "translate": "培训当地人领导马来亚联邦的行政管理",
       "key_points_zh": [
-        "melatih penduduk 本地 menerajui 行政 Persekutuan Tanah Melayu"
+        "培训当地人领导马来亚联邦的行政管理"
       ],
       "bm_focus_phrase": "melatih penduduk tempatan menerajui pentadbiran Persekutuan Tanah Melayu"
     },
     {
       "source_id": "bab-7-3-u04",
       "bm_original": "Beberapa orang anggota Majlis Perundangan Persekutuan (MPP) diberikan tanggungjawab terhadap:",
-      "translate": "Beberapa orang anggota Majlis Perundangan Persekutuan (MPP) diberikan tanggungjawab 针对:",
+      "translate": "联邦立法委员会 (MPP) 的几名成员负责：",
       "key_points_zh": [
-        "Beberapa orang anggota Majlis Perundangan Persekutuan (MPP) diberikan tanggungjawab 针对:"
+        "联邦立法委员会 (MPP) 的几名成员负责："
       ],
       "bm_focus_phrase": "Beberapa orang anggota Majlis Perundangan Persekutuan (MPP) diberikan tanggungjawab terhadap:"
     },
     {
       "source_id": "bab-7-3-extra-6",
       "bm_original": "jabatan",
-      "translate": "重点：jabatan",
+      "translate": "部门",
       "key_points_zh": [
-        "重点：jabatan"
+        "部门"
       ],
       "bm_focus_phrase": "jabatan"
     },
     {
       "source_id": "bab-7-3-extra-7",
       "bm_original": "agensi kerajaan",
-      "translate": "agensi 政府",
+      "translate": "政府机构",
       "key_points_zh": [
-        "agensi 政府"
+        "政府机构"
       ],
       "bm_focus_phrase": "agensi kerajaan"
     },
     {
       "source_id": "bab-7-3-u05",
       "bm_original": "Sistem Ahli juga memberikan latihan kepada penduduk tempatan berkaitan:",
-      "translate": "Sistem Ahli 也 memberikan latihan 向 penduduk 本地 berkaitan:",
+      "translate": "成员制还为当地居民提供以下相关培训：",
       "key_points_zh": [
-        "Sistem Ahli 也 memberikan latihan 向 penduduk 本地 berkaitan:"
+        "成员制还为当地居民提供以下相关培训："
       ],
       "bm_focus_phrase": "Sistem Ahli juga memberikan latihan kepada penduduk tempatan berkaitan:"
     },
     {
       "source_id": "bab-7-3-extra-8",
       "bm_original": "pentadbiran negeri",
-      "translate": "行政 州",
+      "translate": "国家行政部门",
       "key_points_zh": [
-        "行政 州"
+        "国家行政部门"
       ],
       "bm_focus_phrase": "pentadbiran negeri"
     },
     {
       "source_id": "bab-7-3-extra-9",
       "bm_original": "sebelum British memberikan kemerdekaan",
-      "translate": "sebelum British memberikan 独立",
+      "translate": "在英国给予独立之前",
       "key_points_zh": [
-        "sebelum British memberikan 独立"
+        "在英国给予独立之前"
       ],
       "bm_focus_phrase": "sebelum British memberikan kemerdekaan"
     },
     {
       "source_id": "bab-7-3-extra-10",
       "bm_original": "April 1951 ➡️ Jun 1955",
-      "translate": "重点：April 1951 ➡️ Jun 1955",
+      "translate": "1951 年 4 月 ➡️ 1955 年 6 月",
       "key_points_zh": [
-        "重点：April 1951 ➡️ Jun 1955"
+        "1951 年 4 月 ➡️ 1955 年 6 月"
       ],
       "bm_focus_phrase": "April 1951 ➡️ Jun 1955"
     },
     {
       "source_id": "bab-7-3-u06",
       "bm_original": "Tempoh ini berlaku sebelum:",
-      "translate": "Tempoh 这 发生 sebelum:",
+      "translate": "该时期发生在：",
       "key_points_zh": [
-        "Tempoh 这 发生 sebelum:"
+        "该时期发生在："
       ],
       "bm_focus_phrase": "Tempoh ini berlaku sebelum:"
     },
     {
       "source_id": "bab-7-3-extra-11",
       "bm_original": "pilihan raya MPP diadakan pada Julai 1955",
-      "translate": "pilihan raya MPP diadakan 于 Julai 1955",
+      "translate": "1955 年 7 月举行 MPP 选举",
       "key_points_zh": [
-        "pilihan raya MPP diadakan 于 Julai 1955"
+        "1955 年 7 月举行 MPP 选举"
       ],
       "bm_focus_phrase": "pilihan raya MPP diadakan pada Julai 1955"
     },
     {
       "source_id": "bab-7-3-extra-12",
       "bm_original": "Hal Ehwal Ekonomi",
-      "translate": "重点：Hal Ehwal Ekonomi",
+      "translate": "经济事务",
       "key_points_zh": [
-        "重点：Hal Ehwal Ekonomi"
+        "经济事务"
       ],
       "bm_focus_phrase": "Hal Ehwal Ekonomi"
     },
     {
       "source_id": "bab-7-3-extra-13",
       "bm_original": "Perindustrian dan Perhubungan Sosial",
-      "translate": "Perindustrian 与 Perhubungan Sosial",
+      "translate": "产业和社会关系",
       "key_points_zh": [
-        "Perindustrian 与 Perhubungan Sosial"
+        "产业和社会关系"
       ],
       "bm_focus_phrase": "Perindustrian dan Perhubungan Sosial"
     },
     {
       "source_id": "bab-7-3-extra-14",
       "bm_original": "Perumahan dan Kerja Raya",
-      "translate": "Perumahan 与 Kerja Raya",
+      "translate": "住房和公共工程",
       "key_points_zh": [
-        "Perumahan 与 Kerja Raya"
+        "住房和公共工程"
       ],
       "bm_focus_phrase": "Perumahan dan Kerja Raya"
     },
     {
       "source_id": "bab-7-3-extra-15",
       "bm_original": "1954 ➡️ berlaku rombakan dalam Sistem Ahli",
-      "translate": "1954 ➡️ 发生 rombakan 在 Sistem Ahli",
+      "translate": "1954年➡️会员体系进行重组",
       "key_points_zh": [
-        "1954 ➡️ 发生 rombakan 在 Sistem Ahli"
+        "1954年➡️会员体系进行重组"
       ],
       "bm_focus_phrase": "1954 ➡️ berlaku rombakan dalam Sistem Ahli"
     },
     {
       "source_id": "bab-7-3-u07",
       "bm_original": "Beberapa portfolio baharu diwujudkan dan dijawat oleh:",
-      "translate": "Beberapa portfolio baharu diwujudkan 与 dijawat 由:",
+      "translate": "几个新的产品组合由以下人员创建和提供服务：",
       "key_points_zh": [
-        "Beberapa portfolio baharu diwujudkan 与 dijawat 由:"
+        "几个新的产品组合由以下人员创建和提供服务："
       ],
       "bm_focus_phrase": "Beberapa portfolio baharu diwujudkan dan dijawat oleh:"
     },
     {
       "source_id": "bab-7-3-extra-16",
       "bm_original": "warganegara Persekutuan Tanah Melayu",
-      "translate": "重点：warganegara Persekutuan Tanah Melayu",
+      "translate": "马来亚联邦公民",
       "key_points_zh": [
-        "重点：warganegara Persekutuan Tanah Melayu"
+        "马来亚联邦公民"
       ],
       "bm_focus_phrase": "warganegara Persekutuan Tanah Melayu"
     },
     {
       "source_id": "bab-7-3-extra-17",
       "bm_original": "yang menjadi anggota MPP",
-      "translate": "的 menjadi anggota MPP",
+      "translate": "谁是 MPP 成员",
       "key_points_zh": [
-        "的 menjadi anggota MPP"
+        "谁是 MPP 成员"
       ],
       "bm_focus_phrase": "yang menjadi anggota MPP"
     },
     {
       "source_id": "bab-7-3-extra-18",
       "bm_original": "Dato’ Onn Jaafar ➡️ Ahli Hal Ehwal Dalam Negeri",
-      "translate": "Dato’ Onn Jaafar ➡️ Ahli Hal Ehwal Dalam Negeri",
+      "translate": "Dato' Onn Jaafar ➡️ 内政部成员",
       "key_points_zh": [
-        "Dato’ Onn Jaafar ➡️ Ahli Hal Ehwal Dalam Negeri"
+        "Dato' Onn Jaafar ➡️ 内政部成员"
       ],
       "bm_focus_phrase": "Dato’ Onn Jaafar ➡️ Ahli Hal Ehwal Dalam Negeri"
     },
     {
       "source_id": "bab-7-3-extra-19",
       "bm_original": "E.E.C. Thuraisingham ➡️ Ahli Pelajaran",
-      "translate": "重点：E.E.C. Thuraisingham ➡️ Ahli Pelajaran",
+      "translate": "欧洲经济共同体。图拉辛汉姆➡️学者",
       "key_points_zh": [
-        "重点：E.E.C. Thuraisingham ➡️ Ahli Pelajaran"
+        "欧洲经济共同体。图拉辛汉姆➡️学者"
       ],
       "bm_focus_phrase": "E.E.C. Thuraisingham ➡️ Ahli Pelajaran"
     },
     {
       "source_id": "bab-7-3-extra-20",
       "bm_original": "Lee Tiang Keng ➡️ Ahli Kesihatan",
-      "translate": "重点：Lee Tiang Keng ➡️ Ahli Kesihatan",
+      "translate": "李天庆➡️健康专家",
       "key_points_zh": [
-        "重点：Lee Tiang Keng ➡️ Ahli Kesihatan"
+        "李天庆➡️健康专家"
       ],
       "bm_focus_phrase": "Lee Tiang Keng ➡️ Ahli Kesihatan"
     },
     {
       "source_id": "bab-7-3-extra-21",
       "bm_original": "Tunku Yaacob ibni Almarhum Sultan Abdul Hamid Halim Shah ➡️ Ahli Pertanian dan Perhutanan",
-      "translate": "Tunku Yaacob ibni Almarhum Sultan Abdul Hamid Halim Shah ➡️ Ahli Pertanian dan Perhutanan",
+      "translate": "Tunku Yaacob ibni Almarhum Sultan Abdul Hamid Halim Shah ➡️ 农林专家",
       "key_points_zh": [
-        "Tunku Yaacob ibni Almarhum Sultan Abdul Hamid Halim Shah ➡️ Ahli Pertanian dan Perhutanan"
+        "Tunku Yaacob ibni Almarhum Sultan Abdul Hamid Halim Shah ➡️ 农林专家"
       ],
       "bm_focus_phrase": "Tunku Yaacob ibni Almarhum Sultan Abdul Hamid Halim Shah ➡️ Ahli Pertanian dan Perhutanan"
     },
     {
       "source_id": "bab-7-3-extra-22",
       "bm_original": "Dato’ Mahmud Mat ➡️ Ahli Tanah, Lombong dan Perhubungan",
-      "translate": "Dato’ Mahmud Mat ➡️ Ahli Tanah, Lombong 与 Perhubungan",
+      "translate": "Dato' Mahmud Mat ➡️ 土地、矿山和通讯专家",
       "key_points_zh": [
-        "Dato’ Mahmud Mat ➡️ Ahli Tanah, Lombong 与 Perhubungan"
+        "Dato' Mahmud Mat ➡️ 土地、矿山和通讯专家"
       ],
       "bm_focus_phrase": "Dato’ Mahmud Mat ➡️ Ahli Tanah, Lombong dan Perhubungan"
     },
     {
       "source_id": "bab-7-3-extra-23",
       "bm_original": "Dato’ Nik Ahmad Kamil ➡️ Ahli Kerajaan Tempatan, Perumahan dan Perancang Bandar ( 1954 )",
-      "translate": "Dato’ Nik Ahmad Kamil ➡️ Ahli Kerajaan 本地, Perumahan 与 Perancang Bandar ( 1954 )",
+      "translate": "拿督尼克艾哈迈德卡米尔 ➡️ 地方政府、住房和城市规划成员 (1954)",
       "key_points_zh": [
-        "Dato’ Nik Ahmad Kamil ➡️ Ahli Kerajaan 本地, Perumahan 与 Perancang Bandar ( 1954 )"
+        "拿督尼克艾哈迈德卡米尔 ➡️ 地方政府、住房和城市规划成员 (1954)"
       ],
       "bm_focus_phrase": "Dato’ Nik Ahmad Kamil ➡️ Ahli Kerajaan Tempatan, Perumahan dan Perancang Bandar ( 1954 )"
     },
     {
       "source_id": "bab-7-3-extra-24",
       "bm_original": "H.S. Lee ➡️ Ahli Pengangkutan ( 1954 )",
-      "translate": "重点：H.S. Lee ➡️ Ahli Pengangkutan ( 1954 )",
+      "translate": "H.S.李➡️运输车 (1954)",
       "key_points_zh": [
-        "重点：H.S. Lee ➡️ Ahli Pengangkutan ( 1954 )"
+        "H.S.李➡️运输车 (1954)"
       ],
       "bm_focus_phrase": "H.S. Lee ➡️ Ahli Pengangkutan ( 1954 )"
     },
     {
       "source_id": "bab-7-3-extra-25",
       "bm_original": "Dr. Ismail Abdul Rahman ➡️ Ahli Hasil Bumi ( 1954 )",
-      "translate": "重点：Dr. Ismail Abdul Rahman ➡️ Ahli Hasil Bumi ( 1954 )",
+      "translate": "Ismail Abdul Rahman 博士➡️ Earth Products 成员 (1954)",
       "key_points_zh": [
-        "重点：Dr. Ismail Abdul Rahman ➡️ Ahli Hasil Bumi ( 1954 )"
+        "Ismail Abdul Rahman 博士➡️ Earth Products 成员 (1954)"
       ],
       "bm_focus_phrase": "Dr. Ismail Abdul Rahman ➡️ Ahli Hasil Bumi ( 1954 )"
     },
     {
       "source_id": "bab-7-3-u08",
       "bm_original": "Dato’ Onn Jaafar bertanggungjawab menjaga:",
-      "translate": "Dato’ Onn Jaafar bertanggungjawab menjaga:",
+      "translate": "Dato' Onn Jaafar 负责照顾：",
       "key_points_zh": [
-        "Dato’ Onn Jaafar bertanggungjawab menjaga:"
+        "Dato' Onn Jaafar 负责照顾："
       ],
       "bm_focus_phrase": "Dato’ Onn Jaafar bertanggungjawab menjaga:"
     },
     {
       "source_id": "bab-7-3-extra-26",
       "bm_original": "hal ehwal imigran",
-      "translate": "重点：hal ehwal imigran",
+      "translate": "移民事务",
       "key_points_zh": [
-        "重点：hal ehwal imigran"
+        "移民事务"
       ],
       "bm_focus_phrase": "hal ehwal imigran"
     },
     {
       "source_id": "bab-7-3-extra-27",
       "bm_original": "penyiaran dan pencetakan",
-      "translate": "penyiaran 与 pencetakan",
+      "translate": "广播和印刷",
       "key_points_zh": [
-        "penyiaran 与 pencetakan"
+        "广播和印刷"
       ],
       "bm_focus_phrase": "penyiaran dan pencetakan"
     },
     {
       "source_id": "bab-7-3-extra-28",
       "bm_original": "hubungan negeri Melayu dengan Negeri-negeri Selat",
-      "translate": "hubungan 州 Melayu 以 Negeri-negeri Selat",
+      "translate": "马来各邦与海峡殖民地的关系",
       "key_points_zh": [
-        "hubungan 州 Melayu 以 Negeri-negeri Selat"
+        "马来各邦与海峡殖民地的关系"
       ],
       "bm_focus_phrase": "hubungan negeri Melayu dengan Negeri-negeri Selat"
     },
     {
       "source_id": "bab-7-3-extra-29",
       "bm_original": "hal ehwal menunaikan haji",
-      "translate": "重点：hal ehwal menunaikan haji",
+      "translate": "朝觐事宜",
       "key_points_zh": [
-        "重点：hal ehwal menunaikan haji"
+        "朝觐事宜"
       ],
       "bm_focus_phrase": "hal ehwal menunaikan haji"
     },
     {
       "source_id": "bab-7-3-extra-30",
       "bm_original": "pendaftaran kerakyatan",
-      "translate": "重点：pendaftaran kerakyatan",
+      "translate": "公民登记",
       "key_points_zh": [
-        "重点：pendaftaran kerakyatan"
+        "公民登记"
       ],
       "bm_focus_phrase": "pendaftaran kerakyatan"
     },
     {
       "source_id": "bab-7-3-extra-31",
       "bm_original": "perkahwinan",
-      "translate": "重点：perkahwinan",
+      "translate": "婚姻",
       "key_points_zh": [
-        "重点：perkahwinan"
+        "婚姻"
       ],
       "bm_focus_phrase": "perkahwinan"
     },
     {
       "source_id": "bab-7-3-extra-32",
       "bm_original": "kematian",
-      "translate": "重点：kematian",
+      "translate": "死亡",
       "key_points_zh": [
-        "重点：kematian"
+        "死亡"
       ],
       "bm_focus_phrase": "kematian"
     },
     {
       "source_id": "bab-7-3-u09",
       "bm_original": "Selain itu, agensi berikut juga berada di bawah tanggungjawab beliau:",
-      "translate": "Selain 那, agensi berikut 也 berada di bawah tanggungjawab beliau:",
+      "translate": "此外，以下机构也由他负责：",
       "key_points_zh": [
-        "Selain 那, agensi berikut 也 berada di bawah tanggungjawab beliau:"
+        "此外，以下机构也由他负责："
       ],
       "bm_focus_phrase": "Selain itu, agensi berikut juga berada di bawah tanggungjawab beliau:"
     },
     {
       "source_id": "bab-7-3-extra-33",
       "bm_original": "Lembaga Pembangunan Industri Desa (RIDA)",
-      "translate": "重点：Lembaga Pembangunan Industri Desa (RIDA)",
+      "translate": "农村产业发展委员会 (RIDA)",
       "key_points_zh": [
-        "重点：Lembaga Pembangunan Industri Desa (RIDA)"
+        "农村产业发展委员会 (RIDA)"
       ],
       "bm_focus_phrase": "Lembaga Pembangunan Industri Desa (RIDA)"
     },
     {
       "source_id": "bab-7-3-extra-34",
       "bm_original": "Jabatan Pilihan Raya",
-      "translate": "重点：Jabatan Pilihan Raya",
+      "translate": "选举部",
       "key_points_zh": [
-        "重点：Jabatan Pilihan Raya"
+        "选举部"
       ],
       "bm_focus_phrase": "Jabatan Pilihan Raya"
     },
     {
       "source_id": "bab-7-3-extra-35",
       "bm_original": "Jabatan Rupa Bangsa Nasional",
-      "translate": "重点：Jabatan Rupa Bangsa Nasional",
+      "translate": "国貌部",
       "key_points_zh": [
-        "重点：Jabatan Rupa Bangsa Nasional"
+        "国貌部"
       ],
       "bm_focus_phrase": "Jabatan Rupa Bangsa Nasional"
     },
     {
       "source_id": "bab-7-3-u10",
       "bm_original": "Ciri-ciri utama Sistem Ahli ialah:",
-      "translate": "Ciri-ciri 主要 Sistem Ahli 是:",
+      "translate": "成员制的主要特点是：",
       "key_points_zh": [
-        "Ciri-ciri 主要 Sistem Ahli 是:"
+        "成员制的主要特点是："
       ],
       "bm_focus_phrase": "Ciri-ciri utama Sistem Ahli ialah:"
     },
     {
       "source_id": "bab-7-3-extra-36",
       "bm_original": "1️⃣ Ahli bertaraf “Menteri” dan bertanggungjawab menjaga portfolio yang mengandungi jabatan dan agensi kerajaan",
-      "translate": "1️⃣ Ahli bertaraf “Menteri” 与 bertanggungjawab menjaga portfolio 的 mengandungi jabatan 与 agensi 政府",
+      "translate": "1️⃣“部长”级成员，负责管理包含政府部门和机构的事务",
       "key_points_zh": [
-        "1️⃣ Ahli bertaraf “Menteri” 与 bertanggungjawab menjaga portfolio 的 mengandungi jabatan 与 agensi 政府"
+        "1️⃣“部长”级成员，负责管理包含政府部门和机构的事务"
       ],
       "bm_focus_phrase": "1️⃣ Ahli bertaraf “Menteri” dan bertanggungjawab menjaga portfolio yang mengandungi jabatan dan agensi kerajaan"
     },
     {
       "source_id": "bab-7-3-extra-37",
       "bm_original": "2️⃣ Ahli dilantik oleh Pesuruhjaya Tinggi British dengan persetujuan Majlis Raja-Raja",
-      "translate": "2️⃣ Ahli dilantik 由 Pesuruhjaya Tinggi British 以 persetujuan Majlis Raja-Raja",
+      "translate": "2️⃣ 成员由英国高级专员在统治者委员会批准后任命",
       "key_points_zh": [
-        "2️⃣ Ahli dilantik 由 Pesuruhjaya Tinggi British 以 persetujuan Majlis Raja-Raja"
+        "2️⃣ 成员由英国高级专员在统治者委员会批准后任命"
       ],
       "bm_focus_phrase": "2️⃣ Ahli dilantik oleh Pesuruhjaya Tinggi British dengan persetujuan Majlis Raja-Raja"
     },
     {
       "source_id": "bab-7-3-extra-38",
       "bm_original": "3️⃣ Ahli bertanggungjawab mencadangkan undang-undang yang berkaitan dengan jabatannya untuk dibentangkan dalam MPP",
-      "translate": "3️⃣ Ahli bertanggungjawab mencadangkan undang-undang 的 berkaitan 以 jabatannya 为了 dibentangkan 在 MPP",
+      "translate": "3️⃣ 成员负责提出与其部门相关的法律，并在 MPP 中提出",
       "key_points_zh": [
-        "3️⃣ Ahli bertanggungjawab mencadangkan undang-undang 的 berkaitan 以 jabatannya 为了 dibentangkan 在 MPP"
+        "3️⃣ 成员负责提出与其部门相关的法律，并在 MPP 中提出"
       ],
       "bm_focus_phrase": "3️⃣ Ahli bertanggungjawab mencadangkan undang-undang yang berkaitan dengan jabatannya untuk dibentangkan dalam MPP"
     },
     {
       "source_id": "bab-7-3-extra-39",
       "bm_original": "4️⃣ Ahli diletakkan di bawah kuasa Pesuruhjaya Tinggi",
-      "translate": "重点：4️⃣ Ahli diletakkan di bawah kuasa Pesuruhjaya Tinggi",
+      "translate": "4️⃣ 成员受高级专员管辖",
       "key_points_zh": [
-        "重点：4️⃣ Ahli diletakkan di bawah kuasa Pesuruhjaya Tinggi"
+        "4️⃣ 成员受高级专员管辖"
       ],
       "bm_focus_phrase": "4️⃣ Ahli diletakkan di bawah kuasa Pesuruhjaya Tinggi"
     },
     {
       "source_id": "bab-7-3-extra-40",
       "bm_original": "5️⃣ Sistem ini berbentuk kabinet bayangan yang terdiri daripada beberapa pegawai tadbir dan tokoh masyarakat",
-      "translate": "5️⃣ Sistem 这 berbentuk kabinet bayangan 的 terdiri daripada beberapa pegawai tadbir 与 tokoh 社会",
+      "translate": "5️⃣ 这个系统是影子内阁的形式，由多名行政官员和社区领袖组成",
       "key_points_zh": [
-        "5️⃣ Sistem 这 berbentuk kabinet bayangan 的 terdiri daripada beberapa pegawai tadbir 与 tokoh 社会"
+        "5️⃣ 这个系统是影子内阁的形式，由多名行政官员和社区领袖组成"
       ],
       "bm_focus_phrase": "5️⃣ Sistem ini berbentuk kabinet bayangan yang terdiri daripada beberapa pegawai tadbir dan tokoh masyarakat"
     },
     {
       "source_id": "bab-7-3-u11",
       "bm_original": "Sistem Ahli penting ke arah kemerdekaan kerana:",
-      "translate": "Sistem Ahli penting ke arah 独立 因为:",
+      "translate": "成员制对于迈向独立非常重要，因为：",
       "key_points_zh": [
-        "Sistem Ahli penting ke arah 独立 因为:"
+        "成员制对于迈向独立非常重要，因为："
       ],
       "bm_focus_phrase": "Sistem Ahli penting ke arah kemerdekaan kerana:"
     },
     {
       "source_id": "bab-7-3-extra-41",
       "bm_original": "menyediakan asas penting untuk melatih orang tempatan ke arah berkerajaan sendiri",
-      "translate": "menyediakan asas penting 为了 melatih orang 本地 ke arah berkerajaan sendiri",
+      "translate": "为培养当地人民自治提供重要基础",
       "key_points_zh": [
-        "menyediakan asas penting 为了 melatih orang 本地 ke arah berkerajaan sendiri"
+        "为培养当地人民自治提供重要基础"
       ],
       "bm_focus_phrase": "menyediakan asas penting untuk melatih orang tempatan ke arah berkerajaan sendiri"
     },
     {
       "source_id": "bab-7-3-extra-42",
       "bm_original": "memberikan pendedahan kepada penduduk tempatan untuk belajar mentadbir dan menerajui kerajaan menjelang kemerdekaan",
-      "translate": "memberikan pendedahan 向 penduduk 本地 为了 belajar mentadbir 与 menerajui 政府 menjelang 独立",
+      "translate": "让当地居民了解如何在独立前治理和领导政府",
       "key_points_zh": [
-        "memberikan pendedahan 向 penduduk 本地 为了 belajar mentadbir 与 menerajui 政府 menjelang 独立"
+        "让当地居民了解如何在独立前治理和领导政府"
       ],
       "bm_focus_phrase": "memberikan pendedahan kepada penduduk tempatan untuk belajar mentadbir dan menerajui kerajaan menjelang kemerdekaan"
     },
     {
       "source_id": "bab-7-3-extra-43",
       "bm_original": "memupuk perpaduan kaum kerana ahlinya terdiri daripada gabungan pemimpin pelbagai kaum",
-      "translate": "memupuk perpaduan kaum 因为 ahlinya terdiri daripada gabungan 领袖 pelbagai kaum",
+      "translate": "促进种族团结，因为其成员由不同种族的领导人组成",
       "key_points_zh": [
-        "memupuk perpaduan kaum 因为 ahlinya terdiri daripada gabungan 领袖 pelbagai kaum"
+        "促进种族团结，因为其成员由不同种族的领导人组成"
       ],
       "bm_focus_phrase": "memupuk perpaduan kaum kerana ahlinya terdiri daripada gabungan pemimpin pelbagai kaum"
     },
     {
       "source_id": "bab-7-3-extra-44",
       "bm_original": "memastikan kemerdekaan yang diperoleh mendapat sokongan seluruh penduduk Persekutuan Tanah Melayu",
-      "translate": "memastikan 独立 的 diperoleh 获得 sokongan 全国 penduduk Persekutuan Tanah Melayu",
+      "translate": "确保获得的独立得到马来亚联邦全体人民的支持",
       "key_points_zh": [
-        "memastikan 独立 的 diperoleh 获得 sokongan 全国 penduduk Persekutuan Tanah Melayu"
+        "确保获得的独立得到马来亚联邦全体人民的支持"
       ],
       "bm_focus_phrase": "memastikan kemerdekaan yang diperoleh mendapat sokongan seluruh penduduk Persekutuan Tanah Melayu"
     },
     {
       "source_id": "bab-7-3-u12",
       "bm_original": "Sistem Ahli memberikan pendedahan yang baik kepada penduduk tempatan untuk:",
-      "translate": "Sistem Ahli memberikan pendedahan 的 baik 向 penduduk 本地 为了:",
+      "translate": "成员制为当地居民提供了良好的接触机会：",
       "key_points_zh": [
-        "Sistem Ahli memberikan pendedahan 的 baik 向 penduduk 本地 为了:"
+        "成员制为当地居民提供了良好的接触机会："
       ],
       "bm_focus_phrase": "Sistem Ahli memberikan pendedahan yang baik kepada penduduk tempatan untuk:"
     },
     {
       "source_id": "bab-7-3-extra-45",
       "bm_original": "mentadbir kerajaan",
-      "translate": "mentadbir 政府",
+      "translate": "治理政府",
       "key_points_zh": [
-        "mentadbir 政府"
+        "治理政府"
       ],
       "bm_focus_phrase": "mentadbir kerajaan"
     },
     {
       "source_id": "bab-7-3-extra-46",
       "bm_original": "menerajui pentadbiran negara",
-      "translate": "menerajui 行政 negara",
+      "translate": "领导国家行政",
       "key_points_zh": [
-        "menerajui 行政 negara"
+        "领导国家行政"
       ],
       "bm_focus_phrase": "menerajui pentadbiran negara"
     },
     {
       "source_id": "bab-7-3-u13",
       "bm_original": "Sistem ini juga selaras dengan dasar British yang menyediakan tempoh peralihan pentadbiran sebelum kemerdekaan.",
-      "translate": "Sistem 这 也 selaras 以 dasar British 的 menyediakan tempoh peralihan 行政 sebelum 独立.",
+      "translate": "这一制度也符合英国在独立前规定一段行政过渡期的政策。",
       "key_points_zh": [
-        "Sistem 这 也 selaras 以 dasar British 的 menyediakan tempoh peralihan 行政 sebelum 独立."
+        "这一制度也符合英国在独立前规定一段行政过渡期的政策。"
       ],
       "bm_focus_phrase": "Sistem ini juga selaras dengan dasar British yang menyediakan tempoh peralihan pentadbiran sebelum kemerdekaan."
     },
     {
       "source_id": "bab-7-3-u14",
       "bm_original": "Oleh itu, Sistem Ahli menjadi satu langkah penting dalam menyediakan pemimpin tempatan yang berpengalaman, memperkukuh perpaduan kaum dan membuka jalan ke arah kemerdekaan negara.",
-      "translate": "Oleh 那, Sistem Ahli menjadi satu 步骤 penting 在 menyediakan 领袖 本地 的 berpengalaman, memperkukuh perpaduan kaum 与 membuka jalan ke arah 独立 negara.",
+      "translate": "因此，成员制成为培养经验丰富的地方领导人、加强种族团结、为民族独立铺平道路的重要一步。",
       "key_points_zh": [
-        "Oleh 那, Sistem Ahli menjadi satu 步骤 penting 在 menyediakan 领袖 本地 的 berpengalaman, memperkukuh perpaduan kaum 与 membuka jalan ke arah 独立 negara."
+        "因此，成员制成为培养经验丰富的地方领导人、加强种族团结、为民族独立铺平道路的重要一步。"
       ],
       "bm_focus_phrase": "Oleh itu, Sistem Ahli menjadi satu langkah penting dalam menyediakan pemimpin tempatan yang berpengalaman, memperkukuh perpaduan kaum dan membuka jalan ke arah kemerdekaan negara."
     }

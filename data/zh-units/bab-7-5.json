@@ -1,1338 +1,1339 @@
 {
   "meta": {
     "source_file": "notes/bab-7-5.html",
-    "rollout": "gelombang-1-manual-revision"
+    "rollout": "gelombang-1-ms-zh-regenerated",
+    "notes": "Bab 7: translate regenerated from bm_original (ms→zh-CN), then manual term fixes (CLC→族群联络委员会, Sistem Ahli→成员制, Melayu Raya)."
   },
   "units": [
     {
       "source_id": "bab-7-5-u26",
       "bm_original": "Selepas Perang Dunia Kedua , banyak parti politik ditubuhkan hasil perkembangan nasionalisme dan keinginan membebaskan tanah air daripada penjajahan.",
-      "translate": "Selepas 第二次世界大战 , banyak parti 政治 ditubuhkan hasil perkembangan 民族主义 与 keinginan membebaskan tanah air daripada penjajahan.",
+      "translate": "第二次世界大战后，由于民族主义的发展和使祖国摆脱殖民主义的愿望，许多政党成立。",
       "key_points_zh": [
-        "Selepas 第二次世界大战 , banyak parti 政治 ditubuhkan hasil perkembangan 民族主义 与 keinginan membebaskan tanah air daripada penjajahan."
+        "第二次世界大战后，由于民族主义的发展和使祖国摆脱殖民主义的愿望，许多政党成立。"
       ],
       "bm_focus_phrase": "Selepas Perang Dunia Kedua , banyak parti politik ditubuhkan hasil perkembangan nasionalisme dan keinginan membebaskan tanah air daripada penjajahan."
     },
     {
       "source_id": "bab-7-5-u27",
       "bm_original": "Walaupun banyak parti bermula dengan asas kaum atau wilayah, kebanyakannya menuju kepada matlamat yang sama, iaitu mencapai kemerdekaan dan membina negara yang berdaulat.",
-      "translate": "Walaupun banyak parti bermula 以 asas kaum atau wilayah, kebanyakannya menuju 向 matlamat 的 sama, iaitu mencapai 独立 与 membina negara 的 berdaulat.",
+      "translate": "尽管许多政党都是以民族或地区为基础的，但大多数都朝着同一个目标努力，那就是实现独立并建立一个主权国家。",
       "key_points_zh": [
-        "Walaupun banyak parti bermula 以 asas kaum atau wilayah, kebanyakannya menuju 向 matlamat 的 sama, iaitu mencapai 独立 与 membina negara 的 berdaulat."
+        "尽管许多政党都是以民族或地区为基础的，但大多数都朝着同一个目标努力，那就是实现独立并建立一个主权国家。"
       ],
       "bm_focus_phrase": "Walaupun banyak parti bermula dengan asas kaum atau wilayah, kebanyakannya menuju kepada matlamat yang sama, iaitu mencapai kemerdekaan dan membina negara yang berdaulat."
     },
     {
       "source_id": "bab-7-5-u28",
       "bm_original": "Perkembangan ini akhirnya mendorong kerjasama politik antara parti dan antara kaum , yang menjadi asas penting kepada perjuangan kemerdekaan negara.",
-      "translate": "Perkembangan 这 akhirnya mendorong kerjasama 政治 其中 parti 与 其中 kaum , 的 menjadi asas penting 向 斗争 独立 negara.",
+      "translate": "这种发展最终鼓励了党派之间和种族之间的政治合作，成为该国独立斗争的重要基础。",
       "key_points_zh": [
-        "Perkembangan 这 akhirnya mendorong kerjasama 政治 其中 parti 与 其中 kaum , 的 menjadi asas penting 向 斗争 独立 negara."
+        "这种发展最终鼓励了党派之间和种族之间的政治合作，成为该国独立斗争的重要基础。"
       ],
       "bm_focus_phrase": "Perkembangan ini akhirnya mendorong kerjasama politik antara parti dan antara kaum , yang menjadi asas penting kepada perjuangan kemerdekaan negara."
     },
     {
       "source_id": "bab-7-5-u01",
       "bm_original": "Penubuhan parti politik membantu perjuangan kemerdekaan dengan menyedarkan rakyat tentang kepentingan organisasi politik, membela kepentingan masyarakat, dan menyatukan tenaga rakyat dalam menuntut kebebasan daripada penjajah.",
-      "translate": "Penubuhan parti 政治 membantu 斗争 独立 以 menyedarkan 人民 tentang kepentingan organisasi 政治, membela kepentingan 社会, 与 menyatukan tenaga 人民 在 menuntut kebebasan daripada penjajah.",
+      "translate": "政党的建立有助于争取独立的斗争，使人民认识到政治组织的重要性，维护社会利益，团结人民的力量，要求摆脱殖民主义者的自由。",
       "key_points_zh": [
-        "Penubuhan parti 政治 membantu 斗争 独立 以 menyedarkan 人民 tentang kepentingan organisasi 政治, membela kepentingan 社会, 与 menyatukan tenaga 人民 在 menuntut kebebasan daripada penjajah."
+        "政党的建立有助于争取独立的斗争，使人民认识到政治组织的重要性，维护社会利益，团结人民的力量，要求摆脱殖民主义者的自由。"
       ],
       "bm_focus_phrase": "Penubuhan parti politik membantu perjuangan kemerdekaan dengan menyedarkan rakyat tentang kepentingan organisasi politik, membela kepentingan masyarakat, dan menyatukan tenaga rakyat dalam menuntut kebebasan daripada penjajah."
     },
     {
       "source_id": "bab-7-5-u02",
       "bm_original": "Walaupun banyak parti bermula dengan pendekatan berbeza, perkembangan ini akhirnya membawa kepada kerjasama politik yang lebih matang dan memperkukuh perjuangan ke arah kemerdekaan.",
-      "translate": "Walaupun banyak parti bermula 以 pendekatan berbeza, perkembangan 这 akhirnya membawa 向 kerjasama 政治 的 更 matang 与 memperkukuh 斗争 ke arah 独立.",
+      "translate": "尽管许多政党一开始采取了不同的做法，但这种发展最终导致了更加成熟的政治合作并加强了争取独立的斗争。",
       "key_points_zh": [
-        "Walaupun banyak parti bermula 以 pendekatan berbeza, perkembangan 这 akhirnya membawa 向 kerjasama 政治 的 更 matang 与 memperkukuh 斗争 ke arah 独立."
+        "尽管许多政党一开始采取了不同的做法，但这种发展最终导致了更加成熟的政治合作并加强了争取独立的斗争。"
       ],
       "bm_focus_phrase": "Walaupun banyak parti bermula dengan pendekatan berbeza, perkembangan ini akhirnya membawa kepada kerjasama politik yang lebih matang dan memperkukuh perjuangan ke arah kemerdekaan."
     },
     {
       "source_id": "bab-7-5-extra-1",
       "bm_original": "Dr. Burhanuddin al-Helmi",
-      "translate": "重点：Dr. Burhanuddin al-Helmi",
+      "translate": "Burhanuddin al-Helmi 博士",
       "key_points_zh": [
-        "重点：Dr. Burhanuddin al-Helmi"
+        "Burhanuddin al-Helmi 博士"
       ],
       "bm_focus_phrase": "Dr. Burhanuddin al-Helmi"
     },
     {
       "source_id": "bab-7-5-extra-2",
       "bm_original": "Ishak Haji Muhammad",
-      "translate": "重点：Ishak Haji Muhammad",
+      "translate": "艾萨克·哈吉·穆罕默德",
       "key_points_zh": [
-        "重点：Ishak Haji Muhammad"
+        "艾萨克·哈吉·穆罕默德"
       ],
       "bm_focus_phrase": "Ishak Haji Muhammad"
     },
     {
       "source_id": "bab-7-5-extra-3",
       "bm_original": "Ahmad Boestamam",
-      "translate": "重点：Ahmad Boestamam",
+      "translate": "艾哈迈德·布埃斯塔曼",
       "key_points_zh": [
-        "重点：Ahmad Boestamam"
+        "艾哈迈德·布埃斯塔曼"
       ],
       "bm_focus_phrase": "Ahmad Boestamam"
     },
     {
       "source_id": "bab-7-5-extra-4",
       "bm_original": "melahirkan kesedaran politik dalam kalangan orang Melayu",
-      "translate": "melahirkan kesedaran 政治 在 kalangan orang Melayu",
+      "translate": "提高马来人的政治意识",
       "key_points_zh": [
-        "melahirkan kesedaran 政治 在 kalangan orang Melayu"
+        "提高马来人的政治意识"
       ],
       "bm_focus_phrase": "melahirkan kesedaran politik dalam kalangan orang Melayu"
     },
     {
       "source_id": "bab-7-5-extra-5",
       "bm_original": "menekankan perpaduan antara penduduk berbilang kaum",
-      "translate": "menekankan perpaduan 其中 penduduk berbilang kaum",
+      "translate": "强调多种族人口之间的团结",
       "key_points_zh": [
-        "menekankan perpaduan 其中 penduduk berbilang kaum"
+        "强调多种族人口之间的团结"
       ],
       "bm_focus_phrase": "menekankan perpaduan antara penduduk berbilang kaum"
     },
     {
       "source_id": "bab-7-5-extra-6",
       "bm_original": "mencapai kemerdekaan dan memperjuangkan Melayu Raya",
-      "translate": "mencapai 独立 与 memperjuangkan Melayu Raya",
+      "translate": "争取独立并倡导大马来由（Melayu Raya）",
       "key_points_zh": [
-        "mencapai 独立 与 memperjuangkan Melayu Raya"
+        "争取独立并倡导大马来由（Melayu Raya）"
       ],
       "bm_focus_phrase": "mencapai kemerdekaan dan memperjuangkan Melayu Raya"
     },
     {
       "source_id": "bab-7-5-extra-7",
       "bm_original": "Abang Haji Zaini",
-      "translate": "重点：Abang Haji Zaini",
+      "translate": "哈吉再尼弟兄",
       "key_points_zh": [
-        "重点：Abang Haji Zaini"
+        "哈吉再尼弟兄"
       ],
       "bm_focus_phrase": "Abang Haji Zaini"
     },
     {
       "source_id": "bab-7-5-extra-8",
       "bm_original": "Abang Haji Openg",
-      "translate": "重点：Abang Haji Openg",
+      "translate": "哈吉·奥彭弟兄",
       "key_points_zh": [
-        "重点：Abang Haji Openg"
+        "哈吉·奥彭弟兄"
       ],
       "bm_focus_phrase": "Abang Haji Openg"
     },
     {
       "source_id": "bab-7-5-extra-9",
       "bm_original": "Datu Patinggi Abang Haji Abdillah",
-      "translate": "Datu Patinggi Abang Haji Abdillah",
+      "translate": "达图·巴廷吉·阿邦·哈吉·阿卜迪拉",
       "key_points_zh": [
-        "Datu Patinggi Abang Haji Abdillah"
+        "达图·巴廷吉·阿邦·哈吉·阿卜迪拉"
       ],
       "bm_focus_phrase": "Datu Patinggi Abang Haji Abdillah"
     },
     {
       "source_id": "bab-7-5-extra-10",
       "bm_original": "memupuk kesetiaan dan perpaduan kaum di Sarawak",
-      "translate": "memupuk kesetiaan 与 perpaduan kaum di Sarawak",
+      "translate": "促进砂拉越的忠诚和种族团结",
       "key_points_zh": [
-        "memupuk kesetiaan 与 perpaduan kaum di Sarawak"
+        "促进砂拉越的忠诚和种族团结"
       ],
       "bm_focus_phrase": "memupuk kesetiaan dan perpaduan kaum di Sarawak"
     },
     {
       "source_id": "bab-7-5-extra-11",
       "bm_original": "menentang penyerahan Sarawak kepada British",
-      "translate": "反对 penyerahan Sarawak 向 British",
+      "translate": "反对将砂拉越移交给英国",
       "key_points_zh": [
-        "反对 penyerahan Sarawak 向 British"
+        "反对将砂拉越移交给英国"
       ],
       "bm_focus_phrase": "menentang penyerahan Sarawak kepada British"
     },
     {
       "source_id": "bab-7-5-extra-12",
       "bm_original": "penjenamaan semula Persatuan Melayu Sarawak (PMS) yang diharamkan semasa pendudukan Jepun",
-      "translate": "penjenamaan semula 协会 Melayu Sarawak (PMS) 的 diharamkan semasa pendudukan Jepun",
+      "translate": "砂拉越马来协会（PMS）的品牌重塑，该协会在日本占领期间被禁止",
       "key_points_zh": [
-        "penjenamaan semula 协会 Melayu Sarawak (PMS) 的 diharamkan semasa pendudukan Jepun"
+        "砂拉越马来协会（PMS）的品牌重塑，该协会在日本占领期间被禁止"
       ],
       "bm_focus_phrase": "penjenamaan semula Persatuan Melayu Sarawak (PMS) yang diharamkan semasa pendudukan Jepun"
     },
     {
       "source_id": "bab-7-5-extra-13",
       "bm_original": "Ahmad Boestamam",
-      "translate": "重点：Ahmad Boestamam",
+      "translate": "艾哈迈德·布埃斯塔曼",
       "key_points_zh": [
-        "重点：Ahmad Boestamam"
+        "艾哈迈德·布埃斯塔曼"
       ],
       "bm_focus_phrase": "Ahmad Boestamam"
     },
     {
       "source_id": "bab-7-5-extra-14",
       "bm_original": "menggembleng tenaga pemuda sebagai penggerak perubahan politik",
-      "translate": "menggembleng tenaga pemuda 作为 penggerak perubahan 政治",
+      "translate": "动员青年能量作为政治变革的驱动力",
       "key_points_zh": [
-        "menggembleng tenaga pemuda 作为 penggerak perubahan 政治"
+        "动员青年能量作为政治变革的驱动力"
       ],
       "bm_focus_phrase": "menggembleng tenaga pemuda sebagai penggerak perubahan politik"
     },
     {
       "source_id": "bab-7-5-extra-15",
       "bm_original": "menggunakan slogan “Merdeka dengan Darah” untuk memperjuangkan kemerdekaan",
-      "translate": "menggunakan slogan “Merdeka 以 Darah” 为了 memperjuangkan 独立",
+      "translate": "用“用鲜血自由”的口号争取独立",
       "key_points_zh": [
-        "menggunakan slogan “Merdeka 以 Darah” 为了 memperjuangkan 独立"
+        "用“用鲜血自由”的口号争取独立"
       ],
       "bm_focus_phrase": "menggunakan slogan “Merdeka dengan Darah” untuk memperjuangkan kemerdekaan"
     },
     {
       "source_id": "bab-7-5-extra-16",
       "bm_original": "Mohamad Sirat Yaman",
-      "translate": "Mohamad Sirat Yaman",
+      "translate": "穆罕默德·西拉特 也门",
       "key_points_zh": [
-        "Mohamad Sirat Yaman"
+        "穆罕默德·西拉特 也门"
       ],
       "bm_focus_phrase": "Mohamad Sirat Yaman"
     },
     {
       "source_id": "bab-7-5-extra-17",
       "bm_original": "Awang Rambli",
-      "translate": "重点：Awang Rambli",
+      "translate": "阿旺·兰布利",
       "key_points_zh": [
-        "重点：Awang Rambli"
+        "阿旺·兰布利"
       ],
       "bm_focus_phrase": "Awang Rambli"
     },
     {
       "source_id": "bab-7-5-extra-18",
       "bm_original": "Rosli Dhoby",
-      "translate": "重点：Rosli Dhoby",
+      "translate": "罗斯里·多比",
       "key_points_zh": [
-        "重点：Rosli Dhoby"
+        "罗斯里·多比"
       ],
       "bm_focus_phrase": "Rosli Dhoby"
     },
     {
       "source_id": "bab-7-5-extra-19",
       "bm_original": "Morshidi Sidek",
-      "translate": "重点：Morshidi Sidek",
+      "translate": "穆什迪·西德克",
       "key_points_zh": [
-        "重点：Morshidi Sidek"
+        "穆什迪·西德克"
       ],
       "bm_focus_phrase": "Morshidi Sidek"
     },
     {
       "source_id": "bab-7-5-extra-20",
       "bm_original": "menentang penjajahan British",
-      "translate": "反对 penjajahan British",
+      "translate": "反对英国殖民主义",
       "key_points_zh": [
-        "反对 penjajahan British"
+        "反对英国殖民主义"
       ],
       "bm_focus_phrase": "menentang penjajahan British"
     },
     {
       "source_id": "bab-7-5-extra-21",
       "bm_original": "menuntut kemerdekaan Sarawak",
-      "translate": "menuntut 独立 Sarawak",
+      "translate": "要求砂拉越独立",
       "key_points_zh": [
-        "menuntut 独立 Sarawak"
+        "要求砂拉越独立"
       ],
       "bm_focus_phrase": "menuntut kemerdekaan Sarawak"
     },
     {
       "source_id": "bab-7-5-extra-22",
       "bm_original": "Dato’ Onn Jaafar",
-      "translate": "Dato’ Onn Jaafar",
+      "translate": "拿督翁贾法尔",
       "key_points_zh": [
-        "Dato’ Onn Jaafar"
+        "拿督翁贾法尔"
       ],
       "bm_focus_phrase": "Dato’ Onn Jaafar"
     },
     {
       "source_id": "bab-7-5-extra-23",
       "bm_original": "Tunku Abdul Rahman",
-      "translate": "Tunku Abdul Rahman",
+      "translate": "东姑阿都拉曼",
       "key_points_zh": [
-        "Tunku Abdul Rahman"
+        "东姑阿都拉曼"
       ],
       "bm_focus_phrase": "Tunku Abdul Rahman"
     },
     {
       "source_id": "bab-7-5-extra-24",
       "bm_original": "menentang Malayan Union",
-      "translate": "反对 Malayan Union",
+      "translate": "反对马来亚联盟",
       "key_points_zh": [
-        "反对 Malayan Union"
+        "反对马来亚联盟"
       ],
       "bm_focus_phrase": "menentang Malayan Union"
     },
     {
       "source_id": "bab-7-5-extra-25",
       "bm_original": "bekerjasama dengan kaum lain untuk mencapai kemerdekaan",
-      "translate": "bekerjasama 以 kaum lain 为了 mencapai 独立",
+      "translate": "与其他种族合作以实现独立",
       "key_points_zh": [
-        "bekerjasama 以 kaum lain 为了 mencapai 独立"
+        "与其他种族合作以实现独立"
       ],
       "bm_focus_phrase": "bekerjasama dengan kaum lain untuk mencapai kemerdekaan"
     },
     {
       "source_id": "bab-7-5-extra-26",
       "bm_original": "Tengku Noordin",
-      "translate": "Tengku Noordin",
+      "translate": "东姑努丁",
       "key_points_zh": [
-        "Tengku Noordin"
+        "东姑努丁"
       ],
       "bm_focus_phrase": "Tengku Noordin"
     },
     {
       "source_id": "bab-7-5-extra-27",
       "bm_original": "Zakaria Gunn",
-      "translate": "重点：Zakaria Gunn",
+      "translate": "扎卡里亚·冈恩",
       "key_points_zh": [
-        "重点：Zakaria Gunn"
+        "扎卡里亚·冈恩"
       ],
       "bm_focus_phrase": "Zakaria Gunn"
     },
     {
       "source_id": "bab-7-5-extra-28",
       "bm_original": "meningkatkan kemajuan dalam bidang sosioekonomi",
-      "translate": "提升 kemajuan 在 bidang sosioekonomi",
+      "translate": "促进社会经济领域的进步",
       "key_points_zh": [
-        "提升 kemajuan 在 bidang sosioekonomi"
+        "促进社会经济领域的进步"
       ],
       "bm_focus_phrase": "meningkatkan kemajuan dalam bidang sosioekonomi"
     },
     {
       "source_id": "bab-7-5-extra-29",
       "bm_original": "menuntut supaya Sabah dimerdekakan daripada pentadbiran British",
-      "translate": "menuntut supaya Sabah dimerdekakan daripada 行政 British",
+      "translate": "要求沙巴脱离英国管理",
       "key_points_zh": [
-        "menuntut supaya Sabah dimerdekakan daripada 行政 British"
+        "要求沙巴脱离英国管理"
       ],
       "bm_focus_phrase": "menuntut supaya Sabah dimerdekakan daripada pentadbiran British"
     },
     {
       "source_id": "bab-7-5-extra-30",
       "bm_original": "John Thivy",
-      "translate": "重点：John Thivy",
+      "translate": "约翰·蒂维",
       "key_points_zh": [
-        "重点：John Thivy"
+        "约翰·蒂维"
       ],
       "bm_focus_phrase": "John Thivy"
     },
     {
       "source_id": "bab-7-5-extra-31",
       "bm_original": "K.L. Devasar",
-      "translate": "重点：K.L. Devasar",
+      "translate": "K.L.德瓦萨",
       "key_points_zh": [
-        "重点：K.L. Devasar"
+        "K.L.德瓦萨"
       ],
       "bm_focus_phrase": "K.L. Devasar"
     },
     {
       "source_id": "bab-7-5-extra-32",
       "bm_original": "menjaga kepentingan orang India di Tanah Melayu",
-      "translate": "重点：menjaga kepentingan orang India di Tanah Melayu",
+      "translate": "保护马来亚印裔的利益",
       "key_points_zh": [
-        "重点：menjaga kepentingan orang India di Tanah Melayu"
+        "保护马来亚印裔的利益"
       ],
       "bm_focus_phrase": "menjaga kepentingan orang India di Tanah Melayu"
     },
     {
       "source_id": "bab-7-5-extra-33",
       "bm_original": "memperjuangkan kemajuan politik bersama-sama kaum lain",
-      "translate": "memperjuangkan kemajuan 政治 bersama-sama kaum lain",
+      "translate": "与其他种族一起争取政治进步",
       "key_points_zh": [
-        "memperjuangkan kemajuan 政治 bersama-sama kaum lain"
+        "与其他种族一起争取政治进步"
       ],
       "bm_focus_phrase": "memperjuangkan kemajuan politik bersama-sama kaum lain"
     },
     {
       "source_id": "bab-7-5-extra-34",
       "bm_original": "Mandur Syarif",
-      "translate": "重点：Mandur Syarif",
+      "translate": "工头谢里夫",
       "key_points_zh": [
-        "重点：Mandur Syarif"
+        "工头谢里夫"
       ],
       "bm_focus_phrase": "Mandur Syarif"
     },
     {
       "source_id": "bab-7-5-extra-35",
       "bm_original": "Imam Suhaili Yaakub",
-      "translate": "重点：Imam Suhaili Yaakub",
+      "translate": "伊玛目苏海利·雅各布",
       "key_points_zh": [
-        "重点：Imam Suhaili Yaakub"
+        "伊玛目苏海利·雅各布"
       ],
       "bm_focus_phrase": "Imam Suhaili Yaakub"
     },
     {
       "source_id": "bab-7-5-extra-36",
       "bm_original": "Pengiran Ahmad",
-      "translate": "重点：Pengiran Ahmad",
+      "translate": "彭吉兰艾哈迈德",
       "key_points_zh": [
-        "重点：Pengiran Ahmad"
+        "彭吉兰艾哈迈德"
       ],
       "bm_focus_phrase": "Pengiran Ahmad"
     },
     {
       "source_id": "bab-7-5-extra-37",
       "bm_original": "menyatukan anak negeri dan bekerjasama memperbaik keadaan ekonomi dan politik",
-      "translate": "menyatukan anak 州 与 bekerjasama memperbaik keadaan ekonomi 与 政治",
+      "translate": "团结全国人民，共同努力改善经济和政治形势",
       "key_points_zh": [
-        "menyatukan anak 州 与 bekerjasama memperbaik keadaan ekonomi 与 政治"
+        "团结全国人民，共同努力改善经济和政治形势"
       ],
       "bm_focus_phrase": "menyatukan anak negeri dan bekerjasama memperbaik keadaan ekonomi dan politik"
     },
     {
       "source_id": "bab-7-5-extra-38",
       "bm_original": "menuntut keadilan daripada pentadbiran British",
-      "translate": "menuntut keadilan daripada 行政 British",
+      "translate": "要求英国政府伸张正义",
       "key_points_zh": [
-        "menuntut keadilan daripada 行政 British"
+        "要求英国政府伸张正义"
       ],
       "bm_focus_phrase": "menuntut keadilan daripada pentadbiran British"
     },
     {
       "source_id": "bab-7-5-extra-39",
       "bm_original": "Abang Mohd. Kassim Taha",
-      "translate": "重点：Abang Mohd. Kassim Taha",
+      "translate": "莫哈德兄弟。卡西姆·塔哈",
       "key_points_zh": [
-        "重点：Abang Mohd. Kassim Taha"
+        "莫哈德兄弟。卡西姆·塔哈"
       ],
       "bm_focus_phrase": "Abang Mohd. Kassim Taha"
     },
     {
       "source_id": "bab-7-5-extra-40",
       "bm_original": "Ahmad Zaidi Adruce",
-      "translate": "重点：Ahmad Zaidi Adruce",
+      "translate": "艾哈迈德·扎伊迪·阿德鲁斯",
       "key_points_zh": [
-        "重点：Ahmad Zaidi Adruce"
+        "艾哈迈德·扎伊迪·阿德鲁斯"
       ],
       "bm_focus_phrase": "Ahmad Zaidi Adruce"
     },
     {
       "source_id": "bab-7-5-extra-41",
       "bm_original": "memperjuangkan kepentingan penduduk bumiputera ke arah berkerajaan sendiri",
-      "translate": "memperjuangkan kepentingan penduduk bumiputera ke arah berkerajaan sendiri",
+      "translate": "为土著人民争取自治的利益",
       "key_points_zh": [
-        "memperjuangkan kepentingan penduduk bumiputera ke arah berkerajaan sendiri"
+        "为土著人民争取自治的利益"
       ],
       "bm_focus_phrase": "memperjuangkan kepentingan penduduk bumiputera ke arah berkerajaan sendiri"
     },
     {
       "source_id": "bab-7-5-extra-42",
       "bm_original": "menentang penyerahan Sarawak kepada British",
-      "translate": "反对 penyerahan Sarawak 向 British",
+      "translate": "反对将砂拉越移交给英国",
       "key_points_zh": [
-        "反对 penyerahan Sarawak 向 British"
+        "反对将砂拉越移交给英国"
       ],
       "bm_focus_phrase": "menentang penyerahan Sarawak kepada British"
     },
     {
       "source_id": "bab-7-5-extra-43",
       "bm_original": "Tan Cheng Lock",
-      "translate": "重点：Tan Cheng Lock",
+      "translate": "陈祯禄",
       "key_points_zh": [
-        "重点：Tan Cheng Lock"
+        "陈祯禄"
       ],
       "bm_focus_phrase": "Tan Cheng Lock"
     },
     {
       "source_id": "bab-7-5-extra-44",
       "bm_original": "Yong Shook Lin",
-      "translate": "重点：Yong Shook Lin",
+      "translate": "杨旭林",
       "key_points_zh": [
-        "重点：Yong Shook Lin"
+        "杨旭林"
       ],
       "bm_focus_phrase": "Yong Shook Lin"
     },
     {
       "source_id": "bab-7-5-extra-45",
       "bm_original": "H.S. Lee",
-      "translate": "重点：H.S. Lee",
+      "translate": "H.S.李",
       "key_points_zh": [
-        "重点：H.S. Lee"
+        "H.S.李"
       ],
       "bm_focus_phrase": "H.S. Lee"
     },
     {
       "source_id": "bab-7-5-extra-46",
       "bm_original": "memelihara kepentingan kaum Cina",
-      "translate": "重点：memelihara kepentingan kaum Cina",
+      "translate": "维护中国人民的利益",
       "key_points_zh": [
-        "重点：memelihara kepentingan kaum Cina"
+        "维护中国人民的利益"
       ],
       "bm_focus_phrase": "memelihara kepentingan kaum Cina"
     },
     {
       "source_id": "bab-7-5-extra-47",
       "bm_original": "bekerjasama menentang komunis di Tanah Melayu",
-      "translate": "bekerjasama 反对 komunis di Tanah Melayu",
+      "translate": "共同反对马来亚的共产党",
       "key_points_zh": [
-        "bekerjasama 反对 komunis di Tanah Melayu"
+        "共同反对马来亚的共产党"
       ],
       "bm_focus_phrase": "bekerjasama menentang komunis di Tanah Melayu"
     },
     {
       "source_id": "bab-7-5-extra-48",
       "bm_original": "Dato’ Onn Jaafar",
-      "translate": "Dato’ Onn Jaafar",
+      "translate": "拿督翁贾法尔",
       "key_points_zh": [
-        "Dato’ Onn Jaafar"
+        "拿督翁贾法尔"
       ],
       "bm_focus_phrase": "Dato’ Onn Jaafar"
     },
     {
       "source_id": "bab-7-5-extra-49",
       "bm_original": "Tan Cheng Lock",
-      "translate": "重点：Tan Cheng Lock",
+      "translate": "陈祯禄",
       "key_points_zh": [
-        "重点：Tan Cheng Lock"
+        "陈祯禄"
       ],
       "bm_focus_phrase": "Tan Cheng Lock"
     },
     {
       "source_id": "bab-7-5-extra-50",
       "bm_original": "menyatukan rakyat pelbagai kaum di Tanah Melayu",
-      "translate": "menyatukan 人民 pelbagai kaum di Tanah Melayu",
+      "translate": "团结马来亚各族人民",
       "key_points_zh": [
-        "menyatukan 人民 pelbagai kaum di Tanah Melayu"
+        "团结马来亚各族人民"
       ],
       "bm_focus_phrase": "menyatukan rakyat pelbagai kaum di Tanah Melayu"
     },
     {
       "source_id": "bab-7-5-extra-51",
       "bm_original": "menjadikan kerjasama kaum sebagai dasar penting untuk mencapai kemerdekaan",
-      "translate": "menjadikan kerjasama kaum 作为 dasar penting 为了 mencapai 独立",
+      "translate": "让种族合作成为实现独立的重要基础",
       "key_points_zh": [
-        "menjadikan kerjasama kaum 作为 dasar penting 为了 mencapai 独立"
+        "让种族合作成为实现独立的重要基础"
       ],
       "bm_focus_phrase": "menjadikan kerjasama kaum sebagai dasar penting untuk mencapai kemerdekaan"
     },
     {
       "source_id": "bab-7-5-extra-52",
       "bm_original": "Haji Ahmad Fuad Hassan",
-      "translate": "重点：Haji Ahmad Fuad Hassan",
+      "translate": "哈吉·艾哈迈德·福阿德·哈桑",
       "key_points_zh": [
-        "重点：Haji Ahmad Fuad Hassan"
+        "哈吉·艾哈迈德·福阿德·哈桑"
       ],
       "bm_focus_phrase": "Haji Ahmad Fuad Hassan"
     },
     {
       "source_id": "bab-7-5-extra-53",
       "bm_original": "Dr. Burhanuddin al-Helmi",
-      "translate": "重点：Dr. Burhanuddin al-Helmi",
+      "translate": "Burhanuddin al-Helmi 博士",
       "key_points_zh": [
-        "重点：Dr. Burhanuddin al-Helmi"
+        "Burhanuddin al-Helmi 博士"
       ],
       "bm_focus_phrase": "Dr. Burhanuddin al-Helmi"
     },
     {
       "source_id": "bab-7-5-extra-54",
       "bm_original": "memperjuangkan kemerdekaan penuh bagi Tanah Melayu",
-      "translate": "memperjuangkan 独立 penuh bagi Tanah Melayu",
+      "translate": "争取马来亚完全独立",
       "key_points_zh": [
-        "memperjuangkan 独立 penuh bagi Tanah Melayu"
+        "争取马来亚完全独立"
       ],
       "bm_focus_phrase": "memperjuangkan kemerdekaan penuh bagi Tanah Melayu"
     },
     {
       "source_id": "bab-7-5-extra-55",
       "bm_original": "memperjuangkan penyatuan pentadbiran Islam di negeri Melayu",
-      "translate": "memperjuangkan penyatuan 行政 Islam di 州 Melayu",
+      "translate": "争取马来国家伊斯兰行政的统一",
       "key_points_zh": [
-        "memperjuangkan penyatuan 行政 Islam di 州 Melayu"
+        "争取马来国家伊斯兰行政的统一"
       ],
       "bm_focus_phrase": "memperjuangkan penyatuan pentadbiran Islam di negeri Melayu"
     },
     {
       "source_id": "bab-7-5-extra-56",
       "bm_original": "Dr. S. Kanapathippilai",
-      "translate": "重点：Dr. S. Kanapathippilai",
+      "translate": "S.卡纳帕皮莱博士",
       "key_points_zh": [
-        "重点：Dr. S. Kanapathippilai"
+        "S.卡纳帕皮莱博士"
       ],
       "bm_focus_phrase": "Dr. S. Kanapathippilai"
     },
     {
       "source_id": "bab-7-5-extra-57",
       "bm_original": "D.R. Seenivasagam",
-      "translate": "重点：D.R. Seenivasagam",
+      "translate": "D.R.西尼瓦萨甘",
       "key_points_zh": [
-        "重点：D.R. Seenivasagam"
+        "D.R.西尼瓦萨甘"
       ],
       "bm_focus_phrase": "D.R. Seenivasagam"
     },
     {
       "source_id": "bab-7-5-extra-58",
       "bm_original": "memperjuangkan hak yang sama untuk semua kaum",
-      "translate": "memperjuangkan 权利 的 sama 为了 semua kaum",
+      "translate": "为所有种族争取平等权利",
       "key_points_zh": [
-        "memperjuangkan 权利 的 sama 为了 semua kaum"
+        "为所有种族争取平等权利"
       ],
       "bm_focus_phrase": "memperjuangkan hak yang sama untuk semua kaum"
     },
     {
       "source_id": "bab-7-5-extra-59",
       "bm_original": "memperjuangkan keadilan sosioekonomi berasaskan demokrasi berparlimen",
-      "translate": "重点：memperjuangkan keadilan sosioekonomi berasaskan demokrasi berparlimen",
+      "translate": "以议会民主为基础争取社会经济正义",
       "key_points_zh": [
-        "重点：memperjuangkan keadilan sosioekonomi berasaskan demokrasi berparlimen"
+        "以议会民主为基础争取社会经济正义"
       ],
       "bm_focus_phrase": "memperjuangkan keadilan sosioekonomi berasaskan demokrasi berparlimen"
     },
     {
       "source_id": "bab-7-5-extra-60",
       "bm_original": "Dato’ Onn Jaafar",
-      "translate": "Dato’ Onn Jaafar",
+      "translate": "拿督翁贾法尔",
       "key_points_zh": [
-        "Dato’ Onn Jaafar"
+        "拿督翁贾法尔"
       ],
       "bm_focus_phrase": "Dato’ Onn Jaafar"
     },
     {
       "source_id": "bab-7-5-extra-61",
       "bm_original": "Dato’ Hamzah Abdullah",
-      "translate": "Dato’ Hamzah Abdullah",
+      "translate": "拿督哈姆扎阿卜杜拉",
       "key_points_zh": [
-        "Dato’ Hamzah Abdullah"
+        "拿督哈姆扎阿卜杜拉"
       ],
       "bm_focus_phrase": "Dato’ Hamzah Abdullah"
     },
     {
       "source_id": "bab-7-5-extra-62",
       "bm_original": "Heah Joo Seang",
-      "translate": "重点：Heah Joo Seang",
+      "translate": "嘿卓尚",
       "key_points_zh": [
-        "重点：Heah Joo Seang"
+        "嘿卓尚"
       ],
       "bm_focus_phrase": "Heah Joo Seang"
     },
     {
       "source_id": "bab-7-5-extra-63",
       "bm_original": "E.E.C. Thuraisingham",
-      "translate": "重点：E.E.C. Thuraisingham",
+      "translate": "欧洲经济共同体。图拉辛厄姆",
       "key_points_zh": [
-        "重点：E.E.C. Thuraisingham"
+        "欧洲经济共同体。图拉辛厄姆"
       ],
       "bm_focus_phrase": "E.E.C. Thuraisingham"
     },
     {
       "source_id": "bab-7-5-extra-64",
       "bm_original": "P. Ramani",
-      "translate": "重点：P. Ramani",
+      "translate": "P·拉马尼",
       "key_points_zh": [
-        "重点：P. Ramani"
+        "P·拉马尼"
       ],
       "bm_focus_phrase": "P. Ramani"
     },
     {
       "source_id": "bab-7-5-extra-65",
       "bm_original": "menuntut kemerdekaan dengan kerjasama semua kaum",
-      "translate": "menuntut 独立 以 kerjasama semua kaum",
+      "translate": "要求各族合作独立",
       "key_points_zh": [
-        "menuntut 独立 以 kerjasama semua kaum"
+        "要求各族合作独立"
       ],
       "bm_focus_phrase": "menuntut kemerdekaan dengan kerjasama semua kaum"
     },
     {
       "source_id": "bab-7-5-extra-66",
       "bm_original": "membentuk satu parti bagi semua rakyat untuk membina negara Tanah Melayu",
-      "translate": "membentuk satu parti bagi semua 人民 为了 membina negara Tanah Melayu",
+      "translate": "组建全民政党，建设马来亚国家",
       "key_points_zh": [
-        "membentuk satu parti bagi semua 人民 为了 membina negara Tanah Melayu"
+        "组建全民政党，建设马来亚国家"
       ],
       "bm_focus_phrase": "membentuk satu parti bagi semua rakyat untuk membina negara Tanah Melayu"
     },
     {
       "source_id": "bab-7-5-extra-67",
       "bm_original": "kebanyakan parti politik berasaskan kaum dari segi aspirasi dan keahlian",
-      "translate": "kebanyakan parti 政治 berasaskan kaum dari segi aspirasi 与 keahlian",
+      "translate": "大多数政党在愿望和成员资格方面都是基于种族的",
       "key_points_zh": [
-        "kebanyakan parti 政治 berasaskan kaum dari segi aspirasi 与 keahlian"
+        "大多数政党在愿望和成员资格方面都是基于种族的"
       ],
       "bm_focus_phrase": "kebanyakan parti politik berasaskan kaum dari segi aspirasi dan keahlian"
     },
     {
       "source_id": "bab-7-5-extra-68",
       "bm_original": "ditubuhkan untuk memperjuangkan kepentingan kaum masing-masing",
-      "translate": "ditubuhkan 为了 memperjuangkan kepentingan kaum masing-masing",
+      "translate": "成立的目的是为了各自种族的利益而斗争",
       "key_points_zh": [
-        "ditubuhkan 为了 memperjuangkan kepentingan kaum masing-masing"
+        "成立的目的是为了各自种族的利益而斗争"
       ],
       "bm_focus_phrase": "ditubuhkan untuk memperjuangkan kepentingan kaum masing-masing"
     },
     {
       "source_id": "bab-7-5-extra-69",
       "bm_original": "terdapat juga usaha menubuhkan parti pelbagai kaum",
-      "translate": "terdapat 也 usaha 成立 parti pelbagai kaum",
+      "translate": "还努力建立一个多种族政党",
       "key_points_zh": [
-        "terdapat 也 usaha 成立 parti pelbagai kaum"
+        "还努力建立一个多种族政党"
       ],
       "bm_focus_phrase": "terdapat juga usaha menubuhkan parti pelbagai kaum"
     },
     {
       "source_id": "bab-7-5-extra-70",
       "bm_original": "membentuk parti bercorak kebangsaan",
-      "translate": "重点：membentuk parti bercorak kebangsaan",
+      "translate": "组建国家型政党",
       "key_points_zh": [
-        "重点：membentuk parti bercorak kebangsaan"
+        "组建国家型政党"
       ],
       "bm_focus_phrase": "membentuk parti bercorak kebangsaan"
     },
     {
       "source_id": "bab-7-5-u03",
       "bm_original": "Penubuhan parti politik membuktikan bahawa rakyat semakin sedar akan pentingnya:",
-      "translate": "Penubuhan parti 政治 membuktikan bahawa 人民 semakin sedar 将会 pentingnya:",
+      "translate": "政党的建立证明人们日益认识到以下方面的重要性：",
       "key_points_zh": [
-        "Penubuhan parti 政治 membuktikan bahawa 人民 semakin sedar 将会 pentingnya:"
+        "政党的建立证明人们日益认识到以下方面的重要性："
       ],
       "bm_focus_phrase": "Penubuhan parti politik membuktikan bahawa rakyat semakin sedar akan pentingnya:"
     },
     {
       "source_id": "bab-7-5-extra-71",
       "bm_original": "organisasi politik",
-      "translate": "organisasi 政治",
+      "translate": "政治组织",
       "key_points_zh": [
-        "organisasi 政治"
+        "政治组织"
       ],
       "bm_focus_phrase": "organisasi politik"
     },
     {
       "source_id": "bab-7-5-extra-72",
       "bm_original": "permuafakatan",
-      "translate": "重点：permuafakatan",
+      "translate": "共识",
       "key_points_zh": [
-        "重点：permuafakatan"
+        "共识"
       ],
       "bm_focus_phrase": "permuafakatan"
     },
     {
       "source_id": "bab-7-5-extra-73",
       "bm_original": "kesederhanaan dalam perjuangan",
-      "translate": "kesederhanaan 在 斗争",
+      "translate": "斗争中的简单",
       "key_points_zh": [
-        "kesederhanaan 在 斗争"
+        "斗争中的简单"
       ],
       "bm_focus_phrase": "kesederhanaan dalam perjuangan"
     },
     {
       "source_id": "bab-7-5-u04",
       "bm_original": "Pusat Tenaga Rakyat (PUTERA) dipimpin oleh:",
-      "translate": "Pusat Tenaga 人民 (PUTERA) dipimpin 由:",
+      "translate": "Pusat Tenaga Rakyat (PUTERA) 的领导者是：",
       "key_points_zh": [
-        "Pusat Tenaga 人民 (PUTERA) dipimpin 由:"
+        "Pusat Tenaga Rakyat (PUTERA) 的领导者是："
       ],
       "bm_focus_phrase": "Pusat Tenaga Rakyat (PUTERA) dipimpin oleh:"
     },
     {
       "source_id": "bab-7-5-extra-74",
       "bm_original": "Dr. Burhanuddin al-Helmi",
-      "translate": "重点：Dr. Burhanuddin al-Helmi",
+      "translate": "Burhanuddin al-Helmi 博士",
       "key_points_zh": [
-        "重点：Dr. Burhanuddin al-Helmi"
+        "Burhanuddin al-Helmi 博士"
       ],
       "bm_focus_phrase": "Dr. Burhanuddin al-Helmi"
     },
     {
       "source_id": "bab-7-5-u05",
       "bm_original": "All Malaya Council of Joint Action (AMCJA) diketuai oleh:",
-      "translate": "All Malaya Council of Joint Action (AMCJA) diketuai 由:",
+      "translate": "全马来亚联合行动理事会（AMCJA）的领导者是：",
       "key_points_zh": [
-        "All Malaya Council of Joint Action (AMCJA) diketuai 由:"
+        "全马来亚联合行动理事会（AMCJA）的领导者是："
       ],
       "bm_focus_phrase": "All Malaya Council of Joint Action (AMCJA) diketuai oleh:"
     },
     {
       "source_id": "bab-7-5-extra-75",
       "bm_original": "Tan Cheng Lock",
-      "translate": "重点：Tan Cheng Lock",
+      "translate": "陈祯禄",
       "key_points_zh": [
-        "重点：Tan Cheng Lock"
+        "陈祯禄"
       ],
       "bm_focus_phrase": "Tan Cheng Lock"
     },
     {
       "source_id": "bab-7-5-u06",
       "bm_original": "Kedua-dua pertubuhan ini bergabung untuk:",
-      "translate": "Kedua-dua pertubuhan 这 bergabung 为了:",
+      "translate": "这两个组织联手：",
       "key_points_zh": [
-        "Kedua-dua pertubuhan 这 bergabung 为了:"
+        "这两个组织联手："
       ],
       "bm_focus_phrase": "Kedua-dua pertubuhan ini bergabung untuk:"
     },
     {
       "source_id": "bab-7-5-extra-76",
       "bm_original": "memupuk kerjasama politik antara kaum",
-      "translate": "memupuk kerjasama 政治 其中 kaum",
+      "translate": "促进种族间的政治合作",
       "key_points_zh": [
-        "memupuk kerjasama 政治 其中 kaum"
+        "促进种族间的政治合作"
       ],
       "bm_focus_phrase": "memupuk kerjasama politik antara kaum"
     },
     {
       "source_id": "bab-7-5-extra-77",
       "bm_original": "melahirkan Manifesto Perlembagaan Rakyat sebagai alternatif pembinaan negara bangsa merdeka",
-      "translate": "melahirkan Manifesto Perlembagaan 人民 作为 alternatif pembinaan negara bangsa merdeka",
+      "translate": "诞生了《人民宪法宣言》作为建立独立民族国家的替代方案",
       "key_points_zh": [
-        "melahirkan Manifesto Perlembagaan 人民 作为 alternatif pembinaan negara bangsa merdeka"
+        "诞生了《人民宪法宣言》作为建立独立民族国家的替代方案"
       ],
       "bm_focus_phrase": "melahirkan Manifesto Perlembagaan Rakyat sebagai alternatif pembinaan negara bangsa merdeka"
     },
     {
       "source_id": "bab-7-5-u07",
       "bm_original": "Manifesto ini mencadangkan:",
-      "translate": "Manifesto 这 mencadangkan:",
+      "translate": "该宣言提出：",
       "key_points_zh": [
-        "Manifesto 这 mencadangkan:"
+        "该宣言提出："
       ],
       "bm_focus_phrase": "Manifesto ini mencadangkan:"
     },
     {
       "source_id": "bab-7-5-extra-78",
       "bm_original": "pemerintahan sendiri",
-      "translate": "重点：pemerintahan sendiri",
+      "translate": "自治",
       "key_points_zh": [
-        "重点：pemerintahan sendiri"
+        "自治"
       ],
       "bm_focus_phrase": "pemerintahan sendiri"
     },
     {
       "source_id": "bab-7-5-extra-79",
       "bm_original": "pembentukan Dewan Perundangan",
-      "translate": "重点：pembentukan Dewan Perundangan",
+      "translate": "立法机关的组成",
       "key_points_zh": [
-        "重点：pembentukan Dewan Perundangan"
+        "立法机关的组成"
       ],
       "bm_focus_phrase": "pembentukan Dewan Perundangan"
     },
     {
       "source_id": "bab-7-5-extra-80",
       "bm_original": "penerimaan satu kewarganegaraan",
-      "translate": "penerimaan satu 公民权",
+      "translate": "接受公民身份",
       "key_points_zh": [
-        "penerimaan satu 公民权"
+        "接受公民身份"
       ],
       "bm_focus_phrase": "penerimaan satu kewarganegaraan"
     },
     {
       "source_id": "bab-7-5-u08",
       "bm_original": "Persidangan ini diketuai oleh:",
-      "translate": "Persidangan 这 diketuai 由:",
+      "translate": "会议主席：",
       "key_points_zh": [
-        "Persidangan 这 diketuai 由:"
+        "会议主席："
       ],
       "bm_focus_phrase": "Persidangan ini diketuai oleh:"
     },
     {
       "source_id": "bab-7-5-extra-81",
       "bm_original": "Dato’ Panglima Bukit Gantang ➡️ Menteri Besar Perak",
-      "translate": "Dato’ Panglima Bukit Gantang ➡️ Menteri Besar Perak",
+      "translate": "Dato' Panglima Bukit Gantang ➡️ 霹雳州大臣",
       "key_points_zh": [
-        "Dato’ Panglima Bukit Gantang ➡️ Menteri Besar Perak"
+        "Dato' Panglima Bukit Gantang ➡️ 霹雳州大臣"
       ],
       "bm_focus_phrase": "Dato’ Panglima Bukit Gantang ➡️ Menteri Besar Perak"
     },
     {
       "source_id": "bab-7-5-extra-82",
       "bm_original": "Dato’ Abdul Wahab Abdul Aziz",
-      "translate": "Dato’ Abdul Wahab Abdul Aziz",
+      "translate": "拿督阿卜杜勒瓦哈卜阿卜杜勒阿齐兹",
       "key_points_zh": [
-        "Dato’ Abdul Wahab Abdul Aziz"
+        "拿督阿卜杜勒瓦哈卜阿卜杜勒阿齐兹"
       ],
       "bm_focus_phrase": "Dato’ Abdul Wahab Abdul Aziz"
     },
     {
       "source_id": "bab-7-5-u09",
       "bm_original": "Tujuannya ialah membincangkan langkah untuk membentuk:",
-      "translate": "Tujuannya 是 membincangkan 步骤 为了 membentuk:",
+      "translate": "目的是讨论形成的步骤：",
       "key_points_zh": [
-        "Tujuannya 是 membincangkan 步骤 为了 membentuk:"
+        "目的是讨论形成的步骤："
       ],
       "bm_focus_phrase": "Tujuannya ialah membincangkan langkah untuk membentuk:"
     },
     {
       "source_id": "bab-7-5-extra-83",
       "bm_original": "gabungan parti politik kebangsaan Tanah Melayu yang bersatu",
-      "translate": "gabungan parti 政治 kebangsaan Tanah Melayu 的 bersatu",
+      "translate": "联合的马来亚全国政党联盟",
       "key_points_zh": [
-        "gabungan parti 政治 kebangsaan Tanah Melayu 的 bersatu"
+        "联合的马来亚全国政党联盟"
       ],
       "bm_focus_phrase": "gabungan parti politik kebangsaan Tanah Melayu yang bersatu"
     },
     {
       "source_id": "bab-7-5-u10",
       "bm_original": "Persidangan ini disertai oleh:",
-      "translate": "Persidangan 这 disertai 由:",
+      "translate": "出席会议的有：",
       "key_points_zh": [
-        "Persidangan 这 disertai 由:"
+        "出席会议的有："
       ],
       "bm_focus_phrase": "Persidangan ini disertai oleh:"
     },
     {
       "source_id": "bab-7-5-extra-84",
       "bm_original": "Independence of Malayan Party (IMP)",
-      "translate": "重点：Independence of Malayan Party (IMP)",
+      "translate": "马来亚独立党（IMP）",
       "key_points_zh": [
-        "重点：Independence of Malayan Party (IMP)"
+        "马来亚独立党（IMP）"
       ],
       "bm_focus_phrase": "Independence of Malayan Party (IMP)"
     },
     {
       "source_id": "bab-7-5-extra-85",
       "bm_original": "Malayan Indian Congress (MIC)",
-      "translate": "重点：Malayan Indian Congress (MIC)",
+      "translate": "马来亚印度人大会党 (MIC)",
       "key_points_zh": [
-        "重点：Malayan Indian Congress (MIC)"
+        "马来亚印度人大会党 (MIC)"
       ],
       "bm_focus_phrase": "Malayan Indian Congress (MIC)"
     },
     {
       "source_id": "bab-7-5-extra-86",
       "bm_original": "Persatuan Ceylonese Malaya",
-      "translate": "协会 Ceylonese Malaya",
+      "translate": "马来亚锡兰协会",
       "key_points_zh": [
-        "协会 Ceylonese Malaya"
+        "马来亚锡兰协会"
       ],
       "bm_focus_phrase": "Persatuan Ceylonese Malaya"
     },
     {
       "source_id": "bab-7-5-extra-87",
       "bm_original": "Persatuan Eurasian Malaya",
-      "translate": "协会 Eurasian Malaya",
+      "translate": "马来亚欧亚协会",
       "key_points_zh": [
-        "协会 Eurasian Malaya"
+        "马来亚欧亚协会"
       ],
       "bm_focus_phrase": "Persatuan Eurasian Malaya"
     },
     {
       "source_id": "bab-7-5-u11",
       "bm_original": "Tuntutan utama persidangan ini ialah:",
-      "translate": "Tuntutan 主要 persidangan 这 是:",
+      "translate": "本次会议的主要诉求是：",
       "key_points_zh": [
-        "Tuntutan 主要 persidangan 这 是:"
+        "本次会议的主要诉求是："
       ],
       "bm_focus_phrase": "Tuntutan utama persidangan ini ialah:"
     },
     {
       "source_id": "bab-7-5-extra-88",
       "bm_original": "mengadakan pilihan raya Persekutuan",
-      "translate": "重点：mengadakan pilihan raya Persekutuan",
+      "translate": "举行联邦选举",
       "key_points_zh": [
-        "重点：mengadakan pilihan raya Persekutuan"
+        "举行联邦选举"
       ],
       "bm_focus_phrase": "mengadakan pilihan raya Persekutuan"
     },
     {
       "source_id": "bab-7-5-u12",
       "bm_original": "Konvensyen ini dianjurkan oleh:",
-      "translate": "Konvensyen 这 dianjurkan 由:",
+      "translate": "本次大会的组织者：",
       "key_points_zh": [
-        "Konvensyen 这 dianjurkan 由:"
+        "本次大会的组织者："
       ],
       "bm_focus_phrase": "Konvensyen ini dianjurkan oleh:"
     },
     {
       "source_id": "bab-7-5-extra-89",
       "bm_original": "UMNO di bawah pimpinan Tunku Abdul Rahman",
-      "translate": "UMNO di bawah pimpinan Tunku Abdul Rahman",
+      "translate": "东姑阿都拉曼领导下的巫统",
       "key_points_zh": [
-        "UMNO di bawah pimpinan Tunku Abdul Rahman"
+        "东姑阿都拉曼领导下的巫统"
       ],
       "bm_focus_phrase": "UMNO di bawah pimpinan Tunku Abdul Rahman"
     },
     {
       "source_id": "bab-7-5-extra-90",
       "bm_original": "MCA di bawah pimpinan Tan Cheng Lock",
-      "translate": "重点：MCA di bawah pimpinan Tan Cheng Lock",
+      "translate": "陈祯乐领导下的马华",
       "key_points_zh": [
-        "重点：MCA di bawah pimpinan Tan Cheng Lock"
+        "陈祯乐领导下的马华"
       ],
       "bm_focus_phrase": "MCA di bawah pimpinan Tan Cheng Lock"
     },
     {
       "source_id": "bab-7-5-u13",
       "bm_original": "Konvensyen ini membincangkan:",
-      "translate": "Konvensyen 这 membincangkan:",
+      "translate": "该公约涉及：",
       "key_points_zh": [
-        "Konvensyen 这 membincangkan:"
+        "该公约涉及："
       ],
       "bm_focus_phrase": "Konvensyen ini membincangkan:"
     },
     {
       "source_id": "bab-7-5-extra-91",
       "bm_original": "usaha ke arah kemerdekaan",
-      "translate": "usaha ke arah 独立",
+      "translate": "争取独立的努力",
       "key_points_zh": [
-        "usaha ke arah 独立"
+        "争取独立的努力"
       ],
       "bm_focus_phrase": "usaha ke arah kemerdekaan"
     },
     {
       "source_id": "bab-7-5-extra-92",
       "bm_original": "masa depan Tanah Melayu",
-      "translate": "重点：masa depan Tanah Melayu",
+      "translate": "马来亚的未来",
       "key_points_zh": [
-        "重点：masa depan Tanah Melayu"
+        "马来亚的未来"
       ],
       "bm_focus_phrase": "masa depan Tanah Melayu"
     },
     {
       "source_id": "bab-7-5-u14",
       "bm_original": "Konvensyen ini turut dihadiri oleh:",
-      "translate": "Konvensyen 这 turut dihadiri 由:",
+      "translate": "出席会议的还有：",
       "key_points_zh": [
-        "Konvensyen 这 turut dihadiri 由:"
+        "出席会议的还有："
       ],
       "bm_focus_phrase": "Konvensyen ini turut dihadiri oleh:"
     },
     {
       "source_id": "bab-7-5-extra-93",
       "bm_original": "Parti Islam Se-Tanah Melayu (PAS)",
-      "translate": "重点：Parti Islam Se-Tanah Melayu (PAS)",
+      "translate": "全马来伊斯兰党 (PAS)",
       "key_points_zh": [
-        "重点：Parti Islam Se-Tanah Melayu (PAS)"
+        "全马来伊斯兰党 (PAS)"
       ],
       "bm_focus_phrase": "Parti Islam Se-Tanah Melayu (PAS)"
     },
     {
       "source_id": "bab-7-5-extra-94",
       "bm_original": "Persetiaan Melayu Kelantan",
-      "translate": "重点：Persetiaan Melayu Kelantan",
+      "translate": "吉兰丹马来人忠诚度",
       "key_points_zh": [
-        "重点：Persetiaan Melayu Kelantan"
+        "吉兰丹马来人忠诚度"
       ],
       "bm_focus_phrase": "Persetiaan Melayu Kelantan"
     },
     {
       "source_id": "bab-7-5-extra-95",
       "bm_original": "Persatuan Melayu Semenanjung",
-      "translate": "协会 Melayu Semenanjung",
+      "translate": "半岛马来人协会",
       "key_points_zh": [
-        "协会 Melayu Semenanjung"
+        "半岛马来人协会"
       ],
       "bm_focus_phrase": "Persatuan Melayu Semenanjung"
     },
     {
       "source_id": "bab-7-5-u15",
       "bm_original": "Hasil konvensyen:",
-      "translate": "重点：Hasil konvensyen:",
+      "translate": "会议结果：",
       "key_points_zh": [
-        "重点：Hasil konvensyen:"
+        "会议结果："
       ],
       "bm_focus_phrase": "Hasil konvensyen:"
     },
     {
       "source_id": "bab-7-5-extra-96",
       "bm_original": "meluluskan resolusi mendesak British mengadakan pilihan raya Persekutuan",
-      "translate": "重点：meluluskan resolusi mendesak British mengadakan pilihan raya Persekutuan",
+      "translate": "通过决议敦促英国举行联邦选举",
       "key_points_zh": [
-        "重点：meluluskan resolusi mendesak British mengadakan pilihan raya Persekutuan"
+        "通过决议敦促英国举行联邦选举"
       ],
       "bm_focus_phrase": "meluluskan resolusi mendesak British mengadakan pilihan raya Persekutuan"
     },
     {
       "source_id": "bab-7-5-u16",
       "bm_original": "MIC menyertai UMNO dan MCA untuk membentuk:",
-      "translate": "MIC menyertai UMNO 与 MCA 为了 membentuk:",
+      "translate": "国大党与巫统和马华共同组成：",
       "key_points_zh": [
-        "MIC menyertai UMNO 与 MCA 为了 membentuk:"
+        "国大党与巫统和马华共同组成："
       ],
       "bm_focus_phrase": "MIC menyertai UMNO dan MCA untuk membentuk:"
     },
     {
       "source_id": "bab-7-5-extra-97",
       "bm_original": "Parti Perikatan",
-      "translate": "重点：Parti Perikatan",
+      "translate": "联盟党",
       "key_points_zh": [
-        "重点：Parti Perikatan"
+        "联盟党"
       ],
       "bm_focus_phrase": "Parti Perikatan"
     },
     {
       "source_id": "bab-7-5-u17",
       "bm_original": "Penyertaan MIC melengkapkan kerjasama tiga kaum terbesar di Tanah Melayu, iaitu:",
-      "translate": "重点：Penyertaan MIC melengkapkan kerjasama tiga kaum terbesar di Tanah Melayu, iaitu:",
+      "translate": "MIC的参与完成了马来亚三大种族的合作，即：",
       "key_points_zh": [
-        "重点：Penyertaan MIC melengkapkan kerjasama tiga kaum terbesar di Tanah Melayu, iaitu:"
+        "MIC的参与完成了马来亚三大种族的合作，即："
       ],
       "bm_focus_phrase": "Penyertaan MIC melengkapkan kerjasama tiga kaum terbesar di Tanah Melayu, iaitu:"
     },
     {
       "source_id": "bab-7-5-extra-98",
       "bm_original": "Melayu",
-      "translate": "重点：Melayu",
+      "translate": "马来语",
       "key_points_zh": [
-        "重点：Melayu"
+        "马来语"
       ],
       "bm_focus_phrase": "Melayu"
     },
     {
       "source_id": "bab-7-5-extra-99",
       "bm_original": "Cina",
-      "translate": "重点：Cina",
+      "translate": "中国人",
       "key_points_zh": [
-        "重点：Cina"
+        "中国人"
       ],
       "bm_focus_phrase": "Cina"
     },
     {
       "source_id": "bab-7-5-extra-100",
       "bm_original": "India",
-      "translate": "重点：India",
+      "translate": "印度",
       "key_points_zh": [
-        "重点：India"
+        "印度"
       ],
       "bm_focus_phrase": "India"
     },
     {
       "source_id": "bab-7-5-u18",
       "bm_original": "Parti ini memilih:",
-      "translate": "Parti 这 memilih:",
+      "translate": "本方选择：",
       "key_points_zh": [
-        "Parti 这 memilih:"
+        "本方选择："
       ],
       "bm_focus_phrase": "Parti ini memilih:"
     },
     {
       "source_id": "bab-7-5-extra-101",
       "bm_original": "kapal layar sebagai logo",
-      "translate": "kapal layar 作为 logo",
+      "translate": "游艇作为标志",
       "key_points_zh": [
-        "kapal layar 作为 logo"
+        "游艇作为标志"
       ],
       "bm_focus_phrase": "kapal layar sebagai logo"
     },
     {
       "source_id": "bab-7-5-u19",
       "bm_original": "Logo ini melambangkan:",
-      "translate": "Logo 这 melambangkan:",
+      "translate": "这个标志象征着：",
       "key_points_zh": [
-        "Logo 这 melambangkan:"
+        "这个标志象征着："
       ],
       "bm_focus_phrase": "Logo ini melambangkan:"
     },
     {
       "source_id": "bab-7-5-extra-102",
       "bm_original": "kesediaan menempuh cabaran",
-      "translate": "重点：kesediaan menempuh cabaran",
+      "translate": "愿意接受挑战",
       "key_points_zh": [
-        "重点：kesediaan menempuh cabaran"
+        "愿意接受挑战"
       ],
       "bm_focus_phrase": "kesediaan menempuh cabaran"
     },
     {
       "source_id": "bab-7-5-extra-103",
       "bm_original": "ketabahan menghadapi rintangan",
-      "translate": "重点：ketabahan menghadapi rintangan",
+      "translate": "面对逆境的毅力",
       "key_points_zh": [
-        "重点：ketabahan menghadapi rintangan"
+        "面对逆境的毅力"
       ],
       "bm_focus_phrase": "ketabahan menghadapi rintangan"
     },
     {
       "source_id": "bab-7-5-extra-104",
       "bm_original": "tekad mencapai kemerdekaan negara",
-      "translate": "tekad mencapai 独立 negara",
+      "translate": "实现民族独立的决心",
       "key_points_zh": [
-        "tekad mencapai 独立 negara"
+        "实现民族独立的决心"
       ],
       "bm_focus_phrase": "tekad mencapai kemerdekaan negara"
     },
     {
       "source_id": "bab-7-5-extra-105",
       "bm_original": "penubuhan parti politik selepas Perang Dunia Kedua menunjukkan rakyat semakin sedar akan pentingnya organisasi politik dalam perjuangan kemerdekaan",
-      "translate": "成立 parti 政治 在…之后 第二次世界大战 menunjukkan 人民 semakin sedar 将会 pentingnya organisasi 政治 在 斗争 独立",
+      "translate": "第二次世界大战后政党的建立表明，人们日益认识到政治组织在争取独立斗争中的重要性",
       "key_points_zh": [
-        "成立 parti 政治 在…之后 第二次世界大战 menunjukkan 人民 semakin sedar 将会 pentingnya organisasi 政治 在 斗争 独立"
+        "第二次世界大战后政党的建立表明，人们日益认识到政治组织在争取独立斗争中的重要性"
       ],
       "bm_focus_phrase": "penubuhan parti politik selepas Perang Dunia Kedua menunjukkan rakyat semakin sedar akan pentingnya organisasi politik dalam perjuangan kemerdekaan"
     },
     {
       "source_id": "bab-7-5-extra-106",
       "bm_original": "walaupun banyak parti ditubuhkan atas dasar kaum, perkembangan ini akhirnya mendorong pemimpin untuk bekerjasama dan bertolak ansur",
-      "translate": "walaupun banyak parti ditubuhkan atas dasar kaum, perkembangan 这 akhirnya mendorong 领袖 为了 bekerjasama 与 bertolak ansur",
+      "translate": "尽管许多政党是在种族基础上建立的，但这种发展最终鼓励领导人合作和容忍",
       "key_points_zh": [
-        "walaupun banyak parti ditubuhkan atas dasar kaum, perkembangan 这 akhirnya mendorong 领袖 为了 bekerjasama 与 bertolak ansur"
+        "尽管许多政党是在种族基础上建立的，但这种发展最终鼓励领导人合作和容忍"
       ],
       "bm_focus_phrase": "walaupun banyak parti ditubuhkan atas dasar kaum, perkembangan ini akhirnya mendorong pemimpin untuk bekerjasama dan bertolak ansur"
     },
     {
       "source_id": "bab-7-5-extra-107",
       "bm_original": "kerjasama politik antara kaum menjadi asas penting ke arah kemerdekaan dan kehidupan yang rukun serta damai",
-      "translate": "kerjasama 政治 其中 kaum menjadi asas penting ke arah 独立 与 kehidupan 的 rukun 以及 damai",
+      "translate": "种族间的政治合作是走向独立和和谐与和平生活的重要基础",
       "key_points_zh": [
-        "kerjasama 政治 其中 kaum menjadi asas penting ke arah 独立 与 kehidupan 的 rukun 以及 damai"
+        "种族间的政治合作是走向独立和和谐与和平生活的重要基础"
       ],
       "bm_focus_phrase": "kerjasama politik antara kaum menjadi asas penting ke arah kemerdekaan dan kehidupan yang rukun serta damai"
     },
     {
       "source_id": "bab-7-5-u20",
       "bm_original": "Penubuhan parti politik membantu menyusun perjuangan rakyat dengan lebih teratur dan matang, seterusnya membuka jalan kepada kerjasama politik yang lebih luas.",
-      "translate": "Penubuhan parti 政治 membantu menyusun 斗争 人民 以 更 teratur 与 matang, seterusnya membuka jalan 向 kerjasama 政治 的 更 luas.",
+      "translate": "政党的建立有助于以更有组织、更成熟的方式组织人民斗争，从而为更广泛的政治合作铺平道路。",
       "key_points_zh": [
-        "Penubuhan parti 政治 membantu menyusun 斗争 人民 以 更 teratur 与 matang, seterusnya membuka jalan 向 kerjasama 政治 的 更 luas."
+        "政党的建立有助于以更有组织、更成熟的方式组织人民斗争，从而为更广泛的政治合作铺平道路。"
       ],
       "bm_focus_phrase": "Penubuhan parti politik membantu menyusun perjuangan rakyat dengan lebih teratur dan matang, seterusnya membuka jalan kepada kerjasama politik yang lebih luas."
     },
     {
       "source_id": "bab-7-5-u21",
       "bm_original": "Usaha ke arah kemerdekaan menekankan kepentingan:",
-      "translate": "Usaha ke arah 独立 menekankan kepentingan:",
+      "translate": "争取独立的努力强调以下方面的重要性：",
       "key_points_zh": [
-        "Usaha ke arah 独立 menekankan kepentingan:"
+        "争取独立的努力强调以下方面的重要性："
       ],
       "bm_focus_phrase": "Usaha ke arah kemerdekaan menekankan kepentingan:"
     },
     {
       "source_id": "bab-7-5-extra-108",
       "bm_original": "kerjasama antara kaum",
-      "translate": "kerjasama 其中 kaum",
+      "translate": "种族间的合作",
       "key_points_zh": [
-        "kerjasama 其中 kaum"
+        "种族间的合作"
       ],
       "bm_focus_phrase": "kerjasama antara kaum"
     },
     {
       "source_id": "bab-7-5-extra-109",
       "bm_original": "pembentukan identiti kebangsaan",
-      "translate": "重点：pembentukan identiti kebangsaan",
+      "translate": "国家认同的形成",
       "key_points_zh": [
-        "重点：pembentukan identiti kebangsaan"
+        "国家认同的形成"
       ],
       "bm_focus_phrase": "pembentukan identiti kebangsaan"
     },
     {
       "source_id": "bab-7-5-extra-110",
       "bm_original": "persediaan ke arah berkerajaan sendiri",
-      "translate": "persediaan ke arah berkerajaan sendiri",
+      "translate": "自治的准备",
       "key_points_zh": [
-        "persediaan ke arah berkerajaan sendiri"
+        "自治的准备"
       ],
       "bm_focus_phrase": "persediaan ke arah berkerajaan sendiri"
     },
     {
       "source_id": "bab-7-5-u22",
       "bm_original": "Pelbagai langkah telah diambil untuk memastikan rakyat tempatan mampu mentadbir negara sendiri, antaranya melalui:",
-      "translate": "Pelbagai 步骤 已经 diambil 为了 memastikan 人民 本地 mampu mentadbir negara sendiri, antaranya 通过:",
+      "translate": "已采取各种措施确保当地人民能够治理自己的国家，包括：",
       "key_points_zh": [
-        "Pelbagai 步骤 已经 diambil 为了 memastikan 人民 本地 mampu mentadbir negara sendiri, antaranya 通过:"
+        "已采取各种措施确保当地人民能够治理自己的国家，包括："
       ],
       "bm_focus_phrase": "Pelbagai langkah telah diambil untuk memastikan rakyat tempatan mampu mentadbir negara sendiri, antaranya melalui:"
     },
     {
       "source_id": "bab-7-5-extra-111",
       "bm_original": "Jawatankuasa Hubungan Antara Kaum",
-      "translate": "重点：Jawatankuasa Hubungan Antara Kaum",
+      "translate": "族群联络委员会",
       "key_points_zh": [
-        "重点：Jawatankuasa Hubungan Antara Kaum"
+        "族群联络委员会"
       ],
       "bm_focus_phrase": "Jawatankuasa Hubungan Antara Kaum"
     },
     {
       "source_id": "bab-7-5-extra-112",
       "bm_original": "Sistem Ahli",
-      "translate": "重点：Sistem Ahli",
+      "translate": "成员制",
       "key_points_zh": [
-        "重点：Sistem Ahli"
+        "成员制"
       ],
       "bm_focus_phrase": "Sistem Ahli"
     },
     {
       "source_id": "bab-7-5-extra-113",
       "bm_original": "pembentukan sistem pendidikan kebangsaan",
-      "translate": "重点：pembentukan sistem pendidikan kebangsaan",
+      "translate": "国民教育体系的形成",
       "key_points_zh": [
-        "重点：pembentukan sistem pendidikan kebangsaan"
+        "国民教育体系的形成"
       ],
       "bm_focus_phrase": "pembentukan sistem pendidikan kebangsaan"
     },
     {
       "source_id": "bab-7-5-extra-114",
       "bm_original": "kerjasama antara parti politik",
-      "translate": "kerjasama 其中 parti 政治",
+      "translate": "政党间的合作",
       "key_points_zh": [
-        "kerjasama 其中 parti 政治"
+        "政党间的合作"
       ],
       "bm_focus_phrase": "kerjasama antara parti politik"
     },
     {
       "source_id": "bab-7-5-u23",
       "bm_original": "Dasar bekerjasama dan permuafakatan antara kaum dicapai melalui:",
-      "translate": "Dasar bekerjasama 与 permuafakatan 其中 kaum dicapai 通过:",
+      "translate": "合作政策和种族间共识是通过以下方式实现的：",
       "key_points_zh": [
-        "Dasar bekerjasama 与 permuafakatan 其中 kaum dicapai 通过:"
+        "合作政策和种族间共识是通过以下方式实现的："
       ],
       "bm_focus_phrase": "Dasar bekerjasama dan permuafakatan antara kaum dicapai melalui:"
     },
     {
       "source_id": "bab-7-5-extra-115",
       "bm_original": "toleransi",
-      "translate": "重点：toleransi",
+      "translate": "宽容",
       "key_points_zh": [
-        "重点：toleransi"
+        "宽容"
       ],
       "bm_focus_phrase": "toleransi"
     },
     {
       "source_id": "bab-7-5-extra-116",
       "bm_original": "perundingan",
-      "translate": "重点：perundingan",
+      "translate": "咨询",
       "key_points_zh": [
-        "重点：perundingan"
+        "咨询"
       ],
       "bm_focus_phrase": "perundingan"
     },
     {
       "source_id": "bab-7-5-extra-117",
       "bm_original": "kesediaan berkongsi kepentingan",
-      "translate": "重点：kesediaan berkongsi kepentingan",
+      "translate": "愿意分享兴趣",
       "key_points_zh": [
-        "重点：kesediaan berkongsi kepentingan"
+        "愿意分享兴趣"
       ],
       "bm_focus_phrase": "kesediaan berkongsi kepentingan"
     },
     {
       "source_id": "bab-7-5-u24",
       "bm_original": "Semua ini penting untuk mewujudkan:",
-      "translate": "Semua 这 penting 为了 mewujudkan:",
+      "translate": "所有这些对于创建都很重要：",
       "key_points_zh": [
-        "Semua 这 penting 为了 mewujudkan:"
+        "所有这些对于创建都很重要："
       ],
       "bm_focus_phrase": "Semua ini penting untuk mewujudkan:"
     },
     {
       "source_id": "bab-7-5-extra-118",
       "bm_original": "keadaan harmoni",
-      "translate": "重点：keadaan harmoni",
+      "translate": "和谐状态",
       "key_points_zh": [
-        "重点：keadaan harmoni"
+        "和谐状态"
       ],
       "bm_focus_phrase": "keadaan harmoni"
     },
     {
       "source_id": "bab-7-5-extra-119",
       "bm_original": "muhibah",
-      "translate": "重点：muhibah",
+      "translate": "善意",
       "key_points_zh": [
-        "重点：muhibah"
+        "善意"
       ],
       "bm_focus_phrase": "muhibah"
     },
     {
       "source_id": "bab-7-5-extra-120",
       "bm_original": "kestabilan negara dalam kalangan masyarakat berbilang kaum",
-      "translate": "kestabilan negara 在 kalangan 社会 berbilang kaum",
+      "translate": "多种族社会中的国家稳定",
       "key_points_zh": [
-        "kestabilan negara 在 kalangan 社会 berbilang kaum"
+        "多种族社会中的国家稳定"
       ],
       "bm_focus_phrase": "kestabilan negara dalam kalangan masyarakat berbilang kaum"
     },
     {
       "source_id": "bab-7-5-u25",
       "bm_original": "Kegigihan dan kebijaksanaan pemimpin terdahulu dalam membina asas kerjasama politik, ekonomi dan sosial wajar dihargai kerana menjadi landasan penting kepada kemerdekaan negara kita.",
-      "translate": "Kegigihan 与 kebijaksanaan 领袖 terdahulu 在 membina asas kerjasama 政治, ekonomi 与 sosial wajar dihargai 因为 menjadi landasan penting 向 独立 negara kita.",
+      "translate": "前任领导人在建立政治、经济和社会合作基础方面的坚持和智慧值得赞赏，因为这是我国独立的重要基础。",
       "key_points_zh": [
-        "Kegigihan 与 kebijaksanaan 领袖 terdahulu 在 membina asas kerjasama 政治, ekonomi 与 sosial wajar dihargai 因为 menjadi landasan penting 向 独立 negara kita."
+        "前任领导人在建立政治、经济和社会合作基础方面的坚持和智慧值得赞赏，因为这是我国独立的重要基础。"
       ],
       "bm_focus_phrase": "Kegigihan dan kebijaksanaan pemimpin terdahulu dalam membina asas kerjasama politik, ekonomi dan sosial wajar dihargai kerana menjadi landasan penting kepada kemerdekaan negara kita."
     }

@@ -1,1059 +1,1060 @@
 {
   "meta": {
     "source_file": "notes/bab-7-4.html",
-    "rollout": "gelombang-1-manual-revision"
+    "rollout": "gelombang-1-ms-zh-regenerated",
+    "notes": "Bab 7: translate regenerated from bm_original (ms→zh-CN), then manual term fixes (CLC→族群联络委员会, Sistem Ahli→成员制, Melayu Raya)."
   },
   "units": [
     {
       "source_id": "bab-7-4-u35",
       "bm_original": "Semasa pentadbiran British , sistem persekolahan berkembang mengikut kaum dengan bahasa pengantar dan kurikulum yang berbeza.",
-      "translate": "Semasa 行政 British , sistem persekolahan berkembang mengikut kaum 以 bahasa pengantar 与 kurikulum 的 berbeza.",
+      "translate": "在英国执政期间，学校系统根据种族发展了不同的教学语言和课程。",
       "key_points_zh": [
-        "Semasa 行政 British , sistem persekolahan berkembang mengikut kaum 以 bahasa pengantar 与 kurikulum 的 berbeza."
+        "在英国执政期间，学校系统根据种族发展了不同的教学语言和课程。"
       ],
       "bm_focus_phrase": "Semasa pentadbiran British , sistem persekolahan berkembang mengikut kaum dengan bahasa pengantar dan kurikulum yang berbeza."
     },
     {
       "source_id": "bab-7-4-u36",
       "bm_original": "Keadaan ini mewujudkan jurang ekonomi dan sosial , menyukarkan pembentukan perpaduan dan menghalang pembinaan satu identiti bangsa yang sama.",
-      "translate": "Keadaan 这 mewujudkan jurang ekonomi 与 sosial , menyukarkan pembentukan perpaduan 与 menghalang pembinaan satu identiti bangsa 的 sama.",
+      "translate": "这种情况造成了经济和社会差距，难以形成团结，阻碍了共同民族认同的构建。",
       "key_points_zh": [
-        "Keadaan 这 mewujudkan jurang ekonomi 与 sosial , menyukarkan pembentukan perpaduan 与 menghalang pembinaan satu identiti bangsa 的 sama."
+        "这种情况造成了经济和社会差距，难以形成团结，阻碍了共同民族认同的构建。"
       ],
       "bm_focus_phrase": "Keadaan ini mewujudkan jurang ekonomi dan sosial , menyukarkan pembentukan perpaduan dan menghalang pembinaan satu identiti bangsa yang sama."
     },
     {
       "source_id": "bab-7-4-u37",
       "bm_original": "Oleh itu, beberapa laporan , ordinan dan penyata diperkenalkan untuk membentuk sistem pendidikan kebangsaan di Tanah Melayu, Sarawak dan Sabah.",
-      "translate": "Oleh 那, beberapa laporan , ordinan 与 penyata diperkenalkan 为了 membentuk sistem pendidikan kebangsaan di Tanah Melayu, Sarawak 与 Sabah.",
+      "translate": "因此，马来亚、砂拉越和沙巴推出了数份报告、法令和声明，以形成国民教育体系。",
       "key_points_zh": [
-        "Oleh 那, beberapa laporan , ordinan 与 penyata diperkenalkan 为了 membentuk sistem pendidikan kebangsaan di Tanah Melayu, Sarawak 与 Sabah."
+        "因此，马来亚、砂拉越和沙巴推出了数份报告、法令和声明，以形成国民教育体系。"
       ],
       "bm_focus_phrase": "Oleh itu, beberapa laporan , ordinan dan penyata diperkenalkan untuk membentuk sistem pendidikan kebangsaan di Tanah Melayu, Sarawak dan Sabah."
     },
     {
       "source_id": "bab-7-4-u01",
       "bm_original": "Pembentukan sistem pendidikan kebangsaan penting kerana sistem persekolahan yang berasingan mengikut kaum telah mewujudkan jurang sosial dan ekonomi serta menyukarkan usaha menyatukan rakyat.",
-      "translate": "Pembentukan sistem pendidikan kebangsaan penting 因为 sistem persekolahan 的 berasingan mengikut kaum 已经 mewujudkan jurang sosial 与 ekonomi 以及 menyukarkan usaha menyatukan 人民.",
+      "translate": "建立国民教育体系非常重要，因为按种族划分的学校制度造成了社会和经济差距，难以团结人民。",
       "key_points_zh": [
-        "Pembentukan sistem pendidikan kebangsaan penting 因为 sistem persekolahan 的 berasingan mengikut kaum 已经 mewujudkan jurang sosial 与 ekonomi 以及 menyukarkan usaha menyatukan 人民."
+        "建立国民教育体系非常重要，因为按种族划分的学校制度造成了社会和经济差距，难以团结人民。"
       ],
       "bm_focus_phrase": "Pembentukan sistem pendidikan kebangsaan penting kerana sistem persekolahan yang berasingan mengikut kaum telah mewujudkan jurang sosial dan ekonomi serta menyukarkan usaha menyatukan rakyat."
     },
     {
       "source_id": "bab-7-4-u02",
       "bm_original": "Oleh itu, satu sistem pendidikan yang lebih seragam diperlukan untuk memupuk perpaduan, membina identiti negara dan melahirkan taat setia kepada tanah air.",
-      "translate": "Oleh 那, satu sistem pendidikan 的 更 seragam diperlukan 为了 memupuk perpaduan, membina identiti negara 与 melahirkan taat setia 向 tanah air.",
+      "translate": "因此，需要更加统一的教育体系来促进团结、建立民族认同并表现出对祖国的忠诚。",
       "key_points_zh": [
-        "Oleh 那, satu sistem pendidikan 的 更 seragam diperlukan 为了 memupuk perpaduan, membina identiti negara 与 melahirkan taat setia 向 tanah air."
+        "因此，需要更加统一的教育体系来促进团结、建立民族认同并表现出对祖国的忠诚。"
       ],
       "bm_focus_phrase": "Oleh itu, satu sistem pendidikan yang lebih seragam diperlukan untuk memupuk perpaduan, membina identiti negara dan melahirkan taat setia kepada tanah air."
     },
     {
       "source_id": "bab-7-4-extra-1",
       "bm_original": "1️⃣ latar belakang sistem pendidikan sebelum merdeka 🏫",
-      "translate": "重点：1️⃣ latar belakang sistem pendidikan sebelum merdeka 🏫",
+      "translate": "1️⃣独立前的教育制度背景🏫",
       "key_points_zh": [
-        "重点：1️⃣ latar belakang sistem pendidikan sebelum merdeka 🏫"
+        "1️⃣独立前的教育制度背景🏫"
       ],
       "bm_focus_phrase": "1️⃣ latar belakang sistem pendidikan sebelum merdeka 🏫"
     },
     {
       "source_id": "bab-7-4-extra-2",
       "bm_original": "2️⃣ usaha ke arah pembentukan sistem pendidikan kebangsaan 📘",
-      "translate": "重点：2️⃣ usaha ke arah pembentukan sistem pendidikan kebangsaan 📘",
+      "translate": "2️⃣ 为建立国民教育体系而做出的努力📘",
       "key_points_zh": [
-        "重点：2️⃣ usaha ke arah pembentukan sistem pendidikan kebangsaan 📘"
+        "2️⃣ 为建立国民教育体系而做出的努力📘"
       ],
       "bm_focus_phrase": "2️⃣ usaha ke arah pembentukan sistem pendidikan kebangsaan 📘"
     },
     {
       "source_id": "bab-7-4-extra-3",
       "bm_original": "3️⃣ kesan pembentukan sistem pendidikan kebangsaan 🇲🇾",
-      "translate": "3️⃣ 影响 pembentukan sistem pendidikan kebangsaan 🇲🇾",
+      "translate": "3️⃣国民教育体系形成的效果🇲🇾",
       "key_points_zh": [
-        "3️⃣ 影响 pembentukan sistem pendidikan kebangsaan 🇲🇾"
+        "3️⃣国民教育体系形成的效果🇲🇾"
       ],
       "bm_focus_phrase": "3️⃣ kesan pembentukan sistem pendidikan kebangsaan 🇲🇾"
     },
     {
       "source_id": "bab-7-4-u03",
       "bm_original": "Semasa di bawah pentadbiran British , terdapat pelbagai jenis sekolah seperti:",
-      "translate": "Semasa di bawah 行政 British , terdapat pelbagai jenis sekolah seperti:",
+      "translate": "在英国政府统治下，有各种类型的学校，例如：",
       "key_points_zh": [
-        "Semasa di bawah 行政 British , terdapat pelbagai jenis sekolah seperti:"
+        "在英国政府统治下，有各种类型的学校，例如："
       ],
       "bm_focus_phrase": "Semasa di bawah pentadbiran British , terdapat pelbagai jenis sekolah seperti:"
     },
     {
       "source_id": "bab-7-4-extra-4",
       "bm_original": "sekolah vernakular Melayu",
-      "translate": "重点：sekolah vernakular Melayu",
+      "translate": "马来语学校",
       "key_points_zh": [
-        "重点：sekolah vernakular Melayu"
+        "马来语学校"
       ],
       "bm_focus_phrase": "sekolah vernakular Melayu"
     },
     {
       "source_id": "bab-7-4-extra-5",
       "bm_original": "sekolah vernakular Cina",
-      "translate": "重点：sekolah vernakular Cina",
+      "translate": "华文学校",
       "key_points_zh": [
-        "重点：sekolah vernakular Cina"
+        "华文学校"
       ],
       "bm_focus_phrase": "sekolah vernakular Cina"
     },
     {
       "source_id": "bab-7-4-extra-6",
       "bm_original": "sekolah vernakular Tamil",
-      "translate": "重点：sekolah vernakular Tamil",
+      "translate": "泰米尔语学校",
       "key_points_zh": [
-        "重点：sekolah vernakular Tamil"
+        "泰米尔语学校"
       ],
       "bm_focus_phrase": "sekolah vernakular Tamil"
     },
     {
       "source_id": "bab-7-4-extra-7",
       "bm_original": "sekolah aliran agama",
-      "translate": "重点：sekolah aliran agama",
+      "translate": "宗教学校",
       "key_points_zh": [
-        "重点：sekolah aliran agama"
+        "宗教学校"
       ],
       "bm_focus_phrase": "sekolah aliran agama"
     },
     {
       "source_id": "bab-7-4-extra-8",
       "bm_original": "sekolah Inggeris",
-      "translate": "重点：sekolah Inggeris",
+      "translate": "英语学校",
       "key_points_zh": [
-        "重点：sekolah Inggeris"
+        "英语学校"
       ],
       "bm_focus_phrase": "sekolah Inggeris"
     },
     {
       "source_id": "bab-7-4-u04",
       "bm_original": "Di Sarawak dan Sabah , sistem persekolahan juga terbahagi kepada:",
-      "translate": "Di Sarawak 与 Sabah , sistem persekolahan 也 terbahagi 向:",
+      "translate": "在砂拉越和沙巴，学校系统也分为：",
       "key_points_zh": [
-        "Di Sarawak 与 Sabah , sistem persekolahan 也 terbahagi 向:"
+        "在砂拉越和沙巴，学校系统也分为："
       ],
       "bm_focus_phrase": "Di Sarawak dan Sabah , sistem persekolahan juga terbahagi kepada:"
     },
     {
       "source_id": "bab-7-4-extra-9",
       "bm_original": "sekolah vernakular Melayu",
-      "translate": "重点：sekolah vernakular Melayu",
+      "translate": "马来语学校",
       "key_points_zh": [
-        "重点：sekolah vernakular Melayu"
+        "马来语学校"
       ],
       "bm_focus_phrase": "sekolah vernakular Melayu"
     },
     {
       "source_id": "bab-7-4-extra-10",
       "bm_original": "sekolah Cina",
-      "translate": "重点：sekolah Cina",
+      "translate": "中文学校",
       "key_points_zh": [
-        "重点：sekolah Cina"
+        "中文学校"
       ],
       "bm_focus_phrase": "sekolah Cina"
     },
     {
       "source_id": "bab-7-4-extra-11",
       "bm_original": "sekolah mubaligh Kristian",
-      "translate": "重点：sekolah mubaligh Kristian",
+      "translate": "基督教传教士学校",
       "key_points_zh": [
-        "重点：sekolah mubaligh Kristian"
+        "基督教传教士学校"
       ],
       "bm_focus_phrase": "sekolah mubaligh Kristian"
     },
     {
       "source_id": "bab-7-4-u05",
       "bm_original": "Perbezaan bahasa pengantar dan kurikulum ini menyebabkan:",
-      "translate": "Perbezaan bahasa pengantar 与 kurikulum 这 menyebabkan:",
+      "translate": "教学语言和课程的差异导致：",
       "key_points_zh": [
-        "Perbezaan bahasa pengantar 与 kurikulum 这 menyebabkan:"
+        "教学语言和课程的差异导致："
       ],
       "bm_focus_phrase": "Perbezaan bahasa pengantar dan kurikulum ini menyebabkan:"
     },
     {
       "source_id": "bab-7-4-extra-12",
       "bm_original": "jurang ekonomi dan sosial antara kaum",
-      "translate": "jurang ekonomi 与 sosial 其中 kaum",
+      "translate": "种族之间的经济和社会差距",
       "key_points_zh": [
-        "jurang ekonomi 与 sosial 其中 kaum"
+        "种族之间的经济和社会差距"
       ],
       "bm_focus_phrase": "jurang ekonomi dan sosial antara kaum"
     },
     {
       "source_id": "bab-7-4-extra-13",
       "bm_original": "kesukaran membentuk perpaduan",
-      "translate": "重点：kesukaran membentuk perpaduan",
+      "translate": "难以团结",
       "key_points_zh": [
-        "重点：kesukaran membentuk perpaduan"
+        "难以团结"
       ],
       "bm_focus_phrase": "kesukaran membentuk perpaduan"
     },
     {
       "source_id": "bab-7-4-extra-14",
       "bm_original": "tiadanya satu identiti bangsa dan negara yang sama",
-      "translate": "tiadanya satu identiti bangsa 与 negara 的 sama",
+      "translate": "缺乏共同的民族和民族认同",
       "key_points_zh": [
-        "tiadanya satu identiti bangsa 与 negara 的 sama"
+        "缺乏共同的民族和民族认同"
       ],
       "bm_focus_phrase": "tiadanya satu identiti bangsa dan negara yang sama"
     },
     {
       "source_id": "bab-7-4-extra-15",
       "bm_original": "Sekolah vernakular ➡️ sekolah yang menggunakan bahasa ibunda sebagai bahasa pengantar",
-      "translate": "Sekolah vernakular ➡️ sekolah 的 menggunakan bahasa ibunda 作为 bahasa pengantar",
+      "translate": "白话学校➡️使用母语作为教学语言的学校",
       "key_points_zh": [
-        "Sekolah vernakular ➡️ sekolah 的 menggunakan bahasa ibunda 作为 bahasa pengantar"
+        "白话学校➡️使用母语作为教学语言的学校"
       ],
       "bm_focus_phrase": "Sekolah vernakular ➡️ sekolah yang menggunakan bahasa ibunda sebagai bahasa pengantar"
     },
     {
       "source_id": "bab-7-4-u06",
       "bm_original": "Jawatankuasa Pelajaran Melayu dipengerusikan oleh:",
-      "translate": "Jawatankuasa Pelajaran Melayu dipengerusikan 由:",
+      "translate": "马来语教育委员会的主席是：",
       "key_points_zh": [
-        "Jawatankuasa Pelajaran Melayu dipengerusikan 由:"
+        "马来语教育委员会的主席是："
       ],
       "bm_focus_phrase": "Jawatankuasa Pelajaran Melayu dipengerusikan oleh:"
     },
     {
       "source_id": "bab-7-4-extra-16",
       "bm_original": "L.J. Barnes",
-      "translate": "重点：L.J. Barnes",
+      "translate": "LJ巴恩斯",
       "key_points_zh": [
-        "重点：L.J. Barnes"
+        "LJ巴恩斯"
       ],
       "bm_focus_phrase": "L.J. Barnes"
     },
     {
       "source_id": "bab-7-4-u07",
       "bm_original": "Laporan ini menekankan kepentingan sekolah rendah untuk membina:",
-      "translate": "Laporan 这 menekankan kepentingan sekolah rendah 为了 membina:",
+      "translate": "本报告强调小学建设的重要性：",
       "key_points_zh": [
-        "Laporan 这 menekankan kepentingan sekolah rendah 为了 membina:"
+        "本报告强调小学建设的重要性："
       ],
       "bm_focus_phrase": "Laporan ini menekankan kepentingan sekolah rendah untuk membina:"
     },
     {
       "source_id": "bab-7-4-extra-17",
       "bm_original": "satu rupa bangsa penduduk",
-      "translate": "重点：satu rupa bangsa penduduk",
+      "translate": "一种人口",
       "key_points_zh": [
-        "重点：satu rupa bangsa penduduk"
+        "一种人口"
       ],
       "bm_focus_phrase": "satu rupa bangsa penduduk"
     },
     {
       "source_id": "bab-7-4-extra-18",
       "bm_original": "yang menganggap Tanah Melayu sebagai tempat tinggal kekal",
-      "translate": "的 menganggap Tanah Melayu 作为 tempat tinggal kekal",
+      "translate": "认为马来亚为永久居住地的人",
       "key_points_zh": [
-        "的 menganggap Tanah Melayu 作为 tempat tinggal kekal"
+        "认为马来亚为永久居住地的人"
       ],
       "bm_focus_phrase": "yang menganggap Tanah Melayu sebagai tempat tinggal kekal"
     },
     {
       "source_id": "bab-7-4-extra-19",
       "bm_original": "dan tumpuan taat setia",
-      "translate": "与 tumpuan taat setia",
+      "translate": "和虔诚的专注",
       "key_points_zh": [
-        "与 tumpuan taat setia"
+        "和虔诚的专注"
       ],
       "bm_focus_phrase": "dan tumpuan taat setia"
     },
     {
       "source_id": "bab-7-4-u08",
       "bm_original": "Kandungan Laporan Barnes:",
-      "translate": "重点：Kandungan Laporan Barnes:",
+      "translate": "巴恩斯报告的内容：",
       "key_points_zh": [
-        "重点：Kandungan Laporan Barnes:"
+        "巴恩斯报告的内容："
       ],
       "bm_focus_phrase": "Kandungan Laporan Barnes:"
     },
     {
       "source_id": "bab-7-4-extra-20",
       "bm_original": "sekolah rendah menggunakan bahasa Melayu atau bahasa Inggeris sebagai bahasa pengantar",
-      "translate": "sekolah rendah menggunakan bahasa Melayu atau bahasa Inggeris 作为 bahasa pengantar",
+      "translate": "小学以马来语或英语作为教学语言",
       "key_points_zh": [
-        "sekolah rendah menggunakan bahasa Melayu atau bahasa Inggeris 作为 bahasa pengantar"
+        "小学以马来语或英语作为教学语言"
       ],
       "bm_focus_phrase": "sekolah rendah menggunakan bahasa Melayu atau bahasa Inggeris sebagai bahasa pengantar"
     },
     {
       "source_id": "bab-7-4-extra-21",
       "bm_original": "sekolah menengah menggunakan bahasa Inggeris sebagai bahasa pengantar",
-      "translate": "sekolah menengah menggunakan bahasa Inggeris 作为 bahasa pengantar",
+      "translate": "中学以英语为教学语言",
       "key_points_zh": [
-        "sekolah menengah menggunakan bahasa Inggeris 作为 bahasa pengantar"
+        "中学以英语为教学语言"
       ],
       "bm_focus_phrase": "sekolah menengah menggunakan bahasa Inggeris sebagai bahasa pengantar"
     },
     {
       "source_id": "bab-7-4-u09",
       "bm_original": "Laporan ini diterbitkan akibat:",
-      "translate": "Laporan 这 diterbitkan akibat:",
+      "translate": "本报告的发布是由于：",
       "key_points_zh": [
-        "Laporan 这 diterbitkan akibat:"
+        "本报告的发布是由于："
       ],
       "bm_focus_phrase": "Laporan ini diterbitkan akibat:"
     },
     {
       "source_id": "bab-7-4-extra-22",
       "bm_original": "bantahan masyarakat Cina terhadap Laporan Barnes",
-      "translate": "抗议 社会 Cina 针对 Laporan Barnes",
+      "translate": "华人社区对巴恩斯报告的反对",
       "key_points_zh": [
-        "抗议 社会 Cina 针对 Laporan Barnes"
+        "华人社区对巴恩斯报告的反对"
       ],
       "bm_focus_phrase": "bantahan masyarakat Cina terhadap Laporan Barnes"
     },
     {
       "source_id": "bab-7-4-u10",
       "bm_original": "Tujuan laporan ini ialah:",
-      "translate": "目的 laporan 这 是:",
+      "translate": "本报告的目的是：",
       "key_points_zh": [
-        "目的 laporan 这 是:"
+        "本报告的目的是："
       ],
       "bm_focus_phrase": "Tujuan laporan ini ialah:"
     },
     {
       "source_id": "bab-7-4-extra-23",
       "bm_original": "mengkaji pendidikan Cina",
-      "translate": "重点：mengkaji pendidikan Cina",
+      "translate": "学习中国教育",
       "key_points_zh": [
-        "重点：mengkaji pendidikan Cina"
+        "学习中国教育"
       ],
       "bm_focus_phrase": "mengkaji pendidikan Cina"
     },
     {
       "source_id": "bab-7-4-extra-24",
       "bm_original": "mencadangkan penambahbaikan sekolah Cina",
-      "translate": "重点：mencadangkan penambahbaikan sekolah Cina",
+      "translate": "建议华文学校改善",
       "key_points_zh": [
-        "重点：mencadangkan penambahbaikan sekolah Cina"
+        "建议华文学校改善"
       ],
       "bm_focus_phrase": "mencadangkan penambahbaikan sekolah Cina"
     },
     {
       "source_id": "bab-7-4-extra-25",
       "bm_original": "menjadikan sekolah Cina berguna kepada penduduk Tanah Melayu",
-      "translate": "menjadikan sekolah Cina berguna 向 penduduk Tanah Melayu",
+      "translate": "让华校对马来亚人民有用",
       "key_points_zh": [
-        "menjadikan sekolah Cina berguna 向 penduduk Tanah Melayu"
+        "让华校对马来亚人民有用"
       ],
       "bm_focus_phrase": "menjadikan sekolah Cina berguna kepada penduduk Tanah Melayu"
     },
     {
       "source_id": "bab-7-4-u11",
       "bm_original": "Kandungan Laporan Fenn-Wu:",
-      "translate": "重点：Kandungan Laporan Fenn-Wu:",
+      "translate": "Fenn-Wu报告的内容：",
       "key_points_zh": [
-        "重点：Kandungan Laporan Fenn-Wu:"
+        "Fenn-Wu报告的内容："
       ],
       "bm_focus_phrase": "Kandungan Laporan Fenn-Wu:"
     },
     {
       "source_id": "bab-7-4-extra-26",
       "bm_original": "sekolah Cina diteruskan secara berasingan di bawah sistem kebangsaan",
-      "translate": "重点：sekolah Cina diteruskan secara berasingan di bawah sistem kebangsaan",
+      "translate": "华文学校继续在国家体制下独立运作",
       "key_points_zh": [
-        "重点：sekolah Cina diteruskan secara berasingan di bawah sistem kebangsaan"
+        "华文学校继续在国家体制下独立运作"
       ],
       "bm_focus_phrase": "sekolah Cina diteruskan secara berasingan di bawah sistem kebangsaan"
     },
     {
       "source_id": "bab-7-4-extra-27",
       "bm_original": "pendidikan sekolah Cina mesti berorientasikan Tanah Melayu",
-      "translate": "重点：pendidikan sekolah Cina mesti berorientasikan Tanah Melayu",
+      "translate": "华校教育必须面向马来亚",
       "key_points_zh": [
-        "重点：pendidikan sekolah Cina mesti berorientasikan Tanah Melayu"
+        "华校教育必须面向马来亚"
       ],
       "bm_focus_phrase": "pendidikan sekolah Cina mesti berorientasikan Tanah Melayu"
     },
     {
       "source_id": "bab-7-4-extra-28",
       "bm_original": "Dr. William P. Fenn – ahli akademik dari 🇨🇳 China",
-      "translate": "重点：Dr. William P. Fenn – ahli akademik dari 🇨🇳 China",
+      "translate": "William P. Fenn 博士 – 来自🇨🇳中国的学者",
       "key_points_zh": [
-        "重点：Dr. William P. Fenn – ahli akademik dari 🇨🇳 China"
+        "William P. Fenn 博士 – 来自🇨🇳中国的学者"
       ],
       "bm_focus_phrase": "Dr. William P. Fenn – ahli akademik dari 🇨🇳 China"
     },
     {
       "source_id": "bab-7-4-extra-29",
       "bm_original": "Dr. Wu Teh Yao – pegawai Pertubuhan Bangsa-Bangsa Bersatu (PBB)",
-      "translate": "重点：Dr. Wu Teh Yao – pegawai Pertubuhan Bangsa-Bangsa Bersatu (PBB)",
+      "translate": "吴德耀博士 – 联合国 (UN) 官员",
       "key_points_zh": [
-        "重点：Dr. Wu Teh Yao – pegawai Pertubuhan Bangsa-Bangsa Bersatu (PBB)"
+        "吴德耀博士 – 联合国 (UN) 官员"
       ],
       "bm_focus_phrase": "Dr. Wu Teh Yao – pegawai Pertubuhan Bangsa-Bangsa Bersatu (PBB)"
     },
     {
       "source_id": "bab-7-4-u12",
       "bm_original": "Ordinan ini diluluskan selepas:",
-      "translate": "Ordinan 这 diluluskan 在…之后:",
+      "translate": "该法令是在以下时间后通过的：",
       "key_points_zh": [
-        "Ordinan 这 diluluskan 在…之后:"
+        "该法令是在以下时间后通过的："
       ],
       "bm_focus_phrase": "Ordinan ini diluluskan selepas:"
     },
     {
       "source_id": "bab-7-4-extra-30",
       "bm_original": "Jawatankuasa Penasihat Pusat Pelajaran meneliti Laporan Barnes dan Laporan Fenn-Wu",
-      "translate": "Jawatankuasa Penasihat Pusat Pelajaran meneliti Laporan Barnes 与 Laporan Fenn-Wu",
+      "translate": "教育中心咨询委员会审查了 Barnes 报告和 Fenn-Wu 报告",
       "key_points_zh": [
-        "Jawatankuasa Penasihat Pusat Pelajaran meneliti Laporan Barnes 与 Laporan Fenn-Wu"
+        "教育中心咨询委员会审查了 Barnes 报告和 Fenn-Wu 报告"
       ],
       "bm_focus_phrase": "Jawatankuasa Penasihat Pusat Pelajaran meneliti Laporan Barnes dan Laporan Fenn-Wu"
     },
     {
       "source_id": "bab-7-4-u13",
       "bm_original": "Tujuan Ordinan Pelajaran 1952 ialah:",
-      "translate": "目的 Ordinan Pelajaran 1952 是:",
+      "translate": "1952 年教育条例的目的是：",
       "key_points_zh": [
-        "目的 Ordinan Pelajaran 1952 是:"
+        "1952 年教育条例的目的是："
       ],
       "bm_focus_phrase": "Tujuan Ordinan Pelajaran 1952 ialah:"
     },
     {
       "source_id": "bab-7-4-extra-31",
       "bm_original": "membentuk sistem pendidikan yang menggunakan bahasa rasmi Persekutuan",
-      "translate": "membentuk sistem pendidikan 的 menggunakan bahasa rasmi Persekutuan",
+      "translate": "建立使用联邦官方语言的教育体系",
       "key_points_zh": [
-        "membentuk sistem pendidikan 的 menggunakan bahasa rasmi Persekutuan"
+        "建立使用联邦官方语言的教育体系"
       ],
       "bm_focus_phrase": "membentuk sistem pendidikan yang menggunakan bahasa rasmi Persekutuan"
     },
     {
       "source_id": "bab-7-4-extra-32",
       "bm_original": "menyatukan semua murid pelbagai kaum dalam satu sistem berorientasikan Tanah Melayu",
-      "translate": "menyatukan semua murid pelbagai kaum 在 satu sistem berorientasikan Tanah Melayu",
+      "translate": "将所有不同种族的学生团结在一个以马来语为导向的系统中",
       "key_points_zh": [
-        "menyatukan semua murid pelbagai kaum 在 satu sistem berorientasikan Tanah Melayu"
+        "将所有不同种族的学生团结在一个以马来语为导向的系统中"
       ],
       "bm_focus_phrase": "menyatukan semua murid pelbagai kaum dalam satu sistem berorientasikan Tanah Melayu"
     },
     {
       "source_id": "bab-7-4-u14",
       "bm_original": "Kandungan Ordinan Pelajaran 1952:",
-      "translate": "重点：Kandungan Ordinan Pelajaran 1952:",
+      "translate": "1952年教育条例的内容：",
       "key_points_zh": [
-        "重点：Kandungan Ordinan Pelajaran 1952:"
+        "1952年教育条例的内容："
       ],
       "bm_focus_phrase": "Kandungan Ordinan Pelajaran 1952:"
     },
     {
       "source_id": "bab-7-4-extra-33",
       "bm_original": "Tanah Melayu mempunyai dua jenis sekolah rendah ➡️ sekolah yang menggunakan bahasa Melayu ➡️ sekolah yang menggunakan bahasa Inggeris sebagai bahasa pengantar",
-      "translate": "Tanah Melayu mempunyai dua jenis sekolah rendah ➡️ sekolah 的 menggunakan bahasa Melayu ➡️ sekolah 的 menggunakan bahasa Inggeris 作为 bahasa pengantar",
+      "translate": "马来亚有两类小学 ➡️使用马来语的学校 ➡️使用英语作为教学语言的学校",
       "key_points_zh": [
-        "Tanah Melayu mempunyai dua jenis sekolah rendah ➡️ sekolah 的 menggunakan bahasa Melayu ➡️ sekolah 的 menggunakan bahasa Inggeris 作为 bahasa pengantar"
+        "马来亚有两类小学 ➡️使用马来语的学校 ➡️使用英语作为教学语言的学校"
       ],
       "bm_focus_phrase": "Tanah Melayu mempunyai dua jenis sekolah rendah ➡️ sekolah yang menggunakan bahasa Melayu ➡️ sekolah yang menggunakan bahasa Inggeris sebagai bahasa pengantar"
     },
     {
       "source_id": "bab-7-4-extra-34",
       "bm_original": "bahasa Cina dan bahasa Tamil diajar sebagai bahasa ketiga di sekolah rendah jika terdapat 15 orang murid dalam kumpulan yang sama",
-      "translate": "bahasa Cina 与 bahasa Tamil diajar 作为 bahasa ketiga di sekolah rendah jika terdapat 15 orang murid 在 kumpulan 的 sama",
+      "translate": "小学如果有15名学生同组，则将中文和泰米尔语作为第三语言教授",
       "key_points_zh": [
-        "bahasa Cina 与 bahasa Tamil diajar 作为 bahasa ketiga di sekolah rendah jika terdapat 15 orang murid 在 kumpulan 的 sama"
+        "小学如果有15名学生同组，则将中文和泰米尔语作为第三语言教授"
       ],
       "bm_focus_phrase": "bahasa Cina dan bahasa Tamil diajar sebagai bahasa ketiga di sekolah rendah jika terdapat 15 orang murid dalam kumpulan yang sama"
     },
     {
       "source_id": "bab-7-4-extra-35",
       "bm_original": "sekolah menengah menggunakan bahasa Inggeris sebagai bahasa pengantar",
-      "translate": "sekolah menengah menggunakan bahasa Inggeris 作为 bahasa pengantar",
+      "translate": "中学以英语为教学语言",
       "key_points_zh": [
-        "sekolah menengah menggunakan bahasa Inggeris 作为 bahasa pengantar"
+        "中学以英语为教学语言"
       ],
       "bm_focus_phrase": "sekolah menengah menggunakan bahasa Inggeris sebagai bahasa pengantar"
     },
     {
       "source_id": "bab-7-4-u15",
       "bm_original": "Ordinan Pelajaran 1952 merupakan:",
-      "translate": "重点：Ordinan Pelajaran 1952 merupakan:",
+      "translate": "1952 年教育条例是：",
       "key_points_zh": [
-        "重点：Ordinan Pelajaran 1952 merupakan:"
+        "1952 年教育条例是："
       ],
       "bm_focus_phrase": "Ordinan Pelajaran 1952 merupakan:"
     },
     {
       "source_id": "bab-7-4-extra-36",
       "bm_original": "undang-undang pertama yang berkaitan dengan pembentukan satu sistem persekolahan rendah berteraskan bahasa Inggeris dan bahasa Melayu",
-      "translate": "undang-undang pertama 的 berkaitan 以 pembentukan satu sistem persekolahan rendah berteraskan bahasa Inggeris 与 bahasa Melayu",
+      "translate": "第一部有关建立以英语和马来语为基础的小学制度的法律",
       "key_points_zh": [
-        "undang-undang pertama 的 berkaitan 以 pembentukan satu sistem persekolahan rendah berteraskan bahasa Inggeris 与 bahasa Melayu"
+        "第一部有关建立以英语和马来语为基础的小学制度的法律"
       ],
       "bm_focus_phrase": "undang-undang pertama yang berkaitan dengan pembentukan satu sistem persekolahan rendah berteraskan bahasa Inggeris dan bahasa Melayu"
     },
     {
       "source_id": "bab-7-4-extra-37",
       "bm_original": "mendapat tentangan daripada semua kaum",
-      "translate": "获得 tentangan daripada semua kaum",
+      "translate": "遭到各族的反对",
       "key_points_zh": [
-        "获得 tentangan daripada semua kaum"
+        "遭到各族的反对"
       ],
       "bm_focus_phrase": "mendapat tentangan daripada semua kaum"
     },
     {
       "source_id": "bab-7-4-u16",
       "bm_original": "E.W. Woodhead , Ketua Pegawai Pelajaran dari Britain 🇬🇧, diundang untuk:",
-      "translate": "E.W. Woodhead , Ketua Pegawai Pelajaran dari Britain 🇬🇧, diundang 为了:",
+      "translate": "来自英国🇬🇧的首席教育官E.W. Woodhead受邀：",
       "key_points_zh": [
-        "E.W. Woodhead , Ketua Pegawai Pelajaran dari Britain 🇬🇧, diundang 为了:"
+        "来自英国🇬🇧的首席教育官E.W. Woodhead受邀："
       ],
       "bm_focus_phrase": "E.W. Woodhead , Ketua Pegawai Pelajaran dari Britain 🇬🇧, diundang untuk:"
     },
     {
       "source_id": "bab-7-4-extra-38",
       "bm_original": "meninjau perkembangan pendidikan",
-      "translate": "重点：meninjau perkembangan pendidikan",
+      "translate": "回顾教育发展",
       "key_points_zh": [
-        "重点：meninjau perkembangan pendidikan"
+        "回顾教育发展"
       ],
       "bm_focus_phrase": "meninjau perkembangan pendidikan"
     },
     {
       "source_id": "bab-7-4-extra-39",
       "bm_original": "membuat cadangan tentang pendidikan di Sarawak dan Sabah",
-      "translate": "membuat 建议 tentang pendidikan di Sarawak 与 Sabah",
+      "translate": "对砂拉越和沙巴的教育提出建议",
       "key_points_zh": [
-        "membuat 建议 tentang pendidikan di Sarawak 与 Sabah"
+        "对砂拉越和沙巴的教育提出建议"
       ],
       "bm_focus_phrase": "membuat cadangan tentang pendidikan di Sarawak dan Sabah"
     },
     {
       "source_id": "bab-7-4-u17",
       "bm_original": "Cadangan umum Laporan Woodhead:",
-      "translate": "重点：Cadangan umum Laporan Woodhead:",
+      "translate": "伍德海德报告的一般建议：",
       "key_points_zh": [
-        "重点：Cadangan umum Laporan Woodhead:"
+        "伍德海德报告的一般建议："
       ],
       "bm_focus_phrase": "Cadangan umum Laporan Woodhead:"
     },
     {
       "source_id": "bab-7-4-extra-40",
       "bm_original": "memperkasakan pendidikan peringkat rendah dan menengah",
-      "translate": "memperkasakan pendidikan peringkat rendah 与 menengah",
+      "translate": "赋予中小学教育权力",
       "key_points_zh": [
-        "memperkasakan pendidikan peringkat rendah 与 menengah"
+        "赋予中小学教育权力"
       ],
       "bm_focus_phrase": "memperkasakan pendidikan peringkat rendah dan menengah"
     },
     {
       "source_id": "bab-7-4-extra-41",
       "bm_original": "menitikberatkan bahasa Inggeris sebagai bahasa pengantar",
-      "translate": "menitikberatkan bahasa Inggeris 作为 bahasa pengantar",
+      "translate": "强调英语作为教学语言",
       "key_points_zh": [
-        "menitikberatkan bahasa Inggeris 作为 bahasa pengantar"
+        "强调英语作为教学语言"
       ],
       "bm_focus_phrase": "menitikberatkan bahasa Inggeris sebagai bahasa pengantar"
     },
     {
       "source_id": "bab-7-4-extra-42",
       "bm_original": "mewujudkan sistem pembiayaan pendidikan yang teratur",
-      "translate": "mewujudkan sistem pembiayaan pendidikan 的 teratur",
+      "translate": "建立有组织的教育融资体系",
       "key_points_zh": [
-        "mewujudkan sistem pembiayaan pendidikan 的 teratur"
+        "建立有组织的教育融资体系"
       ],
       "bm_focus_phrase": "mewujudkan sistem pembiayaan pendidikan yang teratur"
     },
     {
       "source_id": "bab-7-4-u18",
       "bm_original": "Berdasarkan Laporan Woodhead 1955, cadangan di Sarawak termasuk:",
-      "translate": "Berdasarkan Laporan Woodhead 1955, 建议 di Sarawak termasuk:",
+      "translate": "根据 1955 年 Woodhead 报告，砂拉越的建议包括：",
       "key_points_zh": [
-        "Berdasarkan Laporan Woodhead 1955, 建议 di Sarawak termasuk:"
+        "根据 1955 年 Woodhead 报告，砂拉越的建议包括："
       ],
       "bm_focus_phrase": "Berdasarkan Laporan Woodhead 1955, cadangan di Sarawak termasuk:"
     },
     {
       "source_id": "bab-7-4-extra-43",
       "bm_original": "mewujudkan sekolah menengah berbilang kaum dengan bahasa Inggeris sebagai bahasa pengantar",
-      "translate": "mewujudkan sekolah menengah berbilang kaum 以 bahasa Inggeris 作为 bahasa pengantar",
+      "translate": "创建一所以英语为教学语言的多种族高中",
       "key_points_zh": [
-        "mewujudkan sekolah menengah berbilang kaum 以 bahasa Inggeris 作为 bahasa pengantar"
+        "创建一所以英语为教学语言的多种族高中"
       ],
       "bm_focus_phrase": "mewujudkan sekolah menengah berbilang kaum dengan bahasa Inggeris sebagai bahasa pengantar"
     },
     {
       "source_id": "bab-7-4-extra-44",
       "bm_original": "menyeragamkan sukatan pelajaran dan peperiksaan",
-      "translate": "menyeragamkan sukatan pelajaran 与 peperiksaan",
+      "translate": "标准化教学大纲和考试",
       "key_points_zh": [
-        "menyeragamkan sukatan pelajaran 与 peperiksaan"
+        "标准化教学大纲和考试"
       ],
       "bm_focus_phrase": "menyeragamkan sukatan pelajaran dan peperiksaan"
     },
     {
       "source_id": "bab-7-4-extra-45",
       "bm_original": "memperkenalkan buku teks yang berlatarbelakangkan unsur tempatan",
-      "translate": "memperkenalkan buku teks 的 berlatarbelakangkan unsur 本地",
+      "translate": "引进本土元素的教材",
       "key_points_zh": [
-        "memperkenalkan buku teks 的 berlatarbelakangkan unsur 本地"
+        "引进本土元素的教材"
       ],
       "bm_focus_phrase": "memperkenalkan buku teks yang berlatarbelakangkan unsur tempatan"
     },
     {
       "source_id": "bab-7-4-extra-46",
       "bm_original": "memastikan pendidikan sivik diajar secara formal di sekolah",
-      "translate": "重点：memastikan pendidikan sivik diajar secara formal di sekolah",
+      "translate": "确保学校正式教授公民教育",
       "key_points_zh": [
-        "重点：memastikan pendidikan sivik diajar secara formal di sekolah"
+        "确保学校正式教授公民教育"
       ],
       "bm_focus_phrase": "memastikan pendidikan sivik diajar secara formal di sekolah"
     },
     {
       "source_id": "bab-7-4-u19",
       "bm_original": "Matlamat pendidikan kebangsaan di Sarawak ialah untuk membentuk:",
-      "translate": "Matlamat pendidikan kebangsaan di Sarawak 是 为了 membentuk:",
+      "translate": "砂拉越国民教育的目标是形成：",
       "key_points_zh": [
-        "Matlamat pendidikan kebangsaan di Sarawak 是 为了 membentuk:"
+        "砂拉越国民教育的目标是形成："
       ],
       "bm_focus_phrase": "Matlamat pendidikan kebangsaan di Sarawak ialah untuk membentuk:"
     },
     {
       "source_id": "bab-7-4-extra-47",
       "bm_original": "perasaan kekitaan",
-      "translate": "重点：perasaan kekitaan",
+      "translate": "归属感",
       "key_points_zh": [
-        "重点：perasaan kekitaan"
+        "归属感"
       ],
       "bm_focus_phrase": "perasaan kekitaan"
     },
     {
       "source_id": "bab-7-4-extra-48",
       "bm_original": "taat setia kepada negeri Sarawak",
-      "translate": "taat setia 向 州 Sarawak",
+      "translate": "对砂拉越州的忠诚",
       "key_points_zh": [
-        "taat setia 向 州 Sarawak"
+        "对砂拉越州的忠诚"
       ],
       "bm_focus_phrase": "taat setia kepada negeri Sarawak"
     },
     {
       "source_id": "bab-7-4-extra-49",
       "bm_original": "dalam kalangan penduduk pelbagai kaum",
-      "translate": "在 kalangan penduduk pelbagai kaum",
+      "translate": "在不同种族的人口中",
       "key_points_zh": [
-        "在 kalangan penduduk pelbagai kaum"
+        "在不同种族的人口中"
       ],
       "bm_focus_phrase": "dalam kalangan penduduk pelbagai kaum"
     },
     {
       "source_id": "bab-7-4-u20",
       "bm_original": "Laporan Woodhead 1955 diterima di Sabah dengan beberapa pindaan, iaitu:",
-      "translate": "Laporan Woodhead 1955 diterima di Sabah 以 beberapa pindaan, iaitu:",
+      "translate": "伍德海德 1955 年的报告经过一些修改后被沙巴接受，即：",
       "key_points_zh": [
-        "Laporan Woodhead 1955 diterima di Sabah 以 beberapa pindaan, iaitu:"
+        "伍德海德 1955 年的报告经过一些修改后被沙巴接受，即："
       ],
       "bm_focus_phrase": "Laporan Woodhead 1955 diterima di Sabah dengan beberapa pindaan, iaitu:"
     },
     {
       "source_id": "bab-7-4-extra-50",
       "bm_original": "mempertingkat pengajaran bahasa Melayu dan bahasa Inggeris di sekolah Cina",
-      "translate": "mempertingkat pengajaran bahasa Melayu 与 bahasa Inggeris di sekolah Cina",
+      "translate": "改善华校马来语和英语教学",
       "key_points_zh": [
-        "mempertingkat pengajaran bahasa Melayu 与 bahasa Inggeris di sekolah Cina"
+        "改善华校马来语和英语教学"
       ],
       "bm_focus_phrase": "mempertingkat pengajaran bahasa Melayu dan bahasa Inggeris di sekolah Cina"
     },
     {
       "source_id": "bab-7-4-extra-51",
       "bm_original": "memastikan bahasa Inggeris diajar di sekolah Melayu dan bahasa Melayu diajar di sekolah Inggeris",
-      "translate": "memastikan bahasa Inggeris diajar di sekolah Melayu 与 bahasa Melayu diajar di sekolah Inggeris",
+      "translate": "确保马来语学校教授英语，英语学校教授马来语",
       "key_points_zh": [
-        "memastikan bahasa Inggeris diajar di sekolah Melayu 与 bahasa Melayu diajar di sekolah Inggeris"
+        "确保马来语学校教授英语，英语学校教授马来语"
       ],
       "bm_focus_phrase": "memastikan bahasa Inggeris diajar di sekolah Melayu dan bahasa Melayu diajar di sekolah Inggeris"
     },
     {
       "source_id": "bab-7-4-extra-52",
       "bm_original": "menetapkan peperiksaan di sekolah menengah dikendalikan dalam bahasa Inggeris",
-      "translate": "menetapkan peperiksaan di sekolah menengah dikendalikan 在 bahasa Inggeris",
+      "translate": "高中设定的考试以英语进行",
       "key_points_zh": [
-        "menetapkan peperiksaan di sekolah menengah dikendalikan 在 bahasa Inggeris"
+        "高中设定的考试以英语进行"
       ],
       "bm_focus_phrase": "menetapkan peperiksaan di sekolah menengah dikendalikan dalam bahasa Inggeris"
     },
     {
       "source_id": "bab-7-4-extra-53",
       "bm_original": "1956 ➡️ diperkenalkan Ordinan Pelajaran Koloni 1956",
-      "translate": "重点：1956 ➡️ diperkenalkan Ordinan Pelajaran Koloni 1956",
+      "translate": "1956年➡️《1956年殖民地教育条例》出台",
       "key_points_zh": [
-        "重点：1956 ➡️ diperkenalkan Ordinan Pelajaran Koloni 1956"
+        "1956年➡️《1956年殖民地教育条例》出台"
       ],
       "bm_focus_phrase": "1956 ➡️ diperkenalkan Ordinan Pelajaran Koloni 1956"
     },
     {
       "source_id": "bab-7-4-u21",
       "bm_original": "Tujuan ordinan ini ialah untuk meneruskan rancangan Woodhead bagi:",
-      "translate": "目的 ordinan 这 是 为了 meneruskan rancangan Woodhead bagi:",
+      "translate": "该法令的目的是继续伍德海德的计划：",
       "key_points_zh": [
-        "目的 ordinan 这 是 为了 meneruskan rancangan Woodhead bagi:"
+        "该法令的目的是继续伍德海德的计划："
       ],
       "bm_focus_phrase": "Tujuan ordinan ini ialah untuk meneruskan rancangan Woodhead bagi:"
     },
     {
       "source_id": "bab-7-4-extra-54",
       "bm_original": "menyeragamkan kurikulum",
-      "translate": "重点：menyeragamkan kurikulum",
+      "translate": "课程标准化",
       "key_points_zh": [
-        "重点：menyeragamkan kurikulum"
+        "课程标准化"
       ],
       "bm_focus_phrase": "menyeragamkan kurikulum"
     },
     {
       "source_id": "bab-7-4-extra-55",
       "bm_original": "menyeragamkan peperiksaan",
-      "translate": "重点：menyeragamkan peperiksaan",
+      "translate": "标准化考试",
       "key_points_zh": [
-        "重点：menyeragamkan peperiksaan"
+        "标准化考试"
       ],
       "bm_focus_phrase": "menyeragamkan peperiksaan"
     },
     {
       "source_id": "bab-7-4-extra-56",
       "bm_original": "meliputi peringkat rendah dan menengah",
-      "translate": "meliputi peringkat rendah 与 menengah",
+      "translate": "涵盖小学和中学阶段",
       "key_points_zh": [
-        "meliputi peringkat rendah 与 menengah"
+        "涵盖小学和中学阶段"
       ],
       "bm_focus_phrase": "meliputi peringkat rendah dan menengah"
     },
     {
       "source_id": "bab-7-4-u22",
       "bm_original": "Selain itu, matlamatnya juga adalah untuk melahirkan:",
-      "translate": "Selain 那, matlamatnya 也 是 为了 melahirkan:",
+      "translate": "此外，目标还在于诞生：",
       "key_points_zh": [
-        "Selain 那, matlamatnya 也 是 为了 melahirkan:"
+        "此外，目标还在于诞生："
       ],
       "bm_focus_phrase": "Selain itu, matlamatnya juga adalah untuk melahirkan:"
     },
     {
       "source_id": "bab-7-4-extra-57",
       "bm_original": "perasaan kebersamaan dalam kalangan kaum di Sabah",
-      "translate": "perasaan kebersamaan 在 kalangan kaum di Sabah",
+      "translate": "沙巴各族团结的感觉",
       "key_points_zh": [
-        "perasaan kebersamaan 在 kalangan kaum di Sabah"
+        "沙巴各族团结的感觉"
       ],
       "bm_focus_phrase": "perasaan kebersamaan dalam kalangan kaum di Sabah"
     },
     {
       "source_id": "bab-7-4-u23",
       "bm_original": "Jawatankuasa Pelajaran ini dipengerusikan oleh:",
-      "translate": "Jawatankuasa Pelajaran 这 dipengerusikan 由:",
+      "translate": "研究委员会的主席为：",
       "key_points_zh": [
-        "Jawatankuasa Pelajaran 这 dipengerusikan 由:"
+        "研究委员会的主席为："
       ],
       "bm_focus_phrase": "Jawatankuasa Pelajaran ini dipengerusikan oleh:"
     },
     {
       "source_id": "bab-7-4-extra-58",
       "bm_original": "Dato’ Abdul Razak Hussein ➡️ selaku Menteri Pelajaran",
-      "translate": "Dato’ Abdul Razak Hussein ➡️ selaku Menteri Pelajaran",
+      "translate": "拿督阿卜杜勒拉扎克侯赛因➡️担任教育部长",
       "key_points_zh": [
-        "Dato’ Abdul Razak Hussein ➡️ selaku Menteri Pelajaran"
+        "拿督阿卜杜勒拉扎克侯赛因➡️担任教育部长"
       ],
       "bm_focus_phrase": "Dato’ Abdul Razak Hussein ➡️ selaku Menteri Pelajaran"
     },
     {
       "source_id": "bab-7-4-u24",
       "bm_original": "Jawatankuasa ini ditubuhkan untuk:",
-      "translate": "Jawatankuasa 这 ditubuhkan 为了:",
+      "translate": "该委员会成立的目的是：",
       "key_points_zh": [
-        "Jawatankuasa 这 ditubuhkan 为了:"
+        "该委员会成立的目的是："
       ],
       "bm_focus_phrase": "Jawatankuasa ini ditubuhkan untuk:"
     },
     {
       "source_id": "bab-7-4-extra-59",
       "bm_original": "mengkaji semula sistem pendidikan sedia ada",
-      "translate": "重点：mengkaji semula sistem pendidikan sedia ada",
+      "translate": "检讨现行教育制度",
       "key_points_zh": [
-        "重点：mengkaji semula sistem pendidikan sedia ada"
+        "检讨现行教育制度"
       ],
       "bm_focus_phrase": "mengkaji semula sistem pendidikan sedia ada"
     },
     {
       "source_id": "bab-7-4-extra-60",
       "bm_original": "mencadangkan satu sistem pelajaran kebangsaan yang baharu",
-      "translate": "mencadangkan satu sistem pelajaran kebangsaan 的 baharu",
+      "translate": "提出新的国民教育制度",
       "key_points_zh": [
-        "mencadangkan satu sistem pelajaran kebangsaan 的 baharu"
+        "提出新的国民教育制度"
       ],
       "bm_focus_phrase": "mencadangkan satu sistem pelajaran kebangsaan yang baharu"
     },
     {
       "source_id": "bab-7-4-u25",
       "bm_original": "Penyata ini juga dikenali sebagai:",
-      "translate": "Penyata 这 也 dikenali 作为:",
+      "translate": "该声明也称为：",
       "key_points_zh": [
-        "Penyata 这 也 dikenali 作为:"
+        "该声明也称为："
       ],
       "bm_focus_phrase": "Penyata ini juga dikenali sebagai:"
     },
     {
       "source_id": "bab-7-4-extra-61",
       "bm_original": "Penyata Razak",
-      "translate": "重点：Penyata Razak",
+      "translate": "拉扎克的声明",
       "key_points_zh": [
-        "重点：Penyata Razak"
+        "拉扎克的声明"
       ],
       "bm_focus_phrase": "Penyata Razak"
     },
     {
       "source_id": "bab-7-4-u26",
       "bm_original": "Teras pembentukan sistem pendidikan kebangsaan:",
-      "translate": "重点：Teras pembentukan sistem pendidikan kebangsaan:",
+      "translate": "国民教育体系形成的核心：",
       "key_points_zh": [
-        "重点：Teras pembentukan sistem pendidikan kebangsaan:"
+        "国民教育体系形成的核心："
       ],
       "bm_focus_phrase": "Teras pembentukan sistem pendidikan kebangsaan:"
     },
     {
       "source_id": "bab-7-4-extra-62",
       "bm_original": "sistem persekolahan yang sama bagi kanak-kanak daripada semua bangsa",
-      "translate": "sistem persekolahan 的 sama bagi kanak-kanak daripada semua bangsa",
+      "translate": "为所有种族的儿童提供相同的教育制度",
       "key_points_zh": [
-        "sistem persekolahan 的 sama bagi kanak-kanak daripada semua bangsa"
+        "为所有种族的儿童提供相同的教育制度"
       ],
       "bm_focus_phrase": "sistem persekolahan yang sama bagi kanak-kanak daripada semua bangsa"
     },
     {
       "source_id": "bab-7-4-extra-63",
       "bm_original": "bahasa kebangsaan sebagai bahasa pengantar utama",
-      "translate": "bahasa kebangsaan 作为 bahasa pengantar 主要",
+      "translate": "以国语为主要教学语言",
       "key_points_zh": [
-        "bahasa kebangsaan 作为 bahasa pengantar 主要"
+        "以国语为主要教学语言"
       ],
       "bm_focus_phrase": "bahasa kebangsaan sebagai bahasa pengantar utama"
     },
     {
       "source_id": "bab-7-4-extra-64",
       "bm_original": "kandungan kurikulum yang seragam dan bercorak kebangsaan",
-      "translate": "kandungan kurikulum 的 seragam 与 bercorak kebangsaan",
+      "translate": "课程内容统一、具有全国模式",
       "key_points_zh": [
-        "kandungan kurikulum 的 seragam 与 bercorak kebangsaan"
+        "课程内容统一、具有全国模式"
       ],
       "bm_focus_phrase": "kandungan kurikulum yang seragam dan bercorak kebangsaan"
     },
     {
       "source_id": "bab-7-4-u27",
       "bm_original": "Cadangan Penyata Razak:",
-      "translate": "重点：Cadangan Penyata Razak:",
+      "translate": "拟议的拉萨声明：",
       "key_points_zh": [
-        "重点：Cadangan Penyata Razak:"
+        "拟议的拉萨声明："
       ],
       "bm_focus_phrase": "Cadangan Penyata Razak:"
     },
     {
       "source_id": "bab-7-4-extra-65",
       "bm_original": "Sekolah Umum (rendah) menggunakan bahasa Melayu",
-      "translate": "重点：Sekolah Umum (rendah) menggunakan bahasa Melayu",
+      "translate": "公立（小学）学校使用马来语",
       "key_points_zh": [
-        "重点：Sekolah Umum (rendah) menggunakan bahasa Melayu"
+        "公立（小学）学校使用马来语"
       ],
       "bm_focus_phrase": "Sekolah Umum (rendah) menggunakan bahasa Melayu"
     },
     {
       "source_id": "bab-7-4-extra-66",
       "bm_original": "Sekolah Jenis Umum (rendah) menggunakan sama ada ➡️ bahasa Inggeris",
-      "translate": "重点：Sekolah Jenis Umum (rendah) menggunakan sama ada ➡️ bahasa Inggeris",
+      "translate": "普通类型学校（小学）使用 ➡️ 英语",
       "key_points_zh": [
-        "重点：Sekolah Jenis Umum (rendah) menggunakan sama ada ➡️ bahasa Inggeris"
+        "普通类型学校（小学）使用 ➡️ 英语"
       ],
       "bm_focus_phrase": "Sekolah Jenis Umum (rendah) menggunakan sama ada ➡️ bahasa Inggeris"
     },
     {
       "source_id": "bab-7-4-extra-67",
       "bm_original": "Sekolah Jenis Umum (rendah) menggunakan sama ada ➡️ bahasa Cina",
-      "translate": "重点：Sekolah Jenis Umum (rendah) menggunakan sama ada ➡️ bahasa Cina",
+      "translate": "一般类型学校（小学）使用➡️中文",
       "key_points_zh": [
-        "重点：Sekolah Jenis Umum (rendah) menggunakan sama ada ➡️ bahasa Cina"
+        "一般类型学校（小学）使用➡️中文"
       ],
       "bm_focus_phrase": "Sekolah Jenis Umum (rendah) menggunakan sama ada ➡️ bahasa Cina"
     },
     {
       "source_id": "bab-7-4-extra-68",
       "bm_original": "Sekolah Jenis Umum (rendah) menggunakan sama ada ➡️ bahasa Tamil",
-      "translate": "重点：Sekolah Jenis Umum (rendah) menggunakan sama ada ➡️ bahasa Tamil",
+      "translate": "普通类型学校（小学）使用 ➡️ 泰米尔语",
       "key_points_zh": [
-        "重点：Sekolah Jenis Umum (rendah) menggunakan sama ada ➡️ bahasa Tamil"
+        "普通类型学校（小学）使用 ➡️ 泰米尔语"
       ],
       "bm_focus_phrase": "Sekolah Jenis Umum (rendah) menggunakan sama ada ➡️ bahasa Tamil"
     },
     {
       "source_id": "bab-7-4-extra-69",
       "bm_original": "bahasa Melayu dan bahasa Inggeris dijadikan mata pelajaran wajib di semua sekolah",
-      "translate": "bahasa Melayu 与 bahasa Inggeris dijadikan mata pelajaran wajib di semua sekolah",
+      "translate": "马来语和英语成为所有学校的必修科目",
       "key_points_zh": [
-        "bahasa Melayu 与 bahasa Inggeris dijadikan mata pelajaran wajib di semua sekolah"
+        "马来语和英语成为所有学校的必修科目"
       ],
       "bm_focus_phrase": "bahasa Melayu dan bahasa Inggeris dijadikan mata pelajaran wajib di semua sekolah"
     },
     {
       "source_id": "bab-7-4-extra-70",
       "bm_original": "Sekolah Menengah Kebangsaan menggunakan bahasa Melayu sebagai bahasa pengantar, manakala bahasa Inggeris menjadi mata pelajaran",
-      "translate": "Sekolah Menengah Kebangsaan menggunakan bahasa Melayu 作为 bahasa pengantar, manakala bahasa Inggeris menjadi mata pelajaran",
+      "translate": "国立中学以马来语为教学语言，而英语为科目",
       "key_points_zh": [
-        "Sekolah Menengah Kebangsaan menggunakan bahasa Melayu 作为 bahasa pengantar, manakala bahasa Inggeris menjadi mata pelajaran"
+        "国立中学以马来语为教学语言，而英语为科目"
       ],
       "bm_focus_phrase": "Sekolah Menengah Kebangsaan menggunakan bahasa Melayu sebagai bahasa pengantar, manakala bahasa Inggeris menjadi mata pelajaran"
     },
     {
       "source_id": "bab-7-4-u28",
       "bm_original": "Penyata Razak menjadi asas utama kepada pembentukan sistem pendidikan kebangsaan yang bertujuan memupuk:",
-      "translate": "Penyata Razak menjadi asas 主要 向 pembentukan sistem pendidikan kebangsaan 的 bertujuan memupuk:",
+      "translate": "《拉萨声明》是形成国民教育体系的主要基础，旨在培养：",
       "key_points_zh": [
-        "Penyata Razak menjadi asas 主要 向 pembentukan sistem pendidikan kebangsaan 的 bertujuan memupuk:"
+        "《拉萨声明》是形成国民教育体系的主要基础，旨在培养："
       ],
       "bm_focus_phrase": "Penyata Razak menjadi asas utama kepada pembentukan sistem pendidikan kebangsaan yang bertujuan memupuk:"
     },
     {
       "source_id": "bab-7-4-extra-71",
       "bm_original": "integrasi",
-      "translate": "重点：integrasi",
+      "translate": "一体化",
       "key_points_zh": [
-        "重点：integrasi"
+        "一体化"
       ],
       "bm_focus_phrase": "integrasi"
     },
     {
       "source_id": "bab-7-4-extra-72",
       "bm_original": "perpaduan",
-      "translate": "重点：perpaduan",
+      "translate": "统一",
       "key_points_zh": [
-        "重点：perpaduan"
+        "统一"
       ],
       "bm_focus_phrase": "perpaduan"
     },
     {
       "source_id": "bab-7-4-extra-73",
       "bm_original": "identiti kebangsaan",
-      "translate": "重点：identiti kebangsaan",
+      "translate": "国家认同",
       "key_points_zh": [
-        "重点：identiti kebangsaan"
+        "国家认同"
       ],
       "bm_focus_phrase": "identiti kebangsaan"
     },
     {
       "source_id": "bab-7-4-u29",
       "bm_original": "Penyata Jawatankuasa Pelajaran 1956 menjadi asas kepada pembentukan sistem pendidikan kebangsaan di negara kita.",
-      "translate": "Penyata Jawatankuasa Pelajaran 1956 menjadi asas 向 pembentukan sistem pendidikan kebangsaan di negara kita.",
+      "translate": "1956年教育委员会的声明成为我国国民教育体系形成的基础。",
       "key_points_zh": [
-        "Penyata Jawatankuasa Pelajaran 1956 menjadi asas 向 pembentukan sistem pendidikan kebangsaan di negara kita."
+        "1956年教育委员会的声明成为我国国民教育体系形成的基础。"
       ],
       "bm_focus_phrase": "Penyata Jawatankuasa Pelajaran 1956 menjadi asas kepada pembentukan sistem pendidikan kebangsaan di negara kita."
     },
     {
       "source_id": "bab-7-4-u30",
       "bm_original": "Melalui sistem ini:",
-      "translate": "Melalui sistem 这:",
+      "translate": "通过这个系统：",
       "key_points_zh": [
-        "Melalui sistem 这:"
+        "通过这个系统："
       ],
       "bm_focus_phrase": "Melalui sistem ini:"
     },
     {
       "source_id": "bab-7-4-extra-74",
       "bm_original": "sukatan pelajaran diseragamkan",
-      "translate": "重点：sukatan pelajaran diseragamkan",
+      "translate": "标准化教学大纲",
       "key_points_zh": [
-        "重点：sukatan pelajaran diseragamkan"
+        "标准化教学大纲"
       ],
       "bm_focus_phrase": "sukatan pelajaran diseragamkan"
     },
     {
       "source_id": "bab-7-4-extra-75",
       "bm_original": "peperiksaan diseragamkan",
-      "translate": "重点：peperiksaan diseragamkan",
+      "translate": "标准化考试",
       "key_points_zh": [
-        "重点：peperiksaan diseragamkan"
+        "标准化考试"
       ],
       "bm_focus_phrase": "peperiksaan diseragamkan"
     },
     {
       "source_id": "bab-7-4-extra-76",
       "bm_original": "bahasa pengantar yang sama diberi keutamaan",
-      "translate": "bahasa pengantar 的 sama diberi keutamaan",
+      "translate": "相同教学语言优先",
       "key_points_zh": [
-        "bahasa pengantar 的 sama diberi keutamaan"
+        "相同教学语言优先"
       ],
       "bm_focus_phrase": "bahasa pengantar yang sama diberi keutamaan"
     },
     {
       "source_id": "bab-7-4-u31",
       "bm_original": "Langkah ini penting untuk memupuk:",
-      "translate": "步骤 这 penting 为了 memupuk:",
+      "translate": "此步骤对于促进：",
       "key_points_zh": [
-        "步骤 这 penting 为了 memupuk:"
+        "此步骤对于促进："
       ],
       "bm_focus_phrase": "Langkah ini penting untuk memupuk:"
     },
     {
       "source_id": "bab-7-4-extra-77",
       "bm_original": "semangat perpaduan",
-      "translate": "重点：semangat perpaduan",
+      "translate": "团结精神",
       "key_points_zh": [
-        "重点：semangat perpaduan"
+        "团结精神"
       ],
       "bm_focus_phrase": "semangat perpaduan"
     },
     {
       "source_id": "bab-7-4-extra-78",
       "bm_original": "nilai kewarganegaraan",
-      "translate": "nilai 公民权",
+      "translate": "公民价值",
       "key_points_zh": [
-        "nilai 公民权"
+        "公民价值"
       ],
       "bm_focus_phrase": "nilai kewarganegaraan"
     },
     {
       "source_id": "bab-7-4-extra-79",
       "bm_original": "identiti sepunya",
-      "translate": "重点：identiti sepunya",
+      "translate": "共同身份",
       "key_points_zh": [
-        "重点：identiti sepunya"
+        "共同身份"
       ],
       "bm_focus_phrase": "identiti sepunya"
     },
     {
       "source_id": "bab-7-4-extra-80",
       "bm_original": "kesetiaan kepada negara",
-      "translate": "kesetiaan 向 negara",
+      "translate": "对国家的忠诚",
       "key_points_zh": [
-        "kesetiaan 向 negara"
+        "对国家的忠诚"
       ],
       "bm_focus_phrase": "kesetiaan kepada negara"
     },
     {
       "source_id": "bab-7-4-u32",
       "bm_original": "Penyata Jawatankuasa Pelajaran 1956 menjadi asas kepada pembentukan sistem pendidikan kebangsaan di negara kita.",
-      "translate": "Penyata Jawatankuasa Pelajaran 1956 menjadi asas 向 pembentukan sistem pendidikan kebangsaan di negara kita.",
+      "translate": "1956年教育委员会的声明成为我国国民教育体系形成的基础。",
       "key_points_zh": [
-        "Penyata Jawatankuasa Pelajaran 1956 menjadi asas 向 pembentukan sistem pendidikan kebangsaan di negara kita."
+        "1956年教育委员会的声明成为我国国民教育体系形成的基础。"
       ],
       "bm_focus_phrase": "Penyata Jawatankuasa Pelajaran 1956 menjadi asas kepada pembentukan sistem pendidikan kebangsaan di negara kita."
     },
     {
       "source_id": "bab-7-4-u33",
       "bm_original": "Melalui sistem pendidikan yang lebih seragam, perpaduan rakyat dapat dipupuk dan identiti negara dapat dibina dengan lebih kukuh.",
-      "translate": "Melalui sistem pendidikan 的 更 seragam, perpaduan 人民 dapat dipupuk 与 identiti negara dapat dibina 以 更 kukuh.",
+      "translate": "通过更加统一的教育体系，可以促进人民团结，增强国家认同。",
       "key_points_zh": [
-        "Melalui sistem pendidikan 的 更 seragam, perpaduan 人民 dapat dipupuk 与 identiti negara dapat dibina 以 更 kukuh."
+        "通过更加统一的教育体系，可以促进人民团结，增强国家认同。"
       ],
       "bm_focus_phrase": "Melalui sistem pendidikan yang lebih seragam, perpaduan rakyat dapat dipupuk dan identiti negara dapat dibina dengan lebih kukuh."
     },
     {
       "source_id": "bab-7-4-u34",
       "bm_original": "Oleh itu, sistem pendidikan kebangsaan menjadi salah satu asas penting dalam membentuk generasi muda yang bersatu dan cintakan negara.",
-      "translate": "Oleh 那, sistem pendidikan kebangsaan menjadi salah satu asas penting 在 membentuk generasi muda 的 bersatu 与 cintakan negara.",
+      "translate": "因此，国民教育体系成为培养团结爱国的年轻一代的重要基础之一。",
       "key_points_zh": [
-        "Oleh 那, sistem pendidikan kebangsaan menjadi salah satu asas penting 在 membentuk generasi muda 的 bersatu 与 cintakan negara."
+        "因此，国民教育体系成为培养团结爱国的年轻一代的重要基础之一。"
       ],
       "bm_focus_phrase": "Oleh itu, sistem pendidikan kebangsaan menjadi salah satu asas penting dalam membentuk generasi muda yang bersatu dan cintakan negara."
     }

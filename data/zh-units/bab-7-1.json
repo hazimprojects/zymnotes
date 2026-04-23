@@ -1,303 +1,304 @@
 {
   "meta": {
     "source_file": "notes/bab-7-1.html",
-    "rollout": "gelombang-1-manual-revision"
+    "rollout": "gelombang-1-ms-zh-regenerated",
+    "notes": "Bab 7: translate regenerated from bm_original (ms→zh-CN), then manual term fixes (CLC→族群联络委员会, Sistem Ahli→成员制, Melayu Raya)."
   },
   "units": [
     {
       "source_id": "bab-7-1-u55",
       "bm_original": "Perkembangan politik antarabangsa dan serantau telah mempengaruhi gelombang politik di negara kita sehingga benih kesedaran politik berkembang menjadi idea negara merdeka.",
-      "translate": "Perkembangan 政治 antarabangsa 与 serantau 已经 mempengaruhi gelombang 政治 di negara kita sehingga benih kesedaran 政治 berkembang menjadi idea negara merdeka.",
+      "translate": "国际和地区政治发展影响着我国的政治浪潮，直至政治意识的种子长成独立国家的理念。",
       "key_points_zh": [
-        "Perkembangan 政治 antarabangsa 与 serantau 已经 mempengaruhi gelombang 政治 di negara kita sehingga benih kesedaran 政治 berkembang menjadi idea negara merdeka."
+        "国际和地区政治发展影响着我国的政治浪潮，直至政治意识的种子长成独立国家的理念。"
       ],
       "bm_focus_phrase": "Perkembangan politik antarabangsa dan serantau telah mempengaruhi gelombang politik di negara kita sehingga benih kesedaran politik berkembang menjadi idea negara merdeka."
     },
     {
       "source_id": "bab-7-1-u56",
       "bm_original": "Idea negara merdeka tidak lahir daripada satu pertubuhan sahaja, tetapi berkembang melalui perjuangan pelbagai pertubuhan dan tokoh dengan pendekatan yang berbeza.",
-      "translate": "Idea negara merdeka 不 lahir daripada satu pertubuhan sahaja, tetapi berkembang 通过 斗争 pelbagai pertubuhan 与 tokoh 以 pendekatan 的 berbeza.",
+      "translate": "独立国家的思想并不是由一个组织单独产生的，而是通过各种组织和人物以不同方式的斗争而发展起来的。",
       "key_points_zh": [
-        "Idea negara merdeka 不 lahir daripada satu pertubuhan sahaja, tetapi berkembang 通过 斗争 pelbagai pertubuhan 与 tokoh 以 pendekatan 的 berbeza."
+        "独立国家的思想并不是由一个组织单独产生的，而是通过各种组织和人物以不同方式的斗争而发展起来的。"
       ],
       "bm_focus_phrase": "Idea negara merdeka tidak lahir daripada satu pertubuhan sahaja, tetapi berkembang melalui perjuangan pelbagai pertubuhan dan tokoh dengan pendekatan yang berbeza."
     },
     {
       "source_id": "bab-7-1-u57",
       "bm_original": "Antara idea yang diperjuangkan termasuk Melayu Raya , demokrasi , negara Islam dan perpaduan antara kaum .",
-      "translate": "Antara idea 的 diperjuangkan termasuk Melayu Raya , demokrasi , negara Islam 与 perpaduan 其中 kaum .",
+      "translate": "正在争取的理念包括大马来由（Melayu Raya）、民主、伊斯兰国家和种族团结。",
       "key_points_zh": [
-        "Antara idea 的 diperjuangkan termasuk Melayu Raya , demokrasi , negara Islam 与 perpaduan 其中 kaum ."
+        "正在争取的理念包括大马来由（Melayu Raya）、民主、伊斯兰国家和种族团结。"
       ],
       "bm_focus_phrase": "Antara idea yang diperjuangkan termasuk Melayu Raya , demokrasi , negara Islam dan perpaduan antara kaum ."
     },
     {
       "source_id": "bab-7-1-u01",
       "bm_original": "Idea negara merdeka berkembang hasil pengaruh perkembangan politik antarabangsa dan serantau serta kesedaran politik dalam kalangan penduduk tempatan.",
-      "translate": "Idea negara merdeka berkembang hasil pengaruh perkembangan 政治 antarabangsa 与 serantau 以及 kesedaran 政治 在 kalangan penduduk 本地.",
+      "translate": "独立国家的思想是国际和地区政治发展以及当地民众政治意识影响的结果。",
       "key_points_zh": [
-        "Idea negara merdeka berkembang hasil pengaruh perkembangan 政治 antarabangsa 与 serantau 以及 kesedaran 政治 在 kalangan penduduk 本地."
+        "独立国家的思想是国际和地区政治发展以及当地民众政治意识影响的结果。"
       ],
       "bm_focus_phrase": "Idea negara merdeka berkembang hasil pengaruh perkembangan politik antarabangsa dan serantau serta kesedaran politik dalam kalangan penduduk tempatan."
     },
     {
       "source_id": "bab-7-1-u02",
       "bm_original": "Idea ini dibawa oleh pelbagai pertubuhan dan tokoh yang memperjuangkan kemerdekaan melalui ideologi dan pendekatan yang berbeza, tetapi menuju kepada matlamat yang sama.",
-      "translate": "Idea 这 dibawa 由 pelbagai pertubuhan 与 tokoh 的 memperjuangkan 独立 通过 ideologi 与 pendekatan 的 berbeza, tetapi menuju 向 matlamat 的 sama.",
+      "translate": "这一想法是由不同的组织和人物提出的，他们通过不同的意识形态和方式争取独立，但目标相同。",
       "key_points_zh": [
-        "Idea 这 dibawa 由 pelbagai pertubuhan 与 tokoh 的 memperjuangkan 独立 通过 ideologi 与 pendekatan 的 berbeza, tetapi menuju 向 matlamat 的 sama."
+        "这一想法是由不同的组织和人物提出的，他们通过不同的意识形态和方式争取独立，但目标相同。"
       ],
       "bm_focus_phrase": "Idea ini dibawa oleh pelbagai pertubuhan dan tokoh yang memperjuangkan kemerdekaan melalui ideologi dan pendekatan yang berbeza, tetapi menuju kepada matlamat yang sama."
     },
     {
       "source_id": "bab-7-1-extra-1",
       "bm_original": "1938 – Kesatuan Melayu Muda",
-      "translate": "重点：1938 – Kesatuan Melayu Muda",
+      "translate": "1938 年 – 马来青年联盟",
       "key_points_zh": [
-        "重点：1938 – Kesatuan Melayu Muda"
+        "1938 年 – 马来青年联盟"
       ],
       "bm_focus_phrase": "1938 – Kesatuan Melayu Muda"
     },
     {
       "source_id": "bab-7-1-extra-2",
       "bm_original": "1945 – Parti Kebangsaan Melayu Malaya",
-      "translate": "重点：1945 – Parti Kebangsaan Melayu Malaya",
+      "translate": "1945 年 – 马来亚马来民族党",
       "key_points_zh": [
-        "重点：1945 – Parti Kebangsaan Melayu Malaya"
+        "1945 年 – 马来亚马来民族党"
       ],
       "bm_focus_phrase": "1945 – Parti Kebangsaan Melayu Malaya"
     },
     {
       "source_id": "bab-7-1-extra-3",
       "bm_original": "1946 – API, PKMS, PPM, UMNO, PKML, MIC",
-      "translate": "1946 – API, PKMS, PPM, UMNO, PKML, MIC",
+      "translate": "1946 – API、PKMS、PPM、巫统、PKML、国大党",
       "key_points_zh": [
-        "1946 – API, PKMS, PPM, UMNO, PKML, MIC"
+        "1946 – API、PKMS、PPM、巫统、PKML、国大党"
       ],
       "bm_focus_phrase": "1946 – API, PKMS, PPM, UMNO, PKML, MIC"
     },
     {
       "source_id": "bab-7-1-extra-4",
       "bm_original": "1947 – Hizbul Muslimin",
-      "translate": "重点：1947 – Hizbul Muslimin",
+      "translate": "1947 年——穆斯林党",
       "key_points_zh": [
-        "重点：1947 – Hizbul Muslimin"
+        "1947 年——穆斯林党"
       ],
       "bm_focus_phrase": "1947 – Hizbul Muslimin"
     },
     {
       "source_id": "bab-7-1-extra-5",
       "bm_original": "1949 – MCA",
-      "translate": "重点：1949 – MCA",
+      "translate": "1949 – 马华",
       "key_points_zh": [
-        "重点：1949 – MCA"
+        "1949 – 马华"
       ],
       "bm_focus_phrase": "1949 – MCA"
     },
     {
       "source_id": "bab-7-1-extra-6",
       "bm_original": "1951 – PAS dan IMP",
-      "translate": "1951 – PAS 与 IMP",
+      "translate": "1951 年 – 伊党和 IMP",
       "key_points_zh": [
-        "1951 – PAS 与 IMP"
+        "1951 年 – 伊党和 IMP"
       ],
       "bm_focus_phrase": "1951 – PAS dan IMP"
     },
     {
       "source_id": "bab-7-1-u03",
       "bm_original": "Kesatuan Melayu Muda (KMM) di bawah pimpinan Ibrahim Haji Yaakob memperjuangkan kemerdekaan tanah air melalui konsep:",
-      "translate": "Kesatuan Melayu Muda (KMM) di bawah pimpinan Ibrahim Haji Yaakob memperjuangkan 独立 tanah air 通过 konsep:",
+      "translate": "易卜拉欣·哈吉·雅各布领导下的马来青年联盟（KMM）通过以下理念为祖国的独立而奋斗：",
       "key_points_zh": [
-        "Kesatuan Melayu Muda (KMM) di bawah pimpinan Ibrahim Haji Yaakob memperjuangkan 独立 tanah air 通过 konsep:"
+        "易卜拉欣·哈吉·雅各布领导下的马来青年联盟（KMM）通过以下理念为祖国的独立而奋斗："
       ],
       "bm_focus_phrase": "Kesatuan Melayu Muda (KMM) di bawah pimpinan Ibrahim Haji Yaakob memperjuangkan kemerdekaan tanah air melalui konsep:"
     },
     {
       "source_id": "bab-7-1-extra-7",
       "bm_original": "Melayu Raya",
-      "translate": "重点：Melayu Raya",
+      "translate": "马来拉雅",
       "key_points_zh": [
-        "重点：Melayu Raya"
+        "马来拉雅"
       ],
       "bm_focus_phrase": "Melayu Raya"
     },
     {
       "source_id": "bab-7-1-u04",
       "bm_original": "Idea ini merujuk kepada penyatuan bangsa dan dunia Melayu berdasarkan:",
-      "translate": "Idea 这 merujuk 向 penyatuan bangsa 与 dunia Melayu berdasarkan:",
+      "translate": "这个想法是指马来民族和世界的统一基于：",
       "key_points_zh": [
-        "Idea 这 merujuk 向 penyatuan bangsa 与 dunia Melayu berdasarkan:"
+        "这个想法是指马来民族和世界的统一基于："
       ],
       "bm_focus_phrase": "Idea ini merujuk kepada penyatuan bangsa dan dunia Melayu berdasarkan:"
     },
     {
       "source_id": "bab-7-1-extra-8",
       "bm_original": "persamaan daerah",
-      "translate": "重点：persamaan daerah",
+      "translate": "区域方程",
       "key_points_zh": [
-        "重点：persamaan daerah"
+        "区域方程"
       ],
       "bm_focus_phrase": "persamaan daerah"
     },
     {
       "source_id": "bab-7-1-extra-9",
       "bm_original": "persamaan darah",
-      "translate": "重点：persamaan darah",
+      "translate": "血液方程",
       "key_points_zh": [
-        "重点：persamaan darah"
+        "血液方程"
       ],
       "bm_focus_phrase": "persamaan darah"
     },
     {
       "source_id": "bab-7-1-extra-10",
       "bm_original": "persamaan kebudayaan",
-      "translate": "重点：persamaan kebudayaan",
+      "translate": "文化相似性",
       "key_points_zh": [
-        "重点：persamaan kebudayaan"
+        "文化相似性"
       ],
       "bm_focus_phrase": "persamaan kebudayaan"
     },
     {
       "source_id": "bab-7-1-extra-11",
       "bm_original": "persamaan bahasa",
-      "translate": "重点：persamaan bahasa",
+      "translate": "语言相似度",
       "key_points_zh": [
-        "重点：persamaan bahasa"
+        "语言相似度"
       ],
       "bm_focus_phrase": "persamaan bahasa"
     },
     {
       "source_id": "bab-7-1-u05",
       "bm_original": "Selepas KMM diharamkan, idea Melayu Raya diteruskan oleh:",
-      "translate": "Selepas KMM diharamkan, idea Melayu Raya diteruskan 由:",
+      "translate": "KMM 被禁止后，Melayu Raya 的想法得以继续：",
       "key_points_zh": [
-        "Selepas KMM diharamkan, idea Melayu Raya diteruskan 由:"
+        "KMM 被禁止后，Melayu Raya 的想法得以继续："
       ],
       "bm_focus_phrase": "Selepas KMM diharamkan, idea Melayu Raya diteruskan oleh:"
     },
     {
       "source_id": "bab-7-1-extra-12",
       "bm_original": "Kesatuan Rakyat Indonesia Semenanjung (KRIS)",
-      "translate": "Kesatuan 人民 Indonesia Semenanjung (KRIS)",
+      "translate": "印度尼西亚半岛人民联盟 (KRIS)",
       "key_points_zh": [
-        "Kesatuan 人民 Indonesia Semenanjung (KRIS)"
+        "印度尼西亚半岛人民联盟 (KRIS)"
       ],
       "bm_focus_phrase": "Kesatuan Rakyat Indonesia Semenanjung (KRIS)"
     },
     {
       "source_id": "bab-7-1-extra-13",
       "bm_original": "Parti Kebangsaan Melayu Malaya (PKMM)",
-      "translate": "重点：Parti Kebangsaan Melayu Malaya (PKMM)",
+      "translate": "马来亚民族党 (PKMM)",
       "key_points_zh": [
-        "重点：Parti Kebangsaan Melayu Malaya (PKMM)"
+        "马来亚民族党 (PKMM)"
       ],
       "bm_focus_phrase": "Parti Kebangsaan Melayu Malaya (PKMM)"
     },
     {
       "source_id": "bab-7-1-u06",
       "bm_original": "PKMM dipimpin oleh:",
-      "translate": "PKMM dipimpin 由:",
+      "translate": "PKMM 的领导者是：",
       "key_points_zh": [
-        "PKMM dipimpin 由:"
+        "PKMM 的领导者是："
       ],
       "bm_focus_phrase": "PKMM dipimpin oleh:"
     },
     {
       "source_id": "bab-7-1-extra-14",
       "bm_original": "Dr. Burhanuddin al-Helmi",
-      "translate": "重点：Dr. Burhanuddin al-Helmi",
+      "translate": "Burhanuddin al-Helmi 博士",
       "key_points_zh": [
-        "重点：Dr. Burhanuddin al-Helmi"
+        "Burhanuddin al-Helmi 博士"
       ],
       "bm_focus_phrase": "Dr. Burhanuddin al-Helmi"
     },
     {
       "source_id": "bab-7-1-extra-15",
       "bm_original": "Ishak Haji Muhammad",
-      "translate": "重点：Ishak Haji Muhammad",
+      "translate": "艾萨克·哈吉·穆罕默德",
       "key_points_zh": [
-        "重点：Ishak Haji Muhammad"
+        "艾萨克·哈吉·穆罕默德"
       ],
       "bm_focus_phrase": "Ishak Haji Muhammad"
     },
     {
       "source_id": "bab-7-1-extra-16",
       "bm_original": "Ahmad Boestamam",
-      "translate": "重点：Ahmad Boestamam",
+      "translate": "艾哈迈德·布埃斯塔曼",
       "key_points_zh": [
-        "重点：Ahmad Boestamam"
+        "艾哈迈德·布埃斯塔曼"
       ],
       "bm_focus_phrase": "Ahmad Boestamam"
     },
     {
       "source_id": "bab-7-1-u07",
       "bm_original": "Parti ini menetapkan matlamat politik untuk:",
-      "translate": "Parti 这 menetapkan matlamat 政治 为了:",
+      "translate": "该党设定的政治目标是：",
       "key_points_zh": [
-        "Parti 这 menetapkan matlamat 政治 为了:"
+        "该党设定的政治目标是："
       ],
       "bm_focus_phrase": "Parti ini menetapkan matlamat politik untuk:"
     },
     {
       "source_id": "bab-7-1-extra-17",
       "bm_original": "menanam semangat kebangsaan",
-      "translate": "重点：menanam semangat kebangsaan",
+      "translate": "培育民族精神",
       "key_points_zh": [
-        "重点：menanam semangat kebangsaan"
+        "培育民族精神"
       ],
       "bm_focus_phrase": "menanam semangat kebangsaan"
     },
     {
       "source_id": "bab-7-1-extra-18",
       "bm_original": "bekerjasama dengan kaum lain bagi membentuk perpaduan",
-      "translate": "bekerjasama 以 kaum lain bagi membentuk perpaduan",
+      "translate": "与其他种族合作，团结一致",
       "key_points_zh": [
-        "bekerjasama 以 kaum lain bagi membentuk perpaduan"
+        "与其他种族合作，团结一致"
       ],
       "bm_focus_phrase": "bekerjasama dengan kaum lain bagi membentuk perpaduan"
     },
     {
       "source_id": "bab-7-1-u08",
       "bm_original": "PKMM juga memperjuangkan kemerdekaan melalui konsep:",
-      "translate": "PKMM 也 memperjuangkan 独立 通过 konsep:",
+      "translate": "PKMM 还通过以下理念争取独立：",
       "key_points_zh": [
-        "PKMM 也 memperjuangkan 独立 通过 konsep:"
+        "PKMM 还通过以下理念争取独立："
       ],
       "bm_focus_phrase": "PKMM juga memperjuangkan kemerdekaan melalui konsep:"
     },
     {
       "source_id": "bab-7-1-extra-19",
       "bm_original": "Melayu Raya",
-      "translate": "重点：Melayu Raya",
+      "translate": "马来拉雅",
       "key_points_zh": [
-        "重点：Melayu Raya"
+        "马来拉雅"
       ],
       "bm_focus_phrase": "Melayu Raya"
     },
     {
       "source_id": "bab-7-1-u09",
       "bm_original": "Melalui slogan:",
-      "translate": "重点：Melalui slogan:",
+      "translate": "通过口号：",
       "key_points_zh": [
-        "重点：Melalui slogan:"
+        "通过口号："
       ],
       "bm_focus_phrase": "Melalui slogan:"
     },
     {
       "source_id": "bab-7-1-extra-20",
       "bm_original": "“Merdeka”",
-      "translate": "重点：“Merdeka”",
+      "translate": "“独立的”",
       "key_points_zh": [
-        "重点：“Merdeka”"
+        "“独立的”"
       ],
       "bm_focus_phrase": "“Merdeka”"
     },
     {
       "source_id": "bab-7-1-u10",
       "bm_original": "PKMM berhasrat untuk mendaulatkan hak rakyat dalam bidang:",
-      "translate": "PKMM berhasrat 为了 mendaulatkan 权利 人民 在 bidang:",
+      "translate": "PKMM 打算在以下领域维护人民的权利：",
       "key_points_zh": [
-        "PKMM berhasrat 为了 mendaulatkan 权利 人民 在 bidang:"
+        "PKMM 打算在以下领域维护人民的权利："
       ],
       "bm_focus_phrase": "PKMM berhasrat untuk mendaulatkan hak rakyat dalam bidang:"
     },
@@ -313,999 +314,999 @@
     {
       "source_id": "bab-7-1-extra-22",
       "bm_original": "ekonomi",
-      "translate": "重点：ekonomi",
+      "translate": "经济",
       "key_points_zh": [
-        "重点：ekonomi"
+        "经济"
       ],
       "bm_focus_phrase": "ekonomi"
     },
     {
       "source_id": "bab-7-1-extra-23",
       "bm_original": "agama",
-      "translate": "重点：agama",
+      "translate": "宗教",
       "key_points_zh": [
-        "重点：agama"
+        "宗教"
       ],
       "bm_focus_phrase": "agama"
     },
     {
       "source_id": "bab-7-1-extra-24",
       "bm_original": "sosial",
-      "translate": "重点：sosial",
+      "translate": "社会的",
       "key_points_zh": [
-        "重点：sosial"
+        "社会的"
       ],
       "bm_focus_phrase": "sosial"
     },
     {
       "source_id": "bab-7-1-extra-25",
       "bm_original": "kebudayaan",
-      "translate": "重点：kebudayaan",
+      "translate": "文化",
       "key_points_zh": [
-        "重点：kebudayaan"
+        "文化"
       ],
       "bm_focus_phrase": "kebudayaan"
     },
     {
       "source_id": "bab-7-1-u11",
       "bm_original": "API dipimpin oleh Ahmad Boestamam .",
-      "translate": "API dipimpin 由 Ahmad Boestamam .",
+      "translate": "API 由 Ahmad Boestamam 领导。",
       "key_points_zh": [
-        "API dipimpin 由 Ahmad Boestamam ."
+        "API 由 Ahmad Boestamam 领导。"
       ],
       "bm_focus_phrase": "API dipimpin oleh Ahmad Boestamam ."
     },
     {
       "source_id": "bab-7-1-u12",
       "bm_original": "Pertubuhan ini memperjuangkan idea negara merdeka yang menekankan:",
-      "translate": "Pertubuhan 这 memperjuangkan idea negara merdeka 的 menekankan:",
+      "translate": "该组织争取独立国家的理念，强调：",
       "key_points_zh": [
-        "Pertubuhan 这 memperjuangkan idea negara merdeka 的 menekankan:"
+        "该组织争取独立国家的理念，强调："
       ],
       "bm_focus_phrase": "Pertubuhan ini memperjuangkan idea negara merdeka yang menekankan:"
     },
     {
       "source_id": "bab-7-1-extra-26",
       "bm_original": "pemerintahan demokrasi",
-      "translate": "重点：pemerintahan demokrasi",
+      "translate": "民主政府",
       "key_points_zh": [
-        "重点：pemerintahan demokrasi"
+        "民主政府"
       ],
       "bm_focus_phrase": "pemerintahan demokrasi"
     },
     {
       "source_id": "bab-7-1-extra-27",
       "bm_original": "dasar ekonomi yang mengutamakan rakyat",
-      "translate": "dasar ekonomi 的 mengutamakan 人民",
+      "translate": "以人为本的经济政策",
       "key_points_zh": [
-        "dasar ekonomi 的 mengutamakan 人民"
+        "以人为本的经济政策"
       ],
       "bm_focus_phrase": "dasar ekonomi yang mengutamakan rakyat"
     },
     {
       "source_id": "bab-7-1-extra-28",
       "bm_original": "keadilan sosial",
-      "translate": "重点：keadilan sosial",
+      "translate": "社会正义",
       "key_points_zh": [
-        "重点：keadilan sosial"
+        "社会正义"
       ],
       "bm_focus_phrase": "keadilan sosial"
     },
     {
       "source_id": "bab-7-1-extra-29",
       "bm_original": "Disember 1946 ➡️ risalah Testament Politik API diterbitkan",
-      "translate": "重点：Disember 1946 ➡️ risalah Testament Politik API diterbitkan",
+      "translate": "1946 年 12 月 ➡️ API 政治遗嘱小册子出版",
       "key_points_zh": [
-        "重点：Disember 1946 ➡️ risalah Testament Politik API diterbitkan"
+        "1946 年 12 月 ➡️ API 政治遗嘱小册子出版"
       ],
       "bm_focus_phrase": "Disember 1946 ➡️ risalah Testament Politik API diterbitkan"
     },
     {
       "source_id": "bab-7-1-u13",
       "bm_original": "Risalah ini membawa slogan:",
-      "translate": "Risalah 这 membawa slogan:",
+      "translate": "这本传单的口号是：",
       "key_points_zh": [
-        "Risalah 这 membawa slogan:"
+        "这本传单的口号是："
       ],
       "bm_focus_phrase": "Risalah ini membawa slogan:"
     },
     {
       "source_id": "bab-7-1-extra-30",
       "bm_original": "“Merdeka dengan Darah”",
-      "translate": "“Merdeka 以 Darah”",
+      "translate": "《用鲜血获得自由》",
       "key_points_zh": [
-        "“Merdeka 以 Darah”"
+        "《用鲜血获得自由》"
       ],
       "bm_focus_phrase": "“Merdeka dengan Darah”"
     },
     {
       "source_id": "bab-7-1-u14",
       "bm_original": "Slogan ini menyeru perjuangan mencapai kemerdekaan bangsa dan tanah air melalui:",
-      "translate": "Slogan 这 menyeru 斗争 mencapai 独立 bangsa 与 tanah air 通过:",
+      "translate": "这个口号呼吁通过以下方式实现民族和祖国的独立：",
       "key_points_zh": [
-        "Slogan 这 menyeru 斗争 mencapai 独立 bangsa 与 tanah air 通过:"
+        "这个口号呼吁通过以下方式实现民族和祖国的独立："
       ],
       "bm_focus_phrase": "Slogan ini menyeru perjuangan mencapai kemerdekaan bangsa dan tanah air melalui:"
     },
     {
       "source_id": "bab-7-1-extra-31",
       "bm_original": "jalan terbuka secara lembut",
-      "translate": "重点：jalan terbuka secara lembut",
+      "translate": "道路轻轻地打开",
       "key_points_zh": [
-        "重点：jalan terbuka secara lembut"
+        "道路轻轻地打开"
       ],
       "bm_focus_phrase": "jalan terbuka secara lembut"
     },
     {
       "source_id": "bab-7-1-u15",
       "bm_original": "Pendekatan dan imej radikal ini menyebabkan API diharamkan oleh British .",
-      "translate": "Pendekatan 与 imej radikal 这 menyebabkan API diharamkan 由 British .",
+      "translate": "这种激进的做法和形象导致该 API 被英国禁止。",
       "key_points_zh": [
-        "Pendekatan 与 imej radikal 这 menyebabkan API diharamkan 由 British ."
+        "这种激进的做法和形象导致该 API 被英国禁止。"
       ],
       "bm_focus_phrase": "Pendekatan dan imej radikal ini menyebabkan API diharamkan oleh British ."
     },
     {
       "source_id": "bab-7-1-u16",
       "bm_original": "Persatuan Kebangsaan Melayu Sarawak (PKMS) di bawah pimpinan Datu Patinggi Abang Haji Abdillah mempelopori gerakan menentang penyerahan Sarawak kepada British .",
-      "translate": "协会 Kebangsaan Melayu Sarawak (PKMS) di bawah pimpinan Datu Patinggi Abang Haji Abdillah mempelopori gerakan 反对 penyerahan Sarawak 向 British .",
+      "translate": "拿督巴丁宜阿邦哈吉阿卜迪拉领导下的砂拉越马来民族协会（PKMS）率先发起了反对将砂拉越移交给英国的运动。",
       "key_points_zh": [
-        "协会 Kebangsaan Melayu Sarawak (PKMS) di bawah pimpinan Datu Patinggi Abang Haji Abdillah mempelopori gerakan 反对 penyerahan Sarawak 向 British ."
+        "拿督巴丁宜阿邦哈吉阿卜迪拉领导下的砂拉越马来民族协会（PKMS）率先发起了反对将砂拉越移交给英国的运动。"
       ],
       "bm_focus_phrase": "Persatuan Kebangsaan Melayu Sarawak (PKMS) di bawah pimpinan Datu Patinggi Abang Haji Abdillah mempelopori gerakan menentang penyerahan Sarawak kepada British ."
     },
     {
       "source_id": "bab-7-1-u17",
       "bm_original": "Matlamat pertubuhan ini ialah:",
-      "translate": "Matlamat pertubuhan 这 是:",
+      "translate": "该组织的目标是：",
       "key_points_zh": [
-        "Matlamat pertubuhan 这 是:"
+        "该组织的目标是："
       ],
       "bm_focus_phrase": "Matlamat pertubuhan ini ialah:"
     },
     {
       "source_id": "bab-7-1-extra-32",
       "bm_original": "menjadikan Sarawak negeri merdeka di bawah pemerintahan Raja Brooke",
-      "translate": "menjadikan Sarawak 州 merdeka di bawah pemerintahan Raja Brooke",
+      "translate": "使砂拉越成为布鲁克国王统治下的独立国家",
       "key_points_zh": [
-        "menjadikan Sarawak 州 merdeka di bawah pemerintahan Raja Brooke"
+        "使砂拉越成为布鲁克国王统治下的独立国家"
       ],
       "bm_focus_phrase": "menjadikan Sarawak negeri merdeka di bawah pemerintahan Raja Brooke"
     },
     {
       "source_id": "bab-7-1-u18",
       "bm_original": "Mereka juga mahu Sarawak berkerajaan sendiri sebagaimana yang dijanjikan dalam:",
-      "translate": "Mereka 也 mahu Sarawak berkerajaan sendiri sebagaimana 的 dijanjikan 在:",
+      "translate": "他们还希望砂拉越按照以下承诺实现自治：",
       "key_points_zh": [
-        "Mereka 也 mahu Sarawak berkerajaan sendiri sebagaimana 的 dijanjikan 在:"
+        "他们还希望砂拉越按照以下承诺实现自治："
       ],
       "bm_focus_phrase": "Mereka juga mahu Sarawak berkerajaan sendiri sebagaimana yang dijanjikan dalam:"
     },
     {
       "source_id": "bab-7-1-extra-33",
       "bm_original": "Perlembagaan 1941",
-      "translate": "重点：Perlembagaan 1941",
+      "translate": "1941年宪法",
       "key_points_zh": [
-        "重点：Perlembagaan 1941"
+        "1941年宪法"
       ],
       "bm_focus_phrase": "Perlembagaan 1941"
     },
     {
       "source_id": "bab-7-1-u19",
       "bm_original": "Kontroversi penyerahan Sarawak kepada British melahirkan:",
-      "translate": "Kontroversi penyerahan Sarawak 向 British melahirkan:",
+      "translate": "关于砂拉越移交给英国的争议产生了：",
       "key_points_zh": [
-        "Kontroversi penyerahan Sarawak 向 British melahirkan:"
+        "关于砂拉越移交给英国的争议产生了："
       ],
       "bm_focus_phrase": "Kontroversi penyerahan Sarawak kepada British melahirkan:"
     },
     {
       "source_id": "bab-7-1-extra-34",
       "bm_original": "Pergerakan Pemuda Melayu (PPM)",
-      "translate": "重点：Pergerakan Pemuda Melayu (PPM)",
+      "translate": "马来青年运动（PPM）",
       "key_points_zh": [
-        "重点：Pergerakan Pemuda Melayu (PPM)"
+        "马来青年运动（PPM）"
       ],
       "bm_focus_phrase": "Pergerakan Pemuda Melayu (PPM)"
     },
     {
       "source_id": "bab-7-1-extra-35",
       "bm_original": "di Sibu",
-      "translate": "重点：di Sibu",
+      "translate": "在诗巫",
       "key_points_zh": [
-        "重点：di Sibu"
+        "在诗巫"
       ],
       "bm_focus_phrase": "di Sibu"
     },
     {
       "source_id": "bab-7-1-u20",
       "bm_original": "PPM rela berkorban jiwa untuk mendapatkan:",
-      "translate": "PPM rela berkorban jiwa 为了 取得:",
+      "translate": "PPM愿意牺牲自己的生命来得到：",
       "key_points_zh": [
-        "PPM rela berkorban jiwa 为了 取得:"
+        "PPM愿意牺牲自己的生命来得到："
       ],
       "bm_focus_phrase": "PPM rela berkorban jiwa untuk mendapatkan:"
     },
     {
       "source_id": "bab-7-1-extra-36",
       "bm_original": "kemerdekaan penuh Sarawak",
-      "translate": "独立 penuh Sarawak",
+      "translate": "砂拉越完全独立",
       "key_points_zh": [
-        "独立 penuh Sarawak"
+        "砂拉越完全独立"
       ],
       "bm_focus_phrase": "kemerdekaan penuh Sarawak"
     },
     {
       "source_id": "bab-7-1-u21",
       "bm_original": "Catatan “Merdeka” dalam surat-menyurat PPM menunjukkan bahawa gerakan ini memang bertujuan:",
-      "translate": "Catatan “Merdeka” 在 surat-menyurat PPM menunjukkan bahawa gerakan 这 memang bertujuan:",
+      "translate": "PPM 信件中的“Merdeka”字样表明该运动确实旨在：",
       "key_points_zh": [
-        "Catatan “Merdeka” 在 surat-menyurat PPM menunjukkan bahawa gerakan 这 memang bertujuan:"
+        "PPM 信件中的“Merdeka”字样表明该运动确实旨在："
       ],
       "bm_focus_phrase": "Catatan “Merdeka” dalam surat-menyurat PPM menunjukkan bahawa gerakan ini memang bertujuan:"
     },
     {
       "source_id": "bab-7-1-extra-37",
       "bm_original": "memerdekakan Sarawak",
-      "translate": "重点：memerdekakan Sarawak",
+      "translate": "解放砂拉越",
       "key_points_zh": [
-        "重点：memerdekakan Sarawak"
+        "解放砂拉越"
       ],
       "bm_focus_phrase": "memerdekakan Sarawak"
     },
     {
       "source_id": "bab-7-1-u22",
       "bm_original": "Anggota PPM menubuhkan pakatan sulit:",
-      "translate": "Anggota PPM 成立 pakatan sulit:",
+      "translate": "PPM成员勾结：",
       "key_points_zh": [
-        "Anggota PPM 成立 pakatan sulit:"
+        "PPM成员勾结："
       ],
       "bm_focus_phrase": "Anggota PPM menubuhkan pakatan sulit:"
     },
     {
       "source_id": "bab-7-1-extra-38",
       "bm_original": "Rukun 13",
-      "translate": "重点：Rukun 13",
+      "translate": "支柱 13",
       "key_points_zh": [
-        "重点：Rukun 13"
+        "支柱 13"
       ],
       "bm_focus_phrase": "Rukun 13"
     },
     {
       "source_id": "bab-7-1-u23",
       "bm_original": "Pakatan ini nekad membunuh:",
-      "translate": "Pakatan 这 nekad membunuh:",
+      "translate": "这个联盟决心要杀：",
       "key_points_zh": [
-        "Pakatan 这 nekad membunuh:"
+        "这个联盟决心要杀："
       ],
       "bm_focus_phrase": "Pakatan ini nekad membunuh:"
     },
     {
       "source_id": "bab-7-1-extra-39",
       "bm_original": "gabenor",
-      "translate": "重点：gabenor",
+      "translate": "州长",
       "key_points_zh": [
-        "重点：gabenor"
+        "州长"
       ],
       "bm_focus_phrase": "gabenor"
     },
     {
       "source_id": "bab-7-1-extra-40",
       "bm_original": "pegawai British",
-      "translate": "重点：pegawai British",
+      "translate": "英国军官",
       "key_points_zh": [
-        "重点：pegawai British"
+        "英国军官"
       ],
       "bm_focus_phrase": "pegawai British"
     },
     {
       "source_id": "bab-7-1-extra-41",
       "bm_original": "Datu Melayu yang menyokong penyerahan Sarawak",
-      "translate": "Datu Melayu 的 menyokong penyerahan Sarawak",
+      "translate": "支持砂拉越投降的拿督马来人",
       "key_points_zh": [
-        "Datu Melayu 的 menyokong penyerahan Sarawak"
+        "支持砂拉越投降的拿督马来人"
       ],
       "bm_focus_phrase": "Datu Melayu yang menyokong penyerahan Sarawak"
     },
     {
       "source_id": "bab-7-1-u24",
       "bm_original": "Penubuhan Rukun 13 membuktikan kebencian PPM terhadap kolonial.",
-      "translate": "Penubuhan Rukun 13 membuktikan kebencian PPM 针对 kolonial.",
+      "translate": "Rukun 13的成立证明了PPM对殖民主义的仇恨。",
       "key_points_zh": [
-        "Penubuhan Rukun 13 membuktikan kebencian PPM 针对 kolonial."
+        "Rukun 13的成立证明了PPM对殖民主义的仇恨。"
       ],
       "bm_focus_phrase": "Penubuhan Rukun 13 membuktikan kebencian PPM terhadap kolonial."
     },
     {
       "source_id": "bab-7-1-u25",
       "bm_original": "UMNO dipimpin oleh Dato’ Onn Jaafar .",
-      "translate": "UMNO dipimpin 由 Dato’ Onn Jaafar .",
+      "translate": "巫统由拿督翁贾化尔领导。",
       "key_points_zh": [
-        "UMNO dipimpin 由 Dato’ Onn Jaafar ."
+        "巫统由拿督翁贾化尔领导。"
       ],
       "bm_focus_phrase": "UMNO dipimpin oleh Dato’ Onn Jaafar ."
     },
     {
       "source_id": "bab-7-1-u26",
       "bm_original": "UMNO berusaha menyatukan orang Melayu untuk:",
-      "translate": "UMNO berusaha menyatukan orang Melayu 为了:",
+      "translate": "巫统致力于团结马来人：",
       "key_points_zh": [
-        "UMNO berusaha menyatukan orang Melayu 为了:"
+        "巫统致力于团结马来人："
       ],
       "bm_focus_phrase": "UMNO berusaha menyatukan orang Melayu untuk:"
     },
     {
       "source_id": "bab-7-1-extra-42",
       "bm_original": "mempertahankan hak bangsa Melayu",
-      "translate": "mempertahankan 权利 bangsa Melayu",
+      "translate": "捍卫马来民族的权利",
       "key_points_zh": [
-        "mempertahankan 权利 bangsa Melayu"
+        "捍卫马来民族的权利"
       ],
       "bm_focus_phrase": "mempertahankan hak bangsa Melayu"
     },
     {
       "source_id": "bab-7-1-extra-43",
       "bm_original": "mempertahankan kedudukan Raja-raja Melayu",
-      "translate": "mempertahankan kedudukan Raja-raja Melayu",
+      "translate": "捍卫马来国王的地位",
       "key_points_zh": [
-        "mempertahankan kedudukan Raja-raja Melayu"
+        "捍卫马来国王的地位"
       ],
       "bm_focus_phrase": "mempertahankan kedudukan Raja-raja Melayu"
     },
     {
       "source_id": "bab-7-1-u27",
       "bm_original": "Dengan slogan:",
-      "translate": "重点：Dengan slogan:",
+      "translate": "口号是：",
       "key_points_zh": [
-        "重点：Dengan slogan:"
+        "口号是："
       ],
       "bm_focus_phrase": "Dengan slogan:"
     },
     {
       "source_id": "bab-7-1-extra-44",
       "bm_original": "“Hidup Melayu”",
-      "translate": "重点：“Hidup Melayu”",
+      "translate": "《马来人的生活》",
       "key_points_zh": [
-        "重点：“Hidup Melayu”"
+        "《马来人的生活》"
       ],
       "bm_focus_phrase": "“Hidup Melayu”"
     },
     {
       "source_id": "bab-7-1-u28",
       "bm_original": "UMNO berjuang menentang Malayan Union bagi memelihara:",
-      "translate": "UMNO berjuang 反对 Malayan Union bagi memelihara:",
+      "translate": "巫统与马来亚联盟的斗争是为了维护：",
       "key_points_zh": [
-        "UMNO berjuang 反对 Malayan Union bagi memelihara:"
+        "巫统与马来亚联盟的斗争是为了维护："
       ],
       "bm_focus_phrase": "UMNO berjuang menentang Malayan Union bagi memelihara:"
     },
     {
       "source_id": "bab-7-1-extra-45",
       "bm_original": "status quo orang Melayu",
-      "translate": "重点：status quo orang Melayu",
+      "translate": "马来人的现状",
       "key_points_zh": [
-        "重点：status quo orang Melayu"
+        "马来人的现状"
       ],
       "bm_focus_phrase": "status quo orang Melayu"
     },
     {
       "source_id": "bab-7-1-extra-46",
       "bm_original": "kedaulatan Raja-raja Melayu",
-      "translate": "主权 Raja-raja Melayu",
+      "translate": "马来国王的主权",
       "key_points_zh": [
-        "主权 Raja-raja Melayu"
+        "马来国王的主权"
       ],
       "bm_focus_phrase": "kedaulatan Raja-raja Melayu"
     },
     {
       "source_id": "bab-7-1-extra-47",
       "bm_original": "1951 ➡️ slogan UMNO diubah kepada “Merdeka”",
-      "translate": "1951 ➡️ slogan UMNO diubah 向 “Merdeka”",
+      "translate": "1951年➡️巫统口号改为“Merdeka”",
       "key_points_zh": [
-        "1951 ➡️ slogan UMNO diubah 向 “Merdeka”"
+        "1951年➡️巫统口号改为“Merdeka”"
       ],
       "bm_focus_phrase": "1951 ➡️ slogan UMNO diubah kepada “Merdeka”"
     },
     {
       "source_id": "bab-7-1-u29",
       "bm_original": "Tujuannya ialah memperjuangkan kemerdekaan Tanah Melayu melalui:",
-      "translate": "Tujuannya 是 memperjuangkan 独立 Tanah Melayu 通过:",
+      "translate": "目的是通过以下方式争取马来亚独立：",
       "key_points_zh": [
-        "Tujuannya 是 memperjuangkan 独立 Tanah Melayu 通过:"
+        "目的是通过以下方式争取马来亚独立："
       ],
       "bm_focus_phrase": "Tujuannya ialah memperjuangkan kemerdekaan Tanah Melayu melalui:"
     },
     {
       "source_id": "bab-7-1-extra-48",
       "bm_original": "perundingan",
-      "translate": "重点：perundingan",
+      "translate": "咨询",
       "key_points_zh": [
-        "重点：perundingan"
+        "咨询"
       ],
       "bm_focus_phrase": "perundingan"
     },
     {
       "source_id": "bab-7-1-u30",
       "bm_original": "Perjuangan PKMM untuk kemerdekaan Tanah Melayu telah mempengaruhi penubuhan:",
-      "translate": "斗争 PKMM 为了 独立 Tanah Melayu 已经 mempengaruhi 成立:",
+      "translate": "马来西亚人民运动党争取马来亚独立的斗争影响了以下组织的建立：",
       "key_points_zh": [
-        "斗争 PKMM 为了 独立 Tanah Melayu 已经 mempengaruhi 成立:"
+        "马来西亚人民运动党争取马来亚独立的斗争影响了以下组织的建立："
       ],
       "bm_focus_phrase": "Perjuangan PKMM untuk kemerdekaan Tanah Melayu telah mempengaruhi penubuhan:"
     },
     {
       "source_id": "bab-7-1-extra-49",
       "bm_original": "Parti Kebangsaan Melayu Labuan (PKML)",
-      "translate": "重点：Parti Kebangsaan Melayu Labuan (PKML)",
+      "translate": "纳闽马来民族党 (PKML)",
       "key_points_zh": [
-        "重点：Parti Kebangsaan Melayu Labuan (PKML)"
+        "纳闽马来民族党 (PKML)"
       ],
       "bm_focus_phrase": "Parti Kebangsaan Melayu Labuan (PKML)"
     },
     {
       "source_id": "bab-7-1-extra-50",
       "bm_original": "di Sabah",
-      "translate": "重点：di Sabah",
+      "translate": "在沙巴",
       "key_points_zh": [
-        "重点：di Sabah"
+        "在沙巴"
       ],
       "bm_focus_phrase": "di Sabah"
     },
     {
       "source_id": "bab-7-1-u31",
       "bm_original": "PKML dipimpin oleh:",
-      "translate": "PKML dipimpin 由:",
+      "translate": "PKML 的领导者是：",
       "key_points_zh": [
-        "PKML dipimpin 由:"
+        "PKML 的领导者是："
       ],
       "bm_focus_phrase": "PKML dipimpin oleh:"
     },
     {
       "source_id": "bab-7-1-extra-51",
       "bm_original": "Tengku Noordin",
-      "translate": "Tengku Noordin",
+      "translate": "东姑努丁",
       "key_points_zh": [
-        "Tengku Noordin"
+        "东姑努丁"
       ],
       "bm_focus_phrase": "Tengku Noordin"
     },
     {
       "source_id": "bab-7-1-extra-52",
       "bm_original": "Zakaria Gunn",
-      "translate": "重点：Zakaria Gunn",
+      "translate": "扎卡里亚·冈恩",
       "key_points_zh": [
-        "重点：Zakaria Gunn"
+        "扎卡里亚·冈恩"
       ],
       "bm_focus_phrase": "Zakaria Gunn"
     },
     {
       "source_id": "bab-7-1-u32",
       "bm_original": "PKML menjalankan:",
-      "translate": "重点：PKML menjalankan:",
+      "translate": "PKML 进行：",
       "key_points_zh": [
-        "重点：PKML menjalankan:"
+        "PKML 进行："
       ],
       "bm_focus_phrase": "PKML menjalankan:"
     },
     {
       "source_id": "bab-7-1-extra-53",
       "bm_original": "dasar tidak bekerjasama dengan penjajah",
-      "translate": "dasar 不 bekerjasama 以 penjajah",
+      "translate": "不与殖民主义者合作的政策",
       "key_points_zh": [
-        "dasar 不 bekerjasama 以 penjajah"
+        "不与殖民主义者合作的政策"
       ],
       "bm_focus_phrase": "dasar tidak bekerjasama dengan penjajah"
     },
     {
       "source_id": "bab-7-1-u33",
       "bm_original": "dan menuntut:",
-      "translate": "与 menuntut:",
+      "translate": "并要求：",
       "key_points_zh": [
-        "与 menuntut:"
+        "并要求："
       ],
       "bm_focus_phrase": "dan menuntut:"
     },
     {
       "source_id": "bab-7-1-extra-54",
       "bm_original": "Sabah dimerdekakan daripada British",
-      "translate": "重点：Sabah dimerdekakan daripada British",
+      "translate": "沙巴从英国统治下解放出来",
       "key_points_zh": [
-        "重点：Sabah dimerdekakan daripada British"
+        "沙巴从英国统治下解放出来"
       ],
       "bm_focus_phrase": "Sabah dimerdekakan daripada British"
     },
     {
       "source_id": "bab-7-1-extra-55",
       "bm_original": "“Hidup Melayu-Merdeka”",
-      "translate": "重点：“Hidup Melayu-Merdeka”",
+      "translate": "《无马来人的生活》",
       "key_points_zh": [
-        "重点：“Hidup Melayu-Merdeka”"
+        "《无马来人的生活》"
       ],
       "bm_focus_phrase": "“Hidup Melayu-Merdeka”"
     },
     {
       "source_id": "bab-7-1-u34",
       "bm_original": "MIC diasaskan oleh John Thivy .",
-      "translate": "MIC diasaskan 由 John Thivy .",
+      "translate": "MIC 由约翰·蒂维 (John Thivy) 创立。",
       "key_points_zh": [
-        "MIC diasaskan 由 John Thivy ."
+        "MIC 由约翰·蒂维 (John Thivy) 创立。"
       ],
       "bm_focus_phrase": "MIC diasaskan oleh John Thivy ."
     },
     {
       "source_id": "bab-7-1-u35",
       "bm_original": "MIC meletakkan objektif untuk:",
-      "translate": "MIC meletakkan objektif 为了:",
+      "translate": "MIC 设定的目标是：",
       "key_points_zh": [
-        "MIC meletakkan objektif 为了:"
+        "MIC 设定的目标是："
       ],
       "bm_focus_phrase": "MIC meletakkan objektif untuk:"
     },
     {
       "source_id": "bab-7-1-extra-56",
       "bm_original": "bekerjasama dengan kaum lain",
-      "translate": "bekerjasama 以 kaum lain",
+      "translate": "与其他种族合作",
       "key_points_zh": [
-        "bekerjasama 以 kaum lain"
+        "与其他种族合作"
       ],
       "bm_focus_phrase": "bekerjasama dengan kaum lain"
     },
     {
       "source_id": "bab-7-1-extra-57",
       "bm_original": "memperjuangkan kemerdekaan Tanah Melayu",
-      "translate": "memperjuangkan 独立 Tanah Melayu",
+      "translate": "为马来亚独立而战",
       "key_points_zh": [
-        "memperjuangkan 独立 Tanah Melayu"
+        "为马来亚独立而战"
       ],
       "bm_focus_phrase": "memperjuangkan kemerdekaan Tanah Melayu"
     },
     {
       "source_id": "bab-7-1-u36",
       "bm_original": "MIC menegaskan bahawa kewarganegaraan tunggal perlu diberikan kepada mereka yang:",
-      "translate": "MIC menegaskan bahawa 公民权 tunggal perlu diberikan 向 mereka 的:",
+      "translate": "MIC 坚持认为单一公民身份应给予以下人员：",
       "key_points_zh": [
-        "MIC menegaskan bahawa 公民权 tunggal perlu diberikan 向 mereka 的:"
+        "MIC 坚持认为单一公民身份应给予以下人员："
       ],
       "bm_focus_phrase": "MIC menegaskan bahawa kewarganegaraan tunggal perlu diberikan kepada mereka yang:"
     },
     {
       "source_id": "bab-7-1-extra-58",
       "bm_original": "menerima Tanah Melayu sebagai tanah air",
-      "translate": "menerima Tanah Melayu 作为 tanah air",
+      "translate": "承认马来亚为祖国",
       "key_points_zh": [
-        "menerima Tanah Melayu 作为 tanah air"
+        "承认马来亚为祖国"
       ],
       "bm_focus_phrase": "menerima Tanah Melayu sebagai tanah air"
     },
     {
       "source_id": "bab-7-1-extra-59",
       "bm_original": "sedia melafazkan taat setia kepada Tanah Melayu",
-      "translate": "sedia melafazkan taat setia 向 Tanah Melayu",
+      "translate": "准备宣布效忠马来亚",
       "key_points_zh": [
-        "sedia melafazkan taat setia 向 Tanah Melayu"
+        "准备宣布效忠马来亚"
       ],
       "bm_focus_phrase": "sedia melafazkan taat setia kepada Tanah Melayu"
     },
     {
       "source_id": "bab-7-1-u37",
       "bm_original": "Perhimpunan rakyat di Maahad al-Ehya Assharif, Gunung Semanggol, Perak melahirkan:",
-      "translate": "Perhimpunan 人民 di Maahad al-Ehya Assharif, Gunung Semanggol, Perak melahirkan:",
+      "translate": "霹雳州新芒古山 Maahad al-Ehya Assharif 的人民议会制定了：",
       "key_points_zh": [
-        "Perhimpunan 人民 di Maahad al-Ehya Assharif, Gunung Semanggol, Perak melahirkan:"
+        "霹雳州新芒古山 Maahad al-Ehya Assharif 的人民议会制定了："
       ],
       "bm_focus_phrase": "Perhimpunan rakyat di Maahad al-Ehya Assharif, Gunung Semanggol, Perak melahirkan:"
     },
     {
       "source_id": "bab-7-1-extra-60",
       "bm_original": "Majlis Agama Islam Tertinggi (MATA)",
-      "translate": "重点：Majlis Agama Islam Tertinggi (MATA)",
+      "translate": "最高伊斯兰宗教委员会 (MATA)",
       "key_points_zh": [
-        "重点：Majlis Agama Islam Tertinggi (MATA)"
+        "最高伊斯兰宗教委员会 (MATA)"
       ],
       "bm_focus_phrase": "Majlis Agama Islam Tertinggi (MATA)"
     },
     {
       "source_id": "bab-7-1-u38",
       "bm_original": "MATA diterajui oleh ulama berpengaruh seperti:",
-      "translate": "MATA diterajui 由 ulama berpengaruh seperti:",
+      "translate": "MATA 由有影响力的学者领导，例如：",
       "key_points_zh": [
-        "MATA diterajui 由 ulama berpengaruh seperti:"
+        "MATA 由有影响力的学者领导，例如："
       ],
       "bm_focus_phrase": "MATA diterajui oleh ulama berpengaruh seperti:"
     },
     {
       "source_id": "bab-7-1-extra-61",
       "bm_original": "Abu Bakar al-Baqir",
-      "translate": "重点：Abu Bakar al-Baqir",
+      "translate": "阿布·伯克尔·巴吉尔",
       "key_points_zh": [
-        "重点：Abu Bakar al-Baqir"
+        "阿布·伯克尔·巴吉尔"
       ],
       "bm_focus_phrase": "Abu Bakar al-Baqir"
     },
     {
       "source_id": "bab-7-1-extra-62",
       "bm_original": "Sheikh Fadhlulah Suhaimi",
-      "translate": "重点：Sheikh Fadhlulah Suhaimi",
+      "translate": "谢赫·法德鲁拉·苏海米",
       "key_points_zh": [
-        "重点：Sheikh Fadhlulah Suhaimi"
+        "谢赫·法德鲁拉·苏海米"
       ],
       "bm_focus_phrase": "Sheikh Fadhlulah Suhaimi"
     },
     {
       "source_id": "bab-7-1-extra-63",
       "bm_original": "Sheikh Abdullah Fahim",
-      "translate": "重点：Sheikh Abdullah Fahim",
+      "translate": "谢赫·阿卜杜拉·法希姆",
       "key_points_zh": [
-        "重点：Sheikh Abdullah Fahim"
+        "谢赫·阿卜杜拉·法希姆"
       ],
       "bm_focus_phrase": "Sheikh Abdullah Fahim"
     },
     {
       "source_id": "bab-7-1-u39",
       "bm_original": "Perhimpunan MATA kemudiannya melahirkan:",
-      "translate": "重点：Perhimpunan MATA kemudiannya melahirkan:",
+      "translate": "MATA 大会随后诞生了：",
       "key_points_zh": [
-        "重点：Perhimpunan MATA kemudiannya melahirkan:"
+        "MATA 大会随后诞生了："
       ],
       "bm_focus_phrase": "Perhimpunan MATA kemudiannya melahirkan:"
     },
     {
       "source_id": "bab-7-1-extra-64",
       "bm_original": "Hizbul Muslimin",
-      "translate": "重点：Hizbul Muslimin",
+      "translate": "穆斯林党",
       "key_points_zh": [
-        "重点：Hizbul Muslimin"
+        "穆斯林党"
       ],
       "bm_focus_phrase": "Hizbul Muslimin"
     },
     {
       "source_id": "bab-7-1-u40",
       "bm_original": "Matlamat Hizbul Muslimin ialah mencapai:",
-      "translate": "Matlamat Hizbul Muslimin 是 mencapai:",
+      "translate": "穆斯林党的目标是实现：",
       "key_points_zh": [
-        "Matlamat Hizbul Muslimin 是 mencapai:"
+        "穆斯林党的目标是实现："
       ],
       "bm_focus_phrase": "Matlamat Hizbul Muslimin ialah mencapai:"
     },
     {
       "source_id": "bab-7-1-extra-65",
       "bm_original": "kemerdekaan Tanah Melayu sebagai negara Islam",
-      "translate": "独立 Tanah Melayu 作为 negara Islam",
+      "translate": "马来亚作为伊斯兰国家独立",
       "key_points_zh": [
-        "独立 Tanah Melayu 作为 negara Islam"
+        "马来亚作为伊斯兰国家独立"
       ],
       "bm_focus_phrase": "kemerdekaan Tanah Melayu sebagai negara Islam"
     },
     {
       "source_id": "bab-7-1-u41",
       "bm_original": "British yang tidak senang dengan asas perjuangan Hizbul Muslimin telah mengharamkan pertubuhan tersebut.",
-      "translate": "British 的 不 senang 以 asas 斗争 Hizbul Muslimin 已经 mengharamkan pertubuhan tersebut.",
+      "translate": "英国人对穆斯林党斗争的基本原则不满意，因此取缔了该组织。",
       "key_points_zh": [
-        "British 的 不 senang 以 asas 斗争 Hizbul Muslimin 已经 mengharamkan pertubuhan tersebut."
+        "英国人对穆斯林党斗争的基本原则不满意，因此取缔了该组织。"
       ],
       "bm_focus_phrase": "British yang tidak senang dengan asas perjuangan Hizbul Muslimin telah mengharamkan pertubuhan tersebut."
     },
     {
       "source_id": "bab-7-1-u42",
       "bm_original": "Tan Cheng Lock yang memimpin MCA menegaskan bahawa MCA mempunyai tugas untuk menjadikan Tanah Melayu yang berbilang kaum sebagai:",
-      "translate": "Tan Cheng Lock 的 memimpin MCA menegaskan bahawa MCA mempunyai tugas 为了 menjadikan Tanah Melayu 的 berbilang kaum 作为:",
+      "translate": "马华领袖陈祯禄声称，马华有责任建立一个多元种族的马来亚：",
       "key_points_zh": [
-        "Tan Cheng Lock 的 memimpin MCA menegaskan bahawa MCA mempunyai tugas 为了 menjadikan Tanah Melayu 的 berbilang kaum 作为:"
+        "马华领袖陈祯禄声称，马华有责任建立一个多元种族的马来亚："
       ],
       "bm_focus_phrase": "Tan Cheng Lock yang memimpin MCA menegaskan bahawa MCA mempunyai tugas untuk menjadikan Tanah Melayu yang berbilang kaum sebagai:"
     },
     {
       "source_id": "bab-7-1-extra-66",
       "bm_original": "sebuah negara yang berdemokrasi penuh",
-      "translate": "sebuah negara 的 berdemokrasi penuh",
+      "translate": "一个完全民主的国家",
       "key_points_zh": [
-        "sebuah negara 的 berdemokrasi penuh"
+        "一个完全民主的国家"
       ],
       "bm_focus_phrase": "sebuah negara yang berdemokrasi penuh"
     },
     {
       "source_id": "bab-7-1-u43",
       "bm_original": "Bagi menjayakan matlamat itu, MCA berusaha:",
-      "translate": "Bagi menjayakan matlamat 那, MCA berusaha:",
+      "translate": "为了实现这一目标，MCA 努力：",
       "key_points_zh": [
-        "Bagi menjayakan matlamat 那, MCA berusaha:"
+        "为了实现这一目标，MCA 努力："
       ],
       "bm_focus_phrase": "Bagi menjayakan matlamat itu, MCA berusaha:"
     },
     {
       "source_id": "bab-7-1-extra-67",
       "bm_original": "menyatukan masyarakat Cina",
-      "translate": "menyatukan 社会 Cina",
+      "translate": "团结华人社会",
       "key_points_zh": [
-        "menyatukan 社会 Cina"
+        "团结华人社会"
       ],
       "bm_focus_phrase": "menyatukan masyarakat Cina"
     },
     {
       "source_id": "bab-7-1-extra-68",
       "bm_original": "bekerjasama dengan semua kaum di Tanah Melayu",
-      "translate": "bekerjasama 以 semua kaum di Tanah Melayu",
+      "translate": "与马来亚各族合作",
       "key_points_zh": [
-        "bekerjasama 以 semua kaum di Tanah Melayu"
+        "与马来亚各族合作"
       ],
       "bm_focus_phrase": "bekerjasama dengan semua kaum di Tanah Melayu"
     },
     {
       "source_id": "bab-7-1-extra-69",
       "bm_original": "mewujudkan keadaan harmoni demi kemerdekaan Tanah Melayu",
-      "translate": "mewujudkan keadaan harmoni demi 独立 Tanah Melayu",
+      "translate": "为马来亚独立创造和谐局面",
       "key_points_zh": [
-        "mewujudkan keadaan harmoni demi 独立 Tanah Melayu"
+        "为马来亚独立创造和谐局面"
       ],
       "bm_focus_phrase": "mewujudkan keadaan harmoni demi kemerdekaan Tanah Melayu"
     },
     {
       "source_id": "bab-7-1-u44",
       "bm_original": "Idea negara Islam diteruskan melalui penubuhan:",
-      "translate": "Idea negara Islam diteruskan 通过 成立:",
+      "translate": "伊斯兰国家的理念通过以下几个方面的建立得以延续：",
       "key_points_zh": [
-        "Idea negara Islam diteruskan 通过 成立:"
+        "伊斯兰国家的理念通过以下几个方面的建立得以延续："
       ],
       "bm_focus_phrase": "Idea negara Islam diteruskan melalui penubuhan:"
     },
     {
       "source_id": "bab-7-1-extra-70",
       "bm_original": "Parti Islam Se-Tanah Melayu (PAS)",
-      "translate": "重点：Parti Islam Se-Tanah Melayu (PAS)",
+      "translate": "全马来伊斯兰党 (PAS)",
       "key_points_zh": [
-        "重点：Parti Islam Se-Tanah Melayu (PAS)"
+        "全马来伊斯兰党 (PAS)"
       ],
       "bm_focus_phrase": "Parti Islam Se-Tanah Melayu (PAS)"
     },
     {
       "source_id": "bab-7-1-u45",
       "bm_original": "Dr. Burhanuddin al-Helmi , Yang Dipertua PAS , menegaskan bahawa PAS bercita-cita membina:",
-      "translate": "重点：Dr. Burhanuddin al-Helmi , Yang Dipertua PAS , menegaskan bahawa PAS bercita-cita membina:",
+      "translate": "伊斯兰党主席 Burhanuddin al-Helmi 博士确认，伊斯兰党致力于建立：",
       "key_points_zh": [
-        "重点：Dr. Burhanuddin al-Helmi , Yang Dipertua PAS , menegaskan bahawa PAS bercita-cita membina:"
+        "伊斯兰党主席 Burhanuddin al-Helmi 博士确认，伊斯兰党致力于建立："
       ],
       "bm_focus_phrase": "Dr. Burhanuddin al-Helmi , Yang Dipertua PAS , menegaskan bahawa PAS bercita-cita membina:"
     },
     {
       "source_id": "bab-7-1-extra-71",
       "bm_original": "satu negara",
-      "translate": "重点：satu negara",
+      "translate": "一个国家",
       "key_points_zh": [
-        "重点：satu negara"
+        "一个国家"
       ],
       "bm_focus_phrase": "satu negara"
     },
     {
       "source_id": "bab-7-1-extra-72",
       "bm_original": "satu bangsa yang teguh",
-      "translate": "satu bangsa 的 teguh",
+      "translate": "一个强大的国家",
       "key_points_zh": [
-        "satu bangsa 的 teguh"
+        "一个强大的国家"
       ],
       "bm_focus_phrase": "satu bangsa yang teguh"
     },
     {
       "source_id": "bab-7-1-extra-73",
       "bm_original": "bahasa Melayu sebagai bahasa kebangsaan",
-      "translate": "bahasa Melayu 作为 bahasa kebangsaan",
+      "translate": "马来语为国语",
       "key_points_zh": [
-        "bahasa Melayu 作为 bahasa kebangsaan"
+        "马来语为国语"
       ],
       "bm_focus_phrase": "bahasa Melayu sebagai bahasa kebangsaan"
     },
     {
       "source_id": "bab-7-1-extra-74",
       "bm_original": "bahasa Melayu sebagai bahasa rasmi yang tunggal",
-      "translate": "bahasa Melayu 作为 bahasa rasmi 的 tunggal",
+      "translate": "马来语为唯一官方语言",
       "key_points_zh": [
-        "bahasa Melayu 作为 bahasa rasmi 的 tunggal"
+        "马来语为唯一官方语言"
       ],
       "bm_focus_phrase": "bahasa Melayu sebagai bahasa rasmi yang tunggal"
     },
     {
       "source_id": "bab-7-1-u46",
       "bm_original": "Bagi PAS , kemerdekaan bererti:",
-      "translate": "Bagi PAS , 独立 bererti:",
+      "translate": "对于伊党来说，独立意味着：",
       "key_points_zh": [
-        "Bagi PAS , 独立 bererti:"
+        "对于伊党来说，独立意味着："
       ],
       "bm_focus_phrase": "Bagi PAS , kemerdekaan bererti:"
     },
     {
       "source_id": "bab-7-1-extra-75",
       "bm_original": "Tanah Melayu merdeka dengan menjalankan hukum Islam",
-      "translate": "Tanah Melayu merdeka 以 menjalankan hukum Islam",
+      "translate": "马来亚通过实行伊斯兰法获得独立",
       "key_points_zh": [
-        "Tanah Melayu merdeka 以 menjalankan hukum Islam"
+        "马来亚通过实行伊斯兰法获得独立"
       ],
       "bm_focus_phrase": "Tanah Melayu merdeka dengan menjalankan hukum Islam"
     },
     {
       "source_id": "bab-7-1-u47",
       "bm_original": "Dato’ Onn Jaafar mengasaskan:",
-      "translate": "Dato’ Onn Jaafar mengasaskan:",
+      "translate": "拿督翁贾法尔创立：",
       "key_points_zh": [
-        "Dato’ Onn Jaafar mengasaskan:"
+        "拿督翁贾法尔创立："
       ],
       "bm_focus_phrase": "Dato’ Onn Jaafar mengasaskan:"
     },
     {
       "source_id": "bab-7-1-extra-76",
       "bm_original": "Independence of Malayan Party (IMP)",
-      "translate": "重点：Independence of Malayan Party (IMP)",
+      "translate": "马来亚独立党（IMP）",
       "key_points_zh": [
-        "重点：Independence of Malayan Party (IMP)"
+        "马来亚独立党（IMP）"
       ],
       "bm_focus_phrase": "Independence of Malayan Party (IMP)"
     },
     {
       "source_id": "bab-7-1-u48",
       "bm_original": "untuk melaksanakan idea:",
-      "translate": "为了 melaksanakan idea:",
+      "translate": "实施这个想法：",
       "key_points_zh": [
-        "为了 melaksanakan idea:"
+        "实施这个想法："
       ],
       "bm_focus_phrase": "untuk melaksanakan idea:"
     },
     {
       "source_id": "bab-7-1-extra-77",
       "bm_original": "“Tanah Melayu untuk Malayan”",
-      "translate": "“Tanah Melayu 为了 Malayan”",
+      "translate": "“马来人的马来西亚土地”",
       "key_points_zh": [
-        "“Tanah Melayu 为了 Malayan”"
+        "“马来人的马来西亚土地”"
       ],
       "bm_focus_phrase": "“Tanah Melayu untuk Malayan”"
     },
     {
       "source_id": "bab-7-1-u49",
       "bm_original": "Selepas 1949 , pemikiran politik Dato’ Onn Jaafar semakin terarah kepada:",
-      "translate": "Selepas 1949 , pemikiran 政治 Dato’ Onn Jaafar semakin terarah 向:",
+      "translate": "1949年后，拿督翁贾化尔的政治思想越来越转向：",
       "key_points_zh": [
-        "Selepas 1949 , pemikiran 政治 Dato’ Onn Jaafar semakin terarah 向:"
+        "1949年后，拿督翁贾化尔的政治思想越来越转向："
       ],
       "bm_focus_phrase": "Selepas 1949 , pemikiran politik Dato’ Onn Jaafar semakin terarah kepada:"
     },
     {
       "source_id": "bab-7-1-extra-78",
       "bm_original": "perpaduan kebangsaan",
-      "translate": "重点：perpaduan kebangsaan",
+      "translate": "民族团结",
       "key_points_zh": [
-        "重点：perpaduan kebangsaan"
+        "民族团结"
       ],
       "bm_focus_phrase": "perpaduan kebangsaan"
     },
     {
       "source_id": "bab-7-1-u50",
       "bm_original": "Menurut beliau, tuntutan kemerdekaan tidak boleh dibuat tanpa:",
-      "translate": "Menurut beliau, tuntutan 独立 不 可以 dibuat tanpa:",
+      "translate": "他认为，如果没有以下条件，就不能提出独立要求：",
       "key_points_zh": [
-        "Menurut beliau, tuntutan 独立 不 可以 dibuat tanpa:"
+        "他认为，如果没有以下条件，就不能提出独立要求："
       ],
       "bm_focus_phrase": "Menurut beliau, tuntutan kemerdekaan tidak boleh dibuat tanpa:"
     },
     {
       "source_id": "bab-7-1-extra-79",
       "bm_original": "kerjasama kaum lain",
-      "translate": "重点：kerjasama kaum lain",
+      "translate": "其他种族的合作",
       "key_points_zh": [
-        "重点：kerjasama kaum lain"
+        "其他种族的合作"
       ],
       "bm_focus_phrase": "kerjasama kaum lain"
     },
     {
       "source_id": "bab-7-1-extra-80",
       "bm_original": "penerimaan mereka sebagai rakyat Tanah Melayu",
-      "translate": "penerimaan mereka 作为 人民 Tanah Melayu",
+      "translate": "他们被接纳为马来亚人民",
       "key_points_zh": [
-        "penerimaan mereka 作为 人民 Tanah Melayu"
+        "他们被接纳为马来亚人民"
       ],
       "bm_focus_phrase": "penerimaan mereka sebagai rakyat Tanah Melayu"
     },
     {
       "source_id": "bab-7-1-u51",
       "bm_original": "Beliau mahu:",
-      "translate": "重点：Beliau mahu:",
+      "translate": "他想要：",
       "key_points_zh": [
-        "重点：Beliau mahu:"
+        "他想要："
       ],
       "bm_focus_phrase": "Beliau mahu:"
     },
     {
       "source_id": "bab-7-1-extra-81",
       "bm_original": "orang Melayu menjadi pemimpin",
-      "translate": "orang Melayu menjadi 领袖",
+      "translate": "马来人成为领袖",
       "key_points_zh": [
-        "orang Melayu menjadi 领袖"
+        "马来人成为领袖"
       ],
       "bm_focus_phrase": "orang Melayu menjadi pemimpin"
     },
     {
       "source_id": "bab-7-1-extra-82",
       "bm_original": "orang bukan Melayu turut mempunyai hak dalam politik dan ekonomi",
-      "translate": "orang bukan Melayu turut mempunyai 权利 在 政治 与 ekonomi",
+      "translate": "非马来人也享有政治和经济权利",
       "key_points_zh": [
-        "orang bukan Melayu turut mempunyai 权利 在 政治 与 ekonomi"
+        "非马来人也享有政治和经济权利"
       ],
       "bm_focus_phrase": "orang bukan Melayu turut mempunyai hak dalam politik dan ekonomi"
     },
     {
       "source_id": "bab-7-1-u52",
       "bm_original": "Idea negara merdeka tercetus secara menyeluruh dalam kalangan penduduk di negara kita.",
-      "translate": "Idea negara merdeka tercetus secara menyeluruh 在 kalangan penduduk di negara kita.",
+      "translate": "独立建国的思想已在我国人民中广泛传播。",
       "key_points_zh": [
-        "Idea negara merdeka tercetus secara menyeluruh 在 kalangan penduduk di negara kita."
+        "独立建国的思想已在我国人民中广泛传播。"
       ],
       "bm_focus_phrase": "Idea negara merdeka tercetus secara menyeluruh dalam kalangan penduduk di negara kita."
     },
     {
       "source_id": "bab-7-1-u53",
       "bm_original": "Idea ini lahir daripada pelbagai pertubuhan yang membawa ideologi dan pendekatan berbeza, seperti:",
-      "translate": "Idea 这 lahir daripada pelbagai pertubuhan 的 membawa ideologi 与 pendekatan berbeza, seperti:",
+      "translate": "这个想法诞生于各种带来不同意识形态和方法的组织，例如：",
       "key_points_zh": [
-        "Idea 这 lahir daripada pelbagai pertubuhan 的 membawa ideologi 与 pendekatan berbeza, seperti:"
+        "这个想法诞生于各种带来不同意识形态和方法的组织，例如："
       ],
       "bm_focus_phrase": "Idea ini lahir daripada pelbagai pertubuhan yang membawa ideologi dan pendekatan berbeza, seperti:"
     },
     {
       "source_id": "bab-7-1-extra-83",
       "bm_original": "Melayu Raya",
-      "translate": "重点：Melayu Raya",
+      "translate": "马来拉雅",
       "key_points_zh": [
-        "重点：Melayu Raya"
+        "马来拉雅"
       ],
       "bm_focus_phrase": "Melayu Raya"
     },
     {
       "source_id": "bab-7-1-extra-84",
       "bm_original": "demokrasi",
-      "translate": "重点：demokrasi",
+      "translate": "民主",
       "key_points_zh": [
-        "重点：demokrasi"
+        "民主"
       ],
       "bm_focus_phrase": "demokrasi"
     },
     {
       "source_id": "bab-7-1-extra-85",
       "bm_original": "negara Islam",
-      "translate": "重点：negara Islam",
+      "translate": "伊斯兰国家",
       "key_points_zh": [
-        "重点：negara Islam"
+        "伊斯兰国家"
       ],
       "bm_focus_phrase": "negara Islam"
     },
     {
       "source_id": "bab-7-1-extra-86",
       "bm_original": "perpaduan antara kaum",
-      "translate": "perpaduan 其中 kaum",
+      "translate": "种族团结",
       "key_points_zh": [
-        "perpaduan 其中 kaum"
+        "种族团结"
       ],
       "bm_focus_phrase": "perpaduan antara kaum"
     },
     {
       "source_id": "bab-7-1-u54",
       "bm_original": "Walaupun wujud kepelbagaian idea negara merdeka, semuanya menuju ke arah matlamat yang sama, iaitu:",
-      "translate": "Walaupun wujud kepelbagaian idea negara merdeka, semuanya menuju ke arah matlamat 的 sama, iaitu:",
+      "translate": "尽管独立国家的理念多种多样，但它们都通向同一个目标，那就是：",
       "key_points_zh": [
-        "Walaupun wujud kepelbagaian idea negara merdeka, semuanya menuju ke arah matlamat 的 sama, iaitu:"
+        "尽管独立国家的理念多种多样，但它们都通向同一个目标，那就是："
       ],
       "bm_focus_phrase": "Walaupun wujud kepelbagaian idea negara merdeka, semuanya menuju ke arah matlamat yang sama, iaitu:"
     },
     {
       "source_id": "bab-7-1-extra-87",
       "bm_original": "membebaskan tanah air daripada kolonial British",
-      "translate": "重点：membebaskan tanah air daripada kolonial British",
+      "translate": "把祖国从英国殖民统治下解放出来",
       "key_points_zh": [
-        "重点：membebaskan tanah air daripada kolonial British"
+        "把祖国从英国殖民统治下解放出来"
       ],
       "bm_focus_phrase": "membebaskan tanah air daripada kolonial British"
     },
     {
       "source_id": "bab-7-1-extra-88",
       "bm_original": "mempertahankan kedaulatan negara",
-      "translate": "mempertahankan 主权 negara",
+      "translate": "捍卫国家主权",
       "key_points_zh": [
-        "mempertahankan 主权 negara"
+        "捍卫国家主权"
       ],
       "bm_focus_phrase": "mempertahankan kedaulatan negara"
     }

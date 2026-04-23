@@ -1,708 +1,709 @@
 {
   "meta": {
     "source_file": "notes/bab-7-2.html",
-    "rollout": "gelombang-1-manual-revision"
+    "rollout": "gelombang-1-ms-zh-regenerated",
+    "notes": "Bab 7: translate regenerated from bm_original (ms→zh-CN), then manual term fixes (CLC→族群联络委员会, Sistem Ahli→成员制, Melayu Raya)."
   },
   "units": [
     {
       "source_id": "bab-7-2-u14",
       "bm_original": "Selepas Perang Dunia Kedua , hubungan antara kaum semakin tegang sehingga pemimpin tempatan dan British menyedari bahawa kerjasama antara kaum perlu diwujudkan sebelum kemerdekaan diberikan.",
-      "translate": "Selepas 第二次世界大战 , hubungan 其中 kaum semakin tegang sehingga 领袖 本地 与 British menyedari bahawa kerjasama 其中 kaum perlu diwujudkan sebelum 独立 diberikan.",
+      "translate": "第二次世界大战后，种族间关系变得日益紧张，直到当地和英国领导人意识到在获得独立之前必须建立种族间合作。",
       "key_points_zh": [
-        "Selepas 第二次世界大战 , hubungan 其中 kaum semakin tegang sehingga 领袖 本地 与 British menyedari bahawa kerjasama 其中 kaum perlu diwujudkan sebelum 独立 diberikan."
+        "第二次世界大战后，种族间关系变得日益紧张，直到当地和英国领导人意识到在获得独立之前必须建立种族间合作。"
       ],
       "bm_focus_phrase": "Selepas Perang Dunia Kedua , hubungan antara kaum semakin tegang sehingga pemimpin tempatan dan British menyedari bahawa kerjasama antara kaum perlu diwujudkan sebelum kemerdekaan diberikan."
     },
     {
       "source_id": "bab-7-2-u15",
       "bm_original": "CLC ditubuhkan untuk menghimpunkan pemimpin pelbagai kaum dan mencari penyelesaian secara aman melalui perundingan , tolak ansur dan persefahaman .",
-      "translate": "CLC ditubuhkan 为了 menghimpunkan 领袖 pelbagai kaum 与 mencari penyelesaian secara aman 通过 perundingan , tolak ansur 与 persefahaman .",
+      "translate": "CLC的成立是为了将不同种族的领袖聚集在一起，通过协商、宽容和理解找到和平解决方案。",
       "key_points_zh": [
-        "CLC ditubuhkan 为了 menghimpunkan 领袖 pelbagai kaum 与 mencari penyelesaian secara aman 通过 perundingan , tolak ansur 与 persefahaman ."
+        "CLC的成立是为了将不同种族的领袖聚集在一起，通过协商、宽容和理解找到和平解决方案。"
       ],
       "bm_focus_phrase": "CLC ditubuhkan untuk menghimpunkan pemimpin pelbagai kaum dan mencari penyelesaian secara aman melalui perundingan , tolak ansur dan persefahaman ."
     },
     {
       "source_id": "bab-7-2-u16",
       "bm_original": "Jawatankuasa ini membincangkan isu penting seperti politik , kedudukan istimewa orang Melayu , ekonomi , kewarganegaraan dan pendidikan ke arah berkerajaan sendiri .",
-      "translate": "Jawatankuasa 这 membincangkan isu penting seperti 政治 , kedudukan istimewa orang Melayu , ekonomi , 公民权 与 pendidikan ke arah berkerajaan sendiri .",
+      "translate": "该委员会讨论政治、马来人的特殊地位、经济、公民身份和自治教育等重要问题。",
       "key_points_zh": [
-        "Jawatankuasa 这 membincangkan isu penting seperti 政治 , kedudukan istimewa orang Melayu , ekonomi , 公民权 与 pendidikan ke arah berkerajaan sendiri ."
+        "该委员会讨论政治、马来人的特殊地位、经济、公民身份和自治教育等重要问题。"
       ],
       "bm_focus_phrase": "Jawatankuasa ini membincangkan isu penting seperti politik , kedudukan istimewa orang Melayu , ekonomi , kewarganegaraan dan pendidikan ke arah berkerajaan sendiri ."
     },
     {
       "source_id": "bab-7-2-u01",
       "bm_original": "Jawatankuasa Hubungan Antara Kaum ditubuhkan kerana hubungan antara kaum selepas Perang Dunia Kedua semakin tegang, sedangkan kemerdekaan hanya boleh dicapai jika wujud kerjasama antara kaum utama di Tanah Melayu.",
-      "translate": "Jawatankuasa Hubungan Antara Kaum ditubuhkan 因为 hubungan 其中 kaum 在…之后 第二次世界大战 semakin tegang, sedangkan 独立 hanya 可以 dicapai jika wujud kerjasama 其中 kaum 主要 di Tanah Melayu.",
+      "translate": "族群联络委员会的成立是因为二战后种族间关系日趋紧张，而马来亚各主要种族之间只有合作才能实现独立。",
       "key_points_zh": [
-        "Jawatankuasa Hubungan Antara Kaum ditubuhkan 因为 hubungan 其中 kaum 在…之后 第二次世界大战 semakin tegang, sedangkan 独立 hanya 可以 dicapai jika wujud kerjasama 其中 kaum 主要 di Tanah Melayu."
+        "族群联络委员会的成立是因为二战后种族间关系日趋紧张，而马来亚各主要种族之间只有合作才能实现独立。"
       ],
       "bm_focus_phrase": "Jawatankuasa Hubungan Antara Kaum ditubuhkan kerana hubungan antara kaum selepas Perang Dunia Kedua semakin tegang, sedangkan kemerdekaan hanya boleh dicapai jika wujud kerjasama antara kaum utama di Tanah Melayu."
     },
     {
       "source_id": "bab-7-2-u02",
       "bm_original": "Oleh itu, perundingan antara pemimpin kaum dijalankan untuk membina kestabilan politik, memperbaiki ekonomi, mewujudkan keharmonian sosial dan menyediakan asas ke arah berkerajaan sendiri.",
-      "translate": "Oleh 那, perundingan 其中 领袖 kaum dijalankan 为了 membina kestabilan 政治, memperbaiki ekonomi, mewujudkan keharmonian sosial 与 menyediakan asas ke arah berkerajaan sendiri.",
+      "translate": "因此，部落首领之间进行协商是为了建立政治稳定、改善经济、创造社会和谐并为自治提供基础。",
       "key_points_zh": [
-        "Oleh 那, perundingan 其中 领袖 kaum dijalankan 为了 membina kestabilan 政治, memperbaiki ekonomi, mewujudkan keharmonian sosial 与 menyediakan asas ke arah berkerajaan sendiri."
+        "因此，部落首领之间进行协商是为了建立政治稳定、改善经济、创造社会和谐并为自治提供基础。"
       ],
       "bm_focus_phrase": "Oleh itu, perundingan antara pemimpin kaum dijalankan untuk membina kestabilan politik, memperbaiki ekonomi, mewujudkan keharmonian sosial dan menyediakan asas ke arah berkerajaan sendiri."
     },
     {
       "source_id": "bab-7-2-extra-1",
       "bm_original": "1️⃣ penubuhan Jawatankuasa Hubungan Antara Kaum 🏛️",
-      "translate": "1️⃣ 成立 Jawatankuasa Hubungan Antara Kaum 🏛️",
+      "translate": "1️⃣成立族群联络委员会🏛️",
       "key_points_zh": [
-        "1️⃣ 成立 Jawatankuasa Hubungan Antara Kaum 🏛️"
+        "1️⃣成立族群联络委员会🏛️"
       ],
       "bm_focus_phrase": "1️⃣ penubuhan Jawatankuasa Hubungan Antara Kaum 🏛️"
     },
     {
       "source_id": "bab-7-2-extra-2",
       "bm_original": "2️⃣ peranan Jawatankuasa Hubungan Antara Kaum ⚖️",
-      "translate": "重点：2️⃣ peranan Jawatankuasa Hubungan Antara Kaum ⚖️",
+      "translate": "2️⃣ 族群联络委员会的作用⚖️",
       "key_points_zh": [
-        "重点：2️⃣ peranan Jawatankuasa Hubungan Antara Kaum ⚖️"
+        "2️⃣ 族群联络委员会的作用⚖️"
       ],
       "bm_focus_phrase": "2️⃣ peranan Jawatankuasa Hubungan Antara Kaum ⚖️"
     },
     {
       "source_id": "bab-7-2-extra-3",
       "bm_original": "Januari 1949",
-      "translate": "重点：Januari 1949",
+      "translate": "1949 年 1 月",
       "key_points_zh": [
-        "重点：Januari 1949"
+        "1949 年 1 月"
       ],
       "bm_focus_phrase": "Januari 1949"
     },
     {
       "source_id": "bab-7-2-extra-4",
       "bm_original": "Jawatankuasa Hubungan Antara Kaum",
-      "translate": "重点：Jawatankuasa Hubungan Antara Kaum",
+      "translate": "族群联络委员会",
       "key_points_zh": [
-        "重点：Jawatankuasa Hubungan Antara Kaum"
+        "族群联络委员会"
       ],
       "bm_focus_phrase": "Jawatankuasa Hubungan Antara Kaum"
     },
     {
       "source_id": "bab-7-2-extra-5",
       "bm_original": "atau Communities Liaison Committee (CLC) ditubuhkan",
-      "translate": "重点：atau Communities Liaison Committee (CLC) ditubuhkan",
+      "translate": "或 社区联络委员会 (CLC) 成立",
       "key_points_zh": [
-        "重点：atau Communities Liaison Committee (CLC) ditubuhkan"
+        "或 社区联络委员会 (CLC) 成立"
       ],
       "bm_focus_phrase": "atau Communities Liaison Committee (CLC) ditubuhkan"
     },
     {
       "source_id": "bab-7-2-u03",
       "bm_original": "CLC menghimpunkan pemimpin utama pelbagai kaum di Tanah Melayu .",
-      "translate": "CLC menghimpunkan 领袖 主要 pelbagai kaum di Tanah Melayu .",
+      "translate": "CLC汇集了马来亚各族的主要领袖。",
       "key_points_zh": [
-        "CLC menghimpunkan 领袖 主要 pelbagai kaum di Tanah Melayu ."
+        "CLC汇集了马来亚各族的主要领袖。"
       ],
       "bm_focus_phrase": "CLC menghimpunkan pemimpin utama pelbagai kaum di Tanah Melayu ."
     },
     {
       "source_id": "bab-7-2-extra-6",
       "bm_original": "mengkaji hubungan kaum secara mendalam",
-      "translate": "重点：mengkaji hubungan kaum secara mendalam",
+      "translate": "深入研究种族关系",
       "key_points_zh": [
-        "重点：mengkaji hubungan kaum secara mendalam"
+        "深入研究种族关系"
       ],
       "bm_focus_phrase": "mengkaji hubungan kaum secara mendalam"
     },
     {
       "source_id": "bab-7-2-extra-7",
       "bm_original": "membetulkan keadaan politik, ekonomi dan sosial supaya lebih adil",
-      "translate": "membetulkan keadaan 政治, ekonomi 与 sosial supaya 更 adil",
+      "translate": "纠正政治、经济和社会状况，使其更加公平",
       "key_points_zh": [
-        "membetulkan keadaan 政治, ekonomi 与 sosial supaya 更 adil"
+        "纠正政治、经济和社会状况，使其更加公平"
       ],
       "bm_focus_phrase": "membetulkan keadaan politik, ekonomi dan sosial supaya lebih adil"
     },
     {
       "source_id": "bab-7-2-extra-8",
       "bm_original": "mewujudkan keadaan harmoni dan muhibah antara penduduk",
-      "translate": "mewujudkan keadaan harmoni 与 muhibah 其中 penduduk",
+      "translate": "在人民之间创造和谐和善意的状态",
       "key_points_zh": [
-        "mewujudkan keadaan harmoni 与 muhibah 其中 penduduk"
+        "在人民之间创造和谐和善意的状态"
       ],
       "bm_focus_phrase": "mewujudkan keadaan harmoni dan muhibah antara penduduk"
     },
     {
       "source_id": "bab-7-2-extra-9",
       "bm_original": "“Kesamaan dan Keadilan untuk Penduduk Tanah Melayu”",
-      "translate": "“Kesamaan 与 Keadilan 为了 Penduduk Tanah Melayu”",
+      "translate": "“马来亚人民的平等和正义”",
       "key_points_zh": [
-        "“Kesamaan 与 Keadilan 为了 Penduduk Tanah Melayu”"
+        "“马来亚人民的平等和正义”"
       ],
       "bm_focus_phrase": "“Kesamaan dan Keadilan untuk Penduduk Tanah Melayu”"
     },
     {
       "source_id": "bab-7-2-extra-10",
       "bm_original": "Malcolm MacDonald",
-      "translate": "重点：Malcolm MacDonald",
+      "translate": "马尔科姆·麦克唐纳",
       "key_points_zh": [
-        "重点：Malcolm MacDonald"
+        "马尔科姆·麦克唐纳"
       ],
       "bm_focus_phrase": "Malcolm MacDonald"
     },
     {
       "source_id": "bab-7-2-extra-11",
       "bm_original": "Gabenor Jeneral British di Asia Tenggara",
-      "translate": "重点：Gabenor Jeneral British di Asia Tenggara",
+      "translate": "英国驻东南亚总督",
       "key_points_zh": [
-        "重点：Gabenor Jeneral British di Asia Tenggara"
+        "英国驻东南亚总督"
       ],
       "bm_focus_phrase": "Gabenor Jeneral British di Asia Tenggara"
     },
     {
       "source_id": "bab-7-2-extra-12",
       "bm_original": "E.E.C. Thuraisingham",
-      "translate": "重点：E.E.C. Thuraisingham",
+      "translate": "欧洲经济共同体。图拉辛厄姆",
       "key_points_zh": [
-        "重点：E.E.C. Thuraisingham"
+        "欧洲经济共同体。图拉辛厄姆"
       ],
       "bm_focus_phrase": "E.E.C. Thuraisingham"
     },
     {
       "source_id": "bab-7-2-extra-13",
       "bm_original": "wakil orang Ceylon 🇱🇰",
-      "translate": "重点：wakil orang Ceylon 🇱🇰",
+      "translate": "锡兰人民的代表🇱🇰",
       "key_points_zh": [
-        "重点：wakil orang Ceylon 🇱🇰"
+        "锡兰人民的代表🇱🇰"
       ],
       "bm_focus_phrase": "wakil orang Ceylon 🇱🇰"
     },
     {
       "source_id": "bab-7-2-extra-14",
       "bm_original": "Dato’ Onn Jaafar ➡️ Menteri Besar Johor / Presiden UMNO",
-      "translate": "Dato’ Onn Jaafar ➡️ Menteri Besar Johor / Presiden UMNO",
+      "translate": "拿督翁加化 ➡️ 柔佛州务大臣 / 巫统主席",
       "key_points_zh": [
-        "Dato’ Onn Jaafar ➡️ Menteri Besar Johor / Presiden UMNO"
+        "拿督翁加化 ➡️ 柔佛州务大臣 / 巫统主席"
       ],
       "bm_focus_phrase": "Dato’ Onn Jaafar ➡️ Menteri Besar Johor / Presiden UMNO"
     },
     {
       "source_id": "bab-7-2-extra-15",
       "bm_original": "Dato’ Abdul Wahab Abdul Aziz",
-      "translate": "Dato’ Abdul Wahab Abdul Aziz",
+      "translate": "拿督阿卜杜勒瓦哈卜阿卜杜勒阿齐兹",
       "key_points_zh": [
-        "Dato’ Abdul Wahab Abdul Aziz"
+        "拿督阿卜杜勒瓦哈卜阿卜杜勒阿齐兹"
       ],
       "bm_focus_phrase": "Dato’ Abdul Wahab Abdul Aziz"
     },
     {
       "source_id": "bab-7-2-extra-16",
       "bm_original": "Dato’ Panglima Bukit Gantang ➡️ Menteri Besar Perak",
-      "translate": "Dato’ Panglima Bukit Gantang ➡️ Menteri Besar Perak",
+      "translate": "Dato' Panglima Bukit Gantang ➡️ 霹雳州大臣",
       "key_points_zh": [
-        "Dato’ Panglima Bukit Gantang ➡️ Menteri Besar Perak"
+        "Dato' Panglima Bukit Gantang ➡️ 霹雳州大臣"
       ],
       "bm_focus_phrase": "Dato’ Panglima Bukit Gantang ➡️ Menteri Besar Perak"
     },
     {
       "source_id": "bab-7-2-extra-17",
       "bm_original": "Mohd. Salleh Hakim ➡️ Ahli Majlis Perundangan Negeri Selangor",
-      "translate": "重点：Mohd. Salleh Hakim ➡️ Ahli Majlis Perundangan Negeri Selangor",
+      "translate": "莫哈末。 Salleh Hakim ➡️ 雪兰莪州立法会议员",
       "key_points_zh": [
-        "重点：Mohd. Salleh Hakim ➡️ Ahli Majlis Perundangan Negeri Selangor"
+        "莫哈末。 Salleh Hakim ➡️ 雪兰莪州立法会议员"
       ],
       "bm_focus_phrase": "Mohd. Salleh Hakim ➡️ Ahli Majlis Perundangan Negeri Selangor"
     },
     {
       "source_id": "bab-7-2-extra-18",
       "bm_original": "Dr. Mustapha Osman ➡️ Ahli Jawatankuasa Kerja UMNO",
-      "translate": "Dr. Mustapha Osman ➡️ Ahli Jawatankuasa Kerja UMNO",
+      "translate": "Mustapha Osman 博士 ➡️ 巫统工作委员会成员",
       "key_points_zh": [
-        "Dr. Mustapha Osman ➡️ Ahli Jawatankuasa Kerja UMNO"
+        "Mustapha Osman 博士 ➡️ 巫统工作委员会成员"
       ],
       "bm_focus_phrase": "Dr. Mustapha Osman ➡️ Ahli Jawatankuasa Kerja UMNO"
     },
     {
       "source_id": "bab-7-2-extra-19",
       "bm_original": "Zainal Abidin Haji Abas ➡️ Setiausaha Agung UMNO",
-      "translate": "Zainal Abidin Haji Abas ➡️ Setiausaha Agung UMNO",
+      "translate": "再纳尔·阿比丁·哈吉·阿巴斯 ➡️ 巫统秘书长",
       "key_points_zh": [
-        "Zainal Abidin Haji Abas ➡️ Setiausaha Agung UMNO"
+        "再纳尔·阿比丁·哈吉·阿巴斯 ➡️ 巫统秘书长"
       ],
       "bm_focus_phrase": "Zainal Abidin Haji Abas ➡️ Setiausaha Agung UMNO"
     },
     {
       "source_id": "bab-7-2-extra-20",
       "bm_original": "Tan Cheng Lock ( Melaka )",
-      "translate": "重点：Tan Cheng Lock ( Melaka )",
+      "translate": "陈祯禄（马六甲）",
       "key_points_zh": [
-        "重点：Tan Cheng Lock ( Melaka )"
+        "陈祯禄（马六甲）"
       ],
       "bm_focus_phrase": "Tan Cheng Lock ( Melaka )"
     },
     {
       "source_id": "bab-7-2-extra-21",
       "bm_original": "Lee Tiang Keng ( Pulau Pinang )",
-      "translate": "重点：Lee Tiang Keng ( Pulau Pinang )",
+      "translate": "李天庆（槟城）",
       "key_points_zh": [
-        "重点：Lee Tiang Keng ( Pulau Pinang )"
+        "李天庆（槟城）"
       ],
       "bm_focus_phrase": "Lee Tiang Keng ( Pulau Pinang )"
     },
     {
       "source_id": "bab-7-2-extra-22",
       "bm_original": "C.C. Tan ( Singapura )",
-      "translate": "重点：C.C. Tan ( Singapura )",
+      "translate": "C.C.陈（新加坡）",
       "key_points_zh": [
-        "重点：C.C. Tan ( Singapura )"
+        "C.C.陈（新加坡）"
       ],
       "bm_focus_phrase": "C.C. Tan ( Singapura )"
     },
     {
       "source_id": "bab-7-2-extra-23",
       "bm_original": "Yong Shook Lin ( Selangor )",
-      "translate": "重点：Yong Shook Lin ( Selangor )",
+      "translate": "杨淑莲（雪兰莪）",
       "key_points_zh": [
-        "重点：Yong Shook Lin ( Selangor )"
+        "杨淑莲（雪兰莪）"
       ],
       "bm_focus_phrase": "Yong Shook Lin ( Selangor )"
     },
     {
       "source_id": "bab-7-2-extra-24",
       "bm_original": "Roland Braddell ➡️ wakil orang Eropah 🇬🇧",
-      "translate": "Roland Braddell ➡️ wakil orang Eropah 🇬🇧",
+      "translate": "Roland Braddell ➡️欧洲人的代表🇬🇧",
       "key_points_zh": [
-        "Roland Braddell ➡️ wakil orang Eropah 🇬🇧"
+        "Roland Braddell ➡️欧洲人的代表🇬🇧"
       ],
       "bm_focus_phrase": "Roland Braddell ➡️ wakil orang Eropah 🇬🇧"
     },
     {
       "source_id": "bab-7-2-extra-25",
       "bm_original": "L.R. Doraisamy Iyer ➡️ wakil kaum India 🇮🇳",
-      "translate": "重点：L.R. Doraisamy Iyer ➡️ wakil kaum India 🇮🇳",
+      "translate": "L. R. Doraisamy Iyer ➡️ 印度代表🇮🇳",
       "key_points_zh": [
-        "重点：L.R. Doraisamy Iyer ➡️ wakil kaum India 🇮🇳"
+        "L. R. Doraisamy Iyer ➡️ 印度代表🇮🇳"
       ],
       "bm_focus_phrase": "L.R. Doraisamy Iyer ➡️ wakil kaum India 🇮🇳"
     },
     {
       "source_id": "bab-7-2-extra-26",
       "bm_original": "Dr. J.S. Goonting ➡️ wakil orang Serani",
-      "translate": "重点：Dr. J.S. Goonting ➡️ wakil orang Serani",
+      "translate": "J.S.博士Goonting ➡️ 塞拉尼人的代表",
       "key_points_zh": [
-        "重点：Dr. J.S. Goonting ➡️ wakil orang Serani"
+        "J.S.博士Goonting ➡️ 塞拉尼人的代表"
       ],
       "bm_focus_phrase": "Dr. J.S. Goonting ➡️ wakil orang Serani"
     },
     {
       "source_id": "bab-7-2-extra-27",
       "bm_original": "pemimpin kaum perlu bekerjasama",
-      "translate": "领袖 kaum perlu bekerjasama",
+      "translate": "部落领袖需要共同努力",
       "key_points_zh": [
-        "领袖 kaum perlu bekerjasama"
+        "部落领袖需要共同努力"
       ],
       "bm_focus_phrase": "pemimpin kaum perlu bekerjasama"
     },
     {
       "source_id": "bab-7-2-extra-28",
       "bm_original": "berkongsi kepentingan",
-      "translate": "重点：berkongsi kepentingan",
+      "translate": "分享兴趣",
       "key_points_zh": [
-        "重点：berkongsi kepentingan"
+        "分享兴趣"
       ],
       "bm_focus_phrase": "berkongsi kepentingan"
     },
     {
       "source_id": "bab-7-2-extra-29",
       "bm_original": "membentuk hala tuju bersama ke arah kemerdekaan",
-      "translate": "membentuk hala tuju bersama ke arah 独立",
+      "translate": "形成走向独立的共同方向",
       "key_points_zh": [
-        "membentuk hala tuju bersama ke arah 独立"
+        "形成走向独立的共同方向"
       ],
       "bm_focus_phrase": "membentuk hala tuju bersama ke arah kemerdekaan"
     },
     {
       "source_id": "bab-7-2-u04",
       "bm_original": "CLC berperanan menyelesaikan isu sensitif antara kaum melalui:",
-      "translate": "CLC berperanan menyelesaikan isu sensitif 其中 kaum 通过:",
+      "translate": "CLC 的作用是通过以下方式解决种族之间的敏感问题：",
       "key_points_zh": [
-        "CLC berperanan menyelesaikan isu sensitif 其中 kaum 通过:"
+        "CLC 的作用是通过以下方式解决种族之间的敏感问题："
       ],
       "bm_focus_phrase": "CLC berperanan menyelesaikan isu sensitif antara kaum melalui:"
     },
     {
       "source_id": "bab-7-2-extra-30",
       "bm_original": "perundingan",
-      "translate": "重点：perundingan",
+      "translate": "咨询",
       "key_points_zh": [
-        "重点：perundingan"
+        "咨询"
       ],
       "bm_focus_phrase": "perundingan"
     },
     {
       "source_id": "bab-7-2-extra-31",
       "bm_original": "tolak ansur",
-      "translate": "重点：tolak ansur",
+      "translate": "容忍",
       "key_points_zh": [
-        "重点：tolak ansur"
+        "容忍"
       ],
       "bm_focus_phrase": "tolak ansur"
     },
     {
       "source_id": "bab-7-2-extra-32",
       "bm_original": "persefahaman",
-      "translate": "重点：persefahaman",
+      "translate": "理解",
       "key_points_zh": [
-        "重点：persefahaman"
+        "理解"
       ],
       "bm_focus_phrase": "persefahaman"
     },
     {
       "source_id": "bab-7-2-u05",
       "bm_original": "Persediaan ke arah berkerajaan sendiri .",
-      "translate": "Persediaan ke arah berkerajaan sendiri .",
+      "translate": "为自治做准备。",
       "key_points_zh": [
-        "Persediaan ke arah berkerajaan sendiri ."
+        "为自治做准备。"
       ],
       "bm_focus_phrase": "Persediaan ke arah berkerajaan sendiri ."
     },
     {
       "source_id": "bab-7-2-extra-33",
       "bm_original": "pengalaman pilihan raya diberikan secara berperingkat",
-      "translate": "重点：pengalaman pilihan raya diberikan secara berperingkat",
+      "translate": "选举经验分阶段给出",
       "key_points_zh": [
-        "重点：pengalaman pilihan raya diberikan secara berperingkat"
+        "选举经验分阶段给出"
       ],
       "bm_focus_phrase": "pengalaman pilihan raya diberikan secara berperingkat"
     },
     {
       "source_id": "bab-7-2-extra-34",
       "bm_original": "pilihan raya diadakan di peringkat majlis bandaran",
-      "translate": "重点：pilihan raya diadakan di peringkat majlis bandaran",
+      "translate": "选举在市议会一级举行",
       "key_points_zh": [
-        "重点：pilihan raya diadakan di peringkat majlis bandaran"
+        "选举在市议会一级举行"
       ],
       "bm_focus_phrase": "pilihan raya diadakan di peringkat majlis bandaran"
     },
     {
       "source_id": "bab-7-2-extra-35",
       "bm_original": "pilihan raya diadakan di peringkat majlis negeri",
-      "translate": "pilihan raya diadakan di peringkat majlis 州",
+      "translate": "选举在国务院一级举行",
       "key_points_zh": [
-        "pilihan raya diadakan di peringkat majlis 州"
+        "选举在国务院一级举行"
       ],
       "bm_focus_phrase": "pilihan raya diadakan di peringkat majlis negeri"
     },
     {
       "source_id": "bab-7-2-extra-36",
       "bm_original": "pilihan raya diadakan di peringkat Majlis Perundangan Persekutuan",
-      "translate": "重点：pilihan raya diadakan di peringkat Majlis Perundangan Persekutuan",
+      "translate": "选举在联邦立法委员会一级举行",
       "key_points_zh": [
-        "重点：pilihan raya diadakan di peringkat Majlis Perundangan Persekutuan"
+        "选举在联邦立法委员会一级举行"
       ],
       "bm_focus_phrase": "pilihan raya diadakan di peringkat Majlis Perundangan Persekutuan"
     },
     {
       "source_id": "bab-7-2-u06",
       "bm_original": "Orang Melayu menuntut pengiktirafan sebagai penduduk asal.",
-      "translate": "Orang Melayu menuntut pengiktirafan 作为 penduduk asal.",
+      "translate": "马来人要求被承认为原住民。",
       "key_points_zh": [
-        "Orang Melayu menuntut pengiktirafan 作为 penduduk asal."
+        "马来人要求被承认为原住民。"
       ],
       "bm_focus_phrase": "Orang Melayu menuntut pengiktirafan sebagai penduduk asal."
     },
     {
       "source_id": "bab-7-2-extra-37",
       "bm_original": "orang Melayu mempunyai kedudukan istimewa",
-      "translate": "重点：orang Melayu mempunyai kedudukan istimewa",
+      "translate": "马来人有特殊的地位",
       "key_points_zh": [
-        "重点：orang Melayu mempunyai kedudukan istimewa"
+        "马来人有特殊的地位"
       ],
       "bm_focus_phrase": "orang Melayu mempunyai kedudukan istimewa"
     },
     {
       "source_id": "bab-7-2-extra-38",
       "bm_original": "kerana taat setia tidak berbelah bahagi",
-      "translate": "因为 taat setia 不 berbelah bahagi",
+      "translate": "因为忠诚是不可分割的",
       "key_points_zh": [
-        "因为 taat setia 不 berbelah bahagi"
+        "因为忠诚是不可分割的"
       ],
       "bm_focus_phrase": "kerana taat setia tidak berbelah bahagi"
     },
     {
       "source_id": "bab-7-2-extra-39",
       "bm_original": "kedudukan istimewa orang Melayu diperakui",
-      "translate": "重点：kedudukan istimewa orang Melayu diperakui",
+      "translate": "马来人的特殊地位得到确认",
       "key_points_zh": [
-        "重点：kedudukan istimewa orang Melayu diperakui"
+        "马来人的特殊地位得到确认"
       ],
       "bm_focus_phrase": "kedudukan istimewa orang Melayu diperakui"
     },
     {
       "source_id": "bab-7-2-extra-40",
       "bm_original": "kepentingan sah kaum lain turut diiktiraf",
-      "translate": "重点：kepentingan sah kaum lain turut diiktiraf",
+      "translate": "其他种族的合法利益也得到承认",
       "key_points_zh": [
-        "重点：kepentingan sah kaum lain turut diiktiraf"
+        "其他种族的合法利益也得到承认"
       ],
       "bm_focus_phrase": "kepentingan sah kaum lain turut diiktiraf"
     },
     {
       "source_id": "bab-7-2-u07",
       "bm_original": "Orang Melayu ketinggalan dalam sektor ekonomi.",
-      "translate": "Orang Melayu ketinggalan 在 sektor ekonomi.",
+      "translate": "马来人在经济领域落后。",
       "key_points_zh": [
-        "Orang Melayu ketinggalan 在 sektor ekonomi."
+        "马来人在经济领域落后。"
       ],
       "bm_focus_phrase": "Orang Melayu ketinggalan dalam sektor ekonomi."
     },
     {
       "source_id": "bab-7-2-extra-41",
       "bm_original": "penubuhan agensi untuk meningkatkan ekonomi dan pendidikan",
-      "translate": "成立 agensi 为了 提升 ekonomi 与 pendidikan",
+      "translate": "设立机构以改善经济和教育",
       "key_points_zh": [
-        "成立 agensi 为了 提升 ekonomi 与 pendidikan"
+        "设立机构以改善经济和教育"
       ],
       "bm_focus_phrase": "penubuhan agensi untuk meningkatkan ekonomi dan pendidikan"
     },
     {
       "source_id": "bab-7-2-extra-42",
       "bm_original": "1950 ➡️ tertubuh RIDA (Lembaga Pembangunan Industri Desa)",
-      "translate": "重点：1950 ➡️ tertubuh RIDA (Lembaga Pembangunan Industri Desa)",
+      "translate": "1950 ➡️成立RIDA（农村产业发展委员会）",
       "key_points_zh": [
-        "重点：1950 ➡️ tertubuh RIDA (Lembaga Pembangunan Industri Desa)"
+        "1950 ➡️成立RIDA（农村产业发展委员会）"
       ],
       "bm_focus_phrase": "1950 ➡️ tertubuh RIDA (Lembaga Pembangunan Industri Desa)"
     },
     {
       "source_id": "bab-7-2-u08",
       "bm_original": "Cadangan ini datang daripada:",
-      "translate": "Cadangan 这 datang daripada:",
+      "translate": "这些建议来自：",
       "key_points_zh": [
-        "Cadangan 这 datang daripada:"
+        "这些建议来自："
       ],
       "bm_focus_phrase": "Cadangan ini datang daripada:"
     },
     {
       "source_id": "bab-7-2-extra-43",
       "bm_original": "Dato’ Onn Jaafar",
-      "translate": "Dato’ Onn Jaafar",
+      "translate": "拿督翁贾法尔",
       "key_points_zh": [
-        "Dato’ Onn Jaafar"
+        "拿督翁贾法尔"
       ],
       "bm_focus_phrase": "Dato’ Onn Jaafar"
     },
     {
       "source_id": "bab-7-2-extra-44",
       "bm_original": "sebagai tolak ansur",
-      "translate": "作为 tolak ansur",
+      "translate": "作为宽容",
       "key_points_zh": [
-        "作为 tolak ansur"
+        "作为宽容"
       ],
       "bm_focus_phrase": "sebagai tolak ansur"
     },
     {
       "source_id": "bab-7-2-extra-45",
       "bm_original": "orang Melayu melonggarkan syarat kewarganegaraan",
-      "translate": "orang Melayu melonggarkan syarat 公民权",
+      "translate": "马来人放宽公民身份要求",
       "key_points_zh": [
-        "orang Melayu melonggarkan syarat 公民权"
+        "马来人放宽公民身份要求"
       ],
       "bm_focus_phrase": "orang Melayu melonggarkan syarat kewarganegaraan"
     },
     {
       "source_id": "bab-7-2-u09",
       "bm_original": "Orang Melayu tegas dalam isu kewarganegaraan.",
-      "translate": "Orang Melayu tegas 在 isu 公民权.",
+      "translate": "马来人在公民身份问题上立场坚定。",
       "key_points_zh": [
-        "Orang Melayu tegas 在 isu 公民权."
+        "马来人在公民身份问题上立场坚定。"
       ],
       "bm_focus_phrase": "Orang Melayu tegas dalam isu kewarganegaraan."
     },
     {
       "source_id": "bab-7-2-extra-46",
       "bm_original": "kewarganegaraan penting untuk memupuk taat setia",
-      "translate": "公民权 penting 为了 memupuk taat setia",
+      "translate": "公民身份对于培养忠诚度很重要",
       "key_points_zh": [
-        "公民权 penting 为了 memupuk taat setia"
+        "公民身份对于培养忠诚度很重要"
       ],
       "bm_focus_phrase": "kewarganegaraan penting untuk memupuk taat setia"
     },
     {
       "source_id": "bab-7-2-extra-47",
       "bm_original": "syarat kewarganegaraan dilonggarkan",
-      "translate": "syarat 公民权 dilonggarkan",
+      "translate": "放宽公民身份要求",
       "key_points_zh": [
-        "syarat 公民权 dilonggarkan"
+        "放宽公民身份要求"
       ],
       "bm_focus_phrase": "syarat kewarganegaraan dilonggarkan"
     },
     {
       "source_id": "bab-7-2-extra-48",
       "bm_original": "memberi hak politik kepada bukan Melayu",
-      "translate": "memberi 权利 政治 向 bukan Melayu",
+      "translate": "赋予非马来人政治权利",
       "key_points_zh": [
-        "memberi 权利 政治 向 bukan Melayu"
+        "赋予非马来人政治权利"
       ],
       "bm_focus_phrase": "memberi hak politik kepada bukan Melayu"
     },
     {
       "source_id": "bab-7-2-extra-49",
       "bm_original": "melahirkan semangat patriotik",
-      "translate": "重点：melahirkan semangat patriotik",
+      "translate": "孕育爱国精神",
       "key_points_zh": [
-        "重点：melahirkan semangat patriotik"
+        "孕育爱国精神"
       ],
       "bm_focus_phrase": "melahirkan semangat patriotik"
     },
     {
       "source_id": "bab-7-2-u10",
       "bm_original": "Sistem pendidikan berbeza mengikut kaum.",
-      "translate": "重点：Sistem pendidikan berbeza mengikut kaum.",
+      "translate": "教育系统因种族而异。",
       "key_points_zh": [
-        "重点：Sistem pendidikan berbeza mengikut kaum."
+        "教育系统因种族而异。"
       ],
       "bm_focus_phrase": "Sistem pendidikan berbeza mengikut kaum."
     },
     {
       "source_id": "bab-7-2-extra-50",
       "bm_original": "sistem pendidikan yang seragam",
-      "translate": "sistem pendidikan 的 seragam",
+      "translate": "统一教育制度",
       "key_points_zh": [
-        "sistem pendidikan 的 seragam"
+        "统一教育制度"
       ],
       "bm_focus_phrase": "sistem pendidikan yang seragam"
     },
     {
       "source_id": "bab-7-2-extra-51",
       "bm_original": "penubuhan jawatankuasa pendidikan",
-      "translate": "成立 jawatankuasa pendidikan",
+      "translate": "设立教育委员会",
       "key_points_zh": [
-        "成立 jawatankuasa pendidikan"
+        "设立教育委员会"
       ],
       "bm_focus_phrase": "penubuhan jawatankuasa pendidikan"
     },
     {
       "source_id": "bab-7-2-extra-52",
       "bm_original": "mengkaji sistem pendidikan kebangsaan",
-      "translate": "重点：mengkaji sistem pendidikan kebangsaan",
+      "translate": "研究国民教育制度",
       "key_points_zh": [
-        "重点：mengkaji sistem pendidikan kebangsaan"
+        "研究国民教育制度"
       ],
       "bm_focus_phrase": "mengkaji sistem pendidikan kebangsaan"
     },
     {
       "source_id": "bab-7-2-extra-53",
       "bm_original": "memupuk kesetiaan",
-      "translate": "重点：memupuk kesetiaan",
+      "translate": "培养忠诚度",
       "key_points_zh": [
-        "重点：memupuk kesetiaan"
+        "培养忠诚度"
       ],
       "bm_focus_phrase": "memupuk kesetiaan"
     },
     {
       "source_id": "bab-7-2-extra-54",
       "bm_original": "memperkukuh perpaduan kaum",
-      "translate": "重点：memperkukuh perpaduan kaum",
+      "translate": "加强种族团结",
       "key_points_zh": [
-        "重点：memperkukuh perpaduan kaum"
+        "加强种族团结"
       ],
       "bm_focus_phrase": "memperkukuh perpaduan kaum"
     },
     {
       "source_id": "bab-7-2-u11",
       "bm_original": "CLC memainkan peranan penting dalam:",
-      "translate": "CLC memainkan peranan penting 在:",
+      "translate": "CLC 在以下方面发挥着重要作用：",
       "key_points_zh": [
-        "CLC memainkan peranan penting 在:"
+        "CLC 在以下方面发挥着重要作用："
       ],
       "bm_focus_phrase": "CLC memainkan peranan penting dalam:"
     },
     {
       "source_id": "bab-7-2-extra-55",
       "bm_original": "membina persefahaman antara pemimpin kaum",
-      "translate": "membina persefahaman 其中 领袖 kaum",
+      "translate": "建立种族领袖之间的理解",
       "key_points_zh": [
-        "membina persefahaman 其中 领袖 kaum"
+        "建立种族领袖之间的理解"
       ],
       "bm_focus_phrase": "membina persefahaman antara pemimpin kaum"
     },
     {
       "source_id": "bab-7-2-extra-56",
       "bm_original": "menyelesaikan isu sensitif secara aman",
-      "translate": "重点：menyelesaikan isu sensitif secara aman",
+      "translate": "和平解决敏感问题",
       "key_points_zh": [
-        "重点：menyelesaikan isu sensitif secara aman"
+        "和平解决敏感问题"
       ],
       "bm_focus_phrase": "menyelesaikan isu sensitif secara aman"
     },
     {
       "source_id": "bab-7-2-u12",
       "bm_original": "Pendekatan yang digunakan:",
-      "translate": "Pendekatan 的 digunakan:",
+      "translate": "使用的方法：",
       "key_points_zh": [
-        "Pendekatan 的 digunakan:"
+        "使用的方法："
       ],
       "bm_focus_phrase": "Pendekatan yang digunakan:"
     },
     {
       "source_id": "bab-7-2-extra-57",
       "bm_original": "muafakat",
-      "translate": "重点：muafakat",
+      "translate": "共识",
       "key_points_zh": [
-        "重点：muafakat"
+        "共识"
       ],
       "bm_focus_phrase": "muafakat"
     },
     {
       "source_id": "bab-7-2-extra-58",
       "bm_original": "toleransi",
-      "translate": "重点：toleransi",
+      "translate": "宽容",
       "key_points_zh": [
-        "重点：toleransi"
+        "宽容"
       ],
       "bm_focus_phrase": "toleransi"
     },
     {
       "source_id": "bab-7-2-extra-59",
       "bm_original": "perundingan",
-      "translate": "重点：perundingan",
+      "translate": "咨询",
       "key_points_zh": [
-        "重点：perundingan"
+        "咨询"
       ],
       "bm_focus_phrase": "perundingan"
     },
     {
       "source_id": "bab-7-2-u13",
       "bm_original": "Pengajaran utama:",
-      "translate": "Pengajaran 主要:",
+      "translate": "主要教训：",
       "key_points_zh": [
-        "Pengajaran 主要:"
+        "主要教训："
       ],
       "bm_focus_phrase": "Pengajaran utama:"
     },
     {
       "source_id": "bab-7-2-extra-60",
       "bm_original": "perpaduan kaum adalah asas kestabilan negara",
-      "translate": "perpaduan kaum 是 asas kestabilan negara",
+      "translate": "民族团结是国家稳定的基础",
       "key_points_zh": [
-        "perpaduan kaum 是 asas kestabilan negara"
+        "民族团结是国家稳定的基础"
       ],
       "bm_focus_phrase": "perpaduan kaum adalah asas kestabilan negara"
     },
     {
       "source_id": "bab-7-2-extra-61",
       "bm_original": "perbincangan lebih berkesan daripada konflik",
-      "translate": "perbincangan 更 berkesan daripada konflik",
+      "translate": "讨论比冲突更有效",
       "key_points_zh": [
-        "perbincangan 更 berkesan daripada konflik"
+        "讨论比冲突更有效"
       ],
       "bm_focus_phrase": "perbincangan lebih berkesan daripada konflik"
     },
     {
       "source_id": "bab-7-2-extra-62",
       "bm_original": "kerjasama rakyat pelbagai kaum penting untuk kemerdekaan",
-      "translate": "kerjasama 人民 pelbagai kaum penting 为了 独立",
+      "translate": "不同种族人民的合作对于独立很重要",
       "key_points_zh": [
-        "kerjasama 人民 pelbagai kaum penting 为了 独立"
+        "不同种族人民的合作对于独立很重要"
       ],
       "bm_focus_phrase": "kerjasama rakyat pelbagai kaum penting untuk kemerdekaan"
     }
