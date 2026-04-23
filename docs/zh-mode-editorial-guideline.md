@@ -1,7 +1,9 @@
-# Panduan Ringkas Mod Bahasa Cina (ZH) – Google Translate
+# Panduan Ringkas Mod Bahasa Cina (ZH) – Terjemahan Manual
+
+Mod bahasa Cina **tidak lagi** memanggil Google Translate pada masa paparan. Hanya teks `translate` dalam `data/zh-units/*.json` (selepas semakan `normalizeZhExplain`) yang dipaparkan sebagai ayat penuh berkualiti. Jika unit belum disunting, paparan akan menunjukkan petunjuk BM + sebutan kata kunci daripada glosari.
 
 ## Pengharaman Terjemahan (Wajib)
-Dalam mod auto-translate Google Translate, hanya kategori berikut dilarang diterjemah dan mesti dikekalkan dalam bentuk asal:
+Dalam kandungan Cina yang disunting, kategori berikut **hendaklah dikekalkan** dalam bentuk asal (BM / ejaan asal), dan jika perlu boleh diringi ringkasan Cina dalam kurungan:
 
 1. **Nama orang** *(termasuk nama Sultan dan gelaran Sultan)*
 2. **Nama organisasi rasmi**
