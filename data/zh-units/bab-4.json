@@ -1,51 +1,52 @@
 {
   "meta": {
     "source_file": "notes/bab-4.html",
-    "rollout": "gelombang-1-manual-revision"
+    "rollout": "gelombang-1-ms-zh-regenerated",
+    "notes": "Translate fields regenerated from bm_original (ms→zh-CN) for fluent Simplified Chinese; proper names follow translator output—verify against BM notes."
   },
   "units": [
     {
       "source_id": "bab-4-synopsis-1",
       "bm_original": "British Military Administration (BMA) diperkenalkan di negara kita selepas tamatnya Perang Dunia Kedua .",
-      "translate": "British Military Administration (BMA) diperkenalkan di negara kita 在…之后 tamatnya 第二次世界大战 .",
+      "translate": "英国军事管理局（BMA）是在第二次世界大战结束后引入我国的。",
       "key_points_zh": [
-        "British Military Administration (BMA) diperkenalkan di negara kita 在…之后 tamatnya 第二次世界大战 ."
+        "英国军事管理局（BMA）是在第二次世界大战结束后引入我国的。"
       ],
       "bm_focus_phrase": "British Military Administration (BMA) diperkenalkan di negara kita selepas tamatnya Perang Dunia Kedua ."
     },
     {
       "source_id": "bab-4-synopsis-2",
       "bm_original": "Selepas itu, British melaksanakan Malayan Union di Tanah Melayu .",
-      "translate": "Selepas 那, British melaksanakan Malayan Union di Tanah Melayu .",
+      "translate": "此后，英国在马来亚推行马来亚联盟（Malayan Union）。",
       "key_points_zh": [
-        "Selepas 那, British melaksanakan Malayan Union di Tanah Melayu ."
+        "此后，英国在马来亚推行马来亚联盟（Malayan Union）。"
       ],
       "bm_focus_phrase": "Selepas itu, British melaksanakan Malayan Union di Tanah Melayu ."
     },
     {
       "source_id": "bab-4-synopsis-3",
       "bm_original": "Pelaksanaan Malayan Union mencetuskan bantahan besar-besaran daripada penduduk tempatan hingga British menggantikannya dengan Persekutuan Tanah Melayu 1948 .",
-      "translate": "Pelaksanaan Malayan Union mencetuskan 抗议 besar-besaran daripada penduduk 本地 hingga British menggantikannya 以 Persekutuan Tanah Melayu 1948 .",
+      "translate": "马来亚联盟（Malayan Union）的措施引发当地民众大规模抗议，英国遂于1948年以马来亚联合邦（Persekutuan Tanah Melayu 1948）取代之。",
       "key_points_zh": [
-        "Pelaksanaan Malayan Union mencetuskan 抗议 besar-besaran daripada penduduk 本地 hingga British menggantikannya 以 Persekutuan Tanah Melayu 1948 ."
+        "马来亚联盟（Malayan Union）的措施引发当地民众大规模抗议，英国遂于1948年以马来亚联合邦（Persekutuan Tanah Melayu 1948）取代之。"
       ],
       "bm_focus_phrase": "Pelaksanaan Malayan Union mencetuskan bantahan besar-besaran daripada penduduk tempatan hingga British menggantikannya dengan Persekutuan Tanah Melayu 1948 ."
     },
     {
       "source_id": "bab-4-synopsis-4",
       "bm_original": "Di Sarawak , tindakan Vyner Brooke menyerahkan negeri itu kepada British mencetuskan reaksi menyokong dan menentang, namun majoriti penduduk tempatan menentangnya.",
-      "translate": "Di Sarawak , tindakan Vyner Brooke menyerahkan 州 那 向 British mencetuskan reaksi menyokong 与 反对, namun majoriti penduduk 本地 menentangnya.",
+      "translate": "在砂拉越，维纳布鲁克将国家移交给英国人的举动引起了支持和反对的反应，但当地大多数民众都反对。",
       "key_points_zh": [
-        "Di Sarawak , tindakan Vyner Brooke menyerahkan 州 那 向 British mencetuskan reaksi menyokong 与 反对, namun majoriti penduduk 本地 menentangnya."
+        "在砂拉越，维纳布鲁克将国家移交给英国人的举动引起了支持和反对的反应，但当地大多数民众都反对。"
       ],
       "bm_focus_phrase": "Di Sarawak , tindakan Vyner Brooke menyerahkan negeri itu kepada British mencetuskan reaksi menyokong dan menentang, namun majoriti penduduk tempatan menentangnya."
     },
     {
       "source_id": "bab-4-synopsis-5",
       "bm_original": "Di Sabah , British pula berjaya mengambil alih negeri itu daripada Syarikat Borneo Utara British (SBUB) tanpa penentangan yang besar.",
-      "translate": "Di Sabah , British pula 成功 mengambil alih 州 那 daripada Syarikat Borneo Utara British (SBUB) tanpa 反对 的 besar.",
+      "translate": "在沙巴，英国人在没有太多反对的情况下从英国北婆罗洲公司（SBUB）手中接管了该州。",
       "key_points_zh": [
-        "Di Sabah , British pula 成功 mengambil alih 州 那 daripada Syarikat Borneo Utara British (SBUB) tanpa 反对 的 besar."
+        "在沙巴，英国人在没有太多反对的情况下从英国北婆罗洲公司（SBUB）手中接管了该州。"
       ],
       "bm_focus_phrase": "Di Sabah , British pula berjaya mengambil alih negeri itu daripada Syarikat Borneo Utara British (SBUB) tanpa penentangan yang besar."
     }

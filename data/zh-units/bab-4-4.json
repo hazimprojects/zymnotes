@@ -1,420 +1,421 @@
 {
   "meta": {
     "source_file": "notes/bab-4-4.html",
-    "rollout": "gelombang-1-manual-revision"
+    "rollout": "gelombang-1-ms-zh-regenerated",
+    "notes": "Translate fields regenerated from bm_original (ms→zh-CN) for fluent Simplified Chinese; proper names follow translator output—verify against BM notes."
   },
   "units": [
     {
       "source_id": "bab-4-4-u10",
       "bm_original": "Selepas Perang Dunia Kedua , Sarawak diserahkan kepada kerajaan British.",
-      "translate": "Selepas 第二次世界大战 , Sarawak diserahkan 给/向 政府 British.",
+      "translate": "第二次世界大战后，砂拉越被移交给英国政府。",
       "key_points_zh": [
-        "Selepas 第二次世界大战 , Sarawak diserahkan 给/向 政府 British."
+        "第二次世界大战后，砂拉越被移交给英国政府。"
       ],
       "bm_focus_phrase": "Selepas Perang Dunia Kedua , Sarawak diserahkan kepada kerajaan British."
     },
     {
       "source_id": "bab-4-4-u11",
       "bm_original": "Penyerahan ini berlaku kerana gabungan faktor masalah pewarisan takhta , desakan British dan masalah kewangan yang dihadapi oleh Vyner Brooke .",
-      "translate": "Penyerahan 这 发生 因为 gabungan 因素 masalah pewarisan takhta , desakan British 与 masalah kewangan 的 dihadapi 由 Vyner Brooke .",
+      "translate": "这次交接是由于继承问题、英国的坚持以及维纳·布鲁克面临的财务问题等因素综合作用而发生的。",
       "key_points_zh": [
-        "Penyerahan 这 发生 因为 gabungan 因素 masalah pewarisan takhta , desakan British 与 masalah kewangan 的 dihadapi 由 Vyner Brooke ."
+        "这次交接是由于继承问题、英国的坚持以及维纳·布鲁克面临的财务问题等因素综合作用而发生的。"
       ],
       "bm_focus_phrase": "Penyerahan ini berlaku kerana gabungan faktor masalah pewarisan takhta , desakan British dan masalah kewangan yang dihadapi oleh Vyner Brooke ."
     },
     {
       "source_id": "bab-4-4-u12",
       "bm_original": "Proses penyerahan melibatkan surat daripada Pejabat Tanah Jajahan , usaha Gerard T. MacBryan mendapatkan persetujuan ketua tempatan, dan undian Cession Bill di Majlis Negeri .",
-      "translate": "Proses penyerahan melibatkan surat daripada Pejabat Tanah Jajahan , usaha Gerard T. MacBryan 取得 persetujuan ketua 本地, 与 undian Cession Bill di 州议会 .",
+      "translate": "移交过程涉及殖民部的一封信、杰拉德·T·麦克布赖恩（Gerard T. MacBryan）努力获得当地酋长的同意以及国务院对《移交法案》的投票。",
       "key_points_zh": [
-        "Proses penyerahan melibatkan surat daripada Pejabat Tanah Jajahan , usaha Gerard T. MacBryan 取得 persetujuan ketua 本地, 与 undian Cession Bill di 州议会 ."
+        "移交过程涉及殖民部的一封信、杰拉德·T·麦克布赖恩（Gerard T. MacBryan）努力获得当地酋长的同意以及国务院对《移交法案》的投票。"
       ],
       "bm_focus_phrase": "Proses penyerahan melibatkan surat daripada Pejabat Tanah Jajahan , usaha Gerard T. MacBryan mendapatkan persetujuan ketua tempatan, dan undian Cession Bill di Majlis Negeri ."
     },
     {
       "source_id": "bab-4-4-u13",
       "bm_original": "Walau bagaimanapun, penyerahan ini mendapat tentangan hebat terutama daripada masyarakat peribumi di Sarawak .",
-      "translate": "重点：Walau bagaimanapun, penyerahan 这 获得 tentangan hebat terutama daripada 社会 peribumi di Sarawak .",
+      "translate": "然而，这一移交遭到了强烈反对，尤其是来自砂拉越原住民社区的反对。",
       "key_points_zh": [
-        "重点：Walau bagaimanapun, penyerahan 这 获得 tentangan hebat terutama daripada 社会 peribumi di Sarawak ."
+        "然而，这一移交遭到了强烈反对，尤其是来自砂拉越原住民社区的反对。"
       ],
       "bm_focus_phrase": "Walau bagaimanapun, penyerahan ini mendapat tentangan hebat terutama daripada masyarakat peribumi di Sarawak ."
     },
     {
       "source_id": "bab-4-4-u01",
       "bm_original": "Selepas Perang Dunia Kedua , Sarawak diserahkan kepada kerajaan British. Penyerahan ini berlaku kerana masalah pewarisan takhta, desakan British dan masalah kewangan yang dihadapi oleh Vyner Brooke .",
-      "translate": "Selepas 第二次世界大战 , Sarawak diserahkan 给/向 政府 British. Penyerahan 这 发生 因为 masalah pewarisan takhta, desakan British 与 masalah kewangan 的 dihadapi 由 Vyner Brooke .",
+      "translate": "第二次世界大战后，砂拉越被移交给英国政府。这次交接之所以发生，是因为王位继承问题、英国人的坚持以及维纳布鲁克面临的财政问题。",
       "key_points_zh": [
-        "Selepas 第二次世界大战 , Sarawak diserahkan 给/向 政府 British. Penyerahan 这 发生 因为 masalah pewarisan takhta, desakan British 与 masalah kewangan 的 dihadapi 由 Vyner Brooke ."
+        "第二次世界大战后，砂拉越被移交给英国政府。这次交接之所以发生，是因为王位继承问题、英国人的坚持以及维纳布鲁克面临的财政问题。"
       ],
       "bm_focus_phrase": "Selepas Perang Dunia Kedua , Sarawak diserahkan kepada kerajaan British. Penyerahan ini berlaku kerana masalah pewarisan takhta, desakan British dan masalah kewangan yang dihadapi oleh Vyner Brooke ."
     },
     {
       "source_id": "bab-4-4-u14",
       "bm_original": "11 September 1945 → tentera Australia mendarat di Kuching",
-      "translate": "重点：11 September 1945 → tentera Australia mendarat di Kuching",
+      "translate": "1945 年 9 月 11 日 → 澳大利亚军队在古晋登陆",
       "key_points_zh": [
-        "重点：11 September 1945 → tentera Australia mendarat di Kuching"
+        "1945 年 9 月 11 日 → 澳大利亚军队在古晋登陆"
       ],
       "bm_focus_phrase": "11 September 1945 → tentera Australia mendarat di Kuching"
     },
     {
       "source_id": "bab-4-4-u15",
       "bm_original": "British memperkenalkan pentadbiran tentera yang dikenali sebagai British Borneo Civil Affairs Unit (BBCAU)",
-      "translate": "重点：British memperkenalkan 行政 tentera 的 dikenali 作为 British Borneo Civil Affairs Unit (BBCAU)",
+      "translate": "英国建立了一个军事管理机构，称为英国婆罗洲民政部门（BBCAU）。",
       "key_points_zh": [
-        "重点：British memperkenalkan 行政 tentera 的 dikenali 作为 British Borneo Civil Affairs Unit (BBCAU)"
+        "英国建立了一个军事管理机构，称为英国婆罗洲民政部门（BBCAU）。"
       ],
       "bm_focus_phrase": "British memperkenalkan pentadbiran tentera yang dikenali sebagai British Borneo Civil Affairs Unit (BBCAU)"
     },
     {
       "source_id": "bab-4-4-u16",
       "bm_original": "1946 → British memperkenalkan BMA di Sarawak",
-      "translate": "重点：1946 → British memperkenalkan BMA di Sarawak",
+      "translate": "1946 → 英国在砂拉越引入BMA",
       "key_points_zh": [
-        "重点：1946 → British memperkenalkan BMA di Sarawak"
+        "1946 → 英国在砂拉越引入BMA"
       ],
       "bm_focus_phrase": "1946 → British memperkenalkan BMA di Sarawak"
     },
     {
       "source_id": "bab-4-4-u17",
       "bm_original": "1 Julai 1946 → Vyner Brooke menyerahkan Sarawak kepada kerajaan British",
-      "translate": "1 Julai 1946 → Vyner Brooke menyerahkan Sarawak kepada kerajaan British",
+      "translate": "1946 年 7 月 1 日 → 维纳布鲁克将砂拉越移交给英国政府",
       "key_points_zh": [
-        "1 Julai 1946 → Vyner Brooke menyerahkan Sarawak kepada kerajaan British"
+        "1946 年 7 月 1 日 → 维纳布鲁克将砂拉越移交给英国政府"
       ],
       "bm_focus_phrase": "1 Julai 1946 → Vyner Brooke menyerahkan Sarawak kepada kerajaan British"
     },
     {
       "source_id": "bab-4-4-u02",
       "bm_original": "Pada masa yang sama:",
-      "translate": "重点：Pada masa 的 sama:",
+      "translate": "同时：",
       "key_points_zh": [
-        "重点：Pada masa 的 sama:"
+        "同时："
       ],
       "bm_focus_phrase": "Pada masa yang sama:"
     },
     {
       "source_id": "bab-4-4-extra-1",
       "bm_original": "Beliau semakin tua",
-      "translate": "重点：Beliau semakin tua",
+      "translate": "他正在变老",
       "key_points_zh": [
-        "重点：Beliau semakin tua"
+        "他正在变老"
       ],
       "bm_focus_phrase": "Beliau semakin tua"
     },
     {
       "source_id": "bab-4-4-extra-2",
       "bm_original": "Kesihatannya semakin merosot",
-      "translate": "重点：Kesihatannya semakin merosot",
+      "translate": "他的健康状况正在恶化",
       "key_points_zh": [
-        "重点：Kesihatannya semakin merosot"
+        "他的健康状况正在恶化"
       ],
       "bm_focus_phrase": "Kesihatannya semakin merosot"
     },
     {
       "source_id": "bab-4-4-extra-3",
       "bm_original": "Anthony Brooke → anak kepada Bertram Brooke",
-      "translate": "Anthony Brooke → anak kepada Bertram Brooke",
+      "translate": "安东尼·布鲁克 → 伯特伦·布鲁克之子",
       "key_points_zh": [
-        "Anthony Brooke → anak kepada Bertram Brooke"
+        "安东尼·布鲁克 → 伯特伦·布鲁克之子"
       ],
       "bm_focus_phrase": "Anthony Brooke → anak kepada Bertram Brooke"
     },
     {
       "source_id": "bab-4-4-u03",
       "bm_original": "Keadaan ini menyebabkan masa depan pemerintahan Brooke di Sarawak menjadi tidak menentu.",
-      "translate": "Keadaan ini menyebabkan masa depan pemerintahan Brooke di Sarawak menjadi tidak menentu.",
+      "translate": "这种情况使得布鲁克在砂拉越的统治未来变得不确定。",
       "key_points_zh": [
-        "Keadaan ini menyebabkan masa depan pemerintahan Brooke di Sarawak menjadi tidak menentu."
+        "这种情况使得布鲁克在砂拉越的统治未来变得不确定。"
       ],
       "bm_focus_phrase": "Keadaan ini menyebabkan masa depan pemerintahan Brooke di Sarawak menjadi tidak menentu."
     },
     {
       "source_id": "bab-4-4-u04",
       "bm_original": "British mahu Sarawak dijadikan tanah jajahan kerana:",
-      "translate": "重点：British mahu Sarawak dijadikan tanah jajahan 因为:",
+      "translate": "英国人希望砂拉越成为殖民地，因为：",
       "key_points_zh": [
-        "重点：British mahu Sarawak dijadikan tanah jajahan 因为:"
+        "英国人希望砂拉越成为殖民地，因为："
       ],
       "bm_focus_phrase": "British mahu Sarawak dijadikan tanah jajahan kerana:"
     },
     {
       "source_id": "bab-4-4-extra-4",
       "bm_original": "Kaya dengan sumber ekonomi",
-      "translate": "重点：Kaya 以 sumber ekonomi",
+      "translate": "经济资源丰富",
       "key_points_zh": [
-        "重点：Kaya 以 sumber ekonomi"
+        "经济资源丰富"
       ],
       "bm_focus_phrase": "Kaya dengan sumber ekonomi"
     },
     {
       "source_id": "bab-4-4-extra-5",
       "bm_original": "Penting untuk melindungi pelaburan British",
-      "translate": "重点：Penting 为了 melindungi pelaburan British",
+      "translate": "保护英国投资很重要",
       "key_points_zh": [
-        "重点：Penting 为了 melindungi pelaburan British"
+        "保护英国投资很重要"
       ],
       "bm_focus_phrase": "Penting untuk melindungi pelaburan British"
     },
     {
       "source_id": "bab-4-4-extra-6",
       "bm_original": "Memperluas penguasaan British di Borneo",
-      "translate": "重点：Memperluas penguasaan British di Borneo",
+      "translate": "扩大英国在婆罗洲的统治",
       "key_points_zh": [
-        "重点：Memperluas penguasaan British di Borneo"
+        "扩大英国在婆罗洲的统治"
       ],
       "bm_focus_phrase": "Memperluas penguasaan British di Borneo"
     },
     {
       "source_id": "bab-4-4-u05",
       "bm_original": "Akhirnya, Vyner Brooke bersetuju untuk menyerahkan Sarawak kepada British.",
-      "translate": "Akhirnya, Vyner Brooke bersetuju untuk menyerahkan Sarawak kepada British.",
+      "translate": "最后，维纳布鲁克同意将砂拉越交给英国人。",
       "key_points_zh": [
-        "Akhirnya, Vyner Brooke bersetuju untuk menyerahkan Sarawak kepada British."
+        "最后，维纳布鲁克同意将砂拉越交给英国人。"
       ],
       "bm_focus_phrase": "Akhirnya, Vyner Brooke bersetuju untuk menyerahkan Sarawak kepada British."
     },
     {
       "source_id": "bab-4-4-extra-7",
       "bm_original": "Lombong minyak musnah",
-      "translate": "重点：Lombong minyak musnah",
+      "translate": "油矿被毁",
       "key_points_zh": [
-        "重点：Lombong minyak musnah"
+        "油矿被毁"
       ],
       "bm_focus_phrase": "Lombong minyak musnah"
     },
     {
       "source_id": "bab-4-4-extra-8",
       "bm_original": "Ladang getah terbiar",
-      "translate": "重点：Ladang getah terbiar",
+      "translate": "废弃的橡胶种植园",
       "key_points_zh": [
-        "重点：Ladang getah terbiar"
+        "废弃的橡胶种植园"
       ],
       "bm_focus_phrase": "Ladang getah terbiar"
     },
     {
       "source_id": "bab-4-4-extra-9",
       "bm_original": "Kemudahan pendidikan rosak",
-      "translate": "重点：Kemudahan pendidikan rosak",
+      "translate": "教育设施遭到破坏",
       "key_points_zh": [
-        "重点：Kemudahan pendidikan rosak"
+        "教育设施遭到破坏"
       ],
       "bm_focus_phrase": "Kemudahan pendidikan rosak"
     },
     {
       "source_id": "bab-4-4-extra-10",
       "bm_original": "Kemudahan kesihatan musnah",
-      "translate": "重点：Kemudahan kesihatan musnah",
+      "translate": "卫生设施被毁",
       "key_points_zh": [
-        "重点：Kemudahan kesihatan musnah"
+        "卫生设施被毁"
       ],
       "bm_focus_phrase": "Kemudahan kesihatan musnah"
     },
     {
       "source_id": "bab-4-4-extra-11",
       "bm_original": "Jalan raya rosak",
-      "translate": "重点：Jalan raya rosak",
+      "translate": "路坏了",
       "key_points_zh": [
-        "重点：Jalan raya rosak"
+        "路坏了"
       ],
       "bm_focus_phrase": "Jalan raya rosak"
     },
     {
       "source_id": "bab-4-4-extra-12",
       "bm_original": "Lapangan terbang perlu dibaiki",
-      "translate": "重点：Lapangan terbang perlu dibaiki",
+      "translate": "机场需要修复",
       "key_points_zh": [
-        "重点：Lapangan terbang perlu dibaiki"
+        "机场需要修复"
       ],
       "bm_focus_phrase": "Lapangan terbang perlu dibaiki"
     },
     {
       "source_id": "bab-4-4-u06",
       "bm_original": "Oleh itu, penyerahan kepada British dianggap jalan mudah untuk memulihkan Sarawak.",
-      "translate": "Oleh 那, penyerahan 给/向 British dianggap jalan mudah 为了 恢复 Sarawak.",
+      "translate": "因此，移交给英国人被认为是恢复砂拉越的简单方法。",
       "key_points_zh": [
-        "Oleh 那, penyerahan 给/向 British dianggap jalan mudah 为了 恢复 Sarawak."
+        "因此，移交给英国人被认为是恢复砂拉越的简单方法。"
       ],
       "bm_focus_phrase": "Oleh itu, penyerahan kepada British dianggap jalan mudah untuk memulihkan Sarawak."
     },
     {
       "source_id": "bab-4-4-u07",
       "bm_original": "Tokoh yang terlibat ialah:",
-      "translate": "重点：Tokoh 的 terlibat 是:",
+      "translate": "涉及的数字有：",
       "key_points_zh": [
-        "重点：Tokoh 的 terlibat 是:"
+        "涉及的数字有："
       ],
       "bm_focus_phrase": "Tokoh yang terlibat ialah:"
     },
     {
       "source_id": "bab-4-4-extra-13",
       "bm_original": "Bertram Brooke",
-      "translate": "Bertram Brooke",
+      "translate": "伯特伦·布鲁克",
       "key_points_zh": [
-        "Bertram Brooke"
+        "伯特伦·布鲁克"
       ],
       "bm_focus_phrase": "Bertram Brooke"
     },
     {
       "source_id": "bab-4-4-extra-14",
       "bm_original": "Anthony Brooke",
-      "translate": "Anthony Brooke",
+      "translate": "安东尼·布鲁克",
       "key_points_zh": [
-        "Anthony Brooke"
+        "安东尼·布鲁克"
       ],
       "bm_focus_phrase": "Anthony Brooke"
     },
     {
       "source_id": "bab-4-4-extra-15",
       "bm_original": "Kelulusan Majlis Negeri diperoleh",
-      "translate": "Kelulusan Majlis Negeri diperoleh",
+      "translate": "获得国务院批准",
       "key_points_zh": [
-        "Kelulusan Majlis Negeri diperoleh"
+        "获得国务院批准"
       ],
       "bm_focus_phrase": "Kelulusan Majlis Negeri diperoleh"
     },
     {
       "source_id": "bab-4-4-extra-16",
       "bm_original": "Persetujuan rakyat Sarawak diambil kira",
-      "translate": "重点：Persetujuan 人民 Sarawak diambil kira",
+      "translate": "考虑到砂拉越人民的同意",
       "key_points_zh": [
-        "重点：Persetujuan 人民 Sarawak diambil kira"
+        "考虑到砂拉越人民的同意"
       ],
       "bm_focus_phrase": "Persetujuan rakyat Sarawak diambil kira"
     },
     {
       "source_id": "bab-4-4-extra-17",
       "bm_original": "L.D. Gammans",
-      "translate": "重点：L.D. Gammans",
+      "translate": "L·D·加曼斯",
       "key_points_zh": [
-        "重点：L.D. Gammans"
+        "L·D·加曼斯"
       ],
       "bm_focus_phrase": "L.D. Gammans"
     },
     {
       "source_id": "bab-4-4-extra-18",
       "bm_original": "David Rees Williams",
-      "translate": "重点：David Rees Williams",
+      "translate": "大卫·里斯·威廉姆斯",
       "key_points_zh": [
-        "重点：David Rees Williams"
+        "大卫·里斯·威廉姆斯"
       ],
       "bm_focus_phrase": "David Rees Williams"
     },
     {
       "source_id": "bab-4-4-extra-19",
       "bm_original": "Sebahagian besar penduduk peribumi menentang penyerahan Sarawak",
-      "translate": "重点：Sebahagian besar penduduk peribumi 反对 penyerahan Sarawak",
+      "translate": "大多数原住民反对砂拉越的移交",
       "key_points_zh": [
-        "重点：Sebahagian besar penduduk peribumi 反对 penyerahan Sarawak"
+        "大多数原住民反对砂拉越的移交"
       ],
       "bm_focus_phrase": "Sebahagian besar penduduk peribumi menentang penyerahan Sarawak"
     },
     {
       "source_id": "bab-4-4-extra-20",
       "bm_original": "Kebanyakan orang Cina menyokong penyerahan",
-      "translate": "重点：Kebanyakan orang Cina menyokong penyerahan",
+      "translate": "大多数中国人支持投降",
       "key_points_zh": [
-        "重点：Kebanyakan orang Cina menyokong penyerahan"
+        "大多数中国人支持投降"
       ],
       "bm_focus_phrase": "Kebanyakan orang Cina menyokong penyerahan"
     },
     {
       "source_id": "bab-4-4-extra-21",
       "bm_original": "Ada penduduk yang tidak memahami maksud sebenar penyerahan",
-      "translate": "重点：Ada penduduk 的 不 memahami maksud sebenar penyerahan",
+      "translate": "有居民不明白服从的真正含义",
       "key_points_zh": [
-        "重点：Ada penduduk 的 不 memahami maksud sebenar penyerahan"
+        "有居民不明白服从的真正含义"
       ],
       "bm_focus_phrase": "Ada penduduk yang tidak memahami maksud sebenar penyerahan"
     },
     {
       "source_id": "bab-4-4-extra-22",
       "bm_original": "19 undi menyokong",
-      "translate": "重点：19 undi menyokong",
+      "translate": "19票赞成",
       "key_points_zh": [
-        "重点：19 undi menyokong"
+        "19票赞成"
       ],
       "bm_focus_phrase": "19 undi menyokong"
     },
     {
       "source_id": "bab-4-4-extra-23",
       "bm_original": "16 undi menentang",
-      "translate": "重点：16 undi 反对",
+      "translate": "16票反对",
       "key_points_zh": [
-        "重点：16 undi 反对"
+        "16票反对"
       ],
       "bm_focus_phrase": "16 undi menentang"
     },
     {
       "source_id": "bab-4-4-u08",
       "bm_original": "Ini menunjukkan bahawa keputusan penyerahan Sarawak diluluskan dengan majoriti yang kecil.",
-      "translate": "重点：Ini menunjukkan bahawa keputusan penyerahan Sarawak diluluskan 以 majoriti 的 kecil.",
+      "translate": "这表明砂拉越移交决定以微弱多数获得通过。",
       "key_points_zh": [
-        "重点：Ini menunjukkan bahawa keputusan penyerahan Sarawak diluluskan 以 majoriti 的 kecil."
+        "这表明砂拉越移交决定以微弱多数获得通过。"
       ],
       "bm_focus_phrase": "Ini menunjukkan bahawa keputusan penyerahan Sarawak diluluskan dengan majoriti yang kecil."
     },
     {
       "source_id": "bab-4-4-extra-24",
       "bm_original": "Masalah pewarisan takhta",
-      "translate": "重点：Masalah pewarisan takhta",
+      "translate": "王位继承问题",
       "key_points_zh": [
-        "重点：Masalah pewarisan takhta"
+        "王位继承问题"
       ],
       "bm_focus_phrase": "Masalah pewarisan takhta"
     },
     {
       "source_id": "bab-4-4-extra-25",
       "bm_original": "Desakan kerajaan British",
-      "translate": "Desakan kerajaan British",
+      "translate": "英国政府的坚持",
       "key_points_zh": [
-        "Desakan kerajaan British"
+        "英国政府的坚持"
       ],
       "bm_focus_phrase": "Desakan kerajaan British"
     },
     {
       "source_id": "bab-4-4-extra-26",
       "bm_original": "Masalah kewangan selepas perang",
-      "translate": "重点：Masalah kewangan 在…之后 perang",
+      "translate": "战后的财政问题",
       "key_points_zh": [
-        "重点：Masalah kewangan 在…之后 perang"
+        "战后的财政问题"
       ],
       "bm_focus_phrase": "Masalah kewangan selepas perang"
     },
     {
       "source_id": "bab-4-4-extra-27",
       "bm_original": "Perjanjian dengan British",
-      "translate": "重点：Perjanjian 以 British",
+      "translate": "与英国的条约",
       "key_points_zh": [
-        "重点：Perjanjian 以 British"
+        "与英国的条约"
       ],
       "bm_focus_phrase": "Perjanjian dengan British"
     },
     {
       "source_id": "bab-4-4-extra-28",
       "bm_original": "Usaha Gerard T. MacBryan mendapatkan persetujuan ketua tempatan",
-      "translate": "重点：Usaha Gerard T. MacBryan 取得 persetujuan ketua 本地",
+      "translate": "杰拉德·T·麦克布莱恩 (Gerard T. MacBryan) 努力获得当地酋长的同意",
       "key_points_zh": [
-        "重点：Usaha Gerard T. MacBryan 取得 persetujuan ketua 本地"
+        "杰拉德·T·麦克布莱恩 (Gerard T. MacBryan) 努力获得当地酋长的同意"
       ],
       "bm_focus_phrase": "Usaha Gerard T. MacBryan mendapatkan persetujuan ketua tempatan"
     },
     {
       "source_id": "bab-4-4-extra-29",
       "bm_original": "Undian di Majlis Negeri",
-      "translate": "Undian di Majlis Negeri",
+      "translate": "国务院投票",
       "key_points_zh": [
-        "Undian di Majlis Negeri"
+        "国务院投票"
       ],
       "bm_focus_phrase": "Undian di Majlis Negeri"
     },
     {
       "source_id": "bab-4-4-u09",
       "bm_original": "Oleh itu, penyerahan Sarawak kepada British telah menjadi titik penting yang membangkitkan penentangan politik dalam kalangan penduduk tempatan selepas perang.",
-      "translate": "Oleh 那, penyerahan Sarawak 给/向 British 已经 menjadi titik penting 的 membangkitkan 反对 政治 在 kalangan penduduk 本地 在…之后 perang.",
+      "translate": "因此，砂拉越移交英国成为战后引发当地民众政治反对的重要议题。",
       "key_points_zh": [
-        "Oleh 那, penyerahan Sarawak 给/向 British 已经 menjadi titik penting 的 membangkitkan 反对 政治 在 kalangan penduduk 本地 在…之后 perang."
+        "因此，砂拉越移交英国成为战后引发当地民众政治反对的重要议题。"
       ],
       "bm_focus_phrase": "Oleh itu, penyerahan Sarawak kepada British telah menjadi titik penting yang membangkitkan penentangan politik dalam kalangan penduduk tempatan selepas perang."
     }

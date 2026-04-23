@@ -1,366 +1,367 @@
 {
   "meta": {
     "source_file": "notes/bab-4-6.html",
-    "rollout": "gelombang-1-manual-revision"
+    "rollout": "gelombang-1-ms-zh-regenerated",
+    "notes": "Translate fields regenerated from bm_original (ms→zh-CN) for fluent Simplified Chinese; proper names follow translator output—verify against BM notes."
   },
   "units": [
     {
       "source_id": "bab-4-6-u10",
       "bm_original": "Selepas Perang Dunia Kedua , Sabah diserahkan kepada kerajaan British dan dijadikan tanah jajahan British .",
-      "translate": "Selepas 第二次世界大战 , Sabah diserahkan 向 政府 British 与 dijadikan tanah jajahan British .",
+      "translate": "第二次世界大战后，沙巴被移交给英国政府，成为英国殖民地。",
       "key_points_zh": [
-        "Selepas 第二次世界大战 , Sabah diserahkan 向 政府 British 与 dijadikan tanah jajahan British ."
+        "第二次世界大战后，沙巴被移交给英国政府，成为英国殖民地。"
       ],
       "bm_focus_phrase": "Selepas Perang Dunia Kedua , Sabah diserahkan kepada kerajaan British dan dijadikan tanah jajahan British ."
     },
     {
       "source_id": "bab-4-6-u11",
       "bm_original": "Selepas tentera Jepun menyerah kalah, British memperkenalkan British Military Administration (BMA) di Sabah.",
-      "translate": "重点：Selepas tentera Jepun menyerah kalah, British memperkenalkan British Military Administration (BMA) di Sabah.",
+      "translate": "日本投降后，英国在沙巴设立了英国军事管理局（BMA）。",
       "key_points_zh": [
-        "重点：Selepas tentera Jepun menyerah kalah, British memperkenalkan British Military Administration (BMA) di Sabah."
+        "日本投降后，英国在沙巴设立了英国军事管理局（BMA）。"
       ],
       "bm_focus_phrase": "Selepas tentera Jepun menyerah kalah, British memperkenalkan British Military Administration (BMA) di Sabah."
     },
     {
       "source_id": "bab-4-6-u12",
       "bm_original": "Penyerahan ini berlaku kerana tiga faktor utama, iaitu memenuhi kepentingan British, meneruskan dasar British dalam hubungan luar dan masalah kewangan SBUB .",
-      "translate": "Penyerahan 这 发生 因为 tiga 因素 主要, iaitu memenuhi kepentingan British, meneruskan dasar British 在 hubungan luar 与 masalah kewangan SBUB .",
+      "translate": "这次交接的发生主要出于三个因素，即符合英国的利益、延续英国的外交政策以及SBUB的财务问题。",
       "key_points_zh": [
-        "Penyerahan 这 发生 因为 tiga 因素 主要, iaitu memenuhi kepentingan British, meneruskan dasar British 在 hubungan luar 与 masalah kewangan SBUB ."
+        "这次交接的发生主要出于三个因素，即符合英国的利益、延续英国的外交政策以及SBUB的财务问题。"
       ],
       "bm_focus_phrase": "Penyerahan ini berlaku kerana tiga faktor utama, iaitu memenuhi kepentingan British, meneruskan dasar British dalam hubungan luar dan masalah kewangan SBUB ."
     },
     {
       "source_id": "bab-4-6-u13",
       "bm_original": "Sebagai tanah jajahan British, Sabah ditadbir oleh Gabenor British , dan gabenor pertamanya ialah Sir Edward Twining .",
-      "translate": "Sebagai tanah jajahan British, Sabah ditadbir 由 Gabenor British , 与 gabenor pertamanya 是 Sir Edward Twining .",
+      "translate": "作为英国殖民地，沙巴由英国总督管理，第一任总督是爱德华·特温宁爵士。",
       "key_points_zh": [
-        "Sebagai tanah jajahan British, Sabah ditadbir 由 Gabenor British , 与 gabenor pertamanya 是 Sir Edward Twining ."
+        "作为英国殖民地，沙巴由英国总督管理，第一任总督是爱德华·特温宁爵士。"
       ],
       "bm_focus_phrase": "Sebagai tanah jajahan British, Sabah ditadbir oleh Gabenor British , dan gabenor pertamanya ialah Sir Edward Twining ."
     },
     {
       "source_id": "bab-4-6-u01",
       "bm_original": "Selepas Perang Dunia Kedua , Sabah diserahkan kepada kerajaan British dan dijadikan tanah jajahan British. Penyerahan ini berlaku kerana kepentingan British, dasar hubungan luar yang sudah dikuasai British, serta masalah kewangan yang dihadapi oleh Syarikat Borneo Utara British (SBUB) .",
-      "translate": "Selepas 第二次世界大战 , Sabah diserahkan 向 政府 British 与 dijadikan tanah jajahan British. Penyerahan 这 发生 因为 kepentingan British, dasar hubungan luar 的 sudah dikuasai British, 以及 masalah kewangan 的 dihadapi 由 Syarikat Borneo Utara British (SBUB) .",
+      "translate": "第二次世界大战后，沙巴被移交给英国政府，成为英国殖民地。这次交接的发生是因为英国的利益、英国人控制的外交政策以及英国北婆罗洲公司（SBUB）面临的财务问题。",
       "key_points_zh": [
-        "Selepas 第二次世界大战 , Sabah diserahkan 向 政府 British 与 dijadikan tanah jajahan British. Penyerahan 这 发生 因为 kepentingan British, dasar hubungan luar 的 sudah dikuasai British, 以及 masalah kewangan 的 dihadapi 由 Syarikat Borneo Utara British (SBUB) ."
+        "第二次世界大战后，沙巴被移交给英国政府，成为英国殖民地。这次交接的发生是因为英国的利益、英国人控制的外交政策以及英国北婆罗洲公司（SBUB）面临的财务问题。"
       ],
       "bm_focus_phrase": "Selepas Perang Dunia Kedua , Sabah diserahkan kepada kerajaan British dan dijadikan tanah jajahan British. Penyerahan ini berlaku kerana kepentingan British, dasar hubungan luar yang sudah dikuasai British, serta masalah kewangan yang dihadapi oleh Syarikat Borneo Utara British (SBUB) ."
     },
     {
       "source_id": "bab-4-6-extra-1",
       "bm_original": "British Military Administration (BMA)",
-      "translate": "重点：British Military Administration (BMA)",
+      "translate": "英国军事管理局 (BMA)",
       "key_points_zh": [
-        "重点：British Military Administration (BMA)"
+        "英国军事管理局 (BMA)"
       ],
       "bm_focus_phrase": "British Military Administration (BMA)"
     },
     {
       "source_id": "bab-4-6-u14",
       "bm_original": "28 September 1945 → Kota Kinabalu dibebaskan daripada Jepun",
-      "translate": "重点：28 September 1945 → Kota Kinabalu dibebaskan daripada Jepun",
+      "translate": "1945 年 9 月 28 日 → 亚庇从日本手中解放",
       "key_points_zh": [
-        "重点：28 September 1945 → Kota Kinabalu dibebaskan daripada Jepun"
+        "1945 年 9 月 28 日 → 亚庇从日本手中解放"
       ],
       "bm_focus_phrase": "28 September 1945 → Kota Kinabalu dibebaskan daripada Jepun"
     },
     {
       "source_id": "bab-4-6-u15",
       "bm_original": "19 Oktober 1945 → Sandakan dibebaskan daripada Jepun",
-      "translate": "重点：19 Oktober 1945 → Sandakan dibebaskan daripada Jepun",
+      "translate": "1945 年 10 月 19 日 → 山打根从日本手中解放",
       "key_points_zh": [
-        "重点：19 Oktober 1945 → Sandakan dibebaskan daripada Jepun"
+        "1945 年 10 月 19 日 → 山打根从日本手中解放"
       ],
       "bm_focus_phrase": "19 Oktober 1945 → Sandakan dibebaskan daripada Jepun"
     },
     {
       "source_id": "bab-4-6-extra-2",
       "bm_original": "C.F.C. Macaskie",
-      "translate": "重点：C.F.C. Macaskie",
+      "translate": "C.F.C.马卡斯基",
       "key_points_zh": [
-        "重点：C.F.C. Macaskie"
+        "C.F.C.马卡斯基"
       ],
       "bm_focus_phrase": "C.F.C. Macaskie"
     },
     {
       "source_id": "bab-4-6-u02",
       "bm_original": "Tugas utama BMA ialah mengembalikan keamanan dan ketenteraman di Sabah.",
-      "translate": "Tugas 主要 BMA 是 mengembalikan keamanan 与 ketenteraman di Sabah.",
+      "translate": "BMA的主要任务是恢复沙巴的和平与秩序。",
       "key_points_zh": [
-        "Tugas 主要 BMA 是 mengembalikan keamanan 与 ketenteraman di Sabah."
+        "BMA的主要任务是恢复沙巴的和平与秩序。"
       ],
       "bm_focus_phrase": "Tugas utama BMA ialah mengembalikan keamanan dan ketenteraman di Sabah."
     },
     {
       "source_id": "bab-4-6-u16",
       "bm_original": "26 Jun 1946 → Syarikat Borneo Utara British (SBUB) menandatangani perjanjian dengan kerajaan British",
-      "translate": "26 Jun 1946 → Syarikat Borneo Utara British (SBUB) menandatangani 协议 以 政府 British",
+      "translate": "1946年6月26日 → 英国北婆罗洲公司（SBUB）与英国政府签署协议",
       "key_points_zh": [
-        "26 Jun 1946 → Syarikat Borneo Utara British (SBUB) menandatangani 协议 以 政府 British"
+        "1946年6月26日 → 英国北婆罗洲公司（SBUB）与英国政府签署协议"
       ],
       "bm_focus_phrase": "26 Jun 1946 → Syarikat Borneo Utara British (SBUB) menandatangani perjanjian dengan kerajaan British"
     },
     {
       "source_id": "bab-4-6-extra-3",
       "bm_original": "Sabah dijadikan tanah jajahan British",
-      "translate": "重点：Sabah dijadikan tanah jajahan British",
+      "translate": "沙巴成为英国殖民地",
       "key_points_zh": [
-        "重点：Sabah dijadikan tanah jajahan British"
+        "沙巴成为英国殖民地"
       ],
       "bm_focus_phrase": "Sabah dijadikan tanah jajahan British"
     },
     {
       "source_id": "bab-4-6-extra-4",
       "bm_original": "Gabenor British → bertindak sebagai Ketua Kerajaan",
-      "translate": "Gabenor British → bertindak 作为 Ketua Kerajaan",
+      "translate": "英国总督 → 担任政府首脑",
       "key_points_zh": [
-        "Gabenor British → bertindak 作为 Ketua Kerajaan"
+        "英国总督 → 担任政府首脑"
       ],
       "bm_focus_phrase": "Gabenor British → bertindak sebagai Ketua Kerajaan"
     },
     {
       "source_id": "bab-4-6-extra-5",
       "bm_original": "Sir Edward Twining",
-      "translate": "Sir Edward Twining",
+      "translate": "爱德华·特温宁爵士",
       "key_points_zh": [
-        "Sir Edward Twining"
+        "爱德华·特温宁爵士"
       ],
       "bm_focus_phrase": "Sir Edward Twining"
     },
     {
       "source_id": "bab-4-6-extra-6",
       "bm_original": "Clement Attlee",
-      "translate": "重点：Clement Attlee",
+      "translate": "克莱门特·艾德礼",
       "key_points_zh": [
-        "重点：Clement Attlee"
+        "克莱门特·艾德礼"
       ],
       "bm_focus_phrase": "Clement Attlee"
     },
     {
       "source_id": "bab-4-6-extra-7",
       "bm_original": "Sri Lanka",
-      "translate": "重点：Sri Lanka",
+      "translate": "斯里兰卡",
       "key_points_zh": [
-        "重点：Sri Lanka"
+        "斯里兰卡"
       ],
       "bm_focus_phrase": "Sri Lanka"
     },
     {
       "source_id": "bab-4-6-extra-8",
       "bm_original": "India",
-      "translate": "重点：India",
+      "translate": "印度",
       "key_points_zh": [
-        "重点：India"
+        "印度"
       ],
       "bm_focus_phrase": "India"
     },
     {
       "source_id": "bab-4-6-extra-9",
       "bm_original": "Burma",
-      "translate": "重点：Burma",
+      "translate": "缅甸语",
       "key_points_zh": [
-        "重点：Burma"
+        "缅甸语"
       ],
       "bm_focus_phrase": "Burma"
     },
     {
       "source_id": "bab-4-6-u03",
       "bm_original": "Sabah penting kepada British kerana:",
-      "translate": "Sabah penting 向 British 因为:",
+      "translate": "沙巴对英国人来说很重要，因为：",
       "key_points_zh": [
-        "Sabah penting 向 British 因为:"
+        "沙巴对英国人来说很重要，因为："
       ],
       "bm_focus_phrase": "Sabah penting kepada British kerana:"
     },
     {
       "source_id": "bab-4-6-extra-10",
       "bm_original": "Kaya dengan sumber bahan mentah",
-      "translate": "Kaya 以 sumber bahan mentah",
+      "translate": "原料资源丰富",
       "key_points_zh": [
-        "Kaya 以 sumber bahan mentah"
+        "原料资源丰富"
       ],
       "bm_focus_phrase": "Kaya dengan sumber bahan mentah"
     },
     {
       "source_id": "bab-4-6-extra-11",
       "bm_original": "Sesuai dijadikan kawasan pasaran bagi barangan British",
-      "translate": "重点：Sesuai dijadikan kawasan pasaran bagi barangan British",
+      "translate": "适合作为英国商品的市场区域",
       "key_points_zh": [
-        "重点：Sesuai dijadikan kawasan pasaran bagi barangan British"
+        "适合作为英国商品的市场区域"
       ],
       "bm_focus_phrase": "Sesuai dijadikan kawasan pasaran bagi barangan British"
     },
     {
       "source_id": "bab-4-6-u04",
       "bm_original": "Oleh itu, British mahu terus menguasai Sabah untuk menjaga kepentingan ekonominya.",
-      "translate": "Oleh 那, British mahu terus menguasai Sabah 为了 menjaga kepentingan ekonominya.",
+      "translate": "因此，英国人想继续控制沙巴，以保护其经济利益。",
       "key_points_zh": [
-        "Oleh 那, British mahu terus menguasai Sabah 为了 menjaga kepentingan ekonominya."
+        "因此，英国人想继续控制沙巴，以保护其经济利益。"
       ],
       "bm_focus_phrase": "Oleh itu, British mahu terus menguasai Sabah untuk menjaga kepentingan ekonominya."
     },
     {
       "source_id": "bab-4-6-extra-12",
       "bm_original": "Naungan British",
-      "translate": "重点：Naungan British",
+      "translate": "英国的赞助",
       "key_points_zh": [
-        "重点：Naungan British"
+        "英国的赞助"
       ],
       "bm_focus_phrase": "Naungan British"
     },
     {
       "source_id": "bab-4-6-extra-13",
       "bm_original": "Hubungan luar Sabah",
-      "translate": "重点：Hubungan luar Sabah",
+      "translate": "沙巴对外关系",
       "key_points_zh": [
-        "重点：Hubungan luar Sabah"
+        "沙巴对外关系"
       ],
       "bm_focus_phrase": "Hubungan luar Sabah"
     },
     {
       "source_id": "bab-4-6-extra-14",
       "bm_original": "Pertahanan Sabah",
-      "translate": "重点：Pertahanan Sabah",
+      "translate": "保卫沙巴",
       "key_points_zh": [
-        "重点：Pertahanan Sabah"
+        "保卫沙巴"
       ],
       "bm_focus_phrase": "Pertahanan Sabah"
     },
     {
       "source_id": "bab-4-6-u05",
       "bm_original": "Keadaan ini menyebabkan SBUB lebih mudah membuat keputusan untuk menyerahkan Sabah kepada kerajaan British pada tahun 1946.",
-      "translate": "Keadaan 这 menyebabkan SBUB 更 mudah membuat keputusan 为了 menyerahkan Sabah 向 政府 British 于 年 1946.",
+      "translate": "这种情况使得SBUB更容易在1946年做出将沙巴移交给英国政府的决定。",
       "key_points_zh": [
-        "Keadaan 这 menyebabkan SBUB 更 mudah membuat keputusan 为了 menyerahkan Sabah 向 政府 British 于 年 1946."
+        "这种情况使得SBUB更容易在1946年做出将沙巴移交给英国政府的决定。"
       ],
       "bm_focus_phrase": "Keadaan ini menyebabkan SBUB lebih mudah membuat keputusan untuk menyerahkan Sabah kepada kerajaan British pada tahun 1946."
     },
     {
       "source_id": "bab-4-6-u06",
       "bm_original": "Penyerahan ini juga menunjukkan bahawa pengaruh British di Sabah sudah lama wujud sebelum Sabah dijadikan tanah jajahan secara rasmi.",
-      "translate": "Penyerahan 这 也 menunjukkan bahawa pengaruh British di Sabah sudah lama wujud sebelum Sabah dijadikan tanah jajahan secara rasmi.",
+      "translate": "这次移交也表明，早在沙巴正式成为殖民地之前，英国对沙巴的影响力就已经存在。",
       "key_points_zh": [
-        "Penyerahan 这 也 menunjukkan bahawa pengaruh British di Sabah sudah lama wujud sebelum Sabah dijadikan tanah jajahan secara rasmi."
+        "这次移交也表明，早在沙巴正式成为殖民地之前，英国对沙巴的影响力就已经存在。"
       ],
       "bm_focus_phrase": "Penyerahan ini juga menunjukkan bahawa pengaruh British di Sabah sudah lama wujud sebelum Sabah dijadikan tanah jajahan secara rasmi."
     },
     {
       "source_id": "bab-4-6-extra-15",
       "bm_original": "Jesselton",
-      "translate": "重点：Jesselton",
+      "translate": "杰塞尔顿",
       "key_points_zh": [
-        "重点：Jesselton"
+        "杰塞尔顿"
       ],
       "bm_focus_phrase": "Jesselton"
     },
     {
       "source_id": "bab-4-6-extra-16",
       "bm_original": "Kudat",
-      "translate": "重点：Kudat",
+      "translate": "古达",
       "key_points_zh": [
-        "重点：Kudat"
+        "古达"
       ],
       "bm_focus_phrase": "Kudat"
     },
     {
       "source_id": "bab-4-6-extra-17",
       "bm_original": "Sandakan",
-      "translate": "重点：Sandakan",
+      "translate": "山打根",
       "key_points_zh": [
-        "重点：Sandakan"
+        "山打根"
       ],
       "bm_focus_phrase": "Sandakan"
     },
     {
       "source_id": "bab-4-6-u07",
       "bm_original": "Antaranya melibatkan pembaikan:",
-      "translate": "重点：Antaranya melibatkan pembaikan:",
+      "translate": "其中包括维修：",
       "key_points_zh": [
-        "重点：Antaranya melibatkan pembaikan:"
+        "其中包括维修："
       ],
       "bm_focus_phrase": "Antaranya melibatkan pembaikan:"
     },
     {
       "source_id": "bab-4-6-extra-18",
       "bm_original": "Prasarana",
-      "translate": "重点：Prasarana",
+      "translate": "基础设施",
       "key_points_zh": [
-        "重点：Prasarana"
+        "基础设施"
       ],
       "bm_focus_phrase": "Prasarana"
     },
     {
       "source_id": "bab-4-6-extra-19",
       "bm_original": "Bangunan",
-      "translate": "重点：Bangunan",
+      "translate": "建筑",
       "key_points_zh": [
-        "重点：Bangunan"
+        "建筑"
       ],
       "bm_focus_phrase": "Bangunan"
     },
     {
       "source_id": "bab-4-6-extra-20",
       "bm_original": "Kemudahan pelabuhan",
-      "translate": "重点：Kemudahan pelabuhan",
+      "translate": "港口设施",
       "key_points_zh": [
-        "重点：Kemudahan pelabuhan"
+        "港口设施"
       ],
       "bm_focus_phrase": "Kemudahan pelabuhan"
     },
     {
       "source_id": "bab-4-6-extra-21",
       "bm_original": "Kemudahan awam",
-      "translate": "重点：Kemudahan awam",
+      "translate": "公共设施",
       "key_points_zh": [
-        "重点：Kemudahan awam"
+        "公共设施"
       ],
       "bm_focus_phrase": "Kemudahan awam"
     },
     {
       "source_id": "bab-4-6-u08",
       "bm_original": "Oleh itu, syarikat tersebut bersetuju menyerahkan Sabah kepada British.",
-      "translate": "Oleh 那, syarikat tersebut bersetuju menyerahkan Sabah 向 British.",
+      "translate": "因此，该公司同意将沙巴交给英国人。",
       "key_points_zh": [
-        "Oleh 那, syarikat tersebut bersetuju menyerahkan Sabah 向 British."
+        "因此，该公司同意将沙巴交给英国人。"
       ],
       "bm_focus_phrase": "Oleh itu, syarikat tersebut bersetuju menyerahkan Sabah kepada British."
     },
     {
       "source_id": "bab-4-6-extra-22",
       "bm_original": "Kepentingan British di Sabah",
-      "translate": "重点：Kepentingan British di Sabah",
+      "translate": "英国在沙巴的利益",
       "key_points_zh": [
-        "重点：Kepentingan British di Sabah"
+        "英国在沙巴的利益"
       ],
       "bm_focus_phrase": "Kepentingan British di Sabah"
     },
     {
       "source_id": "bab-4-6-extra-23",
       "bm_original": "Penguasaan British dalam hubungan luar dan pertahanan",
-      "translate": "Penguasaan British 在 hubungan luar 与 pertahanan",
+      "translate": "英国在外交关系和国防方面的主导地位",
       "key_points_zh": [
-        "Penguasaan British 在 hubungan luar 与 pertahanan"
+        "英国在外交关系和国防方面的主导地位"
       ],
       "bm_focus_phrase": "Penguasaan British dalam hubungan luar dan pertahanan"
     },
     {
       "source_id": "bab-4-6-extra-24",
       "bm_original": "Masalah kewangan SBUB selepas kemusnahan perang",
-      "translate": "Masalah kewangan SBUB 在…之后 kemusnahan perang",
+      "translate": "战争破坏后SBUB的财务问题",
       "key_points_zh": [
-        "Masalah kewangan SBUB 在…之后 kemusnahan perang"
+        "战争破坏后SBUB的财务问题"
       ],
       "bm_focus_phrase": "Masalah kewangan SBUB selepas kemusnahan perang"
     },
     {
       "source_id": "bab-4-6-u09",
       "bm_original": "Peristiwa ini membuktikan bahawa British bukan sahaja mahu memulihkan Sabah selepas perang, tetapi juga ingin terus menguasai negeri itu demi kepentingan politik dan ekonominya.",
-      "translate": "Peristiwa 这 membuktikan bahawa British bukan sahaja mahu memulihkan Sabah 在…之后 perang, tetapi 也 ingin terus menguasai 州 那 demi kepentingan 政治 与 ekonominya.",
+      "translate": "这一事件证明英国人不仅想在战后恢复沙巴，而且还想继续统治该州以获得政治和经济利益。",
       "key_points_zh": [
-        "Peristiwa 这 membuktikan bahawa British bukan sahaja mahu memulihkan Sabah 在…之后 perang, tetapi 也 ingin terus menguasai 州 那 demi kepentingan 政治 与 ekonominya."
+        "这一事件证明英国人不仅想在战后恢复沙巴，而且还想继续统治该州以获得政治和经济利益。"
       ],
       "bm_focus_phrase": "Peristiwa ini membuktikan bahawa British bukan sahaja mahu memulihkan Sabah selepas perang, tetapi juga ingin terus menguasai negeri itu demi kepentingan politik dan ekonominya."
     }

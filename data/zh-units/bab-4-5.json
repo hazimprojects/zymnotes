@@ -1,672 +1,673 @@
 {
   "meta": {
     "source_file": "notes/bab-4-5.html",
-    "rollout": "gelombang-1-manual-revision"
+    "rollout": "gelombang-1-ms-zh-regenerated",
+    "notes": "Translate fields regenerated from bm_original (ms→zh-CN) for fluent Simplified Chinese; proper names follow translator output—verify against BM notes."
   },
   "units": [
     {
       "source_id": "bab-4-5-u27",
       "bm_original": "Penyerahan Sarawak kepada British mencetuskan dua reaksi yang berbeza, iaitu golongan yang menentang dan golongan yang menyokong penyerahan.",
-      "translate": "Penyerahan Sarawak 向 British mencetuskan dua reaksi 的 berbeza, iaitu golongan 的 反对 与 golongan 的 menyokong penyerahan.",
+      "translate": "砂拉越移交给英国引起了两种不同的反应，即反对者和支持者。",
       "key_points_zh": [
-        "Penyerahan Sarawak 向 British mencetuskan dua reaksi 的 berbeza, iaitu golongan 的 反对 与 golongan 的 menyokong penyerahan."
+        "砂拉越移交给英国引起了两种不同的反应，即反对者和支持者。"
       ],
       "bm_focus_phrase": "Penyerahan Sarawak kepada British mencetuskan dua reaksi yang berbeza, iaitu golongan yang menentang dan golongan yang menyokong penyerahan."
     },
     {
       "source_id": "bab-4-5-u28",
       "bm_original": "Golongan yang menentang melihat penyerahan itu sebagai satu bentuk penjajahan baharu dan pelanggaran terhadap Perlembagaan 1941 .",
-      "translate": "Golongan 的 反对 melihat penyerahan 那 作为 satu bentuk penjajahan baharu 与 pelanggaran 针对 Perlembagaan 1941 .",
+      "translate": "反对者认为投降是一种新形式的殖民主义，违反了 1941 年宪法。",
       "key_points_zh": [
-        "Golongan 的 反对 melihat penyerahan 那 作为 satu bentuk penjajahan baharu 与 pelanggaran 针对 Perlembagaan 1941 ."
+        "反对者认为投降是一种新形式的殖民主义，违反了 1941 年宪法。"
       ],
       "bm_focus_phrase": "Golongan yang menentang melihat penyerahan itu sebagai satu bentuk penjajahan baharu dan pelanggaran terhadap Perlembagaan 1941 ."
     },
     {
       "source_id": "bab-4-5-u29",
       "bm_original": "Gerakan antipenyerahan menggunakan persidangan, demonstrasi, peletakan jawatan, akhbar, surat bantahan dan penubuhan Rukun 13 .",
-      "translate": "Gerakan antipenyerahan menggunakan persidangan, demonstrasi, peletakan jawatan, 报章, surat 抗议 与 成立 Rukun 13 .",
+      "translate": "反移交运动利用了会议、示威、辞职、报纸、抗议信和成立“鲁昆13”等手段。",
       "key_points_zh": [
-        "Gerakan antipenyerahan menggunakan persidangan, demonstrasi, peletakan jawatan, 报章, surat 抗议 与 成立 Rukun 13 ."
+        "反移交运动利用了会议、示威、辞职、报纸、抗议信和成立“鲁昆13”等手段。"
       ],
       "bm_focus_phrase": "Gerakan antipenyerahan menggunakan persidangan, demonstrasi, peletakan jawatan, akhbar, surat bantahan dan penubuhan Rukun 13 ."
     },
     {
       "source_id": "bab-4-5-u30",
       "bm_original": "Golongan yang menyokong pula percaya British dapat memajukan negeri, meningkatkan taraf hidup rakyat dan membuka peluang pekerjaan.",
-      "translate": "Golongan 的 menyokong pula percaya British dapat memajukan 州, 提升 taraf hidup 人民 与 membuka peluang pekerjaan.",
+      "translate": "支持者认为英国人能够发展国家、提高人民生活水平、提供就业机会。",
       "key_points_zh": [
-        "Golongan 的 menyokong pula percaya British dapat memajukan 州, 提升 taraf hidup 人民 与 membuka peluang pekerjaan."
+        "支持者认为英国人能够发展国家、提高人民生活水平、提供就业机会。"
       ],
       "bm_focus_phrase": "Golongan yang menyokong pula percaya British dapat memajukan negeri, meningkatkan taraf hidup rakyat dan membuka peluang pekerjaan."
     },
     {
       "source_id": "bab-4-5-u01",
       "bm_original": "Penyerahan Sarawak kepada British mencetuskan dua reaksi utama, iaitu penentangan dan sokongan daripada penduduk tempatan.",
-      "translate": "Penyerahan Sarawak 向 British mencetuskan dua reaksi 主要, iaitu 反对 与 sokongan daripada penduduk 本地.",
+      "translate": "砂拉越向英国投降引发了两种主要反应，即当地民众的抵抗和支持。",
       "key_points_zh": [
-        "Penyerahan Sarawak 向 British mencetuskan dua reaksi 主要, iaitu 反对 与 sokongan daripada penduduk 本地."
+        "砂拉越向英国投降引发了两种主要反应，即当地民众的抵抗和支持。"
       ],
       "bm_focus_phrase": "Penyerahan Sarawak kepada British mencetuskan dua reaksi utama, iaitu penentangan dan sokongan daripada penduduk tempatan."
     },
     {
       "source_id": "bab-4-5-u02",
       "bm_original": "Golongan yang menentang melihat penyerahan itu sebagai penjajahan baharu, manakala golongan yang menyokong percaya British dapat membawa kemajuan kepada Sarawak.",
-      "translate": "Golongan 的 反对 melihat penyerahan 那 作为 penjajahan baharu, manakala golongan 的 menyokong percaya British dapat membawa kemajuan 向 Sarawak.",
+      "translate": "反对派将移交视为新殖民主义，而支持派则认为英国可以为砂拉越带来进步。",
       "key_points_zh": [
-        "Golongan 的 反对 melihat penyerahan 那 作为 penjajahan baharu, manakala golongan 的 menyokong percaya British dapat membawa kemajuan 向 Sarawak."
+        "反对派将移交视为新殖民主义，而支持派则认为英国可以为砂拉越带来进步。"
       ],
       "bm_focus_phrase": "Golongan yang menentang melihat penyerahan itu sebagai penjajahan baharu, manakala golongan yang menyokong percaya British dapat membawa kemajuan kepada Sarawak."
     },
     {
       "source_id": "bab-4-5-u03",
       "bm_original": "Menurut prinsip ini:",
-      "translate": "Menurut prinsip 这:",
+      "translate": "根据这个原则：",
       "key_points_zh": [
-        "Menurut prinsip 这:"
+        "根据这个原则："
       ],
       "bm_focus_phrase": "Menurut prinsip ini:"
     },
     {
       "source_id": "bab-4-5-extra-1",
       "bm_original": "Rakyat Sarawak akan dibimbing untuk mentadbir negeri mereka sendiri",
-      "translate": "人民 Sarawak 将会 dibimbing 为了 mentadbir 州 mereka sendiri",
+      "translate": "砂拉越人民将被引导治理自己的州",
       "key_points_zh": [
-        "人民 Sarawak 将会 dibimbing 为了 mentadbir 州 mereka sendiri"
+        "砂拉越人民将被引导治理自己的州"
       ],
       "bm_focus_phrase": "Rakyat Sarawak akan dibimbing untuk mentadbir negeri mereka sendiri"
     },
     {
       "source_id": "bab-4-5-u04",
       "bm_original": "Hal ini bermaksud hak rakyat Sarawak untuk berkerajaan sendiri telah dinafikan.",
-      "translate": "Hal 这 bermaksud 权利 人民 Sarawak 为了 berkerajaan sendiri 已经 dinafikan.",
+      "translate": "这意味着砂拉越人民的自治权被剥夺。",
       "key_points_zh": [
-        "Hal 这 bermaksud 权利 人民 Sarawak 为了 berkerajaan sendiri 已经 dinafikan."
+        "这意味着砂拉越人民的自治权被剥夺。"
       ],
       "bm_focus_phrase": "Hal ini bermaksud hak rakyat Sarawak untuk berkerajaan sendiri telah dinafikan."
     },
     {
       "source_id": "bab-4-5-extra-2",
       "bm_original": "Anthony Brooke",
-      "translate": "Anthony Brooke",
+      "translate": "安东尼·布鲁克",
       "key_points_zh": [
-        "Anthony Brooke"
+        "安东尼·布鲁克"
       ],
       "bm_focus_phrase": "Anthony Brooke"
     },
     {
       "source_id": "bab-4-5-extra-3",
       "bm_original": "Bertram Brooke",
-      "translate": "Bertram Brooke",
+      "translate": "伯特伦·布鲁克",
       "key_points_zh": [
-        "Bertram Brooke"
+        "伯特伦·布鲁克"
       ],
       "bm_focus_phrase": "Bertram Brooke"
     },
     {
       "source_id": "bab-4-5-u05",
       "bm_original": "Golongan antipenyerahan mahu memulihkan pemerintahan Dinasti Brooke kerana mereka berpendapat cara ini akan memudahkan usaha menuntut kemerdekaan.",
-      "translate": "Golongan antipenyerahan mahu memulihkan pemerintahan Dinasti Brooke 因为 mereka berpendapat cara 这 将会 memudahkan usaha menuntut 独立.",
+      "translate": "反投降团体希望恢复布鲁克王朝，因为他们认为这将使要求独立更容易。",
       "key_points_zh": [
-        "Golongan antipenyerahan mahu memulihkan pemerintahan Dinasti Brooke 因为 mereka berpendapat cara 这 将会 memudahkan usaha menuntut 独立."
+        "反投降团体希望恢复布鲁克王朝，因为他们认为这将使要求独立更容易。"
       ],
       "bm_focus_phrase": "Golongan antipenyerahan mahu memulihkan pemerintahan Dinasti Brooke kerana mereka berpendapat cara ini akan memudahkan usaha menuntut kemerdekaan."
     },
     {
       "source_id": "bab-4-5-extra-4",
       "bm_original": "Tekanan",
-      "translate": "重点：Tekanan",
+      "translate": "压力",
       "key_points_zh": [
-        "重点：Tekanan"
+        "压力"
       ],
       "bm_focus_phrase": "Tekanan"
     },
     {
       "source_id": "bab-4-5-extra-5",
       "bm_original": "Desakan",
-      "translate": "重点：Desakan",
+      "translate": "坚持",
       "key_points_zh": [
-        "重点：Desakan"
+        "坚持"
       ],
       "bm_focus_phrase": "Desakan"
     },
     {
       "source_id": "bab-4-5-extra-6",
       "bm_original": "Pujukan",
-      "translate": "重点：Pujukan",
+      "translate": "劝说",
       "key_points_zh": [
-        "重点：Pujukan"
+        "劝说"
       ],
       "bm_focus_phrase": "Pujukan"
     },
     {
       "source_id": "bab-4-5-extra-7",
       "bm_original": "Sogokan",
-      "translate": "重点：Sogokan",
+      "translate": "贿赂",
       "key_points_zh": [
-        "重点：Sogokan"
+        "贿赂"
       ],
       "bm_focus_phrase": "Sogokan"
     },
     {
       "source_id": "bab-4-5-u06",
       "bm_original": "Cara ini menimbulkan kemarahan penduduk tempatan kerana dianggap tidak jujur dan tidak menghormati rakyat Sarawak.",
-      "translate": "Cara 这 menimbulkan kemarahan penduduk 本地 因为 dianggap 不 jujur 与 不 menghormati 人民 Sarawak.",
+      "translate": "这种方法激怒了当地居民，因为这被认为是不诚实和对砂拉越人民的不尊重。",
       "key_points_zh": [
-        "Cara 这 menimbulkan kemarahan penduduk 本地 因为 dianggap 不 jujur 与 不 menghormati 人民 Sarawak."
+        "这种方法激怒了当地居民，因为这被认为是不诚实和对砂拉越人民的不尊重。"
       ],
       "bm_focus_phrase": "Cara ini menimbulkan kemarahan penduduk tempatan kerana dianggap tidak jujur dan tidak menghormati rakyat Sarawak."
     },
     {
       "source_id": "bab-4-5-u07",
       "bm_original": "Antara bentuk penentangan utama ialah:",
-      "translate": "Antara bentuk 反对 主要 是:",
+      "translate": "抵抗的主要形式包括：",
       "key_points_zh": [
-        "Antara bentuk 反对 主要 是:"
+        "抵抗的主要形式包括："
       ],
       "bm_focus_phrase": "Antara bentuk penentangan utama ialah:"
     },
     {
       "source_id": "bab-4-5-extra-8",
       "bm_original": "1️⃣ Mengadakan persidangan",
-      "translate": "重点：1️⃣ Mengadakan persidangan",
+      "translate": "1️⃣召开会议",
       "key_points_zh": [
-        "重点：1️⃣ Mengadakan persidangan"
+        "1️⃣召开会议"
       ],
       "bm_focus_phrase": "1️⃣ Mengadakan persidangan"
     },
     {
       "source_id": "bab-4-5-extra-9",
       "bm_original": "2️⃣ Mengadakan demonstrasi",
-      "translate": "重点：2️⃣ Mengadakan demonstrasi",
+      "translate": "2️⃣ 举行示威",
       "key_points_zh": [
-        "重点：2️⃣ Mengadakan demonstrasi"
+        "2️⃣ 举行示威"
       ],
       "bm_focus_phrase": "2️⃣ Mengadakan demonstrasi"
     },
     {
       "source_id": "bab-4-5-extra-10",
       "bm_original": "3️⃣ Meletakkan jawatan beramai-ramai",
-      "translate": "重点：3️⃣ Meletakkan jawatan beramai-ramai",
+      "translate": "3️⃣集体辞职",
       "key_points_zh": [
-        "重点：3️⃣ Meletakkan jawatan beramai-ramai"
+        "3️⃣集体辞职"
       ],
       "bm_focus_phrase": "3️⃣ Meletakkan jawatan beramai-ramai"
     },
     {
       "source_id": "bab-4-5-extra-11",
       "bm_original": "4️⃣ Bantahan golongan wanita",
-      "translate": "4️⃣ 抗议 golongan 妇女",
+      "translate": "4️⃣ 妇女抗议",
       "key_points_zh": [
-        "4️⃣ 抗议 golongan 妇女"
+        "4️⃣ 妇女抗议"
       ],
       "bm_focus_phrase": "4️⃣ Bantahan golongan wanita"
     },
     {
       "source_id": "bab-4-5-extra-12",
       "bm_original": "5️⃣ Menggunakan akhbar",
-      "translate": "5️⃣ Menggunakan 报章",
+      "translate": "5️⃣ 使用报纸",
       "key_points_zh": [
-        "5️⃣ Menggunakan 报章"
+        "5️⃣ 使用报纸"
       ],
       "bm_focus_phrase": "5️⃣ Menggunakan akhbar"
     },
     {
       "source_id": "bab-4-5-extra-13",
       "bm_original": "6️⃣ Menulis surat bantahan",
-      "translate": "6️⃣ Menulis surat 抗议",
+      "translate": "6️⃣写一封反对信",
       "key_points_zh": [
-        "6️⃣ Menulis surat 抗议"
+        "6️⃣写一封反对信"
       ],
       "bm_focus_phrase": "6️⃣ Menulis surat bantahan"
     },
     {
       "source_id": "bab-4-5-extra-14",
       "bm_original": "7️⃣ Menubuhkan Rukun 13",
-      "translate": "重点：7️⃣ Menubuhkan Rukun 13",
+      "translate": "7️⃣ 建立第 13 支柱",
       "key_points_zh": [
-        "重点：7️⃣ Menubuhkan Rukun 13"
+        "7️⃣ 建立第 13 支柱"
       ],
       "bm_focus_phrase": "7️⃣ Menubuhkan Rukun 13"
     },
     {
       "source_id": "bab-4-5-u08",
       "bm_original": "Tujuan persidangan ini ialah:",
-      "translate": "目的 persidangan 这 是:",
+      "translate": "本次会议的目的是：",
       "key_points_zh": [
-        "目的 persidangan 这 是:"
+        "本次会议的目的是："
       ],
       "bm_focus_phrase": "Tujuan persidangan ini ialah:"
     },
     {
       "source_id": "bab-4-5-extra-15",
       "bm_original": "Mengadakan demonstrasi pada setiap 1 Julai",
-      "translate": "Mengadakan demonstrasi 于 setiap 1 Julai",
+      "translate": "每年7月1日举行示威",
       "key_points_zh": [
-        "Mengadakan demonstrasi 于 setiap 1 Julai"
+        "每年7月1日举行示威"
       ],
       "bm_focus_phrase": "Mengadakan demonstrasi pada setiap 1 Julai"
     },
     {
       "source_id": "bab-4-5-extra-16",
       "bm_original": "Menentang penyerahan Sarawak kepada British",
-      "translate": "Menentang penyerahan Sarawak 向 British",
+      "translate": "反对将砂拉越移交给英国",
       "key_points_zh": [
-        "Menentang penyerahan Sarawak 向 British"
+        "反对将砂拉越移交给英国"
       ],
       "bm_focus_phrase": "Menentang penyerahan Sarawak kepada British"
     },
     {
       "source_id": "bab-4-5-u09",
       "bm_original": "Antara pertubuhan yang menyertainya ialah:",
-      "translate": "Antara pertubuhan 的 menyertainya 是:",
+      "translate": "参与组织包括：",
       "key_points_zh": [
-        "Antara pertubuhan 的 menyertainya 是:"
+        "参与组织包括："
       ],
       "bm_focus_phrase": "Antara pertubuhan yang menyertainya ialah:"
     },
     {
       "source_id": "bab-4-5-extra-17",
       "bm_original": "Pergerakan Pemuda Melayu (PPM)",
-      "translate": "重点：Pergerakan Pemuda Melayu (PPM)",
+      "translate": "马来青年运动（PPM）",
       "key_points_zh": [
-        "重点：Pergerakan Pemuda Melayu (PPM)"
+        "马来青年运动（PPM）"
       ],
       "bm_focus_phrase": "Pergerakan Pemuda Melayu (PPM)"
     },
     {
       "source_id": "bab-4-5-extra-18",
       "bm_original": "Barisan Pemuda Sarawak (BPS)",
-      "translate": "Barisan Pemuda Sarawak (BPS)",
+      "translate": "砂拉越青年阵线 (BPS)",
       "key_points_zh": [
-        "Barisan Pemuda Sarawak (BPS)"
+        "砂拉越青年阵线 (BPS)"
       ],
       "bm_focus_phrase": "Barisan Pemuda Sarawak (BPS)"
     },
     {
       "source_id": "bab-4-5-extra-19",
       "bm_original": "Persatuan Kebangsaan Melayu Sarawak (PKMS)",
-      "translate": "协会 Kebangsaan Melayu Sarawak (PKMS)",
+      "translate": "砂拉越马来民族协会 (PKMS)",
       "key_points_zh": [
-        "协会 Kebangsaan Melayu Sarawak (PKMS)"
+        "砂拉越马来民族协会 (PKMS)"
       ],
       "bm_focus_phrase": "Persatuan Kebangsaan Melayu Sarawak (PKMS)"
     },
     {
       "source_id": "bab-4-5-extra-20",
       "bm_original": "Persatuan Melayu Miri",
-      "translate": "协会 Melayu Miri",
+      "translate": "美里马来公会",
       "key_points_zh": [
-        "协会 Melayu Miri"
+        "美里马来公会"
       ],
       "bm_focus_phrase": "Persatuan Melayu Miri"
     },
     {
       "source_id": "bab-4-5-extra-21",
       "bm_original": "Kesetiaan Muda Matu",
-      "translate": "重点：Kesetiaan Muda Matu",
+      "translate": "马图年轻忠诚",
       "key_points_zh": [
-        "重点：Kesetiaan Muda Matu"
+        "马图年轻忠诚"
       ],
       "bm_focus_phrase": "Kesetiaan Muda Matu"
     },
     {
       "source_id": "bab-4-5-extra-22",
       "bm_original": "Persekutuan Bumiputera",
-      "translate": "重点：Persekutuan Bumiputera",
+      "translate": "土著联合总会",
       "key_points_zh": [
-        "重点：Persekutuan Bumiputera"
+        "土著联合总会"
       ],
       "bm_focus_phrase": "Persekutuan Bumiputera"
     },
     {
       "source_id": "bab-4-5-extra-23",
       "bm_original": "Sarawak Dayak Association (SDA)",
-      "translate": "重点：Sarawak Dayak Association (SDA)",
+      "translate": "砂拉越达雅克公会 (SDA)",
       "key_points_zh": [
-        "重点：Sarawak Dayak Association (SDA)"
+        "砂拉越达雅克公会 (SDA)"
       ],
       "bm_focus_phrase": "Sarawak Dayak Association (SDA)"
     },
     {
       "source_id": "bab-4-5-u10",
       "bm_original": "Antara slogan pada sepanduk ialah:",
-      "translate": "Antara slogan 于 sepanduk 是:",
+      "translate": "横幅上的标语包括：",
       "key_points_zh": [
-        "Antara slogan 于 sepanduk 是:"
+        "横幅上的标语包括："
       ],
       "bm_focus_phrase": "Antara slogan pada sepanduk ialah:"
     },
     {
       "source_id": "bab-4-5-extra-24",
       "bm_original": "“Sarawak adalah hak kami”",
-      "translate": "“Sarawak 是 权利 kami”",
+      "translate": "“砂拉越是我们的权利”",
       "key_points_zh": [
-        "“Sarawak 是 权利 kami”"
+        "“砂拉越是我们的权利”"
       ],
       "bm_focus_phrase": "“Sarawak adalah hak kami”"
     },
     {
       "source_id": "bab-4-5-extra-25",
       "bm_original": "“Leburkan kolonial”",
-      "translate": "重点：“Leburkan kolonial”",
+      "translate": "“殖民地崩溃”",
       "key_points_zh": [
-        "重点：“Leburkan kolonial”"
+        "“殖民地崩溃”"
       ],
       "bm_focus_phrase": "“Leburkan kolonial”"
     },
     {
       "source_id": "bab-4-5-extra-26",
       "bm_original": "“No Cession”",
-      "translate": "重点：“No Cession”",
+      "translate": "“没有停止”",
       "key_points_zh": [
-        "重点：“No Cession”"
+        "“没有停止”"
       ],
       "bm_focus_phrase": "“No Cession”"
     },
     {
       "source_id": "bab-4-5-u11",
       "bm_original": "Beberapa demonstrasi berjaya diadakan dan menunjukkan penolakan yang berterusan terhadap penyerahan Sarawak.",
-      "translate": "Beberapa demonstrasi 成功 diadakan 与 menunjukkan penolakan 的 berterusan 针对 penyerahan Sarawak.",
+      "translate": "多次示威活动成功举行，显示出对砂拉越投降的持续拒绝。",
       "key_points_zh": [
-        "Beberapa demonstrasi 成功 diadakan 与 menunjukkan penolakan 的 berterusan 针对 penyerahan Sarawak."
+        "多次示威活动成功举行，显示出对砂拉越投降的持续拒绝。"
       ],
       "bm_focus_phrase": "Beberapa demonstrasi berjaya diadakan dan menunjukkan penolakan yang berterusan terhadap penyerahan Sarawak."
     },
     {
       "source_id": "bab-4-5-u12",
       "bm_original": "Mereka terdiri daripada jabatan seperti:",
-      "translate": "重点：Mereka terdiri daripada jabatan seperti:",
+      "translate": "它们由以下部门组成：",
       "key_points_zh": [
-        "重点：Mereka terdiri daripada jabatan seperti:"
+        "它们由以下部门组成："
       ],
       "bm_focus_phrase": "Mereka terdiri daripada jabatan seperti:"
     },
     {
       "source_id": "bab-4-5-extra-27",
       "bm_original": "Pos dan Telegraf",
-      "translate": "Pos 与 Telegraf",
+      "translate": "邮电",
       "key_points_zh": [
-        "Pos 与 Telegraf"
+        "邮电"
       ],
       "bm_focus_phrase": "Pos dan Telegraf"
     },
     {
       "source_id": "bab-4-5-extra-28",
       "bm_original": "Marin",
-      "translate": "重点：Marin",
+      "translate": "海洋",
       "key_points_zh": [
-        "重点：Marin"
+        "海洋"
       ],
       "bm_focus_phrase": "Marin"
     },
     {
       "source_id": "bab-4-5-extra-29",
       "bm_original": "Kastam",
-      "translate": "重点：Kastam",
+      "translate": "海关",
       "key_points_zh": [
-        "重点：Kastam"
+        "海关"
       ],
       "bm_focus_phrase": "Kastam"
     },
     {
       "source_id": "bab-4-5-extra-30",
       "bm_original": "Perubatan dan Kesihatan",
-      "translate": "Perubatan 与 Kesihatan",
+      "translate": "医药与健康",
       "key_points_zh": [
-        "Perubatan 与 Kesihatan"
+        "医药与健康"
       ],
       "bm_focus_phrase": "Perubatan dan Kesihatan"
     },
     {
       "source_id": "bab-4-5-extra-31",
       "bm_original": "Percetakan",
-      "translate": "重点：Percetakan",
+      "translate": "印刷",
       "key_points_zh": [
-        "重点：Percetakan"
+        "印刷"
       ],
       "bm_focus_phrase": "Percetakan"
     },
     {
       "source_id": "bab-4-5-extra-32",
       "bm_original": "Tanah dan Ukur",
-      "translate": "Tanah 与 Ukur",
+      "translate": "土地和测量",
       "key_points_zh": [
-        "Tanah 与 Ukur"
+        "土地和测量"
       ],
       "bm_focus_phrase": "Tanah dan Ukur"
     },
     {
       "source_id": "bab-4-5-extra-33",
       "bm_original": "Kerja Raya",
-      "translate": "重点：Kerja Raya",
+      "translate": "公共工程",
       "key_points_zh": [
-        "重点：Kerja Raya"
+        "公共工程"
       ],
       "bm_focus_phrase": "Kerja Raya"
     },
     {
       "source_id": "bab-4-5-extra-34",
       "bm_original": "Bomba",
-      "translate": "重点：Bomba",
+      "translate": "消防员",
       "key_points_zh": [
-        "重点：Bomba"
+        "消防员"
       ],
       "bm_focus_phrase": "Bomba"
     },
     {
       "source_id": "bab-4-5-extra-35",
       "bm_original": "Perbendaharaan",
-      "translate": "重点：Perbendaharaan",
+      "translate": "财政部",
       "key_points_zh": [
-        "重点：Perbendaharaan"
+        "财政部"
       ],
       "bm_focus_phrase": "Perbendaharaan"
     },
     {
       "source_id": "bab-4-5-u13",
       "bm_original": "Antara tokoh wanita yang aktif ialah:",
-      "translate": "Antara tokoh 妇女 的 aktif 是:",
+      "translate": "活跃的女性人物包括：",
       "key_points_zh": [
-        "Antara tokoh 妇女 的 aktif 是:"
+        "活跃的女性人物包括："
       ],
       "bm_focus_phrase": "Antara tokoh wanita yang aktif ialah:"
     },
     {
       "source_id": "bab-4-5-extra-36",
       "bm_original": "Cikgu Lily Eberwein",
-      "translate": "Cikgu Lily Eberwein",
+      "translate": "莉莉·艾伯温老师",
       "key_points_zh": [
-        "Cikgu Lily Eberwein"
+        "莉莉·艾伯温老师"
       ],
       "bm_focus_phrase": "Cikgu Lily Eberwein"
     },
     {
       "source_id": "bab-4-5-extra-37",
       "bm_original": "Hajah Sipah Tuanku Othman",
-      "translate": "Hajah Sipah Tuanku Othman",
+      "translate": "哈贾·西帕·端姑·奥斯曼",
       "key_points_zh": [
-        "Hajah Sipah Tuanku Othman"
+        "哈贾·西帕·端姑·奥斯曼"
       ],
       "bm_focus_phrase": "Hajah Sipah Tuanku Othman"
     },
     {
       "source_id": "bab-4-5-extra-38",
       "bm_original": "Dayang Fauziah",
-      "translate": "Dayang Fauziah",
+      "translate": "达扬·福齐亚",
       "key_points_zh": [
-        "Dayang Fauziah"
+        "达扬·福齐亚"
       ],
       "bm_focus_phrase": "Dayang Fauziah"
     },
     {
       "source_id": "bab-4-5-extra-39",
       "bm_original": "Cikgu Ajibah Abol",
-      "translate": "Cikgu Ajibah Abol",
+      "translate": "阿吉巴·阿布尔老师",
       "key_points_zh": [
-        "Cikgu Ajibah Abol"
+        "阿吉巴·阿布尔老师"
       ],
       "bm_focus_phrase": "Cikgu Ajibah Abol"
     },
     {
       "source_id": "bab-4-5-u14",
       "bm_original": "Mereka sanggup:",
-      "translate": "重点：Mereka sanggup:",
+      "translate": "他们愿意：",
       "key_points_zh": [
-        "重点：Mereka sanggup:"
+        "他们愿意："
       ],
       "bm_focus_phrase": "Mereka sanggup:"
     },
     {
       "source_id": "bab-4-5-extra-40",
       "bm_original": "Mengorbankan masa",
-      "translate": "重点：Mengorbankan masa",
+      "translate": "牺牲时间",
       "key_points_zh": [
-        "重点：Mengorbankan masa"
+        "牺牲时间"
       ],
       "bm_focus_phrase": "Mengorbankan masa"
     },
     {
       "source_id": "bab-4-5-extra-41",
       "bm_original": "Menggunakan tenaga",
-      "translate": "重点：Menggunakan tenaga",
+      "translate": "使用能源",
       "key_points_zh": [
-        "重点：Menggunakan tenaga"
+        "使用能源"
       ],
       "bm_focus_phrase": "Menggunakan tenaga"
     },
     {
       "source_id": "bab-4-5-extra-42",
       "bm_original": "Mengatur demonstrasi",
-      "translate": "重点：Mengatur demonstrasi",
+      "translate": "组织示威",
       "key_points_zh": [
-        "重点：Mengatur demonstrasi"
+        "组织示威"
       ],
       "bm_focus_phrase": "Mengatur demonstrasi"
     },
     {
       "source_id": "bab-4-5-u15",
       "bm_original": "Akhbar ini menjadi saluran untuk:",
-      "translate": "报章 这 menjadi saluran 为了:",
+      "translate": "本报纸是以下渠道：",
       "key_points_zh": [
-        "报章 这 menjadi saluran 为了:"
+        "本报纸是以下渠道："
       ],
       "bm_focus_phrase": "Akhbar ini menjadi saluran untuk:"
     },
     {
       "source_id": "bab-4-5-extra-43",
       "bm_original": "Menyebarkan bantahan",
-      "translate": "Menyebarkan 抗议",
+      "translate": "传播反对意见",
       "key_points_zh": [
-        "Menyebarkan 抗议"
+        "传播反对意见"
       ],
       "bm_focus_phrase": "Menyebarkan bantahan"
     },
     {
       "source_id": "bab-4-5-extra-44",
       "bm_original": "Mengkritik rancangan penyerahan",
-      "translate": "重点：Mengkritik rancangan penyerahan",
+      "translate": "批评交付计划",
       "key_points_zh": [
-        "重点：Mengkritik rancangan penyerahan"
+        "批评交付计划"
       ],
       "bm_focus_phrase": "Mengkritik rancangan penyerahan"
     },
     {
       "source_id": "bab-4-5-extra-45",
       "bm_original": "Menyerang dasar British secara terbuka",
-      "translate": "重点：Menyerang dasar British secara terbuka",
+      "translate": "公开攻击英国政策",
       "key_points_zh": [
-        "重点：Menyerang dasar British secara terbuka"
+        "公开攻击英国政策"
       ],
       "bm_focus_phrase": "Menyerang dasar British secara terbuka"
     },
     {
       "source_id": "bab-4-5-u16",
       "bm_original": "Antara isu yang diketengahkan ialah:",
-      "translate": "Antara isu 的 diketengahkan 是:",
+      "translate": "突出的问题包括：",
       "key_points_zh": [
-        "Antara isu 的 diketengahkan 是:"
+        "突出的问题包括："
       ],
       "bm_focus_phrase": "Antara isu yang diketengahkan ialah:"
     },
     {
       "source_id": "bab-4-5-extra-46",
       "bm_original": "Tindakan British menyekat Anthony Brooke daripada memasuki Sarawak pada 16 September 1949",
-      "translate": "Tindakan British menyekat Anthony Brooke daripada memasuki Sarawak 于 16 September 1949",
+      "translate": "1949 年 9 月 16 日，英国采取行动阻止安东尼·布鲁克进入砂拉越",
       "key_points_zh": [
-        "Tindakan British menyekat Anthony Brooke daripada memasuki Sarawak 于 16 September 1949"
+        "1949 年 9 月 16 日，英国采取行动阻止安东尼·布鲁克进入砂拉越"
       ],
       "bm_focus_phrase": "Tindakan British menyekat Anthony Brooke daripada memasuki Sarawak pada 16 September 1949"
     },
     {
       "source_id": "bab-4-5-extra-47",
       "bm_original": "Artikel “Kerajaan British Menipu Rakyat” pada 7 November 1949",
-      "translate": "Artikel “Kerajaan British Menipu 人民” 于 7 November 1949",
+      "translate": "1949 年 11 月 7 日文章《英国政府欺骗人民》",
       "key_points_zh": [
-        "Artikel “Kerajaan British Menipu 人民” 于 7 November 1949"
+        "1949 年 11 月 7 日文章《英国政府欺骗人民》"
       ],
       "bm_focus_phrase": "Artikel “Kerajaan British Menipu Rakyat” pada 7 November 1949"
     },
     {
       "source_id": "bab-4-5-u17",
       "bm_original": "Antara pemimpinnya ialah:",
-      "translate": "Antara pemimpinnya 是:",
+      "translate": "其中的领导人包括：",
       "key_points_zh": [
-        "Antara pemimpinnya 是:"
+        "其中的领导人包括："
       ],
       "bm_focus_phrase": "Antara pemimpinnya ialah:"
     },
     {
       "source_id": "bab-4-5-extra-48",
       "bm_original": "Awang Rambli",
-      "translate": "重点：Awang Rambli",
+      "translate": "阿旺·兰布利",
       "key_points_zh": [
-        "重点：Awang Rambli"
+        "阿旺·兰布利"
       ],
       "bm_focus_phrase": "Awang Rambli"
     },
     {
       "source_id": "bab-4-5-extra-49",
       "bm_original": "Morshidi Sidek",
-      "translate": "重点：Morshidi Sidek",
+      "translate": "穆什迪·西德克",
       "key_points_zh": [
-        "重点：Morshidi Sidek"
+        "穆什迪·西德克"
       ],
       "bm_focus_phrase": "Morshidi Sidek"
     },
     {
       "source_id": "bab-4-5-extra-50",
       "bm_original": "Bujang Suntong",
-      "translate": "重点：Bujang Suntong",
+      "translate": "顺通单人",
       "key_points_zh": [
-        "重点：Bujang Suntong"
+        "顺通单人"
       ],
       "bm_focus_phrase": "Bujang Suntong"
     },
     {
       "source_id": "bab-4-5-u18",
       "bm_original": "Matlamat utama mereka ialah:",
-      "translate": "Matlamat 主要 mereka 是:",
+      "translate": "他们的主要目标是：",
       "key_points_zh": [
-        "Matlamat 主要 mereka 是:"
+        "他们的主要目标是："
       ],
       "bm_focus_phrase": "Matlamat utama mereka ialah:"
     },
     {
       "source_id": "bab-4-5-extra-51",
       "bm_original": "Menghapuskan pegawai tinggi British di Sarawak",
-      "translate": "重点：Menghapuskan pegawai tinggi British di Sarawak",
+      "translate": "赶走砂拉越的英国高级官员",
       "key_points_zh": [
-        "重点：Menghapuskan pegawai tinggi British di Sarawak"
+        "赶走砂拉越的英国高级官员"
       ],
       "bm_focus_phrase": "Menghapuskan pegawai tinggi British di Sarawak"
     },
     {
       "source_id": "bab-4-5-extra-52",
       "bm_original": "PPM",
-      "translate": "重点：PPM",
+      "translate": "生产计划管理",
       "key_points_zh": [
-        "重点：PPM"
+        "生产计划管理"
       ],
       "bm_focus_phrase": "PPM"
     },
@@ -682,360 +683,360 @@
     {
       "source_id": "bab-4-5-extra-54",
       "bm_original": "BPS",
-      "translate": "BPS",
+      "translate": "BPPS",
       "key_points_zh": [
-        "BPS"
+        "BPPS"
       ],
       "bm_focus_phrase": "BPS"
     },
     {
       "source_id": "bab-4-5-extra-55",
       "bm_original": "Angkatan Semangat Anak Negeri Sarawak (ASAS)",
-      "translate": "重点：Angkatan Semangat Anak Negeri Sarawak (ASAS)",
+      "translate": "砂拉越本土精神力量 (ASAS)",
       "key_points_zh": [
-        "重点：Angkatan Semangat Anak Negeri Sarawak (ASAS)"
+        "砂拉越本土精神力量 (ASAS)"
       ],
       "bm_focus_phrase": "Angkatan Semangat Anak Negeri Sarawak (ASAS)"
     },
     {
       "source_id": "bab-4-5-extra-56",
       "bm_original": "Rosli Dhoby",
-      "translate": "重点：Rosli Dhoby",
+      "translate": "罗斯里·多比",
       "key_points_zh": [
-        "重点：Rosli Dhoby"
+        "罗斯里·多比"
       ],
       "bm_focus_phrase": "Rosli Dhoby"
     },
     {
       "source_id": "bab-4-5-extra-57",
       "bm_original": "Morshidi Sidek",
-      "translate": "重点：Morshidi Sidek",
+      "translate": "穆什迪·西德克",
       "key_points_zh": [
-        "重点：Morshidi Sidek"
+        "穆什迪·西德克"
       ],
       "bm_focus_phrase": "Morshidi Sidek"
     },
     {
       "source_id": "bab-4-5-extra-58",
       "bm_original": "Awang Rambli",
-      "translate": "重点：Awang Rambli",
+      "translate": "阿旺·兰布利",
       "key_points_zh": [
-        "重点：Awang Rambli"
+        "阿旺·兰布利"
       ],
       "bm_focus_phrase": "Awang Rambli"
     },
     {
       "source_id": "bab-4-5-extra-59",
       "bm_original": "Bujang Suntong",
-      "translate": "重点：Bujang Suntong",
+      "translate": "顺通单人",
       "key_points_zh": [
-        "重点：Bujang Suntong"
+        "顺通单人"
       ],
       "bm_focus_phrase": "Bujang Suntong"
     },
     {
       "source_id": "bab-4-5-u19",
       "bm_original": "Walaupun gerakan antipenyerahan gagal, perjuangan ini telah membangkitkan kesedaran nasionalisme dalam kalangan penduduk tempatan dan menjadi asas kepada penubuhan parti politik di Sarawak.",
-      "translate": "Walaupun gerakan antipenyerahan 失败, 斗争 这 已经 membangkitkan kesedaran 民族主义 在 kalangan penduduk 本地 与 menjadi asas 向 成立 parti 政治 di Sarawak.",
+      "translate": "虽然反移交运动失败了，但这场斗争提高了当地民众的民族主义意识，并成为砂拉越政党成立的基础。",
       "key_points_zh": [
-        "Walaupun gerakan antipenyerahan 失败, 斗争 这 已经 membangkitkan kesedaran 民族主义 在 kalangan penduduk 本地 与 menjadi asas 向 成立 parti 政治 di Sarawak."
+        "虽然反移交运动失败了，但这场斗争提高了当地民众的民族主义意识，并成为砂拉越政党成立的基础。"
       ],
       "bm_focus_phrase": "Walaupun gerakan antipenyerahan gagal, perjuangan ini telah membangkitkan kesedaran nasionalisme dalam kalangan penduduk tempatan dan menjadi asas kepada penubuhan parti politik di Sarawak."
     },
     {
       "source_id": "bab-4-5-u20",
       "bm_original": "Golongan ini dipimpin oleh:",
-      "translate": "Golongan 这 dipimpin 由:",
+      "translate": "该小组由以下人员领导：",
       "key_points_zh": [
-        "Golongan 这 dipimpin 由:"
+        "该小组由以下人员领导："
       ],
       "bm_focus_phrase": "Golongan ini dipimpin oleh:"
     },
     {
       "source_id": "bab-4-5-extra-60",
       "bm_original": "Datu Bandar Abang Haji Mustapha",
-      "translate": "Datu Bandar Abang Haji Mustapha",
+      "translate": "达图班达尔阿邦哈吉穆斯塔法",
       "key_points_zh": [
-        "Datu Bandar Abang Haji Mustapha"
+        "达图班达尔阿邦哈吉穆斯塔法"
       ],
       "bm_focus_phrase": "Datu Bandar Abang Haji Mustapha"
     },
     {
       "source_id": "bab-4-5-extra-61",
       "bm_original": "Datu Amar Abang Haji Suleiman",
-      "translate": "Datu Amar Abang Haji Suleiman",
+      "translate": "达图·阿马尔·阿邦·哈吉·苏莱曼",
       "key_points_zh": [
-        "Datu Amar Abang Haji Suleiman"
+        "达图·阿马尔·阿邦·哈吉·苏莱曼"
       ],
       "bm_focus_phrase": "Datu Amar Abang Haji Suleiman"
     },
     {
       "source_id": "bab-4-5-extra-62",
       "bm_original": "Politik",
-      "translate": "重点：Politik",
+      "translate": "政治",
       "key_points_zh": [
-        "重点：Politik"
+        "政治"
       ],
       "bm_focus_phrase": "Politik"
     },
     {
       "source_id": "bab-4-5-extra-63",
       "bm_original": "Perhubungan",
-      "translate": "重点：Perhubungan",
+      "translate": "关系",
       "key_points_zh": [
-        "重点：Perhubungan"
+        "关系"
       ],
       "bm_focus_phrase": "Perhubungan"
     },
     {
       "source_id": "bab-4-5-extra-64",
       "bm_original": "Perdagangan",
-      "translate": "重点：Perdagangan",
+      "translate": "贸易",
       "key_points_zh": [
-        "重点：Perdagangan"
+        "贸易"
       ],
       "bm_focus_phrase": "Perdagangan"
     },
     {
       "source_id": "bab-4-5-extra-65",
       "bm_original": "Pertanian",
-      "translate": "重点：Pertanian",
+      "translate": "农业",
       "key_points_zh": [
-        "重点：Pertanian"
+        "农业"
       ],
       "bm_focus_phrase": "Pertanian"
     },
     {
       "source_id": "bab-4-5-extra-66",
       "bm_original": "Pendidikan",
-      "translate": "重点：Pendidikan",
+      "translate": "教育",
       "key_points_zh": [
-        "重点：Pendidikan"
+        "教育"
       ],
       "bm_focus_phrase": "Pendidikan"
     },
     {
       "source_id": "bab-4-5-extra-67",
       "bm_original": "Kesihatan",
-      "translate": "重点：Kesihatan",
+      "translate": "健康",
       "key_points_zh": [
-        "重点：Kesihatan"
+        "健康"
       ],
       "bm_focus_phrase": "Kesihatan"
     },
     {
       "source_id": "bab-4-5-extra-68",
       "bm_original": "Taraf hidup rakyat",
-      "translate": "Taraf hidup 人民",
+      "translate": "人民生活水平",
       "key_points_zh": [
-        "Taraf hidup 人民"
+        "人民生活水平"
       ],
       "bm_focus_phrase": "Taraf hidup rakyat"
     },
     {
       "source_id": "bab-4-5-u21",
       "bm_original": "Tujuannya ialah:",
-      "translate": "Tujuannya 是:",
+      "translate": "目的是：",
       "key_points_zh": [
-        "Tujuannya 是:"
+        "目的是："
       ],
       "bm_focus_phrase": "Tujuannya ialah:"
     },
     {
       "source_id": "bab-4-5-extra-69",
       "bm_original": "Menggalakkan kemajuan orang Melayu dalam bidang ekonomi dan sosial",
-      "translate": "Menggalakkan kemajuan orang Melayu 在 bidang ekonomi 与 sosial",
+      "translate": "鼓励马来人在经济和社会领域的进步",
       "key_points_zh": [
-        "Menggalakkan kemajuan orang Melayu 在 bidang ekonomi 与 sosial"
+        "鼓励马来人在经济和社会领域的进步"
       ],
       "bm_focus_phrase": "Menggalakkan kemajuan orang Melayu dalam bidang ekonomi dan sosial"
     },
     {
       "source_id": "bab-4-5-extra-70",
       "bm_original": "Membantu orang Melayu yang ketinggalan",
-      "translate": "Membantu orang Melayu 的 ketinggalan",
+      "translate": "帮助落后的马来人",
       "key_points_zh": [
-        "Membantu orang Melayu 的 ketinggalan"
+        "帮助落后的马来人"
       ],
       "bm_focus_phrase": "Membantu orang Melayu yang ketinggalan"
     },
     {
       "source_id": "bab-4-5-u22",
       "bm_original": "Kegiatan YMA melibatkan:",
-      "translate": "重点：Kegiatan YMA melibatkan:",
+      "translate": "YMA活动包括：",
       "key_points_zh": [
-        "重点：Kegiatan YMA melibatkan:"
+        "YMA活动包括："
       ],
       "bm_focus_phrase": "Kegiatan YMA melibatkan:"
     },
     {
       "source_id": "bab-4-5-extra-71",
       "bm_original": "Pelajaran",
-      "translate": "重点：Pelajaran",
+      "translate": "课",
       "key_points_zh": [
-        "重点：Pelajaran"
+        "课"
       ],
       "bm_focus_phrase": "Pelajaran"
     },
     {
       "source_id": "bab-4-5-extra-72",
       "bm_original": "Agama",
-      "translate": "重点：Agama",
+      "translate": "宗教",
       "key_points_zh": [
-        "重点：Agama"
+        "宗教"
       ],
       "bm_focus_phrase": "Agama"
     },
     {
       "source_id": "bab-4-5-extra-73",
       "bm_original": "Sukan",
-      "translate": "重点：Sukan",
+      "translate": "运动的",
       "key_points_zh": [
-        "重点：Sukan"
+        "运动的"
       ],
       "bm_focus_phrase": "Sukan"
     },
     {
       "source_id": "bab-4-5-u23",
       "bm_original": "Cawangan YMA ditubuhkan di:",
-      "translate": "重点：Cawangan YMA ditubuhkan di:",
+      "translate": "YMA分会设立于：",
       "key_points_zh": [
-        "重点：Cawangan YMA ditubuhkan di:"
+        "YMA分会设立于："
       ],
       "bm_focus_phrase": "Cawangan YMA ditubuhkan di:"
     },
     {
       "source_id": "bab-4-5-extra-74",
       "bm_original": "Sibu",
-      "translate": "重点：Sibu",
+      "translate": "诗巫",
       "key_points_zh": [
-        "重点：Sibu"
+        "诗巫"
       ],
       "bm_focus_phrase": "Sibu"
     },
     {
       "source_id": "bab-4-5-extra-75",
       "bm_original": "Kalaka",
-      "translate": "重点：Kalaka",
+      "translate": "卡拉卡",
       "key_points_zh": [
-        "重点：Kalaka"
+        "卡拉卡"
       ],
       "bm_focus_phrase": "Kalaka"
     },
     {
       "source_id": "bab-4-5-extra-76",
       "bm_original": "Miri",
-      "translate": "重点：Miri",
+      "translate": "美里",
       "key_points_zh": [
-        "重点：Miri"
+        "美里"
       ],
       "bm_focus_phrase": "Miri"
     },
     {
       "source_id": "bab-4-5-u24",
       "bm_original": "Antara jawatan yang diharapkan dapat diisi oleh anak tempatan ialah:",
-      "translate": "Antara jawatan 的 diharapkan dapat diisi 由 anak 本地 是:",
+      "translate": "预计由当地儿童担任的职位包括：",
       "key_points_zh": [
-        "Antara jawatan 的 diharapkan dapat diisi 由 anak 本地 是:"
+        "预计由当地儿童担任的职位包括："
       ],
       "bm_focus_phrase": "Antara jawatan yang diharapkan dapat diisi oleh anak tempatan ialah:"
     },
     {
       "source_id": "bab-4-5-extra-77",
       "bm_original": "Peguam",
-      "translate": "重点：Peguam",
+      "translate": "律师",
       "key_points_zh": [
-        "重点：Peguam"
+        "律师"
       ],
       "bm_focus_phrase": "Peguam"
     },
     {
       "source_id": "bab-4-5-extra-78",
       "bm_original": "Doktor",
-      "translate": "重点：Doktor",
+      "translate": "医生",
       "key_points_zh": [
-        "重点：Doktor"
+        "医生"
       ],
       "bm_focus_phrase": "Doktor"
     },
     {
       "source_id": "bab-4-5-extra-79",
       "bm_original": "Jurutera",
-      "translate": "重点：Jurutera",
+      "translate": "工程师",
       "key_points_zh": [
-        "重点：Jurutera"
+        "工程师"
       ],
       "bm_focus_phrase": "Jurutera"
     },
     {
       "source_id": "bab-4-5-u25",
       "bm_original": "Mereka juga percaya British akan memberi taraf berkerajaan sendiri kepada Sarawak pada masa hadapan.",
-      "translate": "Mereka 也 percaya British 将会 memberi taraf berkerajaan sendiri 向 Sarawak 于 masa hadapan.",
+      "translate": "他们还相信英国人将来会给予砂拉越自己的政府地位。",
       "key_points_zh": [
-        "Mereka 也 percaya British 将会 memberi taraf berkerajaan sendiri 向 Sarawak 于 masa hadapan."
+        "他们还相信英国人将来会给予砂拉越自己的政府地位。"
       ],
       "bm_focus_phrase": "Mereka juga percaya British akan memberi taraf berkerajaan sendiri kepada Sarawak pada masa hadapan."
     },
     {
       "source_id": "bab-4-5-extra-80",
       "bm_original": "Pengkhianatan terhadap hak rakyat Sarawak",
-      "translate": "Pengkhianatan 针对 权利 人民 Sarawak",
+      "translate": "背叛砂拉越人民的权利",
       "key_points_zh": [
-        "Pengkhianatan 针对 权利 人民 Sarawak"
+        "背叛砂拉越人民的权利"
       ],
       "bm_focus_phrase": "Pengkhianatan terhadap hak rakyat Sarawak"
     },
     {
       "source_id": "bab-4-5-extra-81",
       "bm_original": "Bentuk penjajahan baharu",
-      "translate": "重点：Bentuk penjajahan baharu",
+      "translate": "新形式的殖民主义",
       "key_points_zh": [
-        "重点：Bentuk penjajahan baharu"
+        "新形式的殖民主义"
       ],
       "bm_focus_phrase": "Bentuk penjajahan baharu"
     },
     {
       "source_id": "bab-4-5-extra-82",
       "bm_original": "Pelanggaran terhadap Perlembagaan 1941",
-      "translate": "Pelanggaran 针对 Perlembagaan 1941",
+      "translate": "违反 1941 年宪法",
       "key_points_zh": [
-        "Pelanggaran 针对 Perlembagaan 1941"
+        "违反 1941 年宪法"
       ],
       "bm_focus_phrase": "Pelanggaran terhadap Perlembagaan 1941"
     },
     {
       "source_id": "bab-4-5-extra-83",
       "bm_original": "Memajukan negeri",
-      "translate": "Memajukan 州",
+      "translate": "推进国家",
       "key_points_zh": [
-        "Memajukan 州"
+        "推进国家"
       ],
       "bm_focus_phrase": "Memajukan negeri"
     },
     {
       "source_id": "bab-4-5-extra-84",
       "bm_original": "Meningkatkan taraf hidup rakyat",
-      "translate": "Meningkatkan taraf hidup 人民",
+      "translate": "提高人民生活水平",
       "key_points_zh": [
-        "Meningkatkan taraf hidup 人民"
+        "提高人民生活水平"
       ],
       "bm_focus_phrase": "Meningkatkan taraf hidup rakyat"
     },
     {
       "source_id": "bab-4-5-extra-85",
       "bm_original": "Membuka peluang pekerjaan",
-      "translate": "重点：Membuka peluang pekerjaan",
+      "translate": "开放就业机会",
       "key_points_zh": [
-        "重点：Membuka peluang pekerjaan"
+        "开放就业机会"
       ],
       "bm_focus_phrase": "Membuka peluang pekerjaan"
     },
     {
       "source_id": "bab-4-5-u26",
       "bm_original": "Walaupun gerakan antipenyerahan akhirnya gagal, perjuangan tersebut berjaya membangkitkan kesedaran politik dan semangat nasionalisme dalam kalangan penduduk Sarawak.",
-      "translate": "Walaupun gerakan antipenyerahan akhirnya 失败, 斗争 tersebut 成功 membangkitkan kesedaran 政治 与 semangat 民族主义 在 kalangan penduduk Sarawak.",
+      "translate": "虽然反移交运动最终失败，但这场斗争成功地提高了砂拉越人民的政治意识和民族主义精神。",
       "key_points_zh": [
-        "Walaupun gerakan antipenyerahan akhirnya 失败, 斗争 tersebut 成功 membangkitkan kesedaran 政治 与 semangat 民族主义 在 kalangan penduduk Sarawak."
+        "虽然反移交运动最终失败，但这场斗争成功地提高了砂拉越人民的政治意识和民族主义精神。"
       ],
       "bm_focus_phrase": "Walaupun gerakan antipenyerahan akhirnya gagal, perjuangan tersebut berjaya membangkitkan kesedaran politik dan semangat nasionalisme dalam kalangan penduduk Sarawak."
     }

@@ -1,636 +1,637 @@
 {
   "meta": {
     "source_file": "notes/bab-4-2.html",
-    "rollout": "gelombang-1-manual-revision"
+    "rollout": "gelombang-1-ms-zh-regenerated",
+    "notes": "Translate fields regenerated from bm_original (ms→zh-CN) for fluent Simplified Chinese; proper names follow translator output—verify against BM notes."
   },
   "units": [
     {
       "source_id": "bab-4-2-u19",
       "bm_original": "Malayan Union diperkenalkan oleh British di Tanah Melayu untuk menggantikan British Military Administration (BMA) .",
-      "translate": "Malayan Union diperkenalkan 由 British di Tanah Melayu 为了 menggantikan 英国军事管制政府 (BMA) .",
+      "translate": "英国人在马来亚建立了马来亚联盟，以取代英国军事管理局（BMA）。",
       "key_points_zh": [
-        "Malayan Union diperkenalkan 由 British di Tanah Melayu 为了 menggantikan 英国军事管制政府 (BMA) ."
+        "英国人在马来亚建立了马来亚联盟，以取代英国军事管理局（BMA）。"
       ],
       "bm_focus_phrase": "Malayan Union diperkenalkan oleh British di Tanah Melayu untuk menggantikan British Military Administration (BMA) ."
     },
     {
       "source_id": "bab-4-2-u20",
       "bm_original": "Gagasan ini boleh difahami melalui dua bahagian utama, iaitu latar belakang dan ciri-ciri Malayan Union serta cara British mendapatkan tandatangan Sultan .",
-      "translate": "Gagasan 这 可以 difahami 通过 dua bahagian 主要, iaitu latar belakang 与 ciri-ciri Malayan Union 以及 cara British 取得 tandatangan Sultan .",
+      "translate": "这个想法可以通过两个主要部分来理解，即马来亚联邦的背景和特点以及英国人如何获得苏丹的签名。",
       "key_points_zh": [
-        "Gagasan 这 可以 difahami 通过 dua bahagian 主要, iaitu latar belakang 与 ciri-ciri Malayan Union 以及 cara British 取得 tandatangan Sultan ."
+        "这个想法可以通过两个主要部分来理解，即马来亚联邦的背景和特点以及英国人如何获得苏丹的签名。"
       ],
       "bm_focus_phrase": "Gagasan ini boleh difahami melalui dua bahagian utama, iaitu latar belakang dan ciri-ciri Malayan Union serta cara British mendapatkan tandatangan Sultan ."
     },
     {
       "source_id": "bab-4-2-u21",
       "bm_original": "Malayan Union mengurangkan kuasa Raja-raja Melayu dan meletakkan Tanah Melayu di bawah kawalan British yang lebih langsung.",
-      "translate": "Malayan Union mengurangkan 权力 Raja-raja Melayu 与 meletakkan Tanah Melayu di bawah kawalan British 的 更 langsung.",
+      "translate": "马来亚联盟削弱了马来国王的权力，并将马来亚置于英国更直接的控制之下。",
       "key_points_zh": [
-        "Malayan Union mengurangkan 权力 Raja-raja Melayu 与 meletakkan Tanah Melayu di bawah kawalan British 的 更 langsung."
+        "马来亚联盟削弱了马来国王的权力，并将马来亚置于英国更直接的控制之下。"
       ],
       "bm_focus_phrase": "Malayan Union mengurangkan kuasa Raja-raja Melayu dan meletakkan Tanah Melayu di bawah kawalan British yang lebih langsung."
     },
     {
       "source_id": "bab-4-2-u22",
       "bm_original": "British memperoleh persetujuan Raja-raja Melayu melalui H.C. Willan dan Sir Harold MacMichael dengan desakan, tekanan dan paksaan politik.",
-      "translate": "British memperoleh persetujuan Raja-raja Melayu 通过 H.C. Willan 与 Sir Harold MacMichael 以 desakan, tekanan 与 paksaan 政治.",
+      "translate": "英国人通过 H.C. 获得了马来国王的同意。威兰和哈罗德·麦克迈克尔爵士的坚持、压力和政治胁迫。",
       "key_points_zh": [
-        "British memperoleh persetujuan Raja-raja Melayu 通过 H.C. Willan 与 Sir Harold MacMichael 以 desakan, tekanan 与 paksaan 政治."
+        "英国人通过 H.C. 获得了马来国王的同意。威兰和哈罗德·麦克迈克尔爵士的坚持、压力和政治胁迫。"
       ],
       "bm_focus_phrase": "British memperoleh persetujuan Raja-raja Melayu melalui H.C. Willan dan Sir Harold MacMichael dengan desakan, tekanan dan paksaan politik."
     },
     {
       "source_id": "bab-4-2-u01",
       "bm_original": "Malayan Union diperkenalkan oleh British di Tanah Melayu untuk menggantikan British Military Administration (BMA) . British berharap sistem ini dapat melicinkan pentadbiran, meningkatkan pelaburan ekonomi, mengukuhkan pertahanan dan mengekalkan orang asing sebagai tenaga kerja.",
-      "translate": "Malayan Union diperkenalkan 由 British di Tanah Melayu 为了 menggantikan 英国军事管制政府 (BMA) . British berharap sistem 这 dapat melicinkan 行政, 提升 pelaburan ekonomi, 加强 pertahanan 与 mengekalkan orang asing 作为 tenaga kerja.",
+      "translate": "英国人在马来亚建立了马来亚联盟，以取代英国军事管理局（BMA）。英国希望这一制度能够精简行政、增加经济投资、加强国防并留住外国人作为劳动力。",
       "key_points_zh": [
-        "Malayan Union diperkenalkan 由 British di Tanah Melayu 为了 menggantikan 英国军事管制政府 (BMA) . British berharap sistem 这 dapat melicinkan 行政, 提升 pelaburan ekonomi, 加强 pertahanan 与 mengekalkan orang asing 作为 tenaga kerja."
+        "英国人在马来亚建立了马来亚联盟，以取代英国军事管理局（BMA）。英国希望这一制度能够精简行政、增加经济投资、加强国防并留住外国人作为劳动力。"
       ],
       "bm_focus_phrase": "Malayan Union diperkenalkan oleh British di Tanah Melayu untuk menggantikan British Military Administration (BMA) . British berharap sistem ini dapat melicinkan pentadbiran, meningkatkan pelaburan ekonomi, mengukuhkan pertahanan dan mengekalkan orang asing sebagai tenaga kerja."
     },
     {
       "source_id": "bab-4-2-extra-1",
       "bm_original": "Unit Perancang Tanah Melayu",
-      "translate": "重点：Unit Perancang Tanah Melayu",
+      "translate": "马来亚规划单位",
       "key_points_zh": [
-        "重点：Unit Perancang Tanah Melayu"
+        "马来亚规划单位"
       ],
       "bm_focus_phrase": "Unit Perancang Tanah Melayu"
     },
     {
       "source_id": "bab-4-2-u23",
       "bm_original": "Mejar Jeneral Ralph Hone",
-      "translate": "重点：Mejar Jeneral Ralph Hone",
+      "translate": "拉尔夫·霍恩少将",
       "key_points_zh": [
-        "重点：Mejar Jeneral Ralph Hone"
+        "拉尔夫·霍恩少将"
       ],
       "bm_focus_phrase": "Mejar Jeneral Ralph Hone"
     },
     {
       "source_id": "bab-4-2-u02",
       "bm_original": "Tujuannya ialah merangka pentadbiran baharu yang dinamakan:",
-      "translate": "重点：Tujuannya 是 merangka 行政 baharu 的 dinamakan:",
+      "translate": "目的是起草一个新政府，名称为：",
       "key_points_zh": [
-        "重点：Tujuannya 是 merangka 行政 baharu 的 dinamakan:"
+        "目的是起草一个新政府，名称为："
       ],
       "bm_focus_phrase": "Tujuannya ialah merangka pentadbiran baharu yang dinamakan:"
     },
     {
       "source_id": "bab-4-2-extra-2",
       "bm_original": "Malayan Union",
-      "translate": "重点：Malayan Union",
+      "translate": "马来亚联盟",
       "key_points_zh": [
-        "重点：Malayan Union"
+        "马来亚联盟"
       ],
       "bm_focus_phrase": "Malayan Union"
     },
     {
       "source_id": "bab-4-2-u03",
       "bm_original": "British berharap Malayan Union dapat:",
-      "translate": "重点：British berharap Malayan Union dapat:",
+      "translate": "英国人希望马来亚联盟能够：",
       "key_points_zh": [
-        "重点：British berharap Malayan Union dapat:"
+        "英国人希望马来亚联盟能够："
       ],
       "bm_focus_phrase": "British berharap Malayan Union dapat:"
     },
     {
       "source_id": "bab-4-2-extra-3",
       "bm_original": "Melicinkan pentadbiran",
-      "translate": "重点：Melicinkan 行政",
+      "translate": "简化管理",
       "key_points_zh": [
-        "重点：Melicinkan 行政"
+        "简化管理"
       ],
       "bm_focus_phrase": "Melicinkan pentadbiran"
     },
     {
       "source_id": "bab-4-2-extra-4",
       "bm_original": "Meningkatkan pelaburan ekonomi",
-      "translate": "重点：Meningkatkan pelaburan ekonomi",
+      "translate": "增加经济投入",
       "key_points_zh": [
-        "重点：Meningkatkan pelaburan ekonomi"
+        "增加经济投入"
       ],
       "bm_focus_phrase": "Meningkatkan pelaburan ekonomi"
     },
     {
       "source_id": "bab-4-2-extra-5",
       "bm_original": "Mengukuhkan pertahanan",
-      "translate": "重点：Mengukuhkan pertahanan",
+      "translate": "加强防御",
       "key_points_zh": [
-        "重点：Mengukuhkan pertahanan"
+        "加强防御"
       ],
       "bm_focus_phrase": "Mengukuhkan pertahanan"
     },
     {
       "source_id": "bab-4-2-extra-6",
       "bm_original": "Mengekalkan orang asing sebagai tenaga kerja",
-      "translate": "重点：Mengekalkan orang asing 作为 tenaga kerja",
+      "translate": "留住外国人作为劳动力",
       "key_points_zh": [
-        "重点：Mengekalkan orang asing 作为 tenaga kerja"
+        "留住外国人作为劳动力"
       ],
       "bm_focus_phrase": "Mengekalkan orang asing sebagai tenaga kerja"
     },
     {
       "source_id": "bab-4-2-extra-7",
       "bm_original": "Kertas Putih 6724",
-      "translate": "重点：Kertas Putih 6724",
+      "translate": "白皮书 6724",
       "key_points_zh": [
-        "重点：Kertas Putih 6724"
+        "白皮书 6724"
       ],
       "bm_focus_phrase": "Kertas Putih 6724"
     },
     {
       "source_id": "bab-4-2-extra-8",
       "bm_original": "Mengambil alih pemerintahan Tanah Melayu",
-      "translate": "重点：Mengambil alih pemerintahan Tanah Melayu",
+      "translate": "接管马来亚政府",
       "key_points_zh": [
-        "重点：Mengambil alih pemerintahan Tanah Melayu"
+        "接管马来亚政府"
       ],
       "bm_focus_phrase": "Mengambil alih pemerintahan Tanah Melayu"
     },
     {
       "source_id": "bab-4-2-extra-9",
       "bm_original": "Menubuhkan pentadbiran berpusat di bawah jajahan British",
-      "translate": "重点：Menubuhkan 行政 berpusat di bawah jajahan British",
+      "translate": "在英国殖民地下建立中央集权行政机构",
       "key_points_zh": [
-        "重点：Menubuhkan 行政 berpusat di bawah jajahan British"
+        "在英国殖民地下建立中央集权行政机构"
       ],
       "bm_focus_phrase": "Menubuhkan pentadbiran berpusat di bawah jajahan British"
     },
     {
       "source_id": "bab-4-2-extra-10",
       "bm_original": "Konsep kesatuan",
-      "translate": "重点：Konsep kesatuan",
+      "translate": "团结的理念",
       "key_points_zh": [
-        "重点：Konsep kesatuan"
+        "团结的理念"
       ],
       "bm_focus_phrase": "Konsep kesatuan"
     },
     {
       "source_id": "bab-4-2-extra-11",
       "bm_original": "Bentuk pentadbiran",
-      "translate": "重点：Bentuk 行政",
+      "translate": "管理形式",
       "key_points_zh": [
-        "重点：Bentuk 行政"
+        "管理形式"
       ],
       "bm_focus_phrase": "Bentuk pentadbiran"
     },
     {
       "source_id": "bab-4-2-extra-12",
       "bm_original": "Sistem perundangan",
-      "translate": "重点：Sistem perundangan",
+      "translate": "法制",
       "key_points_zh": [
-        "重点：Sistem perundangan"
+        "法制"
       ],
       "bm_focus_phrase": "Sistem perundangan"
     },
     {
       "source_id": "bab-4-2-extra-13",
       "bm_original": "Kedudukan Raja-raja Melayu",
-      "translate": "Kedudukan Raja-raja Melayu",
+      "translate": "马来国王的地位",
       "key_points_zh": [
-        "Kedudukan Raja-raja Melayu"
+        "马来国王的地位"
       ],
       "bm_focus_phrase": "Kedudukan Raja-raja Melayu"
     },
     {
       "source_id": "bab-4-2-extra-14",
       "bm_original": "Syarat kewarganegaraan",
-      "translate": "重点：Syarat 公民权",
+      "translate": "公民身份要求",
       "key_points_zh": [
-        "重点：Syarat 公民权"
+        "公民身份要求"
       ],
       "bm_focus_phrase": "Syarat kewarganegaraan"
     },
     {
       "source_id": "bab-4-2-extra-15",
       "bm_original": "Kedudukan agama Islam",
-      "translate": "重点：Kedudukan agama Islam",
+      "translate": "伊斯兰教的立场",
       "key_points_zh": [
-        "重点：Kedudukan agama Islam"
+        "伊斯兰教的立场"
       ],
       "bm_focus_phrase": "Kedudukan agama Islam"
     },
     {
       "source_id": "bab-4-2-u04",
       "bm_original": "Negeri-negeri berikut disatukan menjadi satu unit pentadbiran:",
-      "translate": "重点：Negeri-negeri berikut disatukan menjadi satu unit 行政:",
+      "translate": "下列州合并为一个行政单位：",
       "key_points_zh": [
-        "重点：Negeri-negeri berikut disatukan menjadi satu unit 行政:"
+        "下列州合并为一个行政单位："
       ],
       "bm_focus_phrase": "Negeri-negeri berikut disatukan menjadi satu unit pentadbiran:"
     },
     {
       "source_id": "bab-4-2-extra-16",
       "bm_original": "Negeri-negeri Melayu Bersekutu",
-      "translate": "重点：Negeri-negeri Melayu Bersekutu",
+      "translate": "马来联邦",
       "key_points_zh": [
-        "重点：Negeri-negeri Melayu Bersekutu"
+        "马来联邦"
       ],
       "bm_focus_phrase": "Negeri-negeri Melayu Bersekutu"
     },
     {
       "source_id": "bab-4-2-extra-17",
       "bm_original": "Negeri-negeri Melayu Tidak Bersekutu",
-      "translate": "重点：Negeri-negeri Melayu Tidak Bersekutu",
+      "translate": "不结盟马来国家",
       "key_points_zh": [
-        "重点：Negeri-negeri Melayu Tidak Bersekutu"
+        "不结盟马来国家"
       ],
       "bm_focus_phrase": "Negeri-negeri Melayu Tidak Bersekutu"
     },
     {
       "source_id": "bab-4-2-extra-18",
       "bm_original": "Negeri-negeri Selat",
-      "translate": "重点：Negeri-negeri Selat",
+      "translate": "海峡国家",
       "key_points_zh": [
-        "重点：Negeri-negeri Selat"
+        "海峡国家"
       ],
       "bm_focus_phrase": "Negeri-negeri Selat"
     },
     {
       "source_id": "bab-4-2-u05",
       "bm_original": "Peranan mereka dihadkan kepada:",
-      "translate": "重点：Peranan mereka dihadkan 给/向:",
+      "translate": "他们的作用仅限于：",
       "key_points_zh": [
-        "重点：Peranan mereka dihadkan 给/向:"
+        "他们的作用仅限于："
       ],
       "bm_focus_phrase": "Peranan mereka dihadkan kepada:"
     },
     {
       "source_id": "bab-4-2-extra-19",
       "bm_original": "Hal agama Islam",
-      "translate": "重点：Hal agama Islam",
+      "translate": "伊斯兰教",
       "key_points_zh": [
-        "重点：Hal agama Islam"
+        "伊斯兰教"
       ],
       "bm_focus_phrase": "Hal agama Islam"
     },
     {
       "source_id": "bab-4-2-extra-20",
       "bm_original": "Adat istiadat Melayu",
-      "translate": "重点：Adat istiadat Melayu",
+      "translate": "马来风俗",
       "key_points_zh": [
-        "重点：Adat istiadat Melayu"
+        "马来风俗"
       ],
       "bm_focus_phrase": "Adat istiadat Melayu"
     },
     {
       "source_id": "bab-4-2-u06",
       "bm_original": "Di bawah Gabenor, British menubuhkan:",
-      "translate": "重点：Di bawah Gabenor, British 成立:",
+      "translate": "在总督的领导下，英国建立了：",
       "key_points_zh": [
-        "重点：Di bawah Gabenor, British 成立:"
+        "在总督的领导下，英国建立了："
       ],
       "bm_focus_phrase": "Di bawah Gabenor, British menubuhkan:"
     },
     {
       "source_id": "bab-4-2-extra-21",
       "bm_original": "Majlis Eksekutif",
-      "translate": "Majlis Eksekutif",
+      "translate": "执行委员会",
       "key_points_zh": [
-        "Majlis Eksekutif"
+        "执行委员会"
       ],
       "bm_focus_phrase": "Majlis Eksekutif"
     },
     {
       "source_id": "bab-4-2-extra-22",
       "bm_original": "Majlis Perundangan Malayan Union",
-      "translate": "Majlis Perundangan Malayan Union",
+      "translate": "马来亚联邦立法委员会",
       "key_points_zh": [
-        "Majlis Perundangan Malayan Union"
+        "马来亚联邦立法委员会"
       ],
       "bm_focus_phrase": "Majlis Perundangan Malayan Union"
     },
     {
       "source_id": "bab-4-2-extra-23",
       "bm_original": "Prinsip jus soli",
-      "translate": "重点：Prinsip jus soli",
+      "translate": "属地法原则",
       "key_points_zh": [
-        "重点：Prinsip jus soli"
+        "属地法原则"
       ],
       "bm_focus_phrase": "Prinsip jus soli"
     },
     {
       "source_id": "bab-4-2-u07",
       "bm_original": "Ini bermaksud:",
-      "translate": "重点：Ini bermaksud:",
+      "translate": "这意味着：",
       "key_points_zh": [
-        "重点：Ini bermaksud:"
+        "这意味着："
       ],
       "bm_focus_phrase": "Ini bermaksud:"
     },
     {
       "source_id": "bab-4-2-u24",
       "bm_original": "Sesiapa yang lahir di Tanah Melayu dan Singapura diiktiraf sebagai warganegara.",
-      "translate": "Sesiapa 的 lahir di Tanah Melayu 与 Singapura diiktiraf 作为 warganegara.",
+      "translate": "任何在马来亚和新加坡出生的人都被承认为公民。",
       "key_points_zh": [
-        "Sesiapa 的 lahir di Tanah Melayu 与 Singapura diiktiraf 作为 warganegara."
+        "任何在马来亚和新加坡出生的人都被承认为公民。"
       ],
       "bm_focus_phrase": "Sesiapa yang lahir di Tanah Melayu dan Singapura diiktiraf sebagai warganegara."
     },
     {
       "source_id": "bab-4-2-u08",
       "bm_original": "Selain itu, kewarganegaraan juga diberikan kepada:",
-      "translate": "Selain 那, 公民权 也 diberikan 给/向:",
+      "translate": "此外，公民身份还授予：",
       "key_points_zh": [
-        "Selain 那, 公民权 也 diberikan 给/向:"
+        "此外，公民身份还授予："
       ],
       "bm_focus_phrase": "Selain itu, kewarganegaraan juga diberikan kepada:"
     },
     {
       "source_id": "bab-4-2-extra-24",
       "bm_original": "Mereka yang berumur 18 tahun ke atas",
-      "translate": "重点：Mereka 的 berumur 18 年 ke atas",
+      "translate": "18岁以上人士",
       "key_points_zh": [
-        "重点：Mereka 的 berumur 18 年 ke atas"
+        "18岁以上人士"
       ],
       "bm_focus_phrase": "Mereka yang berumur 18 tahun ke atas"
     },
     {
       "source_id": "bab-4-2-extra-25",
       "bm_original": "Bermastautin selama 10 hingga 15 tahun",
-      "translate": "重点：Bermastautin selama 10 hingga 15 年",
+      "translate": "居住10至15年",
       "key_points_zh": [
-        "重点：Bermastautin selama 10 hingga 15 年"
+        "居住10至15年"
       ],
       "bm_focus_phrase": "Bermastautin selama 10 hingga 15 tahun"
     },
     {
       "source_id": "bab-4-2-u09",
       "bm_original": "Mereka yang berumur di bawah 18 tahun juga layak mendapat kewarganegaraan jika:",
-      "translate": "Mereka 的 berumur di bawah 18 年 也 layak 获得 公民权 jika:",
+      "translate": "18 岁以下的人也有资格获得公民身份，如果：",
       "key_points_zh": [
-        "Mereka 的 berumur di bawah 18 年 也 layak 获得 公民权 jika:"
+        "18 岁以下的人也有资格获得公民身份，如果："
       ],
       "bm_focus_phrase": "Mereka yang berumur di bawah 18 tahun juga layak mendapat kewarganegaraan jika:"
     },
     {
       "source_id": "bab-4-2-extra-26",
       "bm_original": "Ibu bapa mereka ialah warganegara",
-      "translate": "重点：Ibu bapa mereka 是 warganegara",
+      "translate": "他们的父母都是公民",
       "key_points_zh": [
-        "重点：Ibu bapa mereka 是 warganegara"
+        "他们的父母都是公民"
       ],
       "bm_focus_phrase": "Ibu bapa mereka ialah warganegara"
     },
     {
       "source_id": "bab-4-2-u10",
       "bm_original": "Syarat ini dianggap longgar dan menimbulkan kebimbangan orang Melayu.",
-      "translate": "重点：Syarat 这 dianggap longgar 与 menimbulkan kebimbangan 马来人.",
+      "translate": "这种条件被认为是宽松的，引起马来人的担忧。",
       "key_points_zh": [
-        "重点：Syarat 这 dianggap longgar 与 menimbulkan kebimbangan 马来人."
+        "这种条件被认为是宽松的，引起马来人的担忧。"
       ],
       "bm_focus_phrase": "Syarat ini dianggap longgar dan menimbulkan kebimbangan orang Melayu."
     },
     {
       "source_id": "bab-4-2-u11",
       "bm_original": "Untuk tujuan ini, British menggunakan dua tokoh utama:",
-      "translate": "重点：Untuk 目的 这, British menggunakan dua tokoh 主要:",
+      "translate": "为此，英国人使用了两个主要数字：",
       "key_points_zh": [
-        "重点：Untuk 目的 这, British menggunakan dua tokoh 主要:"
+        "为此，英国人使用了两个主要数字："
       ],
       "bm_focus_phrase": "Untuk tujuan ini, British menggunakan dua tokoh utama:"
     },
     {
       "source_id": "bab-4-2-extra-27",
       "bm_original": "H.C. Willan",
-      "translate": "H.C. Willan",
+      "translate": "H.C.威兰",
       "key_points_zh": [
-        "H.C. Willan"
+        "H.C.威兰"
       ],
       "bm_focus_phrase": "H.C. Willan"
     },
     {
       "source_id": "bab-4-2-extra-28",
       "bm_original": "Sir Harold MacMichael",
-      "translate": "Sir Harold MacMichael",
+      "translate": "哈罗德·麦克迈克尔爵士",
       "key_points_zh": [
-        "Sir Harold MacMichael"
+        "哈罗德·麦克迈克尔爵士"
       ],
       "bm_focus_phrase": "Sir Harold MacMichael"
     },
     {
       "source_id": "bab-4-2-u12",
       "bm_original": "Sultan pertama yang ditemui ialah:",
-      "translate": "Sultan pertama yang ditemui ialah:",
+      "translate": "第一个发现的苏丹是：",
       "key_points_zh": [
-        "Sultan pertama yang ditemui ialah:"
+        "第一个发现的苏丹是："
       ],
       "bm_focus_phrase": "Sultan pertama yang ditemui ialah:"
     },
     {
       "source_id": "bab-4-2-extra-29",
       "bm_original": "Sultan Johor",
-      "translate": "Sultan Johor",
+      "translate": "柔佛苏丹",
       "key_points_zh": [
-        "Sultan Johor"
+        "柔佛苏丹"
       ],
       "bm_focus_phrase": "Sultan Johor"
     },
     {
       "source_id": "bab-4-2-u13",
       "bm_original": "Selepas itu, Willan turut menghadap:",
-      "translate": "Selepas itu, Willan turut menghadap:",
+      "translate": "之后，威兰还面临着：",
       "key_points_zh": [
-        "Selepas itu, Willan turut menghadap:"
+        "之后，威兰还面临着："
       ],
       "bm_focus_phrase": "Selepas itu, Willan turut menghadap:"
     },
     {
       "source_id": "bab-4-2-extra-30",
       "bm_original": "Sultan Selangor",
-      "translate": "Sultan Selangor",
+      "translate": "雪兰莪苏丹",
       "key_points_zh": [
-        "Sultan Selangor"
+        "雪兰莪苏丹"
       ],
       "bm_focus_phrase": "Sultan Selangor"
     },
     {
       "source_id": "bab-4-2-extra-31",
       "bm_original": "Sultan Kedah",
-      "translate": "Sultan Kedah",
+      "translate": "吉打苏丹",
       "key_points_zh": [
-        "Sultan Kedah"
+        "吉打苏丹"
       ],
       "bm_focus_phrase": "Sultan Kedah"
     },
     {
       "source_id": "bab-4-2-extra-32",
       "bm_original": "Raja Perlis",
-      "translate": "Raja Perlis",
+      "translate": "玻璃市国王",
       "key_points_zh": [
-        "Raja Perlis"
+        "玻璃市国王"
       ],
       "bm_focus_phrase": "Raja Perlis"
     },
     {
       "source_id": "bab-4-2-extra-33",
       "bm_original": "Sultan Perak",
-      "translate": "Sultan Perak",
+      "translate": "霹雳州苏丹",
       "key_points_zh": [
-        "Sultan Perak"
+        "霹雳州苏丹"
       ],
       "bm_focus_phrase": "Sultan Perak"
     },
     {
       "source_id": "bab-4-2-extra-34",
       "bm_original": "Yang di-Pertuan Besar Negeri Sembilan",
-      "translate": "重点：Yang di-Pertuan Besar Negeri Sembilan",
+      "translate": "森美兰州元首",
       "key_points_zh": [
-        "重点：Yang di-Pertuan Besar Negeri Sembilan"
+        "森美兰州元首"
       ],
       "bm_focus_phrase": "Yang di-Pertuan Besar Negeri Sembilan"
     },
     {
       "source_id": "bab-4-2-extra-35",
       "bm_original": "Sultan Pahang",
-      "translate": "Sultan Pahang",
+      "translate": "彭亨州苏丹",
       "key_points_zh": [
-        "Sultan Pahang"
+        "彭亨州苏丹"
       ],
       "bm_focus_phrase": "Sultan Pahang"
     },
     {
       "source_id": "bab-4-2-extra-36",
       "bm_original": "Sultan Kelantan",
-      "translate": "Sultan Kelantan",
+      "translate": "吉兰丹苏丹",
       "key_points_zh": [
-        "Sultan Kelantan"
+        "吉兰丹苏丹"
       ],
       "bm_focus_phrase": "Sultan Kelantan"
     },
     {
       "source_id": "bab-4-2-extra-37",
       "bm_original": "Sultan Terengganu",
-      "translate": "Sultan Terengganu",
+      "translate": "登嘉楼州苏丹",
       "key_points_zh": [
-        "Sultan Terengganu"
+        "登嘉楼州苏丹"
       ],
       "bm_focus_phrase": "Sultan Terengganu"
     },
     {
       "source_id": "bab-4-2-u14",
       "bm_original": "Dalam laporannya, Willan menyatakan keyakinan bahawa Raja-raja Melayu akan menyokong British dan menandatangani perjanjian Malayan Union.",
-      "translate": "Dalam laporannya, Willan menyatakan keyakinan bahawa Raja-raja Melayu 将会 menyokong British 与 menandatangani 协议 Malayan Union.",
+      "translate": "威兰在报告中表示相信马来统治者将支持英国并签署马来亚联邦协议。",
       "key_points_zh": [
-        "Dalam laporannya, Willan menyatakan keyakinan bahawa Raja-raja Melayu 将会 menyokong British 与 menandatangani 协议 Malayan Union."
+        "威兰在报告中表示相信马来统治者将支持英国并签署马来亚联邦协议。"
       ],
       "bm_focus_phrase": "Dalam laporannya, Willan menyatakan keyakinan bahawa Raja-raja Melayu akan menyokong British dan menandatangani perjanjian Malayan Union."
     },
     {
       "source_id": "bab-4-2-u15",
       "bm_original": "Lawatan Willan ini memudahkan tugas MacMichael .",
-      "translate": "Lawatan Willan ini memudahkan tugas MacMichael .",
+      "translate": "威兰的来访使麦克迈克尔的工作变得更加轻松。",
       "key_points_zh": [
-        "Lawatan Willan ini memudahkan tugas MacMichael ."
+        "威兰的来访使麦克迈克尔的工作变得更加轻松。"
       ],
       "bm_focus_phrase": "Lawatan Willan ini memudahkan tugas MacMichael ."
     },
     {
       "source_id": "bab-4-2-u16",
       "bm_original": "MacMichael menggunakan:",
-      "translate": "MacMichael menggunakan:",
+      "translate": "麦克迈克尔使用：",
       "key_points_zh": [
-        "MacMichael menggunakan:"
+        "麦克迈克尔使用："
       ],
       "bm_focus_phrase": "MacMichael menggunakan:"
     },
     {
       "source_id": "bab-4-2-extra-38",
       "bm_original": "Desakan",
-      "translate": "重点：Desakan",
+      "translate": "坚持",
       "key_points_zh": [
-        "重点：Desakan"
+        "坚持"
       ],
       "bm_focus_phrase": "Desakan"
     },
     {
       "source_id": "bab-4-2-extra-39",
       "bm_original": "Tekanan",
-      "translate": "重点：Tekanan",
+      "translate": "压力",
       "key_points_zh": [
-        "重点：Tekanan"
+        "压力"
       ],
       "bm_focus_phrase": "Tekanan"
     },
     {
       "source_id": "bab-4-2-extra-40",
       "bm_original": "Paksaan politik",
-      "translate": "重点：Paksaan 政治",
+      "translate": "政治胁迫",
       "key_points_zh": [
-        "重点：Paksaan 政治"
+        "政治胁迫"
       ],
       "bm_focus_phrase": "Paksaan politik"
     },
     {
       "source_id": "bab-4-2-u17",
       "bm_original": "Dalam tempoh kira-kira dua bulan, MacMichael berjaya memperoleh tandatangan persetujuan daripada kesemua sembilan Raja Melayu.",
-      "translate": "Dalam tempoh kira-kira dua bulan, MacMichael berjaya memperoleh tandatangan persetujuan daripada kesemua sembilan Raja Melayu.",
+      "translate": "在大约两个月的时间内，麦克迈克尔成功获得了所有九位马来国王的同意签名。",
       "key_points_zh": [
-        "Dalam tempoh kira-kira dua bulan, MacMichael berjaya memperoleh tandatangan persetujuan daripada kesemua sembilan Raja Melayu."
+        "在大约两个月的时间内，麦克迈克尔成功获得了所有九位马来国王的同意签名。"
       ],
       "bm_focus_phrase": "Dalam tempoh kira-kira dua bulan, MacMichael berjaya memperoleh tandatangan persetujuan daripada kesemua sembilan Raja Melayu."
     },
     {
       "source_id": "bab-4-2-extra-41",
       "bm_original": "Mengurangkan kuasa Raja-raja Melayu",
-      "translate": "Mengurangkan 权力 Raja-raja Melayu",
+      "translate": "削弱马来国王的权力",
       "key_points_zh": [
-        "Mengurangkan 权力 Raja-raja Melayu"
+        "削弱马来国王的权力"
       ],
       "bm_focus_phrase": "Mengurangkan kuasa Raja-raja Melayu"
     },
     {
       "source_id": "bab-4-2-extra-42",
       "bm_original": "Meletakkan Tanah Melayu di bawah kawalan British yang lebih langsung",
-      "translate": "重点：Meletakkan Tanah Melayu di bawah kawalan British 的 更 langsung",
+      "translate": "将马来亚置于英国更直接的控制之下",
       "key_points_zh": [
-        "重点：Meletakkan Tanah Melayu di bawah kawalan British 的 更 langsung"
+        "将马来亚置于英国更直接的控制之下"
       ],
       "bm_focus_phrase": "Meletakkan Tanah Melayu di bawah kawalan British yang lebih langsung"
     },
     {
       "source_id": "bab-4-2-extra-43",
       "bm_original": "Melonggarkan syarat kewarganegaraan melalui prinsip jus soli",
-      "translate": "重点：Melonggarkan syarat 公民权 通过 prinsip jus soli",
+      "translate": "通过出生地原则放宽公民身份要求",
       "key_points_zh": [
-        "重点：Melonggarkan syarat 公民权 通过 prinsip jus soli"
+        "通过出生地原则放宽公民身份要求"
       ],
       "bm_focus_phrase": "Melonggarkan syarat kewarganegaraan melalui prinsip jus soli"
     },
     {
       "source_id": "bab-4-2-extra-44",
       "bm_original": "H.C. Willan",
-      "translate": "H.C. Willan",
+      "translate": "H.C.威兰",
       "key_points_zh": [
-        "H.C. Willan"
+        "H.C.威兰"
       ],
       "bm_focus_phrase": "H.C. Willan"
     },
     {
       "source_id": "bab-4-2-extra-45",
       "bm_original": "Sir Harold MacMichael",
-      "translate": "Sir Harold MacMichael",
+      "translate": "哈罗德·麦克迈克尔爵士",
       "key_points_zh": [
-        "Sir Harold MacMichael"
+        "哈罗德·麦克迈克尔爵士"
       ],
       "bm_focus_phrase": "Sir Harold MacMichael"
     },
     {
       "source_id": "bab-4-2-extra-46",
       "bm_original": "Tekanan, desakan dan paksaan",
-      "translate": "重点：Tekanan, desakan 与 paksaan",
+      "translate": "压力、坚持和胁迫",
       "key_points_zh": [
-        "重点：Tekanan, desakan 与 paksaan"
+        "压力、坚持和胁迫"
       ],
       "bm_focus_phrase": "Tekanan, desakan dan paksaan"
     },
     {
       "source_id": "bab-4-2-u18",
       "bm_original": "Cara British memperoleh tandatangan Sultan menimbulkan kemarahan dan bantahan daripada Raja-raja Melayu serta orang Melayu.",
-      "translate": "Cara British memperoleh tandatangan Sultan menimbulkan kemarahan 与 抗议 daripada Raja-raja Melayu 以及 马来人.",
+      "translate": "英国人获得苏丹签名的方式引起了马来国王和马来人的愤怒和抗议。",
       "key_points_zh": [
-        "Cara British memperoleh tandatangan Sultan menimbulkan kemarahan 与 抗议 daripada Raja-raja Melayu 以及 马来人."
+        "英国人获得苏丹签名的方式引起了马来国王和马来人的愤怒和抗议。"
       ],
       "bm_focus_phrase": "Cara British memperoleh tandatangan Sultan menimbulkan kemarahan dan bantahan daripada Raja-raja Melayu serta orang Melayu."
     }

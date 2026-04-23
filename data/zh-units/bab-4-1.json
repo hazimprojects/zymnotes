@@ -1,510 +1,511 @@
 {
   "meta": {
     "source_file": "notes/bab-4-1.html",
-    "rollout": "gelombang-1-manual-revision"
+    "rollout": "gelombang-1-ms-zh-regenerated",
+    "notes": "Translate fields regenerated from bm_original (ms→zh-CN) for fluent Simplified Chinese; proper names follow translator output—verify against BM notes."
   },
   "units": [
     {
       "source_id": "bab-4-1-u13",
       "bm_original": "British Military Administration (BMA) ialah pentadbiran tentera British di Tanah Melayu yang bermula pada 12 September 1945 .",
-      "translate": "英国军事管制政府 (BMA) 是 行政 tentera British di 马来亚 的 bermula 于 12 September 1945 .",
+      "translate": "英国军事管理局（BMA）是英国在马来亚的军事管理局，成立于 1945 年 9 月 12 日。",
       "key_points_zh": [
-        "英国军事管制政府 (BMA) 是 行政 tentera British di 马来亚 的 bermula 于 12 September 1945 ."
+        "英国军事管理局（BMA）是英国在马来亚的军事管理局，成立于 1945 年 9 月 12 日。"
       ],
       "bm_focus_phrase": "British Military Administration (BMA) ialah pentadbiran tentera British di Tanah Melayu yang bermula pada 12 September 1945 ."
     },
     {
       "source_id": "bab-4-1-u14",
       "bm_original": "BMA berada di bawah arahan Lord Mountbatten , manakala hal ehwal awam dirancang oleh Brigedier Jeneral H.C. Willan .",
-      "translate": "BMA berada di bawah arahan Lord Mountbatten , manakala hal ehwal awam dirancang oleh Brigedier Jeneral H.C. Willan .",
+      "translate": "BMA 由蒙巴顿勋爵指挥，而公共事务则由 H.C. 准将负责规划。威兰.",
       "key_points_zh": [
-        "BMA berada di bawah arahan Lord Mountbatten , manakala hal ehwal awam dirancang oleh Brigedier Jeneral H.C. Willan ."
+        "BMA 由蒙巴顿勋爵指挥，而公共事务则由 H.C. 准将负责规划。威兰."
       ],
       "bm_focus_phrase": "BMA berada di bawah arahan Lord Mountbatten , manakala hal ehwal awam dirancang oleh Brigedier Jeneral H.C. Willan ."
     },
     {
       "source_id": "bab-4-1-u15",
       "bm_original": "Tujuan utama BMA ialah mengembalikan kestabilan dan keamanan serta memulihkan kepercayaan rakyat terhadap British.",
-      "translate": "目的 主要 BMA 是 恢复 kestabilan 与 keamanan 以及 恢复 kepercayaan 人民 针对 British.",
+      "translate": "BMA的主要目的是恢复稳定与和平，恢复人民对英国的信任。",
       "key_points_zh": [
-        "目的 主要 BMA 是 恢复 kestabilan 与 keamanan 以及 恢复 kepercayaan 人民 针对 British."
+        "BMA的主要目的是恢复稳定与和平，恢复人民对英国的信任。"
       ],
       "bm_focus_phrase": "Tujuan utama BMA ialah mengembalikan kestabilan dan keamanan serta memulihkan kepercayaan rakyat terhadap British."
     },
     {
       "source_id": "bab-4-1-u16",
       "bm_original": "Walau bagaimanapun, BMA gagal mengawal masalah keselamatan, inflasi, pasar gelap, bekalan makanan dan pemulihan ekonomi dengan berkesan.",
-      "translate": "重点：Walau bagaimanapun, BMA 失败 mengawal masalah keselamatan, inflasi, pasar gelap, bekalan makanan 与 pemulihan ekonomi 以 berkesan.",
+      "translate": "然而，BMA未能有效控制安全、通货膨胀、黑市、食品供应和经济复苏等问题。",
       "key_points_zh": [
-        "重点：Walau bagaimanapun, BMA 失败 mengawal masalah keselamatan, inflasi, pasar gelap, bekalan makanan 与 pemulihan ekonomi 以 berkesan."
+        "然而，BMA未能有效控制安全、通货膨胀、黑市、食品供应和经济复苏等问题。"
       ],
       "bm_focus_phrase": "Walau bagaimanapun, BMA gagal mengawal masalah keselamatan, inflasi, pasar gelap, bekalan makanan dan pemulihan ekonomi dengan berkesan."
     },
     {
       "source_id": "bab-4-1-u01",
       "bm_original": "British Military Administration (BMA) ialah pentadbiran tentera British di Tanah Melayu yang bertujuan memulihkan keamanan, kestabilan dan kepercayaan rakyat selepas perang. Namun, pentadbiran ini tidak berjaya sepenuhnya kerana banyak masalah harian rakyat masih gagal diatasi.",
-      "translate": "英国军事管制政府 (BMA) 是 行政 tentera British di 马来亚 的 bertujuan 恢复 keamanan, kestabilan 与 kepercayaan 人民 在…之后 perang. Namun, 行政 这 不 成功 sepenuhnya 因为 banyak masalah harian 人民 仍然 失败 diatasi.",
+      "translate": "英国军事管理局（BMA）是英国在马来亚的军事管理局，旨在战后恢复和平、稳定和人民的信任。然而，这届政府并没有完全成功，因为许多人民的日常问题仍未得到解决。",
       "key_points_zh": [
-        "英国军事管制政府 (BMA) 是 行政 tentera British di 马来亚 的 bertujuan 恢复 keamanan, kestabilan 与 kepercayaan 人民 在…之后 perang. Namun, 行政 这 不 成功 sepenuhnya 因为 banyak masalah harian 人民 仍然 失败 diatasi."
+        "英国军事管理局（BMA）是英国在马来亚的军事管理局，旨在战后恢复和平、稳定和人民的信任。然而，这届政府并没有完全成功，因为许多人民的日常问题仍未得到解决。"
       ],
       "bm_focus_phrase": "British Military Administration (BMA) ialah pentadbiran tentera British di Tanah Melayu yang bertujuan memulihkan keamanan, kestabilan dan kepercayaan rakyat selepas perang. Namun, pentadbiran ini tidak berjaya sepenuhnya kerana banyak masalah harian rakyat masih gagal diatasi."
     },
     {
       "source_id": "bab-4-1-u02",
       "bm_original": "BMA diletakkan di bawah arahan:",
-      "translate": "重点：BMA diletakkan di bawah arahan:",
+      "translate": "BMA 受以下机构领导：",
       "key_points_zh": [
-        "重点：BMA diletakkan di bawah arahan:"
+        "BMA 受以下机构领导："
       ],
       "bm_focus_phrase": "BMA diletakkan di bawah arahan:"
     },
     {
       "source_id": "bab-4-1-u17",
       "bm_original": "Lord Mountbatten → Pemerintah Tertinggi Tentera Bersekutu di Asia Tenggara ( 1943–1946 )",
-      "translate": "Lord Mountbatten → Pemerintah Tertinggi Tentera Bersekutu di Asia Tenggara ( 1943–1946 )",
+      "translate": "蒙巴顿勋爵 → 东南亚盟军最高统帅（1943-1946）",
       "key_points_zh": [
-        "Lord Mountbatten → Pemerintah Tertinggi Tentera Bersekutu di Asia Tenggara ( 1943–1946 )"
+        "蒙巴顿勋爵 → 东南亚盟军最高统帅（1943-1946）"
       ],
       "bm_focus_phrase": "Lord Mountbatten → Pemerintah Tertinggi Tentera Bersekutu di Asia Tenggara ( 1943–1946 )"
     },
     {
       "source_id": "bab-4-1-u03",
       "bm_original": "Perancangan hal ehwal awam di Tanah Melayu dilakukan oleh:",
-      "translate": "重点：Perancangan hal ehwal awam di 马来亚 dilakukan 由:",
+      "translate": "马来亚的公共事务规划是由以下人员完成的：",
       "key_points_zh": [
-        "重点：Perancangan hal ehwal awam di 马来亚 dilakukan 由:"
+        "马来亚的公共事务规划是由以下人员完成的："
       ],
       "bm_focus_phrase": "Perancangan hal ehwal awam di Tanah Melayu dilakukan oleh:"
     },
     {
       "source_id": "bab-4-1-u18",
       "bm_original": "Brigedier Jeneral H.C. Willan → Timbalan Ketua Pegawai Hal Ehwal Awam",
-      "translate": "Brigedier Jeneral H.C. Willan → Timbalan Ketua Pegawai Hal Ehwal Awam",
+      "translate": "H.C. 准将威兰 → 副首席公共事务官",
       "key_points_zh": [
-        "Brigedier Jeneral H.C. Willan → Timbalan Ketua Pegawai Hal Ehwal Awam"
+        "H.C. 准将威兰 → 副首席公共事务官"
       ],
       "bm_focus_phrase": "Brigedier Jeneral H.C. Willan → Timbalan Ketua Pegawai Hal Ehwal Awam"
     },
     {
       "source_id": "bab-4-1-u04",
       "bm_original": "Tujuan utama BMA ialah:",
-      "translate": "目的 主要 BMA 是:",
+      "translate": "BMA的主要目的是：",
       "key_points_zh": [
-        "目的 主要 BMA 是:"
+        "BMA的主要目的是："
       ],
       "bm_focus_phrase": "Tujuan utama BMA ialah:"
     },
     {
       "source_id": "bab-4-1-extra-1",
       "bm_original": "Mengembalikan kestabilan dan keamanan",
-      "translate": "重点：Mengembalikan kestabilan 与 keamanan",
+      "translate": "恢复稳定与和平",
       "key_points_zh": [
-        "重点：Mengembalikan kestabilan 与 keamanan"
+        "恢复稳定与和平"
       ],
       "bm_focus_phrase": "Mengembalikan kestabilan dan keamanan"
     },
     {
       "source_id": "bab-4-1-extra-2",
       "bm_original": "Memulihkan kepercayaan rakyat terhadap British",
-      "translate": "重点：Memulihkan kepercayaan 人民 针对 British",
+      "translate": "恢复人民对英国人的信任",
       "key_points_zh": [
-        "重点：Memulihkan kepercayaan 人民 针对 British"
+        "恢复人民对英国人的信任"
       ],
       "bm_focus_phrase": "Memulihkan kepercayaan rakyat terhadap British"
     },
     {
       "source_id": "bab-4-1-u05",
       "bm_original": "Selain itu, BMA juga gagal membanteras:",
-      "translate": "重点：Selain 那, BMA 也 失败 membanteras:",
+      "translate": "此外，BMA还未能打击：",
       "key_points_zh": [
-        "重点：Selain 那, BMA 也 失败 membanteras:"
+        "此外，BMA还未能打击："
       ],
       "bm_focus_phrase": "Selain itu, BMA juga gagal membanteras:"
     },
     {
       "source_id": "bab-4-1-extra-3",
       "bm_original": "Kegiatan jenayah",
-      "translate": "重点：Kegiatan jenayah",
+      "translate": "犯罪活动",
       "key_points_zh": [
-        "重点：Kegiatan jenayah"
+        "犯罪活动"
       ],
       "bm_focus_phrase": "Kegiatan jenayah"
     },
     {
       "source_id": "bab-4-1-extra-4",
       "bm_original": "Keganasan",
-      "translate": "重点：Keganasan",
+      "translate": "暴力",
       "key_points_zh": [
-        "重点：Keganasan"
+        "暴力"
       ],
       "bm_focus_phrase": "Keganasan"
     },
     {
       "source_id": "bab-4-1-extra-5",
       "bm_original": "Kongsi gelap",
-      "translate": "重点：Kongsi gelap",
+      "translate": "分享黑暗",
       "key_points_zh": [
-        "重点：Kongsi gelap"
+        "分享黑暗"
       ],
       "bm_focus_phrase": "Kongsi gelap"
     },
     {
       "source_id": "bab-4-1-extra-6",
       "bm_original": "Ketegangan kaum",
-      "translate": "重点：Ketegangan kaum",
+      "translate": "种族紧张局势",
       "key_points_zh": [
-        "重点：Ketegangan kaum"
+        "种族紧张局势"
       ],
       "bm_focus_phrase": "Ketegangan kaum"
     },
     {
       "source_id": "bab-4-1-u06",
       "bm_original": "Antara masalah yang dihadapi rakyat ialah:",
-      "translate": "重点：Antara masalah 的 dihadapi 人民 是:",
+      "translate": "人们面临的问题包括：",
       "key_points_zh": [
-        "重点：Antara masalah 的 dihadapi 人民 是:"
+        "人们面临的问题包括："
       ],
       "bm_focus_phrase": "Antara masalah yang dihadapi rakyat ialah:"
     },
     {
       "source_id": "bab-4-1-extra-7",
       "bm_original": "Bekalan makanan sukar diperoleh",
-      "translate": "重点：Bekalan makanan sukar diperoleh",
+      "translate": "粮食供应来之不易",
       "key_points_zh": [
-        "重点：Bekalan makanan sukar diperoleh"
+        "粮食供应来之不易"
       ],
       "bm_focus_phrase": "Bekalan makanan sukar diperoleh"
     },
     {
       "source_id": "bab-4-1-extra-8",
       "bm_original": "Ubat-ubatan tidak mencukupi",
-      "translate": "重点：Ubat-ubatan 不 mencukupi",
+      "translate": "药物还不够",
       "key_points_zh": [
-        "重点：Ubat-ubatan 不 mencukupi"
+        "药物还不够"
       ],
       "bm_focus_phrase": "Ubat-ubatan tidak mencukupi"
     },
     {
       "source_id": "bab-4-1-extra-9",
       "bm_original": "Harga barang melambung tinggi",
-      "translate": "重点：Harga barang melambung tinggi",
+      "translate": "商品价格飙升",
       "key_points_zh": [
-        "重点：Harga barang melambung tinggi"
+        "商品价格飙升"
       ],
       "bm_focus_phrase": "Harga barang melambung tinggi"
     },
     {
       "source_id": "bab-4-1-extra-10",
       "bm_original": "Wabak penyakit merebak",
-      "translate": "重点：Wabak penyakit merebak",
+      "translate": "疾病爆发蔓延",
       "key_points_zh": [
-        "重点：Wabak penyakit merebak"
+        "疾病爆发蔓延"
       ],
       "bm_focus_phrase": "Wabak penyakit merebak"
     },
     {
       "source_id": "bab-4-1-extra-11",
       "bm_original": "Kebuluran berlaku di banyak tempat",
-      "translate": "重点：Kebuluran 发生 di banyak tempat",
+      "translate": "多地发生饥荒",
       "key_points_zh": [
-        "重点：Kebuluran 发生 di banyak tempat"
+        "多地发生饥荒"
       ],
       "bm_focus_phrase": "Kebuluran berlaku di banyak tempat"
     },
     {
       "source_id": "bab-4-1-u07",
       "bm_original": "Pada masa yang sama, kegiatan berikut semakin berleluasa:",
-      "translate": "重点：Pada masa 的 sama, kegiatan berikut semakin berleluasa:",
+      "translate": "与此同时，以下活动变得越来越普遍：",
       "key_points_zh": [
-        "重点：Pada masa 的 sama, kegiatan berikut semakin berleluasa:"
+        "与此同时，以下活动变得越来越普遍："
       ],
       "bm_focus_phrase": "Pada masa yang sama, kegiatan berikut semakin berleluasa:"
     },
     {
       "source_id": "bab-4-1-extra-12",
       "bm_original": "Menyorok barang",
-      "translate": "重点：Menyorok barang",
+      "translate": "藏东西",
       "key_points_zh": [
-        "重点：Menyorok barang"
+        "藏东西"
       ],
       "bm_focus_phrase": "Menyorok barang"
     },
     {
       "source_id": "bab-4-1-extra-13",
       "bm_original": "Rasuah",
-      "translate": "重点：Rasuah",
+      "translate": "腐败",
       "key_points_zh": [
-        "重点：Rasuah"
+        "腐败"
       ],
       "bm_focus_phrase": "Rasuah"
     },
     {
       "source_id": "bab-4-1-extra-14",
       "bm_original": "Peras ugut",
-      "translate": "重点：Peras ugut",
+      "translate": "勒索",
       "key_points_zh": [
-        "重点：Peras ugut"
+        "勒索"
       ],
       "bm_focus_phrase": "Peras ugut"
     },
     {
       "source_id": "bab-4-1-extra-15",
       "bm_original": "Pasar gelap",
-      "translate": "重点：Pasar gelap",
+      "translate": "黑市",
       "key_points_zh": [
-        "重点：Pasar gelap"
+        "黑市"
       ],
       "bm_focus_phrase": "Pasar gelap"
     },
     {
       "source_id": "bab-4-1-u08",
       "bm_original": "Antara barang yang mengalami kenaikan harga:",
-      "translate": "重点：Antara barang 的 mengalami kenaikan harga:",
+      "translate": "价格上涨的商品包括：",
       "key_points_zh": [
-        "重点：Antara barang 的 mengalami kenaikan harga:"
+        "价格上涨的商品包括："
       ],
       "bm_focus_phrase": "Antara barang yang mengalami kenaikan harga:"
     },
     {
       "source_id": "bab-4-1-extra-16",
       "bm_original": "Beras",
-      "translate": "重点：Beras",
+      "translate": "米",
       "key_points_zh": [
-        "重点：Beras"
+        "米"
       ],
       "bm_focus_phrase": "Beras"
     },
     {
       "source_id": "bab-4-1-extra-17",
       "bm_original": "Gula",
-      "translate": "重点：Gula",
+      "translate": "糖",
       "key_points_zh": [
-        "重点：Gula"
+        "糖"
       ],
       "bm_focus_phrase": "Gula"
     },
     {
       "source_id": "bab-4-1-extra-18",
       "bm_original": "Garam",
-      "translate": "重点：Garam",
+      "translate": "盐",
       "key_points_zh": [
-        "重点：Garam"
+        "盐"
       ],
       "bm_focus_phrase": "Garam"
     },
     {
       "source_id": "bab-4-1-extra-19",
       "bm_original": "Telur",
-      "translate": "重点：Telur",
+      "translate": "鸡蛋",
       "key_points_zh": [
-        "重点：Telur"
+        "鸡蛋"
       ],
       "bm_focus_phrase": "Telur"
     },
     {
       "source_id": "bab-4-1-extra-20",
       "bm_original": "Petrol",
-      "translate": "重点：Petrol",
+      "translate": "汽油",
       "key_points_zh": [
-        "重点：Petrol"
+        "汽油"
       ],
       "bm_focus_phrase": "Petrol"
     },
     {
       "source_id": "bab-4-1-extra-21",
       "bm_original": "Menyelamatkan mereka",
-      "translate": "重点：Menyelamatkan mereka",
+      "translate": "拯救他们",
       "key_points_zh": [
-        "重点：Menyelamatkan mereka"
+        "拯救他们"
       ],
       "bm_focus_phrase": "Menyelamatkan mereka"
     },
     {
       "source_id": "bab-4-1-extra-22",
       "bm_original": "Memulihkan kehidupan harian",
-      "translate": "重点：Memulihkan kehidupan harian",
+      "translate": "恢复日常生活",
       "key_points_zh": [
-        "重点：Memulihkan kehidupan harian"
+        "恢复日常生活"
       ],
       "bm_focus_phrase": "Memulihkan kehidupan harian"
     },
     {
       "source_id": "bab-4-1-extra-23",
       "bm_original": "Mengembalikan pentadbiran yang teratur",
-      "translate": "重点：Mengembalikan 行政 的 teratur",
+      "translate": "恢复行政秩序",
       "key_points_zh": [
-        "重点：Mengembalikan 行政 的 teratur"
+        "恢复行政秩序"
       ],
       "bm_focus_phrase": "Mengembalikan pentadbiran yang teratur"
     },
     {
       "source_id": "bab-4-1-u09",
       "bm_original": "BMA juga berusaha membaiki kerosakan perang seperti:",
-      "translate": "重点：BMA 也 berusaha membaiki kerosakan perang seperti:",
+      "translate": "BMA 还致力于修复战争损害，例如：",
       "key_points_zh": [
-        "重点：BMA 也 berusaha membaiki kerosakan perang seperti:"
+        "BMA 还致力于修复战争损害，例如："
       ],
       "bm_focus_phrase": "BMA juga berusaha membaiki kerosakan perang seperti:"
     },
     {
       "source_id": "bab-4-1-extra-24",
       "bm_original": "Kemudahan kesihatan",
-      "translate": "重点：Kemudahan kesihatan",
+      "translate": "卫生设施",
       "key_points_zh": [
-        "重点：Kemudahan kesihatan"
+        "卫生设施"
       ],
       "bm_focus_phrase": "Kemudahan kesihatan"
     },
     {
       "source_id": "bab-4-1-extra-25",
       "bm_original": "Prasarana awam",
-      "translate": "重点：Prasarana awam",
+      "translate": "公共基础设施",
       "key_points_zh": [
-        "重点：Prasarana awam"
+        "公共基础设施"
       ],
       "bm_focus_phrase": "Prasarana awam"
     },
     {
       "source_id": "bab-4-1-extra-26",
       "bm_original": "Ladang getah",
-      "translate": "重点：Ladang getah",
+      "translate": "橡胶园",
       "key_points_zh": [
-        "重点：Ladang getah"
+        "橡胶园"
       ],
       "bm_focus_phrase": "Ladang getah"
     },
     {
       "source_id": "bab-4-1-extra-27",
       "bm_original": "Lombong bijih timah",
-      "translate": "重点：Lombong bijih timah",
+      "translate": "锡矿",
       "key_points_zh": [
-        "重点：Lombong bijih timah"
+        "锡矿"
       ],
       "bm_focus_phrase": "Lombong bijih timah"
     },
     {
       "source_id": "bab-4-1-u10",
       "bm_original": "Antara kesukaran yang dihadapi ialah kekurangan:",
-      "translate": "重点：Antara kesukaran 的 dihadapi 是 kekurangan:",
+      "translate": "面临的困难包括：",
       "key_points_zh": [
-        "重点：Antara kesukaran 的 dihadapi 是 kekurangan:"
+        "面临的困难包括："
       ],
       "bm_focus_phrase": "Antara kesukaran yang dihadapi ialah kekurangan:"
     },
     {
       "source_id": "bab-4-1-extra-28",
       "bm_original": "Jentera",
-      "translate": "重点：Jentera",
+      "translate": "机械",
       "key_points_zh": [
-        "重点：Jentera"
+        "机械"
       ],
       "bm_focus_phrase": "Jentera"
     },
     {
       "source_id": "bab-4-1-extra-29",
       "bm_original": "Alat ganti",
-      "translate": "重点：Alat ganti",
+      "translate": "备件",
       "key_points_zh": [
-        "重点：Alat ganti"
+        "备件"
       ],
       "bm_focus_phrase": "Alat ganti"
     },
     {
       "source_id": "bab-4-1-extra-30",
       "bm_original": "Mesin",
-      "translate": "重点：Mesin",
+      "translate": "机器",
       "key_points_zh": [
-        "重点：Mesin"
+        "机器"
       ],
       "bm_focus_phrase": "Mesin"
     },
     {
       "source_id": "bab-4-1-extra-31",
       "bm_original": "Teknologi",
-      "translate": "重点：Teknologi",
+      "translate": "技术",
       "key_points_zh": [
-        "重点：Teknologi"
+        "技术"
       ],
       "bm_focus_phrase": "Teknologi"
     },
     {
       "source_id": "bab-4-1-u11",
       "bm_original": "Walaupun BMA cuba mengatasi kekacauan yang berlaku, rakyat tetap berasa hampa terhadap ketidakupayaannya menangani masalah harian mereka.",
-      "translate": "Walaupun BMA cuba mengatasi kekacauan 的 发生, 人民 tetap berasa hampa 针对 ketidakupayaannya menangani masalah harian mereka.",
+      "translate": "尽管BMA正在努力解决混乱问题，但人们仍然对其无力处理日常问题感到空虚。",
       "key_points_zh": [
-        "Walaupun BMA cuba mengatasi kekacauan 的 发生, 人民 tetap berasa hampa 针对 ketidakupayaannya menangani masalah harian mereka."
+        "尽管BMA正在努力解决混乱问题，但人们仍然对其无力处理日常问题感到空虚。"
       ],
       "bm_focus_phrase": "Walaupun BMA cuba mengatasi kekacauan yang berlaku, rakyat tetap berasa hampa terhadap ketidakupayaannya menangani masalah harian mereka."
     },
     {
       "source_id": "bab-4-1-extra-32",
       "bm_original": "Memulihkan keamanan negara",
-      "translate": "重点：Memulihkan keamanan negara",
+      "translate": "恢复国家安全",
       "key_points_zh": [
-        "重点：Memulihkan keamanan negara"
+        "恢复国家安全"
       ],
       "bm_focus_phrase": "Memulihkan keamanan negara"
     },
     {
       "source_id": "bab-4-1-extra-33",
       "bm_original": "Mengembalikan kepercayaan rakyat",
-      "translate": "重点：Mengembalikan kepercayaan 人民",
+      "translate": "恢复人民的信任",
       "key_points_zh": [
-        "重点：Mengembalikan kepercayaan 人民"
+        "恢复人民的信任"
       ],
       "bm_focus_phrase": "Mengembalikan kepercayaan rakyat"
     },
     {
       "source_id": "bab-4-1-extra-34",
       "bm_original": "Membaiki sosioekonomi dan infrastruktur",
-      "translate": "重点：Membaiki sosioekonomi 与 infrastruktur",
+      "translate": "改善社会经济和基础设施",
       "key_points_zh": [
-        "重点：Membaiki sosioekonomi 与 infrastruktur"
+        "改善社会经济和基础设施"
       ],
       "bm_focus_phrase": "Membaiki sosioekonomi dan infrastruktur"
     },
     {
       "source_id": "bab-4-1-extra-35",
       "bm_original": "Menghapuskan jenayah dan keganasan",
-      "translate": "重点：Menghapuskan jenayah 与 keganasan",
+      "translate": "消除犯罪和暴力",
       "key_points_zh": [
-        "重点：Menghapuskan jenayah 与 keganasan"
+        "消除犯罪和暴力"
       ],
       "bm_focus_phrase": "Menghapuskan jenayah dan keganasan"
     },
     {
       "source_id": "bab-4-1-extra-36",
       "bm_original": "Mengawal inflasi dan pasar gelap",
-      "translate": "重点：Mengawal inflasi 与 pasar gelap",
+      "translate": "控制通货膨胀和黑市",
       "key_points_zh": [
-        "重点：Mengawal inflasi 与 pasar gelap"
+        "控制通货膨胀和黑市"
       ],
       "bm_focus_phrase": "Mengawal inflasi dan pasar gelap"
     },
     {
       "source_id": "bab-4-1-extra-37",
       "bm_original": "Menyelesaikan masalah bekalan makanan",
-      "translate": "重点：Menyelesaikan masalah bekalan makanan",
+      "translate": "解决粮食供应问题",
       "key_points_zh": [
-        "重点：Menyelesaikan masalah bekalan makanan"
+        "解决粮食供应问题"
       ],
       "bm_focus_phrase": "Menyelesaikan masalah bekalan makanan"
     },
     {
       "source_id": "bab-4-1-extra-38",
       "bm_original": "Memulihkan ekonomi dengan cepat",
-      "translate": "重点：Memulihkan ekonomi 以 cepat",
+      "translate": "经济快速复苏",
       "key_points_zh": [
-        "重点：Memulihkan ekonomi 以 cepat"
+        "经济快速复苏"
       ],
       "bm_focus_phrase": "Memulihkan ekonomi dengan cepat"
     },
     {
       "source_id": "bab-4-1-u12",
       "bm_original": "Kegagalan BMA memberi kesedaran bahawa rakyat tidak boleh terlalu bergantung kepada kuasa asing untuk menyelesaikan masalah negara.",
-      "translate": "Kegagalan BMA memberi kesedaran bahawa 人民 不 可以 terlalu bergantung 给/向 权力 asing 为了 menyelesaikan masalah negara.",
+      "translate": "BMA的失败让人们认识到，人们不应过度依赖外国势力来解决国家问题。",
       "key_points_zh": [
-        "Kegagalan BMA memberi kesedaran bahawa 人民 不 可以 terlalu bergantung 给/向 权力 asing 为了 menyelesaikan masalah negara."
+        "BMA的失败让人们认识到，人们不应过度依赖外国势力来解决国家问题。"
       ],
       "bm_focus_phrase": "Kegagalan BMA memberi kesedaran bahawa rakyat tidak boleh terlalu bergantung kepada kuasa asing untuk menyelesaikan masalah negara."
     }

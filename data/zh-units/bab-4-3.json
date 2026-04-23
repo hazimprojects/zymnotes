@@ -1,816 +1,817 @@
 {
   "meta": {
     "source_file": "notes/bab-4-3.html",
-    "rollout": "gelombang-1-manual-revision"
+    "rollout": "gelombang-1-ms-zh-regenerated",
+    "notes": "Translate fields regenerated from bm_original (ms→zh-CN) for fluent Simplified Chinese; proper names follow translator output—verify against BM notes."
   },
   "units": [
     {
       "source_id": "bab-4-3-u24",
       "bm_original": "Pengisytiharan Malayan Union pada 1 April 1946 mencetuskan penentangan yang hebat daripada Raja-raja Melayu , orang Melayu, persatuan Melayu dan beberapa bekas pegawai British.",
-      "translate": "1946年4月1日宣布成立 Malayan Union 后，引发强烈反对，包括 Raja-raja Melayu、马来社群、马来团体与部分前英国官员。",
+      "translate": "1946年4月1日宣布成立马来亚联邦，引起了马来统治者、马来人、马来协会和一些前英国官员的强烈反对。",
       "key_points_zh": [
-        "1946年4月1日宣布成立 Malayan Union 后，引发强烈反对，包括 Raja-raja Melayu、马来社群、马来团体与部分前英国官员。"
+        "1946年4月1日宣布成立马来亚联邦，引起了马来统治者、马来人、马来协会和一些前英国官员的强烈反对。"
       ],
       "bm_focus_phrase": "Pengisytiharan Malayan Union pada 1 April 1946 mencetuskan penentangan yang hebat daripada Raja-raja Melayu , orang Melayu, persatuan Melayu dan beberapa bekas pegawai British."
     },
     {
       "source_id": "bab-4-3-u25",
       "bm_original": "Penentangan berlaku kerana Malayan Union dianggap menghapuskan kedaulatan Raja-raja Melayu dan menjadi satu bentuk penjajahan baharu oleh British.",
-      "translate": "各方反对 Malayan Union，因为它被视为削弱 Raja-raja Melayu 主权，并构成英国新的殖民形式。",
+      "translate": "抵抗之所以发生，是因为马来亚联盟被英国认为废除了马来国王的主权，成为新形式的殖民主义。",
       "key_points_zh": [
-        "各方反对 Malayan Union，因为它被视为削弱 Raja-raja Melayu 主权，并构成英国新的殖民形式。"
+        "抵抗之所以发生，是因为马来亚联盟被英国认为废除了马来国王的主权，成为新形式的殖民主义。"
       ],
       "bm_focus_phrase": "Penentangan berlaku kerana Malayan Union dianggap menghapuskan kedaulatan Raja-raja Melayu dan menjadi satu bentuk penjajahan baharu oleh British."
     },
     {
       "source_id": "bab-4-3-u26",
       "bm_original": "Akhbar Melayu, golongan cendekiawan, wanita dan persatuan Melayu memainkan peranan penting dalam membangkitkan kesedaran dan menyatukan orang Melayu.",
-      "translate": "马来报章、知识分子、妇女与马来团体在唤醒民族意识和团结马来人方面发挥关键作用。",
+      "translate": "马来媒体、知识分子、妇女和马来人协会在提高马来人意识和团结马来人方面发挥着重要作用。",
       "key_points_zh": [
-        "马来报章、知识分子、妇女与马来团体在唤醒民族意识和团结马来人方面发挥关键作用。"
+        "马来媒体、知识分子、妇女和马来人协会在提高马来人意识和团结马来人方面发挥着重要作用。"
       ],
       "bm_focus_phrase": "Akhbar Melayu, golongan cendekiawan, wanita dan persatuan Melayu memainkan peranan penting dalam membangkitkan kesedaran dan menyatukan orang Melayu."
     },
     {
       "source_id": "bab-4-3-u27",
       "bm_original": "Penentangan terhadap Malayan Union akhirnya membawa kepada penubuhan UMNO dan menjadi titik penting dalam perkembangan nasionalisme selepas perang.",
-      "translate": "反对 Malayan Union 的运动最终促成 UMNO 成立，成为战后民族主义发展的重要转折点。",
+      "translate": "对马来亚联邦的反对最终导致巫统的成立，并成为战后民族主义发展的一个重要点。",
       "key_points_zh": [
-        "反对 Malayan Union 的运动最终促成 UMNO 成立，成为战后民族主义发展的重要转折点。"
+        "对马来亚联邦的反对最终导致巫统的成立，并成为战后民族主义发展的一个重要点。"
       ],
       "bm_focus_phrase": "Penentangan terhadap Malayan Union akhirnya membawa kepada penubuhan UMNO dan menjadi titik penting dalam perkembangan nasionalisme selepas perang."
     },
     {
       "source_id": "bab-4-3-u01",
       "bm_original": "Pengisytiharan Malayan Union pada 1 April 1946 telah mencetuskan penentangan yang hebat, khususnya daripada Raja-raja Melayu , orang Melayu, persatuan Melayu dan juga beberapa bekas pegawai British yang pernah berkhidmat di Tanah Melayu .",
-      "translate": "Malayan Union 于1946年4月1日宣布后，遭到强烈反对，尤其来自 Raja-raja Melayu、马来人、马来团体及曾在 Tanah Melayu 服务的前英国官员。",
+      "translate": "1946年4月1日宣布成立马来亚联邦，引起了极大的反对，尤其是来自马来统治者、马来人、马来协会，甚至一些曾在马来亚服役的前英国军官。",
       "key_points_zh": [
-        "Malayan Union 于1946年4月1日宣布后，遭到强烈反对，尤其来自 Raja-raja Melayu、马来人、马来团体及曾在 Tanah Melayu 服务的前英国官员。"
+        "1946年4月1日宣布成立马来亚联邦，引起了极大的反对，尤其是来自马来统治者、马来人、马来协会，甚至一些曾在马来亚服役的前英国军官。"
       ],
       "bm_focus_phrase": "Pengisytiharan Malayan Union pada 1 April 1946 telah mencetuskan penentangan yang hebat, khususnya daripada Raja-raja Melayu , orang Melayu, persatuan Melayu dan juga beberapa bekas pegawai British yang pernah berkhidmat di Tanah Melayu ."
     },
     {
       "source_id": "bab-4-3-extra-1",
       "bm_original": "Satu bentuk penjajahan baharu oleh British",
-      "translate": "英国新的殖民形式。",
+      "translate": "英国新形式的殖民",
       "key_points_zh": [
-        "英国新的殖民形式。"
+        "英国新形式的殖民"
       ],
       "bm_focus_phrase": "Satu bentuk penjajahan baharu oleh British"
     },
     {
       "source_id": "bab-4-3-extra-2",
       "bm_original": "Menghapuskan kedaulatan Raja-raja Melayu",
-      "translate": "Menghapuskan kedaulatan Raja-raja Melayu",
+      "translate": "废除马来国王的主权",
       "key_points_zh": [
-        "Menghapuskan kedaulatan Raja-raja Melayu"
+        "废除马来国王的主权"
       ],
       "bm_focus_phrase": "Menghapuskan kedaulatan Raja-raja Melayu"
     },
     {
       "source_id": "bab-4-3-extra-3",
       "bm_original": "Melonggarkan syarat kewarganegaraan secara berlebihan",
-      "translate": "过度放宽公民资格条件。",
+      "translate": "过度放松公民身份要求",
       "key_points_zh": [
-        "过度放宽公民资格条件。"
+        "过度放松公民身份要求"
       ],
       "bm_focus_phrase": "Melonggarkan syarat kewarganegaraan secara berlebihan"
     },
     {
       "source_id": "bab-4-3-extra-4",
       "bm_original": "Mengancam kedudukan politik dan masa depan orang Melayu",
-      "translate": "威胁马来人的政治地位与未来。",
+      "translate": "威胁马来人的政治地位和未来",
       "key_points_zh": [
-        "威胁马来人的政治地位与未来。"
+        "威胁马来人的政治地位和未来"
       ],
       "bm_focus_phrase": "Mengancam kedudukan politik dan masa depan orang Melayu"
     },
     {
       "source_id": "bab-4-3-u02",
       "bm_original": "Antara sebab utama penentangan Raja-raja Melayu ialah:",
-      "translate": "Raja-raja Melayu 反对的主要原因如下：",
+      "translate": "马来国王抵抗的主要原因包括：",
       "key_points_zh": [
-        "Raja-raja Melayu 反对的主要原因如下："
+        "马来国王抵抗的主要原因包括："
       ],
       "bm_focus_phrase": "Antara sebab utama penentangan Raja-raja Melayu ialah:"
     },
     {
       "source_id": "bab-4-3-extra-5",
       "bm_original": "Malayan Union dianggap sebagai penjajahan mutlak oleh British",
-      "translate": "Malayan Union 被视为英国的全面殖民统治。",
+      "translate": "英国人认为马来亚联盟是绝对的殖民主义",
       "key_points_zh": [
-        "Malayan Union 被视为英国的全面殖民统治。"
+        "英国人认为马来亚联盟是绝对的殖民主义"
       ],
       "bm_focus_phrase": "Malayan Union dianggap sebagai penjajahan mutlak oleh British"
     },
     {
       "source_id": "bab-4-3-extra-6",
       "bm_original": "Sultan kehilangan kedaulatan dan kuasa politik",
-      "translate": "Sultan kehilangan kedaulatan dan kuasa politik",
+      "translate": "苏丹失去了主权和政治权力",
       "key_points_zh": [
-        "Sultan kehilangan kedaulatan dan kuasa politik"
+        "苏丹失去了主权和政治权力"
       ],
       "bm_focus_phrase": "Sultan kehilangan kedaulatan dan kuasa politik"
     },
     {
       "source_id": "bab-4-3-extra-7",
       "bm_original": "Persetujuan diperoleh secara tidak sah dan melalui tekanan",
-      "translate": "同意是在施压下以不合法方式取得。",
+      "translate": "同意是通过非法手段和胁迫获得的",
       "key_points_zh": [
-        "同意是在施压下以不合法方式取得。"
+        "同意是通过非法手段和胁迫获得的"
       ],
       "bm_focus_phrase": "Persetujuan diperoleh secara tidak sah dan melalui tekanan"
     },
     {
       "source_id": "bab-4-3-u03",
       "bm_original": "Sultan yang bersedia berangkat ke England jika diperlukan ialah:",
-      "translate": "如有需要，愿意前往 England 的 Sultan 包括：",
+      "translate": "如果需要的话，准备前往英格兰的苏丹是：",
       "key_points_zh": [
-        "如有需要，愿意前往 England 的 Sultan 包括："
+        "如果需要的话，准备前往英格兰的苏丹是："
       ],
       "bm_focus_phrase": "Sultan yang bersedia berangkat ke England jika diperlukan ialah:"
     },
     {
       "source_id": "bab-4-3-extra-8",
       "bm_original": "Sultan Perak",
-      "translate": "Sultan Perak",
+      "translate": "霹雳州苏丹",
       "key_points_zh": [
-        "Sultan Perak"
+        "霹雳州苏丹"
       ],
       "bm_focus_phrase": "Sultan Perak"
     },
     {
       "source_id": "bab-4-3-extra-9",
       "bm_original": "Sultan Kedah",
-      "translate": "Sultan Kedah",
+      "translate": "吉打苏丹",
       "key_points_zh": [
-        "Sultan Kedah"
+        "吉打苏丹"
       ],
       "bm_focus_phrase": "Sultan Kedah"
     },
     {
       "source_id": "bab-4-3-extra-10",
       "bm_original": "Sultan Johor",
-      "translate": "Sultan Johor",
+      "translate": "柔佛苏丹",
       "key_points_zh": [
-        "Sultan Johor"
+        "柔佛苏丹"
       ],
       "bm_focus_phrase": "Sultan Johor"
     },
     {
       "source_id": "bab-4-3-u04",
       "bm_original": "Menurut sistem perundangan British, cara MacMichael mendapatkan persetujuan Raja-raja Melayu dianggap tidak sah.",
-      "translate": "Menurut sistem perundangan British, cara MacMichael mendapatkan persetujuan Raja-raja Melayu dianggap tidak sah.",
+      "translate": "根据英国法律制度，麦克迈克尔获得马来统治者同意的方法被认为是无效的。",
       "key_points_zh": [
-        "Menurut sistem perundangan British, cara MacMichael mendapatkan persetujuan Raja-raja Melayu dianggap tidak sah."
+        "根据英国法律制度，麦克迈克尔获得马来统治者同意的方法被认为是无效的。"
       ],
       "bm_focus_phrase": "Menurut sistem perundangan British, cara MacMichael mendapatkan persetujuan Raja-raja Melayu dianggap tidak sah."
     },
     {
       "source_id": "bab-4-3-u05",
       "bm_original": "Dalam surat itu, mereka mendakwa telah:",
-      "translate": "在该信函中，他们声称自己曾：",
+      "translate": "他们在信中声称拥有：",
       "key_points_zh": [
-        "在该信函中，他们声称自己曾："
+        "他们在信中声称拥有："
       ],
       "bm_focus_phrase": "Dalam surat itu, mereka mendakwa telah:"
     },
     {
       "source_id": "bab-4-3-extra-11",
       "bm_original": "Diperdaya oleh MacMichael",
-      "translate": "Diperdaya oleh MacMichael",
+      "translate": "被麦克迈克尔欺骗了",
       "key_points_zh": [
-        "Diperdaya oleh MacMichael"
+        "被麦克迈克尔欺骗了"
       ],
       "bm_focus_phrase": "Diperdaya oleh MacMichael"
     },
     {
       "source_id": "bab-4-3-extra-12",
       "bm_original": "Diugut supaya menurunkan tandatangan",
-      "translate": "被威胁签字。",
+      "translate": "威胁要签字",
       "key_points_zh": [
-        "被威胁签字。"
+        "威胁要签字"
       ],
       "bm_focus_phrase": "Diugut supaya menurunkan tandatangan"
     },
     {
       "source_id": "bab-4-3-extra-13",
       "bm_original": "Dipaksa bersetuju tanpa memahami kesannya",
-      "translate": "在未充分理解后果下被迫同意。",
+      "translate": "在不了解后果的情况下被迫同意",
       "key_points_zh": [
-        "在未充分理解后果下被迫同意。"
+        "在不了解后果的情况下被迫同意"
       ],
       "bm_focus_phrase": "Dipaksa bersetuju tanpa memahami kesannya"
     },
     {
       "source_id": "bab-4-3-u06",
       "bm_original": "Baginda juga merasmikan pembukaan Kongres Melayu Pertama. Hal ini menunjukkan bahawa Raja-raja Melayu bersama-sama dengan rakyat dalam menentang Malayan Union.",
-      "translate": "此举也显示 Raja-raja Melayu 与人民并肩反对 Malayan Union。",
+      "translate": "陛下还主持了第一届马来人代表大会的开幕。这表明马来统治者与人民一起反对马来亚联邦。",
       "key_points_zh": [
-        "此举也显示 Raja-raja Melayu 与人民并肩反对 Malayan Union。"
+        "陛下还主持了第一届马来人代表大会的开幕。这表明马来统治者与人民一起反对马来亚联邦。"
       ],
       "bm_focus_phrase": "Baginda juga merasmikan pembukaan Kongres Melayu Pertama. Hal ini menunjukkan bahawa Raja-raja Melayu bersama-sama dengan rakyat dalam menentang Malayan Union."
     },
     {
       "source_id": "bab-4-3-u07",
       "bm_original": "Dalam perhimpunan ini, Tuanku Permaisuri Perak, Raja Perempuan Kelsom mengetuai barisan hadapan perarakan bersama wanita Perak.",
-      "translate": "在这场集会中，Tuanku Permaisuri Perak, Raja Perempuan Kelsom 率领 wanita Perak 走在游行前列。",
+      "translate": "在这次聚会中，霹雳州女王陛下 Raja Perempuan Kelsom 与霹雳州妇女一起走在游行队伍的最前线。",
       "key_points_zh": [
-        "在这场集会中，Tuanku Permaisuri Perak, Raja Perempuan Kelsom 率领 wanita Perak 走在游行前列。"
+        "在这次聚会中，霹雳州女王陛下 Raja Perempuan Kelsom 与霹雳州妇女一起走在游行队伍的最前线。"
       ],
       "bm_focus_phrase": "Dalam perhimpunan ini, Tuanku Permaisuri Perak, Raja Perempuan Kelsom mengetuai barisan hadapan perarakan bersama wanita Perak."
     },
     {
       "source_id": "bab-4-3-u08",
       "bm_original": "Peristiwa ini memperlihatkan gabungan raja dan rakyat dalam menentang Malayan Union.",
-      "translate": "Peristiwa ini memperlihatkan gabungan raja dan rakyat dalam menentang Malayan Union.",
+      "translate": "这一事件显示了国王和人民联合起来反对马来亚联盟。",
       "key_points_zh": [
-        "Peristiwa ini memperlihatkan gabungan raja dan rakyat dalam menentang Malayan Union."
+        "这一事件显示了国王和人民联合起来反对马来亚联盟。"
       ],
       "bm_focus_phrase": "Peristiwa ini memperlihatkan gabungan raja dan rakyat dalam menentang Malayan Union."
     },
     {
       "source_id": "bab-4-3-u09",
       "bm_original": "Ribuan orang Melayu berhimpun sambil melaungkan:",
-      "translate": "数千名马来人集会并高呼：",
+      "translate": "数以千计的马来人聚集在一起高呼：",
       "key_points_zh": [
-        "数千名马来人集会并高呼："
+        "数以千计的马来人聚集在一起高呼："
       ],
       "bm_focus_phrase": "Ribuan orang Melayu berhimpun sambil melaungkan:"
     },
     {
       "source_id": "bab-4-3-extra-14",
       "bm_original": "“Daulat Tuanku!”",
-      "translate": "“Daulat Tuanku!”",
+      "translate": "“陛下！”",
       "key_points_zh": [
-        "“Daulat Tuanku!”"
+        "“陛下！”"
       ],
       "bm_focus_phrase": "“Daulat Tuanku!”"
     },
     {
       "source_id": "bab-4-3-extra-15",
       "bm_original": "“Hidup Melayu!”",
-      "translate": "“Hidup Melayu!”",
+      "translate": "“马来人的生活！”",
       "key_points_zh": [
-        "“Hidup Melayu!”"
+        "“马来人的生活！”"
       ],
       "bm_focus_phrase": "“Hidup Melayu!”"
     },
     {
       "source_id": "bab-4-3-u10",
       "bm_original": "Tindakan ini membuktikan ketegasan Raja-raja Melayu menolak Malayan Union.",
-      "translate": "Tindakan ini membuktikan ketegasan Raja-raja Melayu menolak Malayan Union.",
+      "translate": "这一行动证明了马来统治者拒绝马来亚联邦的决心。",
       "key_points_zh": [
-        "Tindakan ini membuktikan ketegasan Raja-raja Melayu menolak Malayan Union."
+        "这一行动证明了马来统治者拒绝马来亚联邦的决心。"
       ],
       "bm_focus_phrase": "Tindakan ini membuktikan ketegasan Raja-raja Melayu menolak Malayan Union."
     },
     {
       "source_id": "bab-4-3-u11",
       "bm_original": "Sejak itu, orang Melayu semakin sedar bahawa Malayan Union akan menggugat kedudukan mereka.",
-      "translate": "自此，马来人更清楚认识到 Malayan Union 将动摇他们的地位。",
+      "translate": "从那时起，马来人越来越意识到马来亚联盟将挑战他们的立场。",
       "key_points_zh": [
-        "自此，马来人更清楚认识到 Malayan Union 将动摇他们的地位。"
+        "从那时起，马来人越来越意识到马来亚联盟将挑战他们的立场。"
       ],
       "bm_focus_phrase": "Sejak itu, orang Melayu semakin sedar bahawa Malayan Union akan menggugat kedudukan mereka."
     },
     {
       "source_id": "bab-4-3-u12",
       "bm_original": "Antara akhbar utama yang lantang menentang ialah:",
-      "translate": "公开反对最有力的主要报章包括：",
+      "translate": "公开反对的主要报纸包括：",
       "key_points_zh": [
-        "公开反对最有力的主要报章包括："
+        "公开反对的主要报纸包括："
       ],
       "bm_focus_phrase": "Antara akhbar utama yang lantang menentang ialah:"
     },
     {
       "source_id": "bab-4-3-extra-16",
       "bm_original": "Utusan Melayu",
-      "translate": "Utusan Melayu",
+      "translate": "马来特使",
       "key_points_zh": [
-        "Utusan Melayu"
+        "马来特使"
       ],
       "bm_focus_phrase": "Utusan Melayu"
     },
     {
       "source_id": "bab-4-3-extra-17",
       "bm_original": "Majlis",
-      "translate": "Majlis",
+      "translate": "理事会",
       "key_points_zh": [
-        "Majlis"
+        "理事会"
       ],
       "bm_focus_phrase": "Majlis"
     },
     {
       "source_id": "bab-4-3-extra-18",
       "bm_original": "Warta Negara",
-      "translate": "Warta Negara",
+      "translate": "国家公报",
       "key_points_zh": [
-        "Warta Negara"
+        "国家公报"
       ],
       "bm_focus_phrase": "Warta Negara"
     },
     {
       "source_id": "bab-4-3-u13",
       "bm_original": "Akhbar-akhbar ini:",
-      "translate": "这些报章：",
+      "translate": "这些报纸：",
       "key_points_zh": [
-        "这些报章："
+        "这些报纸："
       ],
       "bm_focus_phrase": "Akhbar-akhbar ini:"
     },
     {
       "source_id": "bab-4-3-extra-19",
       "bm_original": "Mengecam dan mengutuk Malayan Union",
-      "translate": "谴责并反对 Malayan Union。",
+      "translate": "谴责并谴责马来亚联邦",
       "key_points_zh": [
-        "谴责并反对 Malayan Union。"
+        "谴责并谴责马来亚联邦"
       ],
       "bm_focus_phrase": "Mengecam dan mengutuk Malayan Union"
     },
     {
       "source_id": "bab-4-3-extra-20",
       "bm_original": "Menyeru orang Melayu berhimpun menentangnya",
-      "translate": "号召马来人集会反对。",
+      "translate": "号召马来人集会反对他",
       "key_points_zh": [
-        "号召马来人集会反对。"
+        "号召马来人集会反对他"
       ],
       "bm_focus_phrase": "Menyeru orang Melayu berhimpun menentangnya"
     },
     {
       "source_id": "bab-4-3-extra-21",
       "bm_original": "Melaporkan perkembangan bantahan di seluruh negara",
-      "translate": "报道全国抗议动态。",
+      "translate": "报道全国抗议活动的进展",
       "key_points_zh": [
-        "报道全国抗议动态。"
+        "报道全国抗议活动的进展"
       ],
       "bm_focus_phrase": "Melaporkan perkembangan bantahan di seluruh negara"
     },
     {
       "source_id": "bab-4-3-u14",
       "bm_original": "Akhbar Melayu membangkitkan kesedaran nasionalisme dan mendorong orang Melayu bangkit mempertahankan hak mereka.",
-      "translate": "马来报章唤起民族主义意识，推动马来人挺身捍卫自身权利。",
+      "translate": "马来媒体提高了民族主义意识，鼓励马来人站起来捍卫自己的权利。",
       "key_points_zh": [
-        "马来报章唤起民族主义意识，推动马来人挺身捍卫自身权利。"
+        "马来媒体提高了民族主义意识，鼓励马来人站起来捍卫自己的权利。"
       ],
       "bm_focus_phrase": "Akhbar Melayu membangkitkan kesedaran nasionalisme dan mendorong orang Melayu bangkit mempertahankan hak mereka."
     },
     {
       "source_id": "bab-4-3-extra-22",
       "bm_original": "Dato’ Onn Jaafar",
-      "translate": "Dato’ Onn Jaafar",
+      "translate": "拿督翁贾法尔",
       "key_points_zh": [
-        "Dato’ Onn Jaafar"
+        "拿督翁贾法尔"
       ],
       "bm_focus_phrase": "Dato’ Onn Jaafar"
     },
     {
       "source_id": "bab-4-3-extra-23",
       "bm_original": "Dato’ Nik Ahmad Kamil",
-      "translate": "Dato’ Nik Ahmad Kamil",
+      "translate": "拿督尼克艾哈迈德卡米尔",
       "key_points_zh": [
-        "Dato’ Nik Ahmad Kamil"
+        "拿督尼克艾哈迈德卡米尔"
       ],
       "bm_focus_phrase": "Dato’ Nik Ahmad Kamil"
     },
     {
       "source_id": "bab-4-3-extra-24",
       "bm_original": "Za’ba",
-      "translate": "Za’ba",
+      "translate": "扎巴",
       "key_points_zh": [
-        "Za’ba"
+        "扎巴"
       ],
       "bm_focus_phrase": "Za’ba"
     },
     {
       "source_id": "bab-4-3-extra-25",
       "bm_original": "Tengku Mohamed",
-      "translate": "Tengku Mohamed",
+      "translate": "东姑穆罕默德",
       "key_points_zh": [
-        "Tengku Mohamed"
+        "东姑穆罕默德"
       ],
       "bm_focus_phrase": "Tengku Mohamed"
     },
     {
       "source_id": "bab-4-3-extra-26",
       "bm_original": "Dato’ Abdul Wahab Abdul Aziz (Panglima Bukit Gantang)",
-      "translate": "Dato’ Abdul Wahab Abdul Aziz (Panglima Bukit Gantang)",
+      "translate": "拿督阿卜杜勒瓦哈卜阿卜杜勒阿齐兹 (Bukit Gantang 指挥官)",
       "key_points_zh": [
-        "Dato’ Abdul Wahab Abdul Aziz (Panglima Bukit Gantang)"
+        "拿督阿卜杜勒瓦哈卜阿卜杜勒阿齐兹 (Bukit Gantang 指挥官)"
       ],
       "bm_focus_phrase": "Dato’ Abdul Wahab Abdul Aziz (Panglima Bukit Gantang)"
     },
     {
       "source_id": "bab-4-3-extra-27",
       "bm_original": "Wan Md Yussof (Panglima Kinta, Perak)",
-      "translate": "Wan Md Yussof (Panglima Kinta, Perak)",
+      "translate": "Wan Md Yussof（霹雳州近打指挥官）",
       "key_points_zh": [
-        "Wan Md Yussof (Panglima Kinta, Perak)"
+        "Wan Md Yussof（霹雳州近打指挥官）"
       ],
       "bm_focus_phrase": "Wan Md Yussof (Panglima Kinta, Perak)"
     },
     {
       "source_id": "bab-4-3-extra-28",
       "bm_original": "Dato’ Hamzah Abdullah",
-      "translate": "Dato’ Hamzah Abdullah",
+      "translate": "拿督哈姆扎阿卜杜拉",
       "key_points_zh": [
-        "Dato’ Hamzah Abdullah"
+        "拿督哈姆扎阿卜杜拉"
       ],
       "bm_focus_phrase": "Dato’ Hamzah Abdullah"
     },
     {
       "source_id": "bab-4-3-extra-29",
       "bm_original": "Dato’ Abdul Rahman Mohammad Yassin",
-      "translate": "Dato’ Abdul Rahman Mohammad Yassin",
+      "translate": "拿督阿卜杜勒拉赫曼穆罕默德亚辛",
       "key_points_zh": [
-        "Dato’ Abdul Rahman Mohammad Yassin"
+        "拿督阿卜杜勒拉赫曼穆罕默德亚辛"
       ],
       "bm_focus_phrase": "Dato’ Abdul Rahman Mohammad Yassin"
     },
     {
       "source_id": "bab-4-3-extra-30",
       "bm_original": "Cikgu Zaharah Abdullah (Batu Pahat)",
-      "translate": "Cikgu Zaharah Abdullah (Batu Pahat)",
+      "translate": "Zaharah Abdullah 老师（峇株巴辖）",
       "key_points_zh": [
-        "Cikgu Zaharah Abdullah (Batu Pahat)"
+        "Zaharah Abdullah 老师（峇株巴辖）"
       ],
       "bm_focus_phrase": "Cikgu Zaharah Abdullah (Batu Pahat)"
     },
     {
       "source_id": "bab-4-3-extra-31",
       "bm_original": "Halimahton Abd Majid (Rembau)",
-      "translate": "Halimahton Abd Majid (Rembau)",
+      "translate": "哈利马顿·阿卜杜勒·马吉德 (Rembau)",
       "key_points_zh": [
-        "Halimahton Abd Majid (Rembau)"
+        "哈利马顿·阿卜杜勒·马吉德 (Rembau)"
       ],
       "bm_focus_phrase": "Halimahton Abd Majid (Rembau)"
     },
     {
       "source_id": "bab-4-3-extra-32",
       "bm_original": "Saleha Mohd Ali",
-      "translate": "Saleha Mohd Ali",
+      "translate": "萨利哈·莫哈末·阿里",
       "key_points_zh": [
-        "Saleha Mohd Ali"
+        "萨利哈·莫哈末·阿里"
       ],
       "bm_focus_phrase": "Saleha Mohd Ali"
     },
     {
       "source_id": "bab-4-3-extra-33",
       "bm_original": "Zaharah Tamin (Selangor)",
-      "translate": "Zaharah Tamin (Selangor)",
+      "translate": "扎哈拉·塔明（雪兰莪）",
       "key_points_zh": [
-        "Zaharah Tamin (Selangor)"
+        "扎哈拉·塔明（雪兰莪）"
       ],
       "bm_focus_phrase": "Zaharah Tamin (Selangor)"
     },
     {
       "source_id": "bab-4-3-extra-34",
       "bm_original": "Datin Puteh Mariah Ibrahim Rashid (Perak)",
-      "translate": "Datin Puteh Mariah Ibrahim Rashid (Perak)",
+      "translate": "拿汀布德·玛丽亚·易卜拉欣·拉希德（银牌）",
       "key_points_zh": [
-        "Datin Puteh Mariah Ibrahim Rashid (Perak)"
+        "拿汀布德·玛丽亚·易卜拉欣·拉希德（银牌）"
       ],
       "bm_focus_phrase": "Datin Puteh Mariah Ibrahim Rashid (Perak)"
     },
     {
       "source_id": "bab-4-3-extra-35",
       "bm_original": "Hasnah Ishak (Pulau Pinang)",
-      "translate": "Hasnah Ishak (Pulau Pinang)",
+      "translate": "哈斯纳伊萨（槟城）",
       "key_points_zh": [
-        "Hasnah Ishak (Pulau Pinang)"
+        "哈斯纳伊萨（槟城）"
       ],
       "bm_focus_phrase": "Hasnah Ishak (Pulau Pinang)"
     },
     {
       "source_id": "bab-4-3-u15",
       "bm_original": "Hal ini membuktikan bahawa penentangan terhadap Malayan Union melibatkan seluruh lapisan masyarakat, termasuk wanita.",
-      "translate": "这证明反对 Malayan Union 的运动涵盖社会各阶层，包括妇女。",
+      "translate": "这证明反对马来亚联邦涉及社会各阶层，包括妇女。",
       "key_points_zh": [
-        "这证明反对 Malayan Union 的运动涵盖社会各阶层，包括妇女。"
+        "这证明反对马来亚联邦涉及社会各阶层，包括妇女。"
       ],
       "bm_focus_phrase": "Hal ini membuktikan bahawa penentangan terhadap Malayan Union melibatkan seluruh lapisan masyarakat, termasuk wanita."
     },
     {
       "source_id": "bab-4-3-u16",
       "bm_original": "Antara persatuan yang terlibat ialah:",
-      "translate": "参与的团体包括：",
+      "translate": "参与的协会包括：",
       "key_points_zh": [
-        "参与的团体包括："
+        "参与的协会包括："
       ],
       "bm_focus_phrase": "Antara persatuan yang terlibat ialah:"
     },
     {
       "source_id": "bab-4-3-extra-36",
       "bm_original": "SABERKAS",
-      "translate": "SABERKAS",
+      "translate": "萨伯卡斯",
       "key_points_zh": [
-        "SABERKAS"
+        "萨伯卡斯"
       ],
       "bm_focus_phrase": "SABERKAS"
     },
     {
       "source_id": "bab-4-3-extra-37",
       "bm_original": "Persatuan Melayu Kedah",
-      "translate": "Persatuan Melayu Kedah",
+      "translate": "吉打马来人协会",
       "key_points_zh": [
-        "Persatuan Melayu Kedah"
+        "吉打马来人协会"
       ],
       "bm_focus_phrase": "Persatuan Melayu Kedah"
     },
     {
       "source_id": "bab-4-3-extra-38",
       "bm_original": "Perikatan Melayu Perak",
-      "translate": "Perikatan Melayu Perak",
+      "translate": "霹雳州马来联盟",
       "key_points_zh": [
-        "Perikatan Melayu Perak"
+        "霹雳州马来联盟"
       ],
       "bm_focus_phrase": "Perikatan Melayu Perak"
     },
     {
       "source_id": "bab-4-3-extra-39",
       "bm_original": "Persatuan Melayu Selangor",
-      "translate": "Persatuan Melayu Selangor",
+      "translate": "雪兰莪马来人协会",
       "key_points_zh": [
-        "Persatuan Melayu Selangor"
+        "雪兰莪马来人协会"
       ],
       "bm_focus_phrase": "Persatuan Melayu Selangor"
     },
     {
       "source_id": "bab-4-3-extra-40",
       "bm_original": "Persatuan Melayu Johor",
-      "translate": "Persatuan Melayu Johor",
+      "translate": "柔佛马来人公会",
       "key_points_zh": [
-        "Persatuan Melayu Johor"
+        "柔佛马来人公会"
       ],
       "bm_focus_phrase": "Persatuan Melayu Johor"
     },
     {
       "source_id": "bab-4-3-u17",
       "bm_original": "Pertubuhan ini menjadi penggerak utama rapat umum dan bantahan terhadap tindakan MacMichael serta gagasan Malayan Union .",
-      "translate": "这些组织成为召开群众大会与反对 MacMichael 行动及 Malayan Union 方案的主要推动力量。",
+      "translate": "该组织成为针对麦克迈克尔的行为和马来亚联盟理念的公开集会和抗议的主要推动者。",
       "key_points_zh": [
-        "这些组织成为召开群众大会与反对 MacMichael 行动及 Malayan Union 方案的主要推动力量。"
+        "该组织成为针对麦克迈克尔的行为和马来亚联盟理念的公开集会和抗议的主要推动者。"
       ],
       "bm_focus_phrase": "Pertubuhan ini menjadi penggerak utama rapat umum dan bantahan terhadap tindakan MacMichael serta gagasan Malayan Union ."
     },
     {
       "source_id": "bab-4-3-extra-41",
       "bm_original": "Frank Swettenham",
-      "translate": "Frank Swettenham",
+      "translate": "弗兰克·瑞天咸",
       "key_points_zh": [
-        "Frank Swettenham"
+        "弗兰克·瑞天咸"
       ],
       "bm_focus_phrase": "Frank Swettenham"
     },
     {
       "source_id": "bab-4-3-extra-42",
       "bm_original": "Roland Braddell",
-      "translate": "Roland Braddell",
+      "translate": "罗兰·布拉德尔",
       "key_points_zh": [
-        "Roland Braddell"
+        "罗兰·布拉德尔"
       ],
       "bm_focus_phrase": "Roland Braddell"
     },
     {
       "source_id": "bab-4-3-extra-43",
       "bm_original": "Cecil Clementi Smith",
-      "translate": "Cecil Clementi Smith",
+      "translate": "塞西尔·克莱门蒂·史密斯",
       "key_points_zh": [
-        "Cecil Clementi Smith"
+        "塞西尔·克莱门蒂·史密斯"
       ],
       "bm_focus_phrase": "Cecil Clementi Smith"
     },
     {
       "source_id": "bab-4-3-extra-44",
       "bm_original": "Richard Winstedt",
-      "translate": "Richard Winstedt",
+      "translate": "理查德·温斯特",
       "key_points_zh": [
-        "Richard Winstedt"
+        "理查德·温斯特"
       ],
       "bm_focus_phrase": "Richard Winstedt"
     },
     {
       "source_id": "bab-4-3-extra-45",
       "bm_original": "Frederick Weld",
-      "translate": "Frederick Weld",
+      "translate": "弗雷德里克·韦尔德",
       "key_points_zh": [
-        "Frederick Weld"
+        "弗雷德里克·韦尔德"
       ],
       "bm_focus_phrase": "Frederick Weld"
     },
     {
       "source_id": "bab-4-3-extra-46",
       "bm_original": "George Maxwell",
-      "translate": "George Maxwell",
+      "translate": "乔治·麦克斯韦",
       "key_points_zh": [
-        "George Maxwell"
+        "乔治·麦克斯韦"
       ],
       "bm_focus_phrase": "George Maxwell"
     },
     {
       "source_id": "bab-4-3-u18",
       "bm_original": "Mereka mengkritik keseluruhan rancangan Malayan Union kerana dianggap tidak sesuai dengan keadaan di Tanah Melayu.",
-      "translate": "他们批评整个 Malayan Union 计划，认为其不符合 Tanah Melayu 的实际情况。",
+      "translate": "他们批评马来亚联盟的整个计划，因为认为它不适合马来亚的情况。",
       "key_points_zh": [
-        "他们批评整个 Malayan Union 计划，认为其不符合 Tanah Melayu 的实际情况。"
+        "他们批评马来亚联盟的整个计划，因为认为它不适合马来亚的情况。"
       ],
       "bm_focus_phrase": "Mereka mengkritik keseluruhan rancangan Malayan Union kerana dianggap tidak sesuai dengan keadaan di Tanah Melayu."
     },
     {
       "source_id": "bab-4-3-extra-47",
       "bm_original": "Dato’ Onn Jaafar",
-      "translate": "Dato’ Onn Jaafar",
+      "translate": "拿督翁贾法尔",
       "key_points_zh": [
-        "Dato’ Onn Jaafar"
+        "拿督翁贾法尔"
       ],
       "bm_focus_phrase": "Dato’ Onn Jaafar"
     },
     {
       "source_id": "bab-4-3-extra-48",
       "bm_original": "Dato’ Panglima Bukit Gantang",
-      "translate": "Dato’ Panglima Bukit Gantang",
+      "translate": "拿督邦利马武吉甘当",
       "key_points_zh": [
-        "Dato’ Panglima Bukit Gantang"
+        "拿督邦利马武吉甘当"
       ],
       "bm_focus_phrase": "Dato’ Panglima Bukit Gantang"
     },
     {
       "source_id": "bab-4-3-extra-49",
       "bm_original": "Tunku Abdul Rahman",
-      "translate": "Tunku Abdul Rahman",
+      "translate": "东姑阿都拉曼",
       "key_points_zh": [
-        "Tunku Abdul Rahman"
+        "东姑阿都拉曼"
       ],
       "bm_focus_phrase": "Tunku Abdul Rahman"
     },
     {
       "source_id": "bab-4-3-u19",
       "bm_original": "Kongres ini bersetuju menubuhkan:",
-      "translate": "该大会同意成立：",
+      "translate": "本届大会同意设立：",
       "key_points_zh": [
-        "该大会同意成立："
+        "本届大会同意设立："
       ],
       "bm_focus_phrase": "Kongres ini bersetuju menubuhkan:"
     },
     {
       "source_id": "bab-4-3-extra-50",
       "bm_original": "United Malays National Organisation (UMNO)",
-      "translate": "United Malays National Organisation (UMNO)",
+      "translate": "马来民族统一组织（巫统）",
       "key_points_zh": [
-        "United Malays National Organisation (UMNO)"
+        "马来民族统一组织（巫统）"
       ],
       "bm_focus_phrase": "United Malays National Organisation (UMNO)"
     },
     {
       "source_id": "bab-4-3-u20",
       "bm_original": "UMNO berperanan untuk:",
-      "translate": "UMNO 的角色包括：",
+      "translate": "巫统的作用是：",
       "key_points_zh": [
-        "UMNO 的角色包括："
+        "巫统的作用是："
       ],
       "bm_focus_phrase": "UMNO berperanan untuk:"
     },
     {
       "source_id": "bab-4-3-extra-51",
       "bm_original": "Memupuk perpaduan orang Melayu",
-      "translate": "培育马来人团结。",
+      "translate": "培养马来人的团结",
       "key_points_zh": [
-        "培育马来人团结。"
+        "培养马来人的团结"
       ],
       "bm_focus_phrase": "Memupuk perpaduan orang Melayu"
     },
     {
       "source_id": "bab-4-3-extra-52",
       "bm_original": "Memajukan orang Melayu",
-      "translate": "推动马来社会进步。",
+      "translate": "推动马来人进步",
       "key_points_zh": [
-        "推动马来社会进步。"
+        "推动马来人进步"
       ],
       "bm_focus_phrase": "Memajukan orang Melayu"
     },
     {
       "source_id": "bab-4-3-extra-53",
       "bm_original": "Menjadi penggerak utama menentang Malayan Union",
-      "translate": "成为反对 Malayan Union 的主要力量。",
+      "translate": "成为反对马来亚联盟的主要推动者",
       "key_points_zh": [
-        "成为反对 Malayan Union 的主要力量。"
+        "成为反对马来亚联盟的主要推动者"
       ],
       "bm_focus_phrase": "Menjadi penggerak utama menentang Malayan Union"
     },
     {
       "source_id": "bab-4-3-extra-54",
       "bm_original": "Lilitan kain putih di songkok",
-      "translate": "Songkok 上缠白布。",
+      "translate": "在宋谷包上一块白布",
       "key_points_zh": [
-        "Songkok 上缠白布。"
+        "在宋谷包上一块白布"
       ],
       "bm_focus_phrase": "Lilitan kain putih di songkok"
     },
     {
       "source_id": "bab-4-3-u21",
       "bm_original": "Peristiwa ini menunjukkan betapa mendalamnya kesedihan dan kemarahan orang Melayu terhadap Malayan Union.",
-      "translate": "此事反映马来社会对 Malayan Union 的悲痛与愤怒之深。",
+      "translate": "这起事件显示了马来人对马来亚联盟的悲伤和愤怒有多么深。",
       "key_points_zh": [
-        "此事反映马来社会对 Malayan Union 的悲痛与愤怒之深。"
+        "这起事件显示了马来人对马来亚联盟的悲伤和愤怒有多么深。"
       ],
       "bm_focus_phrase": "Peristiwa ini menunjukkan betapa mendalamnya kesedihan dan kemarahan orang Melayu terhadap Malayan Union."
     },
     {
       "source_id": "bab-4-3-extra-55",
       "bm_original": "Raja-raja Melayu tidak memahami sepenuhnya kesan perjanjian",
-      "translate": "Raja-raja Melayu tidak memahami sepenuhnya kesan perjanjian",
+      "translate": "马来统治者并没有完全理解该协议的效果",
       "key_points_zh": [
-        "Raja-raja Melayu tidak memahami sepenuhnya kesan perjanjian"
+        "马来统治者并没有完全理解该协议的效果"
       ],
       "bm_focus_phrase": "Raja-raja Melayu tidak memahami sepenuhnya kesan perjanjian"
     },
     {
       "source_id": "bab-4-3-extra-56",
       "bm_original": "Mereka menyokong cadangan menubuhkan Persekutuan Tanah Melayu",
-      "translate": "支持成立 Persekutuan Tanah Melayu 的建议。",
+      "translate": "他们支持成立马来亚联邦的建议",
       "key_points_zh": [
-        "支持成立 Persekutuan Tanah Melayu 的建议。"
+        "他们支持成立马来亚联邦的建议"
       ],
       "bm_focus_phrase": "Mereka menyokong cadangan menubuhkan Persekutuan Tanah Melayu"
     },
     {
       "source_id": "bab-4-3-u22",
       "bm_original": "Bantahan penduduk tempatan berjaya membuka mata kerajaan British terhadap kelemahan dan keburukan Malayan Union .",
-      "translate": "Bantahan penduduk tempatan berjaya membuka mata kerajaan British terhadap kelemahan dan keburukan Malayan Union .",
+      "translate": "当地人的抗议成功地让英国政府看到了马来亚联邦的弱点和劣势。",
       "key_points_zh": [
-        "Bantahan penduduk tempatan berjaya membuka mata kerajaan British terhadap kelemahan dan keburukan Malayan Union ."
+        "当地人的抗议成功地让英国政府看到了马来亚联邦的弱点和劣势。"
       ],
       "bm_focus_phrase": "Bantahan penduduk tempatan berjaya membuka mata kerajaan British terhadap kelemahan dan keburukan Malayan Union ."
     },
     {
       "source_id": "bab-4-3-extra-57",
       "bm_original": "Ketegasan Raja-raja Melayu",
-      "translate": "Ketegasan Raja-raja Melayu",
+      "translate": "马来国王的决心",
       "key_points_zh": [
-        "Ketegasan Raja-raja Melayu"
+        "马来国王的决心"
       ],
       "bm_focus_phrase": "Ketegasan Raja-raja Melayu"
     },
     {
       "source_id": "bab-4-3-extra-58",
       "bm_original": "Semangat juang orang Melayu",
-      "translate": "马来人的斗争精神。",
+      "translate": "马来人的战斗精神",
       "key_points_zh": [
-        "马来人的斗争精神。"
+        "马来人的战斗精神"
       ],
       "bm_focus_phrase": "Semangat juang orang Melayu"
     },
     {
       "source_id": "bab-4-3-extra-59",
       "bm_original": "Perpaduan persatuan Melayu",
-      "translate": "马来团体的团结。",
+      "translate": "马来社团团结",
       "key_points_zh": [
-        "马来团体的团结。"
+        "马来社团团结"
       ],
       "bm_focus_phrase": "Perpaduan persatuan Melayu"
     },
     {
       "source_id": "bab-4-3-extra-60",
       "bm_original": "Kebangkitan gerakan kebangsaan secara lebih tersusun",
-      "translate": "民族运动更有组织地兴起。",
+      "translate": "更有组织的全国运动的兴起",
       "key_points_zh": [
-        "民族运动更有组织地兴起。"
+        "更有组织的全国运动的兴起"
       ],
       "bm_focus_phrase": "Kebangkitan gerakan kebangsaan secara lebih tersusun"
     },
     {
       "source_id": "bab-4-3-extra-61",
       "bm_original": "Kedaulatan Raja-raja Melayu",
-      "translate": "Kedaulatan Raja-raja Melayu",
+      "translate": "马来国王的主权",
       "key_points_zh": [
-        "Kedaulatan Raja-raja Melayu"
+        "马来国王的主权"
       ],
       "bm_focus_phrase": "Kedaulatan Raja-raja Melayu"
     },
     {
       "source_id": "bab-4-3-extra-62",
       "bm_original": "Maruah bangsa",
-      "translate": "民族尊严。",
+      "translate": "民族的尊严",
       "key_points_zh": [
-        "民族尊严。"
+        "民族的尊严"
       ],
       "bm_focus_phrase": "Maruah bangsa"
     },
     {
       "source_id": "bab-4-3-extra-63",
       "bm_original": "Kedaulatan tanah air",
-      "translate": "国家主权。",
+      "translate": "祖国主权",
       "key_points_zh": [
-        "国家主权。"
+        "祖国主权"
       ],
       "bm_focus_phrase": "Kedaulatan tanah air"
     },
     {
       "source_id": "bab-4-3-u23",
       "bm_original": "Perjuangan menentang Malayan Union menjadi titik penting dalam sejarah negara kerana berjaya menyatukan orang Melayu dan menjadi asas kepada perkembangan nasionalisme yang lebih kuat selepas perang.",
-      "translate": "反对 Malayan Union 的斗争是国家历史的重要节点，成功团结马来人，并奠定战后更强民族主义发展的基础。",
+      "translate": "反对马来亚联盟的斗争成为该国历史上的一个重要时刻，因为它成功地团结了马来人，并成为战后发展更强大的民族主义的基础。",
       "key_points_zh": [
-        "反对 Malayan Union 的斗争是国家历史的重要节点，成功团结马来人，并奠定战后更强民族主义发展的基础。"
+        "反对马来亚联盟的斗争成为该国历史上的一个重要时刻，因为它成功地团结了马来人，并成为战后发展更强大的民族主义的基础。"
       ],
       "bm_focus_phrase": "Perjuangan menentang Malayan Union menjadi titik penting dalam sejarah negara kerana berjaya menyatukan orang Melayu dan menjadi asas kepada perkembangan nasionalisme yang lebih kuat selepas perang."
     }
