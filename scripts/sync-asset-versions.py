@@ -11,6 +11,7 @@ ROOT = Path(__file__).resolve().parents[1]
 VERSIONS_FILE = ROOT / "data" / "asset-versions.json"
 SW_FILE = ROOT / "sw.js"
 STYLE_FILE = ROOT / "assets" / "css" / "style.css"
+MAIN_JS_FILE = ROOT / "assets" / "js" / "main.js"
 
 # Tokens that appear in HTML <link> / <script> tags
 HTML_PATTERNS = {
@@ -98,10 +99,10 @@ def sync_service_worker(versions: dict) -> bool:
     original = SW_FILE.read_text(encoding="utf-8")
     updated = original
 
-    # CACHE name: hzedu-vX
+    # CACHE name: zym-vX or legacy hzedu-vX
     updated = re.sub(
-        r"(const\s+CACHE\s*=\s*['\"])hzedu-v\d+(['\"])",
-        rf"\g<1>hzedu-v{versions['sw_cache']}\2",
+        r"(const\s+CACHE\s*=\s*['\"])(?:zym|hzedu)-v\d+(['\"])",
+        rf"\g<1>zym-v{versions['sw_cache']}\2",
         updated,
     )
 
@@ -129,16 +130,34 @@ def sync_service_worker(versions: dict) -> bool:
     return False
 
 
+def sync_main_js_service_worker(versions: dict) -> bool:
+    """Keep `/sw.js?v=` in main.js aligned with `sw_cache` for reliable SW updates."""
+    original = MAIN_JS_FILE.read_text(encoding="utf-8")
+    updated = re.sub(
+        r"(/sw\.js\?v=)\d+",
+        rf"\g<1>{versions['sw_cache']}",
+        original,
+    )
+    if updated != original:
+        MAIN_JS_FILE.write_text(updated, encoding="utf-8")
+        return True
+    return False
+
+
 def main() -> None:
     versions = load_versions()
 
     changed_html = sync_html_files(versions)
     changed_style = sync_style_imports(versions)
     changed_sw = sync_service_worker(versions)
+    changed_main_sw = sync_main_js_service_worker(versions)
 
     print(f"Updated {len(changed_html)} HTML file(s).")
     print(f"style.css @imports: {'updated' if changed_style else 'already in sync'}.")
     print(f"sw.js: {'updated' if changed_sw else 'already in sync'}.")
+    print(
+        f"main.js SW register: {'updated' if changed_main_sw else 'already in sync'}."
+    )
 
 
 if __name__ == "__main__":
