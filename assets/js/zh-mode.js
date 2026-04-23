@@ -23,8 +23,8 @@
   var CHIP_TOUCH_CLICK_DELAY_MS = 360;
   var chipInteractionsBound = false;
   var ENTITY_WARNING_LABEL = "⚠︎ Entiti dikekalkan (BM asal).";
-  /** Short Chinese-only placeholder when no curated translate and no glossary hits. */
-  var ZH_FALLBACK_PLACEHOLDER = "（暂无中文释义。）";
+  /** Short Chinese-only placeholder when no curated translate and no glossary hits (no extra parens — chip UI adds （） for inline). */
+  var ZH_FALLBACK_PLACEHOLDER = "暂无中文释义。";
   var HARD_PROTECTED_ENTITIES = [
     "Raja-raja Melayu", "Majlis Raja-raja",
     "Sultan Johor", "Sultan Selangor", "Sultan Kedah", "Raja Perlis", "Sultan Perak",
@@ -706,12 +706,19 @@
       if (/^[\s0-9A-Za-z'’.,\-–—()[\]{}]+$/.test(raw) && raw.length <= 96) return true;
       return false;
     }
-    if (looksMalayHeavy(raw)) return false;
-    if (hasCodeMixedGrammarArtifacts(raw)) return false;
-    if (hasTooMuchMalayInMixedSentence(raw)) return false;
+    // Longer curated strings (e.g. ms→zh-CN regen): accept even with many Latin
+    // proper nouns — only reject obvious broken hybrids, not “BM-heavy” heuristics.
+    if (zhCount < 8) {
+      if (looksMalayHeavy(raw)) return false;
+      if (hasCodeMixedGrammarArtifacts(raw)) return false;
+      if (hasTooMuchMalayInMixedSentence(raw)) return false;
+    } else {
+      if (hasCodeMixedGrammarArtifacts(raw)) return false;
+    }
 
-    // Ensure protected entities (if any) are retained for historical names/acronyms.
-    if (typeof bmSource === "string" && bmSource.trim()) {
+    // Strict entity substring check only for shorter strings (long translations may
+    // romanise or gloss names differently but remain correct).
+    if (zhCount < 24 && typeof bmSource === "string" && bmSource.trim()) {
       var entities = extractProtectedEntities(bmSource, gl);
       var placeholders = Array.isArray(entities.placeholders) ? entities.placeholders : [];
       var map = entities.placeholderMap || {};
@@ -870,7 +877,14 @@
         );
         chip.classList.add("zh-chip-has-explain");
       } else {
-        var shortContent = '<span class="zh-chip-short-inline">（' + escapeHtml(backContent.text) + '）</span>';
+        var inlineRaw = backContent.text || "";
+        var inlineEsc = escapeHtml(inlineRaw);
+        var trimmedInline = inlineRaw.trim();
+        var alreadyParenWrapped = /^[\uff08（]/.test(trimmedInline) && /[\uff09）]\s*$/.test(trimmedInline);
+        var shortInner = alreadyParenWrapped
+          ? inlineEsc
+          : "（" + inlineEsc + "）";
+        var shortContent = '<span class="zh-chip-short-inline">' + shortInner + '</span>';
         translationHtml = '<span class="zh-chip-translation" lang="zh-Hans">' + shortContent + fullSentenceHtml + '</span>';
       }
 
