@@ -1355,12 +1355,29 @@ var ZYMNOTES_NAV = { chapters: [
       window.addEventListener('resize', refreshMindmapLayout);
     }
 
+    centerEl.addEventListener('click', function (e) {
+      if (state !== 'chapter') return;
+      e.stopPropagation();
+      showSubjectView(true);
+    });
+    centerEl.addEventListener('keydown', onCenterKeydown);
+
     overlay.addEventListener('click', function (e) {
-      if (e.target === overlay) close();
+      var st = overlay.querySelector('.hz-mindmap-stage');
+      if (st && st.contains(e.target)) return;
+      close();
     });
     document.addEventListener('keydown', function (e) {
       if (e.key === 'Escape' && overlay && overlay.classList.contains('is-open')) close();
     });
+  }
+
+  function onCenterKeydown(e) {
+    if (state !== 'chapter') return;
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      showSubjectView(true);
+    }
   }
 
   function getIdealRadius(count) {
@@ -1497,6 +1514,10 @@ var ZYMNOTES_NAV = { chapters: [
     });
 
     backBtn.style.display = 'none';
+    centerEl.removeAttribute('title');
+    centerEl.removeAttribute('role');
+    centerEl.removeAttribute('tabindex');
+    centerEl.removeAttribute('aria-label');
     if (animated) {
       centerEl.classList.add('mm-fade');
       setTimeout(function () { centerEl.classList.remove('mm-fade'); }, 280);
@@ -1513,6 +1534,10 @@ var ZYMNOTES_NAV = { chapters: [
     centerEl.innerHTML =
       '<span class="hz-mm-center-title">Bab ' + chapter.num + '</span>' +
       '<span class="hz-mm-center-sub">' + chapter.title.split(' ').slice(0, 4).join(' ') + (chapter.title.split(' ').length > 4 ? '…' : '') + '</span>';
+    centerEl.setAttribute('title', 'Ketik untuk kembali ke mindmap semua bab');
+    centerEl.setAttribute('role', 'button');
+    centerEl.setAttribute('tabindex', '0');
+    centerEl.setAttribute('aria-label', 'Kembali ke mindmap semua bab');
 
     var subs = chapter.subtopics;
     var stage = overlay.querySelector('.hz-mindmap-stage');
@@ -1998,7 +2023,7 @@ var HZ_ICONS = (function () {
   if (!('serviceWorker' in navigator)) return;
 
   window.addEventListener('load', function () {
-    navigator.serviceWorker.register('/sw.js?v=112').catch(function (error) {
+    navigator.serviceWorker.register('/sw.js?v=113').catch(function (error) {
       console.warn('Service worker registration failed:', error);
     });
   });
