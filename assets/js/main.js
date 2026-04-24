@@ -1424,7 +1424,12 @@ var ZYMNOTES_NAV = { chapters: [
 
     overlay.addEventListener('click', function (e) {
       var st = overlay.querySelector('.hz-mindmap-stage');
-      if (st && st.contains(e.target)) return;
+      if (!st) { close(); return; }
+      // Use composedPath() so the check survives DOM mutations that happen inside
+      // click handlers (e.g. clearNodes() removes the clicked chapter button before
+      // this handler runs, making st.contains(e.target) incorrectly return false).
+      var path = e.composedPath ? e.composedPath() : [];
+      if (st.contains(e.target) || path.indexOf(st) !== -1) return;
       close();
     });
     document.addEventListener('keydown', function (e) {
@@ -1514,7 +1519,10 @@ var ZYMNOTES_NAV = { chapters: [
       });
     } else {
       el.type = 'button';
-      if (onClick) el.addEventListener('click', onClick);
+      if (onClick) el.addEventListener('click', function (e) {
+        e.stopPropagation();
+        onClick();
+      });
     }
     el.className = 'hz-mm-node' + (extraClass ? ' ' + extraClass : '');
     if (color) {
