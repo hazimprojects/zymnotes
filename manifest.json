@@ -1,7 +1,7 @@
 {
   "name": "ZymNotes",
   "short_name": "ZymNotes",
-  "description": "ZymNotes — Nota Ulang Kaji Generasi Baharu. Nota visual yang kemas, mesra telefon dan mudah difahami untuk pelajar Malaysia.",
+  "description": "Nota visual berpandukan kurikulum dan buku teks sekolah Malaysia — disusun semula supaya lebih jelas, mudah difahami dan mesra telefon.",
   "start_url": "/",
   "display": "standalone",
   "orientation": "portrait",
