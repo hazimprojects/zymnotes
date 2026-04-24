@@ -1170,6 +1170,14 @@
   animation: none;
   transform: scale(0.93) rotate(20deg);
 }
+.note-sparkle-wrap.audio-active.is-open .note-sparkle-fab {
+  transform: scale(0.93) rotate(0deg);
+}
+
+/* Hide audio item in menu when audio controls are visible */
+.note-sparkle-wrap.audio-active .note-sparkle-item[data-sparkle-type="audio"] {
+  display: none;
+}
 
 /* ── Items Container ─────────────────────────────────────────────────── */
 .note-sparkle-items {
