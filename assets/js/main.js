@@ -522,6 +522,47 @@ document.addEventListener("DOMContentLoaded", function () {
   markSubtopicCardsWithAudio();
 });
 
+/**
+ * Path helpers for mindmap + sparkle menu + search (must match pretty URLs).
+ * - Home is "/", "/index", "/index.html", "/index/", etc. — but never under /notes/.
+ * - Notes section is any path containing "/notes" as a segment ("/notes", "/repo/notes/…").
+ */
+function hzZymnotesIsHomePathname(p) {
+  if (!p || typeof p !== "string") return false;
+  if (/\/notes(?:\/|$)/i.test(p)) return false;
+  var tail = p.replace(/\/+$/, "").split("/").pop() || "";
+  return tail === "" || tail === "index" || tail === "index.html";
+}
+
+function hzZymnotesIsNotesPathname(p) {
+  return !!p && /\/notes(?:\/|$)/i.test(p);
+}
+
+/** Site path prefix before "/notes/…" ("" or "/repo" style); always without trailing slash except "/". */
+function hzZymnotesSiteRootPath() {
+  var p = (window.location.pathname || "/").split("?")[0].split("#")[0];
+  var m = p.match(/^(.*?)\/notes(?:\/|$)/i);
+  if (m) {
+    var prefix = m[1] || "";
+    return prefix.replace(/\/+$/, "") || "/";
+  }
+  var trimmed = p.replace(/\/+$/, "");
+  if (trimmed === "" || trimmed === "/") return "/";
+  var dir = trimmed.replace(/\/[^/]+$/, "");
+  return dir === "" ? "/" : dir;
+}
+
+/** Absolute URL to a file inside /notes/ (correct from homepage, chapter pages, and subtopics). */
+function hzZymnotesNoteHref(filename) {
+  var root = hzZymnotesSiteRootPath();
+  var path = (root === "/" ? "/notes/" : root + "/notes/") + filename;
+  try {
+    return new URL(path, window.location.origin).href;
+  } catch (e) {
+    return path;
+  }
+}
+
 // =========================
 // SEARCH INDEX SOURCE (single source of truth)
 // =========================
@@ -594,7 +635,7 @@ var HZ_NOTES_SEARCH_PAGES = [
   const countEl = document.querySelector(".search-result-count");
   if (!resultsContainer) return;
 
-  const isInNotes = window.location.pathname.includes("/notes/");
+  const isInNotes = hzZymnotesIsNotesPathname(window.location.pathname);
   const base = isInNotes ? "" : "notes/";
 
   const PAGES = HZ_NOTES_SEARCH_PAGES;
@@ -909,8 +950,8 @@ var ZYMNOTES_NAV = { chapters: [
   document.addEventListener('DOMContentLoaded', function() {
     if (document.querySelector('.note-sparkle-wrap')) return;
     var _p = window.location.pathname;
-    var _isHome = /\/(index\.html)?$/.test(_p) && !_p.includes('/notes/');
-    if (!_isHome && !/\/notes\//.test(_p)) return;
+    var _isHome = hzZymnotesIsHomePathname(_p);
+    if (!_isHome && !hzZymnotesIsNotesPathname(_p)) return;
 
     var audioEl = document.querySelector('.note-audio-player .audio-src');
     var zhModeApi = window.HzZhMode || null;
@@ -1284,8 +1325,8 @@ var ZYMNOTES_NAV = { chapters: [
 // =========================
 (function () {
   var _p = window.location.pathname;
-  var _isHome = /\/(index\.html)?$/.test(_p) && !_p.includes('/notes/');
-  if (!_isHome && !/\/notes\//.test(_p)) return;
+  var _isHome = hzZymnotesIsHomePathname(_p);
+  if (!_isHome && !hzZymnotesIsNotesPathname(_p)) return;
 
   var overlay = null;
   var svgEl = null;
@@ -1316,17 +1357,8 @@ var ZYMNOTES_NAV = { chapters: [
     return last && /\.html$/i.test(last) ? last : '';
   }
 
-  /**
-   * Resolve a notes filename to a full URL from the current page (fixes broken
-   * absolute /notes/... links on GitHub Pages or other subdirectory hosts).
-   */
   function noteHref(filename) {
-    var rel = /\/notes\//.test(window.location.pathname) ? filename : ('notes/' + filename);
-    try {
-      return new URL(rel, window.location.href).href;
-    } catch (e) {
-      return rel;
-    }
+    return hzZymnotesNoteHref(filename);
   }
 
   function buildOverlay() {
@@ -1477,7 +1509,9 @@ var ZYMNOTES_NAV = { chapters: [
     var el = href ? document.createElement('a') : document.createElement('button');
     if (href) {
       el.href = href;
-      el.addEventListener('click', close);
+      el.addEventListener('click', function () {
+        setTimeout(close, 0);
+      });
     } else {
       el.type = 'button';
       if (onClick) el.addEventListener('click', onClick);
@@ -2051,7 +2085,7 @@ var HZ_ICONS = (function () {
   if (!('serviceWorker' in navigator)) return;
 
   window.addEventListener('load', function () {
-    navigator.serviceWorker.register('/sw.js?v=116').catch(function (error) {
+    navigator.serviceWorker.register('/sw.js?v=117').catch(function (error) {
       console.warn('Service worker registration failed:', error);
     });
   });
