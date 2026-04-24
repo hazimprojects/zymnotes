@@ -18,7 +18,7 @@ const PRECACHE_URLS = [
   '/404.html',
   '/notes/index.html',
   '/quiz/bab-1-1.html',
-  '/assets/css/style.css?v=85',
+  '/assets/css/style.css?v=86',
   '/assets/js/main.js?v=94',
   '/assets/js/zh-mode.js?v=36',
   '/assets/js/subtopic-lab.js',

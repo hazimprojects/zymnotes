@@ -824,13 +824,17 @@ var HZ_NOTES_SEARCH_PAGES = [
 // QUICK NAV DATA
 // =========================
 var ZYMNOTES_NAV = { chapters: [
-  { num: 1, title: 'Warisan Negara Bangsa', url: 'bab-1.html', subtopics: [
+  { num: 1, title: 'Warisan Negara Bangsa', url: 'bab-1.html',
+    color: { bg: '#e5efdf', text: '#315649', accent: '#52b396' },
+    subtopics: [
     { num: '1.1', title: 'Latar Belakang Negara Bangsa Sebelum Kedatangan Barat', url: 'bab-1-1.html' },
     { num: '1.2', title: 'Ciri-ciri Negara Bangsa Kesultanan Melayu Melaka', url: 'bab-1-2.html' },
     { num: '1.3', title: 'Keunggulan Sistem Pentadbiran dan Undang-undang', url: 'bab-1-3.html' },
     { num: '1.4', title: 'Peranan Pemerintah dan Rakyat', url: 'bab-1-4.html' },
   ]},
-  { num: 2, title: 'Kebangkitan Nasionalisme', url: 'bab-2.html', subtopics: [
+  { num: 2, title: 'Kebangkitan Nasionalisme', url: 'bab-2.html',
+    color: { bg: '#dbe8f4', text: '#294d80', accent: '#5887ce' },
+    subtopics: [
     { num: '2.1', title: 'Maksud Nasionalisme', url: 'bab-2-1.html' },
     { num: '2.2', title: 'Perkembangan Idea Nasionalisme di Barat', url: 'bab-2-2.html' },
     { num: '2.3', title: 'Perkembangan Nasionalisme di Asia', url: 'bab-2-3.html' },
@@ -840,7 +844,9 @@ var ZYMNOTES_NAV = { chapters: [
     { num: '2.7', title: 'Perkembangan Nasionalisme', url: 'bab-2-7.html' },
     { num: '2.8', title: 'Kesan Perkembangan Nasionalisme', url: 'bab-2-8.html' },
   ]},
-  { num: 3, title: 'Konflik Dunia dan Pendudukan Jepun di Negara Kita', url: 'bab-3.html', subtopics: [
+  { num: 3, title: 'Konflik Dunia dan Pendudukan Jepun di Negara Kita', url: 'bab-3.html',
+    color: { bg: '#dde4ea', text: '#41576c', accent: '#78889c' },
+    subtopics: [
     { num: '3.1', title: 'Nasionalisme di Negara Kita Sebelum Perang Dunia', url: 'bab-3-1.html' },
     { num: '3.2', title: 'Latar Belakang Perang Dunia', url: 'bab-3-2.html' },
     { num: '3.3', title: 'Perang Dunia Kedua', url: 'bab-3-3.html' },
@@ -851,7 +857,9 @@ var ZYMNOTES_NAV = { chapters: [
     { num: '3.8', title: 'Perkembangan Gerakan Nasionalisme Tempatan dan Pendudukan Jepun', url: 'bab-3-8.html' },
     { num: '3.9', title: 'Keadaan Negara Kita Selepas Kekalahan Jepun', url: 'bab-3-9.html' },
   ]},
-  { num: 4, title: 'Era Peralihan Kuasa British di Negara Kita', url: 'bab-4.html', subtopics: [
+  { num: 4, title: 'Era Peralihan Kuasa British di Negara Kita', url: 'bab-4.html',
+    color: { bg: '#e2e7ef', text: '#465d77', accent: '#627ea8' },
+    subtopics: [
     { num: '4.1', title: 'British Military Administration (BMA)', url: 'bab-4-1.html' },
     { num: '4.2', title: 'Gagasan Malayan Union', url: 'bab-4-2.html' },
     { num: '4.3', title: 'Reaksi Penduduk Tempatan terhadap Malayan Union', url: 'bab-4-3.html' },
@@ -860,19 +868,25 @@ var ZYMNOTES_NAV = { chapters: [
     { num: '4.6', title: 'Penyerahan Sabah kepada Kerajaan British', url: 'bab-4-6.html' },
     { num: '4.7', title: 'Reaksi Penduduk Tempatan terhadap Penyerahan Sabah', url: 'bab-4-7.html' },
   ]},
-  { num: 5, title: 'Persekutuan Tanah Melayu 1948', url: 'bab-5.html', subtopics: [
+  { num: 5, title: 'Persekutuan Tanah Melayu 1948', url: 'bab-5.html',
+    color: { bg: '#dcece7', text: '#315f57', accent: '#4a847c' },
+    subtopics: [
     { num: '5.1', title: 'Latar Belakang Penubuhan Persekutuan Tanah Melayu 1948', url: 'bab-5-1.html' },
     { num: '5.2', title: 'Faktor Penubuhan Persekutuan Tanah Melayu 1948', url: 'bab-5-2.html' },
     { num: '5.3', title: 'Ciri-ciri Persekutuan Tanah Melayu 1948', url: 'bab-5-3.html' },
     { num: '5.4', title: 'Kesan Penubuhan Persekutuan Tanah Melayu 1948', url: 'bab-5-4.html' },
   ]},
-  { num: 6, title: 'Ancaman Komunis dan Perisytiharan Darurat', url: 'bab-6.html', subtopics: [
+  { num: 6, title: 'Ancaman Komunis dan Perisytiharan Darurat', url: 'bab-6.html',
+    color: { bg: '#efdede', text: '#6f3e3e', accent: '#844646' },
+    subtopics: [
     { num: '6.1', title: 'Kemasukan Pengaruh Komunis di Negara Kita', url: 'bab-6-1.html' },
     { num: '6.2', title: 'Ancaman Komunis di Negara Kita', url: 'bab-6-2.html' },
     { num: '6.3', title: 'Usaha Menangani Ancaman Komunis', url: 'bab-6-3.html' },
     { num: '6.4', title: 'Kesan Zaman Darurat terhadap Negara Kita', url: 'bab-6-4.html' },
   ]},
-  { num: 7, title: 'Usaha ke Arah Kemerdekaan', url: 'bab-7.html', subtopics: [
+  { num: 7, title: 'Usaha ke Arah Kemerdekaan', url: 'bab-7.html',
+    color: { bg: '#e8e3f5', text: '#584892', accent: '#6a58aa' },
+    subtopics: [
     { num: '7.1', title: 'Latar Belakang Idea Negara Merdeka', url: 'bab-7-1.html' },
     { num: '7.2', title: 'Jawatankuasa Hubungan Antara Kaum', url: 'bab-7-2.html' },
     { num: '7.3', title: 'Sistem Ahli', url: 'bab-7-3.html' },
@@ -894,7 +908,9 @@ var ZYMNOTES_NAV = { chapters: [
 (function setupNoteFeatures() {
   document.addEventListener('DOMContentLoaded', function() {
     if (document.querySelector('.note-sparkle-wrap')) return;
-    if (!/\/notes\//.test(window.location.pathname)) return;
+    var _p = window.location.pathname;
+    var _isHome = /\/(index\.html)?$/.test(_p) && !_p.includes('/notes/');
+    if (!_isHome && !/\/notes\//.test(_p)) return;
 
     var audioEl = document.querySelector('.note-audio-player .audio-src');
     var zhModeApi = window.HzZhMode || null;
@@ -1267,7 +1283,9 @@ var ZYMNOTES_NAV = { chapters: [
 // MINDMAP NAVIGATION OVERLAY
 // =========================
 (function () {
-  if (!/\/notes\//.test(window.location.pathname)) return;
+  var _p = window.location.pathname;
+  var _isHome = /\/(index\.html)?$/.test(_p) && !_p.includes('/notes/');
+  if (!_isHome && !/\/notes\//.test(_p)) return;
 
   var overlay = null;
   var svgEl = null;
@@ -1311,7 +1329,7 @@ var ZYMNOTES_NAV = { chapters: [
     backBtn = document.createElement('button');
     backBtn.type = 'button';
     backBtn.className = 'hz-mm-back';
-    backBtn.setAttribute('aria-label', 'Kembali ke pilihan bab');
+    backBtn.setAttribute('aria-label', 'Kembali ke semua bab');
     backBtn.innerHTML = '← Semua Bab';
     backBtn.style.display = 'none';
     backBtn.addEventListener('click', function () { showSubjectView(true); });
@@ -1333,38 +1351,22 @@ var ZYMNOTES_NAV = { chapters: [
   }
 
   function getRadius(count) {
-    if (count <= 4) return 130;
-    if (count <= 6) return 145;
-    if (count <= 8) return 158;
-    return 170;
+    if (count <= 4) return 140;
+    if (count <= 6) return 155;
+    if (count <= 8) return 168;
+    return 182;
   }
 
   function calcPositions(count, radius) {
     var positions = [];
     for (var i = 0; i < count; i++) {
       var angle = (2 * Math.PI * i / count) - Math.PI / 2;
-      positions.push({
-        x: Math.cos(angle) * radius,
-        y: Math.sin(angle) * radius
-      });
+      positions.push({ x: Math.cos(angle) * radius, y: Math.sin(angle) * radius });
     }
     return positions;
   }
 
-  function drawLines(positions) {
-    while (svgEl.firstChild) svgEl.removeChild(svgEl.firstChild);
-    positions.forEach(function (pos) {
-      var line = document.createElementNS(svgNS, 'line');
-      line.setAttribute('x1', '50%');
-      line.setAttribute('y1', '50%');
-      line.setAttribute('x2', 'calc(50% + ' + pos.x + 'px)');
-      line.setAttribute('y2', 'calc(50% + ' + pos.y + 'px)');
-      line.setAttribute('class', 'hz-mm-line');
-      svgEl.appendChild(line);
-    });
-  }
-
-  function makeSvgLines(positions, stageW, stageH) {
+  function makeSvgLines(positions, stageW, stageH, lineColor) {
     while (svgEl.firstChild) svgEl.removeChild(svgEl.firstChild);
     var cx = stageW / 2, cy = stageH / 2;
     positions.forEach(function (pos) {
@@ -1374,6 +1376,7 @@ var ZYMNOTES_NAV = { chapters: [
       line.setAttribute('x2', cx + pos.x);
       line.setAttribute('y2', cy + pos.y);
       line.setAttribute('class', 'hz-mm-line');
+      if (lineColor) line.style.stroke = lineColor;
       svgEl.appendChild(line);
     });
   }
@@ -1383,7 +1386,7 @@ var ZYMNOTES_NAV = { chapters: [
     while (svgEl.firstChild) svgEl.removeChild(svgEl.firstChild);
   }
 
-  function makeNode(label, sublabel, href, onClick, extraClass) {
+  function makeNode(label, sublabel, href, onClick, extraClass, color) {
     var el = href ? document.createElement('a') : document.createElement('button');
     if (href) {
       el.href = href;
@@ -1393,10 +1396,24 @@ var ZYMNOTES_NAV = { chapters: [
       if (onClick) el.addEventListener('click', onClick);
     }
     el.className = 'hz-mm-node' + (extraClass ? ' ' + extraClass : '');
+    if (color) {
+      el.style.setProperty('--mm-node-bg', color.bg);
+      el.style.setProperty('--mm-node-text', color.text);
+      el.style.setProperty('--mm-node-accent', color.accent);
+    }
     el.innerHTML =
       '<span class="hz-mm-node-num">' + label + '</span>' +
       (sublabel ? '<span class="hz-mm-node-sub">' + sublabel + '</span>' : '');
     return el;
+  }
+
+  function applyChapterCenter(chapter) {
+    centerEl.className = 'hz-mm-center hz-mm-center--chapter';
+    if (chapter && chapter.color) {
+      centerEl.style.setProperty('--mm-ch-bg', chapter.color.bg);
+      centerEl.style.setProperty('--mm-ch-text', chapter.color.text);
+      centerEl.style.setProperty('--mm-ch-accent', chapter.color.accent);
+    }
   }
 
   function showSubjectView(animated) {
@@ -1404,6 +1421,8 @@ var ZYMNOTES_NAV = { chapters: [
     activeChapterIdx = -1;
 
     clearNodes();
+    centerEl.className = 'hz-mm-center';
+    centerEl.removeAttribute('style');
     centerEl.innerHTML =
       '<span class="hz-mm-center-title">Sejarah</span>' +
       '<span class="hz-mm-center-sub">Tingkatan 4</span>';
@@ -1413,7 +1432,7 @@ var ZYMNOTES_NAV = { chapters: [
     var stage = overlay.querySelector('.hz-mindmap-stage');
     var sw = stage.offsetWidth || window.innerWidth;
     var sh = stage.offsetHeight || window.innerHeight;
-    makeSvgLines(positions, sw, sh);
+    makeSvgLines(positions, sw, sh, null);
 
     var currentFile = window.location.pathname.split('/').pop();
 
@@ -1424,19 +1443,21 @@ var ZYMNOTES_NAV = { chapters: [
         'Bab ' + ch.num,
         ch.title.split(' ').slice(0, 3).join(' ') + (ch.title.split(' ').length > 3 ? '…' : ''),
         null,
-        function () { showChapterView(ch, i); },
-        isCurrent ? 'is-current' : ''
+        (function (c, idx) { return function () { showChapterView(c, idx); }; })(ch, i),
+        isCurrent ? 'is-current' : '',
+        ch.color
       );
       node.style.setProperty('--mm-x', positions[i].x + 'px');
       node.style.setProperty('--mm-y', positions[i].y + 'px');
-      if (animated) node.classList.add('mm-anim-in');
+      node.classList.add('mm-anim-in');
+      node.style.animationDelay = (i * 48) + 'ms';
       nodesWrap.appendChild(node);
     });
 
     backBtn.style.display = 'none';
     if (animated) {
       centerEl.classList.add('mm-fade');
-      setTimeout(function () { centerEl.classList.remove('mm-fade'); }, 300);
+      setTimeout(function () { centerEl.classList.remove('mm-fade'); }, 280);
     }
   }
 
@@ -1445,16 +1466,18 @@ var ZYMNOTES_NAV = { chapters: [
     activeChapterIdx = chIdx;
 
     clearNodes();
+    applyChapterCenter(chapter);
     centerEl.innerHTML =
       '<span class="hz-mm-center-title">Bab ' + chapter.num + '</span>' +
-      '<span class="hz-mm-center-sub">' + chapter.title.split(' ').slice(0, 4).join(' ') + '</span>';
+      '<span class="hz-mm-center-sub">' + chapter.title.split(' ').slice(0, 4).join(' ') + (chapter.title.split(' ').length > 4 ? '…' : '') + '</span>';
 
     var subs = chapter.subtopics;
     var positions = calcPositions(subs.length, getRadius(subs.length));
     var stage = overlay.querySelector('.hz-mindmap-stage');
     var sw = stage.offsetWidth || window.innerWidth;
     var sh = stage.offsetHeight || window.innerHeight;
-    makeSvgLines(positions, sw, sh);
+    var lineColor = chapter.color ? chapter.color.accent : null;
+    makeSvgLines(positions, sw, sh, lineColor);
 
     var currentFile = window.location.pathname.split('/').pop();
 
@@ -1465,17 +1488,19 @@ var ZYMNOTES_NAV = { chapters: [
         sub.title.split(' ').slice(0, 3).join(' ') + (sub.title.split(' ').length > 3 ? '…' : ''),
         '/notes/' + sub.url,
         null,
-        isCurrent ? 'is-current' : ''
+        isCurrent ? 'is-current' : '',
+        chapter.color
       );
       node.style.setProperty('--mm-x', positions[i].x + 'px');
       node.style.setProperty('--mm-y', positions[i].y + 'px');
       node.classList.add('mm-anim-in');
+      node.style.animationDelay = (i * 40) + 'ms';
       nodesWrap.appendChild(node);
     });
 
     backBtn.style.display = '';
     centerEl.classList.add('mm-fade');
-    setTimeout(function () { centerEl.classList.remove('mm-fade'); }, 300);
+    setTimeout(function () { centerEl.classList.remove('mm-fade'); }, 280);
   }
 
   function open(startChapterIdx) {
@@ -1486,7 +1511,6 @@ var ZYMNOTES_NAV = { chapters: [
     if (typeof startChapterIdx === 'number') {
       showChapterView(ZYMNOTES_NAV.chapters[startChapterIdx], startChapterIdx);
     } else {
-      // Auto-expand current chapter if on a subtopic page
       var currentFile = window.location.pathname.split('/').pop();
       var autoIdx = -1;
       ZYMNOTES_NAV.chapters.forEach(function (ch, i) {
@@ -1809,97 +1833,6 @@ var HZ_ICONS = (function () {
   }
 
   document.addEventListener('hz:search-open', openOverlay);
-})();
-
-// ── Sticky Breadcrumb Nav (subtopic pages) ───────────────────────────────────
-(function () {
-  if (!/\/notes\/bab-\d+-\d+\.html/.test(window.location.pathname)) return;
-
-  document.addEventListener('DOMContentLoaded', function () {
-    var hero = document.querySelector('.page-hero.note-hero');
-    if (!hero) return;
-
-    // Extract data from page DOM
-    var heroLabel = document.querySelector('.note-hero .paper-label');
-    var heroEyebrow = document.querySelector('.note-hero .eyebrow');
-    var chapterText = heroLabel ? heroLabel.textContent.trim() : '';
-    var subtopicNum = heroEyebrow ? heroEyebrow.textContent.replace('Subtopik ', '').trim() : '';
-
-    // chapter short name: "Bab 1 · Warisan Negara Bangsa" → extract chapter num
-    var chapMatch = chapterText.match(/Bab\s*(\d+)/);
-    var chapNum = chapMatch ? chapMatch[1] : '';
-
-    // Find next link (last btn-primary with non-anchor href)
-    var allPrimary = Array.from(document.querySelectorAll('.hero-actions .btn-primary[href]'));
-    var nextEl = null;
-    for (var i = allPrimary.length - 1; i >= 0; i--) {
-      var href = allPrimary[i].getAttribute('href');
-      if (href && href.charAt(0) !== '#') { nextEl = allPrimary[i]; break; }
-    }
-
-    // Find back link (last btn-secondary href matching bab-X.html)
-    var allSecondary = Array.from(document.querySelectorAll('.hero-actions .btn-secondary[href]'));
-    var backEl = allSecondary.length ? allSecondary[allSecondary.length - 1] : null;
-
-    var nextHref = nextEl ? nextEl.getAttribute('href') : null;
-    var nextMatch = nextHref ? nextHref.match(/bab-(\d+)-(\d+)/) : null;
-    var nextLabel = nextMatch ? nextMatch[1] + '.' + nextMatch[2] : null;
-    var backHref = backEl ? backEl.getAttribute('href') : null;
-
-    // Build sticky nav
-    var nav = document.createElement('div');
-    nav.className = 'hz-sticky-nav';
-    nav.setAttribute('aria-label', 'Navigasi halaman semasa');
-
-    var backPart = document.createElement(backHref ? 'a' : 'span');
-    backPart.className = 'hz-snav-back' + (backHref ? '' : ' hz-snav-disabled');
-    if (backHref) backPart.href = backHref;
-    backPart.setAttribute('aria-label', backHref ? 'Kembali ke Bab ' + chapNum : '');
-    backPart.innerHTML =
-      '<span class="hz-snav-arrow" aria-hidden="true">←</span>' +
-      '<span class="hz-snav-back-label">Bab ' + chapNum + '</span>';
-
-    var midBtn = document.createElement('button');
-    midBtn.type = 'button';
-    midBtn.className = 'hz-snav-mid';
-    midBtn.setAttribute('aria-label', 'Buka navigasi mindmap');
-    midBtn.innerHTML =
-      '<span class="hz-snav-pos">' + subtopicNum + '</span>' +
-      '<span class="hz-snav-sep" aria-hidden="true">·</span>' +
-      '<span class="hz-snav-chapter">Bab ' + chapNum + '</span>';
-    midBtn.addEventListener('click', function () {
-      if (window.HzMindmap) window.HzMindmap.open();
-    });
-
-    var nextPart = document.createElement(nextHref ? 'a' : 'span');
-    nextPart.className = 'hz-snav-next' + (nextHref ? '' : ' hz-snav-disabled');
-    if (nextHref) nextPart.href = nextHref;
-    nextPart.setAttribute('aria-label', nextLabel ? 'Seterusnya: ' + nextLabel : '');
-    nextPart.innerHTML =
-      (nextLabel ? '<span class="hz-snav-next-label">' + nextLabel + '</span>' : '') +
-      '<span class="hz-snav-arrow" aria-hidden="true">→</span>';
-
-    nav.appendChild(backPart);
-    nav.appendChild(midBtn);
-    nav.appendChild(nextPart);
-
-    // Set header height CSS var and insert nav
-    var headerEl = document.querySelector('.site-header');
-    if (headerEl) {
-      document.documentElement.style.setProperty('--hz-header-h', headerEl.offsetHeight + 'px');
-    }
-    document.body.appendChild(nav);
-
-    // Show/hide on scroll past hero
-    if ('IntersectionObserver' in window) {
-      var io = new IntersectionObserver(function (entries) {
-        entries.forEach(function (entry) {
-          nav.classList.toggle('is-visible', !entry.isIntersecting);
-        });
-      }, { threshold: 0, rootMargin: '0px 0px 0px 0px' });
-      io.observe(hero);
-    }
-  });
 })();
 
 // ── Bottom Navigation Bar (mobile) ───────────────────────────────────────────
