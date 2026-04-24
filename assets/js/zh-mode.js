@@ -796,7 +796,7 @@
       if (chip.__zhOriginalHTML) {
         chip.innerHTML = chip.__zhOriginalHTML;
       }
-      chip.classList.remove("zh-chip-flip-ready", "zh-chip-flipped", "zh-chip-translated", "zh-chip-inline", "zh-chip-has-pairs", "zh-chip-has-explain");
+      chip.classList.remove("zh-chip-flip-ready", "zh-chip-flipped", "zh-chip-translated", "zh-chip-inline", "zh-chip-has-pairs", "zh-chip-has-explain", "zh-chip-can-flip");
       chip.removeAttribute("data-zh-bm");
       chip.removeAttribute("data-zh-cn");
       chip.removeAttribute("data-zh-mode-label");

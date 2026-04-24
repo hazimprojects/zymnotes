@@ -459,19 +459,6 @@ html[data-theme="dark"] .zh-disclaimer-close:hover {
   position: relative;
 }
 
-/* Subtle 中 hint badge — top-right corner, visible before tap */
-.paper-chip.zh-chip-can-flip:not(.zh-chip-flipped)::after {
-  content: '中';
-  position: absolute;
-  top: 0.18em;
-  right: 0.3em;
-  font-size: 0.58em;
-  font-weight: 800;
-  color: #b91c1c;
-  opacity: 0.38;
-  line-height: 1;
-  pointer-events: none;
-}
 
 /* Inline layout: original text + Chinese side by side */
 .paper-chip .zh-chip-inner {
