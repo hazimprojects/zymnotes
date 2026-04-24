@@ -1238,15 +1238,18 @@
 .note-sparkle-wrap.is-open .note-sparkle-item:nth-child(3) {
   opacity: 1; transform: translateY(0) scale(1); transition-delay: 110ms;
 }
+.note-sparkle-wrap.is-open .note-sparkle-item:nth-child(4) {
+  opacity: 1; transform: translateY(0) scale(1); transition-delay: 165ms;
+}
 
 /* ── Dark Mode ───────────────────────────────────────────────────────── */
 [data-theme="dark"] .note-sparkle-item {
-  background: rgba(36, 34, 32, 0.96);
-  border-color: rgba(220, 210, 190, 0.12);
+  background: rgba(52, 49, 46, 0.96);
+  border-color: rgba(220, 210, 190, 0.22);
   box-shadow: 0 6px 18px rgba(0,0,0,0.28), 0 2px 6px rgba(0,0,0,0.18);
 }
 [data-theme="dark"] .note-sparkle-item:hover {
-  background: rgba(48, 46, 44, 0.98);
+  background: rgba(65, 62, 58, 0.98);
   box-shadow: 0 8px 22px rgba(0,0,0,0.35), 0 2px 8px rgba(0,0,0,0.22);
 }
 
@@ -1295,14 +1298,17 @@
   left: calc(100% + 10px);
   transform: translateY(-50%) translateX(-14px);
 }
-.note-sparkle-wrap.controls-open .sparkle-audio-controls {
+.note-sparkle-wrap.controls-open .sparkle-audio-controls,
+.note-sparkle-wrap.audio-active .sparkle-audio-controls {
   opacity: 1;
   pointer-events: auto;
   transform: translateY(-50%) translateX(0);
 }
 /* Left-corner open state */
 .note-sparkle-wrap.fab-corner-bl.controls-open .sparkle-audio-controls,
-.note-sparkle-wrap.fab-corner-tl.controls-open .sparkle-audio-controls {
+.note-sparkle-wrap.fab-corner-tl.controls-open .sparkle-audio-controls,
+.note-sparkle-wrap.fab-corner-bl.audio-active .sparkle-audio-controls,
+.note-sparkle-wrap.fab-corner-tl.audio-active .sparkle-audio-controls {
   transform: translateY(-50%) translateX(0);
 }
 
@@ -1351,18 +1357,23 @@
 }
 
 /* Staggered entrance */
-.note-sparkle-wrap.controls-open .sparkle-ctrl-btn:nth-child(1) { transition-delay: 0ms; }
-.note-sparkle-wrap.controls-open .sparkle-ctrl-btn:nth-child(2) { transition-delay: 35ms; }
-.note-sparkle-wrap.controls-open .sparkle-ctrl-btn:nth-child(3) { transition-delay: 70ms; }
-.note-sparkle-wrap.controls-open .sparkle-ctrl-btn:nth-child(4) { transition-delay: 105ms; }
+.note-sparkle-wrap.controls-open .sparkle-ctrl-btn:nth-child(1),
+.note-sparkle-wrap.audio-active .sparkle-ctrl-btn:nth-child(1) { transition-delay: 0ms; }
+.note-sparkle-wrap.controls-open .sparkle-ctrl-btn:nth-child(2),
+.note-sparkle-wrap.audio-active .sparkle-ctrl-btn:nth-child(2) { transition-delay: 35ms; }
+.note-sparkle-wrap.controls-open .sparkle-ctrl-btn:nth-child(3),
+.note-sparkle-wrap.audio-active .sparkle-ctrl-btn:nth-child(3) { transition-delay: 70ms; }
+.note-sparkle-wrap.controls-open .sparkle-ctrl-btn:nth-child(4),
+.note-sparkle-wrap.audio-active .sparkle-ctrl-btn:nth-child(4) { transition-delay: 105ms; }
 
 [data-theme="dark"] .sparkle-ctrl-btn {
-  background: rgba(36, 34, 32, 0.96);
-  border-color: rgba(220, 210, 190, 0.12);
+  background: rgba(62, 59, 56, 0.96);
+  border-color: rgba(220, 210, 190, 0.22);
+  color: rgba(235, 228, 218, 0.9);
   box-shadow: 0 4px 12px rgba(0,0,0,0.28);
 }
 [data-theme="dark"] .sparkle-ctrl-btn:hover {
-  background: rgba(48, 46, 44, 0.98);
+  background: rgba(78, 74, 70, 0.98);
 }
 
 /* ── FAB Inner (positions ring around FAB) ───────────────────────── */

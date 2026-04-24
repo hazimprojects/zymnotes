@@ -1014,7 +1014,8 @@ var ZYMNOTES_NAV = { chapters: [
     function syncSparklePanelState() {
       var hasOpenPanel =
         wrap.classList.contains('is-open') ||
-        wrap.classList.contains('controls-open');
+        wrap.classList.contains('controls-open') ||
+        wrap.classList.contains('audio-active');
       document.body.classList.toggle('sparkle-panel-open', hasOpenPanel);
     }
 
@@ -1205,11 +1206,7 @@ var ZYMNOTES_NAV = { chapters: [
     fab.addEventListener('click', function(e) {
       e.stopPropagation();
       if (didDrag) return;
-      if (wrap.classList.contains('audio-active')) {
-        wrap.classList.toggle('controls-open');
-      } else {
-        wrap.classList.toggle('is-open');
-      }
+      wrap.classList.toggle('is-open');
       syncSparklePanelState();
     });
 
