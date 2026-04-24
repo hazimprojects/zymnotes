@@ -1126,37 +1126,19 @@
     toast.setAttribute("role", "status");
     toast.setAttribute("aria-live", "polite");
     toast.innerHTML =
-      '<span class="zh-disclaimer-icon">中</span>' +
+      '<span class="zh-disclaimer-icon" aria-hidden="true">华</span>' +
       '<div class="zh-disclaimer-content">' +
-        '<span class="zh-disclaimer-text">Mod Bahasa Cina aktif · versi awal bantuan belajar</span>' +
-        '<button class="zh-help-toggle zh-disclaimer-help-toggle" type="button" aria-expanded="false">❓ Makluman</button>' +
-        '<span class="zh-disclaimer-help" hidden>Fungsi ini diperkenalkan untuk memudahkan pelajar memahami isi penting. Oleh sebab masih di peringkat awal, sesetengah padanan istilah atau konteks ayat mungkin belum tepat sepenuhnya. Gunakan sebagai bantuan kefahaman, dan jadikan nota BM sebagai rujukan utama.</span>' +
+        '<span class="zh-disclaimer-title">Mod Bahasa Cina aktif</span>' +
+        '<span class="zh-disclaimer-text">Versi awal — gunakan nota BM sebagai rujukan utama.</span>' +
       "</div>" +
-      '<button class="zh-disclaimer-close" type="button" aria-label="Tutup makluman">✕</button>';
+      '<button class="zh-disclaimer-close" type="button" aria-label="Tutup">✕</button>';
 
     document.body.appendChild(toast);
-
-    var helpToggle = toast.querySelector(".zh-disclaimer-help-toggle");
-    var helpText = toast.querySelector(".zh-disclaimer-help");
-    if (helpToggle && helpText) {
-      helpToggle.addEventListener("click", function () {
-        var expanded = helpToggle.getAttribute("aria-expanded") === "true";
-        helpToggle.setAttribute("aria-expanded", expanded ? "false" : "true");
-        helpText.hidden = expanded;
-      });
-    }
 
     toast.querySelector(".zh-disclaimer-close").addEventListener("click", function () {
       toast.classList.add("zh-toast-hide");
       setTimeout(function () { toast.remove(); }, 300);
     });
-
-    setTimeout(function () {
-      if (toast.parentNode) {
-        toast.classList.add("zh-toast-hide");
-        setTimeout(function () { toast.remove(); }, 300);
-      }
-    }, 8500);
 
     requestAnimationFrame(function () {
       requestAnimationFrame(function () { toast.classList.add("zh-toast-show"); });

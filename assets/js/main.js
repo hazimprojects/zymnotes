@@ -969,13 +969,13 @@ var ZYMNOTES_NAV = { chapters: [
         '<span class="audio-notice-icon">\uD83C\uDFA7</span>' +
         '<p class="audio-notice-text">Audio mungkin mengandungi ringkasan \u2014 nota adalah rujukan utama.</p>' +
         '<div class="audio-notice-footer">' +
-          '<span class="audio-notice-countdown">3</span>' +
+          '<span class="audio-notice-countdown">5</span>' +
           '<button class="audio-notice-dismiss" type="button">OK</button>' +
         '</div>';
       document.body.appendChild(sheet);
 
       var cdEl = sheet.querySelector('.audio-notice-countdown');
-      var secs = 3;
+      var secs = 5;
 
       function dismiss() {
         clearInterval(timer);

@@ -1299,7 +1299,7 @@
   transform: translateY(-50%) translateX(-14px);
 }
 .note-sparkle-wrap.controls-open .sparkle-audio-controls,
-.note-sparkle-wrap.audio-active .sparkle-audio-controls {
+.note-sparkle-wrap.audio-active.is-open .sparkle-audio-controls {
   opacity: 1;
   pointer-events: auto;
   transform: translateY(-50%) translateX(0);
@@ -1307,8 +1307,8 @@
 /* Left-corner open state */
 .note-sparkle-wrap.fab-corner-bl.controls-open .sparkle-audio-controls,
 .note-sparkle-wrap.fab-corner-tl.controls-open .sparkle-audio-controls,
-.note-sparkle-wrap.fab-corner-bl.audio-active .sparkle-audio-controls,
-.note-sparkle-wrap.fab-corner-tl.audio-active .sparkle-audio-controls {
+.note-sparkle-wrap.fab-corner-bl.audio-active.is-open .sparkle-audio-controls,
+.note-sparkle-wrap.fab-corner-tl.audio-active.is-open .sparkle-audio-controls {
   transform: translateY(-50%) translateX(0);
 }
 
@@ -1358,13 +1358,13 @@
 
 /* Staggered entrance */
 .note-sparkle-wrap.controls-open .sparkle-ctrl-btn:nth-child(1),
-.note-sparkle-wrap.audio-active .sparkle-ctrl-btn:nth-child(1) { transition-delay: 0ms; }
+.note-sparkle-wrap.audio-active.is-open .sparkle-ctrl-btn:nth-child(1) { transition-delay: 0ms; }
 .note-sparkle-wrap.controls-open .sparkle-ctrl-btn:nth-child(2),
-.note-sparkle-wrap.audio-active .sparkle-ctrl-btn:nth-child(2) { transition-delay: 35ms; }
+.note-sparkle-wrap.audio-active.is-open .sparkle-ctrl-btn:nth-child(2) { transition-delay: 35ms; }
 .note-sparkle-wrap.controls-open .sparkle-ctrl-btn:nth-child(3),
-.note-sparkle-wrap.audio-active .sparkle-ctrl-btn:nth-child(3) { transition-delay: 70ms; }
+.note-sparkle-wrap.audio-active.is-open .sparkle-ctrl-btn:nth-child(3) { transition-delay: 70ms; }
 .note-sparkle-wrap.controls-open .sparkle-ctrl-btn:nth-child(4),
-.note-sparkle-wrap.audio-active .sparkle-ctrl-btn:nth-child(4) { transition-delay: 105ms; }
+.note-sparkle-wrap.audio-active.is-open .sparkle-ctrl-btn:nth-child(4) { transition-delay: 105ms; }
 
 [data-theme="dark"] .sparkle-ctrl-btn {
   background: rgba(62, 59, 56, 0.96);
