@@ -287,14 +287,17 @@
     }
   </style>
 
-  <link rel="manifest" href="/manifest.json?v=9" />
+  <link rel="manifest" href="/manifest.json?v=10" />
+  <link rel="icon" type="image/svg+xml" href="/icons/icon.svg?v=3" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png?v=1" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png?v=1" />
+
   <meta name="theme-color" content="#9B77FF" />
   <meta name="mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="default" />
   <meta name="apple-mobile-web-app-title" content="ZymNotes" />
-  <link rel="icon" type="image/svg+xml" href="/icons/icon.svg?v=3" />
-  <link rel="apple-touch-icon" href="/icons/icon.svg?v=3" />
+  <meta name="msapplication-TileColor" content="#9B77FF" />
 </head>
 <body class="homepage-vibrant page-theme-home">
   <header class="site-header">
@@ -545,18 +548,30 @@
   [
     {
       "@context": "https://schema.org",
-      "@type": "Organization",
+      "@type": "EducationalOrganization",
       "name": "ZymNotes",
       "url": "https://zymnotes.com",
       "logo": "https://zymnotes.com/icons/logo.svg?v=3",
-      "description": "Nota visual berpandukan kurikulum dan buku teks sekolah Malaysia — disusun semula sebagai sokongan pembelajaran supaya isi penting lebih mudah dibaca, difahami dan diingat."
+      "description": "Nota visual berpandukan kurikulum dan buku teks sekolah Malaysia — disusun semula sebagai sokongan pembelajaran supaya isi penting lebih mudah dibaca, difahami dan diingat.",
+      "areaServed": "MY",
+      "inLanguage": "ms-MY",
+      "knowsAbout": ["Sejarah SPM", "Nota Ulang Kaji", "Pendidikan Malaysia", "Tingkatan 4", "Tingkatan 5"]
     },
     {
       "@context": "https://schema.org",
       "@type": "WebSite",
       "name": "ZymNotes",
       "url": "https://zymnotes.com",
-      "description": "Nota visual berpandukan kurikulum dan buku teks sekolah Malaysia — disusun semula sebagai sokongan pembelajaran supaya isi penting lebih mudah dibaca, difahami dan diingat."
+      "description": "Nota visual berpandukan kurikulum dan buku teks sekolah Malaysia — disusun semula sebagai sokongan pembelajaran supaya isi penting lebih mudah dibaca, difahami dan diingat.",
+      "inLanguage": "ms-MY",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://zymnotes.com/notes/?q={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
     }
   ]
   </script>
