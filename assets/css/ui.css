@@ -1662,6 +1662,7 @@
   width: min(400px, 94vw);
   height: min(400px, 58vh);
   flex-shrink: 0;
+  overflow: hidden;
 }
 
 .hz-mindmap-svg {

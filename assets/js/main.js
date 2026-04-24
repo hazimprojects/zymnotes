@@ -1296,6 +1296,10 @@ var ZYMNOTES_NAV = { chapters: [
   var state = 'subject'; // 'subject' | 'chapter'
   var activeChapterIdx = -1;
   var svgNS = 'http://www.w3.org/2000/svg';
+  /** Half-size of .hz-mm-node (72×60 default; 78×60 ≥480px) — keep in sync with ui.css */
+  var NODE_HALF_W = 40;
+  var NODE_HALF_H = 30;
+  var stageResizeObserver = null;
 
   function buildOverlay() {
     if (overlay) return;
@@ -1342,6 +1346,15 @@ var ZYMNOTES_NAV = { chapters: [
     overlay.appendChild(stage);
     document.body.appendChild(overlay);
 
+    if (typeof ResizeObserver !== 'undefined') {
+      stageResizeObserver = new ResizeObserver(function () {
+        if (overlay && overlay.classList.contains('is-open')) refreshMindmapLayout();
+      });
+      stageResizeObserver.observe(stage);
+    } else {
+      window.addEventListener('resize', refreshMindmapLayout);
+    }
+
     overlay.addEventListener('click', function (e) {
       if (e.target === overlay) close();
     });
@@ -1350,11 +1363,40 @@ var ZYMNOTES_NAV = { chapters: [
     });
   }
 
-  function getRadius(count) {
+  function getIdealRadius(count) {
     if (count <= 4) return 140;
     if (count <= 6) return 155;
     if (count <= 8) return 168;
     return 182;
+  }
+
+  /** Largest |cos θ| and |sin θ| for equally spaced nodes (start −90°). */
+  function maxAxisExtents(count) {
+    var maxC = 0;
+    var maxS = 0;
+    for (var i = 0; i < count; i++) {
+      var ang = (2 * Math.PI * i / count) - Math.PI / 2;
+      var ac = Math.abs(Math.cos(ang));
+      var asn = Math.abs(Math.sin(ang));
+      if (ac > maxC) maxC = ac;
+      if (asn > maxS) maxS = asn;
+    }
+    return { cos: maxC, sin: maxS };
+  }
+
+  /**
+   * Cap radial distance so node boxes stay inside the stage (mobile has a small
+   * fixed stage vs desktop ideal radius).
+   */
+  function getRadiusForStage(sw, sh, count) {
+    var ideal = getIdealRadius(count);
+    if (!sw || !sh || count < 1) return ideal;
+    var margin = 8;
+    var ax = maxAxisExtents(count);
+    var capX = ax.cos > 0.001 ? (sw / 2 - margin - NODE_HALF_W) / ax.cos : ideal;
+    var capY = ax.sin > 0.001 ? (sh / 2 - margin - NODE_HALF_H) / ax.sin : ideal;
+    var cap = Math.min(capX, capY);
+    return Math.max(48, Math.min(ideal, cap));
   }
 
   function calcPositions(count, radius) {
@@ -1428,10 +1470,10 @@ var ZYMNOTES_NAV = { chapters: [
       '<span class="hz-mm-center-sub">Tingkatan 4</span>';
 
     var chapters = ZYMNOTES_NAV.chapters;
-    var positions = calcPositions(chapters.length, getRadius(chapters.length));
     var stage = overlay.querySelector('.hz-mindmap-stage');
     var sw = stage.offsetWidth || window.innerWidth;
     var sh = stage.offsetHeight || window.innerHeight;
+    var positions = calcPositions(chapters.length, getRadiusForStage(sw, sh, chapters.length));
     makeSvgLines(positions, sw, sh, null);
 
     var currentFile = window.location.pathname.split('/').pop();
@@ -1461,9 +1503,10 @@ var ZYMNOTES_NAV = { chapters: [
     }
   }
 
-  function showChapterView(chapter, chIdx) {
+  function showChapterView(chapter, chIdx, animated) {
     state = 'chapter';
     activeChapterIdx = chIdx;
+    if (animated === undefined) animated = true;
 
     clearNodes();
     applyChapterCenter(chapter);
@@ -1472,10 +1515,10 @@ var ZYMNOTES_NAV = { chapters: [
       '<span class="hz-mm-center-sub">' + chapter.title.split(' ').slice(0, 4).join(' ') + (chapter.title.split(' ').length > 4 ? '…' : '') + '</span>';
 
     var subs = chapter.subtopics;
-    var positions = calcPositions(subs.length, getRadius(subs.length));
     var stage = overlay.querySelector('.hz-mindmap-stage');
     var sw = stage.offsetWidth || window.innerWidth;
     var sh = stage.offsetHeight || window.innerHeight;
+    var positions = calcPositions(subs.length, getRadiusForStage(sw, sh, subs.length));
     var lineColor = chapter.color ? chapter.color.accent : null;
     makeSvgLines(positions, sw, sh, lineColor);
 
@@ -1499,8 +1542,19 @@ var ZYMNOTES_NAV = { chapters: [
     });
 
     backBtn.style.display = '';
-    centerEl.classList.add('mm-fade');
-    setTimeout(function () { centerEl.classList.remove('mm-fade'); }, 280);
+    if (animated) {
+      centerEl.classList.add('mm-fade');
+      setTimeout(function () { centerEl.classList.remove('mm-fade'); }, 280);
+    }
+  }
+
+  function refreshMindmapLayout() {
+    if (!overlay || !overlay.classList.contains('is-open')) return;
+    if (state === 'subject') {
+      showSubjectView(false);
+    } else if (activeChapterIdx >= 0 && ZYMNOTES_NAV.chapters[activeChapterIdx]) {
+      showChapterView(ZYMNOTES_NAV.chapters[activeChapterIdx], activeChapterIdx, false);
+    }
   }
 
   function open(startChapterIdx) {
@@ -1509,7 +1563,7 @@ var ZYMNOTES_NAV = { chapters: [
     document.body.classList.add('mindmap-open');
 
     if (typeof startChapterIdx === 'number') {
-      showChapterView(ZYMNOTES_NAV.chapters[startChapterIdx], startChapterIdx);
+      showChapterView(ZYMNOTES_NAV.chapters[startChapterIdx], startChapterIdx, false);
     } else {
       var currentFile = window.location.pathname.split('/').pop();
       var autoIdx = -1;
@@ -1517,12 +1571,15 @@ var ZYMNOTES_NAV = { chapters: [
         if (ch.subtopics.some(function (s) { return s.url === currentFile; })) autoIdx = i;
       });
       if (autoIdx >= 0) {
-        showChapterView(ZYMNOTES_NAV.chapters[autoIdx], autoIdx);
+        showChapterView(ZYMNOTES_NAV.chapters[autoIdx], autoIdx, false);
       } else {
         showSubjectView(false);
       }
     }
 
+    requestAnimationFrame(function () {
+      requestAnimationFrame(refreshMindmapLayout);
+    });
     setTimeout(function () { closeBtn.focus(); }, 80);
   }
 
