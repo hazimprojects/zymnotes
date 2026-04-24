@@ -1301,6 +1301,34 @@ var ZYMNOTES_NAV = { chapters: [
   var NODE_HALF_H = 30;
   var stageResizeObserver = null;
 
+  /**
+   * Filename of the active notes page (e.g. bab-3-2.html) for matching nav data.
+   * pathname.split('/').pop() fails for extensionless URLs (/notes/bab-3-2).
+   */
+  function getNotesPageSlug() {
+    var p = window.location.pathname;
+    var m = p.match(/\/(bab-\d+(?:-\d+)?)(?:\.html)?\/?$/i);
+    if (m) {
+      var slug = m[1];
+      return /\.html$/i.test(slug) ? slug : slug + '.html';
+    }
+    var last = p.split('/').filter(Boolean).pop();
+    return last && /\.html$/i.test(last) ? last : '';
+  }
+
+  /**
+   * Resolve a notes filename to a full URL from the current page (fixes broken
+   * absolute /notes/... links on GitHub Pages or other subdirectory hosts).
+   */
+  function noteHref(filename) {
+    var rel = /\/notes\//.test(window.location.pathname) ? filename : ('notes/' + filename);
+    try {
+      return new URL(rel, window.location.href).href;
+    } catch (e) {
+      return rel;
+    }
+  }
+
   function buildOverlay() {
     if (overlay) return;
 
@@ -1493,7 +1521,7 @@ var ZYMNOTES_NAV = { chapters: [
     var positions = calcPositions(chapters.length, getRadiusForStage(sw, sh, chapters.length));
     makeSvgLines(positions, sw, sh, null);
 
-    var currentFile = window.location.pathname.split('/').pop();
+    var currentFile = getNotesPageSlug();
 
     chapters.forEach(function (ch, i) {
       var isCurrent = ch.subtopics.some(function (s) { return s.url === currentFile; }) ||
@@ -1547,14 +1575,14 @@ var ZYMNOTES_NAV = { chapters: [
     var lineColor = chapter.color ? chapter.color.accent : null;
     makeSvgLines(positions, sw, sh, lineColor);
 
-    var currentFile = window.location.pathname.split('/').pop();
+    var currentFile = getNotesPageSlug();
 
     subs.forEach(function (sub, i) {
       var isCurrent = sub.url === currentFile;
       var node = makeNode(
         sub.num,
         sub.title.split(' ').slice(0, 3).join(' ') + (sub.title.split(' ').length > 3 ? '…' : ''),
-        '/notes/' + sub.url,
+        noteHref(sub.url),
         null,
         isCurrent ? 'is-current' : '',
         chapter.color
@@ -1590,7 +1618,7 @@ var ZYMNOTES_NAV = { chapters: [
     if (typeof startChapterIdx === 'number') {
       showChapterView(ZYMNOTES_NAV.chapters[startChapterIdx], startChapterIdx, false);
     } else {
-      var currentFile = window.location.pathname.split('/').pop();
+      var currentFile = getNotesPageSlug();
       var autoIdx = -1;
       ZYMNOTES_NAV.chapters.forEach(function (ch, i) {
         if (ch.subtopics.some(function (s) { return s.url === currentFile; })) autoIdx = i;
@@ -2023,7 +2051,7 @@ var HZ_ICONS = (function () {
   if (!('serviceWorker' in navigator)) return;
 
   window.addEventListener('load', function () {
-    navigator.serviceWorker.register('/sw.js?v=114').catch(function (error) {
+    navigator.serviceWorker.register('/sw.js?v=115').catch(function (error) {
       console.warn('Service worker registration failed:', error);
     });
   });
