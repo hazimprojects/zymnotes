@@ -30,6 +30,8 @@ document.documentElement.classList.add("js-enhanced");
     document.querySelectorAll(".display-fab").forEach((btn) => {
       btn.textContent = theme === "dark" ? "🌙" : "☀️";
     });
+    var tc = document.querySelector('meta[name="theme-color"]');
+    if (tc) tc.content = theme === "dark" ? "#0D0F1A" : "#ffffff";
   }
 
   applyTheme(getTheme());
