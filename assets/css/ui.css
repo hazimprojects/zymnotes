@@ -1630,3 +1630,219 @@
     font-weight: 700;
   }
 }
+
+/* =========================
+   MINDMAP NAVIGATION OVERLAY
+========================= */
+
+.hz-mindmap-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 220;
+  background: rgba(8, 9, 18, 0.88);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.22s ease;
+}
+
+.hz-mindmap-overlay.is-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.hz-mindmap-stage {
+  position: relative;
+  width: min(380px, 92vw);
+  height: min(380px, 55vh);
+  flex-shrink: 0;
+}
+
+.hz-mindmap-svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.hz-mm-line {
+  stroke: rgba(165, 180, 252, 0.28);
+  stroke-width: 1.5;
+  stroke-dasharray: 4 3;
+}
+
+.hz-mm-center {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80px; height: 80px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary, #4f46e5), #7c3aed);
+  box-shadow: 0 0 28px rgba(99, 102, 241, 0.45);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 0.05rem;
+  z-index: 2;
+  transition: opacity 0.22s ease;
+}
+
+.hz-mm-center.mm-fade { opacity: 0; }
+
+.hz-mm-center-title {
+  font-size: 0.72rem;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1.2;
+  letter-spacing: 0.01em;
+}
+
+.hz-mm-center-sub {
+  font-size: 0.62rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.78);
+  line-height: 1.2;
+}
+
+.hz-mm-nodes {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.hz-mm-node {
+  position: absolute;
+  top: 50%; left: 50%;
+  width: 58px; height: 58px;
+  border-radius: 50%;
+  background: rgba(28, 30, 46, 0.92);
+  border: 1.5px solid rgba(165, 180, 252, 0.25);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.28);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 0.1rem;
+  cursor: pointer;
+  pointer-events: auto;
+  text-decoration: none;
+  padding: 0.2rem;
+  font-family: inherit;
+  transform: translate(calc(-50% + var(--mm-x, 0px)), calc(-50% + var(--mm-y, 0px)));
+  transition: background 0.15s, border-color 0.15s, box-shadow 0.15s, transform 0.15s;
+  opacity: 0;
+  animation: none;
+}
+
+.hz-mm-node.mm-anim-in {
+  animation: mmNodeIn 0.32s ease forwards;
+}
+
+@keyframes mmNodeIn {
+  from { opacity: 0; transform: translate(calc(-50% + var(--mm-x, 0px) * 0.5), calc(-50% + var(--mm-y, 0px) * 0.5)) scale(0.6); }
+  to   { opacity: 1; transform: translate(calc(-50% + var(--mm-x, 0px)), calc(-50% + var(--mm-y, 0px))) scale(1); }
+}
+
+/* Nodes shown without animation (subject view on first open) */
+.hz-mindmap-overlay.is-open .hz-mm-node:not(.mm-anim-in) {
+  opacity: 1;
+}
+
+.hz-mm-node:hover,
+.hz-mm-node:focus-visible {
+  background: rgba(79, 70, 229, 0.35);
+  border-color: rgba(165, 180, 252, 0.65);
+  box-shadow: 0 0 18px rgba(99, 102, 241, 0.35);
+  outline: none;
+}
+
+.hz-mm-node.is-current {
+  background: rgba(79, 70, 229, 0.4);
+  border-color: rgba(165, 180, 252, 0.8);
+  box-shadow: 0 0 20px rgba(99, 102, 241, 0.5);
+}
+
+.hz-mm-node-num {
+  font-size: 0.7rem;
+  font-weight: 800;
+  color: #e0e7ff;
+  line-height: 1.1;
+}
+
+.hz-mm-node-sub {
+  font-size: 0.55rem;
+  font-weight: 600;
+  color: rgba(224, 231, 255, 0.65);
+  line-height: 1.2;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  max-width: 52px;
+}
+
+.hz-mm-close {
+  position: absolute;
+  top: -52px; right: 0;
+  width: 38px; height: 38px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(255, 255, 255, 0.18);
+  background: rgba(30, 32, 50, 0.85);
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s, color 0.15s;
+  font-family: inherit;
+}
+
+.hz-mm-close:hover {
+  background: rgba(99, 102, 241, 0.4);
+  color: #fff;
+}
+
+.hz-mm-back {
+  position: absolute;
+  bottom: -52px; left: 50%;
+  transform: translateX(-50%);
+  padding: 0.45rem 1.1rem;
+  border-radius: 999px;
+  border: 1.5px solid rgba(165, 180, 252, 0.3);
+  background: rgba(28, 30, 46, 0.9);
+  color: rgba(165, 180, 252, 0.9);
+  font-size: 0.8rem;
+  font-weight: 700;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+  font-family: inherit;
+}
+
+.hz-mm-back:hover {
+  background: rgba(79, 70, 229, 0.3);
+  color: #a5b4fc;
+  border-color: rgba(165, 180, 252, 0.55);
+}
+
+@media (min-width: 480px) {
+  .hz-mindmap-stage {
+    width: min(440px, 88vw);
+    height: min(440px, 60vh);
+  }
+  .hz-mm-center { width: 88px; height: 88px; }
+  .hz-mm-node { width: 64px; height: 64px; }
+  .hz-mm-center-title { font-size: 0.78rem; }
+  .hz-mm-node-num { font-size: 0.73rem; }
+}
+
+body.mindmap-open { overflow: hidden; }

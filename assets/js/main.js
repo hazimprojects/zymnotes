@@ -821,6 +821,67 @@ var HZ_NOTES_SEARCH_PAGES = [
 })();
 
 // =========================
+// QUICK NAV DATA
+// =========================
+var ZYMNOTES_NAV = { chapters: [
+  { num: 1, title: 'Warisan Negara Bangsa', url: 'bab-1.html', subtopics: [
+    { num: '1.1', title: 'Latar Belakang Negara Bangsa Sebelum Kedatangan Barat', url: 'bab-1-1.html' },
+    { num: '1.2', title: 'Ciri-ciri Negara Bangsa Kesultanan Melayu Melaka', url: 'bab-1-2.html' },
+    { num: '1.3', title: 'Keunggulan Sistem Pentadbiran dan Undang-undang', url: 'bab-1-3.html' },
+    { num: '1.4', title: 'Peranan Pemerintah dan Rakyat', url: 'bab-1-4.html' },
+  ]},
+  { num: 2, title: 'Kebangkitan Nasionalisme', url: 'bab-2.html', subtopics: [
+    { num: '2.1', title: 'Maksud Nasionalisme', url: 'bab-2-1.html' },
+    { num: '2.2', title: 'Perkembangan Idea Nasionalisme di Barat', url: 'bab-2-2.html' },
+    { num: '2.3', title: 'Perkembangan Nasionalisme di Asia', url: 'bab-2-3.html' },
+    { num: '2.4', title: 'Perkembangan Nasionalisme di Asia Tenggara', url: 'bab-2-4.html' },
+    { num: '2.5', title: 'Kesedaran Nasionalisme di Negara Kita', url: 'bab-2-5.html' },
+    { num: '2.6', title: 'Faktor Kemunculan Gerakan Nasionalisme', url: 'bab-2-6.html' },
+    { num: '2.7', title: 'Perkembangan Nasionalisme', url: 'bab-2-7.html' },
+    { num: '2.8', title: 'Kesan Perkembangan Nasionalisme', url: 'bab-2-8.html' },
+  ]},
+  { num: 3, title: 'Konflik Dunia dan Pendudukan Jepun di Negara Kita', url: 'bab-3.html', subtopics: [
+    { num: '3.1', title: 'Nasionalisme di Negara Kita Sebelum Perang Dunia', url: 'bab-3-1.html' },
+    { num: '3.2', title: 'Latar Belakang Perang Dunia', url: 'bab-3-2.html' },
+    { num: '3.3', title: 'Perang Dunia Kedua', url: 'bab-3-3.html' },
+    { num: '3.4', title: 'Perang Dunia Kedua di Asia Pasifik', url: 'bab-3-4.html' },
+    { num: '3.5', title: 'Faktor Kedatangan Jepun ke Negara Kita', url: 'bab-3-5.html' },
+    { num: '3.6', title: 'Dasar Pendudukan Jepun di Negara Kita', url: 'bab-3-6.html' },
+    { num: '3.7', title: 'Perjuangan Rakyat Menentang Pendudukan Jepun', url: 'bab-3-7.html' },
+    { num: '3.8', title: 'Perkembangan Gerakan Nasionalisme Tempatan dan Pendudukan Jepun', url: 'bab-3-8.html' },
+    { num: '3.9', title: 'Keadaan Negara Kita Selepas Kekalahan Jepun', url: 'bab-3-9.html' },
+  ]},
+  { num: 4, title: 'Era Peralihan Kuasa British di Negara Kita', url: 'bab-4.html', subtopics: [
+    { num: '4.1', title: 'British Military Administration (BMA)', url: 'bab-4-1.html' },
+    { num: '4.2', title: 'Gagasan Malayan Union', url: 'bab-4-2.html' },
+    { num: '4.3', title: 'Reaksi Penduduk Tempatan terhadap Malayan Union', url: 'bab-4-3.html' },
+    { num: '4.4', title: 'Penyerahan Sarawak kepada Kerajaan British', url: 'bab-4-4.html' },
+    { num: '4.5', title: 'Reaksi Penduduk Tempatan terhadap Penyerahan Sarawak', url: 'bab-4-5.html' },
+    { num: '4.6', title: 'Penyerahan Sabah kepada Kerajaan British', url: 'bab-4-6.html' },
+    { num: '4.7', title: 'Reaksi Penduduk Tempatan terhadap Penyerahan Sabah', url: 'bab-4-7.html' },
+  ]},
+  { num: 5, title: 'Persekutuan Tanah Melayu 1948', url: 'bab-5.html', subtopics: [
+    { num: '5.1', title: 'Latar Belakang Penubuhan Persekutuan Tanah Melayu 1948', url: 'bab-5-1.html' },
+    { num: '5.2', title: 'Faktor Penubuhan Persekutuan Tanah Melayu 1948', url: 'bab-5-2.html' },
+    { num: '5.3', title: 'Ciri-ciri Persekutuan Tanah Melayu 1948', url: 'bab-5-3.html' },
+    { num: '5.4', title: 'Kesan Penubuhan Persekutuan Tanah Melayu 1948', url: 'bab-5-4.html' },
+  ]},
+  { num: 6, title: 'Ancaman Komunis dan Perisytiharan Darurat', url: 'bab-6.html', subtopics: [
+    { num: '6.1', title: 'Kemasukan Pengaruh Komunis di Negara Kita', url: 'bab-6-1.html' },
+    { num: '6.2', title: 'Ancaman Komunis di Negara Kita', url: 'bab-6-2.html' },
+    { num: '6.3', title: 'Usaha Menangani Ancaman Komunis', url: 'bab-6-3.html' },
+    { num: '6.4', title: 'Kesan Zaman Darurat terhadap Negara Kita', url: 'bab-6-4.html' },
+  ]},
+  { num: 7, title: 'Usaha ke Arah Kemerdekaan', url: 'bab-7.html', subtopics: [
+    { num: '7.1', title: 'Latar Belakang Idea Negara Merdeka', url: 'bab-7-1.html' },
+    { num: '7.2', title: 'Jawatankuasa Hubungan Antara Kaum', url: 'bab-7-2.html' },
+    { num: '7.3', title: 'Sistem Ahli', url: 'bab-7-3.html' },
+    { num: '7.4', title: 'Sistem Pendidikan Kebangsaan', url: 'bab-7-4.html' },
+    { num: '7.5', title: 'Penubuhan Parti Politik', url: 'bab-7-5.html' },
+  ]},
+]};
+
+// =========================
 // AUDIO PLAYER
 // =========================
 (function setupAudioPlayers() {
@@ -886,10 +947,8 @@ var HZ_NOTES_SEARCH_PAGES = [
       labEmoji = '🧩';
     }
 
-    // Only show sparkle if there's at least one item
     if (!audioEl && !labHref && !zhModeApi) {
       document.dispatchEvent(new CustomEvent('hz:zh-legacy-controls'));
-      return;
     }
 
     var wrap = document.createElement('div');
@@ -917,6 +976,7 @@ var HZ_NOTES_SEARCH_PAGES = [
       return el;
     }
 
+    itemsContainer.appendChild(makeSparkleItem('🗺️', 'Navigasi Cepat', 'nav'));
     if (audioEl) itemsContainer.appendChild(makeSparkleItem('🎧', 'Main audio', 'audio'));
     if (labHref) itemsContainer.appendChild(makeSparkleItem(labEmoji, 'Kuiz', 'lab', labHref));
     if (zhModeApi) itemsContainer.appendChild(makeSparkleItem('华', 'Mod Bahasa Cina (Versi Awal)', 'zh-mode'));
@@ -1109,6 +1169,12 @@ var HZ_NOTES_SEARCH_PAGES = [
       var btn = e.target.closest('[data-sparkle-type]');
       if (!btn) return;
       var type = btn.getAttribute('data-sparkle-type');
+      if (type === 'nav') {
+        wrap.classList.remove('is-open');
+        syncSparklePanelState();
+        if (window.HzMindmap) window.HzMindmap.open();
+        return;
+      }
       if (type === 'audio' && audioEl) {
         showAudioNotice();
         audioEl.paused ? audioEl.play() : audioEl.pause();
@@ -1195,6 +1261,254 @@ var HZ_NOTES_SEARCH_PAGES = [
       });
     }
   });
+})();
+
+// =========================
+// MINDMAP NAVIGATION OVERLAY
+// =========================
+(function () {
+  if (!/\/notes\//.test(window.location.pathname)) return;
+
+  var overlay = null;
+  var svgEl = null;
+  var centerEl = null;
+  var nodesWrap = null;
+  var backBtn = null;
+  var closeBtn = null;
+  var state = 'subject'; // 'subject' | 'chapter'
+  var activeChapterIdx = -1;
+  var svgNS = 'http://www.w3.org/2000/svg';
+
+  function buildOverlay() {
+    if (overlay) return;
+
+    overlay = document.createElement('div');
+    overlay.className = 'hz-mindmap-overlay';
+    overlay.setAttribute('role', 'dialog');
+    overlay.setAttribute('aria-modal', 'true');
+    overlay.setAttribute('aria-label', 'Navigasi Nota Mindmap');
+
+    var stage = document.createElement('div');
+    stage.className = 'hz-mindmap-stage';
+
+    svgEl = document.createElementNS(svgNS, 'svg');
+    svgEl.setAttribute('class', 'hz-mindmap-svg');
+    svgEl.setAttribute('aria-hidden', 'true');
+
+    centerEl = document.createElement('div');
+    centerEl.className = 'hz-mm-center';
+
+    nodesWrap = document.createElement('div');
+    nodesWrap.className = 'hz-mm-nodes';
+
+    closeBtn = document.createElement('button');
+    closeBtn.type = 'button';
+    closeBtn.className = 'hz-mm-close';
+    closeBtn.setAttribute('aria-label', 'Tutup navigasi');
+    closeBtn.textContent = '✕';
+    closeBtn.addEventListener('click', close);
+
+    backBtn = document.createElement('button');
+    backBtn.type = 'button';
+    backBtn.className = 'hz-mm-back';
+    backBtn.setAttribute('aria-label', 'Kembali ke pilihan bab');
+    backBtn.innerHTML = '← Semua Bab';
+    backBtn.style.display = 'none';
+    backBtn.addEventListener('click', function () { showSubjectView(true); });
+
+    stage.appendChild(svgEl);
+    stage.appendChild(centerEl);
+    stage.appendChild(nodesWrap);
+    stage.appendChild(closeBtn);
+    stage.appendChild(backBtn);
+    overlay.appendChild(stage);
+    document.body.appendChild(overlay);
+
+    overlay.addEventListener('click', function (e) {
+      if (e.target === overlay) close();
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && overlay && overlay.classList.contains('is-open')) close();
+    });
+  }
+
+  function getRadius(count) {
+    if (count <= 4) return 130;
+    if (count <= 6) return 145;
+    if (count <= 8) return 158;
+    return 170;
+  }
+
+  function calcPositions(count, radius) {
+    var positions = [];
+    for (var i = 0; i < count; i++) {
+      var angle = (2 * Math.PI * i / count) - Math.PI / 2;
+      positions.push({
+        x: Math.cos(angle) * radius,
+        y: Math.sin(angle) * radius
+      });
+    }
+    return positions;
+  }
+
+  function drawLines(positions) {
+    while (svgEl.firstChild) svgEl.removeChild(svgEl.firstChild);
+    positions.forEach(function (pos) {
+      var line = document.createElementNS(svgNS, 'line');
+      line.setAttribute('x1', '50%');
+      line.setAttribute('y1', '50%');
+      line.setAttribute('x2', 'calc(50% + ' + pos.x + 'px)');
+      line.setAttribute('y2', 'calc(50% + ' + pos.y + 'px)');
+      line.setAttribute('class', 'hz-mm-line');
+      svgEl.appendChild(line);
+    });
+  }
+
+  function makeSvgLines(positions, stageW, stageH) {
+    while (svgEl.firstChild) svgEl.removeChild(svgEl.firstChild);
+    var cx = stageW / 2, cy = stageH / 2;
+    positions.forEach(function (pos) {
+      var line = document.createElementNS(svgNS, 'line');
+      line.setAttribute('x1', cx);
+      line.setAttribute('y1', cy);
+      line.setAttribute('x2', cx + pos.x);
+      line.setAttribute('y2', cy + pos.y);
+      line.setAttribute('class', 'hz-mm-line');
+      svgEl.appendChild(line);
+    });
+  }
+
+  function clearNodes() {
+    while (nodesWrap.firstChild) nodesWrap.removeChild(nodesWrap.firstChild);
+    while (svgEl.firstChild) svgEl.removeChild(svgEl.firstChild);
+  }
+
+  function makeNode(label, sublabel, href, onClick, extraClass) {
+    var el = href ? document.createElement('a') : document.createElement('button');
+    if (href) {
+      el.href = href;
+      el.addEventListener('click', close);
+    } else {
+      el.type = 'button';
+      if (onClick) el.addEventListener('click', onClick);
+    }
+    el.className = 'hz-mm-node' + (extraClass ? ' ' + extraClass : '');
+    el.innerHTML =
+      '<span class="hz-mm-node-num">' + label + '</span>' +
+      (sublabel ? '<span class="hz-mm-node-sub">' + sublabel + '</span>' : '');
+    return el;
+  }
+
+  function showSubjectView(animated) {
+    state = 'subject';
+    activeChapterIdx = -1;
+
+    clearNodes();
+    centerEl.innerHTML =
+      '<span class="hz-mm-center-title">Sejarah</span>' +
+      '<span class="hz-mm-center-sub">Tingkatan 4</span>';
+
+    var chapters = ZYMNOTES_NAV.chapters;
+    var positions = calcPositions(chapters.length, getRadius(chapters.length));
+    var stage = overlay.querySelector('.hz-mindmap-stage');
+    var sw = stage.offsetWidth || window.innerWidth;
+    var sh = stage.offsetHeight || window.innerHeight;
+    makeSvgLines(positions, sw, sh);
+
+    var currentFile = window.location.pathname.split('/').pop();
+
+    chapters.forEach(function (ch, i) {
+      var isCurrent = ch.subtopics.some(function (s) { return s.url === currentFile; }) ||
+                      ch.url === currentFile;
+      var node = makeNode(
+        'Bab ' + ch.num,
+        ch.title.split(' ').slice(0, 3).join(' ') + (ch.title.split(' ').length > 3 ? '…' : ''),
+        null,
+        function () { showChapterView(ch, i); },
+        isCurrent ? 'is-current' : ''
+      );
+      node.style.setProperty('--mm-x', positions[i].x + 'px');
+      node.style.setProperty('--mm-y', positions[i].y + 'px');
+      if (animated) node.classList.add('mm-anim-in');
+      nodesWrap.appendChild(node);
+    });
+
+    backBtn.style.display = 'none';
+    if (animated) {
+      centerEl.classList.add('mm-fade');
+      setTimeout(function () { centerEl.classList.remove('mm-fade'); }, 300);
+    }
+  }
+
+  function showChapterView(chapter, chIdx) {
+    state = 'chapter';
+    activeChapterIdx = chIdx;
+
+    clearNodes();
+    centerEl.innerHTML =
+      '<span class="hz-mm-center-title">Bab ' + chapter.num + '</span>' +
+      '<span class="hz-mm-center-sub">' + chapter.title.split(' ').slice(0, 4).join(' ') + '</span>';
+
+    var subs = chapter.subtopics;
+    var positions = calcPositions(subs.length, getRadius(subs.length));
+    var stage = overlay.querySelector('.hz-mindmap-stage');
+    var sw = stage.offsetWidth || window.innerWidth;
+    var sh = stage.offsetHeight || window.innerHeight;
+    makeSvgLines(positions, sw, sh);
+
+    var currentFile = window.location.pathname.split('/').pop();
+
+    subs.forEach(function (sub, i) {
+      var isCurrent = sub.url === currentFile;
+      var node = makeNode(
+        sub.num,
+        sub.title.split(' ').slice(0, 3).join(' ') + (sub.title.split(' ').length > 3 ? '…' : ''),
+        '/notes/' + sub.url,
+        null,
+        isCurrent ? 'is-current' : ''
+      );
+      node.style.setProperty('--mm-x', positions[i].x + 'px');
+      node.style.setProperty('--mm-y', positions[i].y + 'px');
+      node.classList.add('mm-anim-in');
+      nodesWrap.appendChild(node);
+    });
+
+    backBtn.style.display = '';
+    centerEl.classList.add('mm-fade');
+    setTimeout(function () { centerEl.classList.remove('mm-fade'); }, 300);
+  }
+
+  function open(startChapterIdx) {
+    buildOverlay();
+    overlay.classList.add('is-open');
+    document.body.classList.add('mindmap-open');
+
+    if (typeof startChapterIdx === 'number') {
+      showChapterView(ZYMNOTES_NAV.chapters[startChapterIdx], startChapterIdx);
+    } else {
+      // Auto-expand current chapter if on a subtopic page
+      var currentFile = window.location.pathname.split('/').pop();
+      var autoIdx = -1;
+      ZYMNOTES_NAV.chapters.forEach(function (ch, i) {
+        if (ch.subtopics.some(function (s) { return s.url === currentFile; })) autoIdx = i;
+      });
+      if (autoIdx >= 0) {
+        showChapterView(ZYMNOTES_NAV.chapters[autoIdx], autoIdx);
+      } else {
+        showSubjectView(false);
+      }
+    }
+
+    setTimeout(function () { closeBtn.focus(); }, 80);
+  }
+
+  function close() {
+    if (!overlay) return;
+    overlay.classList.remove('is-open');
+    document.body.classList.remove('mindmap-open');
+  }
+
+  window.HzMindmap = { open: open, close: close };
 })();
 
 // ── Nota Feedback Widget ──────────────────────────────────────────────────────
@@ -1495,6 +1809,97 @@ var HZ_ICONS = (function () {
   }
 
   document.addEventListener('hz:search-open', openOverlay);
+})();
+
+// ── Sticky Breadcrumb Nav (subtopic pages) ───────────────────────────────────
+(function () {
+  if (!/\/notes\/bab-\d+-\d+\.html/.test(window.location.pathname)) return;
+
+  document.addEventListener('DOMContentLoaded', function () {
+    var hero = document.querySelector('.page-hero.note-hero');
+    if (!hero) return;
+
+    // Extract data from page DOM
+    var heroLabel = document.querySelector('.note-hero .paper-label');
+    var heroEyebrow = document.querySelector('.note-hero .eyebrow');
+    var chapterText = heroLabel ? heroLabel.textContent.trim() : '';
+    var subtopicNum = heroEyebrow ? heroEyebrow.textContent.replace('Subtopik ', '').trim() : '';
+
+    // chapter short name: "Bab 1 · Warisan Negara Bangsa" → extract chapter num
+    var chapMatch = chapterText.match(/Bab\s*(\d+)/);
+    var chapNum = chapMatch ? chapMatch[1] : '';
+
+    // Find next link (last btn-primary with non-anchor href)
+    var allPrimary = Array.from(document.querySelectorAll('.hero-actions .btn-primary[href]'));
+    var nextEl = null;
+    for (var i = allPrimary.length - 1; i >= 0; i--) {
+      var href = allPrimary[i].getAttribute('href');
+      if (href && href.charAt(0) !== '#') { nextEl = allPrimary[i]; break; }
+    }
+
+    // Find back link (last btn-secondary href matching bab-X.html)
+    var allSecondary = Array.from(document.querySelectorAll('.hero-actions .btn-secondary[href]'));
+    var backEl = allSecondary.length ? allSecondary[allSecondary.length - 1] : null;
+
+    var nextHref = nextEl ? nextEl.getAttribute('href') : null;
+    var nextMatch = nextHref ? nextHref.match(/bab-(\d+)-(\d+)/) : null;
+    var nextLabel = nextMatch ? nextMatch[1] + '.' + nextMatch[2] : null;
+    var backHref = backEl ? backEl.getAttribute('href') : null;
+
+    // Build sticky nav
+    var nav = document.createElement('div');
+    nav.className = 'hz-sticky-nav';
+    nav.setAttribute('aria-label', 'Navigasi halaman semasa');
+
+    var backPart = document.createElement(backHref ? 'a' : 'span');
+    backPart.className = 'hz-snav-back' + (backHref ? '' : ' hz-snav-disabled');
+    if (backHref) backPart.href = backHref;
+    backPart.setAttribute('aria-label', backHref ? 'Kembali ke Bab ' + chapNum : '');
+    backPart.innerHTML =
+      '<span class="hz-snav-arrow" aria-hidden="true">←</span>' +
+      '<span class="hz-snav-back-label">Bab ' + chapNum + '</span>';
+
+    var midBtn = document.createElement('button');
+    midBtn.type = 'button';
+    midBtn.className = 'hz-snav-mid';
+    midBtn.setAttribute('aria-label', 'Buka navigasi mindmap');
+    midBtn.innerHTML =
+      '<span class="hz-snav-pos">' + subtopicNum + '</span>' +
+      '<span class="hz-snav-sep" aria-hidden="true">·</span>' +
+      '<span class="hz-snav-chapter">Bab ' + chapNum + '</span>';
+    midBtn.addEventListener('click', function () {
+      if (window.HzMindmap) window.HzMindmap.open();
+    });
+
+    var nextPart = document.createElement(nextHref ? 'a' : 'span');
+    nextPart.className = 'hz-snav-next' + (nextHref ? '' : ' hz-snav-disabled');
+    if (nextHref) nextPart.href = nextHref;
+    nextPart.setAttribute('aria-label', nextLabel ? 'Seterusnya: ' + nextLabel : '');
+    nextPart.innerHTML =
+      (nextLabel ? '<span class="hz-snav-next-label">' + nextLabel + '</span>' : '') +
+      '<span class="hz-snav-arrow" aria-hidden="true">→</span>';
+
+    nav.appendChild(backPart);
+    nav.appendChild(midBtn);
+    nav.appendChild(nextPart);
+
+    // Set header height CSS var and insert nav
+    var headerEl = document.querySelector('.site-header');
+    if (headerEl) {
+      document.documentElement.style.setProperty('--hz-header-h', headerEl.offsetHeight + 'px');
+    }
+    document.body.appendChild(nav);
+
+    // Show/hide on scroll past hero
+    if ('IntersectionObserver' in window) {
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          nav.classList.toggle('is-visible', !entry.isIntersecting);
+        });
+      }, { threshold: 0, rootMargin: '0px 0px 0px 0px' });
+      io.observe(hero);
+    }
+  });
 })();
 
 // ── Bottom Navigation Bar (mobile) ───────────────────────────────────────────
