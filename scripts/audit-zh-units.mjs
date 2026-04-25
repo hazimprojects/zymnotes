@@ -197,6 +197,8 @@ function auditFile(htmlPath, unitMap) {
     const open = openingTagSlice(html, r);
     if (!classAttrIncludes(open, "paper-chip")) continue;
     const inner = innerHtml(html, r);
+    // Person chips use kw kw-tokoh and intentionally have no zh unit (names stay in BM)
+    if (/\bkw-tokoh\b/.test(inner)) continue;
     const parsed = parseOpeningTag(open);
     const id = (parsed?.attrs["data-zh-unit-id"] || "").trim();
     const text = inner.replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim();
