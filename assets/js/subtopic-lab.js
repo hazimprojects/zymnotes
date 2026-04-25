@@ -8,7 +8,6 @@
   const LEVEL_COLORS = { 1: '#3e5f8a', 2: '#2f7a67', 3: '#8a7158', 4: '#6a7b5a', 5: '#9a5a5a' };
 
   const screens = {
-    intro:  root.querySelector('[data-lab-screen="intro"]'),
     game:   root.querySelector('[data-lab-screen="game"]'),
     result: root.querySelector('[data-lab-screen="result"]'),
   };
@@ -30,7 +29,6 @@
   const resultTitle   = root.querySelector('[data-lab-result-title]');
   const resultText    = root.querySelector('[data-lab-result-text]');
   const bestScoreEl   = root.querySelector('[data-lab-best-score]');
-  const introStatsEl  = root.querySelector('[data-lab-intro-stats]');
   const checkBtn      = root.querySelector('[data-lab-action="check"]');
   const nextBtn       = root.querySelector('[data-lab-action="next"]');
 
@@ -74,12 +72,6 @@
       set.push(Object.assign({}, picked, { shuffledOptions: shuffle(picked.options) }));
     });
     return set;
-  }
-
-  function loadQuestions(id) {
-    return fetch('/data/quiz/' + id + '.json')
-      .then(function(r) { return r.json(); })
-      .then(function(data) { return data.questions; });
   }
 
   function switchScreen(name) {
@@ -128,7 +120,7 @@
       let cls = 'learning-lab-option';
 
       if (state.locked) {
-        if (option === q.answer)           cls += ' is-correct';
+        if (option === q.answer)            cls += ' is-correct';
         else if (state.selected === option) cls += ' is-wrong';
         else                                cls += ' is-muted';
       } else if (isPicked) {
@@ -164,14 +156,14 @@
     renderProgress();
 
     if (typeEl) {
-      typeEl.textContent  = 'Objektif';
-      typeEl.style.color  = '#3e5f8a';
+      typeEl.textContent      = 'Objektif';
+      typeEl.style.color      = '#3e5f8a';
       typeEl.style.background = 'rgba(62,95,138,0.1)';
     }
 
     if (levelEl) {
       const color = LEVEL_COLORS[q.level];
-      levelEl.textContent = 'Aras ' + q.level + ' · ' + LEVEL_LABELS[q.level];
+      levelEl.textContent      = 'Aras ' + q.level + ' · ' + LEVEL_LABELS[q.level];
       levelEl.style.color      = color;
       levelEl.style.background = color + '18';
     }
@@ -235,13 +227,12 @@
   }
 
   function renderResult() {
-    const total     = state.questions.length;
-    const score     = state.score;
-    const prevBest  = getBestScore(quizId);
-    const isRecord  = score > prevBest;
+    const total    = state.questions.length;
+    const score    = state.score;
+    const prevBest = getBestScore(quizId);
+    const isRecord = score > prevBest;
 
     saveBestScore(quizId, score);
-
     const newBest = isRecord ? score : prevBest;
 
     let title, titleColor, bg, border;
@@ -269,6 +260,7 @@
     }
 
     if (progressFill) progressFill.style.width = '100%';
+    if (progressEl)   progressEl.textContent = 'Selesai!';
 
     if (summaryList) {
       summaryList.innerHTML = state.history.map(function(item, i) {
@@ -305,27 +297,53 @@
     switchScreen('game');
   }
 
-  loadQuestions(quizId).then(function(allQuestions) {
-    const best = getBestScore(quizId);
-    if (introStatsEl && best > 0) {
-      introStatsEl.textContent = 'Rekod terbaik anda: ' + best + ' / 5';
-      introStatsEl.style.display = 'block';
-    }
+  // Mark notice button as loading until questions are ready
+  var noticeBtn = document.getElementById('lab-notice-start');
+  if (noticeBtn) {
+    noticeBtn.disabled    = true;
+    noticeBtn.textContent = 'Memuatkan...';
+  }
 
-    root.querySelector('[data-lab-action="start"]').addEventListener('click', function() {
-      startGame(allQuestions);
+  fetch('/data/quiz/' + quizId + '.json')
+    .then(function(r) {
+      if (!r.ok) throw new Error('HTTP ' + r.status);
+      return r.json();
+    })
+    .then(function(data) {
+      var allQuestions = data.questions;
+
+      // Ready — expose global start hook and enable notice button
+      window.__labStartQuiz = function() { startGame(allQuestions); };
+
+      if (noticeBtn) {
+        noticeBtn.disabled    = false;
+        noticeBtn.textContent = 'Mulakan Kuiz 🧩';
+      }
+
+      root.querySelector('[data-lab-action="restart"]').addEventListener('click', function() {
+        startGame(allQuestions);
+      });
+
+      if (checkBtn) checkBtn.addEventListener('click', submitAnswer);
+      if (nextBtn)  nextBtn.addEventListener('click', nextQuestion);
+
+      // Show best score on notice screen if exists
+      var best = getBestScore(quizId);
+      if (best > 0) {
+        var bestEl = document.getElementById('lab-notice-best');
+        if (bestEl) {
+          bestEl.textContent = 'Rekod terbaik anda: ' + best + ' / 5';
+          bestEl.style.display = 'flex';
+        }
+      }
+    })
+    .catch(function(err) {
+      if (noticeBtn) {
+        noticeBtn.disabled    = false;
+        noticeBtn.textContent = '⚠️ Gagal memuatkan — cuba semula';
+      }
+      console.error('Gagal memuatkan soalan:', err);
     });
-    root.querySelector('[data-lab-action="restart"]').addEventListener('click', function() {
-      startGame(allQuestions);
-    });
-
-    if (checkBtn) checkBtn.addEventListener('click', submitAnswer);
-    if (nextBtn)  nextBtn.addEventListener('click', nextQuestion);
-
-    switchScreen('intro');
-  }).catch(function(err) {
-    console.error('Gagal memuatkan soalan:', err);
-  });
 
   const actions = document.querySelector('[data-learning-actions]');
   if (actions) {

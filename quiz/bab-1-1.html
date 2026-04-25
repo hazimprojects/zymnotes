@@ -101,8 +101,8 @@
       gap: 0.72rem;
     }
 
-    /* --- SIDEBAR (hidden on mobile) --- */
-    .lab-compact-side { display: grid; gap: 0.72rem; }
+    /* --- SIDEBAR (hidden on mobile, shown on desktop) --- */
+    .lab-compact-side { display: none; }
 
     /* --- GAME SECTION --- */
     .lab-compact-game {
@@ -144,7 +144,8 @@
       flex-direction: column;
       justify-content: center;
       min-height: 0;
-      overflow: hidden;
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
     }
 
     .lab-notice-card {
@@ -267,6 +268,42 @@
     }
 
     [data-theme="dark"] .lab-notice-rule-text { color: #dbe5ff; }
+
+    /* --- PROGRESS WRAP (compact inside game card) --- */
+    .lab-compact-game .learning-lab-progress-wrap {
+      flex-shrink: 0;
+      padding: 0.1rem 0 0.2rem;
+    }
+
+    /* --- NOTICE BUTTON LOADING STATE --- */
+    .lab-notice-btn:disabled {
+      opacity: 0.65;
+      cursor: wait;
+      transform: none !important;
+      box-shadow: none !important;
+    }
+
+    /* --- NOTICE BEST SCORE CHIP --- */
+    .lab-notice-best {
+      display: none;
+      align-items: center;
+      justify-content: center;
+      gap: 0.38rem;
+      padding: 0.38rem 0.78rem;
+      margin: 0 0.9rem 0.55rem;
+      border-radius: 12px;
+      background: rgba(47, 122, 103, 0.08);
+      border: 1px solid rgba(47, 122, 103, 0.18);
+      font-size: 0.72rem;
+      font-weight: 800;
+      color: #2f7a67;
+    }
+
+    [data-theme="dark"] .lab-notice-best {
+      background: rgba(47, 122, 103, 0.14);
+      border-color: rgba(47, 122, 103, 0.28);
+      color: #7dd4be;
+    }
 
     /* --- STAGE: flex column, content fills + scrolls --- */
     .lab-compact-game [data-lab-screen] {
@@ -658,14 +695,15 @@
                   <span class="lab-notice-rule-text">Ulang kuiz untuk soalan berbeza — rekod terbaik disimpan</span>
                 </div>
               </div>
+              <div class="lab-notice-best" id="lab-notice-best"></div>
               <div class="lab-notice-footer">
-                <button class="lab-notice-btn" id="lab-notice-start">Mulakan Kuiz 🧩</button>
+                <button class="lab-notice-btn" id="lab-notice-start" disabled>Memuatkan...</button>
               </div>
             </div>
           </div>
 
           <!-- Game shell (shown after notice dismissed) -->
-          <div class="learning-lab-shell" data-quiz-id="1-1" id="lab-game-shell" style="display:none">
+          <div class="learning-lab-shell" data-quiz-id="bab-1-1" id="lab-game-shell" style="display:none">
             <div class="learning-lab-card">
               <div class="learning-lab-top">
                 <div>
@@ -681,13 +719,6 @@
                   <span class="learning-lab-stat">5 soalan per sesi</span>
                   <span class="learning-lab-stat">5 aras Bloom</span>
                   <span class="learning-lab-stat">Soalan rawak</span>
-                </div>
-              </div>
-
-              <div class="learning-lab-stage" data-lab-screen="intro">
-                <p class="learning-lab-intro-stats" data-lab-intro-stats style="display:none;"></p>
-                <div class="learning-lab-actions">
-                  <button class="learning-lab-btn" data-lab-action="start">Mulakan Kuiz 🧩</button>
                 </div>
               </div>
 
@@ -770,7 +801,7 @@
   </div>
 
   <script src="../assets/js/zh-mode.js?v=38"></script>
-  <script src="../assets/js/subtopic-lab.js?v=1"></script>
+  <script src="../assets/js/subtopic-lab.js?v=2"></script>
   <script src="../assets/js/main.js?v=110"></script>
   <script>
     (function () {
@@ -829,18 +860,21 @@
         isDragging = false; wrap.classList.remove('is-dragging');
         if (didDrag) snapLabCorner(corner);
       });
-      var noticeScreen = document.getElementById('lab-notice');
-      var gameShell = document.getElementById('lab-game-shell');
-      var noticeStartBtn = document.getElementById('lab-notice-start');
+      var noticeScreen    = document.getElementById('lab-notice');
+      var gameShell       = document.getElementById('lab-game-shell');
+      var noticeStartBtn  = document.getElementById('lab-notice-start');
 
-      // Notice → start game
+      function revealShellAndStart() {
+        noticeScreen.classList.add('is-gone');
+        gameShell.style.cssText = 'display:flex;flex:1;flex-direction:column;min-height:0;';
+        if (typeof window.__labStartQuiz === 'function') window.__labStartQuiz();
+      }
+
+      // Notice → start game (button is disabled until JS ready)
       if (noticeStartBtn) {
         noticeStartBtn.addEventListener('click', function () {
-          noticeScreen.classList.add('is-gone');
-          gameShell.style.cssText = 'display:flex;flex:1;flex-direction:column;min-height:0;';
-          // Auto-click "Mula Bermain" to go straight to first question
-          var startBtn = document.querySelector('[data-lab-action="start"]');
-          if (startBtn) setTimeout(function () { startBtn.click(); }, 40);
+          if (noticeStartBtn.disabled) return;
+          revealShellAndStart();
         });
       }
 
@@ -857,11 +891,12 @@
       // Restart lab
       restartBtn.addEventListener('click', function () {
         var restartGameBtn = document.querySelector('[data-lab-action="restart"]');
-        var startBtn = document.querySelector('[data-lab-action="start"]');
         if (restartGameBtn && !restartGameBtn.closest('.is-hidden')) {
           restartGameBtn.click();
-        } else if (startBtn) {
-          startBtn.click();
+        } else if (!noticeScreen.classList.contains('is-gone')) {
+          revealShellAndStart();
+        } else if (typeof window.__labStartQuiz === 'function') {
+          window.__labStartQuiz();
         }
         wrap.classList.remove('is-open');
       });
