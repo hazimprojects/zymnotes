@@ -16,7 +16,7 @@ Dokumen ini menyenaraikan ayat penting yang sesuai dijadikan objektif pemahaman 
 
 ### notes/bab-1-2.html
 - Soalan fokus: Apakah ciri-ciri negara bangsa yang terdapat dalam Kesultanan Melayu Melaka?
-- Fokus bab: Melaka menunjukkan negara bangsa yang kukuh di Alam Melayu. Empat ciri utama:
+- Fokus bab: Melaka menunjukkan negara bangsa yang kukuh di Alam Melayu. Enam ciri utama (enam bahagian terbuka, tanpa accordion):
 - Mengandungi seksyen kesimpulan/rumusan: Ya
 - Point-line utama:
   - 💡 Kesultanan Melayu Melaka mempunyai sistem pemerintahan yang tersusun dan lengkap, yang menunjukkan pembentukan negara bangsa yang kukuh sebelum kedatangan Barat.
