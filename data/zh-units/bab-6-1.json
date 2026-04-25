@@ -6,15 +6,6 @@
   },
   "units": [
     {
-      "source_id": "bab-6-1-u24",
-      "bm_original": "Komunisme ialah ideologi yang diasaskan oleh Karl Marx dan Friedrich Engels melalui karya Communist Manifesto dan Das Kapital .",
-      "translate": "共产主义是卡尔·马克思和弗里德里希·恩格斯通过《共产党宣言》和《资本论》创立的意识形态。",
-      "key_points_zh": [
-        "共产主义是卡尔·马克思和弗里德里希·恩格斯通过《共产党宣言》和《资本论》创立的意识形态。"
-      ],
-      "bm_focus_phrase": "Komunisme ialah ideologi yang diasaskan oleh Karl Marx dan Friedrich Engels melalui karya Communist Manifesto dan Das Kapital ."
-    },
-    {
       "source_id": "bab-6-1-u25",
       "bm_original": "Penyebaran ideologi ini di negara kita bermula sejak tahun 1920-an melalui pengaruh dari China dan Indonesia .",
       "translate": "这种意识形态在我国的传播始于20世纪20年代，受中国和印度尼西亚的影响。",
@@ -310,78 +301,6 @@
         "1920年代 → 印度尼西亚人物带来的共产主义意识形态，例如："
       ],
       "bm_focus_phrase": "1920-an → fahaman komunis dibawa oleh tokoh Indonesia seperti:"
-    },
-    {
-      "source_id": "bab-6-1-extra-19",
-      "bm_original": "Tan Malaka",
-      "translate": "陈马六甲",
-      "key_points_zh": [
-        "陈马六甲"
-      ],
-      "bm_focus_phrase": "Tan Malaka"
-    },
-    {
-      "source_id": "bab-6-1-extra-20",
-      "bm_original": "Alimin",
-      "translate": "阿利敏",
-      "key_points_zh": [
-        "阿利敏"
-      ],
-      "bm_focus_phrase": "Alimin"
-    },
-    {
-      "source_id": "bab-6-1-extra-21",
-      "bm_original": "Moeso",
-      "translate": "莫埃索",
-      "key_points_zh": [
-        "莫埃索"
-      ],
-      "bm_focus_phrase": "Moeso"
-    },
-    {
-      "source_id": "bab-6-1-extra-22",
-      "bm_original": "Boedisoejitro",
-      "translate": "布埃迪索伊特罗",
-      "key_points_zh": [
-        "布埃迪索伊特罗"
-      ],
-      "bm_focus_phrase": "Boedisoejitro"
-    },
-    {
-      "source_id": "bab-6-1-extra-23",
-      "bm_original": "Hasanoesi",
-      "translate": "哈佐内西",
-      "key_points_zh": [
-        "哈佐内西"
-      ],
-      "bm_focus_phrase": "Hasanoesi"
-    },
-    {
-      "source_id": "bab-6-1-extra-24",
-      "bm_original": "Winanta",
-      "translate": "威南塔",
-      "key_points_zh": [
-        "威南塔"
-      ],
-      "bm_focus_phrase": "Winanta"
-    },
-    {
-      "source_id": "bab-6-1-extra-25",
-      "bm_original": "Soebakat",
-      "translate": "索巴卡特",
-      "key_points_zh": [
-        "索巴卡特"
-      ],
-      "bm_focus_phrase": "Soebakat"
-    },
-    {
-      "source_id": "bab-6-1-extra-26",
-      "bm_original": "Sutan Perpateh",
-      "translate": "苏坦·佩尔帕特",
-      "key_points_zh": [
-        "苏坦·佩尔帕特"
-      ],
-      "bm_focus_phrase": "Sutan Perpateh"
     },
     {
       "source_id": "bab-6-1-u09",

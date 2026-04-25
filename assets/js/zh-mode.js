@@ -691,6 +691,11 @@
       // Always save clean original (without annotation artefacts)
       chip.__zhOriginalHTML = frontHTML;
 
+      // Person-name chips (and other non-translatable chips): no data-zh-unit-id → no flip / no glossary back
+      if (!hasZhUnitId(chip)) {
+        return;
+      }
+
       if (!sourceText || sourceText.length < 3 || sourceText.length > 320) {
         reportChipFlipIssue(chip, "conditional-render", { hasLegacyFlipMarkup: hasLegacyFlipMarkup });
         return;
