@@ -144,8 +144,8 @@
       flex-direction: column;
       justify-content: center;
       min-height: 0;
-      overflow-y: auto;
-      -webkit-overflow-scrolling: touch;
+      overflow: hidden;
+      padding-bottom: 4.5rem; /* clear sparkle FAB */
     }
 
     .lab-notice-card {
@@ -159,7 +159,7 @@
 
     .lab-notice-header {
       background: linear-gradient(145deg, rgba(79, 70, 229, 0.95) 0%, rgba(6, 182, 212, 0.9) 100%);
-      padding: 1.1rem 1.1rem 1rem;
+      padding: 0.8rem 1.1rem 0.75rem;
       text-align: center;
     }
 
@@ -167,28 +167,28 @@
       display: inline-flex;
       align-items: center;
       gap: 0.3rem;
-      padding: 0.26rem 0.68rem;
+      padding: 0.22rem 0.6rem;
       background: rgba(255, 255, 255, 0.16);
       border: 1px solid rgba(255, 255, 255, 0.22);
       border-radius: 999px;
-      font-size: 0.67rem;
+      font-size: 0.65rem;
       font-weight: 900;
       color: rgba(255, 255, 255, 0.9);
       letter-spacing: 0.05em;
       text-transform: uppercase;
-      margin-bottom: 0.7rem;
+      margin-bottom: 0.5rem;
     }
 
     .lab-notice-icon {
-      font-size: 2.4rem;
+      font-size: 2rem;
       display: block;
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.3rem;
       line-height: 1;
     }
 
     .lab-notice-title {
-      margin: 0 0 0.18rem;
-      font-size: 1.32rem;
+      margin: 0 0 0.12rem;
+      font-size: 1.18rem;
       font-weight: 900;
       color: #fff;
       letter-spacing: -0.02em;
@@ -197,42 +197,42 @@
 
     .lab-notice-sub {
       margin: 0;
-      font-size: 0.75rem;
+      font-size: 0.72rem;
       color: rgba(255, 255, 255, 0.68);
       font-weight: 700;
     }
 
     .lab-notice-body {
-      padding: 0.76rem 0.9rem;
+      padding: 0.6rem 0.9rem;
       display: grid;
-      gap: 0.42rem;
+      gap: 0.33rem;
     }
 
     .lab-notice-rule {
       display: flex;
       align-items: flex-start;
-      gap: 0.55rem;
-      padding: 0.52rem 0.64rem;
+      gap: 0.5rem;
+      padding: 0.4rem 0.6rem;
       background: rgba(79, 70, 229, 0.05);
       border: 1px solid rgba(79, 70, 229, 0.12);
       border-radius: 13px;
     }
 
     .lab-notice-rule-icon {
-      font-size: 0.95rem;
+      font-size: 0.88rem;
       flex-shrink: 0;
-      line-height: 1.45;
-    }
-
-    .lab-notice-rule-text {
-      font-size: 0.74rem;
-      font-weight: 700;
-      color: var(--ink);
       line-height: 1.5;
     }
 
+    .lab-notice-rule-text {
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: var(--ink);
+      line-height: 1.48;
+    }
+
     .lab-notice-footer {
-      padding: 0 0.9rem 0.9rem;
+      padding: 0 0.9rem 0.85rem;
     }
 
     .lab-notice-btn {
@@ -364,6 +364,8 @@
     .lab-compact-game .learning-lab-btn {
       padding: 0.76rem 1rem;
       font-size: 0.83rem;
+      background: linear-gradient(135deg, var(--primary, #4f46e5), var(--accent, #06b6d4));
+      box-shadow: 0 4px 14px rgba(79, 70, 229, 0.22);
     }
 
     .lab-compact-game .learning-lab-feedback,
@@ -473,6 +475,21 @@
       }
     }
 
+    /* ── Sparkle item overrides ── */
+    #lab-zh-btn { font-size: 0.95rem; font-weight: 800; }
+    #lab-zh-btn.is-active {
+      background: rgba(220, 38, 38, 0.1);
+      border-color: rgba(220, 38, 38, 0.3);
+      color: #dc2626;
+    }
+    #lab-back-btn { font-size: 1.1rem; }
+
+    [data-theme="dark"] #lab-zh-btn.is-active {
+      background: rgba(239, 68, 68, 0.18);
+      border-color: rgba(239, 68, 68, 0.38);
+      color: #f87171;
+    }
+
     /* --- DARK MODE — candlelit archive --- */
     [data-theme="dark"] .lab-compact-page { background: transparent; }
 
@@ -496,26 +513,29 @@
        Slides up from bottom; collapsible via peek bar
        ====================================== */
 
-    /* Peek bar: hidden on desktop, flex on mobile */
+    /* Peek bar: hidden on desktop */
     .lab-feedback-peek-bar { display: none; }
 
     @media (max-width: 899px) {
+      /* ── Sheet container ── */
       .lab-compact-game .learning-lab-stage[data-lab-feedback-wrap] {
-        display: grid !important;
-        gap: 0.52rem;
+        display: flex !important;
+        flex-direction: column;
+        gap: 0;
         position: fixed;
         bottom: 0; left: 0; right: 0;
         z-index: 45;
-        padding: 0 0.95rem 1.15rem;
-        background: rgba(246, 247, 255, 0.97);
-        border-top: 1px solid rgba(79, 70, 229, 0.13);
-        border-radius: 22px 22px 0 0;
-        box-shadow: 0 -8px 32px rgba(36, 49, 63, 0.13);
-        backdrop-filter: blur(16px);
-        -webkit-backdrop-filter: blur(16px);
+        padding: 0;
+        background: rgba(247, 248, 255, 0.98);
+        border-top: 1.5px solid rgba(79, 70, 229, 0.16);
+        border-radius: 28px 28px 0 0;
+        box-shadow: 0 -20px 60px rgba(36, 49, 63, 0.18), 0 -2px 10px rgba(79, 70, 229, 0.07);
+        backdrop-filter: blur(24px);
+        -webkit-backdrop-filter: blur(24px);
         transform: translateY(106%);
-        transition: transform 0.3s cubic-bezier(0.34, 1.2, 0.64, 1);
+        transition: transform 0.38s cubic-bezier(0.34, 1.15, 0.64, 1);
         pointer-events: none;
+        overflow: hidden;
       }
 
       .lab-compact-game .learning-lab-stage[data-lab-feedback-wrap]:not(.is-hidden) {
@@ -523,72 +543,143 @@
         pointer-events: auto;
       }
 
-      /* Peeking: translate down so only the 44px peek bar remains visible */
+      /* Peeking: only drag handle (52px) remains */
       .lab-compact-game .learning-lab-stage[data-lab-feedback-wrap].is-peeking {
-        transform: translateY(calc(100% - 44px));
+        transform: translateY(calc(100% - 52px));
       }
 
-      /* Peek bar */
+      /* ── Peek / drag handle bar ── */
       .lab-feedback-peek-bar {
         display: flex;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
-        gap: 0.4rem;
-        height: 44px;
+        gap: 0.22rem;
+        height: 52px;
+        flex-shrink: 0;
         cursor: pointer;
         user-select: none;
         -webkit-user-select: none;
+        padding-top: 0.55rem;
       }
 
-      .lab-feedback-peek-btn {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        width: 30px;
-        height: 30px;
-        border-radius: 8px;
-        border: 1px solid rgba(92, 110, 132, 0.16);
-        background: rgba(92, 110, 132, 0.07);
-        font-size: 0.82rem;
-        cursor: pointer;
-        line-height: 1;
+      /* Pill drag handle */
+      .lab-feedback-peek-bar::before {
+        content: '';
+        width: 40px;
+        height: 4px;
+        border-radius: 999px;
+        background: rgba(92, 110, 132, 0.2);
+        display: block;
         flex-shrink: 0;
       }
 
+      /* Hide old emoji button — the bar itself is the tap target */
+      .lab-feedback-peek-btn { display: none; }
+
       .lab-feedback-peek-hint {
-        font-size: 0.7rem;
+        font-size: 0.62rem;
         font-weight: 800;
-        color: #5d6a79;
+        color: #8896a8;
+        letter-spacing: 0.02em;
+        text-transform: uppercase;
       }
 
-      /* Hide sparkle FAB while overlay is fully open (not peeking) */
+      /* ── Feedback box (Betul / Salah) ── */
+      .lab-compact-game .learning-lab-stage[data-lab-feedback-wrap] .learning-lab-feedback {
+        margin: 0 1rem;
+        padding: 1rem 1.15rem;
+        border-radius: 18px;
+        flex-shrink: 0;
+      }
+
+      .lab-compact-game .learning-lab-stage[data-lab-feedback-wrap] .learning-lab-feedback-title {
+        font-size: 1.05rem;
+        margin-bottom: 0.38rem;
+      }
+
+      .lab-compact-game .learning-lab-stage[data-lab-feedback-wrap] .learning-lab-feedback-text {
+        font-size: 0.84rem;
+        line-height: 1.64;
+        color: #3d4a5a;
+      }
+
+      /* ── Tip box ── */
+      .lab-compact-game .learning-lab-stage[data-lab-feedback-wrap] .learning-lab-tip {
+        margin: 0.65rem 1rem 0;
+        padding: 0.82rem 1rem;
+        border-radius: 16px;
+        flex-shrink: 0;
+      }
+
+      .lab-compact-game .learning-lab-stage[data-lab-feedback-wrap] .learning-lab-tip-label {
+        font-size: 0.68rem;
+        margin-bottom: 0.3rem;
+      }
+
+      .lab-compact-game .learning-lab-stage[data-lab-feedback-wrap] .learning-lab-tip-text {
+        font-size: 0.81rem;
+        line-height: 1.58;
+        color: #3d4a5a;
+      }
+
+      /* ── Next / result button ── */
+      .lab-compact-game .learning-lab-stage[data-lab-feedback-wrap] .learning-lab-actions {
+        padding: 0.85rem 1rem calc(1.1rem + env(safe-area-inset-bottom));
+        margin-top: 0;
+        flex-shrink: 0;
+      }
+
+      .lab-compact-game .learning-lab-stage[data-lab-feedback-wrap] .learning-lab-btn {
+        padding: 1rem 1.2rem;
+        font-size: 0.92rem;
+        border-radius: 16px;
+        background: linear-gradient(135deg, var(--primary, #4f46e5), var(--accent, #06b6d4));
+        box-shadow: 0 8px 26px rgba(79, 70, 229, 0.3);
+        transition: transform 0.18s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.18s ease;
+      }
+
+      .lab-compact-game .learning-lab-stage[data-lab-feedback-wrap] .learning-lab-btn:active {
+        transform: scale(0.97);
+        box-shadow: 0 4px 16px rgba(79, 70, 229, 0.22);
+      }
+
+      /* Hide sparkle FAB while overlay is fully open */
       .lab-compact-page:has(.learning-lab-stage[data-lab-feedback-wrap]:not(.is-hidden):not(.is-peeking)) .note-sparkle-wrap {
         opacity: 0;
         pointer-events: none;
         transition: opacity 0.15s;
       }
 
+      /* ── Dark mode ── */
       [data-theme="dark"] .lab-compact-game .learning-lab-stage[data-lab-feedback-wrap] {
-        background: rgba(13, 15, 26, 0.97);
-        border-top-color: rgba(129, 140, 248, 0.14);
+        background: rgba(13, 15, 28, 0.98);
+        border-top-color: rgba(129, 140, 248, 0.2);
+        box-shadow: 0 -20px 60px rgba(0, 0, 0, 0.45), 0 -2px 10px rgba(129, 140, 248, 0.08);
       }
 
-      [data-theme="dark"] .lab-feedback-peek-btn {
-        background: rgba(255, 255, 255, 0.06);
-        border-color: rgba(220, 210, 190, 0.14);
+      [data-theme="dark"] .lab-feedback-peek-bar::before {
+        background: rgba(255, 255, 255, 0.1);
       }
 
-      [data-theme="dark"] .lab-feedback-peek-hint { color: #b8aea1; }
+      [data-theme="dark"] .lab-feedback-peek-hint { color: #6b7a8d; }
+
+      [data-theme="dark"] .lab-compact-game .learning-lab-stage[data-lab-feedback-wrap] .learning-lab-feedback-text,
+      [data-theme="dark"] .lab-compact-game .learning-lab-stage[data-lab-feedback-wrap] .learning-lab-tip-text {
+        color: #b8c6d8;
+      }
     }
 
     @media (max-width: 899px) {
       body.quiz-page {
-        min-height: 100dvh;
-        overflow-y: auto;
+        height: 100dvh;
+        overflow: hidden;
       }
 
       body.quiz-page .lab-compact-page {
-        min-height: calc(100dvh - 72px);
+        height: calc(100dvh - 60px);
+        min-height: 0;
+        overflow: hidden;
       }
 
       body.quiz-page .lab-compact-page > .section.page-hero {
@@ -597,6 +688,7 @@
 
       body.quiz-page .lab-compact-main {
         padding-top: 0.5rem;
+        overflow: hidden;
       }
     }
 
@@ -630,7 +722,7 @@
       <div class="container narrow">
         <div class="paper-label">Kuiz Bab 1</div>
         <p class="eyebrow">Subtopik 1.1</p>
-        <h1>🧩 Bina Negara Bangsa</h1>
+        <h1>🧩 Negara Bangsa Alam Melayu</h1>
         <p class="lead">Kuiz interaktif untuk uji kefahaman fakta penting Sejarah Tingkatan 4 secara pantas dan fokus.</p>
         <div class="hero-actions">
           <a class="btn btn-secondary" href="../notes/bab-1-1.html">Kembali ke Nota 1.1</a>
@@ -644,7 +736,7 @@
         <aside class="lab-compact-side">
           <article class="lab-compact-card">
             <div class="lab-compact-headline">
-              <h1>🧩 Bina Negara Bangsa</h1>
+              <h1>🧩 Negara Bangsa Alam Melayu</h1>
               <p>
                 Uji kefahaman anda secara santai, pantas dan lebih fokus tanpa mengganggu aliran nota utama.
               </p>
@@ -672,9 +764,9 @@
           <div class="lab-notice-screen" id="lab-notice">
             <div class="lab-notice-card">
               <div class="lab-notice-header">
-                <span class="lab-notice-badge">🧩 Kuiz · Bab 1</span>
+                <span class="lab-notice-badge">🧩 Kuiz · Subtopik 1.1</span>
                 <span class="lab-notice-icon">🧩</span>
-                <h2 class="lab-notice-title">Bina Negara Bangsa</h2>
+                <h2 class="lab-notice-title">Negara Bangsa Alam Melayu</h2>
                 <p class="lab-notice-sub">Subtopik 1.1 · Sejarah Tingkatan 4</p>
               </div>
               <div class="lab-notice-body">
@@ -708,7 +800,7 @@
               <div class="learning-lab-top">
                 <div>
                   <span class="learning-lab-kicker">Subtopik 1.1 · Interaktif</span>
-                  <h3 class="learning-lab-title">Bina Negara Bangsa</h3>
+                  <h3 class="learning-lab-title">Negara Bangsa Alam Melayu</h3>
                   <p class="learning-lab-desc">
                     Jawab dengan betul untuk membina kerajaan sedikit demi sedikit. Fokus pada hafalan fakta,
                     urutan isi dan pilihan isi yang sesuai untuk jawapan SPM.
@@ -793,21 +885,22 @@
     <!-- Emoji-only sparkle dock (reuses shared .note-sparkle-* CSS from ui.css) -->
     <div class="note-sparkle-wrap fab-corner-br" id="lab-sparkle-wrap">
       <div class="note-sparkle-items" id="lab-sparkle-items">
-        <button class="note-sparkle-item" type="button" data-tooltip="Cuba Semula" id="lab-restart-btn">🔄</button>
-        <a class="note-sparkle-item" href="../notes/bab-1-1.html" data-tooltip="Nota 1.1">📖</a>
+        <button class="note-sparkle-item" type="button" data-tooltip="Mod Bahasa Cina" id="lab-zh-btn">华</button>
+        <button class="note-sparkle-item" type="button" data-tooltip="← Kembali ke Nota 1.1" id="lab-back-btn" aria-label="Kembali ke Nota 1.1">↩</button>
       </div>
       <button class="note-sparkle-fab" type="button" id="lab-sparkle-fab" aria-label="Menu Kuiz">✨</button>
     </div>
   </div>
 
-  <script src="../assets/js/zh-mode.js?v=38"></script>
+  <script src="../assets/js/zh-mode.js?v=39"></script>
   <script src="../assets/js/subtopic-lab.js?v=2"></script>
   <script src="../assets/js/main.js?v=110"></script>
   <script>
     (function () {
-      var wrap = document.getElementById('lab-sparkle-wrap');
-      var fab  = document.getElementById('lab-sparkle-fab');
-      var restartBtn = document.getElementById('lab-restart-btn');
+      var wrap      = document.getElementById('lab-sparkle-wrap');
+      var fab       = document.getElementById('lab-sparkle-fab');
+      var zhBtn     = document.getElementById('lab-zh-btn');
+      var backBtn   = document.getElementById('lab-back-btn');
 
       // ── Draggable corner FAB (same behaviour as note pages) ─────────────
       var FAB_KEY = 'hzedu-fab-corner';
@@ -888,18 +981,26 @@
         if (!wrap.contains(e.target)) wrap.classList.remove('is-open');
       });
 
-      // Restart lab
-      restartBtn.addEventListener('click', function () {
-        var restartGameBtn = document.querySelector('[data-lab-action="restart"]');
-        if (restartGameBtn && !restartGameBtn.closest('.is-hidden')) {
-          restartGameBtn.click();
-        } else if (!noticeScreen.classList.contains('is-gone')) {
-          revealShellAndStart();
-        } else if (typeof window.__labStartQuiz === 'function') {
-          window.__labStartQuiz();
-        }
-        wrap.classList.remove('is-open');
-      });
+      // 华 — Mod Bahasa Cina toggle
+      if (zhBtn) {
+        if (window.HzZhMode && window.HzZhMode.isActive()) zhBtn.classList.add('is-active');
+        zhBtn.addEventListener('click', function () {
+          if (window.HzZhMode) {
+            window.HzZhMode.toggle();
+            zhBtn.classList.toggle('is-active', window.HzZhMode.isActive());
+          }
+          wrap.classList.remove('is-open');
+        });
+      }
+
+      // ↩ — Kembali ke Nota (dengan pengesahan)
+      if (backBtn) {
+        backBtn.addEventListener('click', function () {
+          wrap.classList.remove('is-open');
+          var ok = window.confirm('Kembali ke Nota 1.1?\n\nKemajuan kuiz semasa tidak akan disimpan.');
+          if (ok) window.location.href = '../notes/bab-1-1.html';
+        });
+      }
 
       // Peek toggle — collapse/expand feedback overlay
       var peekBar  = document.getElementById('lab-feedback-peek-bar');

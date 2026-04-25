@@ -1217,7 +1217,7 @@
   }
 
   function shouldUseSparkleForZhControls() {
-    return /\/notes\//.test(window.location.pathname) && !window.__HZ_ZH_LEGACY_REQUESTED;
+    return (/\/notes\//.test(window.location.pathname) || /\/quiz\//.test(window.location.pathname)) && !window.__HZ_ZH_LEGACY_REQUESTED;
   }
 
   // ── Init ─────────────────────────────────────────────────
