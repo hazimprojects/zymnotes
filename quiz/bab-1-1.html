@@ -475,8 +475,116 @@
       }
     }
 
-    /* ── Sparkle item overrides ── */
-    #lab-zh-btn { font-size: 0.95rem; font-weight: 800; }
+    /* ======================================
+       CUSTOM CONFIRM MODAL
+       Menggantikan window.confirm() bergaya sistem
+       ====================================== */
+    .lab-confirm-backdrop {
+      position: fixed;
+      inset: 0;
+      z-index: 300;
+      background: rgba(13, 15, 28, 0.68);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+      animation: labFadeIn 0.18s ease;
+    }
+    .lab-confirm-backdrop.is-hidden { display: none !important; }
+
+    .lab-confirm-card {
+      width: 100%;
+      max-width: 320px;
+      background: var(--paper, #fffdf8);
+      border-radius: 24px;
+      padding: 1.5rem 1.4rem 1.2rem;
+      box-shadow: 0 32px 72px rgba(0, 0, 0, 0.22), 0 4px 16px rgba(0, 0, 0, 0.1);
+      border: 1px solid rgba(92, 110, 132, 0.1);
+      text-align: center;
+      animation: labSlideUp 0.24s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    .lab-confirm-icon {
+      font-size: 2rem;
+      line-height: 1;
+      margin-bottom: 0.65rem;
+      display: block;
+    }
+
+    .lab-confirm-title {
+      margin: 0 0 0.38rem;
+      font-size: 1rem;
+      font-weight: 900;
+      color: var(--ink, #24313f);
+      letter-spacing: -0.02em;
+      line-height: 1.25;
+    }
+
+    .lab-confirm-body {
+      margin: 0 0 1.2rem;
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: #5d6a79;
+      line-height: 1.55;
+    }
+
+    .lab-confirm-actions {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.5rem;
+    }
+
+    .lab-confirm-btn {
+      padding: 0.72rem 0.9rem;
+      border-radius: 999px;
+      border: none;
+      font-size: 0.83rem;
+      font-weight: 900;
+      cursor: pointer;
+      font-family: inherit;
+      transition: transform 0.16s ease, box-shadow 0.16s ease;
+    }
+
+    .lab-confirm-cancel {
+      background: rgba(92, 110, 132, 0.08);
+      color: #5d6a79;
+      border: 1.5px solid rgba(92, 110, 132, 0.18);
+    }
+
+    .lab-confirm-ok {
+      background: linear-gradient(135deg, var(--primary, #4f46e5), var(--accent, #06b6d4));
+      color: #fff;
+      box-shadow: 0 4px 14px rgba(79, 70, 229, 0.28);
+    }
+
+    .lab-confirm-btn:hover { transform: translateY(-1px); }
+    .lab-confirm-btn:active { transform: scale(0.97); }
+
+    @keyframes labFadeIn {
+      from { opacity: 0; }
+      to   { opacity: 1; }
+    }
+    @keyframes labSlideUp {
+      from { transform: translateY(18px) scale(0.95); opacity: 0; }
+      to   { transform: translateY(0)    scale(1);    opacity: 1; }
+    }
+
+    [data-theme="dark"] .lab-confirm-card {
+      background: rgba(21, 24, 41, 0.98);
+      border-color: rgba(129, 140, 248, 0.15);
+      box-shadow: 0 32px 72px rgba(0, 0, 0, 0.5), 0 4px 16px rgba(0, 0, 0, 0.3);
+    }
+    [data-theme="dark"] .lab-confirm-title  { color: #e8e0d4; }
+    [data-theme="dark"] .lab-confirm-body   { color: #9fb0d8; }
+    [data-theme="dark"] .lab-confirm-cancel {
+      background: rgba(255, 255, 255, 0.06);
+      border-color: rgba(129, 140, 248, 0.18);
+      color: #9fb0d8;
+    }
+
+    /* ── Sparkle item overrides ── */    #lab-zh-btn { font-size: 0.95rem; font-weight: 800; }
     #lab-zh-btn.is-active {
       background: rgba(220, 38, 38, 0.1);
       border-color: rgba(220, 38, 38, 0.3);
@@ -883,6 +991,7 @@
                 <div class="learning-lab-summary-list" data-lab-summary-list></div>
 
                 <div class="learning-lab-actions">
+                  <button class="learning-lab-btn secondary" id="lab-result-back-btn">📖 Kembali ke Nota</button>
                   <button class="learning-lab-btn" data-lab-action="restart">Cuba Semula 🔄</button>
                 </div>
               </div>
@@ -892,11 +1001,24 @@
       </div>
     </main>
 
+    <!-- Custom confirm dialog — menggantikan window.confirm() bergaya sistem -->
+    <div class="lab-confirm-backdrop is-hidden" id="lab-confirm-modal" role="dialog" aria-modal="true" aria-labelledby="lab-confirm-heading">
+      <div class="lab-confirm-card">
+        <span class="lab-confirm-icon">📖</span>
+        <h3 class="lab-confirm-title" id="lab-confirm-heading">Kembali ke Nota 1.1?</h3>
+        <p class="lab-confirm-body">Kemajuan kuiz semasa tidak akan disimpan.</p>
+        <div class="lab-confirm-actions">
+          <button class="lab-confirm-btn lab-confirm-cancel" id="lab-confirm-cancel" type="button">Batal</button>
+          <button class="lab-confirm-btn lab-confirm-ok" id="lab-confirm-ok" type="button">Ya, Kembali</button>
+        </div>
+      </div>
+    </div>
+
     <!-- Emoji-only sparkle dock (reuses shared .note-sparkle-* CSS from ui.css) -->
     <div class="note-sparkle-wrap fab-corner-br" id="lab-sparkle-wrap">
       <div class="note-sparkle-items" id="lab-sparkle-items">
         <button class="note-sparkle-item" type="button" data-tooltip="Mod Bahasa Cina" id="lab-zh-btn">华</button>
-        <button class="note-sparkle-item" type="button" data-tooltip="← Kembali ke Nota 1.1" id="lab-back-btn" aria-label="Kembali ke Nota 1.1">↩</button>
+        <button class="note-sparkle-item" type="button" data-tooltip="Kembali ke Nota 1.1" id="lab-back-btn" aria-label="Kembali ke Nota 1.1">📖</button>
       </div>
       <button class="note-sparkle-fab" type="button" id="lab-sparkle-fab" aria-label="Menu Kuiz">✨</button>
     </div>
@@ -911,6 +1033,31 @@
       var fab       = document.getElementById('lab-sparkle-fab');
       var zhBtn     = document.getElementById('lab-zh-btn');
       var backBtn   = document.getElementById('lab-back-btn');
+
+      // ── Custom confirm modal ──────────────────────────────────────
+      var confirmModal  = document.getElementById('lab-confirm-modal');
+      var confirmOk     = document.getElementById('lab-confirm-ok');
+      var confirmCancel = document.getElementById('lab-confirm-cancel');
+      var confirmDest   = '../notes/bab-1-1.html';
+
+      function showConfirmModal() {
+        confirmModal.classList.remove('is-hidden');
+        confirmOk.focus();
+      }
+      function hideConfirmModal() {
+        confirmModal.classList.add('is-hidden');
+      }
+      if (confirmOk)     confirmOk.addEventListener('click', function () { hideConfirmModal(); window.location.href = confirmDest; });
+      if (confirmCancel) confirmCancel.addEventListener('click', hideConfirmModal);
+      if (confirmModal)  confirmModal.addEventListener('click', function (e) { if (e.target === confirmModal) hideConfirmModal(); });
+
+      // Result screen — kembali ke nota tanpa pengesahan (kuiz sudah selesai)
+      var resultBackBtn = document.getElementById('lab-result-back-btn');
+      if (resultBackBtn) {
+        resultBackBtn.addEventListener('click', function () {
+          window.location.href = confirmDest;
+        });
+      }
 
       // ── Draggable corner FAB (same behaviour as note pages) ─────────────
       var FAB_KEY = 'hzedu-fab-corner';
@@ -1003,12 +1150,11 @@
         });
       }
 
-      // ↩ — Kembali ke Nota (dengan pengesahan)
+      // 📖 — Kembali ke Nota (dengan pengesahan modal custom)
       if (backBtn) {
         backBtn.addEventListener('click', function () {
           wrap.classList.remove('is-open');
-          var ok = window.confirm('Kembali ke Nota 1.1?\n\nKemajuan kuiz semasa tidak akan disimpan.');
-          if (ok) window.location.href = '../notes/bab-1-1.html';
+          showConfirmModal();
         });
       }
 
