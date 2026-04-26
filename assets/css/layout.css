@@ -183,6 +183,34 @@ a.brand { position: relative; }
   box-shadow: var(--shadow-soft);
 }
 
+.display-fab-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  color: var(--muted);
+  pointer-events: none;
+}
+
+.display-fab-icon svg {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.display-fab:hover .display-fab-icon {
+  color: var(--ink);
+}
+
+[data-theme="dark"] .display-fab-icon {
+  color: rgba(226, 232, 240, 0.72);
+}
+
+[data-theme="dark"] .display-fab:hover .display-fab-icon {
+  color: var(--ink);
+}
+
 
 
 .eyebrow {
