@@ -20,7 +20,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="ZymNotes" />
   <meta property="og:locale" content="ms_MY" />
-  <meta property="og:updated_time" content="2026-04-20T09:58:00+00:00" />
+  <meta property="og:updated_time" content="2026-04-26T00:00:00+00:00" />
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="ZymNotes — Nota Ulang Kaji Generasi Baharu" />
@@ -92,173 +92,67 @@
 
   <main>
 
-    <!-- Hero -->
-    <div class="home-hero">
-      <div class="home-hero-eyebrow">✨ Nota Visual · Sejarah Tingkatan 4</div>
-      <h1 class="home-hero-title">Ulang kaji jadi <span class="home-hero-accent">lebih mudah.</span></h1>
-      <p class="home-hero-desc">Nota berpandukan buku teks KSSM — disusun semula supaya lebih jelas, lebih visual dan mesra telefon.</p>
+    <!-- Brand Hero -->
+    <div class="home-brand-hero">
+      <div class="home-brand-name">ZymNotes</div>
+      <div class="home-brand-tagline">NOTA ULANG KAJI GENERASI BAHARU</div>
+      <p class="home-brand-desc">Platform nota visual untuk pelajar SPM Malaysia — fokus pada Sejarah Tingkatan 4 &amp; 5.</p>
+      <a class="btn btn-primary home-brand-cta" href="notes/index.html">Lihat Nota Sekarang</a>
     </div>
 
-    <div class="bab-search-wrap" role="search">
-          <span class="bab-search-icon" aria-hidden="true">🔍</span>
-          <input
-            class="bab-search-input"
-            id="babSearchInput"
-            type="search"
-            placeholder="Cari bab... (contoh: nasionalisme)"
-            autocomplete="off"
-            aria-label="Cari bab"
-          />
-          <span class="bab-search-clear" id="babSearchClear" role="button" tabindex="0" aria-label="Kosongkan carian">✕</span>
+    <!-- Features Grid -->
+    <div class="home-feature-grid">
+      <div class="home-feature-card">
+        <div class="home-feature-icon">🎯</div>
+        <div class="home-feature-title">Misi</div>
+        <p class="home-feature-desc">Platform sokongan pembelajaran, bukan pengganti buku teks</p>
+      </div>
+      <div class="home-feature-card">
+        <div class="home-feature-icon">📱</div>
+        <div class="home-feature-title">Mobile-first</div>
+        <p class="home-feature-desc">Dioptimumkan untuk telefon pintar, boleh guna offline</p>
+      </div>
+      <div class="home-feature-card">
+        <div class="home-feature-icon">👁️</div>
+        <div class="home-feature-title">Visual</div>
+        <p class="home-feature-desc">Nota disusun semula supaya lebih jelas dan mudah diikuti</p>
+      </div>
+      <div class="home-feature-card">
+        <div class="home-feature-icon">🔄</div>
+        <div class="home-feature-title">Dikemas kini</div>
+        <p class="home-feature-desc">Kandungan ditambah &amp; diperbaiki secara berperingkat</p>
+      </div>
+    </div>
+
+    <!-- Scope section -->
+    <div class="home-scope-section">
+      <div class="home-scope-label">Skop Semasa</div>
+      <div class="home-scope-list">
+        <div class="home-scope-item home-scope-active">
+          <span class="home-scope-check">✅</span>
+          <span>Sejarah Tingkatan 4 — Bab 1 hingga Bab 7</span>
         </div>
-
-        <div class="bab-section-head">
-          <div>
-            <div class="bab-section-title">Semua Bab</div>
-            <div class="bab-section-sub">Sejarah Tingkatan 4</div>
-          </div>
+        <div class="home-scope-item">
+          <span class="home-scope-check">🔜</span>
+          <span>Sejarah Tingkatan 5 — akan datang</span>
         </div>
-
-        <div class="bab-grid" id="babGrid">
-          <a class="bab-card bab-card-theme-1" href="notes/bab-1.html" data-title="Warisan Negara Bangsa bab 1">
-            <div class="bab-card-header">
-              <div class="bab-emoji-icon">🏛️</div>
-              <div class="bab-card-top">Bab 1</div>
-            </div>
-            <h3>Warisan Negara Bangsa</h3>
-            <p>Kerajaan Alam Melayu &amp; warisan budaya</p>
-            <div class="bab-card-actions">
-              <span class="bab-action-nota">📄 Nota</span>
-              <span class="bab-action-kuiz bab-kuiz-ready">✏️ Kuiz</span>
-            </div>
-          </a>
-
-          <a class="bab-card bab-card-theme-2" href="notes/bab-2.html" data-title="Kebangkitan Nasionalisme bab 2">
-            <div class="bab-card-header">
-              <div class="bab-emoji-icon">🔥</div>
-              <div class="bab-card-top">Bab 2</div>
-            </div>
-            <h3>Kebangkitan Nasionalisme</h3>
-            <p>Idea nasionalisme di Asia &amp; Tanah Melayu</p>
-            <div class="bab-card-actions">
-              <span class="bab-action-nota">📄 Nota</span>
-              <span class="bab-action-kuiz bab-kuiz-locked">🔒 Kuiz <small>SOON</small></span>
-            </div>
-          </a>
-
-          <a class="bab-card bab-card-theme-3" href="notes/bab-3.html" data-title="Konflik Dunia Pendudukan Jepun bab 3">
-            <div class="bab-card-header">
-              <div class="bab-emoji-icon">🌍</div>
-              <div class="bab-card-top">Bab 3</div>
-            </div>
-            <h3>Konflik Dunia &amp; Pendudukan Jepun</h3>
-            <p>PKII, Jepun &amp; perjuangan rakyat</p>
-            <div class="bab-card-actions">
-              <span class="bab-action-nota">📄 Nota</span>
-              <span class="bab-action-kuiz bab-kuiz-locked">🔒 Kuiz <small>SOON</small></span>
-            </div>
-          </a>
-
-          <a class="bab-card bab-card-theme-4" href="notes/bab-4.html" data-title="Era Peralihan Kuasa British bab 4">
-            <div class="bab-card-header">
-              <div class="bab-emoji-icon">⚖️</div>
-              <div class="bab-card-top">Bab 4</div>
-            </div>
-            <h3>Era Peralihan Kuasa British</h3>
-            <p>BMA, Malayan Union &amp; reaksi rakyat</p>
-            <div class="bab-card-actions">
-              <span class="bab-action-nota">📄 Nota</span>
-              <span class="bab-action-kuiz bab-kuiz-locked">🔒 Kuiz <small>SOON</small></span>
-            </div>
-          </a>
-
-          <a class="bab-card bab-card-theme-5" href="notes/bab-5.html" data-title="Persekutuan Tanah Melayu 1948 bab 5">
-            <div class="bab-card-header">
-              <div class="bab-emoji-icon">🤝</div>
-              <div class="bab-card-top">Bab 5</div>
-            </div>
-            <h3>Persekutuan Tanah Melayu 1948</h3>
-            <p>Penubuhan, faktor &amp; ciri utama</p>
-            <div class="bab-card-actions">
-              <span class="bab-action-nota">📄 Nota</span>
-              <span class="bab-action-kuiz bab-kuiz-locked">🔒 Kuiz <small>SOON</small></span>
-            </div>
-          </a>
-
-          <a class="bab-card bab-card-theme-6" href="notes/bab-6.html" data-title="Ancaman Komunis Darurat bab 6">
-            <div class="bab-card-header">
-              <div class="bab-emoji-icon">🛡️</div>
-              <div class="bab-card-top">Bab 6</div>
-            </div>
-            <h3>Ancaman Komunis &amp; Darurat</h3>
-            <p>Komunis, darurat &amp; usaha mengatasinya</p>
-            <div class="bab-card-actions">
-              <span class="bab-action-nota">📄 Nota</span>
-              <span class="bab-action-kuiz bab-kuiz-locked">🔒 Kuiz <small>SOON</small></span>
-            </div>
-          </a>
-
-          <a class="bab-card bab-card-theme-7" href="notes/bab-7.html" data-title="Usaha ke Arah Kemerdekaan bab 7">
-            <div class="bab-card-header">
-              <div class="bab-emoji-icon">🕊️</div>
-              <div class="bab-card-top">Bab 7</div>
-            </div>
-            <h3>Usaha ke Arah Kemerdekaan</h3>
-            <p>Kerjasama kaum &amp; jalan kemerdekaan</p>
-            <div class="bab-card-actions">
-              <span class="bab-action-nota">📄 Nota</span>
-              <span class="bab-action-kuiz bab-kuiz-locked">🔒 Kuiz <small>SOON</small></span>
-            </div>
-          </a>
+        <div class="home-scope-item">
+          <span class="home-scope-check">🗂️</span>
+          <span>Subjek KSSM lain — rancangan masa depan</span>
         </div>
+      </div>
+    </div>
 
-        <div class="bab-search-empty" id="babSearchEmpty" aria-live="polite">
-          <div class="bab-search-empty-icon">🔍</div>
-          <div class="bab-search-empty-title">Tiada hasil ditemui</div>
-          <p class="bab-search-empty-sub">Cuba cari nombor bab atau kata kunci lain</p>
-        </div>
+    <!-- Contact -->
+    <div class="home-contact-section">
+      <span class="home-contact-icon">✉️</span> Hubungi Kami
+      <a class="home-contact-email" href="mailto:hello@zymnotes.com">hello@zymnotes.com</a>
+      <p class="home-contact-copy">&copy; 2026 ZymNotes · Semua hak cipta terpelihara</p>
+    </div>
 
   </main>
 
-  <script src="assets/js/main.js?v=112"></script>
-  <script>
-    (function () {
-      var input = document.getElementById('babSearchInput');
-      var clear = document.getElementById('babSearchClear');
-      var grid = document.getElementById('babGrid');
-      var empty = document.getElementById('babSearchEmpty');
-      if (!input || !grid) return;
-
-      var cards = Array.from(grid.querySelectorAll('.bab-card'));
-
-      function filterBabs(q) {
-        var query = q.trim().toLowerCase();
-        var count = 0;
-        cards.forEach(function (card) {
-          var title = (card.dataset.title || card.textContent).toLowerCase();
-          var show = !query || title.includes(query);
-          card.style.display = show ? '' : 'none';
-          if (show) count++;
-        });
-        if (empty) empty.classList.toggle('visible', count === 0 && query.length > 0);
-        if (clear) clear.classList.toggle('visible', query.length > 0);
-      }
-
-      input.addEventListener('input', function () { filterBabs(input.value); });
-      input.addEventListener('search', function () { filterBabs(input.value); });
-
-      if (clear) {
-        clear.addEventListener('click', function () {
-          input.value = '';
-          filterBabs('');
-          input.focus();
-        });
-        clear.addEventListener('keydown', function (e) {
-          if (e.key === 'Enter' || e.key === ' ') { input.value = ''; filterBabs(''); input.focus(); }
-        });
-      }
-    })();
-  </script>
+  <script src="assets/js/main.js?v=113"></script>
   <script type="application/ld+json">
   [
     {
