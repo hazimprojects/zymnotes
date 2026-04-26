@@ -2092,7 +2092,7 @@ var HZ_ICONS = (function () {
   if (!('serviceWorker' in navigator)) return;
 
   window.addEventListener('load', function () {
-    navigator.serviceWorker.register('/sw.js?v=143').catch(function (error) {
+    navigator.serviceWorker.register('/sw.js?v=144').catch(function (error) {
       console.warn('Service worker registration failed:', error);
     });
   });
