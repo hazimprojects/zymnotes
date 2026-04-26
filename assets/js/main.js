@@ -1040,6 +1040,8 @@ var ZYMNOTES_NAV = { chapters: [
     if (audioEl) itemsContainer.appendChild(makeSparkleItem('🎧', 'Main audio', 'audio'));
     if (labHref) itemsContainer.appendChild(makeSparkleItem(labEmoji, 'Kuiz', 'lab', labHref));
     if (zhModeApi) itemsContainer.appendChild(makeSparkleItem('华', 'Mod Bahasa Cina (Versi Awal)', 'zh-mode'));
+    var themeSparkleIcon = (document.documentElement.getAttribute('data-theme') || localStorage.getItem('zymnotes-theme') || 'light') === 'dark' ? '☀️' : '🌙';
+    itemsContainer.appendChild(makeSparkleItem(themeSparkleIcon, 'Tukar Tema', 'theme'));
 
     var fab = document.createElement('button');
     fab.className = 'note-sparkle-fab';
@@ -1243,6 +1245,16 @@ var ZYMNOTES_NAV = { chapters: [
       }
       if (type === 'zh-mode' && zhModeApi) {
         zhModeApi.toggle();
+        wrap.classList.remove('is-open');
+        syncSparklePanelState();
+      }
+      if (type === 'theme') {
+        var cur = document.documentElement.getAttribute('data-theme') || 'light';
+        var nxt = cur === 'dark' ? 'light' : 'dark';
+        document.documentElement.setAttribute('data-theme', nxt);
+        localStorage.setItem('zymnotes-theme', nxt);
+        document.querySelectorAll('.display-fab').forEach(function (b) { b.textContent = nxt === 'dark' ? '🌙' : '☀️'; });
+        btn.textContent = nxt === 'dark' ? '☀️' : '🌙';
         wrap.classList.remove('is-open');
         syncSparklePanelState();
       }
@@ -1822,7 +1834,8 @@ var HZ_ICONS = (function () {
     audio:      '<svg viewBox="0 0 24 24"' + s + '><path d="M3 18v-6a9 9 0 0118 0v6"/><path d="M21 19a2 2 0 01-2 2h-1a2 2 0 01-2-2v-3a2 2 0 012-2h3zM3 19a2 2 0 002 2h1a2 2 0 002-2v-3a2 2 0 00-2-2H3z"/></svg>',
     audioPause: '<svg viewBox="0 0 24 24"' + s + '><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>',
     archive: '<svg viewBox="0 0 24 24"' + s + '><polyline points="21 8 21 21 3 21 3 8"/><rect x="1" y="3" width="22" height="5"/><line x1="10" y1="12" x2="14" y2="12"/></svg>',
-    close:   '<svg viewBox="0 0 24 24"' + s + '><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>'
+    close:   '<svg viewBox="0 0 24 24"' + s + '><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>',
+    about:   '<svg viewBox="0 0 24 24"' + s + '><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>'
   };
 })();
 
@@ -2002,44 +2015,18 @@ var HZ_ICONS = (function () {
       if (href === '/index.html') return pp === '' || pp === 'index.html';
       return pp === hp;
     }
-    var isDark = (document.documentElement.getAttribute('data-theme') || localStorage.getItem('zymnotes-theme') || 'light') === 'dark';
     var tabs = [
-      { icon: HZ_ICONS.home,   label: 'Utama', href: '/index.html' },
-      { icon: HZ_ICONS.notes,  label: 'Nota',  href: '/notes/index.html' },
-      { icon: HZ_ICONS.search, label: 'Cari',  href: null, action: 'search' },
-      { icon: isDark ? HZ_ICONS.moon : HZ_ICONS.sun, label: 'Tema', href: null, action: 'theme' }
+      { icon: HZ_ICONS.home,  label: 'Utama',   href: '/index.html' },
+      { icon: HZ_ICONS.notes, label: 'Nota',    href: '/notes/index.html' },
+      { icon: HZ_ICONS.about, label: 'Tentang', href: '/about.html' }
     ];
     var nav = document.createElement('nav');
     nav.className = 'hz-bottom-nav';
     nav.setAttribute('aria-label', 'Navigasi utama');
     tabs.forEach(function (tab) {
-      var el;
-      if (tab.href) {
-        el = document.createElement('a');
-        el.href = tab.href;
-        if (isActive(tab.href)) el.classList.add('is-active');
-      } else {
-        el = document.createElement('button');
-        el.type = 'button';
-        if (tab.action === 'search') {
-          el.addEventListener('click', function () {
-            document.dispatchEvent(new CustomEvent('hz:search-open'));
-          });
-        } else if (tab.action === 'theme') {
-          el.addEventListener('click', function () {
-            var current = document.documentElement.getAttribute('data-theme') || 'light';
-            var next = current === 'dark' ? 'light' : 'dark';
-            document.documentElement.setAttribute('data-theme', next);
-            localStorage.setItem('zymnotes-theme', next);
-            document.querySelectorAll('.display-fab').forEach(function (b) {
-              b.textContent = next === 'dark' ? '🌙' : '☀️';
-            });
-            var icon = el.querySelector('.hz-nav-icon');
-            if (icon) icon.innerHTML = next === 'dark' ? HZ_ICONS.moon : HZ_ICONS.sun;
-          });
-        }
-      }
-      el.className = 'hz-bottom-nav-item';
+      var el = document.createElement('a');
+      el.href = tab.href;
+      el.className = 'hz-bottom-nav-item' + (isActive(tab.href) ? ' is-active' : '');
       el.innerHTML = '<span class="hz-nav-icon">' + tab.icon + '</span><span>' + tab.label + '</span>';
       nav.appendChild(el);
     });
