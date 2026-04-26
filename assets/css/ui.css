@@ -2003,7 +2003,7 @@ body.page-theme-error .page-hero {
 
 body.mindmap-open { overflow: hidden; }
 
-/* ── Pull-to-refresh ZymNotes — huruf Z / N bergantian (bukan spinner Chrome) ─ */
+/* ── Pull-to-refresh — bulatan + anak panah membulat (Chrome-style), warna ZymNotes ─ */
 .hz-ptr-indicator {
   position: fixed;
   top: 0;
@@ -2013,7 +2013,7 @@ body.mindmap-open { overflow: hidden; }
   transform: translateX(-50%);
   pointer-events: none;
   opacity: 0;
-  transition: opacity 0.22s ease;
+  transition: opacity 0.2s ease;
 }
 
 .hz-ptr-indicator.hz-ptr-pulling {
@@ -2021,139 +2021,74 @@ body.mindmap-open { overflow: hidden; }
 }
 
 .hz-ptr-sheen {
-  width: 34px;
-  height: 34px;
+  width: 32px;
+  height: 32px;
   margin: 0 auto;
   border-radius: 999px;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(145deg, rgba(255, 255, 255, 0.42), rgba(248, 250, 255, 0.28));
-  border: 1px solid rgba(155, 119, 255, 0.22);
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.5), rgba(248, 250, 255, 0.32));
+  border: 1px solid rgba(155, 119, 255, 0.2);
   box-shadow:
-    0 4px 16px rgba(85, 181, 255, 0.14),
-    0 2px 10px rgba(155, 119, 255, 0.12),
-    0 1px 0 rgba(255, 255, 255, 0.65) inset;
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  transform: translateY(calc(-28px + var(--hz-ptr-pull, 0px)));
-  transition: box-shadow 0.25s ease, border-color 0.25s ease;
+    0 3px 14px rgba(85, 181, 255, 0.12),
+    0 1px 0 rgba(255, 255, 255, 0.7) inset;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transform: translateY(calc(-26px + var(--hz-ptr-pull, 0px)));
+  transition: box-shadow 0.22s ease, border-color 0.22s ease;
 }
 
 .hz-ptr-indicator.hz-ptr-ready .hz-ptr-sheen {
-  border-color: rgba(155, 119, 255, 0.45);
+  border-color: rgba(155, 119, 255, 0.42);
   box-shadow:
-    0 0 0 2px rgba(85, 181, 255, 0.14),
-    0 6px 20px rgba(79, 70, 229, 0.18),
-    0 1px 0 rgba(255, 255, 255, 0.88) inset;
+    0 0 0 2px rgba(85, 181, 255, 0.12),
+    0 5px 18px rgba(79, 70, 229, 0.16),
+    0 1px 0 rgba(255, 255, 255, 0.85) inset;
 }
 
-/* Bulatan kecil — logo Z/N di tengah; putaran pada pusat bentuk (~50,48) */
-.hz-ptr-logo {
+.hz-ptr-arrow-svg {
   display: block;
-  filter: drop-shadow(0 1px 4px rgba(30, 27, 75, 0.14));
 }
 
-.hz-ptr-spin {
+.hz-ptr-arrow-rot {
   transform-origin: 0 0;
-  animation: hzPtrSpinCycle 3.4s cubic-bezier(0.33, 0.02, 0.25, 1) infinite;
 }
 
-.hz-ptr-draw {
-  transform-origin: 50px 48px;
-  animation: hzPtrMorphCycle 3.4s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+.hz-ptr-indicator.hz-ptr-pulling .hz-ptr-arrow-rot {
+  animation: hzPtrArrowSpin 0.85s linear infinite;
 }
 
-.hz-ptr-path-z,
-.hz-ptr-path-n {
-  stroke-dasharray: 100;
-  vector-effect: non-scaling-stroke;
+.hz-ptr-indicator.hz-ptr-ready.hz-ptr-pulling .hz-ptr-arrow-rot {
+  animation-duration: 0.55s;
 }
 
-.hz-ptr-path-z {
-  animation: hzPtrStrokeZ 3.4s cubic-bezier(0.45, 0, 0.25, 1) infinite;
-}
-
-.hz-ptr-path-n {
-  animation: hzPtrStrokeN 3.4s cubic-bezier(0.45, 0, 0.25, 1) infinite;
-}
-
-/* Jingga: bergerak sepanjang pepenjuru Z → tengah → N; mint: pegun */
-.hz-ptr-coral {
-  transform-box: fill-box;
-  transform-origin: 0 0;
-  animation: hzPtrCoralSlide 3.4s cubic-bezier(0.4, 0, 0.2, 1) infinite;
-}
-
-.hz-ptr-mint {
-  opacity: 0.95;
-}
-
-@keyframes hzPtrSpinCycle {
-  0% { transform: rotate(0deg); }
-  26% { transform: rotate(360deg); }
-  32% { transform: rotate(376deg); }
-  50% { transform: rotate(720deg); }
-  56% { transform: rotate(734deg); }
-  100% { transform: rotate(720deg); }
-}
-
-@keyframes hzPtrMorphCycle {
-  0%, 24% { transform: translate(-50px, -48px) scale(1, 1); }
-  30% { transform: translate(-50px, -48px) scale(0.76, 1.1); }
-  38% { transform: translate(-50px, -48px) scale(0.72, 1.12); }
-  46% { transform: translate(-50px, -48px) scale(0.78, 1.06); }
-  54% { transform: translate(-50px, -48px) scale(0.94, 1.03); }
-  62%, 100% { transform: translate(-50px, -48px) scale(1, 1); }
-}
-
-@keyframes hzPtrStrokeZ {
-  0% { stroke-dashoffset: 100; opacity: 0.4; }
-  6% { stroke-dashoffset: 0; opacity: 1; }
-  34% { stroke-dashoffset: 0; opacity: 1; }
-  42% { stroke-dashoffset: 0; opacity: 0.15; }
-  44%, 56% { stroke-dashoffset: 100; opacity: 0; }
-  64% { stroke-dashoffset: 100; opacity: 0; }
-  72% { stroke-dashoffset: 0; opacity: 1; }
-  100% { stroke-dashoffset: 0; opacity: 1; }
-}
-
-@keyframes hzPtrStrokeN {
-  0%, 36% { stroke-dashoffset: 100; opacity: 0; }
-  44% { stroke-dashoffset: 0; opacity: 1; }
-  52% { stroke-dashoffset: 0; opacity: 1; }
-  58% { stroke-dashoffset: 0; opacity: 0.12; }
-  60%, 100% { stroke-dashoffset: 100; opacity: 0; }
-}
-
-@keyframes hzPtrCoralSlide {
-  /* Z elbow → tengah pepenjuru Z → tengah batang N → kembali elbow Z */
-  0%, 6% { transform: translate(46px, 28px); opacity: 1; }
-  28% { transform: translate(32px, 48px); opacity: 1; }
-  44% { transform: translate(54px, 48px); opacity: 1; }
-  52% { transform: translate(54px, 48px); opacity: 1; }
-  68% { transform: translate(32px, 48px); opacity: 1; }
-  86% { transform: translate(46px, 28px); opacity: 1; }
-  100% { transform: translate(46px, 28px); opacity: 1; }
+@keyframes hzPtrArrowSpin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
 
 [data-theme="dark"] .hz-ptr-sheen {
-  background: linear-gradient(145deg, rgba(30, 32, 48, 0.82), rgba(22, 24, 38, 0.72));
-  border-color: rgba(155, 119, 255, 0.3);
+  background: linear-gradient(145deg, rgba(30, 32, 48, 0.88), rgba(22, 24, 38, 0.78));
+  border-color: rgba(129, 140, 248, 0.26);
   box-shadow:
-    0 6px 20px rgba(0, 0, 0, 0.4),
+    0 4px 16px rgba(0, 0, 0, 0.38),
     0 1px 0 rgba(255, 255, 255, 0.05) inset;
 }
 
 [data-theme="dark"] .hz-ptr-indicator.hz-ptr-ready .hz-ptr-sheen {
-  border-color: rgba(167, 139, 250, 0.42);
+  border-color: rgba(167, 139, 250, 0.38);
   box-shadow:
-    0 0 0 2px rgba(129, 140, 248, 0.18),
-    0 8px 24px rgba(0, 0, 0, 0.45),
+    0 0 0 2px rgba(129, 140, 248, 0.15),
+    0 6px 20px rgba(0, 0, 0, 0.42),
     0 1px 0 rgba(255, 255, 255, 0.06) inset;
 }
 
-[data-theme="dark"] .hz-ptr-logo {
-  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.4));
+[data-theme="dark"] #hzPtrSpinGrad stop:first-child {
+  stop-color: #a78bfa;
+}
+
+[data-theme="dark"] #hzPtrSpinGrad stop:last-child {
+  stop-color: #38bdf8;
 }

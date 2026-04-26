@@ -2099,7 +2099,7 @@ var ZYMNOTES_NAV = { chapters: [
 })();
 
 
-// ── Pull-to-refresh tersuai (ganti Chrome) — penunjuk Z / N bergantian ───────
+// ── Pull-to-refresh tersuai — anak panah membulat (gaya Chrome) + warna ZymNotes ─
 (function setupZymPullToRefresh() {
   if (!window.matchMedia || !window.matchMedia('(max-width: 760px)').matches) return;
 
@@ -2108,28 +2108,18 @@ var ZYMNOTES_NAV = { chapters: [
   var indicator = document.createElement('div');
   indicator.className = 'hz-ptr-indicator';
   indicator.setAttribute('aria-hidden', 'true');
-  var gid = 'hzPtr' + Math.random().toString(36).slice(2, 9);
   indicator.innerHTML =
     '<div class="hz-ptr-sheen">' +
-      '<svg class="hz-ptr-logo" viewBox="0 0 100 100" width="30" height="30" aria-hidden="true">' +
+      '<svg class="hz-ptr-arrow-svg" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">' +
         '<defs>' +
-          '<linearGradient id="' + gid + 'Bg" x1="0" y1="0" x2="1" y2="1">' +
+          '<linearGradient id="hzPtrSpinGrad" x1="0" y1="0" x2="1" y2="1">' +
             '<stop offset="0%" stop-color="#9B77FF"/>' +
             '<stop offset="100%" stop-color="#55B5FF"/>' +
           '</linearGradient>' +
-          '<clipPath id="' + gid + 'Clip"><circle cx="50" cy="50" r="50"/></clipPath>' +
         '</defs>' +
-        '<g clip-path="url(#' + gid + 'Clip)">' +
-          '<rect width="100" height="100" fill="url(#' + gid + 'Bg)"/>' +
-          '<g transform="translate(50,48)">' +
-            '<g class="hz-ptr-spin">' +
-              '<g class="hz-ptr-draw" transform="translate(-50,-48)">' +
-                '<path class="hz-ptr-path-z" pathLength="100" d="M18 28L46 28L18 68L46 68" fill="none" stroke="rgba(255,255,255,0.96)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>' +
-                '<path class="hz-ptr-path-n" pathLength="100" d="M54 68L54 28L82 68L82 28" fill="none" stroke="rgba(255,255,255,0.96)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>' +
-                '<circle class="hz-ptr-mint" cx="54" cy="68" r="5" fill="#6ADBB8"/>' +
-                '<circle class="hz-ptr-coral" r="5.2" fill="#FF9B6A"/>' +
-              '</g>' +
-            '</g>' +
+        '<g transform="translate(12,12)">' +
+          '<g class="hz-ptr-arrow-rot">' +
+            '<circle class="hz-ptr-arrow-arc" cx="0" cy="0" r="7.5" fill="none" stroke="url(#hzPtrSpinGrad)" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="34 14" transform="rotate(-88)"/>' +
           '</g>' +
         '</g>' +
       '</svg>' +
