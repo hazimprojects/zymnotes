@@ -2065,6 +2065,14 @@ body.mindmap-open { overflow: hidden; }
   transition: box-shadow 0.22s ease, border-color 0.22s ease;
 }
 
+/* Snap balik pantas bila lepas tanpa refresh (rasa “getah” seperti Chrome) */
+.hz-ptr-indicator.hz-ptr-snapping .hz-ptr-sheen {
+  transition:
+    transform 0.36s cubic-bezier(0.32, 0.72, 0.22, 1),
+    box-shadow 0.22s ease,
+    border-color 0.22s ease;
+}
+
 .hz-ptr-indicator.hz-ptr-ready .hz-ptr-sheen {
   border-color: rgba(155, 119, 255, 0.42);
   box-shadow:

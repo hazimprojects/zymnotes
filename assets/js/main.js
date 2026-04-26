@@ -2168,11 +2168,21 @@ var ZYMNOTES_NAV = { chapters: [
   var DIST_STRONG = 228;
   var VEL_MS_WINDOW = 110;
   var VEL_MIN = 0.38;
+  /* Paparan “getah”: jarak jari → anak panah ikut sedikit, makin tegang makin sukar (asymptotic) */
+  var RUBBER_MAX_PX = 80;
+  var RUBBER_TAU = 92;
   var startY = 0;
   var active = false;
   var pulling = false;
   var lastDy = 0;
+  var lastVisualPx = 0;
   var moveSamples = [];
+  var sheen = indicator.querySelector('.hz-ptr-sheen');
+
+  function rubberVisualPx(dy) {
+    if (dy <= 0) return 0;
+    return RUBBER_MAX_PX * (1 - Math.exp(-dy / RUBBER_TAU));
+  }
 
   function overlaysOpen() {
     return (
@@ -2184,8 +2194,8 @@ var ZYMNOTES_NAV = { chapters: [
 
   function setPull(dy, ready) {
     lastDy = dy;
-    var clamped = Math.min(dy * 0.38, 76);
-    indicator.style.setProperty('--hz-ptr-pull', clamped + 'px');
+    lastVisualPx = rubberVisualPx(dy);
+    indicator.style.setProperty('--hz-ptr-pull', lastVisualPx + 'px');
     indicator.classList.toggle('hz-ptr-pulling', dy > 6);
     indicator.classList.toggle('hz-ptr-ready', ready);
   }
@@ -2194,9 +2204,35 @@ var ZYMNOTES_NAV = { chapters: [
     pulling = false;
     active = false;
     lastDy = 0;
+    lastVisualPx = 0;
     moveSamples.length = 0;
-    indicator.classList.remove('hz-ptr-pulling', 'hz-ptr-ready');
+    indicator.classList.remove('hz-ptr-snapping', 'hz-ptr-pulling', 'hz-ptr-ready', 'hz-ptr-releasing');
     indicator.style.setProperty('--hz-ptr-pull', '0px');
+  }
+
+  function snapBackThenReset() {
+    if (!sheen || lastVisualPx < 2) {
+      reset();
+      return;
+    }
+    indicator.classList.add('hz-ptr-snapping');
+    indicator.classList.remove('hz-ptr-ready');
+    void sheen.offsetWidth;
+    indicator.style.setProperty('--hz-ptr-pull', '0px');
+    var done = false;
+    function finish() {
+      if (done) return;
+      done = true;
+      sheen.removeEventListener('transitionend', onTransEnd);
+      indicator.classList.remove('hz-ptr-snapping');
+      reset();
+    }
+    function onTransEnd(e) {
+      if (e.propertyName !== 'transform') return;
+      finish();
+    }
+    sheen.addEventListener('transitionend', onTransEnd);
+    window.setTimeout(finish, 480);
   }
 
   function endVelocityPxPerMs() {
@@ -2223,8 +2259,10 @@ var ZYMNOTES_NAV = { chapters: [
     function (e) {
       if (overlaysOpen()) return;
       if (window.scrollY > 10) return;
+      indicator.classList.remove('hz-ptr-snapping');
       active = true;
       lastDy = 0;
+      lastVisualPx = 0;
       moveSamples.length = 0;
       startY = e.touches[0].clientY;
     },
@@ -2261,12 +2299,21 @@ var ZYMNOTES_NAV = { chapters: [
         window.location.reload();
         return;
       }
-      reset();
+      if (pulling) snapBackThenReset();
+      else reset();
     },
     { passive: true }
   );
 
-  window.addEventListener('touchcancel', reset, { passive: true });
+  window.addEventListener(
+    'touchcancel',
+    function () {
+      if (!active) return;
+      if (pulling) snapBackThenReset();
+      else reset();
+    },
+    { passive: true }
+  );
 })();
 
 // =========================
@@ -2276,7 +2323,7 @@ var ZYMNOTES_NAV = { chapters: [
   if (!('serviceWorker' in navigator)) return;
 
   window.addEventListener('load', function () {
-    navigator.serviceWorker.register('/sw.js?v=185').catch(function (error) {
+    navigator.serviceWorker.register('/sw.js?v=186').catch(function (error) {
       console.warn('Service worker registration failed:', error);
     });
   });
