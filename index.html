@@ -65,28 +65,7 @@
 </script>
 
   <style>
-    body.homepage-vibrant {
-      --home-sunrise: #ffb86b;
-      --home-sky: #6cc8ff;
-      --home-mint: #63dba1;
-      --home-violet: #b89dff;
-      --home-canvas: #fffdf8;
-      background:
-        radial-gradient(circle at 8% 10%, color-mix(in srgb, var(--home-sunrise) 36%, transparent), transparent 30%),
-        radial-gradient(circle at 92% 14%, color-mix(in srgb, var(--home-sky) 34%, transparent), transparent 32%),
-        radial-gradient(circle at 52% 86%, color-mix(in srgb, var(--home-mint) 30%, transparent), transparent 36%),
-        linear-gradient(180deg, var(--home-canvas) 0%, #fff7ec 40%, #eff8ff 100%);
-    }
-
-    body.homepage-vibrant .hero {
-      background: linear-gradient(135deg, rgba(255, 214, 147, 0.26), rgba(190, 240, 255, 0.22), rgba(221, 234, 255, 0.18));
-      border-bottom: 1px solid rgba(92, 110, 132, 0.08);
-    }
-
-    body.homepage-vibrant .metric-card {
-      border: 1px solid rgba(92, 110, 132, 0.2);
-      background: linear-gradient(145deg, rgba(255, 255, 255, 0.95), rgba(252, 246, 255, 0.88));
-    }
+    /* --- Homepage-specific styles (app-inspired) --- */
 
     .emoji-tagline {
       display: inline-flex;
@@ -94,22 +73,22 @@
       gap: 0.45rem;
       margin-top: 0.3rem;
       font-size: 0.9rem;
-      color: #5c4f3d;
+      color: var(--muted);
       font-weight: 700;
     }
 
     .metric-icon {
       display: inline-flex;
-      width: 2.1rem;
-      height: 2.1rem;
+      width: 2.2rem;
+      height: 2.2rem;
       align-items: center;
       justify-content: center;
-      border-radius: 999px;
-      margin-bottom: 0.55rem;
+      border-radius: 12px;
+      margin-bottom: 0.6rem;
       font-size: 1.1rem;
-      background: rgba(255, 255, 255, 0.82);
-      border: 1px solid rgba(92, 110, 132, 0.14);
-      box-shadow: 0 6px 16px rgba(36, 49, 63, 0.08);
+      background: var(--paper-soft);
+      border: 1px solid var(--line-strong);
+      box-shadow: var(--shadow-soft);
     }
 
     .color-chip-row {
@@ -125,88 +104,24 @@
       font-size: 0.73rem;
       font-weight: 800;
       letter-spacing: 0.02em;
-      color: #403628;
-      border: 1px solid rgba(92, 110, 132, 0.14);
-      background: #fff;
+      color: var(--ink);
+      border: 1px solid var(--line-strong);
+      background: var(--paper-soft);
     }
 
-    .chip-1 { background: #ffe9d3; }
-    .chip-2 { background: #d9f5ff; }
-    .chip-3 { background: #def8e4; }
-    .chip-4 { background: #f0e4ff; }
+    .chip-1 { background: rgba(82,179,150,0.14); border-color: rgba(82,179,150,0.28); }
+    .chip-2 { background: rgba(88,135,206,0.14); border-color: rgba(88,135,206,0.28); }
+    .chip-3 { background: rgba(74,132,124,0.14); border-color: rgba(74,132,124,0.28); }
+    .chip-4 { background: rgba(106,88,170,0.14); border-color: rgba(106,88,170,0.28); }
 
-    body.dark-mode.homepage-vibrant,
-    [data-theme="dark"] body.homepage-vibrant {
-      background:
-        radial-gradient(circle at 8% 10%, rgba(255, 184, 107, 0.12), transparent 30%),
-        radial-gradient(circle at 92% 14%, rgba(108, 200, 255, 0.12), transparent 31%),
-        radial-gradient(circle at 52% 86%, rgba(99, 219, 161, 0.11), transparent 33%),
-        linear-gradient(180deg, #17191f 0%, #13151b 100%);
-    }
-
-    body.dark-mode.homepage-vibrant .hero,
-    [data-theme="dark"] body.homepage-vibrant .hero {
-      background: linear-gradient(140deg, rgba(27, 29, 36, 0.94), rgba(20, 22, 30, 0.9));
-      border-bottom-color: rgba(255, 255, 255, 0.08);
-    }
-
-    body.dark-mode.homepage-vibrant h1,
-    [data-theme="dark"] body.homepage-vibrant h1 {
-      color: #f6f1e6;
-    }
-
-    body.dark-mode.homepage-vibrant .lead,
-    [data-theme="dark"] body.homepage-vibrant .lead {
-      color: #d2cabd;
-    }
-
-    body.dark-mode.homepage-vibrant .proof-pill,
-    [data-theme="dark"] body.homepage-vibrant .proof-pill {
-      color: #f0e4cf;
-      background: rgba(19, 21, 28, 0.7);
-      border-color: rgba(236, 225, 202, 0.18);
-    }
-
-    body.dark-mode .emoji-tagline,
-    [data-theme="dark"] .emoji-tagline { color: #ddccb2; }
-
-    body.dark-mode .metric-icon,
-    [data-theme="dark"] .metric-icon {
-      background: rgba(255, 255, 255, 0.08);
-      border-color: rgba(255, 255, 255, 0.16);
-    }
-
-    body.dark-mode .color-chip,
-    [data-theme="dark"] .color-chip {
-      color: #f3eadc;
-      border-color: rgba(255,255,255,0.12);
-      background: rgba(255,255,255,0.06);
-    }
-
-    body.dark-mode.homepage-vibrant .metric-card,
-    [data-theme="dark"] body.homepage-vibrant .metric-card {
-      background: linear-gradient(145deg, rgba(36, 38, 46, 0.92), rgba(28, 30, 38, 0.9));
-      border-color: rgba(236, 225, 202, 0.18);
-      box-shadow: 0 14px 30px rgba(0, 0, 0, 0.26);
-    }
-
-    body.dark-mode.homepage-vibrant .metric-card h3,
-    [data-theme="dark"] body.homepage-vibrant .metric-card h3 {
-      color: #f3eadc;
-    }
-
-    body.dark-mode.homepage-vibrant .metric-card p,
-    [data-theme="dark"] body.homepage-vibrant .metric-card p {
-      color: #d6ccbf;
-    }
-
+    /* Project status card */
     .project-status-card {
       margin-top: 1rem;
       padding: 0.95rem 1rem;
       border-radius: 18px;
-      background: rgba(255, 255, 255, 0.72);
-      border: 1px solid rgba(120, 110, 90, 0.14);
-      box-shadow: 0 10px 30px rgba(70, 60, 40, 0.06);
+      background: var(--paper);
+      border: 1px solid var(--line-strong);
+      box-shadow: var(--shadow-soft);
       backdrop-filter: blur(10px);
       -webkit-backdrop-filter: blur(10px);
       max-width: 42rem;
@@ -219,7 +134,7 @@
       font-size: 0.82rem;
       font-weight: 800;
       letter-spacing: 0.02em;
-      color: #6b5a3e;
+      color: var(--primary);
       margin-bottom: 0.45rem;
     }
 
@@ -227,12 +142,12 @@
       margin: 0;
       font-size: 0.98rem;
       line-height: 1.65;
-      color: #544a3d;
+      color: var(--muted);
     }
 
     .project-status-date {
       font-weight: 800;
-      color: #3f372d;
+      color: var(--ink);
       white-space: nowrap;
     }
 
@@ -240,51 +155,79 @@
       display: block;
       margin-top: 0.35rem;
       font-size: 0.9rem;
-      color: #7b6d59;
-    }
-
-    body.dark-mode .project-status-card,
-    [data-theme="dark"] .project-status-card {
-      background: rgba(34, 33, 31, 0.78);
-      border-color: rgba(255, 255, 255, 0.08);
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
-    }
-
-    body.dark-mode .project-status-label,
-    [data-theme="dark"] .project-status-label {
-      color: #e0c78f;
-    }
-
-    body.dark-mode .project-status-text,
-    [data-theme="dark"] .project-status-text {
-      color: #e8dfd2;
-    }
-
-    body.dark-mode .project-status-date,
-    [data-theme="dark"] .project-status-date {
-      color: #fff4da;
-    }
-
-    body.dark-mode .project-status-note,
-    [data-theme="dark"] .project-status-note {
-      color: #c7baaa;
+      color: var(--muted);
     }
 
     .project-status-list {
       margin: 0.45rem 0 0 0;
       padding-left: 1.1rem;
       font-size: 0.87rem;
-      color: #7b6d59;
+      color: var(--muted);
       line-height: 1.6;
       list-style: disc;
     }
 
     .project-status-list li { margin-bottom: 0.1rem; }
 
-    body.dark-mode .project-status-list,
-    [data-theme="dark"] .project-status-list {
-      color: #c7baaa;
+    /* Bab search bar */
+    .bab-search-wrap {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      background: var(--paper);
+      border: 1.5px solid var(--line-strong);
+      border-radius: 14px;
+      padding: 0.6rem 0.9rem;
+      box-shadow: var(--shadow-soft);
+      margin-bottom: 1rem;
+      transition: border-color 0.2s;
     }
+
+    .bab-search-wrap:focus-within {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(79,70,229,0.10);
+    }
+
+    .bab-search-icon { font-size: 1rem; line-height: 1; color: var(--muted); flex-shrink: 0; }
+
+    .bab-search-input {
+      flex: 1;
+      border: none;
+      outline: none;
+      background: transparent;
+      font-size: 0.87rem;
+      font-weight: 600;
+      color: var(--ink);
+      font-family: inherit;
+    }
+
+    .bab-search-input::placeholder { color: var(--muted); font-weight: 500; }
+
+    .bab-search-clear {
+      cursor: pointer;
+      font-size: 0.8rem;
+      font-weight: 800;
+      color: var(--muted);
+      padding: 0.1rem 0.35rem;
+      border-radius: 6px;
+      transition: background 0.15s;
+      display: none;
+    }
+
+    .bab-search-clear.visible { display: inline; }
+    .bab-search-clear:hover { background: var(--paper-soft); }
+
+    .bab-search-empty {
+      text-align: center;
+      padding: 2.5rem 1rem;
+      color: var(--muted);
+      display: none;
+    }
+
+    .bab-search-empty.visible { display: block; }
+    .bab-search-empty-icon { font-size: 2rem; margin-bottom: 0.5rem; }
+    .bab-search-empty-title { font-size: 0.95rem; font-weight: 700; color: var(--ink); }
+    .bab-search-empty-sub { font-size: 0.82rem; margin-top: 0.25rem; }
   </style>
 
   <link rel="manifest" href="/manifest.json?v=11" />
@@ -299,7 +242,7 @@
   <meta name="apple-mobile-web-app-title" content="ZymNotes" />
   <meta name="msapplication-TileColor" content="#9B77FF" />
 </head>
-<body class="homepage-vibrant page-theme-home">
+<body class="page-theme-home">
   <header class="site-header">
     <div class="container nav-wrap">
       <a class="brand" href="index.html">ZymNotes</a>
@@ -387,48 +330,116 @@
           <p>Sejarah Tingkatan 4 ialah fokus aktif ZymNotes buat masa ini. Tujuh bab kini tersedia sebagai asas koleksi nota semasa, sebelum berkembang ke Sejarah Tingkatan 5 dan kandungan lain yang berkaitan secara berperingkat.</p>
         </div>
 
-        <div class="bab-grid">
-          <a class="bab-card bab-card-theme-1" href="notes/bab-1.html">
-            <div class="bab-card-top">Bab 1</div>
+        <div class="bab-search-wrap" role="search">
+          <span class="bab-search-icon" aria-hidden="true">🔍</span>
+          <input
+            class="bab-search-input"
+            id="babSearchInput"
+            type="search"
+            placeholder="Cari bab... (contoh: nasionalisme)"
+            autocomplete="off"
+            aria-label="Cari bab"
+          />
+          <span class="bab-search-clear" id="babSearchClear" role="button" tabindex="0" aria-label="Kosongkan carian">✕</span>
+        </div>
+
+        <div class="bab-grid" id="babGrid">
+          <a class="bab-card bab-card-theme-1" href="notes/bab-1.html" data-title="Warisan Negara Bangsa bab 1">
+            <div class="bab-card-header">
+              <div class="bab-emoji-icon">🏛️</div>
+              <div class="bab-card-top">Bab 1</div>
+            </div>
             <h3>Warisan Negara Bangsa</h3>
-            <p>Asas negara bangsa di Alam Melayu, kesinambungan warisan kerajaan dan hubungan pemerintah dengan rakyat.</p>
+            <p>Kerajaan Alam Melayu &amp; warisan budaya</p>
+            <div class="bab-card-actions">
+              <span class="bab-action-nota">📄 Nota</span>
+              <span class="bab-action-kuiz bab-kuiz-ready">✏️ Kuiz</span>
+            </div>
           </a>
 
-          <a class="bab-card bab-card-theme-2" href="notes/bab-2.html">
-            <div class="bab-card-top">Bab 2</div>
+          <a class="bab-card bab-card-theme-2" href="notes/bab-2.html" data-title="Kebangkitan Nasionalisme bab 2">
+            <div class="bab-card-header">
+              <div class="bab-emoji-icon">🔥</div>
+              <div class="bab-card-top">Bab 2</div>
+            </div>
             <h3>Kebangkitan Nasionalisme</h3>
-            <p>Maksud nasionalisme, perkembangannya di Barat, Asia dan Asia Tenggara serta kesannya di negara kita.</p>
+            <p>Idea nasionalisme di Asia &amp; Tanah Melayu</p>
+            <div class="bab-card-actions">
+              <span class="bab-action-nota">📄 Nota</span>
+              <span class="bab-action-kuiz bab-kuiz-locked">🔒 Kuiz <small>SOON</small></span>
+            </div>
           </a>
 
-          <a class="bab-card bab-card-theme-3" href="notes/bab-3.html">
-            <div class="bab-card-top">Bab 3</div>
-            <h3>Konflik Dunia dan Pendudukan Jepun</h3>
-            <p>Konflik dunia, pendudukan Jepun, perjuangan rakyat dan perkembangan nasionalisme tempatan.</p>
+          <a class="bab-card bab-card-theme-3" href="notes/bab-3.html" data-title="Konflik Dunia Pendudukan Jepun bab 3">
+            <div class="bab-card-header">
+              <div class="bab-emoji-icon">🌍</div>
+              <div class="bab-card-top">Bab 3</div>
+            </div>
+            <h3>Konflik Dunia &amp; Pendudukan Jepun</h3>
+            <p>PKII, Jepun &amp; perjuangan rakyat</p>
+            <div class="bab-card-actions">
+              <span class="bab-action-nota">📄 Nota</span>
+              <span class="bab-action-kuiz bab-kuiz-locked">🔒 Kuiz <small>SOON</small></span>
+            </div>
           </a>
 
-          <a class="bab-card bab-card-theme-4" href="notes/bab-4.html">
-            <div class="bab-card-top">Bab 4</div>
+          <a class="bab-card bab-card-theme-4" href="notes/bab-4.html" data-title="Era Peralihan Kuasa British bab 4">
+            <div class="bab-card-header">
+              <div class="bab-emoji-icon">⚖️</div>
+              <div class="bab-card-top">Bab 4</div>
+            </div>
             <h3>Era Peralihan Kuasa British</h3>
-            <p>British Military Administration, Malayan Union dan reaksi penduduk tempatan terhadap perubahan kuasa.</p>
+            <p>BMA, Malayan Union &amp; reaksi rakyat</p>
+            <div class="bab-card-actions">
+              <span class="bab-action-nota">📄 Nota</span>
+              <span class="bab-action-kuiz bab-kuiz-ready">✏️ Kuiz</span>
+            </div>
           </a>
 
-          <a class="bab-card bab-card-theme-5" href="notes/bab-5.html">
-            <div class="bab-card-top">Bab 5</div>
+          <a class="bab-card bab-card-theme-5" href="notes/bab-5.html" data-title="Persekutuan Tanah Melayu 1948 bab 5">
+            <div class="bab-card-header">
+              <div class="bab-emoji-icon">🤝</div>
+              <div class="bab-card-top">Bab 5</div>
+            </div>
             <h3>Persekutuan Tanah Melayu 1948</h3>
-            <p>Latar belakang penubuhan Persekutuan Tanah Melayu 1948, faktor, ciri-ciri utama dan kesannya terhadap perkembangan politik negara.</p>
+            <p>Penubuhan, faktor &amp; ciri utama</p>
+            <div class="bab-card-actions">
+              <span class="bab-action-nota">📄 Nota</span>
+              <span class="bab-action-kuiz bab-kuiz-locked">🔒 Kuiz <small>SOON</small></span>
+            </div>
           </a>
 
-          <a class="bab-card bab-card-theme-6" href="notes/bab-6.html">
-            <div class="bab-card-top">Bab 6</div>
-            <h3>Ancaman Komunis dan Perisytiharan Darurat</h3>
-            <p>Kemasukan pengaruh komunis di negara kita, ancaman yang dibawa, usaha menanganinya dan kesan zaman darurat terhadap negara.</p>
+          <a class="bab-card bab-card-theme-6" href="notes/bab-6.html" data-title="Ancaman Komunis Darurat bab 6">
+            <div class="bab-card-header">
+              <div class="bab-emoji-icon">🛡️</div>
+              <div class="bab-card-top">Bab 6</div>
+            </div>
+            <h3>Ancaman Komunis &amp; Darurat</h3>
+            <p>Komunis, darurat &amp; usaha mengatasinya</p>
+            <div class="bab-card-actions">
+              <span class="bab-action-nota">📄 Nota</span>
+              <span class="bab-action-kuiz bab-kuiz-locked">🔒 Kuiz <small>SOON</small></span>
+            </div>
           </a>
 
-          <a class="bab-card bab-card-theme-7" href="notes/bab-7.html">
-            <div class="bab-card-top">Bab 7</div>
+          <a class="bab-card bab-card-theme-7" href="notes/bab-7.html" data-title="Usaha ke Arah Kemerdekaan bab 7">
+            <div class="bab-card-header">
+              <div class="bab-emoji-icon">🕊️</div>
+              <div class="bab-card-top">Bab 7</div>
+            </div>
             <h3>Usaha ke Arah Kemerdekaan</h3>
-            <p>Perkembangan idea negara merdeka, kerjasama antara kaum, Sistem Ahli dan usaha politik yang membawa negara ke arah kemerdekaan.</p>
+            <p>Kerjasama kaum &amp; jalan kemerdekaan</p>
+            <div class="bab-card-actions">
+              <span class="bab-action-nota">📄 Nota</span>
+              <span class="bab-action-kuiz bab-kuiz-locked">🔒 Kuiz <small>SOON</small></span>
+            </div>
           </a>
+        </div>
+
+        <div class="bab-search-empty" id="babSearchEmpty" aria-live="polite">
+          <div class="bab-search-empty-icon">🔍</div>
+          <div class="bab-search-empty-title">Tiada hasil ditemui</div>
+          <p class="bab-search-empty-sub">Cuba cari nombor bab atau kata kunci lain</p>
         </div>
       </div>
     </section>
@@ -502,6 +513,44 @@
   </footer>
 
   <script src="assets/js/main.js?v=110"></script>
+  <script>
+    (function () {
+      var input = document.getElementById('babSearchInput');
+      var clear = document.getElementById('babSearchClear');
+      var grid = document.getElementById('babGrid');
+      var empty = document.getElementById('babSearchEmpty');
+      if (!input || !grid) return;
+
+      var cards = Array.from(grid.querySelectorAll('.bab-card'));
+
+      function filterBabs(q) {
+        var query = q.trim().toLowerCase();
+        var count = 0;
+        cards.forEach(function (card) {
+          var title = (card.dataset.title || card.textContent).toLowerCase();
+          var show = !query || title.includes(query);
+          card.style.display = show ? '' : 'none';
+          if (show) count++;
+        });
+        if (empty) empty.classList.toggle('visible', count === 0 && query.length > 0);
+        if (clear) clear.classList.toggle('visible', query.length > 0);
+      }
+
+      input.addEventListener('input', function () { filterBabs(input.value); });
+      input.addEventListener('search', function () { filterBabs(input.value); });
+
+      if (clear) {
+        clear.addEventListener('click', function () {
+          input.value = '';
+          filterBabs('');
+          input.focus();
+        });
+        clear.addEventListener('keydown', function (e) {
+          if (e.key === 'Enter' || e.key === ' ') { input.value = ''; filterBabs(''); input.focus(); }
+        });
+      }
+    })();
+  </script>
   <script>
     function escapeHtml(value) {
       return String(value)

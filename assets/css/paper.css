@@ -995,26 +995,100 @@ body.accordion-no-smooth-scroll {
 
 
 
-.bab-card-theme-1 { background: linear-gradient(150deg, #fff9f2, #ffe9cf); border-color: rgba(217, 119, 6, 0.25); }
-.bab-card-theme-1 .bab-card-top { background: #ffe8cc; color: #8a4b11; }
+/* Bab card theme colors — aligned with app accent palette */
+.bab-card-theme-1 { background: linear-gradient(145deg, #ffffff, rgba(82,179,150,0.08)); border-color: rgba(82,179,150,0.22); }
+.bab-card-theme-1 .bab-card-top { background: rgba(82,179,150,0.14); color: #315649; }
+.bab-card-theme-1 .bab-emoji-icon { background: rgba(82,179,150,0.14); }
+.bab-card-theme-1 .bab-action-nota { background: rgba(82,179,150,0.14); color: #315649; }
 
-.bab-card-theme-2 { background: linear-gradient(150deg, #f4fbff, #ddf1ff); border-color: rgba(2, 132, 199, 0.24); }
-.bab-card-theme-2 .bab-card-top { background: #d8efff; color: #155e75; }
+.bab-card-theme-2 { background: linear-gradient(145deg, #ffffff, rgba(88,135,206,0.08)); border-color: rgba(88,135,206,0.22); }
+.bab-card-theme-2 .bab-card-top { background: rgba(88,135,206,0.14); color: #294d80; }
+.bab-card-theme-2 .bab-emoji-icon { background: rgba(88,135,206,0.14); }
+.bab-card-theme-2 .bab-action-nota { background: rgba(88,135,206,0.14); color: #294d80; }
 
-.bab-card-theme-3 { background: linear-gradient(150deg, #f3fff8, #dbf7e8); border-color: rgba(22, 163, 74, 0.24); }
-.bab-card-theme-3 .bab-card-top { background: #daf8e6; color: #166534; }
+.bab-card-theme-3 { background: linear-gradient(145deg, #ffffff, rgba(120,138,156,0.07)); border-color: rgba(120,138,156,0.20); }
+.bab-card-theme-3 .bab-card-top { background: rgba(120,138,156,0.13); color: #41576c; }
+.bab-card-theme-3 .bab-emoji-icon { background: rgba(120,138,156,0.13); }
+.bab-card-theme-3 .bab-action-nota { background: rgba(120,138,156,0.13); color: #41576c; }
 
-.bab-card-theme-4 { background: linear-gradient(150deg, #faf7ff, #ebe1ff); border-color: rgba(109, 40, 217, 0.24); }
-.bab-card-theme-4 .bab-card-top { background: #e9e3ff; color: #5b21b6; }
+.bab-card-theme-4 { background: linear-gradient(145deg, #ffffff, rgba(98,126,168,0.08)); border-color: rgba(98,126,168,0.22); }
+.bab-card-theme-4 .bab-card-top { background: rgba(98,126,168,0.14); color: #465d77; }
+.bab-card-theme-4 .bab-emoji-icon { background: rgba(98,126,168,0.14); }
+.bab-card-theme-4 .bab-action-nota { background: rgba(98,126,168,0.14); color: #465d77; }
 
-.bab-card-theme-5 { background: linear-gradient(150deg, #fff7fc, #ffe5f3); border-color: rgba(219, 39, 119, 0.24); }
-.bab-card-theme-5 .bab-card-top { background: #ffe3f0; color: #9d174d; }
+.bab-card-theme-5 { background: linear-gradient(145deg, #ffffff, rgba(74,132,124,0.08)); border-color: rgba(74,132,124,0.22); }
+.bab-card-theme-5 .bab-card-top { background: rgba(74,132,124,0.14); color: #315f57; }
+.bab-card-theme-5 .bab-emoji-icon { background: rgba(74,132,124,0.14); }
+.bab-card-theme-5 .bab-action-nota { background: rgba(74,132,124,0.14); color: #315f57; }
 
-.bab-card-theme-6 { background: linear-gradient(150deg, #f2fdff, #d7f5fb); border-color: rgba(13, 148, 136, 0.24); }
-.bab-card-theme-6 .bab-card-top { background: #d4f8fa; color: #0f766e; }
+.bab-card-theme-6 { background: linear-gradient(145deg, #ffffff, rgba(132,70,70,0.07)); border-color: rgba(132,70,70,0.20); }
+.bab-card-theme-6 .bab-card-top { background: rgba(132,70,70,0.13); color: #6f3e3e; }
+.bab-card-theme-6 .bab-emoji-icon { background: rgba(132,70,70,0.13); }
+.bab-card-theme-6 .bab-action-nota { background: rgba(132,70,70,0.13); color: #6f3e3e; }
 
-.bab-card-theme-7 { background: linear-gradient(135deg, #fefce8, #fdf3c8); border-color: rgba(202, 138, 4, 0.24); }
-.bab-card-theme-7 .bab-card-top { background: #fdf4cc; color: #854d0e; }
+.bab-card-theme-7 { background: linear-gradient(145deg, #ffffff, rgba(106,88,170,0.08)); border-color: rgba(106,88,170,0.22); }
+.bab-card-theme-7 .bab-card-top { background: rgba(106,88,170,0.14); color: #584892; }
+.bab-card-theme-7 .bab-emoji-icon { background: rgba(106,88,170,0.14); }
+.bab-card-theme-7 .bab-action-nota { background: rgba(106,88,170,0.14); color: #584892; }
+
+/* Bab card app-style elements */
+.bab-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.65rem;
+}
+
+.bab-emoji-icon {
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.bab-card-actions {
+  display: flex;
+  gap: 0.4rem;
+  margin-top: 0.75rem;
+}
+
+.bab-action-nota,
+.bab-action-kuiz {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+  padding: 0.42rem 0;
+  border-radius: 10px;
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-align: center;
+}
+
+.bab-action-kuiz.bab-kuiz-ready {
+  background: rgba(79,70,229,0.08);
+  color: var(--primary);
+  border: 1px solid transparent;
+}
+
+.bab-action-kuiz.bab-kuiz-locked {
+  background: rgba(0,0,0,0.04);
+  color: var(--muted);
+  border: 1px dashed rgba(0,0,0,0.10);
+  opacity: 0.8;
+}
+
+.bab-action-kuiz.bab-kuiz-locked small {
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  opacity: 0.7;
+}
 
 .bab-card-disabled {
   opacity: 0.78;
