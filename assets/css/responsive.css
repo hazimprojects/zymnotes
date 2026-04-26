@@ -206,3 +206,15 @@
 
   .point-line + .point-heading { margin-top: 0.9rem; }
 }
+
+/* =============================================================
+   DARK MODE TOGGLE — always show in header top-right
+   Overrides layout.css @media rule that hides it on mobile
+============================================================= */
+
+/* This media query wraps the hide rule from layout.css:
+   .nav-wrap .display-fab { display: none !important; }
+   We re-show it here with higher specificity */
+.nav-wrap .display-fab {
+  display: inline-flex !important;
+}
