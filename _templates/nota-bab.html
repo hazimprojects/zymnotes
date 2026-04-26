@@ -12,8 +12,7 @@
   1. Salin fail ini ke folder nota subjek (cth: notes/bab-1.html, notes/unit-3.html)
   2. Gantikan semua placeholder [[...]] dengan nilai sebenar
   3. Tambah kad subtopik (bab-card) dalam blok [C] mengikut bilangan subtopik
-  4. Kemaskini blok Susunan Pembelajaran [D] mengikut bilangan subtopik
-  5. Simpan dan semak di browser
+  4. Simpan dan semak di browser
 
   PLACEHOLDER YANG PERLU DIGANTI:
   [[X]]               → Nombor bab/unit, cth: 1, 2, 7
@@ -34,7 +33,7 @@
   • Hero TIADA eyebrow, TIADA audio, TIADA hero-actions
   • H1 format: "[[BAB_LABEL]] · [[TAJUK_BAB]]" — TIADA nombor subtopik
   • paper-label dalam hero → "[[BAB_LABEL]] Induk" atau subjek
-  • Kandungan utama: Sinopsis + Grid kad subtopik + Susunan pembelajaran
+  • Kandungan utama: Sinopsis + Grid kad subtopik (+ footer hak cipta dalam main)
   • BreadcrumbList hanya 3 tahap (bukan 4)
 
   NOTA UNTUK SUBJEK BAHARU:
@@ -92,15 +91,15 @@
   <!-- ═══════════════════════════════════════════════════════════════════════
        CSS
        ═══════════════════════════════════════════════════════════════════════ -->
-  <link rel="preload" as="style" href="../assets/css/base.css?v=18">
+  <link rel="preload" as="style" href="../assets/css/base.css?v=19">
 <link rel="preload" as="style" href="../assets/css/layout.css?v=15">
 <link rel="preload" as="style" href="../assets/css/ui.css?v=34">
 <link rel="preload" as="style" href="../assets/css/paper.css?v=12">
 <link rel="preload" as="style" href="../assets/css/keywords.css?v=23">
 <link rel="preload" as="style" href="../assets/css/responsive.css?v=6">
-<link rel="preload" as="style" href="../assets/css/themes.css?v=10">
+<link rel="preload" as="style" href="../assets/css/themes.css?v=11">
 <link rel="preload" as="style" href="../assets/css/lab.css?v=3">
-<link rel="stylesheet" href="../assets/css/style.css?v=112" />
+<link rel="stylesheet" href="../assets/css/style.css?v=113" />
 
   <!-- ═══════════════════════════════════════════════════════════════════════
        GOOGLE ANALYTICS
@@ -145,7 +144,7 @@
 </head>
 
 <!-- Halaman bab TIADA data-lab-href kerana tiada kuiz untuk bab induk -->
-<body class="[[SUBJEK_THEME]]">
+<body class="[[SUBJEK_THEME]] bab-hub-page">
 
   <!-- ═══════════════════════════════════════════════════════════════════════
        NAVIGASI ATAS
@@ -295,35 +294,7 @@
 
 
         <!-- ─────────────────────────────────────────────────────────────
-             [D] SUSUNAN PEMBELAJARAN (PILIHAN tapi disyorkan)
-             Panduan urutan membaca untuk pembaca.
-             Guna emoji nombor 1️⃣ 2️⃣ 3️⃣ mengikut bilangan subtopik.
-             ───────────────────────────────────────────────────────────── -->
-        <section class="note-subsection reveal-on-scroll">
-          <article class="paper-board info-paper">
-            <div class="paper-strip strip-info">Susunan Pembelajaran</div>
-            <ul class="emoji-point-list">
-              <li>
-                <span class="emoji-bullet">1️⃣</span>
-                <span>Mulakan dengan <span class="kw kw-masa">[[X]].1</span> untuk [[tujuan subtopik 1]].</span>
-              </li>
-              <li>
-                <span class="emoji-bullet">2️⃣</span>
-                <span>Teruskan ke <span class="kw kw-masa">[[X]].2</span> untuk [[tujuan subtopik 2]].</span>
-              </li>
-              <li>
-                <span class="emoji-bullet">3️⃣</span>
-                <span>Baca <span class="kw kw-masa">[[X]].3</span> untuk [[tujuan subtopik 3]].</span>
-              </li>
-              <!-- Tambah mengikut bilangan subtopik -->
-            </ul>
-          </article>
-        </section>
-        <!-- /SUSUNAN PEMBELAJARAN -->
-
-
-        <!-- ─────────────────────────────────────────────────────────────
-             [E] NAVIGASI BAWAH
+             [D] NAVIGASI BAWAH
              Butang utama: buka subtopik pertama
              Butang kedua: kembali ke halaman senarai nota
              ───────────────────────────────────────────────────────────── -->
@@ -335,6 +306,7 @@
         </section>
         <!-- /NAVIGASI -->
 
+        <p class="home-footer-copy">&copy; 2026 ZymNotes · Semua hak cipta terpelihara</p>
 
       </div>
     </section>
@@ -369,7 +341,7 @@
   <!-- ═══════════════════════════════════════════════════════════════════════
        JAVASCRIPT
        ═══════════════════════════════════════════════════════════════════════ -->
-  <script src="../assets/js/main.js?v=121"></script>
+  <script src="../assets/js/main.js?v=122"></script>
 
   <!-- ═══════════════════════════════════════════════════════════════════════
        STRUCTURED DATA — 3 tahap sahaja (bukan 4 seperti halaman subtopik)

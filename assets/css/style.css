@@ -1,15 +1,15 @@
 /* =========================
-   MASTER STYLESHEET — v57
+   MASTER STYLESHEET — v58
    Import fail-specific files here.
    HTML files reference style.css — no change needed there.
 ========================= */
 
-@import url("base.css?v=18");       /* :root variables, dark mode tokens, body/reset/containers */
+@import url("base.css?v=19");       /* :root variables, dark mode tokens, body/reset/containers */
 @import url("layout.css?v=15");     /* Header, nav, dark mode fab, typography, footer, animations */
 @import url("ui.css?v=34");        /* Buttons, cards, homepage, hero, search, org-chart, interaction */
 @import url("paper.css?v=12");      /* Paper labels, boards, chips, accordion, steps, bab overview */
 @import url("keywords.css?v=23");   /* Keyword highlights, bloc identity, keyword legend, zh-mode annotations */
 @import url("responsive.css?v=6"); /* All @media queries + spacing fixes */
-@import url("themes.css?v=10");     /* Bab visual themes, dark mode overrides, war block chips */
+@import url("themes.css?v=11");     /* Bab visual themes, dark mode overrides, war block chips */
 @import url("lab.css?v=3");        /* Learning Lab, action bar, mini interactive blocks */
 @import url("print.css") print;    /* Print styles (Ctrl+P) */

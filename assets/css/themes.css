@@ -98,6 +98,49 @@ body.page-theme-feedback {
   --page-gradient: linear-gradient(170deg, #f9fafb 0%, #eef2f6 50%, #e8edf2 100%);
 }
 
+/* Halaman induk bab (bab-1 … bab-7) — latar selari indeks nota / app shell */
+body.bab-hub-page {
+  --page-bg-solid: #f1f3f9;
+  --page-overlay-1: radial-gradient(ellipse 95% 65% at 6% 8%, rgba(79, 70, 229, 0.07), transparent 54%);
+  --page-overlay-2: radial-gradient(ellipse 85% 55% at 94% 22%, rgba(56, 189, 248, 0.05), transparent 50%);
+  --page-overlay-3: radial-gradient(ellipse 90% 55% at 42% 96%, rgba(129, 140, 248, 0.06), transparent 52%);
+  --page-gradient: linear-gradient(172deg, #f8f9fc 0%, #eef1f8 48%, #e8ecf4 100%);
+  --page-surface-bg: linear-gradient(155deg, rgba(255, 255, 255, 0.94) 0%, rgba(248, 247, 252, 0.9) 48%, rgba(241, 244, 250, 0.88) 100%);
+  --page-surface-border: rgba(76, 86, 118, 0.11);
+  --page-surface-shadow: 0 20px 48px rgba(45, 52, 72, 0.07), 0 1px 0 rgba(255, 255, 255, 0.65) inset;
+  --page-header-bg: rgba(252, 252, 254, 0.82);
+  --page-header-border: rgba(76, 86, 118, 0.08);
+
+  background-color: var(--page-bg-solid);
+  background-image:
+    var(--page-overlay-1),
+    var(--page-overlay-2),
+    var(--page-overlay-3),
+    var(--page-gradient);
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+  background-attachment: fixed, fixed, fixed, scroll;
+}
+
+body.bab-hub-page .site-header {
+  background: var(--page-header-bg);
+  border-bottom-color: var(--page-header-border);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+html[data-theme="dark"] body.bab-hub-page {
+  --page-bg-solid: #0D0F1A;
+  --page-overlay-1: radial-gradient(circle at 12% 12%, rgba(99, 102, 241, 0.16), transparent 0 24%);
+  --page-overlay-2: radial-gradient(circle at 86% 12%, rgba(34, 211, 238, 0.12), transparent 0 22%);
+  --page-overlay-3: radial-gradient(circle at 16% 86%, rgba(129, 140, 248, 0.10), transparent 0 20%);
+  --page-gradient: linear-gradient(180deg, #0D0F1A 0%, #0B0E1A 56%, #0A0C16 100%);
+  --page-surface-bg: rgba(21, 24, 41, 0.88);
+  --page-surface-border: rgba(129, 140, 248, 0.12);
+  --page-surface-shadow: 0 18px 42px rgba(0, 0, 0, 0.32);
+  --page-header-bg: rgba(13, 15, 26, 0.92);
+  --page-header-border: rgba(129, 140, 248, 0.12);
+}
+
 body.page-theme-thankyou {
   --page-bg-solid: #f4fbff;
   --page-overlay-1: radial-gradient(circle at 12% 12%, rgba(113, 188, 255, 0.22), transparent 0 24%);
@@ -227,6 +270,21 @@ body[class*="bab-theme-"] .search-empty {
   background: var(--theme-surface-bg);
   border-color: var(--theme-surface-border);
   box-shadow: var(--theme-surface-shadow);
+}
+
+/* Halaman induk bab — ganti token permukaan kad (override peraturan bab di atas) */
+body.bab-hub-page .paper-board,
+body.bab-hub-page .keyword-legend-wrap {
+  background: var(--page-surface-bg);
+  border-color: var(--page-surface-border);
+  box-shadow: var(--page-surface-shadow);
+}
+
+html[data-theme="dark"] body.bab-hub-page .paper-board,
+html[data-theme="dark"] body.bab-hub-page .keyword-legend-wrap {
+  background: var(--page-surface-bg) !important;
+  border-color: var(--page-surface-border) !important;
+  box-shadow: var(--page-surface-shadow) !important;
 }
 
 /* Light refresh override supaya semua bab tidak lagi beige-dominant */
