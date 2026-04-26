@@ -927,14 +927,37 @@ body.accordion-no-smooth-scroll {
   transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.35s ease, border-color 0.35s ease;
 }
 
+/* Subtopik ada kuiz (ditanda oleh JS pada halaman bab induk) */
+.bab-card.has-quiz::before {
+  content: "🧩";
+  position: absolute;
+  top: 0.52rem;
+  right: 0.55rem;
+  font-size: 0.72rem;
+  line-height: 1;
+  pointer-events: none;
+  filter: drop-shadow(0 1px 0 rgba(255, 255, 255, 0.35));
+}
+
 .bab-card.has-audio::after {
   content: "🎧";
   position: absolute;
-  top: 0.5rem;
-  right: 0.6rem;
-  font-size: 0.95rem;
+  top: 0.52rem;
+  right: 0.55rem;
+  font-size: 0.72rem;
   line-height: 1;
-  filter: drop-shadow(0 1px 0 rgba(255, 255, 255, 0.4));
+  pointer-events: none;
+  filter: drop-shadow(0 1px 0 rgba(255, 255, 255, 0.35));
+}
+
+/* Ruang untuk 🧩 apabila kedua-dua kuiz + audio */
+.bab-card.has-quiz.has-audio::before {
+  right: 1.42rem;
+}
+
+[data-theme="dark"] .bab-card.has-quiz::before,
+[data-theme="dark"] .bab-card.has-audio::after {
+  filter: drop-shadow(0 1px 0 rgba(0, 0, 0, 0.35));
 }
 
 .bab-card:hover {

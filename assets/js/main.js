@@ -516,6 +516,15 @@ document.addEventListener("DOMContentLoaded", function () {
   // =========================
   // AUDIO MARKER ON SUBTOPIC CARDS
   // =========================
+  const SUBTOPIC_QUIZ_HREF_RE = /^bab-1-[1-4]\.html$/i;
+
+  function appendAriaHint(card, fragment) {
+    const currentLabel = card.getAttribute("aria-label");
+    if (!currentLabel) return;
+    if (currentLabel.includes(fragment)) return;
+    card.setAttribute("aria-label", `${currentLabel} (${fragment})`);
+  }
+
   async function markSubtopicCardsWithAudio() {
     const subtopicCards = Array.from(document.querySelectorAll(".bab-card[href]")).filter((card) => {
       const href = card.getAttribute("href") || "";
@@ -523,6 +532,16 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     if (!subtopicCards.length) return;
+
+    subtopicCards.forEach((card) => {
+      const href = card.getAttribute("href") || "";
+      const file = href.split("/").pop() || href;
+      if (SUBTOPIC_QUIZ_HREF_RE.test(file)) {
+        card.classList.add("has-quiz");
+        card.setAttribute("data-has-quiz", "true");
+        appendAriaHint(card, "ada kuiz");
+      }
+    });
 
     await Promise.all(
       subtopicCards.map(async (card) => {
@@ -539,10 +558,7 @@ document.addEventListener("DOMContentLoaded", function () {
           card.classList.add("has-audio");
           card.setAttribute("data-has-audio", "true");
 
-          const currentLabel = card.getAttribute("aria-label");
-          if (currentLabel) {
-            card.setAttribute("aria-label", `${currentLabel} (ada audio)`);
-          }
+          appendAriaHint(card, "ada audio");
         } catch (e) {
           // senyap sahaja jika audio belum wujud
         }
@@ -2224,7 +2240,7 @@ var ZYMNOTES_NAV = { chapters: [
   if (!('serviceWorker' in navigator)) return;
 
   window.addEventListener('load', function () {
-    navigator.serviceWorker.register('/sw.js?v=173').catch(function (error) {
+    navigator.serviceWorker.register('/sw.js?v=174').catch(function (error) {
       console.warn('Service worker registration failed:', error);
     });
   });
