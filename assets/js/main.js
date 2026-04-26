@@ -569,6 +569,14 @@ function hzZymnotesIsNotesPathname(p) {
   return !!p && /\/notes(?:\/|$)/i.test(p);
 }
 
+/** Utama, indeks nota, tentang — sparkle menu + mindmap (tiada pada halaman bab). */
+function hzZymnotesIsSparkleShellPathname(p) {
+  if (!p || typeof p !== "string") return false;
+  if (hzZymnotesIsHomePathname(p) || hzZymnotesIsNotesPathname(p)) return true;
+  var tail = p.replace(/\/+$/, "").split("/").pop() || "";
+  return /^about\.html$/i.test(tail);
+}
+
 /** Site path prefix before "/notes/…" ("" or "/repo" style); always without trailing slash except "/". */
 function hzZymnotesSiteRootPath() {
   var p = (window.location.pathname || "/").split("?")[0].split("#")[0];
@@ -981,8 +989,7 @@ var ZYMNOTES_NAV = { chapters: [
   document.addEventListener('DOMContentLoaded', function() {
     if (document.querySelector('.note-sparkle-wrap')) return;
     var _p = window.location.pathname;
-    var _isHome = hzZymnotesIsHomePathname(_p);
-    if (!_isHome && !hzZymnotesIsNotesPathname(_p)) return;
+    if (!hzZymnotesIsSparkleShellPathname(_p)) return;
 
     var audioEl = document.querySelector('.note-audio-player .audio-src');
     var zhModeApi = window.HzZhMode || null;
@@ -1353,8 +1360,7 @@ var ZYMNOTES_NAV = { chapters: [
 // =========================
 (function () {
   var _p = window.location.pathname;
-  var _isHome = hzZymnotesIsHomePathname(_p);
-  if (!_isHome && !hzZymnotesIsNotesPathname(_p)) return;
+  if (!hzZymnotesIsSparkleShellPathname(_p)) return;
 
   var overlay = null;
   var svgEl = null;
@@ -2007,6 +2013,9 @@ var ZYMNOTES_NAV = { chapters: [
     function isActive(href) {
       var hp = href.replace(/\/?(index\.html)?$/, '').replace(/^\//, '');
       var pp = p.replace(/\/?(index\.html)?$/, '').replace(/^\//, '');
+      if (href === 'hz:search') {
+        return false;
+      }
       if (href.includes('/notes/') && !href.endsWith('index.html')) {
         return p.includes('/notes/') && !p.endsWith('index.html');
       }
@@ -2015,18 +2024,31 @@ var ZYMNOTES_NAV = { chapters: [
       return pp === hp;
     }
     var tabs = [
-      { icon: HZ_ICONS.home,  label: 'Utama',   href: '/index.html' },
-      { icon: HZ_ICONS.notes, label: 'Nota',    href: '/notes/index.html' },
-      { icon: HZ_ICONS.about, label: 'Tentang', href: '/about.html' }
+      { icon: HZ_ICONS.home,   label: 'Utama',   href: '/index.html' },
+      { icon: HZ_ICONS.notes,  label: 'Nota',    href: '/notes/index.html' },
+      { icon: HZ_ICONS.search, label: 'Cari',    href: 'hz:search' },
+      { icon: HZ_ICONS.about,  label: 'Tentang', href: '/about.html' }
     ];
     var nav = document.createElement('nav');
     nav.className = 'hz-bottom-nav';
     nav.setAttribute('aria-label', 'Navigasi utama');
     tabs.forEach(function (tab) {
-      var el = document.createElement('a');
-      el.href = tab.href;
-      el.className = 'hz-bottom-nav-item' + (isActive(tab.href) ? ' is-active' : '');
-      el.innerHTML = '<span class="hz-nav-icon">' + tab.icon + '</span><span>' + tab.label + '</span>';
+      var el;
+      if (tab.href === 'hz:search') {
+        el = document.createElement('button');
+        el.type = 'button';
+        el.className = 'hz-bottom-nav-item';
+        el.setAttribute('aria-label', 'Buka carian nota');
+        el.innerHTML = '<span class="hz-nav-icon">' + tab.icon + '</span><span>' + tab.label + '</span>';
+        el.addEventListener('click', function () {
+          document.dispatchEvent(new CustomEvent('hz:search-open'));
+        });
+      } else {
+        el = document.createElement('a');
+        el.href = tab.href;
+        el.className = 'hz-bottom-nav-item' + (isActive(tab.href) ? ' is-active' : '');
+        el.innerHTML = '<span class="hz-nav-icon">' + tab.icon + '</span><span>' + tab.label + '</span>';
+      }
       nav.appendChild(el);
     });
     document.body.appendChild(nav);
@@ -2078,7 +2100,7 @@ var ZYMNOTES_NAV = { chapters: [
   if (!('serviceWorker' in navigator)) return;
 
   window.addEventListener('load', function () {
-    navigator.serviceWorker.register('/sw.js?v=158').catch(function (error) {
+    navigator.serviceWorker.register('/sw.js?v=159').catch(function (error) {
       console.warn('Service worker registration failed:', error);
     });
   });

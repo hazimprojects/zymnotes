@@ -4,7 +4,7 @@
    HTML files reference style.css — no change needed there.
 ========================= */
 
-@import url("base.css?v=16");       /* :root variables, dark mode tokens, body/reset/containers */
+@import url("base.css?v=17");       /* :root variables, dark mode tokens, body/reset/containers */
 @import url("layout.css?v=15");     /* Header, nav, dark mode fab, typography, footer, animations */
 @import url("ui.css?v=34");        /* Buttons, cards, homepage, hero, search, org-chart, interaction */
 @import url("paper.css?v=12");      /* Paper labels, boards, chips, accordion, steps, bab overview */
