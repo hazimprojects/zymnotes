@@ -2163,14 +2163,15 @@ var ZYMNOTES_NAV = { chapters: [
     '</div>';
   document.body.appendChild(indicator);
 
-  /* Jarak + halaju: elak refresh bila scroll perlahan di puncak halaman (seperti Chrome — tarik kuat) */
-  var DIST_MIN = 168;
-  var DIST_STRONG = 228;
+  /* Jarak + halaju: refresh hanya bila niat jelas — jarak panjang + getah keras + halaju lepas tinggi */
+  var DIST_MIN = 248;
+  var DIST_STRONG = 336;
   var VEL_MS_WINDOW = 110;
-  var VEL_MIN = 0.38;
-  /* Paparan “getah”: jarak jari → anak panah ikut sedikit, makin tegang makin sukar (asymptotic) */
-  var RUBBER_MAX_PX = 80;
-  var RUBBER_TAU = 92;
+  var VEL_MIN = 0.56;
+  var MIN_SAMPLES_FOR_VEL_COMMIT = 6;
+  /* Paparan “getah”: lebih rintangan — jari perlu tarik lebih jauh untuk anak panah naik sama */
+  var RUBBER_MAX_PX = 58;
+  var RUBBER_TAU = 132;
   var startY = 0;
   var active = false;
   var pulling = false;
@@ -2251,6 +2252,7 @@ var ZYMNOTES_NAV = { chapters: [
   function shouldCommitRefresh() {
     if (lastDy < DIST_MIN) return false;
     if (lastDy >= DIST_STRONG) return true;
+    if (moveSamples.length < MIN_SAMPLES_FOR_VEL_COMMIT) return false;
     return endVelocityPxPerMs() >= VEL_MIN;
   }
 
@@ -2258,7 +2260,7 @@ var ZYMNOTES_NAV = { chapters: [
     'touchstart',
     function (e) {
       if (overlaysOpen()) return;
-      if (window.scrollY > 10) return;
+      if (window.scrollY > 18) return;
       indicator.classList.remove('hz-ptr-snapping');
       active = true;
       lastDy = 0;
@@ -2273,7 +2275,7 @@ var ZYMNOTES_NAV = { chapters: [
     'touchmove',
     function (e) {
       if (!active || overlaysOpen()) return;
-      if (window.scrollY > 10) {
+      if (window.scrollY > 18) {
         reset();
         return;
       }
@@ -2284,7 +2286,11 @@ var ZYMNOTES_NAV = { chapters: [
       var y = e.touches[0].clientY;
       moveSamples.push({ t: now, y: y });
       if (moveSamples.length > 12) moveSamples.shift();
-      var ready = dy >= DIST_MIN && (dy >= DIST_STRONG || endVelocityPxPerMs() >= VEL_MIN * 0.85);
+      var ready =
+        dy >= DIST_STRONG ||
+        (dy >= DIST_MIN &&
+          moveSamples.length >= MIN_SAMPLES_FOR_VEL_COMMIT &&
+          endVelocityPxPerMs() >= VEL_MIN * 0.92);
       setPull(dy, ready);
     },
     { passive: true }
@@ -2323,7 +2329,7 @@ var ZYMNOTES_NAV = { chapters: [
   if (!('serviceWorker' in navigator)) return;
 
   window.addEventListener('load', function () {
-    navigator.serviceWorker.register('/sw.js?v=186').catch(function (error) {
+    navigator.serviceWorker.register('/sw.js?v=187').catch(function (error) {
       console.warn('Service worker registration failed:', error);
     });
   });
