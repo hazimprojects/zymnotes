@@ -2197,7 +2197,7 @@ var ZYMNOTES_NAV = { chapters: [
   if (!('serviceWorker' in navigator)) return;
 
   window.addEventListener('load', function () {
-    navigator.serviceWorker.register('/sw.js?v=163').catch(function (error) {
+    navigator.serviceWorker.register('/sw.js?v=164').catch(function (error) {
       console.warn('Service worker registration failed:', error);
     });
   });
