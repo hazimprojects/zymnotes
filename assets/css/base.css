@@ -920,6 +920,43 @@ body.page-theme-error .display-fab {
   animation: hz-page-in 0.28s ease both;
 }
 
+/* Kuiz: jangan animasi transform pada <main> — fixed sparkle & sheet ikut scroll jika tidak */
+body.quiz-page.js-enhanced main.note-reading-main {
+  animation: none;
+  transform: none;
+}
+
+/* Kuiz mudah alih: halaman tidak scroll; hanya kawasan kad soalan scroll jika panjang */
+@media (max-width: 899px) {
+  body.quiz-page.note-reading-app {
+    display: flex;
+    flex-direction: column;
+    min-height: 100dvh;
+    max-height: 100dvh;
+    overflow: hidden;
+  }
+
+  body.quiz-page.note-reading-app main.note-reading-main {
+    flex: 1 1 auto;
+    min-height: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Sheet maklum balas di atas bottom nav (z-index 50) */
+  body.quiz-page .lab-compact-game .learning-lab-stage[data-lab-feedback-wrap] {
+    z-index: 70;
+  }
+
+  /* Sembunyikan sepenuhnya bila .is-hidden (elak “strip” kelihatan bila scroll) */
+  body.quiz-page .lab-compact-game .learning-lab-stage[data-lab-feedback-wrap].is-hidden {
+    transform: translateY(calc(100% + 120px)) !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+  }
+}
+
 /* =============================================================
    FOCUS RING — consistent across all interactive elements
 ============================================================= */
