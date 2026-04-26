@@ -2108,23 +2108,29 @@ var ZYMNOTES_NAV = { chapters: [
   var indicator = document.createElement('div');
   indicator.className = 'hz-ptr-indicator';
   indicator.setAttribute('aria-hidden', 'true');
+  var gid = 'hzPtr' + Math.random().toString(36).slice(2, 9);
   indicator.innerHTML =
     '<div class="hz-ptr-sheen">' +
-      '<svg class="hz-ptr-logo" viewBox="0 0 100 100" width="56" height="56" aria-hidden="true">' +
+      '<svg class="hz-ptr-logo" viewBox="0 0 100 100" width="30" height="30" aria-hidden="true">' +
         '<defs>' +
-          '<linearGradient id="hzPtrBgGrad" x1="0" y1="0" x2="1" y2="1">' +
+          '<linearGradient id="' + gid + 'Bg" x1="0" y1="0" x2="1" y2="1">' +
             '<stop offset="0%" stop-color="#9B77FF"/>' +
             '<stop offset="100%" stop-color="#55B5FF"/>' +
           '</linearGradient>' +
+          '<clipPath id="' + gid + 'Clip"><circle cx="50" cy="50" r="50"/></clipPath>' +
         '</defs>' +
-        '<rect width="100" height="100" rx="22" fill="url(#hzPtrBgGrad)"/>' +
-        '<g class="hz-ptr-grp hz-ptr-grp--z">' +
-          '<path class="hz-ptr-path-z" pathLength="100" d="M18 28L46 28L18 68L46 68" fill="none" stroke="rgba(255,255,255,0.98)" stroke-width="8.5" stroke-linecap="round" stroke-linejoin="round"/>' +
-          '<circle class="hz-ptr-dot hz-ptr-dot--coral" cx="46" cy="28" r="6.5" fill="#FF9B6A"/>' +
-        '</g>' +
-        '<g class="hz-ptr-grp hz-ptr-grp--n">' +
-          '<path class="hz-ptr-path-n" pathLength="100" d="M54 68L54 28L82 68L82 28" fill="none" stroke="rgba(255,255,255,0.98)" stroke-width="8.5" stroke-linecap="round" stroke-linejoin="round"/>' +
-          '<circle class="hz-ptr-dot hz-ptr-dot--mint" cx="54" cy="68" r="5" fill="#6ADBB8"/>' +
+        '<g clip-path="url(#' + gid + 'Clip)">' +
+          '<rect width="100" height="100" fill="url(#' + gid + 'Bg)"/>' +
+          '<g transform="translate(50,48)">' +
+            '<g class="hz-ptr-spin">' +
+              '<g class="hz-ptr-draw" transform="translate(-50,-48)">' +
+                '<path class="hz-ptr-path-z" pathLength="100" d="M18 28L46 28L18 68L46 68" fill="none" stroke="rgba(255,255,255,0.96)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>' +
+                '<path class="hz-ptr-path-n" pathLength="100" d="M54 68L54 28L82 68L82 28" fill="none" stroke="rgba(255,255,255,0.96)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>' +
+                '<circle class="hz-ptr-mint" cx="54" cy="68" r="5" fill="#6ADBB8"/>' +
+                '<circle class="hz-ptr-coral" r="5.2" fill="#FF9B6A"/>' +
+              '</g>' +
+            '</g>' +
+          '</g>' +
         '</g>' +
       '</svg>' +
     '</div>';
@@ -2212,7 +2218,7 @@ var ZYMNOTES_NAV = { chapters: [
   if (!('serviceWorker' in navigator)) return;
 
   window.addEventListener('load', function () {
-    navigator.serviceWorker.register('/sw.js?v=164').catch(function (error) {
+    navigator.serviceWorker.register('/sw.js?v=165').catch(function (error) {
       console.warn('Service worker registration failed:', error);
     });
   });
