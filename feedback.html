@@ -78,149 +78,6 @@
   <meta name="apple-mobile-web-app-title" content="ZymNotes" />
   <meta name="msapplication-TileColor" content="#9B77FF" />
 
-  <style>
-    .feedback-form {
-      display: grid;
-      gap: 1rem;
-      margin-top: 1rem;
-    }
-
-    .feedback-field {
-      display: grid;
-      gap: 0.45rem;
-    }
-
-    .feedback-label {
-      font-weight: 800;
-      color: #3f372d;
-    }
-
-    .feedback-input,
-    .feedback-select,
-    .feedback-textarea {
-      width: 100%;
-      padding: 0.92rem 1rem;
-      border-radius: 16px;
-      border: 1px solid rgba(120, 110, 90, 0.18);
-      background: rgba(255, 255, 255, 0.82);
-      font: inherit;
-      color: #3f372d;
-      box-shadow: 0 8px 22px rgba(70, 60, 40, 0.04);
-    }
-
-    .feedback-input:focus,
-    .feedback-select:focus,
-    .feedback-textarea:focus {
-      outline: none;
-      border-color: rgba(47, 122, 103, 0.45);
-      box-shadow: 0 0 0 4px rgba(47, 122, 103, 0.10);
-    }
-
-    .feedback-textarea {
-      min-height: 160px;
-      resize: vertical;
-    }
-
-    .feedback-help {
-      margin: 0;
-      font-size: 0.92rem;
-      line-height: 1.55;
-      color: #7b6d59;
-    }
-
-    .feedback-actions {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 0.75rem;
-      margin-top: 0.2rem;
-    }
-
-    .feedback-hidden {
-      display: none !important;
-    }
-
-    .feedback-status {
-      display: none;
-      margin-top: 1rem;
-      padding: 0.95rem 1rem;
-      border-radius: 16px;
-      line-height: 1.6;
-      font-size: 0.96rem;
-      border: 1px solid rgba(120, 110, 90, 0.14);
-    }
-
-    .feedback-status.is-visible {
-      display: block;
-    }
-
-    .feedback-status.is-success {
-      background: rgba(47, 122, 103, 0.10);
-      color: #1f5e4f;
-      border-color: rgba(47, 122, 103, 0.18);
-    }
-
-    .feedback-status.is-error {
-      background: rgba(180, 70, 70, 0.10);
-      color: #8a3030;
-      border-color: rgba(180, 70, 70, 0.18);
-    }
-
-    .feedback-submit[disabled] {
-      opacity: 0.7;
-      cursor: not-allowed;
-    }
-
-    .feedback-success-panel {
-      display: none;
-      margin-top: 1rem;
-      scroll-margin-top: 150px;
-    }
-
-    .feedback-success-panel.is-visible {
-      display: block;
-    }
-
-    .feedback-form-wrap.is-hidden {
-      display: none;
-    }
-
-    body.dark-mode .feedback-label,
-    [data-theme="dark"] .feedback-label {
-      color: #f1e7d8;
-    }
-
-    body.dark-mode .feedback-input,
-    body.dark-mode .feedback-select,
-    body.dark-mode .feedback-textarea,
-    [data-theme="dark"] .feedback-input,
-    [data-theme="dark"] .feedback-select,
-    [data-theme="dark"] .feedback-textarea {
-      background: rgba(31, 31, 30, 0.88);
-      color: #f3eadf;
-      border-color: rgba(255, 255, 255, 0.10);
-      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
-    }
-
-    body.dark-mode .feedback-help,
-    [data-theme="dark"] .feedback-help {
-      color: #c7baaa;
-    }
-
-    body.dark-mode .feedback-status.is-success,
-    [data-theme="dark"] .feedback-status.is-success {
-      background: rgba(47, 122, 103, 0.18);
-      color: #d7f1e8;
-      border-color: rgba(47, 122, 103, 0.25);
-    }
-
-    body.dark-mode .feedback-status.is-error,
-    [data-theme="dark"] .feedback-status.is-error {
-      background: rgba(180, 70, 70, 0.16);
-      color: #ffd7d7;
-      border-color: rgba(180, 70, 70, 0.24);
-    }
-  </style>
 </head>
 <body class="page-theme-feedback app-shell-page">
   <header class="site-header">
@@ -232,243 +89,117 @@
           <div class="app-logo-sub">Maklum Balas</div>
         </div>
       </a>
+      <!-- display-fab injected by main.js -->
     </div>
   </header>
 
   <main>
-    <section class="section page-hero papercraft-hero">
-      <div class="container narrow">
-        <div class="paper-label">Maklum Balas</div>
-        <h1>Ruang ini dibuka untuk cadangan, pembetulan dan pertanyaan yang boleh membantu ZymNotes menjadi lebih baik.</h1>
-        <p class="lead">
-          Jika ada bahagian yang kurang jelas, ada kesilapan fakta, atau anda cuma mahu berkongsi pandangan tentang nota, audio atau pengalaman menggunakan laman ini, boleh tulis di sini. Tak perlu guna email formal — isi sahaja dengan ringkas dan jelas.
-        </p>
 
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="#feedback-form">Isi maklum balas</a>
-          <a class="btn btn-secondary" href="about.html">Kembali ke tentang</a>
+    <div class="home-brand-hero">
+      <div class="home-brand-name home-brand-name-sm">Maklum Balas</div>
+      <p class="home-brand-desc">Ada cadangan, pembetulan atau isu pada laman? Isi borang di bawah — pandangan anda sangat membantu ZymNotes menjadi lebih baik.</p>
+    </div>
+
+    <div class="home-scope-section">
+      <div class="home-scope-label">Apa yang boleh dikongsi</div>
+      <div class="home-scope-list">
+        <div class="home-scope-item home-scope-active"><span class="home-scope-check">📝</span><span>Pembetulan isi, typo atau susunan yang kurang tepat</span></div>
+        <div class="home-scope-item home-scope-active"><span class="home-scope-check">💡</span><span>Cadangan untuk menjadikan nota lebih jelas</span></div>
+        <div class="home-scope-item home-scope-active"><span class="home-scope-check">🎧</span><span>Maklum balas tentang audio nota</span></div>
+        <div class="home-scope-item home-scope-active"><span class="home-scope-check">🛠️</span><span>Laporan masalah — pautan rosak, paparan tak kemas</span></div>
+      </div>
+    </div>
+
+    <div class="home-info-card" id="feedback-form">
+      <div class="home-info-label">Borang Maklum Balas</div>
+
+      <div class="feedback-form-wrap" id="feedbackFormWrap">
+        <form id="feedbackForm" class="feedback-form" novalidate>
+
+          <div class="feedback-field">
+            <label class="feedback-label" for="feedback-name">Nama anda</label>
+            <input class="feedback-input" id="feedback-name" name="name" type="text" required minlength="2" placeholder="Contoh: Aisyah / Amir / Cikgu Farah" />
+          </div>
+
+          <div class="feedback-field">
+            <label class="feedback-label" for="feedback-role">Saya seorang...</label>
+            <select class="feedback-select" id="feedback-role" name="role" required>
+              <option value="">Pilih satu</option>
+              <option value="Pelajar">Pelajar</option>
+              <option value="Guru">Guru</option>
+              <option value="Ibu bapa">Ibu bapa</option>
+              <option value="Pengunjung umum">Pengunjung umum</option>
+            </select>
+          </div>
+
+          <div class="feedback-field">
+            <label class="feedback-label" for="feedback-type">Jenis mesej</label>
+            <select class="feedback-select" id="feedback-type" name="message_type" required>
+              <option value="">Pilih satu</option>
+              <option value="Pertanyaan">Pertanyaan</option>
+              <option value="Cadangan">Cadangan</option>
+              <option value="Pembetulan isi">Pembetulan isi</option>
+              <option value="Laporan masalah pada laman">Laporan masalah pada laman</option>
+              <option value="Maklum balas umum">Maklum balas umum</option>
+            </select>
+          </div>
+
+          <div class="feedback-field">
+            <label class="feedback-label" for="feedback-page">Bab / halaman berkaitan (jika ada)</label>
+            <input class="feedback-input" id="feedback-page" name="page_reference" type="text" placeholder="Contoh: Bab 2 / Subtopik 4.3" />
+            <p class="feedback-help">Tidak wajib — membantu semakan dibuat lebih cepat.</p>
+          </div>
+
+          <div class="feedback-field">
+            <label class="feedback-label" for="feedback-message">Mesej anda</label>
+            <textarea class="feedback-textarea" id="feedback-message" name="message" required minlength="10" rows="5" placeholder="Contoh: Saya rasa bahagian ini kurang jelas... / Ada typo pada topik ini..."></textarea>
+            <p class="feedback-help">Tulis dengan santai. Tidak perlu format email rasmi.</p>
+          </div>
+
+          <div class="feedback-field">
+            <label class="feedback-label" for="feedback-email">Email (jika mahu dibalas)</label>
+            <input class="feedback-input" id="feedback-email" name="email" type="email" placeholder="Tidak wajib — isi jika mahu menerima balasan" />
+          </div>
+
+          <div class="feedback-hidden" aria-hidden="true">
+            <label for="website">Jangan isi ruangan ini</label>
+            <input id="website" type="text" name="_gotcha" tabindex="-1" autocomplete="off" />
+          </div>
+
+          <input type="hidden" name="_subject" value="Maklum balas baru · ZymNotes" />
+          <input type="hidden" name="source_page" value="feedback.html" />
+          <input type="hidden" id="feedbackStartedAt" name="form_started_at" value="" />
+
+          <div class="feedback-field">
+            <p class="feedback-help">Pengesahan ringkas untuk melindungi borang daripada spam.</p>
+            <div class="cf-turnstile" data-sitekey="0x4AAAAAAC7eTaqA732cE0kr" data-theme="auto"></div>
+          </div>
+
+          <div class="feedback-actions">
+            <button type="submit" class="btn btn-primary feedback-submit" id="feedbackSubmitBtn">Hantar maklum balas</button>
+          </div>
+
+          <div id="feedbackStatus" class="feedback-status" role="status" aria-live="polite"></div>
+        </form>
+      </div>
+
+      <div id="feedbackSuccessPanel" class="feedback-success-panel">
+        <div class="home-scope-section" style="margin-top:0">
+          <div class="home-scope-label">✅ Terima kasih!</div>
+          <div class="home-scope-list">
+            <div class="home-scope-item home-scope-active"><span class="home-scope-check">📨</span><span>Mesej anda telah diterima dengan jayanya</span></div>
+            <div class="home-scope-item home-scope-active"><span class="home-scope-check">🔎</span><span>Akan disemak dalam kemas kini seterusnya jika berkaitan pembetulan</span></div>
+          </div>
+        </div>
+        <div class="home-cta-row" style="margin-top:12px">
+          <a class="home-cta-btn home-cta-primary" href="notes/index.html">Kembali ke nota →</a>
         </div>
       </div>
-    </section>
+    </div>
 
-    <section class="section note-section">
-      <div class="container narrow">
+    <p class="home-footer-copy">&copy; 2026 ZymNotes · Semua hak cipta terpelihara</p>
 
-        <article class="paper-board master-summary-paper reveal-on-scroll">
-          <div class="paper-strip strip-summary">Apa yang boleh dikongsi di sini</div>
-          <div class="paper-chip-list">
-            <div class="paper-chip paper-chip-sentence"><span class="chip-icon">📌</span>Cadangan untuk menjadikan nota lebih jelas dan lebih mudah diikuti.</div>
-            <div class="paper-chip paper-chip-sentence"><span class="chip-icon">📝</span>Pembetulan isi, typo atau susunan yang kurang tepat.</div>
-            <div class="paper-chip paper-chip-sentence"><span class="chip-icon">🎧</span>Maklum balas tentang audio nota dan pengalaman belajar sambil mendengar.</div>
-            <div class="paper-chip paper-chip-sentence"><span class="chip-icon">🀄</span>Maklum balas tentang Mod Bahasa Cina, khususnya jika ada istilah atau konteks ayat yang kurang tepat.</div>
-            <div class="paper-chip paper-chip-sentence"><span class="chip-icon">🛠️</span>Laporan masalah pada laman seperti pautan rosak, paparan tidak kemas atau butang yang tidak berfungsi.</div>
-          </div>
-        </article>
-
-        <section class="note-subsection reveal-on-scroll">
-          <div class="section-heading">
-            <div class="paper-label small">Sedikit makluman</div>
-            <h2>Maklum balas seperti ini sangat dihargai, terutama apabila ia membantu memperjelas isi atau memperbaiki pengalaman pengguna.</h2>
-          </div>
-
-          <article class="paper-board info-paper">
-            <div class="paper-strip strip-info">Sebelum anda isi</div>
-            <ul class="emoji-point-list">
-              <li><span class="emoji-bullet">💬</span><span>Tulis dengan ringkas pun tidak mengapa. Yang penting, mesej anda jelas dan mudah difahami.</span></li>
-              <li><span class="emoji-bullet">📚</span><span>Jika maklum balas anda berkaitan nota tertentu, sebutkan bab atau subtopik supaya lebih mudah disemak.</span></li>
-              <li><span class="emoji-bullet">🀄</span><span>Jika berkaitan Mod Bahasa Cina, nyatakan istilah atau ayat asal supaya semakan boleh dibuat dengan lebih tepat.</span></li>
-              <li><span class="emoji-bullet">✉️</span><span>Email tidak diwajibkan. Isi hanya jika anda mahu menerima balasan.</span></li>
-              <li><span class="emoji-bullet">🛡️</span><span>Borang ini dilindungi dengan pengesahan ringkas bagi mengurangkan spam automatik.</span></li>
-            </ul>
-          </article>
-        </section>
-
-        <section class="note-subsection reveal-on-scroll" id="feedback-form">
-          <article class="paper-board glossary-paper">
-            <div class="paper-strip strip-glossary">Borang Maklum Balas</div>
-
-            <div class="feedback-form-wrap" id="feedbackFormWrap">
-              <form
-                id="feedbackForm"
-                class="feedback-form"
-                novalidate
-              >
-                <div class="feedback-field">
-                  <label class="feedback-label" for="feedback-name">Nama anda</label>
-                  <input
-                    class="feedback-input"
-                    id="feedback-name"
-                    name="name"
-                    type="text"
-                    required
-                    minlength="2"
-                    placeholder="Contoh: Aisyah / Amir / Cikgu Farah"
-                  />
-                </div>
-
-                <div class="feedback-field">
-                  <label class="feedback-label" for="feedback-role">Saya seorang...</label>
-                  <select
-                    class="feedback-select"
-                    id="feedback-role"
-                    name="role"
-                    required
-                  >
-                    <option value="">Pilih satu</option>
-                    <option value="Pelajar">Pelajar</option>
-                    <option value="Guru">Guru</option>
-                    <option value="Ibu bapa">Ibu bapa</option>
-                    <option value="Pengunjung umum">Pengunjung umum</option>
-                  </select>
-                </div>
-
-                <div class="feedback-field">
-                  <label class="feedback-label" for="feedback-type">Jenis mesej</label>
-                  <select
-                    class="feedback-select"
-                    id="feedback-type"
-                    name="message_type"
-                    required
-                  >
-                    <option value="">Pilih satu</option>
-                    <option value="Pertanyaan">Pertanyaan</option>
-                    <option value="Cadangan">Cadangan</option>
-                    <option value="Pembetulan isi">Pembetulan isi</option>
-                    <option value="Laporan masalah pada laman">Laporan masalah pada laman</option>
-                    <option value="Maklum balas umum">Maklum balas umum</option>
-                  </select>
-                </div>
-
-                <div class="feedback-field">
-                  <label class="feedback-label" for="feedback-page">Bab / halaman berkaitan (jika ada)</label>
-                  <input
-                    class="feedback-input"
-                    id="feedback-page"
-                    name="page_reference"
-                    type="text"
-                    placeholder="Contoh: Bab 2 / Subtopik 4.3 / Audio Bab 1"
-                  />
-                  <p class="feedback-help">Bahagian ini membantu semakan dilakukan dengan lebih cepat, tetapi tidak wajib diisi.</p>
-                </div>
-
-                <div class="feedback-field">
-                  <label class="feedback-label" for="feedback-message">Tulis mesej anda di sini</label>
-                  <textarea
-                    class="feedback-textarea"
-                    id="feedback-message"
-                    name="message"
-                    required
-                    minlength="10"
-                    rows="6"
-                    placeholder="Contohnya: Saya rasa bahagian ini kurang jelas... / Ada typo pada topik ini... / Audio nota ini membantu, cuma..."
-                  ></textarea>
-                  <p class="feedback-help">Tulis dengan santai dan jelas. Tidak perlu format email rasmi.</p>
-                </div>
-
-                <div class="feedback-field">
-                  <label class="feedback-label" for="feedback-email">Email (jika anda mahu dibalas)</label>
-                  <input
-                    class="feedback-input"
-                    id="feedback-email"
-                    name="email"
-                    type="email"
-                    placeholder="Contoh: nama@email.com"
-                  />
-                  <p class="feedback-help">Bahagian ini tidak wajib. Isi jika anda mahu menerima balasan.</p>
-                </div>
-
-                <div class="feedback-hidden" aria-hidden="true">
-                  <label for="website">Jangan isi ruangan ini</label>
-                  <input
-                    id="website"
-                    type="text"
-                    name="_gotcha"
-                    tabindex="-1"
-                    autocomplete="off"
-                  />
-                </div>
-
-                <input type="hidden" name="_subject" value="Maklum balas baru · ZymNotes" />
-                <input type="hidden" name="source_page" value="feedback.html" />
-                <input type="hidden" id="feedbackStartedAt" name="form_started_at" value="" />
-
-                <div class="feedback-field">
-                  <p class="feedback-help">Pengesahan ringkas ini membantu melindungi borang daripada spam automatik.</p>
-                  <div
-                    class="cf-turnstile"
-                    data-sitekey="0x4AAAAAAC7eTaqA732cE0kr"
-                    data-theme="auto"
-                  ></div>
-                </div>
-
-                <div class="feedback-actions">
-                  <button type="submit" class="btn btn-primary feedback-submit" id="feedbackSubmitBtn">Hantar maklum balas</button>
-                  <p class="feedback-help">Terima kasih. Pandangan seperti ini sangat membantu ZymNotes menjadi lebih baik.</p>
-                </div>
-
-                <div id="feedbackStatus" class="feedback-status" role="status" aria-live="polite"></div>
-              </form>
-            </div>
-
-            <div id="feedbackSuccessPanel" class="feedback-success-panel">
-              <article class="paper-board summary-paper">
-                <div class="paper-strip strip-summary">Terima kasih</div>
-                <p class="point-line">
-                  Mesej anda telah diterima dengan jayanya. Pandangan seperti ini sangat membantu ZymNotes menjadi lebih jelas, lebih kemas dan lebih berguna untuk pengguna.
-                </p>
-                <p class="point-line">
-                  Jika anda meninggalkan email dan mesej anda memerlukan balasan, ZymNotes boleh menghubungi anda semula.
-                </p>
-                <div class="hero-actions">
-                  <a class="btn btn-primary" href="notes/index.html">Kembali ke nota</a>
-                  <a class="btn btn-secondary" href="index.html">Kembali ke utama</a>
-                </div>
-              </article>
-            </div>
-          </article>
-        </section>
-
-        <section class="note-subsection reveal-on-scroll">
-          <article class="paper-board summary-paper">
-            <div class="paper-strip strip-summary">Pilihan lain</div>
-            <p class="point-line">
-              Jika anda lebih selesa menggunakan email, anda boleh tekan butang di bawah untuk terus membuka aplikasi email pada peranti anda.
-              Alamat email tidak dipaparkan pada laman ini bagi mengurangkan risiko pengambilan automatik oleh bot spam.
-            </p>
-            <div class="hero-actions">
-              <a class="btn btn-secondary" href="mailto:hello@zymnotes.com?subject=Maklum%20Balas%20ZymNotes">Guna email</a>
-            </div>
-          </article>
-        </section>
-
-        <section class="note-subsection">
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="notes/index.html">Kembali ke nota</a>
-            <a class="btn btn-secondary" href="index.html">Kembali ke utama</a>
-          </div>
-        </section>
-
-      </div>
-    </section>
   </main>
-
-  <footer class="site-footer">
-    <div class="container footer-wrap">
-      <div>
-        <p class="footer-brand">ZymNotes</p>
-        <p class="footer-text">Nota visual berpandukan kurikulum dan buku teks sekolah Malaysia — disusun semula supaya lebih mudah dibaca, difahami dan diingat.</p>
-      </div>
-      <div class="footer-links">
-        <a href="index.html">Utama</a>
-        <a href="notes/index.html">Nota</a>
-        <a href="about.html">Tentang</a>
-        <a href="feedback.html">Maklum Balas</a>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>&copy; 2026 ZymNotes. Semua hak cipta terpelihara.</p>
-    </div>
-  </footer>
 
   <script src="assets/js/main.js?v=113"></script>
   <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
@@ -574,4 +305,4 @@
     })();
   </script>
 </body>
-    </html>
+</html>
