@@ -730,3 +730,263 @@ body.app-shell-page .bab-grid {
 body.app-shell-page .bab-card {
   padding: 14px 14px 12px;
 }
+
+/* =============================================================
+   READING SHELL — bab-theme pages + utility pages use app-like
+   compact header identical to app-shell-page but keep wide main
+============================================================= */
+
+/* Compact header for ALL pages (bab notes, thank-you, 404, offline) */
+body[class*="bab-theme-"] .site-header,
+body.page-theme-thankyou .site-header,
+body.page-theme-error .site-header {
+  height: 52px;
+  overflow: visible;
+  border-bottom: 1px solid var(--line);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+body[class*="bab-theme-"] .nav-wrap,
+body.page-theme-thankyou .nav-wrap,
+body.page-theme-error .nav-wrap {
+  min-height: 52px;
+  padding: 0 16px;
+}
+
+/* Hide hamburger menu on ALL pages — bottom nav is the nav */
+body[class*="bab-theme-"] .nav-toggle,
+body[class*="bab-theme-"] .site-nav,
+body.page-theme-thankyou .nav-toggle,
+body.page-theme-thankyou .site-nav,
+body.page-theme-error .nav-toggle,
+body.page-theme-error .site-nav {
+  display: none !important;
+}
+
+/* All pages: use consistent app-logo-link in header */
+body[class*="bab-theme-"] .app-logo-link,
+body.page-theme-thankyou .app-logo-link,
+body.page-theme-error .app-logo-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+/* Bab note pages: mobile body padding already handled by layout.css media query */
+
+body.page-theme-thankyou .site-footer {
+  display: none;
+}
+
+/* Ensure the dark mode toggle button is visible on reading pages */
+body[class*="bab-theme-"] .display-fab,
+body.page-theme-thankyou .display-fab,
+body.page-theme-error .display-fab {
+  display: inline-flex;
+}
+
+/* Mobile: ensure bottom nav is styled consistently on bab/utility pages */
+@media (max-width: 760px) {
+  body[class*="bab-theme-"] .hz-bottom-nav,
+  body.page-theme-thankyou .hz-bottom-nav,
+  body.page-theme-error .hz-bottom-nav {
+    display: flex !important;
+  }
+
+  body[class*="bab-theme-"] .hz-bottom-nav-item,
+  body.page-theme-thankyou .hz-bottom-nav-item,
+  body.page-theme-error .hz-bottom-nav-item {
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+  }
+
+  body[class*="bab-theme-"] .hz-bottom-nav-item .hz-nav-icon svg,
+  body.page-theme-thankyou .hz-bottom-nav-item .hz-nav-icon svg,
+  body.page-theme-error .hz-bottom-nav-item .hz-nav-icon svg {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+/* Reading-page subtopic label pill — shown right of logo */
+.app-nav-context {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--muted);
+  line-height: 1.2;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.app-nav-context-sep {
+  opacity: 0.35;
+  font-size: 0.8rem;
+  flex-shrink: 0;
+}
+
+.app-nav-context-label {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: var(--ink);
+  font-weight: 700;
+}
+
+/* =============================================================
+   GLOBAL: bottom nav on ALL pages
+   Reading pages have .hz-bottom-nav injected by JS.
+   Padding override ensures content is not obscured by nav.
+============================================================= */
+
+/* On desktop: bab-theme/utility pages don't need extra bottom padding
+   since the bottom nav only shows on mobile by default.
+   On mobile, layout.css already adds body padding via the @media rule.
+   We force it always visible for these pages above. */
+
+/* =============================================================
+   PAGE-TRANSITION FADE — smooth view switching
+============================================================= */
+
+@keyframes hz-page-in {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.js-enhanced main {
+  animation: hz-page-in 0.28s ease both;
+}
+
+/* =============================================================
+   FOCUS RING — consistent across all interactive elements
+============================================================= */
+
+:focus-visible {
+  outline: 2.5px solid var(--primary);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.btn:focus-visible,
+.display-fab:focus-visible,
+.hz-bottom-nav-item:focus-visible,
+.app-logo-link:focus-visible {
+  outline: 2.5px solid var(--primary);
+  outline-offset: 3px;
+  border-radius: 12px;
+}
+
+/* Suppress ugly default outline on non-keyboard focus */
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* =============================================================
+   BACK BUTTON — appears on note pages in the header
+============================================================= */
+
+.app-back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--muted);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px 8px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: color 0.15s, background 0.15s;
+  flex-shrink: 0;
+  line-height: 1;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.app-back-btn:hover,
+.app-back-btn:focus-visible {
+  color: var(--ink);
+  background: rgba(79,70,229,0.07);
+}
+
+.app-back-btn svg {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+[data-theme="dark"] .app-back-btn:hover,
+[data-theme="dark"] .app-back-btn:focus-visible {
+  background: rgba(129,140,248,0.10);
+}
+
+/* =============================================================
+   READING PAGES — bottom nav active indicator dot
+   Same visual as app-shell-page, but applied to bab-theme and
+   utility pages which now share the same nav chrome
+============================================================= */
+
+body[class*="bab-theme-"] .hz-bottom-nav-item.is-active .hz-nav-icon,
+body.page-theme-thankyou .hz-bottom-nav-item.is-active .hz-nav-icon,
+body.page-theme-error .hz-bottom-nav-item.is-active .hz-nav-icon {
+  position: relative;
+}
+
+body[class*="bab-theme-"] .hz-bottom-nav-item.is-active .hz-nav-icon::before,
+body.page-theme-thankyou .hz-bottom-nav-item.is-active .hz-nav-icon::before,
+body.page-theme-error .hz-bottom-nav-item.is-active .hz-nav-icon::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 4px;
+  border-radius: 999px;
+  background: var(--primary);
+}
+
+body[class*="bab-theme-"] .hz-bottom-nav-item.is-active,
+body.page-theme-thankyou .hz-bottom-nav-item.is-active,
+body.page-theme-error .hz-bottom-nav-item.is-active {
+  font-weight: 800;
+}
+
+/* =============================================================
+   GLOBAL APP CHROME POLISH
+============================================================= */
+
+/* Tap highlight suppression — makes all interactive elements feel native */
+.hz-bottom-nav-item,
+.app-logo-link,
+.btn,
+.display-fab,
+.paper-chip,
+.bab-card,
+.paper-accordion-trigger {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Smooth feel on cards */
+.bab-card,
+.paper-board,
+.paper-chip,
+.metric-card,
+.editorial-card,
+.note-card {
+  will-change: transform;
+}
+
+/* Prevent text selection on interactive elements */
+.hz-bottom-nav-item,
+.app-logo-link,
+.display-fab {
+  user-select: none;
+  -webkit-user-select: none;
+}

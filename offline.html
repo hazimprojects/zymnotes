@@ -5,10 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>Tiada sambungan · ZymNotes</title>
   <meta name="robots" content="noindex, follow" />
-  <link rel="stylesheet" href="/assets/css/style.css?v=100" />
+  <link rel="stylesheet" href="/assets/css/style.css?v=101" />
   <style>
     .offline-hero {
-      min-height: calc(100dvh - 64px);
+      min-height: calc(100dvh - 52px);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -129,14 +129,14 @@
 </head>
 <body class="page-theme-error">
   <header class="site-header">
-    <div class="container nav-wrap">
-      <a class="brand" href="/index.html">ZymNotes</a>
-      <button class="nav-toggle" aria-label="Buka menu" aria-expanded="false">☰</button>
-      <nav class="site-nav">
-        <a href="/index.html">Utama</a>
-        <a href="/notes/index.html">Nota</a>
-        <a href="/about.html">Tentang</a>
-      </nav>
+    <div class="nav-wrap">
+      <a class="app-logo-link" href="/index.html" aria-label="ZymNotes — Utama">
+        <img src="/icons/icon.svg" class="app-logo-icon" alt="" aria-hidden="true" />
+        <div>
+          <div class="app-logo-name">ZymNotes</div>
+          <div class="app-logo-sub">Tiada Sambungan</div>
+        </div>
+      </a>
     </div>
   </header>
 
@@ -168,7 +168,7 @@
     </section>
   </main>
 
-  <script src="/assets/js/main.js?v=111"></script>
+  <script src="/assets/js/main.js?v=112"></script>
   <script>
     document.getElementById("offline-retry").addEventListener("click", function () {
       window.location.reload();

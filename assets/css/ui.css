@@ -430,6 +430,23 @@
   padding-bottom: 1.6rem;
 }
 
+/* Reading pages (bab-theme) have compact 52px header — reduce hero top gap */
+body[class*="bab-theme-"] .page-hero,
+body[class*="bab-theme-"] .note-hero {
+  padding-top: 2rem;
+}
+
+/* App-shell pages (index, notes hub, about, feedback) also compact header */
+body.app-shell-page .page-hero {
+  padding-top: 0;
+}
+
+/* Utility pages (thank-you, 404, offline) also compact header */
+body.page-theme-thankyou .page-hero,
+body.page-theme-error .page-hero {
+  padding-top: 2rem;
+}
+
 .note-hero {
   padding-bottom: 1.8rem;
 }

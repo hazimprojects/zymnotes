@@ -56,6 +56,10 @@
   .section { padding: 3.5rem 0; }
   .hero { padding-top: 5.2rem; padding-bottom: 3.8rem; }
   .page-hero { padding-top: 4rem; padding-bottom: 1.4rem; }
+  body[class*="bab-theme-"] .page-hero,
+  body[class*="bab-theme-"] .note-hero,
+  body.page-theme-thankyou .page-hero,
+  body.page-theme-error .page-hero { padding-top: 1.25rem; }
 
   h1 { font-size: 2rem; max-width: 100%; }
   h2 { font-size: 1.24rem; }
