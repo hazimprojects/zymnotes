@@ -605,6 +605,12 @@ function hzZymnotesIsSubtopicNotePathname(p) {
   return /\/notes\/bab-\d+-\d+(?:\.html)?(?:\/)?$/i.test(p);
 }
 
+/** Halaman kuiz bawah /quiz/ (contoh: bab-1-1.html). */
+function hzZymnotesIsQuizPathname(p) {
+  if (!p || typeof p !== "string") return false;
+  return /\/quiz\/bab-\d+-\d+(?:\.html)?(?:\/)?$/i.test(p);
+}
+
 /** Site path prefix before "/notes/…" ("" or "/repo" style); always without trailing slash except "/". */
 function hzZymnotesSiteRootPath() {
   var p = (window.location.pathname || "/").split("?")[0].split("#")[0];
@@ -1020,7 +1026,8 @@ var ZYMNOTES_NAV = { chapters: [
     if (
       !hzZymnotesIsSparkleShellPathname(_p) &&
       !hzZymnotesIsBabHubPathname(_p) &&
-      !hzZymnotesIsSubtopicNotePathname(_p)
+      !hzZymnotesIsSubtopicNotePathname(_p) &&
+      !hzZymnotesIsQuizPathname(_p)
     )
       return;
 
@@ -1393,7 +1400,8 @@ var ZYMNOTES_NAV = { chapters: [
   if (
     !hzZymnotesIsSparkleShellPathname(_p) &&
     !hzZymnotesIsBabHubPathname(_p) &&
-    !hzZymnotesIsSubtopicNotePathname(_p)
+    !hzZymnotesIsSubtopicNotePathname(_p) &&
+    !hzZymnotesIsQuizPathname(_p)
   )
     return;
 
@@ -2237,7 +2245,7 @@ var ZYMNOTES_NAV = { chapters: [
   if (!('serviceWorker' in navigator)) return;
 
   window.addEventListener('load', function () {
-    navigator.serviceWorker.register('/sw.js?v=179').catch(function (error) {
+    navigator.serviceWorker.register('/sw.js?v=180').catch(function (error) {
       console.warn('Service worker registration failed:', error);
     });
   });
