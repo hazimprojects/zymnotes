@@ -256,7 +256,8 @@
 
     if (bestScoreEl) {
       bestScoreEl.textContent = 'Rekod terbaik: ' + newBest + ' / ' + total + (isRecord ? ' 🎉 Rekod Baru!' : '');
-      bestScoreEl.style.color = isRecord ? '#2f7a67' : '#5d6a79';
+      bestScoreEl.style.color = '';
+      bestScoreEl.classList.toggle('is-record', isRecord);
     }
 
     if (progressFill) progressFill.style.width = '100%';
@@ -268,11 +269,11 @@
         const label = LEVEL_LABELS[item.question.level];
         return '<div class="learning-lab-summary-item">' +
           '<div class="learning-lab-summary-left">' +
-          '<span style="width:7px;height:7px;border-radius:50%;background:' + color + ';display:inline-block;flex-shrink:0;"></span>' +
-          '<span style="font-size:0.79rem;font-weight:800;color:#24313f;">Soalan ' + (i + 1) + '</span>' +
-          '<span style="font-size:0.62rem;padding:0.1rem 0.38rem;border-radius:6px;background:' + color + '18;color:' + color + ';font-weight:900;">Aras ' + item.question.level + ' · ' + label + '</span>' +
+          '<span class="learning-lab-summary-dot" style="background:' + color + ';"></span>' +
+          '<span class="learning-lab-summary-qnum">Soalan ' + (i + 1) + '</span>' +
+          '<span class="learning-lab-summary-level" data-level="' + item.question.level + '">Aras ' + item.question.level + ' · ' + label + '</span>' +
           '</div>' +
-          '<span class="learning-lab-summary-right" style="color:' + (item.ok ? '#2f7a67' : '#9a5a5a') + ';">' +
+          '<span class="learning-lab-summary-right' + (item.ok ? ' is-correct' : ' is-wrong') + '">' +
           (item.ok ? '✓ Betul' : '✗ Salah') + '</span></div>';
       }).join('');
 

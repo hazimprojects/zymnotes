@@ -1,0 +1,211 @@
+{
+  "id": "1-3",
+  "title": "Keunggulan Sistem Pentadbiran dan Undang-undang",
+  "questions": [
+    {
+      "id": "q1",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Apakah dua bidang utama yang menunjukkan keunggulan Kesultanan Melayu Melaka dalam subtopik ini?",
+      "options": [
+        "Sistem pentadbiran dan undang-undang",
+        "Sistem perbankan dan insurans",
+        "Sistem pilihan raya dan parti politik",
+        "Sistem penjajahan dan kongres"
+      ],
+      "answer": "Sistem pentadbiran dan undang-undang",
+      "explanation": "Subtopik menumpukan keunggulan Melaka melalui sistem pentadbiran yang tersusun dan undang-undang yang sistematik.",
+      "tip": "Tajuk subtopik sendiri ialah petunjuk terbesar — hafal pasangan pentadbiran + undang-undang."
+    },
+    {
+      "id": "q2",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Antara berikut, manakah merupakan undang-undang bertulis yang mengatur aspek pentadbiran dan sosial di daratan Melaka?",
+      "options": [
+        "Hukum Kanun Melaka",
+        "Undang-Undang Laut Melaka",
+        "Ordinan Majlis Mesyuarat Kerajaan",
+        "Akta Syarikat 1965"
+      ],
+      "answer": "Hukum Kanun Melaka",
+      "explanation": "Hukum Kanun Melaka merangkumi aspek seperti jenayah, hak milik dan tata cara pemerintahan di daratan.",
+      "tip": "Daratan = Kanun; Laut = Undang Laut — jangan tertukar."
+    },
+    {
+      "id": "q3",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Undang-Undang Laut Melaka terutamanya mengawal selia:",
+      "options": [
+        "Hal ehwal maritim dan aktiviti di laut",
+        "Pentadbiran masjid sahaja",
+        "Pilihan raya kampung",
+        "Perjanjian gaji moden"
+      ],
+      "answer": "Hal ehwal maritim dan aktiviti di laut",
+      "explanation": "Undang-Undang Laut Melaka mengatur hal ehwal maritim seperti perdagangan laut, cukai dan keselamatan di perairan.",
+      "tip": "Nama sendiri ada \"Laut\" — ingat bidang kuasa di perairan."
+    },
+    {
+      "id": "q4",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Dalam struktur tradisional, jawatan manakah sering dianggap setinggi di bawah sultan dan memegang peranan besar dalam pentadbiran?",
+      "options": ["Bendahara", "Laksamana", "Penghulu", "Syahbandar"],
+      "answer": "Bendahara",
+      "explanation": "Bendahara memegang peranan utama dalam pentadbiran dan sering menjadi pembesar tertinggi selepas sultan.",
+      "tip": "Hierarki: ingat Bendahara sebagai \"tangan kanan\" sultan dalam banyak soalan objektif."
+    },
+    {
+      "id": "q5",
+      "level": 2,
+      "levelLabel": "Memahami",
+      "prompt": "Apakah maksud ringkas \"keunggulan\" sesebuah kerajaan dalam konteks nota ini?",
+      "options": [
+        "Keupayaan kerajaan mentadbir dengan sistematik, teratur dan berkesan",
+        "Kekayaan sultan seorang diri tanpa melibatkan pembesar",
+        "Kemenangan dalam semua peperangan dunia",
+        "Jumlah penduduk terbesar di dunia"
+      ],
+      "answer": "Keupayaan kerajaan mentadbir dengan sistematik, teratur dan berkesan",
+      "explanation": "Keunggulan di sini merujuk kepada kecemerlangan pentadbiran dan undang-undang yang menyokong kestabilan dan kemajuan kerajaan.",
+      "tip": "Keunggulan ≠ kaya semata; fokus pada \"sistematik\" dan \"teratur\"."
+    },
+    {
+      "id": "q6",
+      "level": 2,
+      "levelLabel": "Memahami",
+      "prompt": "Mengapakah peringkat pentadbiran dibahagikan antara pentadbiran pusat dan pentadbiran jajahan?",
+      "options": [
+        "Untuk memudahkan kawalan dan pengurusan wilayah yang luas",
+        "Kerana Melaka tidak mempunyai sultan",
+        "Supaya jajahan bebas daripada undang-undang sultan",
+        "Untuk menghapuskan peranan pembesar"
+      ],
+      "answer": "Untuk memudahkan kawalan dan pengurusan wilayah yang luas",
+      "explanation": "Pembahagian pentadbiran pusat dan jajahan membantu sultan meluaskan dan mengekalkan pengaruh ke atas kawasan yang jauh dengan perwakilan pembesar.",
+      "tip": "Wilayah luas → perlu peringkat; pilih jawapan tentang kawalan dan pengurusan."
+    },
+    {
+      "id": "q7",
+      "level": 2,
+      "levelLabel": "Memahami",
+      "prompt": "Bagaimanakah sistem kewangan menyokong keunggulan pentadbiran Melaka?",
+      "options": [
+        "Sumber hasil membantu membiayai pentadbiran, pertahanan dan kesejahteraan",
+        "Sistem kewangan tidak wujud pada zaman Melaka",
+        "Hasil kerajaan hanya digunakan untuk hiburan istana",
+        "Cukai hanya dikenakan kepada sultan"
+      ],
+      "answer": "Sumber hasil membantu membiayai pentadbiran, pertahanan dan kesejahteraan",
+      "explanation": "Pengumpulan hasil dan peranan pembesar dalam mengurus kewangan menyokong kelancaran pentadbiran dan kestabilan kerajaan.",
+      "tip": "Kewangan kerajaan = biaya pentadbiran + pertahanan — elakkan jawapan melampau."
+    },
+    {
+      "id": "q8",
+      "level": 3,
+      "levelLabel": "Mengaplikasi",
+      "prompt": "Seek kapal dagang asing ingin berlabuh dan berniaga di pelabuhan Melaka. Peraturan maritim dan cukai yang relevan biasanya dirujuk dalam:",
+      "options": [
+        "Undang-Undang Laut Melaka",
+        "Hukum Kanun Melaka sahaja tanpa pengecualian",
+        "Perlembagaan negeri moden",
+        "Kitab undang-undang British 1800"
+      ],
+      "answer": "Undang-Undang Laut Melaka",
+      "explanation": "Aktiviti maritim, cukai pelabuhan dan hal ehwal laut dikaitkan dengan Undang-Undang Laut Melaka.",
+      "tip": "Adegan laut/pelabuhan/kapal → Undang Laut."
+    },
+    {
+      "id": "q9",
+      "level": 3,
+      "levelLabel": "Mengaplikasi",
+      "prompt": "Sultan memberi kuasa kepada pembesar untuk mentadbir kawasan pegangan atau jajahan tertentu. Ini mencerminkan:",
+      "options": [
+        "Pewarisan kuasa pentadbiran melalui perwakilan pembesar",
+        "Sultan melepaskan semua kuasa undang-undang",
+        "Jajahan tidak tunduk kepada Melaka",
+        "Sistem demokrasi langsung rakyat"
+      ],
+      "answer": "Pewarisan kuasa pentadbiran melalui perwakilan pembesar",
+      "explanation": "Pelantikan pembesar untuk mentadbir kawasan menunjukkan struktur pentadbiran berperingkat dan sistem delegasi kuasa.",
+      "tip": "Kuasa diberi kepada pembesar = delegasi, bukan kelemahan mutlak sultan."
+    },
+    {
+      "id": "q10",
+      "level": 3,
+      "levelLabel": "Mengaplikasi",
+      "prompt": "Hukum Kanun Melaka merangkumi hukuman jenayah, hak milik dan tata cara pemerintahan. Ini terutamanya memastikan:",
+      "options": [
+        "Kelancaran pentadbiran dan keadilan asas dalam masyarakat",
+        "Semua pedagang dilarang masuk Melaka",
+        "Sultan tidak mempunyai kuasa",
+        "Undang-undang hanya untuk raja British"
+      ],
+      "answer": "Kelancaran pentadbiran dan keadilan asas dalam masyarakat",
+      "explanation": "Perundangan bertulis membantu mengekalkan ketenteraman, hak milik dan tatacara pemerintahan yang jelas.",
+      "tip": "Tiga aspek (jenayah, hak milik, tata cara) = kestabilan sosial dan pentadbiran."
+    },
+    {
+      "id": "q11",
+      "level": 4,
+      "levelLabel": "Menganalisis",
+      "prompt": "Apakah kesan utama gabungan sistem pentadbiran yang berperingkat dengan undang-undang bertulis?",
+      "options": [
+        "Kestabilan politik dan kecekapan mengurus pelbagai lapisan masyarakat",
+        "Kerajaan menjadi tidak teratur dan lemah",
+        "Undang-undang bertulis menghapuskan peranan sultan",
+        "Pembesar tidak lagi diperlukan"
+      ],
+      "answer": "Kestabilan politik dan kecekapan mengurus pelbagai lapisan masyarakat",
+      "explanation": "Struktur pentadbiran dan undang-undang yang jelas saling melengkapi untuk mengekalkan ketenteraman dan kelancaran urusan kerajaan.",
+      "tip": "Gabungan dua sistem → cari kesan positif pada kestabilan dan kecekapan."
+    },
+    {
+      "id": "q12",
+      "level": 4,
+      "levelLabel": "Menganalisis",
+      "prompt": "Bandingkan fungsi Hukum Kanun Melaka dengan Undang-Undang Laut Melaka. Perbezaan utama yang paling tepat ialah:",
+      "options": [
+        "Kanun Melaka untuk urusan darat/sosial; Undang Laut untuk urusan maritim",
+        "Keduanya hanya untuk urusan agama",
+        "Undang Laut menggantikan sepenuhnya Hukum Kanun",
+        "Hukum Kanun hanya untuk pedagang asing"
+      ],
+      "answer": "Kanun Melaka untuk urusan darat/sosial; Undang Laut untuk urusan maritim",
+      "explanation": "Pembahagian bidang kuasa antara undang-undang darat dan maritim menunjukkan sistem perundangan Melaka yang lengkap.",
+      "tip": "Soalan bandingan: asaskan pada medium (darat lwn laut)."
+    },
+    {
+      "id": "q13",
+      "level": 5,
+      "levelLabel": "Menilai",
+      "prompt": "Antara hujah berikut, manakah PALING kukuh bahawa Melaka mencapai keunggulan pentadbiran?",
+      "options": [
+        "Wujudnya struktur berperingkat, peranan pembesar yang jelas, dan sistem hasil untuk menyokong kerajaan",
+        "Melaka tidak mempunyai undang-undang bertulis",
+        "Pentadbiran hanya bergantung pada nasihat rawak tanpa struktur",
+        "Sultan tidak pernah berinteraksi dengan pembesar"
+      ],
+      "answer": "Wujudnya struktur berperingkat, peranan pembesar yang jelas, dan sistem hasil untuk menyokong kerajaan",
+      "explanation": "Hujah kukuh menyatukan struktur, manusia (pembesar) dan sumber kewangan — elemen penting keunggulan yang dibincangkan dalam nota.",
+      "tip": "\"Paling kukuh\" = gabungan beberapa bukti utama subtopik, bukan satu frasa umum."
+    },
+    {
+      "id": "q14",
+      "level": 5,
+      "levelLabel": "Menilai",
+      "prompt": "Antara pernyataan berikut, manakah yang PALING tepat tentang kesan keunggulan ini terhadap reputasi Melaka?",
+      "options": [
+        "Ia menyumbang kepada kegemilangan Melaka sebagai pusat pentadbiran dan perdagangan yang diiktiraf",
+        "Ia menyebabkan Melaka diabaikan oleh pedagang",
+        "Ia membuktikan Melaka tanpa sistem undang-undang",
+        "Ia menunjukkan Melaka hanya negeri naungan tanpa identiti sendiri"
+      ],
+      "answer": "Ia menyumbang kepada kegemilangan Melaka sebagai pusat pentadbiran dan perdagangan yang diiktiraf",
+      "explanation": "Keunggulan pentadbiran dan undang-undang menyokong imej Melaka sebagai kerajaan teratur yang menarik perdagangan dan pengiktirafan.",
+      "tip": "Kesan reputasi → hubungkan dengan kegemilangan dan pusat dagang."
+    }
+  ]
+}

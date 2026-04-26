@@ -113,6 +113,14 @@
   color: #5d6a79;
 }
 
+.learning-lab-best-score.is-record {
+  color: #2f7a67;
+}
+
+[data-theme="dark"] .learning-lab-best-score.is-record {
+  color: #7dd4be;
+}
+
 .learning-lab-intro-stats {
   margin: 0 0 0.6rem;
   font-size: 0.78rem;
@@ -372,6 +380,81 @@
   flex-shrink: 0;
 }
 
+.learning-lab-summary-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.learning-lab-summary-qnum {
+  font-size: 0.79rem;
+  font-weight: 800;
+  color: #24313f;
+}
+
+.learning-lab-summary-level {
+  font-size: 0.62rem;
+  padding: 0.12rem 0.42rem;
+  border-radius: 6px;
+  font-weight: 900;
+  border: 1px solid transparent;
+}
+
+.learning-lab-summary-level[data-level="1"] {
+  background: rgba(62, 95, 138, 0.12);
+  color: #2d4a73;
+  border-color: rgba(62, 95, 138, 0.22);
+}
+
+.learning-lab-summary-level[data-level="2"] {
+  background: rgba(47, 122, 103, 0.12);
+  color: #1f5c4d;
+  border-color: rgba(47, 122, 103, 0.22);
+}
+
+.learning-lab-summary-level[data-level="3"] {
+  background: rgba(138, 113, 88, 0.14);
+  color: #5c4a32;
+  border-color: rgba(138, 113, 88, 0.28);
+}
+
+.learning-lab-summary-level[data-level="4"] {
+  background: rgba(106, 123, 90, 0.14);
+  color: #3d4a32;
+  border-color: rgba(106, 123, 90, 0.26);
+}
+
+.learning-lab-summary-level[data-level="5"] {
+  background: rgba(154, 90, 90, 0.12);
+  color: #6b3535;
+  border-color: rgba(154, 90, 90, 0.24);
+}
+
+.learning-lab-summary-right.is-correct {
+  color: #2f7a67;
+}
+
+.learning-lab-summary-right.is-wrong {
+  color: #9a5a5a;
+}
+
+/* Result screen: secondary button sits in same actions row as primary — keep readable on gradient */
+.learning-lab-stage[data-lab-screen="result"] .learning-lab-actions .learning-lab-btn.secondary {
+  background: rgba(255, 255, 255, 0.22);
+  color: #fff;
+  border: 1.5px solid rgba(255, 255, 255, 0.45);
+}
+
+.learning-lab-stage[data-lab-screen="result"] .learning-lab-actions .learning-lab-btn.secondary:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.learning-lab-stage[data-lab-screen="result"] .learning-lab-actions .learning-lab-btn.secondary:active {
+  background: rgba(255, 255, 255, 0.18);
+}
+
 .learning-lab-floating {
   position: fixed;
   right: 16px;
@@ -427,10 +510,50 @@
 
 [data-theme="dark"] .learning-lab-title,
 [data-theme="dark"] .learning-lab-prompt,
-[data-theme="dark"] .learning-lab-order-text,
-[data-theme="dark"] .learning-lab-summary-item,
-[data-theme="dark"] .learning-lab-summary-left {
+[data-theme="dark"] .learning-lab-order-text {
   color: #e8e0d4;
+}
+
+[data-theme="dark"] .learning-lab-summary-qnum {
+  color: #e8e0d4;
+}
+
+[data-theme="dark"] .learning-lab-summary-level[data-level="1"] {
+  background: rgba(129, 160, 210, 0.16);
+  color: #c5d4f0;
+  border-color: rgba(129, 160, 210, 0.35);
+}
+
+[data-theme="dark"] .learning-lab-summary-level[data-level="2"] {
+  background: rgba(125, 212, 190, 0.12);
+  color: #a8e8d4;
+  border-color: rgba(125, 212, 190, 0.28);
+}
+
+[data-theme="dark"] .learning-lab-summary-level[data-level="3"] {
+  background: rgba(232, 200, 150, 0.12);
+  color: #f0dcc0;
+  border-color: rgba(232, 200, 150, 0.28);
+}
+
+[data-theme="dark"] .learning-lab-summary-level[data-level="4"] {
+  background: rgba(180, 200, 160, 0.12);
+  color: #dce6cc;
+  border-color: rgba(180, 200, 160, 0.28);
+}
+
+[data-theme="dark"] .learning-lab-summary-level[data-level="5"] {
+  background: rgba(224, 144, 144, 0.12);
+  color: #f0c8c8;
+  border-color: rgba(224, 144, 144, 0.3);
+}
+
+[data-theme="dark"] .learning-lab-summary-right.is-correct {
+  color: #7dd4be;
+}
+
+[data-theme="dark"] .learning-lab-summary-right.is-wrong {
+  color: #e09090;
 }
 
 [data-theme="dark"] .learning-lab-desc,

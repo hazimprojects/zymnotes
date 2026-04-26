@@ -516,6 +516,15 @@ document.addEventListener("DOMContentLoaded", function () {
   // =========================
   // AUDIO MARKER ON SUBTOPIC CARDS
   // =========================
+  const SUBTOPIC_QUIZ_HREF_RE = /^bab-1-[1-4]\.html$/i;
+
+  function appendAriaHint(card, fragment) {
+    const currentLabel = card.getAttribute("aria-label");
+    if (!currentLabel) return;
+    if (currentLabel.includes(fragment)) return;
+    card.setAttribute("aria-label", `${currentLabel} (${fragment})`);
+  }
+
   async function markSubtopicCardsWithAudio() {
     const subtopicCards = Array.from(document.querySelectorAll(".bab-card[href]")).filter((card) => {
       const href = card.getAttribute("href") || "";
@@ -523,6 +532,16 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     if (!subtopicCards.length) return;
+
+    subtopicCards.forEach((card) => {
+      const href = card.getAttribute("href") || "";
+      const file = href.split("/").pop() || href;
+      if (SUBTOPIC_QUIZ_HREF_RE.test(file)) {
+        card.classList.add("has-quiz");
+        card.setAttribute("data-has-quiz", "true");
+        appendAriaHint(card, "ada kuiz");
+      }
+    });
 
     await Promise.all(
       subtopicCards.map(async (card) => {
@@ -539,10 +558,7 @@ document.addEventListener("DOMContentLoaded", function () {
           card.classList.add("has-audio");
           card.setAttribute("data-has-audio", "true");
 
-          const currentLabel = card.getAttribute("aria-label");
-          if (currentLabel) {
-            card.setAttribute("aria-label", `${currentLabel} (ada audio)`);
-          }
+          appendAriaHint(card, "ada audio");
         } catch (e) {
           // senyap sahaja jika audio belum wujud
         }
@@ -1027,32 +1043,29 @@ var ZYMNOTES_NAV = { chapters: [
 
       var sheet = document.createElement('div');
       sheet.className = 'audio-notice-sheet';
+      sheet.setAttribute('role', 'status');
+      sheet.setAttribute('aria-live', 'polite');
       sheet.innerHTML =
-        '<span class="audio-notice-icon">\uD83C\uDFA7</span>' +
-        '<p class="audio-notice-text">Audio mungkin mengandungi ringkasan \u2014 nota adalah rujukan utama.</p>' +
-        '<div class="audio-notice-footer">' +
-          '<span class="audio-notice-countdown">5</span>' +
-          '<button class="audio-notice-dismiss" type="button">OK</button>' +
-        '</div>';
+        '<span class="audio-notice-icon" aria-hidden="true">\uD83C\uDFA7</span>' +
+        '<div class="audio-notice-content">' +
+          '<span class="audio-notice-title">Makluman audio</span>' +
+          '<span class="audio-notice-text">Audio mungkin mengandungi ringkasan \u2014 nota adalah rujukan utama.</span>' +
+        '</div>' +
+        '<button class="audio-notice-close" type="button" aria-label="Tutup">\u2715</button>';
       document.body.appendChild(sheet);
 
-      var cdEl = sheet.querySelector('.audio-notice-countdown');
-      var secs = 5;
-
       function dismiss() {
-        clearInterval(timer);
         localStorage.setItem(NOTICE_KEY, '1');
-        sheet.classList.add('is-leaving');
-        setTimeout(function() { sheet.remove(); }, 200);
+        sheet.classList.remove('zh-toast-show');
+        sheet.classList.add('zh-toast-hide');
+        setTimeout(function() { sheet.remove(); }, 300);
       }
 
-      sheet.querySelector('.audio-notice-dismiss').addEventListener('click', dismiss);
+      sheet.querySelector('.audio-notice-close').addEventListener('click', dismiss);
 
-      var timer = setInterval(function() {
-        secs -= 1;
-        if (secs <= 0) { dismiss(); return; }
-        cdEl.textContent = secs;
-      }, 1000);
+      requestAnimationFrame(function () {
+        requestAnimationFrame(function () { sheet.classList.add('zh-toast-show'); });
+      });
     }
 
     var labHref = document.body.dataset.labHref ||
@@ -1062,7 +1075,7 @@ var ZYMNOTES_NAV = { chapters: [
       })();
     var labEmojiRaw = document.body.dataset.labEmoji || '🧩';
     var labEmoji = labEmojiRaw;
-    if (labHref && /(?:^|\/)quiz\/bab-1-1\.html(?:$|[?#])/.test(labHref)) {
+    if (labHref && /(?:^|\/)quiz\/bab-1-[1-4]\.html(?:$|[?#])/.test(labHref)) {
       labEmoji = '🧩';
     }
 
@@ -2232,7 +2245,7 @@ var ZYMNOTES_NAV = { chapters: [
   if (!('serviceWorker' in navigator)) return;
 
   window.addEventListener('load', function () {
-    navigator.serviceWorker.register('/sw.js?v=170').catch(function (error) {
+    navigator.serviceWorker.register('/sw.js?v=180').catch(function (error) {
       console.warn('Service worker registration failed:', error);
     });
   });

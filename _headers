@@ -33,6 +33,13 @@
 /data/*
   Cache-Control: public, max-age=3600
 
+# Crawl hints — keep fresh for Googlebot
+/sitemap.xml
+  Cache-Control: public, max-age=0, must-revalidate
+
+/robots.txt
+  Cache-Control: public, max-age=86400
+
 # Open Graph image — avoid stale social previews
 /assets/og-image.png
   Cache-Control: public, max-age=0, no-cache, must-revalidate

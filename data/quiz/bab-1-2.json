@@ -1,0 +1,206 @@
+{
+  "id": "1-2",
+  "title": "Ciri-ciri Negara Bangsa Kesultanan Melayu Melaka",
+  "questions": [
+    {
+      "id": "q1",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Berapakah bilangan ciri utama negara bangsa yang dibincangkan bagi Kesultanan Melayu Melaka dalam subtopik ini?",
+      "options": ["Empat ciri", "Lima ciri", "Enam ciri", "Tujuh ciri"],
+      "answer": "Enam ciri",
+      "explanation": "Nota menyatakan negara bangsa Melaka terbina melalui enam ciri utama: kerajaan, rakyat, kedaulatan, wilayah pengaruh, undang-undang dan lambang kebesaran.",
+      "tip": "Hafal nombor enam — sering digunakan sebagai soalan objektif ringkas."
+    },
+    {
+      "id": "q2",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Apakah nama sistem pentadbiran utama yang diamalkan oleh Kesultanan Melayu Melaka?",
+      "options": [
+        "Sistem Pembesar Empat Lipatan",
+        "Sistem Malayan Union",
+        "Sistem feudal Eropah",
+        "Sistem demokrasi berparlimen"
+      ],
+      "answer": "Sistem Pembesar Empat Lipatan",
+      "explanation": "Kesultanan Melayu Melaka mengamalkan Sistem Pembesar Empat Lipatan sebagai tonggak pentadbiran kerajaan.",
+      "tip": "Kata kunci: Empat Lipatan + Melaka — gabungkan dalam hafalan."
+    },
+    {
+      "id": "q3",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Antara berikut, manakah merupakan dua undang-undang bertulis Kesultanan Melayu Melaka?",
+      "options": [
+        "Hukum Kanun Melaka dan Undang-Undang Laut Melaka",
+        "Kutara Manawa dan Undang-undang Rom",
+        "Perlembagaan Persekutuan dan Ordinan",
+        "Kanun Tanah dan Akta Hasil"
+      ],
+      "answer": "Hukum Kanun Melaka dan Undang-Undang Laut Melaka",
+      "explanation": "Melaka mempunyai dua undang-undang bertulis: Hukum Kanun Melaka (pentadbiran darat) dan Undang-Undang Laut Melaka (maritim).",
+      "tip": "Darat = Kanun; Laut = Undang Laut — pasangkan dua nama ini."
+    },
+    {
+      "id": "q4",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Apakah maksud ringkas \"kedaulatan\" dalam konteks sultan Melaka?",
+      "options": [
+        "Lambang kekuasaan tertinggi sultan",
+        "Hanya hak untuk mengumpul cukai",
+        "Kuasa tentera tanpa had geografi",
+        "Gelaran hormat tanpa kuasa undang-undang"
+      ],
+      "answer": "Lambang kekuasaan tertinggi sultan",
+      "explanation": "Kedaulatan ialah lambang kekuasaan tertinggi sultan, termasuk hak mutlak mengawal rakyat dan wilayah serta bebas daripada campur tangan asing.",
+      "tip": "Kedaulatan = tertinggi + diiktiraf — elakkan jawapan yang mengecilkan maksud kepada cukai sahaja."
+    },
+    {
+      "id": "q5",
+      "level": 2,
+      "levelLabel": "Memahami",
+      "prompt": "Mengapakah hubungan antara sultan dan rakyat digambarkan sebagai \"timbal balik\" dalam nota?",
+      "options": [
+        "Sultan menjamin kesejahteraan manakala rakyat mengakui kekuasaan sultan",
+        "Sultan dipilih oleh rakyat setiap tahun",
+        "Rakyat menggantikan sultan tanpa upacara",
+        "Hubungan hanya bersifat ekonomi dagangan"
+      ],
+      "answer": "Sultan menjamin kesejahteraan manakala rakyat mengakui kekuasaan sultan",
+      "explanation": "Hubungan timbal balik bermaksud sultan menjamin kesejahteraan rakyat dan rakyat pula taat setia serta mengakui kekuasaan sultan.",
+      "tip": "Timbal balik = dua pihak memberi dan menerima — cari pasangan \"jaminan sultan\" dan \"pengiktirafan rakyat\"."
+    },
+    {
+      "id": "q6",
+      "level": 2,
+      "levelLabel": "Memahami",
+      "prompt": "Apakah yang dimaksudkan dengan wilayah pengaruh bagi Melaka?",
+      "options": [
+        "Kawasan yang penduduknya menerima, mengakui dan mematuhi pemerintahan sultan",
+        "Kawasan yang ditakluki hanya melalui peperangan berterusan",
+        "Wilayah jajahan British secara rasmi",
+        "Sempadan negeri moden seperti dalam peta Malaysia hari ini"
+      ],
+      "answer": "Kawasan yang penduduknya menerima, mengakui dan mematuhi pemerintahan sultan",
+      "explanation": "Wilayah pengaruh merujuk kawasan yang rakyatnya secara sukarela menerima, mengakui dan mematuhi pemerintahan sultan, bukan sekadar taklukan paksa semata.",
+      "tip": "Tiga kata: menerima, mengakui, mematuhi — sama konsep asas seperti bab 1.1 tetapi dengan sultan Melaka."
+    },
+    {
+      "id": "q7",
+      "level": 2,
+      "levelLabel": "Memahami",
+      "prompt": "Selepas kedatangan Islam, gelaran pemerintah tertinggi di Melaka biasanya dirujuk sebagai:",
+      "options": ["Sultan", "Presiden", "Governor", "Maharaja British"],
+      "answer": "Sultan",
+      "explanation": "Selepas Islam, pemerintah menggunakan gelaran sultan, menunjukkan sistem kerajaan yang selaras dengan tradisi Kesultanan Melayu.",
+      "tip": "Islam + Melaka → ingat peralihan gelaran kepada sultan."
+    },
+    {
+      "id": "q8",
+      "level": 3,
+      "levelLabel": "Mengaplikasi",
+      "prompt": "Sultan menghadiahkan Siantan kepada Sultan Mansur Shah hasil perkahwinan diraja dengan Majapahit. Ini merupakan contoh perluasan wilayah melalui:",
+      "options": [
+        "Wilayah melalui perkahwinan",
+        "Wilayah taklukan ketenteraan",
+        "Wilayah naungan ekonomi semata",
+        "Penjajahan langsung oleh kuasa Barat"
+      ],
+      "answer": "Wilayah melalui perkahwinan",
+      "explanation": "Contoh Siantan dan perkahwinan diraja menunjukkan perluasan wilayah pengaruh melalui ikatan perkahwinan, bukan hanya peperangan.",
+      "tip": "Bila naratif menyebut \"hadiah\" dan \"perkahwinan diraja\", pilih kategori perkahwinan."
+    },
+    {
+      "id": "q9",
+      "level": 3,
+      "levelLabel": "Mengaplikasi",
+      "prompt": "Melaka diiktiraf oleh Dinasti Ming dan menerima utusan seperti Laksamana Cheng Ho. Apakah implikasi utama terhadap ciri kedaulatan?",
+      "options": [
+        "Mengukuhkan pengiktirafan antarabangsa terhadap Melaka sebagai kerajaan berdaulat",
+        "Menunjukkan Melaka menjadi jajahan China",
+        "Membuktikan Melaka tidak mempunyai raja sendiri",
+        "Menghapuskan peranan undang-undang tempatan"
+      ],
+      "answer": "Mengukuhkan pengiktirafan antarabangsa terhadap Melaka sebagai kerajaan berdaulat",
+      "explanation": "Pengiktirafan luar seperti daripada Dinasti Ming memperkukuh kedudukan Melaka sebagai kerajaan berdaulat di mata dunia pada masa itu.",
+      "tip": "Utusan dan hubungan diplomatik = bukti diiktiraf, bukan dijajah."
+    },
+    {
+      "id": "q10",
+      "level": 3,
+      "levelLabel": "Mengaplikasi",
+      "prompt": "\"Cap mohor digunakan untuk mengesahkan arahan rasmi sultan.\" Pernyataan ini berkait rapat dengan ciri:",
+      "options": [
+        "Lambang kebesaran",
+        "Rakyat semata-mata",
+        "Wilayah taklukan",
+        "Sistem pilihan raya"
+      ],
+      "answer": "Lambang kebesaran",
+      "explanation": "Cap mohor ialah lambang kebesaran yang mengesahkan arahan rasmi sultan dan identiti pemerintahan.",
+      "tip": "Cap mohor, mohor, panji-panji — kelompokkan sebagai lambang kebesaran."
+    },
+    {
+      "id": "q11",
+      "level": 4,
+      "levelLabel": "Menganalisis",
+      "prompt": "Apakah hubungan antara sistem pentadbiran yang tersusun dengan kekuatan Melaka sebagai empayar?",
+      "options": [
+        "Pentadbiran teratur menyokong kestabilan dan pengembangan pengaruh Melaka",
+        "Pentadbiran yang lemah menyebabkan Melaka diiktiraf oleh semua kuasa besar",
+        "Sistem pentadbiran tidak memberi kesan kepada hubungan luar",
+        "Kekuatan empayar hanya bergantung pada senjata moden"
+      ],
+      "answer": "Pentadbiran teratur menyokong kestabilan dan pengembangan pengaruh Melaka",
+      "explanation": "Sistem pentadbiran yang tersusun dan peranan pembesar membantu Melaka mentadbir wilayah luas dan mengekalkan kegemilangan, menyokong status empayar.",
+      "tip": "Soalan hubungan: sambungkan \"struktur\" dengan \"keputusan\" (stabil, terkenal, berdaulat)."
+    },
+    {
+      "id": "q12",
+      "level": 4,
+      "levelLabel": "Menganalisis",
+      "prompt": "Bandingkan \"wilayah taklukan\" dan \"wilayah naungan\" dalam konteks Melaka. Apakah bezanya yang paling tepat?",
+      "options": [
+        "Taklukan melibatkan penguasaan langsung; naungan melibatkan hubungan perlindungan atau tunduk tidak sama rata",
+        "Keduanya sama maksud dalam semua kes",
+        "Naungan hanya wujud selepas penjajahan British",
+        "Taklukan hanya merujuk kepada perdagangan saham"
+      ],
+      "answer": "Taklukan melibatkan penguasaan langsung; naungan melibatkan hubungan perlindungan atau tunduk tidak sama rata",
+      "explanation": "Melaka membezakan bentuk wilayah: taklukan menunjukkan kawalan lebih langsung, manakala naungan melibatkan hubungan hierarki atau perlindungan yang berbeza daripada sekadar sempadan moden.",
+      "tip": "Bila dibandingkan dua istilah — cari perbezaan \"kawalan langsung\" lwn \"hubungan naungan\"."
+    },
+    {
+      "id": "q13",
+      "level": 5,
+      "levelLabel": "Menilai",
+      "prompt": "Antara hujah berikut, manakah PALING kukuh bahawa Melaka memenuhi konsep negara bangsa sebelum kedatangan Barat?",
+      "options": [
+        "Wujudnya raja, rakyat, kedaulatan, wilayah pengaruh, undang-undang dan lambang kebesaran secara lengkap",
+        "Wujudnya pelabuhan sahaja tanpa struktur politik",
+        "Kewujudan bahasa Melayu sebagai bahasa perdagangan",
+        "Kewujudan bangunan kayu di kawasan bandar"
+      ],
+      "answer": "Wujudnya raja, rakyat, kedaulatan, wilayah pengaruh, undang-undang dan lambang kebesaran secara lengkap",
+      "explanation": "Hujah paling kukuh ialah kombinensi lengkap ciri negara bangsa seperti dalam nota — bukti langsung kepada struktur politik dan undang-undang, bukan bukti sampingan.",
+      "tip": "Soalan \"paling kukuh\" = pilih jawapan yang menyenaraikan ciri inti negara bangsa, bukan geografi atau bahasa sahaja."
+    },
+    {
+      "id": "q14",
+      "level": 5,
+      "levelLabel": "Menilai",
+      "prompt": "Antara pernyataan berikut, manakah yang PALING tepat tentang warisan ciri negara bangsa Melaka kepada Malaysia moden?",
+      "options": [
+        "Ciri-ciri tersebut menjadi rujukan nilai dan struktur asas negara bangsa kontemporari",
+        "Ciri-ciri tersebut tidak relevan sama sekali kepada Malaysia hari ini",
+        "Hanya undang-undang laut sahaja yang diwarisi tanpa unsur lain",
+        "Konsep raja dan rakyat diganti sepenuhnya oleh sistem feudal Eropah"
+      ],
+      "answer": "Ciri-ciri tersebut menjadi rujukan nilai dan struktur asas negara bangsa kontemporari",
+      "explanation": "Nota menekankan ciri-ciri ini menjadi panduan kepada pembentukan negara bangsa Malaysia masa kini, menunjukkan kesinambungan nilai dan identiti.",
+      "tip": "Kesimpulan bab sering menghubungkan warisan → Malaysia — pilih jawapan yang menunjukkan kesinambungan, bukan pemutusan."
+    }
+  ]
+}
