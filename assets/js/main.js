@@ -911,7 +911,7 @@ var HZ_NOTES_SEARCH_PAGES = [
 // =========================
 var ZYMNOTES_NAV = { chapters: [
   { num: 1, title: 'Warisan Negara Bangsa', url: 'bab-1.html',
-    color: { bg: '#e5efdf', text: '#315649', accent: '#52b396' },
+    color: { bg: '#eef2ff', text: '#312e81', accent: '#6366f1' },
     subtopics: [
     { num: '1.1', title: 'Latar Belakang Negara Bangsa Sebelum Kedatangan Barat', url: 'bab-1-1.html' },
     { num: '1.2', title: 'Ciri-ciri Negara Bangsa Kesultanan Melayu Melaka', url: 'bab-1-2.html' },
@@ -919,7 +919,7 @@ var ZYMNOTES_NAV = { chapters: [
     { num: '1.4', title: 'Peranan Pemerintah dan Rakyat', url: 'bab-1-4.html' },
   ]},
   { num: 2, title: 'Kebangkitan Nasionalisme', url: 'bab-2.html',
-    color: { bg: '#dbe8f4', text: '#294d80', accent: '#5887ce' },
+    color: { bg: '#e0f2fe', text: '#0c4a6e', accent: '#0284c7' },
     subtopics: [
     { num: '2.1', title: 'Maksud Nasionalisme', url: 'bab-2-1.html' },
     { num: '2.2', title: 'Perkembangan Idea Nasionalisme di Barat', url: 'bab-2-2.html' },
@@ -931,7 +931,7 @@ var ZYMNOTES_NAV = { chapters: [
     { num: '2.8', title: 'Kesan Perkembangan Nasionalisme', url: 'bab-2-8.html' },
   ]},
   { num: 3, title: 'Konflik Dunia dan Pendudukan Jepun di Negara Kita', url: 'bab-3.html',
-    color: { bg: '#dde4ea', text: '#41576c', accent: '#78889c' },
+    color: { bg: '#f1f5f9', text: '#334155', accent: '#64748b' },
     subtopics: [
     { num: '3.1', title: 'Nasionalisme di Negara Kita Sebelum Perang Dunia', url: 'bab-3-1.html' },
     { num: '3.2', title: 'Latar Belakang Perang Dunia', url: 'bab-3-2.html' },
@@ -944,7 +944,7 @@ var ZYMNOTES_NAV = { chapters: [
     { num: '3.9', title: 'Keadaan Negara Kita Selepas Kekalahan Jepun', url: 'bab-3-9.html' },
   ]},
   { num: 4, title: 'Era Peralihan Kuasa British di Negara Kita', url: 'bab-4.html',
-    color: { bg: '#e2e7ef', text: '#465d77', accent: '#627ea8' },
+    color: { bg: '#ede9fe', text: '#4c1d95', accent: '#7c3aed' },
     subtopics: [
     { num: '4.1', title: 'British Military Administration (BMA)', url: 'bab-4-1.html' },
     { num: '4.2', title: 'Gagasan Malayan Union', url: 'bab-4-2.html' },
@@ -955,7 +955,7 @@ var ZYMNOTES_NAV = { chapters: [
     { num: '4.7', title: 'Reaksi Penduduk Tempatan terhadap Penyerahan Sabah', url: 'bab-4-7.html' },
   ]},
   { num: 5, title: 'Persekutuan Tanah Melayu 1948', url: 'bab-5.html',
-    color: { bg: '#dcece7', text: '#315f57', accent: '#4a847c' },
+    color: { bg: '#ecfdf5', text: '#065f46', accent: '#059669' },
     subtopics: [
     { num: '5.1', title: 'Latar Belakang Penubuhan Persekutuan Tanah Melayu 1948', url: 'bab-5-1.html' },
     { num: '5.2', title: 'Faktor Penubuhan Persekutuan Tanah Melayu 1948', url: 'bab-5-2.html' },
@@ -963,7 +963,7 @@ var ZYMNOTES_NAV = { chapters: [
     { num: '5.4', title: 'Kesan Penubuhan Persekutuan Tanah Melayu 1948', url: 'bab-5-4.html' },
   ]},
   { num: 6, title: 'Ancaman Komunis dan Perisytiharan Darurat', url: 'bab-6.html',
-    color: { bg: '#efdede', text: '#6f3e3e', accent: '#844646' },
+    color: { bg: '#fef2f2', text: '#9f1239', accent: '#e11d48' },
     subtopics: [
     { num: '6.1', title: 'Kemasukan Pengaruh Komunis di Negara Kita', url: 'bab-6-1.html' },
     { num: '6.2', title: 'Ancaman Komunis di Negara Kita', url: 'bab-6-2.html' },
@@ -971,7 +971,7 @@ var ZYMNOTES_NAV = { chapters: [
     { num: '6.4', title: 'Kesan Zaman Darurat terhadap Negara Kita', url: 'bab-6-4.html' },
   ]},
   { num: 7, title: 'Usaha ke Arah Kemerdekaan', url: 'bab-7.html',
-    color: { bg: '#e8e3f5', text: '#584892', accent: '#6a58aa' },
+    color: { bg: '#faf5ff', text: '#6b21a8', accent: '#9333ea' },
     subtopics: [
     { num: '7.1', title: 'Latar Belakang Idea Negara Merdeka', url: 'bab-7-1.html' },
     { num: '7.2', title: 'Jawatankuasa Hubungan Antara Kaum', url: 'bab-7-2.html' },
@@ -2106,7 +2106,7 @@ var ZYMNOTES_NAV = { chapters: [
   if (!('serviceWorker' in navigator)) return;
 
   window.addEventListener('load', function () {
-    navigator.serviceWorker.register('/sw.js?v=161').catch(function (error) {
+    navigator.serviceWorker.register('/sw.js?v=162').catch(function (error) {
       console.warn('Service worker registration failed:', error);
     });
   });

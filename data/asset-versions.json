@@ -1,9 +1,9 @@
 {
-  "style_css": "113",
-  "main_js": "122",
+  "style_css": "114",
+  "main_js": "123",
   "zh_mode_js": "41",
   "manifest": "11",
-  "sw_cache": "161",
+  "sw_cache": "162",
   "icon": "3",
   "icon_maskable": "3",
   "logo": "3",
@@ -15,7 +15,7 @@
   "css": {
     "base": "19",
     "layout": "15",
-    "ui": "34",
+    "ui": "35",
     "paper": "12",
     "keywords": "23",
     "responsive": "6",
