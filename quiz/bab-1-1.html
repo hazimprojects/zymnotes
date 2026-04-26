@@ -36,15 +36,15 @@
     href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap"
     rel="stylesheet"
   />
-  <link rel="preload" as="style" href="../assets/css/base.css?v=23">
+  <link rel="preload" as="style" href="../assets/css/base.css?v=24">
 <link rel="preload" as="style" href="../assets/css/layout.css?v=15">
 <link rel="preload" as="style" href="../assets/css/ui.css?v=40">
 <link rel="preload" as="style" href="../assets/css/paper.css?v=12">
 <link rel="preload" as="style" href="../assets/css/keywords.css?v=23">
 <link rel="preload" as="style" href="../assets/css/responsive.css?v=6">
-<link rel="preload" as="style" href="../assets/css/themes.css?v=13">
+<link rel="preload" as="style" href="../assets/css/themes.css?v=14">
 <link rel="preload" as="style" href="../assets/css/lab.css?v=3">
-<link rel="stylesheet" href="../assets/css/style.css?v=120" />
+<link rel="stylesheet" href="../assets/css/style.css?v=121" />
 
   <!-- Google tag (gtag.js) — deferred for performance -->
 <script>
@@ -823,18 +823,19 @@
   <meta name="apple-mobile-web-app-title" content="ZymNotes" />
   <meta name="msapplication-TileColor" content="#9B77FF" />
 </head>
-<body class="bab-theme-1 quiz-page">
+<body class="bab-theme-1 page-theme-notes note-reading-app quiz-page">
   <header class="site-header">
-    <div class="container nav-wrap">
-      <a class="brand" href="../index.html">ZymNotes</a>
-      <button class="nav-toggle" aria-label="Buka menu" aria-expanded="false">☰</button>
-      <nav class="site-nav">
-        <a href="../index.html">Utama</a>
-        <a href="../notes/index.html">Nota</a>
-        <a href="../about.html">Tentang</a>
-      </nav>
+    <div class="nav-wrap">
+      <a class="app-logo-link" href="../index.html" aria-label="ZymNotes — Utama">
+        <img src="/icons/icon.svg" class="app-logo-icon" alt="" aria-hidden="true" />
+        <div>
+          <div class="app-logo-name">ZymNotes</div>
+          <div class="app-logo-sub">Kuiz</div>
+        </div>
+      </a>
     </div>
   </header>
+  <main class="note-reading-main">
   <div class="lab-compact-page">
     <section class="section page-hero note-hero papercraft-hero">
       <div class="container narrow">
@@ -849,7 +850,7 @@
       </div>
     </section>
 
-    <main class="lab-compact-main" id="kuiz-utama">
+    <div class="lab-compact-main" id="kuiz-utama" role="main">
       <div class="lab-compact-shell">
         <aside class="lab-compact-side">
           <article class="lab-compact-card">
@@ -999,7 +1000,7 @@
           </div>
         </section>
       </div>
-    </main>
+    </div>
 
     <!-- Custom confirm dialog — menggantikan window.confirm() bergaya sistem -->
     <div class="lab-confirm-backdrop is-hidden" id="lab-confirm-modal" role="dialog" aria-modal="true" aria-labelledby="lab-confirm-heading">
@@ -1024,9 +1025,12 @@
     </div>
   </div>
 
+    <p class="home-footer-copy">&copy; 2026 ZymNotes &middot; Semua hak cipta terpelihara</p>
+  </main>
+
   <script src="../assets/js/zh-mode.js?v=41"></script>
   <script src="../assets/js/subtopic-lab.js?v=2"></script>
-  <script src="../assets/js/main.js?v=130"></script>
+  <script src="../assets/js/main.js?v=131"></script>
   <script>
     (function () {
       var wrap      = document.getElementById('lab-sparkle-wrap');

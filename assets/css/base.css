@@ -476,14 +476,16 @@ select {
 
 body.app-shell-page,
 body.bab-hub-page,
-body.note-reading-app {
+body.note-reading-app,
+body.quiz-page.note-reading-app {
   background: var(--bg);
   padding-bottom: calc(72px + env(safe-area-inset-bottom, 0px));
 }
 
 body.app-shell-page .site-header,
 body.bab-hub-page .site-header,
-body.note-reading-app .site-header {
+body.note-reading-app .site-header,
+body.quiz-page.note-reading-app .site-header {
   height: 52px;
   overflow: visible;
   background: rgba(255,255,255,0.88);
@@ -494,13 +496,15 @@ body.note-reading-app .site-header {
 
 [data-theme="dark"] body.app-shell-page .site-header,
 [data-theme="dark"] body.bab-hub-page .site-header,
-[data-theme="dark"] body.note-reading-app .site-header {
+[data-theme="dark"] body.note-reading-app .site-header,
+[data-theme="dark"] body.quiz-page.note-reading-app .site-header {
   background: rgba(13,15,26,0.92);
 }
 
 body.app-shell-page .nav-wrap,
 body.bab-hub-page .nav-wrap,
-body.note-reading-app .nav-wrap {
+body.note-reading-app .nav-wrap,
+body.quiz-page.note-reading-app .nav-wrap {
   min-height: 52px;
   padding: 0 16px;
 }
@@ -510,7 +514,9 @@ body.app-shell-page .site-nav,
 body.bab-hub-page .nav-toggle,
 body.bab-hub-page .site-nav,
 body.note-reading-app .nav-toggle,
-body.note-reading-app .site-nav { display: none !important; }
+body.note-reading-app .site-nav,
+body.quiz-page.note-reading-app .nav-toggle,
+body.quiz-page.note-reading-app .site-nav { display: none !important; }
 
 .app-logo-link {
   display: flex;
@@ -592,7 +598,8 @@ body.note-reading-app .site-nav { display: none !important; }
 
 body.app-shell-page .display-fab,
 body.bab-hub-page .display-fab,
-body.note-reading-app .display-fab {
+body.note-reading-app .display-fab,
+body.quiz-page.note-reading-app .display-fab {
   width: 34px;
   height: 34px;
   border-radius: 10px;
@@ -601,7 +608,8 @@ body.note-reading-app .display-fab {
 
 body.app-shell-page .hz-bottom-nav,
 body.bab-hub-page .hz-bottom-nav,
-body.note-reading-app .hz-bottom-nav {
+body.note-reading-app .hz-bottom-nav,
+body.quiz-page.note-reading-app .hz-bottom-nav {
   display: flex !important;
   background: rgba(255,255,255,0.94);
   border-top: 1px solid var(--line);
@@ -611,14 +619,16 @@ body.note-reading-app .hz-bottom-nav {
 
 [data-theme="dark"] body.app-shell-page .hz-bottom-nav,
 [data-theme="dark"] body.bab-hub-page .hz-bottom-nav,
-[data-theme="dark"] body.note-reading-app .hz-bottom-nav {
+[data-theme="dark"] body.note-reading-app .hz-bottom-nav,
+[data-theme="dark"] body.quiz-page.note-reading-app .hz-bottom-nav {
   background: rgba(13,15,26,0.96);
   border-top-color: rgba(129,140,248,0.12);
 }
 
 body.app-shell-page .hz-bottom-nav-item,
 body.bab-hub-page .hz-bottom-nav-item,
-body.note-reading-app .hz-bottom-nav-item {
+body.note-reading-app .hz-bottom-nav-item,
+body.quiz-page.note-reading-app .hz-bottom-nav-item {
   font-size: 0.65rem;
   font-weight: 600;
   letter-spacing: 0.02em;
@@ -626,26 +636,30 @@ body.note-reading-app .hz-bottom-nav-item {
 
 body.app-shell-page .hz-bottom-nav-item.is-active,
 body.bab-hub-page .hz-bottom-nav-item.is-active,
-body.note-reading-app .hz-bottom-nav-item.is-active {
+body.note-reading-app .hz-bottom-nav-item.is-active,
+body.quiz-page.note-reading-app .hz-bottom-nav-item.is-active {
   font-weight: 800;
 }
 
 body.app-shell-page .hz-bottom-nav-item .hz-nav-icon svg,
 body.bab-hub-page .hz-bottom-nav-item .hz-nav-icon svg,
-body.note-reading-app .hz-bottom-nav-item .hz-nav-icon svg {
+body.note-reading-app .hz-bottom-nav-item .hz-nav-icon svg,
+body.quiz-page.note-reading-app .hz-bottom-nav-item .hz-nav-icon svg {
   width: 24px;
   height: 24px;
 }
 
 body.app-shell-page .hz-bottom-nav-item.is-active .hz-nav-icon,
 body.bab-hub-page .hz-bottom-nav-item.is-active .hz-nav-icon,
-body.note-reading-app .hz-bottom-nav-item.is-active .hz-nav-icon {
+body.note-reading-app .hz-bottom-nav-item.is-active .hz-nav-icon,
+body.quiz-page.note-reading-app .hz-bottom-nav-item.is-active .hz-nav-icon {
   position: relative;
 }
 
 body.app-shell-page .hz-bottom-nav-item.is-active .hz-nav-icon::before,
 body.bab-hub-page .hz-bottom-nav-item.is-active .hz-nav-icon::before,
-body.note-reading-app .hz-bottom-nav-item.is-active .hz-nav-icon::before {
+body.note-reading-app .hz-bottom-nav-item.is-active .hz-nav-icon::before,
+body.quiz-page.note-reading-app .hz-bottom-nav-item.is-active .hz-nav-icon::before {
   content: '';
   position: absolute;
   top: -10px;
@@ -659,7 +673,8 @@ body.note-reading-app .hz-bottom-nav-item.is-active .hz-nav-icon::before {
 
 body.app-shell-page main,
 body.bab-hub-page main,
-body.note-reading-app main {
+body.note-reading-app main,
+body.quiz-page.note-reading-app main.note-reading-main {
   padding: 12px 16px 20px;
   max-width: 680px;
   margin: 0 auto;
@@ -669,7 +684,8 @@ body.note-reading-app main {
 
 body.app-shell-page .site-footer,
 body.bab-hub-page .site-footer,
-body.note-reading-app .site-footer { display: none; }
+body.note-reading-app .site-footer,
+body.quiz-page.note-reading-app .site-footer { display: none; }
 
 /* Bab section head */
 .bab-section-head {
@@ -1265,7 +1281,8 @@ body.page-theme-notes.app-shell-page .home-footer-copy {
 }
 
 body.bab-hub-page .home-footer-copy,
-body.note-reading-app .home-footer-copy {
+body.note-reading-app .home-footer-copy,
+body.quiz-page.note-reading-app .home-footer-copy {
   text-align: center;
   margin-top: 1.25rem;
   padding-bottom: 0.35rem;
