@@ -1036,32 +1036,37 @@ var ZYMNOTES_NAV = { chapters: [
 
       var sheet = document.createElement('div');
       sheet.className = 'audio-notice-sheet';
+      sheet.setAttribute('role', 'status');
+      sheet.setAttribute('aria-live', 'polite');
       sheet.innerHTML =
-        '<span class="audio-notice-icon">\uD83C\uDFA7</span>' +
-        '<p class="audio-notice-text">Audio mungkin mengandungi ringkasan \u2014 nota adalah rujukan utama.</p>' +
-        '<div class="audio-notice-footer">' +
-          '<span class="audio-notice-countdown">5</span>' +
-          '<button class="audio-notice-dismiss" type="button">OK</button>' +
-        '</div>';
+        '<span class="audio-notice-icon" aria-hidden="true">\uD83C\uDFA7</span>' +
+        '<div class="audio-notice-content">' +
+          '<span class="audio-notice-title">Makluman audio</span>' +
+          '<span class="audio-notice-text">Audio mungkin mengandungi ringkasan \u2014 nota adalah rujukan utama.</span>' +
+        '</div>' +
+        '<button class="audio-notice-close" type="button" aria-label="Tutup">\u2715</button>';
       document.body.appendChild(sheet);
 
-      var cdEl = sheet.querySelector('.audio-notice-countdown');
       var secs = 5;
 
       function dismiss() {
         clearInterval(timer);
         localStorage.setItem(NOTICE_KEY, '1');
-        sheet.classList.add('is-leaving');
-        setTimeout(function() { sheet.remove(); }, 200);
+        sheet.classList.remove('zh-toast-show');
+        sheet.classList.add('zh-toast-hide');
+        setTimeout(function() { sheet.remove(); }, 300);
       }
 
-      sheet.querySelector('.audio-notice-dismiss').addEventListener('click', dismiss);
+      sheet.querySelector('.audio-notice-close').addEventListener('click', dismiss);
 
       var timer = setInterval(function() {
         secs -= 1;
         if (secs <= 0) { dismiss(); return; }
-        cdEl.textContent = secs;
       }, 1000);
+
+      requestAnimationFrame(function () {
+        requestAnimationFrame(function () { sheet.classList.add('zh-toast-show'); });
+      });
     }
 
     var labHref = document.body.dataset.labHref ||
