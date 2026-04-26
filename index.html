@@ -65,122 +65,173 @@
 </script>
 
   <style>
-    /* --- Homepage-specific styles (app-inspired) --- */
+    /* =============================================
+       APP SHELL — homepage styled like the app
+    ============================================= */
 
-    .emoji-tagline {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.45rem;
-      margin-top: 0.3rem;
-      font-size: 0.9rem;
-      color: var(--muted);
-      font-weight: 700;
+    /* Override body to remove default gradient padding for app shell */
+    body.app-shell-page {
+      background: var(--bg);
+      padding-bottom: calc(72px + env(safe-area-inset-bottom, 0px));
     }
 
-    .metric-icon {
-      display: inline-flex;
-      width: 2.2rem;
-      height: 2.2rem;
+    /* --- App Header (replaces site-header look) --- */
+    body.app-shell-page .site-header {
+      height: 52px;
+      overflow: visible;
+      background: rgba(255,255,255,0.88);
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+    }
+
+    [data-theme="dark"] body.app-shell-page .site-header {
+      background: rgba(13,15,26,0.92);
+    }
+
+    body.app-shell-page .nav-wrap {
+      min-height: 52px;
+      padding: 0 16px;
+    }
+
+    /* Hide hamburger + old nav links — bottom tab bar replaces them */
+    body.app-shell-page .nav-toggle,
+    body.app-shell-page .site-nav { display: none !important; }
+
+    /* Z logo block */
+    .app-logo-link {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+    }
+
+    .app-logo-icon {
+      width: 30px;
+      height: 30px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, #4F46E5, #818CF8);
+      display: flex;
       align-items: center;
       justify-content: center;
-      border-radius: 12px;
-      margin-bottom: 0.6rem;
-      font-size: 1.1rem;
-      background: var(--paper-soft);
-      border: 1px solid var(--line-strong);
-      box-shadow: var(--shadow-soft);
-    }
-
-    .color-chip-row {
-      display: flex;
-      gap: 0.45rem;
-      margin-top: 0.8rem;
-      flex-wrap: wrap;
-    }
-
-    .color-chip {
-      padding: 0.3rem 0.65rem;
-      border-radius: 999px;
-      font-size: 0.73rem;
+      font-size: 14px;
       font-weight: 800;
-      letter-spacing: 0.02em;
+      color: #fff;
+      flex-shrink: 0;
+      font-family: inherit;
+    }
+
+    .app-logo-name {
+      font-size: 14px;
+      font-weight: 800;
       color: var(--ink);
-      border: 1px solid var(--line-strong);
-      background: var(--paper-soft);
+      line-height: 1.15;
     }
 
-    .chip-1 { background: rgba(82,179,150,0.14); border-color: rgba(82,179,150,0.28); }
-    .chip-2 { background: rgba(88,135,206,0.14); border-color: rgba(88,135,206,0.28); }
-    .chip-3 { background: rgba(74,132,124,0.14); border-color: rgba(74,132,124,0.28); }
-    .chip-4 { background: rgba(106,88,170,0.14); border-color: rgba(106,88,170,0.28); }
-
-    /* Project status card */
-    .project-status-card {
-      margin-top: 1rem;
-      padding: 0.95rem 1rem;
-      border-radius: 18px;
-      background: var(--paper);
-      border: 1px solid var(--line-strong);
-      box-shadow: var(--shadow-soft);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-      max-width: 42rem;
-    }
-
-    .project-status-label {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.45rem;
-      font-size: 0.82rem;
-      font-weight: 800;
-      letter-spacing: 0.02em;
-      color: var(--primary);
-      margin-bottom: 0.45rem;
-    }
-
-    .project-status-text {
-      margin: 0;
-      font-size: 0.98rem;
-      line-height: 1.65;
+    .app-logo-sub {
+      font-size: 10px;
       color: var(--muted);
+      font-weight: 600;
+      line-height: 1.2;
     }
 
-    .project-status-date {
-      font-weight: 800;
-      color: var(--ink);
-      white-space: nowrap;
-    }
-
-    .project-status-note {
-      display: block;
-      margin-top: 0.35rem;
+    /* style the injected display-fab in app header */
+    body.app-shell-page .display-fab {
+      width: 34px;
+      height: 34px;
+      border-radius: 10px;
       font-size: 0.9rem;
-      color: var(--muted);
     }
 
-    .project-status-list {
-      margin: 0.45rem 0 0 0;
-      padding-left: 1.1rem;
-      font-size: 0.87rem;
-      color: var(--muted);
-      line-height: 1.6;
-      list-style: disc;
+    /* --- Bottom Tab Bar (always visible on homepage) --- */
+    body.app-shell-page .hz-bottom-nav {
+      display: flex !important;
+      background: rgba(255,255,255,0.94);
+      border-top: 1px solid var(--line);
+      height: calc(72px + env(safe-area-inset-bottom, 0px));
+      padding-bottom: env(safe-area-inset-bottom, 0px);
     }
 
-    .project-status-list li { margin-bottom: 0.1rem; }
+    [data-theme="dark"] body.app-shell-page .hz-bottom-nav {
+      background: rgba(13,15,26,0.96);
+      border-top-color: rgba(129,140,248,0.12);
+    }
 
-    /* Bab search bar */
+    body.app-shell-page .hz-bottom-nav-item {
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+    }
+
+    body.app-shell-page .hz-bottom-nav-item.is-active {
+      font-weight: 800;
+    }
+
+    body.app-shell-page .hz-bottom-nav-item .hz-nav-icon svg {
+      width: 24px;
+      height: 24px;
+    }
+
+    /* Active dot indicator above icon */
+    body.app-shell-page .hz-bottom-nav-item.is-active .hz-nav-icon {
+      position: relative;
+    }
+
+    body.app-shell-page .hz-bottom-nav-item.is-active .hz-nav-icon::before {
+      content: '';
+      position: absolute;
+      top: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 4px;
+      height: 4px;
+      border-radius: 999px;
+      background: var(--primary);
+    }
+
+    /* --- Content area --- */
+    body.app-shell-page main {
+      padding: 12px 16px 20px;
+      max-width: 680px;
+      margin: 0 auto;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    /* --- Bab section head --- */
+    .bab-section-head {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+
+    .bab-section-title {
+      font-size: 17px;
+      font-weight: 800;
+      color: var(--ink);
+      line-height: 1.2;
+    }
+
+    .bab-section-sub {
+      font-size: 11px;
+      color: var(--muted);
+      font-weight: 500;
+      margin-top: 2px;
+    }
+
+    /* --- Search bar --- */
     .bab-search-wrap {
       display: flex;
       align-items: center;
-      gap: 0.6rem;
+      gap: 0.55rem;
       background: var(--paper);
       border: 1.5px solid var(--line-strong);
       border-radius: 14px;
-      padding: 0.6rem 0.9rem;
+      padding: 10px 14px;
       box-shadow: var(--shadow-soft);
-      margin-bottom: 1rem;
-      transition: border-color 0.2s;
+      margin-bottom: 10px;
+      transition: border-color 0.2s, box-shadow 0.2s;
     }
 
     .bab-search-wrap:focus-within {
@@ -188,14 +239,18 @@
       box-shadow: 0 0 0 3px rgba(79,70,229,0.10);
     }
 
-    .bab-search-icon { font-size: 1rem; line-height: 1; color: var(--muted); flex-shrink: 0; }
+    [data-theme="dark"] .bab-search-wrap:focus-within {
+      box-shadow: 0 0 0 3px rgba(129,140,248,0.12);
+    }
+
+    .bab-search-icon { font-size: 0.95rem; line-height: 1; color: var(--muted); flex-shrink: 0; }
 
     .bab-search-input {
       flex: 1;
       border: none;
       outline: none;
       background: transparent;
-      font-size: 0.87rem;
+      font-size: 0.82rem;
       font-weight: 600;
       color: var(--ink);
       font-family: inherit;
@@ -205,18 +260,20 @@
 
     .bab-search-clear {
       cursor: pointer;
-      font-size: 0.8rem;
+      font-size: 0.78rem;
       font-weight: 800;
       color: var(--muted);
       padding: 0.1rem 0.35rem;
       border-radius: 6px;
       transition: background 0.15s;
       display: none;
+      line-height: 1;
     }
 
     .bab-search-clear.visible { display: inline; }
     .bab-search-clear:hover { background: var(--paper-soft); }
 
+    /* --- Empty search state --- */
     .bab-search-empty {
       text-align: center;
       padding: 2.5rem 1rem;
@@ -228,6 +285,18 @@
     .bab-search-empty-icon { font-size: 2rem; margin-bottom: 0.5rem; }
     .bab-search-empty-title { font-size: 0.95rem; font-weight: 700; color: var(--ink); }
     .bab-search-empty-sub { font-size: 0.82rem; margin-top: 0.25rem; }
+
+    /* Keep 2-column grid even on small screens (app style) */
+    body.app-shell-page .bab-grid {
+      margin-top: 0;
+      grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+      gap: 10px;
+    }
+
+    /* Tighter card padding on app shell */
+    body.app-shell-page .bab-card {
+      padding: 14px 14px 12px;
+    }
   </style>
 
   <link rel="manifest" href="/manifest.json?v=11" />
@@ -242,95 +311,24 @@
   <meta name="apple-mobile-web-app-title" content="ZymNotes" />
   <meta name="msapplication-TileColor" content="#9B77FF" />
 </head>
-<body class="page-theme-home">
+<body class="page-theme-home app-shell-page">
   <header class="site-header">
-    <div class="container nav-wrap">
-      <a class="brand" href="index.html">ZymNotes</a>
-      <button class="nav-toggle" aria-label="Buka menu" aria-expanded="false">☰</button>
-      <nav class="site-nav">
-        <a href="index.html">Utama</a>
-        <a href="notes/index.html">Nota</a>
-        <a href="about.html">Tentang</a>
-      </nav>
+    <div class="nav-wrap">
+      <a class="app-logo-link" href="index.html" aria-label="ZymNotes — Utama">
+        <div class="app-logo-icon" aria-hidden="true">Z</div>
+        <div>
+          <div class="app-logo-name">ZymNotes</div>
+          <div class="app-logo-sub">Utama</div>
+        </div>
+      </a>
+      <!-- display-fab (dark mode toggle) injected here by main.js -->
     </div>
   </header>
 
   <main>
 
-    <!-- HERO -->
-    <section class="section hero homepage-hero">
-      <div class="hero-noise"></div>
-      <div class="hero-orb hero-orb-a"></div>
-      <div class="hero-orb hero-orb-b"></div>
-
-      <div class="container hero-grid">
-        <div class="hero-copy">
-          <div class="paper-label">ZymNotes</div>
-          <p class="eyebrow">Nota Ulang Kaji Generasi Baharu</p>
-          <h1>🎓 Nota yang lengkap, disusun semula supaya lebih mudah diikuti.</h1>
-          <p class="emoji-tagline">✨ Belajar lebih seronok · 🚀 lebih fokus · 🧠 lebih mudah faham</p>
-          <p class="lead">
-            ZymNotes membantu pelajar mengulang kaji dengan lebih terarah melalui nota yang lengkap, visual dan mudah diikuti. Kandungan tidak menggantikan buku teks, sebaliknya disusun semula sebagai sokongan pembelajaran supaya isi penting lebih mudah dibaca, difahami dan diingat. Fokus semasa ialah <strong>Sejarah Tingkatan 4</strong>, sebelum bergerak seterusnya ke <strong>Sejarah Tingkatan 5</strong> dan kandungan lain yang berkaitan secara berperingkat.
-          </p>
-
-          <div class="hero-proof-row">
-            <span class="proof-pill">📱 Mesra telefon</span>
-            <span class="proof-pill">📚 7 bab tersedia</span>
-            <span class="proof-pill">🎧 Audio nota tersedia</span>
-            <span class="proof-pill">✓ Kandungan disemak teliti</span>
-          </div>
-
-          <div class="project-status-card" aria-live="polite">
-            <div class="project-status-label">🔄 Perkembangan terkini</div>
-            <div id="project-status-text" class="project-status-text">
-              ZymNotes dikemas kini dari semasa ke semasa.
-              <span class="project-status-note">Sedang memuatkan maklumat kemaskini...</span>
-            </div>
-          </div>
-
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="notes/index.html">Mula belajar</a>
-            <a class="btn btn-secondary" href="about.html">Tentang ZymNotes</a>
-          </div>
-        </div>
-
-        <div class="hero-panel-wrap">
-          <div class="hero-panel-back"></div>
-          <div class="hero-panel paper-preview-panel">
-            <div class="hero-panel-top">
-              <span></span><span></span><span></span>
-            </div>
-
-            <p class="preview-label">Fokus semasa</p>
-            <h3>Sejarah Tingkatan 4</h3>
-            <p class="preview-subtopic">Fokus aktif — 7 bab tersedia dengan nota lengkap, visual dan mudah diikuti.</p>
-
-            <div class="preview-mini-grid">
-              <span>🏛️ Bab 1<br>Warisan Negara Bangsa</span>
-              <span>🔥 Bab 2<br>Kebangkitan Nasionalisme</span>
-              <span>🌍 Bab 3<br>Konflik Dunia &amp; Pendudukan Jepun</span>
-              <span>⚖️ Bab 4<br>Era Peralihan Kuasa British</span>
-              <span>🤝 Bab 5<br>Persekutuan Tanah Melayu 1948</span>
-              <span>🛡️ Bab 6<br>Ancaman Komunis &amp; Darurat</span>
-              <span>🕊️ Bab 7<br>Usaha ke Arah Kemerdekaan</span>
-            </div>
-
-            <p class="preview-subtopic">Langkah seterusnya: <strong>Sejarah Tingkatan 5</strong>, sebelum diperluaskan kepada kandungan lain yang berkaitan secara berperingkat.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- BAB CARDS -->
-    <section class="section">
-      <div class="container">
-        <div class="section-heading center-heading">
-          <div class="paper-label small">Pilih bab</div>
-          <h2>📘 Koleksi nota semasa</h2>
-          <p>Sejarah Tingkatan 4 ialah fokus aktif ZymNotes buat masa ini. Tujuh bab kini tersedia sebagai asas koleksi nota semasa, sebelum berkembang ke Sejarah Tingkatan 5 dan kandungan lain yang berkaitan secara berperingkat.</p>
-        </div>
-
-        <div class="bab-search-wrap" role="search">
+    <!-- APP CONTENT: search + bab grid (no hero) -->
+    <div class="bab-search-wrap" role="search">
           <span class="bab-search-icon" aria-hidden="true">🔍</span>
           <input
             class="bab-search-input"
@@ -341,6 +339,13 @@
             aria-label="Cari bab"
           />
           <span class="bab-search-clear" id="babSearchClear" role="button" tabindex="0" aria-label="Kosongkan carian">✕</span>
+        </div>
+
+        <div class="bab-section-head">
+          <div>
+            <div class="bab-section-title">Semua Bab</div>
+            <div class="bab-section-sub">1/2 kuiz dicuba</div>
+          </div>
         </div>
 
         <div class="bab-grid" id="babGrid">
@@ -441,76 +446,39 @@
           <div class="bab-search-empty-title">Tiada hasil ditemui</div>
           <p class="bab-search-empty-sub">Cuba cari nombor bab atau kata kunci lain</p>
         </div>
-      </div>
-    </section>
-
-    <!-- FEATURES -->
-    <section class="section section-soft">
-      <div class="container metrics-grid">
-        <article class="metric-card">
-          <span class="metric-icon">🧩</span>
-          <h3>Nota visual yang kemas</h3>
-          <p>Setiap halaman disusun supaya isi penting lebih mudah dibaca, terutama pada telefon pintar dan skrin kecil.</p>
-        </article>
-
-        <article class="metric-card">
-          <span class="metric-icon">🎧</span>
-          <h3>Audio nota disediakan</h3>
-          <p>Beberapa subtopik kini dilengkapi audio sokongan untuk membantu pengguna mendengar sambil membaca semasa ulang kaji.</p>
-        </article>
-
-        <article class="metric-card">
-          <span class="metric-icon">🀄</span>
-          <h3>Mod Bahasa Cina</h3>
-          <p>ZymNotes turut memperkenalkan Mod Bahasa Cina sebagai inisiatif untuk memudahkan pelajar memahami isi penting. Ciri ini masih dalam fasa awal, jadi ada istilah atau konteks ayat yang sedang diperhalusi dari semasa ke semasa.</p>
-        </article>
-
-        <article class="metric-card">
-          <span class="metric-icon">📚</span>
-          <h3>Fokus jelas pada Sejarah Tingkatan 4</h3>
-          <p>ZymNotes sedang mengukuhkan kandungan Sejarah Tingkatan 4 sebagai fokus semasa, dengan 7 bab yang kini tersedia secara berperingkat.</p>
-        </article>
-
-        <article class="metric-card">
-          <span class="metric-icon">📖</span>
-          <h3>Terus daripada buku teks</h3>
-          <p>Kandungan ZymNotes tidak diringkaskan atau ditafsir semula. Ia disusun semula — supaya maklumat yang sama daripada buku teks menjadi lebih jelas, lebih kemas dan lebih mudah diikuti.</p>
-        </article>
-
-        <article class="metric-card">
-          <span class="metric-icon">🌟</span>
-          <h3>Arah seterusnya kandungan ZymNotes</h3>
-          <p>Selepas Sejarah Tingkatan 4, ZymNotes akan bergerak ke Sejarah Tingkatan 5 sebelum diperluaskan kepada subjek lain. Kandungan akan diperhalus secara berperingkat supaya pengalaman belajar kekal jelas, tersusun dan lebih mudah diikuti.</p>
-          <div class="color-chip-row">
-            <span class="color-chip chip-1">Visual</span>
-            <span class="color-chip chip-2">Interaktif</span>
-            <span class="color-chip chip-3">Mesra Telefon</span>
-            <span class="color-chip chip-4">Bertahap</span>
-          </div>
-        </article>
-      </div>
-    </section>
 
   </main>
 
-  <footer class="site-footer">
-    <div class="container footer-wrap">
-      <div>
-        <p class="footer-brand">ZymNotes</p>
-        <!-- DIUBAH: footer text — lebih fokus pada nota, bukan label pelajar -->
-        <p class="footer-text">Nota visual berpandukan kurikulum dan buku teks sekolah Malaysia — disusun semula supaya lebih mudah dibaca, difahami dan diingat.</p>
-      </div>
-      <div class="footer-links">
-        <a href="index.html">Utama</a>
-        <a href="notes/index.html">Nota</a>
-        <a href="about.html">Tentang</a>
-        <a href="feedback.html">Maklum Balas</a>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>&copy; 2026 ZymNotes. Semua hak cipta terpelihara.</p>
-    </div>
-  </footer>
+  <!-- BOTTOM TAB BAR -->
+  <nav class="hz-bottom-nav" aria-label="Navigasi utama">
+    <a class="hz-bottom-nav-item is-active" href="index.html" aria-current="page">
+      <span class="hz-nav-icon">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" fill="currentColor"/>
+        </svg>
+      </span>
+      <span>Utama</span>
+    </a>
+    <a class="hz-bottom-nav-item" href="notes/index.html">
+      <span class="hz-nav-icon">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M4 19.5A2.5 2.5 0 016.5 17H20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          <path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+        </svg>
+      </span>
+      <span>Nota</span>
+    </a>
+    <a class="hz-bottom-nav-item" href="about.html">
+      <span class="hz-nav-icon">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+          <line x1="12" y1="8" x2="12" y2="8" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+          <line x1="12" y1="12" x2="12" y2="16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </span>
+      <span>Tentang</span>
+    </a>
+  </nav>
 
   <script src="assets/js/main.js?v=110"></script>
   <script>
@@ -550,48 +518,6 @@
         });
       }
     })();
-  </script>
-  <script>
-    function escapeHtml(value) {
-      return String(value)
-        .replaceAll('&', '&amp;')
-        .replaceAll('<', '&lt;')
-        .replaceAll('>', '&gt;')
-        .replaceAll('"', '&quot;')
-        .replaceAll("'", '&#39;');
-    }
-
-    async function loadProjectLastUpdated() {
-      const target = document.getElementById('project-status-text');
-      if (!target) return;
-
-      try {
-        const res = await fetch('data/updates.json?v=2');
-        if (!res.ok) throw new Error();
-        const json = await res.json();
-        const latest = json.entries?.[0];
-        if (!latest) throw new Error();
-
-        const formattedDate = new Date(latest.date).toLocaleDateString('ms-MY', {
-          day: 'numeric', month: 'long', year: 'numeric'
-        });
-        const items = (latest.items || []).slice(0, 8);
-        const listItems = items.map(i => `<li>${escapeHtml(i)}</li>`).join('');
-
-        target.innerHTML = `
-          ZymNotes dikemas kini dari semasa ke semasa.
-          <span class="project-status-note">Kemaskini terakhir: <span class="project-status-date">${formattedDate}</span></span>
-          ${listItems ? `<ul class="project-status-list">${listItems}</ul>` : ''}
-        `;
-      } catch {
-        target.innerHTML = `
-          ZymNotes dikemas kini dari semasa ke semasa, walaupun ada masa kemaskini berjalan lebih perlahan.
-          <span class="project-status-note">Maklumat kemas kini tidak dapat dimuatkan sekarang.</span>
-        `;
-      }
-    }
-
-    loadProjectLastUpdated();
   </script>
   <script type="application/ld+json">
   [
