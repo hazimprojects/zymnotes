@@ -577,6 +577,12 @@ function hzZymnotesIsSparkleShellPathname(p) {
   return /^about\.html$/i.test(tail);
 }
 
+/** Halaman induk bab sahaja: bab-1.html … bab-7.html (bukan subtopik). */
+function hzZymnotesIsBabHubPathname(p) {
+  if (!p || typeof p !== "string") return false;
+  return /\/notes\/bab-[1-7](?:\.html)?(?:\/)?$/i.test(p);
+}
+
 /** Site path prefix before "/notes/…" ("" or "/repo" style); always without trailing slash except "/". */
 function hzZymnotesSiteRootPath() {
   var p = (window.location.pathname || "/").split("?")[0].split("#")[0];
@@ -989,7 +995,7 @@ var ZYMNOTES_NAV = { chapters: [
   document.addEventListener('DOMContentLoaded', function() {
     if (document.querySelector('.note-sparkle-wrap')) return;
     var _p = window.location.pathname;
-    if (!hzZymnotesIsSparkleShellPathname(_p)) return;
+    if (!hzZymnotesIsSparkleShellPathname(_p) && !hzZymnotesIsBabHubPathname(_p)) return;
 
     var audioEl = document.querySelector('.note-audio-player .audio-src');
     var zhModeApi = window.HzZhMode || null;
@@ -1360,7 +1366,7 @@ var ZYMNOTES_NAV = { chapters: [
 // =========================
 (function () {
   var _p = window.location.pathname;
-  if (!hzZymnotesIsSparkleShellPathname(_p)) return;
+  if (!hzZymnotesIsSparkleShellPathname(_p) && !hzZymnotesIsBabHubPathname(_p)) return;
 
   var overlay = null;
   var svgEl = null;
@@ -2100,7 +2106,7 @@ var ZYMNOTES_NAV = { chapters: [
   if (!('serviceWorker' in navigator)) return;
 
   window.addEventListener('load', function () {
-    navigator.serviceWorker.register('/sw.js?v=160').catch(function (error) {
+    navigator.serviceWorker.register('/sw.js?v=161').catch(function (error) {
       console.warn('Service worker registration failed:', error);
     });
   });

@@ -470,12 +470,14 @@ select {
    APP SHELL — shared by homepage, notes, about, feedback pages
 ============================================================= */
 
-body.app-shell-page {
+body.app-shell-page,
+body.bab-hub-page {
   background: var(--bg);
   padding-bottom: calc(72px + env(safe-area-inset-bottom, 0px));
 }
 
-body.app-shell-page .site-header {
+body.app-shell-page .site-header,
+body.bab-hub-page .site-header {
   height: 52px;
   overflow: visible;
   background: rgba(255,255,255,0.88);
@@ -484,17 +486,21 @@ body.app-shell-page .site-header {
   -webkit-backdrop-filter: blur(14px);
 }
 
-[data-theme="dark"] body.app-shell-page .site-header {
+[data-theme="dark"] body.app-shell-page .site-header,
+[data-theme="dark"] body.bab-hub-page .site-header {
   background: rgba(13,15,26,0.92);
 }
 
-body.app-shell-page .nav-wrap {
+body.app-shell-page .nav-wrap,
+body.bab-hub-page .nav-wrap {
   min-height: 52px;
   padding: 0 16px;
 }
 
 body.app-shell-page .nav-toggle,
-body.app-shell-page .site-nav { display: none !important; }
+body.app-shell-page .site-nav,
+body.bab-hub-page .nav-toggle,
+body.bab-hub-page .site-nav { display: none !important; }
 
 .app-logo-link {
   display: flex;
@@ -574,14 +580,16 @@ body.app-shell-page .site-nav { display: none !important; }
   line-height: 1.2;
 }
 
-body.app-shell-page .display-fab {
+body.app-shell-page .display-fab,
+body.bab-hub-page .display-fab {
   width: 34px;
   height: 34px;
   border-radius: 10px;
   font-size: 0.9rem;
 }
 
-body.app-shell-page .hz-bottom-nav {
+body.app-shell-page .hz-bottom-nav,
+body.bab-hub-page .hz-bottom-nav {
   display: flex !important;
   background: rgba(255,255,255,0.94);
   border-top: 1px solid var(--line);
@@ -589,31 +597,37 @@ body.app-shell-page .hz-bottom-nav {
   padding-bottom: env(safe-area-inset-bottom, 0px);
 }
 
-[data-theme="dark"] body.app-shell-page .hz-bottom-nav {
+[data-theme="dark"] body.app-shell-page .hz-bottom-nav,
+[data-theme="dark"] body.bab-hub-page .hz-bottom-nav {
   background: rgba(13,15,26,0.96);
   border-top-color: rgba(129,140,248,0.12);
 }
 
-body.app-shell-page .hz-bottom-nav-item {
+body.app-shell-page .hz-bottom-nav-item,
+body.bab-hub-page .hz-bottom-nav-item {
   font-size: 0.65rem;
   font-weight: 600;
   letter-spacing: 0.02em;
 }
 
-body.app-shell-page .hz-bottom-nav-item.is-active {
+body.app-shell-page .hz-bottom-nav-item.is-active,
+body.bab-hub-page .hz-bottom-nav-item.is-active {
   font-weight: 800;
 }
 
-body.app-shell-page .hz-bottom-nav-item .hz-nav-icon svg {
+body.app-shell-page .hz-bottom-nav-item .hz-nav-icon svg,
+body.bab-hub-page .hz-bottom-nav-item .hz-nav-icon svg {
   width: 24px;
   height: 24px;
 }
 
-body.app-shell-page .hz-bottom-nav-item.is-active .hz-nav-icon {
+body.app-shell-page .hz-bottom-nav-item.is-active .hz-nav-icon,
+body.bab-hub-page .hz-bottom-nav-item.is-active .hz-nav-icon {
   position: relative;
 }
 
-body.app-shell-page .hz-bottom-nav-item.is-active .hz-nav-icon::before {
+body.app-shell-page .hz-bottom-nav-item.is-active .hz-nav-icon::before,
+body.bab-hub-page .hz-bottom-nav-item.is-active .hz-nav-icon::before {
   content: '';
   position: absolute;
   top: -10px;
@@ -625,7 +639,8 @@ body.app-shell-page .hz-bottom-nav-item.is-active .hz-nav-icon::before {
   background: var(--primary);
 }
 
-body.app-shell-page main {
+body.app-shell-page main,
+body.bab-hub-page main {
   padding: 12px 16px 20px;
   max-width: 680px;
   margin: 0 auto;
@@ -633,7 +648,8 @@ body.app-shell-page main {
   box-sizing: border-box;
 }
 
-body.app-shell-page .site-footer { display: none; }
+body.app-shell-page .site-footer,
+body.bab-hub-page .site-footer { display: none; }
 
 /* Bab section head */
 .bab-section-head {
@@ -723,13 +739,15 @@ body.app-shell-page .site-footer { display: none; }
 .bab-search-empty-title { font-size: 0.95rem; font-weight: 700; color: var(--ink); }
 .bab-search-empty-sub { font-size: 0.82rem; margin-top: 0.25rem; }
 
-body.app-shell-page .bab-grid {
+body.app-shell-page .bab-grid,
+body.bab-hub-page .bab-grid {
   margin-top: 0;
   grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
   gap: 10px;
 }
 
-body.app-shell-page .bab-card {
+body.app-shell-page .bab-card,
+body.bab-hub-page .bab-card {
   padding: 14px 14px 12px;
 }
 
@@ -1219,6 +1237,12 @@ body.page-theme-home.app-shell-page .home-footer-copy {
 }
 
 body.page-theme-notes.app-shell-page .home-footer-copy {
+  text-align: center;
+  margin-top: 1.25rem;
+  padding-bottom: 0.35rem;
+}
+
+body.bab-hub-page .home-footer-copy {
   text-align: center;
   margin-top: 1.25rem;
   padding-bottom: 0.35rem;
