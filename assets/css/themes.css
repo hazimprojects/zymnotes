@@ -11,19 +11,19 @@
 ========================================================= */
 
 body[class*="page-theme-"] {
-  --page-bg-solid: #f2f6ff;
-  --page-overlay-1: radial-gradient(circle at 10% 14%, rgba(120, 151, 255, 0.19), transparent 0 24%);
-  --page-overlay-2: radial-gradient(circle at 88% 16%, rgba(94, 211, 194, 0.14), transparent 0 20%);
-  --page-overlay-3: radial-gradient(circle at 22% 86%, rgba(188, 162, 255, 0.14), transparent 0 18%);
-  --page-gradient: linear-gradient(180deg, #ffffff 0%, #f3f7ff 52%, #edf6ff 100%);
+  --page-bg-solid: #f3f2f8;
+  --page-overlay-1: radial-gradient(ellipse 120% 80% at 8% -10%, rgba(99, 102, 241, 0.09), transparent 55%);
+  --page-overlay-2: radial-gradient(ellipse 100% 70% at 96% 8%, rgba(45, 212, 191, 0.06), transparent 50%);
+  --page-overlay-3: radial-gradient(ellipse 90% 60% at 50% 100%, rgba(129, 140, 248, 0.07), transparent 52%);
+  --page-gradient: linear-gradient(165deg, #fafafc 0%, #f4f3f9 38%, #eef1f8 72%, #e9eef6 100%);
 
-  --page-surface-bg: linear-gradient(145deg, rgba(255, 255, 255, 0.92), rgba(244, 250, 255, 0.88));
-  --page-surface-border: rgba(94, 115, 148, 0.16);
-  --page-surface-shadow: 0 18px 40px rgba(50, 62, 82, 0.10);
-  --page-header-bg: rgba(255, 255, 255, 0.78);
-  --page-footer-bg: linear-gradient(135deg, rgba(255, 255, 255, 0.80), rgba(242, 249, 255, 0.74));
-  --page-header-border: rgba(79, 70, 229, 0.10);
-  --page-footer-border: rgba(79, 70, 229, 0.10);
+  --page-surface-bg: linear-gradient(155deg, rgba(255, 255, 255, 0.94) 0%, rgba(248, 247, 252, 0.9) 48%, rgba(241, 244, 250, 0.88) 100%);
+  --page-surface-border: rgba(76, 86, 118, 0.11);
+  --page-surface-shadow: 0 20px 48px rgba(45, 52, 72, 0.07), 0 1px 0 rgba(255, 255, 255, 0.65) inset;
+  --page-header-bg: rgba(252, 252, 254, 0.82);
+  --page-footer-bg: linear-gradient(135deg, rgba(252, 252, 254, 0.86), rgba(244, 244, 250, 0.8));
+  --page-header-border: rgba(76, 86, 118, 0.08);
+  --page-footer-border: rgba(76, 86, 118, 0.08);
 
   background-color: var(--page-bg-solid);
   background-image:
@@ -64,35 +64,35 @@ body[class*="page-theme-"] .feedback-form-wrap {
 }
 
 body.page-theme-home {
-  --page-bg-solid: #fffaf3;
-  --page-overlay-1: radial-gradient(circle at 8% 10%, rgba(255, 184, 107, 0.25), transparent 0 30%);
-  --page-overlay-2: radial-gradient(circle at 92% 14%, rgba(108, 200, 255, 0.24), transparent 0 32%);
-  --page-overlay-3: radial-gradient(circle at 52% 86%, rgba(99, 219, 161, 0.18), transparent 0 36%);
-  --page-gradient: linear-gradient(180deg, #fffdf8 0%, #fff7ec 42%, #eff8ff 100%);
+  --page-bg-solid: #f4f3f7;
+  --page-overlay-1: radial-gradient(ellipse 100% 70% at 12% 0%, rgba(99, 102, 241, 0.085), transparent 58%);
+  --page-overlay-2: radial-gradient(ellipse 90% 55% at 92% 18%, rgba(14, 165, 233, 0.055), transparent 52%);
+  --page-overlay-3: radial-gradient(ellipse 85% 50% at 48% 100%, rgba(167, 139, 250, 0.065), transparent 55%);
+  --page-gradient: linear-gradient(168deg, #faf9fc 0%, #f3f2f7 45%, #eceaf3 100%);
 }
 
 body.page-theme-notes {
-  --page-bg-solid: #f4f9ff;
-  --page-overlay-1: radial-gradient(circle at 10% 12%, rgba(126, 169, 255, 0.2), transparent 0 24%);
-  --page-overlay-2: radial-gradient(circle at 88% 16%, rgba(71, 198, 214, 0.18), transparent 0 20%);
-  --page-overlay-3: radial-gradient(circle at 20% 86%, rgba(137, 228, 200, 0.18), transparent 0 18%);
-  --page-gradient: linear-gradient(180deg, #fcfeff 0%, #eff6ff 52%, #e9fbf7 100%);
+  --page-bg-solid: #f1f3f9;
+  --page-overlay-1: radial-gradient(ellipse 95% 65% at 6% 8%, rgba(79, 70, 229, 0.07), transparent 54%);
+  --page-overlay-2: radial-gradient(ellipse 85% 55% at 94% 22%, rgba(56, 189, 248, 0.05), transparent 50%);
+  --page-overlay-3: radial-gradient(ellipse 90% 55% at 42% 96%, rgba(129, 140, 248, 0.06), transparent 52%);
+  --page-gradient: linear-gradient(172deg, #f8f9fc 0%, #eef1f8 48%, #e8ecf4 100%);
 }
 
 body.page-theme-about {
-  --page-bg-solid: #f8f5ff;
-  --page-overlay-1: radial-gradient(circle at 12% 10%, rgba(170, 148, 255, 0.22), transparent 0 24%);
-  --page-overlay-2: radial-gradient(circle at 86% 14%, rgba(108, 198, 255, 0.17), transparent 0 20%);
-  --page-overlay-3: radial-gradient(circle at 18% 86%, rgba(255, 179, 222, 0.18), transparent 0 18%);
-  --page-gradient: linear-gradient(180deg, #fffcff 0%, #f4f0ff 54%, #eef6ff 100%);
+  --page-bg-solid: #f3f1f7;
+  --page-overlay-1: radial-gradient(ellipse 100% 68% at 10% 4%, rgba(124, 58, 237, 0.065), transparent 56%);
+  --page-overlay-2: radial-gradient(ellipse 88% 58% at 90% 16%, rgba(99, 102, 241, 0.055), transparent 52%);
+  --page-overlay-3: radial-gradient(ellipse 92% 52% at 30% 100%, rgba(45, 212, 191, 0.045), transparent 54%);
+  --page-gradient: linear-gradient(168deg, #faf8fc 0%, #f0edf6 52%, #e9ecf4 100%);
 }
 
 body.page-theme-feedback {
-  --page-bg-solid: #f6fff9;
-  --page-overlay-1: radial-gradient(circle at 10% 12%, rgba(91, 199, 168, 0.22), transparent 0 24%);
-  --page-overlay-2: radial-gradient(circle at 88% 16%, rgba(125, 175, 255, 0.18), transparent 0 20%);
-  --page-overlay-3: radial-gradient(circle at 24% 86%, rgba(255, 196, 145, 0.18), transparent 0 18%);
-  --page-gradient: linear-gradient(180deg, #fcfffd 0%, #f0fff8 52%, #edf4ff 100%);
+  --page-bg-solid: #f1f4f6;
+  --page-overlay-1: radial-gradient(ellipse 95% 62% at 8% 10%, rgba(45, 212, 191, 0.055), transparent 54%);
+  --page-overlay-2: radial-gradient(ellipse 90% 58% at 92% 12%, rgba(99, 102, 241, 0.065), transparent 52%);
+  --page-overlay-3: radial-gradient(ellipse 88% 55% at 55% 98%, rgba(148, 163, 184, 0.08), transparent 52%);
+  --page-gradient: linear-gradient(170deg, #f9fafb 0%, #eef2f6 50%, #e8edf2 100%);
 }
 
 body.page-theme-thankyou {
