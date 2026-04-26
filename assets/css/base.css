@@ -990,3 +990,447 @@ body.page-theme-error .hz-bottom-nav-item.is-active {
   user-select: none;
   -webkit-user-select: none;
 }
+
+/* =============================================================
+   HOMEPAGE (Utama) — Brand / Info redesign
+============================================================= */
+
+.home-brand-hero {
+  text-align: left;
+  padding: 20px 0 18px;
+}
+
+.home-brand-name {
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--ink);
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  margin-bottom: 4px;
+}
+
+.home-brand-tagline {
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--primary);
+  margin-bottom: 10px;
+}
+
+.home-brand-desc {
+  font-size: 0.85rem;
+  color: var(--muted);
+  line-height: 1.55;
+  margin: 0 0 16px;
+  max-width: 340px;
+}
+
+.home-feature-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.home-feature-card {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 14px 14px 12px;
+  box-shadow: var(--shadow-soft);
+  transition: background 0.35s ease, border-color 0.35s ease;
+}
+
+.home-feature-icon {
+  font-size: 1.25rem;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.home-feature-title {
+  font-size: 0.82rem;
+  font-weight: 800;
+  color: var(--ink);
+  margin-bottom: 4px;
+  line-height: 1.2;
+}
+
+.home-feature-desc {
+  font-size: 0.75rem;
+  color: var(--muted);
+  line-height: 1.45;
+  margin: 0;
+}
+
+.home-scope-section {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 14px 14px 12px;
+  margin-bottom: 12px;
+  box-shadow: var(--shadow-soft);
+}
+
+.home-scope-label {
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--primary);
+  margin-bottom: 10px;
+}
+
+.home-scope-list {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.home-scope-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 0.82rem;
+  color: var(--muted);
+  line-height: 1.4;
+}
+
+.home-scope-item.home-scope-active { color: var(--ink); }
+
+.home-scope-check {
+  flex-shrink: 0;
+  font-size: 0.88rem;
+  line-height: 1.4;
+}
+
+/* =============================================================
+   NOTA LIST — clean iOS-style list view
+============================================================= */
+
+.nota-page-head { padding: 16px 0 10px; }
+
+.nota-page-title {
+  font-size: 1.45rem;
+  font-weight: 900;
+  color: var(--ink);
+  letter-spacing: -0.025em;
+  line-height: 1.15;
+  margin: 0 0 2px;
+}
+
+.nota-page-sub {
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin: 0;
+  font-weight: 500;
+}
+
+.nota-list {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+}
+
+.nota-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 13px 14px 13px 12px;
+  text-decoration: none;
+  color: inherit;
+  border-bottom: 1px solid var(--line);
+  transition: background 0.12s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.nota-row:last-child { border-bottom: none; }
+
+.nota-row:active,
+.nota-row:hover { background: rgba(79,70,229,0.04); }
+
+[data-theme="dark"] .nota-row:active,
+[data-theme="dark"] .nota-row:hover { background: rgba(129,140,248,0.06); }
+
+.nota-row-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.05rem;
+  flex-shrink: 0;
+}
+
+.nota-row-body { flex: 1; min-width: 0; }
+
+.nota-row-title {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1.3;
+  margin-bottom: 1px;
+}
+
+.nota-row-sub {
+  font-size: 0.76rem;
+  color: var(--muted);
+  line-height: 1.35;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.nota-row-arrow {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+  color: var(--muted);
+  opacity: 0.55;
+}
+
+.nota-search-empty {
+  text-align: center;
+  padding: 2.5rem 1rem;
+  color: var(--muted);
+}
+
+.nota-search-empty-icon { font-size: 1.8rem; margin-bottom: 0.5rem; }
+.nota-search-empty-title { font-size: 0.95rem; font-weight: 700; color: var(--ink); }
+.nota-search-empty-sub { font-size: 0.82rem; margin-top: 0.25rem; }
+
+[data-theme="dark"] .nota-list { background: var(--paper); border-color: var(--line); }
+[data-theme="dark"] .nota-row { border-bottom-color: var(--line); }
+
+/* =============================================================
+   HOME INFO CARD — "Apa itu ZymNotes?" block
+============================================================= */
+
+.home-info-card {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 14px 14px 14px;
+  margin-bottom: 12px;
+  box-shadow: var(--shadow-soft);
+}
+
+.home-info-label {
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--primary);
+  margin-bottom: 8px;
+}
+
+.home-info-text {
+  font-size: 0.84rem;
+  color: var(--muted);
+  line-height: 1.55;
+  margin: 0;
+}
+
+.home-info-text strong { color: var(--ink); }
+
+[data-theme="dark"] .home-info-card {
+  background: var(--paper);
+  border-color: var(--line);
+}
+
+/* =============================================================
+   HOME BRAND SIZE VARIANT
+============================================================= */
+
+.home-brand-name-sm {
+  font-size: 1.45rem !important;
+}
+
+/* =============================================================
+   HOME CTA ROW — two plain link buttons side by side
+============================================================= */
+
+.home-cta-row {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+}
+
+.home-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.7rem 1.1rem;
+  border-radius: 12px;
+  font-size: 0.84rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background 0.15s, color 0.15s, box-shadow 0.15s;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.home-cta-primary {
+  background: var(--primary);
+  color: #fff;
+  box-shadow: var(--shadow-medium);
+}
+
+.home-cta-primary:hover {
+  background: var(--primary-dark);
+  box-shadow: var(--shadow-strong);
+}
+
+.home-cta-secondary {
+  background: var(--paper);
+  color: var(--ink);
+  border: 1px solid var(--line-strong);
+}
+
+.home-cta-secondary:hover {
+  background: var(--paper-soft);
+}
+
+[data-theme="dark"] .home-cta-secondary {
+  background: var(--paper);
+  border-color: var(--line-strong);
+}
+
+/* =============================================================
+   HOME FOOTER COPY
+============================================================= */
+
+.home-footer-copy {
+  text-align: center;
+  font-size: 0.72rem;
+  color: var(--muted);
+  opacity: 0.65;
+  margin: 4px 0 0;
+  padding-bottom: 4px;
+}
+
+/* =============================================================
+   HOME ABOUT AUDIENCE
+============================================================= */
+
+.home-about-audience {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.home-about-aud-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.home-about-aud-icon {
+  font-size: 1.25rem;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.home-about-aud-title {
+  font-size: 0.86rem;
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1.2;
+}
+
+.home-about-aud-desc {
+  font-size: 0.76rem;
+  color: var(--muted);
+  line-height: 1.3;
+}
+
+/* =============================================================
+   FEATURE CARD GRADIENT FLAVOURS
+   Each variant has a unique gradient bg + text colour
+============================================================= */
+
+/* Violet/indigo — primary brand */
+.home-feature-card.hfc-violet {
+  background: linear-gradient(135deg, #ede9fe, #ddd6fe);
+  border-color: rgba(109, 40, 217, 0.18);
+}
+.home-feature-card.hfc-violet .home-feature-title { color: #5b21b6; }
+.home-feature-card.hfc-violet .home-feature-desc { color: #7c3aed; opacity: 0.8; }
+
+/* Cyan/sky */
+.home-feature-card.hfc-cyan {
+  background: linear-gradient(135deg, #cffafe, #a5f3fc);
+  border-color: rgba(8, 145, 178, 0.20);
+}
+.home-feature-card.hfc-cyan .home-feature-title { color: #0e7490; }
+.home-feature-card.hfc-cyan .home-feature-desc { color: #0891b2; opacity: 0.85; }
+
+/* Emerald/green */
+.home-feature-card.hfc-emerald {
+  background: linear-gradient(135deg, #d1fae5, #a7f3d0);
+  border-color: rgba(5, 150, 105, 0.20);
+}
+.home-feature-card.hfc-emerald .home-feature-title { color: #065f46; }
+.home-feature-card.hfc-emerald .home-feature-desc { color: #047857; opacity: 0.85; }
+
+/* Amber/orange */
+.home-feature-card.hfc-amber {
+  background: linear-gradient(135deg, #fef3c7, #fde68a);
+  border-color: rgba(217, 119, 6, 0.20);
+}
+.home-feature-card.hfc-amber .home-feature-title { color: #92400e; }
+.home-feature-card.hfc-amber .home-feature-desc { color: #b45309; opacity: 0.85; }
+
+/* Dark mode gradient card overrides */
+[data-theme="dark"] .home-feature-card.hfc-violet {
+  background: linear-gradient(135deg, rgba(91, 33, 182, 0.25), rgba(76, 29, 149, 0.18));
+  border-color: rgba(167, 139, 250, 0.22);
+}
+[data-theme="dark"] .home-feature-card.hfc-violet .home-feature-title { color: #c4b5fd; }
+[data-theme="dark"] .home-feature-card.hfc-violet .home-feature-desc { color: #a78bfa; opacity: 0.85; }
+
+[data-theme="dark"] .home-feature-card.hfc-cyan {
+  background: linear-gradient(135deg, rgba(8, 145, 178, 0.22), rgba(6, 182, 212, 0.14));
+  border-color: rgba(103, 232, 249, 0.20);
+}
+[data-theme="dark"] .home-feature-card.hfc-cyan .home-feature-title { color: #67e8f9; }
+[data-theme="dark"] .home-feature-card.hfc-cyan .home-feature-desc { color: #22d3ee; opacity: 0.85; }
+
+[data-theme="dark"] .home-feature-card.hfc-emerald {
+  background: linear-gradient(135deg, rgba(5, 150, 105, 0.22), rgba(6, 182, 112, 0.14));
+  border-color: rgba(110, 231, 183, 0.20);
+}
+[data-theme="dark"] .home-feature-card.hfc-emerald .home-feature-title { color: #6ee7b7; }
+[data-theme="dark"] .home-feature-card.hfc-emerald .home-feature-desc { color: #34d399; opacity: 0.85; }
+
+[data-theme="dark"] .home-feature-card.hfc-amber {
+  background: linear-gradient(135deg, rgba(217, 119, 6, 0.22), rgba(245, 158, 11, 0.14));
+  border-color: rgba(252, 211, 77, 0.20);
+}
+[data-theme="dark"] .home-feature-card.hfc-amber .home-feature-title { color: #fcd34d; }
+[data-theme="dark"] .home-feature-card.hfc-amber .home-feature-desc { color: #f59e0b; opacity: 0.85; }
+
+/* =============================================================
+   NOTA LIST ROW — vibrant gradient icon backgrounds
+   Replaces flat rgba tints with proper gradient per bab
+============================================================= */
+
+.nota-row-icon-1 { background: linear-gradient(135deg, #d1fae5, #6ee7b7); }
+.nota-row-icon-2 { background: linear-gradient(135deg, #fee2e2, #fca5a5); }
+.nota-row-icon-3 { background: linear-gradient(135deg, #dbeafe, #93c5fd); }
+.nota-row-icon-4 { background: linear-gradient(135deg, #e0e7ff, #a5b4fc); }
+.nota-row-icon-5 { background: linear-gradient(135deg, #ccfbf1, #5eead4); }
+.nota-row-icon-6 { background: linear-gradient(135deg, #fce7f3, #f9a8d4); }
+.nota-row-icon-7 { background: linear-gradient(135deg, #ede9fe, #c4b5fd); }
+
+[data-theme="dark"] .nota-row-icon-1 { background: linear-gradient(135deg, rgba(5,150,105,0.30), rgba(52,211,153,0.18)); }
+[data-theme="dark"] .nota-row-icon-2 { background: linear-gradient(135deg, rgba(185,28,28,0.30), rgba(252,165,165,0.18)); }
+[data-theme="dark"] .nota-row-icon-3 { background: linear-gradient(135deg, rgba(29,78,216,0.30), rgba(147,197,253,0.18)); }
+[data-theme="dark"] .nota-row-icon-4 { background: linear-gradient(135deg, rgba(67,56,202,0.30), rgba(165,180,252,0.18)); }
+[data-theme="dark"] .nota-row-icon-5 { background: linear-gradient(135deg, rgba(13,148,136,0.30), rgba(94,234,212,0.18)); }
+[data-theme="dark"] .nota-row-icon-6 { background: linear-gradient(135deg, rgba(157,23,77,0.30), rgba(249,168,212,0.18)); }
+[data-theme="dark"] .nota-row-icon-7 { background: linear-gradient(135deg, rgba(91,33,182,0.30), rgba(196,181,253,0.18)); }

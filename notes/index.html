@@ -4,12 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>Nota · ZymNotes</title>
-  <meta
-    name="description"
-    content="Koleksi nota visual ZymNotes — berpandukan kurikulum dan buku teks sekolah Malaysia, disusun semula sebagai sokongan pembelajaran yang lebih jelas dan mudah diikuti."
-  />
+  <meta name="description" content="Koleksi nota visual ZymNotes — berpandukan kurikulum dan buku teks sekolah Malaysia, disusun semula sebagai sokongan pembelajaran yang lebih jelas dan mudah diikuti." />
   <link rel="canonical" href="https://zymnotes.com/notes/" />
-  <!-- Open Graph -->
   <meta property="og:title" content="Nota · ZymNotes" />
   <meta property="og:description" content="Koleksi nota visual ZymNotes — berpandukan kurikulum dan buku teks sekolah Malaysia, disusun semula sebagai sokongan pembelajaran yang lebih jelas dan mudah diikuti." />
   <meta property="og:url" content="https://zymnotes.com/notes/" />
@@ -23,7 +19,6 @@
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="ZymNotes" />
   <meta property="og:locale" content="ms_MY" />
-  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Nota · ZymNotes" />
   <meta name="twitter:description" content="Koleksi nota visual ZymNotes — berpandukan kurikulum dan buku teks sekolah Malaysia, disusun semula sebagai sokongan pembelajaran yang lebih jelas dan mudah diikuti." />
@@ -34,17 +29,16 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap"></noscript>
   <link rel="preload" as="style" href="../assets/css/base.css?v=10">
-<link rel="preload" as="style" href="../assets/css/layout.css?v=13">
-<link rel="preload" as="style" href="../assets/css/ui.css?v=32">
-<link rel="preload" as="style" href="../assets/css/paper.css?v=12">
-<link rel="preload" as="style" href="../assets/css/keywords.css?v=23">
-<link rel="preload" as="style" href="../assets/css/responsive.css?v=5">
-<link rel="preload" as="style" href="../assets/css/themes.css?v=7">
-<link rel="preload" as="style" href="../assets/css/lab.css?v=3">
-<link rel="stylesheet" href="../assets/css/style.css?v=102" />
+  <link rel="preload" as="style" href="../assets/css/layout.css?v=13">
+  <link rel="preload" as="style" href="../assets/css/ui.css?v=32">
+  <link rel="preload" as="style" href="../assets/css/paper.css?v=12">
+  <link rel="preload" as="style" href="../assets/css/keywords.css?v=23">
+  <link rel="preload" as="style" href="../assets/css/responsive.css?v=5">
+  <link rel="preload" as="style" href="../assets/css/themes.css?v=7">
+  <link rel="preload" as="style" href="../assets/css/lab.css?v=3">
+  <link rel="stylesheet" href="../assets/css/style.css?v=103" />
 
-  <!-- Google tag (gtag.js) — deferred for performance -->
-<script>
+  <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
@@ -64,12 +58,11 @@
       });
     }
   })();
-</script>
+  </script>
   <link rel="manifest" href="/manifest.json?v=11" />
   <link rel="icon" type="image/svg+xml" href="/icons/icon.svg?v=3" />
   <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png?v=1" />
   <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png?v=1" />
-
   <meta name="theme-color" content="#0D0F1A" />
   <meta name="mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -87,140 +80,92 @@
           <div class="app-logo-sub">Nota</div>
         </div>
       </a>
+      <!-- display-fab injected by main.js -->
     </div>
   </header>
 
   <main>
-    <section class="section page-hero papercraft-hero">
-      <div class="container narrow">
-        <div class="paper-label">Koleksi Nota</div>
-        <h1>Nota yang dibina sedikit demi sedikit, dengan fokus pada kejelasan.</h1>
-        <p class="lead">
-          Bahagian ini menghimpunkan nota yang sedang dibangunkan untuk <strong>Sejarah Tingkatan 4</strong>. Setiap bab disusun supaya lebih mudah dibaca pada telefon, lebih visual, dan lebih mesra pembelajaran semasa tanpa mengorbankan isi penting.
-        </p>
+
+    <div class="nota-page-head">
+      <h1 class="nota-page-title">Senarai Nota</h1>
+      <p class="nota-page-sub">Sejarah Tingkatan 4 · 7 bab tersedia</p>
+    </div>
+
+    <div class="nota-list" id="notaList">
+
+      <a class="nota-row" href="bab-1.html" data-title="Warisan Negara Bangsa bab 1">
+        <div class="nota-row-icon nota-row-icon-1">🏛️</div>
+        <div class="nota-row-body">
+          <div class="nota-row-title">Bab 1 · Warisan Negara Bangsa</div>
+          <div class="nota-row-sub">Kerajaan Alam Melayu &amp; warisan budaya</div>
+        </div>
+        <svg class="nota-row-arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M6 3l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+
+      <a class="nota-row" href="bab-2.html" data-title="Kebangkitan Nasionalisme bab 2">
+        <div class="nota-row-icon nota-row-icon-2">🔥</div>
+        <div class="nota-row-body">
+          <div class="nota-row-title">Bab 2 · Kebangkitan Nasionalisme</div>
+          <div class="nota-row-sub">Idea nasionalisme di Asia &amp; Tanah Melayu</div>
+        </div>
+        <svg class="nota-row-arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M6 3l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+
+      <a class="nota-row" href="bab-3.html" data-title="Konflik Dunia Pendudukan Jepun bab 3">
+        <div class="nota-row-icon nota-row-icon-3">🌍</div>
+        <div class="nota-row-body">
+          <div class="nota-row-title">Bab 3 · Konflik Dunia &amp; Pendudukan Jepun</div>
+          <div class="nota-row-sub">PKII, Jepun &amp; perjuangan rakyat</div>
+        </div>
+        <svg class="nota-row-arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M6 3l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+
+      <a class="nota-row" href="bab-4.html" data-title="Era Peralihan Kuasa British bab 4">
+        <div class="nota-row-icon nota-row-icon-4">⚖️</div>
+        <div class="nota-row-body">
+          <div class="nota-row-title">Bab 4 · Era Peralihan Kuasa British</div>
+          <div class="nota-row-sub">BMA, Malayan Union &amp; reaksi rakyat</div>
+        </div>
+        <svg class="nota-row-arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M6 3l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+
+      <a class="nota-row" href="bab-5.html" data-title="Persekutuan Tanah Melayu 1948 bab 5">
+        <div class="nota-row-icon nota-row-icon-5">🤝</div>
+        <div class="nota-row-body">
+          <div class="nota-row-title">Bab 5 · Persekutuan Tanah Melayu 1948</div>
+          <div class="nota-row-sub">Penubuhan, faktor &amp; ciri utama</div>
+        </div>
+        <svg class="nota-row-arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M6 3l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+
+      <a class="nota-row" href="bab-6.html" data-title="Ancaman Komunis Darurat bab 6">
+        <div class="nota-row-icon nota-row-icon-6">🛡️</div>
+        <div class="nota-row-body">
+          <div class="nota-row-title">Bab 6 · Ancaman Komunis &amp; Darurat</div>
+          <div class="nota-row-sub">Komunis, darurat &amp; usaha mengatasinya</div>
+        </div>
+        <svg class="nota-row-arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M6 3l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+
+      <a class="nota-row" href="bab-7.html" data-title="Usaha ke Arah Kemerdekaan bab 7">
+        <div class="nota-row-icon nota-row-icon-7">🕊️</div>
+        <div class="nota-row-body">
+          <div class="nota-row-title">Bab 7 · Usaha ke Arah Kemerdekaan</div>
+          <div class="nota-row-sub">Kerjasama kaum &amp; jalan kemerdekaan</div>
+        </div>
+        <svg class="nota-row-arrow" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M6 3l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+
+      <div class="nota-search-empty" id="notaSearchEmpty" aria-live="polite" style="display:none">
+        <div class="nota-search-empty-icon">🔍</div>
+        <div class="nota-search-empty-title">Tiada hasil ditemui</div>
+        <p class="nota-search-empty-sub">Cuba cari nombor bab atau kata kunci lain</p>
       </div>
-    </section>
 
-    <section class="section note-section">
-      <div class="container narrow">
+    </div>
 
-        <div class="search-wrap reveal-on-scroll">
-          <span class="search-icon">🔍</span>
-          <input
-            type="search"
-            class="search-input"
-            placeholder="Cari nota... (contoh: nasionalisme, BMA, Malayan Union, Persekutuan Tanah Melayu, kemerdekaan)"
-            autocomplete="off"
-            spellcheck="false"
-          />
-        </div>
-
-        <div class="search-results" role="region" aria-live="polite">
-          <p class="search-result-count"></p>
-        </div>
-        <div class="search-empty" role="status">
-          😕 Tiada keputusan untuk carian tersebut. Cuba kata kunci lain.
-        </div>
-
-        <div class="bab-grid reveal-on-scroll">
-          <a class="bab-card bab-card-theme-1" href="bab-1.html">
-            <div class="bab-card-top">Sejarah Tingkatan 4</div>
-            <h3>Bab 1 · Warisan Negara Bangsa</h3>
-            <p>Struktur nota untuk topik negara bangsa, kesinambungan kerajaan Alam Melayu, keunggulan Melaka dan hubungan pemerintah dengan rakyat.</p>
-          </a>
-
-          <a class="bab-card bab-card-theme-2" href="bab-2.html">
-            <div class="bab-card-top">Sejarah Tingkatan 4</div>
-            <h3>Bab 2 · Kebangkitan Nasionalisme</h3>
-            <p>Nota tentang maksud nasionalisme, perkembangan idea di Barat, Asia dan Asia Tenggara serta kesedaran, faktor dan kesan nasionalisme di negara kita.</p>
-          </a>
-
-          <a class="bab-card bab-card-theme-3" href="bab-3.html">
-            <div class="bab-card-top">Sejarah Tingkatan 4</div>
-            <h3>Bab 3 · Konflik Dunia dan Pendudukan Jepun di Negara Kita</h3>
-            <p>Nota tentang konflik dunia, pendudukan Jepun, perjuangan rakyat menentang penjajahan dan perkembangan nasionalisme tempatan.</p>
-          </a>
-
-          <a class="bab-card bab-card-theme-4" href="bab-4.html">
-            <div class="bab-card-top">Sejarah Tingkatan 4</div>
-            <h3>Bab 4 · Era Peralihan Kuasa British di Negara Kita</h3>
-            <p>Nota tentang British Military Administration, Malayan Union, reaksi penduduk tempatan serta penyerahan Sarawak dan Sabah kepada British.</p>
-          </a>
-
-          <a class="bab-card bab-card-theme-5" href="bab-5.html">
-            <div class="bab-card-top">Sejarah Tingkatan 4</div>
-            <h3>Bab 5 · Persekutuan Tanah Melayu 1948</h3>
-            <p>Nota tentang latar belakang penubuhan Persekutuan Tanah Melayu 1948, faktor penubuhannya, ciri-ciri utama dan kesannya terhadap perkembangan politik negara.</p>
-          </a>
-
-          <a class="bab-card bab-card-theme-6" href="bab-6.html">
-            <div class="bab-card-top">Sejarah Tingkatan 4</div>
-            <h3>Bab 6 · Ancaman Komunis dan Perisytiharan Darurat</h3>
-            <p>Nota tentang kemasukan pengaruh komunis di negara kita, ancaman yang dibawa, usaha menanganinya dan kesan zaman darurat terhadap negara.</p>
-          </a>
-
-          <a class="bab-card bab-card-theme-7" href="bab-7.html">
-            <div class="bab-card-top">Sejarah Tingkatan 4</div>
-            <h3>Bab 7 · Usaha ke Arah Kemerdekaan</h3>
-            <p>Nota tentang idea negara merdeka, Jawatankuasa Hubungan Antara Kaum, Sistem Ahli, sistem pendidikan kebangsaan dan penubuhan parti politik ke arah kemerdekaan.</p>
-          </a>
-        </div>
-
-        <section class="note-subsection reveal-on-scroll">
-          <article class="paper-board info-paper">
-            <div class="paper-strip strip-info">Status kandungan</div>
-            <ul class="emoji-point-list">
-              <li><span class="emoji-bullet">📌</span><span>Kandungan di ZymNotes dibina secara berperingkat dan dikemas kini dari semasa ke semasa.</span></li>
-              <li><span class="emoji-bullet">📌</span><span>Buat masa ini, fokus utama ialah <strong>Sejarah Tingkatan 4</strong> — terbuka untuk dikembangkan ke subjek KSSM lain pada masa hadapan.</span></li>
-              <li><span class="emoji-bullet">📌</span><span><strong>Bab 1</strong> hingga <strong>Bab 7</strong> kini tersedia sebagai asas koleksi nota semasa.</span></li>
-              <li><span class="emoji-bullet">📌</span><span>Mod Bahasa Cina turut disediakan sebagai inisiatif awal untuk memudahkan pelajar. Fungsi ini masih diperkemas, jadi ada istilah atau konteks ayat yang belum konsisten sepenuhnya.</span></li>
-              <li><span class="emoji-bullet">📌</span><span>Bab atau subjek lain akan ditambah secara berperingkat mengikut masa dan keperluan platform.</span></li>
-            </ul>
-          </article>
-        </section>
-
-        <section class="note-subsection reveal-on-scroll">
-          <article class="paper-board summary-paper">
-            <div class="paper-strip strip-summary">Arah bacaan</div>
-            <p class="point-line">
-              Jika anda baru bermula, mulakan dengan <strong>Bab 1</strong> untuk memahami asas warisan negara bangsa, teruskan ke <strong>Bab 2</strong> bagi melihat perkembangan nasionalisme, sambung ke <strong>Bab 3</strong> untuk memahami konflik dunia serta kesan pendudukan Jepun, kemudian ke <strong>Bab 4</strong> untuk melihat era peralihan kuasa British di negara kita selepas Perang Dunia Kedua, seterusnya ke <strong>Bab 5</strong> untuk memahami latar belakang serta pembentukan <strong>Persekutuan Tanah Melayu 1948</strong>, diikuti <strong>Bab 6</strong> untuk melihat ancaman komunis serta kesan <strong>perisytiharan darurat</strong> terhadap negara, dan akhirnya ke <strong>Bab 7</strong> untuk memahami usaha politik, perpaduan kaum, pendidikan dan kerjasama parti yang membuka jalan ke arah <strong>kemerdekaan</strong>.
-            </p>
-          </article>
-        </section>
-
-        <section class="note-subsection reveal-on-scroll">
-          <article class="paper-board glossary-paper">
-            <div class="paper-strip strip-glossary">💡 Tips Carian</div>
-            <ul class="emoji-point-list">
-              <li><span class="emoji-bullet">⌨️</span><span>Taip <strong>/</strong> di mana-mana halaman ini untuk fokus ke kotak carian dengan cepat.</span></li>
-              <li><span class="emoji-bullet">🔍</span><span>Cuba cari nama tokoh, istilah atau konsep seperti <em>nasionalisme</em>, <em>BMA</em>, <em>Malayan Union</em>, <em>waadat</em>, <em>MacMichael</em>, <em>Persekutuan Tanah Melayu</em> atau <em>kemerdekaan</em>.</span></li>
-              <li><span class="emoji-bullet">🌙</span><span>Gunakan tetapan paparan untuk tukar antara mod cerah dan gelap mengikut keselesaan anda.</span></li>
-            </ul>
-          </article>
-        </section>
-
-      </div>
-    </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container footer-wrap">
-      <div>
-        <p class="footer-brand">ZymNotes</p>
-        <p class="footer-text">Nota visual berpandukan kurikulum dan buku teks sekolah Malaysia — disusun semula supaya lebih mudah dibaca, difahami dan diingat.</p>
-      </div>
-      <div class="footer-links">
-        <a href="../index.html">Utama</a>
-        <a href="index.html">Nota</a>
-        <a href="../about.html">Tentang</a>
-        <a href="../feedback.html">Maklum Balas</a>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>&copy; 2026 ZymNotes. Semua hak cipta terpelihara.</p>
-    </div>
-  </footer>
-
-  <script src="../assets/js/main.js?v=112"></script>
+  <script src="../assets/js/main.js?v=114"></script>
 </body>
 </html>
