@@ -1047,10 +1047,7 @@ var ZYMNOTES_NAV = { chapters: [
         '<button class="audio-notice-close" type="button" aria-label="Tutup">\u2715</button>';
       document.body.appendChild(sheet);
 
-      var secs = 5;
-
       function dismiss() {
-        clearInterval(timer);
         localStorage.setItem(NOTICE_KEY, '1');
         sheet.classList.remove('zh-toast-show');
         sheet.classList.add('zh-toast-hide');
@@ -1058,11 +1055,6 @@ var ZYMNOTES_NAV = { chapters: [
       }
 
       sheet.querySelector('.audio-notice-close').addEventListener('click', dismiss);
-
-      var timer = setInterval(function() {
-        secs -= 1;
-        if (secs <= 0) { dismiss(); return; }
-      }, 1000);
 
       requestAnimationFrame(function () {
         requestAnimationFrame(function () { sheet.classList.add('zh-toast-show'); });
@@ -2245,7 +2237,7 @@ var ZYMNOTES_NAV = { chapters: [
   if (!('serviceWorker' in navigator)) return;
 
   window.addEventListener('load', function () {
-    navigator.serviceWorker.register('/sw.js?v=177').catch(function (error) {
+    navigator.serviceWorker.register('/sw.js?v=178').catch(function (error) {
       console.warn('Service worker registration failed:', error);
     });
   });
