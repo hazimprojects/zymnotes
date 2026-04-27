@@ -29,14 +29,24 @@
      - --floating-bottom-offset = jarak dari bawah skrin ke bawah FAB (nav + jurang kecil ke nav)
      - main padding-bottom = --sparkle-copyright-fab-gap + FAB + offset yang sama (hak cipta → FAB → nav) */
   --sparkle-fab-h: 52px;
-  --sparkle-fab-clearance: 0.42rem;
-  --sparkle-copyright-fab-gap: 0.62rem;
+  /* Jarak dari tepi skrin ke tepi FAB (selari dengan .note-sparkle-wrap { right: 14px }) */
+  --sparkle-fab-edge-h: 14px;
+  /* Jurang antara bawah FAB dan atas nav — jangan terlalu rapat */
+  --sparkle-fab-clearance: 0.85rem;
+  /* Jurang menegak antara teks hak cipta dan atas FAB */
+  --sparkle-copyright-fab-gap: 0.75rem;
+  /* Jarak dari bawah skrin ke bawah FAB (nav + safe + jurang ke nav) */
   --floating-bottom-offset: calc(
     var(--bottom-nav-h, 56px) + var(--safe-bottom, env(safe-area-inset-bottom, 0px)) +
-    var(--sparkle-fab-clearance, 0.42rem)
+    var(--sparkle-fab-clearance, 0.85rem)
   );
+  /*
+   * Ruang bawah main selepas hak cipta: HANYA gap + FAB + jurang ke nav.
+   * Jangan tambah tinggi nav di sini — body sudah ada padding-bottom untuk nav,
+   * kalau tidak jurang menegak antara hak cipta dan FAB jadi ~nav+safe terlalu besar.
+   */
   --sparkle-main-pad-bottom: calc(
-    var(--sparkle-copyright-fab-gap, 0.62rem) + var(--sparkle-fab-h, 52px) + var(--floating-bottom-offset)
+    var(--sparkle-copyright-fab-gap, 0.75rem) + var(--sparkle-fab-h, 52px) + var(--sparkle-fab-clearance, 0.85rem)
   );
   --floating-bottom-offset-avoid-sparkle: calc(
     var(--floating-bottom-offset) + var(--sparkle-fab-h, 52px) + 4.25rem
@@ -715,10 +725,7 @@ body.quiz-page.note-reading-app main.note-reading-main {
   body.bab-hub-page main,
   body.note-reading-app main,
   body.quiz-page.note-reading-app main.note-reading-main {
-    padding-bottom: calc(
-      20px + var(--sparkle-copyright-fab-gap, 0.62rem) + var(--sparkle-fab-h, 52px) +
-      var(--sparkle-fab-clearance, 0.42rem) + var(--safe-bottom, env(safe-area-inset-bottom, 0px)) + 1rem
-    );
+    padding-bottom: calc(20px + var(--sparkle-main-pad-bottom) + 1rem);
   }
 }
 
@@ -1341,25 +1348,37 @@ body.page-theme-home.app-shell-page .home-footer-copy {
   font-size: 0.74rem;
 }
 
-body.page-theme-notes.app-shell-page .home-footer-copy {
-  text-align: center;
-  margin-top: 1.25rem;
-  padding-bottom: 0.12rem;
+/* Satu set jarak footer + lorong mendatar untuk FAB kanan (Utama, Nota, Tentang, Maklum balas, bab, subtopik) */
+@media (max-width: 760px) {
+  body.app-shell-page .home-footer-copy,
+  body.bab-hub-page .home-footer-copy,
+  body.note-reading-app .home-footer-copy,
+  body.quiz-page.note-reading-app .home-footer-copy {
+    text-align: center;
+    margin-top: 1.25rem;
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 0.35rem;
+    padding-left: max(1rem, var(--safe-left));
+    padding-right: calc(
+      max(1rem, var(--safe-right)) + var(--sparkle-fab-h, 52px) + var(--sparkle-fab-edge-h, 14px) + 0.65rem
+    );
+    box-sizing: border-box;
+    max-width: 100%;
+  }
 }
 
-body.bab-hub-page .home-footer-copy,
-body.note-reading-app .home-footer-copy,
-body.quiz-page.note-reading-app .home-footer-copy {
-  text-align: center;
-  margin-top: 1.25rem;
-  padding-bottom: 0.12rem;
-}
-
-body.page-theme-about.app-shell-page .home-footer-copy,
-body.page-theme-feedback.app-shell-page .home-footer-copy {
-  text-align: center;
-  margin-top: 1.25rem;
-  padding-bottom: 0.12rem;
+@media (min-width: 761px) {
+  body.app-shell-page .home-footer-copy,
+  body.bab-hub-page .home-footer-copy,
+  body.note-reading-app .home-footer-copy,
+  body.quiz-page.note-reading-app .home-footer-copy {
+    text-align: center;
+    margin-top: 1.25rem;
+    padding-bottom: 0.35rem;
+    padding-left: max(1rem, var(--safe-left));
+    padding-right: max(1rem, var(--safe-right));
+  }
 }
 
 [data-theme="dark"] body.page-theme-home.app-shell-page .home-brand-name {
@@ -1797,7 +1816,7 @@ body[class*="page-theme-"].app-shell-page .home-info-card {
   color: var(--muted);
   opacity: 0.65;
   margin: 4px 0 0;
-  padding-bottom: 4px;
+  padding-bottom: 0.35rem;
 }
 
 /* =============================================================
