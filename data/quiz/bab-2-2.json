@@ -1,0 +1,216 @@
+{
+  "id": "2-2",
+  "title": "Perkembangan Idea Nasionalisme di Barat",
+  "questions": [
+    {
+      "id": "q1",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Di manakah idea nasionalisme Barat dibincangkan secara utama dalam subtopik ini?",
+      "options": [
+        "Di Barat",
+        "Di Asia Tenggara sahaja",
+        "Di China purba",
+        "Di Alam Melayu pra-Islam"
+      ],
+      "answer": "Di Barat",
+      "explanation": "Nota menekankan perkembangan idea nasionalisme di Barat.",
+      "tip": "Barat = fokus utama subtopik 2.2."
+    },
+    {
+      "id": "q2",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Apakah tiga revolusi penting yang membentuk idea nasionalisme Barat menurut ringkasan nota?",
+      "options": [
+        "Revolusi Keagungan, Revolusi Amerika dan Revolusi Perancis",
+        "Revolusi Industri, Revolusi Hijau dan Revolusi Digital",
+        "Revolusi Mexico, Revolusi Rusia dan Revolusi China",
+        "Revolusi Sains, Revolusi Biologi dan Revolusi Sosial"
+      ],
+      "answer": "Revolusi Keagungan, Revolusi Amerika dan Revolusi Perancis",
+      "explanation": "Tiga revolusi penting ialah Keagungan, Amerika dan Perancis.",
+      "tip": "Hafal tiga R: Keagungan, Amerika, Perancis."
+    },
+    {
+      "id": "q3",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Apakah reaksi utama masyarakat Barat terhadap pemerintahan beraja menurut nota?",
+      "options": [
+        "Menuntut kedaulatan rakyat dan kebebasan daripada pemerintahan mutlak",
+        "Menerima pemerintahan mutlak tanpa syarat",
+        "Menolak semua bentuk undang-undang",
+        "Menggalakkan penjajahan tanpa had"
+      ],
+      "answer": "Menuntut kedaulatan rakyat dan kebebasan daripada pemerintahan mutlak",
+      "explanation": "Nasionalisme Barat berkembang sebagai tindak balas terhadap penindasan dan mutlak raja.",
+      "tip": "Barat: tolak mutlak raja → tuntut kedaulatan rakyat."
+    },
+    {
+      "id": "q4",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Selepas berkembang di Barat, ke manakah idea nasionalisme seterusnya memberi inspirasi?",
+      "options": [
+        "Ke Asia dan Asia Tenggara",
+        "Ke kutub sahaja",
+        "Ke zaman prasejarah",
+        "Ke galaksi lain"
+      ],
+      "answer": "Ke Asia dan Asia Tenggara",
+      "explanation": "Idea nasionalisme Barat menjadi inspirasi kepada kebangkitan di Asia dan Asia Tenggara.",
+      "tip": "Inspirasi: Barat → Asia & Asia Tenggara."
+    },
+    {
+      "id": "q5",
+      "level": 2,
+      "levelLabel": "Memahami",
+      "prompt": "Mengapakah nasionalisme di Barat sering dikaitkan dengan penentangan terhadap pemerintahan beraja?",
+      "options": [
+        "Kerana raja mutlak sering menindas hak rakyat",
+        "Kerana raja tidak pernah wujud di Barat",
+        "Kerana rakyat Barat tidak berminat dengan politik",
+        "Kerana tiada peristiwa penting berlaku"
+      ],
+      "answer": "Kerana raja mutlak sering menindas hak rakyat",
+      "explanation": "Nasionalisme Barat muncul sebagai tindak balas terhadap penindasan hak.",
+      "tip": "Penindasan hak = punca tindak balas."
+    },
+    {
+      "id": "q6",
+      "level": 2,
+      "levelLabel": "Memahami",
+      "prompt": "Apakah yang dimaksudkan dengan menuntut 'kedaulatan rakyat' dalam konteks revolusi Barat?",
+      "options": [
+        "Rakyat ingin kuasa politik yang sah datang daripada rakyat, bukan mutlak raja sahaja",
+        "Rakyat menolak semua bentuk undang-undang",
+        "Rakyat mahu wilayah tanpa sempadan",
+        "Rakyat ingin kembali ke sistem puak"
+      ],
+      "answer": "Rakyat ingin kuasa politik yang sah datang daripada rakyat, bukan mutlak raja sahaja",
+      "explanation": "Kedaulatan rakyat menekankan hak rakyat dalam sistem politik.",
+      "tip": "Kedaulatan rakyat ≠ mutlak raja."
+    },
+    {
+      "id": "q7",
+      "level": 2,
+      "levelLabel": "Memahami",
+      "prompt": "Mengapakah revolusi di Barat penting dalam sejarah idea nasionalisme?",
+      "options": [
+        "Revolusi tersebut memperkukuh semangat kebebasan dan kedaulatan bangsa",
+        "Revolusi tersebut menghapuskan semua bahasa tempatan",
+        "Revolusi tersebut menamatkan perdagangan dunia",
+        "Revolusi tersebut tidak mempengaruhi negara lain"
+      ],
+      "answer": "Revolusi tersebut memperkukuh semangat kebebasan dan kedaulatan bangsa",
+      "explanation": "Revolusi penting memperkukuh idea kebebasan dan kedaulatan.",
+      "tip": "Revolusi = pemangkin idea kebebasan."
+    },
+    {
+      "id": "q8",
+      "level": 3,
+      "levelLabel": "Mengaplikasi",
+      "prompt": "Seorang pelajar berkata: 'Tanpa revolusi di Barat, mungkin lambat bangkitnya semangat nasionalisme di Asia.' Apakah yang paling disokong oleh nota?",
+      "options": [
+        "Idea Barat menjadi inspirasi kepada kebangkitan di bahagian lain dunia",
+        "Asia tidak terpengaruh oleh Barat langsung",
+        "Revolusi Barat hanya penting untuk ekonomi",
+        "Nasionalisme Asia muncul tanpa sebarang konteks global"
+      ],
+      "answer": "Idea Barat menjadi inspirasi kepada kebangkitan di bahagian lain dunia",
+      "explanation": "Nota menekankan inspirasi daripada perkembangan Barat.",
+      "tip": "Inspirasi global: Barat mempengaruhi Asia."
+    },
+    {
+      "id": "q9",
+      "level": 3,
+      "levelLabel": "Mengaplikasi",
+      "prompt": "Apakah yang digambarkan oleh perjuangan menuntut kedaulatan rakyat selepas penindasan mutlak?",
+      "options": [
+        "Peralihan daripada kuasa mutlak raja kepada pengiktirafan hak rakyat",
+        "Kepulangan kepada sistem puak",
+        "Penghapusan semua institusi negara",
+        "Penolakan terhadap apa-apa bentuk kerajaan"
+      ],
+      "answer": "Peralihan daripada kuasa mutlak raja kepada pengiktirafan hak rakyat",
+      "explanation": "Ini menunjukkan perubahan idea politik terhadap hak dan kedaulatan.",
+      "tip": "Petikan politik = cari perubahan kuasa."
+    },
+    {
+      "id": "q10",
+      "level": 3,
+      "levelLabel": "Mengaplikasi",
+      "prompt": "Jika sebuah negara di Asia menerima idea kebebasan daripada contoh Barat, apakah proses yang digambarkan?",
+      "options": [
+        "Penyebaran idea nasionalisme merentasi wilayah",
+        "Penghapusan bahasa kebangsaan",
+        "Ketiadaan sebarang interaksi budaya",
+        "Penolakan mutlak terhadap modenisasi"
+      ],
+      "answer": "Penyebaran idea nasionalisme merentasi wilayah",
+      "explanation": "Ini menggambarkan penyebaran idea daripada satu wilayah ke wilayah lain.",
+      "tip": "Idea merentas wilayah = penyebaran."
+    },
+    {
+      "id": "q11",
+      "level": 4,
+      "levelLabel": "Menganalisis",
+      "prompt": "Apakah persamaan utama antara perkembangan nasionalisme di Barat dengan kesan kepada Asia menurut nota?",
+      "options": [
+        "Keduanya berkaitan dengan semangat kebebasan dan penentangan terhadap penindasan atau penjajahan",
+        "Keduanya sama sekali tidak berkaitan",
+        "Keduanya hanya tentang seni bina",
+        "Keduanya menolak peranan rakyat"
+      ],
+      "answer": "Keduanya berkaitan dengan semangat kebebasan dan penentangan terhadap penindasan atau penjajahan",
+      "explanation": "Barat menentang mutlak raja; Asia menentang penjajahan — tema kebebasan.",
+      "tip": "Tema bersama: kebebasan / penentangan."
+    },
+    {
+      "id": "q12",
+      "level": 4,
+      "levelLabel": "Menganalisis",
+      "prompt": "Apakah perbezaan utama antara 'tindak balas di Barat' dengan 'inspirasi ke Asia' dalam aliran idea?",
+      "options": [
+        "Di Barat ia bermula sebagai tindak balas terhadap mutlak raja; di Asia ia berkembang sebagai inspirasi selepas pertembungan dengan kuasa asing",
+        "Tiada perbezaan langsung",
+        "Di Asia ia bermula sebelum apa-apa idea Barat",
+        "Di Barat ia hanya tentang seni"
+      ],
+      "answer": "Di Barat ia bermula sebagai tindak balas terhadap mutlak raja; di Asia ia berkembang sebagai inspirasi selepas pertembungan dengan kuasa asing",
+      "explanation": "Aliran bermula di Barat dengan sebab berbeza, kemudian mempengaruhi Asia.",
+      "tip": "Barat = punca tempatan; Asia = kesinambungan."
+    },
+    {
+      "id": "q13",
+      "level": 5,
+      "levelLabel": "Menilai",
+      "prompt": "Antara hujah berikut, manakah yang PALING kukuh untuk menjelaskan kepentingan revolusi Barat dalam sejarah nasionalisme dunia?",
+      "options": [
+        "Revolusi tersebut memperkukuh idea kebebasan dan kedaulatan yang kemudiannya menginspirasi gerakan di luar Barat",
+        "Revolusi tersebut hanya relevan untuk muzium",
+        "Revolusi tersebut menghapuskan perdagangan",
+        "Revolusi tersebut tidak mempengaruhi Asia Tenggara"
+      ],
+      "answer": "Revolusi tersebut memperkukuh idea kebebasan dan kedaulatan yang kemudiannya menginspirasi gerakan di luar Barat",
+      "explanation": "Hujah kukuh ialah kesan idea kebebasan yang tersebar.",
+      "tip": "'Paling kukuh' = kesan idea + inspirasi luar."
+    },
+    {
+      "id": "q14",
+      "level": 5,
+      "levelLabel": "Menilai",
+      "prompt": "Antara pernyataan berikut, manakah yang PALING tepat merumuskan subtopik 2.2?",
+      "options": [
+        "Idea nasionalisme di Barat berkembang melalui peristiwa penting dan menjadi inspirasi ke Asia serta Asia Tenggara",
+        "Subtopik ini hanya tentang sistem feudal Jepun",
+        "Subtopik ini menolak kesan revolusi",
+        "Subtopik ini tidak menyentuh kedaulatan rakyat"
+      ],
+      "answer": "Idea nasionalisme di Barat berkembang melalui peristiwa penting dan menjadi inspirasi ke Asia serta Asia Tenggara",
+      "explanation": "Rumusan menyatukan perkembangan Barat dan kesan inspirasi ke rantau lain.",
+      "tip": "Rumusan = Barat + peristiwa + inspirasi ke Asia."
+    }
+  ]
+}

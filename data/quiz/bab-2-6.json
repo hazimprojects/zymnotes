@@ -1,0 +1,216 @@
+{
+  "id": "2-6",
+  "title": "Faktor Kemunculan Gerakan Nasionalisme",
+  "questions": [
+    {
+      "id": "q1",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Pada abad berapakah semangat nasionalisme semakin kuat menurut ringkasan nota?",
+      "options": [
+        "Abad ke-20",
+        "Abad ke-5",
+        "Abad ke-100",
+        "Abad ke-1 SM"
+      ],
+      "answer": "Abad ke-20",
+      "explanation": "Semangat nasionalisme semakin kuat pada abad ke-20.",
+      "tip": "Ingat: abad ke-20."
+    },
+    {
+      "id": "q2",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Antara berikut, manakah faktor yang dinyatakan memainkan peranan besar membangkitkan kesedaran?",
+      "options": [
+        "Agama, pendidikan, penulisan, media dan pengaruh antarabangsa",
+        "Hanya sukan air",
+        "Hanya cuaca",
+        "Hanya seni jalanan"
+      ],
+      "answer": "Agama, pendidikan, penulisan, media dan pengaruh antarabangsa",
+      "explanation": "Faktor termasuk agama, pendidikan, penulisan, media dan antarabangsa.",
+      "tip": "Lima faktor utama."
+    },
+    {
+      "id": "q3",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Apakah contoh saluran penyebaran kesedaran yang disebut dalam ringkasan?",
+      "options": [
+        "Karya kreatif, akhbar, madrasah, institusi pendidikan dan penubuhan persatuan",
+        "Hanya televisyen satelit moden",
+        "Hanya permainan video",
+        "Tiada saluran"
+      ],
+      "answer": "Karya kreatif, akhbar, madrasah, institusi pendidikan dan penubuhan persatuan",
+      "explanation": "Kesedaran disebarkan melalui karya, akhbar, madrasah, sekolah dan persatuan.",
+      "tip": "Senarai saluran dalam nota."
+    },
+    {
+      "id": "q4",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Apakah hasil gabungan faktor menurut ringkasan nota?",
+      "options": [
+        "Melahirkan tokoh dan gerakan yang menjadi asas perjuangan kemerdekaan Tanah Melayu",
+        "Menghapuskan semua bahasa",
+        "Menolak pendidikan",
+        "Tiada kesan"
+      ],
+      "answer": "Melahirkan tokoh dan gerakan yang menjadi asas perjuangan kemerdekaan Tanah Melayu",
+      "explanation": "Faktor-faktor melahirkan tokoh dan gerakan asas kemerdekaan.",
+      "tip": "Hasil: tokoh + gerakan."
+    },
+    {
+      "id": "q5",
+      "level": 2,
+      "levelLabel": "Memahami",
+      "prompt": "Mengapakah faktor luaran penting dalam kemunculan gerakan nasionalisme?",
+      "options": [
+        "Ia turut memperkukuh kesedaran rakyat terhadap tekanan dan perbandingan antarabangsa",
+        "Ia tidak relevan",
+        "Ia menghapuskan media",
+        "Ia menolak agama"
+      ],
+      "answer": "Ia turut memperkukuh kesedaran rakyat terhadap tekanan dan perbandingan antarabangsa",
+      "explanation": "Pengaruh antarabangsa menjadi faktor luaran yang membangkitkan kesedaran.",
+      "tip": "Luaran = antarabangsa + tekanan."
+    },
+    {
+      "id": "q6",
+      "level": 2,
+      "levelLabel": "Memahami",
+      "prompt": "Apakah peranan agama dalam membangkitkan nasionalisme menurut nota?",
+      "options": [
+        "Salah satu faktor penting yang membentuk kesedaran rakyat",
+        "Tiada peranan",
+        "Hanya untuk upacara",
+        "Menolak perpaduan"
+      ],
+      "answer": "Salah satu faktor penting yang membentuk kesedaran rakyat",
+      "explanation": "Agama memainkan peranan besar dalam membangkitkan kesedaran.",
+      "tip": "Agama = faktor kesedaran."
+    },
+    {
+      "id": "q7",
+      "level": 2,
+      "levelLabel": "Memahami",
+      "prompt": "Mengapakah pendidikan dikaitkan dengan kemunculan gerakan?",
+      "options": [
+        "Ia melahirkan golongan yang lebih celik politik dan mampu menyusun gerakan",
+        "Ia menghalang perbincangan",
+        "Ia menolak idea bangsa",
+        "Ia tidak ada kesan"
+      ],
+      "answer": "Ia melahirkan golongan yang lebih celik politik dan mampu menyusun gerakan",
+      "explanation": "Pendidikan membantu melahirkan golongan intelektual dan penganjur.",
+      "tip": "Pendidikan = celik politik."
+    },
+    {
+      "id": "q8",
+      "level": 3,
+      "levelLabel": "Mengaplikasi",
+      "prompt": "Satu persatuan menubuhkan kelas ceramah dan menerbitkan risalah. Apakah yang digambarkan?",
+      "options": [
+        "Penyebaran kesedaran melalui institusi dan penulisan",
+        "Ketiadaan organisasi",
+        "Penolakan terhadap ilmu",
+        "Isu peribadi semata-mata"
+      ],
+      "answer": "Penyebaran kesedaran melalui institusi dan penulisan",
+      "explanation": "Ini menunjukkan saluran persatuan dan bahan bacaan.",
+      "tip": "Persatuan + risalah = sebar idea."
+    },
+    {
+      "id": "q9",
+      "level": 3,
+      "levelLabel": "Mengaplikasi",
+      "prompt": "Apakah yang digambarkan oleh penggunaan akhbar dan karya kreatif bersama-sama?",
+      "options": [
+        "Gabungan media dan budaya untuk menyampaikan idea nasionalisme",
+        "Penolakan terhadap bahasa",
+        "Ketiadaan sasaran khalayak",
+        "Isu teknikal cetakan"
+      ],
+      "answer": "Gabungan media dan budaya untuk menyampaikan idea nasionalisme",
+      "explanation": "Karya dan akhbar bersama-sama menyebarkan idea.",
+      "tip": "Media + budaya = idea."
+    },
+    {
+      "id": "q10",
+      "level": 3,
+      "levelLabel": "Mengaplikasi",
+      "prompt": "Pelajar tempatan membandingkan nasib tanah air dengan negara lain yang merdeka. Apakah faktor yang relevan?",
+      "options": [
+        "Pengaruh antarabangsa memperkukuh kesedaran",
+        "Ketiadaan faktor luaran",
+        "Penolakan terhadap perbandingan",
+        "Isu alam sekitar sahaja"
+      ],
+      "answer": "Pengaruh antarabangsa memperkukuh kesedaran",
+      "explanation": "Perbandingan antarabangsa mempengaruhi kesedaran rakyat.",
+      "tip": "Perbandingan global = faktor luar."
+    },
+    {
+      "id": "q11",
+      "level": 4,
+      "levelLabel": "Menganalisis",
+      "prompt": "Apakah persamaan utama antara faktor agama dan faktor pendidikan dalam konteks nota?",
+      "options": [
+        "Keduanya merupakan saluran dalaman yang membentuk nilai dan celik politik rakyat",
+        "Keduanya tidak berkaitan",
+        "Keduanya hanya untuk elit British",
+        "Keduanya menolak gerakan"
+      ],
+      "answer": "Keduanya merupakan saluran dalaman yang membentuk nilai dan celik politik rakyat",
+      "explanation": "Agama dan pendidikan membentuk kesedaran dan nilai rakyat.",
+      "tip": "Dalaman: nilai + celik."
+    },
+    {
+      "id": "q12",
+      "level": 4,
+      "levelLabel": "Menganalisis",
+      "prompt": "Apakah perbezaan utama antara 'penulisan/media' dengan 'pengaruh antarabangsa'?",
+      "options": [
+        "Yang pertama merujuk kepada saluran penyebaran tempatan manakala yang kedua merujuk kepada konteks perbandingan dan tekanan luar",
+        "Tiada perbezaan",
+        "Keduanya sama",
+        "Keduanya hanya ekonomi"
+      ],
+      "answer": "Yang pertama merujuk kepada saluran penyebaran tempatan manakala yang kedua merujuk kepada konteks perbandingan dan tekanan luar",
+      "explanation": "Media tempatan vs konteks global.",
+      "tip": "Tempatan vs global."
+    },
+    {
+      "id": "q13",
+      "level": 5,
+      "levelLabel": "Menilai",
+      "prompt": "Antara hujah berikut, manakah yang PALING kukuh untuk menjelaskan kemunculan gerakan nasionalisme di negara kita?",
+      "options": [
+        "Gabungan faktor dalaman dan luaran memperkukuh kesedaran dan melahirkan tokoh serta gerakan asas kemerdekaan",
+        "Hanya satu faktor tunggal",
+        "Faktor luar tidak penting",
+        "Tiada kaitan dengan media"
+      ],
+      "answer": "Gabungan faktor dalaman dan luaran memperkukuh kesedaran dan melahirkan tokoh serta gerakan asas kemerdekaan",
+      "explanation": "Hujah kukuh menekankan gabungan faktor dan hasil gerakan.",
+      "tip": "Paling kukuh = gabungan + hasil."
+    },
+    {
+      "id": "q14",
+      "level": 5,
+      "levelLabel": "Menilai",
+      "prompt": "Antara pernyataan berikut, manakah yang PALING tepat merumuskan subtopik 2.6?",
+      "options": [
+        "Pelbagai faktor dalaman dan luaran membangkitkan kesedaran yang disebarkan melalui pelbagai saluran sehingga melahirkan tokoh dan gerakan kemerdekaan",
+        "Subtopik ini menolak peranan pendidikan",
+        "Subtopik ini hanya tentang media British",
+        "Subtopik ini tiada kaitan dengan kemerdekaan"
+      ],
+      "answer": "Pelbagai faktor dalaman dan luaran membangkitkan kesedaran yang disebarkan melalui pelbagai saluran sehingga melahirkan tokoh dan gerakan kemerdekaan",
+      "explanation": "Rumusan merangkumi faktor, saluran dan hasil.",
+      "tip": "Rumusan = faktor + saluran + tokoh/gerakan."
+    }
+  ]
+}

@@ -1,0 +1,216 @@
+{
+  "id": "2-5",
+  "title": "Kesedaran Nasionalisme di Negara Kita",
+  "questions": [
+    {
+      "id": "q1",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Sejak bilakah kesedaran nasionalisme di negara kita bermula menurut ringkasan nota?",
+      "options": [
+        "Sejak zaman Kesultanan Melayu Melaka",
+        "Selepas tahun 3000 Masihi",
+        "Selepas revolusi Perancis di Melaka",
+        "Pada zaman prasejarah global"
+      ],
+      "answer": "Sejak zaman Kesultanan Melayu Melaka",
+      "explanation": "Kesedaran nasionalisme bermula sejak zaman Kesultanan Melayu Melaka.",
+      "tip": "Awal: zaman Melaka."
+    },
+    {
+      "id": "q2",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Pada abad ke-20, apakah saluran utama kesedaran nasionalisme yang dinyatakan dalam ringkasan?",
+      "options": [
+        "Gerakan Islah, penulisan, akhbar dan pertubuhan",
+        "Hanya radio antarabangsa",
+        "Hanya sukan",
+        "Tiada saluran"
+      ],
+      "answer": "Gerakan Islah, penulisan, akhbar dan pertubuhan",
+      "explanation": "Kesedaran berkembang melalui Islah, penulisan, akhbar dan pertubuhan.",
+      "tip": "Empat saluran abad ke-20."
+    },
+    {
+      "id": "q3",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Apakah contoh perjuangan awal yang ditekankan nota pada zaman awal?",
+      "options": [
+        "Usaha sultan dan tokoh tempatan mempertahankan wilayah daripada kuasa asing",
+        "Penubuhan parti komputer",
+        "Migrasi ke planet lain",
+        "Penghapusan sistem raja"
+      ],
+      "answer": "Usaha sultan dan tokoh tempatan mempertahankan wilayah daripada kuasa asing",
+      "explanation": "Perjuangan awal melalui sultan dan tokoh mempertahankan wilayah.",
+      "tip": "Sultan + tokoh = pertahan wilayah."
+    },
+    {
+      "id": "q4",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Apakah hasil akhir kesedaran nasionalisme yang dinyatakan dalam ringkasan?",
+      "options": [
+        "Menjadi asas kepada perjuangan kebangsaan dan kemerdekaan negara",
+        "Menghapuskan semua bahasa tempatan",
+        "Menolak pendidikan",
+        "Tiada kesan politik"
+      ],
+      "answer": "Menjadi asas kepada perjuangan kebangsaan dan kemerdekaan negara",
+      "explanation": "Kesedaran menjadi asas perjuangan kebangsaan dan kemerdekaan.",
+      "tip": "Asas: perjuangan + kemerdekaan."
+    },
+    {
+      "id": "q5",
+      "level": 2,
+      "levelLabel": "Memahami",
+      "prompt": "Mengapakah zaman Melaka penting dalam membincangkan kesedaran awal?",
+      "options": [
+        "Ia menunjukkan asal-usul kesedaran mempertahankan bangsa dan wilayah",
+        "Ia tidak berkaitan dengan sejarah",
+        "Ia hanya tentang seni",
+        "Ia menolak peranan sultan"
+      ],
+      "answer": "Ia menunjukkan asal-usul kesedaran mempertahankan bangsa dan wilayah",
+      "explanation": "Melaka menandakan permulaan kesedaran mempertahankan wilayah.",
+      "tip": "Melaka = permulaan kesedaran."
+    },
+    {
+      "id": "q6",
+      "level": 2,
+      "levelLabel": "Memahami",
+      "prompt": "Apakah fungsi akhbar dan penulisan dalam memperkukuh kesedaran abad ke-20?",
+      "options": [
+        "Menyebarkan idea nasionalisme kepada khalayak ramai",
+        "Menghapuskan komunikasi",
+        "Menggantikan bahasa dengan kod",
+        "Menolak pembacaan"
+      ],
+      "answer": "Menyebarkan idea nasionalisme kepada khalayak ramai",
+      "explanation": "Media dan penulisan menyebarkan idea kepada masyarakat.",
+      "tip": "Media = sebar idea."
+    },
+    {
+      "id": "q7",
+      "level": 2,
+      "levelLabel": "Memahami",
+      "prompt": "Mengapakah pertubuhan disebut bersama-sama dengan Gerakan Islah?",
+      "options": [
+        "Keduanya menyalurkan penyatuan dan kesedaran rakyat",
+        "Keduanya tidak berkaitan",
+        "Keduanya hanya untuk hiburan",
+        "Keduanya menolak pendidikan"
+      ],
+      "answer": "Keduanya menyalurkan penyatuan dan kesedaran rakyat",
+      "explanation": "Islah dan pertubuhan membantu memperkukuh kesedaran kolektif.",
+      "tip": "Islah + pertubuhan = saluran kesedaran."
+    },
+    {
+      "id": "q8",
+      "level": 3,
+      "levelLabel": "Mengaplikasi",
+      "prompt": "Sekumpulan intelektual menerbitkan artikel menentang penjajahan dalam akhbar tempatan. Apakah yang digambarkan?",
+      "options": [
+        "Penyaluran idea nasionalisme melalui media cetak",
+        "Ketiadaan peranan media",
+        "Penolakan terhadap bahasa Melayu",
+        "Isu yang tidak berkaitan dengan politik"
+      ],
+      "answer": "Penyaluran idea nasionalisme melalui media cetak",
+      "explanation": "Akhbar menjadi medium penyebaran idea nasionalisme.",
+      "tip": "Akhbar = medium idea."
+    },
+    {
+      "id": "q9",
+      "level": 3,
+      "levelLabel": "Mengaplikasi",
+      "prompt": "Apakah yang digambarkan oleh usaha sultan menentang serangan kuasa asing pada zaman awal?",
+      "options": [
+        "Perjuangan mempertahankan wilayah dan maruah bangsa",
+        "Penyerahan wilayah tanpa tentangan",
+        "Ketiadaan kepimpinan",
+        "Isu ekonomi sahaja"
+      ],
+      "answer": "Perjuangan mempertahankan wilayah dan maruah bangsa",
+      "explanation": "Usaha sultan menunjukkan pertahanan awal terhadap ancaman luar.",
+      "tip": "Sultan lawan asing = pertahan wilayah."
+    },
+    {
+      "id": "q10",
+      "level": 3,
+      "levelLabel": "Mengaplikasi",
+      "prompt": "Gerakan Islah memberi penekanan kepada pembaharuan masyarakat. Apakah kaitannya dengan nasionalisme dalam nota?",
+      "options": [
+        "Ia merupakan saluran kesedaran nasionalisme pada abad ke-20",
+        "Ia tidak berkaitan langsung",
+        "Ia hanya tentang sukan sekolah",
+        "Ia menolak semangat bangsa"
+      ],
+      "answer": "Ia merupakan saluran kesedaran nasionalisme pada abad ke-20",
+      "explanation": "Islah disebut sebagai saluran kesedaran pada abad ke-20.",
+      "tip": "Islah = saluran abad ke-20."
+    },
+    {
+      "id": "q11",
+      "level": 4,
+      "levelLabel": "Menganalisis",
+      "prompt": "Apakah persamaan utama antara kesedaran zaman Melaka dengan kesedaran abad ke-20?",
+      "options": [
+        "Keduanya berkaitan dengan mempertahankan bangsa dan kepentingan negara walaupun bentuknya berbeza",
+        "Tiada persamaan",
+        "Keduanya menolak peranan rakyat",
+        "Keduanya hanya tentang teknologi"
+      ],
+      "answer": "Keduanya berkaitan dengan mempertahankan bangsa dan kepentingan negara walaupun bentuknya berbeza",
+      "explanation": "Kesinambungan tema pertahanan bangsa dari zaman awal ke moden.",
+      "tip": "Persamaan: pertahan bangsa/negara."
+    },
+    {
+      "id": "q12",
+      "level": 4,
+      "levelLabel": "Menganalisis",
+      "prompt": "Apakah perbezaan utama antara 'perjuangan awal zaman kesultanan' dengan 'saluran abad ke-20'?",
+      "options": [
+        "Awal lebih menekankan pertahanan wilayah oleh elit manakala abad ke-20 menekankan penyebaran idea melalui institusi dan media",
+        "Tiada perbezaan",
+        "Awal hanya tentang ekonomi",
+        "Abad ke-20 menolak media"
+      ],
+      "answer": "Awal lebih menekankan pertahanan wilayah oleh elit manakala abad ke-20 menekankan penyebaran idea melalui institusi dan media",
+      "explanation": "Perbezaan bentuk: pertahanan langsung vs penyebaran idea.",
+      "tip": "Elit pertahan vs media/institusi."
+    },
+    {
+      "id": "q13",
+      "level": 5,
+      "levelLabel": "Menilai",
+      "prompt": "Antara hujah berikut, manakah yang PALING kukuh untuk menunjukkan kesedaran nasionalisme di negara kita adalah berproses?",
+      "options": [
+        "Ia bermula dari pertahanan awal dan berkembang melalui pelbagai saluran sehingga menjadi asas kemerdekaan",
+        "Ia muncul secara tiba-tiba tanpa sejarah",
+        "Ia hanya satu peristiwa tunggal",
+        "Ia tidak melibatkan masyarakat"
+      ],
+      "answer": "Ia bermula dari pertahanan awal dan berkembang melalui pelbagai saluran sehingga menjadi asas kemerdekaan",
+      "explanation": "Hujah kukuh menunjukkan kesinambungan dan perkembangan saluran.",
+      "tip": "Paling kukuh = kesinambungan + saluran."
+    },
+    {
+      "id": "q14",
+      "level": 5,
+      "levelLabel": "Menilai",
+      "prompt": "Antara pernyataan berikut, manakah yang PALING tepat merumuskan subtopik 2.5?",
+      "options": [
+        "Kesedaran nasionalisme bermula sejak Melaka dan berkembang melalui pelbagai saluran sehingga menjadi asas kemerdekaan",
+        "Kesedaran hanya wujud selepas internet",
+        "Kesedaran tidak berkaitan dengan pertubuhan",
+        "Kesedaran menolak peranan penulisan"
+      ],
+      "answer": "Kesedaran nasionalisme bermula sejak Melaka dan berkembang melalui pelbagai saluran sehingga menjadi asas kemerdekaan",
+      "explanation": "Rumusan merangkumi asal, perkembangan dan hasil.",
+      "tip": "Rumusan = Melaka + saluran + kemerdekaan."
+    }
+  ]
+}

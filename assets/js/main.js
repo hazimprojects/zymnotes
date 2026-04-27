@@ -516,7 +516,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // =========================
   // AUDIO MARKER ON SUBTOPIC CARDS
   // =========================
-  const SUBTOPIC_QUIZ_HREF_RE = /^bab-1-[1-4]\.html$/i;
+  const SUBTOPIC_QUIZ_HREF_RE = /^bab-(?:1-[1-4]|2-[1-8])\.html$/i;
 
   function appendAriaHint(card, fragment) {
     const currentLabel = card.getAttribute("aria-label");
@@ -1095,7 +1095,7 @@ var ZYMNOTES_NAV = { chapters: [
       })();
     var labEmojiRaw = document.body.dataset.labEmoji || '🧩';
     var labEmoji = labEmojiRaw;
-    if (labHref && /(?:^|\/)quiz\/bab-1-[1-4]\.html(?:$|[?#])/.test(labHref)) {
+    if (labHref && /(?:^|\/)quiz\/bab-(?:1-[1-4]|2-[1-8])\.html(?:$|[?#])/.test(labHref)) {
       labEmoji = '🧩';
     }
 
@@ -2388,7 +2388,7 @@ var ZYMNOTES_NAV = { chapters: [
   if (!('serviceWorker' in navigator)) return;
 
   window.addEventListener('load', function () {
-    navigator.serviceWorker.register('/sw.js?v=208').catch(function (error) {
+    navigator.serviceWorker.register('/sw.js?v=209').catch(function (error) {
       console.warn('Service worker registration failed:', error);
     });
   });

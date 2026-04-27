@@ -1,0 +1,216 @@
+{
+  "id": "2-7",
+  "title": "Perkembangan Nasionalisme",
+  "questions": [
+    {
+      "id": "q1",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Berapakah bilangan saluran utama perkembangan nasionalisme di negara kita menurut ringkasan nota?",
+      "options": [
+        "Tiga saluran",
+        "Satu saluran",
+        "Lima saluran",
+        "Sepuluh saluran"
+      ],
+      "answer": "Tiga saluran",
+      "explanation": "Perkembangan nasionalisme dapat dilihat melalui tiga saluran utama.",
+      "tip": "Tiga saluran utama."
+    },
+    {
+      "id": "q2",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Siapakah golongan pelopor kesedaran nasionalisme yang disebut?",
+      "options": [
+        "Golongan intelektual berpendidikan agama, Inggeris dan Melayu",
+        "Golongan atlet sahaja",
+        "Golongan pedagang luar",
+        "Golongan tanpa pendidikan"
+      ],
+      "answer": "Golongan intelektual berpendidikan agama, Inggeris dan Melayu",
+      "explanation": "Intelektual berpendidikan agama, Inggeris dan Melayu menjadi pelopor.",
+      "tip": "Tiga aliran pendidikan pelopor."
+    },
+    {
+      "id": "q3",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Apakah peranan penulisan menurut ringkasan nota?",
+      "options": [
+        "Menyebarkan idea nasionalisme melalui akhbar, majalah dan karya kreatif",
+        "Menghapuskan bahasa",
+        "Tiada peranan",
+        "Hanya untuk rekod peribadi"
+      ],
+      "answer": "Menyebarkan idea nasionalisme melalui akhbar, majalah dan karya kreatif",
+      "explanation": "Penulisan menyebarkan idea melalui pelbagai medium.",
+      "tip": "Penulisan = akhbar + majalah + kreatif."
+    },
+    {
+      "id": "q4",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Apakah peranan persatuan dan pertubuhan?",
+      "options": [
+        "Menyatukan suara rakyat untuk menuntut hak dan membina jati diri bangsa",
+        "Memecahkan perpaduan",
+        "Menolak politik",
+        "Tiada fungsi"
+      ],
+      "answer": "Menyatukan suara rakyat untuk menuntut hak dan membina jati diri bangsa",
+      "explanation": "Persatuan menyatukan suara dan membina jati diri.",
+      "tip": "Persatuan = suara + jati diri."
+    },
+    {
+      "id": "q5",
+      "level": 2,
+      "levelLabel": "Memahami",
+      "prompt": "Mengapakah intelektual dianggap pelopor dalam saluran pertama?",
+      "options": [
+        "Mereka memiliki pendidikan dan keupayaan menyusun idea secara sistematik",
+        "Mereka tidak membaca",
+        "Mereka menolak organisasi",
+        "Mereka tiada pengaruh"
+      ],
+      "answer": "Mereka memiliki pendidikan dan keupayaan menyusun idea secara sistematik",
+      "explanation": "Pendidikan membolehkan intelektual memimpin kesedaran.",
+      "tip": "Intelektual = sistematik + idea."
+    },
+    {
+      "id": "q6",
+      "level": 2,
+      "levelLabel": "Memahami",
+      "prompt": "Apakah hubungan antara akhbar dengan penyebaran nasionalisme?",
+      "options": [
+        "Akhbar menjadi medium utama menyampaikan idea kepada masyarakat luas",
+        "Akhbar tidak relevan",
+        "Akhbar hanya untuk iklan",
+        "Akhbar menghapuskan bahasa"
+      ],
+      "answer": "Akhbar menjadi medium utama menyampaikan idea kepada masyarakat luas",
+      "explanation": "Penulisan melalui akhbar menyebarkan idea nasionalisme.",
+      "tip": "Akhbar = medium luas."
+    },
+    {
+      "id": "q7",
+      "level": 2,
+      "levelLabel": "Memahami",
+      "prompt": "Mengapakah persatuan penting dalam saluran ketiga?",
+      "options": [
+        "Ia menyatukan rakyat untuk tindakan kolektif dan menuntut hak",
+        "Ia menghalang perbincangan",
+        "Ia menolak nasionalisme",
+        "Ia hanya untuk elit"
+      ],
+      "answer": "Ia menyatukan rakyat untuk tindakan kolektif dan menuntut hak",
+      "explanation": "Persatuan memberi platform tindakan bersama.",
+      "tip": "Kolektif = kuasa suara."
+    },
+    {
+      "id": "q8",
+      "level": 3,
+      "levelLabel": "Mengaplikasi",
+      "prompt": "Sebuah majalah menerbitkan siri artikel tentang hak rakyat. Saluran manakah yang paling utama?",
+      "options": [
+        "Penulisan melalui media cetak",
+        "Saluran sukan",
+        "Saluran pertanian",
+        "Saluran hiburan"
+      ],
+      "answer": "Penulisan melalui media cetak",
+      "explanation": "Majalah ialah sebahagian daripada penulisan dan media.",
+      "tip": "Majalah = penulisan/media."
+    },
+    {
+      "id": "q9",
+      "level": 3,
+      "levelLabel": "Mengaplikasi",
+      "prompt": "Sekumpulan graduan Melayu, Inggeris dan agama berdiskusi membentuk jawatankuasa perjuangan. Apakah yang digambarkan?",
+      "options": [
+        "Peranan intelektual berbilang aliran pendidikan sebagai pelopor",
+        "Ketiadaan pendidikan",
+        "Penolakan organisasi",
+        "Isu ekonomi sahaja"
+      ],
+      "answer": "Peranan intelektual berbilang aliran pendidikan sebagai pelopor",
+      "explanation": "Ini selari dengan golongan intelektual berpendidikan pelbagai aliran.",
+      "tip": "Pelbagai aliran = pelopor."
+    },
+    {
+      "id": "q10",
+      "level": 3,
+      "levelLabel": "Mengaplikasi",
+      "prompt": "Apakah yang digambarkan apabila beberapa persatuan bersatu menuntut reformasi politik?",
+      "options": [
+        "Penyatuan suara rakyat melalui pertubuhan",
+        "Ketiadaan tindakan",
+        "Penolakan hak",
+        "Migrasi keluar negara"
+      ],
+      "answer": "Penyatuan suara rakyat melalui pertubuhan",
+      "explanation": "Persatuan menyatukan suara untuk menuntut hak.",
+      "tip": "Gabungan persatuan = suara kolektif."
+    },
+    {
+      "id": "q11",
+      "level": 4,
+      "levelLabel": "Menganalisis",
+      "prompt": "Apakah persamaan utama antara saluran penulisan dan saluran persatuan?",
+      "options": [
+        "Keduanya menyebarkan dan memperkukuh idea nasionalisme kepada khalayak atau ahli",
+        "Keduanya menolak idea",
+        "Keduanya hanya untuk elit British",
+        "Keduanya tidak berkaitan"
+      ],
+      "answer": "Keduanya menyebarkan dan memperkukuh idea nasionalisme kepada khalayak atau ahli",
+      "explanation": "Penulisan dan persatuan sama-sama memperkukuh idea.",
+      "tip": "Sebar idea: media vs organisasi."
+    },
+    {
+      "id": "q12",
+      "level": 4,
+      "levelLabel": "Menganalisis",
+      "prompt": "Apakah perbezaan utama antara peranan 'intelektual' dengan 'persatuan' dalam corak perkembangan?",
+      "options": [
+        "Intelektual memimpin penyusunan idea awal manakala persatuan menyalurkan tindakan kolektif dan penyatuan suara",
+        "Tiada perbezaan",
+        "Intelektual tidak penting",
+        "Persatuan tidak menuntut hak"
+      ],
+      "answer": "Intelektual memimpin penyusunan idea awal manakala persatuan menyalurkan tindakan kolektif dan penyatuan suara",
+      "explanation": "Satu fokus kepimpinan idea, satu fokus organisasi rakyat.",
+      "tip": "Idea vs organisasi."
+    },
+    {
+      "id": "q13",
+      "level": 5,
+      "levelLabel": "Menilai",
+      "prompt": "Antara hujah berikut, manakah yang PALING kukuh untuk menjelaskan perkembangan nasionalisme di negara kita?",
+      "options": [
+        "Gabungan kepimpinan intelektual, penyebaran media dan penyatuan pertubuhan memperkukuh perjuangan",
+        "Hanya media tanpa manusia",
+        "Hanya ekonomi",
+        "Tiada peranan rakyat"
+      ],
+      "answer": "Gabungan kepimpinan intelektual, penyebaran media dan penyatuan pertubuhan memperkukuh perjuangan",
+      "explanation": "Hujah kukuh menyatukan ketiga-tiga saluran utama.",
+      "tip": "Paling kukuh = tiga saluran bersama."
+    },
+    {
+      "id": "q14",
+      "level": 5,
+      "levelLabel": "Menilai",
+      "prompt": "Antara pernyataan berikut, manakah yang PALING tepat merumuskan subtopik 2.7?",
+      "options": [
+        "Perkembangan nasionalisme melalui tiga saluran: intelektual, penulisan/media, dan persatuan yang menyatukan suara rakyat",
+        "Hanya satu saluran",
+        "Tiada kaitan dengan hak rakyat",
+        "Menolak akhbar"
+      ],
+      "answer": "Perkembangan nasionalisme melalui tiga saluran: intelektual, penulisan/media, dan persatuan yang menyatukan suara rakyat",
+      "explanation": "Rumusan merangkumi ketiga-tiga saluran dan fungsinya.",
+      "tip": "Rumusan = 3 saluran + fungsi."
+    }
+  ]
+}
