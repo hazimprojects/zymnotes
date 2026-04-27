@@ -22,7 +22,7 @@ const PRECACHE_URLS = [
   '/quiz/bab-1-3.html',
   '/quiz/bab-1-4.html',
   '/assets/css/style.css?v=142',
-  '/assets/js/main.js?v=149',
+  '/assets/js/main.js?v=150',
   '/assets/js/zh-mode.js?v=41',
   '/assets/js/subtopic-lab.js?v=4',
   '/data/zh-glossary.json',
