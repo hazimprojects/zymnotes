@@ -302,6 +302,8 @@ html[data-theme="dark"] .zh-mode-fab.is-active {
   --z-floating: 60;
   --z-toast: 70;
   --z-overlay: 300;
+  --floating-bottom-offset: calc(var(--bottom-nav-h, 56px) + var(--safe-bottom, env(safe-area-inset-bottom, 0px)) + 0.9rem);
+  --floating-bottom-offset-avoid-sparkle: calc(var(--floating-bottom-offset) + 4.25rem);
 }
 
 .kw-zh-ann {
