@@ -58,19 +58,48 @@
     if (score > getBestScore(id)) localStorage.setItem('zymnotes-quiz-best-' + id, score);
   }
 
+  /** Bilangan soalan setiap aras Bloom bagi satu sesi: 2+2+1+1+1 = 7 */
+  function sessionPickCounts(byLevel) {
+    const counts = { 1: 2, 2: 2, 3: 1, 4: 1, 5: 1 };
+    const out = {};
+    [1, 2, 3, 4, 5].forEach(function(level) {
+      const pool = byLevel[level] || [];
+      const want = counts[level];
+      out[level] = Math.min(want, pool.length);
+    });
+    return out;
+  }
+
+  function countSessionQuestions(allQuestions) {
+    const byLevel = {};
+    allQuestions.forEach(function(q) {
+      if (!byLevel[q.level]) byLevel[q.level] = [];
+      byLevel[q.level].push(q);
+    });
+    const c = sessionPickCounts(byLevel);
+    return c[1] + c[2] + c[3] + c[4] + c[5];
+  }
+
   function buildQuestionSet(allQuestions) {
     const byLevel = {};
     allQuestions.forEach(function(q) {
       if (!byLevel[q.level]) byLevel[q.level] = [];
       byLevel[q.level].push(q);
     });
-    const set = [];
-    [1, 2, 3, 4, 5].forEach(function(level) {
-      const pool = byLevel[level] || [];
-      if (!pool.length) return;
-      const picked = pool[Math.floor(Math.random() * pool.length)];
-      set.push(Object.assign({}, picked, { shuffledOptions: shuffle(picked.options) }));
-    });
+    const pickN = function(level, n) {
+      const pool = shuffle(byLevel[level] || []);
+      const picked = pool.slice(0, n);
+      return picked.map(function(q) {
+        return Object.assign({}, q, { shuffledOptions: shuffle(q.options) });
+      });
+    };
+    const c = sessionPickCounts(byLevel);
+    const set = []
+      .concat(pickN(1, c[1]))
+      .concat(pickN(2, c[2]))
+      .concat(pickN(3, c[3]))
+      .concat(pickN(4, c[4]))
+      .concat(pickN(5, c[5]));
     return set;
   }
 
@@ -236,10 +265,10 @@
     if (score === total) {
       title = 'Cemerlang! Skor penuh! 🏆';
       titleColor = '#2f7a67'; bg = 'rgba(47,122,103,0.07)'; border = 'rgba(47,122,103,0.16)';
-    } else if (score >= 4) {
+    } else if (score >= total - 1 && total > 1) {
       title = 'Bagus! Hampir sempurna 🎖️';
       titleColor = '#3e5f8a'; bg = 'rgba(62,95,138,0.07)'; border = 'rgba(62,95,138,0.16)';
-    } else if (score >= 3) {
+    } else if (score >= Math.ceil(total * 0.57)) {
       title = 'Baik! Teruskan ulang kaji 📚';
       titleColor = '#8a7158'; bg = 'rgba(138,113,88,0.07)'; border = 'rgba(138,113,88,0.16)';
     } else {
@@ -309,6 +338,7 @@
     })
     .then(function(data) {
       var allQuestions = data.questions;
+      var sessionTotal = countSessionQuestions(allQuestions);
 
       // Ready — expose global start hook and enable notice button
       window.__labStartQuiz = function() { startGame(allQuestions); };
@@ -330,7 +360,7 @@
       if (best > 0) {
         var bestEl = document.getElementById('lab-notice-best');
         if (bestEl) {
-          bestEl.textContent = 'Rekod terbaik anda: ' + best + ' / 5';
+          bestEl.textContent = 'Rekod terbaik anda: ' + best + ' / ' + sessionTotal;
           bestEl.style.display = 'flex';
         }
       }
