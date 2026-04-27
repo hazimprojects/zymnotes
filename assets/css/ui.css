@@ -1966,16 +1966,27 @@ body.sparkle-panel-open .audio-notice-sheet {
 }
 
 [data-theme="dark"] .hz-mm-center {
-  background: linear-gradient(145deg, rgba(30, 32, 48, 0.92), rgba(22, 24, 38, 0.88));
-  border-color: rgba(129, 140, 248, 0.28);
-  box-shadow: 0 10px 32px rgba(0, 0, 0, 0.45), 0 1px 0 rgba(255, 255, 255, 0.06) inset;
+  /* Lebih cerah daripada overlay supaya bulatan tengah jelas; bayang halus “cincin” */
+  background: linear-gradient(145deg, rgba(58, 64, 98, 0.97), rgba(44, 48, 78, 0.95));
+  border-color: rgba(165, 180, 252, 0.42);
+  box-shadow:
+    0 12px 40px rgba(0, 0, 0, 0.38),
+    0 0 0 1px rgba(165, 180, 252, 0.14),
+    0 1px 0 rgba(255, 255, 255, 0.1) inset;
 }
 
-[data-theme="dark"] .hz-mm-center-title { color: #e0e7ff; }
-[data-theme="dark"] .hz-mm-center-sub { color: rgba(199, 210, 254, 0.65); }
+[data-theme="dark"] .hz-mm-center-title { color: #eef2ff; }
+[data-theme="dark"] .hz-mm-center-sub { color: rgba(226, 232, 240, 0.78); }
 
-[data-theme="dark"] .hz-mm-center--chapter .hz-mm-center-title { color: var(--mm-ch-text, #c7d2fe); }
-[data-theme="dark"] .hz-mm-center--chapter .hz-mm-center-sub { color: var(--mm-ch-text, #c7d2fe); }
+/* Teks bab ditetapkan untuk mod cerah (--mm-ch-text gelap); paksa warna cerah di mod gelap */
+[data-theme="dark"] .hz-mm-center--chapter .hz-mm-center-title {
+  color: #f8fafc;
+}
+
+[data-theme="dark"] .hz-mm-center--chapter .hz-mm-center-sub {
+  color: rgba(241, 245, 249, 0.88);
+  opacity: 1;
+}
 
 [data-theme="dark"] .hz-mm-line { stroke: rgba(129, 140, 248, 0.28); }
 
