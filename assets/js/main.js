@@ -1851,7 +1851,7 @@ var ZYMNOTES_NAV = { chapters: [
 
     document.querySelectorAll('a.brand').forEach(function (el) {
       var img = document.createElement('img');
-      img.src = '/icons/icon.svg?v=3';
+      img.src = '/icons/icon.svg?v=4';
       img.alt = '';
       img.width = 22;
       img.height = 22;
@@ -1861,7 +1861,7 @@ var ZYMNOTES_NAV = { chapters: [
 
     document.querySelectorAll('.footer-brand').forEach(function (el) {
       var img = document.createElement('img');
-      img.src = '/icons/icon.svg?v=3';
+      img.src = '/icons/icon.svg?v=4';
       img.alt = '';
       img.width = 18;
       img.height = 18;
@@ -2538,7 +2538,7 @@ var ZYMNOTES_NAV = { chapters: [
   if (!('serviceWorker' in navigator)) return;
 
   window.addEventListener('load', function () {
-    navigator.serviceWorker.register('/sw.js?v=217').catch(function (error) {
+    navigator.serviceWorker.register('/sw.js?v=218').catch(function (error) {
       console.warn('Service worker registration failed:', error);
     });
   });
