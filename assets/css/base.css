@@ -25,14 +25,22 @@
   --safe-left:   env(safe-area-inset-left,   0px);
   --safe-right:  env(safe-area-inset-right,  0px);
   --bottom-nav-h: 56px;
-  /* Sparkle FAB: keep bottom offset above nav + FAB height (matches bab/subtopik feel) */
+  /* Sparkle FAB — satu skala untuk semua halaman:
+     - --floating-bottom-offset = jarak dari bawah skrin ke bawah FAB (nav + jurang kecil ke nav)
+     - main padding-bottom = --sparkle-copyright-fab-gap + FAB + offset yang sama (hak cipta → FAB → nav) */
   --sparkle-fab-h: 52px;
-  --sparkle-fab-extra-gap: 0.5rem;
+  --sparkle-fab-clearance: 0.42rem;
+  --sparkle-copyright-fab-gap: 0.62rem;
   --floating-bottom-offset: calc(
     var(--bottom-nav-h, 56px) + var(--safe-bottom, env(safe-area-inset-bottom, 0px)) +
-    var(--sparkle-fab-h, 52px) + var(--sparkle-fab-extra-gap, 0.5rem)
+    var(--sparkle-fab-clearance, 0.42rem)
   );
-  --floating-bottom-offset-avoid-sparkle: calc(var(--floating-bottom-offset) + 4.25rem);
+  --sparkle-main-pad-bottom: calc(
+    var(--sparkle-copyright-fab-gap, 0.62rem) + var(--sparkle-fab-h, 52px) + var(--floating-bottom-offset)
+  );
+  --floating-bottom-offset-avoid-sparkle: calc(
+    var(--floating-bottom-offset) + var(--sparkle-fab-h, 52px) + 4.25rem
+  );
 
   /* Dark mode transition */
   --theme-transition: background 0.35s ease, color 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
@@ -690,17 +698,14 @@ body.quiz-page.note-reading-app main.note-reading-main {
   box-sizing: border-box;
 }
 
-/* Reserve space for fixed sparkle FAB + bottom nav (copyright stays readable) */
+/* Ruang bawah main: jurang kecil selepas hak cipta, kemudian FAB, kemudian jurang ke nav (body sudah ada padding nav) */
 @media (max-width: 760px) {
   body.app-shell-page main,
   body.page-theme-notes.app-shell-page main.home-main,
   body.bab-hub-page main,
   body.note-reading-app main,
   body.quiz-page.note-reading-app main.note-reading-main {
-    padding-bottom: calc(
-      20px + var(--bottom-nav-h, 56px) + var(--safe-bottom, env(safe-area-inset-bottom, 0px)) +
-      var(--sparkle-fab-h, 52px) + var(--sparkle-fab-extra-gap, 0.5rem)
-    );
+    padding-bottom: calc(20px + var(--sparkle-main-pad-bottom));
   }
 }
 
@@ -710,7 +715,10 @@ body.quiz-page.note-reading-app main.note-reading-main {
   body.bab-hub-page main,
   body.note-reading-app main,
   body.quiz-page.note-reading-app main.note-reading-main {
-    padding-bottom: calc(20px + var(--sparkle-fab-h, 52px) + var(--sparkle-fab-extra-gap, 0.5rem) + 1rem);
+    padding-bottom: calc(
+      20px + var(--sparkle-copyright-fab-gap, 0.62rem) + var(--sparkle-fab-h, 52px) +
+      var(--sparkle-fab-clearance, 0.42rem) + var(--safe-bottom, env(safe-area-inset-bottom, 0px)) + 1rem
+    );
   }
 }
 
@@ -1336,7 +1344,7 @@ body.page-theme-home.app-shell-page .home-footer-copy {
 body.page-theme-notes.app-shell-page .home-footer-copy {
   text-align: center;
   margin-top: 1.25rem;
-  padding-bottom: 0.35rem;
+  padding-bottom: 0.12rem;
 }
 
 body.bab-hub-page .home-footer-copy,
@@ -1344,7 +1352,14 @@ body.note-reading-app .home-footer-copy,
 body.quiz-page.note-reading-app .home-footer-copy {
   text-align: center;
   margin-top: 1.25rem;
-  padding-bottom: 0.35rem;
+  padding-bottom: 0.12rem;
+}
+
+body.page-theme-about.app-shell-page .home-footer-copy,
+body.page-theme-feedback.app-shell-page .home-footer-copy {
+  text-align: center;
+  margin-top: 1.25rem;
+  padding-bottom: 0.12rem;
 }
 
 [data-theme="dark"] body.page-theme-home.app-shell-page .home-brand-name {

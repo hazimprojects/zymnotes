@@ -1,10 +1,10 @@
 /* =========================
-   MASTER STYLESHEET — v69
+   MASTER STYLESHEET — v70
    Import fail-specific files here.
    HTML files reference style.css — no change needed there.
 ========================= */
 
-@import url("base.css?v=30");       /* :root variables, dark mode tokens, body/reset/containers */
+@import url("base.css?v=31");       /* :root variables, dark mode tokens, body/reset/containers */
 @import url("layout.css?v=15");     /* Header, nav, dark mode fab, typography, footer, animations */
 @import url("ui.css?v=47");        /* Buttons, cards, homepage, hero, search, org-chart, interaction */
 @import url("paper.css?v=14");      /* Paper labels, boards, chips, accordion, steps, bab overview */
