@@ -682,6 +682,19 @@ body.quiz-page.note-reading-app main.note-reading-main {
   box-sizing: border-box;
 }
 
+/* Kuiz: kandungan lebih lebar + margin sisi lebih nipis (selaras rasa dengan halaman nota) */
+body.quiz-page.note-reading-app main.note-reading-main {
+  max-width: min(100%, 720px);
+  padding-left: max(8px, env(safe-area-inset-left, 0px));
+  padding-right: max(8px, env(safe-area-inset-right, 0px));
+}
+
+/* Ruang sisi kuiz lebih nipis supaya kad notis / kad soalan kelihatan lebih lebar */
+body.quiz-page.note-reading-app .lab-compact-main {
+  padding-left: clamp(6px, 2vw, 10px);
+  padding-right: clamp(6px, 2vw, 10px);
+}
+
 body.app-shell-page .site-footer,
 body.bab-hub-page .site-footer,
 body.note-reading-app .site-footer,
