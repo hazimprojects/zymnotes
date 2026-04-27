@@ -1121,7 +1121,7 @@ body.page-theme-error .page-hero {
 /* Base: default bottom-right; .fab-corner-* classes override */
 .note-sparkle-wrap {
   position: fixed;
-  right: 14px; bottom: 18px; left: auto; top: auto;
+  right: var(--sparkle-fab-edge-h, 14px); bottom: 18px; left: auto; top: auto;
   z-index: var(--z-floating);
   display: flex; flex-direction: column;
   align-items: flex-end; gap: 0.52rem;
@@ -1130,19 +1130,19 @@ body.page-theme-error .page-hero {
 
 /* ── Corner Classes ──────────────────────────────────────────────────── */
 .note-sparkle-wrap.fab-corner-br {
-  right: 14px; bottom: 18px; left: auto; top: auto;
+  right: var(--sparkle-fab-edge-h, 14px); bottom: 18px; left: auto; top: auto;
   flex-direction: column; align-items: flex-end;
 }
 .note-sparkle-wrap.fab-corner-bl {
-  left: 14px; bottom: 18px; right: auto; top: auto;
+  left: var(--sparkle-fab-edge-h, 14px); bottom: 18px; right: auto; top: auto;
   flex-direction: column; align-items: flex-start;
 }
 .note-sparkle-wrap.fab-corner-tr {
-  right: 14px; top: 80px; left: auto; bottom: auto;
+  right: var(--sparkle-fab-edge-h, 14px); top: 80px; left: auto; bottom: auto;
   flex-direction: column-reverse; align-items: flex-end;
 }
 .note-sparkle-wrap.fab-corner-tl {
-  left: 14px; top: 80px; right: auto; bottom: auto;
+  left: var(--sparkle-fab-edge-h, 14px); top: 80px; right: auto; bottom: auto;
   flex-direction: column-reverse; align-items: flex-start;
 }
 
