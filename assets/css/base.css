@@ -1139,13 +1139,14 @@ body[class*="page-theme-"].app-shell-page .home-brand-hero {
 body.page-theme-home.app-shell-page .home-main {
   width: min(640px, 100%);
   margin: 0 auto;
-  padding: 0 1rem 1.5rem;
+  /* Ruang atas supaya kad tajuk tidak rapat dengan header (main app-shell = 12px sahaja) */
+  padding: 0.875rem 1rem 1.5rem;
 }
 
 body.page-theme-home.app-shell-page .home-brand-hero {
   position: relative;
   overflow: hidden;
-  padding: 1.45rem 1.25rem 1.35rem;
+  padding: 1.25rem 1.15rem 1.2rem;
   margin-bottom: 1rem;
 }
 
@@ -1162,11 +1163,11 @@ body.page-theme-home.app-shell-page .home-brand-hero::before {
 
 body.page-theme-home.app-shell-page .home-brand-name {
   position: relative;
-  font-size: clamp(2.15rem, 6.5vw, 2.65rem);
+  font-size: clamp(1.72rem, 5.2vw, 2.2rem);
   font-weight: 800;
-  letter-spacing: -0.035em;
-  line-height: 1.08;
-  margin-bottom: 0.55rem;
+  letter-spacing: -0.03em;
+  line-height: 1.12;
+  margin-bottom: 0.5rem;
   background: linear-gradient(115deg, #1e1b4b 0%, #4338ca 38%, #6366f1 72%, #0e7490 100%);
   -webkit-background-clip: text;
   background-clip: text;
@@ -1175,12 +1176,12 @@ body.page-theme-home.app-shell-page .home-brand-name {
 
 body.page-theme-home.app-shell-page .home-brand-tagline {
   display: inline-block;
-  margin-bottom: 0.75rem;
-  padding: 0.32rem 0.65rem;
+  margin-bottom: 0.65rem;
+  padding: 0.28rem 0.58rem;
   border-radius: 999px;
-  font-size: 0.68rem;
+  font-size: 0.62rem;
   font-weight: 800;
-  letter-spacing: 0.11em;
+  letter-spacing: 0.1em;
   color: #4338ca;
   background: linear-gradient(135deg, rgba(238, 242, 255, 0.95), rgba(224, 231, 255, 0.88));
   border: 1px solid rgba(99, 102, 241, 0.22);
@@ -1190,11 +1191,11 @@ body.page-theme-home.app-shell-page .home-brand-tagline {
 body.page-theme-home.app-shell-page .home-brand-desc {
   position: relative;
   max-width: none;
-  font-size: 1.02rem;
-  line-height: 1.65;
+  font-size: 0.9rem;
+  line-height: 1.62;
   color: #475569;
   font-weight: 450;
-  margin: 0 0 1rem;
+  margin: 0 0 0.9rem;
 }
 
 [data-theme="dark"] body.page-theme-home.app-shell-page .home-brand-desc {
@@ -1207,10 +1208,10 @@ body.page-theme-home.app-shell-page .home-hero-primary-cta {
   align-items: center;
   justify-content: center;
   gap: 0.4rem;
-  margin-top: 0.15rem;
-  padding: 0.82rem 1.35rem;
+  margin-top: 0.1rem;
+  padding: 0.72rem 1.2rem;
   border-radius: 14px;
-  font-size: 0.98rem;
+  font-size: 0.9rem;
   font-weight: 700;
   text-decoration: none;
   color: #fff;
