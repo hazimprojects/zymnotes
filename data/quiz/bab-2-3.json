@@ -24,9 +24,9 @@
       "prompt": "Apakah faktor utama yang mendorong rakyat Asia bangkit?",
       "options": [
         "Penjajahan",
-        "Ketiadaan bahasa",
-        "Kurangnya sumber air",
-        "Musim tengkujuh"
+        "Ketiadaan bahasa kebangsaan yang seragam",
+        "Persaingan ekonomi antara kuasa besar tanpa penjajahan langsung",
+        "Kemunduran ekonomi dunia semata-mana tanpa tekanan politik"
       ],
       "answer": "Penjajahan",
       "explanation": "Penjajahan mendorong rakyat Asia bangkit menuntut kemerdekaan.",
@@ -39,9 +39,9 @@
       "prompt": "Antara berikut, manakah contoh utama perkembangan nasionalisme di Asia yang disebut?",
       "options": [
         "India, China, Empayar Uthmaniyah dan Mesir serta Jepun",
-        "Brazil, Argentina dan Chile",
-        "Australia dan New Zealand sahaja",
-        "Iceland dan Greenland"
+        "Filipina, Thailand, Vietnam dan Indonesia",
+        "Turki, Iran, Arab Saudi dan Pakistan",
+        "Korea, Mongolia, Afghanistan dan Sri Lanka"
       ],
       "answer": "India, China, Empayar Uthmaniyah dan Mesir serta Jepun",
       "explanation": "Contoh utama termasuk India, China, Uthmaniyah/Mesir dan Jepun.",
@@ -54,9 +54,9 @@
       "prompt": "Apakah bentuk umum gerakan nasionalisme di Asia yang dinyatakan?",
       "options": [
         "Penentangan langsung, gerakan pembaharuan agama, penubuhan pertubuhan politik dan usaha pemodenan",
-        "Hanya penentangan bersenjata tanpa usaha lain",
-        "Hanya penulisan fiksyen",
-        "Tiada bentuk selain boikot"
+        "Penentangan bersenjata, boikot ekonomi, penubuhan parti politik dan rundingan damai",
+        "Gerakan pembaharuan agama, penulisan akhbar, penubuhan tentera swasta dan usaha pemodenan",
+        "Penentangan langsung, diplomatik multilateral, penubuhan bank pusat dan usaha pemodenan"
       ],
       "answer": "Penentangan langsung, gerakan pembaharuan agama, penubuhan pertubuhan politik dan usaha pemodenan",
       "explanation": "Gerakan berkembang dalam pelbagai bentuk termasuk politik dan pembaharuan.",
@@ -69,9 +69,9 @@
       "prompt": "Mengapakah penjajahan dianggap penting dalam membangkitkan nasionalisme di Asia?",
       "options": [
         "Ia menekan hak rakyat dan mencetuskan tuntutan kemerdekaan",
-        "Ia sentiasa digemari rakyat",
-        "Ia menghapuskan semua bahasa tempatan",
-        "Ia tidak mempengaruhi politik"
+        "Ia memberi peluang ekonomi tanpa menjejaskan hak politik rakyat",
+        "Ia menggalakkan pandangan serantau tanpa menuntut kemerdekaan politik",
+        "Ia hanya menjejaskan lapisan elit bandar tanpa meluas ke masyarakat luas"
       ],
       "answer": "Ia menekan hak rakyat dan mencetuskan tuntutan kemerdekaan",
       "explanation": "Penjajahan mendorong rakyat bangkit menuntut kemerdekaan dan mempertahankan jati diri.",
@@ -84,9 +84,9 @@
       "prompt": "Apakah maksud 'mempertahankan jati diri bangsa' dalam konteks nasionalisme Asia?",
       "options": [
         "Menjaga identiti budaya, politik dan maruah bangsa daripada ancaman luar",
-        "Menolak semua bentuk pendidikan",
-        "Menggantikan bahasa dengan kod rahsia",
-        "Menyerahkan sepenuhnya kepada penjajah"
+        "Membina identiti budaya tanpa menyentuh aspek politik",
+        "Menolak pengaruh luar dalam ekonomi sahaja tanpa sentuhan budaya",
+        "Mengukuhkan maruah bangsa melalui paksaan undang-undang tanpa sukarela rakyat"
       ],
       "answer": "Menjaga identiti budaya, politik dan maruah bangsa daripada ancaman luar",
       "explanation": "Nasionalisme mendorong pempertahanan jati diri bangsa.",
@@ -99,9 +99,9 @@
       "prompt": "Mengapakah Asia dikatakan menerima 'kesinambungan idea' dari Barat?",
       "options": [
         "Kerana idea kebebasan dan kedaulatan Barat mempengaruhi gerakan tempatan selepas pertembungan dengan kuasa Eropah",
-        "Kerana Asia tidak pernah berinteraksi dengan Eropah",
-        "Kerana idea datang tanpa sebarang proses",
-        "Kerana hanya melibatkan seni lukis"
+        "Kerana idea Barat tersebar melalui pendidikan dan media tanpa tekanan penjajah",
+        "Kerana perdagangan Eropah semata-mata tanpa konflik politik",
+        "Kerana Asia menerima cadangan undang-undang PBB secara seragam"
       ],
       "answer": "Kerana idea kebebasan dan kedaulatan Barat mempengaruhi gerakan tempatan selepas pertembungan dengan kuasa Eropah",
       "explanation": "Idea Barat menjadi asas inspirasi tetapi berkembang dalam konteks Asia.",
@@ -129,9 +129,9 @@
       "prompt": "Apakah yang digambarkan apabila rakyat menuntut kemerdekaan selepas penjajahan yang lama?",
       "options": [
         "Bangkitnya semangat nasionalisme sebagai tindak balas terhadap penindasan",
-        "Penyerahan mutlak kepada penjajah",
-        "Ketiadaan kesedaran politik",
-        "Penolakan terhadap pembangunan"
+        "Penyerahan kepada penjajah demi kestabilan ekonomi jangka pendek",
+        "Gerakan elit tanpa sokongan meluas daripada rakyat",
+        "Tuntutan kemerdekaan yang terhad kepada satu bandar utama sahaja"
       ],
       "answer": "Bangkitnya semangat nasionalisme sebagai tindak balas terhadap penindasan",
       "explanation": "Penjajahan lama mencetuskan tuntutan kemerdekaan melalui nasionalisme.",
@@ -144,9 +144,9 @@
       "prompt": "Jepun dan India sama-sama disebut sebagai contoh. Apakah persamaan konsep yang biasanya ditekankan?",
       "options": [
         "Keduanya menunjukkan perkembangan nasionalisme di Asia",
-        "Keduanya bukan sebahagian Asia",
-        "Keduanya tidak ada kaitan dengan politik",
-        "Keduanya hanya contoh ekonomi"
+        "Keduanya menunjukkan perkembangan ekonomi kapitalisme moden",
+        "Keduanya menekankan nasionalisme agama semata-mana",
+        "Keduanya bertumpu pada rundingan diplomatik tanpa gerakan rakyat"
       ],
       "answer": "Keduanya menunjukkan perkembangan nasionalisme di Asia",
       "explanation": "Kedua-duanya digunakan sebagai contoh utama perkembangan di Asia.",
@@ -159,9 +159,9 @@
       "prompt": "Apakah persamaan utama antara 'gerakan pembaharuan agama' dan 'pertubuhan politik' dalam nasionalisme Asia?",
       "options": [
         "Keduanya merupakan saluran untuk menyatukan rakyat dan memperkukuh perjuangan",
-        "Keduanya menolak perubahan",
-        "Keduanya hanya untuk hiburan",
-        "Keduanya tidak berkaitan dengan kemerdekaan"
+        "Keduanya menumpukan pada pembaharuan dalaman tanpa tuntutan politik",
+        "Keduanya terhad kepada gerakan bersenjata tanpa saluran lain",
+        "Keduanya mengutamakan hubungan luar berbanding penyatuan rakyat"
       ],
       "answer": "Keduanya merupakan saluran untuk menyatukan rakyat dan memperkukuh perjuangan",
       "explanation": "Kedua-dua bentuk menyokong penyatuan dan perjuangan nasionalisme.",
@@ -174,9 +174,9 @@
       "prompt": "Apakah perbezaan utama antara faktor 'pertembungan dengan Eropah' dengan 'usaha pemodenan negara'?",
       "options": [
         "Yang pertama merujuk kepada tekanan luar; yang kedua merujuk kepada strategi dalaman memperkukuh negara",
-        "Tiada perbezaan",
-        "Keduanya merujuk kepada musim",
-        "Keduanya hanya tentang sukan"
+        "Keduanya merujuk kepada tekanan ekonomi semata-mata",
+        "Keduanya merujuk kepada faktor agama semata-mana",
+        "Keduanya merujuk kepada pembaharuan tentera semata-mana"
       ],
       "answer": "Yang pertama merujuk kepada tekanan luar; yang kedua merujuk kepada strategi dalaman memperkukuh negara",
       "explanation": "Tekanan luar berbeza dengan strategi pembangunan dalaman.",
@@ -189,9 +189,9 @@
       "prompt": "Antara hujah berikut, manakah yang PALING kukuh untuk menjelaskan corak nasionalisme di Asia?",
       "options": [
         "Ia dipengaruhi idea Barat tetapi berkembang melalui penentangan penjajahan dan pelbagai bentuk gerakan",
-        "Ia hanya tiruan tanpa konteks",
-        "Ia tidak melibatkan rakyat",
-        "Ia hanya berlaku selepas abad ke-21"
+        "Ia hanya meniru slogan Barat tanpa kaitan dengan penjajahan",
+        "Ia terhad kepada lapisan intelek tanpa melibatkan rakyat luas",
+        "Ia hanya muncul selepas Perang Dingin tanpa akar zaman penjajahan"
       ],
       "answer": "Ia dipengaruhi idea Barat tetapi berkembang melalui penentangan penjajahan dan pelbagai bentuk gerakan",
       "explanation": "Hujah kukuh menyatukan inspirasi Barat dan respons Asia.",
@@ -204,9 +204,9 @@
       "prompt": "Antara pernyataan berikut, manakah yang PALING tepat merumuskan subtopik 2.3?",
       "options": [
         "Perkembangan nasionalisme di Asia berlaku sebagai kesinambungan idea Barat dengan pelbagai bentuk perjuangan menentang penjajahan",
-        "Subtopik ini menolak kesan Eropah",
-        "Subtopik ini hanya tentang ekonomi Jepun",
-        "Subtopik ini tidak menyentuh jati diri"
+        "Perkembangan nasionalisme di Asia hanya berpunca daripada ekonomi domestik",
+        "Perkembangan nasionalisme di Asia menolak sama sekali sebarang idea daripada Barat",
+        "Perkembangan nasionalisme di Asia terhad kepada satu bentuk gerakan sahaja"
       ],
       "answer": "Perkembangan nasionalisme di Asia berlaku sebagai kesinambungan idea Barat dengan pelbagai bentuk perjuangan menentang penjajahan",
       "explanation": "Rumusan merangkumi sambungan idea, penjajahan dan bentuk gerakan.",

@@ -7,7 +7,12 @@
       "level": 1,
       "levelLabel": "Mengingat",
       "prompt": "Apakah konsep hubungan timbal balik antara pemerintah dan rakyat yang ditekankan dalam Kesultanan Melayu Melaka?",
-      "options": ["Waadat", "Feudalisme", "Demokrasi liberal", "Komunisme"],
+      "options": [
+        "Waadat",
+        "Tauliah",
+        "Mufakat adat",
+        "Perjanjian sukuan"
+      ],
       "answer": "Waadat",
       "explanation": "Waadat merujuk kepada perjanjian atau ikatan timbal balik antara pemerintah dan rakyat berdasarkan tanggungjawab dan hak masing-masing.",
       "tip": "Waadat = ikatan — hafal istilah ini sebagai kata kunci konsep bab."
@@ -19,9 +24,9 @@
       "prompt": "Golongan pemerintah dalam sistem tradisi Melaka terutamanya merangkumi:",
       "options": [
         "Sultan dan pembesar",
-        "Pedagang asing sahaja",
-        "Tentera British",
-        "Ahli parlimen moden"
+        "Pedagang asing dan nakhoda sebagai pemerintah",
+        "Golongan ulama dan penghulu kampung semata-mata",
+        "Pentadbir kolonial British"
       ],
       "answer": "Sultan dan pembesar",
       "explanation": "Golongan pemerintah terdiri daripada sultan sebagai pemerintah tertinggi dan pembesar yang membantu pentadbiran.",
@@ -34,9 +39,9 @@
       "prompt": "Antara berikut, manakah merupakan tanggungjawab umum rakyat terhadap pemerintah dalam sistem tradisi Melaka?",
       "options": [
         "Taat setia dan mematuhi undang-undang",
-        "Memilih sultan melalui undi umum",
-        "Membubarkan majlis pembesar tanpa kebenaran",
-        "Menolak semua cukai kerajaan"
+        "Taat setia tanpa mematuhi undang-undang jika bercanggah dengan kepentingan peribadi",
+        "Mematuhi undang-undang tanpa mengiktiraf pemerintah",
+        "Memberi kerjasama ekonomi tanpa kewajipan politik"
       ],
       "answer": "Taat setia dan mematuhi undang-undang",
       "explanation": "Rakyat diharapkan taat setia kepada sultan, mematuhi undang-undang serta memberi kerjasama dalam urusan kerajaan.",
@@ -49,9 +54,9 @@
       "prompt": "Sultan berperanan sebagai pemerintah tertinggi. Antara berikut, manakah biasanya dikaitkan dengan tanggungjawab utama sultan?",
       "options": [
         "Menjamin kesejahteraan rakyat dan mengekalkan ketenteraman",
-        "Menghapuskan sistem undang-undang",
-        "Menyerahkan kuasa mutlak kepada kuasa asing",
-        "Mengabaikan hal ehwal agama"
+        "Menjamin kesejahteraan rakyat tanpa mempertahankan undang-undang",
+        "Mengekalkan ketenteraman melalui undang-undang tanpa memikul tanggungjawab sosial rakyat",
+        "Memimpin perdagangan antarabangsa sebagai tugas utama sultan"
       ],
       "answer": "Menjamin kesejahteraan rakyat dan mengekalkan ketenteraman",
       "explanation": "Sultan bertanggungjawab memimpin, melindungi rakyat dan mengekalkan kestabilan serta keadilan dalam kerajaan.",
@@ -94,9 +99,9 @@
       "prompt": "Apakah kesan umum jika waadat dilanggar oleh pemerintah atau rakyat?",
       "options": [
         "Ketidakstabilan politik dan kemerosotan hubungan pemerintah–rakyat",
-        "Kerajaan menjadi lebih kukuh tanpa sebarang masalah",
-        "Undang-undang automatik terhapus",
-        "Sultan dan rakyat bertukar peranan secara rasmi"
+        "Ketenteraman politik tanpa sebarang kesan sosial",
+        "Pengukuhan waadat secara automatik tanpa proses damai",
+        "Peralihan kuasa kepada pembesar tanpa penglibatan rakyat"
       ],
       "answer": "Ketidakstabilan politik dan kemerosotan hubungan pemerintah–rakyat",
       "explanation": "Pelanggaran waadat boleh mencetuskan ketidakpuasan, krisis politik dan gangguan kepada kestabilan kerajaan.",
@@ -109,9 +114,9 @@
       "prompt": "Rakyat menghadiri upacara persetiaan dan meminum air sumpah kepada sultan. Perbuatan ini secara langsung menunjukkan:",
       "options": [
         "Pengiktirafan dan kesetiaan rakyat kepada pemerintah",
-        "Penolakan terhadap sistem pemerintahan",
-        "Pemilihan sultan baharu melalui undi",
-        "Pembubaran sistem waadat"
+        "Penghormatan terhadap pemerintah tanpa pengiktirafan undang-undang",
+        "Kesetiaan berdasarkan paksaan undang-undang tanpa sukarela",
+        "Penglibatan rakyat dalam majlis pembesar sebagai pengganti sumpah setia"
       ],
       "answer": "Pengiktirafan dan kesetiaan rakyat kepada pemerintah",
       "explanation": "Upacara sumpah dan persetiaan ialah simbol kesetiaan dan pengiktirafan rakyat terhadap pemerintahan sultan.",
@@ -124,9 +129,9 @@
       "prompt": "Sultan mengeluarkan arahan rasmi yang disahkan dengan cap mohor. Dari sudut peranan pemerintah, ini menunjukkan:",
       "options": [
         "Kuasa pemerintahan yang sah dan keabsahan arahan",
-        "Sultan tiada kuasa undang-undang",
-        "Cap mohor hiasan tanpa maksud",
-        "Rakyat tidak perlu mematuhi arahan"
+        "Keabsahan arahan tanpa kuasa mengikat rakyat",
+        "Kuasa peribadi sultan tanpa melalui saluran rasmi",
+        "Simbol kebesaran tanpa kaitan dengan pentadbiran"
       ],
       "answer": "Kuasa pemerintahan yang sah dan keabsahan arahan",
       "explanation": "Cap mohor mengesahkan arahan rasmi dan melambangkan autoriti sultan dalam pentadbiran.",
@@ -154,9 +159,9 @@
       "prompt": "Bagaimanakah konsep waadat menyokong kestabilan Kesultanan Melayu Melaka?",
       "options": [
         "Ia menjelaskan hak dan tanggungjawab kedua-dua pihak sehingga mengurangkan konflik",
-        "Ia menghapuskan peranan undang-undang",
-        "Ia memaksa rakyat memberontak",
-        "Ia melarang sultan berunding dengan pembesar"
+        "Ia menjelaskan hak rakyat sahaja tanpa tanggungjawab pemerintah",
+        "Ia mengikat pemerintah tanpa mengikat rakyat secara timbal balik",
+        "Ia mengutamakan kestabilan ekonomi berbanding hubungan politik"
       ],
       "answer": "Ia menjelaskan hak dan tanggungjawab kedua-dua pihak sehingga mengurangkan konflik",
       "explanation": "Waadat memberi asas jelas kepada hubungan pemerintah–rakyat, menyokong persefahaman dan kestabilan politik.",

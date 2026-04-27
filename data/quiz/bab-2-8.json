@@ -9,9 +9,9 @@
       "prompt": "Dalam bidang politik, apakah kesan perkembangan nasionalisme yang biasanya ditekankan?",
       "options": [
         "Meningkatkan kesedaran rakyat terhadap pentadbiran dan peluang berperanan dalam kerajaan",
-        "Menurunkan minat terhadap politik",
-        "Menghapuskan pilihan raya",
-        "Menolak semua parti"
+        "Meningkatkan minat terhadap politik tanpa menuntut penyertaan",
+        "Mengurangkan peranan rakyat dalam membentuk dasar",
+        "Menghapuskan perdebatan tentang pentadbiran kolonial"
       ],
       "answer": "Meningkatkan kesedaran rakyat terhadap pentadbiran dan peluang berperanan dalam kerajaan",
       "explanation": "Kesan politik termasuk kesedaran pentadbiran dan peranan rakyat.",
@@ -24,9 +24,9 @@
       "prompt": "Dalam bidang ekonomi, apakah kesan yang dinyatakan?",
       "options": [
         "Menggalakkan masyarakat meningkatkan pendidikan, taraf hidup dan penguasaan ekonomi",
-        "Menggalakkan ketergantungan mutlak",
-        "Menolak pendidikan",
-        "Tiada kesan"
+        "Menggalakkan ketergantungan kepada import tanpa usaha tempatan",
+        "Menggalakkan peningkatan taraf hidup tanpa menyentuh pendidikan",
+        "Menggalakkan penguasaan ekonomi tanpa menyentuh pendidikan atau taraf hidup"
       ],
       "answer": "Menggalakkan masyarakat meningkatkan pendidikan, taraf hidup dan penguasaan ekonomi",
       "explanation": "Nasionalisme menggalakkan peningkatan pendidikan dan ekonomi.",
@@ -39,9 +39,9 @@
       "prompt": "Dalam bidang sosial, apakah contoh kesedaran yang disebut?",
       "options": [
         "Pendidikan, peranan wanita dan kebajikan masyarakat pelbagai kaum",
-        "Penolakan terhadap semua kaum",
-        "Tiada isu sosial",
-        "Hanya isu sukan"
+        "Penekanan pendidikan tanpa menyentuh isu wanita atau kaum",
+        "Isu sukan dan rekreasi sebagai fokus utama masyarakat",
+        "Penolakan terhadap semua bentuk kebajikan kerana fokus ekonomi"
       ],
       "answer": "Pendidikan, peranan wanita dan kebajikan masyarakat pelbagai kaum",
       "explanation": "Sosial merangkumi pendidikan, wanita dan kebajian pelbagai kaum.",
@@ -54,9 +54,9 @@
       "prompt": "Apakah peranan keseluruhan kesan-kesan ini?",
       "options": [
         "Menjadi titik tolak penting ke arah perjuangan kemerdekaan dan pembinaan negara bangsa",
-        "Tiada kesan besar",
-        "Hanya kesan sementara",
-        "Menolak pembangunan"
+        "Menjadi titik tolak yang hanya mempengaruhi elit politik",
+        "Memberi kesan jangka pendek tanpa kesan kepada kemerdekaan",
+        "Menolak pembinaan negara bangsa demi fokus ekonomi semata-mana"
       ],
       "answer": "Menjadi titik tolak penting ke arah perjuangan kemerdekaan dan pembinaan negara bangsa",
       "explanation": "Kesan menjadi titik tolak kemerdekaan dan negara bangsa.",
@@ -69,9 +69,9 @@
       "prompt": "Mengapakah aspek sosial penting dalam membincangkan kesan nasionalisme?",
       "options": [
         "Ia menunjukkan perubahan nilai masyarakat terhadap pendidikan, wanita dan perpaduan kaum",
-        "Ia tidak berkaitan dengan rakyat",
-        "Ia hanya teori",
-        "Ia menolak kebajikan"
+        "Ia hanya relevan untuk lapisan atas bandar",
+        "Ia menekankan kebajikan tanpa menyentuh pendidikan atau wanita",
+        "Ia menolak perpaduan kaum demi nasionalisme mono-budaya"
       ],
       "answer": "Ia menunjukkan perubahan nilai masyarakat terhadap pendidikan, wanita dan perpaduan kaum",
       "explanation": "Sosial mencerminkan perubahan nilai dan perpaduan.",
@@ -84,9 +84,9 @@
       "prompt": "Apakah hubungan antara kesan ekonomi dengan semangat nasionalisme?",
       "options": [
         "Nasionalisme mendorong usaha meningkatkan daya saing dan taraf hidup bangsa",
-        "Nasionalisme menolak ekonomi",
-        "Tiada hubungan",
-        "Hanya import barang"
+        "Nasionalisme menolak usaha memperkukuh ekonomi bangsa",
+        "Nasionalisme hanya menekankan import tanpa daya saing",
+        "Nasionalisme hanya berkaitan dengan politik tanpa implikasi ekonomi"
       ],
       "answer": "Nasionalisme mendorong usaha meningkatkan daya saing dan taraf hidup bangsa",
       "explanation": "Semangat bangsa mendorong peningkatan ekonomi dan pendidikan.",
@@ -99,9 +99,9 @@
       "prompt": "Mengapakah kesan politik dikaitkan dengan peluang berperanan dalam kerajaan?",
       "options": [
         "Kesedaran politik mendorong rakyat menuntut penyertaan dan akauntabiliti",
-        "Politik tidak berubah",
-        "Rakyat tidak berminat",
-        "Tiada tuntutan"
+        "Kesedaran politik mendorong rakyat menolak penyertaan dalam pentadbiran",
+        "Politik kekal statik walaupun ada gerakan nasionalisme",
+        "Rakyat berminat tetapi tidak membuat sebarang tuntutan"
       ],
       "answer": "Kesedaran politik mendorong rakyat menuntut penyertaan dan akauntabiliti",
       "explanation": "Nasionalisme meningkatkan kesedaran peranan dalam pentadbiran.",
@@ -129,9 +129,9 @@
       "prompt": "Komuniti pelbagai kaum menganjurkan program kebajikan bersama. Apakah yang ditonjolkan?",
       "options": [
         "Nasionalisme membangkitkan kesedaran kebajikan masyarakat pelbagai kaum",
-        "Penolakan perpaduan",
-        "Ketiadaan organisasi",
-        "Isu teknikal"
+        "Program kebajikan menunjukkan penurunan perpaduan kaum",
+        "Organisasi kebajitian wujud tanpa kaitan nasionalisme",
+        "Isu kebajitian hanya teknikal pentadbiran tanpa nilai sosial"
       ],
       "answer": "Nasionalisme membangkitkan kesedaran kebajikan masyarakat pelbagai kaum",
       "explanation": "Ini selari dengan kesan sosial terhadap perpaduan dan kebajian.",
@@ -144,9 +144,9 @@
       "prompt": "Rakyat mula menilai dasar pentadbiran kolonial secara lebih kritis. Apakah bidang kesan?",
       "options": [
         "Bidang politik",
-        "Bidang muzik klasik",
-        "Bidang fesyen",
-        "Bidang gastronomi"
+        "Bidang pentadbiran awam",
+        "Bidang ekonomi",
+        "Bidang pendidikan"
       ],
       "answer": "Bidang politik",
       "explanation": "Penilaian pentadbiran adalah kesan politik.",
@@ -159,9 +159,9 @@
       "prompt": "Apakah persamaan utama antara kesan politik dengan kesan ekonomi?",
       "options": [
         "Keduanya menunjukkan peningkatan kesedaran dan usaha rakyat memperbaiki kedudukan dalam sistem negara",
-        "Keduanya tidak berkaitan dengan rakyat",
-        "Keduanya menolak pendidikan",
-        "Keduanya hanya teori"
+        "Keduanya terpisah daripada penglibatan rakyat",
+        "Keduanya menolak pendidikan sebagai alat peningkatan",
+        "Keduanya hanya wujud dalam teori tanpa contoh sejarah"
       ],
       "answer": "Keduanya menunjukkan peningkatan kesedaran dan usaha rakyat memperbaiki kedudukan dalam sistem negara",
       "explanation": "Politik dan ekonomi sama-sama melibatkan peningkatan kesedaran dan usaha.",
@@ -174,9 +174,9 @@
       "prompt": "Apakah perbezaan utama antara kesan 'sosial' dengan kesan 'politik'?",
       "options": [
         "Sosial menekankan nilai masyarakat, wanita dan kebajian kaum manakala politik menekankan pentadbiran dan penyertaan",
-        "Tiada perbezaan",
-        "Sosial hanya tentang ekonomi",
-        "Politik hanya tentang sukan"
+        "Tiada perbezaan antara kesan sosial dan politik",
+        "Sosial dan politik sama-sama hanya tentang ekonomi",
+        "Politik hanya tentang sukan dan rekreasi rakyat"
       ],
       "answer": "Sosial menekankan nilai masyarakat, wanita dan kebajian kaum manakala politik menekankan pentadbiran dan penyertaan",
       "explanation": "Sosial lebih tentang masyarakat; politik tentang sistem dan penyertaan.",
@@ -189,9 +189,9 @@
       "prompt": "Antara hujah berikut, manakah yang PALING kukuh untuk menunjukkan kesan nasionalisme menyeluruh?",
       "options": [
         "Ia memberi kesan politik, ekonomi dan sosial yang menjadi titik tolak kemerdekaan dan pembinaan negara bangsa",
-        "Ia hanya menjejaskan satu individu",
-        "Ia tiada kesan",
-        "Ia menolak pembangunan"
+        "Ia memberi kesan kepada individu terpilih tanpa implikasi kebangsaan",
+        "Ia memberi kesan sampingan tanpa hubungan dengan kemerdekaan",
+        "Ia menolak pembangunan demi mengekalkan status quo kolonial"
       ],
       "answer": "Ia memberi kesan politik, ekonomi dan sosial yang menjadi titik tolak kemerdekaan dan pembinaan negara bangsa",
       "explanation": "Hujah kukuh merangkumi tiga bidang dan hasil besar.",
@@ -204,9 +204,9 @@
       "prompt": "Antara pernyataan berikut, manakah yang PALING tepat merumuskan subtopik 2.8?",
       "options": [
         "Kesan nasionalisme merangkumi politik, ekonomi dan sosial serta menjadi asas penting ke arah kemerdekaan dan negara bangsa",
-        "Kesan hanya ekonomi",
-        "Tiada kaitan dengan wanita",
-        "Menolak perpaduan"
+        "Kesan nasionalisme terhad kepada ekonomi tanpa politik atau sosial",
+        "Kesan nasionalisme mengabaikan isu wanita dan pendidikan",
+        "Kesan nasionalisme menolak perpaduan kaum dalam pembinaan negara"
       ],
       "answer": "Kesan nasionalisme merangkumi politik, ekonomi dan sosial serta menjadi asas penting ke arah kemerdekaan dan negara bangsa",
       "explanation": "Rumusan menyatukan tiga bidang dan peranan ke arah kemerdekaan.",

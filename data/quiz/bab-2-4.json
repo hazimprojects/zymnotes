@@ -9,9 +9,9 @@
       "prompt": "Apakah punca umum semangat nasionalisme di Asia Tenggara?",
       "options": [
         "Penjajahan Barat",
-        "Ketiadaan sungai",
-        "Musim panas",
-        "Kurangnya hasil pertanian"
+        "Ketiadaan saluran perdagangan maritim",
+        "Persaingan ekonomi antara negara jiran",
+        "Kemunduran sistem beraja tradisional semata-mata"
       ],
       "answer": "Penjajahan Barat",
       "explanation": "Di Asia Tenggara nasionalisme muncul akibat penjajahan Barat.",
@@ -24,9 +24,9 @@
       "prompt": "Antara berikut, manakah negara yang disebut sebagai contoh perkembangan nasionalisme di Asia Tenggara?",
       "options": [
         "Filipina, Burma, Vietnam dan Indonesia",
-        "Kanada dan Mexico",
-        "Iceland",
-        "Madagaskar"
+        "Malaya, Singapura, Brunei dan Thailand",
+        "China, Jepun, Korea dan Vietnam",
+        "India, Pakistan, Bangladesh dan Sri Lanka"
       ],
       "answer": "Filipina, Burma, Vietnam dan Indonesia",
       "explanation": "Contoh utama termasuk Filipina, Burma, Vietnam dan Indonesia.",
@@ -84,9 +84,9 @@
       "prompt": "Apakah maksud 'mempertahankan kedaulatan' dalam konteks gerakan di Asia Tenggara?",
       "options": [
         "Menjaga hak negara untuk mengurus hal ehwal sendiri tanpa dominasi asing",
-        "Menyerahkan pentadbiran kepada kuasa luar",
-        "Menolak semua undang-undang",
-        "Menghapuskan sempadan negara"
+        "Menjaga hak negara dengan menyerahkan hal ehwal ekonomi kepada kuasa asing",
+        "Menjaga kedaulatan melalui paksaan ketenteraan tanpa pengiktirafan rakyat",
+        "Menjaga sempadan geografi tanpa mengiktiraf rakyat sebagai unsur kedaulatan"
       ],
       "answer": "Menjaga hak negara untuk mengurus hal ehwal sendiri tanpa dominasi asing",
       "explanation": "Kedaulatan merujuk kepada kawalan dan hak negara.",
@@ -99,9 +99,9 @@
       "prompt": "Mengapakah contoh Filipina, Burma, Vietnam dan Indonesia dikumpulkan?",
       "options": [
         "Untuk menunjukkan corak nasionalisme di pelbagai negara Asia Tenggara",
-        "Kerana mereka berada di benua Eropah",
-        "Kerana mereka tidak berkaitan dengan penjajahan",
-        "Kerana mereka tiada gerakan politik"
+        "Kerana kesemuaannya berkongsi sistem politik yang sama pada masa yang sama",
+        "Kerana kesemuanya terletak di luar Asia Tenggara",
+        "Kerana tiada negara tersebut mengalami penjajahan"
       ],
       "answer": "Untuk menunjukkan corak nasionalisme di pelbagai negara Asia Tenggara",
       "explanation": "Contoh-contoh menunjukkan perkembangan serantau.",
@@ -174,9 +174,9 @@
       "prompt": "Apakah perbezaan utama antara contoh Thailand dengan contoh Filipina atau Burma?",
       "options": [
         "Thailand menekankan pembaharuan untuk kekal merdeka manakala banyak contoh lain menekankan pembebasan daripada penjajahan",
-        "Tiada perbezaan",
-        "Thailand tidak ada hubungan dengan nasionalisme",
-        "Filipina tidak pernah dijajah"
+        "Thailand dan negara lain menggunakan strategi ketenteraan yang sama",
+        "Thailand mengutamakan penjajahan langsung seperti negara jiran",
+        "Filipina memilih pembaharuan dalaman manakala Thailand menumpukan pembebasan daripada penjajahan"
       ],
       "answer": "Thailand menekankan pembaharuan untuk kekal merdeka manakala banyak contoh lain menekankan pembebasan daripada penjajahan",
       "explanation": "Thailand menonjol dengan strategi kekal merdeka melalui pembaharuan.",

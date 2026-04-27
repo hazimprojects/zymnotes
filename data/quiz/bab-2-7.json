@@ -24,9 +24,9 @@
       "prompt": "Siapakah golongan pelopor kesedaran nasionalisme yang disebut?",
       "options": [
         "Golongan intelektual berpendidikan agama, Inggeris dan Melayu",
-        "Golongan atlet sahaja",
-        "Golongan pedagang luar",
-        "Golongan tanpa pendidikan"
+        "Golongan pedagang dan nelayan sahaja",
+        "Golongan tentera dan polis moden",
+        "Golongan petani tanpa akses pendidikan"
       ],
       "answer": "Golongan intelektual berpendidikan agama, Inggeris dan Melayu",
       "explanation": "Intelektual berpendidikan agama, Inggeris dan Melayu menjadi pelopor.",
@@ -39,9 +39,9 @@
       "prompt": "Apakah peranan penulisan?",
       "options": [
         "Menyebarkan idea nasionalisme melalui akhbar, majalah dan karya kreatif",
-        "Menghapuskan bahasa",
-        "Tiada peranan",
-        "Hanya untuk rekod peribadi"
+        "Menyebarkan idea hanya melalui ceramah di masjid",
+        "Menyebarkan maklumat pentadbiran tanpa membentuk idea nasionalisme",
+        "Menyimpan rekod peribadi tanpa niat mempengaruhi khalayak"
       ],
       "answer": "Menyebarkan idea nasionalisme melalui akhbar, majalah dan karya kreatif",
       "explanation": "Penulisan menyebarkan idea melalui pelbagai medium.",
@@ -54,9 +54,9 @@
       "prompt": "Apakah peranan persatuan dan pertubuhan?",
       "options": [
         "Menyatukan suara rakyat untuk menuntut hak dan membina jati diri bangsa",
-        "Memecahkan perpaduan",
-        "Menolak politik",
-        "Tiada fungsi"
+        "Memecahkan suara rakyat melalui pertubuhan yang bersaing",
+        "Menolak politik dan menumpukan ekonomi semata-mana",
+        "Berfungsi sebagai badan sukarela tanpa matlamat politik"
       ],
       "answer": "Menyatukan suara rakyat untuk menuntut hak dan membina jati diri bangsa",
       "explanation": "Persatuan menyatukan suara dan membina jati diri.",
@@ -69,9 +69,9 @@
       "prompt": "Mengapakah intelektual dianggap pelopor dalam saluran pertama?",
       "options": [
         "Mereka memiliki pendidikan dan keupayaan menyusun idea secara sistematik",
-        "Mereka tidak membaca",
-        "Mereka menolak organisasi",
-        "Mereka tiada pengaruh"
+        "Mereka tidak membaca sumber tempatan",
+        "Mereka menolak organisasi dan persatuan",
+        "Mereka tiada pengaruh dalam masyarakat"
       ],
       "answer": "Mereka memiliki pendidikan dan keupayaan menyusun idea secara sistematik",
       "explanation": "Pendidikan membolehkan intelektual memimpin kesedaran.",
@@ -84,9 +84,9 @@
       "prompt": "Apakah hubungan antara akhbar dengan penyebaran nasionalisme?",
       "options": [
         "Akhbar menjadi medium utama menyampaikan idea kepada masyarakat luas",
-        "Akhbar tidak relevan",
-        "Akhbar hanya untuk iklan",
-        "Akhbar menghapuskan bahasa"
+        "Akhbar menjadi medium utama tetapi terhad kepada golongan berpendapatan tinggi",
+        "Akhbar menyampaikan idea tanpa mempengaruhi khalayak ramai",
+        "Akhbar menggantikan sepenuhnya peranan ceramah dan persatuan"
       ],
       "answer": "Akhbar menjadi medium utama menyampaikan idea kepada masyarakat luas",
       "explanation": "Penulisan melalui akhbar menyebarkan idea nasionalisme.",
@@ -114,9 +114,9 @@
       "prompt": "Sebuah majalah menerbitkan siri artikel tentang hak rakyat. Saluran manakah yang paling utama?",
       "options": [
         "Penulisan melalui media cetak",
-        "Saluran sukan",
-        "Saluran pertanian",
-        "Saluran hiburan"
+        "Penulisan melalui siaran radio sahaja",
+        "Penyampaian idea melalui khutbah di masjid",
+        "Penyampaian idea melalui poster kempen pilihan raya moden"
       ],
       "answer": "Penulisan melalui media cetak",
       "explanation": "Majalah ialah sebahagian daripada penulisan dan media.",
@@ -159,9 +159,9 @@
       "prompt": "Apakah persamaan utama antara saluran penulisan dan saluran persatuan?",
       "options": [
         "Keduanya menyebarkan dan memperkukuh idea nasionalisme kepada khalayak atau ahli",
-        "Keduanya menolak idea",
-        "Keduanya hanya untuk elit British",
-        "Keduanya tidak berkaitan"
+        "Keduanya mengehadkan idea kepada golongan elit British",
+        "Keduanya menolak penggunaan bahasa Melayu",
+        "Keduanya tidak berkaitan dengan nasionalisme"
       ],
       "answer": "Keduanya menyebarkan dan memperkukuh idea nasionalisme kepada khalayak atau ahli",
       "explanation": "Penulisan dan persatuan sama-sama memperkukuh idea.",
@@ -174,9 +174,9 @@
       "prompt": "Apakah perbezaan utama antara peranan 'intelektual' dengan 'persatuan' dalam corak perkembangan?",
       "options": [
         "Intelektual memimpin penyusunan idea awal manakala persatuan menyalurkan tindakan kolektif dan penyatuan suara",
-        "Tiada perbezaan",
-        "Intelektual tidak penting",
-        "Persatuan tidak menuntut hak"
+        "Tiada perbezaan fungsi antara kedua-duanya",
+        "Intelektual menggantikan peranan persatuan sepenuhnya",
+        "Persatuan tidak pernah menuntut hak atau reformasi"
       ],
       "answer": "Intelektual memimpin penyusunan idea awal manakala persatuan menyalurkan tindakan kolektif dan penyatuan suara",
       "explanation": "Satu fokus kepimpinan idea, satu fokus organisasi rakyat.",
@@ -189,9 +189,9 @@
       "prompt": "Antara hujah berikut, manakah yang PALING kukuh untuk menjelaskan perkembangan nasionalisme di negara kita?",
       "options": [
         "Gabungan kepimpinan intelektual, penyebaran media dan penyatuan pertubuhan memperkukuh perjuangan",
-        "Hanya media tanpa manusia",
-        "Hanya ekonomi",
-        "Tiada peranan rakyat"
+        "Media sahaja yang membentuk perjuangan tanpa peranan manusia",
+        "Ekonomi pasaran bebas semata-mana yang memperkukuh perjuangan",
+        "Tiada peranan rakyat dalam menyokong gerakan"
       ],
       "answer": "Gabungan kepimpinan intelektual, penyebaran media dan penyatuan pertubuhan memperkukuh perjuangan",
       "explanation": "Hujah kukuh menyatukan ketiga-tiga saluran utama.",
@@ -204,9 +204,9 @@
       "prompt": "Antara pernyataan berikut, manakah yang PALING tepat merumuskan subtopik 2.7?",
       "options": [
         "Perkembangan nasionalisme melalui tiga saluran: intelektual, penulisan/media, dan persatuan yang menyatukan suara rakyat",
-        "Hanya satu saluran",
-        "Tiada kaitan dengan hak rakyat",
-        "Menolak akhbar"
+        "Perkembangan nasionalisme melalui satu saluran tunggal",
+        "Perkembangan nasionalisme tanpa kaitan dengan hak rakyat",
+        "Perkembangan nasionalisme dengan menolak peranan akhbar"
       ],
       "answer": "Perkembangan nasionalisme melalui tiga saluran: intelektual, penulisan/media, dan persatuan yang menyatukan suara rakyat",
       "explanation": "Rumusan merangkumi ketiga-tiga saluran dan fungsinya.",

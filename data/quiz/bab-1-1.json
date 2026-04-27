@@ -24,9 +24,9 @@
       "prompt": "Antara berikut, manakah yang merupakan kerajaan awal di Alam Melayu?",
       "options": [
         "Funan, Champa dan Kedah Tua",
-        "Johor, Perak dan Selangor",
-        "Singapura, Brunei dan Sulu",
-        "Aceh, Patani dan Majapahit"
+        "Srivijaya, Majapahit dan Chenla",
+        "Aceh, Patani dan Johor-Riau",
+        "Champa, Tarumanegara dan Langkasuka"
       ],
       "answer": "Funan, Champa dan Kedah Tua",
       "explanation": "Funan, Champa dan Kedah Tua ialah kerajaan awal yang membuktikan asas negara bangsa telah wujud di Alam Melayu sebelum kedatangan Barat.",
@@ -39,9 +39,9 @@
       "prompt": "Apakah ciri-ciri utama sebuah negara bangsa di Alam Melayu?",
       "options": [
         "Raja, rakyat, wilayah pengaruh dan undang-undang",
-        "Parlimen, perlembagaan, pilihan raya dan parti politik",
-        "Tentera, senjata, kubu dan benteng pertahanan",
-        "Pelabuhan, pedagang, mata wang dan cukai"
+        "Raja, rakyat, wilayah taklukan dan undang-undang",
+        "Raja, rakyat, ekonomi maritim dan undang-undang",
+        "Raja, rakyat, wilayah pengaruh dan sistem demokrasi berwakil"
       ],
       "answer": "Raja, rakyat, wilayah pengaruh dan undang-undang",
       "explanation": "Empat ciri negara bangsa di Alam Melayu ialah raja, rakyat, wilayah pengaruh dan undang-undang. Hafal keempat-empat ciri ini.",
@@ -69,9 +69,9 @@
       "prompt": "Mengapakah kemunculan kerajaan awal seperti Funan, Champa dan Kedah Tua penting dalam sejarah Alam Melayu?",
       "options": [
         "Membuktikan asas negara bangsa telah wujud sebelum kedatangan Barat",
-        "Menunjukkan pengaruh penjajahan Barat telah lama bertapak di Alam Melayu",
-        "Memperkenalkan sistem demokrasi kepada masyarakat Alam Melayu",
-        "Menyebarkan agama Islam ke seluruh kepulauan Melayu"
+        "Menunjukkan pengaruh perdagangan maritim telah membentuk corak kerajaan awal",
+        "Memperlihatkan hubungan raja–rakyat mengikut corak feudal Eropah",
+        "Menunjukkan sistem undang-undang bertulis seragam telah dipakai di seluruh rantau"
       ],
       "answer": "Membuktikan asas negara bangsa telah wujud sebelum kedatangan Barat",
       "explanation": "Kemunculan kerajaan awal membuktikan bahawa asas negara bangsa — raja, rakyat, wilayah pengaruh dan undang-undang — telah wujud jauh sebelum Barat tiba.",
@@ -99,9 +99,9 @@
       "prompt": "Mengapakah raja dianggap sebagai tonggak utama dalam kerajaan awal Alam Melayu?",
       "options": [
         "Raja merupakan simbol perpaduan dan pemegang kuasa pemerintahan tertinggi",
-        "Raja bertanggungjawab menguruskan perdagangan antarabangsa secara langsung",
-        "Raja dipilih melalui sistem pilihan raya oleh rakyat jelata",
-        "Raja hanya berfungsi sebagai pemimpin upacara keagamaan semata-mata"
+        "Raja bertanggungjawab terus menguruskan semua urusan dagangan luar",
+        "Raja dipilih melalui musyawarah pembesar tanpa pengiktirafan rakyat",
+        "Raja hanya berperanan simbolik manakala kuasa sebenar di tangan pedagang"
       ],
       "answer": "Raja merupakan simbol perpaduan dan pemegang kuasa pemerintahan tertinggi",
       "explanation": "Raja ialah tonggak kerajaan kerana baginda menjadi simbol perpaduan rakyat dan pemegang kuasa pemerintahan tertinggi. Tanpa raja, konsep negara bangsa tidak lengkap.",
@@ -114,9 +114,9 @@
       "prompt": "Kerajaan Srivijaya berjaya menguasai laluan perdagangan dan menerima ufti daripada kerajaan-kerajaan lain di sekitarnya. Rakyat dari pelbagai kawasan tunduk kepada pemerintahannya. Apakah yang digambarkan oleh petikan ini?",
       "options": [
         "Kesinambungan negara bangsa yang berkembang daripada kerajaan sebelumnya",
-        "Pengaruh penjajahan Barat ke atas struktur kerajaan tempatan",
-        "Sistem pilihan raya yang diamalkan dalam kerajaan Srivijaya",
-        "Kegagalan kerajaan Srivijaya mempertahankan wilayahnya"
+        "Penguasaan ekonomi maritim tanpa pengiktirafan politik rakyat",
+        "Pembentukan empayar melalui paksaan ketenteraan di semua wilayah",
+        "Penyerahan sepenuhnya pentadbiran kepada kuasa pedagang asing"
       ],
       "answer": "Kesinambungan negara bangsa yang berkembang daripada kerajaan sebelumnya",
       "explanation": "Srivijaya mewarisi dan mengembangkan tradisi negara bangsa daripada kerajaan-kerajaan sebelumnya seperti Funan dan Champa, menunjukkan kesinambungan negara bangsa di Alam Melayu.",
@@ -129,9 +129,9 @@
       "prompt": "Rakyat di sebuah kawasan secara sukarela menghantar ufti kepada raja dan mematuhi perintahnya tanpa paksaan. Konsep apakah yang dirujuk oleh situasi ini?",
       "options": [
         "Wilayah pengaruh",
-        "Perjanjian perdamaian",
-        "Sistem feudal Barat",
-        "Demokrasi berparlimen"
+        "Wilayah taklukan melalui ketenteraan berterusan",
+        "Wilayah naungan dengan bayaran upeti tanpa pengiktirafan raja",
+        "Wilayah perjanjian perdamaian antara dua kuasa besar"
       ],
       "answer": "Wilayah pengaruh",
       "explanation": "Situasi ini menggambarkan konsep wilayah pengaruh — kawasan yang rakyatnya secara sukarela menerima, mengakui dan mematuhi pemerintahan raja.",
@@ -159,9 +159,9 @@
       "prompt": "Apakah persamaan utama antara Funan, Champa dan Kedah Tua dari sudut sejarah Alam Melayu?",
       "options": [
         "Ketiga-tiganya merupakan kerajaan awal yang membuktikan kewujudan negara bangsa di Alam Melayu",
-        "Ketiga-tiganya ditubuhkan oleh penjajah Barat sebagai pusat pentadbiran kolonial",
-        "Ketiga-tiganya mengamalkan sistem demokrasi berparlimen yang sama",
-        "Ketiga-tiganya terletak di kepulauan yang sama dan berkongsi sempadan geografi"
+        "Ketiga-tiganya merupakan pusat penyebaran agama Buddha serentak di rantau ini",
+        "Ketiga-tiganya terletak dalam lingkungan pengaruh politik China pada abad yang sama",
+        "Ketiga-tiganya mengamalkan sistem undang-undang bertulis yang sama seperti Melaka"
       ],
       "answer": "Ketiga-tiganya merupakan kerajaan awal yang membuktikan kewujudan negara bangsa di Alam Melayu",
       "explanation": "Persamaan utama Funan, Champa dan Kedah Tua ialah ketiga-tiganya merupakan kerajaan awal di Alam Melayu yang membuktikan bahawa asas negara bangsa telah wujud sebelum kedatangan Barat.",
@@ -174,9 +174,9 @@
       "prompt": "Apakah perbezaan utama antara Kutara Manawa (Majapahit) dengan Hukum Kanun Melaka?",
       "options": [
         "Kedua-duanya merupakan undang-undang bagi negara bangsa yang berbeza",
-        "Kutara Manawa dibawa oleh Barat manakala Hukum Kanun Melaka dibina sendiri",
-        "Hukum Kanun Melaka lebih tua daripada Kutara Manawa dari segi sejarah",
-        "Kutara Manawa hanya untuk golongan bangsawan manakala Hukum Kanun Melaka untuk semua"
+        "Kutara Manawa merupakan sumber langsung kepada Hukum Kanun Melaka",
+        "Hukum Kanun Melaka menggantikan sepenuhnya amalan Kutara Manawa di Alam Melayu",
+        "Kedua-duanya hanya terpakai kepada urusan maritim dan cukai pelabuhan"
       ],
       "answer": "Kedua-duanya merupakan undang-undang bagi negara bangsa yang berbeza",
       "explanation": "Perbezaan utamanya ialah Kutara Manawa ialah undang-undang Majapahit manakala Hukum Kanun Melaka ialah undang-undang Kesultanan Melayu Melaka — dua negara bangsa yang berbeza dengan sistem undang-undang masing-masing.",
@@ -189,9 +189,9 @@
       "prompt": "Antara hujah berikut, manakah yang PALING kukuh untuk membuktikan bahawa negara bangsa telah wujud di Alam Melayu sebelum kedatangan Barat?",
       "options": [
         "Kewujudan kerajaan awal dengan ciri raja, rakyat, wilayah pengaruh dan undang-undang yang lengkap",
-        "Kegiatan perdagangan yang aktif antara pedagang tempatan dan pedagang asing",
-        "Penggunaan bahasa Melayu sebagai lingua franca di rantau Asia Tenggara",
-        "Kewujudan seni bina dan budaya tempatan yang unik dan berbeza"
+        "Kewujudan rangkaian perdagangan yang menghubungkan pelabuhan tempatan dengan Asia",
+        "Kewujudan bahasa Melayu sebagai lingua franca dalam urusan dagangan",
+        "Kewujudan seni bina istana dan monumen yang menyerlahkan identiti tempatan"
       ],
       "answer": "Kewujudan kerajaan awal dengan ciri raja, rakyat, wilayah pengaruh dan undang-undang yang lengkap",
       "explanation": "Hujah paling kukuh ialah kewujudan kerajaan awal yang memiliki KEEMPAT-EMPAT ciri negara bangsa secara lengkap — raja, rakyat, wilayah pengaruh dan undang-undang. Ini secara langsung membuktikan negara bangsa wujud.",
@@ -204,9 +204,9 @@
       "prompt": "Antara pernyataan berikut, manakah yang PALING tepat tentang kepentingan kesinambungan negara bangsa di Alam Melayu?",
       "options": [
         "Kesinambungan negara bangsa membuktikan tradisi pemerintahan berterusan dari kerajaan awal hingga Malaysia moden",
-        "Kesinambungan negara bangsa hanya relevan untuk tujuan kajian akademik semata-mata",
-        "Kesinambungan negara bangsa menunjukkan bahawa Barat telah berjaya memodenkan Alam Melayu",
-        "Kesinambungan negara bangsa bermula hanya selepas kemerdekaan Malaysia pada tahun 1957"
+        "Kesinambungan negara bangsa bermaksud tiada perubahan sosial atau ekonomi antara zaman",
+        "Kesinambungan negara bangsa menunjukkan sistem politik Melayu mengikut corak demokrasi Barat",
+        "Kesinambungan negara bangsa terhad kepada aspek undang-undang tanpa unsur budaya"
       ],
       "answer": "Kesinambungan negara bangsa membuktikan tradisi pemerintahan berterusan dari kerajaan awal hingga Malaysia moden",
       "explanation": "Kesinambungan negara bangsa dari Funan/Champa → Srivijaya → Melaka → Johor-Riau → Malaysia membuktikan bahawa tradisi pemerintahan dan identiti bangsa Melayu adalah berterusan, bukan ciptaan Barat.",

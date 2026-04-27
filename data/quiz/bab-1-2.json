@@ -7,7 +7,12 @@
       "level": 1,
       "levelLabel": "Mengingat",
       "prompt": "Berapakah bilangan ciri utama negara bangsa Kesultanan Melayu Melaka yang dibincangkan dalam bab ini?",
-      "options": ["Empat ciri", "Lima ciri", "Enam ciri", "Tujuh ciri"],
+      "options": [
+        "Empat ciri",
+        "Lima ciri",
+        "Enam ciri",
+        "Tujuh ciri"
+      ],
       "answer": "Enam ciri",
       "explanation": "Negara bangsa Melaka terbina melalui enam ciri utama: kerajaan, rakyat, kedaulatan, wilayah pengaruh, undang-undang dan lambang kebesaran.",
       "tip": "Nombor enam mudah diuji — ingat enam ciri tadi sebagai senarai ringkas."
@@ -19,9 +24,9 @@
       "prompt": "Apakah nama sistem pentadbiran utama yang diamalkan oleh Kesultanan Melayu Melaka?",
       "options": [
         "Sistem Pembesar Empat Lipatan",
-        "Sistem Malayan Union",
-        "Sistem feudal Eropah",
-        "Sistem demokrasi berparlimen"
+        "Sistem Orang Besar Berempat",
+        "Sistem Beraja Berpembantu tradisional Melaka",
+        "Sistem Temenggung dan Laksamana sahaja"
       ],
       "answer": "Sistem Pembesar Empat Lipatan",
       "explanation": "Kesultanan Melayu Melaka mengamalkan Sistem Pembesar Empat Lipatan sebagai tonggak pentadbiran kerajaan.",
@@ -92,7 +97,12 @@
       "level": 2,
       "levelLabel": "Memahami",
       "prompt": "Selepas kedatangan Islam, gelaran pemerintah tertinggi di Melaka biasanya dirujuk sebagai:",
-      "options": ["Sultan", "Presiden", "Governor", "Maharaja British"],
+      "options": [
+        "Sultan",
+        "Bendahara",
+        "Yamtuan",
+        "Temenggung"
+      ],
       "answer": "Sultan",
       "explanation": "Selepas Islam, pemerintah menggunakan gelaran sultan, menunjukkan sistem kerajaan yang selaras dengan tradisi Kesultanan Melayu.",
       "tip": "Islam + Melaka → ingat peralihan gelaran kepada sultan."
@@ -119,9 +129,9 @@
       "prompt": "Melaka diiktiraf oleh Dinasti Ming dan menerima utusan seperti Laksamana Cheng Ho. Apakah implikasi utama terhadap ciri kedaulatan?",
       "options": [
         "Mengukuhkan pengiktirafan antarabangsa terhadap Melaka sebagai kerajaan berdaulat",
-        "Menunjukkan Melaka menjadi jajahan China",
-        "Membuktikan Melaka tidak mempunyai raja sendiri",
-        "Menghapuskan peranan undang-undang tempatan"
+        "Menunjukkan Melaka bergantung sepenuhnya kepada China dalam hal politik dalaman",
+        "Membuktikan Melaka tidak mempunyai raja yang diiktiraf secara tempatan",
+        "Menghapuskan keperluan undang-undang tempatan dalam urusan dagangan"
       ],
       "answer": "Mengukuhkan pengiktirafan antarabangsa terhadap Melaka sebagai kerajaan berdaulat",
       "explanation": "Pengiktirafan luar seperti daripada Dinasti Ming memperkukuh kedudukan Melaka sebagai kerajaan berdaulat di mata dunia pada masa itu.",
@@ -179,9 +189,9 @@
       "prompt": "Antara hujah berikut, manakah PALING kukuh bahawa Melaka memenuhi konsep negara bangsa sebelum kedatangan Barat?",
       "options": [
         "Wujudnya raja, rakyat, kedaulatan, wilayah pengaruh, undang-undang dan lambang kebesaran secara lengkap",
-        "Wujudnya pelabuhan sahaja tanpa struktur politik",
-        "Kewujudan bahasa Melayu sebagai bahasa perdagangan",
-        "Kewujudan bangunan kayu di kawasan bandar"
+        "Wujudnya raja, rakyat dan undang-undang tanpa wilayah pengaruh yang jelas",
+        "Wujudnya pelabuhan, rakyat dan undang-undang tanpa lambang kebesaran rasmi",
+        "Wujudnya kedaulatan dan wilayah pengaruh tanpa peranan raja yang jelas"
       ],
       "answer": "Wujudnya raja, rakyat, kedaulatan, wilayah pengaruh, undang-undang dan lambang kebesaran secara lengkap",
       "explanation": "Hujah paling kukuh ialah gabungan lengkap ciri negara bangsa — bukti terus kepada struktur politik dan undang-undang, bukan bukti sampingan.",

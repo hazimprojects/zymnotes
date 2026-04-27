@@ -52,7 +52,12 @@
       "level": 1,
       "levelLabel": "Mengingat",
       "prompt": "Dalam struktur tradisional, jawatan manakah sering dianggap setinggi di bawah sultan dan memegang peranan besar dalam pentadbiran?",
-      "options": ["Bendahara", "Laksamana", "Penghulu", "Syahbandar"],
+      "options": [
+        "Bendahara",
+        "Laksamana",
+        "Penghulu",
+        "Syahbandar"
+      ],
       "answer": "Bendahara",
       "explanation": "Bendahara memegang peranan utama dalam pentadbiran dan sering menjadi pembesar tertinggi selepas sultan.",
       "tip": "Hierarki: Bendahara sering digambarkan sebagai \"tangan kanan\" sultan — elak pilihan moden yang tidak wujud pada zaman itu."
@@ -109,9 +114,9 @@
       "prompt": "Seek kapal dagang asing ingin berlabuh dan berniaga di pelabuhan Melaka. Peraturan maritim dan cukai yang relevan biasanya dirujuk dalam:",
       "options": [
         "Undang-Undang Laut Melaka",
-        "Hukum Kanun Melaka sahaja tanpa pengecualian",
-        "Perlembagaan negeri moden",
-        "Kitab undang-undang British 1800"
+        "Hukum Kanun Melaka dengan pengecualian untuk pedagang asing",
+        "Surat-surat perjanjian lisan antara pembesar dan nakhoda",
+        "Hukum adat setempat tanpa perundangan bertulis"
       ],
       "answer": "Undang-Undang Laut Melaka",
       "explanation": "Aktiviti maritim, cukai pelabuhan dan hal ehwal laut dikaitkan dengan Undang-Undang Laut Melaka.",
@@ -124,9 +129,9 @@
       "prompt": "Sultan memberi kuasa kepada pembesar untuk mentadbir kawasan pegangan atau jajahan tertentu. Ini mencerminkan:",
       "options": [
         "Pewarisan kuasa pentadbiran melalui perwakilan pembesar",
-        "Sultan melepaskan semua kuasa undang-undang",
-        "Jajahan tidak tunduk kepada Melaka",
-        "Sistem demokrasi langsung rakyat"
+        "Pemusatan semua kuasa undang-undang di tangan seorang pembesar tunggal",
+        "Pengabaian kuasa sultan di wilayah jajahan secara automatik",
+        "Penghapusan peranan pembesar dalam pengumpulan hasil kerajaan"
       ],
       "answer": "Pewarisan kuasa pentadbiran melalui perwakilan pembesar",
       "explanation": "Pelantikan pembesar untuk mentadbir kawasan menunjukkan struktur pentadbiran berperingkat dan sistem delegasi kuasa.",
@@ -139,9 +144,9 @@
       "prompt": "Hukum Kanun Melaka merangkumi hukuman jenayah, hak milik dan tata cara pemerintahan. Ini terutamanya memastikan:",
       "options": [
         "Kelancaran pentadbiran dan keadilan asas dalam masyarakat",
-        "Semua pedagang dilarang masuk Melaka",
-        "Sultan tidak mempunyai kuasa",
-        "Undang-undang hanya untuk raja British"
+        "Kawalan mutlak sultan ke atas pedagang tanpa peraturan bertulis",
+        "Undang-undang yang hanya mengikat golongan bangsawan istana",
+        "Undang-undang yang terhad kepada urusan agama tanpa jenayah atau hak milik"
       ],
       "answer": "Kelancaran pentadbiran dan keadilan asas dalam masyarakat",
       "explanation": "Perundangan bertulis membantu mengekalkan ketenteraman, hak milik dan tatacara pemerintahan yang jelas.",
@@ -184,9 +189,9 @@
       "prompt": "Antara hujah berikut, manakah PALING kukuh bahawa Melaka mencapai keunggulan pentadbiran?",
       "options": [
         "Wujudnya struktur berperingkat, peranan pembesar yang jelas, dan sistem hasil untuk menyokong kerajaan",
-        "Melaka tidak mempunyai undang-undang bertulis",
-        "Pentadbiran hanya bergantung pada nasihat rawak tanpa struktur",
-        "Sultan tidak pernah berinteraksi dengan pembesar"
+        "Wujudnya undang-undang bertulis tanpa peranan pembesar dalam pelaksanaan",
+        "Wujudnya sistem hasil tanpa struktur pentadbiran yang jelas",
+        "Wujudnya pembesar yang berkuasa tanpa sebarang undang-undang bertulis"
       ],
       "answer": "Wujudnya struktur berperingkat, peranan pembesar yang jelas, dan sistem hasil untuk menyokong kerajaan",
       "explanation": "Hujah kukuh menyatukan struktur, manusia (pembesar) dan sumber kewangan — elemen penting keunggulan yang dibincangkan dalam bab ini.",

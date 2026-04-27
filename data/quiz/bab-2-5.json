@@ -9,9 +9,9 @@
       "prompt": "Sejak bilakah kesedaran nasionalisme di negara kita bermula?",
       "options": [
         "Sejak zaman Kesultanan Melayu Melaka",
-        "Selepas tahun 3000 Masihi",
-        "Selepas revolusi Perancis di Melaka",
-        "Pada zaman prasejarah global"
+        "Sejak abad ke-15 di Eropah sahaja",
+        "Sejak penubuhan sistem demokrasi berparlimen moden",
+        "Sejak penubuhan Pertubuhan Bangsa-Bangsa Bersatu"
       ],
       "answer": "Sejak zaman Kesultanan Melayu Melaka",
       "explanation": "Kesedaran nasionalisme bermula sejak zaman Kesultanan Melayu Melaka.",
@@ -24,9 +24,9 @@
       "prompt": "Pada abad ke-20, apakah saluran utama kesedaran nasionalisme yang dinyatakan?",
       "options": [
         "Gerakan Islah, penulisan, akhbar dan pertubuhan",
-        "Hanya radio antarabangsa",
-        "Hanya sukan",
-        "Tiada saluran"
+        "Radio, televisyen dan media sosial moden",
+        "Tentera, polis dan mahkamah moden",
+        "Bank pusat, bursa saham dan insurans"
       ],
       "answer": "Gerakan Islah, penulisan, akhbar dan pertubuhan",
       "explanation": "Kesedaran berkembang melalui Islah, penulisan, akhbar dan pertubuhan.",
@@ -39,9 +39,9 @@
       "prompt": "Apakah contoh perjuangan awal yang biasanya ditekankan pada zaman awal?",
       "options": [
         "Usaha sultan dan tokoh tempatan mempertahankan wilayah daripada kuasa asing",
-        "Penubuhan parti komputer",
-        "Migrasi ke planet lain",
-        "Penghapusan sistem raja"
+        "Penubuhan parti politik moden di pusat bandar",
+        "Migrasi besar-besaran ke luar negara",
+        "Penyerahan wilayah kepada kuasa asing tanpa tentangan"
       ],
       "answer": "Usaha sultan dan tokoh tempatan mempertahankan wilayah daripada kuasa asing",
       "explanation": "Perjuangan awal melalui sultan dan tokoh mempertahankan wilayah.",
@@ -54,9 +54,9 @@
       "prompt": "Apakah hasil akhir kesedaran nasionalisme yang dinyatakan?",
       "options": [
         "Menjadi asas kepada perjuangan kebangsaan dan kemerdekaan negara",
-        "Menghapuskan semua bahasa tempatan",
-        "Menolak pendidikan",
-        "Tiada kesan politik"
+        "Menjadi asas kepada sistem ekonomi kapitalisme semata-mana",
+        "Menjadi asas kepada penjajahan tanpa wujudnya gerakan kemerdekaan",
+        "Tiada implikasi politik; hanya kesedaran budaya"
       ],
       "answer": "Menjadi asas kepada perjuangan kebangsaan dan kemerdekaan negara",
       "explanation": "Kesedaran menjadi asas perjuangan kebangsaan dan kemerdekaan.",
@@ -69,9 +69,9 @@
       "prompt": "Mengapakah zaman Melaka penting dalam membincangkan kesedaran awal?",
       "options": [
         "Ia menunjukkan asal-usul kesedaran mempertahankan bangsa dan wilayah",
-        "Ia tidak berkaitan dengan sejarah",
-        "Ia hanya tentang seni",
-        "Ia menolak peranan sultan"
+        "Ia hanya relevan untuk sejarah seni istana",
+        "Ia menunjukkan Melaka sebagai model demokrasi moden",
+        "Ia menolak peranan sultan dalam mempertahankan wilayah"
       ],
       "answer": "Ia menunjukkan asal-usul kesedaran mempertahankan bangsa dan wilayah",
       "explanation": "Melaka menandakan permulaan kesedaran mempertahankan wilayah.",
@@ -84,9 +84,9 @@
       "prompt": "Apakah fungsi akhbar dan penulisan dalam memperkukuh kesedaran abad ke-20?",
       "options": [
         "Menyebarkan idea nasionalisme kepada khalayak ramai",
-        "Menghapuskan komunikasi",
-        "Menggantikan bahasa dengan kod",
-        "Menolak pembacaan"
+        "Menyebarkan idea nasionalisme terhad kepada golongan elit sahaja",
+        "Menyebarkan maklumat tanpa membentuk kesedaran nasionalisme",
+        "Menyebarkan idea melalui ceramah tanpa melibatkan media cetak"
       ],
       "answer": "Menyebarkan idea nasionalisme kepada khalayak ramai",
       "explanation": "Media dan penulisan menyebarkan idea kepada masyarakat.",
@@ -204,9 +204,9 @@
       "prompt": "Antara pernyataan berikut, manakah yang PALING tepat merumuskan subtopik 2.5?",
       "options": [
         "Kesedaran nasionalisme bermula sejak Melaka dan berkembang melalui pelbagai saluran sehingga menjadi asas kemerdekaan",
-        "Kesedaran hanya wujud selepas internet",
-        "Kesedaran tidak berkaitan dengan pertubuhan",
-        "Kesedaran menolak peranan penulisan"
+        "Kesedaran nasionalisme bermula selepas kemerdekaan dan berkembang ke belakang",
+        "Kesedaran nasionalisme hanya wujud melalui media digital moden",
+        "Kesedaran nasionalisme terhad kepada gerakan elit tanpa saluran massa"
       ],
       "answer": "Kesedaran nasionalisme bermula sejak Melaka dan berkembang melalui pelbagai saluran sehingga menjadi asas kemerdekaan",
       "explanation": "Rumusan merangkumi asal, perkembangan dan hasil.",

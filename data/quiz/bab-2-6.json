@@ -24,9 +24,9 @@
       "prompt": "Antara berikut, manakah faktor yang dinyatakan memainkan peranan besar membangkitkan kesedaran?",
       "options": [
         "Agama, pendidikan, penulisan, media dan pengaruh antarabangsa",
-        "Hanya sukan air",
-        "Hanya cuaca",
-        "Hanya seni jalanan"
+        "Sukan, hiburan, fesyen, muzik dan seni jalanan",
+        "Pertanian, perikanan, perhutanan, perlombongan dan pembinaan",
+        "Cuaca, bencana alam, wabak, inflasi dan kemiskinan"
       ],
       "answer": "Agama, pendidikan, penulisan, media dan pengaruh antarabangsa",
       "explanation": "Faktor termasuk agama, pendidikan, penulisan, media dan antarabangsa.",
@@ -39,9 +39,9 @@
       "prompt": "Apakah contoh saluran penyebaran kesedaran yang disebut?",
       "options": [
         "Karya kreatif, akhbar, madrasah, institusi pendidikan dan penubuhan persatuan",
-        "Hanya televisyen satelit moden",
-        "Hanya permainan video",
-        "Tiada saluran"
+        "Karya kreatif, radio, masjid, institusi pendidikan dan penubuhan persatuan",
+        "Karya kreatif, akhbar, madrasah, tentera swasta dan penubuhan persatuan",
+        "Risalah, akhbar, madrasah, institusi pendidikan dan penubuhan kongres antarabangsa"
       ],
       "answer": "Karya kreatif, akhbar, madrasah, institusi pendidikan dan penubuhan persatuan",
       "explanation": "Kesedaran disebarkan melalui karya, akhbar, madrasah, sekolah dan persatuan.",
@@ -54,9 +54,9 @@
       "prompt": "Apakah hasil gabungan faktor?",
       "options": [
         "Melahirkan tokoh dan gerakan yang menjadi asas perjuangan kemerdekaan Tanah Melayu",
-        "Menghapuskan semua bahasa",
-        "Menolak pendidikan",
-        "Tiada kesan"
+        "Menghapuskan peranan bahasa kebangsaan dalam masyarakat",
+        "Menolak pendidikan sebagai saluran kesedaran",
+        "Menghasilkan gerakan tanpa sebarang kesan politik"
       ],
       "answer": "Melahirkan tokoh dan gerakan yang menjadi asas perjuangan kemerdekaan Tanah Melayu",
       "explanation": "Faktor-faktor melahirkan tokoh dan gerakan asas kemerdekaan.",
@@ -69,9 +69,9 @@
       "prompt": "Mengapakah faktor luaran penting dalam kemunculan gerakan nasionalisme?",
       "options": [
         "Ia turut memperkukuh kesedaran rakyat terhadap tekanan dan perbandingan antarabangsa",
-        "Ia tidak relevan",
-        "Ia menghapuskan media",
-        "Ia menolak agama"
+        "Ia lemah dan jarang mempengaruhi pandangan rakyat",
+        "Ia menggantikan sepenuhnya peranan agama dan pendidikan",
+        "Ia hanya relevan untuk elit bandar tanpa kesan ke luar bandar"
       ],
       "answer": "Ia turut memperkukuh kesedaran rakyat terhadap tekanan dan perbandingan antarabangsa",
       "explanation": "Pengaruh antarabangsa menjadi faktor luaran yang membangkitkan kesedaran.",
@@ -84,9 +84,9 @@
       "prompt": "Apakah peranan agama dalam membangkitkan nasionalisme?",
       "options": [
         "Salah satu faktor penting yang membentuk kesedaran rakyat",
-        "Tiada peranan",
-        "Hanya untuk upacara",
-        "Menolak perpaduan"
+        "Faktor sampingan tanpa kesan kepada gerakan politik",
+        "Hanya relevan dalam konteks upacara keagamaan",
+        "Menghalang perpaduan kerana perbezaan mazhab"
       ],
       "answer": "Salah satu faktor penting yang membentuk kesedaran rakyat",
       "explanation": "Agama memainkan peranan besar dalam membangkitkan kesedaran.",
@@ -114,9 +114,9 @@
       "prompt": "Satu persatuan menubuhkan kelas ceramah dan menerbitkan risalah. Apakah yang digambarkan?",
       "options": [
         "Penyebaran kesedaran melalui institusi dan penulisan",
-        "Ketiadaan organisasi",
-        "Penolakan terhadap ilmu",
-        "Isu peribadi semata-mata"
+        "Penutupan institusi daripada khalayak ramai",
+        "Penolakan terhadap ilmu dan pendidikan formal",
+        "Isu peribadi pemimpin tanpa kesan kepada masyarakat"
       ],
       "answer": "Penyebaran kesedaran melalui institusi dan penulisan",
       "explanation": "Ini menunjukkan saluran persatuan dan bahan bacaan.",
@@ -129,9 +129,9 @@
       "prompt": "Apakah yang digambarkan oleh penggunaan akhbar dan karya kreatif bersama-sama?",
       "options": [
         "Gabungan media dan budaya untuk menyampaikan idea nasionalisme",
-        "Penolakan terhadap bahasa",
-        "Ketiadaan sasaran khalayak",
-        "Isu teknikal cetakan"
+        "Penekanan bahasa kebangsaan tanpa menyentuh idea politik",
+        "Ketiadaan sasaran khalayak kerana edaran terhad",
+        "Isu teknikal percetakan tanpa kandungan politik"
       ],
       "answer": "Gabungan media dan budaya untuk menyampaikan idea nasionalisme",
       "explanation": "Karya dan akhbar bersama-sama menyebarkan idea.",
@@ -159,9 +159,9 @@
       "prompt": "Apakah persamaan utama antara faktor agama dan faktor pendidikan dalam konteks sejarah?",
       "options": [
         "Keduanya merupakan saluran dalaman yang membentuk nilai dan celik politik rakyat",
-        "Keduanya tidak berkaitan",
-        "Keduanya hanya untuk elit British",
-        "Keduanya menolak gerakan"
+        "Keduanya hanya mempengaruhi golongan pedagang asing",
+        "Keduanya terhad kepada kempen pilihan raya moden",
+        "Keduanya menolak penyertaan rakyat dalam gerakan"
       ],
       "answer": "Keduanya merupakan saluran dalaman yang membentuk nilai dan celik politik rakyat",
       "explanation": "Agama dan pendidikan membentuk kesedaran dan nilai rakyat.",
@@ -174,9 +174,9 @@
       "prompt": "Apakah perbezaan utama antara 'penulisan/media' dengan 'pengaruh antarabangsa'?",
       "options": [
         "Yang pertama merujuk kepada saluran penyebaran tempatan manakala yang kedua merujuk kepada konteks perbandingan dan tekanan luar",
-        "Tiada perbezaan",
-        "Keduanya sama",
-        "Keduanya hanya ekonomi"
+        "Keduanya merujuk kepada saluran yang sama tanpa perbezaan",
+        "Keduanya merujuk kepada faktor ekonomi semata-mana",
+        "Keduanya merujuk kepada undang-undang penjajah secara langsung"
       ],
       "answer": "Yang pertama merujuk kepada saluran penyebaran tempatan manakala yang kedua merujuk kepada konteks perbandingan dan tekanan luar",
       "explanation": "Media tempatan vs konteks global.",
@@ -189,9 +189,9 @@
       "prompt": "Antara hujah berikut, manakah yang PALING kukuh untuk menjelaskan kemunculan gerakan nasionalisme di negara kita?",
       "options": [
         "Gabungan faktor dalaman dan luaran memperkukuh kesedaran dan melahirkan tokoh serta gerakan asas kemerdekaan",
-        "Hanya satu faktor tunggal",
-        "Faktor luar tidak penting",
-        "Tiada kaitan dengan media"
+        "Hanya faktor dalaman yang penting; faktor luar tidak memberi kesan",
+        "Hanya media British yang membentuk kesedaran tanpa faktor lain",
+        "Tiada kaitan antara kesedaran dengan penubuhan gerakan politik"
       ],
       "answer": "Gabungan faktor dalaman dan luaran memperkukuh kesedaran dan melahirkan tokoh serta gerakan asas kemerdekaan",
       "explanation": "Hujah kukuh menekankan gabungan faktor dan hasil gerakan.",
@@ -204,9 +204,9 @@
       "prompt": "Antara pernyataan berikut, manakah yang PALING tepat merumuskan subtopik 2.6?",
       "options": [
         "Pelbagai faktor dalaman dan luaran membangkitkan kesedaran yang disebarkan melalui pelbagai saluran sehingga melahirkan tokoh dan gerakan kemerdekaan",
-        "Subtopik ini menolak peranan pendidikan",
-        "Subtopik ini hanya tentang media British",
-        "Subtopik ini tiada kaitan dengan kemerdekaan"
+        "Subtopik ini menolak peranan pendidikan dalam membentuk kesedaran",
+        "Subtopik ini menekankan media British sebagai satu-satunya sumber",
+        "Subtopik ini memisahkan kesedaran daripada matlamat kemerdekaan"
       ],
       "answer": "Pelbagai faktor dalaman dan luaran membangkitkan kesedaran yang disebarkan melalui pelbagai saluran sehingga melahirkan tokoh dan gerakan kemerdekaan",
       "explanation": "Rumusan merangkumi faktor, saluran dan hasil.",
