@@ -2213,6 +2213,39 @@ var ZYMNOTES_NAV = { chapters: [
     );
   }
 
+  /** True if element can scroll vertically (overflow + content taller than box). */
+  function isVerticallyScrollable(el) {
+    if (!el || el === document.body || el === document.documentElement) return false;
+    var st = window.getComputedStyle(el);
+    var oy = st.overflowY;
+    var yScroll =
+      oy === 'auto' || oy === 'scroll' || oy === 'overlay' ||
+      st.overflow === 'auto' || st.overflow === 'scroll';
+    if (!yScroll) return false;
+    return el.scrollHeight > el.clientHeight + 1;
+  }
+
+  /**
+   * Walk ancestors from node: if any vertically scrollable ancestor is scrolled
+   * down (scrollTop > 0), pull-to-refresh must not steal the gesture — window.scrollY
+   * stays 0 while inner scrollables move (quiz notice card, game card, feedback).
+   */
+  function innerVerticalScrollNotAtTop(node) {
+    for (var el = node; el && el !== document.documentElement; el = el.parentElement) {
+      if (!el || el.nodeType !== 1) continue;
+      if (!isVerticallyScrollable(el)) continue;
+      if (el.scrollTop > 1) return true;
+    }
+    return false;
+  }
+
+  function innerVerticalScrollNotAtTopAtPoint(clientX, clientY) {
+    if (typeof document.elementFromPoint !== 'function') return false;
+    var top = document.elementFromPoint(clientX, clientY);
+    if (!top || top === document.documentElement) return false;
+    return innerVerticalScrollNotAtTop(top);
+  }
+
   function setPull(dy, ready) {
     lastDy = dy;
     lastVisualPx = rubberVisualPx(dy);
@@ -2281,6 +2314,7 @@ var ZYMNOTES_NAV = { chapters: [
     function (e) {
       if (overlaysOpen()) return;
       if (window.scrollY > 18) return;
+      if (innerVerticalScrollNotAtTop(e.target)) return;
       indicator.classList.remove('hz-ptr-snapping');
       active = true;
       lastDy = 0;
@@ -2299,7 +2333,12 @@ var ZYMNOTES_NAV = { chapters: [
         reset();
         return;
       }
-      var dy = e.touches[0].clientY - startY;
+      var t = e.touches[0];
+      if (innerVerticalScrollNotAtTopAtPoint(t.clientX, t.clientY)) {
+        reset();
+        return;
+      }
+      var dy = t.clientY - startY;
       if (dy <= 0) return;
       pulling = true;
       var now = performance.now();
