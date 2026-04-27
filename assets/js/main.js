@@ -2163,15 +2163,15 @@ var ZYMNOTES_NAV = { chapters: [
     '</div>';
   document.body.appendChild(indicator);
 
-  /* Jarak + halaju: refresh hanya bila niat jelas — jarak panjang + getah keras + halaju lepas tinggi */
-  var DIST_MIN = 248;
-  var DIST_STRONG = 336;
+  /* Jarak + halaju: refresh hanya bila niat jelas — jarak + getah + halaju (sedikit longgar vs sebelum ini, rapat Chrome) */
+  var DIST_MIN = 228;
+  var DIST_STRONG = 308;
   var VEL_MS_WINDOW = 110;
-  var VEL_MIN = 0.56;
+  var VEL_MIN = 0.52;
   var MIN_SAMPLES_FOR_VEL_COMMIT = 6;
-  /* Paparan “getah”: lebih rintangan — jari perlu tarik lebih jauh untuk anak panah naik sama */
-  var RUBBER_MAX_PX = 58;
-  var RUBBER_TAU = 132;
+  /* Paparan “getah”: sedikit kurang rintangan — anak panah ikut jari lebih rapat */
+  var RUBBER_MAX_PX = 66;
+  var RUBBER_TAU = 118;
   var startY = 0;
   var active = false;
   var pulling = false;
