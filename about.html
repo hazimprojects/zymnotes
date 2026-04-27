@@ -1,6 +1,29 @@
 <!DOCTYPE html>
 <html lang="ms">
 <head>
+  <script>
+    (function () {
+      var KEY = "zymnotes-pwa-installed";
+      function standalone() {
+        try {
+          if (window.matchMedia("(display-mode: standalone)").matches) return true;
+          if (window.matchMedia("(display-mode: minimal-ui)").matches) return true;
+          if (window.matchMedia("(display-mode: window-controls-overlay)").matches) return true;
+        } catch (e) {}
+        return navigator.standalone === true;
+      }
+      try {
+        if (localStorage.getItem(KEY)) {
+          document.documentElement.classList.add("about-pwa-hide-card");
+          return;
+        }
+        if (standalone()) {
+          document.documentElement.classList.add("about-pwa-hide-card");
+          localStorage.setItem(KEY, "1");
+        }
+      } catch (e) {}
+    })();
+  </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <title>Tentang · ZymNotes</title>
@@ -30,7 +53,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap"></noscript>
-  <link rel="preload" as="style" href="assets/css/base.css?v=42">
+  <link rel="preload" as="style" href="assets/css/base.css?v=44">
 <link rel="preload" as="style" href="assets/css/layout.css?v=15">
 <link rel="preload" as="style" href="assets/css/ui.css?v=50">
 <link rel="preload" as="style" href="assets/css/paper.css?v=14">
@@ -38,7 +61,7 @@
 <link rel="preload" as="style" href="assets/css/responsive.css?v=6">
 <link rel="preload" as="style" href="assets/css/themes.css?v=14">
 <link rel="preload" as="style" href="assets/css/lab.css?v=7">
-<link rel="stylesheet" href="assets/css/style.css?v=146" />
+<link rel="stylesheet" href="assets/css/style.css?v=148" />
 
   <!-- Google tag (gtag.js) — deferred for performance -->
 <script>
@@ -63,7 +86,7 @@
   })();
 </script>
 
-  <link rel="manifest" href="/manifest.json?v=11" />
+  <link rel="manifest" href="/manifest.json?v=12" />
   <link rel="icon" type="image/svg+xml" href="/icons/icon.svg?v=3" />
   <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png?v=1" />
   <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png?v=1" />
@@ -164,6 +187,31 @@
 
     <div class="home-info-card" id="about-pwa-card">
       <div class="home-info-label">Pasang sebagai aplikasi (telefon)</div>
+      <figure class="about-pwa-showcase" aria-label="Pratonton ikon ZymNotes di skrin utama telefon">
+        <div class="about-pwa-phone" aria-hidden="true">
+          <div class="about-pwa-phone-status">
+            <span class="about-pwa-phone-time">9:41</span>
+            <span class="about-pwa-phone-signal"></span>
+          </div>
+          <div class="about-pwa-phone-wallpaper">
+            <div class="about-pwa-grid" role="presentation">
+              <span class="about-pwa-slot"></span><span class="about-pwa-slot"></span><span class="about-pwa-slot"></span><span class="about-pwa-slot"></span>
+              <span class="about-pwa-slot"></span><span class="about-pwa-slot"></span><span class="about-pwa-slot"></span><span class="about-pwa-slot"></span>
+              <span class="about-pwa-slot"></span><span class="about-pwa-slot"></span>
+              <span class="about-pwa-tile">
+                <span class="about-pwa-tile-icon-wrap">
+                  <img class="about-pwa-tile-icon" src="/icons/icon-192.png?v=1" width="64" height="64" alt="" decoding="async" />
+                </span>
+                <span class="about-pwa-tile-label">ZymNotes</span>
+              </span>
+            </div>
+          </div>
+          <div class="about-pwa-phone-dock" aria-hidden="true">
+            <span class="about-pwa-dock-pill"></span>
+          </div>
+        </div>
+        <figcaption class="about-pwa-showcase-caption">Selepas pasang, ikon <strong>ZymNotes</strong> akan muncul di skrin utama anda seperti aplikasi lain.</figcaption>
+      </figure>
       <p class="home-info-text">ZymNotes ialah laman web progresif (PWA): anda boleh menambahkannya ke skrin utama dan membukanya seperti aplikasi biasa — sesuai untuk ulang kaji tanpa perlu cari semula dalam pelayar.</p>
       <p class="home-info-text about-pwa-lead"><strong>Android (Chrome)</strong></p>
       <ol class="about-pwa-steps">
@@ -175,7 +223,6 @@
         <li>Buka laman dalam Safari (bukan terus dari aplikasi mesej jika boleh).</li>
         <li>Ketuk butang <strong>Kongsi</strong> &gt; <strong>Tambah ke Skrin Utama</strong> &gt; <strong>Tambah</strong>.</li>
       </ol>
-      <p class="about-pwa-note" id="about-pwa-installed-note" hidden>ZymNotes kelihatan sudah dipasang pada peranti ini — teruskan gunakan ikon di skrin utama.</p>
       <div class="about-pwa-actions">
         <button type="button" class="home-cta-btn home-cta-primary" id="about-pwa-install-btn" hidden>Pasang ZymNotes</button>
       </div>

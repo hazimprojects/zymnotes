@@ -11,6 +11,12 @@
   "lang": "ms",
   "categories": ["education"],
   "prefer_related_applications": false,
+  "related_applications": [
+    {
+      "platform": "webapp",
+      "url": "https://zymnotes.com/manifest.json"
+    }
+  ],
   "icons": [
     {
       "src": "/icons/icon.svg?v=3",

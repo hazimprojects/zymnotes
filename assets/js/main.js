@@ -2382,37 +2382,83 @@ var ZYMNOTES_NAV = { chapters: [
 })();
 
 // =========================
-// ABOUT PAGE — PWA INSTALL (Chrome/Edge prompt + standalone note)
+// ABOUT PAGE — PWA INSTALL (hide card when installed / in app)
 // =========================
 (function () {
-  var btn = document.getElementById('about-pwa-install-btn');
-  var note = document.getElementById('about-pwa-installed-note');
-  if (!btn || !note) return;
+  var KEY = "zymnotes-pwa-installed";
+  var card = document.getElementById("about-pwa-card");
+  var btn = document.getElementById("about-pwa-install-btn");
+  if (!card || !btn) return;
 
-  var deferredPrompt = null;
+  function hidePwaCard() {
+    document.documentElement.classList.add("about-pwa-hide-card");
+  }
+
+  function markInstalled() {
+    try {
+      localStorage.setItem(KEY, "1");
+    } catch (e) {}
+    hidePwaCard();
+  }
 
   function isStandaloneDisplay() {
-    if (window.matchMedia && window.matchMedia('(display-mode: standalone)').matches) return true;
-    if (typeof navigator.standalone === 'boolean' && navigator.standalone) return true;
+    try {
+      if (window.matchMedia("(display-mode: standalone)").matches) return true;
+      if (window.matchMedia("(display-mode: minimal-ui)").matches) return true;
+      if (window.matchMedia("(display-mode: window-controls-overlay)").matches) return true;
+    } catch (e) {}
+    if (typeof navigator.standalone === "boolean" && navigator.standalone) return true;
     return false;
   }
 
-  if (isStandaloneDisplay()) {
-    note.hidden = false;
+  function storageSaysInstalled() {
+    try {
+      return localStorage.getItem(KEY) === "1";
+    } catch (e) {
+      return false;
+    }
+  }
+
+  if (document.documentElement.classList.contains("about-pwa-hide-card")) return;
+
+  if (storageSaysInstalled()) {
+    markInstalled();
     return;
   }
 
-  window.addEventListener('beforeinstallprompt', function (e) {
+  if (isStandaloneDisplay()) {
+    markInstalled();
+    return;
+  }
+
+  if (navigator.getInstalledRelatedApps) {
+    navigator.getInstalledRelatedApps().then(function (apps) {
+      if (apps && apps.length) markInstalled();
+    }).catch(function () {});
+  }
+
+  var deferredPrompt = null;
+
+  window.addEventListener("beforeinstallprompt", function (e) {
     e.preventDefault();
     deferredPrompt = e;
     btn.hidden = false;
   });
 
-  btn.addEventListener('click', function () {
+  window.addEventListener("appinstalled", function () {
+    markInstalled();
+    deferredPrompt = null;
+  });
+
+  btn.addEventListener("click", function () {
     if (!deferredPrompt) return;
     deferredPrompt.prompt();
-    deferredPrompt.userChoice.then(function () {
-      btn.hidden = true;
+    deferredPrompt.userChoice.then(function (choice) {
+      if (choice && choice.outcome === "accepted") {
+        markInstalled();
+      } else {
+        btn.hidden = true;
+      }
       deferredPrompt = null;
     });
   });
@@ -2425,7 +2471,7 @@ var ZYMNOTES_NAV = { chapters: [
   if (!('serviceWorker' in navigator)) return;
 
   window.addEventListener('load', function () {
-    navigator.serviceWorker.register('/sw.js?v=214').catch(function (error) {
+    navigator.serviceWorker.register('/sw.js?v=216').catch(function (error) {
       console.warn('Service worker registration failed:', error);
     });
   });
