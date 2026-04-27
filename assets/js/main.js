@@ -585,12 +585,18 @@ function hzZymnotesIsNotesPathname(p) {
   return !!p && /\/notes(?:\/|$)/i.test(p);
 }
 
-/** Utama, indeks nota, tentang — sparkle menu + mindmap; bab induk + subtopik nota. */
+function hzZymnotesIsFeedbackPathname(p) {
+  if (!p || typeof p !== "string") return false;
+  var tail = p.replace(/\/+$/, "").split("/").pop() || "";
+  return /^feedback\.html$/i.test(tail);
+}
+
+/** Utama, indeks nota, tentang, maklum balas — sparkle menu + mindmap; bab induk + subtopik nota. */
 function hzZymnotesIsSparkleShellPathname(p) {
   if (!p || typeof p !== "string") return false;
   if (hzZymnotesIsHomePathname(p) || hzZymnotesIsNotesPathname(p)) return true;
   var tail = p.replace(/\/+$/, "").split("/").pop() || "";
-  return /^about\.html$/i.test(tail);
+  return /^about\.html$/i.test(tail) || hzZymnotesIsFeedbackPathname(p);
 }
 
 /** Halaman induk bab sahaja: bab-1.html … bab-7.html (bukan subtopik). */
@@ -1908,7 +1914,7 @@ var ZYMNOTES_NAV = { chapters: [
       '<div class="hz-search-header">' +
         '<div class="hz-search-input-wrap">' +
           '<span class="hz-search-icon">' + HZ_ICONS.search + '</span>' +
-          '<input class="hz-search-input" type="search" placeholder="Cari nota..." autocomplete="off" />' +
+          '<input class="hz-search-input" type="text" inputmode="search" enterkeyhint="search" placeholder="Cari nota..." autocomplete="off" />' +
           '<button class="hz-search-close" type="button" aria-label="Tutup">' + HZ_ICONS.close + '</button>' +
         '</div>' +
       '</div>' +
