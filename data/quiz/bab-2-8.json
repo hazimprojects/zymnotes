@@ -1,0 +1,216 @@
+{
+  "id": "2-8",
+  "title": "Kesan Perkembangan Nasionalisme",
+  "questions": [
+    {
+      "id": "q1",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Dalam bidang politik, apakah kesan perkembangan nasionalisme yang ditekankan nota?",
+      "options": [
+        "Meningkatkan kesedaran rakyat terhadap pentadbiran dan peluang berperanan dalam kerajaan",
+        "Menurunkan minat terhadap politik",
+        "Menghapuskan pilihan raya",
+        "Menolak semua parti"
+      ],
+      "answer": "Meningkatkan kesedaran rakyat terhadap pentadbiran dan peluang berperanan dalam kerajaan",
+      "explanation": "Kesan politik termasuk kesedaran pentadbiran dan peranan rakyat.",
+      "tip": "Politik = kesedaran + peranan."
+    },
+    {
+      "id": "q2",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Dalam bidang ekonomi, apakah kesan yang dinyatakan?",
+      "options": [
+        "Menggalakkan masyarakat meningkatkan pendidikan, taraf hidup dan penguasaan ekonomi",
+        "Menggalakkan ketergantungan mutlak",
+        "Menolak pendidikan",
+        "Tiada kesan"
+      ],
+      "answer": "Menggalakkan masyarakat meningkatkan pendidikan, taraf hidup dan penguasaan ekonomi",
+      "explanation": "Nasionalisme menggalakkan peningkatan pendidikan dan ekonomi.",
+      "tip": "Ekonomi = pendidikan + taraf + penguasaan."
+    },
+    {
+      "id": "q3",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Dalam bidang sosial, apakah contoh kesedaran yang disebut?",
+      "options": [
+        "Pendidikan, peranan wanita dan kebajikan masyarakat pelbagai kaum",
+        "Penolakan terhadap semua kaum",
+        "Tiada isu sosial",
+        "Hanya isu sukan"
+      ],
+      "answer": "Pendidikan, peranan wanita dan kebajikan masyarakat pelbagai kaum",
+      "explanation": "Sosial merangkumi pendidikan, wanita dan kebajian pelbagai kaum.",
+      "tip": "Sosial = pendidikan + wanita + kebajian."
+    },
+    {
+      "id": "q4",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Apakah peranan keseluruhan kesan-kesan ini menurut ringkasan?",
+      "options": [
+        "Menjadi titik tolak penting ke arah perjuangan kemerdekaan dan pembinaan negara bangsa",
+        "Tiada kesan besar",
+        "Hanya kesan sementara",
+        "Menolak pembangunan"
+      ],
+      "answer": "Menjadi titik tolak penting ke arah perjuangan kemerdekaan dan pembinaan negara bangsa",
+      "explanation": "Kesan menjadi titik tolak kemerdekaan dan negara bangsa.",
+      "tip": "Titik tolak = merdeka + negara bangsa."
+    },
+    {
+      "id": "q5",
+      "level": 2,
+      "levelLabel": "Memahami",
+      "prompt": "Mengapakah aspek sosial penting dalam membincangkan kesan nasionalisme?",
+      "options": [
+        "Ia menunjukkan perubahan nilai masyarakat terhadap pendidikan, wanita dan perpaduan kaum",
+        "Ia tidak berkaitan dengan rakyat",
+        "Ia hanya teori",
+        "Ia menolak kebajikan"
+      ],
+      "answer": "Ia menunjukkan perubahan nilai masyarakat terhadap pendidikan, wanita dan perpaduan kaum",
+      "explanation": "Sosial mencerminkan perubahan nilai dan perpaduan.",
+      "tip": "Sosial = nilai + perpaduan."
+    },
+    {
+      "id": "q6",
+      "level": 2,
+      "levelLabel": "Memahami",
+      "prompt": "Apakah hubungan antara kesan ekonomi dengan semangat nasionalisme?",
+      "options": [
+        "Nasionalisme mendorong usaha meningkatkan daya saing dan taraf hidup bangsa",
+        "Nasionalisme menolak ekonomi",
+        "Tiada hubungan",
+        "Hanya import barang"
+      ],
+      "answer": "Nasionalisme mendorong usaha meningkatkan daya saing dan taraf hidup bangsa",
+      "explanation": "Semangat bangsa mendorong peningkatan ekonomi dan pendidikan.",
+      "tip": "Ekonomi = daya saing bangsa."
+    },
+    {
+      "id": "q7",
+      "level": 2,
+      "levelLabel": "Memahami",
+      "prompt": "Mengapakah kesan politik dikaitkan dengan peluang berperanan dalam kerajaan?",
+      "options": [
+        "Kesedaran politik mendorong rakyat menuntut penyertaan dan akauntabiliti",
+        "Politik tidak berubah",
+        "Rakyat tidak berminat",
+        "Tiada tuntutan"
+      ],
+      "answer": "Kesedaran politik mendorong rakyat menuntut penyertaan dan akauntabiliti",
+      "explanation": "Nasionalisme meningkatkan kesedaran peranan dalam pentadbiran.",
+      "tip": "Politik = penyertaan + akauntabiliti."
+    },
+    {
+      "id": "q8",
+      "level": 3,
+      "levelLabel": "Mengaplikasi",
+      "prompt": "Gerakan wanita menuntut hak pendidikan dan kebajikan selepas kesedaran nasionalisme meningkat. Bidang manakah?",
+      "options": [
+        "Bidang sosial",
+        "Bidang astronomi",
+        "Bidang geologi",
+        "Bidang botani"
+      ],
+      "answer": "Bidang sosial",
+      "explanation": "Isu wanita dan kebajian tergolong dalam kesan sosial.",
+      "tip": "Wanita + kebajian = sosial."
+    },
+    {
+      "id": "q9",
+      "level": 3,
+      "levelLabel": "Mengaplikasi",
+      "prompt": "Komuniti pelbagai kaum menganjurkan program kebajikan bersama. Apakah yang ditonjolkan?",
+      "options": [
+        "Nasionalisme membangkitkan kesedaran kebajikan masyarakat pelbagai kaum",
+        "Penolakan perpaduan",
+        "Ketiadaan organisasi",
+        "Isu teknikal"
+      ],
+      "answer": "Nasionalisme membangkitkan kesedaran kebajikan masyarakat pelbagai kaum",
+      "explanation": "Ini selari dengan kesan sosial terhadap perpaduan dan kebajian.",
+      "tip": "Kebajian kaum = kesan sosial."
+    },
+    {
+      "id": "q10",
+      "level": 3,
+      "levelLabel": "Mengaplikasi",
+      "prompt": "Rakyat mula menilai dasar pentadbiran kolonial secara lebih kritis. Apakah bidang kesan?",
+      "options": [
+        "Bidang politik",
+        "Bidang muzik klasik",
+        "Bidang fesyen",
+        "Bidang gastronomi"
+      ],
+      "answer": "Bidang politik",
+      "explanation": "Penilaian pentadbiran adalah kesan politik.",
+      "tip": "Kritik pentadbiran = politik."
+    },
+    {
+      "id": "q11",
+      "level": 4,
+      "levelLabel": "Menganalisis",
+      "prompt": "Apakah persamaan utama antara kesan politik dengan kesan ekonomi menurut nota?",
+      "options": [
+        "Keduanya menunjukkan peningkatan kesedaran dan usaha rakyat memperbaiki kedudukan dalam sistem negara",
+        "Keduanya tidak berkaitan dengan rakyat",
+        "Keduanya menolak pendidikan",
+        "Keduanya hanya teori"
+      ],
+      "answer": "Keduanya menunjukkan peningkatan kesedaran dan usaha rakyat memperbaiki kedudukan dalam sistem negara",
+      "explanation": "Politik dan ekonomi sama-sama melibatkan peningkatan kesedaran dan usaha.",
+      "tip": "Kesedaran + usaha rakyat."
+    },
+    {
+      "id": "q12",
+      "level": 4,
+      "levelLabel": "Menganalisis",
+      "prompt": "Apakah perbezaan utama antara kesan 'sosial' dengan kesan 'politik' dalam ringkasan?",
+      "options": [
+        "Sosial menekankan nilai masyarakat, wanita dan kebajian kaum manakala politik menekankan pentadbiran dan penyertaan",
+        "Tiada perbezaan",
+        "Sosial hanya tentang ekonomi",
+        "Politik hanya tentang sukan"
+      ],
+      "answer": "Sosial menekankan nilai masyarakat, wanita dan kebajian kaum manakala politik menekankan pentadbiran dan penyertaan",
+      "explanation": "Sosial lebih tentang masyarakat; politik tentang sistem dan penyertaan.",
+      "tip": "Masyarakat vs sistem."
+    },
+    {
+      "id": "q13",
+      "level": 5,
+      "levelLabel": "Menilai",
+      "prompt": "Antara hujah berikut, manakah yang PALING kukuh untuk menunjukkan kesan nasionalisme menyeluruh?",
+      "options": [
+        "Ia memberi kesan politik, ekonomi dan sosial yang menjadi titik tolak kemerdekaan dan pembinaan negara bangsa",
+        "Ia hanya menjejaskan satu individu",
+        "Ia tiada kesan",
+        "Ia menolak pembangunan"
+      ],
+      "answer": "Ia memberi kesan politik, ekonomi dan sosial yang menjadi titik tolak kemerdekaan dan pembinaan negara bangsa",
+      "explanation": "Hujah kukuh merangkumi tiga bidang dan hasil besar.",
+      "tip": "Paling kukuh = tiga bidang + titik tolak."
+    },
+    {
+      "id": "q14",
+      "level": 5,
+      "levelLabel": "Menilai",
+      "prompt": "Antara pernyataan berikut, manakah yang PALING tepat merumuskan subtopik 2.8?",
+      "options": [
+        "Kesan nasionalisme merangkumi politik, ekonomi dan sosial serta menjadi asas penting ke arah kemerdekaan dan negara bangsa",
+        "Kesan hanya ekonomi",
+        "Tiada kaitan dengan wanita",
+        "Menolak perpaduan"
+      ],
+      "answer": "Kesan nasionalisme merangkumi politik, ekonomi dan sosial serta menjadi asas penting ke arah kemerdekaan dan negara bangsa",
+      "explanation": "Rumusan menyatukan tiga bidang dan peranan ke arah kemerdekaan.",
+      "tip": "Rumusan = 3 bidang + kemerdekaan."
+    }
+  ]
+}

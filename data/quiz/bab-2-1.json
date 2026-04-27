@@ -1,0 +1,216 @@
+{
+  "id": "2-1",
+  "title": "Maksud Nasionalisme",
+  "questions": [
+    {
+      "id": "q1",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Apakah maksud nasionalisme secara umum dalam konteks sejarah?",
+      "options": [
+        "Perasaan cinta yang mendalam terhadap bangsa dan negara",
+        "Sistem pemerintahan mutlak raja di Eropah",
+        "Dasar perdagangan bebas tanpa kawalan",
+        "Perjanjian gencatan senjata antara negara"
+      ],
+      "answer": "Perasaan cinta yang mendalam terhadap bangsa dan negara",
+      "explanation": "Nasionalisme ialah perasaan cinta yang mendalam terhadap bangsa dan negara.",
+      "tip": "Ingat: nasionalisme = cinta bangsa + negara."
+    },
+    {
+      "id": "q2",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Antara berikut, manakah merupakan matlamat utama perjuangan yang didorong oleh nasionalisme?",
+      "options": [
+        "Menentang penjajahan, membela bangsa dan tanah air serta mencapai kebebasan",
+        "Mengembangkan empayar melalui penjajahan",
+        "Menghapuskan peranan bahasa kebangsaan",
+        "Menggantikan sistem pentadbiran tradisional dengan feudalisme"
+      ],
+      "answer": "Menentang penjajahan, membela bangsa dan tanah air serta mencapai kebebasan",
+      "explanation": "Nasionalisme mendorong perjuangan menentang penjajahan, membela bangsa dan tanah air serta mencapai kebebasan.",
+      "tip": "Tiga arah: lawan penjajah, bela bangsa, capai kebebasan."
+    },
+    {
+      "id": "q3",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Mengapakah maksud nasionalisme boleh berbeza antara masyarakat?",
+      "options": [
+        "Dipengaruhi oleh keturunan, agama, bahasa, adat resam dan pengalaman sejarah",
+        "Kerana semua negara menggunakan definisi PBB yang sama",
+        "Kerana nasionalisme hanya wujud selepas tahun 2000",
+        "Kerana ia ditetapkan oleh satu undang-undang antarabangsa"
+      ],
+      "answer": "Dipengaruhi oleh keturunan, agama, bahasa, adat resam dan pengalaman sejarah",
+      "explanation": "Maksud nasionalisme tidak statik; ia berbeza mengikut konteks masyarakat.",
+      "tip": "Lima faktor: keturunan, agama, bahasa, adat, sejarah."
+    },
+    {
+      "id": "q4",
+      "level": 1,
+      "levelLabel": "Mengingat",
+      "prompt": "Menurut Hans Kohn, apakah intipati utama nasionalisme?",
+      "options": [
+        "Kesetiaan seseorang hanya kepada negara atau bangsanya",
+        "Kewajipan membayar cukai kepada kerajaan",
+        "Penggunaan bahasa Inggeris di sekolah",
+        "Penubuhan tentera elit sahaja"
+      ],
+      "answer": "Kesetiaan seseorang hanya kepada negara atau bangsanya",
+      "explanation": "Hans Kohn menekankan kesetiaan kepada negara atau bangsa.",
+      "tip": "Kata kunci: kesetiaan kepada negara/bangsa."
+    },
+    {
+      "id": "q5",
+      "level": 2,
+      "levelLabel": "Memahami",
+      "prompt": "Mengapakah pemahaman tentang nasionalisme penting untuk rakyat negara kita?",
+      "options": [
+        "Ia asas kepada mempertahankan hak, menolak penjajahan dan membina negara berdaulat",
+        "Ia hanya penting untuk sejarawan di universiti",
+        "Ia membatalkan peranan institusi beraja",
+        "Ia menggalakkan rakyat meninggalkan tanah air"
+      ],
+      "answer": "Ia asas kepada mempertahankan hak, menolak penjajahan dan membina negara berdaulat",
+      "explanation": "Pemahaman nasionalisme mendorong perjuangan mempertahankan hak dan menolak penjajahan.",
+      "tip": "'Mengapa penting' = kesan kepada rakyat dan negara."
+    },
+    {
+      "id": "q6",
+      "level": 2,
+      "levelLabel": "Memahami",
+      "prompt": "Apakah yang dimaksudkan dengan nasionalisme 'tidak statik' dalam nota subtopik ini?",
+      "options": [
+        "Maksudnya boleh berubah mengikut zaman dan konteks masyarakat",
+        "Maksudnya sentiasa sama di setiap negara",
+        "Maksudnya hanya terpakai pada zaman moden",
+        "Maksudnya tidak mempunyai kaitan dengan politik"
+      ],
+      "answer": "Maksudnya boleh berubah mengikut zaman dan konteks masyarakat",
+      "explanation": "Nasionalisme tidak statik kerana dipengaruhi konteks dan pengalaman berbeza.",
+      "tip": "'Tidak statik' = berubah mengikut konteks."
+    },
+    {
+      "id": "q7",
+      "level": 2,
+      "levelLabel": "Memahami",
+      "prompt": "Profesor William R. Roff menghubungkan kebangkitan nasionalisme Melayu dengan apakah?",
+      "options": [
+        "Ancaman terhadap hak dan ekonomi orang Melayu serta kebimbangan terhadap sekularisme dan imperialisme Barat",
+        "Ketiadaan sistem pendidikan di Alam Melayu",
+        "Penubuhan Malayan Union sahaja",
+        "Kemerosotan perdagangan dunia semasa zaman moden"
+      ],
+      "answer": "Ancaman terhadap hak dan ekonomi orang Melayu serta kebimbangan terhadap sekularisme dan imperialisme Barat",
+      "explanation": "Roff menekankan tekanan luar dan keperluan mempertahankan identiti.",
+      "tip": "Roff = tekanan hak/ekonomi + kebimbangan Barat."
+    },
+    {
+      "id": "q8",
+      "level": 3,
+      "levelLabel": "Mengaplikasi",
+      "prompt": "Sebuah masyarakat menganggap nasionalisme sebagai semangat mempertahankan agama dan adat daripada pengaruh asing. Apakah yang ditunjukkan oleh contoh ini?",
+      "options": [
+        "Maksud nasionalisme dipengaruhi oleh agama dan adat resam dalam konteks setempat",
+        "Nasionalisme tidak mempunyai kaitan dengan budaya",
+        "Nasionalisme hanya tentang ekonomi",
+        "Nasionalisme ditakrifkan oleh penjajah"
+      ],
+      "answer": "Maksud nasionalisme dipengaruhi oleh agama dan adat resam dalam konteks setempat",
+      "explanation": "Ini menunjukkan faktor agama dan adat membentuk tafsiran nasionalisme.",
+      "tip": "Petikan konteks = cari faktor pembentuk maksud."
+    },
+    {
+      "id": "q9",
+      "level": 3,
+      "levelLabel": "Mengaplikasi",
+      "prompt": "Dato' Onn Jaafar menekankan bangsa yang 'tegap, kuat, berdikari'. Apakah fokus utama petikan tersebut terhadap nasionalisme?",
+      "options": [
+        "Membina jati diri dan keyakinan bangsa",
+        "Menggalakkan penjajahan untuk kemajuan",
+        "Menolak pendidikan rakyat",
+        "Memusatkan kuasa ekonomi di tangan asing"
+      ],
+      "answer": "Membina jati diri dan keyakinan bangsa",
+      "explanation": "Onn Jaafar menekankan pembinaan jati diri dan keyakinan bangsa.",
+      "tip": "Onn = tegap, berdikari → jati diri bangsa."
+    },
+    {
+      "id": "q10",
+      "level": 3,
+      "levelLabel": "Mengaplikasi",
+      "prompt": "Dr. R. Suntharalingam menyatakan setiap bangsa berhak membentuk negara. Apakah konsep utama yang ditekankan?",
+      "options": [
+        "Hak bangsa untuk merdeka dan mentadbir sendiri",
+        "Penghapusan sistem demokrasi",
+        "Kewajipan bergantung sepenuhnya kepada kuasa asing",
+        "Penolakan terhadap semua bentuk organisasi politik"
+      ],
+      "answer": "Hak bangsa untuk merdeka dan mentadbir sendiri",
+      "explanation": "Suntharalingam menekankan hak asasi bangsa membentuk negara.",
+      "tip": "Suntharalingam = hak merdeka + kedaulatan rakyat."
+    },
+    {
+      "id": "q11",
+      "level": 4,
+      "levelLabel": "Menganalisis",
+      "prompt": "Apakah persamaan utama antara pandangan Hans Kohn dengan Dr. Burhanuddin al-Helmi tentang nasionalisme?",
+      "options": [
+        "Keduanya menekankan komitmen atau cara perjuangan yang menyatukan bangsa",
+        "Keduanya menolak peranan agama dalam politik",
+        "Keduanya hanya membincangkan ekonomi dunia",
+        "Keduanya fokus kepada penjajahan Jepun"
+      ],
+      "answer": "Keduanya menekankan komitmen atau cara perjuangan yang menyatukan bangsa",
+      "explanation": "Hans Kohn (kesetiaan) dan Burhanuddin (persatuan, tatatertib) sama-sama menekankan penyatuan bangsa.",
+      "tip": "Persamaan = cari tema penyatuan/komitmen."
+    },
+    {
+      "id": "q12",
+      "level": 4,
+      "levelLabel": "Menganalisis",
+      "prompt": "Apakah perbezaan utama antara pandangan Hans Kohn dengan pandangan Profesor William R. Roff?",
+      "options": [
+        "Hans Kohn menekankan definisi kesetiaan bangsa manakala Roff menekankan punca tekanan luar terhadap bangsa Melayu",
+        "Keduanya membincangkan revolusi Perancis",
+        "Keduanya menolak kesan penjajahan",
+        "Keduanya sama sekali tidak menyentuh politik"
+      ],
+      "answer": "Hans Kohn menekankan definisi kesetiaan bangsa manakala Roff menekankan punca tekanan luar terhadap bangsa Melayu",
+      "explanation": "Hans Kohn lebih umum tentang kesetiaan; Roff khusus tentang punca nasionalisme Melayu.",
+      "tip": "Perbezaan: satu definisi umum, satu punca tempatan."
+    },
+    {
+      "id": "q13",
+      "level": 5,
+      "levelLabel": "Menilai",
+      "prompt": "Antara hujah berikut, manakah yang PALING kukuh untuk menunjukkan nasionalisme penting dalam pembinaan negara?",
+      "options": [
+        "Ia mendorong rakyat mempertahankan hak, menolak penjajahan dan membina negara berdaulat",
+        "Ia hanya meningkatkan jumlah pelancong asing",
+        "Ia menghapuskan keperluan pendidikan",
+        "Ia membatalkan semua tradisi tempatan"
+      ],
+      "answer": "Ia mendorong rakyat mempertahankan hak, menolak penjajahan dan membina negara berdaulat",
+      "explanation": "Hujah paling kukuh ialah kesan langsung kepada kedaulatan dan perjuangan rakyat.",
+      "tip": "'Paling kukuh' = kesan langsung kepada negara dan rakyat."
+    },
+    {
+      "id": "q14",
+      "level": 5,
+      "levelLabel": "Menilai",
+      "prompt": "Antara pernyataan berikut, manakah yang PALING tepat tentang subtopik maksud nasionalisme?",
+      "options": [
+        "Ia menghubungkan definisi asas, pandangan tokoh dan matlamat perjuangan nasionalisme",
+        "Ia hanya membincangkan undang-undang feudal Eropah",
+        "Ia terhad kepada sejarah ekonomi dunia semata-mata",
+        "Ia tidak berkaitan dengan penjajahan"
+      ],
+      "answer": "Ia menghubungkan definisi asas, pandangan tokoh dan matlamat perjuangan nasionalisme",
+      "explanation": "Subtopik ini merangkumi definisi, konteks, tokoh dan matlamat perjuangan.",
+      "tip": "'Paling tepat' = pilih ringkasan yang paling menyeluruh."
+    }
+  ]
+}
