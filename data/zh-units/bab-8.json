@@ -1,0 +1,74 @@
+{
+  "meta": {
+    "source_file": "notes/bab-8.html",
+    "rollout": "bab-8-hub-manual-zh",
+    "notes": "Bab 8 induk (Pilihan Raya): terjemahan zh-CN manual, bm_original selaras dengan chip sinopsis pada bab-8.html."
+  },
+  "units": [
+    {
+      "source_id": "bab-8-synopsis-1",
+      "bm_original": "Pilihan raya diadakan untuk membolehkan rakyat memilih wakil dalam membentuk kerajaan.",
+      "translate": "选举让人民选出代表，以组织政府。",
+      "key_points_zh": [
+        "选举让人民选出代表，以组织政府。"
+      ],
+      "bm_focus_phrase": "Pilihan raya diadakan untuk membolehkan rakyat memilih wakil dalam membentuk kerajaan."
+    },
+    {
+      "source_id": "bab-8-synopsis-2",
+      "bm_original": "Pilihan raya menyaksikan pengamalan sistem demokrasi di sesebuah negara.",
+      "translate": "选举体现一国实行民主制度的过程。",
+      "key_points_zh": [
+        "选举体现一国实行民主制度的过程。"
+      ],
+      "bm_focus_phrase": "Pilihan raya menyaksikan pengamalan sistem demokrasi di sesebuah negara."
+    },
+    {
+      "source_id": "bab-8-synopsis-3",
+      "bm_original": "Di negara kita, pilihan raya bermula dengan pilihan raya majlis perbandaran, pilihan raya negeri dan pilihan raya umum yang diadakan pada tahun 1955.",
+      "translate": "在我国，选举始于市政局选举、州选举与于1955年举行的大选。",
+      "key_points_zh": [
+        "在我国，选举始于市政局选举、州选举与于1955年举行的大选。"
+      ],
+      "bm_focus_phrase": "Di negara kita, pilihan raya bermula dengan pilihan raya majlis perbandaran, pilihan raya negeri dan pilihan raya umum yang diadakan pada tahun 1955."
+    },
+    {
+      "source_id": "bab-8-synopsis-4",
+      "bm_original": "Melalui Pilihan Raya Majlis Perundangan Persekutuan 1955, sebanyak 52 orang ahli dipilih untuk menganggotai Majlis Perundangan Persekutuan yang akhirnya berjaya membentuk kabinet pertama di negara kita.",
+      "translate": "通过1955年联邦立法议会选举，共选出52名议员加入联邦立法议会，并最终促成我国首届内阁的成立。",
+      "key_points_zh": [
+        "通过1955年联邦立法议会选举，共选出52名议员加入联邦立法议会，并最终促成我国首届内阁的成立。"
+      ],
+      "bm_focus_phrase": "Melalui Pilihan Raya Majlis Perundangan Persekutuan 1955, sebanyak 52 orang ahli dipilih untuk menganggotai Majlis Perundangan Persekutuan yang akhirnya berjaya membentuk kabinet pertama di negara kita."
+    },
+    {
+      "source_id": "bab-8-synopsis-5",
+      "bm_original": "Sementara itu, pilihan raya juga diadakan di Sarawak dan Sabah bagi memilih wakil masing-masing dalam kerajaan tempatan.",
+      "translate": "与此同时，砂拉越与沙巴也举行选举，以选出各自地方政府中的代表。",
+      "key_points_zh": [
+        "与此同时，砂拉越与沙巴也举行选举，以选出各自地方政府中的代表。"
+      ],
+      "bm_focus_phrase": "Sementara itu, pilihan raya juga diadakan di Sarawak dan Sabah bagi memilih wakil masing-masing dalam kerajaan tempatan."
+    },
+    {
+      "source_id": "bab-8-li1",
+      "bm_original": "Mulakan dengan 8.1 untuk memahami perkembangan pilihan raya di Persekutuan Tanah Melayu.",
+      "translate": "从8.1开始，了解马来亚联邦的选举发展。"
+    },
+    {
+      "source_id": "bab-8-li2",
+      "bm_original": "Teruskan ke 8.2 untuk melihat proses pilihan raya umum pertama.",
+      "translate": "继续8.2，了解首次大选的进程。"
+    },
+    {
+      "source_id": "bab-8-li3",
+      "bm_original": "Baca 8.3 bagi memahami penubuhan Majlis Perundangan Persekutuan.",
+      "translate": "阅读8.3，了解联邦立法议会的成立。"
+    },
+    {
+      "source_id": "bab-8-li4",
+      "bm_original": "Akhiri dengan 8.4 untuk menilai peranan kabinet pertama Persekutuan Tanah Melayu.",
+      "translate": "最后阅读8.4，认识马来亚联邦首届内阁的作用。"
+    }
+  ]
+}

@@ -6,7 +6,7 @@
    - Same-origin non-document GET: cache-first
 */
 
-const CACHE = 'zym-v198';
+const CACHE = 'zym-v200';
 
 const PRECACHE_URLS = [
   '/',
@@ -81,7 +81,12 @@ const PRECACHE_URLS = [
   '/notes/bab-7-3.html',
   '/notes/bab-7-4.html',
   '/notes/bab-7-5.html',
-  '/notes/bab-7.html'
+  '/notes/bab-7.html',
+  '/notes/bab-8.html',
+  '/notes/bab-8-1.html',
+  '/notes/bab-8-2.html',
+  '/notes/bab-8-3.html',
+  '/notes/bab-8-4.html'
 ];
 
 function normalizeHtmlCacheKeys(fullUrl) {
