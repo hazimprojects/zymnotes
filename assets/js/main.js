@@ -599,10 +599,10 @@ function hzZymnotesIsSparkleShellPathname(p) {
   return /^about\.html$/i.test(tail) || hzZymnotesIsFeedbackPathname(p);
 }
 
-/** Halaman induk bab sahaja: bab-1.html … bab-7.html (bukan subtopik). */
+/** Halaman induk bab sahaja: bab-1.html … bab-8.html (bukan subtopik). */
 function hzZymnotesIsBabHubPathname(p) {
   if (!p || typeof p !== "string") return false;
-  return /\/notes\/bab-[1-7](?:\.html)?(?:\/)?$/i.test(p);
+  return /\/notes\/bab-[1-8](?:\.html)?(?:\/)?$/i.test(p);
 }
 
 /** Halaman nota subtopik: bab-X-Y.html (bukan bab induk). */
@@ -700,6 +700,12 @@ var HZ_NOTES_SEARCH_PAGES = [
   { title: "7.3 · Sistem Ahli", tag: "Subtopik 7.3", href: "bab-7-3.html" },
   { title: "7.4 · Sistem Pendidikan Kebangsaan", tag: "Subtopik 7.4", href: "bab-7-4.html" },
   { title: "7.5 · Penubuhan Parti Politik", tag: "Subtopik 7.5", href: "bab-7-5.html" },
+
+  { title: "Bab 8 · Pilihan Raya", tag: "Bab Induk", href: "bab-8.html" },
+  { title: "8.1 · Perkembangan Pilihan Raya di Persekutuan Tanah Melayu", tag: "Subtopik 8.1", href: "bab-8-1.html" },
+  { title: "8.2 · Proses Pilihan Raya Umum Pertama", tag: "Subtopik 8.2", href: "bab-8-2.html" },
+  { title: "8.3 · Penubuhan Majlis Perundangan Persekutuan", tag: "Subtopik 8.3", href: "bab-8-3.html" },
+  { title: "8.4 · Peranan Kabinet Pertama Persekutuan Tanah Melayu", tag: "Subtopik 8.4", href: "bab-8-4.html" },
 ];
 
 // =========================
@@ -1012,6 +1018,14 @@ var ZYMNOTES_NAV = { chapters: [
     { num: '7.3', title: 'Sistem Ahli', url: 'bab-7-3.html' },
     { num: '7.4', title: 'Sistem Pendidikan Kebangsaan', url: 'bab-7-4.html' },
     { num: '7.5', title: 'Penubuhan Parti Politik', url: 'bab-7-5.html' },
+  ]},
+  { num: 8, title: 'Pilihan Raya', url: 'bab-8.html',
+    color: { bg: '#ecfeff', text: '#155e75', accent: '#0891b2' },
+    subtopics: [
+    { num: '8.1', title: 'Perkembangan Pilihan Raya di Persekutuan Tanah Melayu', url: 'bab-8-1.html' },
+    { num: '8.2', title: 'Proses Pilihan Raya Umum Pertama', url: 'bab-8-2.html' },
+    { num: '8.3', title: 'Penubuhan Majlis Perundangan Persekutuan', url: 'bab-8-3.html' },
+    { num: '8.4', title: 'Peranan Kabinet Pertama Persekutuan Tanah Melayu', url: 'bab-8-4.html' },
   ]},
 ]};
 
@@ -2335,7 +2349,7 @@ var ZYMNOTES_NAV = { chapters: [
   if (!('serviceWorker' in navigator)) return;
 
   window.addEventListener('load', function () {
-    navigator.serviceWorker.register('/sw.js?v=197').catch(function (error) {
+    navigator.serviceWorker.register('/sw.js?v=199').catch(function (error) {
       console.warn('Service worker registration failed:', error);
     });
   });

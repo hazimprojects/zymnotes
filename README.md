@@ -25,7 +25,7 @@ Nada dan arah brand semasa menekankan:
 
 ## Skop Kandungan Semasa (Aktif)
 
-Fokus aktif semasa ialah **Sejarah Tingkatan 4 (KSSM)**:
+Fokus aktif semasa ialah **Sejarah Tingkatan 4 (KSSM)** (bab induk sehingga Bab 8; subtopik 8.1–8.4 dalam pembinaan):
 
 - **Bab 1** · Warisan Negara Bangsa
 - **Bab 2** · Kebangkitan Nasionalisme
@@ -34,6 +34,7 @@ Fokus aktif semasa ialah **Sejarah Tingkatan 4 (KSSM)**:
 - **Bab 5** · Persekutuan Tanah Melayu 1948
 - **Bab 6** · Ancaman Komunis dan Perisytiharan Darurat
 - **Bab 7** · Usaha ke Arah Kemerdekaan
+- **Bab 8** · Pilihan Raya
 
 Setiap bab mempunyai halaman bab utama dan pecahan subtopik (contoh: `bab-4-1.html`, `bab-4-2.html`, dan seterusnya).
 
