@@ -2382,24 +2382,16 @@ var ZYMNOTES_NAV = { chapters: [
 })();
 
 // =========================
-// ABOUT PAGE — PWA INSTALL (hide card when installed / in app)
+// ABOUT PAGE — PWA INSTALL (hide when installed; re-show after uninstall)
 // =========================
 (function () {
   var KEY = "zymnotes-pwa-installed";
+  var FORCE_KEY = "zymnotes-about-pwa-force-show";
   var card = document.getElementById("about-pwa-card");
   var btn = document.getElementById("about-pwa-install-btn");
+  var recoverWrap = document.getElementById("about-pwa-recover");
+  var recoverBtn = document.getElementById("about-pwa-recover-btn");
   if (!card || !btn) return;
-
-  function hidePwaCard() {
-    document.documentElement.classList.add("about-pwa-hide-card");
-  }
-
-  function markInstalled() {
-    try {
-      localStorage.setItem(KEY, "1");
-    } catch (e) {}
-    hidePwaCard();
-  }
 
   function isStandaloneDisplay() {
     try {
@@ -2419,30 +2411,105 @@ var ZYMNOTES_NAV = { chapters: [
     }
   }
 
-  if (document.documentElement.classList.contains("about-pwa-hide-card")) return;
-
-  if (storageSaysInstalled()) {
-    markInstalled();
-    return;
+  function skipStorageHide() {
+    try {
+      return sessionStorage.getItem(FORCE_KEY) === "1";
+    } catch (e) {
+      return false;
+    }
   }
 
-  if (isStandaloneDisplay()) {
-    markInstalled();
-    return;
+  function clearInstalledFlag() {
+    try {
+      localStorage.removeItem(KEY);
+    } catch (e) {}
   }
 
-  if (navigator.getInstalledRelatedApps) {
-    navigator.getInstalledRelatedApps().then(function (apps) {
-      if (apps && apps.length) markInstalled();
-    }).catch(function () {});
+  function syncRecoverUI() {
+    if (!recoverWrap) return;
+    if (!document.documentElement.classList.contains("about-pwa-hide-card")) {
+      recoverWrap.hidden = true;
+      return;
+    }
+    recoverWrap.hidden = isStandaloneDisplay();
   }
+
+  function hidePwaCard() {
+    document.documentElement.classList.add("about-pwa-hide-card");
+    syncRecoverUI();
+  }
+
+  function showPwaCard() {
+    document.documentElement.classList.remove("about-pwa-hide-card");
+    if (recoverWrap) recoverWrap.hidden = true;
+  }
+
+  function markInstalled() {
+    try {
+      localStorage.setItem(KEY, "1");
+    } catch (e) {}
+    hidePwaCard();
+  }
+
+  function getRelatedAppsResult() {
+    if (!navigator.getInstalledRelatedApps) {
+      return Promise.resolve({ supported: false });
+    }
+    return navigator
+      .getInstalledRelatedApps()
+      .then(function (apps) {
+        return { supported: true, apps: apps || [] };
+      })
+      .catch(function () {
+        return { supported: false };
+      });
+  }
+
+  function applyAboutPwaVisibility() {
+    if (isStandaloneDisplay()) {
+      markInstalled();
+      return;
+    }
+    getRelatedAppsResult().then(function (result) {
+      if (isStandaloneDisplay()) {
+        markInstalled();
+        return;
+      }
+      if (result.supported && result.apps.length) {
+        markInstalled();
+        return;
+      }
+      if (result.supported && result.apps.length === 0) {
+        clearInstalledFlag();
+      }
+      if (storageSaysInstalled() && !skipStorageHide()) {
+        hidePwaCard();
+        return;
+      }
+      showPwaCard();
+    });
+  }
+
+  if (recoverBtn) {
+    recoverBtn.addEventListener("click", function () {
+      try {
+        sessionStorage.setItem(FORCE_KEY, "1");
+      } catch (e) {}
+      clearInstalledFlag();
+      showPwaCard();
+    });
+  }
+
+  applyAboutPwaVisibility();
 
   var deferredPrompt = null;
 
   window.addEventListener("beforeinstallprompt", function (e) {
     e.preventDefault();
+    clearInstalledFlag();
     deferredPrompt = e;
     btn.hidden = false;
+    showPwaCard();
   });
 
   window.addEventListener("appinstalled", function () {
@@ -2471,7 +2538,7 @@ var ZYMNOTES_NAV = { chapters: [
   if (!('serviceWorker' in navigator)) return;
 
   window.addEventListener('load', function () {
-    navigator.serviceWorker.register('/sw.js?v=216').catch(function (error) {
+    navigator.serviceWorker.register('/sw.js?v=217').catch(function (error) {
       console.warn('Service worker registration failed:', error);
     });
   });

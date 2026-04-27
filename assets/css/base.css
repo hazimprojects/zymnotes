@@ -1995,6 +1995,40 @@ html.about-pwa-hide-card #about-pwa-card {
   border: none;
 }
 
+.about-pwa-recover {
+  text-align: center;
+  margin: 0 0 14px;
+  padding: 0 10px;
+}
+
+.about-pwa-recover-btn {
+  display: inline-block;
+  margin: 0 0 6px;
+  padding: 0;
+  border: none;
+  background: none;
+  font: inherit;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--primary);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.about-pwa-recover-btn:hover {
+  color: var(--primary-dark);
+}
+
+.about-pwa-recover-hint {
+  display: block;
+  font-size: 0.72rem;
+  line-height: 1.4;
+  color: var(--muted);
+  opacity: 0.9;
+}
+
 /* =============================================================
    FEATURE CARD GRADIENT FLAVOURS
 ============================================================= */
