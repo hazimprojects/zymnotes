@@ -2163,11 +2163,11 @@ var ZYMNOTES_NAV = { chapters: [
     '</div>';
   document.body.appendChild(indicator);
 
-  /* Jarak + halaju: refresh hanya bila niat jelas — jarak + getah + halaju (sedikit longgar vs sebelum ini, rapat Chrome) */
-  var DIST_MIN = 228;
-  var DIST_STRONG = 308;
+  /* Jarak + halaju: refresh bila niat jelas — jarak commit lebih pendek (rapat Chrome), scrollY guard kekal */
+  var DIST_MIN = 200;
+  var DIST_STRONG = 278;
   var VEL_MS_WINDOW = 110;
-  var VEL_MIN = 0.52;
+  var VEL_MIN = 0.48;
   var MIN_SAMPLES_FOR_VEL_COMMIT = 6;
   /* Paparan “getah”: sedikit kurang rintangan — anak panah ikut jari lebih rapat */
   var RUBBER_MAX_PX = 66;
