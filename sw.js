@@ -6,7 +6,7 @@
    - Same-origin non-document GET: cache-first
 */
 
-const CACHE = 'zym-v232';
+const CACHE = 'zym-v233';
 
 const PRECACHE_URLS = [
   '/',
@@ -29,9 +29,9 @@ const PRECACHE_URLS = [
   '/quiz/bab-2-6.html',
   '/quiz/bab-2-7.html',
   '/quiz/bab-2-8.html',
-  '/assets/css/style.css?v=160',
-  '/assets/js/main.js?v=172',
-  '/assets/js/zh-mode.js?v=41',
+  '/assets/css/style.css?v=161',
+  '/assets/js/main.js?v=173',
+  '/assets/js/zh-mode.js?v=42',
   '/assets/js/subtopic-lab.js?v=7',
   '/data/zh-glossary.json',
   '/data/zh-comprehension.json',

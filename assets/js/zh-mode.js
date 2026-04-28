@@ -1191,6 +1191,15 @@
 
   // ── FAB Button Injection ─────────────────────────────────
 
+  /** Nota bab induk (bab-1 … bab-8) atau subtopik (bab-X-Y) — butang 华 di header, bukan sparkle. */
+  function isZhHeaderNotePathname(p) {
+    if (!p || typeof p !== "string") return false;
+    return (
+      /\/notes\/bab-[1-8](?:\.html)?(?:\/)?$/i.test(p) ||
+      /\/notes\/bab-\d+-\d+(?:\.html)?(?:\/)?$/i.test(p)
+    );
+  }
+
   function injectFabButtons() {
     document.querySelectorAll(".nav-wrap").forEach(function (nav) {
       if (nav.querySelector(".zh-mode-fab")) return;
@@ -1207,8 +1216,11 @@
         applyZhMode(!isZhMode());
       });
 
+      var themeFab = nav.querySelector(".display-fab");
       var navToggle = nav.querySelector(".nav-toggle");
-      if (navToggle) {
+      if (themeFab && themeFab.parentNode === nav) {
+        nav.insertBefore(btn, themeFab.nextSibling);
+      } else if (navToggle) {
         nav.insertBefore(btn, navToggle);
       } else {
         nav.appendChild(btn);
@@ -1226,11 +1238,35 @@
     return (/\/notes\//.test(window.location.pathname) || /\/quiz\//.test(window.location.pathname)) && !window.__HZ_ZH_LEGACY_REQUESTED;
   }
 
+  /** Tunggu penogol tema (.display-fab) disuntik supaya 华 boleh diletakkan sebelahnya. */
+  function scheduleZhFabInjection() {
+    if (!isZhHeaderNotePathname(window.location.pathname || "")) {
+      initLegacyControls();
+      return;
+    }
+    var tries = 0;
+    function tick() {
+      if (legacyControlsInitialized) return;
+      tries += 1;
+      if (tries > 150) {
+        initLegacyControls();
+        return;
+      }
+      var nav = document.querySelector(".nav-wrap");
+      if (nav && nav.querySelector(".display-fab")) {
+        initLegacyControls();
+        return;
+      }
+      requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+  }
+
   // ── Init ─────────────────────────────────────────────────
 
   document.addEventListener("DOMContentLoaded", function () {
     if (!shouldUseSparkleForZhControls()) {
-      initLegacyControls();
+      scheduleZhFabInjection();
     }
 
     if (isZhMode()) {

@@ -607,6 +607,16 @@ body.quiz-page.note-reading-app .display-fab {
   font-size: 0.9rem;
 }
 
+body.app-shell-page .zh-mode-fab,
+body.bab-hub-page .zh-mode-fab,
+body.note-reading-app .zh-mode-fab,
+body.quiz-page.note-reading-app .zh-mode-fab {
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  font-size: 0.9rem;
+}
+
 body.app-shell-page .hz-bottom-nav,
 body.bab-hub-page .hz-bottom-nav,
 body.note-reading-app .hz-bottom-nav,

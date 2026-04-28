@@ -262,6 +262,11 @@ html[data-theme="dark"] .paper-chip.bloc-chip-allies {
 ========================= */
 
 /* FAB toggle button — base styles (mirrors .display-fab from layout.css) */
+/* Rapatkan dengan penogol tema di header (sebelah .display-fab) */
+.nav-wrap .display-fab + .zh-mode-fab {
+  margin-left: 0.35rem;
+}
+
 .zh-mode-fab {
   display: inline-flex;
   align-items: center;
