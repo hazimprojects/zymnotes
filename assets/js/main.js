@@ -21,7 +21,7 @@ document.documentElement.classList.add("js-enhanced");
   hzZymnotesClearStoredZhModeIfNeeded();
 })();
 
-// Latar bertema + denyut lembut dipautkan scroll (bab induk, subtopik, kuiz bab)
+// Latar bertema (bab induk, subtopik, kuiz bab) — denyut halus hanya CSS, tanpa scroll
 (function () {
   var doc = document.documentElement;
   var body = document.body;
@@ -49,33 +49,6 @@ document.documentElement.classList.add("js-enhanced");
   if (!hasClassPrefix(body, "bab-theme-")) return;
 
   doc.classList.add("hz-themed-scroll-backdrop");
-
-  var raf = 0;
-  var scrollEndTimer = 0;
-  var lastY = typeof window.scrollY === "number" ? window.scrollY : 0;
-
-  function applyScrollShift() {
-    var y = typeof window.scrollY === "number" ? window.scrollY : 0;
-    doc.style.setProperty("--hz-scroll-bg-shift", y + "px");
-    lastY = y;
-  }
-
-  function onScroll() {
-    if (!doc.classList.contains("hz-scroll-active")) {
-      doc.classList.add("hz-scroll-active");
-    }
-    if (scrollEndTimer) clearTimeout(scrollEndTimer);
-    scrollEndTimer = window.setTimeout(function () {
-      scrollEndTimer = 0;
-      doc.classList.remove("hz-scroll-active");
-    }, 220);
-
-    cancelAnimationFrame(raf);
-    raf = requestAnimationFrame(applyScrollShift);
-  }
-
-  applyScrollShift();
-  window.addEventListener("scroll", onScroll, { passive: true });
 })();
 
 // Apply handedness class before first paint to avoid layout flash
@@ -2730,7 +2703,7 @@ var ZYMNOTES_NAV = { chapters: [
   if (!('serviceWorker' in navigator)) return;
 
   window.addEventListener('load', function () {
-    navigator.serviceWorker.register('/sw.js?v=244').catch(function (error) {
+    navigator.serviceWorker.register('/sw.js?v=245').catch(function (error) {
       console.warn('Service worker registration failed:', error);
     });
   });

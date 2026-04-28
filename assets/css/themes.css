@@ -862,22 +862,16 @@ html[data-theme="dark"] body .paper-chip.bloc-chip-allies {
 }
 
 /* =========================================================
-   Latar bertema + denyut lembut semasa scroll
-   (bab induk, subtopik bacaan, kuiz bab — kad kekal token sedia ada)
+   Latar bertema + denyut lembut (opacity sahaja; bab induk,
+   subtopik bacaan, kuiz bab — kad kekal token sedia ada)
 ========================================================= */
-
-:root {
-  --hz-scroll-bg-shift: 0px;
-}
 
 @keyframes zymScrollBackdropBreath {
   0%, 100% {
-    opacity: 0.94;
-    filter: saturate(1) brightness(1);
+    opacity: 0.88;
   }
   50% {
     opacity: 1;
-    filter: saturate(1.06) brightness(1.035);
   }
 }
 
@@ -899,26 +893,16 @@ html.hz-themed-scroll-backdrop::before {
   z-index: -1;
   pointer-events: none;
   background-color: #e4e8fb;
+  /* Elips lebar + henti lembut — elak sempadan tajam yang nampak macam “garisan” */
   background-image:
-    radial-gradient(ellipse 120% 85% at 8% 18%, rgba(99, 102, 241, 0.34), transparent 52%),
-    radial-gradient(ellipse 100% 80% at 92% 12%, rgba(167, 139, 250, 0.28), transparent 50%),
-    radial-gradient(ellipse 90% 70% at 50% 96%, rgba(34, 211, 238, 0.18), transparent 48%),
+    radial-gradient(ellipse 140% 120% at 12% 22%, rgba(99, 102, 241, 0.26), transparent 58%),
+    radial-gradient(ellipse 130% 115% at 88% 14%, rgba(167, 139, 250, 0.22), transparent 56%),
+    radial-gradient(ellipse 125% 100% at 50% 100%, rgba(34, 211, 238, 0.14), transparent 55%),
     linear-gradient(168deg, #eef0ff 0%, #e2e7fb 42%, #dde8f8 100%);
   background-repeat: no-repeat;
-  background-size: 140% 140%, 130% 130%, 120% 120%, 100% 100%;
-  background-position:
-    calc(12% + var(--hz-scroll-bg-shift, 0px) * 0.08) 20%,
-    calc(88% - var(--hz-scroll-bg-shift, 0px) * 0.06) 8%,
-    50% calc(100% + var(--hz-scroll-bg-shift, 0px) * 0.04),
-    center center;
-  transform: translate3d(0, calc(var(--hz-scroll-bg-shift, 0px) * 0.04), 0);
-  will-change: transform, opacity, filter;
-  animation: zymScrollBackdropBreath 16s ease-in-out infinite;
-  transition: transform 0.55s ease-out, background-position 0.55s ease-out;
-}
-
-html.hz-themed-scroll-backdrop.hz-scroll-active::before {
-  animation-duration: 9s;
+  background-size: 150% 150%, 145% 145%, 140% 130%, 100% 100%;
+  background-position: 10% 18%, 90% 10%, 50% 100%, center center;
+  animation: zymScrollBackdropBreath 14s ease-in-out infinite;
 }
 
 html[data-theme="dark"].hz-themed-scroll-backdrop {
@@ -928,15 +912,11 @@ html[data-theme="dark"].hz-themed-scroll-backdrop {
 html[data-theme="dark"].hz-themed-scroll-backdrop::before {
   background-color: #0a0c14;
   background-image:
-    radial-gradient(ellipse 110% 80% at 10% 20%, rgba(99, 102, 241, 0.22), transparent 50%),
-    radial-gradient(ellipse 100% 75% at 90% 10%, rgba(129, 140, 248, 0.16), transparent 48%),
-    radial-gradient(ellipse 95% 65% at 48% 92%, rgba(34, 211, 238, 0.12), transparent 46%),
+    radial-gradient(ellipse 135% 115% at 12% 22%, rgba(99, 102, 241, 0.18), transparent 56%),
+    radial-gradient(ellipse 125% 110% at 88% 12%, rgba(129, 140, 248, 0.14), transparent 54%),
+    radial-gradient(ellipse 120% 95% at 50% 100%, rgba(34, 211, 238, 0.10), transparent 52%),
     linear-gradient(180deg, #0d0f1a 0%, #0b0d18 55%, #080a12 100%);
-  animation-duration: 18s;
-}
-
-html[data-theme="dark"].hz-themed-scroll-backdrop.hz-scroll-active::before {
-  animation-duration: 11s;
+  animation-duration: 16s;
 }
 
 @media (prefers-reduced-motion: reduce) {
