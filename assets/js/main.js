@@ -12,7 +12,7 @@ document.documentElement.classList.add("js-enhanced");
 })();
 
 // =========================
-// HOME (/) — PWA animated loading (standalone, once per session; no image intro)
+// HOME (/) — PWA soft transition into page (standalone, once per session)
 // =========================
 (function () {
   var path = (location.pathname || "/").replace(/\/+$/, "") || "/";
@@ -32,11 +32,11 @@ document.documentElement.classList.add("js-enhanced");
   function showLoader() {
     if (!loader) return;
     loader.removeAttribute("hidden");
-    root.classList.add("pwa-loader-pending", "pwa-loader-show");
+    root.classList.add("pwa-loader-pending");
   }
 
   function removeLoaderCompletely() {
-    root.classList.remove("pwa-loader-pending", "pwa-loader-show");
+    root.classList.remove("pwa-loader-pending");
     if (loader && loader.parentNode) loader.parentNode.removeChild(loader);
   }
 
@@ -47,7 +47,7 @@ document.documentElement.classList.add("js-enhanced");
     }
     loader.setAttribute("data-loader-dismissed", "1");
     loader.classList.add("pwa-loader--hide");
-    root.classList.remove("pwa-loader-show");
+    root.classList.remove("pwa-loader-pending");
     var done = false;
     function finish() {
       if (done) return;
@@ -55,7 +55,7 @@ document.documentElement.classList.add("js-enhanced");
       removeLoaderCompletely();
     }
     loader.addEventListener("transitionend", finish, { once: true });
-    setTimeout(finish, 480);
+    setTimeout(finish, 780);
   }
 
   try {
@@ -78,8 +78,8 @@ document.documentElement.classList.add("js-enhanced");
       : Promise.resolve();
 
   function runLoadSequence() {
-    var minLoaderMs = 1500;
-    var maxWaitMs = 10000;
+    var minMs = 900;
+    var maxWaitMs = 9000;
     var t0 = typeof performance !== "undefined" && performance.now ? performance.now() : Date.now();
 
     function elapsed() {
@@ -91,7 +91,7 @@ document.documentElement.classList.add("js-enhanced");
       return Promise.all([
         fontsPromise,
         new Promise(function (r) {
-          setTimeout(r, minLoaderMs);
+          setTimeout(r, minMs);
         }),
       ]).then(function () {
         return new Promise(function (r) {
@@ -2654,7 +2654,7 @@ var ZYMNOTES_NAV = { chapters: [
   if (!('serviceWorker' in navigator)) return;
 
   window.addEventListener('load', function () {
-    navigator.serviceWorker.register('/sw.js?v=224').catch(function (error) {
+    navigator.serviceWorker.register('/sw.js?v=225').catch(function (error) {
       console.warn('Service worker registration failed:', error);
     });
   });
