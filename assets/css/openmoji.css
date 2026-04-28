@@ -9,41 +9,49 @@
   user-select: none;
 }
 
-/* Match illustration scale to adjacent UI copy (~0.9–1em body lines) */
+/* ── Saiz standard per konteks ───────────────────────────────────────── */
+
+/* Feature cards (homepage, about) — di dalam badge 48px */
 .openmoji--feature {
-  width: 1.65rem;
-  height: 1.65rem;
+  width: 1.75rem;
+  height: 1.75rem;
 }
 
+/* Scope/checklist items */
 .openmoji--scope {
   width: 1.4em;
   height: 1.4em;
-  margin-top: 0.04em;
+  flex-shrink: 0;
 }
 
+/* Nota list row icons */
 .openmoji--nota {
   width: 1.7rem;
   height: 1.7rem;
 }
 
+/* Search empty state */
 .openmoji--empty {
   width: 2.85rem;
   height: 2.85rem;
 }
 
+/* Audience icons (about page) */
 .openmoji--aud {
   width: 1.75rem;
   height: 1.75rem;
 }
 
-/* Inline icons in paper-chip synopses (bab induk / subtopik) — saiz ≈ tinggi x, tengah optik dengan teks */
+/* Inline icons dalam paper-chip synopses — tengah optik dengan teks */
 .openmoji--chip {
   width: 1.18em;
   height: 1.18em;
-  vertical-align: 0;
+  vertical-align: -0.12em;
   display: inline-block;
+  flex-shrink: 0;
 }
 
+/* Heading emoji dalam bab hub pages */
 .bab-hub-heading-openmoji {
   display: flex;
   align-items: center;
@@ -51,18 +59,106 @@
 }
 
 .openmoji--hub-heading {
-  width: 1.28em;
-  height: 1.28em;
+  width: 1.35em;
+  height: 1.35em;
   flex-shrink: 0;
 }
 
-/* Corner badges on bab induk subtopic cards (kuiz / audio) */
+/* Corner badges pada subtopik cards (kuiz / audio) */
 .openmoji--bab-badge {
   width: 0.85rem;
   height: 0.85rem;
   display: block;
 }
 
+/* ── Feature card icon badge — kotak berlatar 48px ───────────────────── */
+.home-feature-icon-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  flex-shrink: 0;
+}
+
+.home-feature-icon-badge .openmoji--feature {
+  width: 28px;
+  height: 28px;
+}
+
+/* Wrapper div — spacing ke title diurus oleh base.css */
+.home-feature-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ── Scope check icon — container chip kecil ─────────────────────────── */
+.home-scope-check {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 9px;
+  background: rgba(99, 102, 241, 0.08);
+  margin-top: 0.08em;
+}
+
+[data-theme="dark"] .home-scope-check {
+  background: rgba(129, 140, 248, 0.13);
+}
+
+/* ── Hero decorative emoji — ilustrasi sudut kanan atas ──────────────── */
+.home-hero-emoji-deco {
+  position: absolute;
+  top: 14px;
+  right: 18px;
+  width: 72px;
+  height: 72px;
+  opacity: 0.22;
+  pointer-events: none;
+  user-select: none;
+  display: block;
+}
+
+.home-hero-emoji-deco img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* ── Nota page head emoji — anchor visual atas senarai ───────────────── */
+.nota-page-head-emoji {
+  display: block;
+  width: 44px;
+  height: 44px;
+  margin-bottom: 0.5rem;
+}
+
+.nota-page-head-emoji img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* ── Paper-label dengan emoji icon kecil ─────────────────────────────── */
+.paper-label--with-icon {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.32rem;
+}
+
+.openmoji--label-icon {
+  width: 1em;
+  height: 1em;
+  flex-shrink: 0;
+  vertical-align: 0;
+}
+
+/* ── Attrib footer ───────────────────────────────────────────────────── */
 .home-footer-openmoji-attrib {
   font-size: 0.68rem;
   opacity: 0.72;
@@ -79,33 +175,20 @@
   text-decoration: underline;
 }
 
-.home-scope-label-with-icon {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.35rem;
-}
-
-body.page-theme-home.app-shell-page .home-feature-icon .openmoji--feature,
-.home-feature-icon .openmoji--feature {
-  display: block;
-  margin: 0 auto;
-}
-
-.home-feature-icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 1.65rem;
-  margin-bottom: 0;
-}
-
+/* ── Search empty state icon ─────────────────────────────────────────── */
 .nota-search-empty-icon {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-/* Sparkle FAB menu — ikon OpenMoji (main.js) */
+.home-scope-label-with-icon {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+/* ── Sparkle FAB menu — ikon disuntik oleh main.js ───────────────────── */
 .openmoji--sparkle-fab {
   width: 24px;
   height: 24px;
@@ -140,68 +223,4 @@ body.page-theme-home.app-shell-page .home-feature-icon .openmoji--feature,
 
 .audio-notice-close:hover .openmoji--audio-notice-close {
   opacity: 1;
-}
-
-/* ── Feature card icon badge — kotak berlatar 48px ───────────────────── */
-.home-feature-icon-badge {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 48px;
-  height: 48px;
-  border-radius: 14px;
-  flex-shrink: 0;
-  margin-bottom: 0.55rem;
-}
-
-.home-feature-icon-badge .openmoji--feature {
-  width: 28px;
-  height: 28px;
-}
-
-/* ── Hero decorative emoji — ilustrasi sudut kanan atas ──────────────── */
-.home-hero-emoji-deco {
-  position: absolute;
-  top: 14px;
-  right: 18px;
-  width: 72px;
-  height: 72px;
-  opacity: 0.22;
-  pointer-events: none;
-  user-select: none;
-  display: block;
-}
-
-.home-hero-emoji-deco img {
-  width: 100%;
-  height: 100%;
-  display: block;
-}
-
-/* ── Nota page head emoji — anchor visual atas senarai ───────────────── */
-.nota-page-head-emoji {
-  display: block;
-  width: 44px;
-  height: 44px;
-  margin-bottom: 0.55rem;
-}
-
-.nota-page-head-emoji img {
-  width: 100%;
-  height: 100%;
-  display: block;
-}
-
-/* ── Paper-label with inline emoji icon ──────────────────────────────── */
-.paper-label--with-icon {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.32rem;
-}
-
-.openmoji--label-icon {
-  width: 1em;
-  height: 1em;
-  flex-shrink: 0;
-  vertical-align: 0;
 }
