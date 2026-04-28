@@ -355,10 +355,9 @@ html[data-theme="dark"] body.quiz-page.note-reading-app.page-theme-notes .lab-co
   box-shadow: var(--page-surface-shadow) !important;
 }
 
-/* Light refresh override supaya semua bab tidak lagi beige-dominant */
+/* Light refresh — tona moden tanpa memusnahkan identiti warna setiap bab */
 body[class*="bab-theme-"] {
-  --theme-bg-solid: #f3f8ff;
-  --theme-gradient: linear-gradient(180deg, #fcfdff 0%, #f2f7ff 52%, #eefbf9 100%);
+  --theme-pattern: none;
 }
 
 /* =========================================================
@@ -775,40 +774,6 @@ html[data-theme="dark"] body.bab-theme-10 {
 }
 
 /* =========================================================
-   LIGHT REFRESH — paksa tona putih moden untuk semua bab
-========================================================= */
-body[class*="bab-theme-"] {
-  --theme-bg-solid: #f7faff !important;
-  --theme-overlay-1: radial-gradient(circle at 10% 12%, rgba(111, 167, 248, 0.14), transparent 0 20%) !important;
-  --theme-overlay-2: radial-gradient(circle at 88% 14%, rgba(96, 216, 182, 0.10), transparent 0 18%) !important;
-  --theme-overlay-3: radial-gradient(circle at 18% 84%, rgba(189, 149, 255, 0.10), transparent 0 16%) !important;
-  --theme-pattern: none !important;
-  --theme-gradient: linear-gradient(180deg, #ffffff 0%, #f8fbff 52%, #f4fbff 100%) !important;
-  --theme-label-bg: linear-gradient(90deg, #edf5ff, #e4f0ff) !important;
-  --theme-label-color: #315a86 !important;
-  --theme-surface-bg: linear-gradient(145deg, rgba(255, 255, 255, 0.96), rgba(247, 251, 255, 0.92)) !important;
-  --theme-surface-border: rgba(92, 110, 132, 0.16) !important;
-  --theme-header-bg: rgba(255, 255, 255, 0.86) !important;
-  --theme-footer-bg: linear-gradient(135deg, rgba(255, 255, 255, 0.90), rgba(246, 251, 255, 0.84)) !important;
-}
-
-/* Pastikan dark mode kekal dominan walaupun light refresh guna !important */
-html[data-theme="dark"] body[class*="bab-theme-"] {
-  --theme-bg-solid: #0D0F1A !important;
-  --theme-overlay-1: radial-gradient(circle at 10% 12%, rgba(99, 102, 241, 0.12), transparent 0 35%) !important;
-  --theme-overlay-2: radial-gradient(circle at 88% 14%, rgba(34, 211, 238, 0.08), transparent 0 30%) !important;
-  --theme-overlay-3: radial-gradient(circle at 18% 84%, rgba(129, 140, 248, 0.10), transparent 0 26%) !important;
-  --theme-pattern: none !important;
-  --theme-gradient: linear-gradient(180deg, #0D0F1A 0%, #0A0C16 100%) !important;
-  --theme-label-bg: linear-gradient(90deg, rgba(99, 102, 241, 0.26), rgba(129, 140, 248, 0.22)) !important;
-  --theme-label-color: #C7D2FE !important;
-  --theme-surface-bg: rgba(21, 24, 41, 0.88) !important;
-  --theme-surface-border: rgba(129, 140, 248, 0.12) !important;
-  --theme-header-bg: rgba(13, 15, 26, 0.92) !important;
-  --theme-footer-bg: rgba(13, 15, 26, 0.84) !important;
-}
-
-/* =========================================================
    RESTORE WAR BLOCK CHIPS
    Kekalkan supaya Bab 3 tidak rosak
 ========================================================= */
@@ -862,8 +827,39 @@ html[data-theme="dark"] body .paper-chip.bloc-chip-allies {
 }
 
 /* =========================================================
-   Latar bertema + denyut lembut (opacity sahaja; bab induk,
-   subtopik bacaan, kuiz bab — kad kekal token sedia ada)
+   Halaman induk bab — kad subtopik (.bab-card) selari paper-board
+   (kekalkan .bab-card-theme-N jika digunakan)
+========================================================= */
+
+body.bab-hub-page .bab-card:not([class*="bab-card-theme-"]) {
+  background: var(--page-surface-bg);
+  border-color: var(--page-surface-border);
+  box-shadow: var(--page-surface-shadow);
+}
+
+body.bab-hub-page .bab-card:not([class*="bab-card-theme-"]) .bab-card-top {
+  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid rgba(92, 110, 132, 0.12);
+  color: var(--ink);
+  box-shadow: 0 4px 12px rgba(36, 49, 63, 0.06);
+}
+
+html[data-theme="dark"] body.bab-hub-page .bab-card:not([class*="bab-card-theme-"]) {
+  background: var(--page-surface-bg) !important;
+  border-color: var(--page-surface-border) !important;
+  box-shadow: var(--page-surface-shadow) !important;
+}
+
+html[data-theme="dark"] body.bab-hub-page .bab-card:not([class*="bab-card-theme-"]) .bab-card-top {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(129, 140, 248, 0.14);
+  color: #e0e7ff;
+}
+
+/* =========================================================
+   Latar bertema + denyut lembut — token pada <html> supaya
+   ::before boleh warisi; warna berbeza ikut bab (kelas bab-theme-N
+   disalin ke <html> oleh main.js)
 ========================================================= */
 
 @keyframes zymScrollBackdropBreath {
@@ -877,8 +873,185 @@ html[data-theme="dark"] body .paper-chip.bloc-chip-allies {
 
 html.hz-themed-scroll-backdrop {
   min-height: 100%;
-  background-color: #e4e8fb;
   isolation: isolate;
+  --hz-backdrop-base: #e4e8fb;
+  --hz-backdrop-a: rgba(99, 102, 241, 0.24);
+  --hz-backdrop-b: rgba(167, 139, 250, 0.18);
+  --hz-backdrop-c: rgba(34, 211, 238, 0.12);
+  --hz-backdrop-g0: #f4f6ff;
+  --hz-backdrop-g1: #e8ecf9;
+  --hz-backdrop-g2: #dde5f5;
+  background-color: var(--hz-backdrop-base);
+}
+
+html.hz-themed-scroll-backdrop.bab-theme-1 {
+  --hz-backdrop-base: #e6f2ea;
+  --hz-backdrop-a: rgba(82, 179, 150, 0.26);
+  --hz-backdrop-b: rgba(198, 153, 62, 0.12);
+  --hz-backdrop-c: rgba(110, 78, 53, 0.10);
+  --hz-backdrop-g0: #f4faf6;
+  --hz-backdrop-g1: #e8f4ee;
+  --hz-backdrop-g2: #dceee4;
+}
+
+html.hz-themed-scroll-backdrop.bab-theme-2 {
+  --hz-backdrop-base: #e6ecf8;
+  --hz-backdrop-a: rgba(54, 99, 170, 0.22);
+  --hz-backdrop-b: rgba(48, 130, 108, 0.14);
+  --hz-backdrop-c: rgba(159, 105, 48, 0.10);
+  --hz-backdrop-g0: #f5f8fd;
+  --hz-backdrop-g1: #e9f0fa;
+  --hz-backdrop-g2: #dde8f4;
+}
+
+html.hz-themed-scroll-backdrop.bab-theme-3 {
+  --hz-backdrop-base: #e8ecf1;
+  --hz-backdrop-a: rgba(79, 104, 132, 0.20);
+  --hz-backdrop-b: rgba(114, 128, 84, 0.12);
+  --hz-backdrop-c: rgba(148, 90, 72, 0.10);
+  --hz-backdrop-g0: #f5f6f9;
+  --hz-backdrop-g1: #eaedf3;
+  --hz-backdrop-g2: #dfe5ed;
+}
+
+html.hz-themed-scroll-backdrop.bab-theme-4 {
+  --hz-backdrop-base: #e8edf5;
+  --hz-backdrop-a: rgba(84, 103, 132, 0.20);
+  --hz-backdrop-b: rgba(58, 112, 104, 0.12);
+  --hz-backdrop-c: rgba(145, 108, 62, 0.10);
+  --hz-backdrop-g0: #f5f7fb;
+  --hz-backdrop-g1: #eaeff7;
+  --hz-backdrop-g2: #dfe7f2;
+}
+
+html.hz-themed-scroll-backdrop.bab-theme-5 {
+  --hz-backdrop-base: #e8f3f0;
+  --hz-backdrop-a: rgba(74, 132, 124, 0.22);
+  --hz-backdrop-b: rgba(181, 143, 78, 0.11);
+  --hz-backdrop-c: rgba(104, 118, 148, 0.10);
+  --hz-backdrop-g0: #f4faf8;
+  --hz-backdrop-g1: #e9f5f2;
+  --hz-backdrop-g2: #ddeeea;
+}
+
+html.hz-themed-scroll-backdrop.bab-theme-6 {
+  --hz-backdrop-base: #f0e8ea;
+  --hz-backdrop-a: rgba(132, 70, 70, 0.16);
+  --hz-backdrop-b: rgba(104, 124, 92, 0.10);
+  --hz-backdrop-c: rgba(90, 108, 136, 0.10);
+  --hz-backdrop-g0: #faf6f7;
+  --hz-backdrop-g1: #f2e9ec;
+  --hz-backdrop-g2: #e8dde2;
+}
+
+html.hz-themed-scroll-backdrop.bab-theme-7 {
+  --hz-backdrop-base: #ebe6f5;
+  --hz-backdrop-a: rgba(106, 88, 170, 0.18);
+  --hz-backdrop-b: rgba(76, 138, 122, 0.11);
+  --hz-backdrop-c: rgba(182, 142, 82, 0.10);
+  --hz-backdrop-g0: #f6f4fb;
+  --hz-backdrop-g1: #eeeaf7;
+  --hz-backdrop-g2: #e4def0;
+}
+
+html.hz-themed-scroll-backdrop.bab-theme-8 {
+  --hz-backdrop-base: #e6f0fa;
+  --hz-backdrop-a: rgba(58, 124, 176, 0.20);
+  --hz-backdrop-b: rgba(64, 132, 110, 0.11);
+  --hz-backdrop-c: rgba(176, 142, 82, 0.09);
+  --hz-backdrop-g0: #f3f8fd;
+  --hz-backdrop-g1: #e8f2fa;
+  --hz-backdrop-g2: #dcecf7;
+}
+
+html.hz-themed-scroll-backdrop.bab-theme-9 {
+  --hz-backdrop-base: #e8f2ef;
+  --hz-backdrop-a: rgba(52, 120, 116, 0.20);
+  --hz-backdrop-b: rgba(102, 120, 170, 0.12);
+  --hz-backdrop-c: rgba(176, 134, 84, 0.09);
+  --hz-backdrop-g0: #f4faf8;
+  --hz-backdrop-g1: #eaf5f2;
+  --hz-backdrop-g2: #dfeee9;
+}
+
+html.hz-themed-scroll-backdrop.bab-theme-10 {
+  --hz-backdrop-base: #eaf5f0;
+  --hz-backdrop-a: rgba(62, 132, 118, 0.20);
+  --hz-backdrop-b: rgba(196, 152, 76, 0.11);
+  --hz-backdrop-c: rgba(86, 110, 158, 0.10);
+  --hz-backdrop-g0: #f5fbf8;
+  --hz-backdrop-g1: #ecf7f2;
+  --hz-backdrop-g2: #e0efe8;
+}
+
+html[data-theme="dark"].hz-themed-scroll-backdrop {
+  --hz-backdrop-base: #0a0c14;
+  --hz-backdrop-a: rgba(99, 102, 241, 0.16);
+  --hz-backdrop-b: rgba(129, 140, 248, 0.12);
+  --hz-backdrop-c: rgba(34, 211, 238, 0.09);
+  --hz-backdrop-g0: #0f121f;
+  --hz-backdrop-g1: #0c0e18;
+  --hz-backdrop-g2: #080a12;
+}
+
+html[data-theme="dark"].hz-themed-scroll-backdrop.bab-theme-1 {
+  --hz-backdrop-a: rgba(82, 179, 150, 0.14);
+  --hz-backdrop-b: rgba(212, 170, 96, 0.08);
+  --hz-backdrop-c: rgba(118, 92, 68, 0.08);
+}
+
+html[data-theme="dark"].hz-themed-scroll-backdrop.bab-theme-2 {
+  --hz-backdrop-a: rgba(88, 135, 206, 0.14);
+  --hz-backdrop-b: rgba(82, 179, 150, 0.09);
+  --hz-backdrop-c: rgba(180, 132, 86, 0.07);
+}
+
+html[data-theme="dark"].hz-themed-scroll-backdrop.bab-theme-3 {
+  --hz-backdrop-a: rgba(120, 138, 156, 0.12);
+  --hz-backdrop-b: rgba(136, 148, 98, 0.08);
+  --hz-backdrop-c: rgba(176, 108, 88, 0.08);
+}
+
+html[data-theme="dark"].hz-themed-scroll-backdrop.bab-theme-4 {
+  --hz-backdrop-a: rgba(98, 126, 168, 0.12);
+  --hz-backdrop-b: rgba(86, 158, 145, 0.08);
+  --hz-backdrop-c: rgba(176, 130, 78, 0.07);
+}
+
+html[data-theme="dark"].hz-themed-scroll-backdrop.bab-theme-5 {
+  --hz-backdrop-a: rgba(110, 185, 174, 0.12);
+  --hz-backdrop-b: rgba(201, 162, 96, 0.08);
+  --hz-backdrop-c: rgba(130, 152, 186, 0.08);
+}
+
+html[data-theme="dark"].hz-themed-scroll-backdrop.bab-theme-6 {
+  --hz-backdrop-a: rgba(176, 104, 104, 0.12);
+  --hz-backdrop-b: rgba(126, 148, 112, 0.08);
+  --hz-backdrop-c: rgba(132, 152, 188, 0.08);
+}
+
+html[data-theme="dark"].hz-themed-scroll-backdrop.bab-theme-7 {
+  --hz-backdrop-a: rgba(156, 136, 220, 0.14);
+  --hz-backdrop-b: rgba(98, 174, 152, 0.08);
+  --hz-backdrop-c: rgba(198, 160, 98, 0.07);
+}
+
+html[data-theme="dark"].hz-themed-scroll-backdrop.bab-theme-8 {
+  --hz-backdrop-a: rgba(98, 176, 228, 0.12);
+  --hz-backdrop-b: rgba(102, 182, 156, 0.08);
+  --hz-backdrop-c: rgba(198, 160, 102, 0.07);
+}
+
+html[data-theme="dark"].hz-themed-scroll-backdrop.bab-theme-9 {
+  --hz-backdrop-a: rgba(90, 176, 168, 0.11);
+  --hz-backdrop-b: rgba(134, 156, 212, 0.09);
+  --hz-backdrop-c: rgba(198, 160, 102, 0.07);
+}
+
+html[data-theme="dark"].hz-themed-scroll-backdrop.bab-theme-10 {
+  --hz-backdrop-a: rgba(98, 182, 166, 0.11);
+  --hz-backdrop-b: rgba(224, 182, 104, 0.08);
+  --hz-backdrop-c: rgba(132, 154, 206, 0.08);
 }
 
 html.hz-themed-scroll-backdrop body {
@@ -892,30 +1065,19 @@ html.hz-themed-scroll-backdrop::before {
   inset: 0;
   z-index: -1;
   pointer-events: none;
-  background-color: #e4e8fb;
-  /* Elips lebar + henti lembut — elak sempadan tajam yang nampak macam “garisan” */
+  background-color: var(--hz-backdrop-base);
   background-image:
-    radial-gradient(ellipse 140% 120% at 12% 22%, rgba(99, 102, 241, 0.26), transparent 58%),
-    radial-gradient(ellipse 130% 115% at 88% 14%, rgba(167, 139, 250, 0.22), transparent 56%),
-    radial-gradient(ellipse 125% 100% at 50% 100%, rgba(34, 211, 238, 0.14), transparent 55%),
-    linear-gradient(168deg, #eef0ff 0%, #e2e7fb 42%, #dde8f8 100%);
+    radial-gradient(ellipse 140% 120% at 12% 22%, var(--hz-backdrop-a), transparent 58%),
+    radial-gradient(ellipse 130% 115% at 88% 14%, var(--hz-backdrop-b), transparent 56%),
+    radial-gradient(ellipse 125% 100% at 50% 100%, var(--hz-backdrop-c), transparent 55%),
+    linear-gradient(168deg, var(--hz-backdrop-g0) 0%, var(--hz-backdrop-g1) 42%, var(--hz-backdrop-g2) 100%);
   background-repeat: no-repeat;
   background-size: 150% 150%, 145% 145%, 140% 130%, 100% 100%;
   background-position: 10% 18%, 90% 10%, 50% 100%, center center;
   animation: zymScrollBackdropBreath 14s ease-in-out infinite;
 }
 
-html[data-theme="dark"].hz-themed-scroll-backdrop {
-  background-color: #0a0c14;
-}
-
 html[data-theme="dark"].hz-themed-scroll-backdrop::before {
-  background-color: #0a0c14;
-  background-image:
-    radial-gradient(ellipse 135% 115% at 12% 22%, rgba(99, 102, 241, 0.18), transparent 56%),
-    radial-gradient(ellipse 125% 110% at 88% 12%, rgba(129, 140, 248, 0.14), transparent 54%),
-    radial-gradient(ellipse 120% 95% at 50% 100%, rgba(34, 211, 238, 0.10), transparent 52%),
-    linear-gradient(180deg, #0d0f1a 0%, #0b0d18 55%, #080a12 100%);
   animation-duration: 16s;
 }
 
