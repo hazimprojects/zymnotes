@@ -34,6 +34,7 @@ ICON_URL_PATTERNS = {
 
 # Tokens that appear in HTML <link rel="preload"> tags for individual CSS files
 CSS_PRELOAD_PATTERNS = {
+    "base.css?v=":       "base",
     "layout.css?v=":     "layout",
     "ui.css?v=":         "ui",
     "paper.css?v=":      "paper",
