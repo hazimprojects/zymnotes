@@ -1,0 +1,77 @@
+/* OpenMoji graphics (CC BY-SA 4.0) — https://openmoji.org — © OpenMoji Contributors */
+
+.openmoji {
+  display: inline-block;
+  vertical-align: -0.15em;
+  flex-shrink: 0;
+  object-fit: contain;
+  pointer-events: none;
+  user-select: none;
+}
+
+.openmoji--feature {
+  width: 1.35rem;
+  height: 1.35rem;
+}
+
+.openmoji--scope {
+  width: 1em;
+  height: 1em;
+  margin-top: 0.12em;
+}
+
+.openmoji--nota {
+  width: 1.28rem;
+  height: 1.28rem;
+}
+
+.openmoji--empty {
+  width: 2.35rem;
+  height: 2.35rem;
+}
+
+.openmoji--aud {
+  width: 1.45rem;
+  height: 1.45rem;
+}
+
+.home-footer-openmoji-attrib {
+  font-size: 0.68rem;
+  opacity: 0.72;
+  margin-bottom: 0.35rem;
+}
+
+.home-footer-openmoji-attrib a {
+  color: var(--primary);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.home-footer-openmoji-attrib a:hover {
+  text-decoration: underline;
+}
+
+.home-scope-label-with-icon {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+body.page-theme-home.app-shell-page .home-feature-icon .openmoji--feature,
+.home-feature-icon .openmoji--feature {
+  display: block;
+  margin: 0 auto;
+}
+
+.home-feature-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 1.35rem;
+}
+
+.nota-search-empty-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
