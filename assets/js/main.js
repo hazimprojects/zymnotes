@@ -261,8 +261,9 @@ document.addEventListener("DOMContentLoaded", function () {
       const clickedInsideNav = siteNav.contains(event.target);
       const clickedToggle = navToggle.contains(event.target);
       const clickedDisplayFab = event.target.closest(".display-fab");
+      const clickedZhFab = event.target.closest(".zh-mode-fab");
 
-      if (!clickedInsideNav && !clickedToggle && !clickedDisplayFab && siteNav.classList.contains("open")) {
+      if (!clickedInsideNav && !clickedToggle && !clickedDisplayFab && !clickedZhFab && siteNav.classList.contains("open")) {
         siteNav.classList.remove("open");
         navToggle.setAttribute("aria-expanded", "false");
       }

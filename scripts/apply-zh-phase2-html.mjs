@@ -72,7 +72,7 @@ function injectSummaryH2(html, slug) {
 }
 
 function bumpZhMode(html) {
-  return html.replace(/zh-mode\.js\?v=\d+/g, "zh-mode.js?v=43");
+  return html.replace(/zh-mode\.js\?v=\d+/g, "zh-mode.js?v=44");
 }
 
 for (const rel of FILES) {

@@ -261,10 +261,13 @@ html[data-theme="dark"] .paper-chip.bloc-chip-allies {
    MOD BAHASA CINA (中文模式)
 ========================= */
 
-/* FAB toggle button — base styles (mirrors .display-fab from layout.css) */
-/* Rapatkan dengan penogol tema di header (sebelah .display-fab) */
-.nav-wrap .display-fab + .zh-mode-fab {
-  margin-left: 0.35rem;
+/* Penjuru kanan: 华 (kiri) + penogol tema (kanan), rapat — tema kekal di penjuru */
+.nav-wrap-end {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.28rem;
+  margin-left: auto;
+  flex-shrink: 0;
 }
 
 .zh-mode-fab {

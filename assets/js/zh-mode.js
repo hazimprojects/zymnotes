@@ -1222,13 +1222,26 @@
       });
 
       var themeFab = nav.querySelector(".display-fab");
-      var navToggle = nav.querySelector(".nav-toggle");
-      if (themeFab && themeFab.parentNode === nav) {
-        nav.insertBefore(btn, themeFab.nextSibling);
-      } else if (navToggle) {
-        nav.insertBefore(btn, navToggle);
+      var end = nav.querySelector(".nav-wrap-end");
+      if (!end) {
+        end = document.createElement("div");
+        end.className = "nav-wrap-end";
+        if (themeFab && themeFab.parentNode === nav) {
+          nav.insertBefore(end, themeFab);
+          end.appendChild(themeFab);
+        } else if (themeFab) {
+          end.appendChild(themeFab);
+          nav.appendChild(end);
+        } else {
+          nav.appendChild(end);
+        }
+      } else if (themeFab && themeFab.parentNode !== end) {
+        end.appendChild(themeFab);
+      }
+      if (themeFab) {
+        end.insertBefore(btn, themeFab);
       } else {
-        nav.appendChild(btn);
+        end.insertBefore(btn, end.firstChild);
       }
     });
   }
