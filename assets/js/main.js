@@ -1244,6 +1244,7 @@ var ZYMNOTES_NAV = { chapters: [
       labEmoji = '🧩';
     }
 
+    var wrap = document.createElement('div');
     wrap.className = 'note-sparkle-wrap';
 
     function syncSparklePanelState() {
