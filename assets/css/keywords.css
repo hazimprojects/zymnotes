@@ -289,17 +289,17 @@ html[data-theme="dark"] .paper-chip.bloc-chip-allies {
   box-shadow: var(--shadow-soft);
 }
 
-/* FAB toggle button — active state (red tint) */
+/* FAB toggle button — active state (subtle indigo; clear but not harsh) */
 .zh-mode-fab.is-active {
-  background: rgba(220, 38, 38, 0.10);
-  border-color: rgba(220, 38, 38, 0.30);
-  color: #dc2626;
+  background: rgba(99, 102, 241, 0.12);
+  border-color: rgba(99, 102, 241, 0.35);
+  color: #4f46e5;
 }
 
 html[data-theme="dark"] .zh-mode-fab.is-active {
-  background: rgba(239, 68, 68, 0.18);
-  border-color: rgba(239, 68, 68, 0.38);
-  color: #f87171;
+  background: rgba(129, 140, 248, 0.16);
+  border-color: rgba(165, 180, 252, 0.42);
+  color: #a5b4fc;
 }
 
 /* Keyword annotation — hidden by default */

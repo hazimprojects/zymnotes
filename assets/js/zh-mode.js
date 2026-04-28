@@ -1,9 +1,13 @@
 // =========================
 // MOD BAHASA CINA (中文模式)
 // =========================
-// Flash prevention — apply data-lang-mode before first paint
+// Flash prevention — apply data-lang-mode before first paint (halaman nota bab/subtopik sahaja)
 (function () {
-  if (localStorage.getItem("hzedu-lang-mode") === "zh") {
+  var p = (window.location.pathname || "").split("?")[0];
+  var onNoteZhPage =
+    /\/notes\/bab-[1-8](?:\.html)?(?:\/)?$/i.test(p) ||
+    /\/notes\/bab-\d+-\d+(?:\.html)?(?:\/)?$/i.test(p);
+  if (onNoteZhPage && localStorage.getItem("hzedu-lang-mode") === "zh") {
     document.documentElement.setAttribute("data-lang-mode", "zh");
   }
 })();
@@ -1201,6 +1205,7 @@
   }
 
   function injectFabButtons() {
+    if (!isZhHeaderNotePathname(window.location.pathname || "")) return;
     document.querySelectorAll(".nav-wrap").forEach(function (nav) {
       if (nav.querySelector(".zh-mode-fab")) return;
 
@@ -1230,20 +1235,14 @@
 
   function initLegacyControls() {
     if (legacyControlsInitialized) return;
+    if (!isZhHeaderNotePathname(window.location.pathname || "")) return;
     legacyControlsInitialized = true;
     injectFabButtons();
   }
 
-  function shouldUseSparkleForZhControls() {
-    return (/\/notes\//.test(window.location.pathname) || /\/quiz\//.test(window.location.pathname)) && !window.__HZ_ZH_LEGACY_REQUESTED;
-  }
-
   /** Tunggu penogol tema (.display-fab) disuntik supaya 华 boleh diletakkan sebelahnya. */
   function scheduleZhFabInjection() {
-    if (!isZhHeaderNotePathname(window.location.pathname || "")) {
-      initLegacyControls();
-      return;
-    }
+    if (!isZhHeaderNotePathname(window.location.pathname || "")) return;
     var tries = 0;
     function tick() {
       if (legacyControlsInitialized) return;
@@ -1265,11 +1264,9 @@
   // ── Init ─────────────────────────────────────────────────
 
   document.addEventListener("DOMContentLoaded", function () {
-    if (!shouldUseSparkleForZhControls()) {
-      scheduleZhFabInjection();
-    }
+    scheduleZhFabInjection();
 
-    if (isZhMode()) {
+    if (isZhMode() && isZhHeaderNotePathname(window.location.pathname || "")) {
       Promise.all([loadGlossary(), loadComprehensionData()]).then(function () {
         var merged = getMergedGlossary();
         var comprehension = getComprehensionMap();
@@ -1277,11 +1274,6 @@
         annotateOrphanText(merged, comprehension);
       });
     }
-  });
-
-  document.addEventListener("hz:zh-legacy-controls", function () {
-    window.__HZ_ZH_LEGACY_REQUESTED = true;
-    initLegacyControls();
   });
 
   window.HzZhMode = {
@@ -1295,8 +1287,7 @@
       return isZhMode();
     },
     initLegacyControls: function () {
-      window.__HZ_ZH_LEGACY_REQUESTED = true;
-      initLegacyControls();
+      scheduleZhFabInjection();
     },
     showDisclaimer: showDisclaimer
   };

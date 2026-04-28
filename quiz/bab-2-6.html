@@ -44,7 +44,7 @@
 <link rel="preload" as="style" href="../assets/css/responsive.css?v=6">
 <link rel="preload" as="style" href="../assets/css/themes.css?v=15">
 <link rel="preload" as="style" href="../assets/css/lab.css?v=7">
-<link rel="stylesheet" href="../assets/css/style.css?v=161" />
+<link rel="stylesheet" href="../assets/css/style.css?v=162" />
 
   <!-- Google tag (gtag.js) — deferred for performance -->
 <script>
@@ -593,19 +593,7 @@
       color: #9fb0d8;
     }
 
-    /* ── Sparkle item overrides ── */    #lab-zh-btn { font-size: 0.95rem; font-weight: 800; }
-    #lab-zh-btn.is-active {
-      background: rgba(220, 38, 38, 0.1);
-      border-color: rgba(220, 38, 38, 0.3);
-      color: #dc2626;
-    }
     #lab-back-btn { font-size: 1.1rem; }
-
-    [data-theme="dark"] #lab-zh-btn.is-active {
-      background: rgba(239, 68, 68, 0.18);
-      border-color: rgba(239, 68, 68, 0.38);
-      color: #f87171;
-    }
 
     /* --- DARK MODE — candlelit archive --- */
     [data-theme="dark"] .lab-compact-page { background: transparent; }
@@ -1006,7 +994,6 @@
     <!-- Emoji-only sparkle dock (reuses shared .note-sparkle-* CSS from ui.css) -->
     <div class="note-sparkle-wrap fab-corner-br" id="lab-sparkle-wrap">
       <div class="note-sparkle-items" id="lab-sparkle-items">
-        <button class="note-sparkle-item" type="button" data-tooltip="Mod Bahasa Cina" id="lab-zh-btn">华</button>
         <button class="note-sparkle-item" type="button" data-tooltip="Kembali ke Nota 2.6" id="lab-back-btn" aria-label="Kembali ke Nota 2.6">📖</button>
       </div>
 
@@ -1014,14 +1001,12 @@
       <button class="note-sparkle-fab" type="button" id="lab-sparkle-fab" aria-label="Menu Kuiz">✨</button>
     </div>
 
-<script src="../assets/js/zh-mode.js?v=42"></script>
   <script src="../assets/js/subtopic-lab.js?v=7"></script>
-  <script src="../assets/js/main.js?v=173"></script>
+  <script src="../assets/js/main.js?v=174"></script>
   <script>
     (function () {
       var wrap      = document.getElementById('lab-sparkle-wrap');
       var fab       = document.getElementById('lab-sparkle-fab');
-      var zhBtn     = document.getElementById('lab-zh-btn');
       var backBtn   = document.getElementById('lab-back-btn');
 
       // ── Custom confirm modal ──────────────────────────────────────
@@ -1127,18 +1112,6 @@
       document.addEventListener('click', function (e) {
         if (!wrap.contains(e.target)) wrap.classList.remove('is-open');
       });
-
-      // 华 — Mod Bahasa Cina toggle
-      if (zhBtn) {
-        if (window.HzZhMode && window.HzZhMode.isActive()) zhBtn.classList.add('is-active');
-        zhBtn.addEventListener('click', function () {
-          if (window.HzZhMode) {
-            window.HzZhMode.toggle();
-            zhBtn.classList.toggle('is-active', window.HzZhMode.isActive());
-          }
-          wrap.classList.remove('is-open');
-        });
-      }
 
       // 📖 — Kembali ke Nota (dengan pengesahan modal custom)
       if (backBtn) {
