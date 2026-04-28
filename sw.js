@@ -44,7 +44,6 @@ const PRECACHE_URLS = [
   '/icons/icon-maskable-512.png?v=2',
   '/icons/favicon-32x32.png?v=2',
   '/manifest.json?v=15',
-  '/assets/pwa-splash-card.svg?v=1',
   '/notes/bab-1-1.html',
   '/notes/bab-1-2.html',
   '/notes/bab-1-3.html',

@@ -31,7 +31,6 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap"></noscript>
-  <link rel="preload" as="image" href="assets/pwa-splash-card.svg?v=1" type="image/svg+xml" fetchpriority="high" />
   <link rel="preload" as="style" href="assets/css/base.css?v=50">
   <link rel="preload" as="style" href="assets/css/layout.css?v=15">
   <link rel="preload" as="style" href="assets/css/ui.css?v=50">
@@ -76,9 +75,9 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="default" />
   <meta name="apple-mobile-web-app-title" content="ZymNotes" />
   <meta name="msapplication-TileColor" content="#9B77FF" />
-  <style id="pwa-splash-critical">
-    /* Paparan intro PWA: mesti tersedia sebelum CSS penuh dimuat */
-    .pwa-splash {
+  <style id="pwa-loader-critical">
+    /* Skrin memuat PWA (standalone) — sebelum CSS penuh */
+    .pwa-loader {
       box-sizing: border-box;
       position: fixed;
       inset: 0;
@@ -88,64 +87,14 @@
       align-items: center;
       justify-content: center;
       margin: 0;
-      padding: max(10px, env(safe-area-inset-top, 0px)) max(18px, env(safe-area-inset-right, 0px)) max(24px, env(safe-area-inset-bottom, 0px)) max(18px, env(safe-area-inset-left, 0px));
-      background: radial-gradient(125% 100% at 50% 0%, rgba(155, 119, 255, 0.32) 0%, transparent 52%),
-        linear-gradient(168deg, #1e1b2e 0%, #14121c 48%, #0c0a12 100%);
-    }
-    html.pwa-splash-pending .pwa-splash {
-      display: flex;
-    }
-    html.pwa-splash-pending, html.pwa-splash-pending body {
-      height: 100%;
-    }
-    html.pwa-splash-pending body {
-      overflow: hidden;
-    }
-    .pwa-splash-bg {
-      position: absolute;
-      inset: 0;
-      pointer-events: none;
-      opacity: 0.45;
-      background: radial-gradient(ellipse 80% 50% at 20% 80%, rgba(85, 181, 255, 0.2) 0%, transparent 55%),
-        radial-gradient(ellipse 60% 45% at 85% 20%, rgba(255, 155, 106, 0.12) 0%, transparent 50%);
-    }
-    .pwa-splash-card {
-      position: relative;
-      z-index: 1;
-      width: min(88vw, 380px);
-      max-width: 100%;
-      max-height: min(78vh, 720px);
-    }
-    .pwa-splash-art {
-      display: block;
-      width: 100%;
-      height: auto;
-      max-height: min(78vh, 720px);
-      object-fit: contain;
-      border-radius: 24px;
-      box-shadow: 0 20px 56px rgba(0, 0, 0, 0.55), 0 0 0 1px rgba(255, 255, 255, 0.08);
-    }
-    /* Loading fasa (tunjuk segera selepas intro) */
-    .pwa-loader {
-      box-sizing: border-box;
-      position: fixed;
-      inset: 0;
-      z-index: 99998;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
       padding: max(12px, env(safe-area-inset-top, 0px)) 20px max(20px, env(safe-area-inset-bottom, 0px));
       background: linear-gradient(168deg, #1a1828 0%, #12101a 50%, #0a090f 100%);
-      opacity: 0;
-      visibility: hidden;
-      pointer-events: none;
-      transition: opacity 0.35s ease, visibility 0.35s ease;
     }
-    html.pwa-loader-show .pwa-loader {
-      opacity: 1;
-      visibility: visible;
-      pointer-events: auto;
+    html.pwa-loader-pending .pwa-loader {
+      display: flex;
+    }
+    html.pwa-loader-pending, html.pwa-loader-pending body {
+      height: 100%;
     }
     html.pwa-loader-pending body {
       overflow: hidden;
@@ -158,10 +107,8 @@
       var p = location.pathname || "/";
       if (p !== "/" && p !== "/index.html") return;
       var loaderDone = false;
-      var splashSeen = false;
       try {
         loaderDone = sessionStorage.getItem("zym-loader-done") === "1";
-        splashSeen = sessionStorage.getItem("zym-splash-seen") === "1";
       } catch (e) {}
       if (loaderDone) return;
       var d = false;
@@ -170,35 +117,11 @@
       } catch (e) {}
       if (!d && typeof navigator.standalone === "boolean") d = navigator.standalone;
       if (!d) return;
-      if (!splashSeen) {
-        document.documentElement.classList.add("pwa-splash-pending");
-      } else {
-        document.documentElement.classList.add("pwa-loader-pending", "pwa-loader-show");
-        var el = document.getElementById("pwa-loader");
-        if (el) el.removeAttribute("hidden");
-      }
+      document.documentElement.classList.add("pwa-loader-pending");
+      var el = document.getElementById("pwa-loader");
+      if (el) el.removeAttribute("hidden");
     })();
   </script>
-  <div
-    id="pwa-splash"
-    class="pwa-splash"
-    role="img"
-    aria-label="ZymNotes"
-    aria-hidden="true"
-  >
-    <div class="pwa-splash-bg" aria-hidden="true"></div>
-    <div class="pwa-splash-card">
-      <img
-        class="pwa-splash-art"
-        src="assets/pwa-splash-card.svg?v=1"
-        width="450"
-        height="780"
-        alt=""
-        decoding="async"
-        fetchpriority="high"
-      />
-    </div>
-  </div>
   <div
     id="pwa-loader"
     class="pwa-loader"

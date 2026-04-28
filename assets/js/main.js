@@ -12,16 +12,14 @@ document.documentElement.classList.add("js-enhanced");
 })();
 
 // =========================
-// HOME (/) — PWA intro + animated loading (standalone only, once per session)
+// HOME (/) — PWA animated loading (standalone, once per session; no image intro)
 // =========================
 (function () {
   var path = (location.pathname || "/").replace(/\/+$/, "") || "/";
   if (path !== "/" && path !== "/index.html") return;
 
   var root = document.documentElement;
-  var splash = document.getElementById("pwa-splash");
   var loader = document.getElementById("pwa-loader");
-  var splashSeenKey = "zym-splash-seen";
   var loaderDoneKey = "zym-loader-done";
 
   function isStandalonePwa() {
@@ -31,40 +29,20 @@ document.documentElement.classList.add("js-enhanced");
     return typeof navigator.standalone === "boolean" && navigator.standalone;
   }
 
-  function removeSplashFromDom() {
-    if (splash && splash.parentNode) splash.parentNode.removeChild(splash);
-    root.classList.remove("pwa-splash-pending");
-  }
-
-  function hideSplashAnimated() {
-    if (!splash || splash.getAttribute("data-splash-dismissed") === "1") {
-      removeSplashFromDom();
-      return;
-    }
-    splash.setAttribute("data-splash-dismissed", "1");
-    splash.classList.add("pwa-splash--hide");
-    var done = false;
-    function finish() {
-      if (done) return;
-      done = true;
-      removeSplashFromDom();
-    }
-    splash.addEventListener("transitionend", finish, { once: true });
-    setTimeout(finish, 520);
-  }
-
   function showLoader() {
     if (!loader) return;
     loader.removeAttribute("hidden");
     root.classList.add("pwa-loader-pending", "pwa-loader-show");
-    requestAnimationFrame(function () {
-      loader.classList.remove("pwa-loader--hide");
-    });
+  }
+
+  function removeLoaderCompletely() {
+    root.classList.remove("pwa-loader-pending", "pwa-loader-show");
+    if (loader && loader.parentNode) loader.parentNode.removeChild(loader);
   }
 
   function hideLoaderAnimated() {
     if (!loader || loader.getAttribute("data-loader-dismissed") === "1") {
-      finishLoaderCleanup();
+      removeLoaderCompletely();
       return;
     }
     loader.setAttribute("data-loader-dismissed", "1");
@@ -74,66 +52,39 @@ document.documentElement.classList.add("js-enhanced");
     function finish() {
       if (done) return;
       done = true;
-      finishLoaderCleanup();
+      removeLoaderCompletely();
     }
     loader.addEventListener("transitionend", finish, { once: true });
     setTimeout(finish, 480);
   }
 
-  function finishLoaderCleanup() {
-    root.classList.remove("pwa-loader-pending");
-    if (loader && loader.parentNode) loader.parentNode.removeChild(loader);
-  }
-
   try {
     if (sessionStorage.getItem(loaderDoneKey) === "1") {
-      removeSplashFromDom();
-      if (loader) loader.remove();
-      root.classList.remove("pwa-loader-pending", "pwa-loader-show");
+      removeLoaderCompletely();
       return;
     }
   } catch (e) {}
 
   if (!isStandalonePwa()) {
-    removeSplashFromDom();
-    if (loader) loader.remove();
+    removeLoaderCompletely();
     return;
   }
 
-  try {
-    if (sessionStorage.getItem(splashSeenKey) === "1") {
-      removeSplashFromDom();
-      showLoader();
-    }
-  } catch (e) {
-    removeSplashFromDom();
-  }
+  showLoader();
 
   var fontsPromise =
     document.fonts && document.fonts.ready
       ? document.fonts.ready.catch(function () {})
       : Promise.resolve();
 
-  function runSplashSequence() {
-    var minSplashMs = 720;
-    try {
-      if (sessionStorage.getItem(splashSeenKey) === "1") minSplashMs = 0;
-    } catch (e) {}
-    var minLoaderMs = 1400;
-    var maxTotalMs = 11000;
+  function runLoadSequence() {
+    var minLoaderMs = 1500;
+    var maxWaitMs = 10000;
     var t0 = typeof performance !== "undefined" && performance.now ? performance.now() : Date.now();
 
     function elapsed() {
       var t = typeof performance !== "undefined" && performance.now ? performance.now() : Date.now();
       return t - t0;
-    }
-
-    function afterSplashWindow() {
-      try {
-        sessionStorage.setItem(splashSeenKey, "1");
-      } catch (e) {}
-      hideSplashAnimated();
-      showLoader();
     }
 
     function waitForLoaderEnd() {
@@ -151,34 +102,28 @@ document.documentElement.classList.add("js-enhanced");
       });
     }
 
-    setTimeout(function () {
-      afterSplashWindow();
-      var budget = Math.max(0, maxTotalMs - elapsed());
-      Promise.race([
-        waitForLoaderEnd(),
-        new Promise(function (r) {
-          setTimeout(r, budget);
-        }),
-      ]).then(function () {
-        try {
-          sessionStorage.setItem(loaderDoneKey, "1");
-        } catch (e) {}
-        hideLoaderAnimated();
-      });
-    }, minSplashMs);
+    var budget = Math.max(0, maxWaitMs - elapsed());
+    Promise.race([
+      waitForLoaderEnd(),
+      new Promise(function (r) {
+        setTimeout(r, budget);
+      }),
+    ]).then(function () {
+      try {
+        sessionStorage.setItem(loaderDoneKey, "1");
+      } catch (e) {}
+      hideLoaderAnimated();
+    });
   }
 
   if (document.readyState === "complete") {
-    runSplashSequence();
+    runLoadSequence();
   } else {
-    window.addEventListener("load", runSplashSequence, { once: true });
+    window.addEventListener("load", runLoadSequence, { once: true });
   }
 
   window.addEventListener("pageshow", function (ev) {
-    if (ev.persisted) {
-      removeSplashFromDom();
-      finishLoaderCleanup();
-    }
+    if (ev.persisted) removeLoaderCompletely();
   });
 })();
 
