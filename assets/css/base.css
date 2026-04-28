@@ -1278,8 +1278,7 @@ body.page-theme-home.app-shell-page .home-feature-card:hover {
 }
 
 body.page-theme-home.app-shell-page .home-feature-icon {
-  font-size: 1.35rem;
-  margin-bottom: 0.55rem;
+  margin-bottom: 0.6rem;
 }
 
 body.page-theme-home.app-shell-page .home-feature-title {
@@ -1448,8 +1447,8 @@ body[class*="page-theme-"].app-shell-page .home-scope-section {
 
 .home-scope-item {
   display: flex;
-  align-items: flex-start;
-  gap: 8px;
+  align-items: center;
+  gap: 10px;
   font-size: 0.9rem;
   color: var(--ink);
   line-height: 1.45;
@@ -1461,8 +1460,6 @@ body[class*="page-theme-"].app-shell-page .home-scope-section {
 
 .home-scope-check {
   flex-shrink: 0;
-  font-size: 0.88rem;
-  line-height: 1.4;
 }
 
 /* Contact section */
