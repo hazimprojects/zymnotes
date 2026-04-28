@@ -261,13 +261,30 @@ html[data-theme="dark"] .paper-chip.bloc-chip-allies {
    MOD BAHASA CINA (中文模式)
 ========================= */
 
-/* Penjuru kanan: 华 (kiri) + penogol tema (kanan), rapat — tema kekal di penjuru */
+/* Penjuru kanan: 华 (kiri) + penogol tema (kanan) — selari & berjarak */
 .nav-wrap-end {
-  display: inline-flex;
+  display: flex;
   align-items: center;
-  gap: 0.28rem;
+  justify-content: flex-end;
+  gap: 0.5rem;
   margin-left: auto;
   flex-shrink: 0;
+}
+
+/* Elakkan baseline inline-flex: kedua-dua butang pakai flex tengah penuh */
+.nav-wrap-end .zh-mode-fab,
+.nav-wrap-end .display-fab {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.nav-wrap-end .zh-mode-fab {
+  /* line-height 0 + flex = glyph 华 ditegah secara optik selari dengan ikon SVG */
+  line-height: 0;
 }
 
 .zh-mode-fab {
