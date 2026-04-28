@@ -21,6 +21,63 @@ document.documentElement.classList.add("js-enhanced");
   hzZymnotesClearStoredZhModeIfNeeded();
 })();
 
+// Latar bertema + denyut lembut dipautkan scroll (bab induk, subtopik, kuiz bab)
+(function () {
+  var doc = document.documentElement;
+  var body = document.body;
+  if (!body) return;
+
+  function hasClassPrefix(el, prefix) {
+    if (!el || !el.classList) return false;
+    var list = el.classList;
+    for (var i = 0; i < list.length; i++) {
+      if (list[i].indexOf(prefix) === 0) return true;
+    }
+    return false;
+  }
+
+  var isBabHub = body.classList.contains("bab-hub-page");
+  var isReadingNotes =
+    body.classList.contains("note-reading-app") &&
+    body.classList.contains("page-theme-notes");
+  var isBabQuiz =
+    body.classList.contains("quiz-page") &&
+    body.classList.contains("note-reading-app") &&
+    body.classList.contains("page-theme-notes");
+
+  if (!isBabHub && !isReadingNotes && !isBabQuiz) return;
+  if (!hasClassPrefix(body, "bab-theme-")) return;
+
+  doc.classList.add("hz-themed-scroll-backdrop");
+
+  var raf = 0;
+  var scrollEndTimer = 0;
+  var lastY = typeof window.scrollY === "number" ? window.scrollY : 0;
+
+  function applyScrollShift() {
+    var y = typeof window.scrollY === "number" ? window.scrollY : 0;
+    doc.style.setProperty("--hz-scroll-bg-shift", y + "px");
+    lastY = y;
+  }
+
+  function onScroll() {
+    if (!doc.classList.contains("hz-scroll-active")) {
+      doc.classList.add("hz-scroll-active");
+    }
+    if (scrollEndTimer) clearTimeout(scrollEndTimer);
+    scrollEndTimer = window.setTimeout(function () {
+      scrollEndTimer = 0;
+      doc.classList.remove("hz-scroll-active");
+    }, 220);
+
+    cancelAnimationFrame(raf);
+    raf = requestAnimationFrame(applyScrollShift);
+  }
+
+  applyScrollShift();
+  window.addEventListener("scroll", onScroll, { passive: true });
+})();
+
 // Apply handedness class before first paint to avoid layout flash
 (function () {
   if (localStorage.getItem("hzedu-hand") === "left") {
@@ -2673,7 +2730,7 @@ var ZYMNOTES_NAV = { chapters: [
   if (!('serviceWorker' in navigator)) return;
 
   window.addEventListener('load', function () {
-    navigator.serviceWorker.register('/sw.js?v=242').catch(function (error) {
+    navigator.serviceWorker.register('/sw.js?v=244').catch(function (error) {
       console.warn('Service worker registration failed:', error);
     });
   });

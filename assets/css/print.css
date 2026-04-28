@@ -30,6 +30,14 @@
     animation: none !important;
   }
 
+  html.hz-themed-scroll-backdrop {
+    background: white !important;
+  }
+
+  html.hz-themed-scroll-backdrop::before {
+    display: none !important;
+  }
+
   .container,
   .container.narrow,
   .container.note-wide { max-width: 100% !important; padding: 0 !important; }
