@@ -2029,7 +2029,7 @@ html.about-pwa-hide-card #about-pwa-card {
   opacity: 0.9;
 }
 
-/* Home — PWA loading phase (after intro card) */
+/* Home — PWA app open: soft brand transition (not a loading screen) */
 .pwa-loader {
   box-sizing: border-box;
   position: fixed;
@@ -2041,8 +2041,8 @@ html.about-pwa-hide-card #about-pwa-card {
   justify-content: center;
   margin: 0;
   padding: max(12px, env(safe-area-inset-top, 0px)) 20px max(20px, env(safe-area-inset-bottom, 0px));
-  background: linear-gradient(168deg, #1a1828 0%, #12101a 50%, #0a090f 100%);
-  transition: opacity 0.4s ease, visibility 0.4s ease;
+  background: linear-gradient(168deg, #1c1a2a 0%, #13111c 42%, #0a090f 100%);
+  transition: opacity 0.65s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.65s cubic-bezier(0.4, 0, 0.2, 1), transform 0.65s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .pwa-loader[hidden] {
   display: none !important;
@@ -2051,9 +2051,29 @@ html.about-pwa-hide-card #about-pwa-card {
   position: absolute;
   inset: 0;
   pointer-events: none;
-  background: radial-gradient(90% 60% at 50% 0%, rgba(155, 119, 255, 0.2) 0%, transparent 45%),
-    radial-gradient(70% 50% at 0% 100%, rgba(85, 181, 255, 0.1) 0%, transparent 50%);
-  opacity: 0.9;
+  overflow: hidden;
+}
+.pwa-loader-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(64px);
+  opacity: 0.55;
+  animation: pwa-tx-orb-drift 14s ease-in-out infinite;
+}
+.pwa-loader-orb-a {
+  width: min(120vw, 420px);
+  height: min(120vw, 420px);
+  left: -20%;
+  top: -15%;
+  background: radial-gradient(circle, rgba(155, 119, 255, 0.45) 0%, transparent 70%);
+}
+.pwa-loader-orb-b {
+  width: min(100vw, 360px);
+  height: min(100vw, 360px);
+  right: -25%;
+  bottom: -20%;
+  background: radial-gradient(circle, rgba(85, 181, 255, 0.28) 0%, transparent 70%);
+  animation-delay: -6s;
 }
 .pwa-loader-inner {
   position: relative;
@@ -2063,123 +2083,80 @@ html.about-pwa-hide-card #about-pwa-card {
   align-items: center;
   text-align: center;
   max-width: 20rem;
+  animation: pwa-tx-content-in 0.75s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 .pwa-loader-icon-wrap {
   position: relative;
-  width: 104px;
-  height: 104px;
-  margin-bottom: 14px;
-}
-.pwa-loader-rings {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  pointer-events: none;
-}
-.pwa-loader-ring {
-  position: absolute;
-  border-radius: 50%;
-  border: 2px solid transparent;
-}
-.pwa-loader-ring-1 {
-  width: 104px;
-  height: 104px;
-  border-top-color: rgba(155, 119, 255, 0.85);
-  border-right-color: rgba(155, 119, 255, 0.15);
-  animation: pwa-loader-spin 1.15s linear infinite;
-}
-.pwa-loader-ring-2 {
-  width: 86px;
-  height: 86px;
-  border-bottom-color: rgba(85, 181, 255, 0.7);
-  border-left-color: rgba(85, 181, 255, 0.1);
-  animation: pwa-loader-spin 0.9s linear infinite reverse;
+  width: 96px;
+  height: 96px;
+  margin-bottom: 16px;
 }
 .pwa-loader-icon {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  width: 68px;
-  height: 68px;
-  margin: -34px 0 0 -34px;
-  border-radius: 16px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
-  animation: pwa-loader-pulse 1.4s ease-in-out infinite;
+  display: block;
+  width: 88px;
+  height: 88px;
+  margin: 0 auto;
+  border-radius: 20px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.08);
+  animation: pwa-tx-icon-breathe 2.8s ease-in-out infinite;
 }
 .pwa-loader-title {
-  margin: 0 0 4px;
-  font-size: 1.35rem;
+  margin: 0 0 6px;
+  font-size: 1.45rem;
   font-weight: 800;
   letter-spacing: 0.02em;
   color: #fff;
-  text-shadow: 0 2px 16px rgba(155, 119, 255, 0.35);
+  text-shadow: 0 2px 20px rgba(155, 119, 255, 0.25);
 }
-.pwa-loader-sub {
-  margin: 0 0 18px;
-  font-size: 0.86rem;
-  color: rgba(255, 255, 255, 0.55);
-  line-height: 1.4;
-}
-.pwa-loader-bar {
-  position: relative;
-  width: min(200px, 70vw);
-  height: 4px;
-  border-radius: 4px;
-  overflow: hidden;
-  background: rgba(255, 255, 255, 0.08);
-}
-.pwa-loader-bar-track {
-  display: block;
-  height: 100%;
-  width: 40%;
-  border-radius: 4px;
-  background: linear-gradient(90deg, #7c5ce8, #55b5ff, #7c5ce8);
-  background-size: 200% 100%;
-  animation: pwa-loader-bar 1.1s ease-in-out infinite;
-}
-.pwa-loader-bar-glow {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-  animation: pwa-loader-shimmer 1.6s ease-in-out infinite;
-  pointer-events: none;
+.pwa-loader-tagline {
+  margin: 0;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.42);
+  line-height: 1.5;
 }
 .pwa-loader.pwa-loader--hide {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
+  transform: scale(1.02);
 }
-@keyframes pwa-loader-spin {
-  to { transform: rotate(360deg); }
+@keyframes pwa-tx-orb-drift {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(4%, 3%) scale(1.05); }
 }
-@keyframes pwa-loader-pulse {
+@keyframes pwa-tx-content-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes pwa-tx-icon-breathe {
   0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.04); }
-}
-@keyframes pwa-loader-bar {
-  0% { transform: translateX(-100%); }
-  100% { transform: translateX(250%); }
-}
-@keyframes pwa-loader-shimmer {
-  0% { transform: translateX(-100%); opacity: 0; }
-  40% { opacity: 0.5; }
-  100% { transform: translateX(100%); opacity: 0; }
+  50% { transform: scale(1.03); }
 }
 @media (prefers-reduced-motion: reduce) {
-  .pwa-loader-ring-1,
-  .pwa-loader-ring-2,
-  .pwa-loader-icon,
-  .pwa-loader-bar-track,
-  .pwa-loader-bar-glow {
+  .pwa-loader-orb {
+    animation: none;
+  }
+  .pwa-loader-inner {
     animation: none;
   }
   .pwa-loader-icon {
-    transform: none;
+    animation: none;
+  }
+  .pwa-loader {
+    transition: opacity 0.35s ease, visibility 0.35s ease;
   }
 }
 
+/* =============================================================
    FEATURE CARD GRADIENT FLAVOURS
 ============================================================= */
 

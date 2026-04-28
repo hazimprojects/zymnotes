@@ -76,7 +76,7 @@
   <meta name="apple-mobile-web-app-title" content="ZymNotes" />
   <meta name="msapplication-TileColor" content="#9B77FF" />
   <style id="pwa-loader-critical">
-    /* Skrin memuat PWA (standalone) — sebelum CSS penuh */
+    /* Transisi masuk PWA (standalone) — sebelum CSS penuh */
     .pwa-loader {
       box-sizing: border-box;
       position: fixed;
@@ -127,31 +127,24 @@
     class="pwa-loader"
     hidden
     aria-hidden="true"
-    aria-busy="true"
-    aria-label="Memuatkan ZymNotes"
   >
-    <div class="pwa-loader-bg" aria-hidden="true"></div>
+    <div class="pwa-loader-bg" aria-hidden="true">
+      <span class="pwa-loader-orb pwa-loader-orb-a"></span>
+      <span class="pwa-loader-orb pwa-loader-orb-b"></span>
+    </div>
     <div class="pwa-loader-inner">
       <div class="pwa-loader-icon-wrap">
-        <div class="pwa-loader-rings" aria-hidden="true">
-          <span class="pwa-loader-ring pwa-loader-ring-1"></span>
-          <span class="pwa-loader-ring pwa-loader-ring-2"></span>
-        </div>
         <img
           class="pwa-loader-icon"
           src="/icons/icon-192.png?v=2"
-          width="80"
-          height="80"
+          width="88"
+          height="88"
           alt=""
           decoding="async"
         />
       </div>
       <p class="pwa-loader-title">ZymNotes</p>
-      <p class="pwa-loader-sub">Sedang menyediakan halaman…</p>
-      <div class="pwa-loader-bar" role="progressbar" aria-label="Memuat">
-        <span class="pwa-loader-bar-track"></span>
-        <span class="pwa-loader-bar-glow"></span>
-      </div>
+      <p class="pwa-loader-tagline">Nota ulang kaji generasi baharu</p>
     </div>
   </div>
   <header class="site-header">
