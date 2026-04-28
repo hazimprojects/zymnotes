@@ -1166,7 +1166,7 @@ body.page-theme-error .page-hero {
 .note-sparkle-fab {
   width: 52px; height: 52px;
   border-radius: 50%; border: none;
-  font-size: 1.15rem;
+  font-size: 0;
   color: #fff;
   touch-action: none;
   background: linear-gradient(135deg, #6d63ff, #a78bfa);
@@ -1176,7 +1176,7 @@ body.page-theme-error .page-hero {
   flex-shrink: 0;
   display: flex; align-items: center; justify-content: center;
 }
-.note-sparkle-fab svg { width: 22px; height: 22px; pointer-events: none; }
+.note-sparkle-fab .openmoji--sparkle-fab { width: 24px; height: 24px; }
 
 @keyframes sparkle-idle-pulse {
   0%, 100% { box-shadow: 0 8px 24px rgba(109,99,255,0.32), 0 2px 8px rgba(109,99,255,0.18); }
@@ -1211,7 +1211,7 @@ body.page-theme-error .page-hero {
   border: 1px solid rgba(92, 110, 132, 0.13);
   background: rgba(255, 253, 248, 0.97);
   box-shadow: 0 6px 18px rgba(36, 49, 63, 0.12), 0 2px 6px rgba(36, 49, 63, 0.07);
-  font-size: 1.1rem;
+  font-size: 0;
   cursor: pointer;
   display: flex; align-items: center; justify-content: center;
   text-decoration: none; color: var(--muted);
@@ -1221,7 +1221,7 @@ body.page-theme-error .page-hero {
               background 0.15s ease, box-shadow 0.15s ease;
   position: relative;
 }
-.note-sparkle-item svg { width: 20px; height: 20px; pointer-events: none; }
+.note-sparkle-item .openmoji--sparkle-item { width: 24px; height: 24px; }
 .note-sparkle-item:hover {
   background: rgba(255, 253, 248, 1);
   box-shadow: 0 8px 22px rgba(36, 49, 63, 0.17), 0 2px 8px rgba(36, 49, 63, 0.1);
@@ -1345,13 +1345,14 @@ body.page-theme-error .page-hero {
   border: 1px solid rgba(92, 110, 132, 0.13);
   background: rgba(255, 253, 248, 0.97);
   box-shadow: 0 4px 12px rgba(36, 49, 63, 0.12), 0 1px 4px rgba(36, 49, 63, 0.07);
-  font-size: 0.85rem;
+  font-size: 0;
   line-height: 1;
   cursor: pointer;
   display: flex; align-items: center; justify-content: center;
   flex-shrink: 0;
   transition: transform 0.12s ease, background 0.12s ease;
 }
+.sparkle-ctrl-btn .openmoji--sparkle-ctrl { width: 18px; height: 18px; }
 .sparkle-ctrl-btn:hover {
   background: rgba(255, 253, 248, 1);
   box-shadow: 0 6px 16px rgba(36, 49, 63, 0.16);
@@ -1359,27 +1360,18 @@ body.page-theme-error .page-hero {
 .sparkle-ctrl-btn:active { transform: scale(0.88); }
 .sparkle-ctrl-btn[data-ctrl="skip-back"],
 .sparkle-ctrl-btn[data-ctrl="skip-fwd"] {
-  font-size: 0.65rem;
-  font-weight: 800;
-  letter-spacing: -0.02em;
-  font-family: var(--font-sans, "Nunito Sans", sans-serif);
+  font-size: 0;
 }
-/* Play/pause button — CSS-drawn icons, no text */
+.sparkle-ctrl-btn.sparkle-ctrl-btn--play-pause .openmoji--sparkle-ctrl {
+  margin-left: 1px;
+}
+/* Play/pause — ikon OpenMoji (main.js menggantikan img mengikut keadaan) */
 .sparkle-ctrl-btn[data-ctrl="play-pause"] { font-size: 0; }
 .sparkle-ctrl-btn[data-ctrl="play-pause"]::before {
-  content: '';
-  display: block;
-  width: 9px; height: 12px;
-  border-left: 2.5px solid currentColor;
-  border-right: 2.5px solid currentColor;
-  box-sizing: border-box;
+  content: none;
 }
 .sparkle-ctrl-btn[data-ctrl="play-pause"].is-paused::before {
-  width: 0; height: 0;
-  border-style: solid;
-  border-width: 6px 0 6px 11px;
-  border-color: transparent transparent transparent currentColor;
-  border-right: none;
+  content: none;
 }
 
 /* Staggered entrance */
@@ -1490,8 +1482,10 @@ body.page-theme-error .page-hero {
 
 .audio-notice-icon {
   flex-shrink: 0;
-  font-size: 1rem;
-  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 0;
 }
 
 .audio-notice-title {

@@ -36,11 +36,12 @@
   height: 1.75rem;
 }
 
-/* Inline icons in paper-chip synopses (bab induk / subtopik) */
+/* Inline icons in paper-chip synopses (bab induk / subtopik) — saiz ≈ tinggi x, tengah optik dengan teks */
 .openmoji--chip {
-  width: 1.15em;
-  height: 1.15em;
-  vertical-align: -0.2em;
+  width: 1.08em;
+  height: 1.08em;
+  vertical-align: 0;
+  display: inline-block;
 }
 
 .bab-hub-heading-openmoji {
@@ -101,4 +102,41 @@ body.page-theme-home.app-shell-page .home-feature-icon .openmoji--feature,
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+/* Sparkle FAB menu — ikon OpenMoji (main.js) */
+.openmoji--sparkle-fab {
+  width: 24px;
+  height: 24px;
+  display: block;
+  pointer-events: none;
+}
+
+.openmoji--sparkle-item {
+  width: 24px;
+  height: 24px;
+  display: block;
+}
+
+.openmoji--sparkle-ctrl {
+  width: 18px;
+  height: 18px;
+  display: block;
+}
+
+.openmoji--notice-icon {
+  width: 22px;
+  height: 22px;
+  display: block;
+}
+
+.openmoji--audio-notice-close {
+  width: 16px;
+  height: 16px;
+  display: block;
+  opacity: 0.72;
+}
+
+.audio-notice-close:hover .openmoji--audio-notice-close {
+  opacity: 1;
 }
