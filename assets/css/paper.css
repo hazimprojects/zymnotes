@@ -413,7 +413,6 @@ span.paper-chip {
   align-items: center;
   justify-content: center;
   margin-right: 0.38em;
-  vertical-align: -0.12em;
   line-height: 0;
   flex-shrink: 0;
 }
@@ -432,9 +431,16 @@ span.paper-chip {
   vertical-align: baseline;
 }
 
-.paper-chip-sentence .chip-icon,
+/* Hanya anak-anak chip-icon yang reset — bukan chip-icon itu sendiri */
 .paper-chip-sentence .chip-icon * {
   vertical-align: unset;
+}
+
+/* Pusat optik icon selari dengan midline teks:
+   icon tinggi 1.18em → tengah di +0.59em. Teks cap-height midline ≈ +0.37em.
+   Shift turun 0.22em supaya tengah icon = tengah huruf besar. */
+.paper-chip-sentence .chip-icon {
+  vertical-align: -0.22em;
 }
 
 .paper-grid {
