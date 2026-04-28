@@ -4,10 +4,10 @@
    HTML files reference style.css — no change needed there.
 ========================= */
 
-@import url("openmoji.css?v=4");   /* OpenMoji img helpers (shell pages) */
+@import url("openmoji.css?v=5");   /* OpenMoji img helpers (shell pages) */
 @import url("base.css?v=62");       /* :root variables, dark mode tokens, body/reset/containers */
 @import url("layout.css?v=15");     /* Header, nav, dark mode fab, typography, footer, animations */
-@import url("ui.css?v=52");        /* Buttons, cards, homepage, hero, search, org-chart, interaction */
+@import url("ui.css?v=53");        /* Buttons, cards, homepage, hero, search, org-chart, interaction */
 @import url("paper.css?v=15");      /* Paper labels, boards, chips, accordion, steps, bab overview */
 @import url("keywords.css?v=32");   /* Keyword highlights, bloc identity, keyword legend, zh-mode annotations */
 @import url("responsive.css?v=8"); /* All @media queries + spacing fixes */

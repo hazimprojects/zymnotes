@@ -102,3 +102,40 @@ body.page-theme-home.app-shell-page .home-feature-icon .openmoji--feature,
   align-items: center;
   justify-content: center;
 }
+
+/* Sparkle FAB menu — ikon OpenMoji (main.js) */
+.openmoji--sparkle-fab {
+  width: 24px;
+  height: 24px;
+  display: block;
+  pointer-events: none;
+}
+
+.openmoji--sparkle-item {
+  width: 24px;
+  height: 24px;
+  display: block;
+}
+
+.openmoji--sparkle-ctrl {
+  width: 18px;
+  height: 18px;
+  display: block;
+}
+
+.openmoji--notice-icon {
+  width: 22px;
+  height: 22px;
+  display: block;
+}
+
+.openmoji--audio-notice-close {
+  width: 16px;
+  height: 16px;
+  display: block;
+  opacity: 0.72;
+}
+
+.audio-notice-close:hover .openmoji--audio-notice-close {
+  opacity: 1;
+}
