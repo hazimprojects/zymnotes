@@ -409,7 +409,17 @@ span.paper-chip {
 }
 
 .paper-chip-sentence .chip-icon {
-  margin-right: 0.45rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 0.38em;
+  vertical-align: -0.12em;
+  line-height: 0;
+  flex-shrink: 0;
+}
+
+.paper-chip-sentence .chip-icon .openmoji--chip {
+  display: block;
 }
 
 .paper-chip-sentence .kw {
@@ -420,6 +430,11 @@ span.paper-chip {
 .paper-chip-sentence,
 .paper-chip-sentence * {
   vertical-align: baseline;
+}
+
+.paper-chip-sentence .chip-icon,
+.paper-chip-sentence .chip-icon * {
+  vertical-align: unset;
 }
 
 .paper-grid {
