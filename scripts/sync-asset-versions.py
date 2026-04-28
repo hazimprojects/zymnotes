@@ -21,9 +21,19 @@ HTML_PATTERNS = {
     "manifest.json?v=": "manifest",
 }
 
+# App icon / PWA image URLs in HTML and sw.js precache
+ICON_URL_PATTERNS = {
+    "/icons/icon.svg?v=": "icon",
+    "/icons/icon-maskable.svg?v=": "icon_maskable",
+    "/icons/apple-touch-icon.png?v=": "apple_touch_icon",
+    "/icons/icon-192.png?v=": "icon_192",
+    "/icons/icon-512.png?v=": "icon_512",
+    "/icons/icon-maskable-512.png?v=": "icon_maskable_512",
+    "/icons/favicon-32x32.png?v=": "favicon_32",
+}
+
 # Tokens that appear in HTML <link rel="preload"> tags for individual CSS files
 CSS_PRELOAD_PATTERNS = {
-    "base.css?v=":       "base",
     "layout.css?v=":     "layout",
     "ui.css?v=":         "ui",
     "paper.css?v=":      "paper",
@@ -48,7 +58,15 @@ CSS_IMPORT_MAP = {
 
 def load_versions() -> dict:
     raw = json.loads(VERSIONS_FILE.read_text(encoding="utf-8"))
-    required_top = {"style_css", "main_js", "zh_mode_js", "manifest", "sw_cache", "css"}
+    required_top = {
+        "style_css",
+        "main_js",
+        "zh_mode_js",
+        "manifest",
+        "sw_cache",
+        "css",
+        *ICON_URL_PATTERNS.values(),
+    }
     missing = sorted(required_top - set(raw))
     if missing:
         raise ValueError(f"Missing keys in {VERSIONS_FILE}: {', '.join(missing)}")
@@ -70,6 +88,13 @@ def sync_html_files(versions: dict) -> list[Path]:
             updated = re.sub(
                 rf"({re.escape(token)})[^\"'\s>]+",
                 rf"\g<1>{versions['css'][key]}",
+                updated,
+            )
+        for token, key in ICON_URL_PATTERNS.items():
+            v = str(versions[key])
+            updated = re.sub(
+                rf"({re.escape(token)})[^\"'\s>]+",
+                rf"\g<1>{v}",
                 updated,
             )
         if updated != original:
@@ -122,6 +147,13 @@ def sync_service_worker(versions: dict) -> bool:
                        rf"\g<1>{versions['zh_mode_js']}", new_block)
     new_block = re.sub(r"(/manifest\.json\?v=)[^\"']+",
                        rf"\g<1>{versions['manifest']}", new_block)
+    for path_prefix, key in ICON_URL_PATTERNS.items():
+        v = str(versions[key])
+        new_block = re.sub(
+            rf"({re.escape(path_prefix)})[^\"']+",
+            rf"\g<1>{v}",
+            new_block,
+        )
     if "'/data/zh-comprehension.json'" not in new_block:
         new_block = new_block.replace(
             "'/data/zh-glossary.json',",

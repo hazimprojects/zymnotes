@@ -6,7 +6,7 @@
    - Same-origin non-document GET: cache-first
 */
 
-const CACHE = 'zym-v230';
+const CACHE = 'zym-v231';
 
 const PRECACHE_URLS = [
   '/',
@@ -36,14 +36,14 @@ const PRECACHE_URLS = [
   '/data/zh-glossary.json',
   '/data/zh-comprehension.json',
   '/data/zh-units/index.json',
-  '/icons/icon.svg?v=4',
-  '/icons/icon-maskable.svg?v=4',
-  '/icons/apple-touch-icon.png?v=2',
-  '/icons/icon-192.png?v=2',
-  '/icons/icon-512.png?v=2',
-  '/icons/icon-maskable-512.png?v=2',
-  '/icons/favicon-32x32.png?v=2',
-  '/manifest.json?v=15',
+  '/icons/icon.svg?v=5',
+  '/icons/icon-maskable.svg?v=5',
+  '/icons/apple-touch-icon.png?v=3',
+  '/icons/icon-192.png?v=3',
+  '/icons/icon-512.png?v=3',
+  '/icons/icon-maskable-512.png?v=3',
+  '/icons/favicon-32x32.png?v=3',
+  '/manifest.json?v=17',
   '/notes/bab-1-1.html',
   '/notes/bab-1-2.html',
   '/notes/bab-1-3.html',
