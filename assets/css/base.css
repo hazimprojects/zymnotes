@@ -970,6 +970,61 @@ body.quiz-page.js-enhanced main.note-reading-main {
 
 }
 
+/* Pra-kuiz: kad notis penuh mengikut kandungan — scroll halaman, bukan scroll dalam kad */
+@media (max-width: 899px) {
+  body.quiz-page.note-reading-app.is-quiz-notice-phase {
+    max-height: none;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  body.quiz-page.note-reading-app.is-quiz-notice-phase main.note-reading-main {
+    flex: 0 1 auto;
+    min-height: 0;
+    max-height: none;
+    overflow: visible;
+  }
+
+  body.quiz-page.note-reading-app.is-quiz-notice-phase .lab-compact-page {
+    flex: 0 1 auto;
+    min-height: 0;
+    max-height: none;
+    overflow: visible;
+  }
+
+  body.quiz-page.note-reading-app.is-quiz-notice-phase .lab-compact-main {
+    flex: 0 1 auto;
+    min-height: auto;
+    max-height: none;
+    overflow: visible;
+  }
+
+  body.quiz-page.note-reading-app.is-quiz-notice-phase .lab-compact-shell {
+    flex: 0 1 auto;
+    min-height: auto;
+    max-height: none;
+    overflow: visible;
+  }
+
+  body.quiz-page.note-reading-app.is-quiz-notice-phase .lab-compact-game {
+    flex: 0 1 auto;
+    min-height: auto;
+    overflow: visible;
+  }
+
+  body.quiz-page.note-reading-app.is-quiz-notice-phase .lab-notice-screen {
+    flex: 0 1 auto;
+    min-height: 0;
+    overflow: visible;
+  }
+
+  body.quiz-page.note-reading-app.is-quiz-notice-phase .lab-notice-card {
+    max-height: none;
+    overflow-x: hidden;
+    overflow-y: visible;
+  }
+}
+
 /* =============================================================
    FOCUS RING — consistent across all interactive elements
 ============================================================= */
