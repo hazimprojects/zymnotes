@@ -78,8 +78,9 @@ document.documentElement.classList.add("js-enhanced");
       : Promise.resolve();
 
   function runLoadSequence() {
-    var minMs = 900;
-    var maxWaitMs = 9000;
+    /* ~2.6s minimum so tagline can be read once comfortably */
+    var minMs = 2600;
+    var maxWaitMs = 11000;
     var t0 = typeof performance !== "undefined" && performance.now ? performance.now() : Date.now();
 
     function elapsed() {
@@ -2654,7 +2655,7 @@ var ZYMNOTES_NAV = { chapters: [
   if (!('serviceWorker' in navigator)) return;
 
   window.addEventListener('load', function () {
-    navigator.serviceWorker.register('/sw.js?v=226').catch(function (error) {
+    navigator.serviceWorker.register('/sw.js?v=228').catch(function (error) {
       console.warn('Service worker registration failed:', error);
     });
   });

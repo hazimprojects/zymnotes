@@ -64,11 +64,13 @@ body[class*="page-theme-"] .feedback-form-wrap {
 }
 
 body.page-theme-home {
-  --page-bg-solid: #f0f2fb;
-  --page-overlay-1: radial-gradient(ellipse 110% 75% at 10% -5%, rgba(99, 102, 241, 0.14), transparent 55%);
-  --page-overlay-2: radial-gradient(ellipse 95% 60% at 94% 12%, rgba(14, 165, 233, 0.11), transparent 50%);
-  --page-overlay-3: radial-gradient(ellipse 95% 55% at 42% 102%, rgba(167, 139, 250, 0.12), transparent 52%);
-  --page-gradient: linear-gradient(168deg, #fdfcfe 0%, #eef1fb 42%, #e4e9f8 100%);
+  /* Mesh lembut — empat penjuru + pusat terang (sesuai skrin potret) */
+  --page-bg-solid: #faf7fc;
+  --page-overlay-1: radial-gradient(ellipse 100% 100% at 0% 0%, rgba(255, 210, 220, 0.5), transparent 58%);
+  --page-overlay-2: radial-gradient(ellipse 100% 100% at 100% 0%, rgba(180, 225, 255, 0.48), transparent 58%);
+  --page-overlay-3: radial-gradient(ellipse 100% 100% at 0% 100%, rgba(255, 224, 205, 0.42), transparent 60%);
+  --page-gradient: radial-gradient(ellipse 100% 100% at 100% 100%, rgba(170, 240, 210, 0.38), transparent 58%),
+    radial-gradient(ellipse 78% 62% at 50% 40%, #ffffff 0%, rgba(255, 255, 255, 0.75) 42%, #f2edf9 100%);
   --page-surface-bg: linear-gradient(160deg, rgba(255, 255, 255, 0.97) 0%, rgba(248, 249, 255, 0.94) 55%, rgba(241, 244, 252, 0.92) 100%);
   --page-surface-border: rgba(79, 70, 229, 0.14);
   --page-surface-shadow: 0 22px 52px rgba(55, 48, 120, 0.1), 0 1px 0 rgba(255, 255, 255, 0.75) inset;
