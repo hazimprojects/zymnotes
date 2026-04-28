@@ -708,6 +708,52 @@ document.addEventListener("DOMContentLoaded", function () {
     card.setAttribute("aria-label", `${currentLabel} (${fragment})`);
   }
 
+  var OPENMOJI_BAB_BADGE_BASE =
+    "https://cdn.jsdelivr.net/npm/openmoji@15.0.0/color/svg";
+
+  function injectBabCardOpenmojiBadges() {
+    document.querySelectorAll(".bab-card-badge-openmoji").forEach(function (el) {
+      el.remove();
+    });
+
+    document
+      .querySelectorAll(".bab-card[href].has-quiz, .bab-card[href].has-audio")
+      .forEach(function (card) {
+        var quiz = card.classList.contains("has-quiz");
+        var audio = card.classList.contains("has-audio");
+        if (!quiz && !audio) return;
+
+        var wrap = document.createElement("span");
+        wrap.className = "bab-card-badge-openmoji";
+        wrap.setAttribute("aria-hidden", "true");
+
+        if (quiz) {
+          var iq = document.createElement("img");
+          iq.className = "openmoji openmoji--bab-badge";
+          iq.src = OPENMOJI_BAB_BADGE_BASE + "/1F9E9.svg";
+          iq.alt = "";
+          iq.width = 14;
+          iq.height = 14;
+          iq.decoding = "async";
+          iq.setAttribute("data-bab-badge", "quiz");
+          wrap.appendChild(iq);
+        }
+        if (audio) {
+          var ia = document.createElement("img");
+          ia.className = "openmoji openmoji--bab-badge";
+          ia.src = OPENMOJI_BAB_BADGE_BASE + "/1F3A7.svg";
+          ia.alt = "";
+          ia.width = 14;
+          ia.height = 14;
+          ia.decoding = "async";
+          ia.setAttribute("data-bab-badge", "audio");
+          wrap.appendChild(ia);
+        }
+
+        card.appendChild(wrap);
+      });
+  }
+
   async function markSubtopicCardsWithAudio() {
     const subtopicCards = Array.from(document.querySelectorAll(".bab-card[href]")).filter((card) => {
       const href = card.getAttribute("href") || "";
@@ -747,6 +793,8 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       })
     );
+
+    injectBabCardOpenmojiBadges();
   }
 
   markSubtopicCardsWithAudio();
@@ -2710,7 +2758,7 @@ var ZYMNOTES_NAV = { chapters: [
   if (!('serviceWorker' in navigator)) return;
 
   window.addEventListener('load', function () {
-    navigator.serviceWorker.register('/sw.js?v=259').catch(function (error) {
+    navigator.serviceWorker.register('/sw.js?v=260').catch(function (error) {
       console.warn('Service worker registration failed:', error);
     });
   });

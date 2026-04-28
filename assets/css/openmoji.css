@@ -55,6 +55,13 @@
   flex-shrink: 0;
 }
 
+/* Corner badges on bab induk subtopic cards (kuiz / audio) */
+.openmoji--bab-badge {
+  width: 0.85rem;
+  height: 0.85rem;
+  display: block;
+}
+
 .home-footer-openmoji-attrib {
   font-size: 0.68rem;
   opacity: 0.72;
