@@ -782,6 +782,25 @@
         flex: 1 1 0;
         min-height: 0;
       }
+
+      /* Pra-kuiz: kad notis penuhi tinggi ruang permainan (selaras rasa kad soalan) */
+      body.quiz-page .lab-compact-game .lab-notice-screen {
+        justify-content: flex-start;
+        align-items: stretch;
+      }
+
+      body.quiz-page .lab-compact-game .lab-notice-card {
+        display: flex;
+        flex-direction: column;
+        flex: 1 1 auto;
+        min-height: 0;
+        max-height: none;
+      }
+
+      body.quiz-page .lab-compact-game .lab-notice-body {
+        flex: 1 1 auto;
+        min-height: 0;
+      }
     }
 
   </style>
