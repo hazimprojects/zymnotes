@@ -640,3 +640,28 @@
     flex-direction: column;
   }
 }
+
+/* Kuiz lab-compact: bar kemajuan + jalur notis selari dengan tepi luar kad soalan */
+body.quiz-page.note-reading-app .lab-compact-game [data-lab-screen="game"] .learning-lab-progress-wrap {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+  padding: 0.1rem 0.78rem 0.2rem;
+}
+
+body.quiz-page.note-reading-app .lab-compact-game .lab-notice-body {
+  padding-left: 0.8rem;
+  padding-right: 0.8rem;
+}
+
+body.quiz-page.note-reading-app .lab-compact-game .lab-notice-footer {
+  padding-left: 0.8rem;
+  padding-right: 0.8rem;
+}
+
+body.quiz-page.note-reading-app .lab-compact-game .lab-notice-best {
+  margin-left: 0.8rem;
+  margin-right: 0.8rem;
+}

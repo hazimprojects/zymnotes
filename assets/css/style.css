@@ -11,5 +11,5 @@
 @import url("keywords.css?v=32");   /* Keyword highlights, bloc identity, keyword legend, zh-mode annotations */
 @import url("responsive.css?v=6"); /* All @media queries + spacing fixes */
 @import url("themes.css?v=19");     /* Bab visual themes, dark mode overrides, war block chips */
-@import url("lab.css?v=7");        /* Learning Lab, action bar, mini interactive blocks */
+@import url("lab.css?v=8");        /* Learning Lab, action bar, mini interactive blocks */
 @import url("print.css") print;    /* Print styles (Ctrl+P) */
