@@ -2029,7 +2029,7 @@ html.about-pwa-hide-card #about-pwa-card {
   opacity: 0.9;
 }
 
-/* Home — PWA app open: soft brand transition (not a loading screen) */
+/* Home — PWA app open: soft brand transition (portrait mesh, not a loading screen) */
 .pwa-loader {
   box-sizing: border-box;
   position: fixed;
@@ -2040,8 +2040,14 @@ html.about-pwa-hide-card #about-pwa-card {
   align-items: center;
   justify-content: center;
   margin: 0;
-  padding: max(12px, env(safe-area-inset-top, 0px)) 20px max(20px, env(safe-area-inset-bottom, 0px));
-  background: linear-gradient(168deg, #1c1a2a 0%, #13111c 42%, #0a090f 100%);
+  padding: max(12px, env(safe-area-inset-top, 0px)) 22px max(24px, env(safe-area-inset-bottom, 0px));
+  background-color: #faf7fc;
+  background-image:
+    radial-gradient(ellipse 100% 100% at 0% 0%, rgba(255, 210, 220, 0.5), transparent 58%),
+    radial-gradient(ellipse 100% 100% at 100% 0%, rgba(180, 225, 255, 0.45), transparent 58%),
+    radial-gradient(ellipse 100% 100% at 0% 100%, rgba(255, 224, 205, 0.4), transparent 60%),
+    radial-gradient(ellipse 100% 100% at 100% 100%, rgba(170, 240, 210, 0.35), transparent 60%),
+    radial-gradient(ellipse 85% 60% at 50% 42%, #ffffff 0%, #f2edf9 100%);
   transition: opacity 0.65s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.65s cubic-bezier(0.4, 0, 0.2, 1), transform 0.65s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .pwa-loader[hidden] {
@@ -2056,24 +2062,40 @@ html.about-pwa-hide-card #about-pwa-card {
 .pwa-loader-orb {
   position: absolute;
   border-radius: 50%;
-  filter: blur(64px);
-  opacity: 0.55;
-  animation: pwa-tx-orb-drift 14s ease-in-out infinite;
+  filter: blur(48px);
+  opacity: 0.42;
+  animation: pwa-tx-orb-drift 16s ease-in-out infinite;
 }
-.pwa-loader-orb-a {
-  width: min(120vw, 420px);
-  height: min(120vw, 420px);
-  left: -20%;
-  top: -15%;
-  background: radial-gradient(circle, rgba(155, 119, 255, 0.45) 0%, transparent 70%);
+.pwa-loader-orb-tl {
+  width: min(95vw, 360px);
+  height: min(95vw, 360px);
+  left: -28%;
+  top: -20%;
+  background: radial-gradient(circle, rgba(255, 190, 210, 0.55) 0%, transparent 70%);
 }
-.pwa-loader-orb-b {
-  width: min(100vw, 360px);
-  height: min(100vw, 360px);
-  right: -25%;
-  bottom: -20%;
-  background: radial-gradient(circle, rgba(85, 181, 255, 0.28) 0%, transparent 70%);
-  animation-delay: -6s;
+.pwa-loader-orb-tr {
+  width: min(88vw, 320px);
+  height: min(88vw, 320px);
+  right: -26%;
+  top: -12%;
+  background: radial-gradient(circle, rgba(160, 210, 255, 0.5) 0%, transparent 70%);
+  animation-delay: -4s;
+}
+.pwa-loader-orb-bl {
+  width: min(90vw, 340px);
+  height: min(90vw, 340px);
+  left: -22%;
+  bottom: -24%;
+  background: radial-gradient(circle, rgba(255, 200, 175, 0.45) 0%, transparent 70%);
+  animation-delay: -8s;
+}
+.pwa-loader-orb-br {
+  width: min(86vw, 300px);
+  height: min(86vw, 300px);
+  right: -20%;
+  bottom: -18%;
+  background: radial-gradient(circle, rgba(150, 235, 200, 0.42) 0%, transparent 70%);
+  animation-delay: -12s;
 }
 .pwa-loader-inner {
   position: relative;
@@ -2082,14 +2104,14 @@ html.about-pwa-hide-card #about-pwa-card {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  max-width: 20rem;
-  animation: pwa-tx-content-in 0.75s cubic-bezier(0.22, 1, 0.36, 1) both;
+  max-width: min(22rem, 92vw);
+  animation: pwa-tx-content-in 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 .pwa-loader-icon-wrap {
   position: relative;
   width: 96px;
   height: 96px;
-  margin-bottom: 16px;
+  margin-bottom: 18px;
 }
 .pwa-loader-icon {
   display: block;
@@ -2097,40 +2119,61 @@ html.about-pwa-hide-card #about-pwa-card {
   height: 88px;
   margin: 0 auto;
   border-radius: 20px;
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.08);
+  box-shadow:
+    0 10px 36px rgba(95, 70, 130, 0.2),
+    0 0 0 1px rgba(255, 255, 255, 0.85);
   animation: pwa-tx-icon-breathe 2.8s ease-in-out infinite;
 }
-.pwa-loader-title {
-  margin: 0 0 6px;
-  font-size: 1.45rem;
+.pwa-loader-wordmark {
+  margin: 0 0 8px;
+  font-size: clamp(1.5rem, 5.5vw, 1.85rem);
   font-weight: 800;
   letter-spacing: 0.02em;
-  color: #fff;
-  text-shadow: 0 2px 20px rgba(155, 119, 255, 0.25);
+  line-height: 1.15;
+  color: #1c1530;
+}
+.pwa-loader-wordmark-zym {
+  color: #2d1f4a;
+}
+.pwa-loader-wordmark-notes {
+  color: #5b3d8a;
 }
 .pwa-loader-tagline {
-  margin: 0;
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 0.2em;
+  margin: 0 0 6px;
+  font-size: clamp(0.72rem, 2.6vw, 0.82rem);
+  font-weight: 600;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.42);
-  line-height: 1.5;
+  color: rgba(50, 38, 72, 0.55);
+  line-height: 1.45;
+}
+.pwa-loader-url {
+  margin: 0;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: lowercase;
+  color: rgba(90, 55, 140, 0.4);
 }
 .pwa-loader.pwa-loader--hide {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-  transform: scale(1.02);
+  transform: scale(1.01);
 }
 @keyframes pwa-tx-orb-drift {
-  0%, 100% { transform: translate(0, 0) scale(1); }
-  50% { transform: translate(4%, 3%) scale(1.05); }
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(3%, 2.5%) scale(1.04);
+  }
 }
 @keyframes pwa-tx-content-in {
   from {
     opacity: 0;
-    transform: translateY(12px);
+    transform: translateY(10px);
   }
   to {
     opacity: 1;
@@ -2138,8 +2181,13 @@ html.about-pwa-hide-card #about-pwa-card {
   }
 }
 @keyframes pwa-tx-icon-breathe {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.03); }
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.03);
+  }
 }
 @media (prefers-reduced-motion: reduce) {
   .pwa-loader-orb {

@@ -31,7 +31,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap"></noscript>
-  <link rel="preload" as="style" href="assets/css/base.css?v=51">
+  <link rel="preload" as="style" href="assets/css/base.css?v=54">
   <link rel="preload" as="style" href="assets/css/layout.css?v=15">
   <link rel="preload" as="style" href="assets/css/ui.css?v=50">
   <link rel="preload" as="style" href="assets/css/paper.css?v=14">
@@ -39,7 +39,7 @@
   <link rel="preload" as="style" href="assets/css/responsive.css?v=6">
   <link rel="preload" as="style" href="assets/css/themes.css?v=14">
   <link rel="preload" as="style" href="assets/css/lab.css?v=7">
-  <link rel="stylesheet" href="assets/css/style.css?v=155" />
+  <link rel="stylesheet" href="assets/css/style.css?v=158" />
 
   <!-- Google tag (gtag.js) — deferred for performance -->
 <script>
@@ -76,7 +76,7 @@
   <meta name="apple-mobile-web-app-title" content="ZymNotes" />
   <meta name="msapplication-TileColor" content="#9B77FF" />
   <style id="pwa-loader-critical">
-    /* Transisi masuk PWA (standalone) — sebelum CSS penuh */
+    /* Transisi PWA: mesh pastel (potret) — sebelum CSS penuh */
     .pwa-loader {
       box-sizing: border-box;
       position: fixed;
@@ -87,8 +87,14 @@
       align-items: center;
       justify-content: center;
       margin: 0;
-      padding: max(12px, env(safe-area-inset-top, 0px)) 20px max(20px, env(safe-area-inset-bottom, 0px));
-      background: linear-gradient(168deg, #1a1828 0%, #12101a 50%, #0a090f 100%);
+      padding: max(12px, env(safe-area-inset-top, 0px)) 22px max(24px, env(safe-area-inset-bottom, 0px));
+      background-color: #faf7fc;
+      background-image:
+        radial-gradient(ellipse 100% 100% at 0% 0%, rgba(255, 210, 220, 0.5), transparent 58%),
+        radial-gradient(ellipse 100% 100% at 100% 0%, rgba(180, 225, 255, 0.45), transparent 58%),
+        radial-gradient(ellipse 100% 100% at 0% 100%, rgba(255, 224, 205, 0.4), transparent 60%),
+        radial-gradient(ellipse 100% 100% at 100% 100%, rgba(170, 240, 210, 0.35), transparent 60%),
+        radial-gradient(ellipse 85% 60% at 50% 42%, #ffffff 0%, #f2edf9 100%);
     }
     html.pwa-loader-pending .pwa-loader {
       display: flex;
@@ -129,22 +135,27 @@
     aria-hidden="true"
   >
     <div class="pwa-loader-bg" aria-hidden="true">
-      <span class="pwa-loader-orb pwa-loader-orb-a"></span>
-      <span class="pwa-loader-orb pwa-loader-orb-b"></span>
+      <span class="pwa-loader-orb pwa-loader-orb-tl"></span>
+      <span class="pwa-loader-orb pwa-loader-orb-tr"></span>
+      <span class="pwa-loader-orb pwa-loader-orb-bl"></span>
+      <span class="pwa-loader-orb pwa-loader-orb-br"></span>
     </div>
     <div class="pwa-loader-inner">
       <div class="pwa-loader-icon-wrap">
         <img
           class="pwa-loader-icon"
           src="/icons/icon-192.png?v=2"
-          width="88"
-          height="88"
+          width="96"
+          height="96"
           alt=""
           decoding="async"
         />
       </div>
-      <p class="pwa-loader-title">ZymNotes</p>
+      <h1 class="pwa-loader-wordmark">
+        <span class="pwa-loader-wordmark-zym">Zym</span><span class="pwa-loader-wordmark-notes">Notes</span>
+      </h1>
       <p class="pwa-loader-tagline">Nota ulang kaji generasi baharu</p>
+      <p class="pwa-loader-url">zymnotes.com</p>
     </div>
   </div>
   <header class="site-header">
@@ -225,7 +236,7 @@
 
   </main>
 
-  <script src="assets/js/main.js?v=167"></script>
+  <script src="assets/js/main.js?v=169"></script>
   <script type="application/ld+json">
   [
     {
