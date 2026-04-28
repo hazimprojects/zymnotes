@@ -21,7 +21,7 @@
   </svg>
   <!-- Wordmark -->
   <text x="54" y="22"
-        font-family="'Plus Jakarta Sans', 'Inter', system-ui, sans-serif"
+        font-family="'Nunito Sans', 'Lexend', system-ui, sans-serif"
         font-size="25" font-weight="800"
         dominant-baseline="middle">
     <tspan fill="#9B77FF">Zym</tspan><tspan fill="#1E2A34">Notes</tspan>

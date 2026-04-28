@@ -2,37 +2,38 @@
 
 .openmoji {
   display: inline-block;
-  vertical-align: -0.15em;
+  vertical-align: -0.22em;
   flex-shrink: 0;
   object-fit: contain;
   pointer-events: none;
   user-select: none;
 }
 
+/* Match illustration scale to adjacent UI copy (~0.9–1em body lines) */
 .openmoji--feature {
-  width: 1.35rem;
-  height: 1.35rem;
+  width: 1.65rem;
+  height: 1.65rem;
 }
 
 .openmoji--scope {
-  width: 1em;
-  height: 1em;
-  margin-top: 0.12em;
+  width: 1.25em;
+  height: 1.25em;
+  margin-top: 0.06em;
 }
 
 .openmoji--nota {
-  width: 1.28rem;
-  height: 1.28rem;
+  width: 1.55rem;
+  height: 1.55rem;
 }
 
 .openmoji--empty {
-  width: 2.35rem;
-  height: 2.35rem;
+  width: 2.85rem;
+  height: 2.85rem;
 }
 
 .openmoji--aud {
-  width: 1.45rem;
-  height: 1.45rem;
+  width: 1.75rem;
+  height: 1.75rem;
 }
 
 .home-footer-openmoji-attrib {
@@ -67,7 +68,7 @@ body.page-theme-home.app-shell-page .home-feature-icon .openmoji--feature,
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 1.35rem;
+  min-height: 1.65rem;
 }
 
 .nota-search-empty-icon {

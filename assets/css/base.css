@@ -1,6 +1,6 @@
 :root {
-  /* Lexend: jarak huruf mesra bacaan pelajar; Plus Jakarta sandaran untuk UI sedia ada */
-  --font-sans: "Lexend", "Plus Jakarta Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  /* Nunito Sans: bulat lembut, selaras dengan ilustrasi OpenMoji; Lexend sandaran mesra bacaan */
+  --font-sans: "Nunito Sans", "Lexend", system-ui, -apple-system, "Segoe UI", sans-serif;
   --bg: #F6F7FF;
   --paper: #ffffff;
   --paper-soft: #F0F1FF;
