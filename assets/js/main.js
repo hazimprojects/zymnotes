@@ -49,13 +49,20 @@ document.documentElement.classList.add("js-enhanced");
     loader.classList.add("pwa-loader--hide");
     root.classList.remove("pwa-loader-pending");
     var done = false;
+    var fadeMs = 1200;
     function finish() {
       if (done) return;
       done = true;
       removeLoaderCompletely();
     }
-    loader.addEventListener("transitionend", finish, { once: true });
-    setTimeout(finish, 780);
+    function onTransitionEnd(ev) {
+      if (ev && ev.target === loader && ev.propertyName === "opacity") {
+        finish();
+      }
+    }
+    loader.addEventListener("transitionend", onTransitionEnd);
+    /* Fallback: jangan potong sebelum ~1.2s opacity selesai (bukan 780ms) */
+    setTimeout(finish, fadeMs + 400);
   }
 
   try {
@@ -2655,7 +2662,7 @@ var ZYMNOTES_NAV = { chapters: [
   if (!('serviceWorker' in navigator)) return;
 
   window.addEventListener('load', function () {
-    navigator.serviceWorker.register('/sw.js?v=228').catch(function (error) {
+    navigator.serviceWorker.register('/sw.js?v=229').catch(function (error) {
       console.warn('Service worker registration failed:', error);
     });
   });
