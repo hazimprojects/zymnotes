@@ -16,14 +16,14 @@
 }
 
 .openmoji--scope {
-  width: 1.25em;
-  height: 1.25em;
-  margin-top: 0.06em;
+  width: 1.4em;
+  height: 1.4em;
+  margin-top: 0.04em;
 }
 
 .openmoji--nota {
-  width: 1.55rem;
-  height: 1.55rem;
+  width: 1.7rem;
+  height: 1.7rem;
 }
 
 .openmoji--empty {
@@ -38,8 +38,8 @@
 
 /* Inline icons in paper-chip synopses (bab induk / subtopik) — saiz ≈ tinggi x, tengah optik dengan teks */
 .openmoji--chip {
-  width: 1.08em;
-  height: 1.08em;
+  width: 1.18em;
+  height: 1.18em;
   vertical-align: 0;
   display: inline-block;
 }
@@ -96,6 +96,7 @@ body.page-theme-home.app-shell-page .home-feature-icon .openmoji--feature,
   align-items: center;
   justify-content: center;
   min-height: 1.65rem;
+  margin-bottom: 0;
 }
 
 .nota-search-empty-icon {
@@ -139,4 +140,68 @@ body.page-theme-home.app-shell-page .home-feature-icon .openmoji--feature,
 
 .audio-notice-close:hover .openmoji--audio-notice-close {
   opacity: 1;
+}
+
+/* ── Feature card icon badge — kotak berlatar 48px ───────────────────── */
+.home-feature-icon-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  flex-shrink: 0;
+  margin-bottom: 0.55rem;
+}
+
+.home-feature-icon-badge .openmoji--feature {
+  width: 28px;
+  height: 28px;
+}
+
+/* ── Hero decorative emoji — ilustrasi sudut kanan atas ──────────────── */
+.home-hero-emoji-deco {
+  position: absolute;
+  top: 14px;
+  right: 18px;
+  width: 72px;
+  height: 72px;
+  opacity: 0.22;
+  pointer-events: none;
+  user-select: none;
+  display: block;
+}
+
+.home-hero-emoji-deco img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* ── Nota page head emoji — anchor visual atas senarai ───────────────── */
+.nota-page-head-emoji {
+  display: block;
+  width: 44px;
+  height: 44px;
+  margin-bottom: 0.55rem;
+}
+
+.nota-page-head-emoji img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* ── Paper-label with inline emoji icon ──────────────────────────────── */
+.paper-label--with-icon {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.32rem;
+}
+
+.openmoji--label-icon {
+  width: 1em;
+  height: 1em;
+  flex-shrink: 0;
+  vertical-align: 0;
 }
