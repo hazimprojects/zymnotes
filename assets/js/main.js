@@ -49,6 +49,13 @@ document.documentElement.classList.add("js-enhanced");
   if (!hasClassPrefix(body, "bab-theme-")) return;
 
   doc.classList.add("hz-themed-scroll-backdrop");
+  for (var i = 0; i < body.classList.length; i++) {
+    var c = body.classList[i];
+    if (c.indexOf("bab-theme-") === 0) {
+      doc.classList.add(c);
+      break;
+    }
+  }
 })();
 
 // Apply handedness class before first paint to avoid layout flash
