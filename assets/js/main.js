@@ -1,5 +1,26 @@
 document.documentElement.classList.add("js-enhanced");
 
+// Nyahaktifkan mod bahasa Cina tersimpan pada halaman tanpa kandungan zh (main.js dimuat di semua halaman utama)
+(function () {
+  var LANG_KEY = "hzedu-lang-mode";
+  function hzZymnotesIsZhContentNotePathname(p) {
+    if (!p || typeof p !== "string") return false;
+    return (
+      /\/notes\/bab-[1-8](?:\.html)?(?:\/)?$/i.test(p) ||
+      /\/notes\/bab-\d+-\d+(?:\.html)?(?:\/)?$/i.test(p)
+    );
+  }
+  function hzZymnotesClearStoredZhModeIfNeeded() {
+    var p = (window.location.pathname || "").split("?")[0];
+    if (hzZymnotesIsZhContentNotePathname(p)) return;
+    try {
+      localStorage.removeItem(LANG_KEY);
+    } catch (e) {}
+    document.documentElement.removeAttribute("data-lang-mode");
+  }
+  hzZymnotesClearStoredZhModeIfNeeded();
+})();
+
 // Apply handedness class before first paint to avoid layout flash
 (function () {
   if (localStorage.getItem("hzedu-hand") === "left") {
@@ -1176,7 +1197,6 @@ var ZYMNOTES_NAV = { chapters: [
       return;
 
     var audioEl = document.querySelector('.note-audio-player .audio-src');
-    var zhModeApi = window.HzZhMode || null;
 
     var NOTICE_KEY = 'hzaudio-notice' + window.location.pathname;
     var noticeShown = false;
@@ -1223,11 +1243,6 @@ var ZYMNOTES_NAV = { chapters: [
       labEmoji = '🧩';
     }
 
-    if (!audioEl && !labHref && !zhModeApi) {
-      document.dispatchEvent(new CustomEvent('hz:zh-legacy-controls'));
-    }
-
-    var wrap = document.createElement('div');
     wrap.className = 'note-sparkle-wrap';
 
     function syncSparklePanelState() {
@@ -1256,7 +1271,6 @@ var ZYMNOTES_NAV = { chapters: [
     itemsContainer.appendChild(makeSparkleItem('🗺️', 'Navigasi Cepat', 'nav'));
     if (audioEl) itemsContainer.appendChild(makeSparkleItem('🎧', 'Main audio', 'audio'));
     if (labHref) itemsContainer.appendChild(makeSparkleItem(labEmoji, 'Kuiz', 'lab', labHref));
-    if (zhModeApi) itemsContainer.appendChild(makeSparkleItem('华', 'Mod Bahasa Cina (Versi Awal)', 'zh-mode'));
 
     var fab = document.createElement('button');
     fab.className = 'note-sparkle-fab';
@@ -1455,11 +1469,6 @@ var ZYMNOTES_NAV = { chapters: [
         syncSparklePanelState();
       }
       if (type === 'lab') {
-        wrap.classList.remove('is-open');
-        syncSparklePanelState();
-      }
-      if (type === 'zh-mode' && zhModeApi) {
-        zhModeApi.toggle();
         wrap.classList.remove('is-open');
         syncSparklePanelState();
       }
