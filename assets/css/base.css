@@ -1502,6 +1502,10 @@ body[class*="page-theme-"].app-shell-page .home-scope-section {
   padding: 16px 0 10px;
 }
 
+.nota-page-head .nota-page-head-emoji {
+  margin-bottom: 0.5rem;
+}
+
 body.page-theme-notes.app-shell-page .nota-page-head {
   padding: 1.1rem 1rem 1rem;
   margin-bottom: 0.75rem;
@@ -1579,9 +1583,9 @@ body.page-theme-notes.app-shell-page .nota-row:hover {
 
 /* Row icon circle */
 .nota-row-icon {
-  width: 40px;
-  height: 40px;
-  border-radius: 11px;
+  width: 44px;
+  height: 44px;
+  border-radius: 13px;
   display: flex;
   align-items: center;
   justify-content: center;
