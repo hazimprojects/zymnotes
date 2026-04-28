@@ -1,0 +1,207 @@
+/* ============================================================
+   APP SHELL — flat “paper” vibe aligned with OpenMoji illustration style
+   (body.app-shell-page only: utama, indeks nota, tentang, maklum balas)
+============================================================ */
+
+body.app-shell-page[class*="page-theme-"] {
+  /* Calm paper field — less mesh/gloss than default page themes */
+  --page-bg-solid: #edeae3;
+  --page-overlay-1: radial-gradient(ellipse 80% 55% at 14% 10%, rgba(120, 132, 148, 0.055), transparent 55%);
+  --page-overlay-2: radial-gradient(ellipse 75% 48% at 88% 16%, rgba(155, 148, 130, 0.045), transparent 52%);
+  --page-overlay-3: radial-gradient(ellipse 85% 45% at 42% 94%, rgba(110, 125, 145, 0.04), transparent 54%);
+  --page-gradient: linear-gradient(176deg, #f7f5f0 0%, #eeeae4 52%, #e4dfd6 100%);
+
+  --page-surface-bg: #f9f8f5;
+  --page-surface-border: rgba(55, 62, 72, 0.11);
+  --page-surface-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.75),
+    0 3px 10px rgba(42, 48, 56, 0.055);
+
+  --page-header-bg: rgba(247, 245, 241, 0.94);
+  --page-footer-bg: rgba(247, 245, 241, 0.9);
+  --page-header-border: rgba(55, 62, 72, 0.09);
+  --page-footer-border: rgba(55, 62, 72, 0.08);
+}
+
+body.app-shell-page.page-theme-home {
+  --page-bg-solid: #efece5;
+  --page-overlay-1: radial-gradient(ellipse 88% 58% at 10% 8%, rgba(165, 155, 190, 0.06), transparent 56%);
+  --page-overlay-2: radial-gradient(ellipse 82% 52% at 92% 14%, rgba(140, 175, 195, 0.05), transparent 54%);
+  --page-overlay-3: radial-gradient(ellipse 90% 48% at 48% 96%, rgba(185, 170, 150, 0.045), transparent 54%);
+  --page-gradient: linear-gradient(175deg, #f9f7f3 0%, #ede9e2 50%, #e3ddd4 100%);
+}
+
+body.app-shell-page.page-theme-notes {
+  --page-bg-solid: #e9ecf0;
+  --page-overlay-1: radial-gradient(ellipse 85% 52% at 8% 12%, rgba(110, 135, 165, 0.055), transparent 56%);
+  --page-overlay-2: radial-gradient(ellipse 78% 48% at 90% 18%, rgba(130, 155, 175, 0.045), transparent 54%);
+  --page-overlay-3: radial-gradient(ellipse 82% 46% at 44% 94%, rgba(95, 115, 140, 0.04), transparent 54%);
+  --page-gradient: linear-gradient(176deg, #f4f6f8 0%, #e8ecf1 48%, #dde2e8 100%);
+}
+
+body.app-shell-page.page-theme-about {
+  --page-bg-solid: #ece8ef;
+  --page-overlay-1: radial-gradient(ellipse 86% 54% at 12% 10%, rgba(140, 120, 175, 0.055), transparent 56%);
+  --page-overlay-2: radial-gradient(ellipse 80% 50% at 88% 16%, rgba(155, 145, 175, 0.045), transparent 54%);
+  --page-overlay-3: radial-gradient(ellipse 84% 46% at 40% 94%, rgba(125, 130, 155, 0.04), transparent 54%);
+  --page-gradient: linear-gradient(176deg, #f6f4f8 0%, #eae6ef 50%, #ddd8e4 100%);
+}
+
+body.app-shell-page.page-theme-feedback {
+  --page-bg-solid: #e8ebe9;
+  --page-overlay-1: radial-gradient(ellipse 84% 52% at 10% 12%, rgba(115, 145, 135, 0.05), transparent 56%);
+  --page-overlay-2: radial-gradient(ellipse 78% 48% at 92% 14%, rgba(130, 155, 165, 0.045), transparent 54%);
+  --page-overlay-3: radial-gradient(ellipse 82% 46% at 46% 94%, rgba(120, 135, 145, 0.04), transparent 54%);
+  --page-gradient: linear-gradient(176deg, #f3f6f4 0%, #e6eae8 50%, #dadddb 100%);
+}
+
+html[data-theme="dark"] body.app-shell-page[class*="page-theme-"] {
+  --page-bg-solid: #12141c;
+  --page-overlay-1: radial-gradient(circle at 14% 14%, rgba(130, 145, 185, 0.09), transparent 26%);
+  --page-overlay-2: radial-gradient(circle at 86% 12%, rgba(100, 140, 155, 0.06), transparent 22%);
+  --page-overlay-3: radial-gradient(circle at 18% 86%, rgba(120, 115, 165, 0.06), transparent 20%);
+  --page-gradient: linear-gradient(178deg, #141821 0%, #10141c 56%, #0c0e14 100%);
+  --page-surface-bg: rgba(24, 27, 38, 0.94);
+  --page-surface-border: rgba(170, 185, 210, 0.14);
+  --page-surface-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
+  --page-header-bg: rgba(18, 20, 28, 0.94);
+  --page-footer-bg: rgba(18, 20, 28, 0.88);
+  --page-header-border: rgba(140, 155, 190, 0.12);
+  --page-footer-border: rgba(140, 155, 190, 0.1);
+}
+
+body.app-shell-page .site-header {
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+
+body[class*="page-theme-"].app-shell-page .home-brand-hero {
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+
+body.page-theme-home.app-shell-page .home-brand-hero::before {
+  display: none;
+}
+
+body.page-theme-home.app-shell-page .home-brand-name {
+  background: none;
+  -webkit-background-clip: unset;
+  background-clip: unset;
+  color: var(--ink);
+}
+
+body.page-theme-home.app-shell-page .home-brand-tagline {
+  color: #4b5568;
+  background: #e8ecf0;
+  border: 1px solid rgba(55, 62, 72, 0.12);
+  box-shadow: none;
+}
+
+[data-theme="dark"] body.page-theme-home.app-shell-page .home-brand-tagline {
+  color: #c7d0e8;
+  background: rgba(36, 40, 54, 0.95);
+  border-color: rgba(140, 155, 200, 0.18);
+}
+
+body.page-theme-home.app-shell-page .home-hero-primary-cta {
+  background: var(--primary);
+  border: 1px solid rgba(0, 0, 0, 0.07);
+  box-shadow: 0 2px 8px rgba(45, 52, 62, 0.14);
+}
+
+body.page-theme-home.app-shell-page .home-hero-primary-cta:hover {
+  box-shadow: 0 4px 12px rgba(45, 52, 62, 0.18);
+}
+
+body.page-theme-home.app-shell-page .home-feature-card {
+  box-shadow: var(--page-surface-shadow);
+}
+
+body.page-theme-home.app-shell-page .home-feature-card:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.65),
+    0 6px 16px rgba(42, 48, 56, 0.08);
+}
+
+/* Feature flavours — flat tinted chips (not glossy gradients) */
+body.app-shell-page .home-feature-card.hfc-violet {
+  background: rgba(124, 58, 237, 0.07);
+  border-color: rgba(124, 58, 237, 0.2);
+}
+body.app-shell-page .home-feature-card.hfc-cyan {
+  background: rgba(8, 145, 178, 0.07);
+  border-color: rgba(8, 145, 178, 0.2);
+}
+body.app-shell-page .home-feature-card.hfc-emerald {
+  background: rgba(5, 122, 85, 0.07);
+  border-color: rgba(5, 122, 85, 0.2);
+}
+body.app-shell-page .home-feature-card.hfc-amber {
+  background: rgba(180, 130, 70, 0.09);
+  border-color: rgba(180, 130, 70, 0.22);
+}
+
+[data-theme="dark"] body.app-shell-page .home-feature-card.hfc-violet {
+  background: rgba(124, 58, 237, 0.12);
+  border-color: rgba(167, 139, 250, 0.22);
+}
+[data-theme="dark"] body.app-shell-page .home-feature-card.hfc-cyan {
+  background: rgba(8, 145, 178, 0.11);
+  border-color: rgba(34, 211, 238, 0.18);
+}
+[data-theme="dark"] body.app-shell-page .home-feature-card.hfc-emerald {
+  background: rgba(16, 185, 129, 0.1);
+  border-color: rgba(110, 231, 183, 0.18);
+}
+[data-theme="dark"] body.app-shell-page .home-feature-card.hfc-amber {
+  background: rgba(217, 119, 6, 0.1);
+  border-color: rgba(252, 211, 77, 0.18);
+}
+
+body[class*="page-theme-"].app-shell-page .home-scope-section {
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+
+body[class*="page-theme-"].app-shell-page .home-info-card {
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+
+body.page-theme-notes.app-shell-page .nota-page-head {
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+
+body.page-theme-notes.app-shell-page .nota-list {
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+
+/* Note index row icons — flat tints (no glossy gradients) */
+body.app-shell-page .nota-row-icon-1 { background: rgba(82, 179, 150, 0.2) !important; }
+body.app-shell-page .nota-row-icon-2 { background: rgba(220, 120, 115, 0.2) !important; }
+body.app-shell-page .nota-row-icon-3 { background: rgba(115, 145, 185, 0.2) !important; }
+body.app-shell-page .nota-row-icon-4 { background: rgba(125, 140, 175, 0.2) !important; }
+body.app-shell-page .nota-row-icon-5 { background: rgba(95, 155, 145, 0.2) !important; }
+body.app-shell-page .nota-row-icon-6 { background: rgba(185, 115, 130, 0.2) !important; }
+body.app-shell-page .nota-row-icon-7 { background: rgba(145, 125, 185, 0.2) !important; }
+body.app-shell-page .nota-row-icon-8 { background: rgba(90, 155, 175, 0.2) !important; }
+
+[data-theme="dark"] body.app-shell-page .nota-row-icon-1 { background: rgba(82, 179, 150, 0.22) !important; }
+[data-theme="dark"] body.app-shell-page .nota-row-icon-2 { background: rgba(220, 120, 115, 0.18) !important; }
+[data-theme="dark"] body.app-shell-page .nota-row-icon-3 { background: rgba(115, 145, 185, 0.2) !important; }
+[data-theme="dark"] body.app-shell-page .nota-row-icon-4 { background: rgba(125, 140, 175, 0.2) !important; }
+[data-theme="dark"] body.app-shell-page .nota-row-icon-5 { background: rgba(95, 155, 145, 0.2) !important; }
+[data-theme="dark"] body.app-shell-page .nota-row-icon-6 { background: rgba(185, 115, 130, 0.18) !important; }
+[data-theme="dark"] body.app-shell-page .nota-row-icon-7 { background: rgba(145, 125, 185, 0.2) !important; }
+[data-theme="dark"] body.app-shell-page .nota-row-icon-8 { background: rgba(90, 155, 175, 0.2) !important; }
+
+[data-theme="dark"] body.page-theme-home.app-shell-page .home-brand-name {
+  background: none;
+  -webkit-background-clip: unset;
+  background-clip: unset;
+  color: #e4e8f4;
+}
