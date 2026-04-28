@@ -36,6 +36,25 @@
   height: 1.75rem;
 }
 
+/* Inline icons in paper-chip synopses (bab induk / subtopik) */
+.openmoji--chip {
+  width: 1.15em;
+  height: 1.15em;
+  vertical-align: -0.2em;
+}
+
+.bab-hub-heading-openmoji {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.openmoji--hub-heading {
+  width: 1.28em;
+  height: 1.28em;
+  flex-shrink: 0;
+}
+
 .home-footer-openmoji-attrib {
   font-size: 0.68rem;
   opacity: 0.72;
