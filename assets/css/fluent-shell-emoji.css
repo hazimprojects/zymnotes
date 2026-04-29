@@ -17,6 +17,42 @@
   filter: drop-shadow(0 12px 20px rgba(0, 0, 0, 0.45)) drop-shadow(0 2px 6px rgba(129, 140, 248, 0.12));
 }
 
+/* Halaman kuiz — imej guna fluent-3d-emoji + kelas saiz openmoji--* (bukan .openmoji) */
+.fluent-3d-emoji.openmoji--inline {
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.12em;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.fluent-3d-emoji.openmoji--lab-notice-icon {
+  width: 2rem;
+  height: 2rem;
+  display: block;
+}
+
+.fluent-3d-emoji.openmoji--lab-rule-icon {
+  width: 0.9em;
+  height: 0.9em;
+  vertical-align: -0.08em;
+  flex-shrink: 0;
+}
+
+.fluent-3d-emoji.openmoji--lab-compact {
+  width: 1.1em;
+  height: 1.1em;
+  vertical-align: -0.1em;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+body.quiz-page .fluent-3d-emoji.openmoji--inline {
+  width: 1.15em;
+  height: 1.15em;
+  transform: scale(0.9) translateY(-1px);
+}
+
 .home-feature-icon-badge .fluent-3d-emoji--feature {
   width: 28px;
   height: 28px;

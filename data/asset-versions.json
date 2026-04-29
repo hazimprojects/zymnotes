@@ -3,7 +3,7 @@
   "main_js": "198",
   "zh_mode_js": "45",
   "manifest": "18",
-  "sw_cache": "281",
+  "sw_cache": "282",
   "icon": "5",
   "icon_maskable": "5",
   "logo": "4",
@@ -19,10 +19,10 @@
     "paper": "21",
     "keywords": "32",
     "responsive": "8",
-    "themes": "20",
+    "themes": "21",
     "lab": "7",
     "openmoji": "12",
-    "fluent_shell": "3",
+    "fluent_shell": "4",
     "bab_hub": "1",
     "shell_openmoji": "12"
   }
