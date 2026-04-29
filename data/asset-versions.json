@@ -19,10 +19,11 @@
     "paper": "19",
     "keywords": "32",
     "responsive": "8",
-    "themes": "19",
+    "themes": "20",
     "lab": "7",
     "openmoji": "11",
-    "fluent_shell": "2",
+    "fluent_shell": "3",
+    "bab_hub": "1",
     "shell_openmoji": "12"
   }
 }
