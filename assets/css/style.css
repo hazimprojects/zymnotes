@@ -4,14 +4,14 @@
    HTML files reference style.css — no change needed there.
 ========================= */
 
-@import url("openmoji.css?v=7");   /* OpenMoji img helpers (shell pages) */
-@import url("base.css?v=64");       /* :root variables, dark mode tokens, body/reset/containers */
+@import url("openmoji.css?v=8");   /* OpenMoji img helpers (shell pages) */
+@import url("base.css?v=65");       /* :root variables, dark mode tokens, body/reset/containers */
 @import url("layout.css?v=15");     /* Header, nav, dark mode fab, typography, footer, animations */
 @import url("ui.css?v=54");        /* Buttons, cards, homepage, hero, search, org-chart, interaction */
 @import url("paper.css?v=19");      /* Paper labels, boards, chips, accordion, steps, bab overview */
 @import url("keywords.css?v=32");   /* Keyword highlights, bloc identity, keyword legend, zh-mode annotations */
 @import url("responsive.css?v=8"); /* All @media queries + spacing fixes */
 @import url("themes.css?v=19");     /* Bab visual themes, dark mode overrides, war block chips */
-@import url("shell-openmoji.css?v=2"); /* App shell: flat paper palette for OpenMoji */
+@import url("shell-openmoji.css?v=3"); /* App shell: flat paper palette for OpenMoji */
 @import url("lab.css?v=7");        /* Learning Lab, action bar, mini interactive blocks */
 @import url("print.css") print;    /* Print styles (Ctrl+P) */
