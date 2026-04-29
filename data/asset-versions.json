@@ -1,9 +1,9 @@
 {
-  "style_css": "196",
+  "style_css": "197",
   "main_js": "197",
   "zh_mode_js": "45",
   "manifest": "18",
-  "sw_cache": "280",
+  "sw_cache": "281",
   "icon": "5",
   "icon_maskable": "5",
   "logo": "4",
@@ -19,10 +19,10 @@
     "paper": "20",
     "keywords": "32",
     "responsive": "8",
-    "themes": "20",
+    "themes": "21",
     "lab": "7",
     "openmoji": "12",
-    "fluent_shell": "3",
+    "fluent_shell": "4",
     "bab_hub": "1",
     "shell_openmoji": "12"
   }
