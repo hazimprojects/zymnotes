@@ -191,3 +191,50 @@
 .audio-notice-close:hover .openmoji--audio-notice-close {
   opacity: 1;
 }
+
+/* ── Emoji-bullet — inden list icons ────────────────────────────────── */
+.openmoji--emoji-bullet {
+  width: 1.15em;
+  height: 1.15em;
+  display: block;
+  flex-shrink: 0;
+}
+
+/* ── Process-icon — sequential step cards ───────────────────────────── */
+.openmoji--process-icon {
+  width: 1.4em;
+  height: 1.4em;
+  display: block;
+}
+
+/* ── Inline emoji dalam headings dan text blocks ─────────────────────── */
+.openmoji--inline {
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.12em;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+/* ── Lab quiz — notice icon besar (standalone) ──────────────────────── */
+.openmoji--lab-notice-icon {
+  width: 2rem;
+  height: 2rem;
+  display: block;
+}
+
+/* ── Lab quiz — icon compact (rules, badges, points, links) ─────────── */
+.openmoji--lab-rule-icon {
+  width: 0.9em;
+  height: 0.9em;
+  vertical-align: -0.08em;
+  flex-shrink: 0;
+}
+
+.openmoji--lab-compact {
+  width: 1.1em;
+  height: 1.1em;
+  vertical-align: -0.1em;
+  display: inline-block;
+  flex-shrink: 0;
+}
