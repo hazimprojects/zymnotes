@@ -5,7 +5,7 @@
 ========================= */
 
 @import url("openmoji.css?v=8");   /* OpenMoji img helpers (shell pages) */
-@import url("base.css?v=65");       /* :root variables, dark mode tokens, body/reset/containers */
+@import url("base.css?v=66");       /* :root variables, dark mode tokens, body/reset/containers */
 @import url("layout.css?v=15");     /* Header, nav, dark mode fab, typography, footer, animations */
 @import url("ui.css?v=54");        /* Buttons, cards, homepage, hero, search, org-chart, interaction */
 @import url("paper.css?v=19");      /* Paper labels, boards, chips, accordion, steps, bab overview */
