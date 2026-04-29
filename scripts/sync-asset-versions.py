@@ -48,6 +48,7 @@ CSS_PRELOAD_PATTERNS = {
 CSS_IMPORT_MAP = {
     "openmoji.css":          "openmoji",
     "fluent-shell-emoji.css": "fluent_shell",
+    "shell-openmoji.css":   "shell_openmoji",
     "base.css":       "base",
     "layout.css":     "layout",
     "ui.css":         "ui",

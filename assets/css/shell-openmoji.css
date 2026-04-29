@@ -1,234 +1,356 @@
 /* ============================================================
-   APP SHELL — flat “paper” vibe aligned with OpenMoji illustration style
-   (body.app-shell-page only: utama, indeks nota, tentang, maklum balas)
+   APP SHELL — peringkat “Zym 3D” (body.app-shell-page)
+   Mesh pastel jenama + permukaan kaca + bayang — selari Fluent 3D
 ============================================================ */
 
 body.app-shell-page[class*="page-theme-"] {
-  /* Calm paper field — less mesh/gloss than default page themes */
-  --page-bg-solid: #edeae3;
-  --page-overlay-1: radial-gradient(ellipse 80% 55% at 14% 10%, rgba(120, 132, 148, 0.055), transparent 55%);
-  --page-overlay-2: radial-gradient(ellipse 75% 48% at 88% 16%, rgba(155, 148, 130, 0.045), transparent 52%);
-  --page-overlay-3: radial-gradient(ellipse 85% 45% at 42% 94%, rgba(110, 125, 145, 0.04), transparent 54%);
-  --page-gradient: linear-gradient(176deg, #f7f5f0 0%, #eeeae4 52%, #e4dfd6 100%);
+  --page-bg-solid: #f4f2fb;
+  --page-overlay-1: radial-gradient(ellipse 100% 70% at 8% -5%, rgba(99, 102, 241, 0.14), transparent 52%);
+  --page-overlay-2: radial-gradient(ellipse 90% 60% at 96% 8%, rgba(6, 182, 212, 0.1), transparent 48%);
+  --page-overlay-3: radial-gradient(ellipse 88% 55% at 50% 100%, rgba(139, 92, 246, 0.09), transparent 52%);
+  --page-gradient: linear-gradient(168deg, #faf9ff 0%, #f0edfb 42%, #e8e4f6 100%);
 
-  --page-surface-bg: #f9f8f5;
-  --page-surface-border: rgba(55, 62, 72, 0.11);
+  --page-surface-bg: linear-gradient(
+    155deg,
+    rgba(255, 255, 255, 0.92) 0%,
+    rgba(248, 247, 255, 0.88) 45%,
+    rgba(241, 239, 252, 0.85) 100%
+  );
+  --page-surface-border: rgba(79, 70, 229, 0.14);
   --page-surface-shadow:
-    0 1px 0 rgba(255, 255, 255, 0.75),
-    0 3px 10px rgba(42, 48, 56, 0.055);
+    0 1px 0 rgba(255, 255, 255, 0.85) inset,
+    0 14px 40px rgba(67, 56, 202, 0.1),
+    0 4px 14px rgba(15, 23, 42, 0.06);
 
-  --page-header-bg: rgba(247, 245, 241, 0.94);
-  --page-footer-bg: rgba(247, 245, 241, 0.9);
-  --page-header-border: rgba(55, 62, 72, 0.09);
-  --page-footer-border: rgba(55, 62, 72, 0.08);
+  --page-header-bg: rgba(252, 251, 255, 0.88);
+  --page-footer-bg: rgba(250, 248, 255, 0.86);
+  --page-header-border: rgba(99, 102, 241, 0.12);
+  --page-footer-border: rgba(99, 102, 241, 0.1);
 }
 
 body.app-shell-page.page-theme-home {
-  --page-bg-solid: #efece5;
-  --page-overlay-1: radial-gradient(ellipse 88% 58% at 10% 8%, rgba(165, 155, 190, 0.06), transparent 56%);
-  --page-overlay-2: radial-gradient(ellipse 82% 52% at 92% 14%, rgba(140, 175, 195, 0.05), transparent 54%);
-  --page-overlay-3: radial-gradient(ellipse 90% 48% at 48% 96%, rgba(185, 170, 150, 0.045), transparent 54%);
-  --page-gradient: linear-gradient(175deg, #f9f7f3 0%, #ede9e2 50%, #e3ddd4 100%);
+  --page-bg-solid: #faf7fc;
+  --page-overlay-1: radial-gradient(ellipse 100% 85% at 0% 0%, rgba(255, 210, 220, 0.42), transparent 55%);
+  --page-overlay-2: radial-gradient(ellipse 100% 80% at 100% 0%, rgba(180, 225, 255, 0.38), transparent 55%);
+  --page-overlay-3: radial-gradient(ellipse 95% 70% at 50% 100%, rgba(170, 240, 210, 0.22), transparent 58%);
+  --page-gradient: radial-gradient(ellipse 90% 65% at 50% 38%, rgba(255, 255, 255, 0.95) 0%, rgba(242, 237, 249, 0.92) 52%, #ebe4f4 100%);
 }
 
 body.app-shell-page.page-theme-notes {
-  --page-bg-solid: #e9ecf0;
-  --page-overlay-1: radial-gradient(ellipse 85% 52% at 8% 12%, rgba(110, 135, 165, 0.055), transparent 56%);
-  --page-overlay-2: radial-gradient(ellipse 78% 48% at 90% 18%, rgba(130, 155, 175, 0.045), transparent 54%);
-  --page-overlay-3: radial-gradient(ellipse 82% 46% at 44% 94%, rgba(95, 115, 140, 0.04), transparent 54%);
-  --page-gradient: linear-gradient(176deg, #f4f6f8 0%, #e8ecf1 48%, #dde2e8 100%);
+  --page-bg-solid: #eef0fb;
+  --page-overlay-1: radial-gradient(ellipse 95% 65% at 6% 10%, rgba(79, 70, 229, 0.11), transparent 54%);
+  --page-overlay-2: radial-gradient(ellipse 88% 58% at 94% 18%, rgba(56, 189, 248, 0.09), transparent 50%);
+  --page-overlay-3: radial-gradient(ellipse 92% 52% at 42% 96%, rgba(129, 140, 248, 0.1), transparent 52%);
+  --page-gradient: linear-gradient(172deg, #f8f9ff 0%, #eef1fc 48%, #e4e8f7 100%);
 }
 
 body.app-shell-page.page-theme-about {
-  --page-bg-solid: #ece8ef;
-  --page-overlay-1: radial-gradient(ellipse 86% 54% at 12% 10%, rgba(140, 120, 175, 0.055), transparent 56%);
-  --page-overlay-2: radial-gradient(ellipse 80% 50% at 88% 16%, rgba(155, 145, 175, 0.045), transparent 54%);
-  --page-overlay-3: radial-gradient(ellipse 84% 46% at 40% 94%, rgba(125, 130, 155, 0.04), transparent 54%);
-  --page-gradient: linear-gradient(176deg, #f6f4f8 0%, #eae6ef 50%, #ddd8e4 100%);
+  --page-bg-solid: #f3f0fa;
+  --page-overlay-1: radial-gradient(ellipse 96% 62% at 10% 6%, rgba(124, 58, 237, 0.12), transparent 54%);
+  --page-overlay-2: radial-gradient(ellipse 88% 56% at 90% 14%, rgba(99, 102, 241, 0.09), transparent 52%);
+  --page-overlay-3: radial-gradient(ellipse 90% 52% at 38% 100%, rgba(45, 212, 191, 0.08), transparent 54%);
+  --page-gradient: linear-gradient(168deg, #faf8ff 0%, #f0ecf9 50%, #e6e2f4 100%);
 }
 
 body.app-shell-page.page-theme-feedback {
-  --page-bg-solid: #e8ebe9;
-  --page-overlay-1: radial-gradient(ellipse 84% 52% at 10% 12%, rgba(115, 145, 135, 0.05), transparent 56%);
-  --page-overlay-2: radial-gradient(ellipse 78% 48% at 92% 14%, rgba(130, 155, 165, 0.045), transparent 54%);
-  --page-overlay-3: radial-gradient(ellipse 82% 46% at 46% 94%, rgba(120, 135, 145, 0.04), transparent 54%);
-  --page-gradient: linear-gradient(176deg, #f3f6f4 0%, #e6eae8 50%, #dadddb 100%);
+  --page-bg-solid: #eef6f8;
+  --page-overlay-1: radial-gradient(ellipse 94% 60% at 8% 10%, rgba(45, 212, 191, 0.12), transparent 54%);
+  --page-overlay-2: radial-gradient(ellipse 88% 56% at 92% 12%, rgba(99, 102, 241, 0.1), transparent 52%);
+  --page-overlay-3: radial-gradient(ellipse 90% 54% at 52% 98%, rgba(148, 163, 184, 0.1), transparent 52%);
+  --page-gradient: linear-gradient(170deg, #f9fcfd 0%, #ecf4f8 50%, #e2edf3 100%);
 }
 
 html[data-theme="dark"] body.app-shell-page[class*="page-theme-"] {
-  --page-bg-solid: #12141c;
-  --page-overlay-1: radial-gradient(circle at 14% 14%, rgba(130, 145, 185, 0.09), transparent 26%);
-  --page-overlay-2: radial-gradient(circle at 86% 12%, rgba(100, 140, 155, 0.06), transparent 22%);
-  --page-overlay-3: radial-gradient(circle at 18% 86%, rgba(120, 115, 165, 0.06), transparent 20%);
-  --page-gradient: linear-gradient(178deg, #141821 0%, #10141c 56%, #0c0e14 100%);
-  --page-surface-bg: rgba(24, 27, 38, 0.94);
-  --page-surface-border: rgba(170, 185, 210, 0.14);
-  --page-surface-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
-  --page-header-bg: rgba(18, 20, 28, 0.94);
-  --page-footer-bg: rgba(18, 20, 28, 0.88);
-  --page-header-border: rgba(140, 155, 190, 0.12);
-  --page-footer-border: rgba(140, 155, 190, 0.1);
+  --page-bg-solid: #0f111a;
+  --page-overlay-1: radial-gradient(circle at 12% 18%, rgba(99, 102, 241, 0.22), transparent 32%);
+  --page-overlay-2: radial-gradient(circle at 88% 10%, rgba(6, 182, 212, 0.14), transparent 28%);
+  --page-overlay-3: radial-gradient(circle at 48% 92%, rgba(139, 92, 246, 0.12), transparent 36%);
+  --page-gradient: linear-gradient(178deg, #121528 0%, #0e101c 52%, #0a0c14 100%);
+  --page-surface-bg: linear-gradient(
+    165deg,
+    rgba(28, 31, 48, 0.96) 0%,
+    rgba(22, 24, 38, 0.94) 100%
+  );
+  --page-surface-border: rgba(129, 140, 248, 0.2);
+  --page-surface-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.06) inset,
+    0 18px 48px rgba(0, 0, 0, 0.45);
+  --page-header-bg: rgba(16, 18, 28, 0.92);
+  --page-footer-bg: rgba(14, 16, 24, 0.9);
+  --page-header-border: rgba(129, 140, 248, 0.16);
+  --page-footer-border: rgba(129, 140, 248, 0.12);
 }
 
 body.app-shell-page .site-header {
-  backdrop-filter: none;
-  -webkit-backdrop-filter: none;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
 }
 
 body[class*="page-theme-"].app-shell-page .home-brand-hero {
-  backdrop-filter: none;
-  -webkit-backdrop-filter: none;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
 }
 
+/* Utama — pulihkan “wordmark” gradient + sorotan 3D (override flat lama) */
 body.page-theme-home.app-shell-page .home-brand-hero::before {
-  display: none;
+  display: block;
+  inset: -50% -25% auto auto;
+  width: min(320px, 78vw);
+  height: min(320px, 78vw);
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.28) 0%, rgba(6, 182, 212, 0.08) 42%, transparent 70%);
+  filter: blur(0);
 }
 
 body.page-theme-home.app-shell-page .home-brand-name {
-  background: none;
-  -webkit-background-clip: unset;
-  background-clip: unset;
-  color: var(--ink);
+  background: linear-gradient(115deg, #1e1b4b 0%, #4338ca 38%, #6366f1 72%, #0e7490 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0 12px 40px rgba(79, 70, 229, 0.18);
 }
 
 body.page-theme-home.app-shell-page .home-brand-tagline {
-  color: #4b5568;
-  background: #e8ecf0;
-  border: 1px solid rgba(55, 62, 72, 0.12);
-  box-shadow: none;
+  color: #4338ca;
+  background: linear-gradient(135deg, rgba(238, 242, 255, 0.98), rgba(224, 231, 255, 0.92));
+  border: 1px solid rgba(99, 102, 241, 0.28);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.9) inset,
+    0 8px 22px rgba(79, 70, 229, 0.12);
 }
 
 [data-theme="dark"] body.page-theme-home.app-shell-page .home-brand-tagline {
-  color: #c7d0e8;
-  background: rgba(36, 40, 54, 0.95);
-  border-color: rgba(140, 155, 200, 0.18);
+  color: #c7d0ff;
+  background: linear-gradient(135deg, rgba(36, 40, 58, 0.98), rgba(28, 32, 52, 0.95));
+  border-color: rgba(129, 140, 248, 0.35);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
 }
 
 body.page-theme-home.app-shell-page .home-hero-primary-cta {
-  background: var(--primary);
-  border: 1px solid rgba(0, 0, 0, 0.07);
-  box-shadow: 0 2px 8px rgba(45, 52, 62, 0.14);
+  background: linear-gradient(135deg, #4f46e5 0%, #6366f1 42%, #4338ca 100%);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.2) inset,
+    0 14px 36px rgba(79, 70, 229, 0.38),
+    0 4px 12px rgba(67, 56, 202, 0.22);
 }
 
 body.page-theme-home.app-shell-page .home-hero-primary-cta:hover {
-  box-shadow: 0 4px 12px rgba(45, 52, 62, 0.18);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.25) inset,
+    0 18px 44px rgba(79, 70, 229, 0.45),
+    0 6px 16px rgba(67, 56, 202, 0.28);
 }
 
 body.page-theme-home.app-shell-page .home-feature-card {
-  box-shadow: var(--page-surface-shadow);
+  border-radius: 20px;
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.75) inset,
+    0 16px 40px rgba(55, 48, 120, 0.1),
+    0 4px 12px rgba(15, 23, 42, 0.05);
 }
 
 body.page-theme-home.app-shell-page .home-feature-card:hover {
-  transform: translateY(-2px);
+  transform: translateY(-4px);
   box-shadow:
-    0 1px 0 rgba(255, 255, 255, 0.65),
-    0 6px 16px rgba(42, 48, 56, 0.08);
+    0 1px 0 rgba(255, 255, 255, 0.8) inset,
+    0 22px 50px rgba(67, 56, 202, 0.14),
+    0 8px 20px rgba(15, 23, 42, 0.08);
 }
 
-/* Feature flavours — flat tinted chips (not glossy gradients) */
+/* Kad ciri — permukaan kaca lembut (bukan flat chip) */
 body.app-shell-page .home-feature-card.hfc-violet {
-  background: rgba(124, 58, 237, 0.11);
-  border-color: rgba(124, 58, 237, 0.26);
+  background: linear-gradient(155deg, rgba(255, 255, 255, 0.55) 0%, rgba(237, 233, 255, 0.92) 100%);
+  border-color: rgba(124, 58, 237, 0.32);
 }
 body.app-shell-page .home-feature-card.hfc-cyan {
-  background: rgba(8, 145, 178, 0.11);
-  border-color: rgba(8, 145, 178, 0.26);
+  background: linear-gradient(155deg, rgba(255, 255, 255, 0.55) 0%, rgba(224, 247, 252, 0.92) 100%);
+  border-color: rgba(8, 145, 178, 0.32);
 }
 body.app-shell-page .home-feature-card.hfc-emerald {
-  background: rgba(5, 122, 85, 0.10);
-  border-color: rgba(5, 122, 85, 0.24);
+  background: linear-gradient(155deg, rgba(255, 255, 255, 0.55) 0%, rgba(220, 252, 241, 0.9) 100%);
+  border-color: rgba(5, 122, 85, 0.3);
 }
 body.app-shell-page .home-feature-card.hfc-amber {
-  background: rgba(180, 130, 70, 0.12);
-  border-color: rgba(180, 130, 70, 0.26);
+  background: linear-gradient(155deg, rgba(255, 255, 255, 0.55) 0%, rgba(254, 243, 230, 0.92) 100%);
+  border-color: rgba(217, 119, 6, 0.32);
 }
 
-/* Feature icon badge — tint berlatar per flavour */
 body.app-shell-page .home-feature-card.hfc-violet .home-feature-icon-badge {
-  background: rgba(124, 58, 237, 0.14);
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.75), rgba(221, 214, 254, 0.95));
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.9) inset,
+    0 10px 22px rgba(124, 58, 237, 0.18);
 }
 body.app-shell-page .home-feature-card.hfc-cyan .home-feature-icon-badge {
-  background: rgba(8, 145, 178, 0.14);
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.75), rgba(207, 250, 254, 0.95));
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.9) inset,
+    0 10px 22px rgba(8, 145, 178, 0.16);
 }
 body.app-shell-page .home-feature-card.hfc-emerald .home-feature-icon-badge {
-  background: rgba(5, 122, 85, 0.13);
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.75), rgba(209, 250, 229, 0.95));
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.9) inset,
+    0 10px 22px rgba(5, 122, 85, 0.14);
 }
 body.app-shell-page .home-feature-card.hfc-amber .home-feature-icon-badge {
-  background: rgba(180, 130, 70, 0.16);
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.75), rgba(254, 233, 198, 0.95));
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.9) inset,
+    0 10px 22px rgba(217, 119, 6, 0.14);
 }
 
 [data-theme="dark"] body.app-shell-page .home-feature-card.hfc-violet {
-  background: rgba(124, 58, 237, 0.14);
-  border-color: rgba(167, 139, 250, 0.28);
+  background: linear-gradient(155deg, rgba(40, 36, 58, 0.95) 0%, rgba(30, 27, 48, 0.92) 100%);
+  border-color: rgba(167, 139, 250, 0.35);
 }
 [data-theme="dark"] body.app-shell-page .home-feature-card.hfc-cyan {
-  background: rgba(8, 145, 178, 0.13);
-  border-color: rgba(34, 211, 238, 0.24);
+  background: linear-gradient(155deg, rgba(32, 40, 52, 0.95) 0%, rgba(24, 32, 44, 0.92) 100%);
+  border-color: rgba(34, 211, 238, 0.28);
 }
 [data-theme="dark"] body.app-shell-page .home-feature-card.hfc-emerald {
-  background: rgba(16, 185, 129, 0.12);
-  border-color: rgba(110, 231, 183, 0.22);
+  background: linear-gradient(155deg, rgba(32, 44, 40, 0.95) 0%, rgba(24, 36, 32, 0.92) 100%);
+  border-color: rgba(110, 231, 183, 0.26);
 }
 [data-theme="dark"] body.app-shell-page .home-feature-card.hfc-amber {
-  background: rgba(217, 119, 6, 0.12);
-  border-color: rgba(252, 211, 77, 0.22);
+  background: linear-gradient(155deg, rgba(48, 40, 30, 0.95) 0%, rgba(36, 30, 24, 0.92) 100%);
+  border-color: rgba(252, 211, 77, 0.28);
 }
 
 [data-theme="dark"] body.app-shell-page .home-feature-card.hfc-violet .home-feature-icon-badge {
-  background: rgba(167, 139, 250, 0.18);
+  background: linear-gradient(145deg, rgba(60, 54, 82, 0.95), rgba(45, 38, 72, 0.98));
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35);
 }
 [data-theme="dark"] body.app-shell-page .home-feature-card.hfc-cyan .home-feature-icon-badge {
-  background: rgba(34, 211, 238, 0.16);
+  background: linear-gradient(145deg, rgba(44, 54, 68, 0.95), rgba(32, 42, 56, 0.98));
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.32);
 }
 [data-theme="dark"] body.app-shell-page .home-feature-card.hfc-emerald .home-feature-icon-badge {
-  background: rgba(110, 231, 183, 0.15);
+  background: linear-gradient(145deg, rgba(44, 58, 52, 0.95), rgba(32, 46, 40, 0.98));
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.3);
 }
 [data-theme="dark"] body.app-shell-page .home-feature-card.hfc-amber .home-feature-icon-badge {
-  background: rgba(252, 211, 77, 0.15);
+  background: linear-gradient(145deg, rgba(58, 48, 36, 0.95), rgba(44, 36, 28, 0.98));
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.3);
 }
 
 body[class*="page-theme-"].app-shell-page .home-scope-section {
-  backdrop-filter: none;
-  -webkit-backdrop-filter: none;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
 }
 
 body[class*="page-theme-"].app-shell-page .home-info-card {
-  backdrop-filter: none;
-  -webkit-backdrop-filter: none;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
 }
 
 body.page-theme-notes.app-shell-page .nota-page-head {
-  backdrop-filter: none;
-  -webkit-backdrop-filter: none;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
 }
 
 body.page-theme-notes.app-shell-page .nota-list {
-  backdrop-filter: none;
-  -webkit-backdrop-filter: none;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
 }
 
-/* Note index row icons — flat tints (no glossy gradients) */
-body.app-shell-page .nota-row-icon-1 { background: rgba(82, 179, 150, 0.2) !important; }
-body.app-shell-page .nota-row-icon-2 { background: rgba(220, 120, 115, 0.2) !important; }
-body.app-shell-page .nota-row-icon-3 { background: rgba(115, 145, 185, 0.2) !important; }
-body.app-shell-page .nota-row-icon-4 { background: rgba(125, 140, 175, 0.2) !important; }
-body.app-shell-page .nota-row-icon-5 { background: rgba(95, 155, 145, 0.2) !important; }
-body.app-shell-page .nota-row-icon-6 { background: rgba(185, 115, 130, 0.2) !important; }
-body.app-shell-page .nota-row-icon-7 { background: rgba(145, 125, 185, 0.2) !important; }
-body.app-shell-page .nota-row-icon-8 { background: rgba(90, 155, 175, 0.2) !important; }
+/* Indeks nota — latar ikon bab: gelung lembut (sokong emoji 3D) */
+body.app-shell-page .nota-row-icon-1 {
+  background: linear-gradient(145deg, rgba(220, 243, 234, 0.95), rgba(167, 230, 208, 0.55)) !important;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.65) inset, 0 8px 18px rgba(5, 122, 85, 0.12) !important;
+}
+body.app-shell-page .nota-row-icon-2 {
+  background: linear-gradient(145deg, rgba(254, 236, 236, 0.95), rgba(248, 196, 196, 0.55)) !important;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.65) inset, 0 8px 18px rgba(220, 38, 38, 0.1) !important;
+}
+body.app-shell-page .nota-row-icon-3 {
+  background: linear-gradient(145deg, rgba(235, 242, 252, 0.95), rgba(186, 210, 245, 0.55)) !important;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.65) inset, 0 8px 18px rgba(37, 99, 235, 0.1) !important;
+}
+body.app-shell-page .nota-row-icon-4 {
+  background: linear-gradient(145deg, rgba(237, 239, 252, 0.95), rgba(199, 210, 254, 0.52)) !important;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.65) inset, 0 8px 18px rgba(67, 56, 202, 0.1) !important;
+}
+body.app-shell-page .nota-row-icon-5 {
+  background: linear-gradient(145deg, rgba(230, 246, 243, 0.95), rgba(167, 243, 208, 0.52)) !important;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.65) inset, 0 8px 18px rgba(13, 148, 136, 0.1) !important;
+}
+body.app-shell-page .nota-row-icon-6 {
+  background: linear-gradient(145deg, rgba(252, 238, 245, 0.95), rgba(244, 180, 210, 0.48)) !important;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.65) inset, 0 8px 18px rgba(157, 23, 77, 0.1) !important;
+}
+body.app-shell-page .nota-row-icon-7 {
+  background: linear-gradient(145deg, rgba(242, 239, 252, 0.95), rgba(216, 201, 254, 0.52)) !important;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.65) inset, 0 8px 18px rgba(91, 33, 182, 0.1) !important;
+}
+body.app-shell-page .nota-row-icon-8 {
+  background: linear-gradient(145deg, rgba(236, 254, 255, 0.95), rgba(165, 243, 252, 0.52)) !important;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.65) inset, 0 8px 18px rgba(8, 145, 178, 0.1) !important;
+}
 
-[data-theme="dark"] body.app-shell-page .nota-row-icon-1 { background: rgba(82, 179, 150, 0.22) !important; }
-[data-theme="dark"] body.app-shell-page .nota-row-icon-2 { background: rgba(220, 120, 115, 0.18) !important; }
-[data-theme="dark"] body.app-shell-page .nota-row-icon-3 { background: rgba(115, 145, 185, 0.2) !important; }
-[data-theme="dark"] body.app-shell-page .nota-row-icon-4 { background: rgba(125, 140, 175, 0.2) !important; }
-[data-theme="dark"] body.app-shell-page .nota-row-icon-5 { background: rgba(95, 155, 145, 0.2) !important; }
-[data-theme="dark"] body.app-shell-page .nota-row-icon-6 { background: rgba(185, 115, 130, 0.18) !important; }
-[data-theme="dark"] body.app-shell-page .nota-row-icon-7 { background: rgba(145, 125, 185, 0.2) !important; }
-[data-theme="dark"] body.app-shell-page .nota-row-icon-8 { background: rgba(90, 155, 175, 0.2) !important; }
+[data-theme="dark"] body.app-shell-page .nota-row-icon-1 {
+  background: linear-gradient(145deg, rgba(5, 150, 105, 0.22), rgba(52, 211, 153, 0.12)) !important;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35) !important;
+}
+[data-theme="dark"] body.app-shell-page .nota-row-icon-2 {
+  background: linear-gradient(145deg, rgba(185, 28, 28, 0.2), rgba(252, 165, 165, 0.1)) !important;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.32) !important;
+}
+[data-theme="dark"] body.app-shell-page .nota-row-icon-3 {
+  background: linear-gradient(145deg, rgba(29, 78, 216, 0.2), rgba(147, 197, 253, 0.1)) !important;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.32) !important;
+}
+[data-theme="dark"] body.app-shell-page .nota-row-icon-4 {
+  background: linear-gradient(145deg, rgba(67, 56, 202, 0.2), rgba(165, 180, 252, 0.1)) !important;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.32) !important;
+}
+[data-theme="dark"] body.app-shell-page .nota-row-icon-5 {
+  background: linear-gradient(145deg, rgba(13, 148, 136, 0.2), rgba(94, 234, 212, 0.1)) !important;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3) !important;
+}
+[data-theme="dark"] body.app-shell-page .nota-row-icon-6 {
+  background: linear-gradient(145deg, rgba(157, 23, 77, 0.2), rgba(249, 168, 212, 0.1)) !important;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3) !important;
+}
+[data-theme="dark"] body.app-shell-page .nota-row-icon-7 {
+  background: linear-gradient(145deg, rgba(91, 33, 182, 0.2), rgba(196, 181, 253, 0.1)) !important;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3) !important;
+}
+[data-theme="dark"] body.app-shell-page .nota-row-icon-8 {
+  background: linear-gradient(145deg, rgba(8, 145, 178, 0.2), rgba(165, 243, 252, 0.1)) !important;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3) !important;
+}
 
 [data-theme="dark"] body.page-theme-home.app-shell-page .home-brand-name {
-  background: none;
-  -webkit-background-clip: unset;
-  background-clip: unset;
-  color: #e4e8f4;
+  background: linear-gradient(115deg, #e0e7ff 0%, #c7d2fe 35%, #a5b4fc 70%, #67e8f9 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: none;
+  filter: drop-shadow(0 8px 28px rgba(99, 102, 241, 0.35));
+}
+
+/* Skop / senarai — chip semak lebih “mengambang” */
+body.app-shell-page .home-scope-check {
+  background: linear-gradient(160deg, rgba(255, 255, 255, 0.75), rgba(237, 233, 255, 0.55));
+  border: 1px solid rgba(99, 102, 241, 0.14);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.85) inset,
+    0 6px 14px rgba(79, 70, 229, 0.1);
+}
+
+[data-theme="dark"] body.app-shell-page .home-scope-check {
+  background: linear-gradient(160deg, rgba(48, 46, 68, 0.9), rgba(32, 30, 48, 0.92));
+  border-color: rgba(129, 140, 248, 0.22);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.35);
+}
+
+/* Baris nota — hover lembut (indeks) */
+body.page-theme-notes.app-shell-page .nota-row {
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+body.page-theme-notes.app-shell-page .nota-row:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 36px rgba(67, 56, 202, 0.1), 0 4px 12px rgba(15, 23, 42, 0.05);
 }
