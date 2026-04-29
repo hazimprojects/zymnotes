@@ -71,6 +71,22 @@
   display: block;
 }
 
+/* ── Feature card icon badge — kotak berlatar 48px ───────────────────── */
+.home-feature-icon-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  flex-shrink: 0;
+}
+
+.home-feature-icon-badge .openmoji--feature {
+  width: 28px;
+  height: 28px;
+}
+
 /* Wrapper div — spacing ke title diurus oleh base.css */
 .home-feature-icon {
   display: flex;
