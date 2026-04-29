@@ -9,7 +9,7 @@
 @import url("base.css?v=66");       /* :root variables, dark mode tokens, body/reset/containers */
 @import url("layout.css?v=15");     /* Header, nav, dark mode fab, typography, footer, animations */
 @import url("ui.css?v=54");        /* Buttons, cards, homepage, hero, search, org-chart, interaction */
-@import url("paper.css?v=20");      /* Paper labels, boards, chips, accordion, steps, bab overview */
+@import url("paper.css?v=21");      /* Paper labels, boards, chips, accordion, steps, bab overview */
 @import url("keywords.css?v=32");   /* Keyword highlights, bloc identity, keyword legend, zh-mode annotations */
 @import url("responsive.css?v=8"); /* All @media queries + spacing fixes */
 @import url("themes.css?v=21");     /* Bab visual themes, dark mode overrides, war block chips */
