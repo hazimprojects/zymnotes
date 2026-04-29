@@ -29,7 +29,9 @@
 .fluent-3d-emoji.openmoji--lab-notice-icon {
   width: 2rem;
   height: 2rem;
-  display: block;
+  /* inline-block + auto margin: berpusat dalam .lab-notice-header (text-align:center) */
+  display: inline-block;
+  margin-inline: auto;
 }
 
 .fluent-3d-emoji.openmoji--lab-rule-icon {
@@ -114,6 +116,19 @@ body.bab-hub-page .paper-chip-sentence .chip-icon .fluent-3d-emoji--chip {
 
 .openmoji--sparkle-ctrl.fluent-3d-emoji,
 .sparkle-ctrl-btn .fluent-3d-emoji.openmoji--sparkle-ctrl {
+  width: 18px;
+  height: 18px;
+}
+
+/* Halaman kuiz: HTML statik guna openmoji--lab-compact pada FAB/item — induk sparkle
+   tetap font-size:0; saiz em jadi 0. Paksa px supaya ikon ✨/📖 kelihatan. */
+.note-sparkle-fab .fluent-3d-emoji.openmoji--lab-compact,
+.note-sparkle-item .fluent-3d-emoji.openmoji--lab-compact {
+  width: 24px;
+  height: 24px;
+}
+
+.sparkle-ctrl-btn .fluent-3d-emoji.openmoji--lab-compact {
   width: 18px;
   height: 18px;
 }
