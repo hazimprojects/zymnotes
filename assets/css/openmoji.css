@@ -71,22 +71,6 @@
   display: block;
 }
 
-/* ── Feature card icon badge — kotak berlatar 48px ───────────────────── */
-.home-feature-icon-badge {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 48px;
-  height: 48px;
-  border-radius: 14px;
-  flex-shrink: 0;
-}
-
-.home-feature-icon-badge .openmoji--feature {
-  width: 28px;
-  height: 28px;
-}
-
 /* Wrapper div — spacing ke title diurus oleh base.css */
 .home-feature-icon {
   display: flex;
@@ -109,39 +93,6 @@
 
 [data-theme="dark"] .home-scope-check {
   background: rgba(129, 140, 248, 0.13);
-}
-
-/* ── Hero decorative emoji — ilustrasi sudut kanan atas ──────────────── */
-.home-hero-emoji-deco {
-  position: absolute;
-  top: 14px;
-  right: 18px;
-  width: 72px;
-  height: 72px;
-  opacity: 0.22;
-  pointer-events: none;
-  user-select: none;
-  display: block;
-}
-
-.home-hero-emoji-deco img {
-  width: 100%;
-  height: 100%;
-  display: block;
-}
-
-/* ── Nota page head emoji — anchor visual atas senarai ───────────────── */
-.nota-page-head-emoji {
-  display: block;
-  width: 44px;
-  height: 44px;
-  margin-bottom: 0.5rem;
-}
-
-.nota-page-head-emoji img {
-  width: 100%;
-  height: 100%;
-  display: block;
 }
 
 /* ── Paper-label dengan emoji icon kecil ─────────────────────────────── */
