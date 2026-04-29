@@ -143,6 +143,20 @@ body.app-shell-page .home-feature-card.hfc-amber {
   border-color: rgba(180, 130, 70, 0.26);
 }
 
+/* Feature icon badge — tint berlatar per flavour */
+body.app-shell-page .home-feature-card.hfc-violet .home-feature-icon-badge {
+  background: rgba(124, 58, 237, 0.14);
+}
+body.app-shell-page .home-feature-card.hfc-cyan .home-feature-icon-badge {
+  background: rgba(8, 145, 178, 0.14);
+}
+body.app-shell-page .home-feature-card.hfc-emerald .home-feature-icon-badge {
+  background: rgba(5, 122, 85, 0.13);
+}
+body.app-shell-page .home-feature-card.hfc-amber .home-feature-icon-badge {
+  background: rgba(180, 130, 70, 0.16);
+}
+
 [data-theme="dark"] body.app-shell-page .home-feature-card.hfc-violet {
   background: rgba(124, 58, 237, 0.14);
   border-color: rgba(167, 139, 250, 0.28);
@@ -158,6 +172,19 @@ body.app-shell-page .home-feature-card.hfc-amber {
 [data-theme="dark"] body.app-shell-page .home-feature-card.hfc-amber {
   background: rgba(217, 119, 6, 0.12);
   border-color: rgba(252, 211, 77, 0.22);
+}
+
+[data-theme="dark"] body.app-shell-page .home-feature-card.hfc-violet .home-feature-icon-badge {
+  background: rgba(167, 139, 250, 0.18);
+}
+[data-theme="dark"] body.app-shell-page .home-feature-card.hfc-cyan .home-feature-icon-badge {
+  background: rgba(34, 211, 238, 0.16);
+}
+[data-theme="dark"] body.app-shell-page .home-feature-card.hfc-emerald .home-feature-icon-badge {
+  background: rgba(110, 231, 183, 0.15);
+}
+[data-theme="dark"] body.app-shell-page .home-feature-card.hfc-amber .home-feature-icon-badge {
+  background: rgba(252, 211, 77, 0.15);
 }
 
 body[class*="page-theme-"].app-shell-page .home-scope-section {
