@@ -280,22 +280,81 @@
       "bm_focus_phrase": "Ini membuktikan penerimaan rakyat terhadap politik kerjasama kaum dan keyakinan terhadap kepimpinan tempatan."
     },
     {
-      "source_id": "bab-8-1-u22",
-      "bm_original": "Pilihan raya peringkat awal berjaya menyedarkan rakyat tentang amalan demokrasi, memberi pengalaman mengendalikan pilihan raya, dan melatih rakyat ke arah berkerajaan sendiri.",
-      "translate": "早期选举成功让人民认识民主实践、积累办选经验，并训练人民走向自治。",
-      "key_points_zh": [
-        "早期选举成功让人民认识民主实践、积累办选经验，并训练人民走向自治。"
-      ],
-      "bm_focus_phrase": "Pilihan raya peringkat awal berjaya menyedarkan rakyat tentang amalan demokrasi, memberi pengalaman mengendalikan pilihan raya, dan melatih rakyat ke arah berkerajaan sendiri."
+      "source_id": "bab-8-1-orph-tl1",
+      "bm_original": "Garis masa utama:",
+      "translate": "主要时间线：",
+      "key_points_zh": ["主要时间线："],
+      "bm_focus_phrase": "Garis masa utama:"
     },
     {
-      "source_id": "bab-8-1-u23",
-      "bm_original": "Pilihan raya ini menjadi langkah penting menuju kemerdekaan dan asas pembentukan sistem demokrasi negara.",
-      "translate": "这些选举成为迈向独立的重要一步，也是国家民主制度形成的基础。",
-      "key_points_zh": [
-        "这些选举成为迈向独立的重要一步，也是国家民主制度形成的基础。"
-      ],
-      "bm_focus_phrase": "Pilihan raya ini menjadi langkah penting menuju kemerdekaan dan asas pembentukan sistem demokrasi negara."
+      "source_id": "bab-8-1-tl-1",
+      "bm_original": "1951 – pilihan raya majlis perbandaran pertama ( George Town )",
+      "translate": "1951年——首次市议会选举（乔治市）。",
+      "key_points_zh": ["1951年——首次市议会选举（乔治市）。"],
+      "bm_focus_phrase": "1951 – pilihan raya majlis perbandaran pertama ( George Town )"
+    },
+    {
+      "source_id": "bab-8-1-tl-2",
+      "bm_original": "1952 – pilihan raya Kuala Lumpur ; Perikatan UMNO–MCA",
+      "translate": "1952年——吉隆坡选举；联盟（巫统—马华）。",
+      "key_points_zh": ["1952年——吉隆坡选举；联盟（巫统—马华）。"],
+      "bm_focus_phrase": "1952 – pilihan raya Kuala Lumpur ; Perikatan UMNO–MCA"
+    },
+    {
+      "source_id": "bab-8-1-tl-3",
+      "bm_original": "1954 – pilihan raya peringkat negeri",
+      "translate": "1954年——州级选举。",
+      "key_points_zh": ["1954年——州级选举。"],
+      "bm_focus_phrase": "1954 – pilihan raya peringkat negeri"
+    },
+    {
+      "source_id": "bab-8-1-u22a",
+      "bm_original": "Pilihan raya peringkat awal berjaya:",
+      "translate": "早期选举成功：",
+      "key_points_zh": ["早期选举成功："],
+      "bm_focus_phrase": "Pilihan raya peringkat awal berjaya:"
+    },
+    {
+      "source_id": "bab-8-1-kes-1",
+      "bm_original": "menyedarkan rakyat tentang amalan demokrasi",
+      "translate": "让人民认识民主实践",
+      "key_points_zh": ["让人民认识民主实践"],
+      "bm_focus_phrase": "menyedarkan rakyat tentang amalan demokrasi"
+    },
+    {
+      "source_id": "bab-8-1-kes-2",
+      "bm_original": "memberi pengalaman mengendalikan pilihan raya",
+      "translate": "提供组织选举的经验",
+      "key_points_zh": ["提供组织选举的经验"],
+      "bm_focus_phrase": "memberi pengalaman mengendalikan pilihan raya"
+    },
+    {
+      "source_id": "bab-8-1-kes-3",
+      "bm_original": "melatih rakyat ke arah berkerajaan sendiri",
+      "translate": "培养人民走向自治",
+      "key_points_zh": ["培养人民走向自治"],
+      "bm_focus_phrase": "melatih rakyat ke arah berkerajaan sendiri"
+    },
+    {
+      "source_id": "bab-8-1-u23a",
+      "bm_original": "Pilihan raya ini menjadi:",
+      "translate": "这些选举成为：",
+      "key_points_zh": ["这些选举成为："],
+      "bm_focus_phrase": "Pilihan raya ini menjadi:"
+    },
+    {
+      "source_id": "bab-8-1-kes-4",
+      "bm_original": "langkah penting menuju kemerdekaan",
+      "translate": "迈向独立的重要一步",
+      "key_points_zh": ["迈向独立的重要一步"],
+      "bm_focus_phrase": "langkah penting menuju kemerdekaan"
+    },
+    {
+      "source_id": "bab-8-1-kes-5",
+      "bm_original": "asas pembentukan sistem demokrasi negara",
+      "translate": "国家民主制度形成的基础",
+      "key_points_zh": ["国家民主制度形成的基础"],
+      "bm_focus_phrase": "asas pembentukan sistem demokrasi negara"
     }
   ]
 }

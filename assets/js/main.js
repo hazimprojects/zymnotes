@@ -2854,7 +2854,7 @@ var HZ_OPENMOJI_SPARKLE_FILES = {
   if (!('serviceWorker' in navigator)) return;
 
   window.addEventListener('load', function () {
-    navigator.serviceWorker.register('/sw.js?v=271').catch(function (error) {
+    navigator.serviceWorker.register('/sw.js?v=272').catch(function (error) {
       console.warn('Service worker registration failed:', error);
     });
   });
