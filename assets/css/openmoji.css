@@ -64,7 +64,7 @@
   flex-shrink: 0;
 }
 
-/* Corner badges pada subtopik cards (kuiz / audio) */
+/* Corner badges pada subtopik cards (kuiz / audio) — OpenMoji SVG jika digunakan di tempat lain */
 .openmoji--bab-badge {
   width: 0.85rem;
   height: 0.85rem;

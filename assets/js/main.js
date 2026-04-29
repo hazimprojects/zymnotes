@@ -708,11 +708,17 @@ document.addEventListener("DOMContentLoaded", function () {
     card.setAttribute("aria-label", `${currentLabel} (${fragment})`);
   }
 
-  var OPENMOJI_BAB_BADGE_BASE =
-    "https://cdn.jsdelivr.net/npm/openmoji@15.0.0/color/svg";
+  function injectBabCardFluent3dBadges() {
+    var fluentRef = "62ecdc0d7ca5";
+    var fluentBase =
+      "https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@" +
+      fluentRef +
+      "/assets";
+    function fluentAsset(folderName, fileName) {
+      return fluentBase + "/" + encodeURIComponent(folderName) + "/3D/" + fileName;
+    }
 
-  function injectBabCardOpenmojiBadges() {
-    document.querySelectorAll(".bab-card-badge-openmoji").forEach(function (el) {
+    document.querySelectorAll(".bab-card-badge-fluent").forEach(function (el) {
       el.remove();
     });
 
@@ -724,27 +730,27 @@ document.addEventListener("DOMContentLoaded", function () {
         if (!quiz && !audio) return;
 
         var wrap = document.createElement("span");
-        wrap.className = "bab-card-badge-openmoji";
+        wrap.className = "bab-card-badge-fluent";
         wrap.setAttribute("aria-hidden", "true");
 
         if (quiz) {
           var iq = document.createElement("img");
-          iq.className = "openmoji openmoji--bab-badge";
-          iq.src = OPENMOJI_BAB_BADGE_BASE + "/1F9E9.svg";
+          iq.className = "fluent-3d-emoji fluent-3d-emoji--bab-badge";
+          iq.src = fluentAsset("Puzzle piece", "puzzle_piece_3d.png");
           iq.alt = "";
-          iq.width = 14;
-          iq.height = 14;
+          iq.width = 18;
+          iq.height = 18;
           iq.decoding = "async";
           iq.setAttribute("data-bab-badge", "quiz");
           wrap.appendChild(iq);
         }
         if (audio) {
           var ia = document.createElement("img");
-          ia.className = "openmoji openmoji--bab-badge";
-          ia.src = OPENMOJI_BAB_BADGE_BASE + "/1F3A7.svg";
+          ia.className = "fluent-3d-emoji fluent-3d-emoji--bab-badge";
+          ia.src = fluentAsset("Headphone", "headphone_3d.png");
           ia.alt = "";
-          ia.width = 14;
-          ia.height = 14;
+          ia.width = 18;
+          ia.height = 18;
           ia.decoding = "async";
           ia.setAttribute("data-bab-badge", "audio");
           wrap.appendChild(ia);
@@ -794,7 +800,7 @@ document.addEventListener("DOMContentLoaded", function () {
       })
     );
 
-    injectBabCardOpenmojiBadges();
+    injectBabCardFluent3dBadges();
   }
 
   markSubtopicCardsWithAudio();
@@ -2877,7 +2883,7 @@ function hzLabQuizSparklePair() {
   if (!('serviceWorker' in navigator)) return;
 
   window.addEventListener('load', function () {
-    navigator.serviceWorker.register('/sw.js?v=278').catch(function (error) {
+    navigator.serviceWorker.register('/sw.js?v=279').catch(function (error) {
       console.warn('Service worker registration failed:', error);
     });
   });
