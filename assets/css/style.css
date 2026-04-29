@@ -5,7 +5,7 @@
 ========================= */
 
 @import url("openmoji.css?v=11");   /* OpenMoji img helpers (nota & sparkle UI) */
-@import url("fluent-shell-emoji.css?v=1"); /* Fluent UI Emoji 3D pada halaman shell */
+@import url("fluent-shell-emoji.css?v=2"); /* Fluent UI Emoji 3D pada halaman shell */
 @import url("base.css?v=66");       /* :root variables, dark mode tokens, body/reset/containers */
 @import url("layout.css?v=15");     /* Header, nav, dark mode fab, typography, footer, animations */
 @import url("ui.css?v=54");        /* Buttons, cards, homepage, hero, search, org-chart, interaction */
@@ -13,6 +13,6 @@
 @import url("keywords.css?v=32");   /* Keyword highlights, bloc identity, keyword legend, zh-mode annotations */
 @import url("responsive.css?v=8"); /* All @media queries + spacing fixes */
 @import url("themes.css?v=19");     /* Bab visual themes, dark mode overrides, war block chips */
-@import url("shell-openmoji.css?v=11"); /* App shell: flat paper palette for OpenMoji */
+@import url("shell-openmoji.css?v=12"); /* App shell: Zym 3D stage (mesh + glass) */
 @import url("lab.css?v=7");        /* Learning Lab, action bar, mini interactive blocks */
 @import url("print.css") print;    /* Print styles (Ctrl+P) */

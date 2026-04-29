@@ -8,8 +8,13 @@
   object-fit: contain;
   pointer-events: none;
   user-select: none;
-  /* PNG 3D ada padding optik — kecilkan sedikit supaya seimbang dengan OpenMoji SVG */
-  transform: scale(0.94);
+  /* Padding optik PNG 3D + sedikit “lift” seperti ikon Microsoft */
+  transform: scale(0.96) translateY(-1px);
+  filter: drop-shadow(0 10px 14px rgba(55, 48, 120, 0.14)) drop-shadow(0 2px 4px rgba(15, 23, 42, 0.08));
+}
+
+[data-theme="dark"] .fluent-3d-emoji {
+  filter: drop-shadow(0 12px 20px rgba(0, 0, 0, 0.45)) drop-shadow(0 2px 6px rgba(129, 140, 248, 0.12));
 }
 
 .home-feature-icon-badge .fluent-3d-emoji--feature {
