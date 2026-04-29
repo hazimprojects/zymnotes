@@ -46,6 +46,8 @@ CSS_PRELOAD_PATTERNS = {
 
 # CSS filenames that appear in style.css @import lines
 CSS_IMPORT_MAP = {
+    "openmoji.css":          "openmoji",
+    "fluent-shell-emoji.css": "fluent_shell",
     "base.css":       "base",
     "layout.css":     "layout",
     "ui.css":         "ui",
