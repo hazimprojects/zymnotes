@@ -125,20 +125,23 @@
   vertical-align: 0;
 }
 
-/* ── Attrib footer ───────────────────────────────────────────────────── */
-.home-footer-openmoji-attrib {
+/* ── Attrib footer (OpenMoji / Fluent shell) ─────────────────────────── */
+.home-footer-openmoji-attrib,
+.home-footer-fluent-attrib {
   font-size: 0.68rem;
   opacity: 0.72;
   margin-bottom: 0.35rem;
 }
 
-.home-footer-openmoji-attrib a {
+.home-footer-openmoji-attrib a,
+.home-footer-fluent-attrib a {
   color: var(--primary);
   font-weight: 600;
   text-decoration: none;
 }
 
-.home-footer-openmoji-attrib a:hover {
+.home-footer-openmoji-attrib a:hover,
+.home-footer-fluent-attrib a:hover {
   text-decoration: underline;
 }
 

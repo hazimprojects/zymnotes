@@ -1,0 +1,43 @@
+/* Microsoft Fluent UI Emoji (3D PNG) — shell pages (utama, indeks nota, tentang, maklum balas)
+   Sumber: https://github.com/microsoft/fluentui-emoji (MIT) — aset dihos melalui jsDelivr */
+
+.fluent-3d-emoji {
+  display: inline-block;
+  vertical-align: -0.18em;
+  flex-shrink: 0;
+  object-fit: contain;
+  pointer-events: none;
+  user-select: none;
+  /* PNG 3D ada padding optik — kecilkan sedikit supaya seimbang dengan OpenMoji SVG */
+  transform: scale(0.94);
+}
+
+.home-feature-icon-badge .fluent-3d-emoji--feature {
+  width: 28px;
+  height: 28px;
+}
+
+.home-scope-check .fluent-3d-emoji--scope {
+  width: 22px;
+  height: 22px;
+}
+
+.nota-row-icon .fluent-3d-emoji--nota {
+  width: 28px;
+  height: 28px;
+}
+
+.nota-search-empty-icon .fluent-3d-emoji--empty {
+  width: 46px;
+  height: 46px;
+}
+
+.home-about-aud-icon .fluent-3d-emoji--aud {
+  width: 28px;
+  height: 28px;
+}
+
+.home-scope-label-with-icon .fluent-3d-emoji--scope {
+  width: 22px;
+  height: 22px;
+}
