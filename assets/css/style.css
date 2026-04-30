@@ -6,7 +6,7 @@
 
 @import url("openmoji.css?v=13");   /* OpenMoji img helpers (nota & sparkle UI) */
 @import url("fluent-shell-emoji.css?v=5"); /* Fluent UI Emoji 3D pada halaman shell */
-@import url("base.css?v=70");       /* :root variables, dark mode tokens, body/reset/containers */
+@import url("base.css?v=71");       /* :root variables, dark mode tokens, body/reset/containers */
 @import url("layout.css?v=15");     /* Header, nav, dark mode fab, typography, footer, animations */
 @import url("ui.css?v=56");        /* Buttons, cards, homepage, hero, search, org-chart, interaction */
 @import url("paper.css?v=21");      /* Paper labels, boards, chips, accordion, steps, bab overview */
