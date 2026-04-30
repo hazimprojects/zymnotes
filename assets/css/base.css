@@ -1,8 +1,8 @@
 :root {
-  /* Nunito: rounded display — heading, UI, label, butang
-     Nunito Sans: body reading — nota, keterangan panjang */
-  --font-display: "Nunito", "Nunito Sans", system-ui, -apple-system, sans-serif;
-  --font-sans: "Nunito Sans", "Lexend", system-ui, -apple-system, "Segoe UI", sans-serif;
+  /* Quicksand: display — heading, UI, label, butang
+     Nunito: body reading — nota, keterangan panjang */
+  --font-display: "Quicksand", "Nunito", system-ui, -apple-system, sans-serif;
+  --font-sans: "Nunito", "Lexend", system-ui, -apple-system, sans-serif;
   --bg: #F6F7FF;
   --paper: #ffffff;
   --paper-soft: #F0F1FF;
