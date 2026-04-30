@@ -71,9 +71,9 @@ body.no-bottom-nav .hz-bottom-nav { display: none !important; }
   .hz-bottom-nav-item.is-active { color: var(--primary); }
   .hz-bottom-nav-item .hz-nav-icon {
     display: flex; align-items: center; justify-content: center;
-    width: 22px; height: 22px;
+    width: 24px; height: 24px;
   }
-  .hz-bottom-nav-item .hz-nav-icon svg { width: 22px; height: 22px; }
+  .hz-bottom-nav-item .hz-nav-icon svg { width: 24px; height: 24px; }
   /* Body padding — content not hidden behind bottom nav */
   body { padding-bottom: calc(var(--bottom-nav-h) + var(--safe-bottom)); }
   /* Hide hamburger — bottom nav replaces it on mobile */

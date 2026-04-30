@@ -303,19 +303,29 @@ ZymStore.migrate();
 var HZ_ICONS = (function () {
   var s = ' fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"';
   return {
-    home:    '<svg viewBox="0 0 24 24"' + s + '><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>',
-    notes:   '<svg viewBox="0 0 24 24"' + s + '><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>',
-    search:  '<svg viewBox="0 0 24 24"' + s + '><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>',
+    // Nav bar — Fluent UI System Icons (regular variant, fill="currentColor")
+    home:    '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M10.55 2.53a2.25 2.25 0 012.9 0l6.75 5.86c.48.42.76 1.03.76 1.67V19.75A2.25 2.25 0 0118.7 22H14.5a1 1 0 01-1-1v-4.5h-3V21a1 1 0 01-1 1H5.29a2.25 2.25 0 01-2.25-2.25V10.06c0-.64.28-1.25.76-1.67l6.75-5.86zm1.45 1.12L5.25 9.51a.75.75 0 00-.21.55V19.75c0 .41.34.75.75.75H9v-4.5a1.5 1.5 0 011.5-1.5h3a1.5 1.5 0 011.5 1.5V20.5h3.2a.75.75 0 00.75-.75V10.06a.75.75 0 00-.21-.55l-6.74-5.86z"/></svg>',
+    notes:   '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.5 2A3.5 3.5 0 003 5.5v13A3.5 3.5 0 006.5 22h11a.5.5 0 000-1H6.5A2.5 2.5 0 014 18.5V5.5A2.5 2.5 0 016.5 3H17v9.5a.5.5 0 001 0V2.5a.5.5 0 00-.5-.5h-11zm3 5a.75.75 0 000 1.5h5a.75.75 0 000-1.5h-5zm0 3.5a.75.75 0 000 1.5h5a.75.75 0 000-1.5h-5zm0 3.5a.75.75 0 000 1.5h3a.75.75 0 000-1.5h-3z"/></svg>',
+    search:  '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M10 2.75a7.25 7.25 0 014.96 12.48l4.9 4.9a.75.75 0 01-1.06 1.07l-4.9-4.9A7.25 7.25 0 1110 2.75zm0 1.5a5.75 5.75 0 100 11.5 5.75 5.75 0 000-11.5z"/></svg>',
+    about:   '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 110 20A10 10 0 0112 2zm0 1.5a8.5 8.5 0 100 17 8.5 8.5 0 000-17zm0 6.5a.75.75 0 01.75.75v5.5a.75.75 0 01-1.5 0v-5.5A.75.75 0 0112 10zm0-3.25a1 1 0 110 2 1 1 0 010-2z"/></svg>',
+    // Other UI icons (Feather, stroke-based)
     sun:     '<svg viewBox="0 0 24 24"' + s + '><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>',
     moon:    '<svg viewBox="0 0 24 24"' + s + '><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>',
     sparkle: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H23l-7.5 5.4 2.4 7.5L12 17.7l-5.9 4.6 2.4-7.5L1 9.4h8.6L12 2z"/></svg>',
     audio:      '<svg viewBox="0 0 24 24"' + s + '><path d="M3 18v-6a9 9 0 0118 0v6"/><path d="M21 19a2 2 0 01-2 2h-1a2 2 0 01-2-2v-3a2 2 0 012-2h3zM3 19a2 2 0 002 2h1a2 2 0 002-2v-3a2 2 0 00-2-2H3z"/></svg>',
     audioPause: '<svg viewBox="0 0 24 24"' + s + '><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>',
     archive: '<svg viewBox="0 0 24 24"' + s + '><polyline points="21 8 21 21 3 21 3 8"/><rect x="1" y="3" width="22" height="5"/><line x1="10" y1="12" x2="14" y2="12"/></svg>',
-    close:   '<svg viewBox="0 0 24 24"' + s + '><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>',
-    about:   '<svg viewBox="0 0 24 24"' + s + '><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>'
+    close:   '<svg viewBox="0 0 24 24"' + s + '><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>'
   };
 })();
+
+// Nav bar filled variants (Fluent UI System Icons — active state)
+var HZ_ICONS_FILLED = {
+  home:   '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.45 2.53a2.25 2.25 0 00-2.9 0L3.8 8.39a2.25 2.25 0 00-.76 1.67v9.69A2.25 2.25 0 005.29 22H9.5a1 1 0 001-1v-4.5h3V21a1 1 0 001 1h4.2a2.25 2.25 0 002.25-2.25v-9.7c0-.63-.28-1.24-.76-1.66l-6.74-5.86z"/></svg>',
+  notes:  '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 2H6.5A3.5 3.5 0 003 5.5v13A3.5 3.5 0 006.5 22H17a.5.5 0 000-1H6.5A2.5 2.5 0 014 18.5V5.5A2.5 2.5 0 016.5 3H17v9.5a.5.5 0 001 0V2.5a.5.5 0 00-.5-.5zM9.5 7a.75.75 0 000 1.5h5a.75.75 0 000-1.5h-5zm0 3.5a.75.75 0 000 1.5h5a.75.75 0 000-1.5h-5zm0 3.5a.75.75 0 000 1.5h3a.75.75 0 000-1.5h-3z"/></svg>',
+  search: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M10 2.75a7.25 7.25 0 014.96 12.48l4.9 4.9a.75.75 0 01-1.06 1.07l-4.9-4.9A7.25 7.25 0 1110 2.75z"/></svg>',
+  about:  '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 110 20A10 10 0 0112 2zm0 6.5a1 1 0 110 2 1 1 0 010-2zm0 3.25a.75.75 0 01.75.75v5.5a.75.75 0 01-1.5 0v-5.5A.75.75 0 0112 11.75z"/></svg>'
+};
 
 // =========================
 // DARK MODE
@@ -2521,30 +2531,32 @@ function hzLabQuizSparklePair() {
       return pp === hp;
     }
     var tabs = [
-      { icon: HZ_ICONS.home,   label: 'Utama',   href: '/index.html' },
-      { icon: HZ_ICONS.notes,  label: 'Nota',    href: '/notes/index.html' },
-      { icon: HZ_ICONS.search, label: 'Cari',    href: 'hz:search' },
-      { icon: HZ_ICONS.about,  label: 'Tentang', href: '/about.html' }
+      { iconKey: 'home',   label: 'Utama',   href: '/index.html' },
+      { iconKey: 'notes',  label: 'Nota',    href: '/notes/index.html' },
+      { iconKey: 'search', label: 'Cari',    href: 'hz:search' },
+      { iconKey: 'about',  label: 'Tentang', href: '/about.html' }
     ];
     var nav = document.createElement('nav');
     nav.className = 'hz-bottom-nav';
     nav.setAttribute('aria-label', 'Navigasi utama');
     tabs.forEach(function (tab) {
+      var active = isActive(tab.href);
+      var icon = (active && HZ_ICONS_FILLED[tab.iconKey]) ? HZ_ICONS_FILLED[tab.iconKey] : HZ_ICONS[tab.iconKey];
       var el;
       if (tab.href === 'hz:search') {
         el = document.createElement('button');
         el.type = 'button';
         el.className = 'hz-bottom-nav-item';
         el.setAttribute('aria-label', 'Buka carian nota');
-        el.innerHTML = '<span class="hz-nav-icon">' + tab.icon + '</span><span>' + tab.label + '</span>';
+        el.innerHTML = '<span class="hz-nav-icon">' + icon + '</span><span>' + tab.label + '</span>';
         el.addEventListener('click', function () {
           document.dispatchEvent(new CustomEvent('hz:search-open'));
         });
       } else {
         el = document.createElement('a');
         el.href = tab.href;
-        el.className = 'hz-bottom-nav-item' + (isActive(tab.href) ? ' is-active' : '');
-        el.innerHTML = '<span class="hz-nav-icon">' + tab.icon + '</span><span>' + tab.label + '</span>';
+        el.className = 'hz-bottom-nav-item' + (active ? ' is-active' : '');
+        el.innerHTML = '<span class="hz-nav-icon">' + icon + '</span><span>' + tab.label + '</span>';
       }
       nav.appendChild(el);
     });
