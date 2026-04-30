@@ -3167,6 +3167,27 @@ function hzLabQuizSparklePair() {
 })();
 
 // =========================
+// KEMASKINI TERKINI — baca dari updates.json
+// =========================
+(function () {
+  var el = document.querySelector('[data-last-updated]');
+  if (!el) return;
+
+  var BULAN = ['Januari','Februari','Mac','April','Mei','Jun','Julai','Ogos','September','Oktober','November','Disember'];
+
+  fetch('/data/updates.json')
+    .then(function (r) { return r.json(); })
+    .then(function (data) {
+      var latest = data.entries && data.entries[0] && data.entries[0].date;
+      if (!latest) return;
+      var parts = latest.split('-');
+      var label = BULAN[parseInt(parts[1], 10) - 1] + ' ' + parts[0];
+      el.textContent = 'Kemaskini terkini: ' + label;
+    })
+    .catch(function () {});
+})();
+
+// =========================
 // SERVICE WORKER REGISTRATION
 // =========================
 (function () {
