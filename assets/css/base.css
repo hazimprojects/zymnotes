@@ -1,7 +1,7 @@
 :root {
-  /* Quicksand: display — heading, UI, label, butang
+  /* Fredoka: display — heading, UI, label, butang
      Nunito: body reading — nota, keterangan panjang */
-  --font-display: "Quicksand", "Nunito", system-ui, -apple-system, sans-serif;
+  --font-display: "Fredoka", "Nunito", system-ui, -apple-system, sans-serif;
   --font-sans: "Nunito", "Lexend", system-ui, -apple-system, sans-serif;
   --bg: #F6F7FF;
   --paper: #ffffff;
