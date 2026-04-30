@@ -429,7 +429,7 @@ body {
 
 
 /* =========================
-   TIPOGRAFI PAPARAN — Nunito
+   TIPOGRAFI PAPARAN — Fredoka
 ========================= */
 h1, h2, h3, h4, h5, h6,
 button,
@@ -460,6 +460,7 @@ button,
 .learning-lab-result-title,
 .learning-lab-best-score {
   font-family: var(--font-display);
+  letter-spacing: 0.018em;
 }
 
 img {
