@@ -51,10 +51,12 @@
   }
 
   function getBestScore(id) {
+    if (window.ZymStore) return ZymStore.getQuizScore(id);
     return parseInt(localStorage.getItem('zymnotes-quiz-best-' + id) || '0', 10);
   }
 
   function saveBestScore(id, score) {
+    if (window.ZymStore) { ZymStore.saveQuizScore(id, score); return; }
     if (score > getBestScore(id)) localStorage.setItem('zymnotes-quiz-best-' + id, score);
   }
 

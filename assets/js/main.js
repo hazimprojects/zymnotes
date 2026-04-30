@@ -21,6 +21,122 @@ document.documentElement.classList.add("js-enhanced");
   hzZymnotesClearStoredZhModeIfNeeded();
 })();
 
+// =========================
+// ZYMSTORE — Pengurusan data tersimpan (5 kunci bersih menggantikan kunci berserak lama)
+// =========================
+window.ZymStore = (function () {
+  var KEYS = {
+    prefs:     'zym.prefs',
+    quiz:      'zym.quiz',
+    feedback:  'zym.feedback',
+    dismissed: 'zym.dismissed',
+    app:       'zym.app'
+  };
+
+  function _read(key) {
+    try { return JSON.parse(localStorage.getItem(key) || 'null'); } catch (e) { return null; }
+  }
+  function _write(key, data) {
+    try { localStorage.setItem(key, JSON.stringify(data)); } catch (e) {}
+  }
+
+  function _defaultPrefs() { return { theme: null, fabCorner: 'br' }; }
+  function getPrefs() { return Object.assign(_defaultPrefs(), _read(KEYS.prefs) || {}); }
+  function getPref(k) { return getPrefs()[k]; }
+  function hasPref(k) { return Object.prototype.hasOwnProperty.call(_read(KEYS.prefs) || {}, k); }
+  function setPref(k, v) { var p = getPrefs(); p[k] = v; _write(KEYS.prefs, p); }
+
+  function getQuizScore(id) { return (_read(KEYS.quiz) || {})[id] || 0; }
+  function saveQuizScore(id, score) {
+    var q = _read(KEYS.quiz) || {};
+    if (score > (q[id] || 0)) { q[id] = score; _write(KEYS.quiz, q); }
+  }
+  function clearQuizScores() { try { localStorage.removeItem(KEYS.quiz); } catch (e) {} }
+  function getQuizCount() { return Object.keys(_read(KEYS.quiz) || {}).length; }
+
+  function getFeedback(path) { return (_read(KEYS.feedback) || {})[path]; }
+  function saveFeedback(path, reaction) {
+    var f = _read(KEYS.feedback) || {}; f[path] = reaction; _write(KEYS.feedback, f);
+  }
+  function clearFeedback() { try { localStorage.removeItem(KEYS.feedback); } catch (e) {} }
+  function getFeedbackCount() { return Object.keys(_read(KEYS.feedback) || {}).length; }
+
+  function isDismissed(k) { return !!(_read(KEYS.dismissed) || {})[k]; }
+  function setDismissed(k) { var d = _read(KEYS.dismissed) || {}; d[k] = true; _write(KEYS.dismissed, d); }
+
+  function getApp(k) { return (_read(KEYS.app) || {})[k]; }
+  function setApp(k, v) { var a = _read(KEYS.app) || {}; a[k] = v; _write(KEYS.app, a); }
+
+  function clearAll() {
+    Object.keys(KEYS).forEach(function (k) {
+      try { localStorage.removeItem(KEYS[k]); } catch (e) {}
+    });
+    // Bersihkan kunci lama sekiranya masih ada
+    ['zymnotes-theme','hzedu-hand','hzedu-fab-corner','zymnotes-pwa-installed',
+     'hzedu-chip-debug','hzedu-lang-mode'].forEach(function (k) {
+      try { localStorage.removeItem(k); } catch (e) {}
+    });
+    var toRemove = [];
+    for (var i = 0; i < localStorage.length; i++) {
+      var key = localStorage.key(i);
+      if (key && (key.indexOf('hzaudio-notice') === 0 ||
+                  key.indexOf('hzfb-') === 0 ||
+                  key.indexOf('zymnotes-quiz-best-') === 0)) {
+        toRemove.push(key);
+      }
+    }
+    toRemove.forEach(function (k) { try { localStorage.removeItem(k); } catch (e) {} });
+  }
+
+  function migrate() {
+    if (((_read(KEYS.app) || {}).migrated)) return;
+    var prefs = Object.assign(_defaultPrefs(), _read(KEYS.prefs) || {});
+    var oldTheme = localStorage.getItem('zymnotes-theme');
+    if (oldTheme) prefs.theme = oldTheme;
+    var oldCorner = localStorage.getItem('hzedu-fab-corner');
+    if (oldCorner) prefs.fabCorner = oldCorner;
+    _write(KEYS.prefs, prefs);
+
+    var quiz = _read(KEYS.quiz) || {};
+    var fb = _read(KEYS.feedback) || {};
+    var toRemove = [];
+    for (var i = 0; i < localStorage.length; i++) {
+      var k = localStorage.key(i);
+      if (!k) continue;
+      if (k.indexOf('zymnotes-quiz-best-') === 0) {
+        quiz[k.replace('zymnotes-quiz-best-', '')] = parseInt(localStorage.getItem(k) || '0', 10);
+        toRemove.push(k);
+      } else if (k.indexOf('hzfb-') === 0) {
+        fb[k.replace('hzfb-', '')] = localStorage.getItem(k);
+        toRemove.push(k);
+      } else if (k.indexOf('hzaudio-notice') === 0) {
+        toRemove.push(k);
+      }
+    }
+    if (Object.keys(quiz).length) _write(KEYS.quiz, quiz);
+    if (Object.keys(fb).length) _write(KEYS.feedback, fb);
+    if (localStorage.getItem('zymnotes-pwa-installed') === '1') setApp('pwaInstalled', true);
+    setApp('migrated', true);
+    ['zymnotes-theme','hzedu-hand','hzedu-fab-corner','zymnotes-pwa-installed','hzedu-chip-debug'].forEach(function (k) {
+      try { localStorage.removeItem(k); } catch (e) {}
+    });
+    toRemove.forEach(function (k) { try { localStorage.removeItem(k); } catch (e) {} });
+  }
+
+  return {
+    getPref: getPref, hasPref: hasPref, setPref: setPref, getPrefs: getPrefs,
+    getQuizScore: getQuizScore, saveQuizScore: saveQuizScore,
+    clearQuizScores: clearQuizScores, getQuizCount: getQuizCount,
+    getFeedback: getFeedback, saveFeedback: saveFeedback,
+    clearFeedback: clearFeedback, getFeedbackCount: getFeedbackCount,
+    isDismissed: isDismissed, setDismissed: setDismissed,
+    getApp: getApp, setApp: setApp,
+    clearAll: clearAll, migrate: migrate
+  };
+})();
+
+ZymStore.migrate();
+
 // Latar bertema (bab induk, subtopik, kuiz bab) — denyut halus hanya CSS, tanpa scroll
 (function () {
   var doc = document.documentElement;
@@ -58,16 +174,6 @@ document.documentElement.classList.add("js-enhanced");
   }
 })();
 
-// Apply handedness class before first paint to avoid layout flash
-(function () {
-  if (localStorage.getItem("hzedu-hand") === "left") {
-    document.body
-      ? document.body.classList.add("hand-left")
-      : document.addEventListener("DOMContentLoaded", function () {
-          document.body.classList.add("hand-left");
-        });
-  }
-})();
 
 // =========================
 // HOME (/) — PWA soft transition into page (standalone, once per session)
@@ -224,18 +330,16 @@ function hzThemeToggleLabel(theme) {
 // DARK MODE TOGGLE
 // =========================
 (function () {
-  const KEY = "zymnotes-theme";
-
   function getTheme() {
     return (
-      localStorage.getItem(KEY) ||
+      ZymStore.getPref('theme') ||
       (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light")
     );
   }
 
   function applyTheme(theme) {
     document.documentElement.setAttribute("data-theme", theme);
-    localStorage.setItem(KEY, theme);
+    ZymStore.setPref('theme', theme);
     document.querySelectorAll(".display-fab").forEach((btn) => {
       btn.innerHTML = hzThemeToggleMarkup(theme);
       btn.setAttribute("aria-label", hzThemeToggleLabel(theme));
@@ -268,7 +372,7 @@ function hzThemeToggleLabel(theme) {
   });
 
   window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", (e) => {
-    if (!localStorage.getItem(KEY)) {
+    if (!ZymStore.hasPref('theme')) {
       applyTheme(e.matches ? "dark" : "light");
     }
   });
@@ -1342,11 +1446,10 @@ function hzLabQuizSparklePair() {
 
     var audioEl = document.querySelector('.note-audio-player .audio-src');
 
-    var NOTICE_KEY = 'hzaudio-notice' + window.location.pathname;
     var noticeShown = false;
 
     function showAudioNotice() {
-      if (noticeShown || localStorage.getItem(NOTICE_KEY)) return;
+      if (noticeShown || ZymStore.isDismissed('audioNotice')) return;
       noticeShown = true;
 
       var sheet = document.createElement('div');
@@ -1384,7 +1487,7 @@ function hzLabQuizSparklePair() {
       document.body.appendChild(sheet);
 
       function dismiss() {
-        localStorage.setItem(NOTICE_KEY, '1');
+        ZymStore.setDismissed('audioNotice');
         sheet.classList.remove('zh-toast-show');
         sheet.classList.add('zh-toast-hide');
         setTimeout(function() { sheet.remove(); }, 300);
@@ -1466,6 +1569,22 @@ function hzLabQuizSparklePair() {
         makeSparkleItemFluent(labQuizSparklePair, 'Kuiz', 'lab', labHref)
       );
     }
+
+    // Item tetapan — dibuat terus di sini supaya timing betul
+    (function () {
+      var settingsEl = document.createElement('button');
+      settingsEl.className = 'note-sparkle-item';
+      settingsEl.type = 'button';
+      settingsEl.setAttribute('data-sparkle-type', 'settings');
+      settingsEl.setAttribute('data-tooltip', 'Tetapan');
+      settingsEl.setAttribute('aria-label', 'Tetapan');
+      settingsEl.innerHTML = '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>';
+      settingsEl.addEventListener('click', function () {
+        wrap.classList.remove('is-open');
+        if (window.ZymSettings) window.ZymSettings.open();
+      });
+      itemsContainer.appendChild(settingsEl);
+    })();
 
     var fab = document.createElement('button');
     fab.className = 'note-sparkle-fab';
@@ -1564,15 +1683,14 @@ function hzLabQuizSparklePair() {
     document.body.appendChild(wrap);
 
     // ── Corner Position ───────────────────────────────────────────────
-    var FAB_KEY = 'hzedu-fab-corner';
-    var corner = localStorage.getItem(FAB_KEY) || 'br';
+    var corner = ZymStore.getPref('fabCorner') || 'br';
     wrap.classList.add('fab-corner-' + corner);
 
     function snapToCorner(c) {
       ['br','bl','tr','tl'].forEach(function(cc) { wrap.classList.remove('fab-corner-' + cc); });
       wrap.style.cssText = '';
       corner = c;
-      localStorage.setItem(FAB_KEY, corner);
+      ZymStore.setPref('fabCorner', corner);
       wrap.classList.add('fab-corner-' + corner);
     }
 
@@ -2133,8 +2251,7 @@ function hzLabQuizSparklePair() {
 (function () {
   if (!window.location.pathname.match(/\/notes\/bab-\d+-\d+\.html/)) return;
 
-  var STORAGE_KEY = 'hzfb-' + window.location.pathname;
-  if (localStorage.getItem(STORAGE_KEY)) return;
+  if (ZymStore.getFeedback(window.location.pathname)) return;
 
   var style = document.createElement('style');
   style.textContent = [
@@ -2175,7 +2292,7 @@ function hzLabQuizSparklePair() {
       if (typeof gtag === 'function') {
         gtag('event', 'nota_reaction', { reaction: reaction, page_path: window.location.pathname });
       }
-      localStorage.setItem(STORAGE_KEY, reaction);
+      ZymStore.saveFeedback(window.location.pathname, reaction);
       var thanks = document.createElement('p');
       thanks.className = 'nota-feedback-thanks';
       thanks.textContent = 'Terima kasih! 🙏';
@@ -2730,7 +2847,6 @@ function hzLabQuizSparklePair() {
 // ABOUT PAGE — PWA INSTALL (hide when installed; re-show after uninstall)
 // =========================
 (function () {
-  var KEY = "zymnotes-pwa-installed";
   var FORCE_KEY = "zymnotes-about-pwa-force-show";
   var card = document.getElementById("about-pwa-card");
   var btn = document.getElementById("about-pwa-install-btn");
@@ -2749,11 +2865,7 @@ function hzLabQuizSparklePair() {
   }
 
   function storageSaysInstalled() {
-    try {
-      return localStorage.getItem(KEY) === "1";
-    } catch (e) {
-      return false;
-    }
+    return !!ZymStore.getApp('pwaInstalled');
   }
 
   function skipStorageHide() {
@@ -2765,9 +2877,7 @@ function hzLabQuizSparklePair() {
   }
 
   function clearInstalledFlag() {
-    try {
-      localStorage.removeItem(KEY);
-    } catch (e) {}
+    ZymStore.setApp('pwaInstalled', false);
   }
 
   function syncRecoverUI() {
@@ -2790,9 +2900,7 @@ function hzLabQuizSparklePair() {
   }
 
   function markInstalled() {
-    try {
-      localStorage.setItem(KEY, "1");
-    } catch (e) {}
+    ZymStore.setApp('pwaInstalled', true);
     hidePwaCard();
   }
 
@@ -2872,6 +2980,248 @@ function hzLabQuizSparklePair() {
         btn.hidden = true;
       }
       deferredPrompt = null;
+    });
+  });
+})();
+
+// =========================
+// PANEL TETAPAN (ZymSettings)
+// =========================
+(function () {
+  var overlay, sheet, themeRow, quizRow, feedbackRow, confirmBox;
+
+  function getThemeLabel() {
+    var t = document.documentElement.getAttribute('data-theme') || 'light';
+    return t === 'dark' ? 'Gelap' : 'Cerah';
+  }
+
+  function buildSheet() {
+    overlay = document.createElement('div');
+    overlay.className = 'zym-settings-overlay';
+    overlay.setAttribute('aria-hidden', 'true');
+
+    sheet = document.createElement('div');
+    sheet.className = 'zym-settings-sheet';
+    sheet.setAttribute('role', 'dialog');
+    sheet.setAttribute('aria-modal', 'true');
+    sheet.setAttribute('aria-label', 'Tetapan');
+
+    sheet.innerHTML =
+      '<div class="zym-settings-handle"><div class="zym-settings-handle-bar"></div></div>' +
+      '<div class="zym-settings-header">' +
+        '<p class="zym-settings-title">Tetapan</p>' +
+        '<button class="zym-settings-close" type="button" aria-label="Tutup tetapan">✕</button>' +
+      '</div>' +
+      '<div class="zym-settings-body">' +
+        // Paparan
+        '<div class="zym-settings-section">' +
+          '<p class="zym-settings-section-label">Paparan</p>' +
+          '<div class="zym-settings-row" id="zymset-theme-row">' +
+            '<span class="zym-settings-row-icon">🎨</span>' +
+            '<div class="zym-settings-row-body">' +
+              '<span class="zym-settings-row-label">Tema</span>' +
+            '</div>' +
+            '<div class="zym-theme-toggle-group">' +
+              '<button class="zym-theme-btn" data-theme-val="light" type="button">Cerah</button>' +
+              '<button class="zym-theme-btn" data-theme-val="dark" type="button">Gelap</button>' +
+            '</div>' +
+          '</div>' +
+        '</div>' +
+        '<div class="zym-settings-divider"></div>' +
+        // Data Pembelajaran
+        '<div class="zym-settings-section">' +
+          '<p class="zym-settings-section-label">Data Pembelajaran</p>' +
+          '<div class="zym-settings-row" id="zymset-quiz-row">' +
+            '<span class="zym-settings-row-icon">🏆</span>' +
+            '<div class="zym-settings-row-body">' +
+              '<span class="zym-settings-row-label">Skor Kuiz</span>' +
+              '<span class="zym-settings-row-meta" id="zymset-quiz-meta">memuatkan...</span>' +
+            '</div>' +
+            '<button class="zym-settings-action-btn" id="zymset-quiz-btn" type="button">Tetapkan Semula</button>' +
+          '</div>' +
+          '<div class="zym-settings-row" id="zymset-feedback-row">' +
+            '<span class="zym-settings-row-icon">📝</span>' +
+            '<div class="zym-settings-row-body">' +
+              '<span class="zym-settings-row-label">Maklum Balas Nota</span>' +
+              '<span class="zym-settings-row-meta" id="zymset-feedback-meta">memuatkan...</span>' +
+            '</div>' +
+            '<button class="zym-settings-action-btn" id="zymset-feedback-btn" type="button">Tetapkan Semula</button>' +
+          '</div>' +
+        '</div>' +
+        '<div class="zym-settings-divider"></div>' +
+        // Padam Semua
+        '<div class="zym-settings-section" style="padding-bottom:0.6rem">' +
+          '<button class="zym-settings-danger-btn" id="zymset-clear-all-btn" type="button">' +
+            '🗑️ Padam Semua Data' +
+          '</button>' +
+          '<div class="zym-settings-confirm" id="zymset-confirm">' +
+            '<p class="zym-settings-confirm-text">Tindakan ini tidak boleh diterbalikkan. Semua tetapan dan data pembelajaran akan dipadamkan.</p>' +
+            '<div class="zym-settings-confirm-actions">' +
+              '<button class="zym-settings-confirm-yes" id="zymset-confirm-yes" type="button">Ya, Padam</button>' +
+              '<button class="zym-settings-confirm-no" id="zymset-confirm-no" type="button">Batal</button>' +
+            '</div>' +
+          '</div>' +
+        '</div>' +
+      '</div>';
+
+    document.body.appendChild(overlay);
+    document.body.appendChild(sheet);
+
+    // Sambungkan events
+    sheet.querySelector('.zym-settings-close').addEventListener('click', closeSettings);
+    overlay.addEventListener('click', closeSettings);
+
+    // Toggle tema
+    sheet.querySelectorAll('.zym-theme-btn').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var val = btn.getAttribute('data-theme-val');
+        document.documentElement.setAttribute('data-theme', val);
+        ZymStore.setPref('theme', val);
+        var tc = document.querySelector('meta[name="theme-color"]');
+        if (tc) tc.content = val === 'dark' ? '#0D0F1A' : '#ffffff';
+        document.querySelectorAll('.display-fab').forEach(function (fab) {
+          fab.innerHTML = hzThemeToggleMarkup(val);
+          fab.setAttribute('aria-label', hzThemeToggleLabel(val));
+        });
+        syncThemeButtons();
+      });
+    });
+
+    // Reset skor kuiz
+    sheet.querySelector('#zymset-quiz-btn').addEventListener('click', function () {
+      ZymStore.clearQuizScores();
+      updateDataCounts();
+      var btn = sheet.querySelector('#zymset-quiz-btn');
+      btn.textContent = '✓ Dipadam';
+      btn.classList.add('is-done');
+      setTimeout(function () {
+        btn.textContent = 'Tetapkan Semula';
+        btn.classList.remove('is-done');
+      }, 2200);
+    });
+
+    // Reset maklum balas
+    sheet.querySelector('#zymset-feedback-btn').addEventListener('click', function () {
+      ZymStore.clearFeedback();
+      updateDataCounts();
+      var btn = sheet.querySelector('#zymset-feedback-btn');
+      btn.textContent = '✓ Dipadam';
+      btn.classList.add('is-done');
+      setTimeout(function () {
+        btn.textContent = 'Tetapkan Semula';
+        btn.classList.remove('is-done');
+      }, 2200);
+    });
+
+    // Padam semua — tunjuk pengesahan
+    sheet.querySelector('#zymset-clear-all-btn').addEventListener('click', function () {
+      sheet.querySelector('#zymset-confirm').classList.add('is-visible');
+    });
+    sheet.querySelector('#zymset-confirm-no').addEventListener('click', function () {
+      sheet.querySelector('#zymset-confirm').classList.remove('is-visible');
+    });
+    sheet.querySelector('#zymset-confirm-yes').addEventListener('click', function () {
+      ZymStore.clearAll();
+      sheet.querySelector('#zymset-confirm').classList.remove('is-visible');
+      updateDataCounts();
+      // Kembalikan tema ke default sistem
+      var sysTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-theme', sysTheme);
+      var tc = document.querySelector('meta[name="theme-color"]');
+      if (tc) tc.content = sysTheme === 'dark' ? '#0D0F1A' : '#ffffff';
+      document.querySelectorAll('.display-fab').forEach(function (fab) {
+        fab.innerHTML = hzThemeToggleMarkup(sysTheme);
+        fab.setAttribute('aria-label', hzThemeToggleLabel(sysTheme));
+      });
+      syncThemeButtons();
+      var dangerBtn = sheet.querySelector('#zymset-clear-all-btn');
+      dangerBtn.textContent = '✓ Semua data dipadamkan';
+      dangerBtn.disabled = true;
+      setTimeout(function () {
+        dangerBtn.textContent = '🗑️ Padam Semua Data';
+        dangerBtn.disabled = false;
+      }, 3000);
+    });
+
+    // Swipe ke bawah untuk tutup
+    var startY = 0;
+    sheet.addEventListener('touchstart', function (e) { startY = e.touches[0].clientY; }, { passive: true });
+    sheet.addEventListener('touchend', function (e) {
+      if (e.changedTouches[0].clientY - startY > 60) closeSettings();
+    }, { passive: true });
+  }
+
+  function syncThemeButtons() {
+    if (!sheet) return;
+    var current = document.documentElement.getAttribute('data-theme') || 'light';
+    sheet.querySelectorAll('.zym-theme-btn').forEach(function (btn) {
+      btn.classList.toggle('is-active', btn.getAttribute('data-theme-val') === current);
+    });
+  }
+
+  function updateDataCounts() {
+    if (!sheet) return;
+    var qCount = ZymStore.getQuizCount();
+    var fCount = ZymStore.getFeedbackCount();
+    var qMeta = sheet.querySelector('#zymset-quiz-meta');
+    var fMeta = sheet.querySelector('#zymset-feedback-meta');
+    var qBtn = sheet.querySelector('#zymset-quiz-btn');
+    var fBtn = sheet.querySelector('#zymset-feedback-btn');
+    if (qMeta) qMeta.textContent = qCount > 0 ? qCount + ' rekod tersimpan' : 'Tiada rekod';
+    if (fMeta) fMeta.textContent = fCount > 0 ? fCount + ' rekod tersimpan' : 'Tiada rekod';
+    if (qBtn) qBtn.disabled = qCount === 0;
+    if (fBtn) fBtn.disabled = fCount === 0;
+  }
+
+  function openSettings() {
+    if (!sheet) buildSheet();
+    syncThemeButtons();
+    updateDataCounts();
+    sheet.querySelector('#zymset-confirm').classList.remove('is-visible');
+    overlay.classList.add('is-open');
+    sheet.classList.add('is-open');
+    sheet.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+    setTimeout(function () {
+      var closeBtn = sheet.querySelector('.zym-settings-close');
+      if (closeBtn) closeBtn.focus();
+    }, 80);
+  }
+
+  function closeSettings() {
+    if (!sheet) return;
+    overlay.classList.remove('is-open');
+    sheet.classList.remove('is-open');
+    sheet.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  }
+
+  window.ZymSettings = { open: openSettings, close: closeSettings };
+
+  // Injek butang ⚙️ ke header di semua halaman
+  document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('.nav-wrap').forEach(function (nav) {
+      if (nav.querySelector('.zym-settings-header-btn')) return;
+      var btn = document.createElement('button');
+      btn.className = 'zym-settings-header-btn';
+      btn.type = 'button';
+      btn.setAttribute('aria-label', 'Buka tetapan');
+      btn.innerHTML = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>';
+      btn.addEventListener('click', openSettings);
+      var displayFab = nav.querySelector('.display-fab');
+      var navToggle = nav.querySelector('.nav-toggle');
+      if (displayFab) {
+        nav.insertBefore(btn, displayFab);
+      } else if (navToggle) {
+        nav.insertBefore(btn, navToggle);
+      } else {
+        nav.appendChild(btn);
+      }
+    });
+
+    // Keyboard: Escape tutup panel
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && sheet && sheet.classList.contains('is-open')) closeSettings();
     });
   });
 })();
