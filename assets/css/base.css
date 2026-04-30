@@ -1462,6 +1462,35 @@ body[class*="page-theme-"].app-shell-page .home-scope-section {
   flex-shrink: 0;
 }
 
+/* Pendekatan Pembinaan — kad pastel berasingan */
+.about-approach-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+.about-approach-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+  padding: 0.78rem 1rem;
+  border-radius: 12px;
+}
+.about-approach-icon {
+  flex-shrink: 0;
+  width: 26px;
+  height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1px;
+}
+.about-approach-text {
+  font-size: 0.875rem;
+  line-height: 1.55;
+  color: var(--fg);
+}
+
 /* Contact section */
 .home-contact-section {
   text-align: center;
