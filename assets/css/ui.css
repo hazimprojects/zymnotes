@@ -1241,7 +1241,7 @@ body.page-theme-error .page-hero {
   transform: translateY(-50%);
   background: rgba(36, 49, 63, 0.88); color: #fff;
   font-size: 0.72rem; font-weight: 700;
-  font-family: var(--font-sans, "Nunito Sans", sans-serif);
+  font-family: var(--font-sans, "Nunito", sans-serif);
   padding: 0.28rem 0.6rem; border-radius: 8px;
   white-space: nowrap; opacity: 0;
   pointer-events: none; transition: opacity 0.15s ease;
@@ -1427,7 +1427,7 @@ body.page-theme-error .page-hero {
 .sparkle-audio-countdown {
   font-size: 0.62rem;
   font-weight: 700;
-  font-family: var(--font-sans, "Nunito Sans", sans-serif);
+  font-family: var(--font-sans, "Nunito", sans-serif);
   font-variant-numeric: tabular-nums;
   color: rgba(109, 99, 255, 0.75);
   letter-spacing: 0.02em;
