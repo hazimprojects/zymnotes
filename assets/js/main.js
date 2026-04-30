@@ -322,7 +322,7 @@ var HZ_ICONS = (function () {
 // Icons8 3D Fluency — bottom nav bar
 var HZ_ICONS8_NAV = {
   home:   'https://img.icons8.com/3d-fluency/96/home.png',
-  notes:  'https://img.icons8.com/3d-fluency/96/books.png',
+  notes:  'https://img.icons8.com/3d-fluency/96/book-shelf.png',
   search: 'https://img.icons8.com/3d-fluency/96/search.png',
   about:  'https://img.icons8.com/3d-fluency/96/about.png'
 };
