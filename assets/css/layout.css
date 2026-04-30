@@ -71,9 +71,17 @@ body.no-bottom-nav .hz-bottom-nav { display: none !important; }
   .hz-bottom-nav-item.is-active { color: var(--primary); }
   .hz-bottom-nav-item .hz-nav-icon {
     display: flex; align-items: center; justify-content: center;
-    width: 24px; height: 24px;
+    width: 28px; height: 28px;
   }
-  .hz-bottom-nav-item .hz-nav-icon svg { width: 24px; height: 24px; }
+  .hz-bottom-nav-item .hz-nav-icon svg { width: 28px; height: 28px; }
+  .hz-bottom-nav-item .hz-nav-img {
+    width: 28px; height: 28px;
+    transition: transform 0.2s ease, filter 0.2s ease;
+  }
+  .hz-bottom-nav-item.is-active .hz-nav-img {
+    transform: scale(1.12);
+    filter: drop-shadow(0 2px 8px rgba(79, 70, 229, 0.35));
+  }
   /* Body padding — content not hidden behind bottom nav */
   body { padding-bottom: calc(var(--bottom-nav-h) + var(--safe-bottom)); }
   /* Hide hamburger — bottom nav replaces it on mobile */
@@ -280,7 +288,54 @@ h3 {
 }
 
 /* =========================
-   FOOTER
+   PAGE FOOTER (minimal — shell pages)
+========================= */
+
+.page-footer {
+  padding: 1.6rem 1.25rem 1.8rem;
+  text-align: center;
+  border-top: 1px solid var(--line);
+}
+.page-footer-inner {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem 0.5rem;
+  font-size: 0.69rem;
+  color: var(--muted);
+  opacity: 0.82;
+}
+.page-footer-brand {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.7rem;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--ink);
+  opacity: 0.45;
+}
+.page-footer-sep { opacity: 0.28; }
+.page-footer-link {
+  color: inherit;
+  text-decoration: none;
+  padding: 0.18rem 0.6rem;
+  border-radius: 999px;
+  border: 1px solid rgba(92, 110, 132, 0.22);
+  font-size: 0.67rem;
+  transition: color 0.15s, border-color 0.15s, background 0.15s;
+}
+.page-footer-link:hover {
+  color: var(--primary);
+  border-color: rgba(79, 70, 229, 0.28);
+  background: rgba(79, 70, 229, 0.04);
+}
+[data-theme="dark"] .page-footer-link {
+  border-color: rgba(129, 140, 248, 0.18);
+}
+
+/* =========================
+   FOOTER (site-footer — content pages)
 ========================= */
 
 .site-footer {
