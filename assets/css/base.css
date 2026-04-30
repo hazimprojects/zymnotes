@@ -1,5 +1,7 @@
 :root {
-  /* Nunito Sans: bulat lembut, selaras dengan ilustrasi OpenMoji; Lexend sandaran mesra bacaan */
+  /* Nunito: rounded display — heading, UI, label, butang
+     Nunito Sans: body reading — nota, keterangan panjang */
+  --font-display: "Nunito", "Nunito Sans", system-ui, -apple-system, sans-serif;
   --font-sans: "Nunito Sans", "Lexend", system-ui, -apple-system, "Segoe UI", sans-serif;
   --bg: #F6F7FF;
   --paper: #ffffff;
@@ -425,6 +427,40 @@ body {
   transition: var(--theme-transition);
 }
 
+
+/* =========================
+   TIPOGRAFI PAPARAN — Nunito
+========================= */
+h1, h2, h3, h4, h5, h6,
+button,
+.app-logo-name,
+.app-logo-sub,
+.home-brand-name,
+.home-scope-label,
+.home-info-label,
+.home-feature-title,
+.home-about-aud-title,
+.home-cta-btn,
+.home-last-updated,
+.home-footer-copy,
+.hz-bottom-nav-label,
+.bab-hub-title,
+.bab-hub-subtitle,
+.note-bab-title,
+.note-subtopic-label,
+.zym-settings-title,
+.zym-settings-section-label,
+.zym-settings-row-label,
+.learning-lab-type,
+.learning-lab-level,
+.learning-lab-progress,
+.learning-lab-check-btn,
+.learning-lab-next-btn,
+.learning-lab-restart-btn,
+.learning-lab-result-title,
+.learning-lab-best-score {
+  font-family: var(--font-display);
+}
 
 img {
   display: block;
