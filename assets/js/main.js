@@ -319,6 +319,17 @@ var HZ_ICONS = (function () {
   };
 })();
 
+// Icons8 3D Fluency — bottom nav bar
+var HZ_ICONS8_NAV = {
+  home:   'https://img.icons8.com/3d-fluency/96/home.png',
+  notes:  'https://img.icons8.com/3d-fluency/96/books.png',
+  search: 'https://img.icons8.com/3d-fluency/96/search.png',
+  about:  'https://img.icons8.com/3d-fluency/96/about.png'
+};
+function hzNavImg(key) {
+  return '<img class="hz-nav-img" src="' + HZ_ICONS8_NAV[key] + '" alt="" width="28" height="28" decoding="async">';
+}
+
 // Nav bar filled variants (Fluent UI System Icons — active state)
 var HZ_ICONS_FILLED = {
   home:   '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.45 2.53a2.25 2.25 0 00-2.9 0L3.8 8.39a2.25 2.25 0 00-.76 1.67v9.69A2.25 2.25 0 005.29 22H9.5a1 1 0 001-1v-4.5h3V21a1 1 0 001 1h4.2a2.25 2.25 0 002.25-2.25v-9.7c0-.63-.28-1.24-.76-1.66l-6.74-5.86z"/></svg>',
@@ -2541,7 +2552,7 @@ function hzLabQuizSparklePair() {
     nav.setAttribute('aria-label', 'Navigasi utama');
     tabs.forEach(function (tab) {
       var active = isActive(tab.href);
-      var icon = (active && HZ_ICONS_FILLED[tab.iconKey]) ? HZ_ICONS_FILLED[tab.iconKey] : HZ_ICONS[tab.iconKey];
+      var icon = hzNavImg(tab.iconKey);
       var el;
       if (tab.href === 'hz:search') {
         el = document.createElement('button');

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Kredit · ZymNotes</title>
+  <meta name="description" content="Pengakuan dan kredit aset yang digunakan dalam ZymNotes." />
+  <link rel="canonical" href="https://zymnotes.com/kredit.html" />
+  <meta name="robots" content="noindex, follow" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600&family=Nunito:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Lexend:wght@400;500;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600&family=Nunito:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Lexend:wght@400;500;600;700;800&display=swap"></noscript>
+  <link rel="preload" as="style" href="assets/css/base.css?v=69">
+  <link rel="preload" as="style" href="assets/css/layout.css?v=15">
+  <link rel="preload" as="style" href="assets/css/ui.css?v=56">
+  <link rel="stylesheet" href="assets/css/style.css?v=205" />
+
+  <!-- Google tag (gtag.js) — deferred for performance -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-S26E62S18R');
+  (function(){
+    function loadGA(){
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-S26E62S18R';
+      document.head.appendChild(s);
+    }
+    if (document.readyState === 'complete') {
+      'requestIdleCallback' in window ? requestIdleCallback(loadGA) : setTimeout(loadGA, 0);
+    } else {
+      window.addEventListener('load', function(){
+        'requestIdleCallback' in window ? requestIdleCallback(loadGA) : setTimeout(loadGA, 0);
+      });
+    }
+  })();
+</script>
+
+  <style>
+    .kredit-wrap {
+      max-width: 560px;
+      margin: 0 auto;
+      padding: 2.4rem 1.25rem 3rem;
+    }
+    .kredit-header {
+      margin-bottom: 2rem;
+    }
+    .kredit-eyebrow {
+      display: inline-block;
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--primary);
+      opacity: 0.7;
+      margin-bottom: 0.5rem;
+    }
+    .kredit-title {
+      font-size: 1.55rem;
+      font-weight: 700;
+      color: var(--ink);
+      margin: 0 0 0.5rem;
+      line-height: 1.25;
+    }
+    .kredit-subtitle {
+      font-size: 0.88rem;
+      color: var(--muted);
+      line-height: 1.6;
+      margin: 0;
+    }
+    .kredit-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+    .kredit-card {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      padding: 1rem 1.1rem;
+      border-radius: 14px;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      transition: border-color 0.15s;
+    }
+    .kredit-card:hover { border-color: var(--line-strong); }
+    .kredit-icon {
+      flex-shrink: 0;
+      width: 36px; height: 36px;
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.25rem;
+    }
+    .kredit-body { flex: 1; min-width: 0; }
+    .kredit-name {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--ink);
+      margin: 0 0 0.18rem;
+    }
+    .kredit-desc {
+      font-size: 0.78rem;
+      color: var(--muted);
+      line-height: 1.5;
+      margin: 0 0 0.35rem;
+    }
+    .kredit-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      font-size: 0.72rem;
+      color: var(--primary);
+      text-decoration: none;
+      opacity: 0.85;
+      transition: opacity 0.15s;
+    }
+    .kredit-link:hover { opacity: 1; text-decoration: underline; }
+    .kredit-license {
+      display: inline-block;
+      font-size: 0.62rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--muted);
+      background: var(--paper-soft);
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 0.1rem 0.45rem;
+      margin-left: 0.4rem;
+      vertical-align: middle;
+    }
+    [data-theme="dark"] .kredit-card { background: rgba(255,255,255,0.03); }
+  </style>
+
+  <link rel="manifest" href="/manifest.json?v=18" />
+  <link rel="icon" type="image/svg+xml" href="/icons/icon.svg?v=5" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png?v=3" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png?v=3" />
+  <meta name="theme-color" content="#0D0F1A" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="ZymNotes" />
+</head>
+<body class="page-theme-about app-shell-page">
+  <header class="site-header">
+    <div class="nav-wrap">
+      <a class="app-logo-link" href="index.html" aria-label="ZymNotes — Utama">
+        <img src="/icons/icon.svg?v=5" class="app-logo-icon" alt="" aria-hidden="true" />
+        <div>
+          <div class="app-logo-name">ZymNotes</div>
+          <div class="app-logo-sub">Kredit</div>
+        </div>
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <div class="kredit-wrap">
+
+      <div class="kredit-header">
+        <span class="kredit-eyebrow">Pengakuan</span>
+        <h1 class="kredit-title">Kredit & Lesen</h1>
+        <p class="kredit-subtitle">ZymNotes menggunakan aset daripada pihak ketiga berikut. Terima kasih kepada semua pembuat.</p>
+      </div>
+
+      <div class="kredit-list">
+
+        <div class="kredit-card">
+          <div class="kredit-icon" style="background: rgba(14,130,235,0.1);">
+            <img src="https://img.icons8.com/3d-fluency/96/home.png" alt="" width="24" height="24" decoding="async">
+          </div>
+          <div class="kredit-body">
+            <p class="kredit-name">Icons8 — 3D Fluency</p>
+            <p class="kredit-desc">Ikon navigasi bar bawah (Home, Books, Search, About).</p>
+            <a href="https://icons8.com" class="kredit-link" target="_blank" rel="noopener">icons8.com</a>
+            <span class="kredit-license">Free + Attribution</span>
+          </div>
+        </div>
+
+        <div class="kredit-card">
+          <div class="kredit-icon" style="background: rgba(99,102,241,0.1);">
+            <img src="https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@62ecdc0d7ca5/assets/Sparkles/3D/sparkles_3d.png" alt="" width="24" height="24" decoding="async">
+          </div>
+          <div class="kredit-body">
+            <p class="kredit-name">Microsoft Fluent UI Emoji</p>
+            <p class="kredit-desc">Emoji 3D dalam menu FAB, panel tetapan, dan kandungan nota.</p>
+            <a href="https://github.com/microsoft/fluentui-emoji" class="kredit-link" target="_blank" rel="noopener">github.com/microsoft/fluentui-emoji</a>
+            <span class="kredit-license">MIT</span>
+          </div>
+        </div>
+
+        <div class="kredit-card">
+          <div class="kredit-icon" style="background: rgba(234,88,12,0.08);">
+            <span style="font-size:1.4rem;">G</span>
+          </div>
+          <div class="kredit-body">
+            <p class="kredit-name">Google Fonts</p>
+            <p class="kredit-desc">Fredoka (paparan & UI), Nunito (teks badan), Lexend (sokongan).</p>
+            <a href="https://fonts.google.com" class="kredit-link" target="_blank" rel="noopener">fonts.google.com</a>
+            <span class="kredit-license">OFL</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <footer class="page-footer">
+      <div class="page-footer-inner">
+        <span class="page-footer-brand">ZymNotes</span>
+        <span class="page-footer-sep">·</span>
+        <span>© 2026</span>
+      </div>
+    </footer>
+  </main>
+
+  <script src="assets/js/main.js?v=207"></script>
+</body>
+</html>
