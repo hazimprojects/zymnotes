@@ -317,17 +317,8 @@ var HZ_ICONS = (function () {
   };
 })();
 
-function hzThemeToggleMarkup(theme) {
-  var icon = theme === "dark" ? HZ_ICONS.sun : HZ_ICONS.moon;
-  return '<span class="display-fab-icon" aria-hidden="true">' + icon + "</span>";
-}
-
-function hzThemeToggleLabel(theme) {
-  return theme === "dark" ? "Aktifkan mod terang" : "Aktifkan mod gelap";
-}
-
 // =========================
-// DARK MODE TOGGLE
+// DARK MODE
 // =========================
 (function () {
   function getTheme() {
@@ -340,42 +331,19 @@ function hzThemeToggleLabel(theme) {
   function applyTheme(theme) {
     document.documentElement.setAttribute("data-theme", theme);
     ZymStore.setPref('theme', theme);
-    document.querySelectorAll(".display-fab").forEach((btn) => {
-      btn.innerHTML = hzThemeToggleMarkup(theme);
-      btn.setAttribute("aria-label", hzThemeToggleLabel(theme));
-    });
     var tc = document.querySelector('meta[name="theme-color"]');
     if (tc) tc.content = theme === "dark" ? "#0D0F1A" : "#ffffff";
   }
 
   applyTheme(getTheme());
 
-  document.addEventListener("DOMContentLoaded", function () {
-    document.querySelectorAll(".nav-wrap").forEach((nav) => {
-      if (nav.querySelector(".display-fab")) return;
-
-      const btn = document.createElement("button");
-      btn.className = "display-fab";
-      btn.setAttribute("type", "button");
-      const initial = getTheme();
-      btn.innerHTML = hzThemeToggleMarkup(initial);
-      btn.setAttribute("aria-label", hzThemeToggleLabel(initial));
-
-      btn.addEventListener("click", () => {
-        const current = document.documentElement.getAttribute("data-theme");
-        applyTheme(current === "dark" ? "light" : "dark");
-      });
-
-      const navToggle = nav.querySelector(".nav-toggle");
-      navToggle ? nav.insertBefore(btn, navToggle) : nav.appendChild(btn);
-    });
-  });
-
   window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", (e) => {
     if (!ZymStore.hasPref('theme')) {
       applyTheme(e.matches ? "dark" : "light");
     }
   });
+
+  window.hzApplyTheme = applyTheme;
 })();
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -3075,14 +3043,7 @@ function hzLabQuizSparklePair() {
     sheet.querySelectorAll('.zym-theme-btn').forEach(function (btn) {
       btn.addEventListener('click', function () {
         var val = btn.getAttribute('data-theme-val');
-        document.documentElement.setAttribute('data-theme', val);
-        ZymStore.setPref('theme', val);
-        var tc = document.querySelector('meta[name="theme-color"]');
-        if (tc) tc.content = val === 'dark' ? '#0D0F1A' : '#ffffff';
-        document.querySelectorAll('.display-fab').forEach(function (fab) {
-          fab.innerHTML = hzThemeToggleMarkup(val);
-          fab.setAttribute('aria-label', hzThemeToggleLabel(val));
-        });
+        if (window.hzApplyTheme) window.hzApplyTheme(val);
         syncThemeButtons();
       });
     });
@@ -3126,13 +3087,7 @@ function hzLabQuizSparklePair() {
       updateDataCounts();
       // Kembalikan tema ke default sistem
       var sysTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-      document.documentElement.setAttribute('data-theme', sysTheme);
-      var tc = document.querySelector('meta[name="theme-color"]');
-      if (tc) tc.content = sysTheme === 'dark' ? '#0D0F1A' : '#ffffff';
-      document.querySelectorAll('.display-fab').forEach(function (fab) {
-        fab.innerHTML = hzThemeToggleMarkup(sysTheme);
-        fab.setAttribute('aria-label', hzThemeToggleLabel(sysTheme));
-      });
+      if (window.hzApplyTheme) window.hzApplyTheme(sysTheme);
       syncThemeButtons();
       var dangerBtn = sheet.querySelector('#zymset-clear-all-btn');
       dangerBtn.textContent = '✓ Semua data dipadamkan';
@@ -3200,25 +3155,6 @@ function hzLabQuizSparklePair() {
 
   // Injek butang ⚙️ ke header di semua halaman
   document.addEventListener('DOMContentLoaded', function () {
-    document.querySelectorAll('.nav-wrap').forEach(function (nav) {
-      if (nav.querySelector('.zym-settings-header-btn')) return;
-      var btn = document.createElement('button');
-      btn.className = 'zym-settings-header-btn';
-      btn.type = 'button';
-      btn.setAttribute('aria-label', 'Buka tetapan');
-      btn.innerHTML = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>';
-      btn.addEventListener('click', openSettings);
-      var displayFab = nav.querySelector('.display-fab');
-      var navToggle = nav.querySelector('.nav-toggle');
-      if (displayFab) {
-        nav.insertBefore(btn, displayFab);
-      } else if (navToggle) {
-        nav.insertBefore(btn, navToggle);
-      } else {
-        nav.appendChild(btn);
-      }
-    });
-
     // Keyboard: Escape tutup panel
     document.addEventListener('keydown', function (e) {
       if (e.key === 'Escape' && sheet && sheet.classList.contains('is-open')) closeSettings();
