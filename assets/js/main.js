@@ -322,7 +322,7 @@ var HZ_ICONS = (function () {
 // Icons8 3D Fluency — bottom nav bar
 var HZ_ICONS8_NAV = {
   home:   'https://img.icons8.com/3d-fluency/96/home.png',
-  notes:  'https://img.icons8.com/3d-fluency/96/books.png',
+  notes:  'https://img.icons8.com/3d-fluency/96/book-shelf.png',
   search: 'https://img.icons8.com/3d-fluency/96/search.png',
   about:  'https://img.icons8.com/3d-fluency/96/about.png'
 };
@@ -3217,7 +3217,7 @@ function hzLabQuizSparklePair() {
   if (!('serviceWorker' in navigator)) return;
 
   window.addEventListener('load', function () {
-    navigator.serviceWorker.register('/sw.js?v=302').catch(function (error) {
+    navigator.serviceWorker.register('/sw.js?v=303').catch(function (error) {
       console.warn('Service worker registration failed:', error);
     });
   });
