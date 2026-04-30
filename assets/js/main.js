@@ -1370,6 +1370,10 @@ var HZ_FLUENT_SPARKLE = {
   plus: ["Plus", "plus_3d.png"],
   crossMark: ["Cross mark", "cross_mark_3d.png"],
   gear: ["Gear", "gear_3d.png"],
+  artistPalette: ["Artist palette", "artist_palette_3d.png"],
+  trophy: ["Trophy", "trophy_3d.png"],
+  memo: ["Memo", "memo_3d.png"],
+  wastebasket: ["Wastebasket", "wastebasket_3d.png"],
 };
 
 /** data-lab-openmoji-hex (OpenMoji) → aset Fluent 3D untuk item Kuiz */
@@ -1386,6 +1390,11 @@ function hzFluentSparkleImg(pair, extraClass, w, h) {
   img.height = h;
   img.decoding = "async";
   return img;
+}
+
+function hzFluentImgHtml(pair, size) {
+  var src = hzFluent3dAsset(pair[0], pair[1]);
+  return '<img class="fluent-3d-emoji" src="' + src + '" alt="" width="' + size + '" height="' + size + '" decoding="async">';
 }
 
 function hzSparkleIcon(key) {
@@ -2980,7 +2989,7 @@ function hzLabQuizSparklePair() {
         '<div class="zym-settings-section">' +
           '<p class="zym-settings-section-label">Paparan</p>' +
           '<div class="zym-settings-row" id="zymset-theme-row">' +
-            '<span class="zym-settings-row-icon">🎨</span>' +
+            '<span class="zym-settings-row-icon">' + hzFluentImgHtml(HZ_FLUENT_SPARKLE.artistPalette, 24) + '</span>' +
             '<div class="zym-settings-row-body">' +
               '<span class="zym-settings-row-label">Tema</span>' +
             '</div>' +
@@ -2995,7 +3004,7 @@ function hzLabQuizSparklePair() {
         '<div class="zym-settings-section">' +
           '<p class="zym-settings-section-label">Data Pembelajaran</p>' +
           '<div class="zym-settings-row" id="zymset-quiz-row">' +
-            '<span class="zym-settings-row-icon">🏆</span>' +
+            '<span class="zym-settings-row-icon">' + hzFluentImgHtml(HZ_FLUENT_SPARKLE.trophy, 24) + '</span>' +
             '<div class="zym-settings-row-body">' +
               '<span class="zym-settings-row-label">Skor Kuiz</span>' +
               '<span class="zym-settings-row-meta" id="zymset-quiz-meta">memuatkan...</span>' +
@@ -3003,7 +3012,7 @@ function hzLabQuizSparklePair() {
             '<button class="zym-settings-action-btn" id="zymset-quiz-btn" type="button">Tetapkan Semula</button>' +
           '</div>' +
           '<div class="zym-settings-row" id="zymset-feedback-row">' +
-            '<span class="zym-settings-row-icon">📝</span>' +
+            '<span class="zym-settings-row-icon">' + hzFluentImgHtml(HZ_FLUENT_SPARKLE.memo, 24) + '</span>' +
             '<div class="zym-settings-row-body">' +
               '<span class="zym-settings-row-label">Maklum Balas Nota</span>' +
               '<span class="zym-settings-row-meta" id="zymset-feedback-meta">memuatkan...</span>' +
@@ -3015,7 +3024,7 @@ function hzLabQuizSparklePair() {
         // Padam Semua
         '<div class="zym-settings-section" style="padding-bottom:0.6rem">' +
           '<button class="zym-settings-danger-btn" id="zymset-clear-all-btn" type="button">' +
-            '🗑️ Padam Semua Data' +
+            hzFluentImgHtml(HZ_FLUENT_SPARKLE.wastebasket, 20) + ' Padam Semua Data' +
           '</button>' +
           '<div class="zym-settings-confirm" id="zymset-confirm">' +
             '<p class="zym-settings-confirm-text">Tindakan ini tidak boleh diterbalikkan. Semua tetapan dan data pembelajaran akan dipadamkan.</p>' +
@@ -3088,7 +3097,7 @@ function hzLabQuizSparklePair() {
       dangerBtn.textContent = '✓ Semua data dipadamkan';
       dangerBtn.disabled = true;
       setTimeout(function () {
-        dangerBtn.textContent = '🗑️ Padam Semua Data';
+        dangerBtn.innerHTML = hzFluentImgHtml(HZ_FLUENT_SPARKLE.wastebasket, 20) + ' Padam Semua Data';
         dangerBtn.disabled = false;
       }, 3000);
     });
