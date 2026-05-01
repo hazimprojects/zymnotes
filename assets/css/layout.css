@@ -376,9 +376,7 @@ h3 {
   50% { opacity: 0.6; }
 }
 
-/* Swipe page-turn: browser handles vertical pan natively; JS handles horizontal */
-.note-reading-main { touch-action: pan-y; }
-
+/* Swipe page-turn entrance animations */
 @keyframes swipeEnterRight {
   from { transform: translateX(100vw); }
   to   { transform: translateX(0); }
