@@ -3376,7 +3376,7 @@ function hzLabQuizSparklePair() {
   if (!('serviceWorker' in navigator)) return;
 
   window.addEventListener('load', function () {
-    navigator.serviceWorker.register('/sw.js?v=315').catch(function (error) {
+    navigator.serviceWorker.register('/sw.js?v=316').catch(function (error) {
       console.warn('Service worker registration failed:', error);
     });
   });
