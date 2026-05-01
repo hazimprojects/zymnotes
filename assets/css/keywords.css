@@ -415,10 +415,10 @@ html[data-theme="dark"][data-lang-mode="zh"] .kw.kw-zh-open .kw-zh-ann {
 
 .zh-disclaimer-icon {
   flex-shrink: 0;
-  font-size: 1rem;
-  font-weight: 900;
-  color: #dc2626;
-  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 0;
 }
 
 .zh-disclaimer-title {
@@ -436,19 +436,22 @@ html[data-theme="dark"][data-lang-mode="zh"] .kw.kw-zh-open .kw-zh-ann {
 
 .zh-disclaimer-close {
   flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: none;
   border: none;
-  color: #a8a29e;
-  font-size: 1rem;
+  font-size: 0;
   cursor: pointer;
   padding: 0.1rem 0.15rem;
-  line-height: 1;
-  transition: color 0.15s;
+  line-height: 0;
+  opacity: 0.6;
+  transition: opacity 0.15s;
   margin-left: 0.1rem;
 }
 
 .zh-disclaimer-close:hover {
-  color: #292524;
+  opacity: 1;
 }
 
 html[data-theme="dark"] .zh-disclaimer-toast {
@@ -465,13 +468,8 @@ html[data-theme="dark"] .zh-disclaimer-text {
   color: #a8a29e;
 }
 
-html[data-theme="dark"] .zh-disclaimer-close {
-  color: #78716c;
-}
-
-html[data-theme="dark"] .zh-disclaimer-close:hover {
-  color: #fafaf9;
-}
+html[data-theme="dark"] .zh-disclaimer-close { opacity: 0.55; }
+html[data-theme="dark"] .zh-disclaimer-close:hover { opacity: 1; }
 
 /* Zh chip — tap-to-reveal layout */
 
