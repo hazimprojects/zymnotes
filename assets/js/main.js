@@ -1420,6 +1420,7 @@ function hzFluentImgHtml(pair, size) {
 
 // Icons8 3D Fluency — sparkle menu & settings panel
 var HZ_ICONS8_BASE = 'https://img.icons8.com/3d-fluency/96/';
+var HZ_ICONS8_FALLBACK = 'https://img.icons8.com/fluency/96/';
 var HZ_ICONS8_SPARKLE = {
   sparkles:      'sparkle',
   worldMap:      'map',
@@ -1433,7 +1434,7 @@ var HZ_ICONS8_SPARKLE = {
   plus:          'fast-forward',
   crossMark:     'delete-sign',
   artistPalette: 'color-palette',
-  trophy:        'score',
+  trophy:        'trophy',
   memo:          'form',
   wastebasket:   'trash',
 };
@@ -1445,10 +1446,11 @@ function hzIcons8SparkleImg(name, extraClass, w, h) {
   img.width = w;
   img.height = h;
   img.decoding = 'async';
+  img.onerror = function() { if (!this._fb) { this._fb = 1; this.src = HZ_ICONS8_FALLBACK + name + '.png'; } };
   return img;
 }
 function hzIcons8ImgHtml(name, size) {
-  return '<img class="fluent-3d-emoji" src="' + HZ_ICONS8_BASE + name + '.png" alt="" width="' + size + '" height="' + size + '" decoding="async">';
+  return '<img class="fluent-3d-emoji" src="' + HZ_ICONS8_BASE + name + '.png" alt="" width="' + size + '" height="' + size + '" decoding="async" onerror="if(!this._fb){this._fb=1;this.src=\'https://img.icons8.com/fluency/96/' + name + '.png\'}">';
 }
 
 function hzSparkleIcon(key) {
