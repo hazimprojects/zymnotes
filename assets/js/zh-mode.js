@@ -1136,12 +1136,12 @@
     toast.setAttribute("role", "status");
     toast.setAttribute("aria-live", "polite");
     toast.innerHTML =
-      '<span class="zh-disclaimer-icon" aria-hidden="true">华</span>' +
+      '<span class="zh-disclaimer-icon" aria-hidden="true"><img src="https://img.icons8.com/?size=96&id=10lwQw8Al1lP&format=png" alt="" width="22" height="22" decoding="async" style="display:block;"></span>' +
       '<div class="zh-disclaimer-content">' +
         '<span class="zh-disclaimer-title">Mod Bahasa Cina aktif</span>' +
         '<span class="zh-disclaimer-text">Versi awal — gunakan nota BM sebagai rujukan utama.</span>' +
       "</div>" +
-      '<button class="zh-disclaimer-close" type="button" aria-label="Tutup">✕</button>';
+      '<button class="zh-disclaimer-close" type="button" aria-label="Tutup"><img src="https://img.icons8.com/3d-fluency/96/delete-sign.png" alt="" width="16" height="16" decoding="async" style="display:block;"></button>';
 
     document.body.appendChild(toast);
 
