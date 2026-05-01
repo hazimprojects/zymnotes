@@ -10,7 +10,7 @@
 @import url("layout.css?v=17");     /* Header, nav, dark mode fab, typography, footer, animations */
 @import url("ui.css?v=58");        /* Buttons, cards, homepage, hero, search, org-chart, interaction */
 @import url("paper.css?v=21");      /* Paper labels, boards, chips, accordion, steps, bab overview */
-@import url("keywords.css?v=32");   /* Keyword highlights, bloc identity, keyword legend, zh-mode annotations */
+@import url("keywords.css?v=33");   /* Keyword highlights, bloc identity, keyword legend, zh-mode annotations */
 @import url("responsive.css?v=8"); /* All @media queries + spacing fixes */
 @import url("themes.css?v=22");     /* Bab visual themes, dark mode overrides, war block chips */
 @import url("bab-hub-fluent-3d.css?v=1"); /* Bab induk: mesh + glass + chip wells (Fluent 3D) */
