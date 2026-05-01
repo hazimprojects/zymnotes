@@ -1081,30 +1081,9 @@ body.quiz-page.js-enhanced main.note-reading-main {
 }
 
 /* =============================================================
-   READING PAGES — bottom nav active indicator dot
-   Same visual as app-shell-page, but applied to bab-theme and
-   utility pages which now share the same nav chrome
+   READING PAGES — bottom nav active state (bold label)
+   Applied to bab-theme and utility pages which share the same nav chrome
 ============================================================= */
-
-body[class*="bab-theme-"] .hz-bottom-nav-item.is-active .hz-nav-icon,
-body.page-theme-thankyou .hz-bottom-nav-item.is-active .hz-nav-icon,
-body.page-theme-error .hz-bottom-nav-item.is-active .hz-nav-icon {
-  position: relative;
-}
-
-body[class*="bab-theme-"] .hz-bottom-nav-item.is-active .hz-nav-icon::before,
-body.page-theme-thankyou .hz-bottom-nav-item.is-active .hz-nav-icon::before,
-body.page-theme-error .hz-bottom-nav-item.is-active .hz-nav-icon::before {
-  content: '';
-  position: absolute;
-  top: -10px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 4px;
-  height: 4px;
-  border-radius: 999px;
-  background: var(--primary);
-}
 
 body[class*="bab-theme-"] .hz-bottom-nav-item.is-active,
 body.page-theme-thankyou .hz-bottom-nav-item.is-active,
