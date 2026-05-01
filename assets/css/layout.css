@@ -376,15 +376,17 @@ h3 {
   50% { opacity: 0.6; }
 }
 
-/* Swipe page-turn entrance */
+/* Swipe page-turn: browser handles vertical pan natively; JS handles horizontal */
+.note-reading-main { touch-action: pan-y; }
+
 @keyframes swipeEnterRight {
-  from { transform: translateX(100%); }
+  from { transform: translateX(100vw); }
   to   { transform: translateX(0); }
 }
 @keyframes swipeEnterLeft {
-  from { transform: translateX(-100%); }
+  from { transform: translateX(-100vw); }
   to   { transform: translateX(0); }
 }
-.swipe-enter-right { animation: swipeEnterRight 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both; }
-.swipe-enter-left  { animation: swipeEnterLeft  0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both; }
+.swipe-enter-right { animation: swipeEnterRight 0.32s cubic-bezier(0.25, 0.46, 0.45, 0.94) both; }
+.swipe-enter-left  { animation: swipeEnterLeft  0.32s cubic-bezier(0.25, 0.46, 0.45, 0.94) both; }
 body.swipe-animating { overflow-x: hidden; }
