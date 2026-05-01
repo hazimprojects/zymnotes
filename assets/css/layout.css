@@ -375,3 +375,16 @@ h3 {
   0%, 100% { opacity: 1; }
   50% { opacity: 0.6; }
 }
+
+/* Swipe page-turn entrance */
+@keyframes swipeEnterRight {
+  from { transform: translateX(100%); }
+  to   { transform: translateX(0); }
+}
+@keyframes swipeEnterLeft {
+  from { transform: translateX(-100%); }
+  to   { transform: translateX(0); }
+}
+.swipe-enter-right { animation: swipeEnterRight 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both; }
+.swipe-enter-left  { animation: swipeEnterLeft  0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both; }
+body.swipe-animating { overflow-x: hidden; }

@@ -2397,6 +2397,103 @@ function hzLabQuizSparklePair() {
   });
 })();
 
+// ── Swipe Navigation: touch left/right on subtopic pages ─────────────────────
+(function () {
+  // Entrance animation when arriving from a swipe
+  var swipeDir = sessionStorage.getItem('hz-swipe-dir');
+  if (swipeDir) {
+    sessionStorage.removeItem('hz-swipe-dir');
+    var enterEl = document.querySelector('.note-reading-main');
+    if (enterEl) {
+      document.body.classList.add('swipe-animating');
+      enterEl.classList.add(swipeDir === 'left' ? 'swipe-enter-right' : 'swipe-enter-left');
+      enterEl.addEventListener('animationend', function () {
+        enterEl.classList.remove('swipe-enter-right', 'swipe-enter-left');
+        document.body.classList.remove('swipe-animating');
+      }, { once: true });
+    }
+  }
+
+  if (!/\/notes\/bab-\d+-\d+\.html$/.test(location.pathname)) return;
+  var main = document.querySelector('.note-reading-main');
+  if (!main) return;
+
+  // Derive prev/next subtopic URLs from the global nav manifest
+  function getTargets() {
+    var fname = location.pathname.split('/').pop();
+    var flat = [];
+    ZYMNOTES_NAV.chapters.forEach(function (ch) {
+      ch.subtopics.forEach(function (sub) { flat.push(sub.url); });
+    });
+    var i = flat.indexOf(fname);
+    return i === -1 ? { prev: null, next: null } : {
+      prev: i > 0 ? flat[i - 1] : null,
+      next: i < flat.length - 1 ? flat[i + 1] : null
+    };
+  }
+
+  var tgt = getTargets();
+  var sx, sy, st, active = false, locked = false;
+
+  function snapBack() {
+    main.style.willChange = '';
+    main.style.transition = 'transform 0.38s cubic-bezier(0.34, 1.56, 0.64, 1)';
+    main.style.transform = 'translateX(0)';
+    main.addEventListener('transitionend', function () {
+      main.style.transition = '';
+      main.style.transform = '';
+      document.body.classList.remove('swipe-animating');
+    }, { once: true });
+  }
+
+  function goTo(url, dir) {
+    sessionStorage.setItem('hz-swipe-dir', dir);
+    main.style.willChange = '';
+    main.style.transition = 'transform 0.26s cubic-bezier(0.4, 0, 0.6, 1)';
+    main.style.transform = 'translateX(' + (dir === 'left' ? -window.innerWidth : window.innerWidth) + 'px)';
+    main.addEventListener('transitionend', function () { window.location.href = url; }, { once: true });
+  }
+
+  document.addEventListener('touchstart', function (e) {
+    if (e.touches.length !== 1) return;
+    sx = e.touches[0].clientX; sy = e.touches[0].clientY;
+    st = Date.now(); active = true; locked = false;
+  }, { passive: true });
+
+  document.addEventListener('touchmove', function (e) {
+    if (!active || e.touches.length !== 1) return;
+    var dx = e.touches[0].clientX - sx, dy = e.touches[0].clientY - sy;
+    if (!locked) {
+      if (Math.abs(dx) < 7 && Math.abs(dy) < 7) return;
+      if (Math.abs(dy) >= Math.abs(dx)) { active = false; return; }
+      locked = true;
+      main.style.willChange = 'transform';
+      main.style.transition = 'none';
+      document.body.classList.add('swipe-animating');
+    }
+    e.preventDefault();
+    var hasTarget = dx < 0 ? !!tgt.next : !!tgt.prev;
+    main.style.transform = 'translateX(' + (hasTarget ? dx : dx * 0.18) + 'px)';
+  }, { passive: false });
+
+  document.addEventListener('touchend', function (e) {
+    if (!active) return;
+    active = false;
+    if (!locked) return;
+    var dx = e.changedTouches[0].clientX - sx;
+    var vel = Math.abs(dx) / Math.max(1, Date.now() - st);
+    var go = Math.abs(dx) > Math.min(72, window.innerWidth * 0.2) || vel > 0.38;
+    if (dx < 0 && go && tgt.next)       goTo(tgt.next, 'left');
+    else if (dx > 0 && go && tgt.prev)  goTo(tgt.prev, 'right');
+    else                                 snapBack();
+  }, { passive: true });
+
+  document.addEventListener('touchcancel', function () {
+    if (!active) return; active = false;
+    if (locked) snapBack(); else main.style.willChange = '';
+  }, { passive: true });
+})();
+
 // ── Global Search Overlay ─────────────────────────────────────────────────────
 (function () {
   var PAGES = HZ_NOTES_SEARCH_PAGES;
