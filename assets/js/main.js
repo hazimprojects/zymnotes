@@ -1421,11 +1421,11 @@ function hzFluentImgHtml(pair, size) {
 // Icons8 3D Fluency — sparkle menu & settings panel
 var HZ_ICONS8_BASE = 'https://img.icons8.com/3d-fluency/96/';
 var HZ_ICONS8_SPARKLE = {
-  sparkles:      'sparkling',
-  worldMap:      'worldwide',
-  headphones:    'headphones',
-  puzzlePiece:   'puzzle',
-  gear:          'settings',
+  sparkles:      'sparkle',
+  worldMap:      'map',
+  headphones:    'audio',
+  puzzlePiece:   'puzzles',
+  gear:          'gear',
   play:          'play',
   pause:         'pause',
   stopMedia:     'stop',
@@ -1433,8 +1433,8 @@ var HZ_ICONS8_SPARKLE = {
   plus:          'fast-forward',
   crossMark:     'delete-sign',
   artistPalette: 'color-palette',
-  trophy:        'trophy',
-  memo:          'note',
+  trophy:        'score',
+  memo:          'form',
   wastebasket:   'trash',
 };
 function hzIcons8SparkleImg(name, extraClass, w, h) {
