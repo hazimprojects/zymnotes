@@ -2397,15 +2397,17 @@ function hzLabQuizSparklePair() {
   });
 })();
 
-// ── Swipe Navigation: touch left/right on subtopic pages ─────────────────────
-// touch-action:pan-y (CSS) lets browser handle vertical scroll natively so all
-// listeners here can be passive — no scroll jank, genuine 60fps finger tracking.
+// ── Swipe Navigation: touch left/right on note pages ─────────────────────────
+// Listeners are on <main> (not document) so { passive:false } on touchmove only
+// affects this element — document-level scroll stays fast. e.preventDefault() is
+// called only after horizontal intent is confirmed, stopping the browser from also
+// scrolling vertically while the element is tracking the finger.
 (function () {
-  // Entrance animation when arriving from a swipe
+  // Apply entrance animation when arriving from a swipe
   var swipeDir = sessionStorage.getItem('hz-swipe-dir');
   if (swipeDir) {
     sessionStorage.removeItem('hz-swipe-dir');
-    var enterEl = document.querySelector('.note-reading-main');
+    var enterEl = document.querySelector('.note-reading-main') || document.querySelector('main');
     if (enterEl) {
       document.body.classList.add('swipe-animating');
       enterEl.classList.add(swipeDir === 'left' ? 'swipe-enter-right' : 'swipe-enter-left');
@@ -2414,17 +2416,31 @@ function hzLabQuizSparklePair() {
         document.body.classList.remove('swipe-animating');
       };
       enterEl.addEventListener('animationend', cleanEnter, { once: true });
-      setTimeout(cleanEnter, 600); // fallback if animationend doesn't fire
+      setTimeout(cleanEnter, 600);
     }
   }
 
-  if (!/\/notes\/bab-\d+-\d+\.html$/.test(location.pathname)) return;
-  var main = document.querySelector('.note-reading-main');
+  // Run on subtopic pages AND chapter hub pages
+  var isSubtopic = /\/notes\/bab-\d+-\d+\.html$/.test(location.pathname);
+  var isHub      = /\/notes\/bab-\d+\.html$/.test(location.pathname);
+  if (!isSubtopic && !isHub) return;
+
+  var main = document.querySelector('.note-reading-main') || document.querySelector('main');
   if (!main) return;
 
-  // Build flat subtopic list from global nav manifest for prev/next lookup
   function getTargets() {
     var fname = location.pathname.split('/').pop();
+    if (isHub) {
+      // Hub page: swipe left → first subtopic of this chapter
+      var hm = fname.match(/^bab-(\d+)\.html$/);
+      if (!hm) return { prev: null, next: null };
+      var chapNum = parseInt(hm[1]), ch = null;
+      for (var j = 0; j < ZYMNOTES_NAV.chapters.length; j++) {
+        if (ZYMNOTES_NAV.chapters[j].num === chapNum) { ch = ZYMNOTES_NAV.chapters[j]; break; }
+      }
+      return { prev: null, next: ch && ch.subtopics.length ? ch.subtopics[0].url : null };
+    }
+    // Subtopic page: flat list across all chapters
     var flat = [];
     ZYMNOTES_NAV.chapters.forEach(function (ch) {
       ch.subtopics.forEach(function (sub) { flat.push(sub.url); });
@@ -2437,18 +2453,9 @@ function hzLabQuizSparklePair() {
   }
 
   var tgt = getTargets();
-  var sx, sy, st, active = false, locked = false, rafId = null;
-
-  function applyX(x) {
-    if (rafId) cancelAnimationFrame(rafId);
-    rafId = requestAnimationFrame(function () {
-      main.style.transform = 'translateX(' + x + 'px)';
-      rafId = null;
-    });
-  }
+  var sx, sy, st, active = false, locked = false;
 
   function snapBack() {
-    if (rafId) { cancelAnimationFrame(rafId); rafId = null; }
     document.body.classList.remove('swipe-animating');
     main.style.willChange = '';
     main.style.transition = 'transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1)';
@@ -2460,12 +2467,10 @@ function hzLabQuizSparklePair() {
   }
 
   function goTo(url, dir) {
-    if (rafId) { cancelAnimationFrame(rafId); rafId = null; }
     var target = (dir === 'left' ? -1 : 1) * window.innerWidth;
     sessionStorage.setItem('hz-swipe-dir', dir);
     main.style.willChange = '';
-    // Double rAF: first frame applies transition property, second applies transform
-    // so the browser doesn't batch them into a single no-op paint.
+    // Double rAF: ensure transition property is computed before transform changes.
     requestAnimationFrame(function () {
       main.style.transition = 'transform 0.22s cubic-bezier(0.4, 0, 1, 1)';
       requestAnimationFrame(function () {
@@ -2475,36 +2480,36 @@ function hzLabQuizSparklePair() {
     setTimeout(function () { window.location.href = url; }, 260);
   }
 
-  // All listeners on main (not document) + passive — works alongside touch-action:pan-y
   main.addEventListener('touchstart', function (e) {
     if (e.touches.length !== 1) return;
-    // Interrupt any snap-back in progress
-    main.style.transition = 'none';
+    main.style.transition = 'none'; // interrupt any snap-back in progress
     sx = e.touches[0].clientX; sy = e.touches[0].clientY;
     st = Date.now(); active = true; locked = false;
   }, { passive: true });
 
+  // { passive: false } required so e.preventDefault() can stop vertical scroll
+  // while the finger is tracking horizontally. Only called after horizontal is confirmed.
   main.addEventListener('touchmove', function (e) {
     if (!active || e.touches.length !== 1) return;
     var dx = e.touches[0].clientX - sx, dy = e.touches[0].clientY - sy;
     if (!locked) {
-      if (Math.abs(dx) < 6 && Math.abs(dy) < 6) return; // wait for intent
-      if (Math.abs(dy) > Math.abs(dx)) { active = false; return; } // vertical scroll
+      if (Math.abs(dx) < 8 && Math.abs(dy) < 8) return; // dead zone — wait for intent
+      if (Math.abs(dy) > Math.abs(dx)) { active = false; return; } // clearly vertical
       locked = true;
       main.style.willChange = 'transform';
       document.body.classList.add('swipe-animating');
     }
+    e.preventDefault(); // stop browser scrolling while tracking horizontal swipe
     var hasTarget = dx < 0 ? !!tgt.next : !!tgt.prev;
-    applyX(hasTarget ? dx : dx * 0.2); // rubber-band when no target
-  }, { passive: true });
+    main.style.transform = 'translateX(' + (hasTarget ? dx : dx * 0.2) + 'px)';
+  }, { passive: false });
 
   main.addEventListener('touchend', function (e) {
     if (!active) return; active = false;
     if (!locked) return;
-    if (rafId) { cancelAnimationFrame(rafId); rafId = null; }
     var dx = e.changedTouches[0].clientX - sx;
     var vel = Math.abs(dx) / Math.max(1, Date.now() - st); // px/ms
-    var go = (Math.abs(dx) > 50 || vel > 0.3) && Math.abs(dx) > 15;
+    var go = (Math.abs(dx) > 40 || vel > 0.25) && Math.abs(dx) > 15;
     if      (dx < 0 && go && tgt.next) goTo(tgt.next, 'left');
     else if (dx > 0 && go && tgt.prev) goTo(tgt.prev, 'right');
     else                                snapBack();
@@ -2512,7 +2517,6 @@ function hzLabQuizSparklePair() {
 
   main.addEventListener('touchcancel', function () {
     if (!active) return; active = false;
-    if (rafId) { cancelAnimationFrame(rafId); rafId = null; }
     if (locked) snapBack(); else main.style.willChange = '';
   }, { passive: true });
 })();
