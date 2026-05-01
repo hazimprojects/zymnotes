@@ -1418,14 +1418,45 @@ function hzFluentImgHtml(pair, size) {
   return '<img class="fluent-3d-emoji" src="' + src + '" alt="" width="' + size + '" height="' + size + '" decoding="async">';
 }
 
+// Icons8 3D Fluency — sparkle menu & settings panel
+var HZ_ICONS8_BASE = 'https://img.icons8.com/3d-fluency/96/';
+var HZ_ICONS8_SPARKLE = {
+  sparkles:      'sparkling',
+  worldMap:      'worldwide',
+  headphones:    'headphones',
+  puzzlePiece:   'puzzle',
+  gear:          'settings',
+  play:          'play',
+  pause:         'pause',
+  stopMedia:     'stop',
+  minus:         'rewind',
+  plus:          'fast-forward',
+  crossMark:     'delete-sign',
+  artistPalette: 'color-palette',
+  trophy:        'trophy',
+  memo:          'note',
+  wastebasket:   'trash',
+};
+function hzIcons8SparkleImg(name, extraClass, w, h) {
+  var img = document.createElement('img');
+  img.className = 'fluent-3d-emoji' + (extraClass ? ' ' + extraClass : '');
+  img.src = HZ_ICONS8_BASE + name + '.png';
+  img.alt = '';
+  img.width = w;
+  img.height = h;
+  img.decoding = 'async';
+  return img;
+}
+function hzIcons8ImgHtml(name, size) {
+  return '<img class="fluent-3d-emoji" src="' + HZ_ICONS8_BASE + name + '.png" alt="" width="' + size + '" height="' + size + '" decoding="async">';
+}
+
 function hzSparkleIcon(key) {
-  return HZ_FLUENT_SPARKLE[key] || HZ_FLUENT_SPARKLE.puzzlePiece;
+  return HZ_ICONS8_SPARKLE[key] || HZ_ICONS8_SPARKLE.puzzlePiece;
 }
 
 function hzLabQuizSparklePair() {
-  var hex = document.body.dataset.labOpenmojiHex;
-  if (hex && HZ_LAB_OPENMOJI_HEX_TO_FLUENT[hex]) return HZ_LAB_OPENMOJI_HEX_TO_FLUENT[hex];
-  return HZ_FLUENT_SPARKLE.puzzlePiece;
+  return HZ_ICONS8_SPARKLE.puzzlePiece;
 }
 
 // =========================
@@ -1460,7 +1491,7 @@ function hzLabQuizSparklePair() {
       noticeIconWrap.className = 'audio-notice-icon';
       noticeIconWrap.setAttribute('aria-hidden', 'true');
       noticeIconWrap.appendChild(
-        hzFluentSparkleImg(hzSparkleIcon("headphones"), "openmoji--notice-icon", 22, 22)
+        hzIcons8SparkleImg(hzSparkleIcon("headphones"), "openmoji--notice-icon", 22, 22)
       );
 
       var contentWrap = document.createElement('div');
@@ -1478,7 +1509,7 @@ function hzLabQuizSparklePair() {
       closeBtn.className = 'audio-notice-close';
       closeBtn.type = 'button';
       closeBtn.setAttribute('aria-label', 'Tutup');
-      closeBtn.appendChild(hzFluentSparkleImg(HZ_FLUENT_SPARKLE.crossMark, 'openmoji--audio-notice-close', 16, 16));
+      closeBtn.appendChild(hzIcons8SparkleImg(HZ_ICONS8_SPARKLE.crossMark, 'openmoji--audio-notice-close', 16, 16));
 
       sheet.appendChild(noticeIconWrap);
       sheet.appendChild(contentWrap);
@@ -1509,7 +1540,7 @@ function hzLabQuizSparklePair() {
       labHref &&
       /(?:^|\/)quiz\/bab-(?:1-[1-4]|2-[1-8])\.html(?:$|[?#])/.test(labHref)
     ) {
-      labQuizSparklePair = HZ_FLUENT_SPARKLE.puzzlePiece;
+      labQuizSparklePair = HZ_ICONS8_SPARKLE.puzzlePiece;
     }
 
     var wrap = document.createElement('div');
@@ -1526,7 +1557,7 @@ function hzLabQuizSparklePair() {
     var itemsContainer = document.createElement('div');
     itemsContainer.className = 'note-sparkle-items';
 
-    function makeSparkleItemFluent(pair, tooltip, type, href) {
+    function makeSparkleItemFluent(name, tooltip, type, href) {
       var el = href ? document.createElement('a') : document.createElement('button');
       if (href) { el.href = href; }
       else { el.type = 'button'; }
@@ -1535,32 +1566,32 @@ function hzLabQuizSparklePair() {
       el.setAttribute('data-tooltip', tooltip);
       el.setAttribute('data-sparkle-type', type);
       el.appendChild(
-        hzFluentSparkleImg(pair, 'openmoji--sparkle-item', 24, 24)
+        hzIcons8SparkleImg(name, 'openmoji--sparkle-item', 24, 24)
       );
       return el;
     }
 
-    function setFabFluent(pair) {
+    function setFabFluent(name) {
       fab.textContent = '';
       fab.appendChild(
-        hzFluentSparkleImg(pair, 'openmoji--sparkle-fab', 24, 24)
+        hzIcons8SparkleImg(name, 'openmoji--sparkle-fab', 24, 24)
       );
     }
 
-    function setSparkleItemFluent(el, pair) {
+    function setSparkleItemFluent(el, name) {
       if (!el) return;
       el.textContent = '';
       el.appendChild(
-        hzFluentSparkleImg(pair, 'openmoji--sparkle-item', 24, 24)
+        hzIcons8SparkleImg(name, 'openmoji--sparkle-item', 24, 24)
       );
     }
 
     itemsContainer.appendChild(
-      makeSparkleItemFluent(HZ_FLUENT_SPARKLE.worldMap, 'Navigasi Cepat', 'nav')
+      makeSparkleItemFluent(HZ_ICONS8_SPARKLE.worldMap, 'Navigasi Cepat', 'nav')
     );
     if (audioEl) {
       itemsContainer.appendChild(
-        makeSparkleItemFluent(HZ_FLUENT_SPARKLE.headphones, 'Main audio', 'audio')
+        makeSparkleItemFluent(HZ_ICONS8_SPARKLE.headphones, 'Main audio', 'audio')
       );
     }
     if (labHref) {
@@ -1571,7 +1602,7 @@ function hzLabQuizSparklePair() {
 
     // Item tetapan — dibuat terus di sini supaya timing betul
     (function () {
-      var settingsEl = makeSparkleItemFluent(HZ_FLUENT_SPARKLE.gear, 'Tetapan', 'settings');
+      var settingsEl = makeSparkleItemFluent(HZ_ICONS8_SPARKLE.gear, 'Tetapan', 'settings');
       settingsEl.addEventListener('click', function () {
         wrap.classList.remove('is-open');
         if (window.ZymSettings) window.ZymSettings.open();
@@ -1583,7 +1614,7 @@ function hzLabQuizSparklePair() {
     fab.className = 'note-sparkle-fab';
     fab.type = 'button';
     fab.setAttribute('aria-label', 'Menu pembelajaran');
-    setFabFluent(HZ_FLUENT_SPARKLE.sparkles);
+    setFabFluent(HZ_ICONS8_SPARKLE.sparkles);
 
     // ── Audio Progress Ring (around FAB) ──────────────────────────────
     var CIRC = 2 * Math.PI * 30;
@@ -1641,7 +1672,7 @@ function hzLabQuizSparklePair() {
     fabGroup.appendChild(countdownEl);
 
     // ── Audio Side Controls ───────────────────────────────────────────
-    function makeCtrlBtnFluent(pair, ariaLabel, action, extraClass) {
+    function makeCtrlBtnFluent(name, ariaLabel, action, extraClass) {
       var btn = document.createElement('button');
       btn.type = 'button';
       btn.className = 'sparkle-ctrl-btn';
@@ -1649,15 +1680,15 @@ function hzLabQuizSparklePair() {
       btn.setAttribute('data-ctrl', action);
       btn.setAttribute('aria-label', ariaLabel);
       btn.appendChild(
-        hzFluentSparkleImg(pair, 'openmoji--sparkle-ctrl', 18, 18)
+        hzIcons8SparkleImg(name, 'openmoji--sparkle-ctrl', 18, 18)
       );
       return btn;
     }
 
-    var ctrlStop = makeCtrlBtnFluent(HZ_FLUENT_SPARKLE.stopMedia, 'Berhenti', 'stop');
-    var ctrlBack = makeCtrlBtnFluent(HZ_FLUENT_SPARKLE.minus, 'Undur 10 saat', 'skip-back');
-    var ctrlPlayPause = makeCtrlBtnFluent(HZ_FLUENT_SPARKLE.play, 'Main / jeda', 'play-pause', 'sparkle-ctrl-btn--play-pause');
-    var ctrlFwd = makeCtrlBtnFluent(HZ_FLUENT_SPARKLE.plus, 'Maju 10 saat', 'skip-fwd');
+    var ctrlStop = makeCtrlBtnFluent(HZ_ICONS8_SPARKLE.stopMedia, 'Berhenti', 'stop');
+    var ctrlBack = makeCtrlBtnFluent(HZ_ICONS8_SPARKLE.minus, 'Undur 10 saat', 'skip-back');
+    var ctrlPlayPause = makeCtrlBtnFluent(HZ_ICONS8_SPARKLE.play, 'Main / jeda', 'play-pause', 'sparkle-ctrl-btn--play-pause');
+    var ctrlFwd = makeCtrlBtnFluent(HZ_ICONS8_SPARKLE.plus, 'Maju 10 saat', 'skip-fwd');
 
     var audioControls = document.createElement('div');
     audioControls.className = 'sparkle-audio-controls';
@@ -1787,16 +1818,16 @@ function hzLabQuizSparklePair() {
     if (audioEl) {
       var audioBtn = itemsContainer.querySelector('[data-sparkle-type="audio"]');
 
-      function replaceSparkleCtrlIcon(btn, pair) {
+      function replaceSparkleCtrlIcon(btn, name) {
         btn.replaceChildren(
-          hzFluentSparkleImg(pair, 'openmoji--sparkle-ctrl', 18, 18)
+          hzIcons8SparkleImg(name, 'openmoji--sparkle-ctrl', 18, 18)
         );
       }
 
       function syncPlayPauseCtrlVisual() {
         replaceSparkleCtrlIcon(
           ctrlPlayPause,
-          audioEl.paused ? HZ_FLUENT_SPARKLE.play : HZ_FLUENT_SPARKLE.pause
+          audioEl.paused ? HZ_ICONS8_SPARKLE.play : HZ_ICONS8_SPARKLE.pause
         );
         ctrlPlayPause.classList.toggle('is-paused', audioEl.paused);
       }
@@ -1818,32 +1849,32 @@ function hzLabQuizSparklePair() {
       function stopAudio() {
         audioEl.pause();
         audioEl.currentTime = 0;
-        setFabFluent(HZ_FLUENT_SPARKLE.sparkles);
+        setFabFluent(HZ_ICONS8_SPARKLE.sparkles);
         wrap.classList.remove('audio-active');
         wrap.classList.remove('controls-open');
         syncSparklePanelState();
         progCircle.setAttribute('stroke-dashoffset', '0');
         countdownEl.textContent = '';
-        replaceSparkleCtrlIcon(ctrlPlayPause, HZ_FLUENT_SPARKLE.play);
+        replaceSparkleCtrlIcon(ctrlPlayPause, HZ_ICONS8_SPARKLE.play);
         ctrlPlayPause.classList.remove('is-paused');
-        setSparkleItemFluent(audioBtn, HZ_FLUENT_SPARKLE.headphones);
+        setSparkleItemFluent(audioBtn, HZ_ICONS8_SPARKLE.headphones);
       }
 
       audioEl.addEventListener('timeupdate', updateRing);
 
       audioEl.addEventListener('play', function() {
-        setFabFluent(HZ_FLUENT_SPARKLE.headphones);
+        setFabFluent(HZ_ICONS8_SPARKLE.headphones);
         wrap.classList.add('audio-active');
         wrap.classList.remove('is-open');
         syncSparklePanelState();
         syncPlayPauseCtrlVisual();
         countdownEl.textContent = fmtRemaining();
-        setSparkleItemFluent(audioBtn, HZ_FLUENT_SPARKLE.pause);
+        setSparkleItemFluent(audioBtn, HZ_ICONS8_SPARKLE.pause);
       });
 
       audioEl.addEventListener('pause', function() {
         syncPlayPauseCtrlVisual();
-        setSparkleItemFluent(audioBtn, HZ_FLUENT_SPARKLE.headphones);
+        setSparkleItemFluent(audioBtn, HZ_ICONS8_SPARKLE.headphones);
       });
 
       audioEl.addEventListener('ended', stopAudio);
@@ -3012,7 +3043,7 @@ function hzLabQuizSparklePair() {
         '<div class="zym-settings-section">' +
           '<p class="zym-settings-section-label">Paparan</p>' +
           '<div class="zym-settings-row" id="zymset-theme-row">' +
-            '<span class="zym-settings-row-icon">' + hzFluentImgHtml(HZ_FLUENT_SPARKLE.artistPalette, 24) + '</span>' +
+            '<span class="zym-settings-row-icon">' + hzIcons8ImgHtml(HZ_ICONS8_SPARKLE.artistPalette, 24) + '</span>' +
             '<div class="zym-settings-row-body">' +
               '<span class="zym-settings-row-label">Tema</span>' +
             '</div>' +
@@ -3027,7 +3058,7 @@ function hzLabQuizSparklePair() {
         '<div class="zym-settings-section">' +
           '<p class="zym-settings-section-label">Data Pembelajaran</p>' +
           '<div class="zym-settings-row" id="zymset-quiz-row">' +
-            '<span class="zym-settings-row-icon">' + hzFluentImgHtml(HZ_FLUENT_SPARKLE.trophy, 24) + '</span>' +
+            '<span class="zym-settings-row-icon">' + hzIcons8ImgHtml(HZ_ICONS8_SPARKLE.trophy, 24) + '</span>' +
             '<div class="zym-settings-row-body">' +
               '<span class="zym-settings-row-label">Skor Kuiz</span>' +
               '<span class="zym-settings-row-meta" id="zymset-quiz-meta">memuatkan...</span>' +
@@ -3035,7 +3066,7 @@ function hzLabQuizSparklePair() {
             '<button class="zym-settings-action-btn" id="zymset-quiz-btn" type="button">Tetapkan Semula</button>' +
           '</div>' +
           '<div class="zym-settings-row" id="zymset-feedback-row">' +
-            '<span class="zym-settings-row-icon">' + hzFluentImgHtml(HZ_FLUENT_SPARKLE.memo, 24) + '</span>' +
+            '<span class="zym-settings-row-icon">' + hzIcons8ImgHtml(HZ_ICONS8_SPARKLE.memo, 24) + '</span>' +
             '<div class="zym-settings-row-body">' +
               '<span class="zym-settings-row-label">Maklum Balas Nota</span>' +
               '<span class="zym-settings-row-meta" id="zymset-feedback-meta">memuatkan...</span>' +
@@ -3047,7 +3078,7 @@ function hzLabQuizSparklePair() {
         // Padam Semua
         '<div class="zym-settings-section" style="padding-bottom:0.6rem">' +
           '<button class="zym-settings-danger-btn" id="zymset-clear-all-btn" type="button">' +
-            hzFluentImgHtml(HZ_FLUENT_SPARKLE.wastebasket, 20) + ' Padam Semua Data' +
+            hzIcons8ImgHtml(HZ_ICONS8_SPARKLE.wastebasket, 20) + ' Padam Semua Data' +
           '</button>' +
           '<div class="zym-settings-confirm" id="zymset-confirm">' +
             '<p class="zym-settings-confirm-text">Tindakan ini tidak boleh diterbalikkan. Semua tetapan dan data pembelajaran akan dipadamkan.</p>' +
@@ -3120,7 +3151,7 @@ function hzLabQuizSparklePair() {
       dangerBtn.textContent = '✓ Semua data dipadamkan';
       dangerBtn.disabled = true;
       setTimeout(function () {
-        dangerBtn.innerHTML = hzFluentImgHtml(HZ_FLUENT_SPARKLE.wastebasket, 20) + ' Padam Semua Data';
+        dangerBtn.innerHTML = hzIcons8ImgHtml(HZ_ICONS8_SPARKLE.wastebasket, 20) + ' Padam Semua Data';
         dangerBtn.disabled = false;
       }, 3000);
     });
