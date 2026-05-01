@@ -3,7 +3,7 @@
 ================================================================================
   TEMPLATE RASMI: HALAMAN INDUK BAB — ZymNotes
 ================================================================================
-  Versi    : 1.0
+  Versi    : 1.1
   Lokasi   : _templates/nota-bab.html
   Tujuan   : Template universal untuk halaman induk bab/unit merentasi semua
              subjek (Sejarah, Matematik, Sains, BM, dll.)
@@ -13,6 +13,16 @@
   2. Gantikan semua placeholder [[...]] dengan nilai sebenar
   3. Tambah kad subtopik (bab-card) dalam blok [C] mengikut bilangan subtopik
   4. Simpan dan semak di browser
+
+  KEMAS KINI v1.1:
+  • Title/meta/OG/Twitter diselaraskan dengan format halaman semasa
+  • Font loading ditukar kepada async/non-blocking (preload + onload + noscript)
+  • Manifest dikemaskini dengan versi ?v=18
+  • paper-label ditukar kepada paper-label--with-icon dengan Fluent emoji img
+  • Keyword legend diselaraskan: 8 item (kw-gerakan, kw-karya)
+  • Synopsis chips ditambah data-zh-unit-id dan data-zh-mode contoh
+  • Ditambah zh-mode.js sebelum main.js
+  • Ditambah Course JSON-LD schema
 
   PLACEHOLDER YANG PERLU DIGANTI:
   [[X]]               → Nombor bab/unit, cth: 1, 2, 7
@@ -48,15 +58,15 @@
        ═══════════════════════════════════════════════════════════════════════ -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <title>[[BAB_LABEL]] · [[TAJUK_BAB]] · ZymNotes</title>
-  <meta name="description" content="Halaman induk [[BAB_LABEL]] [[SUBJEK_NAMA]] Tingkatan [[TINGKATAN]]: [[TAJUK_BAB]]." />
+  <title>Nota [[SUBJEK_NAMA]] Tingkatan [[TINGKATAN]] [[BAB_LABEL]]: [[TAJUK_BAB]] | ZymNotes</title>
+  <meta name="description" content="Nota [[SUBJEK_NAMA]] Tingkatan [[TINGKATAN]] [[BAB_LABEL]]: [[TAJUK_BAB]]. Ringkasan bab induk dan pautan subtopik untuk ulang kaji SPM." />
   <link rel="canonical" href="https://zymnotes.com/notes/[[FAIL_INI]]" />
 
   <!-- ═══════════════════════════════════════════════════════════════════════
        OPEN GRAPH
        ═══════════════════════════════════════════════════════════════════════ -->
-  <meta property="og:title" content="[[BAB_LABEL]] · [[TAJUK_BAB]] · ZymNotes" />
-  <meta property="og:description" content="Halaman induk [[BAB_LABEL]] [[SUBJEK_NAMA]] Tingkatan [[TINGKATAN]]: [[TAJUK_BAB]]." />
+  <meta property="og:title" content="Nota [[SUBJEK_NAMA]] Tingkatan [[TINGKATAN]] [[BAB_LABEL]]: [[TAJUK_BAB]] | ZymNotes" />
+  <meta property="og:description" content="Nota [[SUBJEK_NAMA]] Tingkatan [[TINGKATAN]] [[BAB_LABEL]]: [[TAJUK_BAB]]. Ringkasan bab induk dan pautan subtopik untuk ulang kaji SPM." />
   <meta property="og:url" content="https://zymnotes.com/notes/[[FAIL_INI]]" />
   <meta property="og:image" content="https://zymnotes.com/assets/og-image.png?v=[[OG_IMAGE_V]]" />
   <meta property="og:image:url" content="https://zymnotes.com/assets/og-image.png?v=[[OG_IMAGE_V]]" />
@@ -73,8 +83,8 @@
        TWITTER CARD
        ═══════════════════════════════════════════════════════════════════════ -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="[[BAB_LABEL]] · [[TAJUK_BAB]] · ZymNotes" />
-  <meta name="twitter:description" content="Halaman induk [[BAB_LABEL]] [[SUBJEK_NAMA]] Tingkatan [[TINGKATAN]]: [[TAJUK_BAB]]." />
+  <meta name="twitter:title" content="Nota [[SUBJEK_NAMA]] Tingkatan [[TINGKATAN]] [[BAB_LABEL]]: [[TAJUK_BAB]] | ZymNotes" />
+  <meta name="twitter:description" content="Nota [[SUBJEK_NAMA]] Tingkatan [[TINGKATAN]] [[BAB_LABEL]]: [[TAJUK_BAB]]. Ringkasan bab induk dan pautan subtopik untuk ulang kaji SPM." />
   <meta name="twitter:image" content="https://zymnotes.com/assets/og-image.png?v=[[OG_IMAGE_V]]" />
   <meta name="twitter:image:src" content="https://zymnotes.com/assets/og-image.png?v=[[OG_IMAGE_V]]" />
 
@@ -83,10 +93,7 @@
        ═══════════════════════════════════════════════════════════════════════ -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600&family=Nunito:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Lexend:wght@400;500;600;700;800&display=swap"
-    rel="stylesheet"
-  />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600&family=Nunito:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Lexend:wght@400;500;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'" /><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600&family=Nunito:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Lexend:wght@400;500;600;700;800&display=swap" /></noscript>
 
   <!-- ═══════════════════════════════════════════════════════════════════════
        CSS
@@ -130,7 +137,7 @@
   <!-- ═══════════════════════════════════════════════════════════════════════
        PWA
        ═══════════════════════════════════════════════════════════════════════ -->
-  <link rel="manifest" href="/manifest.json" />
+  <link rel="manifest" href="/manifest.json?v=18" />
   <link rel="icon" type="image/svg+xml" href="/icons/icon.svg?v=5" />
   <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png?v=3" />
   <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png?v=3" />
@@ -176,7 +183,7 @@
     <section class="section page-hero papercraft-hero">
       <div class="container narrow">
 
-        <div class="paper-label">[[BAB_LABEL]] Induk</div>
+        <div class="paper-label paper-label--with-icon"><img class="fluent-3d-emoji fluent-3d-emoji--label-icon" src="https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@62ecdc0d7ca5/assets/Books/3D/books_3d.png" width="16" height="16" alt="" decoding="async" />Bab Induk</div>
         <h1>[[BAB_LABEL]] · [[TAJUK_BAB]]</h1>
 
         <p class="lead">
@@ -184,18 +191,19 @@
           [[TEKS PENERANGAN RINGKAS BAB INI]]
         </p>
 
-        <!-- Keyword legend — sama seperti subtopik dalam bab ini -->
+        <!-- Keyword legend — konsisten dengan semua subtopik dalam bab ini
+             SESUAIKAN mengikut keperluan bab: buang atau ganti kelas kw-* yang tidak relevan -->
         <div class="keyword-legend-wrap">
           <p class="keyword-legend-title">Warna kata kunci</p>
           <div class="keyword-legend-grid">
-            <!-- GANTI mengikut keperluan bab — konsisten dengan semua subtopik dalam bab ini -->
-            <span class="keyword-legend-item"><span class="kw kw-tokoh">Tokoh / Pemerintah</span></span>
-            <span class="keyword-legend-item"><span class="kw kw-tahun">Tahun / Tarikh</span></span>
-            <span class="keyword-legend-item"><span class="kw kw-tempat">Tempat / Wilayah</span></span>
+            <span class="keyword-legend-item"><span class="kw kw-tokoh">Tokoh</span></span>
+            <span class="keyword-legend-item"><span class="kw kw-tahun">Tahun</span></span>
+            <span class="keyword-legend-item"><span class="kw kw-tempat">Tempat</span></span>
             <span class="keyword-legend-item"><span class="kw kw-peristiwa">Peristiwa</span></span>
+            <span class="keyword-legend-item"><span class="kw kw-gerakan">Gerakan</span></span>
             <span class="keyword-legend-item"><span class="kw kw-pertubuhan">Pertubuhan</span></span>
-            <span class="keyword-legend-item"><span class="kw kw-perjanjian">Perjanjian / Undang-undang</span></span>
-            <span class="keyword-legend-item"><span class="kw kw-istilah">Istilah Penting</span></span>
+            <span class="keyword-legend-item"><span class="kw kw-karya">Karya</span></span>
+            <span class="keyword-legend-item"><span class="kw kw-istilah">Istilah</span></span>
           </div>
         </div>
 
@@ -221,22 +229,25 @@
           <div class="paper-strip strip-summary">Sinopsis [[BAB_LABEL]]</div>
           <div class="paper-chip-list">
 
-            <div class="paper-chip paper-chip-sentence">
+            <!-- data-zh-unit-id: ID unik untuk terjemahan Cina, format: [[bab-X-synopsis-N]]
+                 data-zh-mode="explain": tandakan jika ayat perlu penjelasan dalam mod Cina
+                 Ganti emoji pushpin dengan emoji relevan mengikut kandungan -->
+            <div class="paper-chip paper-chip-sentence" data-zh-unit-id="[[bab-X-synopsis-1]]" data-zh-mode="explain">
               <span class="chip-icon"><img class="fluent-3d-emoji openmoji--chip" src="https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@62ecdc0d7ca5/assets/Pushpin/3D/pushpin_3d.png" width="18" height="18" alt="" decoding="async" /></span>
               <!-- Idea utama pertama -->
             </div>
 
-            <div class="paper-chip paper-chip-sentence">
+            <div class="paper-chip paper-chip-sentence" data-zh-unit-id="[[bab-X-synopsis-2]]" data-zh-mode="explain">
               <span class="chip-icon"><img class="fluent-3d-emoji openmoji--chip" src="https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@62ecdc0d7ca5/assets/Pushpin/3D/pushpin_3d.png" width="18" height="18" alt="" decoding="async" /></span>
               <!-- Idea utama kedua -->
             </div>
 
-            <div class="paper-chip paper-chip-sentence">
+            <div class="paper-chip paper-chip-sentence" data-zh-unit-id="[[bab-X-synopsis-3]]" data-zh-mode="explain">
               <span class="chip-icon"><img class="fluent-3d-emoji openmoji--chip" src="https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@62ecdc0d7ca5/assets/Pushpin/3D/pushpin_3d.png" width="18" height="18" alt="" decoding="async" /></span>
               <!-- Idea utama ketiga -->
             </div>
 
-            <div class="paper-chip paper-chip-sentence">
+            <div class="paper-chip paper-chip-sentence" data-zh-unit-id="[[bab-X-synopsis-4]]" data-zh-mode="explain">
               <span class="chip-icon"><img class="fluent-3d-emoji openmoji--chip" src="https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@62ecdc0d7ca5/assets/Pushpin/3D/pushpin_3d.png" width="18" height="18" alt="" decoding="async" /></span>
               <!-- Idea utama keempat -->
             </div>
@@ -338,7 +349,7 @@
   <!-- ═══════════════════════════════════════════════════════════════════════
        JAVASCRIPT
        ═══════════════════════════════════════════════════════════════════════ -->
-  <script src="../assets/js/main.js?v=218"></script>
+  <script src="../assets/js/zh-mode.js?v=47"></script><script src="../assets/js/main.js?v=218"></script>
 
   <!-- ═══════════════════════════════════════════════════════════════════════
        STRUCTURED DATA — 3 tahap sahaja (bukan 4 seperti halaman subtopik)
@@ -352,6 +363,18 @@
       {"@type": "ListItem", "position": 2, "name": "Nota", "item": "https://zymnotes.com/notes/"},
       {"@type": "ListItem", "position": 3, "name": "[[BAB_LABEL]] · [[TAJUK_BAB]]", "item": "https://zymnotes.com/notes/[[FAIL_INI]]"}
     ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    "name": "[[SUBJEK_NAMA]] Tingkatan [[TINGKATAN]] [[BAB_LABEL]]: [[TAJUK_BAB]]",
+    "description": "Nota [[SUBJEK_NAMA]] Tingkatan [[TINGKATAN]] [[BAB_LABEL]]: [[TAJUK_BAB]]. Nota visual untuk ulang kaji SPM.",
+    "provider": {"@type": "EducationalOrganization", "name": "ZymNotes", "url": "https://zymnotes.com"},
+    "inLanguage": "ms-MY",
+    "educationalLevel": "SPM",
+    "url": "https://zymnotes.com/notes/[[FAIL_INI]]"
   }
   </script>
 
