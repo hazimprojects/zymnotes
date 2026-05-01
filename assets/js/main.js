@@ -1421,7 +1421,7 @@ function hzFluentImgHtml(pair, size) {
 // Icons8 3D Fluency — sparkle menu & settings panel
 var HZ_ICONS8_3D = 'https://img.icons8.com/3d-fluency/96/';
 var HZ_ICONS8_SPARKLE = {
-  sparkles:      'https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@62ecdc0d7ca5/assets/Sparkles/3D/sparkles_3d.png',
+  sparkles:      'https://img.icons8.com/?size=96&id=LuXk2sw4rJVF&format=png',
   worldMap:      'https://img.icons8.com/?size=96&id=IJyJrL3znN8t&format=png',
   headphones:    'https://img.icons8.com/?size=96&id=skGSi9ds96Pb&format=png',
   puzzlePiece:   'https://img.icons8.com/?size=96&id=8fF8GAV7U3Pt&format=png',

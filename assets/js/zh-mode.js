@@ -1214,7 +1214,7 @@
       btn.className = "zh-mode-fab";
       btn.setAttribute("aria-label", "Mod Bahasa Cina (versi awal)");
       btn.setAttribute("aria-pressed", isZhMode() ? "true" : "false");
-      btn.textContent = "华";
+      btn.innerHTML = '<img src="https://img.icons8.com/?size=96&id=10lwQw8Al1lP&format=png" alt="华" width="22" height="22" decoding="async" style="display:block;">';
       if (isZhMode()) btn.classList.add("is-active");
 
       btn.addEventListener("click", function () {
