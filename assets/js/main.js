@@ -2398,6 +2398,8 @@ function hzLabQuizSparklePair() {
 })();
 
 // ── Swipe Navigation: touch left/right on subtopic pages ─────────────────────
+// touch-action:pan-y (CSS) lets browser handle vertical scroll natively so all
+// listeners here can be passive — no scroll jank, genuine 60fps finger tracking.
 (function () {
   // Entrance animation when arriving from a swipe
   var swipeDir = sessionStorage.getItem('hz-swipe-dir');
@@ -2407,10 +2409,12 @@ function hzLabQuizSparklePair() {
     if (enterEl) {
       document.body.classList.add('swipe-animating');
       enterEl.classList.add(swipeDir === 'left' ? 'swipe-enter-right' : 'swipe-enter-left');
-      enterEl.addEventListener('animationend', function () {
+      var cleanEnter = function () {
         enterEl.classList.remove('swipe-enter-right', 'swipe-enter-left');
         document.body.classList.remove('swipe-animating');
-      }, { once: true });
+      };
+      enterEl.addEventListener('animationend', cleanEnter, { once: true });
+      setTimeout(cleanEnter, 600); // fallback if animationend doesn't fire
     }
   }
 
@@ -2418,7 +2422,7 @@ function hzLabQuizSparklePair() {
   var main = document.querySelector('.note-reading-main');
   if (!main) return;
 
-  // Derive prev/next subtopic URLs from the global nav manifest
+  // Build flat subtopic list from global nav manifest for prev/next lookup
   function getTargets() {
     var fname = location.pathname.split('/').pop();
     var flat = [];
@@ -2433,63 +2437,82 @@ function hzLabQuizSparklePair() {
   }
 
   var tgt = getTargets();
-  var sx, sy, st, active = false, locked = false;
+  var sx, sy, st, active = false, locked = false, rafId = null;
+
+  function applyX(x) {
+    if (rafId) cancelAnimationFrame(rafId);
+    rafId = requestAnimationFrame(function () {
+      main.style.transform = 'translateX(' + x + 'px)';
+      rafId = null;
+    });
+  }
 
   function snapBack() {
+    if (rafId) { cancelAnimationFrame(rafId); rafId = null; }
+    document.body.classList.remove('swipe-animating');
     main.style.willChange = '';
-    main.style.transition = 'transform 0.38s cubic-bezier(0.34, 1.56, 0.64, 1)';
+    main.style.transition = 'transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1)';
     main.style.transform = 'translateX(0)';
     main.addEventListener('transitionend', function () {
       main.style.transition = '';
       main.style.transform = '';
-      document.body.classList.remove('swipe-animating');
     }, { once: true });
   }
 
   function goTo(url, dir) {
+    if (rafId) { cancelAnimationFrame(rafId); rafId = null; }
+    var target = (dir === 'left' ? -1 : 1) * window.innerWidth;
     sessionStorage.setItem('hz-swipe-dir', dir);
     main.style.willChange = '';
-    main.style.transition = 'transform 0.26s cubic-bezier(0.4, 0, 0.6, 1)';
-    main.style.transform = 'translateX(' + (dir === 'left' ? -window.innerWidth : window.innerWidth) + 'px)';
-    main.addEventListener('transitionend', function () { window.location.href = url; }, { once: true });
+    // Double rAF: first frame applies transition property, second applies transform
+    // so the browser doesn't batch them into a single no-op paint.
+    requestAnimationFrame(function () {
+      main.style.transition = 'transform 0.22s cubic-bezier(0.4, 0, 1, 1)';
+      requestAnimationFrame(function () {
+        main.style.transform = 'translateX(' + target + 'px)';
+      });
+    });
+    setTimeout(function () { window.location.href = url; }, 260);
   }
 
-  document.addEventListener('touchstart', function (e) {
+  // All listeners on main (not document) + passive — works alongside touch-action:pan-y
+  main.addEventListener('touchstart', function (e) {
     if (e.touches.length !== 1) return;
+    // Interrupt any snap-back in progress
+    main.style.transition = 'none';
     sx = e.touches[0].clientX; sy = e.touches[0].clientY;
     st = Date.now(); active = true; locked = false;
   }, { passive: true });
 
-  document.addEventListener('touchmove', function (e) {
+  main.addEventListener('touchmove', function (e) {
     if (!active || e.touches.length !== 1) return;
     var dx = e.touches[0].clientX - sx, dy = e.touches[0].clientY - sy;
     if (!locked) {
-      if (Math.abs(dx) < 7 && Math.abs(dy) < 7) return;
-      if (Math.abs(dy) >= Math.abs(dx)) { active = false; return; }
+      if (Math.abs(dx) < 6 && Math.abs(dy) < 6) return; // wait for intent
+      if (Math.abs(dy) > Math.abs(dx)) { active = false; return; } // vertical scroll
       locked = true;
       main.style.willChange = 'transform';
-      main.style.transition = 'none';
       document.body.classList.add('swipe-animating');
     }
-    e.preventDefault();
     var hasTarget = dx < 0 ? !!tgt.next : !!tgt.prev;
-    main.style.transform = 'translateX(' + (hasTarget ? dx : dx * 0.18) + 'px)';
-  }, { passive: false });
-
-  document.addEventListener('touchend', function (e) {
-    if (!active) return;
-    active = false;
-    if (!locked) return;
-    var dx = e.changedTouches[0].clientX - sx;
-    var vel = Math.abs(dx) / Math.max(1, Date.now() - st);
-    var go = Math.abs(dx) > Math.min(72, window.innerWidth * 0.2) || vel > 0.38;
-    if (dx < 0 && go && tgt.next)       goTo(tgt.next, 'left');
-    else if (dx > 0 && go && tgt.prev)  goTo(tgt.prev, 'right');
-    else                                 snapBack();
+    applyX(hasTarget ? dx : dx * 0.2); // rubber-band when no target
   }, { passive: true });
 
-  document.addEventListener('touchcancel', function () {
+  main.addEventListener('touchend', function (e) {
     if (!active) return; active = false;
+    if (!locked) return;
+    if (rafId) { cancelAnimationFrame(rafId); rafId = null; }
+    var dx = e.changedTouches[0].clientX - sx;
+    var vel = Math.abs(dx) / Math.max(1, Date.now() - st); // px/ms
+    var go = (Math.abs(dx) > 50 || vel > 0.3) && Math.abs(dx) > 15;
+    if      (dx < 0 && go && tgt.next) goTo(tgt.next, 'left');
+    else if (dx > 0 && go && tgt.prev) goTo(tgt.prev, 'right');
+    else                                snapBack();
+  }, { passive: true });
+
+  main.addEventListener('touchcancel', function () {
+    if (!active) return; active = false;
+    if (rafId) { cancelAnimationFrame(rafId); rafId = null; }
     if (locked) snapBack(); else main.style.willChange = '';
   }, { passive: true });
 })();
