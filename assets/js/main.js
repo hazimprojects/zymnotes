@@ -1422,7 +1422,7 @@ function hzFluentImgHtml(pair, size) {
 var HZ_ICONS8_3D = 'https://img.icons8.com/3d-fluency/96/';
 var HZ_ICONS8_SPARKLE = {
   sparkles:      'https://img.icons8.com/?size=96&id=CzeyF7MGqYga&format=png',
-  worldMap:      HZ_ICONS8_3D + 'map.png',
+  worldMap:      'https://img.icons8.com/?size=96&id=IJyJrL3znN8t&format=png',
   headphones:    'https://img.icons8.com/?size=96&id=skGSi9ds96Pb&format=png',
   puzzlePiece:   'https://img.icons8.com/?size=96&id=8fF8GAV7U3Pt&format=png',
   gear:          HZ_ICONS8_3D + 'gear.png',
@@ -1433,8 +1433,8 @@ var HZ_ICONS8_SPARKLE = {
   plus:          HZ_ICONS8_3D + 'fast-forward.png',
   crossMark:     HZ_ICONS8_3D + 'delete-sign.png',
   artistPalette: HZ_ICONS8_3D + 'color-palette.png',
-  trophy:        HZ_ICONS8_3D + 'trophy.png',
-  memo:          HZ_ICONS8_3D + 'form.png',
+  trophy:        'https://img.icons8.com/?size=96&id=94bZrF6ZIaXP&format=png',
+  memo:          'https://img.icons8.com/?size=96&id=zIKcpVIKdvP1&format=png',
   wastebasket:   HZ_ICONS8_3D + 'trash.png',
 };
 function hzIcons8SparkleImg(url, extraClass, w, h) {
