@@ -1419,38 +1419,40 @@ function hzFluentImgHtml(pair, size) {
 }
 
 // Icons8 3D Fluency — sparkle menu & settings panel
-var HZ_ICONS8_BASE = 'https://img.icons8.com/3d-fluency/96/';
-var HZ_ICONS8_FALLBACK = 'https://img.icons8.com/fluency/96/';
+var HZ_ICONS8_3D = 'https://img.icons8.com/3d-fluency/96/';
 var HZ_ICONS8_SPARKLE = {
-  sparkles:      'sparkle',
-  worldMap:      'map',
-  headphones:    'audio',
-  puzzlePiece:   'puzzles',
-  gear:          'gear',
-  play:          'play',
-  pause:         'pause',
-  stopMedia:     'stop',
-  minus:         'rewind',
-  plus:          'fast-forward',
-  crossMark:     'delete-sign',
-  artistPalette: 'color-palette',
-  trophy:        'trophy',
-  memo:          'form',
-  wastebasket:   'trash',
+  sparkles:      'https://img.icons8.com/?size=96&id=CzeyF7MGqYga&format=png',
+  worldMap:      HZ_ICONS8_3D + 'map.png',
+  headphones:    'https://img.icons8.com/?size=96&id=skGSi9ds96Pb&format=png',
+  puzzlePiece:   'https://img.icons8.com/?size=96&id=8fF8GAV7U3Pt&format=png',
+  gear:          HZ_ICONS8_3D + 'gear.png',
+  play:          HZ_ICONS8_3D + 'play.png',
+  pause:         HZ_ICONS8_3D + 'pause.png',
+  stopMedia:     HZ_ICONS8_3D + 'stop.png',
+  minus:         HZ_ICONS8_3D + 'rewind.png',
+  plus:          HZ_ICONS8_3D + 'fast-forward.png',
+  crossMark:     HZ_ICONS8_3D + 'delete-sign.png',
+  artistPalette: HZ_ICONS8_3D + 'color-palette.png',
+  trophy:        HZ_ICONS8_3D + 'trophy.png',
+  memo:          HZ_ICONS8_3D + 'form.png',
+  wastebasket:   HZ_ICONS8_3D + 'trash.png',
 };
-function hzIcons8SparkleImg(name, extraClass, w, h) {
+function hzIcons8SparkleImg(url, extraClass, w, h) {
   var img = document.createElement('img');
   img.className = 'fluent-3d-emoji' + (extraClass ? ' ' + extraClass : '');
-  img.src = HZ_ICONS8_BASE + name + '.png';
+  img.src = url;
   img.alt = '';
   img.width = w;
   img.height = h;
   img.decoding = 'async';
-  img.onerror = function() { if (!this._fb) { this._fb = 1; this.src = HZ_ICONS8_FALLBACK + name + '.png'; } };
+  if (url.indexOf('/3d-fluency/') !== -1) {
+    img.onerror = function() { if (!this._fb) { this._fb = 1; this.src = this.src.replace('/3d-fluency/', '/fluency/'); } };
+  }
   return img;
 }
-function hzIcons8ImgHtml(name, size) {
-  return '<img class="fluent-3d-emoji" src="' + HZ_ICONS8_BASE + name + '.png" alt="" width="' + size + '" height="' + size + '" decoding="async" onerror="if(!this._fb){this._fb=1;this.src=\'https://img.icons8.com/fluency/96/' + name + '.png\'}">';
+function hzIcons8ImgHtml(url, size) {
+  var oe = url.indexOf('/3d-fluency/') !== -1 ? ' onerror="if(!this._fb){this._fb=1;this.src=this.src.replace(\'/3d-fluency/\',\'/fluency/\')}"' : '';
+  return '<img class="fluent-3d-emoji" src="' + url + '" alt="" width="' + size + '" height="' + size + '" decoding="async"' + oe + '>';
 }
 
 function hzSparkleIcon(key) {
