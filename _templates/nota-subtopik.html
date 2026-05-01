@@ -3,10 +3,20 @@
 ================================================================================
   TEMPLATE RASMI: HALAMAN NOTA SUBTOPIK — ZymNotes
 ================================================================================
-  Versi    : 2.3
+  Versi    : 2.4
   Lokasi   : _templates/nota-subtopik.html
   Tujuan   : Template universal untuk semua halaman nota subtopik merentasi
              semua subjek (Sejarah, Matematik, Sains, BM, dll.)
+
+  KEMAS KINI v2.4:
+  • Font loading ditukar kepada async/non-blocking (preload + onload + noscript)
+  • Keyword legend diselaraskan dengan halaman semasa: 8 item (kw-gerakan, kw-karya)
+  • Chip icon dalam Ringkasan ditukar dari placeholder komen kepada contoh Fluent emoji img
+  • Soalan Utama, Fokus, Kesimpulan: teks emoji ditukar kepada Fluent emoji img
+  • Nombor accordion dan fokus kingdom ditukar kepada Fluent keycap img
+  • Ditambah data-zh-unit-id dan data-zh-mode contoh pada elemen kandungan
+  • Ditambah Article JSON-LD schema
+  • BreadcrumbList item 4 dikemaskini dengan format kod subtopik
 
   KEMAS KINI v2.3:
   • Title dan meta description diselaraskan dengan format SEO penuh halaman semasa
@@ -107,10 +117,7 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600&family=Nunito:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Lexend:wght@400;500;600;700;800&display=swap"
-    rel="stylesheet"
-  />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600&family=Nunito:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Lexend:wght@400;500;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'" /><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600&family=Nunito:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Lexend:wght@400;500;600;700;800&display=swap" /></noscript>
 
   <!-- CSS -->
   <link rel="preload" as="style" href="../assets/css/base.css?v=73">
@@ -191,16 +198,18 @@
           [[TEKS PENERANGAN RINGKAS SUBTOPIK INI]]
         </p>
 
+        <!-- SESUAIKAN keyword legend mengikut keperluan bab — mesti sama dengan halaman induk bab -->
         <div class="keyword-legend-wrap">
           <p class="keyword-legend-title">Warna kata kunci</p>
           <div class="keyword-legend-grid">
-            <span class="keyword-legend-item"><span class="kw kw-tokoh">Tokoh / Pemerintah</span></span>
-            <span class="keyword-legend-item"><span class="kw kw-tahun">Tahun / Tarikh</span></span>
-            <span class="keyword-legend-item"><span class="kw kw-tempat">Tempat / Wilayah</span></span>
+            <span class="keyword-legend-item"><span class="kw kw-tokoh">Tokoh</span></span>
+            <span class="keyword-legend-item"><span class="kw kw-tahun">Tahun</span></span>
+            <span class="keyword-legend-item"><span class="kw kw-tempat">Tempat</span></span>
             <span class="keyword-legend-item"><span class="kw kw-peristiwa">Peristiwa</span></span>
+            <span class="keyword-legend-item"><span class="kw kw-gerakan">Gerakan</span></span>
             <span class="keyword-legend-item"><span class="kw kw-pertubuhan">Pertubuhan</span></span>
-            <span class="keyword-legend-item"><span class="kw kw-perjanjian">Perjanjian / Undang-undang</span></span>
-            <span class="keyword-legend-item"><span class="kw kw-istilah">Istilah Penting</span></span>
+            <span class="keyword-legend-item"><span class="kw kw-karya">Karya</span></span>
+            <span class="keyword-legend-item"><span class="kw kw-istilah">Istilah</span></span>
           </div>
         </div>
 
@@ -225,7 +234,7 @@
              Buang blok ini jika tiada audio untuk subtopik ini -->
         <div class="note-audio-player">
           <audio class="audio-src" src="[[AUDIO_SRC]]" preload="metadata"></audio>
-          <p class="audio-label">🎧 Audio Nota</p>
+          <p class="audio-label"><img class="fluent-3d-emoji openmoji--inline" src="https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@62ecdc0d7ca5/assets/Headphone/3D/headphone_3d.png" width="20" height="20" alt="" decoding="async" /> Audio Nota</p>
           <p class="audio-desc">
             Dengar audio ini sambil membaca nota untuk pengulangkajian yang lebih berkesan.
             <span class="audio-disclaimer">
@@ -256,18 +265,21 @@
           <div class="cv-unit-body">
             <div class="paper-chip-list">
 
-              <div class="paper-chip paper-chip-sentence" data-cv-collectible="false">
-                <span class="chip-icon"><!-- emoji relevan --></span>
+              <!-- data-zh-unit-id: ID unik untuk terjemahan Cina, format: [[bab-X-Y-uNN]]
+                 data-zh-mode="explain": tandakan jika ayat perlu penjelasan dalam mod Cina
+                 Ganti emoji pushpin dengan emoji yang relevan mengikut kandungan chip -->
+            <div class="paper-chip paper-chip-sentence" data-cv-collectible="false" data-zh-unit-id="[[bab-X-Y-u01]]" data-zh-mode="explain">
+                <span class="chip-icon"><img class="fluent-3d-emoji openmoji--chip" src="https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@62ecdc0d7ca5/assets/Pushpin/3D/pushpin_3d.png" width="20" height="20" alt="" decoding="async" /></span>
                 <!-- Fakta/idea utama pertama -->
               </div>
 
-              <div class="paper-chip paper-chip-sentence" data-cv-collectible="false">
-                <span class="chip-icon"><!-- emoji relevan --></span>
+              <div class="paper-chip paper-chip-sentence" data-cv-collectible="false" data-zh-unit-id="[[bab-X-Y-u02]]" data-zh-mode="explain">
+                <span class="chip-icon"><img class="fluent-3d-emoji openmoji--chip" src="https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@62ecdc0d7ca5/assets/Pushpin/3D/pushpin_3d.png" width="20" height="20" alt="" decoding="async" /></span>
                 <!-- Fakta/idea utama kedua -->
               </div>
 
-              <div class="paper-chip paper-chip-sentence" data-cv-collectible="false">
-                <span class="chip-icon"><!-- emoji relevan --></span>
+              <div class="paper-chip paper-chip-sentence" data-cv-collectible="false" data-zh-unit-id="[[bab-X-Y-u03]]" data-zh-mode="explain">
+                <span class="chip-icon"><img class="fluent-3d-emoji openmoji--chip" src="https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@62ecdc0d7ca5/assets/Pushpin/3D/pushpin_3d.png" width="20" height="20" alt="" decoding="async" /></span>
                 <!-- Fakta/idea utama ketiga -->
               </div>
 
@@ -286,13 +298,13 @@
             data-cv-type="flap"
             data-cv-title="Soalan Utama [[X.X]]"
           >
-            <div class="flap-top">❓ Soalan Utama</div>
+            <div class="flap-top"><img class="fluent-3d-emoji openmoji--inline" src="https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@62ecdc0d7ca5/assets/Red%20question%20mark/3D/red_question_mark_3d.png" width="20" height="20" alt="" decoding="async" /> Soalan Utama</div>
             <div class="flap-body">
-              <p class="point-heading">[[SOALAN UTAMA SUBTOPIK INI?]]</p>
+              <p class="point-heading" data-zh-unit-id="[[bab-X-Y-soalan-heading]]" data-zh-mode="explain">[[SOALAN UTAMA SUBTOPIK INI?]]</p>
               <div class="cv-unit-body">
                 <div class="answer-paper">
-                  <p class="point-line">💡 [[Jawapan utama / inti pati]]</p>
-                  <p class="point-line">📌 [[Huraian lanjut atau poin kedua]]</p>
+                  <p class="point-line" data-zh-unit-id="[[bab-X-Y-soalan-line-1]]" data-zh-mode="explain"><img class="fluent-3d-emoji openmoji--inline" src="https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@62ecdc0d7ca5/assets/Light%20bulb/3D/light_bulb_3d.png" width="20" height="20" alt="" decoding="async" /> [[Jawapan utama / inti pati]]</p>
+                  <p class="point-line" data-zh-unit-id="[[bab-X-Y-soalan-line-2]]" data-zh-mode="explain"><img class="fluent-3d-emoji openmoji--inline" src="https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@62ecdc0d7ca5/assets/Pushpin/3D/pushpin_3d.png" width="20" height="20" alt="" decoding="async" /> [[Huraian lanjut atau poin kedua]]</p>
                   <!-- Tambah sehingga 3 point-line -->
                 </div>
               </div>
@@ -309,17 +321,17 @@
             data-cv-type="board"
             data-cv-title="Fokus [[X.X]]"
           >
-            <div class="paper-strip strip-sub">📌 Fokus [[X.X]]</div>
+            <div class="paper-strip strip-sub"><img class="fluent-3d-emoji openmoji--inline" src="https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@62ecdc0d7ca5/assets/Pushpin/3D/pushpin_3d.png" width="20" height="20" alt="" decoding="async" /> Fokus [[X.X]]</div>
             <div class="cv-unit-body">
 
-              <!-- PILIHAN -->
-              <!-- <p class="point-line">[[TAJUK_SUBTOPIK]] boleh difahami melalui beberapa perkara utama berikut:</p> -->
+              <!-- PILIHAN: tambah ayat pengantar fokus jika perlu -->
+              <!-- <p class="point-line" data-zh-unit-id="[[bab-X-Y-fokus-line]]" data-zh-mode="explain">[[TAJUK_SUBTOPIK]] boleh difahami melalui beberapa perkara utama berikut:</p> -->
 
               <div class="paper-grid compact-kingdom-grid">
-                <article class="paper-kingdom" data-cv-collectible="false">1️⃣ [[Perkara Utama Pertama]]</article>
-                <article class="paper-kingdom" data-cv-collectible="false">2️⃣ [[Perkara Utama Kedua]]</article>
-                <article class="paper-kingdom" data-cv-collectible="false">3️⃣ [[Perkara Utama Ketiga]]</article>
-                <!-- Tambah sehingga 5 item -->
+                <article class="paper-kingdom" data-cv-collectible="false"><img class="fluent-3d-emoji openmoji--inline" src="https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@62ecdc0d7ca5/assets/Keycap%201/3D/keycap_1_3d.png" width="20" height="20" alt="" decoding="async" /> [[Perkara Utama Pertama]]</article>
+                <article class="paper-kingdom" data-cv-collectible="false"><img class="fluent-3d-emoji openmoji--inline" src="https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@62ecdc0d7ca5/assets/Keycap%202/3D/keycap_2_3d.png" width="20" height="20" alt="" decoding="async" /> [[Perkara Utama Kedua]]</article>
+                <article class="paper-kingdom" data-cv-collectible="false"><img class="fluent-3d-emoji openmoji--inline" src="https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@62ecdc0d7ca5/assets/Keycap%203/3D/keycap_3_3d.png" width="20" height="20" alt="" decoding="async" /> [[Perkara Utama Ketiga]]</article>
+                <!-- Tambah sehingga 5 item — guna keycap_4_3d.png, keycap_5_3d.png -->
               </div>
             </div>
           </article>
@@ -357,7 +369,7 @@
               data-cv-title="[[Tajuk Item Pertama]]"
             >
               <button class="paper-accordion-trigger" data-accordion="acc-[[id-unik-1]]">
-                <span class="paper-accordion-no">1️⃣</span>
+                <span class="paper-accordion-no"><img class="fluent-3d-emoji openmoji--inline" src="https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@62ecdc0d7ca5/assets/Keycap%201/3D/keycap_1_3d.png" width="20" height="20" alt="" decoding="async" /></span>
                 <span class="paper-accordion-title">[[Tajuk Item Pertama]]</span>
               </button>
               <div id="acc-[[id-unik-1]]" class="paper-accordion-panel">
@@ -378,7 +390,7 @@
               data-cv-title="[[Tajuk Item Kedua]]"
             >
               <button class="paper-accordion-trigger" data-accordion="acc-[[id-unik-2]]">
-                <span class="paper-accordion-no">2️⃣</span>
+                <span class="paper-accordion-no"><img class="fluent-3d-emoji openmoji--inline" src="https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@62ecdc0d7ca5/assets/Keycap%202/3D/keycap_2_3d.png" width="20" height="20" alt="" decoding="async" /></span>
                 <span class="paper-accordion-title">[[Tajuk Item Kedua]]</span>
               </button>
               <div id="acc-[[id-unik-2]]" class="paper-accordion-panel">
@@ -395,7 +407,7 @@
               data-cv-title="[[Tajuk Item Ketiga]]"
             >
               <button class="paper-accordion-trigger" data-accordion="acc-[[id-unik-3]]">
-                <span class="paper-accordion-no">3️⃣</span>
+                <span class="paper-accordion-no"><img class="fluent-3d-emoji openmoji--inline" src="https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@62ecdc0d7ca5/assets/Keycap%203/3D/keycap_3_3d.png" width="20" height="20" alt="" decoding="async" /></span>
                 <span class="paper-accordion-title">[[Tajuk Item Ketiga]]</span>
               </button>
               <div id="acc-[[id-unik-3]]" class="paper-accordion-panel">
@@ -439,7 +451,7 @@
             data-cv-type="board"
             data-cv-title="Kesimpulan [[X.X]]"
           >
-            <div class="paper-strip strip-summary">🎯 Kesimpulan</div>
+            <div class="paper-strip strip-summary"><img class="fluent-3d-emoji openmoji--inline" src="https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@62ecdc0d7ca5/assets/Bullseye/3D/bullseye_3d.png" width="20" height="20" alt="" decoding="async" /> Kesimpulan</div>
             <div class="cv-unit-body">
               <div class="paper-chip-list">
                 <div class="paper-chip" data-cv-collectible="false">[[Poin kesimpulan pertama]]</div>
@@ -558,8 +570,20 @@
       {"@type": "ListItem", "position": 1, "name": "ZymNotes", "item": "https://zymnotes.com/"},
       {"@type": "ListItem", "position": 2, "name": "Nota", "item": "https://zymnotes.com/notes/"},
       {"@type": "ListItem", "position": 3, "name": "[[BAB_LABEL]] · [[TAJUK_BAB]]", "item": "https://zymnotes.com/notes/[[BAB_URL]]"},
-      {"@type": "ListItem", "position": 4, "name": "[[TAJUK_SUBTOPIK]] · ZymNotes", "item": "https://zymnotes.com/notes/[[FAIL_INI]]"}
+      {"@type": "ListItem", "position": 4, "name": "[[X.X]] [[TAJUK_SUBTOPIK]] · ZymNotes", "item": "https://zymnotes.com/notes/[[FAIL_INI]]"}
     ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Nota [[SUBJEK_NAMA]] Tingkatan [[TINGKATAN]] Bab [[X.X]]: [[TAJUK_SUBTOPIK]]",
+    "description": "Nota [[SUBJEK_NAMA]] Tingkatan [[TINGKATAN]] Bab [[X.X]] ([[TAJUK_BAB]]): [[TAJUK_SUBTOPIK]]. Ringkasan padat untuk ulang kaji SPM.",
+    "inLanguage": "ms-MY",
+    "educationalLevel": "SPM",
+    "publisher": {"@type": "EducationalOrganization", "name": "ZymNotes", "url": "https://zymnotes.com"},
+    "url": "https://zymnotes.com/notes/[[FAIL_INI]]"
   }
   </script>
 
