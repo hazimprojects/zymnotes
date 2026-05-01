@@ -1423,7 +1423,7 @@ var HZ_ICONS8_3D = 'https://img.icons8.com/3d-fluency/96/';
 var HZ_ICONS8_SPARKLE = {
   sparkles:      'https://img.icons8.com/?size=96&id=LuXk2sw4rJVF&format=png',
   worldMap:      'https://img.icons8.com/?size=96&id=IJyJrL3znN8t&format=png',
-  headphones:    'https://img.icons8.com/?size=96&id=skGSi9ds96Pb&format=png',
+  headphones:    'https://img.icons8.com/?size=96&id=N06cr99JrdGK&format=png',
   puzzlePiece:   'https://img.icons8.com/?size=96&id=8fF8GAV7U3Pt&format=png',
   gear:          HZ_ICONS8_3D + 'gear.png',
   play:          HZ_ICONS8_3D + 'play.png',
