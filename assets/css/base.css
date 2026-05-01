@@ -1733,6 +1733,219 @@ body.page-theme-notes.app-shell-page .nota-row:hover {
 }
 
 /* =============================================================
+   NOTA ROW — SUBTOPIC EXPANDABLE PANEL
+============================================================= */
+
+/* Wrapper replaces each <a class="nota-row"> */
+.nota-row-item {
+  position: relative;
+}
+
+.nota-row-item + .nota-row-item {
+  border-top: 1px solid var(--line);
+}
+
+/* button.nota-row — resets browser defaults, keeps all visual styles */
+button.nota-row {
+  border-bottom: none;
+  width: 100%;
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  font-family: inherit;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Rotate arrow when panel open */
+button.nota-row[aria-expanded="true"] .nota-row-arrow {
+  transform: rotate(90deg);
+  opacity: 0.85;
+}
+
+.nota-row-arrow {
+  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.25s ease;
+}
+
+/* Expanding panel — CSS grid height trick */
+.nota-subtopics-panel {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.32s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nota-subtopics-panel.is-open {
+  grid-template-rows: 1fr;
+}
+
+.nota-subtopics-inner {
+  overflow: hidden;
+}
+
+/* Panel header — back button + label */
+.nota-subtopics-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 7px 14px 7px 8px;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.nota-subtopics-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--primary);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px 10px;
+  border-radius: 8px;
+  transition: background 0.12s ease;
+  -webkit-tap-highlight-color: transparent;
+  font-family: inherit;
+}
+
+.nota-subtopics-back:hover,
+.nota-subtopics-back:active {
+  background: rgba(79, 70, 229, 0.07);
+}
+
+[data-theme="dark"] .nota-subtopics-back {
+  color: #a5b4fc;
+}
+
+[data-theme="dark"] .nota-subtopics-back:hover,
+[data-theme="dark"] .nota-subtopics-back:active {
+  background: rgba(129, 140, 248, 0.1);
+}
+
+.nota-subtopics-back svg {
+  width: 13px;
+  height: 13px;
+  flex-shrink: 0;
+}
+
+.nota-subtopics-header-label {
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  padding-right: 2px;
+}
+
+/* Each subtopic link row */
+.nota-subtopic-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 11px 14px 11px 12px;
+  text-decoration: none;
+  color: inherit;
+  border-bottom: 1px solid var(--line);
+  transition: background 0.12s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.nota-subtopic-item:last-child {
+  border-bottom: none;
+}
+
+.nota-subtopic-item:hover,
+.nota-subtopic-item:active {
+  background: rgba(79, 70, 229, 0.035);
+}
+
+body.page-theme-notes.app-shell-page .nota-subtopic-item:hover,
+body.page-theme-notes.app-shell-page .nota-subtopic-item:active {
+  background: rgba(99, 102, 241, 0.045);
+}
+
+[data-theme="dark"] .nota-subtopic-item:hover,
+[data-theme="dark"] .nota-subtopic-item:active {
+  background: rgba(129, 140, 248, 0.06);
+}
+
+/* Bab Induk special row */
+.nota-subtopic-item--hub {
+  background: rgba(79, 70, 229, 0.038);
+}
+
+.nota-subtopic-item--hub:hover,
+.nota-subtopic-item--hub:active {
+  background: rgba(79, 70, 229, 0.065);
+}
+
+[data-theme="dark"] .nota-subtopic-item--hub {
+  background: rgba(129, 140, 248, 0.055);
+}
+
+[data-theme="dark"] .nota-subtopic-item--hub:hover,
+[data-theme="dark"] .nota-subtopic-item--hub:active {
+  background: rgba(129, 140, 248, 0.09);
+}
+
+/* Number/icon badge pill */
+.nota-subtopic-num {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 11px;
+  background: rgba(0, 0, 0, 0.045);
+  font-size: 0.73rem;
+  font-weight: 800;
+  color: var(--muted);
+  flex-shrink: 0;
+  letter-spacing: -0.01em;
+  line-height: 1;
+}
+
+.nota-subtopic-num--hub {
+  background: rgba(79, 70, 229, 0.1);
+  color: var(--primary);
+  font-size: 1.05rem;
+}
+
+[data-theme="dark"] .nota-subtopic-num {
+  background: rgba(255, 255, 255, 0.07);
+}
+
+[data-theme="dark"] .nota-subtopic-num--hub {
+  background: rgba(129, 140, 248, 0.16);
+  color: #a5b4fc;
+}
+
+/* Text body */
+.nota-subtopic-item-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.nota-subtopic-item-title {
+  font-size: 0.87rem;
+  font-weight: 600;
+  color: var(--ink);
+  line-height: 1.3;
+}
+
+.nota-subtopic-item--hub .nota-subtopic-item-title {
+  font-weight: 700;
+}
+
+.nota-subtopic-item-sub {
+  font-size: 0.78rem;
+  color: var(--muted);
+  margin-top: 2px;
+  line-height: 1.3;
+}
+
+/* =============================================================
    HOME INFO CARD
 ============================================================= */
 

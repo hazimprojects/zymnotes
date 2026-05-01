@@ -1,12 +1,12 @@
 /* =========================
-   MASTER STYLESHEET — v89
+   MASTER STYLESHEET — v90
    Import fail-specific files here.
    HTML files reference style.css — no change needed there.
 ========================= */
 
 @import url("openmoji.css?v=13");   /* OpenMoji img helpers (nota & sparkle UI) */
 @import url("fluent-shell-emoji.css?v=5"); /* Fluent UI Emoji 3D pada halaman shell */
-@import url("base.css?v=72");       /* :root variables, dark mode tokens, body/reset/containers */
+@import url("base.css?v=73");       /* :root variables, dark mode tokens, body/reset/containers */
 @import url("layout.css?v=17");     /* Header, nav, dark mode fab, typography, footer, animations */
 @import url("ui.css?v=58");        /* Buttons, cards, homepage, hero, search, org-chart, interaction */
 @import url("paper.css?v=21");      /* Paper labels, boards, chips, accordion, steps, bab overview */
