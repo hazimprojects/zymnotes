@@ -383,3 +383,8 @@ html.hz-swipe-dragging {
 }
 
 body.swipe-animating { overflow-x: hidden; }
+
+/* Subtopic swipe: transform on <main> only (see main.js) */
+main.note-reading-main.swipe-animating {
+  overflow-x: hidden;
+}

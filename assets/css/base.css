@@ -28,18 +28,6 @@
   --safe-right:  env(safe-area-inset-right,  0px);
   /* Mesti sepadan dengan .hz-bottom-nav pada halaman bacaan (±72px + safe) — untuk sparkle FAB & body padding */
   --bottom-nav-h: 72px;
-  /* Tinggi jalur pembaca nota (atas nav tetap); fallback 100vh jika dvh tidak disokong */
-  --hz-reader-vh: 100vh;
-  --hz-reader-dvh: 100dvh;
-  --hz-note-header-h: 52px;
-  --hz-note-reader-track-min: max(
-    200px,
-    calc(var(--hz-reader-vh) - var(--hz-note-header-h) - var(--bottom-nav-h) - var(--safe-bottom))
-  );
-  --hz-note-reader-track-min-dvh: max(
-    200px,
-    calc(var(--hz-reader-dvh) - var(--hz-note-header-h) - var(--bottom-nav-h) - var(--safe-bottom))
-  );
 
   /* Dark mode transition */
   --theme-transition: background 0.35s ease, color 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
@@ -532,38 +520,42 @@ body.quiz-page.note-reading-app {
   padding-bottom: calc(72px + env(safe-area-inset-bottom, 0px));
 }
 
-/* In-app subtopic reader: header + FAB + bottom nav fixed; only note strip slides */
-body.hz-note-reader-active .hz-note-app-shell {
+/* Subtopic strip reader: header + footer stay fixed; only main content slides */
+body.hz-note-strip-reader-active {
   display: flex;
   flex-direction: column;
-  box-sizing: border-box;
-  /* Ruang di atas nav tetap — elak 100dvh penuh (nav fixed bertindih kandungan) */
-  height: calc(100vh - var(--bottom-nav-h) - var(--safe-bottom));
-  height: calc(100dvh - var(--bottom-nav-h) - var(--safe-bottom));
-  min-height: calc(100vh - var(--bottom-nav-h) - var(--safe-bottom));
-  min-height: calc(100dvh - var(--bottom-nav-h) - var(--safe-bottom));
-  max-height: calc(100vh - var(--bottom-nav-h) - var(--safe-bottom));
-  max-height: calc(100dvh - var(--bottom-nav-h) - var(--safe-bottom));
+  min-height: 100vh;
+  min-height: 100dvh;
 }
 
-body.hz-note-reader-active #hz-note-app-shell > header.site-header {
+body.hz-note-strip-reader-active > header.site-header {
   flex-shrink: 0;
-  position: sticky;
-  top: 0;
-  z-index: 60;
 }
 
-body.hz-note-reader-active .hz-note-reader-track {
+body.hz-note-strip-reader-active > footer.site-footer {
+  flex-shrink: 0;
+}
+
+#hz-note-strip-reader {
   flex: 1 1 auto;
-  min-height: var(--hz-note-reader-track-min);
-  min-height: var(--hz-note-reader-track-min-dvh);
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
   overflow: hidden;
   width: 100%;
   position: relative;
   touch-action: pan-y;
 }
 
-body.hz-note-reader-active .hz-note-reader-slots {
+#hz-note-strip-reader .hz-note-strip-track {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+#hz-note-strip-reader .hz-note-strip-slots {
   display: flex;
   flex-direction: row;
   width: 300%;
@@ -573,7 +565,7 @@ body.hz-note-reader-active .hz-note-reader-slots {
   will-change: transform;
 }
 
-body.hz-note-reader-active .hz-note-reader-slot {
+#hz-note-strip-reader .hz-note-strip-slot {
   flex: 0 0 calc(100% / 3);
   width: calc(100% / 3);
   max-width: calc(100% / 3);
@@ -584,7 +576,7 @@ body.hz-note-reader-active .hz-note-reader-slot {
   box-sizing: border-box;
 }
 
-body.hz-note-reader-active .hz-note-reader-panel {
+#hz-note-strip-reader .hz-note-strip-panel {
   max-width: none;
   margin: 0;
   width: 100%;
