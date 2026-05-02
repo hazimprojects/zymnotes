@@ -376,15 +376,19 @@ h3 {
   50% { opacity: 0.6; }
 }
 
-/* Swipe page-turn entrance animations */
-@keyframes swipeEnterRight {
-  from { transform: translateX(100%); opacity: 0.92; }
-  to   { transform: translateX(0); opacity: 1; }
+/* Swipe between notes: whole-page drag uses transform on body (see main.js) */
+html.hz-swipe-dragging {
+  overflow-x: hidden;
+  overscroll-behavior-x: none;
 }
-@keyframes swipeEnterLeft {
-  from { transform: translateX(-100%); opacity: 0.92; }
-  to   { transform: translateX(0); opacity: 1; }
+
+/* Subtle settle after navigation — avoids a hard “pop” on paint */
+@keyframes hzSwipePageSettle {
+  from { opacity: 0.9; }
+  to   { opacity: 1; }
 }
-.swipe-enter-right { animation: swipeEnterRight 0.38s cubic-bezier(0.22, 1, 0.36, 1) both; }
-.swipe-enter-left  { animation: swipeEnterLeft  0.38s cubic-bezier(0.22, 1, 0.36, 1) both; }
+body.hz-swipe-page-settle {
+  animation: hzSwipePageSettle 0.28s ease-out both;
+}
+
 body.swipe-animating { overflow-x: hidden; }
