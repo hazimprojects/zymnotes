@@ -1505,7 +1505,12 @@ window.HzSubtopicStripReader = (function () {
   }
 
   function slotWidthPx() {
-    return root ? root.getBoundingClientRect().width || window.innerWidth : window.innerWidth || 360;
+    var w = 0;
+    if (root) {
+      w = root.getBoundingClientRect().width;
+    }
+    if (!w) w = window.innerWidth || document.documentElement.clientWidth || 0;
+    return Math.max(1, Math.round(w));
   }
 
   function baseTrackX() {
@@ -1807,12 +1812,24 @@ window.HzSubtopicStripReader = (function () {
     prevUrl = t.prev;
     nextUrl = t.next;
 
+    /** Align to centre column after layout (width was often 0 before first paint). */
+    function alignAfterLayout() {
+      resetTrackInstant();
+      requestAnimationFrame(function () {
+        resetTrackInstant();
+      });
+    }
+    alignAfterLayout();
+    requestAnimationFrame(function () {
+      requestAnimationFrame(alignAfterLayout);
+    });
+
     busy = true;
     Promise.all([fetchAndPanel(prevUrl), fetchAndPanel(nextUrl)]).then(function (panels) {
       installPanel(slotPrev, panels[0]);
       installPanel(slotNext, panels[1]);
       busy = false;
-      resetTrackInstant();
+      alignAfterLayout();
       document.dispatchEvent(new CustomEvent("hz:note-active-changed"));
     });
 
@@ -3957,7 +3974,7 @@ function hzLabQuizSparklePair() {
   if (!('serviceWorker' in navigator)) return;
 
   window.addEventListener('load', function () {
-    navigator.serviceWorker.register('/sw.js?v=327').catch(function (error) {
+    navigator.serviceWorker.register('/sw.js?v=328').catch(function (error) {
       console.warn('Service worker registration failed:', error);
     });
   });
