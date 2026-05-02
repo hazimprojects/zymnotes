@@ -2396,37 +2396,39 @@ function hzLabQuizSparklePair() {
   });
 })();
 
-// ── Swipe Navigation: touch left/right on note pages ─────────────────────────
-// Listeners are on <main> (not document) so { passive:false } on touchmove only
-// affects this element — document-level scroll stays fast. e.preventDefault() is
-// called only after horizontal intent is confirmed, stopping the browser from also
-// scrolling vertically while the element is tracking the finger.
+// ── Swipe Navigation: whole-page drag + velocity finish (subtopic + bab hub) ─
+// Transform on document.body so header + main + chrome move 1:1 with the finger.
 (function () {
-  // Apply entrance animation when arriving from a swipe
-  var swipeDir = sessionStorage.getItem('hz-swipe-dir');
-  if (swipeDir) {
-    sessionStorage.removeItem('hz-swipe-dir');
-    var enterEl = document.querySelector('.note-reading-main') || document.querySelector('main');
-    if (enterEl) {
-      document.body.classList.add('swipe-animating');
-      enterEl.classList.add(swipeDir === 'left' ? 'swipe-enter-right' : 'swipe-enter-left');
-      var cleanEnter = function () {
-        enterEl.classList.remove('swipe-enter-right', 'swipe-enter-left');
-        document.body.classList.remove('swipe-animating');
-      };
-      enterEl.addEventListener('animationend', cleanEnter, { once: true });
-      setTimeout(cleanEnter, 520);
-    }
-  }
-
-  // Run on subtopic pages AND chapter hub pages
   var isSubtopic = hzZymnotesIsSubtopicNotePathname(location.pathname);
   var isHub      = hzZymnotesIsBabHubPathname(location.pathname);
   if (!isSubtopic && !isHub) return;
 
-  var main = document.querySelector('.note-reading-main') || document.querySelector('main');
-  if (!main) return;
+  /** Light settle after navigation so the new page does not “pop” in abruptly. */
+  if (sessionStorage.getItem('hz-swipe-arrived') === '1') {
+    sessionStorage.removeItem('hz-swipe-arrived');
+    function applySettle() {
+      document.body.classList.add('hz-swipe-page-settle');
+      document.body.addEventListener(
+        'animationend',
+        function onEnd(e) {
+          if (e.animationName !== 'hzSwipePageSettle') return;
+          document.body.classList.remove('hz-swipe-page-settle');
+          document.body.removeEventListener('animationend', onEnd);
+        },
+        { once: true }
+      );
+      window.setTimeout(function () {
+        document.body.classList.remove('hz-swipe-page-settle');
+      }, 400);
+    }
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', applySettle, { once: true });
+    } else {
+      requestAnimationFrame(applySettle);
+    }
+  }
 
+  if (!document.body) return;
   function noteFilenameFromPathname(pathname) {
     var tail = (pathname || "").replace(/\/+$/, "").split("/").pop() || "";
     return tail.replace(/\.html?$/i, "") + ".html";
@@ -2435,18 +2437,23 @@ function hzLabQuizSparklePair() {
   function getTargets() {
     var fname = noteFilenameFromPathname(location.pathname);
     if (isHub) {
-      // Hub page: swipe left → first subtopic of this chapter
       var hm = fname.match(/^bab-(\d+)\.html$/);
       if (!hm) return { prev: null, next: null };
-      var chapNum = parseInt(hm[1]), ch = null;
+      var chapNum = parseInt(hm[1], 10);
+      var ch = null;
       for (var j = 0; j < ZYMNOTES_NAV.chapters.length; j++) {
-        if (ZYMNOTES_NAV.chapters[j].num === chapNum) { ch = ZYMNOTES_NAV.chapters[j]; break; }
+        if (ZYMNOTES_NAV.chapters[j].num === chapNum) {
+          ch = ZYMNOTES_NAV.chapters[j];
+          break;
+        }
       }
-      return { prev: null, next: ch && ch.subtopics.length ? hzZymnotesNoteHref(ch.subtopics[0].url) : null };
+      return {
+        prev: null,
+        next: ch && ch.subtopics.length ? hzZymnotesNoteHref(ch.subtopics[0].url) : null,
+      };
     }
-    // Subtopic page: flat list across all chapters
-    // First subtopic of each chapter goes back to its chapter hub on swipe-right.
-    var flat = [], firstOf = {};
+    var flat = [];
+    var firstOf = {};
     ZYMNOTES_NAV.chapters.forEach(function (ch) {
       ch.subtopics.forEach(function (sub, idx) {
         flat.push(sub.url);
@@ -2454,80 +2461,182 @@ function hzLabQuizSparklePair() {
       });
     });
     var i = flat.indexOf(fname);
-    return i === -1 ? { prev: null, next: null } : {
-      prev: firstOf[fname] ? hzZymnotesNoteHref(firstOf[fname]) : (i > 0 ? hzZymnotesNoteHref(flat[i - 1]) : null),
-      next: i < flat.length - 1 ? hzZymnotesNoteHref(flat[i + 1]) : null
+    if (i === -1) return { prev: null, next: null };
+    return {
+      prev: firstOf[fname]
+        ? hzZymnotesNoteHref(firstOf[fname])
+        : i > 0
+          ? hzZymnotesNoteHref(flat[i - 1])
+          : null,
+      next: i < flat.length - 1 ? hzZymnotesNoteHref(flat[i + 1]) : null,
     };
   }
 
   var tgt = getTargets();
-  var sx, sy, st, active = false, locked = false;
 
-  function snapBack() {
-    main.style.willChange = '';
-    main.style.transition = 'transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1)';
-    main.style.transform = 'translateX(0)';
-    main.addEventListener('transitionend', function () {
-      main.style.transition = '';
-      main.style.transform = '';
-    }, { once: true });
+  var prefetched = {};
+  function prefetchUrl(url) {
+    if (!url) return;
+    var abs = url;
+    try {
+      abs = new URL(url, window.location.href).href;
+    } catch (e1) {}
+    if (prefetched[abs]) return;
+    prefetched[abs] = true;
+    var link = document.createElement('link');
+    link.rel = 'prefetch';
+    link.href = abs;
+    document.head.appendChild(link);
   }
 
-  function goTo(url, dir) {
-    var target = (dir === 'left' ? -1 : 1) * window.innerWidth;
-    sessionStorage.setItem('hz-swipe-dir', dir);
+  prefetchUrl(tgt.prev);
+  prefetchUrl(tgt.next);
+
+  var sx = 0;
+  var sy = 0;
+  var lastX = 0;
+  var lastT = 0;
+  var moveSamples = [];
+  var active = false;
+  var locked = false;
+  var VEL_MS_WINDOW = 110;
+
+  function clearBodySwipeStyles() {
+    document.documentElement.classList.remove('hz-swipe-dragging');
+    document.body.classList.remove('swipe-animating');
+    document.body.style.willChange = '';
+    document.body.style.transition = '';
+    document.body.style.transform = '';
+  }
+
+  function endVelocityPxPerMs() {
+    var now = performance.now();
+    var t0 = now - VEL_MS_WINDOW;
+    var i = moveSamples.length - 1;
+    while (i >= 0 && moveSamples[i].t < t0) i--;
+    if (i < 1) return 0;
+    var a = moveSamples[i - 1];
+    var b = moveSamples[moveSamples.length - 1];
+    var dt = b.t - a.t;
+    if (dt < 8) return 0;
+    return (b.x - a.x) / dt;
+  }
+
+  function snapBackFrom(currentX) {
+    document.body.style.willChange = 'transform';
+    document.body.style.transition =
+      'transform ' + Math.min(0.42, 0.22 + Math.abs(currentX) / 2200) + 's cubic-bezier(0.22, 1, 0.36, 1)';
+    document.body.style.transform = 'translateX(0)';
+    function done() {
+      clearBodySwipeStyles();
+      document.body.removeEventListener('transitionend', onTrans);
+    }
+    function onTrans(e) {
+      if (e.propertyName !== 'transform') return;
+      done();
+    }
+    document.body.addEventListener('transitionend', onTrans);
+    window.setTimeout(done, 500);
+  }
+
+  function finishCommit(url, dir, currentX) {
+    var w = window.innerWidth || 360;
+    var dest = dir === 'left' ? -w : w;
+    var remain = dest - currentX;
+    var v = Math.abs(endVelocityPxPerMs());
+    var dur = 0.26 + Math.min(0.34, Math.abs(remain) / (420 + v * 900));
+    dur = Math.max(0.18, Math.min(0.55, dur));
+    sessionStorage.setItem('hz-swipe-arrived', '1');
     document.body.classList.add('swipe-animating');
-    main.style.willChange = 'transform';
+    document.documentElement.classList.add('hz-swipe-dragging');
+    document.body.style.willChange = 'transform';
+    document.body.style.transition = 'transform ' + dur + 's cubic-bezier(0.22, 1, 0.32, 1)';
     requestAnimationFrame(function () {
-      main.style.transition = 'transform 0.34s cubic-bezier(0.22, 1, 0.36, 1)';
-      requestAnimationFrame(function () {
-        main.style.transform = 'translateX(' + target + 'px)';
-      });
+      document.body.style.transform = 'translateX(' + dest + 'px)';
     });
     window.setTimeout(function () {
       window.location.assign(url);
-    }, 340);
+    }, Math.round(dur * 1000) + 40);
   }
 
-  main.addEventListener('touchstart', function (e) {
-    if (e.touches.length !== 1) return;
-    main.style.transition = 'none'; // interrupt any snap-back in progress
-    sx = e.touches[0].clientX; sy = e.touches[0].clientY;
-    st = Date.now(); active = true; locked = false;
-  }, { passive: true });
+  document.body.addEventListener(
+    'touchstart',
+    function (e) {
+      if (e.touches.length !== 1) return;
+      document.body.style.transition = 'none';
+      sx = e.touches[0].clientX;
+      sy = e.touches[0].clientY;
+      lastX = sx;
+      lastT = performance.now();
+      moveSamples.length = 0;
+      moveSamples.push({ t: lastT, x: lastX });
+      active = true;
+      locked = false;
+    },
+    { passive: true }
+  );
 
-  // { passive: false } required so e.preventDefault() can stop vertical scroll
-  // while the finger is tracking horizontally. Only called after horizontal is confirmed.
-  main.addEventListener('touchmove', function (e) {
-    if (!active || e.touches.length !== 1) return;
-    var dx = e.touches[0].clientX - sx, dy = e.touches[0].clientY - sy;
-    if (!locked) {
-      if (Math.abs(dx) < 8 && Math.abs(dy) < 8) return; // dead zone — wait for intent
-      if (Math.abs(dy) > Math.abs(dx)) { active = false; return; } // clearly vertical
-      locked = true;
-      main.style.willChange = 'transform';
-      // Do NOT add overflow-x:hidden here — it clips the transform and makes
-      // the element appear invisible while tracking the finger.
-    }
-    e.preventDefault(); // stop browser scrolling while tracking horizontal swipe
-    var hasTarget = dx < 0 ? !!tgt.next : !!tgt.prev;
-    main.style.transform = 'translateX(' + (hasTarget ? dx : dx * 0.2) + 'px)';
-  }, { passive: false });
+  document.body.addEventListener(
+    'touchmove',
+    function (e) {
+      if (!active || e.touches.length !== 1) return;
+      var cx = e.touches[0].clientX;
+      var cy = e.touches[0].clientY;
+      var dx = cx - sx;
+      var dy = cy - sy;
+      if (!locked) {
+        if (Math.abs(dx) < 10 && Math.abs(dy) < 10) return;
+        if (Math.abs(dy) > Math.abs(dx) * 1.15) {
+          active = false;
+          return;
+        }
+        locked = true;
+        document.documentElement.classList.add('hz-swipe-dragging');
+        document.body.style.willChange = 'transform';
+      }
+      e.preventDefault();
+      var now = performance.now();
+      moveSamples.push({ t: now, x: cx });
+      while (moveSamples.length > 12) moveSamples.shift();
+      lastX = cx;
+      lastT = now;
+      var hasTarget = dx < 0 ? !!tgt.next : !!tgt.prev;
+      var rubber = hasTarget ? 1 : 0.22;
+      document.body.style.transform = 'translateX(' + dx * rubber + 'px)';
+    },
+    { passive: false }
+  );
 
-  main.addEventListener('touchend', function (e) {
-    if (!active) return; active = false;
+  function onTouchEnd(e) {
+    if (!active) return;
+    active = false;
     if (!locked) return;
-    var dx = e.changedTouches[0].clientX - sx;
-    var vel = Math.abs(dx) / Math.max(1, Date.now() - st); // px/ms
-    var go = (Math.abs(dx) > 40 || vel > 0.25) && Math.abs(dx) > 15;
-    if      (dx < 0 && go && tgt.next) goTo(tgt.next, 'left');
-    else if (dx > 0 && go && tgt.prev) goTo(tgt.prev, 'right');
-    else                                snapBack();
-  }, { passive: true });
+    locked = false;
+    document.documentElement.classList.remove('hz-swipe-dragging');
+    var endX = e.changedTouches[0].clientX;
+    var dx = endX - sx;
+    var vx = endVelocityPxPerMs();
+    var w = window.innerWidth || 360;
+    var distNeed = Math.min(0.34 * w, 140);
+    var fling = Math.abs(vx) > 0.55;
+    var goLeft = dx < 0 && tgt.next && (dx < -distNeed || (fling && vx < -0.35));
+    var goRight = dx > 0 && tgt.prev && (dx > distNeed || (fling && vx > 0.35));
+    if (goLeft) finishCommit(tgt.next, 'left', dx);
+    else if (goRight) finishCommit(tgt.prev, 'right', dx);
+    else snapBackFrom(dx);
+  }
 
-  main.addEventListener('touchcancel', function () {
-    if (!active) return; active = false;
-    if (locked) snapBack(); else main.style.willChange = '';
+  document.body.addEventListener('touchend', onTouchEnd, { passive: true });
+  document.body.addEventListener('touchcancel', function () {
+    if (!active) return;
+    active = false;
+    document.documentElement.classList.remove('hz-swipe-dragging');
+    if (locked) {
+      locked = false;
+      snapBackFrom(lastX - sx);
+    } else {
+      clearBodySwipeStyles();
+    }
   }, { passive: true });
 })();
 
