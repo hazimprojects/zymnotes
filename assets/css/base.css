@@ -520,6 +520,70 @@ body.quiz-page.note-reading-app {
   padding-bottom: calc(72px + env(safe-area-inset-bottom, 0px));
 }
 
+/* Subtopic strip reader: header + footer stay fixed; only main content slides */
+body.hz-note-strip-reader-active {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+body.hz-note-strip-reader-active > header.site-header {
+  flex-shrink: 0;
+}
+
+body.hz-note-strip-reader-active > footer.site-footer {
+  flex-shrink: 0;
+}
+
+#hz-note-strip-reader {
+  flex: 1 1 auto;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  touch-action: pan-y;
+}
+
+#hz-note-strip-reader .hz-note-strip-track {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+#hz-note-strip-reader .hz-note-strip-slots {
+  display: flex;
+  flex-direction: row;
+  width: 300%;
+  height: 100%;
+  min-height: 100%;
+  align-items: stretch;
+  will-change: transform;
+}
+
+#hz-note-strip-reader .hz-note-strip-slot {
+  flex: 0 0 calc(100% / 3);
+  width: calc(100% / 3);
+  max-width: calc(100% / 3);
+  min-height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  box-sizing: border-box;
+}
+
+#hz-note-strip-reader .hz-note-strip-panel {
+  max-width: none;
+  margin: 0;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0;
+}
+
 body.app-shell-page .site-header,
 body.bab-hub-page .site-header,
 body.note-reading-app .site-header,

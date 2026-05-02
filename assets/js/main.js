@@ -1359,6 +1359,479 @@ var ZYMNOTES_NAV = { chapters: [
   ]},
 ]};
 
+/**
+ * Fixed chrome + sliding note strip only: wraps <main> in a 3-slot horizontal track.
+ * Header, footer, FAB (fixed), bottom nav stay put; prev/next HTML prefetched.
+ */
+window.HzSubtopicStripReader = (function () {
+  var root = null;
+  var track = null;
+  var slotPrev = null;
+  var slotCurr = null;
+  var slotNext = null;
+  var currentSlug = "";
+  var prevUrl = null;
+  var nextUrl = null;
+  var busy = false;
+
+  function noteFilenameFromPathname(pathname) {
+    var tail = (pathname || "").replace(/\/+$/, "").split("/").pop() || "";
+    return tail.replace(/\.html?$/i, "") + ".html";
+  }
+
+  function hzUrlToNoteSlug(url) {
+    try {
+      var u = typeof url === "string" ? new URL(url, window.location.href) : url;
+      var tail = (u.pathname || "").replace(/\/+$/, "").split("/").pop() || "";
+      return tail.replace(/\.html?$/i, "") + ".html";
+    } catch (e) {
+      return "";
+    }
+  }
+
+  function getNavTargets(slug) {
+    var fname = slug || noteFilenameFromPathname(location.pathname);
+    var flat = [];
+    var firstOf = {};
+    ZYMNOTES_NAV.chapters.forEach(function (ch) {
+      ch.subtopics.forEach(function (sub, idx) {
+        flat.push(sub.url);
+        if (idx === 0) firstOf[sub.url] = ch.url;
+      });
+    });
+    var i = flat.indexOf(fname);
+    if (i === -1) return { prev: null, next: null };
+    return {
+      prev: firstOf[fname]
+        ? hzZymnotesNoteHref(firstOf[fname])
+        : i > 0
+          ? hzZymnotesNoteHref(flat[i - 1])
+          : null,
+      next: i < flat.length - 1 ? hzZymnotesNoteHref(flat[i + 1]) : null,
+    };
+  }
+
+  function fetchNoteHtml(url) {
+    if (!url) return Promise.resolve("");
+    var candidates = [url];
+    try {
+      var abs = new URL(url, location.href).href;
+      if (candidates.indexOf(abs) === -1) candidates.push(abs);
+      var path = new URL(url, location.href).pathname + new URL(url, location.href).search;
+      if (path && candidates.indexOf(path) === -1) candidates.push(path);
+    } catch (e0) {}
+    function tryFetch(i) {
+      if (i >= candidates.length) return Promise.resolve("");
+      return fetch(candidates[i], { credentials: "same-origin" })
+        .then(function (r) {
+          return r.ok ? r.text() : "";
+        })
+        .then(function (txt) {
+          if (txt) return txt;
+          return tryFetch(i + 1);
+        });
+    }
+    return tryFetch(0).catch(function () {
+      return "";
+    });
+  }
+
+  function stripScripts(rootEl) {
+    if (!rootEl || !rootEl.querySelectorAll) return;
+    rootEl.querySelectorAll("script").forEach(function (s) {
+      s.remove();
+    });
+  }
+
+  function buildMainPanelFromDoc(doc) {
+    var srcMain = doc.querySelector("main.note-reading-main") || doc.querySelector("main");
+    if (!srcMain) return null;
+    var panel = document.createElement("div");
+    panel.className = "hz-note-strip-panel";
+    stripScripts(srcMain);
+    panel.appendChild(srcMain.cloneNode(true));
+    return panel;
+  }
+
+  function applyBodyThemeFromParsedBody(parsedBody) {
+    if (!parsedBody) return;
+    var keep = new Set(
+      (document.body.className || "")
+        .split(/\s+/)
+        .filter(function (c) {
+          return c && !/^bab-theme-\d+$/.test(c) && !/^page-theme-/.test(c);
+        })
+    );
+    (parsedBody.className || "")
+      .split(/\s+/)
+      .filter(Boolean)
+      .forEach(function (c) {
+        if (/^bab-theme-\d+$/.test(c) || /^page-theme-/.test(c)) keep.add(c);
+      });
+    document.body.className = Array.from(keep).join(" ");
+  }
+
+  function applySubtopicChromeFromDoc(doc) {
+    if (!doc || !doc.body) return;
+    var b = doc.body;
+    var lab = b.getAttribute("data-lab-href");
+    if (lab != null) document.body.setAttribute("data-lab-href", lab);
+    var em = b.getAttribute("data-lab-emoji");
+    if (em != null) document.body.setAttribute("data-lab-emoji", em);
+    var hex = b.getAttribute("data-lab-openmoji-hex");
+    if (hex != null) document.body.setAttribute("data-lab-openmoji-hex", hex);
+    var ptitle = b.getAttribute("data-page-title");
+    if (ptitle != null) document.body.setAttribute("data-page-title", ptitle);
+    var labA = document.querySelector('.note-sparkle-wrap a[data-sparkle-type="lab"]');
+    if (labA && lab) {
+      labA.setAttribute("href", lab);
+    }
+  }
+
+  function parseTrackX() {
+    if (!track || !track.style.transform) return baseTrackX();
+    var m = track.style.transform.match(/translate3d\(\s*(-?[\d.]+)px/i);
+    if (m) return parseFloat(m[1], 10);
+    var m2 = track.style.transform.match(/translateX\(\s*(-?[\d.]+)px/i);
+    return m2 ? parseFloat(m2[1], 10) : baseTrackX();
+  }
+
+  function setTrackPx(px, withTransition, durSec) {
+    if (!track) return;
+    track.style.transition = withTransition
+      ? "transform " + durSec + "s cubic-bezier(0.22, 1, 0.32, 1)"
+      : "none";
+    track.style.transform = "translate3d(" + px + "px,0,0)";
+  }
+
+  function slotWidthPx() {
+    return root ? root.getBoundingClientRect().width || window.innerWidth : window.innerWidth || 360;
+  }
+
+  function baseTrackX() {
+    return -slotWidthPx();
+  }
+
+  function clearSlot(slot) {
+    if (!slot) return;
+    while (slot.firstChild) slot.removeChild(slot.firstChild);
+  }
+
+  function fetchAndPanel(url) {
+    if (!url) return Promise.resolve(null);
+    return fetchNoteHtml(url).then(function (html) {
+      if (!html) return null;
+      var doc = new DOMParser().parseFromString(html, "text/html");
+      return buildMainPanelFromDoc(doc);
+    });
+  }
+
+  function fetchMeta(url) {
+    if (!url) return Promise.resolve(null);
+    return fetchNoteHtml(url).then(function (html) {
+      if (!html) return null;
+      return new DOMParser().parseFromString(html, "text/html");
+    });
+  }
+
+  function installPanel(slot, panel) {
+    clearSlot(slot);
+    if (!panel) return;
+    slot.appendChild(panel);
+    panel.querySelectorAll(".reveal-on-scroll").forEach(function (el) {
+      el.classList.add("visible");
+    });
+  }
+
+  function resetTrackInstant() {
+    setTrackPx(baseTrackX(), false, 0);
+  }
+
+  function bindSwipe() {
+    if (!track) return;
+
+    var sx = 0;
+    var sy = 0;
+    var lastX = 0;
+    var moveSamples = [];
+    var active = false;
+    var locked = false;
+    var VEL_MS_WINDOW = 110;
+
+    function endVelocityPxPerMs() {
+      var now = performance.now();
+      var t0 = now - VEL_MS_WINDOW;
+      var i = moveSamples.length - 1;
+      while (i >= 0 && moveSamples[i].t < t0) i--;
+      if (i < 1) return 0;
+      var a = moveSamples[i - 1];
+      var b = moveSamples[moveSamples.length - 1];
+      var dt = b.t - a.t;
+      if (dt < 8) return 0;
+      return (b.x - a.x) / dt;
+    }
+
+    function finishAnimTo(px, then) {
+      var start = parseTrackX();
+      var remain = px - start;
+      var v = Math.abs(endVelocityPxPerMs());
+      var dur = 0.2 + Math.min(0.38, Math.abs(remain) / (460 + v * 780));
+      dur = Math.max(0.15, Math.min(0.52, dur));
+      setTrackPx(px, true, dur);
+      window.setTimeout(then, Math.round(dur * 1000) + 35);
+    }
+
+    function commitNext() {
+      busy = true;
+      var w = slotWidthPx();
+      finishAnimTo(-2 * w, function () {
+        clearSlot(slotPrev);
+        while (slotCurr.firstChild) slotPrev.appendChild(slotCurr.firstChild);
+        while (slotNext.firstChild) slotCurr.appendChild(slotNext.firstChild);
+        clearSlot(slotNext);
+        var arrivedUrl = nextUrl;
+        var newSlug = hzUrlToNoteSlug(arrivedUrl);
+        currentSlug = newSlug;
+        var nt = getNavTargets(currentSlug);
+        prevUrl = nt.prev;
+        nextUrl = nt.next;
+        try {
+          var u = new URL(arrivedUrl, location.href);
+          history.pushState({ hzStripReader: true, slug: newSlug }, "", u.pathname + u.search + u.hash);
+        } catch (e3) {
+          history.pushState({ hzStripReader: true, slug: newSlug }, "", location.pathname);
+        }
+        fetchMeta(hzZymnotesNoteHref(newSlug)).then(function (d) {
+          if (d) {
+            if (d.title) document.title = d.title;
+            if (d.body) {
+              applyBodyThemeFromParsedBody(d.body);
+              applySubtopicChromeFromDoc(d);
+            }
+          }
+        });
+        fetchAndPanel(nextUrl).then(function (pn) {
+          installPanel(slotNext, pn);
+          busy = false;
+          resetTrackInstant();
+          if (window.HzSparkleRebindNoteAudio) window.HzSparkleRebindNoteAudio();
+          document.dispatchEvent(new CustomEvent("hz:note-active-changed"));
+        });
+      });
+    }
+
+    function commitPrev() {
+      busy = true;
+      finishAnimTo(0, function () {
+        clearSlot(slotNext);
+        while (slotCurr.firstChild) slotNext.appendChild(slotCurr.firstChild);
+        while (slotPrev.firstChild) slotCurr.appendChild(slotPrev.firstChild);
+        clearSlot(slotPrev);
+        var arrivedUrl = prevUrl;
+        var newSlug = hzUrlToNoteSlug(arrivedUrl);
+        currentSlug = newSlug;
+        var nt = getNavTargets(currentSlug);
+        prevUrl = nt.prev;
+        nextUrl = nt.next;
+        try {
+          var u = new URL(arrivedUrl, location.href);
+          history.pushState({ hzStripReader: true, slug: newSlug }, "", u.pathname + u.search + u.hash);
+        } catch (e4) {
+          history.pushState({ hzStripReader: true, slug: newSlug }, "", location.pathname);
+        }
+        fetchMeta(hzZymnotesNoteHref(newSlug)).then(function (d) {
+          if (d) {
+            if (d.title) document.title = d.title;
+            if (d.body) {
+              applyBodyThemeFromParsedBody(d.body);
+              applySubtopicChromeFromDoc(d);
+            }
+          }
+        });
+        fetchAndPanel(prevUrl).then(function (pp) {
+          installPanel(slotPrev, pp);
+          busy = false;
+          resetTrackInstant();
+          if (window.HzSparkleRebindNoteAudio) window.HzSparkleRebindNoteAudio();
+          document.dispatchEvent(new CustomEvent("hz:note-active-changed"));
+        });
+      });
+    }
+
+    function snapBack() {
+      document.documentElement.classList.remove("hz-swipe-dragging");
+      finishAnimTo(baseTrackX(), function () {
+        busy = false;
+        resetTrackInstant();
+      });
+    }
+
+    track.addEventListener(
+      "touchstart",
+      function (e) {
+        if (busy || e.touches.length !== 1) return;
+        track.style.transition = "none";
+        sx = e.touches[0].clientX;
+        sy = e.touches[0].clientY;
+        lastX = sx;
+        moveSamples.length = 0;
+        moveSamples.push({ t: performance.now(), x: lastX });
+        active = true;
+        locked = false;
+      },
+      { passive: true }
+    );
+
+    track.addEventListener(
+      "touchmove",
+      function (e) {
+        if (!active || busy || e.touches.length !== 1) return;
+        var cx = e.touches[0].clientX;
+        var cy = e.touches[0].clientY;
+        var dx = cx - sx;
+        var dy = cy - sy;
+        if (!locked) {
+          if (Math.abs(dx) < 10 && Math.abs(dy) < 10) return;
+          if (Math.abs(dy) > Math.abs(dx) * 1.12) {
+            active = false;
+            return;
+          }
+          locked = true;
+          document.documentElement.classList.add("hz-swipe-dragging");
+        }
+        e.preventDefault();
+        moveSamples.push({ t: performance.now(), x: cx });
+        while (moveSamples.length > 14) moveSamples.shift();
+        lastX = cx;
+        var w = slotWidthPx();
+        var base = -w;
+        var rubber = 0.22;
+        var tx;
+        if (dx <= 0) {
+          tx = nextUrl ? base + dx : base + dx * rubber;
+        } else {
+          tx = prevUrl ? base + dx : base + dx * rubber;
+        }
+        setTrackPx(tx, false, 0);
+      },
+      { passive: false }
+    );
+
+    function onTouchEnd(e) {
+      if (!active) return;
+      active = false;
+      if (!locked) return;
+      locked = false;
+      document.documentElement.classList.remove("hz-swipe-dragging");
+      var dx = e.changedTouches[0].clientX - sx;
+      var vx = endVelocityPxPerMs();
+      var w = slotWidthPx();
+      var distNeed = Math.min(0.3 * w, 120);
+      var fling = Math.abs(vx) > 0.5;
+      var goLeft = nextUrl && (dx < -distNeed || (fling && vx < -0.32));
+      var goRight = prevUrl && (dx > distNeed || (fling && vx > 0.32));
+      if (goLeft) commitNext();
+      else if (goRight) commitPrev();
+      else snapBack();
+    }
+
+    track.addEventListener("touchend", onTouchEnd, { passive: true });
+    track.addEventListener(
+      "touchcancel",
+      function () {
+        if (!active) return;
+        active = false;
+        locked = false;
+        snapBack();
+      },
+      { passive: true }
+    );
+  }
+
+  function prefetchNeighbors() {
+    function one(url) {
+      if (!url) return;
+      try {
+        var abs = new URL(url, location.href).href;
+        var link = document.createElement("link");
+        link.rel = "prefetch";
+        link.href = abs;
+        document.head.appendChild(link);
+      } catch (e5) {}
+    }
+    one(prevUrl);
+    one(nextUrl);
+  }
+
+  function init() {
+    if (!hzZymnotesIsSubtopicNotePathname(location.pathname)) return false;
+    if (document.getElementById("hz-note-strip-reader")) return true;
+
+    var main = document.querySelector("main.note-reading-main");
+    if (!main) return false;
+
+    root = document.createElement("div");
+    root.id = "hz-note-strip-reader";
+
+    track = document.createElement("div");
+    track.className = "hz-note-strip-track";
+
+    var slotsEl = document.createElement("div");
+    slotsEl.className = "hz-note-strip-slots";
+
+    slotPrev = document.createElement("div");
+    slotPrev.className = "hz-note-strip-slot";
+    slotCurr = document.createElement("div");
+    slotCurr.className = "hz-note-strip-slot";
+    slotNext = document.createElement("div");
+    slotNext.className = "hz-note-strip-slot";
+
+    slotsEl.appendChild(slotPrev);
+    slotsEl.appendChild(slotCurr);
+    slotsEl.appendChild(slotNext);
+    track.appendChild(slotsEl);
+    root.appendChild(track);
+
+    var panelCurr = document.createElement("div");
+    panelCurr.className = "hz-note-strip-panel";
+    panelCurr.appendChild(main);
+    slotCurr.appendChild(panelCurr);
+
+    main.parentNode.insertBefore(root, main.nextSibling);
+
+    document.body.classList.add("hz-note-strip-reader-active");
+    prefetchNeighbors();
+
+    currentSlug = noteFilenameFromPathname(location.pathname);
+    var t = getNavTargets(currentSlug);
+    prevUrl = t.prev;
+    nextUrl = t.next;
+
+    busy = true;
+    Promise.all([fetchAndPanel(prevUrl), fetchAndPanel(nextUrl)]).then(function (panels) {
+      installPanel(slotPrev, panels[0]);
+      installPanel(slotNext, panels[1]);
+      busy = false;
+      resetTrackInstant();
+      document.dispatchEvent(new CustomEvent("hz:note-active-changed"));
+    });
+
+    bindSwipe();
+    window.addEventListener("resize", function () {
+      if (document.body.classList.contains("hz-note-strip-reader-active")) {
+        resetTrackInstant();
+      }
+    });
+    window.addEventListener("popstate", function () {
+      window.location.reload();
+    });
+
+    return true;
+  }
+
+  return { init: init };
+})();
+
 // =========================
 // AUDIO PLAYER
 // =========================
@@ -1880,6 +2353,14 @@ function hzLabQuizSparklePair() {
       }
       function onEnded() { stopAudio(); }
 
+      function detachAudioListeners(el) {
+        if (!el) return;
+        el.removeEventListener('timeupdate', onTimeUpdate);
+        el.removeEventListener('play', onPlay);
+        el.removeEventListener('pause', onPause);
+        el.removeEventListener('ended', onEnded);
+      }
+
       function attachAudioListeners(el) {
         if (!el) return;
         el.addEventListener('timeupdate', onTimeUpdate);
@@ -1887,6 +2368,15 @@ function hzLabQuizSparklePair() {
         el.addEventListener('pause', onPause);
         el.addEventListener('ended', onEnded);
       }
+
+      window.HzSparkleRebindNoteAudio = function () {
+        var next = document.querySelector('.note-audio-player .audio-src');
+        if (!next || next === audioEl) return;
+        detachAudioListeners(audioEl);
+        audioEl = next;
+        attachAudioListeners(audioEl);
+        stopAudio();
+      };
 
       attachAudioListeners(audioEl);
 
@@ -2403,7 +2893,7 @@ function hzLabQuizSparklePair() {
   });
 })();
 
-// ── Swipe navigation: subtopic (<main> only) + bab hub (full body) ───────────
+// ── Swipe navigation: subtopic strip reader (fixed chrome) + bab hub (body) ───
 (function () {
   var isSubtopic = hzZymnotesIsSubtopicNotePathname(location.pathname);
   var isHub = hzZymnotesIsBabHubPathname(location.pathname);
@@ -2412,28 +2902,6 @@ function hzLabQuizSparklePair() {
   function noteFilenameFromPathname(pathname) {
     var tail = (pathname || "").replace(/\/+$/, "").split("/").pop() || "";
     return tail.replace(/\.html?$/i, "") + ".html";
-  }
-
-  function getSubtopicTargets() {
-    var fname = noteFilenameFromPathname(location.pathname);
-    var flat = [];
-    var firstOf = {};
-    ZYMNOTES_NAV.chapters.forEach(function (ch) {
-      ch.subtopics.forEach(function (sub, idx) {
-        flat.push(sub.url);
-        if (idx === 0) firstOf[sub.url] = ch.url;
-      });
-    });
-    var i = flat.indexOf(fname);
-    if (i === -1) return { prev: null, next: null };
-    return {
-      prev: firstOf[fname]
-        ? hzZymnotesNoteHref(firstOf[fname])
-        : i > 0
-          ? hzZymnotesNoteHref(flat[i - 1])
-          : null,
-      next: i < flat.length - 1 ? hzZymnotesNoteHref(flat[i + 1]) : null,
-    };
   }
 
   function hubNextUrl() {
@@ -2611,16 +3079,14 @@ function hzLabQuizSparklePair() {
     return;
   }
 
-  function bindSubtopicSwipe() {
-    var main = document.querySelector(".note-reading-main");
-    if (!main) return;
-    setupSwipe(main, getSubtopicTargets());
+  function bindStripReader() {
+    if (window.HzSubtopicStripReader && window.HzSubtopicStripReader.init()) return;
   }
 
   if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", bindSubtopicSwipe, { once: true });
+    document.addEventListener("DOMContentLoaded", bindStripReader, { once: true });
   } else {
-    bindSubtopicSwipe();
+    bindStripReader();
   }
 })();
 
@@ -2846,6 +3312,7 @@ function hzLabQuizSparklePair() {
     }
 
     window.addEventListener('popstate', refreshBottomNavActive);
+    document.addEventListener('hz:note-active-changed', refreshBottomNavActive);
   });
 })();
 
