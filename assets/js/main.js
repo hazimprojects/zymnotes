@@ -2363,8 +2363,7 @@ function hzLabQuizSparklePair() {
 
 // ── Reading Progress Bar (note subtopic pages only) ───────────────────────────
 (function () {
-  var isNotePage = /\/notes\/bab-\d+-\d+\.html$/.test(location.pathname);
-  if (!isNotePage) return;
+  if (!hzZymnotesIsSubtopicNotePathname(location.pathname)) return;
   document.addEventListener('DOMContentLoaded', function () {
     var bar = document.createElement('div');
     bar.className = 'reading-progress-bar is-active';
@@ -2385,8 +2384,8 @@ function hzLabQuizSparklePair() {
 
 // ── Keyboard Shortcuts: ← → prev/next on note pages ─────────────────────────
 (function () {
-  var isNotePage = /\/notes\/bab-\d+(-\d+)?\.html$/.test(location.pathname);
-  if (!isNotePage) return;
+  var p = location.pathname;
+  if (!hzZymnotesIsSubtopicNotePathname(p) && !hzZymnotesIsBabHubPathname(p)) return;
   document.addEventListener('keydown', function (e) {
     if (['INPUT', 'TEXTAREA', 'SELECT'].indexOf(document.activeElement.tagName) !== -1) return;
     if (e.ctrlKey || e.metaKey || e.altKey) return;
@@ -2416,20 +2415,25 @@ function hzLabQuizSparklePair() {
         document.body.classList.remove('swipe-animating');
       };
       enterEl.addEventListener('animationend', cleanEnter, { once: true });
-      setTimeout(cleanEnter, 600);
+      setTimeout(cleanEnter, 520);
     }
   }
 
   // Run on subtopic pages AND chapter hub pages
-  var isSubtopic = /\/notes\/bab-\d+-\d+\.html$/.test(location.pathname);
-  var isHub      = /\/notes\/bab-\d+\.html$/.test(location.pathname);
+  var isSubtopic = hzZymnotesIsSubtopicNotePathname(location.pathname);
+  var isHub      = hzZymnotesIsBabHubPathname(location.pathname);
   if (!isSubtopic && !isHub) return;
 
   var main = document.querySelector('.note-reading-main') || document.querySelector('main');
   if (!main) return;
 
+  function noteFilenameFromPathname(pathname) {
+    var tail = (pathname || "").replace(/\/+$/, "").split("/").pop() || "";
+    return tail.replace(/\.html?$/i, "") + ".html";
+  }
+
   function getTargets() {
-    var fname = location.pathname.split('/').pop();
+    var fname = noteFilenameFromPathname(location.pathname);
     if (isHub) {
       // Hub page: swipe left → first subtopic of this chapter
       var hm = fname.match(/^bab-(\d+)\.html$/);
@@ -2438,7 +2442,7 @@ function hzLabQuizSparklePair() {
       for (var j = 0; j < ZYMNOTES_NAV.chapters.length; j++) {
         if (ZYMNOTES_NAV.chapters[j].num === chapNum) { ch = ZYMNOTES_NAV.chapters[j]; break; }
       }
-      return { prev: null, next: ch && ch.subtopics.length ? ch.subtopics[0].url : null };
+      return { prev: null, next: ch && ch.subtopics.length ? hzZymnotesNoteHref(ch.subtopics[0].url) : null };
     }
     // Subtopic page: flat list across all chapters
     // First subtopic of each chapter goes back to its chapter hub on swipe-right.
@@ -2451,8 +2455,8 @@ function hzLabQuizSparklePair() {
     });
     var i = flat.indexOf(fname);
     return i === -1 ? { prev: null, next: null } : {
-      prev: firstOf[fname] ? firstOf[fname] : (i > 0 ? flat[i - 1] : null),
-      next: i < flat.length - 1 ? flat[i + 1] : null
+      prev: firstOf[fname] ? hzZymnotesNoteHref(firstOf[fname]) : (i > 0 ? hzZymnotesNoteHref(flat[i - 1]) : null),
+      next: i < flat.length - 1 ? hzZymnotesNoteHref(flat[i + 1]) : null
     };
   }
 
@@ -2472,18 +2476,17 @@ function hzLabQuizSparklePair() {
   function goTo(url, dir) {
     var target = (dir === 'left' ? -1 : 1) * window.innerWidth;
     sessionStorage.setItem('hz-swipe-dir', dir);
-    // overflow-x:hidden only during exit so no scrollbar flash — safe here since
-    // page is about to navigate away anyway.
     document.body.classList.add('swipe-animating');
-    main.style.willChange = '';
-    // Double rAF: ensure transition property is computed before transform changes.
+    main.style.willChange = 'transform';
     requestAnimationFrame(function () {
-      main.style.transition = 'transform 0.22s cubic-bezier(0.4, 0, 1, 1)';
+      main.style.transition = 'transform 0.34s cubic-bezier(0.22, 1, 0.36, 1)';
       requestAnimationFrame(function () {
         main.style.transform = 'translateX(' + target + 'px)';
       });
     });
-    setTimeout(function () { window.location.href = url; }, 260);
+    window.setTimeout(function () {
+      window.location.assign(url);
+    }, 340);
   }
 
   main.addEventListener('touchstart', function (e) {
@@ -2743,8 +2746,7 @@ function hzLabQuizSparklePair() {
 
 // ── Desktop Floating TOC (note subtopic pages, wide screens) ─────────────────
 (function () {
-  var isNotePage = /\/notes\/bab-\d+-\d+\.html$/.test(location.pathname);
-  if (!isNotePage) return;
+  if (!hzZymnotesIsSubtopicNotePathname(location.pathname)) return;
   document.addEventListener('DOMContentLoaded', function () {
     if (window.innerWidth < 1024) return;
     var headings = document.querySelectorAll(
