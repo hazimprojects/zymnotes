@@ -524,8 +524,14 @@ body.quiz-page.note-reading-app {
 body.hz-note-reader-active .hz-note-app-shell {
   display: flex;
   flex-direction: column;
+  /* min-height alone leaves flex children with indefinite height → track/slots collapse to 0 */
+  height: 100vh;
+  height: 100dvh;
+  max-height: 100vh;
+  max-height: 100dvh;
   min-height: 100vh;
   min-height: 100dvh;
+  box-sizing: border-box;
 }
 
 body.hz-note-reader-active #hz-note-app-shell > header.site-header {
@@ -536,7 +542,7 @@ body.hz-note-reader-active #hz-note-app-shell > header.site-header {
 }
 
 body.hz-note-reader-active .hz-note-reader-track {
-  flex: 1;
+  flex: 1 1 auto;
   min-height: 0;
   overflow: hidden;
   width: 100%;
@@ -549,6 +555,8 @@ body.hz-note-reader-active .hz-note-reader-slots {
   flex-direction: row;
   width: 300%;
   height: 100%;
+  min-height: 100%;
+  align-items: stretch;
   will-change: transform;
 }
 
