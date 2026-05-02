@@ -1385,6 +1385,37 @@ window.HzNotePageReader = (function () {
   var nextUrl = null;
   var busy = false;
 
+  /** Reserve space for fixed bottom nav when measuring shell height. */
+  function bottomOverlayPx() {
+    var nav = document.querySelector(".hz-bottom-nav");
+    if (nav) {
+      var st = window.getComputedStyle(nav);
+      if (st.display !== "none" && st.visibility !== "hidden") {
+        return Math.round(nav.getBoundingClientRect().height);
+      }
+    }
+    if (window.matchMedia && window.matchMedia("(max-width: 760px)").matches) {
+      var pb = window.getComputedStyle(document.body).paddingBottom || "0";
+      var m = pb.match(/^([\d.]+)px/);
+      if (m) return Math.round(parseFloat(m[1], 10));
+    }
+    return 0;
+  }
+
+  function syncShellHeights() {
+    if (!shell || !track) return;
+    var overlay = bottomOverlayPx();
+    var avail = Math.max(120, window.innerHeight - overlay);
+    var hdr = shell.querySelector("header.site-header");
+    var hdrH = hdr ? hdr.getBoundingClientRect().height : 52;
+    shell.style.height = avail + "px";
+    shell.style.maxHeight = avail + "px";
+    shell.style.minHeight = avail + "px";
+    track.style.flex = "1 1 auto";
+    track.style.minHeight = "0";
+    track.style.height = Math.max(80, avail - hdrH) + "px";
+  }
+
   function noteFilenameFromPathname(pathname) {
     var tail = (pathname || "").replace(/\/+$/, "").split("/").pop() || "";
     return tail.replace(/\.html?$/i, "") + ".html";
@@ -1774,6 +1805,11 @@ window.HzNotePageReader = (function () {
     shell.appendChild(track);
     document.body.insertBefore(shell, document.body.firstChild);
     document.body.classList.add("hz-note-reader-active");
+    syncShellHeights();
+    requestAnimationFrame(function () {
+      syncShellHeights();
+      requestAnimationFrame(syncShellHeights);
+    });
 
     currentSlug = noteFilenameFromPathname(location.pathname);
     var t = getNavTargets(currentSlug);
@@ -1791,7 +1827,10 @@ window.HzNotePageReader = (function () {
 
     bindSwipe();
     window.addEventListener("resize", function () {
-      if (document.body.classList.contains("hz-note-reader-active")) resetTrackInstant();
+      if (document.body.classList.contains("hz-note-reader-active")) {
+        syncShellHeights();
+        resetTrackInstant();
+      }
     });
     window.addEventListener("popstate", function () {
       window.location.reload();
