@@ -586,6 +586,17 @@ body.hz-note-strip-reader-active > footer.site-footer {
   padding: 0;
 }
 
+/*
+ * Reveal-on-scroll uses IntersectionObserver with the default root (viewport).
+ * After <main> moves into #hz-note-strip-reader, those elements scroll inside
+ * a nested overflow — they never intersect the viewport → stay opacity:0.
+ * Force them visible inside the strip reader (neighbour panels + current).
+ */
+html.js-enhanced #hz-note-strip-reader .hz-note-strip-panel .reveal-on-scroll {
+  opacity: 1;
+  transform: none;
+}
+
 body.app-shell-page .site-header,
 body.bab-hub-page .site-header,
 body.note-reading-app .site-header,
