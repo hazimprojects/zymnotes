@@ -1405,15 +1405,58 @@ window.HzNotePageReader = (function () {
   function syncShellHeights() {
     if (!shell || !track) return;
     var overlay = bottomOverlayPx();
-    var avail = Math.max(120, window.innerHeight - overlay);
+    var navH = 0;
+    var nav = document.querySelector(".hz-bottom-nav");
+    if (nav) {
+      var st = window.getComputedStyle(nav);
+      if (st.display !== "none" && st.visibility !== "hidden") {
+        navH = Math.round(nav.getBoundingClientRect().height);
+      }
+    }
+    if (!navH && window.matchMedia && window.matchMedia("(max-width: 760px)").matches) {
+      var cs = getComputedStyle(document.documentElement);
+      var bh = parseFloat(cs.getPropertyValue("--bottom-nav-h")) || 72;
+      var sb = parseFloat(cs.getPropertyValue("--safe-bottom")) || 0;
+      navH = Math.round(bh + sb);
+    }
+    var avail = Math.max(200, window.innerHeight - overlay);
     var hdr = shell.querySelector("header.site-header");
-    var hdrH = hdr ? hdr.getBoundingClientRect().height : 52;
+    var hdrH = hdr ? Math.round(hdr.getBoundingClientRect().height) : 52;
+    var trackH = Math.max(160, avail - hdrH);
     shell.style.height = avail + "px";
     shell.style.maxHeight = avail + "px";
     shell.style.minHeight = avail + "px";
     track.style.flex = "1 1 auto";
-    track.style.minHeight = "0";
-    track.style.height = Math.max(80, avail - hdrH) + "px";
+    track.style.minHeight = trackH + "px";
+    track.style.height = trackH + "px";
+  }
+
+  /** Same-origin GET with fallbacks when absolute URL mismatches dev/prod origin. */
+  function fetchNoteHtml(url) {
+    if (!url) return Promise.resolve("");
+    var candidates = [url];
+    try {
+      var abs = new URL(url, location.href).href;
+      if (candidates.indexOf(abs) === -1) candidates.push(abs);
+      var path = new URL(url, location.href).pathname + new URL(url, location.href).search;
+      if (path && candidates.indexOf(path) === -1) candidates.push(path);
+    } catch (e0) {
+      /* keep url only */
+    }
+    function tryFetch(i) {
+      if (i >= candidates.length) return Promise.resolve("");
+      return fetch(candidates[i], { credentials: "same-origin" })
+        .then(function (r) {
+          return r.ok ? r.text() : "";
+        })
+        .then(function (txt) {
+          if (txt) return txt;
+          return tryFetch(i + 1);
+        });
+    }
+    return tryFetch(0).catch(function () {
+      return "";
+    });
   }
 
   function noteFilenameFromPathname(pathname) {
@@ -1526,33 +1569,19 @@ window.HzNotePageReader = (function () {
 
   function fetchAndPanel(url) {
     if (!url) return Promise.resolve(null);
-    return fetch(url, { credentials: "same-origin" })
-      .then(function (r) {
-        return r.ok ? r.text() : "";
-      })
-      .then(function (html) {
-        if (!html) return null;
-        var doc = new DOMParser().parseFromString(html, "text/html");
-        return buildMainPanelFromDoc(doc);
-      })
-      .catch(function () {
-        return null;
-      });
+    return fetchNoteHtml(url).then(function (html) {
+      if (!html) return null;
+      var doc = new DOMParser().parseFromString(html, "text/html");
+      return buildMainPanelFromDoc(doc);
+    });
   }
 
   function fetchMeta(url) {
     if (!url) return Promise.resolve(null);
-    return fetch(url, { credentials: "same-origin" })
-      .then(function (r) {
-        return r.ok ? r.text() : "";
-      })
-      .then(function (html) {
-        if (!html) return null;
-        return new DOMParser().parseFromString(html, "text/html");
-      })
-      .catch(function () {
-        return null;
-      });
+    return fetchNoteHtml(url).then(function (html) {
+      if (!html) return null;
+      return new DOMParser().parseFromString(html, "text/html");
+    });
   }
 
   function installPanel(slot, panel) {
