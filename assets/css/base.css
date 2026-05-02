@@ -520,6 +520,57 @@ body.quiz-page.note-reading-app {
   padding-bottom: calc(72px + env(safe-area-inset-bottom, 0px));
 }
 
+/* In-app subtopic reader: header + FAB + bottom nav fixed; only note strip slides */
+body.hz-note-reader-active .hz-note-app-shell {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+body.hz-note-reader-active #hz-note-app-shell > header.site-header {
+  flex-shrink: 0;
+  position: sticky;
+  top: 0;
+  z-index: 60;
+}
+
+body.hz-note-reader-active .hz-note-reader-track {
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  touch-action: pan-y;
+}
+
+body.hz-note-reader-active .hz-note-reader-slots {
+  display: flex;
+  flex-direction: row;
+  width: 300%;
+  height: 100%;
+  will-change: transform;
+}
+
+body.hz-note-reader-active .hz-note-reader-slot {
+  flex: 0 0 calc(100% / 3);
+  width: calc(100% / 3);
+  max-width: calc(100% / 3);
+  min-height: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  box-sizing: border-box;
+}
+
+body.hz-note-reader-active .hz-note-reader-panel {
+  max-width: none;
+  margin: 0;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0;
+}
+
 body.app-shell-page .site-header,
 body.bab-hub-page .site-header,
 body.note-reading-app .site-header,
