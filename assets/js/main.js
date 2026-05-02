@@ -2441,13 +2441,17 @@ function hzLabQuizSparklePair() {
       return { prev: null, next: ch && ch.subtopics.length ? ch.subtopics[0].url : null };
     }
     // Subtopic page: flat list across all chapters
-    var flat = [];
+    // First subtopic of each chapter goes back to its chapter hub on swipe-right.
+    var flat = [], firstOf = {};
     ZYMNOTES_NAV.chapters.forEach(function (ch) {
-      ch.subtopics.forEach(function (sub) { flat.push(sub.url); });
+      ch.subtopics.forEach(function (sub, idx) {
+        flat.push(sub.url);
+        if (idx === 0) firstOf[sub.url] = ch.url;
+      });
     });
     var i = flat.indexOf(fname);
     return i === -1 ? { prev: null, next: null } : {
-      prev: i > 0 ? flat[i - 1] : null,
+      prev: firstOf[fname] ? firstOf[fname] : (i > 0 ? flat[i - 1] : null),
       next: i < flat.length - 1 ? flat[i + 1] : null
     };
   }
@@ -2456,7 +2460,6 @@ function hzLabQuizSparklePair() {
   var sx, sy, st, active = false, locked = false;
 
   function snapBack() {
-    document.body.classList.remove('swipe-animating');
     main.style.willChange = '';
     main.style.transition = 'transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1)';
     main.style.transform = 'translateX(0)';
@@ -2469,6 +2472,9 @@ function hzLabQuizSparklePair() {
   function goTo(url, dir) {
     var target = (dir === 'left' ? -1 : 1) * window.innerWidth;
     sessionStorage.setItem('hz-swipe-dir', dir);
+    // overflow-x:hidden only during exit so no scrollbar flash — safe here since
+    // page is about to navigate away anyway.
+    document.body.classList.add('swipe-animating');
     main.style.willChange = '';
     // Double rAF: ensure transition property is computed before transform changes.
     requestAnimationFrame(function () {
@@ -2497,7 +2503,8 @@ function hzLabQuizSparklePair() {
       if (Math.abs(dy) > Math.abs(dx)) { active = false; return; } // clearly vertical
       locked = true;
       main.style.willChange = 'transform';
-      document.body.classList.add('swipe-animating');
+      // Do NOT add overflow-x:hidden here — it clips the transform and makes
+      // the element appear invisible while tracking the finger.
     }
     e.preventDefault(); // stop browser scrolling while tracking horizontal swipe
     var hasTarget = dx < 0 ? !!tgt.next : !!tgt.prev;
