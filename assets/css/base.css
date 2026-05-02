@@ -28,6 +28,18 @@
   --safe-right:  env(safe-area-inset-right,  0px);
   /* Mesti sepadan dengan .hz-bottom-nav pada halaman bacaan (±72px + safe) — untuk sparkle FAB & body padding */
   --bottom-nav-h: 72px;
+  /* Tinggi jalur pembaca nota (atas nav tetap); fallback 100vh jika dvh tidak disokong */
+  --hz-reader-vh: 100vh;
+  --hz-reader-dvh: 100dvh;
+  --hz-note-header-h: 52px;
+  --hz-note-reader-track-min: max(
+    200px,
+    calc(var(--hz-reader-vh) - var(--hz-note-header-h) - var(--bottom-nav-h) - var(--safe-bottom))
+  );
+  --hz-note-reader-track-min-dvh: max(
+    200px,
+    calc(var(--hz-reader-dvh) - var(--hz-note-header-h) - var(--bottom-nav-h) - var(--safe-bottom))
+  );
 
   /* Dark mode transition */
   --theme-transition: background 0.35s ease, color 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
@@ -524,14 +536,14 @@ body.quiz-page.note-reading-app {
 body.hz-note-reader-active .hz-note-app-shell {
   display: flex;
   flex-direction: column;
-  /* min-height alone leaves flex children with indefinite height → track/slots collapse to 0 */
-  height: 100vh;
-  height: 100dvh;
-  max-height: 100vh;
-  max-height: 100dvh;
-  min-height: 100vh;
-  min-height: 100dvh;
   box-sizing: border-box;
+  /* Ruang di atas nav tetap — elak 100dvh penuh (nav fixed bertindih kandungan) */
+  height: calc(100vh - var(--bottom-nav-h) - var(--safe-bottom));
+  height: calc(100dvh - var(--bottom-nav-h) - var(--safe-bottom));
+  min-height: calc(100vh - var(--bottom-nav-h) - var(--safe-bottom));
+  min-height: calc(100dvh - var(--bottom-nav-h) - var(--safe-bottom));
+  max-height: calc(100vh - var(--bottom-nav-h) - var(--safe-bottom));
+  max-height: calc(100dvh - var(--bottom-nav-h) - var(--safe-bottom));
 }
 
 body.hz-note-reader-active #hz-note-app-shell > header.site-header {
@@ -543,7 +555,8 @@ body.hz-note-reader-active #hz-note-app-shell > header.site-header {
 
 body.hz-note-reader-active .hz-note-reader-track {
   flex: 1 1 auto;
-  min-height: 0;
+  min-height: var(--hz-note-reader-track-min);
+  min-height: var(--hz-note-reader-track-min-dvh);
   overflow: hidden;
   width: 100%;
   position: relative;
@@ -564,7 +577,7 @@ body.hz-note-reader-active .hz-note-reader-slot {
   flex: 0 0 calc(100% / 3);
   width: calc(100% / 3);
   max-width: calc(100% / 3);
-  min-height: 0;
+  min-height: 100%;
   overflow-y: auto;
   overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
