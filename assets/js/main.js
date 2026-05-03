@@ -526,44 +526,14 @@ document.addEventListener("DOMContentLoaded", function () {
     return Math.round(headerHeight + stickyHeight + 12);
   }
 
-  /** Strip reader scrolls inside .hz-note-strip-slot; window stays locked — accordion must use this root. */
-  function hzStripReadingScrollParent() {
-    return typeof window.hzNoteStripScrollParent === "function"
-      ? window.hzNoteStripScrollParent()
-      : null;
-  }
-
-  function hzReadingScrollTop() {
-    const sp = hzStripReadingScrollParent();
-    return sp ? sp.scrollTop : window.scrollY;
-  }
-
-  function hzReadingScrollBy(delta) {
-    const sp = hzStripReadingScrollParent();
-    if (sp) sp.scrollTop += delta;
-    else window.scrollTo(window.scrollX, window.scrollY + delta);
-  }
-
-  function hzReadingScrollToTop(top, behavior) {
-    const sp = hzStripReadingScrollParent();
-    if (sp) {
-      if (behavior === "smooth") sp.scrollTo({ top: top, behavior: "smooth" });
-      else sp.scrollTop = top;
-    } else if (behavior === "smooth") {
-      window.scrollTo({ top: top, behavior: "smooth" });
-    } else {
-      window.scrollTo(window.scrollX, top);
-    }
-  }
-
-  function waitUntilReadingScrollReaches(targetTop, callback) {
+  function waitUntilScrollReaches(targetTop, callback) {
     let stableFrames = 0;
     const MAX_FRAMES = 90;
     let frameCount = 0;
 
     function check() {
       frameCount += 1;
-      const distance = Math.abs(hzReadingScrollTop() - targetTop);
+      const distance = Math.abs(window.scrollY - targetTop);
 
       if (distance <= 2) {
         stableFrames += 1;
@@ -572,7 +542,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
 
       if (stableFrames >= 4 || frameCount >= MAX_FRAMES) {
-        hzReadingScrollToTop(targetTop, "auto");
+        window.scrollTo(0, targetTop);
         callback();
         return;
       }
@@ -667,7 +637,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const delta = currentTop - anchorTop;
 
         if (Math.abs(delta) > 0.5) {
-          hzReadingScrollBy(delta);
+          window.scrollTo(window.scrollX, window.scrollY + delta);
         }
 
         const adjustedTop = trigger.getBoundingClientRect().top;
@@ -693,12 +663,15 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     const triggerRect = trigger.getBoundingClientRect();
-    const absoluteTop = hzReadingScrollTop() + triggerRect.top;
+    const absoluteTop = window.scrollY + triggerRect.top;
     const targetTop = Math.max(0, Math.round(absoluteTop - getHeaderOffset()));
 
-    hzReadingScrollToTop(targetTop, "smooth");
+    window.scrollTo({
+      top: targetTop,
+      behavior: "smooth",
+    });
 
-    waitUntilReadingScrollReaches(targetTop, () => {
+    waitUntilScrollReaches(targetTop, () => {
       const anchorTop = trigger.getBoundingClientRect().top;
 
       document.documentElement.classList.add("accordion-no-smooth-scroll");
@@ -726,7 +699,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const delta = currentTop - anchorTop;
 
         if (Math.abs(delta) > 0.5) {
-          hzReadingScrollBy(delta);
+          window.scrollTo(window.scrollX, window.scrollY + delta);
         }
 
         const adjustedTop = trigger.getBoundingClientRect().top;
@@ -745,13 +718,16 @@ document.addEventListener("DOMContentLoaded", function () {
           document.documentElement.classList.remove("accordion-no-smooth-scroll");
           document.body.classList.remove("accordion-no-smooth-scroll");
 
-          const finalAbsoluteTop = hzReadingScrollTop() + trigger.getBoundingClientRect().top;
+          const finalAbsoluteTop = window.scrollY + trigger.getBoundingClientRect().top;
           const finalTargetTop = Math.max(
             0,
             Math.round(finalAbsoluteTop - getHeaderOffset())
           );
 
-          hzReadingScrollToTop(finalTargetTop, "auto");
+          window.scrollTo({
+            top: finalTargetTop,
+            behavior: "auto",
+          });
 
           refreshOpenAccordions();
         }
@@ -1396,569 +1372,6 @@ var ZYMNOTES_NAV = { chapters: [
   ]},
 ]};
 
-/**
- * Fixed chrome + sliding note strip only: wraps <main> in a 3-slot horizontal track.
- * Header, footer, FAB (fixed), bottom nav stay put; prev/next HTML prefetched.
- */
-window.HzSubtopicStripReader = (function () {
-  var root = null;
-  var track = null;
-  var slotsEl = null;
-  var slotPrev = null;
-  var slotCurr = null;
-  var slotNext = null;
-  var currentSlug = "";
-  var prevUrl = null;
-  var nextUrl = null;
-  var busy = false;
-
-  function noteFilenameFromPathname(pathname) {
-    var tail = (pathname || "").replace(/\/+$/, "").split("/").pop() || "";
-    return tail.replace(/\.html?$/i, "") + ".html";
-  }
-
-  function hzUrlToNoteSlug(url) {
-    try {
-      var u = typeof url === "string" ? new URL(url, window.location.href) : url;
-      var tail = (u.pathname || "").replace(/\/+$/, "").split("/").pop() || "";
-      return tail.replace(/\.html?$/i, "") + ".html";
-    } catch (e) {
-      return "";
-    }
-  }
-
-  function getNavTargets(slug) {
-    var fname = slug || noteFilenameFromPathname(location.pathname);
-    var flat = [];
-    var firstOf = {};
-    ZYMNOTES_NAV.chapters.forEach(function (ch) {
-      ch.subtopics.forEach(function (sub, idx) {
-        flat.push(sub.url);
-        if (idx === 0) firstOf[sub.url] = ch.url;
-      });
-    });
-    var i = flat.indexOf(fname);
-    if (i === -1) return { prev: null, next: null };
-    return {
-      prev: firstOf[fname]
-        ? hzZymnotesNoteHref(firstOf[fname])
-        : i > 0
-          ? hzZymnotesNoteHref(flat[i - 1])
-          : null,
-      next: i < flat.length - 1 ? hzZymnotesNoteHref(flat[i + 1]) : null,
-    };
-  }
-
-  function fetchNoteHtml(url) {
-    if (!url) return Promise.resolve("");
-    var candidates = [url];
-    try {
-      var abs = new URL(url, location.href).href;
-      if (candidates.indexOf(abs) === -1) candidates.push(abs);
-      var path = new URL(url, location.href).pathname + new URL(url, location.href).search;
-      if (path && candidates.indexOf(path) === -1) candidates.push(path);
-    } catch (e0) {}
-    function tryFetch(i) {
-      if (i >= candidates.length) return Promise.resolve("");
-      return fetch(candidates[i], { credentials: "same-origin" })
-        .then(function (r) {
-          return r.ok ? r.text() : "";
-        })
-        .then(function (txt) {
-          if (txt) return txt;
-          return tryFetch(i + 1);
-        });
-    }
-    return tryFetch(0).catch(function () {
-      return "";
-    });
-  }
-
-  function stripScripts(rootEl) {
-    if (!rootEl || !rootEl.querySelectorAll) return;
-    rootEl.querySelectorAll("script").forEach(function (s) {
-      s.remove();
-    });
-  }
-
-  function buildMainPanelFromDoc(doc) {
-    var srcMain = doc.querySelector("main.note-reading-main") || doc.querySelector("main");
-    if (!srcMain) return null;
-    var panel = document.createElement("div");
-    panel.className = "hz-note-strip-panel";
-    stripScripts(srcMain);
-    panel.appendChild(srcMain.cloneNode(true));
-    return panel;
-  }
-
-  function applyBodyThemeFromParsedBody(parsedBody) {
-    if (!parsedBody) return;
-    var keep = new Set(
-      (document.body.className || "")
-        .split(/\s+/)
-        .filter(function (c) {
-          return c && !/^bab-theme-\d+$/.test(c) && !/^page-theme-/.test(c);
-        })
-    );
-    (parsedBody.className || "")
-      .split(/\s+/)
-      .filter(Boolean)
-      .forEach(function (c) {
-        if (/^bab-theme-\d+$/.test(c) || /^page-theme-/.test(c)) keep.add(c);
-      });
-    document.body.className = Array.from(keep).join(" ");
-  }
-
-  function applySubtopicChromeFromDoc(doc) {
-    if (!doc || !doc.body) return;
-    var b = doc.body;
-    var lab = b.getAttribute("data-lab-href");
-    if (lab != null) document.body.setAttribute("data-lab-href", lab);
-    var em = b.getAttribute("data-lab-emoji");
-    if (em != null) document.body.setAttribute("data-lab-emoji", em);
-    var hex = b.getAttribute("data-lab-openmoji-hex");
-    if (hex != null) document.body.setAttribute("data-lab-openmoji-hex", hex);
-    var ptitle = b.getAttribute("data-page-title");
-    if (ptitle != null) document.body.setAttribute("data-page-title", ptitle);
-    var labA = document.querySelector('.note-sparkle-wrap a[data-sparkle-type="lab"]');
-    if (labA && lab) {
-      labA.setAttribute("href", lab);
-    }
-  }
-
-  function parseTrackX() {
-    if (!slotsEl || !slotsEl.style.transform) return baseTrackX();
-    var m = slotsEl.style.transform.match(/translate3d\(\s*(-?[\d.]+)px/i);
-    if (m) return parseFloat(m[1], 10);
-    var m2 = slotsEl.style.transform.match(/translateX\(\s*(-?[\d.]+)px/i);
-    return m2 ? parseFloat(m2[1], 10) : baseTrackX();
-  }
-
-  function setTrackPx(px, withTransition, durSec) {
-    if (!slotsEl) return;
-    slotsEl.style.transition = withTransition
-      ? "transform " + durSec + "s cubic-bezier(0.22, 1, 0.32, 1)"
-      : "none";
-    slotsEl.style.transform = "translate3d(" + px + "px,0,0)";
-  }
-
-  function slotWidthPx() {
-    var w = 0;
-    if (root) {
-      w = root.getBoundingClientRect().width;
-    }
-    if (!w) w = window.innerWidth || document.documentElement.clientWidth || 0;
-    return Math.max(1, Math.round(w));
-  }
-
-  function baseTrackX() {
-    return -slotWidthPx();
-  }
-
-  function clearSlot(slot) {
-    if (!slot) return;
-    while (slot.firstChild) slot.removeChild(slot.firstChild);
-  }
-
-  function fetchAndPanel(url) {
-    if (!url) return Promise.resolve(null);
-    return fetchNoteHtml(url).then(function (html) {
-      if (!html) return null;
-      var doc = new DOMParser().parseFromString(html, "text/html");
-      return buildMainPanelFromDoc(doc);
-    });
-  }
-
-  function fetchMeta(url) {
-    if (!url) return Promise.resolve(null);
-    return fetchNoteHtml(url).then(function (html) {
-      if (!html) return null;
-      return new DOMParser().parseFromString(html, "text/html");
-    });
-  }
-
-  function hzStripResetNestedScroll(panelRoot) {
-    if (!panelRoot || !panelRoot.querySelectorAll) return;
-    panelRoot.querySelectorAll("*").forEach(function (el) {
-      try {
-        if (el.scrollTop > 0) el.scrollTop = 0;
-      } catch (e0) {}
-    });
-  }
-
-  function installPanel(slot, panel) {
-    clearSlot(slot);
-    if (!panel) return;
-    slot.scrollTop = 0;
-    slot.appendChild(panel);
-    hzStripResetNestedScroll(panel);
-    panel.querySelectorAll(".reveal-on-scroll").forEach(function (el) {
-      el.classList.add("visible");
-    });
-    if (typeof window.hzPreparePaperAccordions === "function") {
-      window.hzPreparePaperAccordions(panel);
-    }
-  }
-
-  /** Reveal IO uses viewport root; content inside strip slots never intersects — ensure visible. */
-  function markRevealsVisible(scope) {
-    if (!scope || !scope.querySelectorAll) return;
-    scope.querySelectorAll(".reveal-on-scroll").forEach(function (el) {
-      el.classList.add("visible");
-    });
-  }
-
-  function resetTrackInstant() {
-    setTrackPx(baseTrackX(), false, 0);
-  }
-
-  function bindSwipe() {
-    if (!track) return;
-
-    var sx = 0;
-    var sy = 0;
-    var lastX = 0;
-    var moveSamples = [];
-    var active = false;
-    var locked = false;
-    var VEL_MS_WINDOW = 110;
-
-    function endVelocityPxPerMs() {
-      var now = performance.now();
-      var t0 = now - VEL_MS_WINDOW;
-      var i = moveSamples.length - 1;
-      while (i >= 0 && moveSamples[i].t < t0) i--;
-      if (i < 1) return 0;
-      var a = moveSamples[i - 1];
-      var b = moveSamples[moveSamples.length - 1];
-      var dt = b.t - a.t;
-      if (dt < 8) return 0;
-      return (b.x - a.x) / dt;
-    }
-
-    function finishAnimTo(px, then) {
-      var start = parseTrackX();
-      var remain = px - start;
-      var v = Math.abs(endVelocityPxPerMs());
-      var dur = 0.2 + Math.min(0.38, Math.abs(remain) / (460 + v * 780));
-      dur = Math.max(0.15, Math.min(0.52, dur));
-      setTrackPx(px, true, dur);
-      window.setTimeout(then, Math.round(dur * 1000) + 35);
-    }
-
-    function commitNext() {
-      busy = true;
-      slotNext.scrollTop = 0;
-      hzStripResetNestedScroll(slotNext.firstElementChild);
-      var w = slotWidthPx();
-      finishAnimTo(-2 * w, function () {
-        clearSlot(slotPrev);
-        while (slotCurr.firstChild) slotPrev.appendChild(slotCurr.firstChild);
-        while (slotNext.firstChild) slotCurr.appendChild(slotNext.firstChild);
-        clearSlot(slotNext);
-        slotCurr.scrollTop = 0;
-        hzStripResetNestedScroll(slotCurr.firstElementChild);
-        var arrivedUrl = nextUrl;
-        var newSlug = hzUrlToNoteSlug(arrivedUrl);
-        currentSlug = newSlug;
-        var nt = getNavTargets(currentSlug);
-        prevUrl = nt.prev;
-        nextUrl = nt.next;
-        try {
-          var u = new URL(arrivedUrl, location.href);
-          history.pushState({ hzStripReader: true, slug: newSlug }, "", u.pathname + u.search + u.hash);
-        } catch (e3) {
-          history.pushState({ hzStripReader: true, slug: newSlug }, "", location.pathname);
-        }
-        fetchMeta(hzZymnotesNoteHref(newSlug)).then(function (d) {
-          if (d) {
-            if (d.title) document.title = d.title;
-            if (d.body) {
-              applyBodyThemeFromParsedBody(d.body);
-              applySubtopicChromeFromDoc(d);
-            }
-          }
-        });
-        fetchAndPanel(nextUrl).then(function (pn) {
-          installPanel(slotNext, pn);
-          busy = false;
-          resetTrackInstant();
-          updateStripScrollTopFab();
-          if (window.HzSparkleRebindNoteAudio) window.HzSparkleRebindNoteAudio();
-          document.dispatchEvent(new CustomEvent("hz:note-active-changed"));
-        });
-      });
-    }
-
-    function commitPrev() {
-      busy = true;
-      var preservePrevScroll = slotPrev.scrollTop;
-      finishAnimTo(0, function () {
-        clearSlot(slotNext);
-        while (slotCurr.firstChild) slotNext.appendChild(slotCurr.firstChild);
-        while (slotPrev.firstChild) slotCurr.appendChild(slotPrev.firstChild);
-        clearSlot(slotPrev);
-        slotCurr.scrollTop = preservePrevScroll;
-        var arrivedUrl = prevUrl;
-        var newSlug = hzUrlToNoteSlug(arrivedUrl);
-        currentSlug = newSlug;
-        var nt = getNavTargets(currentSlug);
-        prevUrl = nt.prev;
-        nextUrl = nt.next;
-        try {
-          var u = new URL(arrivedUrl, location.href);
-          history.pushState({ hzStripReader: true, slug: newSlug }, "", u.pathname + u.search + u.hash);
-        } catch (e4) {
-          history.pushState({ hzStripReader: true, slug: newSlug }, "", location.pathname);
-        }
-        fetchMeta(hzZymnotesNoteHref(newSlug)).then(function (d) {
-          if (d) {
-            if (d.title) document.title = d.title;
-            if (d.body) {
-              applyBodyThemeFromParsedBody(d.body);
-              applySubtopicChromeFromDoc(d);
-            }
-          }
-        });
-        fetchAndPanel(prevUrl).then(function (pp) {
-          installPanel(slotPrev, pp);
-          busy = false;
-          resetTrackInstant();
-          updateStripScrollTopFab();
-          if (window.HzSparkleRebindNoteAudio) window.HzSparkleRebindNoteAudio();
-          document.dispatchEvent(new CustomEvent("hz:note-active-changed"));
-        });
-      });
-    }
-
-    function snapBack() {
-      document.documentElement.classList.remove("hz-swipe-dragging");
-      finishAnimTo(baseTrackX(), function () {
-        busy = false;
-        resetTrackInstant();
-      });
-    }
-
-    track.addEventListener(
-      "touchstart",
-      function (e) {
-        if (busy || e.touches.length !== 1) return;
-        slotsEl.style.transition = "none";
-        sx = e.touches[0].clientX;
-        sy = e.touches[0].clientY;
-        lastX = sx;
-        moveSamples.length = 0;
-        moveSamples.push({ t: performance.now(), x: lastX });
-        active = true;
-        locked = false;
-      },
-      { passive: true }
-    );
-
-    track.addEventListener(
-      "touchmove",
-      function (e) {
-        if (!active || busy || e.touches.length !== 1) return;
-        var cx = e.touches[0].clientX;
-        var cy = e.touches[0].clientY;
-        var dx = cx - sx;
-        var dy = cy - sy;
-        if (!locked) {
-          if (Math.abs(dx) < 10 && Math.abs(dy) < 10) return;
-          if (Math.abs(dy) > Math.abs(dx) * 1.12) {
-            active = false;
-            return;
-          }
-          locked = true;
-          document.documentElement.classList.add("hz-swipe-dragging");
-        }
-        e.preventDefault();
-        moveSamples.push({ t: performance.now(), x: cx });
-        while (moveSamples.length > 14) moveSamples.shift();
-        lastX = cx;
-        var w = slotWidthPx();
-        var base = -w;
-        var rubber = 0.22;
-        var tx;
-        if (dx <= 0) {
-          tx = nextUrl ? base + dx : base + dx * rubber;
-        } else {
-          tx = prevUrl ? base + dx : base + dx * rubber;
-        }
-        setTrackPx(tx, false, 0);
-      },
-      { passive: false }
-    );
-
-    function onTouchEnd(e) {
-      if (!active) return;
-      active = false;
-      if (!locked) return;
-      locked = false;
-      document.documentElement.classList.remove("hz-swipe-dragging");
-      var dx = e.changedTouches[0].clientX - sx;
-      var vx = endVelocityPxPerMs();
-      var w = slotWidthPx();
-      var distNeed = Math.min(0.3 * w, 120);
-      var fling = Math.abs(vx) > 0.5;
-      var goLeft = nextUrl && (dx < -distNeed || (fling && vx < -0.32));
-      var goRight = prevUrl && (dx > distNeed || (fling && vx > 0.32));
-      if (goLeft) commitNext();
-      else if (goRight) commitPrev();
-      else snapBack();
-    }
-
-    track.addEventListener("touchend", onTouchEnd, { passive: true });
-    track.addEventListener(
-      "touchcancel",
-      function () {
-        if (!active) return;
-        active = false;
-        locked = false;
-        snapBack();
-      },
-      { passive: true }
-    );
-  }
-
-  function prefetchNeighbors() {
-    function one(url) {
-      if (!url) return;
-      try {
-        var abs = new URL(url, location.href).href;
-        var link = document.createElement("link");
-        link.rel = "prefetch";
-        link.href = abs;
-        document.head.appendChild(link);
-      } catch (e5) {}
-    }
-    one(prevUrl);
-    one(nextUrl);
-  }
-
-  function init() {
-    if (!hzZymnotesIsSubtopicNotePathname(location.pathname)) return false;
-    if (document.getElementById("hz-note-strip-reader")) return true;
-
-    var main = document.querySelector("main.note-reading-main");
-    if (!main) return false;
-
-    // Save original DOM position before moving main into the strip structure
-    var mainParent = main.parentNode;
-    var mainNextSib = main.nextSibling;
-
-    root = document.createElement("div");
-    root.id = "hz-note-strip-reader";
-
-    track = document.createElement("div");
-    track.className = "hz-note-strip-track";
-
-    slotsEl = document.createElement("div");
-    slotsEl.className = "hz-note-strip-slots";
-
-    slotPrev = document.createElement("div");
-    slotPrev.className = "hz-note-strip-slot";
-    slotCurr = document.createElement("div");
-    slotCurr.className = "hz-note-strip-slot";
-    slotNext = document.createElement("div");
-    slotNext.className = "hz-note-strip-slot";
-
-    slotsEl.appendChild(slotPrev);
-    slotsEl.appendChild(slotCurr);
-    slotsEl.appendChild(slotNext);
-    track.appendChild(slotsEl);
-    root.appendChild(track);
-
-    window.hzNoteStripScrollParent = function () {
-      return slotCurr;
-    };
-
-    var scrollTopFab = document.createElement("button");
-    scrollTopFab.type = "button";
-    scrollTopFab.className = "hz-strip-scroll-top display-fab";
-    scrollTopFab.setAttribute("aria-label", "Tatal ke atas");
-    scrollTopFab.hidden = true;
-    scrollTopFab.innerHTML =
-      '<span class="display-fab-icon" aria-hidden="true">' +
-      '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>' +
-      "</span>";
-    root.appendChild(scrollTopFab);
-
-    function updateStripScrollTopFab() {
-      if (!slotCurr || !scrollTopFab) return;
-      scrollTopFab.hidden = slotCurr.scrollTop < 180;
-    }
-
-    scrollTopFab.addEventListener("click", function () {
-      if (!slotCurr) return;
-      slotCurr.scrollTo({ top: 0, behavior: "smooth" });
-    });
-
-    slotCurr.addEventListener("scroll", updateStripScrollTopFab, { passive: true });
-    window.addEventListener("resize", updateStripScrollTopFab);
-
-    var panelCurr = document.createElement("div");
-    panelCurr.className = "hz-note-strip-panel";
-    panelCurr.appendChild(main);
-    slotCurr.appendChild(panelCurr);
-
-    // Use saved parent/sibling — after appendChild(main) above, main.parentNode is panelCurr,
-    // so using it directly would try to insert root inside its own descendant (HierarchyRequestError)
-    mainParent.insertBefore(root, mainNextSib);
-    markRevealsVisible(root);
-
-    document.documentElement.classList.add("hz-note-strip-reader-active");
-    document.body.classList.add("hz-note-strip-reader-active");
-    try {
-      window.scrollTo(0, 0);
-      document.documentElement.scrollTop = 0;
-      document.body.scrollTop = 0;
-    } catch (eScroll) {}
-
-    prefetchNeighbors();
-
-    currentSlug = noteFilenameFromPathname(location.pathname);
-    var t = getNavTargets(currentSlug);
-    prevUrl = t.prev;
-    nextUrl = t.next;
-
-    /** Align to centre column after layout (width was often 0 before first paint). */
-    function alignAfterLayout() {
-      resetTrackInstant();
-      requestAnimationFrame(function () {
-        resetTrackInstant();
-      });
-    }
-    alignAfterLayout();
-    requestAnimationFrame(function () {
-      requestAnimationFrame(alignAfterLayout);
-    });
-
-    busy = true;
-    Promise.all([fetchAndPanel(prevUrl), fetchAndPanel(nextUrl)]).then(function (panels) {
-      installPanel(slotPrev, panels[0]);
-      installPanel(slotNext, panels[1]);
-      busy = false;
-      alignAfterLayout();
-      updateStripScrollTopFab();
-      document.dispatchEvent(new CustomEvent("hz:note-active-changed"));
-    });
-
-    bindSwipe();
-    window.addEventListener("resize", function () {
-      if (document.body.classList.contains("hz-note-strip-reader-active")) {
-        resetTrackInstant();
-      }
-    });
-    window.addEventListener("popstate", function () {
-      window.location.reload();
-    });
-
-    return true;
-  }
-
-  return { init: init };
-})();
 
 // =========================
 // AUDIO PLAYER
@@ -2995,61 +2408,18 @@ function hzLabQuizSparklePair() {
     var header = document.querySelector(".site-header");
     if (header) header.appendChild(bar);
     var raf;
-    var slotScrollBound = null;
-
-    function progressScrollParent() {
-      return typeof window.hzNoteStripScrollParent === "function"
-        ? window.hzNoteStripScrollParent()
-        : null;
-    }
-
-    function updateProgressBar() {
-      var sp = progressScrollParent();
-      var scrolled = sp ? sp.scrollTop : window.scrollY;
-      var scrollable = sp
-        ? sp.scrollHeight - sp.clientHeight
-        : document.documentElement.scrollHeight - window.innerHeight;
-      var total = Math.max(0, scrollable);
-      bar.style.width = (total > 0 ? Math.min((scrolled / total) * 100, 100) : 0) + "%";
-    }
-
-    function onSlotScroll() {
-      cancelAnimationFrame(raf);
-      raf = requestAnimationFrame(updateProgressBar);
-    }
-
-    function bindSlotScrollListener() {
-      var sp = progressScrollParent();
-      if (sp === slotScrollBound) return;
-      if (slotScrollBound) {
-        slotScrollBound.removeEventListener("scroll", onSlotScroll);
-      }
-      slotScrollBound = sp || null;
-      if (slotScrollBound) {
-        slotScrollBound.addEventListener("scroll", onSlotScroll, { passive: true });
-      }
-    }
-
     window.addEventListener(
       "scroll",
       function () {
         cancelAnimationFrame(raf);
-        raf = requestAnimationFrame(updateProgressBar);
+        raf = requestAnimationFrame(function () {
+          var scrolled = window.scrollY;
+          var total = document.documentElement.scrollHeight - window.innerHeight;
+          bar.style.width = (total > 0 ? Math.min((scrolled / total) * 100, 100) : 0) + "%";
+        });
       },
       { passive: true }
     );
-
-    document.addEventListener("hz:note-active-changed", function () {
-      bindSlotScrollListener();
-      cancelAnimationFrame(raf);
-      raf = requestAnimationFrame(updateProgressBar);
-    });
-
-    bindSlotScrollListener();
-    window.requestAnimationFrame(function () {
-      bindSlotScrollListener();
-      updateProgressBar();
-    });
   });
 })();
 
@@ -3068,202 +2438,6 @@ function hzLabQuizSparklePair() {
   });
 })();
 
-// ── Swipe navigation: subtopic strip reader (fixed chrome) + bab hub (body) ───
-(function () {
-  var isSubtopic = hzZymnotesIsSubtopicNotePathname(location.pathname);
-  var isHub = hzZymnotesIsBabHubPathname(location.pathname);
-  if (!isSubtopic && !isHub) return;
-
-  function noteFilenameFromPathname(pathname) {
-    var tail = (pathname || "").replace(/\/+$/, "").split("/").pop() || "";
-    return tail.replace(/\.html?$/i, "") + ".html";
-  }
-
-  function hubNextUrl() {
-    var fname = noteFilenameFromPathname(location.pathname);
-    var hm = fname.match(/^bab-(\d+)\.html$/);
-    if (!hm) return null;
-    var chapNum = parseInt(hm[1], 10);
-    var ch = null;
-    for (var j = 0; j < ZYMNOTES_NAV.chapters.length; j++) {
-      if (ZYMNOTES_NAV.chapters[j].num === chapNum) {
-        ch = ZYMNOTES_NAV.chapters[j];
-        break;
-      }
-    }
-    return ch && ch.subtopics.length ? hzZymnotesNoteHref(ch.subtopics[0].url) : null;
-  }
-
-  function setupSwipe(swipeEl, tgt) {
-    var prefetched = {};
-    function prefetchUrl(url) {
-      if (!url) return;
-      try {
-        var abs = new URL(url, location.href).href;
-        if (prefetched[abs]) return;
-        prefetched[abs] = true;
-        var link = document.createElement("link");
-        link.rel = "prefetch";
-        link.href = abs;
-        document.head.appendChild(link);
-      } catch (e0) {}
-    }
-    prefetchUrl(tgt.prev);
-    prefetchUrl(tgt.next);
-
-    var sx = 0;
-    var sy = 0;
-    var lastX = 0;
-    var moveSamples = [];
-    var active = false;
-    var locked = false;
-    var VEL_MS_WINDOW = 110;
-
-    function endVelocityPxPerMs() {
-      var now = performance.now();
-      var t0 = now - VEL_MS_WINDOW;
-      var i = moveSamples.length - 1;
-      while (i >= 0 && moveSamples[i].t < t0) i--;
-      if (i < 1) return 0;
-      var a = moveSamples[i - 1];
-      var b = moveSamples[moveSamples.length - 1];
-      var dt = b.t - a.t;
-      if (dt < 8) return 0;
-      return (b.x - a.x) / dt;
-    }
-
-    function clearSwipeStyles() {
-      document.documentElement.classList.remove("hz-swipe-dragging");
-      swipeEl.classList.remove("swipe-animating");
-      swipeEl.style.willChange = "";
-      swipeEl.style.transition = "";
-      swipeEl.style.transform = "";
-    }
-
-    function snapBackFrom(currentDx) {
-      swipeEl.style.willChange = "transform";
-      swipeEl.style.transition =
-        "transform " + Math.min(0.4, 0.22 + Math.abs(currentDx || 0) / 2200) + "s cubic-bezier(0.22, 1, 0.36, 1)";
-      swipeEl.style.transform = "translateX(0)";
-      window.setTimeout(clearSwipeStyles, 480);
-    }
-
-    function goTo(url, dirLeft) {
-      var w = window.innerWidth || 360;
-      var dest = dirLeft ? -w : w;
-      swipeEl.classList.add("swipe-animating");
-      document.documentElement.classList.add("hz-swipe-dragging");
-      swipeEl.style.willChange = "transform";
-      swipeEl.style.transition = "transform 0.28s cubic-bezier(0.22, 1, 0.32, 1)";
-      requestAnimationFrame(function () {
-        swipeEl.style.transform = "translateX(" + dest + "px)";
-      });
-      window.setTimeout(function () {
-        window.location.assign(url);
-      }, 300);
-    }
-
-    swipeEl.addEventListener(
-      "touchstart",
-      function (e) {
-        if (e.touches.length !== 1) return;
-        swipeEl.style.transition = "none";
-        sx = e.touches[0].clientX;
-        sy = e.touches[0].clientY;
-        lastX = sx;
-        moveSamples.length = 0;
-        moveSamples.push({ t: performance.now(), x: lastX });
-        active = true;
-        locked = false;
-      },
-      { passive: true }
-    );
-
-    swipeEl.addEventListener(
-      "touchmove",
-      function (e) {
-        if (!active || e.touches.length !== 1) return;
-        var cx = e.touches[0].clientX;
-        var cy = e.touches[0].clientY;
-        var dx = cx - sx;
-        var dy = cy - sy;
-        if (!locked) {
-          if (Math.abs(dx) < 10 && Math.abs(dy) < 10) return;
-          if (Math.abs(dy) > Math.abs(dx) * 1.12) {
-            active = false;
-            return;
-          }
-          locked = true;
-          document.documentElement.classList.add("hz-swipe-dragging");
-          swipeEl.style.willChange = "transform";
-        }
-        e.preventDefault();
-        moveSamples.push({ t: performance.now(), x: cx });
-        while (moveSamples.length > 14) moveSamples.shift();
-        lastX = cx;
-        var hasTarget = dx < 0 ? !!tgt.next : !!tgt.prev;
-        var rubber = hasTarget ? 1 : 0.22;
-        swipeEl.style.transform = "translateX(" + dx * rubber + "px)";
-      },
-      { passive: false }
-    );
-
-    swipeEl.addEventListener(
-      "touchend",
-      function (e) {
-        if (!active) return;
-        active = false;
-        if (!locked) return;
-        locked = false;
-        document.documentElement.classList.remove("hz-swipe-dragging");
-        var dx = e.changedTouches[0].clientX - sx;
-        var vx = endVelocityPxPerMs();
-        var w = window.innerWidth || 360;
-        var distNeed = Math.min(0.3 * w, 120);
-        var fling = Math.abs(vx) > 0.5;
-        var goLeft = tgt.next && (dx < -distNeed || (fling && vx < -0.32));
-        var goRight = tgt.prev && (dx > distNeed || (fling && vx > 0.32));
-        if (goLeft) goTo(tgt.next, true);
-        else if (goRight) goTo(tgt.prev, false);
-        else snapBackFrom(dx);
-      },
-      { passive: true }
-    );
-
-    swipeEl.addEventListener(
-      "touchcancel",
-      function () {
-        if (!active) return;
-        active = false;
-        document.documentElement.classList.remove("hz-swipe-dragging");
-        if (locked) {
-          locked = false;
-          snapBackFrom(lastX - sx);
-        } else {
-          clearSwipeStyles();
-        }
-      },
-      { passive: true }
-    );
-  }
-
-  if (isHub) {
-    var next = hubNextUrl();
-    if (!next) return;
-    setupSwipe(document.body, { prev: null, next: next });
-    return;
-  }
-
-  function bindStripReader() {
-    if (window.HzSubtopicStripReader && window.HzSubtopicStripReader.init()) return;
-  }
-
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", bindStripReader, { once: true });
-  } else {
-    bindStripReader();
-  }
-})();
 
 // ── Global Search Overlay ─────────────────────────────────────────────────────
 (function () {
