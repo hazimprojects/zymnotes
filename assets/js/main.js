@@ -1543,6 +1543,7 @@ window.HzSubtopicStripReader = (function () {
   function installPanel(slot, panel) {
     clearSlot(slot);
     if (!panel) return;
+    slot.scrollTop = 0;
     slot.appendChild(panel);
     panel.querySelectorAll(".reveal-on-scroll").forEach(function (el) {
       el.classList.add("visible");
@@ -1603,6 +1604,7 @@ window.HzSubtopicStripReader = (function () {
         while (slotCurr.firstChild) slotPrev.appendChild(slotCurr.firstChild);
         while (slotNext.firstChild) slotCurr.appendChild(slotNext.firstChild);
         clearSlot(slotNext);
+        slotCurr.scrollTop = 0;
         var arrivedUrl = nextUrl;
         var newSlug = hzUrlToNoteSlug(arrivedUrl);
         currentSlug = newSlug;
@@ -1641,6 +1643,7 @@ window.HzSubtopicStripReader = (function () {
         while (slotCurr.firstChild) slotNext.appendChild(slotCurr.firstChild);
         while (slotPrev.firstChild) slotCurr.appendChild(slotPrev.firstChild);
         clearSlot(slotPrev);
+        slotCurr.scrollTop = 0;
         var arrivedUrl = prevUrl;
         var newSlug = hzUrlToNoteSlug(arrivedUrl);
         currentSlug = newSlug;
