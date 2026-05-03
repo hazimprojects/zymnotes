@@ -1366,6 +1366,7 @@ var ZYMNOTES_NAV = { chapters: [
 window.HzSubtopicStripReader = (function () {
   var root = null;
   var track = null;
+  var slotsEl = null;
   var slotPrev = null;
   var slotCurr = null;
   var slotNext = null;
@@ -1489,19 +1490,19 @@ window.HzSubtopicStripReader = (function () {
   }
 
   function parseTrackX() {
-    if (!track || !track.style.transform) return baseTrackX();
-    var m = track.style.transform.match(/translate3d\(\s*(-?[\d.]+)px/i);
+    if (!slotsEl || !slotsEl.style.transform) return baseTrackX();
+    var m = slotsEl.style.transform.match(/translate3d\(\s*(-?[\d.]+)px/i);
     if (m) return parseFloat(m[1], 10);
-    var m2 = track.style.transform.match(/translateX\(\s*(-?[\d.]+)px/i);
+    var m2 = slotsEl.style.transform.match(/translateX\(\s*(-?[\d.]+)px/i);
     return m2 ? parseFloat(m2[1], 10) : baseTrackX();
   }
 
   function setTrackPx(px, withTransition, durSec) {
-    if (!track) return;
-    track.style.transition = withTransition
+    if (!slotsEl) return;
+    slotsEl.style.transition = withTransition
       ? "transform " + durSec + "s cubic-bezier(0.22, 1, 0.32, 1)"
       : "none";
-    track.style.transform = "translate3d(" + px + "px,0,0)";
+    slotsEl.style.transform = "translate3d(" + px + "px,0,0)";
   }
 
   function slotWidthPx() {
@@ -1683,7 +1684,7 @@ window.HzSubtopicStripReader = (function () {
       "touchstart",
       function (e) {
         if (busy || e.touches.length !== 1) return;
-        track.style.transition = "none";
+        slotsEl.style.transition = "none";
         sx = e.touches[0].clientX;
         sy = e.touches[0].clientY;
         lastX = sx;
@@ -1793,7 +1794,7 @@ window.HzSubtopicStripReader = (function () {
     track = document.createElement("div");
     track.className = "hz-note-strip-track";
 
-    var slotsEl = document.createElement("div");
+    slotsEl = document.createElement("div");
     slotsEl.className = "hz-note-strip-slots";
 
     slotPrev = document.createElement("div");
