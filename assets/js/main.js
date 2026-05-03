@@ -433,8 +433,6 @@ document.addEventListener("DOMContentLoaded", function () {
   // =========================
   // PAPER ACCORDION
   // =========================
-  const accordionTriggers = document.querySelectorAll(".paper-accordion-trigger");
-
   function getOwnAccordionPanel(item) {
     return item.querySelector(":scope > .paper-accordion-panel");
   }
@@ -574,166 +572,172 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  accordionTriggers.forEach((trigger) => {
-    const item = trigger.closest(".paper-accordion-item");
-    const panel = item ? getOwnAccordionPanel(item) : null;
+  function prepareAccordionPanels(root) {
+    if (!root || !root.querySelectorAll) return;
+    root.querySelectorAll(".paper-accordion-trigger").forEach((trigger) => {
+      const item = trigger.closest(".paper-accordion-item");
+      const panel = item ? getOwnAccordionPanel(item) : null;
 
-    if (trigger) {
       trigger.setAttribute(
         "aria-expanded",
         item && item.classList.contains("is-open") ? "true" : "false"
       );
-    }
 
-    if (panel && !item.classList.contains("is-open")) {
-      panel.style.maxHeight = "0px";
-      panel.style.opacity = "0";
-      panel.style.overflow = "hidden";
-    }
-
-    if (panel && item.classList.contains("is-open")) {
-      panel.classList.add("active");
-      panel.style.maxHeight = "none";
-      panel.style.opacity = "1";
-      panel.style.overflow = "visible";
-    }
-  });
-
-  accordionTriggers.forEach((trigger) => {
-    trigger.addEventListener("click", () => {
-      const currentItem = trigger.closest(".paper-accordion-item");
-      const accordionGroup = getAccordionGroupForItem(currentItem);
-      if (!currentItem || !accordionGroup) return;
-
-      const wasOpen = currentItem.classList.contains("is-open");
-
-      if (wasOpen) {
-        const anchorTop = trigger.getBoundingClientRect().top;
-
-        document.documentElement.classList.add("accordion-no-smooth-scroll");
-        document.body.classList.add("accordion-no-smooth-scroll");
-
-        accordionGroup
-          .querySelectorAll(":scope > .paper-accordion-item")
-          .forEach((item) => {
-            setAccordionState(item, false);
-          });
-
-        trigger.blur();
-
-        let stillFrames = 0;
-        let lastTop = null;
-        const REQUIRED_STILL_FRAMES = 10;
-        const MAX_FRAMES = 40;
-        let frameCount = 0;
-
-        function stabilizeClose() {
-          frameCount += 1;
-
-          const currentTop = trigger.getBoundingClientRect().top;
-          const delta = currentTop - anchorTop;
-
-          if (Math.abs(delta) > 0.5) {
-            window.scrollTo(window.scrollX, window.scrollY + delta);
-          }
-
-          const adjustedTop = trigger.getBoundingClientRect().top;
-
-          if (lastTop !== null && Math.abs(adjustedTop - lastTop) < 0.25) {
-            stillFrames += 1;
-          } else {
-            stillFrames = 0;
-          }
-
-          lastTop = adjustedTop;
-
-          if (stillFrames < REQUIRED_STILL_FRAMES && frameCount < MAX_FRAMES) {
-            requestAnimationFrame(stabilizeClose);
-          } else {
-            document.documentElement.classList.remove("accordion-no-smooth-scroll");
-            document.body.classList.remove("accordion-no-smooth-scroll");
-          }
-        }
-
-        requestAnimationFrame(stabilizeClose);
-        return;
+      if (panel && item && !item.classList.contains("is-open")) {
+        panel.style.maxHeight = "0px";
+        panel.style.opacity = "0";
+        panel.style.overflow = "hidden";
       }
 
-      const triggerRect = trigger.getBoundingClientRect();
-      const absoluteTop = window.scrollY + triggerRect.top;
-      const targetTop = Math.max(0, Math.round(absoluteTop - getHeaderOffset()));
+      if (panel && item && item.classList.contains("is-open")) {
+        panel.classList.add("active");
+        panel.style.maxHeight = "none";
+        panel.style.opacity = "1";
+        panel.style.overflow = "visible";
+      }
+    });
+  }
 
-      window.scrollTo({
-        top: targetTop,
-        behavior: "smooth",
-      });
+  window.hzPreparePaperAccordions = prepareAccordionPanels;
 
-      waitUntilScrollReaches(targetTop, () => {
-        const anchorTop = trigger.getBoundingClientRect().top;
+  document.body.addEventListener("click", function (accordionEv) {
+    const trigger = accordionEv.target.closest(".paper-accordion-trigger");
+    if (!trigger || !document.body.contains(trigger)) return;
 
-        document.documentElement.classList.add("accordion-no-smooth-scroll");
-        document.body.classList.add("accordion-no-smooth-scroll");
+    const currentItem = trigger.closest(".paper-accordion-item");
+    const accordionGroup = getAccordionGroupForItem(currentItem);
+    if (!currentItem || !accordionGroup) return;
 
-        accordionGroup
-          .querySelectorAll(":scope > .paper-accordion-item")
-          .forEach((item) => {
-            setAccordionState(item, false);
-          });
+    const wasOpen = currentItem.classList.contains("is-open");
 
-        setAccordionState(currentItem, true);
-        trigger.blur();
+    if (wasOpen) {
+      const anchorTop = trigger.getBoundingClientRect().top;
 
-        let stillFrames = 0;
-        let lastTop = null;
-        const REQUIRED_STILL_FRAMES = 10;
-        const MAX_FRAMES = 50;
-        let frameCount = 0;
+      document.documentElement.classList.add("accordion-no-smooth-scroll");
+      document.body.classList.add("accordion-no-smooth-scroll");
 
-        function stabilizeOpen() {
-          frameCount += 1;
+      accordionGroup
+        .querySelectorAll(":scope > .paper-accordion-item")
+        .forEach((item) => {
+          setAccordionState(item, false);
+        });
 
-          const currentTop = trigger.getBoundingClientRect().top;
-          const delta = currentTop - anchorTop;
+      trigger.blur();
 
-          if (Math.abs(delta) > 0.5) {
-            window.scrollTo(window.scrollX, window.scrollY + delta);
-          }
+      let stillFrames = 0;
+      let lastTop = null;
+      const REQUIRED_STILL_FRAMES = 10;
+      const MAX_FRAMES = 40;
+      let frameCount = 0;
 
-          const adjustedTop = trigger.getBoundingClientRect().top;
+      function stabilizeClose() {
+        frameCount += 1;
 
-          if (lastTop !== null && Math.abs(adjustedTop - lastTop) < 0.25) {
-            stillFrames += 1;
-          } else {
-            stillFrames = 0;
-          }
+        const currentTop = trigger.getBoundingClientRect().top;
+        const delta = currentTop - anchorTop;
 
-          lastTop = adjustedTop;
-
-          if (stillFrames < REQUIRED_STILL_FRAMES && frameCount < MAX_FRAMES) {
-            requestAnimationFrame(stabilizeOpen);
-          } else {
-            document.documentElement.classList.remove("accordion-no-smooth-scroll");
-            document.body.classList.remove("accordion-no-smooth-scroll");
-
-            const finalAbsoluteTop = window.scrollY + trigger.getBoundingClientRect().top;
-            const finalTargetTop = Math.max(
-              0,
-              Math.round(finalAbsoluteTop - getHeaderOffset())
-            );
-
-            window.scrollTo({
-              top: finalTargetTop,
-              behavior: "auto",
-            });
-
-            refreshOpenAccordions();
-          }
+        if (Math.abs(delta) > 0.5) {
+          window.scrollTo(window.scrollX, window.scrollY + delta);
         }
 
-        requestAnimationFrame(stabilizeOpen);
-      });
+        const adjustedTop = trigger.getBoundingClientRect().top;
+
+        if (lastTop !== null && Math.abs(adjustedTop - lastTop) < 0.25) {
+          stillFrames += 1;
+        } else {
+          stillFrames = 0;
+        }
+
+        lastTop = adjustedTop;
+
+        if (stillFrames < REQUIRED_STILL_FRAMES && frameCount < MAX_FRAMES) {
+          requestAnimationFrame(stabilizeClose);
+        } else {
+          document.documentElement.classList.remove("accordion-no-smooth-scroll");
+          document.body.classList.remove("accordion-no-smooth-scroll");
+        }
+      }
+
+      requestAnimationFrame(stabilizeClose);
+      return;
+    }
+
+    const triggerRect = trigger.getBoundingClientRect();
+    const absoluteTop = window.scrollY + triggerRect.top;
+    const targetTop = Math.max(0, Math.round(absoluteTop - getHeaderOffset()));
+
+    window.scrollTo({
+      top: targetTop,
+      behavior: "smooth",
+    });
+
+    waitUntilScrollReaches(targetTop, () => {
+      const anchorTop = trigger.getBoundingClientRect().top;
+
+      document.documentElement.classList.add("accordion-no-smooth-scroll");
+      document.body.classList.add("accordion-no-smooth-scroll");
+
+      accordionGroup
+        .querySelectorAll(":scope > .paper-accordion-item")
+        .forEach((item) => {
+          setAccordionState(item, false);
+        });
+
+      setAccordionState(currentItem, true);
+      trigger.blur();
+
+      let stillFrames = 0;
+      let lastTop = null;
+      const REQUIRED_STILL_FRAMES = 10;
+      const MAX_FRAMES = 50;
+      let frameCount = 0;
+
+      function stabilizeOpen() {
+        frameCount += 1;
+
+        const currentTop = trigger.getBoundingClientRect().top;
+        const delta = currentTop - anchorTop;
+
+        if (Math.abs(delta) > 0.5) {
+          window.scrollTo(window.scrollX, window.scrollY + delta);
+        }
+
+        const adjustedTop = trigger.getBoundingClientRect().top;
+
+        if (lastTop !== null && Math.abs(adjustedTop - lastTop) < 0.25) {
+          stillFrames += 1;
+        } else {
+          stillFrames = 0;
+        }
+
+        lastTop = adjustedTop;
+
+        if (stillFrames < REQUIRED_STILL_FRAMES && frameCount < MAX_FRAMES) {
+          requestAnimationFrame(stabilizeOpen);
+        } else {
+          document.documentElement.classList.remove("accordion-no-smooth-scroll");
+          document.body.classList.remove("accordion-no-smooth-scroll");
+
+          const finalAbsoluteTop = window.scrollY + trigger.getBoundingClientRect().top;
+          const finalTargetTop = Math.max(
+            0,
+            Math.round(finalAbsoluteTop - getHeaderOffset())
+          );
+
+          window.scrollTo({
+            top: finalTargetTop,
+            behavior: "auto",
+          });
+
+          refreshOpenAccordions();
+        }
+      }
+
+      requestAnimationFrame(stabilizeOpen);
     });
   });
+
+  prepareAccordionPanels(document.body);
 
   window.addEventListener("resize", refreshOpenAccordions);
 
@@ -1557,6 +1561,9 @@ window.HzSubtopicStripReader = (function () {
     panel.querySelectorAll(".reveal-on-scroll").forEach(function (el) {
       el.classList.add("visible");
     });
+    if (typeof window.hzPreparePaperAccordions === "function") {
+      window.hzPreparePaperAccordions(panel);
+    }
   }
 
   /** Reveal IO uses viewport root; content inside strip slots never intersects — ensure visible. */
