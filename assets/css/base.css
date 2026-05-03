@@ -520,108 +520,7 @@ body.quiz-page.note-reading-app {
   padding-bottom: calc(72px + env(safe-area-inset-bottom, 0px));
 }
 
-/* Subtopic strip reader: header + footer stay fixed; only main content slides */
-html.hz-note-strip-reader-active {
-  overflow: hidden;
-  height: 100%;
-}
-
-html.hz-note-strip-reader-active body {
-  overflow: hidden;
-}
-
-body.hz-note-strip-reader-active {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  min-height: 100dvh;
-}
-
-body.hz-note-strip-reader-active > header.site-header {
-  flex-shrink: 0;
-}
-
-body.hz-note-strip-reader-active > footer.site-footer {
-  flex-shrink: 0;
-}
-
-#hz-note-strip-reader {
-  flex: 1 1 auto;
-  min-height: 0;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-  width: 100%;
-  position: relative;
-  touch-action: pan-y;
-}
-
-#hz-note-strip-reader .hz-note-strip-track {
-  flex: 1 1 auto;
-  min-height: 0;
-  overflow: hidden;
-  width: 100%;
-  position: relative;
-}
-
-#hz-note-strip-reader .hz-note-strip-slots {
-  display: flex;
-  flex-direction: row;
-  width: 300%;
-  height: 100%;
-  min-height: 100%;
-  align-items: stretch;
-  will-change: transform;
-  /* Default: show centre (curr) slot. -33.333% of 3-slot container = 1 slot width left */
-  transform: translate3d(-33.3333%, 0, 0);
-}
-
-#hz-note-strip-reader .hz-note-strip-slot {
-  flex: 0 0 calc(100% / 3);
-  width: calc(100% / 3);
-  max-width: calc(100% / 3);
-  min-height: 100%;
-  overflow-y: auto;
-  overflow-x: hidden;
-  -webkit-overflow-scrolling: touch;
-  box-sizing: border-box;
-}
-
-#hz-note-strip-reader .hz-note-strip-panel {
-  max-width: none;
-  margin: 0;
-  width: 100%;
-  box-sizing: border-box;
-  padding: 0;
-}
-
-/* Scroll-to-top within active strip column (does not use header .display-fab — hidden on mobile) */
-#hz-note-strip-reader .hz-strip-scroll-top {
-  position: absolute;
-  right: max(14px, env(safe-area-inset-right, 0px));
-  bottom: calc(max(18px, env(safe-area-inset-bottom, 0px)) + var(--bottom-nav-h));
-  z-index: 6;
-  box-shadow: var(--shadow-soft);
-}
-
-#hz-note-strip-reader .hz-strip-scroll-top[hidden] {
-  display: none !important;
-}
-
-[data-theme="dark"] #hz-note-strip-reader .hz-strip-scroll-top {
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
-}
-
-/*
- * Reveal-on-scroll uses IntersectionObserver with the default root (viewport).
- * After <main> moves into #hz-note-strip-reader, those elements scroll inside
- * a nested overflow — they never intersect the viewport → stay opacity:0.
- * Force them visible inside the strip reader (neighbour panels + current).
- */
-html.js-enhanced #hz-note-strip-reader .hz-note-strip-panel .reveal-on-scroll {
-  opacity: 1;
-  transform: none;
-}
+/* Subtopic strip reader removed — normal document scroll on note pages */
 
 body.app-shell-page .site-header,
 body.bab-hub-page .site-header,
@@ -1205,8 +1104,7 @@ body.page-theme-error .hz-bottom-nav-item.is-active {
 .display-fab,
 .paper-chip,
 .bab-card,
-.paper-accordion-trigger,
-.hz-strip-scroll-top {
+.paper-accordion-trigger {
   -webkit-tap-highlight-color: transparent;
 }
 
