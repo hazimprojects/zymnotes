@@ -1,5 +1,5 @@
 {
-  "style_css": "230",
+  "style_css": "231",
   "main_js": "237",
   "zh_mode_js": "47",
   "manifest": "18",
@@ -13,7 +13,7 @@
   "icon_maskable_512": "3",
   "favicon_32": "3",
   "css": {
-    "base": "81",
+    "base": "82",
     "layout": "27",
     "ui": "58",
     "paper": "21",

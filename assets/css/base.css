@@ -553,8 +553,6 @@ body.hz-note-strip-reader-active > footer.site-footer {
   overflow: hidden;
   width: 100%;
   position: relative;
-  /* Default centre column before JS runs (avoids flash of empty prev slot) */
-  transform: translate3d(-100%, 0, 0);
 }
 
 #hz-note-strip-reader .hz-note-strip-slots {
@@ -565,6 +563,8 @@ body.hz-note-strip-reader-active > footer.site-footer {
   min-height: 100%;
   align-items: stretch;
   will-change: transform;
+  /* Default: show centre (curr) slot. -33.333% of 3-slot container = 1 slot width left */
+  transform: translate3d(-33.3333%, 0, 0);
 }
 
 #hz-note-strip-reader .hz-note-strip-slot {
