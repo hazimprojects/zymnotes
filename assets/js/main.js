@@ -1783,6 +1783,10 @@ window.HzSubtopicStripReader = (function () {
     var main = document.querySelector("main.note-reading-main");
     if (!main) return false;
 
+    // Save original DOM position before moving main into the strip structure
+    var mainParent = main.parentNode;
+    var mainNextSib = main.nextSibling;
+
     root = document.createElement("div");
     root.id = "hz-note-strip-reader";
 
@@ -1810,7 +1814,9 @@ window.HzSubtopicStripReader = (function () {
     panelCurr.appendChild(main);
     slotCurr.appendChild(panelCurr);
 
-    main.parentNode.insertBefore(root, main.nextSibling);
+    // Use saved parent/sibling — after appendChild(main) above, main.parentNode is panelCurr,
+    // so using it directly would try to insert root inside its own descendant (HierarchyRequestError)
+    mainParent.insertBefore(root, mainNextSib);
     markRevealsVisible(root);
 
     document.body.classList.add("hz-note-strip-reader-active");
