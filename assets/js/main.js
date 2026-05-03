@@ -1614,6 +1614,7 @@ window.HzSubtopicStripReader = (function () {
 
     function commitNext() {
       busy = true;
+      slotNext.scrollTop = 0;
       var w = slotWidthPx();
       finishAnimTo(-2 * w, function () {
         clearSlot(slotPrev);
@@ -1646,6 +1647,7 @@ window.HzSubtopicStripReader = (function () {
           installPanel(slotNext, pn);
           busy = false;
           resetTrackInstant();
+          updateStripScrollTopFab();
           if (window.HzSparkleRebindNoteAudio) window.HzSparkleRebindNoteAudio();
           document.dispatchEvent(new CustomEvent("hz:note-active-changed"));
         });
@@ -1654,12 +1656,13 @@ window.HzSubtopicStripReader = (function () {
 
     function commitPrev() {
       busy = true;
+      var preservePrevScroll = slotPrev.scrollTop;
       finishAnimTo(0, function () {
         clearSlot(slotNext);
         while (slotCurr.firstChild) slotNext.appendChild(slotCurr.firstChild);
         while (slotPrev.firstChild) slotCurr.appendChild(slotPrev.firstChild);
         clearSlot(slotPrev);
-        slotCurr.scrollTop = 0;
+        slotCurr.scrollTop = preservePrevScroll;
         var arrivedUrl = prevUrl;
         var newSlug = hzUrlToNoteSlug(arrivedUrl);
         currentSlug = newSlug;
@@ -1685,6 +1688,7 @@ window.HzSubtopicStripReader = (function () {
           installPanel(slotPrev, pp);
           busy = false;
           resetTrackInstant();
+          updateStripScrollTopFab();
           if (window.HzSparkleRebindNoteAudio) window.HzSparkleRebindNoteAudio();
           document.dispatchEvent(new CustomEvent("hz:note-active-changed"));
         });
@@ -1829,6 +1833,30 @@ window.HzSubtopicStripReader = (function () {
     track.appendChild(slotsEl);
     root.appendChild(track);
 
+    var scrollTopFab = document.createElement("button");
+    scrollTopFab.type = "button";
+    scrollTopFab.className = "hz-strip-scroll-top display-fab";
+    scrollTopFab.setAttribute("aria-label", "Tatal ke atas");
+    scrollTopFab.hidden = true;
+    scrollTopFab.innerHTML =
+      '<span class="display-fab-icon" aria-hidden="true">' +
+      '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>' +
+      "</span>";
+    root.appendChild(scrollTopFab);
+
+    function updateStripScrollTopFab() {
+      if (!slotCurr || !scrollTopFab) return;
+      scrollTopFab.hidden = slotCurr.scrollTop < 180;
+    }
+
+    scrollTopFab.addEventListener("click", function () {
+      if (!slotCurr) return;
+      slotCurr.scrollTo({ top: 0, behavior: "smooth" });
+    });
+
+    slotCurr.addEventListener("scroll", updateStripScrollTopFab, { passive: true });
+    window.addEventListener("resize", updateStripScrollTopFab);
+
     var panelCurr = document.createElement("div");
     panelCurr.className = "hz-note-strip-panel";
     panelCurr.appendChild(main);
@@ -1865,6 +1893,7 @@ window.HzSubtopicStripReader = (function () {
       installPanel(slotNext, panels[1]);
       busy = false;
       alignAfterLayout();
+      updateStripScrollTopFab();
       document.dispatchEvent(new CustomEvent("hz:note-active-changed"));
     });
 

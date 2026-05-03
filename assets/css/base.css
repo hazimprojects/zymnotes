@@ -586,6 +586,23 @@ body.hz-note-strip-reader-active > footer.site-footer {
   padding: 0;
 }
 
+/* Scroll-to-top within active strip column (does not use header .display-fab — hidden on mobile) */
+#hz-note-strip-reader .hz-strip-scroll-top {
+  position: absolute;
+  right: max(14px, env(safe-area-inset-right, 0px));
+  bottom: max(18px, env(safe-area-inset-bottom, 0px));
+  z-index: 6;
+  box-shadow: var(--shadow-soft);
+}
+
+#hz-note-strip-reader .hz-strip-scroll-top[hidden] {
+  display: none !important;
+}
+
+[data-theme="dark"] #hz-note-strip-reader .hz-strip-scroll-top {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+}
+
 /*
  * Reveal-on-scroll uses IntersectionObserver with the default root (viewport).
  * After <main> moves into #hz-note-strip-reader, those elements scroll inside
@@ -1179,7 +1196,8 @@ body.page-theme-error .hz-bottom-nav-item.is-active {
 .display-fab,
 .paper-chip,
 .bab-card,
-.paper-accordion-trigger {
+.paper-accordion-trigger,
+.hz-strip-scroll-top {
   -webkit-tap-highlight-color: transparent;
 }
 
