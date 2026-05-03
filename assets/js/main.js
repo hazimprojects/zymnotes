@@ -443,6 +443,15 @@ document.addEventListener("DOMContentLoaded", function () {
     return item.querySelector(":scope > .paper-accordion-trigger");
   }
 
+  /** Nearest accordion group: parent .paper-accordion of this item (fixes nested accordions; closest() would grab the outer wrapper). */
+  function getAccordionGroupForItem(item) {
+    if (!item || !item.parentElement) return null;
+    const parent = item.parentElement;
+    return parent.classList.contains("paper-accordion")
+      ? parent
+      : item.closest(".paper-accordion");
+  }
+
   function animateOpen(panel, item) {
     panel.classList.add("active");
     item.classList.add("is-open");
@@ -593,7 +602,7 @@ document.addEventListener("DOMContentLoaded", function () {
   accordionTriggers.forEach((trigger) => {
     trigger.addEventListener("click", () => {
       const currentItem = trigger.closest(".paper-accordion-item");
-      const accordionGroup = trigger.closest(".paper-accordion");
+      const accordionGroup = getAccordionGroupForItem(currentItem);
       if (!currentItem || !accordionGroup) return;
 
       const wasOpen = currentItem.classList.contains("is-open");
