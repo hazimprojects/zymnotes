@@ -521,6 +521,15 @@ body.quiz-page.note-reading-app {
 }
 
 /* Subtopic strip reader: header + footer stay fixed; only main content slides */
+html.hz-note-strip-reader-active {
+  overflow: hidden;
+  height: 100%;
+}
+
+html.hz-note-strip-reader-active body {
+  overflow: hidden;
+}
+
 body.hz-note-strip-reader-active {
   display: flex;
   flex-direction: column;
@@ -590,7 +599,7 @@ body.hz-note-strip-reader-active > footer.site-footer {
 #hz-note-strip-reader .hz-strip-scroll-top {
   position: absolute;
   right: max(14px, env(safe-area-inset-right, 0px));
-  bottom: max(18px, env(safe-area-inset-bottom, 0px));
+  bottom: calc(max(18px, env(safe-area-inset-bottom, 0px)) + var(--bottom-nav-h));
   z-index: 6;
   box-shadow: var(--shadow-soft);
 }

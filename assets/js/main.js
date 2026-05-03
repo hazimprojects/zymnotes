@@ -526,14 +526,44 @@ document.addEventListener("DOMContentLoaded", function () {
     return Math.round(headerHeight + stickyHeight + 12);
   }
 
-  function waitUntilScrollReaches(targetTop, callback) {
+  /** Strip reader scrolls inside .hz-note-strip-slot; window stays locked — accordion must use this root. */
+  function hzStripReadingScrollParent() {
+    return typeof window.hzNoteStripScrollParent === "function"
+      ? window.hzNoteStripScrollParent()
+      : null;
+  }
+
+  function hzReadingScrollTop() {
+    const sp = hzStripReadingScrollParent();
+    return sp ? sp.scrollTop : window.scrollY;
+  }
+
+  function hzReadingScrollBy(delta) {
+    const sp = hzStripReadingScrollParent();
+    if (sp) sp.scrollTop += delta;
+    else window.scrollTo(window.scrollX, window.scrollY + delta);
+  }
+
+  function hzReadingScrollToTop(top, behavior) {
+    const sp = hzStripReadingScrollParent();
+    if (sp) {
+      if (behavior === "smooth") sp.scrollTo({ top: top, behavior: "smooth" });
+      else sp.scrollTop = top;
+    } else if (behavior === "smooth") {
+      window.scrollTo({ top: top, behavior: "smooth" });
+    } else {
+      window.scrollTo(window.scrollX, top);
+    }
+  }
+
+  function waitUntilReadingScrollReaches(targetTop, callback) {
     let stableFrames = 0;
     const MAX_FRAMES = 90;
     let frameCount = 0;
 
     function check() {
       frameCount += 1;
-      const distance = Math.abs(window.scrollY - targetTop);
+      const distance = Math.abs(hzReadingScrollTop() - targetTop);
 
       if (distance <= 2) {
         stableFrames += 1;
@@ -542,7 +572,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
 
       if (stableFrames >= 4 || frameCount >= MAX_FRAMES) {
-        window.scrollTo(0, targetTop);
+        hzReadingScrollToTop(targetTop, "auto");
         callback();
         return;
       }
@@ -637,7 +667,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const delta = currentTop - anchorTop;
 
         if (Math.abs(delta) > 0.5) {
-          window.scrollTo(window.scrollX, window.scrollY + delta);
+          hzReadingScrollBy(delta);
         }
 
         const adjustedTop = trigger.getBoundingClientRect().top;
@@ -663,15 +693,12 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     const triggerRect = trigger.getBoundingClientRect();
-    const absoluteTop = window.scrollY + triggerRect.top;
+    const absoluteTop = hzReadingScrollTop() + triggerRect.top;
     const targetTop = Math.max(0, Math.round(absoluteTop - getHeaderOffset()));
 
-    window.scrollTo({
-      top: targetTop,
-      behavior: "smooth",
-    });
+    hzReadingScrollToTop(targetTop, "smooth");
 
-    waitUntilScrollReaches(targetTop, () => {
+    waitUntilReadingScrollReaches(targetTop, () => {
       const anchorTop = trigger.getBoundingClientRect().top;
 
       document.documentElement.classList.add("accordion-no-smooth-scroll");
@@ -699,7 +726,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const delta = currentTop - anchorTop;
 
         if (Math.abs(delta) > 0.5) {
-          window.scrollTo(window.scrollX, window.scrollY + delta);
+          hzReadingScrollBy(delta);
         }
 
         const adjustedTop = trigger.getBoundingClientRect().top;
@@ -718,16 +745,13 @@ document.addEventListener("DOMContentLoaded", function () {
           document.documentElement.classList.remove("accordion-no-smooth-scroll");
           document.body.classList.remove("accordion-no-smooth-scroll");
 
-          const finalAbsoluteTop = window.scrollY + trigger.getBoundingClientRect().top;
+          const finalAbsoluteTop = hzReadingScrollTop() + trigger.getBoundingClientRect().top;
           const finalTargetTop = Math.max(
             0,
             Math.round(finalAbsoluteTop - getHeaderOffset())
           );
 
-          window.scrollTo({
-            top: finalTargetTop,
-            behavior: "auto",
-          });
+          hzReadingScrollToTop(finalTargetTop, "auto");
 
           refreshOpenAccordions();
         }
@@ -1553,11 +1577,21 @@ window.HzSubtopicStripReader = (function () {
     });
   }
 
+  function hzStripResetNestedScroll(panelRoot) {
+    if (!panelRoot || !panelRoot.querySelectorAll) return;
+    panelRoot.querySelectorAll("*").forEach(function (el) {
+      try {
+        if (el.scrollTop > 0) el.scrollTop = 0;
+      } catch (e0) {}
+    });
+  }
+
   function installPanel(slot, panel) {
     clearSlot(slot);
     if (!panel) return;
     slot.scrollTop = 0;
     slot.appendChild(panel);
+    hzStripResetNestedScroll(panel);
     panel.querySelectorAll(".reveal-on-scroll").forEach(function (el) {
       el.classList.add("visible");
     });
@@ -1615,6 +1649,7 @@ window.HzSubtopicStripReader = (function () {
     function commitNext() {
       busy = true;
       slotNext.scrollTop = 0;
+      hzStripResetNestedScroll(slotNext.firstElementChild);
       var w = slotWidthPx();
       finishAnimTo(-2 * w, function () {
         clearSlot(slotPrev);
@@ -1622,6 +1657,7 @@ window.HzSubtopicStripReader = (function () {
         while (slotNext.firstChild) slotCurr.appendChild(slotNext.firstChild);
         clearSlot(slotNext);
         slotCurr.scrollTop = 0;
+        hzStripResetNestedScroll(slotCurr.firstElementChild);
         var arrivedUrl = nextUrl;
         var newSlug = hzUrlToNoteSlug(arrivedUrl);
         currentSlug = newSlug;
@@ -1833,6 +1869,10 @@ window.HzSubtopicStripReader = (function () {
     track.appendChild(slotsEl);
     root.appendChild(track);
 
+    window.hzNoteStripScrollParent = function () {
+      return slotCurr;
+    };
+
     var scrollTopFab = document.createElement("button");
     scrollTopFab.type = "button";
     scrollTopFab.className = "hz-strip-scroll-top display-fab";
@@ -1867,7 +1907,14 @@ window.HzSubtopicStripReader = (function () {
     mainParent.insertBefore(root, mainNextSib);
     markRevealsVisible(root);
 
+    document.documentElement.classList.add("hz-note-strip-reader-active");
     document.body.classList.add("hz-note-strip-reader-active");
+    try {
+      window.scrollTo(0, 0);
+      document.documentElement.scrollTop = 0;
+      document.body.scrollTop = 0;
+    } catch (eScroll) {}
+
     prefetchNeighbors();
 
     currentSlug = noteFilenameFromPathname(location.pathname);
@@ -2942,20 +2989,67 @@ function hzLabQuizSparklePair() {
 // ── Reading Progress Bar (note subtopic pages only) ───────────────────────────
 (function () {
   if (!hzZymnotesIsSubtopicNotePathname(location.pathname)) return;
-  document.addEventListener('DOMContentLoaded', function () {
-    var bar = document.createElement('div');
-    bar.className = 'reading-progress-bar is-active';
-    var header = document.querySelector('.site-header');
+  document.addEventListener("DOMContentLoaded", function () {
+    var bar = document.createElement("div");
+    bar.className = "reading-progress-bar is-active";
+    var header = document.querySelector(".site-header");
     if (header) header.appendChild(bar);
     var raf;
-    window.addEventListener('scroll', function () {
+    var slotScrollBound = null;
+
+    function progressScrollParent() {
+      return typeof window.hzNoteStripScrollParent === "function"
+        ? window.hzNoteStripScrollParent()
+        : null;
+    }
+
+    function updateProgressBar() {
+      var sp = progressScrollParent();
+      var scrolled = sp ? sp.scrollTop : window.scrollY;
+      var scrollable = sp
+        ? sp.scrollHeight - sp.clientHeight
+        : document.documentElement.scrollHeight - window.innerHeight;
+      var total = Math.max(0, scrollable);
+      bar.style.width = (total > 0 ? Math.min((scrolled / total) * 100, 100) : 0) + "%";
+    }
+
+    function onSlotScroll() {
       cancelAnimationFrame(raf);
-      raf = requestAnimationFrame(function () {
-        var scrolled = window.scrollY;
-        var total = document.documentElement.scrollHeight - window.innerHeight;
-        bar.style.width = (total > 0 ? Math.min(scrolled / total * 100, 100) : 0) + '%';
-      });
-    }, { passive: true });
+      raf = requestAnimationFrame(updateProgressBar);
+    }
+
+    function bindSlotScrollListener() {
+      var sp = progressScrollParent();
+      if (sp === slotScrollBound) return;
+      if (slotScrollBound) {
+        slotScrollBound.removeEventListener("scroll", onSlotScroll);
+      }
+      slotScrollBound = sp || null;
+      if (slotScrollBound) {
+        slotScrollBound.addEventListener("scroll", onSlotScroll, { passive: true });
+      }
+    }
+
+    window.addEventListener(
+      "scroll",
+      function () {
+        cancelAnimationFrame(raf);
+        raf = requestAnimationFrame(updateProgressBar);
+      },
+      { passive: true }
+    );
+
+    document.addEventListener("hz:note-active-changed", function () {
+      bindSlotScrollListener();
+      cancelAnimationFrame(raf);
+      raf = requestAnimationFrame(updateProgressBar);
+    });
+
+    bindSlotScrollListener();
+    window.requestAnimationFrame(function () {
+      bindSlotScrollListener();
+      updateProgressBar();
+    });
   });
 })();
 
