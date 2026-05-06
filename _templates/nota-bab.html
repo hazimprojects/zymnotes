@@ -3,7 +3,7 @@
 ================================================================================
   TEMPLATE RASMI: HALAMAN INDUK BAB — ZymNotes
 ================================================================================
-  Versi    : 1.1
+  Versi    : 1.2
   Lokasi   : _templates/nota-bab.html
   Tujuan   : Template universal untuk halaman induk bab/unit merentasi semua
              subjek (Sejarah, Matematik, Sains, BM, dll.)
@@ -13,6 +13,9 @@
   2. Gantikan semua placeholder [[...]] dengan nilai sebenar
   3. Tambah kad subtopik (bab-card) dalam blok [C] mengikut bilangan subtopik
   4. Simpan dan semak di browser
+
+  KEMAS KINI v1.2:
+  • Placeholder [[CSS_V]] dan [[JS_V]] dikeluarkan — versi CSS/JS sudah hardcode dalam template
 
   KEMAS KINI v1.1:
   • Title/meta/OG/Twitter diselaraskan dengan format halaman semasa
@@ -35,8 +38,10 @@
   [[SUBJEK_NAMA]]     → Nama subjek, cth: Sejarah, Matematik
   [[TINGKATAN]]       → Tingkatan, cth: 4, 5
   [[OG_IMAGE_V]]      → Versi OG image, cth: 20260414
-  [[CSS_V]]           → Versi CSS terkini, cth: 54
-  [[JS_V]]            → Versi JS terkini, cth: 55
+
+  VERSI ASET (diurus manual — tidak perlu diganti):
+  Versi CSS, JS, zh-mode.js, dan manifest sudah hardcode dalam template.
+  Kemaskini nilai ?v= secara terus apabila fail aset berubah.
 
   PERBEZAAN DARI TEMPLATE SUBTOPIK:
   • Hero TIADA kelas note-hero (hanya page-hero papercraft-hero)
