@@ -1448,6 +1448,7 @@ var HZ_FLUENT_SPARKLE = {
   faceThinking: ["Thinking face", "thinking_face_3d.png"],
   faceConfused: ["Confused face", "confused_face_3d.png"],
   faceRelieved: ["Relieved face", "relieved_face_3d.png"],
+  thumbsUp: ["Thumbs up", "thumbs_up_3d.png"],
 };
 
 /** data-lab-openmoji-hex (OpenMoji) → aset Fluent 3D untuk item Kuiz */
@@ -2382,15 +2383,19 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
     '.nota-feedback{text-align:center;padding:1.4rem 1rem 0.5rem;opacity:0;animation:nfb-in 0.4s ease 0.5s forwards}',
     '@keyframes nfb-in{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:none}}',
     '.nota-feedback-label{margin:0 0 0.75rem;font-size:0.8rem;font-weight:700;color:#8c7d6a;letter-spacing:0.01em}',
-    '.nota-feedback-options{display:flex;justify-content:center;gap:0.55rem}',
-    '.nota-feedback-btn{width:52px;height:52px;border-radius:999px;border:1.5px solid rgba(92,110,132,0.14);background:rgba(255,253,248,0.9);cursor:pointer;transition:transform 0.14s ease,box-shadow 0.14s ease;display:inline-flex;align-items:center;justify-content:center;padding:0}',
-    '.nota-feedback-btn img{width:30px;height:30px;pointer-events:none;display:block}',
+    '.nota-feedback-options{display:flex;justify-content:center;gap:0.45rem}',
+    '.nota-feedback-option-wrap{display:flex;flex-direction:column;align-items:center;gap:0.28rem}',
+    '.nota-feedback-btn{width:48px;height:48px;border-radius:999px;border:1.5px solid rgba(92,110,132,0.14);background:rgba(255,253,248,0.9);cursor:pointer;transition:transform 0.14s ease,box-shadow 0.14s ease;display:inline-flex;align-items:center;justify-content:center;padding:0}',
+    '.nota-feedback-btn img{width:28px;height:28px;pointer-events:none;display:block}',
     '.nota-feedback-btn:hover{transform:scale(1.18);box-shadow:0 4px 14px rgba(0,0,0,0.09)}',
     '.nota-feedback-btn:active{transform:scale(0.94)}',
-    '.nota-feedback-thanks{margin:0;font-size:0.86rem;font-weight:700;color:#2f7a67;animation:nfb-in 0.25s ease forwards;padding:1rem 1rem 0.3rem;text-align:center}',
+    '.nota-feedback-btn-label{font-size:10px;font-weight:600;color:#8c7d6a;text-align:center;line-height:1.2;white-space:nowrap}',
+    '.nota-feedback-past{display:flex;align-items:center;justify-content:center;gap:0.5rem;padding:0.9rem 1rem 0.4rem}',
+    '.nota-feedback-thanks{margin:0;font-size:0.84rem;font-weight:700;color:#2f7a67;animation:nfb-in 0.25s ease forwards;text-align:center}',
     '.nota-feedback-count{margin:0.35rem 0 0;font-size:0.74rem;color:#8c7d6a;text-align:center;transition:opacity 0.3s}',
     '[data-theme="dark"] .nota-feedback-label{color:#b8aea1}',
     '[data-theme="dark"] .nota-feedback-btn{background:rgba(50,48,44,0.9);border-color:rgba(220,210,190,0.13)}',
+    '[data-theme="dark"] .nota-feedback-btn-label{color:#8a8077}',
     '[data-theme="dark"] .nota-feedback-thanks{color:#7dd4be}',
     '[data-theme="dark"] .nota-feedback-count{color:#b8aea1}'
   ].join('');
@@ -2428,66 +2433,57 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
     return p;
   }
 
+  var REACTIONS = [
+    { key: 'suka',        pair: HZ_FLUENT_SPARKLE.thumbsUp,     alt: '👍', label: 'Suka!'           },
+    { key: 'mudah',       pair: HZ_FLUENT_SPARKLE.faceSmiling,  alt: '😊', label: 'Mudah difahami'  },
+    { key: 'boleh-baik',  pair: HZ_FLUENT_SPARKLE.faceThinking, alt: '🤔', label: 'Boleh diperbaiki' },
+    { key: 'kurang-jelas',pair: HZ_FLUENT_SPARKLE.faceConfused,  alt: '😕', label: 'Kurang jelas'    }
+  ];
+
   var navSection = document.querySelector('.note-subsection .hero-actions');
   if (!navSection) return;
   var insertBefore = navSection.closest('.note-subsection');
   if (!insertBefore) return;
 
-  // Pengguna yang sudah beri maklumbalas: tunjuk kiraan semula
-  if (alreadyGave === 'mudah') {
-    fetchHelpfulCount().then(function (count) {
-      if (count === null) return;
-      var wrap = document.createElement('div');
-      wrap.className = 'nota-feedback';
-      var t = document.createElement('p');
-      t.className = 'nota-feedback-thanks';
-      t.textContent = 'Anda rasa nota ini membantu 😊';
-      wrap.appendChild(t);
-      wrap.appendChild(makeCountEl(count));
-      insertBefore.parentNode.insertBefore(wrap, insertBefore);
-    });
+  // Pengguna yang sudah beri maklumbalas: tunjuk emoji + label mereka
+  if (alreadyGave) {
+    var pastR = REACTIONS.filter(function (r) { return r.key === alreadyGave; })[0];
+    if (pastR) {
+      var pastWrap = document.createElement('div');
+      pastWrap.className = 'nota-feedback';
+      pastWrap.innerHTML =
+        '<div class="nota-feedback-past">' +
+        '<img src="' + hzFluent3dAsset(pastR.pair[0], pastR.pair[1]) + '" alt="' + pastR.alt + '" width="26" height="26" loading="lazy">' +
+        '<p class="nota-feedback-thanks" style="margin:0">Maklum balas anda: ' + pastR.label + '</p>' +
+        '</div>';
+      insertBefore.parentNode.insertBefore(pastWrap, insertBefore);
+    }
     return;
   }
-  if (alreadyGave) return;
 
   // Bina widget
-  var REACTIONS = [
-    { key: 'mudah',       pair: HZ_FLUENT_SPARKLE.faceSmiling,  alt: '😊', title: 'Mudah difahami'   },
-    { key: 'boleh-baik',  pair: HZ_FLUENT_SPARKLE.faceThinking, alt: '🤔', title: 'Boleh diperbaiki'  },
-    { key: 'kurang-jelas',pair: HZ_FLUENT_SPARKLE.faceConfused,  alt: '😕', title: 'Kurang jelas'      }
-  ];
-
   var widget = document.createElement('div');
   widget.className = 'nota-feedback';
   widget.innerHTML =
-    '<p class="nota-feedback-label">Nota ini membantu?</p>' +
+    '<p class="nota-feedback-label">Apa pendapat anda tentang nota ini?</p>' +
     '<div class="nota-feedback-options">' +
     REACTIONS.map(function (r) {
       var src = hzFluent3dAsset(r.pair[0], r.pair[1]);
-      return '<button class="nota-feedback-btn" type="button" data-reaction="' + r.key + '" title="' + r.title + '">' +
+      return '<div class="nota-feedback-option-wrap">' +
+        '<button class="nota-feedback-btn" type="button" data-reaction="' + r.key + '" title="' + r.label + '">' +
         '<img src="' + src + '" alt="' + r.alt + '" width="30" height="30" loading="lazy">' +
-        '</button>';
+        '</button>' +
+        '<span class="nota-feedback-btn-label">' + r.label + '</span>' +
+        '</div>';
     }).join('') +
     '</div>';
-
-  var countEl = makeCountEl(null);
-  countEl.style.opacity = '0';
-  widget.appendChild(countEl);
-
-  var helpfulCount = null;
-  fetchHelpfulCount().then(function (count) {
-    helpfulCount = count;
-    if (count !== null && count > 0) {
-      countEl.textContent = count + ' orang rasa nota ini membantu';
-      countEl.style.opacity = '1';
-    }
-  });
 
   insertBefore.parentNode.insertBefore(widget, insertBefore);
 
   widget.querySelectorAll('.nota-feedback-btn').forEach(function (btn) {
     btn.addEventListener('click', function () {
       var reaction = btn.getAttribute('data-reaction');
+      var picked = REACTIONS.filter(function (r) { return r.key === reaction; })[0];
       if (typeof gtag === 'function') {
         gtag('event', 'nota_reaction', { reaction: reaction, page_path: pathname });
       }
@@ -2497,18 +2493,12 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
       });
 
       var wrap = document.createElement('div');
-      var thanks = document.createElement('p');
-      thanks.className = 'nota-feedback-thanks';
-      thanks.textContent = reaction === 'mudah'
-        ? 'Terima kasih! Gembira ia membantu 😊'
-        : 'Terima kasih atas maklum balas anda! 🙏';
-      wrap.appendChild(thanks);
-
-      if (reaction === 'mudah') {
-        var updatedCount = helpfulCount !== null ? helpfulCount + 1 : null;
-        wrap.appendChild(makeCountEl(updatedCount));
-      }
-
+      wrap.className = 'nota-feedback';
+      wrap.innerHTML =
+        '<div class="nota-feedback-past">' +
+        (picked ? '<img src="' + hzFluent3dAsset(picked.pair[0], picked.pair[1]) + '" alt="' + picked.alt + '" width="26" height="26" loading="lazy">' : '') +
+        '<p class="nota-feedback-thanks" style="margin:0">Terima kasih! Maklum balas anda tersimpan.</p>' +
+        '</div>';
       widget.replaceWith(wrap);
     });
   });
@@ -2552,6 +2542,7 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
   if (!lead) return;
 
   var STAT_REACTIONS = [
+    { key: 'suka',         pair: HZ_FLUENT_SPARKLE.thumbsUp     },
     { key: 'mudah',        pair: HZ_FLUENT_SPARKLE.faceSmiling  },
     { key: 'boleh-baik',   pair: HZ_FLUENT_SPARKLE.faceThinking },
     { key: 'kurang-jelas', pair: HZ_FLUENT_SPARKLE.faceConfused  }
@@ -3539,7 +3530,8 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
     });
   }
 
-  var REACTION_LABELS = { 'mudah': 'Mudah difahami', 'boleh-baik': 'Boleh diperbaiki', 'kurang-jelas': 'Kurang jelas' };
+  var REACTION_LABELS = { 'suka': 'Suka!', 'mudah': 'Mudah difahami', 'boleh-baik': 'Boleh diperbaiki', 'kurang-jelas': 'Kurang jelas' };
+  var REACTION_PAIRS  = { 'suka': HZ_FLUENT_SPARKLE.thumbsUp, 'mudah': HZ_FLUENT_SPARKLE.faceSmiling, 'boleh-baik': HZ_FLUENT_SPARKLE.faceThinking, 'kurang-jelas': HZ_FLUENT_SPARKLE.faceConfused };
 
   function fmtSubtopic(key) {
     var m = key.match(/bab-(\d+)-(\d+)/i);
@@ -3571,9 +3563,13 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
     if (!keys.length) { panel.classList.remove('is-open'); sheet.querySelector('#zymset-feedback-toggle').textContent = 'Butiran ▾'; return; }
     panel.innerHTML = keys.map(function (path) {
       var rKey = typeof fb[path] === 'object' ? fb[path].r : fb[path];
+      var pair = REACTION_PAIRS[rKey];
+      var emojiHtml = pair
+        ? '<img src="' + hzFluent3dAsset(pair[0], pair[1]) + '" width="15" height="15" loading="lazy" style="vertical-align:middle;margin-right:3px;flex-shrink:0"> '
+        : '';
       return '<div class="zymset-detail-item">' +
         '<span class="zymset-detail-label">' + fmtSubtopic(path) + '</span>' +
-        '<span class="zymset-detail-val">' + (REACTION_LABELS[rKey] || rKey) + '</span>' +
+        '<span class="zymset-detail-val">' + emojiHtml + (REACTION_LABELS[rKey] || rKey) + '</span>' +
         '<button class="zymset-detail-del" type="button" data-fb-del="' + path + '" title="Padam entri ini">Padam</button>' +
         '</div>';
     }).join('');
