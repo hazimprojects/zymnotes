@@ -455,37 +455,103 @@ body.page-theme-error .page-hero {
 .nota-stat-bar {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.4rem;
-  margin: 0.75rem 0 0;
+  gap: 0.45rem;
+  margin: 0.8rem 0 0;
   opacity: 0;
   animation: nfb-in 0.35s ease 0.3s forwards;
 }
 .nota-stat-pill {
   display: inline-flex;
   align-items: center;
-  padding: 0.2rem 0.6rem;
+  gap: 0.3rem;
+  padding: 0.3rem 0.75rem;
   border-radius: 999px;
-  font-size: 0.71rem;
+  font-size: 0.74rem;
   font-weight: 700;
   letter-spacing: 0.01em;
-  background: rgba(47, 122, 103, 0.09);
-  color: #2a6e5c;
-  border: 1px solid rgba(47, 122, 103, 0.18);
+  background: var(--theme-label-bg, rgba(47, 122, 103, 0.1));
+  color: var(--theme-label-color, #2a6e5c);
+  box-shadow: 0 1px 5px rgba(0,0,0,0.08);
 }
-.nota-stat-pill--score {
-  background: rgba(62, 95, 138, 0.09);
-  color: #3a5880;
-  border-color: rgba(62, 95, 138, 0.18);
+.nota-stat-emoji {
+  display: block;
+  flex-shrink: 0;
 }
-[data-theme="dark"] .nota-stat-pill {
-  background: rgba(47, 122, 103, 0.14);
-  color: #7dd4be;
-  border-color: rgba(47, 122, 103, 0.22);
+
+/* Nota Hargai — butang penanda apresiasi unik ZymNotes */
+.nota-hargai-wrap {
+  display: flex;
+  justify-content: center;
+  margin: 1.1rem 0 0.2rem;
+  opacity: 0;
+  animation: nfb-in 0.35s ease 0.5s forwards;
 }
-[data-theme="dark"] .nota-stat-pill--score {
-  background: rgba(88, 135, 206, 0.13);
-  color: #93b4e8;
-  border-color: rgba(88, 135, 206, 0.22);
+.nota-hargai-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.48rem 1.1rem 0.48rem 0.85rem;
+  border-radius: 999px;
+  border: 2px solid var(--line-strong);
+  background: var(--paper);
+  color: var(--muted);
+  font-family: inherit;
+  cursor: pointer;
+  transition: border-color 0.18s, background 0.18s, color 0.18s, box-shadow 0.18s;
+  user-select: none;
+}
+.nota-hargai-btn:hover:not(.is-active) {
+  border-color: rgba(219,39,119,0.4);
+  background: rgba(219,39,119,0.04);
+  color: rgba(219,39,119,0.8);
+  box-shadow: 0 2px 10px rgba(219,39,119,0.12);
+}
+.nota-hargai-btn.is-active {
+  border-color: rgba(219,39,119,0.35);
+  background: rgba(219,39,119,0.06);
+  color: #be185d;
+  cursor: default;
+}
+.nota-hargai-icon {
+  display: block;
+  flex-shrink: 0;
+  filter: grayscale(1) opacity(0.45);
+  transition: filter 0.18s;
+}
+.nota-hargai-btn:hover:not(.is-active) .nota-hargai-icon,
+.nota-hargai-btn.is-active .nota-hargai-icon {
+  filter: none;
+}
+.nota-hargai-btn.is-popping .nota-hargai-icon {
+  animation: hargai-pop 0.65s cubic-bezier(0.36,0.07,0.19,0.97);
+}
+@keyframes hargai-pop {
+  0%   { transform: scale(1) rotate(0deg); }
+  25%  { transform: scale(1.55) rotate(-12deg); }
+  55%  { transform: scale(0.88) rotate(6deg); }
+  75%  { transform: scale(1.15) rotate(-4deg); }
+  100% { transform: scale(1) rotate(0deg); }
+}
+.nota-hargai-count {
+  font-size: 0.95rem;
+  font-weight: 800;
+  min-width: 1rem;
+  text-align: center;
+  line-height: 1;
+}
+.nota-hargai-label {
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+[data-theme="dark"] .nota-hargai-btn { background: var(--paper); }
+[data-theme="dark"] .nota-hargai-btn.is-active {
+  background: rgba(219,39,119,0.1);
+  border-color: rgba(219,39,119,0.28);
+  color: #f9a8d4;
+}
+[data-theme="dark"] .nota-hargai-btn:hover:not(.is-active) {
+  background: rgba(219,39,119,0.08);
+  color: #f472b6;
 }
 
 .note-section {

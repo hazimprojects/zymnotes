@@ -1466,6 +1466,7 @@ var HZ_ICONS8_SPARKLE = {
   trophy:        'https://img.icons8.com/?size=96&id=94bZrF6ZIaXP&format=png',
   memo:          'https://img.icons8.com/?size=96&id=zIKcpVIKdvP1&format=png',
   wastebasket:   HZ_ICONS8_3D + 'trash.png',
+  hargai:        'https://img.icons8.com/?size=96&id=5twNojKL5zU7&format=png',
 };
 function hzIcons8SparkleImg(url, extraClass, w, h) {
   var img = document.createElement('img');
@@ -2521,22 +2522,114 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
   var lead = document.querySelector('.note-hero .lead');
   if (!lead) return;
 
+  function pillImg(pair) {
+    return '<img src="' + hzFluent3dAsset(pair[0], pair[1]) + '" alt="" width="15" height="15" loading="lazy" class="nota-stat-emoji">';
+  }
+
   fetchHelpful().then(function (helpfulCount) {
     var pills = [];
     if (helpfulCount !== null && helpfulCount > 0) {
-      pills.push({ text: helpfulCount + ' pelajar terbantu', mod: '' });
+      pills.push(pillImg(HZ_FLUENT_SPARKLE.faceSmiling) + ' Membantu ' + helpfulCount + ' pelajar');
     }
     if (bestScore > 0) {
-      pills.push({ text: 'Skor terbaik anda: ' + bestScore + '%', mod: ' nota-stat-pill--score' });
+      pills.push(pillImg(HZ_FLUENT_SPARKLE.trophy) + ' Skor terbaik: ' + bestScore + '%');
     }
     if (!pills.length) return;
 
     var bar = document.createElement('div');
     bar.className = 'nota-stat-bar';
-    bar.innerHTML = pills.map(function (p) {
-      return '<span class="nota-stat-pill' + p.mod + '">' + p.text + '</span>';
+    bar.innerHTML = pills.map(function (html) {
+      return '<span class="nota-stat-pill">' + html + '</span>';
     }).join('');
     lead.insertAdjacentElement('afterend', bar);
+  });
+})();
+
+// ── Nota Hargai Widget ────────────────────────────────────────────────────────
+// Supabase — jalankan SQL ini sekali sahaja dalam SQL Editor:
+//   CREATE TABLE public.nota_hargai (
+//     id bigserial PRIMARY KEY,
+//     page_path text NOT NULL,
+//     created_at timestamptz DEFAULT now());
+//   ALTER TABLE public.nota_hargai ENABLE ROW LEVEL SECURITY;
+//   CREATE POLICY "anon insert" ON public.nota_hargai FOR INSERT TO anon WITH CHECK (true);
+//   CREATE OR REPLACE FUNCTION public.get_nota_hargai_count(p_path text)
+//   RETURNS bigint LANGUAGE sql SECURITY DEFINER AS $$
+//     SELECT COUNT(*) FROM public.nota_hargai WHERE page_path = p_path; $$;
+//   GRANT EXECUTE ON FUNCTION public.get_nota_hargai_count TO anon;
+(function () {
+  if (!window.location.pathname.match(/\/notes\/bab-\d+-\d+\.html/)) return;
+
+  var pathname = window.location.pathname;
+  var APP_KEY  = 'hargai:' + pathname;
+  var isActive = !!ZymStore.getApp(APP_KEY);
+
+  function fetchCount() {
+    if (!NOTA_FB_SUPABASE_URL || !NOTA_FB_SUPABASE_KEY) return Promise.resolve(null);
+    return fetch(NOTA_FB_SUPABASE_URL + '/rest/v1/rpc/get_nota_hargai_count', {
+      method: 'POST',
+      headers: {
+        'apikey': NOTA_FB_SUPABASE_KEY,
+        'Authorization': 'Bearer ' + NOTA_FB_SUPABASE_KEY,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ p_path: pathname })
+    }).then(function (r) { return r.ok ? r.json() : null; }).catch(function () { return null; });
+  }
+
+  function submitHargai() {
+    if (!NOTA_FB_SUPABASE_URL || !NOTA_FB_SUPABASE_KEY) return;
+    fetch(NOTA_FB_SUPABASE_URL + '/rest/v1/nota_hargai', {
+      method: 'POST',
+      headers: {
+        'apikey': NOTA_FB_SUPABASE_KEY,
+        'Authorization': 'Bearer ' + NOTA_FB_SUPABASE_KEY,
+        'Content-Type': 'application/json',
+        'Prefer': 'return=minimal'
+      },
+      body: JSON.stringify({ page_path: pathname })
+    });
+  }
+
+  var legend = document.querySelector('.note-hero .keyword-legend-wrap');
+  var lead   = document.querySelector('.note-hero .lead');
+  if (!lead) return;
+  var anchor = legend || lead;
+  var insertPos = legend ? 'beforebegin' : 'afterend';
+
+  var wrap = document.createElement('div');
+  wrap.className = 'nota-hargai-wrap';
+
+  var btn = document.createElement('button');
+  btn.type = 'button';
+  btn.className = 'nota-hargai-btn' + (isActive ? ' is-active' : '');
+  btn.setAttribute('aria-label', isActive ? 'Anda telah hargai nota ini' : 'Hargai nota ini');
+  btn.innerHTML =
+    '<img src="' + HZ_ICONS8_SPARKLE.hargai + '" alt="" width="26" height="26" class="nota-hargai-icon" decoding="async">' +
+    '<span class="nota-hargai-count" id="nota-hargai-count">–</span>' +
+    '<span class="nota-hargai-label">' + (isActive ? 'Dihargai' : 'Hargai') + '</span>';
+
+  wrap.appendChild(btn);
+  anchor.insertAdjacentElement(insertPos, wrap);
+
+  fetchCount().then(function (count) {
+    var el = document.getElementById('nota-hargai-count');
+    if (el && count !== null) el.textContent = count;
+  });
+
+  btn.addEventListener('click', function () {
+    if (isActive) return;
+    isActive = true;
+    ZymStore.setApp(APP_KEY, 1);
+    submitHargai();
+
+    btn.classList.add('is-active', 'is-popping');
+    btn.setAttribute('aria-label', 'Anda telah hargai nota ini');
+    btn.querySelector('.nota-hargai-label').textContent = 'Dihargai';
+    setTimeout(function () { btn.classList.remove('is-popping'); }, 700);
+
+    var el = document.getElementById('nota-hargai-count');
+    if (el) el.textContent = (parseInt(el.textContent) || 0) + 1;
   });
 })();
 
