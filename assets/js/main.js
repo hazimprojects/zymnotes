@@ -2402,15 +2402,9 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
   }
 
   function submitFeedback(reaction) {
-    return supFetch('/rest/v1/nota_feedback', {
+    return supFetch('/rest/v1/rpc/submit_nota_feedback', {
       method: 'POST',
-      headers: {
-        'apikey': NOTA_FB_SUPABASE_KEY,
-        'Authorization': 'Bearer ' + NOTA_FB_SUPABASE_KEY,
-        'Content-Type': 'application/json',
-        'Prefer': 'return=representation'
-      },
-      body: JSON.stringify({ page_path: pathname, reaction: reaction })
+      body: JSON.stringify({ p_path: pathname, p_reaction: reaction })
     }).then(function (r) { return r && r.ok ? r.json() : null; });
   }
 
@@ -2485,8 +2479,7 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
         gtag('event', 'nota_reaction', { reaction: reaction, page_path: pathname });
       }
       ZymStore.saveFeedback(pathname, reaction);
-      submitFeedback(reaction).then(function (rows) {
-        var supId = rows && rows[0] ? rows[0].id : null;
+      submitFeedback(reaction).then(function (supId) {
         if (supId) ZymStore.saveFeedback(pathname, reaction, supId);
       });
 
