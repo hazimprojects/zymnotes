@@ -3,10 +3,20 @@
 ================================================================================
   TEMPLATE RASMI: HALAMAN NOTA SUBTOPIK — ZymNotes
 ================================================================================
-  Versi    : 2.4
+  Versi    : 2.5
   Lokasi   : _templates/nota-subtopik.html
   Tujuan   : Template universal untuk semua halaman nota subtopik merentasi
              semua subjek (Sejarah, Matematik, Sains, BM, dll.)
+
+  KEMAS KINI v2.5:
+  • Ditambah zh-mode.js sebelum main.js (wajib untuk semua halaman subtopik)
+  • emoji-bullet dalam emoji-point-list ditukar kepada Fluent emoji img (openmoji--emoji-bullet)
+  • Li items dalam emoji-point-list kini ada data-zh-mode dan data-zh-unit-id pada span teks
+  • Accordion point-line: raw 📌 ditukar kepada Fluent emoji img
+  • Kesimpulan point-line: raw 💡 dan 🇲🇾 ditukar kepada Fluent emoji img (hibiscus untuk nilai/negara)
+  • Kesimpulan chips: ditambah data-zh-mode dan data-zh-unit-id
+  • Rumusan Besar (dikomentari): semua raw emoji ditukar kepada Fluent emoji img + data-zh-* ditambah
+  • Info Tambahan (dikomentari): raw 🔍 ditukar kepada Fluent emoji img
 
   KEMAS KINI v2.4:
   • Font loading ditukar kepada async/non-blocking (preload + onload + noscript)
@@ -353,8 +363,8 @@
           >
             <div class="cv-unit-body">
               <ul class="emoji-point-list">
-                <li><span class="emoji-bullet">📌</span><span>[[Fakta/poin pertama]]</span></li>
-                <li><span class="emoji-bullet">📌</span><span>[[Fakta/poin kedua]]</span></li>
+                <li><span class="emoji-bullet"><img class="fluent-3d-emoji openmoji--emoji-bullet" src="https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@62ecdc0d7ca5/assets/Pushpin/3D/pushpin_3d.png" width="20" height="20" alt="" decoding="async" /></span><span data-zh-mode="explain" data-zh-unit-id="[[bab-X-Y-li1]]">[[Fakta/poin pertama]]</span></li>
+                <li><span class="emoji-bullet"><img class="fluent-3d-emoji openmoji--emoji-bullet" src="https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@62ecdc0d7ca5/assets/Pushpin/3D/pushpin_3d.png" width="20" height="20" alt="" decoding="async" /></span><span data-zh-mode="explain" data-zh-unit-id="[[bab-X-Y-li2]]">[[Fakta/poin kedua]]</span></li>
               </ul>
             </div>
           </article>
@@ -374,10 +384,10 @@
               </button>
               <div id="acc-[[id-unik-1]]" class="paper-accordion-panel">
                 <div class="cv-unit-body">
-                  <p class="point-line">📌 [[Huraian item pertama]]</p>
+                  <p class="point-line" data-zh-mode="explain" data-zh-unit-id="[[bab-X-Y-acc1-intro]]"><img class="fluent-3d-emoji openmoji--inline" src="https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@62ecdc0d7ca5/assets/Pushpin/3D/pushpin_3d.png" width="20" height="20" alt="" decoding="async" /> [[Huraian item pertama]]</p>
                   <div class="paper-chip-list">
-                    <div class="paper-chip" data-cv-collectible="false">[[butiran]]</div>
-                    <div class="paper-chip" data-cv-collectible="false">[[butiran]]</div>
+                    <div class="paper-chip" data-cv-collectible="false" data-zh-mode="explain" data-zh-unit-id="[[bab-X-Y-acc1-c1]]">[[butiran]]</div>
+                    <div class="paper-chip" data-cv-collectible="false" data-zh-mode="explain" data-zh-unit-id="[[bab-X-Y-acc1-c2]]">[[butiran]]</div>
                   </div>
                 </div>
               </div>
@@ -395,7 +405,7 @@
               </button>
               <div id="acc-[[id-unik-2]]" class="paper-accordion-panel">
                 <div class="cv-unit-body">
-                  <p class="point-line">📌 [[Huraian item kedua]]</p>
+                  <p class="point-line" data-zh-mode="explain" data-zh-unit-id="[[bab-X-Y-acc2-intro]]"><img class="fluent-3d-emoji openmoji--inline" src="https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@62ecdc0d7ca5/assets/Pushpin/3D/pushpin_3d.png" width="20" height="20" alt="" decoding="async" /> [[Huraian item kedua]]</p>
                 </div>
               </div>
             </article>
@@ -412,7 +422,7 @@
               </button>
               <div id="acc-[[id-unik-3]]" class="paper-accordion-panel">
                 <div class="cv-unit-body">
-                  <p class="point-line">📌 [[Huraian item ketiga]]</p>
+                  <p class="point-line" data-zh-mode="explain" data-zh-unit-id="[[bab-X-Y-acc3-intro]]"><img class="fluent-3d-emoji openmoji--inline" src="https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@62ecdc0d7ca5/assets/Pushpin/3D/pushpin_3d.png" width="20" height="20" alt="" decoding="async" /> [[Huraian item ketiga]]</p>
                 </div>
               </div>
             </article>
@@ -434,9 +444,9 @@
             data-cv-type="board"
             data-cv-title="Info Tambahan"
           >
-            <div class="paper-strip strip-info">🔍 Info Tambahan</div>
+            <div class="paper-strip strip-info"><img class="fluent-3d-emoji openmoji--inline" src="https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@62ecdc0d7ca5/assets/Magnifying%20glass%20tilted%20left/3D/magnifying_glass_tilted_left_3d.png" width="20" height="20" alt="" decoding="async" /> Info Tambahan</div>
             <div class="cv-unit-body">
-              <p class="point-line">📌 [[Maklumat tambahan]]</p>
+              <p class="point-line" data-zh-mode="explain" data-zh-unit-id="[[bab-X-Y-info-1]]"><img class="fluent-3d-emoji openmoji--inline" src="https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@62ecdc0d7ca5/assets/Pushpin/3D/pushpin_3d.png" width="20" height="20" alt="" decoding="async" /> [[Maklumat tambahan]]</p>
             </div>
           </article>
         </section>
@@ -454,14 +464,14 @@
             <div class="paper-strip strip-summary"><img class="fluent-3d-emoji openmoji--inline" src="https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@62ecdc0d7ca5/assets/Bullseye/3D/bullseye_3d.png" width="20" height="20" alt="" decoding="async" /> Kesimpulan</div>
             <div class="cv-unit-body">
               <div class="paper-chip-list">
-                <div class="paper-chip" data-cv-collectible="false">[[Poin kesimpulan pertama]]</div>
-                <div class="paper-chip" data-cv-collectible="false">[[Poin kesimpulan kedua]]</div>
-                <div class="paper-chip" data-cv-collectible="false">[[Poin kesimpulan ketiga]]</div>
+                <div class="paper-chip" data-cv-collectible="false" data-zh-mode="explain" data-zh-unit-id="[[bab-X-Y-konk-c1]]">[[Poin kesimpulan pertama]]</div>
+                <div class="paper-chip" data-cv-collectible="false" data-zh-mode="explain" data-zh-unit-id="[[bab-X-Y-konk-c2]]">[[Poin kesimpulan kedua]]</div>
+                <div class="paper-chip" data-cv-collectible="false" data-zh-mode="explain" data-zh-unit-id="[[bab-X-Y-konk-c3]]">[[Poin kesimpulan ketiga]]</div>
               </div>
 
-              <p class="point-line">💡 [[Ayat rumusan keseluruhan subtopik]]</p>
-              <!-- Ayat refleksi/nilai sangat digalakkan -->
-              <p class="point-line">🇲🇾 [[Ayat refleksi/nilai atau kaitan dengan kehidupan/negara hari ini]]</p>
+              <p class="point-line" data-zh-mode="explain" data-zh-unit-id="[[bab-X-Y-konk-rumusan]]"><img class="fluent-3d-emoji openmoji--inline" src="https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@62ecdc0d7ca5/assets/Light%20bulb/3D/light_bulb_3d.png" width="20" height="20" alt="" decoding="async" /> [[Ayat rumusan keseluruhan subtopik]]</p>
+              <!-- Ayat refleksi/nilai sangat digalakkan — guna hibiscus sebagai simbol nilai kebangsaan -->
+              <p class="point-line" data-zh-mode="explain" data-zh-unit-id="[[bab-X-Y-konk-nilai]]"><img class="fluent-3d-emoji openmoji--inline" src="https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@62ecdc0d7ca5/assets/Hibiscus/3D/hibiscus_3d.png" width="20" height="20" alt="" decoding="async" /> [[Ayat refleksi/nilai atau kaitan dengan kehidupan/negara hari ini]]</p>
             </div>
           </article>
         </section>
@@ -473,36 +483,36 @@
         <!--
         <section class="note-subsection reveal-on-scroll">
           <article
-            class="paper-board master-summary-paper reveal-on-scroll cv-unit"
+            class="paper-board master-summary-paper cv-unit"
             data-cv-collectible="true"
             data-cv-type="board"
             data-cv-title="Rumusan Besar [[BAB_LABEL]]"
           >
-            <div class="paper-strip strip-summary">🌍 Rumusan Besar [[BAB_LABEL]]</div>
+            <div class="paper-strip strip-summary"><img class="fluent-3d-emoji openmoji--inline" src="https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@62ecdc0d7ca5/assets/Globe%20showing%20asia-australia/3D/globe_showing_asia-australia_3d.png" width="20" height="20" alt="" decoding="async" /> Rumusan Besar [[BAB_LABEL]]</div>
             <div class="cv-unit-body">
 
-              <p class="point-heading">📌 [[Teras rumusan pertama]]</p>
+              <p class="point-heading" data-zh-mode="explain" data-zh-unit-id="[[bab-X-Y-rum-h1]]"><img class="fluent-3d-emoji openmoji--inline" src="https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@62ecdc0d7ca5/assets/Pushpin/3D/pushpin_3d.png" width="20" height="20" alt="" decoding="async" /> [[Teras rumusan pertama]]</p>
               <div class="paper-chip-list">
-                <div class="paper-chip" data-cv-collectible="false">[[Rumusan kecil 1]]</div>
-                <div class="paper-chip" data-cv-collectible="false">[[Rumusan kecil 2]]</div>
+                <div class="paper-chip" data-cv-collectible="false" data-zh-mode="explain" data-zh-unit-id="[[bab-X-Y-rum-c1]]">[[Rumusan kecil 1]]</div>
+                <div class="paper-chip" data-cv-collectible="false" data-zh-mode="explain" data-zh-unit-id="[[bab-X-Y-rum-c2]]">[[Rumusan kecil 2]]</div>
               </div>
 
-              <p class="point-heading">📌 [[Teras rumusan kedua]]</p>
+              <p class="point-heading" data-zh-mode="explain" data-zh-unit-id="[[bab-X-Y-rum-h2]]"><img class="fluent-3d-emoji openmoji--inline" src="https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@62ecdc0d7ca5/assets/Pushpin/3D/pushpin_3d.png" width="20" height="20" alt="" decoding="async" /> [[Teras rumusan kedua]]</p>
               <div class="paper-chip-list">
-                <div class="paper-chip" data-cv-collectible="false">[[Rumusan kecil 3]]</div>
-                <div class="paper-chip" data-cv-collectible="false">[[Rumusan kecil 4]]</div>
+                <div class="paper-chip" data-cv-collectible="false" data-zh-mode="explain" data-zh-unit-id="[[bab-X-Y-rum-c3]]">[[Rumusan kecil 3]]</div>
+                <div class="paper-chip" data-cv-collectible="false" data-zh-mode="explain" data-zh-unit-id="[[bab-X-Y-rum-c4]]">[[Rumusan kecil 4]]</div>
               </div>
 
-              <p class="point-heading">💡 [[Rumusan keseluruhan bab]]</p>
+              <p class="point-heading" data-zh-mode="explain" data-zh-unit-id="[[bab-X-Y-rum-h3]]"><img class="fluent-3d-emoji openmoji--inline" src="https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@62ecdc0d7ca5/assets/Light%20bulb/3D/light_bulb_3d.png" width="20" height="20" alt="" decoding="async" /> [[Rumusan keseluruhan bab]]</p>
               <div class="paper-chip-list">
-                <div class="paper-chip" data-cv-collectible="false">[[Inti akhir 1]]</div>
-                <div class="paper-chip" data-cv-collectible="false">[[Inti akhir 2]]</div>
+                <div class="paper-chip" data-cv-collectible="false" data-zh-mode="explain" data-zh-unit-id="[[bab-X-Y-rum-c5]]">[[Inti akhir 1]]</div>
+                <div class="paper-chip" data-cv-collectible="false" data-zh-mode="explain" data-zh-unit-id="[[bab-X-Y-rum-c6]]">[[Inti akhir 2]]</div>
               </div>
 
-              <p class="point-heading">🇲🇾 [[Kaitan nilai / penghayatan akhir bab]]</p>
+              <p class="point-heading" data-zh-mode="explain" data-zh-unit-id="[[bab-X-Y-rum-h4]]"><img class="fluent-3d-emoji openmoji--inline" src="https://cdn.jsdelivr.net/gh/microsoft/fluentui-emoji@62ecdc0d7ca5/assets/Hibiscus/3D/hibiscus_3d.png" width="20" height="20" alt="" decoding="async" /> [[Kaitan nilai / penghayatan akhir bab]]</p>
               <div class="paper-chip-list">
-                <div class="paper-chip" data-cv-collectible="false">[[Nilai 1]]</div>
-                <div class="paper-chip" data-cv-collectible="false">[[Nilai 2]]</div>
+                <div class="paper-chip" data-cv-collectible="false" data-zh-mode="explain" data-zh-unit-id="[[bab-X-Y-rum-c7]]">[[Nilai 1]]</div>
+                <div class="paper-chip" data-cv-collectible="false" data-zh-mode="explain" data-zh-unit-id="[[bab-X-Y-rum-c8]]">[[Nilai 2]]</div>
               </div>
 
             </div>
@@ -557,7 +567,7 @@
   </footer>
 
   <!-- JavaScript -->
-  <script src="../assets/js/main.js?v=244"></script>
+  <script src="../assets/js/zh-mode.js?v=47"></script><script src="../assets/js/main.js?v=244"></script>
   <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.3/Sortable.min.js"></script>
   <script src="../assets/js/canvas.js?v=1"></script>
 
