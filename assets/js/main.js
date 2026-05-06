@@ -87,6 +87,19 @@ window.ZymStore = (function () {
   function getApp(k) { return (_read(KEYS.app) || {})[k]; }
   function setApp(k, v) { var a = _read(KEYS.app) || {}; a[k] = v; _write(KEYS.app, a); }
 
+  function getUserSecret() {
+    var a = _read(KEYS.app) || {};
+    if (a.usersecret) return a.usersecret;
+    var uid = (typeof crypto !== 'undefined' && crypto.randomUUID)
+      ? crypto.randomUUID()
+      : 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
+          var r = Math.random() * 16 | 0;
+          return (c === 'x' ? r : (r & 0x3 | 0x8)).toString(16);
+        });
+    a.usersecret = uid; _write(KEYS.app, a);
+    return uid;
+  }
+
   function clearAll() {
     Object.keys(KEYS).forEach(function (k) {
       try { localStorage.removeItem(KEYS[k]); } catch (e) {}
@@ -151,7 +164,7 @@ window.ZymStore = (function () {
     getFeedback: getFeedback, getFeedbackId: getFeedbackId, saveFeedback: saveFeedback,
     clearFeedback: clearFeedback, getFeedbackCount: getFeedbackCount,
     getAllFeedback: getAllFeedback, deleteFeedbackEntry: deleteFeedbackEntry,
-    isDismissed: isDismissed, setDismissed: setDismissed,
+    isDismissed: isDismissed, setDismissed: setDismissed, getUserSecret: getUserSecret,
     getApp: getApp, setApp: setApp,
     clearAll: clearAll, migrate: migrate
   };
@@ -2404,7 +2417,7 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
   function submitFeedback(reaction) {
     return supFetch('/rest/v1/rpc/submit_nota_feedback', {
       method: 'POST',
-      body: JSON.stringify({ p_path: pathname, p_reaction: reaction })
+      body: JSON.stringify({ p_path: pathname, p_reaction: reaction, p_secret: ZymStore.getUserSecret() })
     }).then(function (r) { return r && r.ok ? r.json() : null; });
   }
 
@@ -3374,6 +3387,26 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
       });
     });
 
+    // Helper: padam semua rekod Supabase untuk pengguna ini (guna ID yang tersimpan)
+    function deleteAllFeedbackFromSupabase() {
+      var fb = ZymStore.getAllFeedback();
+      var ids = Object.keys(fb).map(function (p) {
+        var v = fb[p]; return (v && typeof v === 'object') ? v.id : null;
+      }).filter(Boolean);
+      if (!ids.length || !NOTA_FB_SUPABASE_URL || !NOTA_FB_SUPABASE_KEY) return Promise.resolve();
+      return fetch(NOTA_FB_SUPABASE_URL + '/rest/v1/rpc/delete_nota_feedback_entries', {
+        method: 'POST',
+        headers: {
+          'apikey': NOTA_FB_SUPABASE_KEY,
+          'Authorization': 'Bearer ' + NOTA_FB_SUPABASE_KEY,
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ p_ids: ids, p_secret: ZymStore.getUserSecret() })
+      }).catch(function () {});
+    }
+
+    var isNotaPage = !!window.location.pathname.match(/\/notes\/bab-\d+-\d+\.html/);
+
     // Reset skor kuiz
     sheet.querySelector('#zymset-quiz-btn').addEventListener('click', function () {
       ZymStore.clearQuizScores();
@@ -3381,6 +3414,7 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
       var btn = sheet.querySelector('#zymset-quiz-btn');
       btn.textContent = '✓ Dipadam';
       btn.classList.add('is-done');
+      if (isNotaPage) { setTimeout(function () { window.location.reload(); }, 600); return; }
       setTimeout(function () {
         btn.textContent = 'Tetapkan Semula';
         btn.classList.remove('is-done');
@@ -3389,15 +3423,21 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
 
     // Reset maklum balas
     sheet.querySelector('#zymset-feedback-btn').addEventListener('click', function () {
-      ZymStore.clearFeedback();
-      updateDataCounts();
       var btn = sheet.querySelector('#zymset-feedback-btn');
-      btn.textContent = '✓ Dipadam';
-      btn.classList.add('is-done');
-      setTimeout(function () {
-        btn.textContent = 'Tetapkan Semula';
-        btn.classList.remove('is-done');
-      }, 2200);
+      btn.textContent = '⏳ Memadam...';
+      btn.disabled = true;
+      deleteAllFeedbackFromSupabase().then(function () {
+        ZymStore.clearFeedback();
+        updateDataCounts();
+        if (isNotaPage) { window.location.reload(); return; }
+        btn.textContent = '✓ Dipadam';
+        btn.classList.add('is-done');
+        btn.disabled = false;
+        setTimeout(function () {
+          btn.textContent = 'Tetapkan Semula';
+          btn.classList.remove('is-done');
+        }, 2200);
+      });
     });
 
     // Toggle panel butiran kuiz
@@ -3446,7 +3486,7 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
               'Authorization': 'Bearer ' + NOTA_FB_SUPABASE_KEY,
               'Content-Type': 'application/json'
             },
-            body: JSON.stringify({ p_id: supId })
+            body: JSON.stringify({ p_id: supId, p_secret: ZymStore.getUserSecret() })
           }).catch(function () {})
         : Promise.resolve();
 
@@ -3465,20 +3505,22 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
       sheet.querySelector('#zymset-confirm').classList.remove('is-visible');
     });
     sheet.querySelector('#zymset-confirm-yes').addEventListener('click', function () {
-      ZymStore.clearAll();
       sheet.querySelector('#zymset-confirm').classList.remove('is-visible');
-      updateDataCounts();
-      // Kembalikan tema ke default sistem
-      var sysTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-      if (window.hzApplyTheme) window.hzApplyTheme(sysTheme);
-      syncThemeButtons();
-      var dangerBtn = sheet.querySelector('#zymset-clear-all-btn');
-      dangerBtn.textContent = '✓ Semua data dipadamkan';
-      dangerBtn.disabled = true;
-      setTimeout(function () {
-        dangerBtn.innerHTML = hzIcons8ImgHtml(HZ_ICONS8_SPARKLE.wastebasket, 20) + ' Padam Semua Data';
-        dangerBtn.disabled = false;
-      }, 3000);
+      deleteAllFeedbackFromSupabase().then(function () {
+        ZymStore.clearAll();
+        updateDataCounts();
+        var sysTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        if (window.hzApplyTheme) window.hzApplyTheme(sysTheme);
+        syncThemeButtons();
+        if (isNotaPage) { window.location.reload(); return; }
+        var dangerBtn = sheet.querySelector('#zymset-clear-all-btn');
+        dangerBtn.textContent = '✓ Semua data dipadamkan';
+        dangerBtn.disabled = true;
+        setTimeout(function () {
+          dangerBtn.innerHTML = hzIcons8ImgHtml(HZ_ICONS8_SPARKLE.wastebasket, 20) + ' Padam Semua Data';
+          dangerBtn.disabled = false;
+        }, 3000);
+      });
     });
 
     // Swipe ke bawah untuk tutup
