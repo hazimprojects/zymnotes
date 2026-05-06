@@ -53,6 +53,11 @@ window.ZymStore = (function () {
   }
   function clearQuizScores() { try { localStorage.removeItem(KEYS.quiz); } catch (e) {} }
   function getQuizCount() { return Object.keys(_read(KEYS.quiz) || {}).length; }
+  function getAllQuizScores() { return Object.assign({}, _read(KEYS.quiz) || {}); }
+  function deleteQuizScore(id) {
+    var q = _read(KEYS.quiz) || {}; delete q[id];
+    if (Object.keys(q).length) _write(KEYS.quiz, q); else try { localStorage.removeItem(KEYS.quiz); } catch (e) {}
+  }
 
   function getFeedback(path) { return (_read(KEYS.feedback) || {})[path]; }
   function saveFeedback(path, reaction) {
@@ -60,6 +65,11 @@ window.ZymStore = (function () {
   }
   function clearFeedback() { try { localStorage.removeItem(KEYS.feedback); } catch (e) {} }
   function getFeedbackCount() { return Object.keys(_read(KEYS.feedback) || {}).length; }
+  function getAllFeedback() { return Object.assign({}, _read(KEYS.feedback) || {}); }
+  function deleteFeedbackEntry(path) {
+    var f = _read(KEYS.feedback) || {}; delete f[path];
+    if (Object.keys(f).length) _write(KEYS.feedback, f); else try { localStorage.removeItem(KEYS.feedback); } catch (e) {}
+  }
 
   function isDismissed(k) { return !!(_read(KEYS.dismissed) || {})[k]; }
   function setDismissed(k) { var d = _read(KEYS.dismissed) || {}; d[k] = true; _write(KEYS.dismissed, d); }
@@ -127,8 +137,10 @@ window.ZymStore = (function () {
     getPref: getPref, hasPref: hasPref, setPref: setPref, getPrefs: getPrefs,
     getQuizScore: getQuizScore, saveQuizScore: saveQuizScore,
     clearQuizScores: clearQuizScores, getQuizCount: getQuizCount,
+    getAllQuizScores: getAllQuizScores, deleteQuizScore: deleteQuizScore,
     getFeedback: getFeedback, saveFeedback: saveFeedback,
     clearFeedback: clearFeedback, getFeedbackCount: getFeedbackCount,
+    getAllFeedback: getAllFeedback, deleteFeedbackEntry: deleteFeedbackEntry,
     isDismissed: isDismissed, setDismissed: setDismissed,
     getApp: getApp, setApp: setApp,
     clearAll: clearAll, migrate: migrate
@@ -3235,17 +3247,21 @@ var NOTA_FB_SUPABASE_KEY = '';      // kunci anon dari Supabase > Settings > API
             '<div class="zym-settings-row-body">' +
               '<span class="zym-settings-row-label">Skor Kuiz</span>' +
               '<span class="zym-settings-row-meta" id="zymset-quiz-meta">memuatkan...</span>' +
+              '<button class="zymset-detail-toggle" id="zymset-quiz-toggle" type="button" hidden>Butiran ▾</button>' +
             '</div>' +
             '<button class="zym-settings-action-btn" id="zymset-quiz-btn" type="button">Tetapkan Semula</button>' +
           '</div>' +
+          '<div class="zymset-detail-panel" id="zymset-quiz-detail"></div>' +
           '<div class="zym-settings-row" id="zymset-feedback-row">' +
             '<span class="zym-settings-row-icon">' + hzIcons8ImgHtml(HZ_ICONS8_SPARKLE.memo, 24) + '</span>' +
             '<div class="zym-settings-row-body">' +
               '<span class="zym-settings-row-label">Maklum Balas Nota</span>' +
               '<span class="zym-settings-row-meta" id="zymset-feedback-meta">memuatkan...</span>' +
+              '<button class="zymset-detail-toggle" id="zymset-feedback-toggle" type="button" hidden>Butiran ▾</button>' +
             '</div>' +
             '<button class="zym-settings-action-btn" id="zymset-feedback-btn" type="button">Tetapkan Semula</button>' +
           '</div>' +
+          '<div class="zymset-detail-panel" id="zymset-feedback-detail"></div>' +
         '</div>' +
         '<div class="zym-settings-divider"></div>' +
         // Padam Semua
@@ -3305,6 +3321,40 @@ var NOTA_FB_SUPABASE_KEY = '';      // kunci anon dari Supabase > Settings > API
       }, 2200);
     });
 
+    // Toggle panel butiran kuiz
+    sheet.querySelector('#zymset-quiz-toggle').addEventListener('click', function () {
+      var panel = sheet.querySelector('#zymset-quiz-detail');
+      var toggle = sheet.querySelector('#zymset-quiz-toggle');
+      var open = panel.classList.toggle('is-open');
+      toggle.textContent = open ? 'Tutup ▴' : 'Butiran ▾';
+      if (open) renderQuizDetail();
+    });
+
+    // Toggle panel butiran maklum balas
+    sheet.querySelector('#zymset-feedback-toggle').addEventListener('click', function () {
+      var panel = sheet.querySelector('#zymset-feedback-detail');
+      var toggle = sheet.querySelector('#zymset-feedback-toggle');
+      var open = panel.classList.toggle('is-open');
+      toggle.textContent = open ? 'Tutup ▴' : 'Butiran ▾';
+      if (open) renderFeedbackDetail();
+    });
+
+    // Padam entri kuiz individu (event delegation)
+    sheet.querySelector('#zymset-quiz-detail').addEventListener('click', function (e) {
+      var btn = e.target.closest('[data-quiz-del]');
+      if (!btn) return;
+      ZymStore.deleteQuizScore(btn.getAttribute('data-quiz-del'));
+      updateDataCounts();
+    });
+
+    // Padam entri maklum balas individu (event delegation)
+    sheet.querySelector('#zymset-feedback-detail').addEventListener('click', function (e) {
+      var btn = e.target.closest('[data-fb-del]');
+      if (!btn) return;
+      ZymStore.deleteFeedbackEntry(btn.getAttribute('data-fb-del'));
+      updateDataCounts();
+    });
+
     // Padam semua — tunjuk pengesahan
     sheet.querySelector('#zymset-clear-all-btn').addEventListener('click', function () {
       sheet.querySelector('#zymset-confirm').classList.add('is-visible');
@@ -3345,6 +3395,45 @@ var NOTA_FB_SUPABASE_KEY = '';      // kunci anon dari Supabase > Settings > API
     });
   }
 
+  var REACTION_LABELS = { 'mudah': 'Mudah difahami', 'boleh-baik': 'Boleh diperbaiki', 'kurang-jelas': 'Kurang jelas' };
+
+  function fmtSubtopic(key) {
+    var m = key.match(/bab-(\d+)-(\d+)/i);
+    return m ? 'Bab ' + m[1] + '.' + m[2] : key;
+  }
+
+  function renderQuizDetail() {
+    if (!sheet) return;
+    var panel = sheet.querySelector('#zymset-quiz-detail');
+    if (!panel || !panel.classList.contains('is-open')) return;
+    var scores = ZymStore.getAllQuizScores();
+    var keys = Object.keys(scores).sort();
+    if (!keys.length) { panel.classList.remove('is-open'); sheet.querySelector('#zymset-quiz-toggle').textContent = 'Butiran ▾'; return; }
+    panel.innerHTML = keys.map(function (id) {
+      return '<div class="zymset-detail-item">' +
+        '<span class="zymset-detail-label">' + fmtSubtopic(id) + '</span>' +
+        '<span class="zymset-detail-val">' + scores[id] + '%</span>' +
+        '<button class="zymset-detail-del" type="button" data-quiz-del="' + id + '" title="Padam entri ini">✕</button>' +
+        '</div>';
+    }).join('');
+  }
+
+  function renderFeedbackDetail() {
+    if (!sheet) return;
+    var panel = sheet.querySelector('#zymset-feedback-detail');
+    if (!panel || !panel.classList.contains('is-open')) return;
+    var fb = ZymStore.getAllFeedback();
+    var keys = Object.keys(fb).sort();
+    if (!keys.length) { panel.classList.remove('is-open'); sheet.querySelector('#zymset-feedback-toggle').textContent = 'Butiran ▾'; return; }
+    panel.innerHTML = keys.map(function (path) {
+      return '<div class="zymset-detail-item">' +
+        '<span class="zymset-detail-label">' + fmtSubtopic(path) + '</span>' +
+        '<span class="zymset-detail-val">' + (REACTION_LABELS[fb[path]] || fb[path]) + '</span>' +
+        '<button class="zymset-detail-del" type="button" data-fb-del="' + path + '" title="Padam entri ini">✕</button>' +
+        '</div>';
+    }).join('');
+  }
+
   function updateDataCounts() {
     if (!sheet) return;
     var qCount = ZymStore.getQuizCount();
@@ -3353,10 +3442,23 @@ var NOTA_FB_SUPABASE_KEY = '';      // kunci anon dari Supabase > Settings > API
     var fMeta = sheet.querySelector('#zymset-feedback-meta');
     var qBtn = sheet.querySelector('#zymset-quiz-btn');
     var fBtn = sheet.querySelector('#zymset-feedback-btn');
+    var qToggle = sheet.querySelector('#zymset-quiz-toggle');
+    var fToggle = sheet.querySelector('#zymset-feedback-toggle');
+    var qPanel = sheet.querySelector('#zymset-quiz-detail');
+    var fPanel = sheet.querySelector('#zymset-feedback-detail');
+
     if (qMeta) qMeta.textContent = qCount > 0 ? qCount + ' rekod tersimpan' : 'Tiada rekod';
     if (fMeta) fMeta.textContent = fCount > 0 ? fCount + ' rekod tersimpan' : 'Tiada rekod';
     if (qBtn) qBtn.disabled = qCount === 0;
     if (fBtn) fBtn.disabled = fCount === 0;
+    if (qToggle) qToggle.hidden = qCount === 0;
+    if (fToggle) fToggle.hidden = fCount === 0;
+
+    if (qCount === 0 && qPanel) { qPanel.classList.remove('is-open'); qPanel.innerHTML = ''; if (qToggle) qToggle.textContent = 'Butiran ▾'; }
+    if (fCount === 0 && fPanel) { fPanel.classList.remove('is-open'); fPanel.innerHTML = ''; if (fToggle) fToggle.textContent = 'Butiran ▾'; }
+
+    renderQuizDetail();
+    renderFeedbackDetail();
   }
 
   function openSettings() {

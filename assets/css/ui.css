@@ -2402,6 +2402,83 @@ body.mindmap-open { overflow: hidden; }
 [data-theme="dark"] .zym-settings-confirm-text { color: #fca5a5; }
 [data-theme="dark"] .zym-settings-confirm-yes { background: #dc2626; }
 
+/* Panel butiran data per-subtopik */
+.zymset-detail-toggle {
+  display: inline-block;
+  margin-top: 0.2rem;
+  padding: 0;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--primary);
+  background: none;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  line-height: 1.4;
+}
+.zymset-detail-toggle:hover { opacity: 1; }
+
+.zymset-detail-panel {
+  display: none;
+  flex-direction: column;
+  gap: 0.25rem;
+  margin: 0 0.4rem 0.4rem;
+  padding: 0.5rem 0.9rem 0.55rem 1rem;
+  background: var(--paper-soft);
+  border-radius: 10px;
+  border: 1px solid var(--line);
+}
+.zymset-detail-panel.is-open { display: flex; }
+
+.zymset-detail-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.78rem;
+  padding: 0.18rem 0;
+}
+.zymset-detail-label {
+  font-weight: 700;
+  color: var(--ink);
+  flex-shrink: 0;
+  min-width: 4.2rem;
+}
+.zymset-detail-val {
+  flex: 1;
+  color: var(--muted);
+  font-size: 0.74rem;
+}
+.zymset-detail-del {
+  width: 22px;
+  height: 22px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1px solid var(--line-strong);
+  background: none;
+  color: var(--muted);
+  font-size: 0.65rem;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background 0.12s, color 0.12s, border-color 0.12s;
+}
+.zymset-detail-del:hover {
+  background: rgba(185, 28, 28, 0.08);
+  border-color: rgba(185, 28, 28, 0.4);
+  color: #b91c1c;
+}
+[data-theme="dark"] .zymset-detail-panel {
+  background: rgba(255,255,255,0.04);
+  border-color: var(--line);
+}
+[data-theme="dark"] .zymset-detail-del:hover {
+  background: rgba(239,68,68,0.12);
+  border-color: rgba(239,68,68,0.35);
+  color: #f87171;
+}
+
 /* Butang Tetapan di header (di sebelah toggle tema) */
 .zym-settings-header-btn {
   width: 36px; height: 36px;
