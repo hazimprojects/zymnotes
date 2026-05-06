@@ -3569,7 +3569,7 @@ var NOTA_FB_SUPABASE_KEY = '';      // kunci anon dari Supabase > Settings > API
   if (!('serviceWorker' in navigator)) return;
 
   window.addEventListener('load', function () {
-    navigator.serviceWorker.register('/sw.js?v=341').catch(function (error) {
+    navigator.serviceWorker.register('/sw.js?v=342').catch(function (error) {
       console.warn('Service worker registration failed:', error);
     });
   });
