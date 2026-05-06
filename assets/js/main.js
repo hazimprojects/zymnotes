@@ -87,6 +87,19 @@ window.ZymStore = (function () {
   function getApp(k) { return (_read(KEYS.app) || {})[k]; }
   function setApp(k, v) { var a = _read(KEYS.app) || {}; a[k] = v; _write(KEYS.app, a); }
 
+  function getUserSecret() {
+    var a = _read(KEYS.app) || {};
+    if (a.usersecret) return a.usersecret;
+    var uid = (typeof crypto !== 'undefined' && crypto.randomUUID)
+      ? crypto.randomUUID()
+      : 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
+          var r = Math.random() * 16 | 0;
+          return (c === 'x' ? r : (r & 0x3 | 0x8)).toString(16);
+        });
+    a.usersecret = uid; _write(KEYS.app, a);
+    return uid;
+  }
+
   function clearAll() {
     Object.keys(KEYS).forEach(function (k) {
       try { localStorage.removeItem(KEYS[k]); } catch (e) {}
@@ -151,7 +164,7 @@ window.ZymStore = (function () {
     getFeedback: getFeedback, getFeedbackId: getFeedbackId, saveFeedback: saveFeedback,
     clearFeedback: clearFeedback, getFeedbackCount: getFeedbackCount,
     getAllFeedback: getAllFeedback, deleteFeedbackEntry: deleteFeedbackEntry,
-    isDismissed: isDismissed, setDismissed: setDismissed,
+    isDismissed: isDismissed, setDismissed: setDismissed, getUserSecret: getUserSecret,
     getApp: getApp, setApp: setApp,
     clearAll: clearAll, migrate: migrate
   };
@@ -2404,7 +2417,7 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
   function submitFeedback(reaction) {
     return supFetch('/rest/v1/rpc/submit_nota_feedback', {
       method: 'POST',
-      body: JSON.stringify({ p_path: pathname, p_reaction: reaction })
+      body: JSON.stringify({ p_path: pathname, p_reaction: reaction, p_secret: ZymStore.getUserSecret() })
     }).then(function (r) { return r && r.ok ? r.json() : null; });
   }
 
@@ -3388,7 +3401,7 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
           'Authorization': 'Bearer ' + NOTA_FB_SUPABASE_KEY,
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ p_ids: ids })
+        body: JSON.stringify({ p_ids: ids, p_secret: ZymStore.getUserSecret() })
       }).catch(function () {});
     }
 
@@ -3473,7 +3486,7 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
               'Authorization': 'Bearer ' + NOTA_FB_SUPABASE_KEY,
               'Content-Type': 'application/json'
             },
-            body: JSON.stringify({ p_id: supId })
+            body: JSON.stringify({ p_id: supId, p_secret: ZymStore.getUserSecret() })
           }).catch(function () {})
         : Promise.resolve();
 
