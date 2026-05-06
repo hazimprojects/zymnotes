@@ -2449,19 +2449,20 @@ body.mindmap-open { overflow: hidden; }
   font-size: 0.74rem;
 }
 .zymset-detail-del {
-  width: 22px;
   height: 22px;
-  padding: 0;
+  padding: 0 0.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 50%;
+  border-radius: 999px;
   border: 1px solid var(--line-strong);
   background: none;
   color: var(--muted);
-  font-size: 0.65rem;
+  font-size: 0.68rem;
+  font-weight: 600;
   cursor: pointer;
   flex-shrink: 0;
+  white-space: nowrap;
   transition: background 0.12s, color 0.12s, border-color 0.12s;
 }
 .zymset-detail-del:hover {

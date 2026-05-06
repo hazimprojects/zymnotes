@@ -3413,7 +3413,7 @@ var NOTA_FB_SUPABASE_KEY = '';      // kunci anon dari Supabase > Settings > API
       return '<div class="zymset-detail-item">' +
         '<span class="zymset-detail-label">' + fmtSubtopic(id) + '</span>' +
         '<span class="zymset-detail-val">' + scores[id] + '%</span>' +
-        '<button class="zymset-detail-del" type="button" data-quiz-del="' + id + '" title="Padam entri ini">✕</button>' +
+        '<button class="zymset-detail-del" type="button" data-quiz-del="' + id + '" title="Padam entri ini">Padam</button>' +
         '</div>';
     }).join('');
   }
@@ -3429,7 +3429,7 @@ var NOTA_FB_SUPABASE_KEY = '';      // kunci anon dari Supabase > Settings > API
       return '<div class="zymset-detail-item">' +
         '<span class="zymset-detail-label">' + fmtSubtopic(path) + '</span>' +
         '<span class="zymset-detail-val">' + (REACTION_LABELS[fb[path]] || fb[path]) + '</span>' +
-        '<button class="zymset-detail-del" type="button" data-fb-del="' + path + '" title="Padam entri ini">✕</button>' +
+        '<button class="zymset-detail-del" type="button" data-fb-del="' + path + '" title="Padam entri ini">Padam</button>' +
         '</div>';
     }).join('');
   }
