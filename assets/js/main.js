@@ -3422,8 +3422,12 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
     sheet.querySelector('#zymset-quiz-detail').addEventListener('click', function (e) {
       var btn = e.target.closest('[data-quiz-del]');
       if (!btn) return;
-      ZymStore.deleteQuizScore(btn.getAttribute('data-quiz-del'));
+      var qid = btn.getAttribute('data-quiz-del');
+      ZymStore.deleteQuizScore(qid);
       updateDataCounts();
+      // Reload jika kuiz ini milik halaman semasa supaya stat bar hilang
+      var pageMatch = window.location.pathname.match(/\/notes\/(bab-\d+-\d+)\.html/i);
+      if (pageMatch && pageMatch[1] === qid) window.location.reload();
     });
 
     // Padam entri maklum balas individu (event delegation)
@@ -3432,19 +3436,25 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
       if (!btn) return;
       var path = btn.getAttribute('data-fb-del');
       var supId = ZymStore.getFeedbackId(path);
-      if (supId && NOTA_FB_SUPABASE_URL && NOTA_FB_SUPABASE_KEY) {
-        fetch(NOTA_FB_SUPABASE_URL + '/rest/v1/rpc/delete_nota_feedback_entry', {
-          method: 'POST',
-          headers: {
-            'apikey': NOTA_FB_SUPABASE_KEY,
-            'Authorization': 'Bearer ' + NOTA_FB_SUPABASE_KEY,
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify({ p_id: supId })
-        }).catch(function () {});
-      }
+      var isCurrentPage = (path === window.location.pathname);
+
+      var deleteOp = (supId && NOTA_FB_SUPABASE_URL && NOTA_FB_SUPABASE_KEY)
+        ? fetch(NOTA_FB_SUPABASE_URL + '/rest/v1/rpc/delete_nota_feedback_entry', {
+            method: 'POST',
+            headers: {
+              'apikey': NOTA_FB_SUPABASE_KEY,
+              'Authorization': 'Bearer ' + NOTA_FB_SUPABASE_KEY,
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ p_id: supId })
+          }).catch(function () {})
+        : Promise.resolve();
+
       ZymStore.deleteFeedbackEntry(path);
       updateDataCounts();
+
+      // Reload halaman semasa supaya stat bar hilang dan widget maklum balas muncul semula
+      if (isCurrentPage) deleteOp.then(function () { window.location.reload(); });
     });
 
     // Padam semua — tunjuk pengesahan
