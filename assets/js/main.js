@@ -80,6 +80,19 @@ window.ZymStore = (function () {
     var s = _fbNorm((_read(KEYS.feedback) || {})[path]).s;
     return typeof s === 'number' ? s : null;
   }
+  function clearSuka(path) {
+    var f = _read(KEYS.feedback) || {};
+    var e = _fbNorm(f[path]);
+    e.s = null;
+    if (e.o) {
+      f[path] = { s: null, o: e.o };
+      _write(KEYS.feedback, f);
+    } else {
+      delete f[path];
+      if (Object.keys(f).length) _write(KEYS.feedback, f);
+      else try { localStorage.removeItem(KEYS.feedback); } catch (x) {}
+    }
+  }
   function saveFeedback(path, reaction, supId) {
     var f = _read(KEYS.feedback) || {};
     var e = _fbNorm(f[path]);
@@ -180,7 +193,7 @@ window.ZymStore = (function () {
     clearQuizScores: clearQuizScores, getQuizCount: getQuizCount,
     getAllQuizScores: getAllQuizScores, deleteQuizScore: deleteQuizScore,
     getFeedback: getFeedback, getFeedbackId: getFeedbackId, saveFeedback: saveFeedback,
-    getSukaGiven: getSukaGiven, getSukaId: getSukaId,
+    getSukaGiven: getSukaGiven, getSukaId: getSukaId, clearSuka: clearSuka,
     clearFeedback: clearFeedback, getFeedbackCount: getFeedbackCount,
     getAllFeedback: getAllFeedback, deleteFeedbackEntry: deleteFeedbackEntry,
     isDismissed: isDismissed, setDismissed: setDismissed, getUserSecret: getUserSecret,
@@ -2396,18 +2409,19 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
   if (!window.location.pathname.match(/\/notes\/bab-\d+-\d+\.html/)) return;
 
   var pathname = window.location.pathname;
+  var SUKA_SRC   = 'https://img.icons8.com/?size=100&id=5twNojKL5zU7&format=png&color=000000';
+  var KONGSI_SRC = 'https://img.icons8.com/?size=100&id=xPX4qmtKvtBp&format=png&color=000000';
 
   var style = document.createElement('style');
   style.textContent = [
     '.nota-feedback{text-align:center;padding:1.2rem 1rem 0.6rem;opacity:0;animation:nfb-in 0.4s ease 0.5s forwards}',
     '@keyframes nfb-in{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:none}}',
-    '.nota-feedback-suka-wrap{display:flex;justify-content:center;margin-bottom:0.55rem}',
-    '.nota-feedback-suka-btn{display:inline-flex;align-items:center;gap:0.35rem;padding:0.38rem 1.3rem;border-radius:999px;border:2px solid rgba(224,80,140,0.28);background:rgba(224,80,140,0.06);color:#b8406a;font-size:0.82rem;font-weight:700;cursor:pointer;transition:transform 0.14s,box-shadow 0.14s,background 0.14s}',
+    '.nota-feedback-suka-wrap{display:flex;justify-content:center;margin-bottom:0.6rem}',
+    '.nota-feedback-suka-btn{display:inline-flex;align-items:center;gap:0.35rem;padding:0.38rem 1.3rem;border-radius:999px;border:2px solid rgba(224,80,140,0.28);background:rgba(224,80,140,0.06);color:#b8406a;font-size:0.82rem;font-weight:700;cursor:pointer;transition:transform 0.14s,box-shadow 0.14s,background 0.14s,border-color 0.14s}',
     '.nota-feedback-suka-btn img{width:22px;height:22px;pointer-events:none;flex-shrink:0}',
     '.nota-feedback-suka-btn:hover{transform:scale(1.05);box-shadow:0 3px 12px rgba(224,80,140,0.2)}',
     '.nota-feedback-suka-btn:active{transform:scale(0.96)}',
-    '.nota-feedback-suka-done{display:inline-flex;align-items:center;gap:0.32rem;padding:0.28rem 1rem;border-radius:999px;background:rgba(224,80,140,0.1);color:#b8406a;font-size:0.8rem;font-weight:700}',
-    '.nota-feedback-suka-done img{width:18px;height:18px;flex-shrink:0}',
+    '.nota-feedback-suka-btn.is-active{background:rgba(224,80,140,0.14);border-color:rgba(224,80,140,0.6);color:#a03060}',
     '.nota-feedback-label{margin:0 0 0.6rem;font-size:0.8rem;font-weight:700;color:#8c7d6a;letter-spacing:0.01em}',
     '.nota-feedback-options{display:flex;justify-content:center;gap:0.5rem}',
     '.nota-feedback-option-wrap{display:flex;flex-direction:column;align-items:center;gap:0.28rem}',
@@ -2419,12 +2433,18 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
     '.nota-feedback-opinion-appr{display:flex;align-items:center;justify-content:center;gap:0.45rem;padding:0.3rem 0;opacity:0;animation:nfb-in 0.35s ease 0.05s forwards}',
     '.nota-feedback-opinion-appr img{width:28px;height:28px;flex-shrink:0}',
     '.nota-feedback-appr-msg{font-size:0.8rem;font-weight:700;color:#8c7d6a;margin:0}',
+    '.nota-feedback-kongsi-wrap{display:flex;justify-content:center;margin-top:0.65rem}',
+    '.nota-feedback-kongsi-btn{display:inline-flex;align-items:center;gap:0.35rem;padding:0.34rem 1.1rem;border-radius:999px;border:1.5px solid rgba(50,130,200,0.25);background:rgba(50,130,200,0.05);color:#2a6090;font-size:0.78rem;font-weight:700;cursor:pointer;transition:transform 0.14s,box-shadow 0.14s,background 0.14s}',
+    '.nota-feedback-kongsi-btn img{width:18px;height:18px;pointer-events:none;flex-shrink:0}',
+    '.nota-feedback-kongsi-btn:hover{transform:scale(1.05);box-shadow:0 3px 10px rgba(50,130,200,0.15)}',
+    '.nota-feedback-kongsi-btn:active{transform:scale(0.96)}',
     '[data-theme="dark"] .nota-feedback-suka-btn{background:rgba(224,80,140,0.08);border-color:rgba(224,80,140,0.22);color:#d06090}',
-    '[data-theme="dark"] .nota-feedback-suka-done{background:rgba(224,80,140,0.15);color:#d06090}',
+    '[data-theme="dark"] .nota-feedback-suka-btn.is-active{background:rgba(224,80,140,0.18);border-color:rgba(224,80,140,0.5)}',
     '[data-theme="dark"] .nota-feedback-label{color:#b8aea1}',
     '[data-theme="dark"] .nota-feedback-btn{background:rgba(50,48,44,0.9);border-color:rgba(220,210,190,0.13)}',
     '[data-theme="dark"] .nota-feedback-btn-label{color:#8a8077}',
-    '[data-theme="dark"] .nota-feedback-appr-msg{color:#b8aea1}'
+    '[data-theme="dark"] .nota-feedback-appr-msg{color:#b8aea1}',
+    '[data-theme="dark"] .nota-feedback-kongsi-btn{background:rgba(50,130,200,0.08);border-color:rgba(50,130,200,0.2);color:#6aaad8}'
   ].join('');
   document.head.appendChild(style);
 
@@ -2432,24 +2452,27 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
     if (!NOTA_FB_SUPABASE_URL || !NOTA_FB_SUPABASE_KEY) return Promise.resolve(null);
     return fetch(NOTA_FB_SUPABASE_URL + '/rest/v1/rpc/submit_nota_feedback', {
       method: 'POST',
-      headers: {
-        'apikey': NOTA_FB_SUPABASE_KEY,
-        'Authorization': 'Bearer ' + NOTA_FB_SUPABASE_KEY,
-        'Content-Type': 'application/json'
-      },
+      headers: { 'apikey': NOTA_FB_SUPABASE_KEY, 'Authorization': 'Bearer ' + NOTA_FB_SUPABASE_KEY, 'Content-Type': 'application/json' },
       body: JSON.stringify({ p_path: pathname, p_reaction: reaction, p_secret: ZymStore.getUserSecret() })
     }).then(function (r) { return r && r.ok ? r.json() : null; }).catch(function () { return null; });
   }
 
-  var heartSrc = hzFluent3dAsset(HZ_FLUENT_SPARKLE.sparklingHeart[0], HZ_FLUENT_SPARKLE.sparklingHeart[1]);
+  function deleteSukaFromSupabase(id) {
+    if (!id || !NOTA_FB_SUPABASE_URL || !NOTA_FB_SUPABASE_KEY) return;
+    fetch(NOTA_FB_SUPABASE_URL + '/rest/v1/rpc/delete_nota_feedback_entries', {
+      method: 'POST',
+      headers: { 'apikey': NOTA_FB_SUPABASE_KEY, 'Authorization': 'Bearer ' + NOTA_FB_SUPABASE_KEY, 'Content-Type': 'application/json' },
+      body: JSON.stringify({ p_ids: [id], p_secret: ZymStore.getUserSecret() })
+    }).catch(function () {});
+  }
 
   function fluentImg(pair, size) {
     return '<img src="' + hzFluent3dAsset(pair[0], pair[1]) + '" alt="" width="' + size + '" height="' + size + '" loading="lazy">';
   }
 
   var OPINION_REACTIONS = [
-    { key: 'mudah',        pair: HZ_FLUENT_SPARKLE.faceSmiling,  label: 'Mudah<br>difahami',  msg: 'Syukurlah! Terima kasih atas maklum balas.'        },
-    { key: 'boleh-baik',   pair: HZ_FLUENT_SPARKLE.faceThinking, label: 'Boleh<br>diperbaiki', msg: 'Terima kasih! Kami akan usahakan yang terbaik.'      },
+    { key: 'mudah',        pair: HZ_FLUENT_SPARKLE.faceSmiling,  label: 'Mudah<br>difahami',  msg: 'Syukurlah! Terima kasih atas maklum balas.'   },
+    { key: 'boleh-baik',   pair: HZ_FLUENT_SPARKLE.faceThinking, label: 'Boleh<br>diperbaiki', msg: 'Terima kasih! Kami akan usahakan yang terbaik.' },
     { key: 'kurang-jelas', pair: HZ_FLUENT_SPARKLE.faceConfused,  label: 'Kurang<br>jelas',    msg: 'Terima kasih! Maklum balas anda amat berharga.' }
   ];
 
@@ -2474,20 +2497,42 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
   var insertBefore = navSection.closest('.note-subsection');
   if (!insertBefore) return;
 
-  var sukaGiven  = ZymStore.getSukaGiven(pathname);
+  var sukaState  = { given: ZymStore.getSukaGiven(pathname), id: ZymStore.getSukaId(pathname) };
   var opinionKey = ZymStore.getFeedback(pathname);
 
   var widget = document.createElement('div');
   widget.className = 'nota-feedback';
 
-  // ── Suka section ─────────────────────────────────
+  // ── Suka section (toggleable) ─────────────────────
   var sukaSection = document.createElement('div');
   sukaSection.className = 'nota-feedback-suka-wrap';
-  sukaSection.innerHTML = sukaGiven
-    ? '<div class="nota-feedback-suka-done">' + fluentImg(HZ_FLUENT_SPARKLE.sparklingHeart, 18) + '<span>Suka! ✓</span></div>'
-    : '<button class="nota-feedback-suka-btn" type="button">' +
-        fluentImg(HZ_FLUENT_SPARKLE.sparklingHeart, 22) + '<span>Suka!</span>' +
-      '</button>';
+
+  function renderSuka() {
+    var active = sukaState.given;
+    sukaSection.innerHTML =
+      '<button class="nota-feedback-suka-btn' + (active ? ' is-active' : '') + '" type="button">' +
+      '<img src="' + SUKA_SRC + '" alt="" width="22" height="22" loading="lazy">' +
+      '<span>' + (active ? 'Suka! ✓' : 'Suka!') + '</span></button>';
+    sukaSection.querySelector('button').addEventListener('click', function () {
+      if (sukaState.given) {
+        // undo
+        var id = sukaState.id;
+        ZymStore.clearSuka(pathname);
+        sukaState.given = false;
+        sukaState.id = null;
+        deleteSukaFromSupabase(id);
+      } else {
+        if (typeof gtag === 'function') gtag('event', 'nota_reaction', { reaction: 'suka', page_path: pathname });
+        ZymStore.saveFeedback(pathname, 'suka', null);
+        sukaState.given = true;
+        submitFeedback('suka').then(function (supId) {
+          if (supId) { ZymStore.saveFeedback(pathname, 'suka', supId); sukaState.id = supId; }
+        });
+      }
+      renderSuka();
+    });
+  }
+  renderSuka();
 
   // ── Opinion section ───────────────────────────────
   var opinionSection = document.createElement('div');
@@ -2500,33 +2545,10 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
       OPINION_REACTIONS.map(function (r) {
         return '<div class="nota-feedback-option-wrap">' +
           '<button class="nota-feedback-btn" type="button" data-reaction="' + r.key + '">' +
-          fluentImg(r.pair, 26) +
-          '</button>' +
-          '<span class="nota-feedback-btn-label">' + r.label + '</span>' +
-          '</div>';
-      }).join('') +
-      '</div>';
-  }
-
-  widget.appendChild(sukaSection);
-  widget.appendChild(opinionSection);
-  insertBefore.parentNode.insertBefore(widget, insertBefore);
-
-  // ── Suka click: mark done, keep opinions ─────────
-  if (!sukaGiven) {
-    widget.querySelector('.nota-feedback-suka-btn').addEventListener('click', function () {
-      if (typeof gtag === 'function') gtag('event', 'nota_reaction', { reaction: 'suka', page_path: pathname });
-      ZymStore.saveFeedback(pathname, 'suka', null);
-      submitFeedback('suka').then(function (supId) {
-        if (supId) ZymStore.saveFeedback(pathname, 'suka', supId);
-      });
-      sukaSection.innerHTML = '<div class="nota-feedback-suka-done">' + fluentImg(HZ_FLUENT_SPARKLE.sparklingHeart, 18) + '<span>Suka! ✓</span></div>';
-    });
-  }
-
-  // ── Opinion click: replace opinions, keep suka ───
-  if (!opinionKey) {
-    widget.querySelectorAll('.nota-feedback-btn').forEach(function (btn) {
+          fluentImg(r.pair, 26) + '</button>' +
+          '<span class="nota-feedback-btn-label">' + r.label + '</span></div>';
+      }).join('') + '</div>';
+    opinionSection.querySelectorAll('.nota-feedback-btn').forEach(function (btn) {
       btn.addEventListener('click', function () {
         var reaction = btn.getAttribute('data-reaction');
         if (typeof gtag === 'function') gtag('event', 'nota_reaction', { reaction: reaction, page_path: pathname });
@@ -2539,6 +2561,33 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
       });
     });
   }
+
+  // ── Kongsi Pautan section ─────────────────────────
+  var kongsiSection = document.createElement('div');
+  kongsiSection.className = 'nota-feedback-kongsi-wrap';
+  kongsiSection.innerHTML =
+    '<button class="nota-feedback-kongsi-btn" type="button">' +
+    '<img src="' + KONGSI_SRC + '" alt="" width="18" height="18" loading="lazy">' +
+    '<span>Kongsi Pautan</span></button>';
+  var kongsiBtn = kongsiSection.querySelector('button');
+  kongsiBtn.addEventListener('click', function () {
+    var url = window.location.href;
+    var title = document.title || 'ZymNotes';
+    if (navigator.share) {
+      navigator.share({ title: title, url: url }).catch(function () {});
+    } else if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(url).then(function () {
+        var span = kongsiBtn.querySelector('span');
+        span.textContent = 'Pautan disalin!';
+        setTimeout(function () { span.textContent = 'Kongsi Pautan'; }, 2000);
+      }).catch(function () {});
+    }
+  });
+
+  widget.appendChild(sukaSection);
+  widget.appendChild(opinionSection);
+  widget.appendChild(kongsiSection);
+  insertBefore.parentNode.insertBefore(widget, insertBefore);
 })();
 
 // ── Nota Stat Bar ─────────────────────────────────────────────────────────────
