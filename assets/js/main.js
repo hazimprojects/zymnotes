@@ -1409,6 +1409,10 @@ var HZ_FLUENT_SPARKLE = {
   trophy: ["Trophy", "trophy_3d.png"],
   memo: ["Memo", "memo_3d.png"],
   wastebasket: ["Wastebasket", "wastebasket_3d.png"],
+  faceSmiling: ["Smiling face with smiling eyes", "smiling_face_with_smiling_eyes_3d.png"],
+  faceThinking: ["Thinking face", "thinking_face_3d.png"],
+  faceConfused: ["Confused face", "confused_face_3d.png"],
+  faceRelieved: ["Relieved face", "relieved_face_3d.png"],
 };
 
 /** data-lab-openmoji-hex (OpenMoji) → aset Fluent 3D untuk item Kuiz */
@@ -2314,41 +2318,140 @@ function hzLabQuizSparklePair() {
 })();
 
 // ── Nota Feedback Widget ──────────────────────────────────────────────────────
+// Supabase setup (isi nilai dari projek Supabase anda):
+//   1. Buat table: CREATE TABLE public.nota_feedback (
+//        id bigserial PRIMARY KEY, page_path text NOT NULL,
+//        reaction text NOT NULL CHECK (reaction IN ('mudah','boleh-baik','kurang-jelas')),
+//        created_at timestamptz DEFAULT now());
+//   2. Aktifkan RLS: ALTER TABLE public.nota_feedback ENABLE ROW LEVEL SECURITY;
+//   3. Policy INSERT anon: CREATE POLICY "anon insert" ON public.nota_feedback
+//        FOR INSERT TO anon WITH CHECK (true);
+//   4. Fungsi kiraan (SECURITY DEFINER agar anon tidak boleh baca jadual terus):
+//        CREATE OR REPLACE FUNCTION public.get_nota_helpful_count(p_path text)
+//        RETURNS bigint LANGUAGE sql SECURITY DEFINER AS $$
+//          SELECT COUNT(*) FROM public.nota_feedback
+//          WHERE page_path = p_path AND reaction = 'mudah'; $$;
+//        GRANT EXECUTE ON FUNCTION public.get_nota_helpful_count TO anon;
+var NOTA_FB_SUPABASE_URL = '';      // cth: 'https://xxxx.supabase.co'
+var NOTA_FB_SUPABASE_KEY = '';      // kunci anon dari Supabase > Settings > API
+
 (function () {
   if (!window.location.pathname.match(/\/notes\/bab-\d+-\d+\.html/)) return;
 
-  if (ZymStore.getFeedback(window.location.pathname)) return;
+  var pathname = window.location.pathname;
+  var alreadyGave = ZymStore.getFeedback(pathname);
 
   var style = document.createElement('style');
   style.textContent = [
-    '.nota-feedback{text-align:center;padding:1.4rem 1rem 0.6rem;opacity:0;animation:nfb-in 0.4s ease 0.5s forwards}',
+    '.nota-feedback{text-align:center;padding:1.4rem 1rem 0.5rem;opacity:0;animation:nfb-in 0.4s ease 0.5s forwards}',
     '@keyframes nfb-in{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:none}}',
-    '.nota-feedback-label{margin:0 0 0.7rem;font-size:0.8rem;font-weight:700;color:#8c7d6a;letter-spacing:0.01em}',
+    '.nota-feedback-label{margin:0 0 0.75rem;font-size:0.8rem;font-weight:700;color:#8c7d6a;letter-spacing:0.01em}',
     '.nota-feedback-options{display:flex;justify-content:center;gap:0.55rem}',
-    '.nota-feedback-btn{width:46px;height:46px;border-radius:999px;border:1.5px solid rgba(92,110,132,0.14);background:rgba(255,253,248,0.9);font-size:1.3rem;cursor:pointer;transition:transform 0.14s ease,box-shadow 0.14s ease;display:inline-flex;align-items:center;justify-content:center;line-height:1}',
-    '.nota-feedback-btn:hover{transform:scale(1.2);box-shadow:0 4px 14px rgba(0,0,0,0.08)}',
-    '.nota-feedback-btn:active{transform:scale(0.95)}',
-    '.nota-feedback-thanks{margin:0;font-size:0.86rem;font-weight:700;color:#2f7a67;animation:nfb-in 0.25s ease forwards;padding:1.2rem 1rem 0.6rem;text-align:center}',
+    '.nota-feedback-btn{width:52px;height:52px;border-radius:999px;border:1.5px solid rgba(92,110,132,0.14);background:rgba(255,253,248,0.9);cursor:pointer;transition:transform 0.14s ease,box-shadow 0.14s ease;display:inline-flex;align-items:center;justify-content:center;padding:0}',
+    '.nota-feedback-btn img{width:30px;height:30px;pointer-events:none;display:block}',
+    '.nota-feedback-btn:hover{transform:scale(1.18);box-shadow:0 4px 14px rgba(0,0,0,0.09)}',
+    '.nota-feedback-btn:active{transform:scale(0.94)}',
+    '.nota-feedback-thanks{margin:0;font-size:0.86rem;font-weight:700;color:#2f7a67;animation:nfb-in 0.25s ease forwards;padding:1rem 1rem 0.3rem;text-align:center}',
+    '.nota-feedback-count{margin:0.35rem 0 0;font-size:0.74rem;color:#8c7d6a;text-align:center;transition:opacity 0.3s}',
     '[data-theme="dark"] .nota-feedback-label{color:#b8aea1}',
     '[data-theme="dark"] .nota-feedback-btn{background:rgba(50,48,44,0.9);border-color:rgba(220,210,190,0.13)}',
-    '[data-theme="dark"] .nota-feedback-thanks{color:#7dd4be}'
+    '[data-theme="dark"] .nota-feedback-thanks{color:#7dd4be}',
+    '[data-theme="dark"] .nota-feedback-count{color:#b8aea1}'
   ].join('');
   document.head.appendChild(style);
+
+  function supFetch(path, opts) {
+    if (!NOTA_FB_SUPABASE_URL || !NOTA_FB_SUPABASE_KEY) return Promise.resolve(null);
+    return fetch(NOTA_FB_SUPABASE_URL + path, Object.assign({
+      headers: {
+        'apikey': NOTA_FB_SUPABASE_KEY,
+        'Authorization': 'Bearer ' + NOTA_FB_SUPABASE_KEY,
+        'Content-Type': 'application/json'
+      }
+    }, opts)).catch(function () { return null; });
+  }
+
+  function fetchHelpfulCount() {
+    return supFetch('/rest/v1/rpc/get_nota_helpful_count', {
+      method: 'POST',
+      body: JSON.stringify({ p_path: pathname })
+    }).then(function (r) { return r && r.ok ? r.json() : null; });
+  }
+
+  function submitFeedback(reaction) {
+    supFetch('/rest/v1/nota_feedback', {
+      method: 'POST',
+      headers: {
+        'apikey': NOTA_FB_SUPABASE_KEY,
+        'Authorization': 'Bearer ' + NOTA_FB_SUPABASE_KEY,
+        'Content-Type': 'application/json',
+        'Prefer': 'return=minimal'
+      },
+      body: JSON.stringify({ page_path: pathname, reaction: reaction })
+    });
+  }
+
+  function makeCountEl(count) {
+    var p = document.createElement('p');
+    p.className = 'nota-feedback-count';
+    if (count !== null && count > 0) p.textContent = count + ' orang rasa nota ini membantu';
+    return p;
+  }
 
   var navSection = document.querySelector('.note-subsection .hero-actions');
   if (!navSection) return;
   var insertBefore = navSection.closest('.note-subsection');
   if (!insertBefore) return;
 
+  // Pengguna yang sudah beri maklumbalas: tunjuk kiraan semula
+  if (alreadyGave === 'mudah') {
+    fetchHelpfulCount().then(function (count) {
+      if (count === null) return;
+      var wrap = document.createElement('div');
+      wrap.className = 'nota-feedback';
+      var t = document.createElement('p');
+      t.className = 'nota-feedback-thanks';
+      t.textContent = 'Anda rasa nota ini membantu 😊';
+      wrap.appendChild(t);
+      wrap.appendChild(makeCountEl(count));
+      insertBefore.parentNode.insertBefore(wrap, insertBefore);
+    });
+    return;
+  }
+  if (alreadyGave) return;
+
+  // Bina widget
+  var REACTIONS = [
+    { key: 'mudah',       pair: HZ_FLUENT_SPARKLE.faceSmiling,  alt: '😊', title: 'Mudah difahami'   },
+    { key: 'boleh-baik',  pair: HZ_FLUENT_SPARKLE.faceThinking, alt: '🤔', title: 'Boleh diperbaiki'  },
+    { key: 'kurang-jelas',pair: HZ_FLUENT_SPARKLE.faceConfused,  alt: '😕', title: 'Kurang jelas'      }
+  ];
+
   var widget = document.createElement('div');
   widget.className = 'nota-feedback';
   widget.innerHTML =
     '<p class="nota-feedback-label">Nota ini membantu?</p>' +
     '<div class="nota-feedback-options">' +
-      '<button class="nota-feedback-btn" type="button" data-reaction="mudah" title="Mudah difahami">😊</button>' +
-      '<button class="nota-feedback-btn" type="button" data-reaction="boleh-baik" title="Boleh diperbaiki">🤔</button>' +
-      '<button class="nota-feedback-btn" type="button" data-reaction="kurang-jelas" title="Kurang jelas">😕</button>' +
+    REACTIONS.map(function (r) {
+      var src = hzFluent3dAsset(r.pair[0], r.pair[1]);
+      return '<button class="nota-feedback-btn" type="button" data-reaction="' + r.key + '" title="' + r.title + '">' +
+        '<img src="' + src + '" alt="' + r.alt + '" width="30" height="30" loading="lazy">' +
+        '</button>';
+    }).join('') +
     '</div>';
+
+  var countEl = makeCountEl(null);
+  countEl.style.opacity = '0';
+  widget.appendChild(countEl);
+
+  var helpfulCount = null;
+  fetchHelpfulCount().then(function (count) {
+    helpfulCount = count;
+    if (count !== null && count > 0) {
+      countEl.textContent = count + ' orang rasa nota ini membantu';
+      countEl.style.opacity = '1';
+    }
+  });
 
   insertBefore.parentNode.insertBefore(widget, insertBefore);
 
@@ -2356,13 +2459,25 @@ function hzLabQuizSparklePair() {
     btn.addEventListener('click', function () {
       var reaction = btn.getAttribute('data-reaction');
       if (typeof gtag === 'function') {
-        gtag('event', 'nota_reaction', { reaction: reaction, page_path: window.location.pathname });
+        gtag('event', 'nota_reaction', { reaction: reaction, page_path: pathname });
       }
-      ZymStore.saveFeedback(window.location.pathname, reaction);
+      ZymStore.saveFeedback(pathname, reaction);
+      submitFeedback(reaction);
+
+      var wrap = document.createElement('div');
       var thanks = document.createElement('p');
       thanks.className = 'nota-feedback-thanks';
-      thanks.textContent = 'Terima kasih! 🙏';
-      widget.replaceWith(thanks);
+      thanks.textContent = reaction === 'mudah'
+        ? 'Terima kasih! Gembira ia membantu 😊'
+        : 'Terima kasih atas maklum balas anda! 🙏';
+      wrap.appendChild(thanks);
+
+      if (reaction === 'mudah') {
+        var updatedCount = helpfulCount !== null ? helpfulCount + 1 : null;
+        wrap.appendChild(makeCountEl(updatedCount));
+      }
+
+      widget.replaceWith(wrap);
     });
   });
 })();
