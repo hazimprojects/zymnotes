@@ -2521,20 +2521,24 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
   var lead = document.querySelector('.note-hero .lead');
   if (!lead) return;
 
+  function pillImg(pair) {
+    return '<img src="' + hzFluent3dAsset(pair[0], pair[1]) + '" alt="" width="15" height="15" loading="lazy" class="nota-stat-emoji">';
+  }
+
   fetchHelpful().then(function (helpfulCount) {
     var pills = [];
     if (helpfulCount !== null && helpfulCount > 0) {
-      pills.push({ text: helpfulCount + ' pelajar terbantu', mod: '' });
+      pills.push(pillImg(HZ_FLUENT_SPARKLE.faceSmiling) + ' Membantu ' + helpfulCount + ' pelajar');
     }
     if (bestScore > 0) {
-      pills.push({ text: 'Skor terbaik anda: ' + bestScore + '%', mod: ' nota-stat-pill--score' });
+      pills.push(pillImg(HZ_FLUENT_SPARKLE.trophy) + ' Skor terbaik: ' + bestScore + '%');
     }
     if (!pills.length) return;
 
     var bar = document.createElement('div');
     bar.className = 'nota-stat-bar';
-    bar.innerHTML = pills.map(function (p) {
-      return '<span class="nota-stat-pill' + p.mod + '">' + p.text + '</span>';
+    bar.innerHTML = pills.map(function (html) {
+      return '<span class="nota-stat-pill">' + html + '</span>';
     }).join('');
     lead.insertAdjacentElement('afterend', bar);
   });
