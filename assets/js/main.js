@@ -2496,8 +2496,18 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
 })();
 
 // ── Nota Stat Bar ─────────────────────────────────────────────────────────────
-// Tunjuk kiraan "X pelajar terbantu" + skor terbaik pengguna di hero nota.
+// Tunjuk kiraan reaksi ringkas (😊 3 · 🤔 1) + skor terbaik pengguna di hero nota.
 // Hanya muncul apabila ada data — tidak muncul langsung jika tiada rekod.
+//
+// SQL diperlukan di Supabase (jalankan sekali):
+//   CREATE OR REPLACE FUNCTION public.get_nota_reaction_counts(p_path text)
+//   RETURNS json LANGUAGE sql SECURITY DEFINER AS $$
+//     SELECT json_build_object(
+//       'mudah',        COUNT(*) FILTER (WHERE reaction = 'mudah'),
+//       'boleh-baik',   COUNT(*) FILTER (WHERE reaction = 'boleh-baik'),
+//       'kurang-jelas', COUNT(*) FILTER (WHERE reaction = 'kurang-jelas')
+//     ) FROM nota_feedback WHERE page_path = p_path; $$;
+//   GRANT EXECUTE ON FUNCTION public.get_nota_reaction_counts TO anon;
 (function () {
   if (!window.location.pathname.match(/\/notes\/bab-\d+-\d+\.html/)) return;
 
@@ -2506,9 +2516,9 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
   var quizId = qMatch ? qMatch[1] : null;
   var bestScore = quizId && window.ZymStore ? ZymStore.getQuizScore(quizId) : 0;
 
-  function fetchHelpful() {
+  function fetchReactionCounts() {
     if (!NOTA_FB_SUPABASE_URL || !NOTA_FB_SUPABASE_KEY) return Promise.resolve(null);
-    return fetch(NOTA_FB_SUPABASE_URL + '/rest/v1/rpc/get_nota_helpful_count', {
+    return fetch(NOTA_FB_SUPABASE_URL + '/rest/v1/rpc/get_nota_reaction_counts', {
       method: 'POST',
       headers: {
         'apikey': NOTA_FB_SUPABASE_KEY,
@@ -2522,18 +2532,30 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
   var lead = document.querySelector('.note-hero .lead');
   if (!lead) return;
 
+  var STAT_REACTIONS = [
+    { key: 'mudah',        pair: HZ_FLUENT_SPARKLE.faceSmiling  },
+    { key: 'boleh-baik',   pair: HZ_FLUENT_SPARKLE.faceThinking },
+    { key: 'kurang-jelas', pair: HZ_FLUENT_SPARKLE.faceConfused  }
+  ];
+
   function pillImg(pair) {
-    return '<img src="' + hzFluent3dAsset(pair[0], pair[1]) + '" alt="" width="15" height="15" loading="lazy" class="nota-stat-emoji">';
+    return '<img src="' + hzFluent3dAsset(pair[0], pair[1]) + '" alt="" width="14" height="14" loading="lazy" class="nota-stat-emoji">';
   }
 
-  fetchHelpful().then(function (helpfulCount) {
+  fetchReactionCounts().then(function (counts) {
     var pills = [];
-    if (helpfulCount !== null && helpfulCount > 0) {
-      pills.push(pillImg(HZ_FLUENT_SPARKLE.faceSmiling) + ' Membantu ' + helpfulCount + ' pelajar');
+
+    if (counts) {
+      STAT_REACTIONS.forEach(function (r) {
+        var n = Number(counts[r.key] || 0);
+        if (n > 0) pills.push(pillImg(r.pair) + '<span>' + n + '</span>');
+      });
     }
+
     if (bestScore > 0) {
-      pills.push(pillImg(HZ_FLUENT_SPARKLE.trophy) + ' Skor terbaik: ' + bestScore + '%');
+      pills.push(pillImg(HZ_FLUENT_SPARKLE.trophy) + '<span>' + bestScore + '%</span>');
     }
+
     if (!pills.length) return;
 
     var bar = document.createElement('div');
