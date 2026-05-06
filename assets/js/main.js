@@ -2396,38 +2396,27 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
   if (!window.location.pathname.match(/\/notes\/bab-\d+-\d+\.html/)) return;
 
   var pathname = window.location.pathname;
-  var alreadyGave = ZymStore.getFeedback(pathname);
+  var alreadyGave = ZymStore.getSukaGiven(pathname) || !!ZymStore.getFeedback(pathname);
 
   var style = document.createElement('style');
   style.textContent = [
     '.nota-feedback{text-align:center;padding:1.2rem 1rem 0.6rem;opacity:0;animation:nfb-in 0.4s ease 0.5s forwards}',
     '@keyframes nfb-in{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:none}}',
     '.nota-feedback-label{margin:0 0 0.7rem;font-size:0.8rem;font-weight:700;color:#8c7d6a;letter-spacing:0.01em}',
-    '.nota-feedback-suka-wrap{display:flex;justify-content:center;margin-bottom:0.65rem}',
-    '.nota-feedback-suka-btn{display:inline-flex;align-items:center;gap:0.38rem;padding:0.42rem 1.5rem;border-radius:999px;border:2px solid rgba(224,80,140,0.28);background:rgba(224,80,140,0.06);color:#b8406a;font-size:0.82rem;font-weight:700;cursor:pointer;transition:transform 0.14s,box-shadow 0.14s,background 0.14s}',
-    '.nota-feedback-suka-btn img{width:22px;height:22px;pointer-events:none;flex-shrink:0}',
-    '.nota-feedback-suka-btn:hover:not([disabled]){transform:scale(1.05);box-shadow:0 3px 12px rgba(224,80,140,0.2)}',
-    '.nota-feedback-suka-btn:active:not([disabled]){transform:scale(0.96)}',
-    '.nota-feedback-suka-btn.is-active{background:rgba(224,80,140,0.13);border-color:rgba(224,80,140,0.55);color:#a03060}',
-    '.nota-feedback-suka-btn[disabled]{cursor:default}',
-    '.nota-feedback-sep{display:flex;align-items:center;gap:0.45rem;margin:0 1rem 0.6rem;color:#c0b5aa;font-size:10.5px;font-weight:600;letter-spacing:0.03em}',
-    '.nota-feedback-sep::before,.nota-feedback-sep::after{content:"";flex:1;height:1px;background:rgba(180,165,150,0.28)}',
     '.nota-feedback-options{display:flex;justify-content:center;gap:0.5rem}',
     '.nota-feedback-option-wrap{display:flex;flex-direction:column;align-items:center;gap:0.28rem}',
     '.nota-feedback-btn{width:48px;height:48px;border-radius:999px;border:1.5px solid rgba(92,110,132,0.14);background:rgba(255,253,248,0.9);cursor:pointer;transition:transform 0.14s,box-shadow 0.14s;display:inline-flex;align-items:center;justify-content:center;padding:0}',
     '.nota-feedback-btn img{width:26px;height:26px;pointer-events:none;display:block}',
-    '.nota-feedback-btn:hover:not([disabled]){transform:scale(1.18);box-shadow:0 4px 14px rgba(0,0,0,0.09)}',
-    '.nota-feedback-btn:active:not([disabled]){transform:scale(0.94)}',
-    '.nota-feedback-btn.is-active{border-color:rgba(62,95,138,0.5);background:rgba(62,95,138,0.1)}',
-    '.nota-feedback-btn[disabled]{cursor:default}',
+    '.nota-feedback-btn:hover{transform:scale(1.18);box-shadow:0 4px 14px rgba(0,0,0,0.09)}',
+    '.nota-feedback-btn:active{transform:scale(0.94)}',
     '.nota-feedback-btn-label{font-size:10px;font-weight:600;color:#8c7d6a;text-align:center;line-height:1.25}',
+    '.nota-feedback-appr{text-align:center;padding:1rem 1rem 0.6rem;opacity:0;animation:nfb-in 0.4s ease 0.1s forwards}',
+    '.nota-feedback-appr-emoji{font-size:2rem;line-height:1;margin-bottom:0.3rem}',
+    '.nota-feedback-appr-msg{font-size:0.8rem;font-weight:700;color:#8c7d6a}',
     '[data-theme="dark"] .nota-feedback-label{color:#b8aea1}',
-    '[data-theme="dark"] .nota-feedback-suka-btn{background:rgba(224,80,140,0.08);border-color:rgba(224,80,140,0.22);color:#d06090}',
-    '[data-theme="dark"] .nota-feedback-suka-btn.is-active{background:rgba(224,80,140,0.18);border-color:rgba(224,80,140,0.5);color:#e080b0}',
     '[data-theme="dark"] .nota-feedback-btn{background:rgba(50,48,44,0.9);border-color:rgba(220,210,190,0.13)}',
-    '[data-theme="dark"] .nota-feedback-btn.is-active{border-color:rgba(100,140,200,0.45);background:rgba(62,95,138,0.22)}',
     '[data-theme="dark"] .nota-feedback-btn-label{color:#8a8077}',
-    '[data-theme="dark"] .nota-feedback-sep{color:#6a6058}'
+    '[data-theme="dark"] .nota-feedback-appr-msg{color:#b8aea1}'
   ].join('');
   document.head.appendChild(style);
 
@@ -2444,38 +2433,50 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
     }).then(function (r) { return r && r.ok ? r.json() : null; }).catch(function () { return null; });
   }
 
-  var OPINION_REACTIONS = [
+  var REACTIONS = [
+    { key: 'suka',         imgSrc: 'https://img.icons8.com/?size=100&id=5twNojKL5zU7&format=png&color=000000', alt: '🩷', label: 'Suka!' },
     { key: 'mudah',        pair: HZ_FLUENT_SPARKLE.faceSmiling,  alt: '😊', label: 'Mudah<br>difahami'  },
     { key: 'boleh-baik',   pair: HZ_FLUENT_SPARKLE.faceThinking, alt: '🤔', label: 'Boleh<br>diperbaiki' },
     { key: 'kurang-jelas', pair: HZ_FLUENT_SPARKLE.faceConfused,  alt: '😕', label: 'Kurang<br>jelas'    }
   ];
+
+  var APPR_MSGS = {
+    'suka':         { emoji: '🩷', msg: 'Terima kasih! Gembira nota ini bermanfaat.' },
+    'mudah':        { emoji: '😊', msg: 'Syukurlah! Terima kasih atas maklum balas.' },
+    'boleh-baik':   { emoji: '🤔', msg: 'Terima kasih! Kami akan usahakan yang terbaik.' },
+    'kurang-jelas': { emoji: '😕', msg: 'Terima kasih! Maklum balas anda amat berharga.' }
+  };
 
   var navSection = document.querySelector('.note-subsection .hero-actions');
   if (!navSection) return;
   var insertBefore = navSection.closest('.note-subsection');
   if (!insertBefore) return;
 
-  var sukaGiven   = ZymStore.getSukaGiven(pathname);
-  var opinionKey  = ZymStore.getFeedback(pathname);
-  var heartSrc    = hzFluent3dAsset(HZ_FLUENT_SPARKLE.sparklingHeart[0], HZ_FLUENT_SPARKLE.sparklingHeart[1]);
+  function makeAppreciation(reaction) {
+    var appr = APPR_MSGS[reaction] || { emoji: '🙏', msg: 'Terima kasih atas maklum balas!' };
+    var div = document.createElement('div');
+    div.className = 'nota-feedback-appr';
+    div.innerHTML = '<div class="nota-feedback-appr-emoji">' + appr.emoji + '</div>' +
+      '<p class="nota-feedback-appr-msg">' + appr.msg + '</p>';
+    return div;
+  }
+
+  if (alreadyGave) {
+    var givenKey = ZymStore.getFeedback(pathname) || 'suka';
+    insertBefore.parentNode.insertBefore(makeAppreciation(givenKey), insertBefore);
+    return;
+  }
 
   var widget = document.createElement('div');
   widget.className = 'nota-feedback';
   widget.innerHTML =
     '<p class="nota-feedback-label">Apa pendapat anda tentang nota ini?</p>' +
-    '<div class="nota-feedback-suka-wrap">' +
-      '<button class="nota-feedback-suka-btn' + (sukaGiven ? ' is-active' : '') + '" type="button" data-reaction="suka"' + (sukaGiven ? ' disabled' : '') + '>' +
-        '<img src="' + heartSrc + '" alt="🩷" width="22" height="22" loading="lazy">' +
-        '<span>' + (sukaGiven ? 'Saya Suka! ✓' : 'Saya Suka!') + '</span>' +
-      '</button>' +
-    '</div>' +
-    '<div class="nota-feedback-sep">pendapat anda</div>' +
     '<div class="nota-feedback-options">' +
-    OPINION_REACTIONS.map(function (r) {
-      var isActive = opinionKey === r.key;
+    REACTIONS.map(function (r) {
+      var imgSrc = r.imgSrc || hzFluent3dAsset(r.pair[0], r.pair[1]);
       return '<div class="nota-feedback-option-wrap">' +
-        '<button class="nota-feedback-btn' + (isActive ? ' is-active' : '') + '" type="button" data-reaction="' + r.key + '"' + (opinionKey ? ' disabled' : '') + '>' +
-        '<img src="' + hzFluent3dAsset(r.pair[0], r.pair[1]) + '" alt="' + r.alt + '" width="26" height="26" loading="lazy">' +
+        '<button class="nota-feedback-btn" type="button" data-reaction="' + r.key + '">' +
+        '<img src="' + imgSrc + '" alt="' + r.alt + '" width="26" height="26" loading="lazy">' +
         '</button>' +
         '<span class="nota-feedback-btn-label">' + r.label + '</span>' +
         '</div>';
@@ -2484,24 +2485,7 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
 
   insertBefore.parentNode.insertBefore(widget, insertBefore);
 
-  // Suka — bebas dari pendapat
-  var sukaBtn = widget.querySelector('.nota-feedback-suka-btn');
-  if (sukaBtn && !sukaGiven) {
-    sukaBtn.addEventListener('click', function () {
-      if (typeof gtag === 'function') gtag('event', 'nota_reaction', { reaction: 'suka', page_path: pathname });
-      ZymStore.saveFeedback(pathname, 'suka', null);
-      submitFeedback('suka').then(function (supId) {
-        if (supId) ZymStore.saveFeedback(pathname, 'suka', supId);
-      });
-      sukaBtn.classList.add('is-active');
-      sukaBtn.disabled = true;
-      sukaBtn.querySelector('span').textContent = 'Saya Suka! ✓';
-    });
-  }
-
-  // Pendapat — bebas dari suka
   widget.querySelectorAll('.nota-feedback-btn').forEach(function (btn) {
-    if (opinionKey) return;
     btn.addEventListener('click', function () {
       var reaction = btn.getAttribute('data-reaction');
       if (typeof gtag === 'function') gtag('event', 'nota_reaction', { reaction: reaction, page_path: pathname });
@@ -2509,10 +2493,7 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
       submitFeedback(reaction).then(function (supId) {
         if (supId) ZymStore.saveFeedback(pathname, reaction, supId);
       });
-      widget.querySelectorAll('.nota-feedback-btn').forEach(function (b) {
-        b.disabled = true;
-        b.classList.toggle('is-active', b === btn);
-      });
+      widget.replaceWith(makeAppreciation(reaction));
     });
   });
 })();
