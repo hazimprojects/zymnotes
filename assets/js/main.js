@@ -59,18 +59,36 @@ window.ZymStore = (function () {
     if (Object.keys(q).length) _write(KEYS.quiz, q); else try { localStorage.removeItem(KEYS.quiz); } catch (e) {}
   }
 
+  // Format baru: { s: rowId|'p'|null, o: {key,id}|null }
+  // Legacy: string 'mudah' atau {r,id} — diubah ke format baru secara automatik
+  function _fbNorm(v) {
+    if (!v) return { s: null, o: null };
+    if (typeof v === 'string') return { s: null, o: { key: v, id: null } };
+    if (v.r !== undefined) return { s: null, o: { key: v.r, id: v.id || null } };
+    return { s: v.s != null ? v.s : null, o: v.o || null };
+  }
   function getFeedback(path) {
-    var v = (_read(KEYS.feedback) || {})[path];
-    if (!v) return null;
-    return typeof v === 'object' ? v.r : v;
+    var e = _fbNorm((_read(KEYS.feedback) || {})[path]);
+    return e.o ? e.o.key : null;
   }
   function getFeedbackId(path) {
-    var v = (_read(KEYS.feedback) || {})[path];
-    return (v && typeof v === 'object') ? (v.id || null) : null;
+    var e = _fbNorm((_read(KEYS.feedback) || {})[path]);
+    return (e.o && typeof e.o.id === 'number') ? e.o.id : null;
+  }
+  function getSukaGiven(path) { return _fbNorm((_read(KEYS.feedback) || {})[path]).s != null; }
+  function getSukaId(path) {
+    var s = _fbNorm((_read(KEYS.feedback) || {})[path]).s;
+    return typeof s === 'number' ? s : null;
   }
   function saveFeedback(path, reaction, supId) {
     var f = _read(KEYS.feedback) || {};
-    f[path] = supId ? { r: reaction, id: supId } : reaction;
+    var e = _fbNorm(f[path]);
+    if (reaction === 'suka') {
+      e.s = supId != null ? supId : (e.s != null ? e.s : 'p');
+    } else {
+      e.o = { key: reaction, id: supId != null ? supId : (e.o && e.o.key === reaction ? e.o.id : null) };
+    }
+    f[path] = { s: e.s, o: e.o };
     _write(KEYS.feedback, f);
   }
   function clearFeedback() { try { localStorage.removeItem(KEYS.feedback); } catch (e) {} }
@@ -162,6 +180,7 @@ window.ZymStore = (function () {
     clearQuizScores: clearQuizScores, getQuizCount: getQuizCount,
     getAllQuizScores: getAllQuizScores, deleteQuizScore: deleteQuizScore,
     getFeedback: getFeedback, getFeedbackId: getFeedbackId, saveFeedback: saveFeedback,
+    getSukaGiven: getSukaGiven, getSukaId: getSukaId,
     clearFeedback: clearFeedback, getFeedbackCount: getFeedbackCount,
     getAllFeedback: getAllFeedback, deleteFeedbackEntry: deleteFeedbackEntry,
     isDismissed: isDismissed, setDismissed: setDismissed, getUserSecret: getUserSecret,
@@ -1449,6 +1468,7 @@ var HZ_FLUENT_SPARKLE = {
   faceConfused: ["Confused face", "confused_face_3d.png"],
   faceRelieved: ["Relieved face", "relieved_face_3d.png"],
   thumbsUp: ["Thumbs up", "thumbs_up_3d.png"],
+  sparklingHeart: ["Sparkling heart", "sparkling_heart_3d.png"],
 };
 
 /** data-lab-openmoji-hex (OpenMoji) → aset Fluent 3D untuk item Kuiz */
@@ -2380,64 +2400,54 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
 
   var style = document.createElement('style');
   style.textContent = [
-    '.nota-feedback{text-align:center;padding:1.4rem 1rem 0.5rem;opacity:0;animation:nfb-in 0.4s ease 0.5s forwards}',
+    '.nota-feedback{text-align:center;padding:1.2rem 1rem 0.6rem;opacity:0;animation:nfb-in 0.4s ease 0.5s forwards}',
     '@keyframes nfb-in{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:none}}',
-    '.nota-feedback-label{margin:0 0 0.75rem;font-size:0.8rem;font-weight:700;color:#8c7d6a;letter-spacing:0.01em}',
-    '.nota-feedback-options{display:flex;justify-content:center;gap:0.45rem}',
+    '.nota-feedback-label{margin:0 0 0.7rem;font-size:0.8rem;font-weight:700;color:#8c7d6a;letter-spacing:0.01em}',
+    '.nota-feedback-suka-wrap{display:flex;justify-content:center;margin-bottom:0.65rem}',
+    '.nota-feedback-suka-btn{display:inline-flex;align-items:center;gap:0.38rem;padding:0.42rem 1.5rem;border-radius:999px;border:2px solid rgba(224,80,140,0.28);background:rgba(224,80,140,0.06);color:#b8406a;font-size:0.82rem;font-weight:700;cursor:pointer;transition:transform 0.14s,box-shadow 0.14s,background 0.14s}',
+    '.nota-feedback-suka-btn img{width:22px;height:22px;pointer-events:none;flex-shrink:0}',
+    '.nota-feedback-suka-btn:hover:not([disabled]){transform:scale(1.05);box-shadow:0 3px 12px rgba(224,80,140,0.2)}',
+    '.nota-feedback-suka-btn:active:not([disabled]){transform:scale(0.96)}',
+    '.nota-feedback-suka-btn.is-active{background:rgba(224,80,140,0.13);border-color:rgba(224,80,140,0.55);color:#a03060}',
+    '.nota-feedback-suka-btn[disabled]{cursor:default}',
+    '.nota-feedback-sep{display:flex;align-items:center;gap:0.45rem;margin:0 1rem 0.6rem;color:#c0b5aa;font-size:10.5px;font-weight:600;letter-spacing:0.03em}',
+    '.nota-feedback-sep::before,.nota-feedback-sep::after{content:"";flex:1;height:1px;background:rgba(180,165,150,0.28)}',
+    '.nota-feedback-options{display:flex;justify-content:center;gap:0.5rem}',
     '.nota-feedback-option-wrap{display:flex;flex-direction:column;align-items:center;gap:0.28rem}',
-    '.nota-feedback-btn{width:48px;height:48px;border-radius:999px;border:1.5px solid rgba(92,110,132,0.14);background:rgba(255,253,248,0.9);cursor:pointer;transition:transform 0.14s ease,box-shadow 0.14s ease;display:inline-flex;align-items:center;justify-content:center;padding:0}',
-    '.nota-feedback-btn img{width:28px;height:28px;pointer-events:none;display:block}',
-    '.nota-feedback-btn:hover{transform:scale(1.18);box-shadow:0 4px 14px rgba(0,0,0,0.09)}',
-    '.nota-feedback-btn:active{transform:scale(0.94)}',
-    '.nota-feedback-btn-label{font-size:10px;font-weight:600;color:#8c7d6a;text-align:center;line-height:1.2;white-space:nowrap}',
-    '.nota-feedback-past{display:flex;align-items:center;justify-content:center;gap:0.5rem;padding:0.9rem 1rem 0.4rem}',
-    '.nota-feedback-thanks{margin:0;font-size:0.84rem;font-weight:700;color:#2f7a67;animation:nfb-in 0.25s ease forwards;text-align:center}',
-    '.nota-feedback-count{margin:0.35rem 0 0;font-size:0.74rem;color:#8c7d6a;text-align:center;transition:opacity 0.3s}',
+    '.nota-feedback-btn{width:48px;height:48px;border-radius:999px;border:1.5px solid rgba(92,110,132,0.14);background:rgba(255,253,248,0.9);cursor:pointer;transition:transform 0.14s,box-shadow 0.14s;display:inline-flex;align-items:center;justify-content:center;padding:0}',
+    '.nota-feedback-btn img{width:26px;height:26px;pointer-events:none;display:block}',
+    '.nota-feedback-btn:hover:not([disabled]){transform:scale(1.18);box-shadow:0 4px 14px rgba(0,0,0,0.09)}',
+    '.nota-feedback-btn:active:not([disabled]){transform:scale(0.94)}',
+    '.nota-feedback-btn.is-active{border-color:rgba(62,95,138,0.5);background:rgba(62,95,138,0.1)}',
+    '.nota-feedback-btn[disabled]{cursor:default}',
+    '.nota-feedback-btn-label{font-size:10px;font-weight:600;color:#8c7d6a;text-align:center;line-height:1.25}',
     '[data-theme="dark"] .nota-feedback-label{color:#b8aea1}',
+    '[data-theme="dark"] .nota-feedback-suka-btn{background:rgba(224,80,140,0.08);border-color:rgba(224,80,140,0.22);color:#d06090}',
+    '[data-theme="dark"] .nota-feedback-suka-btn.is-active{background:rgba(224,80,140,0.18);border-color:rgba(224,80,140,0.5);color:#e080b0}',
     '[data-theme="dark"] .nota-feedback-btn{background:rgba(50,48,44,0.9);border-color:rgba(220,210,190,0.13)}',
+    '[data-theme="dark"] .nota-feedback-btn.is-active{border-color:rgba(100,140,200,0.45);background:rgba(62,95,138,0.22)}',
     '[data-theme="dark"] .nota-feedback-btn-label{color:#8a8077}',
-    '[data-theme="dark"] .nota-feedback-thanks{color:#7dd4be}',
-    '[data-theme="dark"] .nota-feedback-count{color:#b8aea1}'
+    '[data-theme="dark"] .nota-feedback-sep{color:#6a6058}'
   ].join('');
   document.head.appendChild(style);
 
-  function supFetch(path, opts) {
+  function submitFeedback(reaction) {
     if (!NOTA_FB_SUPABASE_URL || !NOTA_FB_SUPABASE_KEY) return Promise.resolve(null);
-    return fetch(NOTA_FB_SUPABASE_URL + path, Object.assign({
+    return fetch(NOTA_FB_SUPABASE_URL + '/rest/v1/rpc/submit_nota_feedback', {
+      method: 'POST',
       headers: {
         'apikey': NOTA_FB_SUPABASE_KEY,
         'Authorization': 'Bearer ' + NOTA_FB_SUPABASE_KEY,
         'Content-Type': 'application/json'
-      }
-    }, opts)).catch(function () { return null; });
-  }
-
-  function fetchHelpfulCount() {
-    return supFetch('/rest/v1/rpc/get_nota_helpful_count', {
-      method: 'POST',
-      body: JSON.stringify({ p_path: pathname })
-    }).then(function (r) { return r && r.ok ? r.json() : null; });
-  }
-
-  function submitFeedback(reaction) {
-    return supFetch('/rest/v1/rpc/submit_nota_feedback', {
-      method: 'POST',
+      },
       body: JSON.stringify({ p_path: pathname, p_reaction: reaction, p_secret: ZymStore.getUserSecret() })
-    }).then(function (r) { return r && r.ok ? r.json() : null; });
+    }).then(function (r) { return r && r.ok ? r.json() : null; }).catch(function () { return null; });
   }
 
-  function makeCountEl(count) {
-    var p = document.createElement('p');
-    p.className = 'nota-feedback-count';
-    if (count !== null && count > 0) p.textContent = count + ' orang rasa nota ini membantu';
-    return p;
-  }
-
-  var REACTIONS = [
-    { key: 'suka',        pair: HZ_FLUENT_SPARKLE.thumbsUp,     alt: '👍', label: 'Suka!'           },
-    { key: 'mudah',       pair: HZ_FLUENT_SPARKLE.faceSmiling,  alt: '😊', label: 'Mudah difahami'  },
-    { key: 'boleh-baik',  pair: HZ_FLUENT_SPARKLE.faceThinking, alt: '🤔', label: 'Boleh diperbaiki' },
-    { key: 'kurang-jelas',pair: HZ_FLUENT_SPARKLE.faceConfused,  alt: '😕', label: 'Kurang jelas'    }
+  var OPINION_REACTIONS = [
+    { key: 'mudah',        pair: HZ_FLUENT_SPARKLE.faceSmiling,  alt: '😊', label: 'Mudah<br>difahami'  },
+    { key: 'boleh-baik',   pair: HZ_FLUENT_SPARKLE.faceThinking, alt: '🤔', label: 'Boleh<br>diperbaiki' },
+    { key: 'kurang-jelas', pair: HZ_FLUENT_SPARKLE.faceConfused,  alt: '😕', label: 'Kurang<br>jelas'    }
   ];
 
   var navSection = document.querySelector('.note-subsection .hero-actions');
@@ -2445,33 +2455,27 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
   var insertBefore = navSection.closest('.note-subsection');
   if (!insertBefore) return;
 
-  // Pengguna yang sudah beri maklumbalas: tunjuk emoji + label mereka
-  if (alreadyGave) {
-    var pastR = REACTIONS.filter(function (r) { return r.key === alreadyGave; })[0];
-    if (pastR) {
-      var pastWrap = document.createElement('div');
-      pastWrap.className = 'nota-feedback';
-      pastWrap.innerHTML =
-        '<div class="nota-feedback-past">' +
-        '<img src="' + hzFluent3dAsset(pastR.pair[0], pastR.pair[1]) + '" alt="' + pastR.alt + '" width="26" height="26" loading="lazy">' +
-        '<p class="nota-feedback-thanks" style="margin:0">Maklum balas anda: ' + pastR.label + '</p>' +
-        '</div>';
-      insertBefore.parentNode.insertBefore(pastWrap, insertBefore);
-    }
-    return;
-  }
+  var sukaGiven   = ZymStore.getSukaGiven(pathname);
+  var opinionKey  = ZymStore.getFeedback(pathname);
+  var heartSrc    = hzFluent3dAsset(HZ_FLUENT_SPARKLE.sparklingHeart[0], HZ_FLUENT_SPARKLE.sparklingHeart[1]);
 
-  // Bina widget
   var widget = document.createElement('div');
   widget.className = 'nota-feedback';
   widget.innerHTML =
     '<p class="nota-feedback-label">Apa pendapat anda tentang nota ini?</p>' +
+    '<div class="nota-feedback-suka-wrap">' +
+      '<button class="nota-feedback-suka-btn' + (sukaGiven ? ' is-active' : '') + '" type="button" data-reaction="suka"' + (sukaGiven ? ' disabled' : '') + '>' +
+        '<img src="' + heartSrc + '" alt="🩷" width="22" height="22" loading="lazy">' +
+        '<span>' + (sukaGiven ? 'Saya Suka! ✓' : 'Saya Suka!') + '</span>' +
+      '</button>' +
+    '</div>' +
+    '<div class="nota-feedback-sep">pendapat anda</div>' +
     '<div class="nota-feedback-options">' +
-    REACTIONS.map(function (r) {
-      var src = hzFluent3dAsset(r.pair[0], r.pair[1]);
+    OPINION_REACTIONS.map(function (r) {
+      var isActive = opinionKey === r.key;
       return '<div class="nota-feedback-option-wrap">' +
-        '<button class="nota-feedback-btn" type="button" data-reaction="' + r.key + '" title="' + r.label + '">' +
-        '<img src="' + src + '" alt="' + r.alt + '" width="30" height="30" loading="lazy">' +
+        '<button class="nota-feedback-btn' + (isActive ? ' is-active' : '') + '" type="button" data-reaction="' + r.key + '"' + (opinionKey ? ' disabled' : '') + '>' +
+        '<img src="' + hzFluent3dAsset(r.pair[0], r.pair[1]) + '" alt="' + r.alt + '" width="26" height="26" loading="lazy">' +
         '</button>' +
         '<span class="nota-feedback-btn-label">' + r.label + '</span>' +
         '</div>';
@@ -2480,26 +2484,35 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
 
   insertBefore.parentNode.insertBefore(widget, insertBefore);
 
+  // Suka — bebas dari pendapat
+  var sukaBtn = widget.querySelector('.nota-feedback-suka-btn');
+  if (sukaBtn && !sukaGiven) {
+    sukaBtn.addEventListener('click', function () {
+      if (typeof gtag === 'function') gtag('event', 'nota_reaction', { reaction: 'suka', page_path: pathname });
+      ZymStore.saveFeedback(pathname, 'suka', null);
+      submitFeedback('suka').then(function (supId) {
+        if (supId) ZymStore.saveFeedback(pathname, 'suka', supId);
+      });
+      sukaBtn.classList.add('is-active');
+      sukaBtn.disabled = true;
+      sukaBtn.querySelector('span').textContent = 'Saya Suka! ✓';
+    });
+  }
+
+  // Pendapat — bebas dari suka
   widget.querySelectorAll('.nota-feedback-btn').forEach(function (btn) {
+    if (opinionKey) return;
     btn.addEventListener('click', function () {
       var reaction = btn.getAttribute('data-reaction');
-      var picked = REACTIONS.filter(function (r) { return r.key === reaction; })[0];
-      if (typeof gtag === 'function') {
-        gtag('event', 'nota_reaction', { reaction: reaction, page_path: pathname });
-      }
-      ZymStore.saveFeedback(pathname, reaction);
+      if (typeof gtag === 'function') gtag('event', 'nota_reaction', { reaction: reaction, page_path: pathname });
+      ZymStore.saveFeedback(pathname, reaction, null);
       submitFeedback(reaction).then(function (supId) {
         if (supId) ZymStore.saveFeedback(pathname, reaction, supId);
       });
-
-      var wrap = document.createElement('div');
-      wrap.className = 'nota-feedback';
-      wrap.innerHTML =
-        '<div class="nota-feedback-past">' +
-        (picked ? '<img src="' + hzFluent3dAsset(picked.pair[0], picked.pair[1]) + '" alt="' + picked.alt + '" width="26" height="26" loading="lazy">' : '') +
-        '<p class="nota-feedback-thanks" style="margin:0">Terima kasih! Maklum balas anda tersimpan.</p>' +
-        '</div>';
-      widget.replaceWith(wrap);
+      widget.querySelectorAll('.nota-feedback-btn').forEach(function (b) {
+        b.disabled = true;
+        b.classList.toggle('is-active', b === btn);
+      });
     });
   });
 })();
@@ -2542,7 +2555,7 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
   if (!lead) return;
 
   var STAT_REACTIONS = [
-    { key: 'suka',         pair: HZ_FLUENT_SPARKLE.thumbsUp     },
+    { key: 'suka',         pair: HZ_FLUENT_SPARKLE.sparklingHeart },
     { key: 'mudah',        pair: HZ_FLUENT_SPARKLE.faceSmiling  },
     { key: 'boleh-baik',   pair: HZ_FLUENT_SPARKLE.faceThinking },
     { key: 'kurang-jelas', pair: HZ_FLUENT_SPARKLE.faceConfused  }
@@ -3381,9 +3394,13 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
     // Helper: padam semua rekod Supabase untuk pengguna ini (guna ID yang tersimpan)
     function deleteAllFeedbackFromSupabase() {
       var fb = ZymStore.getAllFeedback();
-      var ids = Object.keys(fb).map(function (p) {
-        var v = fb[p]; return (v && typeof v === 'object') ? v.id : null;
-      }).filter(Boolean);
+      var ids = [];
+      Object.keys(fb).forEach(function (p) {
+        var sid = ZymStore.getSukaId(p);
+        var oid = ZymStore.getFeedbackId(p);
+        if (sid) ids.push(sid);
+        if (oid) ids.push(oid);
+      });
       if (!ids.length || !NOTA_FB_SUPABASE_URL || !NOTA_FB_SUPABASE_KEY) return Promise.resolve();
       return fetch(NOTA_FB_SUPABASE_URL + '/rest/v1/rpc/delete_nota_feedback_entries', {
         method: 'POST',
@@ -3466,18 +3483,19 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
       var btn = e.target.closest('[data-fb-del]');
       if (!btn) return;
       var path = btn.getAttribute('data-fb-del');
-      var supId = ZymStore.getFeedbackId(path);
       var isCurrentPage = (path === window.location.pathname);
+      // Kumpul semua ID (suka + pendapat) untuk dipadam sekaligus
+      var ids = [ZymStore.getSukaId(path), ZymStore.getFeedbackId(path)].filter(function(id) { return id != null; });
 
-      var deleteOp = (supId && NOTA_FB_SUPABASE_URL && NOTA_FB_SUPABASE_KEY)
-        ? fetch(NOTA_FB_SUPABASE_URL + '/rest/v1/rpc/delete_nota_feedback_entry', {
+      var deleteOp = (ids.length && NOTA_FB_SUPABASE_URL && NOTA_FB_SUPABASE_KEY)
+        ? fetch(NOTA_FB_SUPABASE_URL + '/rest/v1/rpc/delete_nota_feedback_entries', {
             method: 'POST',
             headers: {
               'apikey': NOTA_FB_SUPABASE_KEY,
               'Authorization': 'Bearer ' + NOTA_FB_SUPABASE_KEY,
               'Content-Type': 'application/json'
             },
-            body: JSON.stringify({ p_id: supId, p_secret: ZymStore.getUserSecret() })
+            body: JSON.stringify({ p_ids: ids, p_secret: ZymStore.getUserSecret() })
           }).catch(function () {})
         : Promise.resolve();
 
@@ -3531,7 +3549,7 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
   }
 
   var REACTION_LABELS = { 'suka': 'Suka!', 'mudah': 'Mudah difahami', 'boleh-baik': 'Boleh diperbaiki', 'kurang-jelas': 'Kurang jelas' };
-  var REACTION_PAIRS  = { 'suka': HZ_FLUENT_SPARKLE.thumbsUp, 'mudah': HZ_FLUENT_SPARKLE.faceSmiling, 'boleh-baik': HZ_FLUENT_SPARKLE.faceThinking, 'kurang-jelas': HZ_FLUENT_SPARKLE.faceConfused };
+  var REACTION_PAIRS  = { 'suka': HZ_FLUENT_SPARKLE.sparklingHeart, 'mudah': HZ_FLUENT_SPARKLE.faceSmiling, 'boleh-baik': HZ_FLUENT_SPARKLE.faceThinking, 'kurang-jelas': HZ_FLUENT_SPARKLE.faceConfused };
 
   function fmtSubtopic(key) {
     var m = key.match(/bab-(\d+)-(\d+)/i);
@@ -3562,14 +3580,20 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
     var keys = Object.keys(fb).sort();
     if (!keys.length) { panel.classList.remove('is-open'); sheet.querySelector('#zymset-feedback-toggle').textContent = 'Butiran ▾'; return; }
     panel.innerHTML = keys.map(function (path) {
-      var rKey = typeof fb[path] === 'object' ? fb[path].r : fb[path];
-      var pair = REACTION_PAIRS[rKey];
-      var emojiHtml = pair
-        ? '<img src="' + hzFluent3dAsset(pair[0], pair[1]) + '" width="15" height="15" loading="lazy" style="vertical-align:middle;margin-right:3px;flex-shrink:0"> '
-        : '';
+      var parts = [];
+      if (ZymStore.getSukaGiven(path)) {
+        var sp = REACTION_PAIRS['suka'];
+        parts.push('<img src="' + hzFluent3dAsset(sp[0], sp[1]) + '" width="14" height="14" loading="lazy" style="vertical-align:middle"> Suka!');
+      }
+      var oKey = ZymStore.getFeedback(path);
+      if (oKey) {
+        var op = REACTION_PAIRS[oKey];
+        parts.push((op ? '<img src="' + hzFluent3dAsset(op[0], op[1]) + '" width="14" height="14" loading="lazy" style="vertical-align:middle"> ' : '') + (REACTION_LABELS[oKey] || oKey));
+      }
+      if (!parts.length) return '';
       return '<div class="zymset-detail-item">' +
         '<span class="zymset-detail-label">' + fmtSubtopic(path) + '</span>' +
-        '<span class="zymset-detail-val">' + emojiHtml + (REACTION_LABELS[rKey] || rKey) + '</span>' +
+        '<span class="zymset-detail-val">' + parts.join(' · ') + '</span>' +
         '<button class="zymset-detail-del" type="button" data-fb-del="' + path + '" title="Padam entri ini">Padam</button>' +
         '</div>';
     }).join('');
