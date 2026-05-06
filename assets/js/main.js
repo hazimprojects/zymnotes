@@ -3712,7 +3712,7 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
   if (!('serviceWorker' in navigator)) return;
 
   window.addEventListener('load', function () {
-    navigator.serviceWorker.register('/sw.js?v=353').catch(function (error) {
+    navigator.serviceWorker.register('/sw.js?v=354').catch(function (error) {
       console.warn('Service worker registration failed:', error);
     });
   });
