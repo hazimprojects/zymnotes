@@ -260,8 +260,9 @@
     const prevBest = getBestScore(quizId);
     const isRecord = score > prevBest;
 
-    saveBestScore(quizId, score);
-    const newBest = isRecord ? score : prevBest;
+    const pct = Math.round((score / total) * 100);
+    saveBestScore(quizId, pct);
+    const newBest = isRecord ? pct : prevBest;
 
     let title, titleColor, bg, border;
     if (score === total) {
@@ -283,7 +284,7 @@
     if (resultText)  resultText.textContent = score + ' / ' + total + ' soalan betul (' + Math.round(score / total * 100) + '%)';
 
     if (bestScoreEl) {
-      bestScoreEl.textContent = 'Rekod terbaik: ' + newBest + ' / ' + total + (isRecord ? ' 🎉 Rekod Baru!' : '');
+      bestScoreEl.textContent = 'Rekod terbaik: ' + newBest + '%' + (isRecord ? ' 🎉 Rekod Baru!' : '');
       bestScoreEl.style.color = '';
       bestScoreEl.classList.toggle('is-record', isRecord);
     }

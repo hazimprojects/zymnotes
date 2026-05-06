@@ -451,6 +451,43 @@ body.page-theme-error .page-hero {
   padding-bottom: 1.8rem;
 }
 
+/* Bar statistik nota (kiraan terbantu + skor terbaik) */
+.nota-stat-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 0.75rem 0 0;
+  opacity: 0;
+  animation: nfb-in 0.35s ease 0.3s forwards;
+}
+.nota-stat-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.71rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  background: rgba(47, 122, 103, 0.09);
+  color: #2a6e5c;
+  border: 1px solid rgba(47, 122, 103, 0.18);
+}
+.nota-stat-pill--score {
+  background: rgba(62, 95, 138, 0.09);
+  color: #3a5880;
+  border-color: rgba(62, 95, 138, 0.18);
+}
+[data-theme="dark"] .nota-stat-pill {
+  background: rgba(47, 122, 103, 0.14);
+  color: #7dd4be;
+  border-color: rgba(47, 122, 103, 0.22);
+}
+[data-theme="dark"] .nota-stat-pill--score {
+  background: rgba(88, 135, 206, 0.13);
+  color: #93b4e8;
+  border-color: rgba(88, 135, 206, 0.22);
+}
+
 .note-section {
   padding-top: 0.5rem;
 }

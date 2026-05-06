@@ -2494,6 +2494,52 @@ var NOTA_FB_SUPABASE_KEY = '';      // kunci anon dari Supabase > Settings > API
   });
 })();
 
+// ── Nota Stat Bar ─────────────────────────────────────────────────────────────
+// Tunjuk kiraan "X pelajar terbantu" + skor terbaik pengguna di hero nota.
+// Hanya muncul apabila ada data — tidak muncul langsung jika tiada rekod.
+(function () {
+  if (!window.location.pathname.match(/\/notes\/bab-\d+-\d+\.html/)) return;
+
+  var pathname = window.location.pathname;
+  var qMatch = pathname.match(/\/notes\/(bab-\d+-\d+)\.html/i);
+  var quizId = qMatch ? qMatch[1] : null;
+  var bestScore = quizId && window.ZymStore ? ZymStore.getQuizScore(quizId) : 0;
+
+  function fetchHelpful() {
+    if (!NOTA_FB_SUPABASE_URL || !NOTA_FB_SUPABASE_KEY) return Promise.resolve(null);
+    return fetch(NOTA_FB_SUPABASE_URL + '/rest/v1/rpc/get_nota_helpful_count', {
+      method: 'POST',
+      headers: {
+        'apikey': NOTA_FB_SUPABASE_KEY,
+        'Authorization': 'Bearer ' + NOTA_FB_SUPABASE_KEY,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ p_path: pathname })
+    }).then(function (r) { return r.ok ? r.json() : null; }).catch(function () { return null; });
+  }
+
+  var lead = document.querySelector('.note-hero .lead');
+  if (!lead) return;
+
+  fetchHelpful().then(function (helpfulCount) {
+    var pills = [];
+    if (helpfulCount !== null && helpfulCount > 0) {
+      pills.push({ text: helpfulCount + ' pelajar terbantu', mod: '' });
+    }
+    if (bestScore > 0) {
+      pills.push({ text: 'Skor terbaik anda: ' + bestScore + '%', mod: ' nota-stat-pill--score' });
+    }
+    if (!pills.length) return;
+
+    var bar = document.createElement('div');
+    bar.className = 'nota-stat-bar';
+    bar.innerHTML = pills.map(function (p) {
+      return '<span class="nota-stat-pill' + p.mod + '">' + p.text + '</span>';
+    }).join('');
+    lead.insertAdjacentElement('afterend', bar);
+  });
+})();
+
 // ── Brand Logo Injection ───────────────────────────────────────────────────────
 (function () {
   document.addEventListener('DOMContentLoaded', function () {
