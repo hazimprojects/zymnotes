@@ -2344,8 +2344,8 @@ function hzLabQuizSparklePair() {
 //          SELECT COUNT(*) FROM public.nota_feedback
 //          WHERE page_path = p_path AND reaction = 'mudah'; $$;
 //        GRANT EXECUTE ON FUNCTION public.get_nota_helpful_count TO anon;
-var NOTA_FB_SUPABASE_URL = '';      // cth: 'https://xxxx.supabase.co'
-var NOTA_FB_SUPABASE_KEY = '';      // kunci anon dari Supabase > Settings > API
+var NOTA_FB_SUPABASE_URL = 'https://hcvdhonpszwdiwcxwcrp.supabase.co';
+var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhjdmRob25wc3p3ZGl3Y3h3Y3JwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzgwNTUwOTEsImV4cCI6MjA5MzYzMTA5MX0.UazJr2fXKTG08s7GbYA8aZnl2HwP6Uh60eSN6ei_m1A';
 
 (function () {
   if (!window.location.pathname.match(/\/notes\/bab-\d+-\d+\.html/)) return;
