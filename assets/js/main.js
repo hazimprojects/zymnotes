@@ -59,9 +59,19 @@ window.ZymStore = (function () {
     if (Object.keys(q).length) _write(KEYS.quiz, q); else try { localStorage.removeItem(KEYS.quiz); } catch (e) {}
   }
 
-  function getFeedback(path) { return (_read(KEYS.feedback) || {})[path]; }
-  function saveFeedback(path, reaction) {
-    var f = _read(KEYS.feedback) || {}; f[path] = reaction; _write(KEYS.feedback, f);
+  function getFeedback(path) {
+    var v = (_read(KEYS.feedback) || {})[path];
+    if (!v) return null;
+    return typeof v === 'object' ? v.r : v;
+  }
+  function getFeedbackId(path) {
+    var v = (_read(KEYS.feedback) || {})[path];
+    return (v && typeof v === 'object') ? (v.id || null) : null;
+  }
+  function saveFeedback(path, reaction, supId) {
+    var f = _read(KEYS.feedback) || {};
+    f[path] = supId ? { r: reaction, id: supId } : reaction;
+    _write(KEYS.feedback, f);
   }
   function clearFeedback() { try { localStorage.removeItem(KEYS.feedback); } catch (e) {} }
   function getFeedbackCount() { return Object.keys(_read(KEYS.feedback) || {}).length; }
@@ -138,7 +148,7 @@ window.ZymStore = (function () {
     getQuizScore: getQuizScore, saveQuizScore: saveQuizScore,
     clearQuizScores: clearQuizScores, getQuizCount: getQuizCount,
     getAllQuizScores: getAllQuizScores, deleteQuizScore: deleteQuizScore,
-    getFeedback: getFeedback, saveFeedback: saveFeedback,
+    getFeedback: getFeedback, getFeedbackId: getFeedbackId, saveFeedback: saveFeedback,
     clearFeedback: clearFeedback, getFeedbackCount: getFeedbackCount,
     getAllFeedback: getAllFeedback, deleteFeedbackEntry: deleteFeedbackEntry,
     isDismissed: isDismissed, setDismissed: setDismissed,
@@ -2392,16 +2402,16 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
   }
 
   function submitFeedback(reaction) {
-    supFetch('/rest/v1/nota_feedback', {
+    return supFetch('/rest/v1/nota_feedback', {
       method: 'POST',
       headers: {
         'apikey': NOTA_FB_SUPABASE_KEY,
         'Authorization': 'Bearer ' + NOTA_FB_SUPABASE_KEY,
         'Content-Type': 'application/json',
-        'Prefer': 'return=minimal'
+        'Prefer': 'return=representation'
       },
       body: JSON.stringify({ page_path: pathname, reaction: reaction })
-    });
+    }).then(function (r) { return r && r.ok ? r.json() : null; });
   }
 
   function makeCountEl(count) {
@@ -2475,7 +2485,10 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
         gtag('event', 'nota_reaction', { reaction: reaction, page_path: pathname });
       }
       ZymStore.saveFeedback(pathname, reaction);
-      submitFeedback(reaction);
+      submitFeedback(reaction).then(function (rows) {
+        var supId = rows && rows[0] ? rows[0].id : null;
+        if (supId) ZymStore.saveFeedback(pathname, reaction, supId);
+      });
 
       var wrap = document.createElement('div');
       var thanks = document.createElement('p');
@@ -3424,7 +3437,20 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
     sheet.querySelector('#zymset-feedback-detail').addEventListener('click', function (e) {
       var btn = e.target.closest('[data-fb-del]');
       if (!btn) return;
-      ZymStore.deleteFeedbackEntry(btn.getAttribute('data-fb-del'));
+      var path = btn.getAttribute('data-fb-del');
+      var supId = ZymStore.getFeedbackId(path);
+      if (supId && NOTA_FB_SUPABASE_URL && NOTA_FB_SUPABASE_KEY) {
+        fetch(NOTA_FB_SUPABASE_URL + '/rest/v1/rpc/delete_nota_feedback_entry', {
+          method: 'POST',
+          headers: {
+            'apikey': NOTA_FB_SUPABASE_KEY,
+            'Authorization': 'Bearer ' + NOTA_FB_SUPABASE_KEY,
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({ p_id: supId })
+        }).catch(function () {});
+      }
+      ZymStore.deleteFeedbackEntry(path);
       updateDataCounts();
     });
 
@@ -3499,9 +3525,10 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
     var keys = Object.keys(fb).sort();
     if (!keys.length) { panel.classList.remove('is-open'); sheet.querySelector('#zymset-feedback-toggle').textContent = 'Butiran ▾'; return; }
     panel.innerHTML = keys.map(function (path) {
+      var rKey = typeof fb[path] === 'object' ? fb[path].r : fb[path];
       return '<div class="zymset-detail-item">' +
         '<span class="zymset-detail-label">' + fmtSubtopic(path) + '</span>' +
-        '<span class="zymset-detail-val">' + (REACTION_LABELS[fb[path]] || fb[path]) + '</span>' +
+        '<span class="zymset-detail-val">' + (REACTION_LABELS[rKey] || rKey) + '</span>' +
         '<button class="zymset-detail-del" type="button" data-fb-del="' + path + '" title="Padam entri ini">Padam</button>' +
         '</div>';
     }).join('');
