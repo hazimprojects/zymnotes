@@ -477,6 +477,10 @@ body.page-theme-error .page-hero {
   display: block;
   flex-shrink: 0;
 }
+[data-theme="dark"] .nota-stat-pill {
+  background: rgba(var(--theme-accent-rgb, 98, 126, 168), 0.18);
+  color: var(--theme-label-dark-color, #b9ccef);
+}
 
 .note-section {
   padding-top: 0.5rem;
