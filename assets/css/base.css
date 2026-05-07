@@ -746,8 +746,6 @@ body.quiz-page.note-reading-app .lab-compact-main {
 }
 
 body.app-shell-page .site-footer,
-body.bab-hub-page .site-footer,
-body.note-reading-app .site-footer,
 body.quiz-page.note-reading-app .site-footer { display: none; }
 
 /* Hide page-footer on mobile quiz pages — it sits inside <main> and steals height from the quiz card */
