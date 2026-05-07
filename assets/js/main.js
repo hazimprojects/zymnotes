@@ -2465,18 +2465,27 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
     '.nota-feedback-pdf-btn:active{transform:scale(0.96)}',
     '[data-theme="dark"] .nota-feedback-pdf-btn{background:rgba(79,70,229,0.1);border-color:rgba(79,70,229,0.25);color:#a5b4fc}',
     '[data-theme="dark"] .nota-feedback-pdf-btn img{filter:brightness(0) invert(1)}',
-    '#zym-pdf-overlay{position:fixed;inset:0;background:rgba(15,23,42,0.5);z-index:10000;display:flex;align-items:flex-end;justify-content:center;padding:0 16px 24px;opacity:0;visibility:hidden;transition:opacity 0.2s,visibility 0.2s}',
+    '#zym-pdf-overlay{position:fixed;inset:0;z-index:10001;display:flex;flex-direction:column;background:#18182b;opacity:0;visibility:hidden;transition:opacity 0.22s,visibility 0.22s}',
     '#zym-pdf-overlay.is-open{opacity:1;visibility:visible}',
-    '@media(min-width:480px){#zym-pdf-overlay{align-items:center}}',
-    '#zym-pdf-sheet{background:var(--paper,#fff);border-radius:20px;padding:22px 20px;max-width:360px;width:100%;box-shadow:0 20px 60px rgba(15,23,42,0.2);transform:translateY(30px);transition:transform 0.22s ease}',
-    '#zym-pdf-overlay.is-open #zym-pdf-sheet{transform:translateY(0)}',
-    '.zym-pdf-title{font-family:"Fredoka",sans-serif;font-size:1.1rem;font-weight:600;color:var(--ink,#0f172a);margin:0 0 4px}',
-    '.zym-pdf-desc{font-size:0.8rem;color:var(--muted,#64748b);margin:0 0 14px;line-height:1.45}',
-    '.zym-pdf-desc strong{color:var(--ink,#0f172a)}',
-    '.zym-pdf-go-btn{width:100%;margin-bottom:8px}',
-    '.zym-pdf-cancel-btn{background:none;border:none;color:var(--muted,#64748b);font-size:0.82rem;cursor:pointer;padding:4px 0;display:block;width:100%;text-align:center}',
-    '.zym-pdf-cancel-btn:hover{color:var(--ink,#0f172a)}',
-    '@media print{#zym-pdf-overlay,#zym-pdf-sheet{display:none!important}}',
+    '#zym-pdf-topbar{display:flex;align-items:center;gap:8px;padding:10px 14px;background:#0f172a;flex-shrink:0;min-height:52px}',
+    '#zym-pdf-topbar-title{font-family:Fredoka,sans-serif;font-size:0.92rem;font-weight:600;color:#cbd5e1;flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}',
+    '#zym-pdf-save-btn{display:inline-flex;align-items:center;gap:5px;padding:7px 14px;border-radius:99px;border:none;background:#4f46e5;color:#fff;font-size:0.8rem;font-weight:700;cursor:pointer;flex-shrink:0;line-height:1.4;white-space:nowrap}',
+    '#zym-pdf-save-btn:hover{background:#4338ca}',
+    '#zym-pdf-save-btn:disabled{opacity:0.55;cursor:default;pointer-events:none}',
+    '#zym-pdf-close-btn{width:34px;height:34px;border-radius:50%;border:none;background:rgba(255,255,255,0.07);color:#94a3b8;font-size:1.1rem;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:background 0.14s,color 0.14s}',
+    '#zym-pdf-close-btn:hover{background:rgba(255,255,255,0.15);color:#e2e8f0}',
+    '#zym-pdf-pages{flex:1;overflow-y:auto;padding:16px 12px;display:flex;flex-direction:column;align-items:center;gap:14px;background:#2d3748}',
+    '#zym-pdf-loading{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:60px 24px;color:#94a3b8;font-size:0.85rem;text-align:center;width:100%}',
+    '.zym-pdf-spinner{width:36px;height:36px;border:3px solid rgba(79,70,229,0.2);border-top-color:#4f46e5;border-radius:50%;animation:zym-spin 0.8s linear infinite;flex-shrink:0}',
+    '@keyframes zym-spin{to{transform:rotate(360deg)}}',
+    '.zym-pdf-page-outer{background:#fff;box-shadow:0 6px 28px rgba(0,0,0,0.4);width:100%;max-width:520px;overflow:hidden;border-radius:2px}',
+    '.zym-pdf-page-hdr{display:flex;align-items:center;justify-content:space-between;padding:5px 9px;border-bottom:0.5px solid #d4d4e8;font-family:Fredoka,sans-serif}',
+    '.zym-pdf-page-hdr-l{font-size:0.65rem;font-weight:700;color:#6060a0}',
+    '.zym-pdf-page-hdr-r{font-size:0.57rem;color:#b0b0cc;max-width:55%;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;text-align:right}',
+    '.zym-pdf-page-canvas-wrap canvas{display:block;width:100%;height:auto}',
+    '.zym-pdf-page-ftr{display:flex;align-items:center;justify-content:space-between;padding:4px 9px;border-top:0.5px solid #d4d4e8;font-size:0.55rem;color:#b8b8d0;font-family:Fredoka,sans-serif}',
+    '.zym-pdf-page-num{color:#6b7280;font-size:0.7rem;text-align:center;font-family:Fredoka,sans-serif;padding:2px}',
+    '@media print{#zym-pdf-overlay{display:none!important}}',
     '#zym-print-header,#zym-print-footer{display:none}'
   ].join('');
   document.head.appendChild(style);
@@ -2613,146 +2622,271 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
     }
   });
 
-  // ── PDF Download button + dialog (A4 sahaja — pengguna boleh tukar dalam printer settings) ──
+  // ── PDF Download — Pratonton dalaman ZymNotes + jana PDF terus ──────────
   var pdfBtn = document.createElement('button');
   pdfBtn.className = 'nota-feedback-pdf-btn';
   pdfBtn.type = 'button';
   pdfBtn.innerHTML = '<img src="' + PDF_DL_SRC + '" alt="" width="18" height="18" loading="lazy"><span>PDF</span>';
 
+  // Build preview overlay
   var pdfOverlay = document.createElement('div');
   pdfOverlay.id = 'zym-pdf-overlay';
   pdfOverlay.setAttribute('aria-hidden', 'true');
-
-  var pdfSheet = document.createElement('div');
-  pdfSheet.id = 'zym-pdf-sheet';
-  pdfSheet.setAttribute('role', 'dialog');
-  pdfSheet.setAttribute('aria-modal', 'true');
-  pdfSheet.setAttribute('aria-label', 'Muat Turun PDF');
-  pdfSheet.innerHTML = [
-    '<p class="zym-pdf-title">Muat Turun PDF</p>',
-    '<p class="zym-pdf-desc">Nota akan diformat untuk kertas <strong>A4</strong>. Dalam dialog seterusnya, pilih <strong>"Save as PDF"</strong> sebagai destinasi. Untuk saiz lain, tukar dalam tetapan pencetak anda.</p>',
-    '<button class="btn btn-primary zym-pdf-go-btn" type="button">Muat Turun PDF</button>',
-    '<button class="zym-pdf-cancel-btn" type="button">Batal</button>',
+  pdfOverlay.setAttribute('role', 'dialog');
+  pdfOverlay.setAttribute('aria-modal', 'true');
+  pdfOverlay.setAttribute('aria-label', 'Pratonton PDF');
+  pdfOverlay.innerHTML = [
+    '<div id="zym-pdf-topbar">',
+      '<div id="zym-pdf-topbar-title">Pratonton PDF</div>',
+      '<button id="zym-pdf-save-btn" type="button" disabled>',
+        '<svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" style="flex-shrink:0"><path d="M5 20h14v-2H5v2zm7-18l-5 5h3v4h4V7h3l-5-5z"/></svg>',
+        '<span>Simpan PDF</span>',
+      '</button>',
+      '<button id="zym-pdf-close-btn" type="button" aria-label="Tutup">✕</button>',
+    '</div>',
+    '<div id="zym-pdf-pages">',
+      '<div id="zym-pdf-loading">',
+        '<div class="zym-pdf-spinner"></div>',
+        '<p>Sedang menyediakan pratonton…</p>',
+      '</div>',
+    '</div>'
   ].join('');
-
-  pdfOverlay.appendChild(pdfSheet);
   document.body.appendChild(pdfOverlay);
 
-  function openPdfDialog() {
-    pdfOverlay.classList.add('is-open');
-    pdfOverlay.setAttribute('aria-hidden', 'false');
-    document.body.style.overflow = 'hidden';
-    setTimeout(function () { pdfSheet.querySelector('.zym-pdf-go-btn').focus(); }, 80);
-  }
-  function closePdfDialog() {
-    pdfOverlay.classList.remove('is-open');
-    pdfOverlay.setAttribute('aria-hidden', 'true');
-    document.body.style.overflow = '';
+  var _pdfPageCanvases = [];
+  var _pdfDims = null;
+  var _pdfNoteTitle = '';
+  var _pdfBusy = false;
+
+  function _escPdfHtml(s) {
+    return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
   }
 
-  pdfOverlay.addEventListener('click', function (e) { if (e.target === pdfOverlay) closePdfDialog(); });
-  pdfSheet.querySelector('.zym-pdf-cancel-btn').addEventListener('click', closePdfDialog);
-  document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape' && pdfOverlay.classList.contains('is-open')) closePdfDialog();
-  });
+  function _loadScript(src, cb) {
+    var s = document.createElement('script');
+    s.src = src;
+    s.onload = function() { cb(null); };
+    s.onerror = function() { cb(new Error('Gagal memuatkan: ' + src)); };
+    document.head.appendChild(s);
+  }
 
-  pdfSheet.querySelector('.zym-pdf-go-btn').addEventListener('click', function () {
-    closePdfDialog();
-    setTimeout(function () { window.print(); }, 60);
-  });
-
-  pdfBtn.addEventListener('click', openPdfDialog);
-
-  // ── PDF Header & Footer — tersembunyi dalam skrin, tunjuk dalam print ──
-  (function () {
-    // Dapatkan tajuk nota
-    var noteTitle = '';
-    var h1 = document.querySelector('.note-hero h1, .papercraft-hero h1');
-    if (h1) {
-      noteTitle = (h1.textContent || '').trim();
-    } else {
-      noteTitle = (document.title || '').replace(/\s*·\s*ZymNotes.*$/, '').trim();
-    }
-
-    if (!document.getElementById('zym-print-header')) {
-      var hdr = document.createElement('div');
-      hdr.id = 'zym-print-header';
-      hdr.setAttribute('aria-hidden', 'true');
-      hdr.innerHTML =
-        '<div class="zph-left">' +
-          '<img src="/icons/icon.svg" alt="" width="14" height="14">' +
-          '<span class="zph-brand">ZymNotes</span>' +
-        '</div>' +
-        '<div class="zph-right">' + (noteTitle ? _escHtml(noteTitle) : 'Sejarah SPM') + '</div>';
-      document.body.appendChild(hdr);
-    }
-
-    if (!document.getElementById('zym-print-footer')) {
-      var ftr = document.createElement('div');
-      ftr.id = 'zym-print-footer';
-      ftr.setAttribute('aria-hidden', 'true');
-      ftr.innerHTML =
-        '<span class="zpf-url">zymnotes.com</span>' +
-        '<span class="zpf-copy">© 2026 ZymNotes · Semua hak cipta terpelihara</span>';
-      document.body.appendChild(ftr);
-    }
-
-    function _escHtml(s) {
-      return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
-    }
-  }());
-
-  // ── Paksa sembunyikan elemen UI sebelum print (backup untuk CSS) ──
-  var PRINT_HIDE_SELECTORS = [
-    '.hz-bottom-nav', '.nota-stat-bar', '.site-header',
-    '.hero-actions', '.nota-feedback', '.keyword-legend-wrap',
-    '.note-sparkle-wrap', '.nota-feedback-pdf-btn', '#zym-pdf-overlay'
-  ].join(', ');
-  var _printHiddenEls = [];
-  var _accordionRestoreData = [];
-
-  window.addEventListener('beforeprint', function () {
-    // Sembunyikan UI chrome
-    _printHiddenEls = [];
-    document.querySelectorAll(PRINT_HIDE_SELECTORS).forEach(function (el) {
-      if (el.style.display !== 'none') {
-        el.setAttribute('data-zym-print-hidden', '1');
-        el.style.setProperty('display', 'none', 'important');
-        _printHiddenEls.push(el);
-      }
-    });
-    // Paksa buka semua accordion panel (CSS !important sudah ada, ini backup JS)
-    _accordionRestoreData = [];
-    document.querySelectorAll('.paper-accordion-panel').forEach(function (panel) {
-      _accordionRestoreData.push({
-        el: panel,
-        maxHeight: panel.style.maxHeight,
-        opacity: panel.style.opacity,
-        overflow: panel.style.overflow,
-        height: panel.style.height
+  function _ensureLibs(cb) {
+    var toLoad = [];
+    if (!window.html2canvas) toLoad.push('https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js');
+    if (!window.jspdf && !window.jsPDF) toLoad.push('https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js');
+    if (!toLoad.length) { cb(null); return; }
+    var done = 0;
+    var failed = false;
+    toLoad.forEach(function(src) {
+      _loadScript(src, function(err) {
+        if (failed) return;
+        if (err) { failed = true; cb(err); return; }
+        done++;
+        if (done === toLoad.length) cb(null);
       });
+    });
+  }
+
+  function _prepareContent(cb) {
+    var panelData = [];
+    document.querySelectorAll('.paper-accordion-panel').forEach(function(panel) {
+      panelData.push({ el: panel, mh: panel.style.maxHeight, op: panel.style.opacity, ov: panel.style.overflow, h: panel.style.height });
       panel.style.setProperty('max-height', 'none', 'important');
       panel.style.setProperty('height', 'auto', 'important');
       panel.style.setProperty('opacity', '1', 'important');
       panel.style.setProperty('overflow', 'visible', 'important');
     });
+    var hiddenEls = [];
+    ['.hz-bottom-nav','.nota-stat-bar','.site-header','.site-footer','.hero-actions',
+     '.nota-feedback','.keyword-legend-wrap','.note-sparkle-wrap','#zym-print-header','#zym-print-footer'].forEach(function(sel) {
+      document.querySelectorAll(sel).forEach(function(el) {
+        hiddenEls.push(el);
+        el.style.setProperty('display', 'none', 'important');
+      });
+    });
+    requestAnimationFrame(function() {
+      requestAnimationFrame(function() {
+        cb(function restore() {
+          hiddenEls.forEach(function(el) { el.style.removeProperty('display'); });
+          panelData.forEach(function(d) { d.el.style.maxHeight=d.mh; d.el.style.opacity=d.op; d.el.style.overflow=d.ov; d.el.style.height=d.h; });
+        });
+      });
+    });
+  }
+
+  function _generatePages(cb) {
+    var contentEl = document.querySelector('main.note-reading-main') || document.body;
+    _prepareContent(function(restore) {
+      _ensureLibs(function(err) {
+        if (err) { restore(); cb(err); return; }
+        window.html2canvas(contentEl, {
+          scale: 2,
+          useCORS: true,
+          allowTaint: false,
+          backgroundColor: '#ffffff',
+          logging: false,
+          imageTimeout: 20000,
+          onclone: function(doc) {
+            // Ensure all reveal-on-scroll elements are visible in the clone
+            doc.querySelectorAll('.reveal-on-scroll').forEach(function(el) {
+              el.style.opacity = '1';
+              el.style.transform = 'none';
+            });
+          }
+        }).then(function(canvas) {
+          restore();
+          var mLeft=12, mRight=12, mTop=18, mBottom=22;
+          var pageW=210, pageH=297;
+          var cW = pageW - mLeft - mRight; // 186mm
+          var cH = pageH - mTop - mBottom; // 257mm
+          var pxPerMm = canvas.width / cW;
+          var pxPerPage = Math.round(cH * pxPerMm);
+          var numPages = Math.ceil(canvas.height / pxPerPage);
+          var pages = [];
+          for (var p = 0; p < numPages; p++) {
+            var srcY = p * pxPerPage;
+            var srcH = Math.min(pxPerPage, canvas.height - srcY);
+            var pc = document.createElement('canvas');
+            pc.width = canvas.width;
+            pc.height = pxPerPage;
+            var pctx = pc.getContext('2d');
+            pctx.fillStyle = '#fff';
+            pctx.fillRect(0, 0, pc.width, pc.height);
+            pctx.drawImage(canvas, 0, srcY, canvas.width, srcH, 0, 0, canvas.width, srcH);
+            pages.push(pc);
+          }
+          cb(null, pages, { pageW:pageW,pageH:pageH,mLeft:mLeft,mRight:mRight,mTop:mTop,mBottom:mBottom,cW:cW,cH:cH });
+        }).catch(function(e) { restore(); cb(e); });
+      });
+    });
+  }
+
+  function _savePdf(pages, dims, title) {
+    var jsPDF = (window.jspdf && window.jspdf.jsPDF) || window.jsPDF;
+    if (!jsPDF) { alert('Ralat: pustaka PDF tidak dimuat.'); return; }
+    var pdf = new jsPDF({ orientation:'portrait', unit:'mm', format:'a4' });
+    pages.forEach(function(pc, i) {
+      if (i > 0) pdf.addPage();
+      // Content image
+      var imgData = pc.toDataURL('image/jpeg', 0.9);
+      pdf.addImage(imgData, 'JPEG', dims.mLeft, dims.mTop, dims.cW, dims.cH);
+      // Header separator line
+      pdf.setDrawColor(212, 212, 232);
+      pdf.setLineWidth(0.3);
+      pdf.line(dims.mLeft, dims.mTop - 2, dims.pageW - dims.mRight, dims.mTop - 2);
+      // Header text
+      pdf.setFont('helvetica', 'bold');
+      pdf.setFontSize(8);
+      pdf.setTextColor(96, 96, 160);
+      pdf.text('ZymNotes', dims.mLeft, dims.mTop - 5);
+      if (title) {
+        pdf.setFont('helvetica', 'normal');
+        pdf.setFontSize(6.5);
+        pdf.setTextColor(176, 176, 204);
+        pdf.text(title, dims.pageW - dims.mRight, dims.mTop - 5, { align:'right', maxWidth: dims.cW * 0.6 });
+      }
+      // Footer separator line
+      var fY = dims.pageH - dims.mBottom + 2;
+      pdf.setDrawColor(212, 212, 232);
+      pdf.line(dims.mLeft, fY, dims.pageW - dims.mRight, fY);
+      // Footer text
+      pdf.setFont('helvetica', 'normal');
+      pdf.setFontSize(6.5);
+      pdf.setTextColor(144, 144, 184);
+      pdf.text('zymnotes.com', dims.mLeft, fY + 4);
+      pdf.setTextColor(184, 184, 208);
+      pdf.text('© 2026 ZymNotes · Semua hak cipta terpelihara', dims.pageW - dims.mRight, fY + 4, { align:'right' });
+    });
+    var fname = (title || 'ZymNotes').replace(/[^\w\sÀ-ɏ-]/g,'').trim().replace(/\s+/g,'-') || 'ZymNotes';
+    pdf.save(fname + '.pdf');
+  }
+
+  function openPdfPreview() {
+    if (_pdfBusy) return;
+    _pdfBusy = true;
+    _pdfPageCanvases = [];
+    _pdfDims = null;
+
+    var h1El = document.querySelector('.note-hero h1, .papercraft-hero h1');
+    _pdfNoteTitle = (h1El ? h1El.textContent : document.title.replace(/\s*·.*$/,'')).trim();
+
+    pdfOverlay.classList.add('is-open');
+    pdfOverlay.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+
+    var pagesDiv = document.getElementById('zym-pdf-pages');
+    var saveBtn = document.getElementById('zym-pdf-save-btn');
+    saveBtn.disabled = true;
+    pagesDiv.innerHTML = '<div id="zym-pdf-loading"><div class="zym-pdf-spinner"></div><p>Sedang menyediakan pratonton…</p></div>';
+
+    _generatePages(function(err, pages, dims) {
+      _pdfBusy = false;
+      if (err) {
+        pagesDiv.innerHTML = '<div id="zym-pdf-loading"><p style="color:#f87171">Ralat semasa menyediakan PDF. Cuba lagi.</p></div>';
+        return;
+      }
+      _pdfPageCanvases = pages;
+      _pdfDims = dims;
+
+      pagesDiv.innerHTML = '';
+      pages.forEach(function(pc, i) {
+        var outer = document.createElement('div');
+        outer.className = 'zym-pdf-page-outer';
+
+        var hdr = document.createElement('div');
+        hdr.className = 'zym-pdf-page-hdr';
+        hdr.innerHTML = '<span class="zym-pdf-page-hdr-l">ZymNotes</span>' +
+          '<span class="zym-pdf-page-hdr-r">' + _escPdfHtml(_pdfNoteTitle) + '</span>';
+        outer.appendChild(hdr);
+
+        var wrap = document.createElement('div');
+        wrap.className = 'zym-pdf-page-canvas-wrap';
+        wrap.appendChild(pc);
+        outer.appendChild(wrap);
+
+        var ftr = document.createElement('div');
+        ftr.className = 'zym-pdf-page-ftr';
+        ftr.innerHTML = '<span>zymnotes.com</span><span>© 2026 ZymNotes · Semua hak cipta terpelihara</span>';
+        outer.appendChild(ftr);
+
+        pagesDiv.appendChild(outer);
+
+        var pgNum = document.createElement('div');
+        pgNum.className = 'zym-pdf-page-num';
+        pgNum.textContent = (i + 1) + ' / ' + pages.length;
+        pagesDiv.appendChild(pgNum);
+      });
+
+      saveBtn.disabled = false;
+      if (pages.length) saveBtn.focus();
+    });
+  }
+
+  function closePdfPreview() {
+    pdfOverlay.classList.remove('is-open');
+    pdfOverlay.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  }
+
+  document.getElementById('zym-pdf-save-btn').addEventListener('click', function() {
+    if (!_pdfPageCanvases.length || !_pdfDims) return;
+    var btn = this;
+    btn.disabled = true;
+    btn.querySelector('span').textContent = 'Sedang menyimpan…';
+    setTimeout(function() {
+      _savePdf(_pdfPageCanvases, _pdfDims, _pdfNoteTitle);
+      btn.disabled = false;
+      btn.querySelector('span').textContent = 'Simpan PDF';
+    }, 50);
   });
 
-  window.addEventListener('afterprint', function () {
-    _printHiddenEls.forEach(function (el) {
-      el.removeAttribute('data-zym-print-hidden');
-      el.style.removeProperty('display');
-    });
-    _printHiddenEls = [];
-    // Pulihkan state accordion
-    _accordionRestoreData.forEach(function (data) {
-      data.el.style.maxHeight = data.maxHeight;
-      data.el.style.opacity = data.opacity;
-      data.el.style.overflow = data.overflow;
-      data.el.style.height = data.height;
-    });
-    _accordionRestoreData = [];
+  document.getElementById('zym-pdf-close-btn').addEventListener('click', closePdfPreview);
+  pdfOverlay.addEventListener('click', function(e) { if (e.target === pdfOverlay) closePdfPreview(); });
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && pdfOverlay.classList.contains('is-open')) closePdfPreview();
   });
+
+  pdfBtn.addEventListener('click', openPdfPreview);
 
   // ── Bottom actions row: Suka + Kongsi + PDF ──────────────────
   var actionsSection = document.createElement('div');
