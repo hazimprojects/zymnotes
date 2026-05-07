@@ -2688,90 +2688,221 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
     });
   }
 
+  // ── Print Renderer: extract note DOM → build clean paper HTML ────────
+  function _kwHtml(el) {
+    var out = '';
+    el.childNodes.forEach(function(node) {
+      if (node.nodeType === 3) { out += _escPdfHtml(node.textContent); return; }
+      if (node.nodeType !== 1) return;
+      if (node.tagName === 'IMG') return; // drop emoji images
+      var m = (node.className || '').match(/\bkw-(istilah|tempat|tokoh|masa|konsep|kerajaan)\b/);
+      if (m) { out += '<span class="zpkw-' + m[1] + '">' + _escPdfHtml(node.textContent) + '</span>'; }
+      else { out += _kwHtml(node); }
+    });
+    return out;
+  }
+
+  function _bodyHtml(el) {
+    var h = '';
+    el.childNodes.forEach(function(node) {
+      if (node.nodeType !== 1) return;
+      var cls = node.className || '', tag = node.tagName;
+      if (cls.indexOf('paper-chip-list') !== -1) {
+        h += '<div class="zp-chips">';
+        node.querySelectorAll('.paper-chip').forEach(function(c) {
+          h += '<span class="zp-chip">' + _kwHtml(c) + '</span>';
+        });
+        h += '</div>';
+      } else if (cls.indexOf('point-heading') !== -1) {
+        h += '<p class="zp-ph">' + _kwHtml(node) + '</p>';
+      } else if (cls.indexOf('point-line') !== -1) {
+        h += '<p class="zp-p">· ' + _kwHtml(node) + '</p>';
+      } else if (tag === 'P') {
+        var t = node.textContent.trim();
+        if (t && t.indexOf('Klik kad') === -1 && t.indexOf('akan terbuka') === -1)
+          h += '<p class="zp-p">' + _kwHtml(node) + '</p>';
+      } else if (tag === 'H2' || tag === 'H3' || tag === 'H4') {
+        h += '<p class="zp-ph">' + _escPdfHtml(node.textContent.trim()) + '</p>';
+      } else if (cls.indexOf('answer-paper') !== -1) {
+        h += '<div class="zp-answer">' + _bodyHtml(node) + '</div>';
+      } else if (tag === 'UL' || tag === 'OL') {
+        node.querySelectorAll('li').forEach(function(li) {
+          h += '<p class="zp-p">· ' + _escPdfHtml(li.textContent.trim()) + '</p>';
+        });
+      } else { h += _bodyHtml(node); }
+    });
+    return h;
+  }
+
+  function _buildPrintHtml(mainEl) {
+    var h = '<div class="zp-page">';
+    var heroEl = mainEl.querySelector('.page-hero');
+    if (heroEl) {
+      var lbl = heroEl.querySelector('.paper-label');
+      var eye = heroEl.querySelector('.eyebrow');
+      var h1  = heroEl.querySelector('h1');
+      var lead = heroEl.querySelector('.lead');
+      h += '<div class="zp-hero">';
+      if (lbl)  h += '<span class="zp-chapter-lbl">' + _escPdfHtml(lbl.textContent.trim()) + '</span>';
+      if (eye)  h += '<div class="zp-subtopik">' + _escPdfHtml(eye.textContent.trim()) + '</div>';
+      if (h1)   h += '<h1 class="zp-title">' + _escPdfHtml(h1.textContent.trim()) + '</h1>';
+      if (lead) h += '<p class="zp-desc">' + _kwHtml(lead) + '</p>';
+      h += '</div>';
+    }
+    mainEl.querySelectorAll('.note-subsection').forEach(function(sub) {
+      var flap = sub.querySelector('.paper-flap-card');
+      if (flap) {
+        var fTop = flap.querySelector('.flap-top');
+        var fQ   = flap.querySelector('.point-heading');
+        var fA   = flap.querySelector('.answer-paper');
+        h += '<div class="zp-flap">';
+        if (fTop) h += '<div class="zp-flap-top">' + _escPdfHtml(fTop.textContent.trim()) + '</div>';
+        if (fQ)   h += '<div class="zp-flap-q">' + _kwHtml(fQ) + '</div>';
+        if (fA)   h += '<div class="zp-flap-a">' + _bodyHtml(fA) + '</div>';
+        h += '</div>';
+        return;
+      }
+      sub.querySelectorAll('.paper-board').forEach(function(board) {
+        var strip = board.querySelector('.paper-strip');
+        var body  = board.querySelector('.cv-unit-body');
+        var color = '#4f46e5';
+        if (strip) {
+          var sc = strip.className;
+          if (sc.indexOf('strip-summary') !== -1) color = '#16a34a';
+          else if (sc.indexOf('strip-info') !== -1) color = '#2563eb';
+          else if (sc.indexOf('strip-glossary') !== -1) color = '#7c3aed';
+          else if (sc.indexOf('strip-sub') !== -1) color = '#d97706';
+        }
+        h += '<div class="zp-board" style="border-color:' + color + '">';
+        if (strip) h += '<div class="zp-board-lbl" style="color:' + color + '">' + _escPdfHtml(strip.textContent.trim()) + '</div>';
+        if (body) h += _bodyHtml(body);
+        h += '</div>';
+      });
+      var sh = sub.querySelector('.section-heading');
+      if (sh) {
+        var badge = sh.querySelector('.paper-label');
+        var sh2   = sh.querySelector('h2');
+        h += '<div class="zp-section">';
+        if (badge) h += '<span class="zp-section-badge">' + _escPdfHtml(badge.textContent.trim()) + '</span>';
+        if (sh2)   h += '<h2 class="zp-section-title">' + _escPdfHtml(sh2.textContent.trim()) + '</h2>';
+        h += '</div>';
+      }
+      sub.querySelectorAll('.paper-accordion').forEach(function(acc) {
+        var idx = 0;
+        acc.querySelectorAll('.paper-accordion-item').forEach(function(item) {
+          idx++;
+          var trig  = item.querySelector('.paper-accordion-trigger');
+          var panel = item.querySelector('.paper-accordion-panel');
+          h += '<div class="zp-acc">';
+          if (trig) {
+            var ttl = trig.querySelector('.paper-accordion-title');
+            h += '<div class="zp-acc-hd"><span class="zp-acc-num">' + idx + '</span>';
+            if (ttl) h += '<span class="zp-acc-ttl">' + _escPdfHtml(ttl.textContent.trim()) + '</span>';
+            h += '</div>';
+          }
+          if (panel) {
+            var body2 = panel.querySelector('.cv-unit-body');
+            h += '<div class="zp-acc-body">' + (body2 ? _bodyHtml(body2) : '') + '</div>';
+          }
+          h += '</div>';
+        });
+      });
+    });
+    h += '</div>';
+    return h;
+  }
+
+  function _getPrintCss() {
+    return [
+      '#zym-pr,#zym-pr *{box-sizing:border-box;font-family:Fredoka,sans-serif}',
+      '#zym-pr{position:fixed;left:-9999px;top:0;width:794px;background:#fff;font-size:13px;color:#1a1a3a;line-height:1.5;z-index:-9999;pointer-events:none}',
+      '#zym-pr .zp-page{padding:0 36px 32px}',
+      // Hero
+      '#zym-pr .zp-hero{padding:22px 0 14px;border-bottom:2px solid #4f46e5;margin-bottom:16px}',
+      '#zym-pr .zp-chapter-lbl{display:inline-block;font-size:8px;font-weight:700;color:#fff;background:#4f46e5;padding:2px 10px;border-radius:4px;letter-spacing:.06em;text-transform:uppercase;margin-bottom:6px}',
+      '#zym-pr .zp-subtopik{font-size:9px;color:#6b7280;letter-spacing:.1em;text-transform:uppercase;margin:4px 0 5px}',
+      '#zym-pr h1.zp-title{font-size:21px;font-weight:700;color:#1e1e3a;line-height:1.2;margin:0 0 8px}',
+      '#zym-pr .zp-desc{font-size:11.5px;color:#4a4a6a;margin:0;line-height:1.55}',
+      // Boards
+      '#zym-pr .zp-board{border:1.5px solid;border-left-width:4px;border-radius:0 8px 8px 0;padding:10px 14px;margin-bottom:12px;background:#fafaff}',
+      '#zym-pr .zp-board-lbl{font-size:8px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;margin-bottom:8px}',
+      // Flap card (Soalan Utama)
+      '#zym-pr .zp-flap{border:1.5px solid #d97706;border-radius:8px;overflow:hidden;margin-bottom:14px}',
+      '#zym-pr .zp-flap-top{background:#fef3c7;padding:7px 14px;font-size:11px;font-weight:700;color:#92400e;border-bottom:1px solid #fde68a}',
+      '#zym-pr .zp-flap-q{padding:10px 14px 4px;font-size:12px;font-weight:700;color:#1a1a3a}',
+      '#zym-pr .zp-flap-a{padding:4px 14px 10px;font-size:12px;color:#3a3a5a;background:#fffbf0}',
+      // Section
+      '#zym-pr .zp-section{margin:18px 0 8px}',
+      '#zym-pr .zp-section-badge{display:inline-block;font-size:8px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#fff;background:#4f46e5;padding:3px 10px;border-radius:999px;margin-bottom:6px}',
+      '#zym-pr h2.zp-section-title{font-size:15px;font-weight:700;color:#1e1e3a;margin:0 0 8px;line-height:1.3}',
+      // Accordion
+      '#zym-pr .zp-acc{border:1px solid #e0e0ef;border-radius:8px;margin-bottom:8px;overflow:hidden;break-inside:avoid}',
+      '#zym-pr .zp-acc-hd{display:flex;align-items:center;gap:10px;padding:8px 12px;background:#f4f4ff;border-bottom:1px solid #e0e0ef}',
+      '#zym-pr .zp-acc-num{font-size:10px;font-weight:700;color:#4f46e5;min-width:22px;height:22px;background:#ede9fe;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0}',
+      '#zym-pr .zp-acc-ttl{font-size:13px;font-weight:700;color:#1e1e3a}',
+      '#zym-pr .zp-acc-body{padding:10px 12px}',
+      // Chips
+      '#zym-pr .zp-chips{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0}',
+      '#zym-pr .zp-chip{border:1px solid #d8d8ee;background:#f0f0f8;border-radius:6px;padding:4px 10px;font-size:11px;color:#2d2d5a;display:inline-flex;align-items:center;gap:5px;max-width:100%}',
+      // Answer box
+      '#zym-pr .zp-answer{border-left:3px solid #d0d0e8;padding-left:10px;margin:6px 0}',
+      // Text
+      '#zym-pr p.zp-p{font-size:12px;color:#3a3a5a;margin:4px 0 6px;line-height:1.55}',
+      '#zym-pr p.zp-ph{font-size:12.5px;font-weight:700;color:#1a1a3a;margin:6px 0 4px}',
+      // Keywords
+      '#zym-pr .zpkw-istilah{color:#7c3aed;font-weight:700}',
+      '#zym-pr .zpkw-tempat{color:#0f766e;font-weight:700}',
+      '#zym-pr .zpkw-tokoh{color:#1d4ed8;font-weight:700}',
+      '#zym-pr .zpkw-masa{color:#c2410c;font-weight:700}',
+      '#zym-pr .zpkw-konsep{color:#7c3aed;font-weight:700}',
+      '#zym-pr .zpkw-kerajaan{color:#0f766e;font-weight:700}',
+    ].join('');
+  }
+
   function _generatePages(cb) {
-    var contentEl = document.querySelector('main.note-reading-main') || document.body;
+    var mainEl = document.querySelector('main.note-reading-main');
+    if (!mainEl) { cb(new Error('Tiada kandungan nota')); return; }
     var savedScrollY = window.scrollY || window.pageYOffset || 0;
-    window.scrollTo(0, 0);
 
     _ensureLibs(function(err) {
-      if (err) { window.scrollTo(0, savedScrollY); cb(err); return; }
+      if (err) { cb(err); return; }
+
+      // Inject scoped CSS for the print renderer
+      var cssEl = document.createElement('style');
+      cssEl.id = 'zym-pr-css';
+      cssEl.textContent = _getPrintCss();
+      document.head.appendChild(cssEl);
+
+      // Build clean print container from note DOM
+      var container = document.createElement('div');
+      container.id = 'zym-pr';
+      container.setAttribute('aria-hidden', 'true');
+      container.innerHTML = _buildPrintHtml(mainEl);
+      document.body.appendChild(container);
+
+      function _cleanup() {
+        container.remove();
+        var c = document.getElementById('zym-pr-css');
+        if (c) c.remove();
+        window.scrollTo(0, savedScrollY);
+      }
 
       requestAnimationFrame(function() {
         requestAnimationFrame(function() {
-          window.html2canvas(contentEl, {
+          window.html2canvas(container, {
             scale: 2,
             useCORS: true,
             allowTaint: false,
             backgroundColor: '#ffffff',
             logging: false,
-            imageTimeout: 30000,
-            windowWidth: 800,
+            imageTimeout: 15000,
             onclone: function(doc) {
-              // Force desktop-like width so layout reflects full paper view
-              doc.documentElement.style.setProperty('width', '800px', 'important');
-              doc.documentElement.style.setProperty('max-width', '800px', 'important');
-              doc.body.style.setProperty('width', '800px', 'important');
-              doc.body.style.setProperty('max-width', '800px', 'important');
-              // Always capture in light mode
-              doc.documentElement.removeAttribute('data-theme');
-              // Open all accordion panels
-              doc.querySelectorAll('.paper-accordion-panel').forEach(function(p) {
-                p.style.setProperty('max-height', 'none', 'important');
-                p.style.setProperty('height', 'auto', 'important');
-                p.style.setProperty('opacity', '1', 'important');
-                p.style.setProperty('overflow', 'visible', 'important');
-              });
-              // Fix chip widths (inline, not stretched)
-              doc.querySelectorAll('.paper-chip').forEach(function(c) {
-                c.style.setProperty('width', 'fit-content', 'important');
-                c.style.setProperty('max-width', '100%', 'important');
-                c.style.setProperty('flex', '0 0 auto', 'important');
-              });
-              // Show scroll-reveal elements
-              doc.querySelectorAll('.reveal-on-scroll').forEach(function(el) {
-                el.style.opacity = '1';
-                el.style.transform = 'none';
-              });
-              // Hide UI chrome that should not appear in PDF
-              ['.hz-bottom-nav','.nota-stat-bar','.site-header','.site-footer','.hero-actions',
-               '.nota-feedback','.keyword-legend-wrap','.note-sparkle-wrap',
-               '#zym-pdf-overlay','#zym-pdf-gen-load','#zym-print-header','#zym-print-footer'
-              ].forEach(function(sel) {
-                doc.querySelectorAll(sel).forEach(function(el) {
-                  el.style.setProperty('display', 'none', 'important');
-                });
-              });
-              // Hide "Klik kad..." interactive instructions (not relevant on paper)
-              doc.querySelectorAll('p').forEach(function(p) {
-                var t = p.textContent.trim();
-                if (t.indexOf('Klik kad') !== -1 || t.indexOf('klik kad') !== -1 ||
-                    t.indexOf('akan terbuka') !== -1) {
-                  p.style.setProperty('display', 'none', 'important');
-                }
-              });
-              // Paper-first CSS: remove interactive UI artifacts and clean up for print
-              var paperStyle = doc.createElement('style');
-              paperStyle.textContent = [
-                // Kill all transitions and animations
-                '*{transition:none!important;animation-duration:0s!important;animation-delay:0s!important}',
-                // Remove accordion toggle arrow/icon (::after pseudo-element)
-                '.paper-accordion-trigger::after{display:none!important}',
-                '.paper-accordion-trigger::before{display:none!important}',
-                // Remove interactive cursor/pointer on accordion triggers
-                '.paper-accordion-trigger{cursor:default!important;pointer-events:none!important;border-bottom:none!important}',
-                // Subtler card shadows for paper feel
-                '.paper-board{box-shadow:0 1px 4px rgba(0,0,0,0.06)!important;border:1px solid #eaeaf2!important}',
-                '.paper-accordion{box-shadow:0 1px 4px rgba(0,0,0,0.05)!important;border:1px solid #ececf5!important}',
-                '.paper-accordion-item{border-bottom:1px solid #ececf5!important;break-inside:avoid}',
-                // Chips: no extra shadows
-                '.paper-chip{box-shadow:none!important}',
-                // Remove focus outlines
-                '*{outline:none!important}',
-              ].join('');
-              doc.head.appendChild(paperStyle);
+              var s = doc.createElement('style');
+              s.textContent = '*{transition:none!important;animation-duration:0s!important}';
+              doc.head.appendChild(s);
             }
           }).then(function(canvas) {
-            window.scrollTo(0, savedScrollY);
+            _cleanup();
             var mLeft=12, mRight=12, mTop=18, mBottom=22;
             var pageW=210, pageH=297;
             var cW = pageW - mLeft - mRight;
@@ -2780,35 +2911,28 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
             var pxPerPage = Math.round(cH * pxPerMm);
             var numPages = Math.ceil(canvas.height / pxPerPage);
 
-            // Smart split: for each page boundary, scan up to 6% of page height upward
-            // to find a mostly-white row (gap between content blocks).
-            // Sampling every 4 pixels horizontally for speed.
+            // Smart split: scan up to 6% above each boundary for a mostly-white row
             function _bestSplitY(approxY) {
               if (approxY <= 0 || approxY >= canvas.height) return approxY;
               var ctx2 = canvas.getContext('2d');
               var maxSearch = Math.min(Math.round(pxPerPage * 0.06), approxY);
-              var sampStep = 4;
-              var sampW = Math.floor(canvas.width / sampStep);
+              var sampW = Math.floor(canvas.width / 4);
               var bestY = approxY, bestScore = -1;
               for (var dy = 0; dy <= maxSearch; dy += 2) {
                 var y = approxY - dy;
                 var row = ctx2.getImageData(0, y, canvas.width, 1).data;
                 var light = 0;
-                for (var xi = 0; xi < row.length; xi += sampStep * 4) {
+                for (var xi = 0; xi < row.length; xi += 16) {
                   if (row[xi] > 238 && row[xi+1] > 238 && row[xi+2] > 238) light++;
                 }
-                // Weight: lightness × proximity (prefer closer to nominal boundary)
                 var score = (light / sampW) * (1 - dy / maxSearch * 0.25);
                 if (score > bestScore) { bestScore = score; bestY = y; }
               }
               return bestY;
             }
 
-            // Build split point array using smart detection
             var splitPts = [0];
-            for (var s = 1; s < numPages; s++) {
-              splitPts.push(_bestSplitY(s * pxPerPage));
-            }
+            for (var s = 1; s < numPages; s++) splitPts.push(_bestSplitY(s * pxPerPage));
             splitPts.push(canvas.height);
 
             var pages = [];
@@ -2821,15 +2945,11 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
               var pctx = pc.getContext('2d');
               pctx.fillStyle = '#ffffff';
               pctx.fillRect(0, 0, pc.width, pc.height);
-              // Scale srcH content to fit pxPerPage (srcH ≈ pxPerPage so distortion is minimal)
               pctx.drawImage(canvas, 0, srcY, canvas.width, srcH, 0, 0, canvas.width, Math.min(srcH, pxPerPage));
               pages.push(pc);
             }
             cb(null, pages, {pageW:pageW,pageH:pageH,mLeft:mLeft,mRight:mRight,mTop:mTop,mBottom:mBottom,cW:cW,cH:cH});
-          }).catch(function(e) {
-            window.scrollTo(0, savedScrollY);
-            cb(e);
-          });
+          }).catch(function(e) { _cleanup(); cb(e); });
         });
       });
     });
@@ -4167,7 +4287,7 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
   if (!('serviceWorker' in navigator)) return;
 
   window.addEventListener('load', function () {
-    navigator.serviceWorker.register('/sw.js?v=371').catch(function (error) {
+    navigator.serviceWorker.register('/sw.js?v=372').catch(function (error) {
       console.warn('Service worker registration failed:', error);
     });
   });
