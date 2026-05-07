@@ -24,9 +24,12 @@
   .search-empty,
   .feedback-widget,
   .nota-feedback,
+  .nota-stat-bar,
   .keyword-legend-wrap,
   .display-fab,
-  .nav-toggle { display: none !important; }
+  .nav-toggle,
+  .paper-accordion-trigger::after,
+  .note-breadcrumb { display: none !important; }
 
   /* ── Footer branding kanan — muncul setiap halaman ──────────── */
   body::after {
@@ -66,6 +69,7 @@
     font-size: 11pt;
     line-height: 1.55;
     animation: none !important;
+    padding-bottom: 20mm !important;
   }
 
   html.hz-themed-scroll-backdrop {
@@ -79,6 +83,15 @@
   .container,
   .container.narrow,
   .container.note-wide { max-width: 100% !important; padding: 0 !important; }
+
+  /* ── Hero section — kompak untuk print ─────────────────────── */
+  .note-hero {
+    padding-top: 1rem !important;
+    padding-bottom: 0.5rem !important;
+    min-height: unset !important;
+  }
+  .note-hero h1 { font-size: 18pt !important; margin-bottom: 0.3rem !important; }
+  .note-hero .lead { margin-bottom: 0.4rem !important; }
 
   /* ── Typography ─────────────────────────────────────────────── */
   h1, h2, h3, .ink { color: black !important; }
@@ -118,20 +131,47 @@
     print-color-adjust: exact;
   }
 
-  /* ── Accordions — expand all for print ─────────────────────── */
-  .accordion-body {
+  /* ── Accordions — buka semua untuk print ────────────────────── */
+  /* NOTA: Kelas sebenar ialah .paper-accordion-panel, bukan .accordion-body */
+  .paper-accordion-panel {
     max-height: none !important;
+    height: auto !important;
     overflow: visible !important;
     opacity: 1 !important;
+    padding: 0 1.1rem 1.1rem !important;
+    display: block !important;
   }
-  .accordion-trigger::after { display: none !important; }
+  .paper-accordion-item {
+    break-inside: avoid;
+  }
+
+  /* ── Process cards — tunjuk semua panel ─────────────────────── */
+  .paper-process-panel {
+    display: block !important;
+    margin-bottom: 0.5rem;
+  }
+  .paper-process-card {
+    break-inside: avoid;
+    cursor: default !important;
+  }
+
+  /* ── Timeline nodes — tunjuk semua ──────────────────────────── */
+  .paper-timeline-node {
+    break-inside: avoid;
+  }
+
+  /* ── Flap cards — semua kandungan kelihatan ──────────────────── */
+  .flap-top {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
 
   /* ── Page breaks ────────────────────────────────────────────── */
   h1, h2, h3 { break-after: avoid; }
   .note-subsection { break-inside: avoid; }
   .paper-board { break-inside: avoid; }
 
-  /* ── Reveal-on-scroll — show all ───────────────────────────── */
+  /* ── Reveal-on-scroll — tunjuk semua ───────────────────────── */
   .reveal-on-scroll { opacity: 1 !important; transform: none !important; }
 
   /* ── Keywords — bold + underline, warna latar dibuang ─────── */
@@ -146,8 +186,11 @@
     border-radius: 0 !important;
   }
 
-  /* ── Chips: keep readable ───────────────────────────────────── */
+  /* ── Chips: kekalkan pembacaan ──────────────────────────────── */
   .paper-chip-list { break-inside: avoid; }
+
+  /* ── Seksyen nota — kurangkan jarak ─────────────────────────── */
+  .section.note-section { padding-top: 0.6rem !important; padding-bottom: 0.6rem !important; }
 
   /* ZH mode annotations — tunjukkan semasa cetak */
   html[data-lang-mode="zh"] .kw.kw-zh-annotated { display: inline !important; }
