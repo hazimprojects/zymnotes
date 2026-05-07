@@ -8,7 +8,7 @@
 @import url("fluent-shell-emoji.css?v=5"); /* Fluent UI Emoji 3D pada halaman shell */
 @import url("base.css?v=87");       /* :root variables, dark mode tokens, body/reset/containers */
 @import url("layout.css?v=27");     /* Header, nav, dark mode fab, typography, footer, animations */
-@import url("ui.css?v=65");        /* Buttons, cards, homepage, hero, search, org-chart, interaction */
+@import url("ui.css?v=66");        /* Buttons, cards, homepage, hero, search, org-chart, interaction */
 @import url("paper.css?v=21");      /* Paper labels, boards, chips, accordion, steps, bab overview */
 @import url("keywords.css?v=34");   /* Keyword highlights, bloc identity, keyword legend, zh-mode annotations */
 @import url("responsive.css?v=8"); /* All @media queries + spacing fixes */
