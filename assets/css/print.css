@@ -84,21 +84,6 @@
     print-color-adjust: exact;
   }
 
-  /* ── Footer branding teks — di bawah setiap halaman ──────────── */
-  body::after {
-    content: "ZymNotes  ·  zymnotes.com";
-    position: fixed;
-    bottom: 6mm;
-    left: 0;
-    right: 0;
-    text-align: center;
-    font-family: "Fredoka", sans-serif;
-    font-size: 7pt;
-    color: #c0c0d0;
-    letter-spacing: 0.06em;
-    -webkit-print-color-adjust: exact;
-    print-color-adjust: exact;
-  }
 
   /* ══════════════════════════════════════════════════
      RESET LAYOUT — kompak untuk kertas
