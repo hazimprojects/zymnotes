@@ -93,6 +93,19 @@ window.ZymStore = (function () {
       else try { localStorage.removeItem(KEYS.feedback); } catch (x) {}
     }
   }
+  function clearOpinion(path) {
+    var f = _read(KEYS.feedback) || {};
+    var e = _fbNorm(f[path]);
+    e.o = null;
+    if (e.s != null) {
+      f[path] = { s: e.s, o: null };
+      _write(KEYS.feedback, f);
+    } else {
+      delete f[path];
+      if (Object.keys(f).length) _write(KEYS.feedback, f);
+      else try { localStorage.removeItem(KEYS.feedback); } catch (x) {}
+    }
+  }
   function saveFeedback(path, reaction, supId) {
     var f = _read(KEYS.feedback) || {};
     var e = _fbNorm(f[path]);
@@ -193,7 +206,7 @@ window.ZymStore = (function () {
     clearQuizScores: clearQuizScores, getQuizCount: getQuizCount,
     getAllQuizScores: getAllQuizScores, deleteQuizScore: deleteQuizScore,
     getFeedback: getFeedback, getFeedbackId: getFeedbackId, saveFeedback: saveFeedback,
-    getSukaGiven: getSukaGiven, getSukaId: getSukaId, clearSuka: clearSuka,
+    getSukaGiven: getSukaGiven, getSukaId: getSukaId, clearSuka: clearSuka, clearOpinion: clearOpinion,
     clearFeedback: clearFeedback, getFeedbackCount: getFeedbackCount,
     getAllFeedback: getAllFeedback, deleteFeedbackEntry: deleteFeedbackEntry,
     isDismissed: isDismissed, setDismissed: setDismissed, getUserSecret: getUserSecret,
@@ -2471,7 +2484,7 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
   }
 
   var OPINION_REACTIONS = [
-    { key: 'mudah',        pair: HZ_FLUENT_SPARKLE.faceSmiling,  label: 'Mudah<br>difahami',  msg: 'Syukurlah! Terima kasih atas maklum balas.'   },
+    { key: 'mudah',        pair: HZ_FLUENT_SPARKLE.faceSmiling,  label: 'Mudah<br>difahami',  msg: 'Gembira nota ini mudah difahami! Terima kasih.' },
     { key: 'boleh-baik',   pair: HZ_FLUENT_SPARKLE.faceThinking, label: 'Boleh<br>diperbaiki', msg: 'Terima kasih! Kami akan usahakan yang terbaik.' },
     { key: 'kurang-jelas', pair: HZ_FLUENT_SPARKLE.faceConfused,  label: 'Kurang<br>jelas',    msg: 'Terima kasih! Maklum balas anda amat berharga.' }
   ];
@@ -3553,31 +3566,27 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
       if (pageMatch && pageMatch[1] === qid) window.location.reload();
     });
 
-    // Padam entri maklum balas individu (event delegation)
+    // Padam suka atau pendapat secara berasingan (event delegation)
     sheet.querySelector('#zymset-feedback-detail').addEventListener('click', function (e) {
-      var btn = e.target.closest('[data-fb-del]');
+      var btn = e.target.closest('[data-fb-suka-del],[data-fb-op-del]');
       if (!btn) return;
-      var path = btn.getAttribute('data-fb-del');
+      var isSuka = btn.hasAttribute('data-fb-suka-del');
+      var path = btn.getAttribute(isSuka ? 'data-fb-suka-del' : 'data-fb-op-del');
       var isCurrentPage = (path === window.location.pathname);
-      // Kumpul semua ID (suka + pendapat) untuk dipadam sekaligus
-      var ids = [ZymStore.getSukaId(path), ZymStore.getFeedbackId(path)].filter(function(id) { return id != null; });
+      var id = isSuka ? ZymStore.getSukaId(path) : ZymStore.getFeedbackId(path);
 
-      var deleteOp = (ids.length && NOTA_FB_SUPABASE_URL && NOTA_FB_SUPABASE_KEY)
+      var deleteOp = (id && NOTA_FB_SUPABASE_URL && NOTA_FB_SUPABASE_KEY)
         ? fetch(NOTA_FB_SUPABASE_URL + '/rest/v1/rpc/delete_nota_feedback_entries', {
             method: 'POST',
-            headers: {
-              'apikey': NOTA_FB_SUPABASE_KEY,
-              'Authorization': 'Bearer ' + NOTA_FB_SUPABASE_KEY,
-              'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({ p_ids: ids, p_secret: ZymStore.getUserSecret() })
+            headers: { 'apikey': NOTA_FB_SUPABASE_KEY, 'Authorization': 'Bearer ' + NOTA_FB_SUPABASE_KEY, 'Content-Type': 'application/json' },
+            body: JSON.stringify({ p_ids: [id], p_secret: ZymStore.getUserSecret() })
           }).catch(function () {})
         : Promise.resolve();
 
-      ZymStore.deleteFeedbackEntry(path);
+      if (isSuka) ZymStore.clearSuka(path); else ZymStore.clearOpinion(path);
       updateDataCounts();
+      renderFeedbackDetail();
 
-      // Reload halaman semasa supaya stat bar hilang dan widget maklum balas muncul semula
       if (isCurrentPage) deleteOp.then(function () { window.location.reload(); });
     });
 
@@ -3654,24 +3663,32 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
     var fb = ZymStore.getAllFeedback();
     var keys = Object.keys(fb).sort();
     if (!keys.length) { panel.classList.remove('is-open'); sheet.querySelector('#zymset-feedback-toggle').textContent = 'Butiran ▾'; return; }
-    panel.innerHTML = keys.map(function (path) {
-      var parts = [];
+    var rows = [];
+    keys.forEach(function (path) {
+      var label = fmtSubtopic(path);
       if (ZymStore.getSukaGiven(path)) {
         var sp = REACTION_PAIRS['suka'];
-        parts.push('<img src="' + hzFluent3dAsset(sp[0], sp[1]) + '" width="14" height="14" loading="lazy" style="vertical-align:middle"> Suka!');
+        rows.push(
+          '<div class="zymset-detail-item">' +
+          '<span class="zymset-detail-label">' + label + '</span>' +
+          '<span class="zymset-detail-val"><img src="' + hzFluent3dAsset(sp[0], sp[1]) + '" width="14" height="14" loading="lazy" style="vertical-align:middle"> Suka!</span>' +
+          '<button class="zymset-detail-del" type="button" data-fb-suka-del="' + path + '">Padam</button>' +
+          '</div>'
+        );
       }
       var oKey = ZymStore.getFeedback(path);
       if (oKey) {
         var op = REACTION_PAIRS[oKey];
-        parts.push((op ? '<img src="' + hzFluent3dAsset(op[0], op[1]) + '" width="14" height="14" loading="lazy" style="vertical-align:middle"> ' : '') + (REACTION_LABELS[oKey] || oKey));
+        rows.push(
+          '<div class="zymset-detail-item">' +
+          '<span class="zymset-detail-label">' + label + '</span>' +
+          '<span class="zymset-detail-val">' + (op ? '<img src="' + hzFluent3dAsset(op[0], op[1]) + '" width="14" height="14" loading="lazy" style="vertical-align:middle"> ' : '') + (REACTION_LABELS[oKey] || oKey) + '</span>' +
+          '<button class="zymset-detail-del" type="button" data-fb-op-del="' + path + '">Padam</button>' +
+          '</div>'
+        );
       }
-      if (!parts.length) return '';
-      return '<div class="zymset-detail-item">' +
-        '<span class="zymset-detail-label">' + fmtSubtopic(path) + '</span>' +
-        '<span class="zymset-detail-val">' + parts.join(' · ') + '</span>' +
-        '<button class="zymset-detail-del" type="button" data-fb-del="' + path + '" title="Padam entri ini">Padam</button>' +
-        '</div>';
-    }).join('');
+    });
+    panel.innerHTML = rows.join('');
   }
 
   function updateDataCounts() {
