@@ -2642,7 +2642,8 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
   if (!lead) return;
 
   var STAT_REACTIONS = [
-    { key: 'suka', imgSrc: 'https://img.icons8.com/?size=100&id=5twNojKL5zU7&format=png&color=000000' }
+    { key: 'suka',  imgSrc: 'https://img.icons8.com/?size=100&id=5twNojKL5zU7&format=png&color=000000' },
+    { key: 'mudah', pair: HZ_FLUENT_SPARKLE.faceSmiling }
   ];
 
   function pillImg(r) {
@@ -2658,10 +2659,6 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
         var n = Number(counts[r.key] || 0);
         if (n > 0) pills.push(pillImg(r) + '<span>' + n + '</span>');
       });
-    }
-
-    if (bestScore > 0) {
-      pills.push(pillImg({ pair: HZ_FLUENT_SPARKLE.trophy }) + '<span>' + bestScore + '%</span>');
     }
 
     if (!pills.length) return;
