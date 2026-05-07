@@ -1,5 +1,5 @@
 /* =========================
-   MASTER STYLESHEET — v90
+   MASTER STYLESHEET — v91
    Import fail-specific files here.
    HTML files reference style.css — no change needed there.
 ========================= */
@@ -16,4 +16,4 @@
 @import url("bab-hub-fluent-3d.css?v=1"); /* Bab induk: mesh + glass + chip wells (Fluent 3D) */
 @import url("shell-openmoji.css?v=12"); /* App shell: Zym 3D stage (mesh + glass) */
 @import url("lab.css?v=7");        /* Learning Lab, action bar, mini interactive blocks */
-@import url("print.css") print;    /* Print styles (Ctrl+P) */
+@import url("print.css?v=2") print;    /* Print styles (Ctrl+P) */
