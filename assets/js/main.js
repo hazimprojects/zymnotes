@@ -3406,7 +3406,7 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
         '<div class="zym-settings-section">' +
           '<p class="zym-settings-section-label">Paparan</p>' +
           '<div class="zym-settings-row" id="zymset-theme-row">' +
-            '<span class="zym-settings-row-icon">' + hzIcons8ImgHtml(HZ_ICONS8_SPARKLE.artistPalette, 24) + '</span>' +
+            '<span class="zym-settings-row-icon">' + hzIcons8ImgHtml(HZ_ICONS8_SPARKLE.artistPalette, 18) + '</span>' +
             '<div class="zym-settings-row-body">' +
               '<span class="zym-settings-row-label">Tema</span>' +
             '</div>' +
@@ -3421,7 +3421,7 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
         '<div class="zym-settings-section">' +
           '<p class="zym-settings-section-label">Data Pembelajaran</p>' +
           '<div class="zym-settings-row" id="zymset-quiz-row">' +
-            '<span class="zym-settings-row-icon">' + hzIcons8ImgHtml(HZ_ICONS8_SPARKLE.trophy, 24) + '</span>' +
+            '<span class="zym-settings-row-icon">' + hzIcons8ImgHtml(HZ_ICONS8_SPARKLE.trophy, 18) + '</span>' +
             '<div class="zym-settings-row-body">' +
               '<span class="zym-settings-row-label">Skor Kuiz</span>' +
               '<span class="zym-settings-row-meta" id="zymset-quiz-meta">memuatkan...</span>' +
@@ -3431,7 +3431,7 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
           '</div>' +
           '<div class="zymset-detail-panel" id="zymset-quiz-detail"></div>' +
           '<div class="zym-settings-row" id="zymset-feedback-row">' +
-            '<span class="zym-settings-row-icon">' + hzIcons8ImgHtml(HZ_ICONS8_SPARKLE.memo, 24) + '</span>' +
+            '<span class="zym-settings-row-icon">' + hzIcons8ImgHtml(HZ_ICONS8_SPARKLE.memo, 18) + '</span>' +
             '<div class="zym-settings-row-body">' +
               '<span class="zym-settings-row-label">Maklum Balas Nota</span>' +
               '<span class="zym-settings-row-meta" id="zymset-feedback-meta">memuatkan...</span>' +
@@ -3645,7 +3645,7 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
       return '<div class="zymset-detail-item">' +
         '<span class="zymset-detail-label">' + fmtSubtopic(id) + '</span>' +
         '<span class="zymset-detail-val">' + scores[id] + '%</span>' +
-        '<button class="zymset-detail-del" type="button" data-quiz-del="' + id + '" title="Padam entri ini">Padam</button>' +
+        '<button class="zymset-detail-del" type="button" data-quiz-del="' + id + '" title="Padam entri ini">×</button>' +
         '</div>';
     }).join('');
   }
@@ -3666,7 +3666,7 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
           '<div class="zymset-detail-item">' +
           '<span class="zymset-detail-label">' + label + '</span>' +
           '<span class="zymset-detail-val"><img src="' + hzFluent3dAsset(sp[0], sp[1]) + '" width="14" height="14" loading="lazy" style="vertical-align:middle"> Suka!</span>' +
-          '<button class="zymset-detail-del" type="button" data-fb-suka-del="' + path + '">Padam</button>' +
+          '<button class="zymset-detail-del" type="button" data-fb-suka-del="' + path + '" title="Padam">×</button>' +
           '</div>'
         );
       }
@@ -3677,7 +3677,7 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
           '<div class="zymset-detail-item">' +
           '<span class="zymset-detail-label">' + label + '</span>' +
           '<span class="zymset-detail-val">' + (op ? '<img src="' + hzFluent3dAsset(op[0], op[1]) + '" width="14" height="14" loading="lazy" style="vertical-align:middle"> ' : '') + (REACTION_LABELS[oKey] || oKey) + '</span>' +
-          '<button class="zymset-detail-del" type="button" data-fb-op-del="' + path + '">Padam</button>' +
+          '<button class="zymset-detail-del" type="button" data-fb-op-del="' + path + '" title="Padam">×</button>' +
           '</div>'
         );
       }
