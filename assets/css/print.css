@@ -59,31 +59,81 @@
     print-color-adjust: exact;
   }
 
-  /* ── Footer branding dengan logo — di setiap halaman ─────────── */
-  #zym-print-footer {
+  /* ══════════════════════════════════════════════════
+     HEADER PDF — atas setiap halaman (logo kiri, tajuk kanan)
+  ══════════════════════════════════════════════════ */
+  #zym-print-header {
     display: flex !important;
     align-items: center;
-    justify-content: center;
-    gap: 5px;
+    justify-content: space-between;
     position: fixed;
-    bottom: 6mm;
-    left: 0;
-    right: 0;
+    top: 4mm;
+    left: 12mm;
+    right: 12mm;
+    padding-bottom: 1.5mm;
+    border-bottom: 0.4pt solid #d4d4e8;
     font-family: "Fredoka", sans-serif;
-    font-size: 7pt;
-    color: #c0c0d0;
-    letter-spacing: 0.06em;
     pointer-events: none;
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
   }
-  #zym-print-footer img {
-    width: 13px;
-    height: 13px;
-    opacity: 0.55;
+  #zym-print-header .zph-left {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+  #zym-print-header .zph-left img {
+    width: 14px;
+    height: 14px;
+    opacity: 0.65;
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
   }
+  #zym-print-header .zph-brand {
+    font-size: 8pt;
+    font-weight: 700;
+    color: #6060a0;
+    letter-spacing: 0.06em;
+  }
+  #zym-print-header .zph-right {
+    font-size: 6.5pt;
+    color: #b0b0cc;
+    letter-spacing: 0.02em;
+    text-align: right;
+    max-width: 55%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  /* ══════════════════════════════════════════════════
+     FOOTER PDF — bawah setiap halaman (URL kiri, hak cipta kanan)
+  ══════════════════════════════════════════════════ */
+  #zym-print-footer {
+    display: flex !important;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    bottom: 4mm;
+    left: 12mm;
+    right: 12mm;
+    padding-top: 1.5mm;
+    border-top: 0.4pt solid #d4d4e8;
+    font-family: "Fredoka", sans-serif;
+    font-size: 6.5pt;
+    color: #b8b8d0;
+    pointer-events: none;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  #zym-print-footer .zpf-url {
+    letter-spacing: 0.04em;
+    color: #9090b8;
+  }
+  #zym-print-footer .zpf-copy {
+    opacity: 0.75;
+  }
+
 
   /* ══════════════════════════════════════════════════
      RESET LAYOUT — kompak untuk kertas
@@ -395,7 +445,8 @@
   }
 }
 
-/* ── #zym-print-footer tersembunyi dalam skrin biasa ─────────── */
+/* ── Elemen print tersembunyi dalam skrin biasa ─────────────── */
+#zym-print-header,
 #zym-print-footer {
   display: none;
 }

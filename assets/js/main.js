@@ -2662,19 +2662,44 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
 
   pdfBtn.addEventListener('click', openPdfDialog);
 
-  // ── Footer logo — disembunyi dalam skrin, tunjuk dalam print via CSS ──
-  var printFooter = document.getElementById('zym-print-footer');
-  if (!printFooter) {
-    printFooter = document.createElement('div');
-    printFooter.id = 'zym-print-footer';
-    printFooter.setAttribute('aria-hidden', 'true');
-    printFooter.innerHTML =
-      '<img src="/icons/icon.svg" alt="" width="13" height="13">' +
-      '<span>ZymNotes</span>' +
-      '<span style="opacity:0.6">·</span>' +
-      '<span>zymnotes.com</span>';
-    document.body.appendChild(printFooter);
-  }
+  // ── PDF Header & Footer — tersembunyi dalam skrin, tunjuk dalam print ──
+  (function () {
+    // Dapatkan tajuk nota
+    var noteTitle = '';
+    var h1 = document.querySelector('.note-hero h1, .papercraft-hero h1');
+    if (h1) {
+      noteTitle = (h1.textContent || '').trim();
+    } else {
+      noteTitle = (document.title || '').replace(/\s*·\s*ZymNotes.*$/, '').trim();
+    }
+
+    if (!document.getElementById('zym-print-header')) {
+      var hdr = document.createElement('div');
+      hdr.id = 'zym-print-header';
+      hdr.setAttribute('aria-hidden', 'true');
+      hdr.innerHTML =
+        '<div class="zph-left">' +
+          '<img src="/icons/icon.svg" alt="" width="14" height="14">' +
+          '<span class="zph-brand">ZymNotes</span>' +
+        '</div>' +
+        '<div class="zph-right">' + (noteTitle ? _escHtml(noteTitle) : 'Sejarah SPM') + '</div>';
+      document.body.appendChild(hdr);
+    }
+
+    if (!document.getElementById('zym-print-footer')) {
+      var ftr = document.createElement('div');
+      ftr.id = 'zym-print-footer';
+      ftr.setAttribute('aria-hidden', 'true');
+      ftr.innerHTML =
+        '<span class="zpf-url">zymnotes.com</span>' +
+        '<span class="zpf-copy">© 2026 ZymNotes · Semua hak cipta terpelihara</span>';
+      document.body.appendChild(ftr);
+    }
+
+    function _escHtml(s) {
+      return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+    }
+  }());
 
   // ── Paksa sembunyikan elemen UI sebelum print (backup untuk CSS) ──
   var PRINT_HIDE_SELECTORS = [
