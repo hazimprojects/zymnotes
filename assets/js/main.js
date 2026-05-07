@@ -2662,6 +2662,20 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
 
   pdfBtn.addEventListener('click', openPdfDialog);
 
+  // ── Footer logo — disembunyi dalam skrin, tunjuk dalam print via CSS ──
+  var printFooter = document.getElementById('zym-print-footer');
+  if (!printFooter) {
+    printFooter = document.createElement('div');
+    printFooter.id = 'zym-print-footer';
+    printFooter.setAttribute('aria-hidden', 'true');
+    printFooter.innerHTML =
+      '<img src="/icons/icon.svg" alt="" width="13" height="13">' +
+      '<span>ZymNotes</span>' +
+      '<span style="opacity:0.6">·</span>' +
+      '<span>zymnotes.com</span>';
+    document.body.appendChild(printFooter);
+  }
+
   // ── Paksa sembunyikan elemen UI sebelum print (backup untuk CSS) ──
   var PRINT_HIDE_SELECTORS = [
     '.hz-bottom-nav', '.nota-stat-bar', '.site-header',
@@ -2669,8 +2683,10 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
     '.note-sparkle-wrap', '.nota-feedback-pdf-btn', '#zym-pdf-overlay'
   ].join(', ');
   var _printHiddenEls = [];
+  var _accordionRestoreData = [];
 
   window.addEventListener('beforeprint', function () {
+    // Sembunyikan UI chrome
     _printHiddenEls = [];
     document.querySelectorAll(PRINT_HIDE_SELECTORS).forEach(function (el) {
       if (el.style.display !== 'none') {
@@ -2678,6 +2694,21 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
         el.style.setProperty('display', 'none', 'important');
         _printHiddenEls.push(el);
       }
+    });
+    // Paksa buka semua accordion panel (CSS !important sudah ada, ini backup JS)
+    _accordionRestoreData = [];
+    document.querySelectorAll('.paper-accordion-panel').forEach(function (panel) {
+      _accordionRestoreData.push({
+        el: panel,
+        maxHeight: panel.style.maxHeight,
+        opacity: panel.style.opacity,
+        overflow: panel.style.overflow,
+        height: panel.style.height
+      });
+      panel.style.setProperty('max-height', 'none', 'important');
+      panel.style.setProperty('height', 'auto', 'important');
+      panel.style.setProperty('opacity', '1', 'important');
+      panel.style.setProperty('overflow', 'visible', 'important');
     });
   });
 
@@ -2687,6 +2718,14 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
       el.style.removeProperty('display');
     });
     _printHiddenEls = [];
+    // Pulihkan state accordion
+    _accordionRestoreData.forEach(function (data) {
+      data.el.style.maxHeight = data.maxHeight;
+      data.el.style.opacity = data.opacity;
+      data.el.style.overflow = data.overflow;
+      data.el.style.height = data.height;
+    });
+    _accordionRestoreData = [];
   });
 
   // ── Bottom actions row: Suka + Kongsi + PDF ──────────────────
