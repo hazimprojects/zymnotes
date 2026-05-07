@@ -2473,11 +2473,6 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
     '.zym-pdf-title{font-family:"Fredoka",sans-serif;font-size:1.1rem;font-weight:600;color:var(--ink,#0f172a);margin:0 0 4px}',
     '.zym-pdf-desc{font-size:0.8rem;color:var(--muted,#64748b);margin:0 0 14px;line-height:1.45}',
     '.zym-pdf-desc strong{color:var(--ink,#0f172a)}',
-    '.zym-pdf-size-row{display:flex;gap:8px;margin-bottom:6px}',
-    '.zym-pdf-size-btn{flex:1;padding:9px 0;border-radius:12px;font-family:"Fredoka",sans-serif;font-size:0.95rem;font-weight:500;border:2px solid var(--line,#e2e8f0);background:transparent;cursor:pointer;color:var(--ink,#0f172a);transition:all 0.15s}',
-    '.zym-pdf-size-btn.is-active{border-color:var(--primary,#4f46e5);background:var(--primary,#4f46e5);color:#fff}',
-    '.zym-pdf-size-btn:not(.is-active):hover{background:var(--paper-soft,#f8fafc)}',
-    '.zym-pdf-size-hint{font-size:0.72rem;color:var(--muted,#64748b);margin:0 0 14px;line-height:1.4}',
     '.zym-pdf-go-btn{width:100%;margin-bottom:8px}',
     '.zym-pdf-cancel-btn{background:none;border:none;color:var(--muted,#64748b);font-size:0.82rem;cursor:pointer;padding:4px 0;display:block;width:100%;text-align:center}',
     '.zym-pdf-cancel-btn:hover{color:var(--ink,#0f172a)}',
@@ -2617,7 +2612,7 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
     }
   });
 
-  // ── PDF Download button + dialog ─────────────────────────────
+  // ── PDF Download button + dialog (A4 sahaja — pengguna boleh tukar dalam printer settings) ──
   var pdfBtn = document.createElement('button');
   pdfBtn.className = 'nota-feedback-pdf-btn';
   pdfBtn.type = 'button';
@@ -2634,34 +2629,13 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
   pdfSheet.setAttribute('aria-label', 'Muat Turun PDF');
   pdfSheet.innerHTML = [
     '<p class="zym-pdf-title">Muat Turun PDF</p>',
-    '<p class="zym-pdf-desc">Pilih saiz kertas. Dalam dialog seterusnya, pilih <strong>"Save as PDF"</strong> sebagai destinasi cetak.</p>',
-    '<div class="zym-pdf-size-row">',
-      '<button class="zym-pdf-size-btn is-active" data-size="a4" type="button">A4</button>',
-      '<button class="zym-pdf-size-btn" data-size="a5" type="button">A5</button>',
-    '</div>',
-    '<p class="zym-pdf-size-hint" id="zym-pdf-size-hint">Format standard (210 × 297mm) — sesuai untuk dicetak atau difailkan.</p>',
+    '<p class="zym-pdf-desc">Nota akan diformat untuk kertas <strong>A4</strong>. Dalam dialog seterusnya, pilih <strong>"Save as PDF"</strong> sebagai destinasi. Untuk saiz lain, tukar dalam tetapan pencetak anda.</p>',
     '<button class="btn btn-primary zym-pdf-go-btn" type="button">Muat Turun PDF</button>',
     '<button class="zym-pdf-cancel-btn" type="button">Batal</button>',
   ].join('');
 
   pdfOverlay.appendChild(pdfSheet);
   document.body.appendChild(pdfOverlay);
-
-  var pdfSelectedSize = 'a4';
-  var pdfSizeHint = pdfSheet.querySelector('#zym-pdf-size-hint');
-  var PDF_SIZE_DESC = {
-    a4: 'Format standard (210 × 297mm) — sesuai untuk dicetak atau difailkan.',
-    a5: 'Format lebih kecil (148 × 210mm) — sesuai untuk simpan di telefon atau tablet.'
-  };
-
-  pdfSheet.querySelectorAll('.zym-pdf-size-btn').forEach(function (btn) {
-    btn.addEventListener('click', function () {
-      pdfSheet.querySelectorAll('.zym-pdf-size-btn').forEach(function (b) { b.classList.remove('is-active'); });
-      btn.classList.add('is-active');
-      pdfSelectedSize = btn.getAttribute('data-size');
-      if (pdfSizeHint) pdfSizeHint.textContent = PDF_SIZE_DESC[pdfSelectedSize] || '';
-    });
-  });
 
   function openPdfDialog() {
     pdfOverlay.classList.add('is-open');
@@ -2681,22 +2655,9 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
     if (e.key === 'Escape' && pdfOverlay.classList.contains('is-open')) closePdfDialog();
   });
 
-  var a5StyleTag = null;
-
   pdfSheet.querySelector('.zym-pdf-go-btn').addEventListener('click', function () {
     closePdfDialog();
-    if (a5StyleTag && a5StyleTag.parentNode) { a5StyleTag.parentNode.removeChild(a5StyleTag); a5StyleTag = null; }
-    if (pdfSelectedSize === 'a5') {
-      a5StyleTag = document.createElement('style');
-      a5StyleTag.id = 'zym-a5-override';
-      a5StyleTag.textContent = '@media print{@page{size:A5 portrait;margin:12mm 10mm 16mm 10mm}body{font-size:9.5pt!important;line-height:1.5!important}.paper-board{padding:14px!important;margin-bottom:10px!important}.paper-chip{padding:6px 10px!important;margin-bottom:4px!important}h1{font-size:15pt!important}h2{font-size:12pt!important}h3{font-size:10pt!important}}';
-      document.head.appendChild(a5StyleTag);
-    }
     setTimeout(function () { window.print(); }, 60);
-  });
-
-  window.addEventListener('afterprint', function () {
-    if (a5StyleTag && a5StyleTag.parentNode) { a5StyleTag.parentNode.removeChild(a5StyleTag); a5StyleTag = null; }
   });
 
   pdfBtn.addEventListener('click', openPdfDialog);
