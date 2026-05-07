@@ -750,6 +750,13 @@ body.bab-hub-page .site-footer,
 body.note-reading-app .site-footer,
 body.quiz-page.note-reading-app .site-footer { display: none; }
 
+/* Hide page-footer on mobile quiz pages — it sits inside <main> and steals height from the quiz card */
+@media (max-width: 899px) {
+  body.quiz-page.note-reading-app .page-footer {
+    display: none;
+  }
+}
+
 /* Bab section head */
 .bab-section-head {
   display: flex;
@@ -1009,12 +1016,19 @@ body.quiz-page.js-enhanced main.note-reading-main {
 
 }
 
-/* Pra-kuiz: halaman kekal tanpa scroll (100dvh); kad notis ikut kandungan — tiada scroll dalam kad */
+/* Pra-kuiz: kad notis regang penuh seperti kad kuiz */
 @media (max-width: 899px) {
+  body.quiz-page.note-reading-app.is-quiz-notice-phase .lab-notice-screen {
+    justify-content: flex-start;
+    align-items: stretch;
+    padding-top: 0.25rem;
+    padding-bottom: calc(var(--bottom-nav-h, 60px) + var(--safe-bottom, 0px) + 0.25rem);
+  }
   body.quiz-page.note-reading-app.is-quiz-notice-phase .lab-notice-card {
     max-height: none;
     overflow-x: hidden;
-    overflow-y: visible;
+    overflow-y: auto;
+    flex: 1;
   }
 }
 
