@@ -2482,7 +2482,8 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
     '.zym-pdf-page-hdr{display:flex;align-items:center;justify-content:space-between;padding:5px 9px;border-bottom:0.5px solid #d4d4e8;font-family:Fredoka,sans-serif}',
     '.zym-pdf-page-hdr-l{font-size:0.65rem;font-weight:700;color:#6060a0}',
     '.zym-pdf-page-hdr-r{font-size:0.57rem;color:#b0b0cc;max-width:55%;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;text-align:right}',
-    '.zym-pdf-page-canvas-wrap img{display:block;width:100%;height:auto;border:0}',
+    '.zym-pdf-page-canvas-wrap{aspect-ratio:186/257;overflow:hidden;background:#fff}',
+    '.zym-pdf-page-canvas-wrap img{display:block;width:100%;height:100%;object-fit:cover;border:0}',
     '.zym-pdf-page-ftr{display:flex;align-items:center;justify-content:space-between;padding:4px 9px;border-top:0.5px solid #d4d4e8;font-size:0.55rem;color:#b8b8d0;font-family:Fredoka,sans-serif}',
     '.zym-pdf-page-num{color:#6b7280;font-size:0.7rem;text-align:center;font-family:Fredoka,sans-serif;padding:2px}',
     '@media print{#zym-pdf-overlay{display:none!important}}',
@@ -2740,10 +2741,34 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
                   el.style.setProperty('display', 'none', 'important');
                 });
               });
-              // Kill transitions/animations so capture is instant
-              var noAnim = doc.createElement('style');
-              noAnim.textContent = '*{transition:none!important;animation-duration:0s!important;animation-delay:0s!important}';
-              doc.head.appendChild(noAnim);
+              // Hide "Klik kad..." interactive instructions (not relevant on paper)
+              doc.querySelectorAll('p').forEach(function(p) {
+                var t = p.textContent.trim();
+                if (t.indexOf('Klik kad') !== -1 || t.indexOf('klik kad') !== -1 ||
+                    t.indexOf('akan terbuka') !== -1) {
+                  p.style.setProperty('display', 'none', 'important');
+                }
+              });
+              // Paper-first CSS: remove interactive UI artifacts and clean up for print
+              var paperStyle = doc.createElement('style');
+              paperStyle.textContent = [
+                // Kill all transitions and animations
+                '*{transition:none!important;animation-duration:0s!important;animation-delay:0s!important}',
+                // Remove accordion toggle arrow/icon (::after pseudo-element)
+                '.paper-accordion-trigger::after{display:none!important}',
+                '.paper-accordion-trigger::before{display:none!important}',
+                // Remove interactive cursor/pointer on accordion triggers
+                '.paper-accordion-trigger{cursor:default!important;pointer-events:none!important;border-bottom:none!important}',
+                // Subtler card shadows for paper feel
+                '.paper-board{box-shadow:0 1px 4px rgba(0,0,0,0.06)!important;border:1px solid #eaeaf2!important}',
+                '.paper-accordion{box-shadow:0 1px 4px rgba(0,0,0,0.05)!important;border:1px solid #ececf5!important}',
+                '.paper-accordion-item{border-bottom:1px solid #ececf5!important;break-inside:avoid}',
+                // Chips: no extra shadows
+                '.paper-chip{box-shadow:none!important}',
+                // Remove focus outlines
+                '*{outline:none!important}',
+              ].join('');
+              doc.head.appendChild(paperStyle);
             }
           }).then(function(canvas) {
             window.scrollTo(0, savedScrollY);
@@ -2754,17 +2779,50 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
             var pxPerMm = canvas.width / cW;
             var pxPerPage = Math.round(cH * pxPerMm);
             var numPages = Math.ceil(canvas.height / pxPerPage);
+
+            // Smart split: for each page boundary, scan up to 6% of page height upward
+            // to find a mostly-white row (gap between content blocks).
+            // Sampling every 4 pixels horizontally for speed.
+            function _bestSplitY(approxY) {
+              if (approxY <= 0 || approxY >= canvas.height) return approxY;
+              var ctx2 = canvas.getContext('2d');
+              var maxSearch = Math.min(Math.round(pxPerPage * 0.06), approxY);
+              var sampStep = 4;
+              var sampW = Math.floor(canvas.width / sampStep);
+              var bestY = approxY, bestScore = -1;
+              for (var dy = 0; dy <= maxSearch; dy += 2) {
+                var y = approxY - dy;
+                var row = ctx2.getImageData(0, y, canvas.width, 1).data;
+                var light = 0;
+                for (var xi = 0; xi < row.length; xi += sampStep * 4) {
+                  if (row[xi] > 238 && row[xi+1] > 238 && row[xi+2] > 238) light++;
+                }
+                // Weight: lightness × proximity (prefer closer to nominal boundary)
+                var score = (light / sampW) * (1 - dy / maxSearch * 0.25);
+                if (score > bestScore) { bestScore = score; bestY = y; }
+              }
+              return bestY;
+            }
+
+            // Build split point array using smart detection
+            var splitPts = [0];
+            for (var s = 1; s < numPages; s++) {
+              splitPts.push(_bestSplitY(s * pxPerPage));
+            }
+            splitPts.push(canvas.height);
+
             var pages = [];
             for (var p = 0; p < numPages; p++) {
-              var srcY = p * pxPerPage;
-              var srcH = Math.min(pxPerPage, canvas.height - srcY);
+              var srcY = splitPts[p];
+              var srcH = splitPts[p + 1] - srcY;
               var pc = document.createElement('canvas');
               pc.width = canvas.width;
               pc.height = pxPerPage;
               var pctx = pc.getContext('2d');
               pctx.fillStyle = '#ffffff';
               pctx.fillRect(0, 0, pc.width, pc.height);
-              pctx.drawImage(canvas, 0, srcY, canvas.width, srcH, 0, 0, canvas.width, srcH);
+              // Scale srcH content to fit pxPerPage (srcH ≈ pxPerPage so distortion is minimal)
+              pctx.drawImage(canvas, 0, srcY, canvas.width, srcH, 0, 0, canvas.width, Math.min(srcH, pxPerPage));
               pages.push(pc);
             }
             cb(null, pages, {pageW:pageW,pageH:pageH,mLeft:mLeft,mRight:mRight,mTop:mTop,mBottom:mBottom,cW:cW,cH:cH});
