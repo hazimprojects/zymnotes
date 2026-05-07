@@ -2482,7 +2482,7 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
     '.zym-pdf-page-hdr{display:flex;align-items:center;justify-content:space-between;padding:5px 9px;border-bottom:0.5px solid #d4d4e8;font-family:Fredoka,sans-serif}',
     '.zym-pdf-page-hdr-l{font-size:0.65rem;font-weight:700;color:#6060a0}',
     '.zym-pdf-page-hdr-r{font-size:0.57rem;color:#b0b0cc;max-width:55%;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;text-align:right}',
-    '.zym-pdf-page-canvas-wrap canvas{display:block;width:100%;height:auto}',
+    '.zym-pdf-page-canvas-wrap img{display:block;width:100%;height:auto;border:0}',
     '.zym-pdf-page-ftr{display:flex;align-items:center;justify-content:space-between;padding:4px 9px;border-top:0.5px solid #d4d4e8;font-size:0.55rem;color:#b8b8d0;font-family:Fredoka,sans-serif}',
     '.zym-pdf-page-num{color:#6b7280;font-size:0.7rem;text-align:center;font-family:Fredoka,sans-serif;padding:2px}',
     '@media print{#zym-pdf-overlay{display:none!important}}',
@@ -2687,76 +2687,92 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
     });
   }
 
-  function _prepareContent(cb) {
-    var panelData = [];
-    document.querySelectorAll('.paper-accordion-panel').forEach(function(panel) {
-      panelData.push({ el: panel, mh: panel.style.maxHeight, op: panel.style.opacity, ov: panel.style.overflow, h: panel.style.height });
-      panel.style.setProperty('max-height', 'none', 'important');
-      panel.style.setProperty('height', 'auto', 'important');
-      panel.style.setProperty('opacity', '1', 'important');
-      panel.style.setProperty('overflow', 'visible', 'important');
-    });
-    var hiddenEls = [];
-    ['.hz-bottom-nav','.nota-stat-bar','.site-header','.site-footer','.hero-actions',
-     '.nota-feedback','.keyword-legend-wrap','.note-sparkle-wrap','#zym-print-header','#zym-print-footer'].forEach(function(sel) {
-      document.querySelectorAll(sel).forEach(function(el) {
-        hiddenEls.push(el);
-        el.style.setProperty('display', 'none', 'important');
-      });
-    });
-    requestAnimationFrame(function() {
-      requestAnimationFrame(function() {
-        cb(function restore() {
-          hiddenEls.forEach(function(el) { el.style.removeProperty('display'); });
-          panelData.forEach(function(d) { d.el.style.maxHeight=d.mh; d.el.style.opacity=d.op; d.el.style.overflow=d.ov; d.el.style.height=d.h; });
-        });
-      });
-    });
-  }
-
   function _generatePages(cb) {
     var contentEl = document.querySelector('main.note-reading-main') || document.body;
-    _prepareContent(function(restore) {
-      _ensureLibs(function(err) {
-        if (err) { restore(); cb(err); return; }
-        window.html2canvas(contentEl, {
-          scale: 2,
-          useCORS: true,
-          allowTaint: false,
-          backgroundColor: '#ffffff',
-          logging: false,
-          imageTimeout: 20000,
-          onclone: function(doc) {
-            // Ensure all reveal-on-scroll elements are visible in the clone
-            doc.querySelectorAll('.reveal-on-scroll').forEach(function(el) {
-              el.style.opacity = '1';
-              el.style.transform = 'none';
-            });
-          }
-        }).then(function(canvas) {
-          restore();
-          var mLeft=12, mRight=12, mTop=18, mBottom=22;
-          var pageW=210, pageH=297;
-          var cW = pageW - mLeft - mRight; // 186mm
-          var cH = pageH - mTop - mBottom; // 257mm
-          var pxPerMm = canvas.width / cW;
-          var pxPerPage = Math.round(cH * pxPerMm);
-          var numPages = Math.ceil(canvas.height / pxPerPage);
-          var pages = [];
-          for (var p = 0; p < numPages; p++) {
-            var srcY = p * pxPerPage;
-            var srcH = Math.min(pxPerPage, canvas.height - srcY);
-            var pc = document.createElement('canvas');
-            pc.width = canvas.width;
-            pc.height = pxPerPage;
-            var pctx = pc.getContext('2d');
-            pctx.fillStyle = '#fff';
-            pctx.fillRect(0, 0, pc.width, pc.height);
-            pctx.drawImage(canvas, 0, srcY, canvas.width, srcH, 0, 0, canvas.width, srcH);
-            pages.push(pc);
-          }
-          cb(null, pages, { pageW:pageW,pageH:pageH,mLeft:mLeft,mRight:mRight,mTop:mTop,mBottom:mBottom,cW:cW,cH:cH });
-        }).catch(function(e) { restore(); cb(e); });
+    var savedScrollY = window.scrollY || window.pageYOffset || 0;
+    window.scrollTo(0, 0);
+
+    _ensureLibs(function(err) {
+      if (err) { window.scrollTo(0, savedScrollY); cb(err); return; }
+
+      requestAnimationFrame(function() {
+        requestAnimationFrame(function() {
+          window.html2canvas(contentEl, {
+            scale: 2,
+            useCORS: true,
+            allowTaint: false,
+            backgroundColor: '#ffffff',
+            logging: false,
+            imageTimeout: 30000,
+            windowWidth: 800,
+            onclone: function(doc) {
+              // Force desktop-like width so layout reflects full paper view
+              doc.documentElement.style.setProperty('width', '800px', 'important');
+              doc.documentElement.style.setProperty('max-width', '800px', 'important');
+              doc.body.style.setProperty('width', '800px', 'important');
+              doc.body.style.setProperty('max-width', '800px', 'important');
+              // Always capture in light mode
+              doc.documentElement.removeAttribute('data-theme');
+              // Open all accordion panels
+              doc.querySelectorAll('.paper-accordion-panel').forEach(function(p) {
+                p.style.setProperty('max-height', 'none', 'important');
+                p.style.setProperty('height', 'auto', 'important');
+                p.style.setProperty('opacity', '1', 'important');
+                p.style.setProperty('overflow', 'visible', 'important');
+              });
+              // Fix chip widths (inline, not stretched)
+              doc.querySelectorAll('.paper-chip').forEach(function(c) {
+                c.style.setProperty('width', 'fit-content', 'important');
+                c.style.setProperty('max-width', '100%', 'important');
+                c.style.setProperty('flex', '0 0 auto', 'important');
+              });
+              // Show scroll-reveal elements
+              doc.querySelectorAll('.reveal-on-scroll').forEach(function(el) {
+                el.style.opacity = '1';
+                el.style.transform = 'none';
+              });
+              // Hide UI chrome that should not appear in PDF
+              ['.hz-bottom-nav','.nota-stat-bar','.site-header','.site-footer','.hero-actions',
+               '.nota-feedback','.keyword-legend-wrap','.note-sparkle-wrap',
+               '#zym-pdf-overlay','#zym-pdf-gen-load','#zym-print-header','#zym-print-footer'
+              ].forEach(function(sel) {
+                doc.querySelectorAll(sel).forEach(function(el) {
+                  el.style.setProperty('display', 'none', 'important');
+                });
+              });
+              // Kill transitions/animations so capture is instant
+              var noAnim = doc.createElement('style');
+              noAnim.textContent = '*{transition:none!important;animation-duration:0s!important;animation-delay:0s!important}';
+              doc.head.appendChild(noAnim);
+            }
+          }).then(function(canvas) {
+            window.scrollTo(0, savedScrollY);
+            var mLeft=12, mRight=12, mTop=18, mBottom=22;
+            var pageW=210, pageH=297;
+            var cW = pageW - mLeft - mRight;
+            var cH = pageH - mTop - mBottom;
+            var pxPerMm = canvas.width / cW;
+            var pxPerPage = Math.round(cH * pxPerMm);
+            var numPages = Math.ceil(canvas.height / pxPerPage);
+            var pages = [];
+            for (var p = 0; p < numPages; p++) {
+              var srcY = p * pxPerPage;
+              var srcH = Math.min(pxPerPage, canvas.height - srcY);
+              var pc = document.createElement('canvas');
+              pc.width = canvas.width;
+              pc.height = pxPerPage;
+              var pctx = pc.getContext('2d');
+              pctx.fillStyle = '#ffffff';
+              pctx.fillRect(0, 0, pc.width, pc.height);
+              pctx.drawImage(canvas, 0, srcY, canvas.width, srcH, 0, 0, canvas.width, srcH);
+              pages.push(pc);
+            }
+            cb(null, pages, {pageW:pageW,pageH:pageH,mLeft:mLeft,mRight:mRight,mTop:mTop,mBottom:mBottom,cW:cW,cH:cH});
+          }).catch(function(e) {
+            window.scrollTo(0, savedScrollY);
+            cb(e);
+          });
+        });
       });
     });
   }
@@ -2765,16 +2781,15 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
     var jsPDF = (window.jspdf && window.jspdf.jsPDF) || window.jsPDF;
     if (!jsPDF) { alert('Ralat: pustaka PDF tidak dimuat.'); return; }
     var pdf = new jsPDF({ orientation:'portrait', unit:'mm', format:'a4' });
+    var total = pages.length;
     pages.forEach(function(pc, i) {
       if (i > 0) pdf.addPage();
-      // Content image
-      var imgData = pc.toDataURL('image/jpeg', 0.9);
+      var imgData = pc.toDataURL('image/jpeg', 0.92);
       pdf.addImage(imgData, 'JPEG', dims.mLeft, dims.mTop, dims.cW, dims.cH);
-      // Header separator line
+      // Header
       pdf.setDrawColor(212, 212, 232);
       pdf.setLineWidth(0.3);
       pdf.line(dims.mLeft, dims.mTop - 2, dims.pageW - dims.mRight, dims.mTop - 2);
-      // Header text
       pdf.setFont('helvetica', 'bold');
       pdf.setFontSize(8);
       pdf.setTextColor(96, 96, 160);
@@ -2785,17 +2800,18 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
         pdf.setTextColor(176, 176, 204);
         pdf.text(title, dims.pageW - dims.mRight, dims.mTop - 5, { align:'right', maxWidth: dims.cW * 0.6 });
       }
-      // Footer separator line
+      // Footer
       var fY = dims.pageH - dims.mBottom + 2;
       pdf.setDrawColor(212, 212, 232);
       pdf.line(dims.mLeft, fY, dims.pageW - dims.mRight, fY);
-      // Footer text
       pdf.setFont('helvetica', 'normal');
       pdf.setFontSize(6.5);
       pdf.setTextColor(144, 144, 184);
       pdf.text('zymnotes.com', dims.mLeft, fY + 4);
+      pdf.setTextColor(176, 176, 204);
+      pdf.text((i + 1) + ' / ' + total, dims.pageW / 2, fY + 4, { align:'center' });
       pdf.setTextColor(184, 184, 208);
-      pdf.text('© 2026 ZymNotes · Semua hak cipta terpelihara', dims.pageW - dims.mRight, fY + 4, { align:'right' });
+      pdf.text('© 2026 ZymNotes', dims.pageW - dims.mRight, fY + 4, { align:'right' });
     });
     var fname = (title || 'ZymNotes').replace(/[^\w\sÀ-ɏ-]/g,'').trim().replace(/\s+/g,'-') || 'ZymNotes';
     pdf.save(fname + '.pdf');
@@ -2810,25 +2826,43 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
     var h1El = document.querySelector('.note-hero h1, .papercraft-hero h1');
     _pdfNoteTitle = (h1El ? h1El.textContent : document.title.replace(/\s*·.*$/,'')).trim();
 
-    pdfOverlay.classList.add('is-open');
-    pdfOverlay.setAttribute('aria-hidden', 'false');
-    document.body.style.overflow = 'hidden';
-
-    var pagesDiv = document.getElementById('zym-pdf-pages');
-    var saveBtn = document.getElementById('zym-pdf-save-btn');
-    saveBtn.disabled = true;
-    pagesDiv.innerHTML = '<div id="zym-pdf-loading"><div class="zym-pdf-spinner"></div><p>Sedang menyediakan pratonton…</p></div>';
+    // Show a translucent loading screen OVER the page — NOT the overlay.
+    // Opening the overlay first would block html2canvas from seeing the note content.
+    var genLoad = document.createElement('div');
+    genLoad.id = 'zym-pdf-gen-load';
+    genLoad.innerHTML =
+      '<div class="zym-pdf-spinner" style="width:40px;height:40px;border-width:4px"></div>' +
+      '<p style="margin:0;font-size:0.9rem;font-family:Fredoka,sans-serif">Sedang menyediakan pratonton…</p>';
+    genLoad.style.cssText =
+      'position:fixed;inset:0;z-index:10002;display:flex;flex-direction:column;' +
+      'align-items:center;justify-content:center;gap:14px;' +
+      'background:rgba(15,23,42,0.82);color:#94a3b8;' +
+      'backdrop-filter:blur(3px);-webkit-backdrop-filter:blur(3px)';
+    document.body.appendChild(genLoad);
 
     _generatePages(function(err, pages, dims) {
       _pdfBusy = false;
+      genLoad.remove();
+
       if (err) {
-        pagesDiv.innerHTML = '<div id="zym-pdf-loading"><p style="color:#f87171">Ralat semasa menyediakan PDF. Cuba lagi.</p></div>';
+        var toast = document.createElement('div');
+        toast.style.cssText =
+          'position:fixed;bottom:80px;left:50%;transform:translateX(-50%);' +
+          'background:#ef4444;color:#fff;padding:10px 22px;border-radius:8px;' +
+          'font-size:0.85rem;z-index:10002;font-family:Fredoka,sans-serif;white-space:nowrap';
+        toast.textContent = 'Ralat semasa menyediakan PDF. Cuba lagi.';
+        document.body.appendChild(toast);
+        setTimeout(function() { toast.remove(); }, 4000);
         return;
       }
+
       _pdfPageCanvases = pages;
       _pdfDims = dims;
 
+      var pagesDiv = document.getElementById('zym-pdf-pages');
+      var saveBtn = document.getElementById('zym-pdf-save-btn');
       pagesDiv.innerHTML = '';
+
       pages.forEach(function(pc, i) {
         var outer = document.createElement('div');
         outer.className = 'zym-pdf-page-outer';
@@ -2839,25 +2873,30 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
           '<span class="zym-pdf-page-hdr-r">' + _escPdfHtml(_pdfNoteTitle) + '</span>';
         outer.appendChild(hdr);
 
+        // Use <img> with data URL — moving canvas elements is unreliable across browsers
         var wrap = document.createElement('div');
         wrap.className = 'zym-pdf-page-canvas-wrap';
-        wrap.appendChild(pc);
+        var img = document.createElement('img');
+        img.src = pc.toDataURL('image/jpeg', 0.92);
+        img.alt = '';
+        img.decoding = 'async';
+        wrap.appendChild(img);
         outer.appendChild(wrap);
 
         var ftr = document.createElement('div');
         ftr.className = 'zym-pdf-page-ftr';
-        ftr.innerHTML = '<span>zymnotes.com</span><span>© 2026 ZymNotes · Semua hak cipta terpelihara</span>';
+        ftr.innerHTML = '<span>zymnotes.com</span>' +
+          '<span style="color:#9090b8;font-weight:600">' + (i + 1) + ' / ' + pages.length + '</span>';
         outer.appendChild(ftr);
 
         pagesDiv.appendChild(outer);
-
-        var pgNum = document.createElement('div');
-        pgNum.className = 'zym-pdf-page-num';
-        pgNum.textContent = (i + 1) + ' / ' + pages.length;
-        pagesDiv.appendChild(pgNum);
       });
 
       saveBtn.disabled = false;
+      // Open the overlay AFTER pages are ready
+      pdfOverlay.classList.add('is-open');
+      pdfOverlay.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
       if (pages.length) saveBtn.focus();
     });
   }
