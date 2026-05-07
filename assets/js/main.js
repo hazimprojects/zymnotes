@@ -2642,10 +2642,7 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
   if (!lead) return;
 
   var STAT_REACTIONS = [
-    { key: 'suka',         imgSrc: 'https://img.icons8.com/?size=100&id=5twNojKL5zU7&format=png&color=000000' },
-    { key: 'mudah',        pair: HZ_FLUENT_SPARKLE.faceSmiling  },
-    { key: 'boleh-baik',   pair: HZ_FLUENT_SPARKLE.faceThinking },
-    { key: 'kurang-jelas', pair: HZ_FLUENT_SPARKLE.faceConfused  }
+    { key: 'suka', imgSrc: 'https://img.icons8.com/?size=100&id=5twNojKL5zU7&format=png&color=000000' }
   ];
 
   function pillImg(r) {
