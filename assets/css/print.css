@@ -67,13 +67,15 @@
     align-items: center;
     justify-content: space-between;
     position: fixed;
-    top: 4mm;
+    top: 5mm;
     left: 12mm;
     right: 12mm;
+    height: 8mm;
     padding-bottom: 1.5mm;
     border-bottom: 0.4pt solid #d4d4e8;
     font-family: "Fredoka", sans-serif;
     pointer-events: none;
+    z-index: 9999;
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
   }
@@ -114,15 +116,17 @@
     align-items: center;
     justify-content: space-between;
     position: fixed;
-    bottom: 4mm;
+    bottom: 5mm;
     left: 12mm;
     right: 12mm;
+    height: 7mm;
     padding-top: 1.5mm;
     border-top: 0.4pt solid #d4d4e8;
     font-family: "Fredoka", sans-serif;
     font-size: 6.5pt;
     color: #b8b8d0;
     pointer-events: none;
+    z-index: 9999;
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
   }
@@ -141,13 +145,14 @@
   * { animation: none !important; transition: none !important; }
 
   body {
+    margin: 0 !important;
     padding: 0 !important;
     background: white !important;
     color: #111 !important;
     font-size: 8.5pt !important;
     line-height: 1.35 !important;
-    padding-top: 4mm !important;
-    padding-bottom: 18mm !important;
+    padding-top: 6mm !important;
+    padding-bottom: 20mm !important;
   }
 
   html.hz-themed-scroll-backdrop { background: white !important; }
@@ -245,7 +250,11 @@
      PAPER CHIP — adaptive, mengikut saiz teks
      Susunan bersebelahan seperti desktop
   ══════════════════════════════════════════════════ */
-  .paper-chip-list {
+  .paper-chip-list,
+  .paper-accordion-panel .paper-chip-list,
+  .info-paper .paper-chip-list,
+  .answer-paper .paper-chip-list,
+  .glossary-paper .paper-chip-list {
     display: flex !important;
     flex-direction: row !important;
     flex-wrap: wrap !important;
@@ -253,7 +262,11 @@
     margin-top: 3px !important;
     align-items: flex-start !important;
   }
-  .paper-chip {
+  .paper-chip,
+  .paper-accordion-panel .paper-chip,
+  .info-paper .paper-chip,
+  .answer-paper .paper-chip,
+  .glossary-paper .paper-chip {
     display: inline-flex !important;
     align-items: center !important;
     gap: 4px !important;
@@ -272,8 +285,12 @@
     word-break: normal !important;
   }
   /* Chip dengan ayat panjang — kekal lebar penuh */
-  .paper-chip.paper-chip-sentence {
+  .paper-chip.paper-chip-sentence,
+  .paper-accordion-panel .paper-chip.paper-chip-sentence,
+  .info-paper .paper-chip.paper-chip-sentence,
+  .answer-paper .paper-chip.paper-chip-sentence {
     display: flex !important;
+    flex: 1 1 100% !important;
     width: 100% !important;
     max-width: 100% !important;
   }
