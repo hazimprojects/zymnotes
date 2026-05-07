@@ -2662,18 +2662,16 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
 
   pdfBtn.addEventListener('click', openPdfDialog);
 
-  // ── Footer logo — disembunyi dalam skrin, tunjuk dalam print via CSS ──
-  var printFooter = document.getElementById('zym-print-footer');
-  if (!printFooter) {
-    printFooter = document.createElement('div');
-    printFooter.id = 'zym-print-footer';
-    printFooter.setAttribute('aria-hidden', 'true');
-    printFooter.innerHTML =
-      '<img src="/icons/icon.svg" alt="" width="13" height="13">' +
-      '<span>ZymNotes</span>' +
-      '<span style="opacity:0.6">·</span>' +
-      '<span>zymnotes.com</span>';
-    document.body.appendChild(printFooter);
+  // ── Logo rasmi — tersembunyi dalam skrin, tunjuk di atas kanan dalam print ──
+  var printLogo = document.getElementById('zym-print-logo');
+  if (!printLogo) {
+    printLogo = document.createElement('div');
+    printLogo.id = 'zym-print-logo';
+    printLogo.setAttribute('aria-hidden', 'true');
+    printLogo.innerHTML =
+      '<img src="/icons/icon.svg" alt="" width="15" height="15">' +
+      '<span>ZymNotes</span>';
+    document.body.appendChild(printLogo);
   }
 
   // ── Paksa sembunyikan elemen UI sebelum print (backup untuk CSS) ──

@@ -59,28 +59,43 @@
     print-color-adjust: exact;
   }
 
-  /* ── Footer branding dengan logo — di setiap halaman ─────────── */
-  #zym-print-footer {
+  /* ── Logo rasmi — sudut atas kanan setiap halaman ────────────── */
+  #zym-print-logo {
     display: flex !important;
     align-items: center;
-    justify-content: center;
-    gap: 5px;
+    gap: 4px;
     position: fixed;
-    bottom: 6mm;
-    left: 0;
-    right: 0;
+    top: 5mm;
+    right: 12mm;
     font-family: "Fredoka", sans-serif;
-    font-size: 7pt;
-    color: #c0c0d0;
-    letter-spacing: 0.06em;
+    font-size: 7.5pt;
+    font-weight: 600;
+    color: #a0a0c0;
+    letter-spacing: 0.05em;
     pointer-events: none;
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
   }
-  #zym-print-footer img {
-    width: 13px;
-    height: 13px;
+  #zym-print-logo img {
+    width: 15px;
+    height: 15px;
     opacity: 0.55;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* ── Footer branding teks — di bawah setiap halaman ──────────── */
+  body::after {
+    content: "ZymNotes  ·  zymnotes.com";
+    position: fixed;
+    bottom: 6mm;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-family: "Fredoka", sans-serif;
+    font-size: 7pt;
+    color: #c0c0d0;
+    letter-spacing: 0.06em;
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
   }
@@ -395,7 +410,7 @@
   }
 }
 
-/* ── #zym-print-footer tersembunyi dalam skrin biasa ─────────── */
-#zym-print-footer {
+/* ── #zym-print-logo tersembunyi dalam skrin biasa ──────────── */
+#zym-print-logo {
   display: none;
 }
