@@ -3,6 +3,12 @@
    Untuk guru, pelajar, atau sesiapa yang ingin cetak nota
 ========================= */
 
+/* ── Page size default A4 portrait ───────────────────────────────────── */
+@page {
+  size: A4 portrait;
+  margin: 18mm 15mm 22mm 15mm;
+}
+
 @media print {
   /* ── Hide UI chrome ─────────────────────────────────────────── */
   .site-header,
@@ -17,8 +23,40 @@
   .search-results,
   .search-empty,
   .feedback-widget,
+  .nota-feedback,
+  .keyword-legend-wrap,
   .display-fab,
   .nav-toggle { display: none !important; }
+
+  /* ── Footer branding kanan — muncul setiap halaman ──────────── */
+  body::after {
+    content: "ZymNotes  ·  zymnotes.com";
+    position: fixed;
+    bottom: 7mm;
+    right: 12mm;
+    font-family: "Fredoka", sans-serif;
+    font-size: 7.5pt;
+    color: #b0b0c0;
+    letter-spacing: 0.04em;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* ── Watermark kiri halus — muncul setiap halaman ───────────── */
+  body::before {
+    content: "ZymNotes";
+    position: fixed;
+    bottom: 7mm;
+    left: 12mm;
+    font-family: "Fredoka", sans-serif;
+    font-size: 8pt;
+    font-weight: 600;
+    color: #4f46e5;
+    opacity: 0.15;
+    letter-spacing: 0.1em;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
 
   /* ── Reset layout ───────────────────────────────────────────── */
   body {
@@ -96,8 +134,11 @@
   /* ── Reveal-on-scroll — show all ───────────────────────────── */
   .reveal-on-scroll { opacity: 1 !important; transform: none !important; }
 
-  /* ── Keywords (print with colour hint) ─────────────────────── */
-  .kw-istilah, .kw-tokoh, .kw-tempat, .kw-tarikh, .kw-kerajaan {
+  /* ── Keywords — bold + underline, warna latar dibuang ─────── */
+  .kw-istilah, .kw-tokoh, .kw-tempat, .kw-tarikh,
+  .kw-kerajaan, .kw-masa, .kw-tahun, .kw-konsep,
+  .kw-perjanjian, .kw-peristiwa, .kw-gerakan,
+  .kw-pertubuhan, .kw-karya, .kw-pentadbiran {
     font-weight: 700;
     text-decoration: underline;
     background: none !important;
