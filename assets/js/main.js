@@ -2476,7 +2476,8 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
     '.zym-pdf-go-btn{width:100%;margin-bottom:8px}',
     '.zym-pdf-cancel-btn{background:none;border:none;color:var(--muted,#64748b);font-size:0.82rem;cursor:pointer;padding:4px 0;display:block;width:100%;text-align:center}',
     '.zym-pdf-cancel-btn:hover{color:var(--ink,#0f172a)}',
-    '@media print{#zym-pdf-overlay,#zym-pdf-sheet{display:none!important}}'
+    '@media print{#zym-pdf-overlay,#zym-pdf-sheet{display:none!important}}',
+    '#zym-print-header,#zym-print-footer{display:none}'
   ].join('');
   document.head.appendChild(style);
 

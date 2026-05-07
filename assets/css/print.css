@@ -445,8 +445,3 @@
   }
 }
 
-/* ── Elemen print tersembunyi dalam skrin biasa ─────────────── */
-#zym-print-header,
-#zym-print-footer {
-  display: none;
-}
