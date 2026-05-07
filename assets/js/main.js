@@ -2416,7 +2416,7 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
   style.textContent = [
     '.nota-feedback{text-align:center;padding:1.2rem 1rem 0.6rem;opacity:0;animation:nfb-in 0.4s ease 0.5s forwards}',
     '@keyframes nfb-in{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:none}}',
-    '.nota-feedback-suka-wrap{display:flex;justify-content:center;margin-bottom:0.6rem}',
+    '.nota-feedback-actions{display:flex;justify-content:center;gap:0.5rem;margin-top:0.65rem;flex-wrap:wrap}',
     '.nota-feedback-suka-btn{display:inline-flex;align-items:center;gap:0.35rem;padding:0.38rem 1.3rem;border-radius:999px;border:2px solid rgba(224,80,140,0.28);background:rgba(224,80,140,0.06);color:#b8406a;font-size:0.82rem;font-weight:700;cursor:pointer;transition:transform 0.14s,box-shadow 0.14s,background 0.14s,border-color 0.14s}',
     '.nota-feedback-suka-btn img{width:22px;height:22px;pointer-events:none;flex-shrink:0}',
     '.nota-feedback-suka-btn:hover{transform:scale(1.05);box-shadow:0 3px 12px rgba(224,80,140,0.2)}',
@@ -2433,7 +2433,6 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
     '.nota-feedback-opinion-appr{display:flex;align-items:center;justify-content:center;gap:0.45rem;padding:0.3rem 0;opacity:0;animation:nfb-in 0.35s ease 0.05s forwards}',
     '.nota-feedback-opinion-appr img{width:28px;height:28px;flex-shrink:0}',
     '.nota-feedback-appr-msg{font-size:0.8rem;font-weight:700;color:#8c7d6a;margin:0}',
-    '.nota-feedback-kongsi-wrap{display:flex;justify-content:center;margin-top:0.65rem}',
     '.nota-feedback-kongsi-btn{display:inline-flex;align-items:center;gap:0.35rem;padding:0.34rem 1.1rem;border-radius:999px;border:1.5px solid rgba(50,130,200,0.25);background:rgba(50,130,200,0.05);color:#2a6090;font-size:0.78rem;font-weight:700;cursor:pointer;transition:transform 0.14s,box-shadow 0.14s,background 0.14s}',
     '.nota-feedback-kongsi-btn img{width:18px;height:18px;pointer-events:none;flex-shrink:0}',
     '.nota-feedback-kongsi-btn:hover{transform:scale(1.05);box-shadow:0 3px 10px rgba(50,130,200,0.15)}',
@@ -2444,7 +2443,8 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
     '[data-theme="dark"] .nota-feedback-btn{background:rgba(50,48,44,0.9);border-color:rgba(220,210,190,0.13)}',
     '[data-theme="dark"] .nota-feedback-btn-label{color:#8a8077}',
     '[data-theme="dark"] .nota-feedback-appr-msg{color:#b8aea1}',
-    '[data-theme="dark"] .nota-feedback-kongsi-btn{background:rgba(50,130,200,0.08);border-color:rgba(50,130,200,0.2);color:#6aaad8}'
+    '[data-theme="dark"] .nota-feedback-kongsi-btn{background:rgba(50,130,200,0.08);border-color:rgba(50,130,200,0.2);color:#6aaad8}',
+    '[data-theme="dark"] .nota-feedback-kongsi-btn img{filter:brightness(0) invert(1)}'
   ].join('');
   document.head.appendChild(style);
 
@@ -2503,9 +2503,8 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
   var widget = document.createElement('div');
   widget.className = 'nota-feedback';
 
-  // ── Suka section (toggleable) ─────────────────────
+  // ── Suka section (toggleable, lives in bottom actions row) ───
   var sukaSection = document.createElement('div');
-  sukaSection.className = 'nota-feedback-suka-wrap';
 
   function renderSuka() {
     var active = sukaState.given;
@@ -2562,14 +2561,11 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
     });
   }
 
-  // ── Kongsi Pautan section ─────────────────────────
-  var kongsiSection = document.createElement('div');
-  kongsiSection.className = 'nota-feedback-kongsi-wrap';
-  kongsiSection.innerHTML =
-    '<button class="nota-feedback-kongsi-btn" type="button">' +
-    '<img src="' + KONGSI_SRC + '" alt="" width="18" height="18" loading="lazy">' +
-    '<span>Kongsi Pautan</span></button>';
-  var kongsiBtn = kongsiSection.querySelector('button');
+  // ── Kongsi Pautan button ──────────────────────────
+  var kongsiBtn = document.createElement('button');
+  kongsiBtn.className = 'nota-feedback-kongsi-btn';
+  kongsiBtn.type = 'button';
+  kongsiBtn.innerHTML = '<img src="' + KONGSI_SRC + '" alt="" width="18" height="18" loading="lazy"><span>Kongsi Pautan</span>';
   kongsiBtn.addEventListener('click', function () {
     var url = window.location.href;
     var title = document.title || 'ZymNotes';
@@ -2584,9 +2580,14 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
     }
   });
 
-  widget.appendChild(sukaSection);
+  // ── Bottom actions row: Suka + Kongsi side by side ─
+  var actionsSection = document.createElement('div');
+  actionsSection.className = 'nota-feedback-actions';
+  actionsSection.appendChild(sukaSection);
+  actionsSection.appendChild(kongsiBtn);
+
   widget.appendChild(opinionSection);
-  widget.appendChild(kongsiSection);
+  widget.appendChild(actionsSection);
   insertBefore.parentNode.insertBefore(widget, insertBefore);
 })();
 
@@ -2628,14 +2629,15 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
   if (!lead) return;
 
   var STAT_REACTIONS = [
-    { key: 'suka',         pair: HZ_FLUENT_SPARKLE.sparklingHeart },
+    { key: 'suka',         imgSrc: 'https://img.icons8.com/?size=100&id=5twNojKL5zU7&format=png&color=000000' },
     { key: 'mudah',        pair: HZ_FLUENT_SPARKLE.faceSmiling  },
     { key: 'boleh-baik',   pair: HZ_FLUENT_SPARKLE.faceThinking },
     { key: 'kurang-jelas', pair: HZ_FLUENT_SPARKLE.faceConfused  }
   ];
 
-  function pillImg(pair) {
-    return '<img src="' + hzFluent3dAsset(pair[0], pair[1]) + '" alt="" width="14" height="14" loading="lazy" class="nota-stat-emoji">';
+  function pillImg(r) {
+    var src = r.imgSrc || hzFluent3dAsset(r.pair[0], r.pair[1]);
+    return '<img src="' + src + '" alt="" width="14" height="14" loading="lazy" class="nota-stat-emoji">';
   }
 
   fetchReactionCounts().then(function (counts) {
@@ -2644,12 +2646,12 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
     if (counts) {
       STAT_REACTIONS.forEach(function (r) {
         var n = Number(counts[r.key] || 0);
-        if (n > 0) pills.push(pillImg(r.pair) + '<span>' + n + '</span>');
+        if (n > 0) pills.push(pillImg(r) + '<span>' + n + '</span>');
       });
     }
 
     if (bestScore > 0) {
-      pills.push(pillImg(HZ_FLUENT_SPARKLE.trophy) + '<span>' + bestScore + '%</span>');
+      pills.push(pillImg({ pair: HZ_FLUENT_SPARKLE.trophy }) + '<span>' + bestScore + '%</span>');
     }
 
     if (!pills.length) return;
