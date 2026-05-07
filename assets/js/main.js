@@ -2662,6 +2662,33 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
 
   pdfBtn.addEventListener('click', openPdfDialog);
 
+  // ── Paksa sembunyikan elemen UI sebelum print (backup untuk CSS) ──
+  var PRINT_HIDE_SELECTORS = [
+    '.hz-bottom-nav', '.nota-stat-bar', '.site-header',
+    '.hero-actions', '.nota-feedback', '.keyword-legend-wrap',
+    '.note-sparkle-wrap', '.nota-feedback-pdf-btn', '#zym-pdf-overlay'
+  ].join(', ');
+  var _printHiddenEls = [];
+
+  window.addEventListener('beforeprint', function () {
+    _printHiddenEls = [];
+    document.querySelectorAll(PRINT_HIDE_SELECTORS).forEach(function (el) {
+      if (el.style.display !== 'none') {
+        el.setAttribute('data-zym-print-hidden', '1');
+        el.style.setProperty('display', 'none', 'important');
+        _printHiddenEls.push(el);
+      }
+    });
+  });
+
+  window.addEventListener('afterprint', function () {
+    _printHiddenEls.forEach(function (el) {
+      el.removeAttribute('data-zym-print-hidden');
+      el.style.removeProperty('display');
+    });
+    _printHiddenEls = [];
+  });
+
   // ── Bottom actions row: Suka + Kongsi + PDF ──────────────────
   var actionsSection = document.createElement('div');
   actionsSection.className = 'nota-feedback-actions';
