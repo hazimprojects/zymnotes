@@ -2853,7 +2853,6 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
       } else if (cls.indexOf('paper-accordion') !== -1) {
         h = _renderAccordion(child, h);
       } else if (cls.indexOf('paper-grid') !== -1) {
-        // two-up-grid and similar: render each contained paper-board sequentially
         child.querySelectorAll('.paper-board').forEach(function(board) {
           h = _renderBoard(board, h);
         });
@@ -2863,28 +2862,41 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
 
     var h = '<div class="zp-page">';
 
-    // Walk main's direct children in DOM order so Ringkasan board is included
-    mainEl.childNodes.forEach(function(child) {
+    // Hero: direct child of main
+    var heroEl = mainEl.querySelector('.page-hero');
+    if (heroEl) {
+      var lbl  = heroEl.querySelector('.paper-label');
+      var eye  = heroEl.querySelector('.eyebrow');
+      var h1   = heroEl.querySelector('h1');
+      var lead = heroEl.querySelector('.lead');
+      h += '<div class="zp-hero">';
+      if (lbl)  h += '<span class="zp-chapter-lbl">' + _escPdfHtml(lbl.textContent.trim()) + '</span>';
+      if (eye)  h += '<div class="zp-subtopik">' + _escPdfHtml(eye.textContent.trim()) + '</div>';
+      if (h1)   h += '<h1 class="zp-title">' + _escPdfHtml(h1.textContent.trim()) + '</h1>';
+      if (lead) h += '<p class="zp-desc">' + _kwHtml(lead) + '</p>';
+      h += '</div>';
+    }
+
+    // All note content lives inside .note-section > .container (one level below main)
+    // Walk its direct children in DOM order: master-summary board first, then subsections
+    var contentEl = mainEl.querySelector('.note-section .container') ||
+                    mainEl.querySelector('.container.narrow') ||
+                    mainEl;
+    contentEl.childNodes.forEach(function(child) {
       if (child.nodeType !== 1) return;
       var cls = child.className || '';
-      if (cls.indexOf('page-hero') !== -1) {
-        var lbl  = child.querySelector('.paper-label');
-        var eye  = child.querySelector('.eyebrow');
-        var h1   = child.querySelector('h1');
-        var lead = child.querySelector('.lead');
-        h += '<div class="zp-hero">';
-        if (lbl)  h += '<span class="zp-chapter-lbl">' + _escPdfHtml(lbl.textContent.trim()) + '</span>';
-        if (eye)  h += '<div class="zp-subtopik">' + _escPdfHtml(eye.textContent.trim()) + '</div>';
-        if (h1)   h += '<h1 class="zp-title">' + _escPdfHtml(h1.textContent.trim()) + '</h1>';
-        if (lead) h += '<p class="zp-desc">' + _kwHtml(lead) + '</p>';
-        h += '</div>';
+      // Skip audio player and other non-content elements
+      if (cls.indexOf('note-audio') !== -1) return;
+      if (cls.indexOf('cv-lab') !== -1) return;
+      if (cls.indexOf('pdf-') !== -1) return;
+
+      if (cls.indexOf('paper-board') !== -1) {
+        // master-summary-paper (Ringkasan) and other direct boards
+        h = _renderBoard(child, h);
       } else if (cls.indexOf('note-subsection') !== -1) {
         child.childNodes.forEach(function(c) {
           if (c.nodeType === 1) h = _renderSubChild(c, h);
         });
-      } else if (cls.indexOf('paper-board') !== -1) {
-        // Direct board on main (e.g. master-summary-paper / Ringkasan)
-        h = _renderBoard(child, h);
       }
     });
 
@@ -4371,7 +4383,7 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
   if (!('serviceWorker' in navigator)) return;
 
   window.addEventListener('load', function () {
-    navigator.serviceWorker.register('/sw.js?v=374').catch(function (error) {
+    navigator.serviceWorker.register('/sw.js?v=375').catch(function (error) {
       console.warn('Service worker registration failed:', error);
     });
   });
