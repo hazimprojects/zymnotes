@@ -2708,11 +2708,18 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
       if (node.nodeType !== 1) return;
       var cls = node.className || '', tag = node.tagName;
       if (cls.indexOf('paper-chip-list') !== -1) {
-        h += '<div class="zp-chips">';
-        node.querySelectorAll('.paper-chip').forEach(function(c) {
-          h += '<span class="zp-chip">' + _kwHtml(c) + '</span>';
-        });
-        h += '</div>';
+        var hasSentence = node.querySelector('.paper-chip-sentence') !== null;
+        if (hasSentence) {
+          node.querySelectorAll('.paper-chip').forEach(function(c) {
+            h += '<p class="zp-sentence">' + _kwHtml(c) + '</p>';
+          });
+        } else {
+          h += '<div class="zp-chips">';
+          node.querySelectorAll('.paper-chip').forEach(function(c) {
+            h += '<span class="zp-chip">' + _kwHtml(c) + '</span>';
+          });
+          h += '</div>';
+        }
       } else if (cls.indexOf('point-heading') !== -1) {
         h += '<p class="zp-ph">' + _kwHtml(node) + '</p>';
       } else if (cls.indexOf('point-line') !== -1) {
@@ -2761,84 +2768,126 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
           }
           h += '</div>';
         });
+      } else if (cls.indexOf('org-chart') !== -1) {
+        node.querySelectorAll('.org-level').forEach(function(level, li) {
+          var lc = level.className;
+          var nodes = level.querySelectorAll('.org-node');
+          var isL2 = lc.indexOf('org-level-2') !== -1;
+          var isL3 = lc.indexOf('org-level-3') !== -1;
+          if (li > 0) h += '<p style="color:#6366f1;font-size:12px;margin:2px 0 2px ' + (isL3 ? '40px' : isL2 ? '20px' : '0') + '">↓</p>';
+          if (isL3) {
+            h += '<div class="zp-chips" style="padding-left:40px">';
+            nodes.forEach(function(n) { h += '<span class="zp-chip">' + _escPdfHtml(n.textContent.trim()) + '</span>'; });
+            h += '</div>';
+          } else {
+            nodes.forEach(function(n) {
+              var ps = isL2 ? ' style="padding-left:20px"' : '';
+              h += '<p class="zp-ph"' + ps + '>' + _escPdfHtml(n.textContent.trim()) + '</p>';
+            });
+          }
+        });
       } else { h += _bodyHtml(node); }
     });
     return h;
   }
 
   function _buildPrintHtml(mainEl) {
-    var h = '<div class="zp-page">';
-    var heroEl = mainEl.querySelector('.page-hero');
-    if (heroEl) {
-      var lbl = heroEl.querySelector('.paper-label');
-      var eye = heroEl.querySelector('.eyebrow');
-      var h1  = heroEl.querySelector('h1');
-      var lead = heroEl.querySelector('.lead');
-      h += '<div class="zp-hero">';
-      if (lbl)  h += '<span class="zp-chapter-lbl">' + _escPdfHtml(lbl.textContent.trim()) + '</span>';
-      if (eye)  h += '<div class="zp-subtopik">' + _escPdfHtml(eye.textContent.trim()) + '</div>';
-      if (h1)   h += '<h1 class="zp-title">' + _escPdfHtml(h1.textContent.trim()) + '</h1>';
-      if (lead) h += '<p class="zp-desc">' + _kwHtml(lead) + '</p>';
+    function _renderBoard(el, h) {
+      var strip = el.querySelector('.paper-strip');
+      var body  = el.querySelector('.cv-unit-body');
+      var color = '#4f46e5';
+      if (strip) {
+        var sc = strip.className;
+        if (sc.indexOf('strip-summary') !== -1) color = '#16a34a';
+        else if (sc.indexOf('strip-info') !== -1) color = '#2563eb';
+        else if (sc.indexOf('strip-glossary') !== -1) color = '#7c3aed';
+        else if (sc.indexOf('strip-sub') !== -1) color = '#d97706';
+      }
+      h += '<div class="zp-board" style="border-color:' + color + '">';
+      if (strip) h += '<div class="zp-board-lbl" style="color:' + color + '">' + _escPdfHtml(strip.textContent.trim()) + '</div>';
+      if (body) h += _bodyHtml(body);
       h += '</div>';
+      return h;
     }
-    // Process each subsection in DOM order so headings always precede their content
-    mainEl.querySelectorAll('.note-subsection').forEach(function(sub) {
-      sub.childNodes.forEach(function(child) {
-        if (child.nodeType !== 1) return;
-        var cls = child.className || '';
-        if (cls.indexOf('paper-flap-card') !== -1) {
-          var fTop = child.querySelector('.flap-top');
-          var fQ   = child.querySelector('.point-heading');
-          var fA   = child.querySelector('.answer-paper');
-          h += '<div class="zp-flap">';
-          if (fTop) h += '<div class="zp-flap-top">' + _escPdfHtml(fTop.textContent.trim()) + '</div>';
-          if (fQ)   h += '<div class="zp-flap-q">' + _kwHtml(fQ) + '</div>';
-          if (fA)   h += '<div class="zp-flap-a">' + _bodyHtml(fA) + '</div>';
+    function _renderAccordion(el, h) {
+      var idx = 0;
+      el.querySelectorAll('.paper-accordion-item').forEach(function(item) {
+        idx++;
+        var trig  = item.querySelector('.paper-accordion-trigger');
+        var panel = item.querySelector('.paper-accordion-panel');
+        h += '<div class="zp-acc">';
+        if (trig) {
+          var ttl = trig.querySelector('.paper-accordion-title');
+          h += '<div class="zp-acc-hd"><span class="zp-acc-num">' + idx + '</span>';
+          if (ttl) h += '<span class="zp-acc-ttl">' + _escPdfHtml(ttl.textContent.trim()) + '</span>';
           h += '</div>';
-        } else if (cls.indexOf('section-heading') !== -1) {
-          var badge = child.querySelector('.paper-label');
-          var sh2   = child.querySelector('h2');
-          h += '<div class="zp-section">';
-          if (badge) h += '<span class="zp-section-badge">' + _escPdfHtml(badge.textContent.trim()) + '</span>';
-          if (sh2)   h += '<h2 class="zp-section-title">' + _kwHtml(sh2) + '</h2>';
-          h += '</div>';
-        } else if (cls.indexOf('paper-board') !== -1) {
-          var strip = child.querySelector('.paper-strip');
-          var body  = child.querySelector('.cv-unit-body');
-          var color = '#4f46e5';
-          if (strip) {
-            var sc = strip.className;
-            if (sc.indexOf('strip-summary') !== -1) color = '#16a34a';
-            else if (sc.indexOf('strip-info') !== -1) color = '#2563eb';
-            else if (sc.indexOf('strip-glossary') !== -1) color = '#7c3aed';
-            else if (sc.indexOf('strip-sub') !== -1) color = '#d97706';
-          }
-          h += '<div class="zp-board" style="border-color:' + color + '">';
-          if (strip) h += '<div class="zp-board-lbl" style="color:' + color + '">' + _escPdfHtml(strip.textContent.trim()) + '</div>';
-          if (body) h += _bodyHtml(body);
-          h += '</div>';
-        } else if (cls.indexOf('paper-accordion') !== -1) {
-          var idx = 0;
-          child.querySelectorAll('.paper-accordion-item').forEach(function(item) {
-            idx++;
-            var trig  = item.querySelector('.paper-accordion-trigger');
-            var panel = item.querySelector('.paper-accordion-panel');
-            h += '<div class="zp-acc">';
-            if (trig) {
-              var ttl = trig.querySelector('.paper-accordion-title');
-              h += '<div class="zp-acc-hd"><span class="zp-acc-num">' + idx + '</span>';
-              if (ttl) h += '<span class="zp-acc-ttl">' + _escPdfHtml(ttl.textContent.trim()) + '</span>';
-              h += '</div>';
-            }
-            if (panel) {
-              var body2 = panel.querySelector('.cv-unit-body');
-              h += '<div class="zp-acc-body">' + (body2 ? _bodyHtml(body2) : '') + '</div>';
-            }
-            h += '</div>';
-          });
         }
+        if (panel) {
+          var body2 = panel.querySelector('.cv-unit-body');
+          h += '<div class="zp-acc-body">' + (body2 ? _bodyHtml(body2) : '') + '</div>';
+        }
+        h += '</div>';
       });
+      return h;
+    }
+    function _renderSubChild(child, h) {
+      var cls = child.className || '';
+      if (cls.indexOf('paper-flap-card') !== -1) {
+        var fTop = child.querySelector('.flap-top');
+        var fQ   = child.querySelector('.point-heading');
+        var fA   = child.querySelector('.answer-paper');
+        h += '<div class="zp-flap">';
+        if (fTop) h += '<div class="zp-flap-top">' + _escPdfHtml(fTop.textContent.trim()) + '</div>';
+        if (fQ)   h += '<div class="zp-flap-q">' + _kwHtml(fQ) + '</div>';
+        if (fA)   h += '<div class="zp-flap-a">' + _bodyHtml(fA) + '</div>';
+        h += '</div>';
+      } else if (cls.indexOf('section-heading') !== -1) {
+        var badge = child.querySelector('.paper-label');
+        var sh2   = child.querySelector('h2');
+        h += '<div class="zp-section">';
+        if (badge) h += '<span class="zp-section-badge">' + _escPdfHtml(badge.textContent.trim()) + '</span>';
+        if (sh2)   h += '<h2 class="zp-section-title">' + _kwHtml(sh2) + '</h2>';
+        h += '</div>';
+      } else if (cls.indexOf('paper-board') !== -1) {
+        h = _renderBoard(child, h);
+      } else if (cls.indexOf('paper-accordion') !== -1) {
+        h = _renderAccordion(child, h);
+      } else if (cls.indexOf('paper-grid') !== -1) {
+        // two-up-grid and similar: render each contained paper-board sequentially
+        child.querySelectorAll('.paper-board').forEach(function(board) {
+          h = _renderBoard(board, h);
+        });
+      }
+      return h;
+    }
+
+    var h = '<div class="zp-page">';
+
+    // Walk main's direct children in DOM order so Ringkasan board is included
+    mainEl.childNodes.forEach(function(child) {
+      if (child.nodeType !== 1) return;
+      var cls = child.className || '';
+      if (cls.indexOf('page-hero') !== -1) {
+        var lbl  = child.querySelector('.paper-label');
+        var eye  = child.querySelector('.eyebrow');
+        var h1   = child.querySelector('h1');
+        var lead = child.querySelector('.lead');
+        h += '<div class="zp-hero">';
+        if (lbl)  h += '<span class="zp-chapter-lbl">' + _escPdfHtml(lbl.textContent.trim()) + '</span>';
+        if (eye)  h += '<div class="zp-subtopik">' + _escPdfHtml(eye.textContent.trim()) + '</div>';
+        if (h1)   h += '<h1 class="zp-title">' + _escPdfHtml(h1.textContent.trim()) + '</h1>';
+        if (lead) h += '<p class="zp-desc">' + _kwHtml(lead) + '</p>';
+        h += '</div>';
+      } else if (cls.indexOf('note-subsection') !== -1) {
+        child.childNodes.forEach(function(c) {
+          if (c.nodeType === 1) h = _renderSubChild(c, h);
+        });
+      } else if (cls.indexOf('paper-board') !== -1) {
+        // Direct board on main (e.g. master-summary-paper / Ringkasan)
+        h = _renderBoard(child, h);
+      }
     });
+
     h += '</div>';
     return h;
   }
@@ -2883,6 +2932,7 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
       // Text
       '#zym-pr p.zp-p{font-size:12px;color:#3a3a5a;margin:4px 0 6px;line-height:1.55}',
       '#zym-pr p.zp-ph{font-size:12.5px;font-weight:700;color:#1a1a3a;margin:6px 0 4px}',
+      '#zym-pr p.zp-sentence{font-size:12px;color:#3a3a5a;margin:5px 0;padding:5px 10px;border-left:3px solid #c7d2fe;line-height:1.6}',
       // Keywords
       '#zym-pr .zpkw-istilah{color:#7c3aed;font-weight:700}',
       '#zym-pr .zpkw-tempat{color:#0f766e;font-weight:700}',
@@ -4321,7 +4371,7 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
   if (!('serviceWorker' in navigator)) return;
 
   window.addEventListener('load', function () {
-    navigator.serviceWorker.register('/sw.js?v=373').catch(function (error) {
+    navigator.serviceWorker.register('/sw.js?v=374').catch(function (error) {
       console.warn('Service worker registration failed:', error);
     });
   });
