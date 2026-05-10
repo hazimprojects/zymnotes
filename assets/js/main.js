@@ -2474,16 +2474,25 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
     '#zym-pdf-save-btn:disabled{opacity:0.55;cursor:default;pointer-events:none}',
     '#zym-pdf-close-btn{width:34px;height:34px;border-radius:50%;border:none;background:rgba(255,255,255,0.07);color:#94a3b8;font-size:1.1rem;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:background 0.14s,color 0.14s}',
     '#zym-pdf-close-btn:hover{background:rgba(255,255,255,0.15);color:#e2e8f0}',
-    '#zym-pdf-pages{flex:1;overflow-y:auto;padding:16px 12px;display:flex;flex-direction:column;align-items:center;gap:14px;background:#2d3748}',
-    '#zym-pdf-loading{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:60px 24px;color:#94a3b8;font-size:0.85rem;text-align:center;width:100%}',
+    '#zym-pdf-pages-viewport{flex:1;position:relative;min-height:0;display:flex;flex-direction:column;background:#1e293b}',
+    '#zym-pdf-pages{flex:1;display:flex;flex-direction:row;align-items:center;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scroll-behavior:smooth;gap:0;width:100%;scrollbar-width:thin;overscroll-behavior-x:contain}',
+    '#zym-pdf-pages::-webkit-scrollbar{height:6px}',
+    '#zym-pdf-pages::-webkit-scrollbar-thumb{background:rgba(255,255,255,0.18);border-radius:3px}',
+    '.zym-pdf-page-slide{flex:0 0 100%;width:100%;min-width:100%;max-width:100%;box-sizing:border-box;scroll-snap-align:center;scroll-snap-stop:always;display:flex;align-items:center;justify-content:center;padding:12px 44px 18px;min-height:0}',
+    '#zym-pdf-carousel-prev,#zym-pdf-carousel-next{position:absolute;top:50%;transform:translateY(-50%);z-index:3;width:40px;height:40px;border-radius:50%;border:none;background:rgba(15,23,42,0.55);color:#e2e8f0;font-size:1.35rem;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 12px rgba(0,0,0,0.35);transition:background 0.15s,color 0.15s}',
+    '#zym-pdf-carousel-prev:hover,#zym-pdf-carousel-next:hover{background:rgba(79,70,229,0.55);color:#fff}',
+    '#zym-pdf-carousel-prev:disabled,#zym-pdf-carousel-next:disabled{opacity:0.25;cursor:default;pointer-events:none}',
+    '#zym-pdf-carousel-prev{left:6px}',
+    '#zym-pdf-carousel-next{right:6px}',
+    '#zym-pdf-loading{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:60px 24px;color:#94a3b8;font-size:0.85rem;text-align:center;width:100%;min-width:100%}',
     '.zym-pdf-spinner{width:36px;height:36px;border:3px solid rgba(79,70,229,0.2);border-top-color:#4f46e5;border-radius:50%;animation:zym-spin 0.8s linear infinite;flex-shrink:0}',
     '@keyframes zym-spin{to{transform:rotate(360deg)}}',
-    '.zym-pdf-page-outer{background:#fff;box-shadow:0 6px 28px rgba(0,0,0,0.4);width:100%;max-width:520px;overflow:hidden;border-radius:2px}',
+    '.zym-pdf-page-outer{background:#fff;box-shadow:0 6px 28px rgba(0,0,0,0.4);width:100%;max-width:min(520px,calc(100vw - 88px));overflow:hidden;border-radius:2px;flex-shrink:0}',
     '.zym-pdf-page-hdr{display:flex;align-items:center;justify-content:space-between;padding:5px 9px;border-bottom:0.5px solid #d4d4e8;font-family:Fredoka,sans-serif}',
     '.zym-pdf-page-hdr-l{font-size:0.65rem;font-weight:700;color:#6060a0}',
     '.zym-pdf-page-hdr-r{font-size:0.57rem;color:#b0b0cc;max-width:55%;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;text-align:right}',
-    '.zym-pdf-page-canvas-wrap{aspect-ratio:186/257;overflow:hidden;background:#fff}',
-    '.zym-pdf-page-canvas-wrap img{display:block;width:100%;height:100%;object-fit:cover;border:0}',
+    '.zym-pdf-page-canvas-wrap{display:flex;align-items:center;justify-content:center;background:#fff;min-height:0}',
+    '.zym-pdf-page-canvas-wrap img{display:block;max-width:100%;max-height:min(72vh,calc(100dvh - 210px));width:auto;height:auto;object-fit:contain;border:0}',
     '.zym-pdf-page-ftr{display:flex;align-items:center;justify-content:space-between;padding:4px 9px;border-top:0.5px solid #d4d4e8;font-size:0.55rem;color:#b8b8d0;font-family:Fredoka,sans-serif}',
     '.zym-pdf-page-num{color:#6b7280;font-size:0.7rem;text-align:center;font-family:Fredoka,sans-serif;padding:2px}',
     '@media print{#zym-pdf-overlay{display:none!important}}',
@@ -2645,14 +2654,62 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
       '</button>',
       '<button id="zym-pdf-close-btn" type="button" aria-label="Tutup">✕</button>',
     '</div>',
-    '<div id="zym-pdf-pages">',
-      '<div id="zym-pdf-loading">',
-        '<div class="zym-pdf-spinner"></div>',
-        '<p>Sedang menyediakan pratonton…</p>',
+    '<div id="zym-pdf-pages-viewport" class="zym-pdf-pages-viewport">',
+      '<div id="zym-pdf-pages">',
+        '<div id="zym-pdf-loading">',
+          '<div class="zym-pdf-spinner"></div>',
+          '<p>Sedang menyediakan pratonton…</p>',
+        '</div>',
       '</div>',
+      '<button type="button" id="zym-pdf-carousel-prev" aria-label="Halaman sebelumnya">‹</button>',
+      '<button type="button" id="zym-pdf-carousel-next" aria-label="Halaman seterusnya">›</button>',
     '</div>'
   ].join('');
   document.body.appendChild(pdfOverlay);
+
+  function _pdfUpdateCarouselUi() {
+    var track = document.getElementById('zym-pdf-pages');
+    var prev = document.getElementById('zym-pdf-carousel-prev');
+    var next = document.getElementById('zym-pdf-carousel-next');
+    var ttl = document.getElementById('zym-pdf-topbar-title');
+    if (!track || !prev || !next) return;
+    var slides = track.querySelectorAll('.zym-pdf-page-slide');
+    var n = slides.length;
+    if (!n) {
+      prev.disabled = true;
+      next.disabled = true;
+      if (ttl) ttl.textContent = 'Pratonton PDF';
+      return;
+    }
+    var cw = track.clientWidth || 1;
+    var idx = Math.min(n - 1, Math.max(0, Math.round(track.scrollLeft / cw)));
+    prev.disabled = idx <= 0;
+    next.disabled = idx >= n - 1;
+    if (ttl) ttl.textContent = 'Pratonton PDF · ' + (idx + 1) + ' / ' + n;
+  }
+
+  (function _pdfCarouselInit() {
+    var track = document.getElementById('zym-pdf-pages');
+    if (!track || track.dataset.zymPdfCarousel) return;
+    track.dataset.zymPdfCarousel = '1';
+    track.addEventListener('scroll', function() {
+      requestAnimationFrame(_pdfUpdateCarouselUi);
+    }, { passive: true });
+    var prev = document.getElementById('zym-pdf-carousel-prev');
+    var next = document.getElementById('zym-pdf-carousel-next');
+    if (prev) {
+      prev.addEventListener('click', function() {
+        var t = document.getElementById('zym-pdf-pages');
+        if (t) t.scrollBy({ left: -(t.clientWidth || 0), behavior: 'smooth' });
+      });
+    }
+    if (next) {
+      next.addEventListener('click', function() {
+        var t = document.getElementById('zym-pdf-pages');
+        if (t) t.scrollBy({ left: (t.clientWidth || 0), behavior: 'smooth' });
+      });
+    }
+  })();
 
   var _pdfPageCanvases = [];
   var _pdfDims = null;
@@ -2909,21 +2966,21 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
       '#zym-pr{position:fixed;left:-9999px;top:0;width:794px;background:#fff;font-size:13px;color:#1a1a3a;line-height:1.5;z-index:-9999;pointer-events:none}',
       '#zym-pr .zp-page{padding:0 36px 32px}',
       // Hero
-      '#zym-pr .zp-hero{padding:22px 0 14px;border-bottom:2px solid #4f46e5;margin-bottom:16px}',
+      '#zym-pr .zp-hero{padding:22px 0 14px;border-bottom:2px solid #4f46e5;margin-bottom:16px;break-inside:avoid;page-break-inside:avoid}',
       '#zym-pr .zp-chapter-lbl{display:inline-block;font-size:8px;font-weight:700;color:#fff;background:#4f46e5;padding:2px 10px;border-radius:4px;letter-spacing:.06em;text-transform:uppercase;margin-bottom:6px}',
       '#zym-pr .zp-subtopik{font-size:9px;color:#6b7280;letter-spacing:.1em;text-transform:uppercase;margin:4px 0 5px}',
       '#zym-pr h1.zp-title{font-size:21px;font-weight:700;color:#1e1e3a;line-height:1.2;margin:0 0 8px}',
       '#zym-pr .zp-desc{font-size:11.5px;color:#4a4a6a;margin:0;line-height:1.55}',
       // Boards
-      '#zym-pr .zp-board{border:1.5px solid;border-left-width:4px;border-radius:0 8px 8px 0;padding:10px 14px;margin-bottom:12px;background:#fafaff}',
+      '#zym-pr .zp-board{border:1.5px solid;border-left-width:4px;border-radius:0 8px 8px 0;padding:10px 14px;margin-bottom:12px;background:#fafaff;break-inside:avoid;page-break-inside:avoid}',
       '#zym-pr .zp-board-lbl{font-size:8px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;margin-bottom:8px}',
       // Flap card (Soalan Utama)
-      '#zym-pr .zp-flap{border:1.5px solid #d97706;border-radius:8px;overflow:hidden;margin-bottom:14px}',
+      '#zym-pr .zp-flap{border:1.5px solid #d97706;border-radius:8px;overflow:hidden;margin-bottom:14px;break-inside:avoid;page-break-inside:avoid}',
       '#zym-pr .zp-flap-top{background:#fef3c7;padding:7px 14px;font-size:11px;font-weight:700;color:#92400e;border-bottom:1px solid #fde68a}',
       '#zym-pr .zp-flap-q{padding:10px 14px 4px;font-size:12px;font-weight:700;color:#1a1a3a}',
       '#zym-pr .zp-flap-a{padding:4px 14px 10px;font-size:12px;color:#3a3a5a;background:#fffbf0}',
       // Section
-      '#zym-pr .zp-section{margin:18px 0 8px}',
+      '#zym-pr .zp-section{margin:18px 0 8px;break-inside:avoid;page-break-inside:avoid}',
       '#zym-pr .zp-section-badge{display:inline-block;font-size:8px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#fff;background:#4f46e5;padding:3px 10px;border-radius:999px;margin-bottom:6px}',
       '#zym-pr h2.zp-section-title{font-size:15px;font-weight:700;color:#1e1e3a;margin:0 0 8px;line-height:1.3}',
       // Accordion
@@ -2953,6 +3010,23 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
       '#zym-pr .zpkw-konsep{color:#7c3aed;font-weight:700}',
       '#zym-pr .zpkw-kerajaan{color:#0f766e;font-weight:700}',
     ].join('');
+  }
+
+  /** Koordinat piksel kanvas (html2canvas scale) untuk blok — elak pisah tengah kotak / eyebrow+badan. */
+  function _collectPdfBlockRanges(container, scale) {
+    var ranges = [];
+    if (!container || !scale) return ranges;
+    try {
+      var cr = container.getBoundingClientRect();
+      var sel = '.zp-hero, .zp-board, .zp-section, .zp-flap, .zp-acc';
+      container.querySelectorAll(sel).forEach(function(el) {
+        var r = el.getBoundingClientRect();
+        var top = (r.top - cr.top) * scale;
+        var bottom = (r.bottom - cr.top) * scale;
+        if (bottom > top + 2) ranges.push({ top: top, bottom: bottom });
+      });
+    } catch (e) {}
+    return ranges;
   }
 
   function _generatePages(cb) {
@@ -2985,8 +3059,11 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
 
       requestAnimationFrame(function() {
         requestAnimationFrame(function() {
+          var h2cScale = 2;
+          void container.offsetHeight;
+          var blockRanges = _collectPdfBlockRanges(container, h2cScale);
           window.html2canvas(container, {
-            scale: 2,
+            scale: h2cScale,
             useCORS: true,
             allowTaint: false,
             backgroundColor: '#ffffff',
@@ -3006,29 +3083,69 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
             var pxPerMm = canvas.width / cW;
             var pxPerPage = Math.round(cH * pxPerMm);
             var numPages = Math.ceil(canvas.height / pxPerPage);
+            var ctxFull = canvas.getContext('2d');
+            var cwPx = canvas.width;
 
-            // Smart split: scan up to 6% above each boundary for a mostly-white row
-            function _bestSplitY(approxY) {
-              if (approxY <= 0 || approxY >= canvas.height) return approxY;
-              var ctx2 = canvas.getContext('2d');
-              var maxSearch = Math.min(Math.round(pxPerPage * 0.06), approxY);
-              var sampW = Math.floor(canvas.width / 4);
-              var bestY = approxY, bestScore = -1;
-              for (var dy = 0; dy <= maxSearch; dy += 2) {
-                var y = approxY - dy;
-                var row = ctx2.getImageData(0, y, canvas.width, 1).data;
-                var light = 0;
-                for (var xi = 0; xi < row.length; xi += 16) {
-                  if (row[xi] > 238 && row[xi+1] > 238 && row[xi+2] > 238) light++;
-                }
-                var score = (light / sampW) * (1 - dy / maxSearch * 0.25);
-                if (score > bestScore) { bestScore = score; bestY = y; }
+            function _rowWhiteness(y) {
+              if (y < 0 || y >= canvas.height) return 0;
+              var row = ctxFull.getImageData(0, y, cwPx, 1).data;
+              var light = 0;
+              var samp = 0;
+              for (var xi = 0; xi < row.length; xi += 16) {
+                samp++;
+                if (row[xi] > 235 && row[xi + 1] > 235 && row[xi + 2] > 235) light++;
               }
-              return bestY;
+              return samp ? light / samp : 0;
+            }
+
+            function _rowBisectsBlock(y, ranges) {
+              for (var i = 0; i < ranges.length; i++) {
+                var rg = ranges[i];
+                if (y > rg.top && y < rg.bottom) return true;
+              }
+              return false;
+            }
+
+            /** Cari baris pisahan: utamakan yang tidak melintasi blok; kemudian “ruang putih”. */
+            function _pickPdfSplitY(approxY, ranges, minY) {
+              var maxSearch = Math.min(Math.round(pxPerPage * 0.16), approxY - minY);
+              if (maxSearch < 0) maxSearch = 0;
+              var bestSafeY = -1;
+              var bestSafeWhite = -1;
+              var bestAnyY = approxY;
+              var bestAnyCombo = -1e9;
+              for (var dy = 0; dy <= maxSearch; dy++) {
+                var y = Math.floor(approxY - dy);
+                if (y <= minY) break;
+                var white = _rowWhiteness(y);
+                var bisects = _rowBisectsBlock(y, ranges);
+                var penalty = (maxSearch > 0 ? dy / maxSearch : 0) * 0.14;
+                var combo = white - penalty;
+                if (!bisects && white > bestSafeWhite) {
+                  bestSafeWhite = white;
+                  bestSafeY = y;
+                }
+                if (combo > bestAnyCombo) {
+                  bestAnyCombo = combo;
+                  bestAnyY = y;
+                }
+              }
+              if (bestSafeY > minY && bestSafeWhite > 0.22) return bestSafeY;
+              if (bestAnyY > minY) return bestAnyY;
+              return Math.max(minY + 1, Math.min(approxY, canvas.height - 1));
             }
 
             var splitPts = [0];
-            for (var s = 1; s < numPages; s++) splitPts.push(_bestSplitY(s * pxPerPage));
+            var minGapPx = Math.min(Math.round(pxPerPage * 0.1), 110);
+            for (var s = 1; s < numPages; s++) {
+              var ideal = Math.round(s * pxPerPage);
+              var prevY = splitPts[s - 1];
+              var minY = Math.min(prevY + minGapPx, ideal - 6);
+              if (minY >= ideal) minY = prevY + 40;
+              var yPick = _pickPdfSplitY(ideal, blockRanges, minY);
+              if (yPick <= prevY) yPick = Math.min(prevY + minGapPx, canvas.height - 2);
+              splitPts.push(yPick);
+            }
             splitPts.push(canvas.height);
 
             var pages = [];
@@ -3138,6 +3255,9 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
       pagesDiv.innerHTML = '';
 
       pages.forEach(function(pc, i) {
+        var slide = document.createElement('div');
+        slide.className = 'zym-pdf-page-slide';
+
         var outer = document.createElement('div');
         outer.className = 'zym-pdf-page-outer';
 
@@ -3163,8 +3283,12 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
           '<span style="color:#9090b8;font-weight:600">' + (i + 1) + ' / ' + pages.length + '</span>';
         outer.appendChild(ftr);
 
-        pagesDiv.appendChild(outer);
+        slide.appendChild(outer);
+        pagesDiv.appendChild(slide);
       });
+
+      pagesDiv.scrollLeft = 0;
+      requestAnimationFrame(_pdfUpdateCarouselUi);
 
       saveBtn.disabled = false;
       // Open the overlay AFTER pages are ready
@@ -3179,6 +3303,8 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
     pdfOverlay.classList.remove('is-open');
     pdfOverlay.setAttribute('aria-hidden', 'true');
     document.body.style.overflow = '';
+    var ttl = document.getElementById('zym-pdf-topbar-title');
+    if (ttl) ttl.textContent = 'Pratonton PDF';
   }
 
   document.getElementById('zym-pdf-save-btn').addEventListener('click', function() {
@@ -3196,7 +3322,20 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
   document.getElementById('zym-pdf-close-btn').addEventListener('click', closePdfPreview);
   pdfOverlay.addEventListener('click', function(e) { if (e.target === pdfOverlay) closePdfPreview(); });
   document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape' && pdfOverlay.classList.contains('is-open')) closePdfPreview();
+    if (!pdfOverlay.classList.contains('is-open')) return;
+    if (e.key === 'Escape') {
+      closePdfPreview();
+      return;
+    }
+    if (e.key === 'ArrowLeft') {
+      e.preventDefault();
+      var t = document.getElementById('zym-pdf-pages');
+      if (t) t.scrollBy({ left: -(t.clientWidth || 0), behavior: 'smooth' });
+    } else if (e.key === 'ArrowRight') {
+      e.preventDefault();
+      var t2 = document.getElementById('zym-pdf-pages');
+      if (t2) t2.scrollBy({ left: (t2.clientWidth || 0), behavior: 'smooth' });
+    }
   });
 
   pdfBtn.addEventListener('click', openPdfPreview);
