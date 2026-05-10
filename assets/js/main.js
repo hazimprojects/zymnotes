@@ -1455,32 +1455,64 @@ var ZYMNOTES_NAV = { chapters: [
   ]},
 ]};
 
-// ── CTA indeks bab induk seterusnya (hujung bar navigasi subtopik) ─────────────
+// ── CTA indeks bab induk seterusnya (subtopik terakhir sahaja) ──────────────────
+// Pada halaman subtopik terakhir dalam bab: ganti butang utama "Kembali ke Bab N"
+// (ke indeks bab semasa) dengan "Seterusnya: Bab M" ke indeks bab berikutnya.
+// Subtopik lain tidak diubah. Tiada bab selepas 8 — kekalkan CTA asal.
 (function () {
   var pathname = window.location.pathname;
-  if (!pathname.match(/\/notes\/bab-\d+-\d+\.html$/i)) return;
-  var m = pathname.match(/bab-(\d+)-\d+\.html$/i);
-  if (!m) return;
-  var chNum = parseInt(m[1], 10);
+  var fileMatch = pathname.match(/(bab-(\d+)-\d+\.html)$/i);
+  if (!fileMatch) return;
+  var currentFile = fileMatch[1].toLowerCase();
+  var chNum = parseInt(fileMatch[2], 10);
   if (!(chNum >= 1 && chNum <= 8)) return;
   if (!window.ZYMNOTES_NAV || !ZYMNOTES_NAV.chapters || !ZYMNOTES_NAV.chapters.length) return;
   var idx = chNum - 1;
+  var chapter = ZYMNOTES_NAV.chapters[idx];
+  if (!chapter || !chapter.subtopics || !chapter.subtopics.length) return;
+  var lastSubUrl = String(chapter.subtopics[chapter.subtopics.length - 1].url || '').toLowerCase();
+  if (lastSubUrl !== currentFile) return;
   if (idx + 1 >= ZYMNOTES_NAV.chapters.length) return;
   var nextCh = ZYMNOTES_NAV.chapters[idx + 1];
+
+  function hrefBasename(h) {
+    if (!h) return '';
+    var x = String(h).split('#')[0].split('?')[0];
+    var parts = x.split('/');
+    return (parts[parts.length - 1] || '').toLowerCase();
+  }
+  var hubFile = hrefBasename(chapter.url);
 
   var bars = document.querySelectorAll('main.note-reading-main .note-subsection .hero-actions');
   if (!bars.length) bars = document.querySelectorAll('main .note-subsection .hero-actions');
   if (!bars.length) return;
-  var bar = bars[bars.length - 1];
-  if (bar.querySelector('a[data-zym-next-bab]')) return;
 
-  var a = document.createElement('a');
-  a.className = 'btn btn-secondary';
-  a.setAttribute('data-zym-next-bab', '1');
-  a.href = nextCh.url;
-  a.textContent = 'Seterusnya: Bab ' + nextCh.num;
-  a.setAttribute('aria-label', 'Pergi ke indeks Bab ' + nextCh.num + ' — ' + nextCh.title);
-  bar.appendChild(a);
+  for (var b = 0; b < bars.length; b++) {
+    var bar = bars[b];
+    var target = null;
+    var primaries = bar.querySelectorAll('a.btn.btn-primary');
+    for (var pi = 0; pi < primaries.length; pi++) {
+      if (hrefBasename(primaries[pi].getAttribute('href')) === hubFile) {
+        target = primaries[pi];
+        break;
+      }
+    }
+    if (!target) {
+      var anchors = bar.querySelectorAll('a.btn');
+      for (var i = 0; i < anchors.length; i++) {
+        if (hrefBasename(anchors[i].getAttribute('href')) === hubFile) {
+          target = anchors[i];
+          break;
+        }
+      }
+    }
+    if (!target) continue;
+
+    target.setAttribute('data-zym-next-bab', '1');
+    target.href = nextCh.url;
+    target.textContent = 'Seterusnya: Bab ' + nextCh.num;
+    target.setAttribute('aria-label', 'Pergi ke indeks Bab ' + nextCh.num + ' — ' + nextCh.title);
+  }
 })();
 
 
@@ -4766,7 +4798,7 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
   if (!('serviceWorker' in navigator)) return;
 
   window.addEventListener('load', function () {
-    navigator.serviceWorker.register('/sw.js?v=400').catch(function (error) {
+    navigator.serviceWorker.register('/sw.js?v=403').catch(function (error) {
       console.warn('Service worker registration failed:', error);
     });
   });
