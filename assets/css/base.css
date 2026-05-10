@@ -1338,6 +1338,9 @@ body.page-theme-home.app-shell-page .home-feature-card.hfc-emerald {
 body.page-theme-home.app-shell-page .home-feature-card.hfc-amber {
   border-left: 3px solid #d97706;
 }
+body.page-theme-home.app-shell-page .home-feature-card.hfc-indigo {
+  border-left: 3px solid #4f46e5;
+}
 
 body.page-theme-home.app-shell-page .home-scope-section {
   margin-bottom: 1.1rem;
@@ -2546,6 +2549,13 @@ html.about-pwa-hide-card #about-pwa-card {
 .home-feature-card.hfc-amber .home-feature-title { color: var(--ink); }
 .home-feature-card.hfc-amber .home-feature-desc { color: var(--muted); opacity: 0.92; }
 
+.home-feature-card.hfc-indigo {
+  background: linear-gradient(152deg, rgba(245, 243, 255, 0.98), rgba(238, 242, 255, 0.88));
+  border-color: rgba(67, 56, 202, 0.1);
+}
+.home-feature-card.hfc-indigo .home-feature-title { color: var(--ink); }
+.home-feature-card.hfc-indigo .home-feature-desc { color: var(--muted); opacity: 0.92; }
+
 [data-theme="dark"] .home-feature-card.hfc-violet {
   background: linear-gradient(152deg, rgba(46, 42, 72, 0.92), rgba(38, 36, 58, 0.82));
   border-color: rgba(167, 139, 250, 0.12);
@@ -2573,6 +2583,13 @@ html.about-pwa-hide-card #about-pwa-card {
 }
 [data-theme="dark"] .home-feature-card.hfc-amber .home-feature-title { color: var(--ink); }
 [data-theme="dark"] .home-feature-card.hfc-amber .home-feature-desc { color: var(--muted); opacity: 0.9; }
+
+[data-theme="dark"] .home-feature-card.hfc-indigo {
+  background: linear-gradient(152deg, rgba(42, 40, 62, 0.92), rgba(34, 32, 52, 0.82));
+  border-color: rgba(165, 180, 252, 0.12);
+}
+[data-theme="dark"] .home-feature-card.hfc-indigo .home-feature-title { color: var(--ink); }
+[data-theme="dark"] .home-feature-card.hfc-indigo .home-feature-desc { color: var(--muted); opacity: 0.9; }
 
 /* =============================================================
    NOTA ROW ICONS — vibrant gradients (overrides flat rgba tints)
