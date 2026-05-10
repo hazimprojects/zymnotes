@@ -481,6 +481,35 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // =========================
+  // PAPER TIMELINE — satu kad per langkah (tajuk + isi sentiasa kelihatan)
+  // =========================
+  document.querySelectorAll(".paper-timeline").forEach(function (wrap) {
+    if (wrap.dataset.zymTimelineWrapped) return;
+    wrap.dataset.zymTimelineWrapped = "1";
+    var el = wrap.firstElementChild;
+    while (el) {
+      var next = el.nextElementSibling;
+      if (
+        el.classList &&
+        el.classList.contains("paper-timeline-node") &&
+        next &&
+        next.classList &&
+        next.classList.contains("paper-timeline-panel")
+      ) {
+        var card = document.createElement("article");
+        card.className = "paper-timeline-card";
+        card.setAttribute("role", "group");
+        wrap.insertBefore(card, el);
+        card.appendChild(el);
+        card.appendChild(next);
+        el = card.nextElementSibling;
+      } else {
+        el = next;
+      }
+    }
+  });
+
+  // =========================
   // PROCESS CARDS
   // =========================
   const processCards = document.querySelectorAll(".paper-process-card");
@@ -2853,6 +2882,28 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
             });
           }
         });
+      } else if (cls.indexOf('paper-timeline') !== -1) {
+        var ch = node.firstElementChild;
+        while (ch) {
+          if ((ch.className || '').indexOf('paper-timeline-card') !== -1) {
+            var hd = ch.querySelector(':scope > .paper-timeline-node');
+            var bd = ch.querySelector(':scope > .paper-timeline-panel');
+            if (hd) h += '<p class="zp-ph">' + _escPdfHtml(hd.textContent.trim()) + '</p>';
+            if (bd) h += _bodyHtml(bd);
+            ch = ch.nextElementSibling;
+            continue;
+          }
+          if ((ch.className || '').indexOf('paper-timeline-node') !== -1) {
+            var pn = ch.nextElementSibling;
+            h += '<p class="zp-ph">' + _escPdfHtml(ch.textContent.trim()) + '</p>';
+            if (pn && (pn.className || '').indexOf('paper-timeline-panel') !== -1) {
+              h += _bodyHtml(pn);
+            }
+            ch = pn ? pn.nextElementSibling : ch.nextElementSibling;
+            continue;
+          }
+          ch = ch.nextElementSibling;
+        }
       } else { h += _bodyHtml(node); }
     });
     return h;

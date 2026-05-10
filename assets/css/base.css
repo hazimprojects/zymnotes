@@ -283,6 +283,12 @@ body {
   box-shadow: 0 4px 18px rgba(0, 0, 0, 0.28);
 }
 
+[data-theme="dark"] .paper-timeline-card {
+  background: linear-gradient(180deg, rgba(28, 30, 48, 0.96), rgba(22, 24, 38, 0.92));
+  border-color: rgba(129, 140, 248, 0.16);
+  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.35);
+}
+
 [data-theme="dark"] .paper-step {
   background: linear-gradient(135deg, rgba(21,24,41,0.95), rgba(17,20,35,0.95));
 }

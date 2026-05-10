@@ -406,6 +406,10 @@
      TIMELINE — kompak
   ══════════════════════════════════════════════════ */
   .paper-timeline { gap: 6px !important; margin-top: 4px !important; }
+  .paper-timeline-card {
+    break-inside: avoid;
+    border-radius: 6px !important;
+  }
   .paper-timeline-node {
     padding: 4px 8px !important;
     font-size: 8pt !important;
