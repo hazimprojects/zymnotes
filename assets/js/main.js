@@ -2959,9 +2959,32 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
         // master-summary-paper (Ringkasan) and other direct boards
         h = _renderBoard(child, h);
       } else if (cls.indexOf('note-subsection') !== -1) {
-        child.childNodes.forEach(function(c) {
-          if (c.nodeType === 1) h = _renderSubChild(c, h);
-        });
+        var subKids = [];
+        for (var si = 0; si < child.childNodes.length; si++) {
+          var sn = child.childNodes[si];
+          if (sn.nodeType === 1) subKids.push(sn);
+        }
+        var i = 0;
+        while (i < subKids.length) {
+          var c = subKids[i];
+          var ccls = c.className || '';
+          if (ccls.indexOf('section-heading') !== -1) {
+            h += '<div class="zp-section-wrap">';
+            h = _renderSubChild(c, h);
+            i++;
+            while (i < subKids.length) {
+              var nx = subKids[i];
+              var nxcls = nx.className || '';
+              if (nxcls.indexOf('section-heading') !== -1) break;
+              h = _renderSubChild(nx, h);
+              i++;
+            }
+            h += '</div>';
+          } else {
+            h = _renderSubChild(c, h);
+            i++;
+          }
+        }
       }
     });
 
@@ -2991,12 +3014,19 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
       '#zym-pr .zp-section{margin:14px 0 6px;break-inside:avoid;page-break-inside:avoid}',
       '#zym-pr .zp-section-badge{display:inline-flex;align-items:center;justify-content:center;font-size:8px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#fff;background:#4f46e5;padding:5px 11px;border-radius:999px;margin-bottom:7px;line-height:1;min-height:21px}',
       '#zym-pr h2.zp-section-title{font-size:14.5px;font-weight:700;color:#1e1e3a;margin:0 0 8px;line-height:1.28}',
-      // Accordion
-      '#zym-pr .zp-acc{border:1px solid #e0e0ef;border-radius:8px;margin-bottom:8px;overflow:hidden;break-inside:avoid}',
-      '#zym-pr .zp-acc-hd{display:flex;align-items:center;gap:9px;padding:8px 11px;background:#f4f4ff;border-bottom:1px solid #e0e0ef}',
-      '#zym-pr .zp-acc-num{font-size:9.5px;font-weight:700;color:#4f46e5;min-width:21px;height:21px;background:#ede9fe;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0}',
-      '#zym-pr .zp-acc-ttl{font-size:12px;font-weight:700;color:#1e1e3a;line-height:1.28;display:flex;align-items:center}',
-      '#zym-pr .zp-acc-body{padding:9px 12px}',
+      // Satu unit: eyebrow + tajuk bahagian + kandungan (papan / accordion / grid) — elak pisah halaman
+      '#zym-pr .zp-section-wrap{margin:10px 0 12px;break-inside:avoid;page-break-inside:avoid}',
+      '#zym-pr .zp-section-wrap .zp-section{margin:0 0 3px}',
+      '#zym-pr .zp-section-wrap .zp-section-badge{margin-bottom:5px}',
+      '#zym-pr .zp-section-wrap h2.zp-section-title{margin:0 0 5px}',
+      // Accordion — sedikit lebih jimat ruang (contoh: “Berlaku secara” bab 1.1)
+      '#zym-pr .zp-acc{border:1px solid #e0e0ef;border-radius:8px;margin-bottom:6px;overflow:hidden;break-inside:avoid}',
+      '#zym-pr .zp-acc-hd{display:flex;align-items:center;gap:8px;padding:6px 10px;background:#f4f4ff;border-bottom:1px solid #e0e0ef}',
+      '#zym-pr .zp-acc-num{font-size:9.5px;font-weight:700;color:#4f46e5;min-width:20px;height:20px;background:#ede9fe;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0}',
+      '#zym-pr .zp-acc-ttl{font-size:11.75px;font-weight:700;color:#1e1e3a;line-height:1.22;display:flex;align-items:center}',
+      '#zym-pr .zp-acc-body{padding:6px 10px}',
+      '#zym-pr .zp-acc-body > p.zp-p{margin:2px 0 5px;line-height:1.42}',
+      '#zym-pr .zp-acc-body > p.zp-ph{margin:3px 0 3px}',
       // Chips — lebih tinggi & jarak baris supaya teks tidak mepet bingkai
       '#zym-pr .zp-chips{display:flex;flex-wrap:wrap;gap:6px 8px;margin:7px 0}',
       '#zym-pr .zp-chip{border:1px solid #d8d8ee;background:#f0f0f8;border-radius:6px;padding:5px 10px;font-size:10.5px;color:#2d2d5a;display:inline-flex;align-items:center;justify-content:center;gap:5px;max-width:100%;line-height:1.32;min-height:28px}',
@@ -3026,12 +3056,25 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
     if (!container || !scale) return ranges;
     try {
       var cr = container.getBoundingClientRect();
-      var sel = '.zp-hero, .zp-board, .zp-section, .zp-flap, .zp-acc';
-      container.querySelectorAll(sel).forEach(function(el) {
+      function pushEl(el) {
         var r = el.getBoundingClientRect();
         var top = (r.top - cr.top) * scale;
         var bottom = (r.bottom - cr.top) * scale;
         if (bottom > top + 2) ranges.push({ top: top, bottom: bottom });
+      }
+      container.querySelectorAll('.zp-section-wrap').forEach(pushEl);
+      container.querySelectorAll('.zp-hero, .zp-flap').forEach(pushEl);
+      container.querySelectorAll('.zp-board').forEach(function(el) {
+        if (el.closest && el.closest('.zp-section-wrap')) return;
+        pushEl(el);
+      });
+      container.querySelectorAll('.zp-section').forEach(function(el) {
+        if (el.closest && el.closest('.zp-section-wrap')) return;
+        pushEl(el);
+      });
+      container.querySelectorAll('.zp-acc').forEach(function(el) {
+        if (el.closest && el.closest('.zp-section-wrap')) return;
+        pushEl(el);
       });
     } catch (e) {}
     return ranges;
@@ -4543,7 +4586,7 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
   if (!('serviceWorker' in navigator)) return;
 
   window.addEventListener('load', function () {
-    navigator.serviceWorker.register('/sw.js?v=383').catch(function (error) {
+    navigator.serviceWorker.register('/sw.js?v=384').catch(function (error) {
       console.warn('Service worker registration failed:', error);
     });
   });
