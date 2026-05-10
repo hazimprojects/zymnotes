@@ -822,32 +822,6 @@ document.addEventListener("DOMContentLoaded", function () {
   window.addEventListener("resize", refreshOpenAccordions);
 
   // =========================
-  // PAPER TIMELINE
-  // =========================
-  const paperTimelineNodes = document.querySelectorAll(".paper-timeline-node");
-  const paperTimelinePanels = document.querySelectorAll(".paper-timeline-panel");
-
-  paperTimelineNodes.forEach((node) => {
-    node.addEventListener("click", () => {
-      const targetId = node.getAttribute("data-timeline");
-      if (!targetId) return;
-
-      const targetPanel = document.getElementById(targetId);
-      if (!targetPanel) return;
-
-      const isOpen = node.classList.contains("active");
-
-      paperTimelineNodes.forEach((item) => item.classList.remove("active"));
-      paperTimelinePanels.forEach((panel) => panel.classList.remove("active"));
-
-      if (!isOpen) {
-        node.classList.add("active");
-        targetPanel.classList.add("active");
-      }
-    });
-  });
-
-  // =========================
   // REVEAL ON SCROLL
   // =========================
   const revealElements = document.querySelectorAll(".reveal-on-scroll");
@@ -4691,7 +4665,7 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
   if (!('serviceWorker' in navigator)) return;
 
   window.addEventListener('load', function () {
-    navigator.serviceWorker.register('/sw.js?v=394').catch(function (error) {
+    navigator.serviceWorker.register('/sw.js?v=395').catch(function (error) {
       console.warn('Service worker registration failed:', error);
     });
   });

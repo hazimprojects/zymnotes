@@ -405,11 +405,17 @@
   /* ══════════════════════════════════════════════════
      TIMELINE — kompak
   ══════════════════════════════════════════════════ */
-  .paper-timeline { gap: 2px !important; margin-top: 3px !important; }
+  .paper-timeline { gap: 6px !important; margin-top: 4px !important; }
   .paper-timeline-node {
-    padding: 3px 8px !important;
+    padding: 4px 8px !important;
     font-size: 8pt !important;
-    border-radius: 5px !important;
+    border-radius: 5px 5px 0 0 !important;
+    break-inside: avoid;
+  }
+  .paper-timeline-panel {
+    padding: 3px 8px 5px !important;
+    font-size: 8pt !important;
+    border-radius: 0 0 5px 5px !important;
     break-inside: avoid;
   }
 

@@ -276,6 +276,13 @@ body {
   background: linear-gradient(135deg, rgba(21,24,41,0.95), rgba(17,20,35,0.95));
 }
 
+[data-theme="dark"] .paper-timeline-panel {
+  background: rgba(21, 24, 41, 0.72);
+  border-color: rgba(129, 140, 248, 0.14);
+  border-top-color: rgba(129, 140, 248, 0.1);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.28);
+}
+
 [data-theme="dark"] .paper-step {
   background: linear-gradient(135deg, rgba(21,24,41,0.95), rgba(17,20,35,0.95));
 }
