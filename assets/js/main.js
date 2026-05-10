@@ -3014,8 +3014,8 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
       '#zym-pr .zp-section{margin:14px 0 6px;break-inside:avoid;page-break-inside:avoid}',
       '#zym-pr .zp-section-badge{display:inline-flex;align-items:center;justify-content:center;font-size:8.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#fff;background:#4f46e5;padding:5px 12px;border-radius:999px;margin-bottom:7px;line-height:1;min-height:22px}',
       '#zym-pr h2.zp-section-title{font-size:16px;font-weight:700;color:#1e1e3a;margin:0 0 8px;line-height:1.28}',
-      // Satu unit: eyebrow + tajuk bahagian + kandungan (papan / accordion / grid) — elak pisah halaman
-      '#zym-pr .zp-section-wrap{margin:10px 0 12px;break-inside:avoid;page-break-inside:avoid}',
+      // Pembungkus bahagian (logik DOM sahaja; elak pisah halaman diurus melalui julat blok PDF)
+      '#zym-pr .zp-section-wrap{margin:10px 0 12px}',
       '#zym-pr .zp-section-wrap .zp-section{margin:0 0 3px}',
       '#zym-pr .zp-section-wrap .zp-section-badge{margin-bottom:5px}',
       '#zym-pr .zp-section-wrap h2.zp-section-title{margin:0 0 5px}',
@@ -3050,31 +3050,65 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
     ].join('');
   }
 
-  /** Koordinat piksel kanvas (html2canvas scale) untuk blok — elak pisah tengah kotak / eyebrow+badan. */
+  /** Koordinat piksel kanvas (html2canvas scale) untuk blok — elak pisah tengah kotak / eyebrow + blok pertama. */
   function _collectPdfBlockRanges(container, scale) {
     var ranges = [];
     if (!container || !scale) return ranges;
     try {
       var cr = container.getBoundingClientRect();
-      function pushEl(el) {
+      function rectRange(el) {
         var r = el.getBoundingClientRect();
-        var top = (r.top - cr.top) * scale;
-        var bottom = (r.bottom - cr.top) * scale;
+        return {
+          top: (r.top - cr.top) * scale,
+          bottom: (r.bottom - cr.top) * scale
+        };
+      }
+      function pushRange(top, bottom) {
         if (bottom > top + 2) ranges.push({ top: top, bottom: bottom });
       }
-      container.querySelectorAll('.zp-section-wrap').forEach(pushEl);
-      container.querySelectorAll('.zp-hero, .zp-flap').forEach(pushEl);
-      container.querySelectorAll('.zp-board').forEach(function(el) {
-        if (el.closest && el.closest('.zp-section-wrap')) return;
-        pushEl(el);
+      function mergePair(a, b) {
+        return { top: Math.min(a.top, b.top), bottom: Math.max(a.bottom, b.bottom) };
+      }
+
+      container.querySelectorAll('.zp-hero').forEach(function(el) {
+        var rg = rectRange(el);
+        pushRange(rg.top, rg.bottom);
       });
+
+      container.querySelectorAll('.zp-section-wrap').forEach(function(wrap) {
+        var sectionEl = wrap.querySelector(':scope > .zp-section');
+        var first = sectionEl ? sectionEl.nextElementSibling : null;
+        var glueFirst = first && first.classList &&
+          (first.classList.contains('zp-board') || first.classList.contains('zp-flap') || first.classList.contains('zp-acc'));
+        if (sectionEl && glueFirst) {
+          var merged = mergePair(rectRange(sectionEl), rectRange(first));
+          pushRange(merged.top, merged.bottom);
+        } else if (sectionEl) {
+          var secRg = rectRange(sectionEl);
+          pushRange(secRg.top, secRg.bottom);
+        }
+        for (var ci = 0; ci < wrap.children.length; ci++) {
+          var ch = wrap.children[ci];
+          if (!ch.classList) continue;
+          if (ch.classList.contains('zp-section')) continue;
+          if (glueFirst && first && ch === first) continue;
+          if (ch.classList.contains('zp-board') || ch.classList.contains('zp-flap') || ch.classList.contains('zp-acc')) {
+            var chRg = rectRange(ch);
+            pushRange(chRg.top, chRg.bottom);
+          }
+        }
+      });
+
+      container.querySelectorAll('.zp-board, .zp-flap, .zp-acc').forEach(function(el) {
+        if (el.closest && el.closest('.zp-section-wrap')) return;
+        var rg = rectRange(el);
+        pushRange(rg.top, rg.bottom);
+      });
+
       container.querySelectorAll('.zp-section').forEach(function(el) {
         if (el.closest && el.closest('.zp-section-wrap')) return;
-        pushEl(el);
-      });
-      container.querySelectorAll('.zp-acc').forEach(function(el) {
-        if (el.closest && el.closest('.zp-section-wrap')) return;
-        pushEl(el);
+        var rg2 = rectRange(el);
+        pushRange(rg2.top, rg2.bottom);
       });
     } catch (e) {}
     return ranges;
@@ -4586,7 +4620,7 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
   if (!('serviceWorker' in navigator)) return;
 
   window.addEventListener('load', function () {
-    navigator.serviceWorker.register('/sw.js?v=387').catch(function (error) {
+    navigator.serviceWorker.register('/sw.js?v=388').catch(function (error) {
       console.warn('Service worker registration failed:', error);
     });
   });
