@@ -639,6 +639,34 @@ span.paper-chip {
   margin-top: 0.8rem;
 }
 
+/* Satu langkah = satu kad (tajuk + isi); diisi oleh JS atau markup terus */
+.paper-timeline-card {
+  border-radius: 16px;
+  border: 1px solid rgba(92, 110, 132, 0.12);
+  background: linear-gradient(180deg, rgba(255, 253, 248, 0.98), rgba(255, 252, 247, 0.92));
+  box-shadow: var(--shadow-soft);
+  overflow: hidden;
+}
+
+.paper-timeline-card .paper-timeline-node {
+  border-radius: 0;
+  border: 0;
+  border-bottom: 1px solid rgba(92, 110, 132, 0.1);
+  box-shadow: none;
+}
+
+.paper-timeline-card .paper-timeline-panel {
+  margin-top: 0;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  padding-top: 0.7rem;
+}
+
+.paper-timeline-card .paper-timeline-panel p:first-child {
+  margin-top: 0;
+}
+
 /* Tajuk tarikh / peringkat + kandungan — kad statik (bukan accordion) */
 .paper-timeline-node {
   width: 100%;
@@ -675,7 +703,9 @@ span.paper-chip {
 }
 
 .paper-timeline-panel {
-  display: block;
+  display: block !important;
+  visibility: visible !important;
+  max-height: none !important;
   margin: 0;
   margin-top: -1px;
   padding: 0.65rem 1rem 0.95rem;
@@ -685,6 +715,7 @@ span.paper-chip {
   background: var(--paper-note);
   box-shadow: var(--shadow-soft);
   overflow: visible;
+  color: var(--ink);
 }
 
 .paper-timeline-panel.active {
