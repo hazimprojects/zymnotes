@@ -2432,20 +2432,9 @@ function hzLabQuizSparklePair() {
 })();
 
 // ── Nota Feedback Widget ──────────────────────────────────────────────────────
-// Supabase setup (isi nilai dari projek Supabase anda):
-//   1. Buat table: CREATE TABLE public.nota_feedback (
-//        id bigserial PRIMARY KEY, page_path text NOT NULL,
-//        reaction text NOT NULL CHECK (reaction IN ('mudah','boleh-baik','kurang-jelas')),
-//        created_at timestamptz DEFAULT now());
-//   2. Aktifkan RLS: ALTER TABLE public.nota_feedback ENABLE ROW LEVEL SECURITY;
-//   3. Policy INSERT anon: CREATE POLICY "anon insert" ON public.nota_feedback
-//        FOR INSERT TO anon WITH CHECK (true);
-//   4. Fungsi kiraan (SECURITY DEFINER agar anon tidak boleh baca jadual terus):
-//        CREATE OR REPLACE FUNCTION public.get_nota_helpful_count(p_path text)
-//        RETURNS bigint LANGUAGE sql SECURITY DEFINER AS $$
-//          SELECT COUNT(*) FROM public.nota_feedback
-//          WHERE page_path = p_path AND reaction = 'mudah'; $$;
-//        GRANT EXECUTE ON FUNCTION public.get_nota_helpful_count TO anon;
+// Skema Supabase (jadual nota_feedback, RPC submit/delete/kiraan) + log PDF:
+//   docs/supabase/nota_feedback_pdf.sql
+//
 var NOTA_FB_SUPABASE_URL = 'https://hcvdhonpszwdiwcxwcrp.supabase.co';
 var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhjdmRob25wc3p3ZGl3Y3h3Y3JwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzgwNTUwOTEsImV4cCI6MjA5MzYzMTA5MX0.UazJr2fXKTG08s7GbYA8aZnl2HwP6Uh60eSN6ei_m1A';
 
@@ -3569,36 +3558,8 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
 // ── Nota Stat Bar ─────────────────────────────────────────────────────────────
 // Tunjuk kiraan reaksi ringkas (suka, mudah) + kiraan muat turun PDF di hero nota.
 // Hanya muncul apabila ada sekurang-kurangnya satu kiraan > 0.
-//
-// SQL diperlukan di Supabase (jalankan sekali):
-//   CREATE OR REPLACE FUNCTION public.get_nota_reaction_counts(p_path text)
-//   RETURNS json LANGUAGE sql SECURITY DEFINER AS $$
-//     SELECT json_build_object(
-//       'mudah',        COUNT(*) FILTER (WHERE reaction = 'mudah'),
-//       'boleh-baik',   COUNT(*) FILTER (WHERE reaction = 'boleh-baik'),
-//       'kurang-jelas', COUNT(*) FILTER (WHERE reaction = 'kurang-jelas')
-//     ) FROM nota_feedback WHERE page_path = p_path; $$;
-//   GRANT EXECUTE ON FUNCTION public.get_nota_reaction_counts TO anon;
-//
-//   Kiraan muat turun PDF (log append + RPC):
-//   CREATE TABLE public.nota_pdf_downloads (
-//     id bigserial PRIMARY KEY,
-//     page_path text NOT NULL,
-//     created_at timestamptz DEFAULT now()
-//   );
-//   ALTER TABLE public.nota_pdf_downloads ENABLE ROW LEVEL SECURITY;
-//   CREATE POLICY "anon insert pdf download" ON public.nota_pdf_downloads
-//     FOR INSERT TO anon WITH CHECK (true);
-//   CREATE OR REPLACE FUNCTION public.submit_nota_pdf_download(p_path text)
-//   RETURNS void LANGUAGE sql SECURITY DEFINER AS $$
-//     INSERT INTO public.nota_pdf_downloads (page_path) VALUES (p_path);
-//   $$;
-//   GRANT EXECUTE ON FUNCTION public.submit_nota_pdf_download(text) TO anon;
-//   CREATE OR REPLACE FUNCTION public.get_nota_pdf_download_count(p_path text)
-//   RETURNS bigint LANGUAGE sql SECURITY DEFINER AS $$
-//     SELECT COUNT(*)::bigint FROM public.nota_pdf_downloads WHERE page_path = p_path;
-//   $$;
-//   GRANT EXECUTE ON FUNCTION public.get_nota_pdf_download_count(text) TO anon;
+// Skema Supabase (RPC get_nota_reaction_counts, get_nota_pdf_download_count, dll.):
+//   docs/supabase/nota_feedback_pdf.sql
 (function () {
   if (!window.location.pathname.match(/\/notes\/bab-\d+-\d+\.html/)) return;
 
@@ -4805,7 +4766,7 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
   if (!('serviceWorker' in navigator)) return;
 
   window.addEventListener('load', function () {
-    navigator.serviceWorker.register('/sw.js?v=398').catch(function (error) {
+    navigator.serviceWorker.register('/sw.js?v=399').catch(function (error) {
       console.warn('Service worker registration failed:', error);
     });
   });
