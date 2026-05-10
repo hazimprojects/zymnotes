@@ -2432,20 +2432,9 @@ function hzLabQuizSparklePair() {
 })();
 
 // ── Nota Feedback Widget ──────────────────────────────────────────────────────
-// Supabase setup (isi nilai dari projek Supabase anda):
-//   1. Buat table: CREATE TABLE public.nota_feedback (
-//        id bigserial PRIMARY KEY, page_path text NOT NULL,
-//        reaction text NOT NULL CHECK (reaction IN ('mudah','boleh-baik','kurang-jelas')),
-//        created_at timestamptz DEFAULT now());
-//   2. Aktifkan RLS: ALTER TABLE public.nota_feedback ENABLE ROW LEVEL SECURITY;
-//   3. Policy INSERT anon: CREATE POLICY "anon insert" ON public.nota_feedback
-//        FOR INSERT TO anon WITH CHECK (true);
-//   4. Fungsi kiraan (SECURITY DEFINER agar anon tidak boleh baca jadual terus):
-//        CREATE OR REPLACE FUNCTION public.get_nota_helpful_count(p_path text)
-//        RETURNS bigint LANGUAGE sql SECURITY DEFINER AS $$
-//          SELECT COUNT(*) FROM public.nota_feedback
-//          WHERE page_path = p_path AND reaction = 'mudah'; $$;
-//        GRANT EXECUTE ON FUNCTION public.get_nota_helpful_count TO anon;
+// Skema Supabase (jadual nota_feedback, RPC submit/delete/kiraan) + log PDF:
+//   docs/supabase/nota_feedback_pdf.sql
+//
 var NOTA_FB_SUPABASE_URL = 'https://hcvdhonpszwdiwcxwcrp.supabase.co';
 var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhjdmRob25wc3p3ZGl3Y3h3Y3JwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzgwNTUwOTEsImV4cCI6MjA5MzYzMTA5MX0.UazJr2fXKTG08s7GbYA8aZnl2HwP6Uh60eSN6ei_m1A';
 
@@ -3387,6 +3376,26 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
     });
     var fname = (title || 'ZymNotes').replace(/[^\w\sÀ-ɏ-]/g,'').trim().replace(/\s+/g,'-') || 'ZymNotes';
     pdf.save(fname + '.pdf');
+    recordPdfDownload().finally(function () {
+      document.dispatchEvent(new CustomEvent('zym-nota-pdf-downloaded', { detail: { path: pathname } }));
+    });
+  }
+
+  function recordPdfDownload() {
+    if (!NOTA_FB_SUPABASE_URL || !NOTA_FB_SUPABASE_KEY) return Promise.resolve();
+    return fetch(NOTA_FB_SUPABASE_URL + '/rest/v1/rpc/submit_nota_pdf_download', {
+      method: 'POST',
+      headers: {
+        'apikey': NOTA_FB_SUPABASE_KEY,
+        'Authorization': 'Bearer ' + NOTA_FB_SUPABASE_KEY,
+        'Content-Type': 'application/json',
+        Prefer: 'return=minimal'
+      },
+      body: JSON.stringify({ p_path: pathname })
+    }).then(function (r) {
+      if (!r.ok) return Promise.reject(new Error('pdf dl rpc'));
+      if (typeof gtag === 'function') gtag('event', 'nota_pdf_download', { page_path: pathname });
+    });
   }
 
   function openPdfPreview() {
@@ -3547,18 +3556,10 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
 })();
 
 // ── Nota Stat Bar ─────────────────────────────────────────────────────────────
-// Tunjuk kiraan reaksi ringkas (😊 3 · 🤔 1) + skor terbaik pengguna di hero nota.
-// Hanya muncul apabila ada data — tidak muncul langsung jika tiada rekod.
-//
-// SQL diperlukan di Supabase (jalankan sekali):
-//   CREATE OR REPLACE FUNCTION public.get_nota_reaction_counts(p_path text)
-//   RETURNS json LANGUAGE sql SECURITY DEFINER AS $$
-//     SELECT json_build_object(
-//       'mudah',        COUNT(*) FILTER (WHERE reaction = 'mudah'),
-//       'boleh-baik',   COUNT(*) FILTER (WHERE reaction = 'boleh-baik'),
-//       'kurang-jelas', COUNT(*) FILTER (WHERE reaction = 'kurang-jelas')
-//     ) FROM nota_feedback WHERE page_path = p_path; $$;
-//   GRANT EXECUTE ON FUNCTION public.get_nota_reaction_counts TO anon;
+// Tunjuk kiraan reaksi ringkas (suka, mudah) + kiraan muat turun PDF di hero nota.
+// Hanya muncul apabila ada sekurang-kurangnya satu kiraan > 0.
+// Skema Supabase (RPC get_nota_reaction_counts, get_nota_pdf_download_count, dll.):
+//   docs/supabase/nota_feedback_pdf.sql
 (function () {
   if (!window.location.pathname.match(/\/notes\/bab-\d+-\d+\.html/)) return;
 
@@ -3580,6 +3581,35 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
     }).then(function (r) { return r.ok ? r.json() : null; }).catch(function () { return null; });
   }
 
+  function fetchPdfDownloadCount() {
+    if (!NOTA_FB_SUPABASE_URL || !NOTA_FB_SUPABASE_KEY) return Promise.resolve(0);
+    return fetch(NOTA_FB_SUPABASE_URL + '/rest/v1/rpc/get_nota_pdf_download_count', {
+      method: 'POST',
+      headers: {
+        'apikey': NOTA_FB_SUPABASE_KEY,
+        'Authorization': 'Bearer ' + NOTA_FB_SUPABASE_KEY,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ p_path: pathname })
+    })
+      .then(function (r) {
+        if (!r.ok) return 0;
+        return r.text().then(function (t) {
+          try {
+            var s = (t || '').trim();
+            if (!s) return 0;
+            var j = JSON.parse(s);
+            if (Array.isArray(j)) j = j[0];
+            var n = typeof j === 'number' ? j : parseInt(String(j), 10);
+            return isNaN(n) ? 0 : n;
+          } catch (e) {
+            return 0;
+          }
+        });
+      })
+      .catch(function () { return 0; });
+  }
+
   var lead = document.querySelector('.note-hero .lead');
   if (!lead) return;
 
@@ -3587,30 +3617,50 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
     { key: 'suka',  imgSrc: 'https://img.icons8.com/?size=100&id=5twNojKL5zU7&format=png&color=000000' },
     { key: 'mudah', pair: HZ_FLUENT_SPARKLE.faceSmiling }
   ];
+  var STAT_PDF_DL_IMG = 'https://img.icons8.com/?size=100&id=yGBEe6Dss9zK&format=png&color=000000';
 
   function pillImg(r) {
     var src = r.imgSrc || hzFluent3dAsset(r.pair[0], r.pair[1]);
     return '<img src="' + src + '" alt="" width="14" height="14" loading="lazy" class="nota-stat-emoji">';
   }
 
-  fetchReactionCounts().then(function (counts) {
-    var pills = [];
+  function mountNotaStatBar() {
+    Promise.all([fetchReactionCounts(), fetchPdfDownloadCount()]).then(function (pair) {
+      var counts = pair[0];
+      var pdfN = pair[1];
+      var pills = [];
 
-    if (counts) {
-      STAT_REACTIONS.forEach(function (r) {
-        var n = Number(counts[r.key] || 0);
-        if (n > 0) pills.push(pillImg(r) + '<span>' + n + '</span>');
-      });
-    }
+      if (counts) {
+        STAT_REACTIONS.forEach(function (r) {
+          var n = Number(counts[r.key] || 0);
+          if (n > 0) pills.push(pillImg(r) + '<span>' + n + '</span>');
+        });
+      }
+      if (pdfN > 0) {
+        pills.push(
+          '<img src="' + STAT_PDF_DL_IMG + '" alt="" width="14" height="14" loading="lazy" class="nota-stat-emoji">' +
+          '<span>' + pdfN + '</span>'
+        );
+      }
 
-    if (!pills.length) return;
+      var oldBar = document.querySelector('.nota-stat-bar');
+      if (oldBar) oldBar.remove();
 
-    var bar = document.createElement('div');
-    bar.className = 'nota-stat-bar';
-    bar.innerHTML = pills.map(function (html) {
-      return '<span class="nota-stat-pill">' + html + '</span>';
-    }).join('');
-    lead.insertAdjacentElement('afterend', bar);
+      if (!pills.length) return;
+
+      var bar = document.createElement('div');
+      bar.className = 'nota-stat-bar';
+      bar.innerHTML = pills.map(function (html) {
+        return '<span class="nota-stat-pill">' + html + '</span>';
+      }).join('');
+      lead.insertAdjacentElement('afterend', bar);
+    });
+  }
+
+  mountNotaStatBar();
+  document.addEventListener('zym-nota-pdf-downloaded', function (ev) {
+    if (!ev || !ev.detail || ev.detail.path !== pathname) return;
+    mountNotaStatBar();
   });
 })();
 
@@ -4716,7 +4766,7 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
   if (!('serviceWorker' in navigator)) return;
 
   window.addEventListener('load', function () {
-    navigator.serviceWorker.register('/sw.js?v=397').catch(function (error) {
+    navigator.serviceWorker.register('/sw.js?v=399').catch(function (error) {
       console.warn('Service worker registration failed:', error);
     });
   });
