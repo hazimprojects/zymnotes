@@ -1452,6 +1452,34 @@ var ZYMNOTES_NAV = { chapters: [
   ]},
 ]};
 
+// ── CTA indeks bab induk seterusnya (hujung bar navigasi subtopik) ─────────────
+(function () {
+  var pathname = window.location.pathname;
+  if (!pathname.match(/\/notes\/bab-\d+-\d+\.html$/i)) return;
+  var m = pathname.match(/bab-(\d+)-\d+\.html$/i);
+  if (!m) return;
+  var chNum = parseInt(m[1], 10);
+  if (!(chNum >= 1 && chNum <= 8)) return;
+  if (!window.ZYMNOTES_NAV || !ZYMNOTES_NAV.chapters || !ZYMNOTES_NAV.chapters.length) return;
+  var idx = chNum - 1;
+  if (idx + 1 >= ZYMNOTES_NAV.chapters.length) return;
+  var nextCh = ZYMNOTES_NAV.chapters[idx + 1];
+
+  var bars = document.querySelectorAll('main.note-reading-main .note-subsection .hero-actions');
+  if (!bars.length) bars = document.querySelectorAll('main .note-subsection .hero-actions');
+  if (!bars.length) return;
+  var bar = bars[bars.length - 1];
+  if (bar.querySelector('a[data-zym-next-bab]')) return;
+
+  var a = document.createElement('a');
+  a.className = 'btn btn-secondary';
+  a.setAttribute('data-zym-next-bab', '1');
+  a.href = nextCh.url;
+  a.textContent = 'Seterusnya: Bab ' + nextCh.num;
+  a.setAttribute('aria-label', 'Pergi ke indeks Bab ' + nextCh.num + ' — ' + nextCh.title);
+  bar.appendChild(a);
+})();
+
 
 // =========================
 // AUDIO PLAYER
@@ -4663,7 +4691,7 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
   if (!('serviceWorker' in navigator)) return;
 
   window.addEventListener('load', function () {
-    navigator.serviceWorker.register('/sw.js?v=390').catch(function (error) {
+    navigator.serviceWorker.register('/sw.js?v=391').catch(function (error) {
       console.warn('Service worker registration failed:', error);
     });
   });
