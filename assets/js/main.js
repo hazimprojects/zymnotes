@@ -2994,26 +2994,26 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
   function _getPrintCss() {
     return [
       '#zym-pr,#zym-pr *{box-sizing:border-box;font-family:Fredoka,sans-serif}',
-      '#zym-pr{position:fixed;left:-9999px;top:0;width:794px;background:#fff;font-size:12.5px;color:#1a1a3a;line-height:1.45;z-index:-9999;pointer-events:none}',
+      '#zym-pr{position:fixed;left:-9999px;top:0;width:794px;background:#fff;font-size:13.5px;color:#1a1a3a;line-height:1.48;z-index:-9999;pointer-events:none}',
       '#zym-pr .zp-page{padding:0 34px 26px}',
       // Hero
       '#zym-pr .zp-hero{padding:16px 0 12px;border-bottom:2px solid #4f46e5;margin-bottom:12px;break-inside:avoid;page-break-inside:avoid}',
-      '#zym-pr .zp-chapter-lbl{display:inline-flex;align-items:center;justify-content:center;font-size:8px;font-weight:700;color:#fff;background:#4f46e5;padding:5px 10px;border-radius:4px;letter-spacing:.06em;text-transform:uppercase;margin-bottom:6px;line-height:1;min-height:21px}',
-      '#zym-pr .zp-subtopik{display:flex;align-items:center;font-size:9px;color:#6b7280;letter-spacing:.1em;text-transform:uppercase;margin:4px 0 5px;line-height:1.2;min-height:17px}',
-      '#zym-pr h1.zp-title{font-size:20px;font-weight:700;color:#1e1e3a;line-height:1.2;margin:0 0 6px}',
-      '#zym-pr .zp-desc{font-size:11px;color:#4a4a6a;margin:0;line-height:1.48}',
+      '#zym-pr .zp-chapter-lbl{display:inline-flex;align-items:center;justify-content:center;font-size:8.5px;font-weight:700;color:#fff;background:#4f46e5;padding:5px 11px;border-radius:4px;letter-spacing:.06em;text-transform:uppercase;margin-bottom:6px;line-height:1;min-height:22px}',
+      '#zym-pr .zp-subtopik{display:flex;align-items:center;font-size:9.5px;color:#6b7280;letter-spacing:.1em;text-transform:uppercase;margin:4px 0 5px;line-height:1.2;min-height:18px}',
+      '#zym-pr h1.zp-title{font-size:22px;font-weight:700;color:#1e1e3a;line-height:1.2;margin:0 0 6px}',
+      '#zym-pr .zp-desc{font-size:12px;color:#4a4a6a;margin:0;line-height:1.5}',
       // Boards — padding & margin lebih selesa (elak teks “tersepit” dengan sempadan)
       '#zym-pr .zp-board{border:1.5px solid;border-left-width:4px;border-radius:0 8px 8px 0;padding:11px 15px;margin-bottom:11px;background:#fafaff;break-inside:avoid;page-break-inside:avoid}',
-      '#zym-pr .zp-board-lbl{display:flex;align-items:center;min-height:20px;font-size:8px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;margin-bottom:9px;line-height:1.15}',
+      '#zym-pr .zp-board-lbl{display:flex;align-items:center;min-height:21px;font-size:8.5px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;margin-bottom:9px;line-height:1.15}',
       // Flap card (Soalan Utama)
       '#zym-pr .zp-flap{border:1.5px solid #d97706;border-radius:8px;overflow:hidden;margin-bottom:12px;break-inside:avoid;page-break-inside:avoid}',
-      '#zym-pr .zp-flap-top{display:flex;align-items:center;min-height:30px;line-height:1.2;background:#fef3c7;padding:7px 13px;font-size:10.5px;font-weight:700;color:#92400e;border-bottom:1px solid #fde68a}',
-      '#zym-pr .zp-flap-q{padding:10px 14px 6px;font-size:11.5px;font-weight:700;color:#1a1a3a;line-height:1.3}',
-      '#zym-pr .zp-flap-a{padding:5px 14px 10px;font-size:11.5px;color:#3a3a5a;background:#fffbf0;line-height:1.45}',
+      '#zym-pr .zp-flap-top{display:flex;align-items:center;min-height:30px;line-height:1.2;background:#fef3c7;padding:7px 13px;font-size:11.5px;font-weight:700;color:#92400e;border-bottom:1px solid #fde68a}',
+      '#zym-pr .zp-flap-q{padding:10px 14px 6px;font-size:12.5px;font-weight:700;color:#1a1a3a;line-height:1.32}',
+      '#zym-pr .zp-flap-a{padding:5px 14px 10px;font-size:12.5px;color:#3a3a5a;background:#fffbf0;line-height:1.48}',
       // Section (eyebrow → tajuk)
       '#zym-pr .zp-section{margin:14px 0 6px;break-inside:avoid;page-break-inside:avoid}',
-      '#zym-pr .zp-section-badge{display:inline-flex;align-items:center;justify-content:center;font-size:8px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#fff;background:#4f46e5;padding:5px 11px;border-radius:999px;margin-bottom:7px;line-height:1;min-height:21px}',
-      '#zym-pr h2.zp-section-title{font-size:14.5px;font-weight:700;color:#1e1e3a;margin:0 0 8px;line-height:1.28}',
+      '#zym-pr .zp-section-badge{display:inline-flex;align-items:center;justify-content:center;font-size:8.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#fff;background:#4f46e5;padding:5px 12px;border-radius:999px;margin-bottom:7px;line-height:1;min-height:22px}',
+      '#zym-pr h2.zp-section-title{font-size:16px;font-weight:700;color:#1e1e3a;margin:0 0 8px;line-height:1.28}',
       // Satu unit: eyebrow + tajuk bahagian + kandungan (papan / accordion / grid) — elak pisah halaman
       '#zym-pr .zp-section-wrap{margin:10px 0 12px;break-inside:avoid;page-break-inside:avoid}',
       '#zym-pr .zp-section-wrap .zp-section{margin:0 0 3px}',
@@ -3022,24 +3022,24 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
       // Accordion — sedikit lebih jimat ruang (contoh: “Berlaku secara” bab 1.1)
       '#zym-pr .zp-acc{border:1px solid #e0e0ef;border-radius:8px;margin-bottom:6px;overflow:hidden;break-inside:avoid}',
       '#zym-pr .zp-acc-hd{display:flex;align-items:center;gap:8px;padding:6px 10px;background:#f4f4ff;border-bottom:1px solid #e0e0ef}',
-      '#zym-pr .zp-acc-num{font-size:9.5px;font-weight:700;color:#4f46e5;min-width:20px;height:20px;background:#ede9fe;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0}',
-      '#zym-pr .zp-acc-ttl{font-size:11.75px;font-weight:700;color:#1e1e3a;line-height:1.22;display:flex;align-items:center}',
+      '#zym-pr .zp-acc-num{font-size:10.5px;font-weight:700;color:#4f46e5;min-width:22px;height:22px;background:#ede9fe;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0}',
+      '#zym-pr .zp-acc-ttl{font-size:13px;font-weight:700;color:#1e1e3a;line-height:1.25;display:flex;align-items:center}',
       '#zym-pr .zp-acc-body{padding:6px 10px}',
-      '#zym-pr .zp-acc-body > p.zp-p{margin:2px 0 5px;line-height:1.42}',
+      '#zym-pr .zp-acc-body > p.zp-p{margin:2px 0 5px;line-height:1.46}',
       '#zym-pr .zp-acc-body > p.zp-ph{margin:3px 0 3px}',
       // Chips — lebih tinggi & jarak baris supaya teks tidak mepet bingkai
       '#zym-pr .zp-chips{display:flex;flex-wrap:wrap;gap:6px 8px;margin:7px 0}',
-      '#zym-pr .zp-chip{border:1px solid #d8d8ee;background:#f0f0f8;border-radius:6px;padding:5px 10px;font-size:10.5px;color:#2d2d5a;display:inline-flex;align-items:center;justify-content:center;gap:5px;max-width:100%;line-height:1.32;min-height:28px}',
+      '#zym-pr .zp-chip{border:1px solid #d8d8ee;background:#f0f0f8;border-radius:6px;padding:5px 10px;font-size:11.5px;color:#2d2d5a;display:inline-flex;align-items:center;justify-content:center;gap:5px;max-width:100%;line-height:1.34;min-height:30px}',
       // Steps (process flow)
       '#zym-pr .zp-steps{display:flex;flex-wrap:wrap;gap:5px 8px;margin:7px 0;align-items:center}',
-      '#zym-pr .zp-step{border:1px solid #c7d2fe;background:#eef2ff;border-radius:6px;padding:5px 10px;font-size:10.5px;color:#3730a3;position:relative;display:inline-flex;align-items:center;justify-content:center;line-height:1.32;min-height:28px}',
-      '#zym-pr .zp-step+.zp-step::before{content:"→";margin-right:6px;color:#6366f1;font-size:11px}',
+      '#zym-pr .zp-step{border:1px solid #c7d2fe;background:#eef2ff;border-radius:6px;padding:5px 10px;font-size:11.5px;color:#3730a3;position:relative;display:inline-flex;align-items:center;justify-content:center;line-height:1.34;min-height:30px}',
+      '#zym-pr .zp-step+.zp-step::before{content:"→";margin-right:6px;color:#6366f1;font-size:12px}',
       // Answer box
       '#zym-pr .zp-answer{border-left:3px solid #d0d0e8;padding-left:10px;margin:5px 0}',
       // Text
-      '#zym-pr p.zp-p{font-size:11.5px;color:#3a3a5a;margin:4px 0 7px;line-height:1.5}',
-      '#zym-pr p.zp-ph{font-size:12px;font-weight:700;color:#1a1a3a;margin:6px 0 5px;line-height:1.3}',
-      '#zym-pr p.zp-sentence{font-size:11.5px;color:#3a3a5a;margin:5px 0;padding:6px 11px;border-left:3px solid #c7d2fe;line-height:1.52}',
+      '#zym-pr p.zp-p{font-size:12.5px;color:#3a3a5a;margin:4px 0 7px;line-height:1.52}',
+      '#zym-pr p.zp-ph{font-size:13px;font-weight:700;color:#1a1a3a;margin:6px 0 5px;line-height:1.32}',
+      '#zym-pr p.zp-sentence{font-size:12.5px;color:#3a3a5a;margin:5px 0;padding:6px 11px;border-left:3px solid #c7d2fe;line-height:1.55}',
       // Keywords
       '#zym-pr .zpkw-istilah{color:#7c3aed;font-weight:700}',
       '#zym-pr .zpkw-tempat{color:#0f766e;font-weight:700}',
@@ -3233,12 +3233,12 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
       pdf.setLineWidth(0.3);
       pdf.line(dims.mLeft, dims.mTop - 2, dims.pageW - dims.mRight, dims.mTop - 2);
       pdf.setFont('helvetica', 'bold');
-      pdf.setFontSize(8);
+      pdf.setFontSize(9);
       pdf.setTextColor(96, 96, 160);
       pdf.text('ZymNotes', dims.mLeft, dims.mTop - 5);
       if (title) {
         pdf.setFont('helvetica', 'normal');
-        pdf.setFontSize(6.5);
+        pdf.setFontSize(7);
         pdf.setTextColor(176, 176, 204);
         pdf.text(title, dims.pageW - dims.mRight, dims.mTop - 5, { align:'right', maxWidth: dims.cW * 0.6 });
       }
@@ -3247,7 +3247,7 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
       pdf.setDrawColor(212, 212, 232);
       pdf.line(dims.mLeft, fY, dims.pageW - dims.mRight, fY);
       pdf.setFont('helvetica', 'normal');
-      pdf.setFontSize(6.5);
+      pdf.setFontSize(7);
       pdf.setTextColor(144, 144, 184);
       pdf.text('zymnotes.com', dims.mLeft, fY + 4);
       pdf.setTextColor(176, 176, 204);
@@ -4586,7 +4586,7 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
   if (!('serviceWorker' in navigator)) return;
 
   window.addEventListener('load', function () {
-    navigator.serviceWorker.register('/sw.js?v=385').catch(function (error) {
+    navigator.serviceWorker.register('/sw.js?v=386').catch(function (error) {
       console.warn('Service worker registration failed:', error);
     });
   });
