@@ -472,5 +472,71 @@
     opacity: 1 !important;
     color: #333 !important;
   }
+
+  /* ══════════════════════════════════════════════════
+     PRATONTON PDF — cetak halaman pratonton (bukan nota HTML)
+  ══════════════════════════════════════════════════ */
+  body.zym-print-pdf-preview::before {
+    content: none !important;
+    display: none !important;
+  }
+  body.zym-print-pdf-preview * {
+    visibility: hidden;
+  }
+  body.zym-print-pdf-preview #zym-pdf-overlay,
+  body.zym-print-pdf-preview #zym-pdf-overlay * {
+    visibility: visible;
+  }
+  body.zym-print-pdf-preview #zym-pdf-overlay {
+    position: fixed !important;
+    inset: 0 !important;
+    width: 100% !important;
+    min-height: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    background: #fff !important;
+    z-index: 2147483647 !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+  body.zym-print-pdf-preview #zym-pdf-topbar,
+  body.zym-print-pdf-preview #zym-pdf-mode-wrap,
+  body.zym-print-pdf-preview #zym-pdf-carousel-prev,
+  body.zym-print-pdf-preview #zym-pdf-carousel-next {
+    display: none !important;
+  }
+  body.zym-print-pdf-preview #zym-pdf-pages-viewport {
+    position: static !important;
+    flex: 1 !important;
+    min-height: 0 !important;
+  }
+  body.zym-print-pdf-preview #zym-pdf-pages {
+    display: block !important;
+    overflow: visible !important;
+    scroll-snap-type: none !important;
+    width: 100% !important;
+  }
+  body.zym-print-pdf-preview .zym-pdf-page-slide {
+    display: block !important;
+    width: 100% !important;
+    min-width: 100% !important;
+    max-width: 100% !important;
+    page-break-after: always;
+    break-inside: avoid;
+    padding: 6mm 0 !important;
+  }
+  body.zym-print-pdf-preview .zym-pdf-page-slide:last-of-type {
+    page-break-after: auto;
+  }
+  body.zym-print-pdf-preview .zym-pdf-page-outer {
+    max-width: 100% !important;
+    box-shadow: none !important;
+    border: 0 !important;
+  }
+  body.zym-print-pdf-preview .zym-pdf-page-canvas-wrap img {
+    max-width: 100% !important;
+    max-height: none !important;
+    height: auto !important;
+  }
 }
 
