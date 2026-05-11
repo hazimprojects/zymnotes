@@ -2997,30 +2997,38 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
           }
         });
       } else if (cls.indexOf('paper-timeline') !== -1) {
-        var ch = node.firstElementChild;
-        while (ch) {
-          if ((ch.className || '').indexOf('paper-timeline-card') !== -1) {
-            var hd = ch.querySelector(':scope > .paper-timeline-node');
-            var bd = ch.querySelector(':scope > .paper-timeline-panel');
-            if (hd) h += '<p class="zp-ph">' + _kwHtml(hd) + '</p>';
-            if (bd) h += _bodyHtml(bd);
-            ch = ch.nextElementSibling;
-            continue;
-          }
-          if ((ch.className || '').indexOf('paper-timeline-node') !== -1) {
-            var pn = ch.nextElementSibling;
-            h += '<p class="zp-ph">' + _kwHtml(ch) + '</p>';
-            if (pn && (pn.className || '').indexOf('paper-timeline-panel') !== -1) {
-              h += _bodyHtml(pn);
-            }
-            ch = pn ? pn.nextElementSibling : ch.nextElementSibling;
-            continue;
-          }
-          ch = ch.nextElementSibling;
-        }
+        h += _pdfPaperTimelineHtml(node);
       } else { h += _bodyHtml(node); }
     });
     return h;
+  }
+
+  /** Garis masa nota → HTML pratonton PDF (node + panel). */
+  function _pdfPaperTimelineHtml(timelineEl) {
+    if (!timelineEl) return '';
+    var out = '';
+    var ch = timelineEl.firstElementChild;
+    while (ch) {
+      if ((ch.className || '').indexOf('paper-timeline-card') !== -1) {
+        var hd = ch.querySelector(':scope > .paper-timeline-node');
+        var bd = ch.querySelector(':scope > .paper-timeline-panel');
+        if (hd) out += '<p class="zp-ph">' + _kwHtml(hd) + '</p>';
+        if (bd) out += _bodyHtml(bd);
+        ch = ch.nextElementSibling;
+        continue;
+      }
+      if ((ch.className || '').indexOf('paper-timeline-node') !== -1) {
+        var pn = ch.nextElementSibling;
+        out += '<p class="zp-ph">' + _kwHtml(ch) + '</p>';
+        if (pn && (pn.className || '').indexOf('paper-timeline-panel') !== -1) {
+          out += _bodyHtml(pn);
+        }
+        ch = pn ? pn.nextElementSibling : ch.nextElementSibling;
+        continue;
+      }
+      ch = ch.nextElementSibling;
+    }
+    return out;
   }
 
   function _buildPrintHtml(mainEl) {
@@ -3082,7 +3090,15 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
         h += '<div class="zp-section">';
         if (badge) h += '<span class="zp-section-badge">' + _escPdfHtml(badge.textContent.trim()) + '</span>';
         if (sh2)   h += '<h2 class="zp-section-title">' + _kwHtml(sh2) + '</h2>';
+        child.querySelectorAll(':scope > p').forEach(function(pEl) {
+          var tp = pEl.textContent.trim();
+          if (tp && tp.indexOf('Klik kad') === -1 && tp.indexOf('akan terbuka') === -1) {
+            h += '<p class="zp-p">' + _kwHtml(pEl) + '</p>';
+          }
+        });
         h += '</div>';
+      } else if (cls.indexOf('paper-timeline') !== -1) {
+        h += _pdfPaperTimelineHtml(child);
       } else if (cls.indexOf('paper-board') !== -1) {
         h = _renderBoard(child, h);
       } else if (cls.indexOf('paper-accordion') !== -1) {
