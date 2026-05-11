@@ -13,11 +13,11 @@
   "icon_maskable_512": "3",
   "favicon_32": "3",
   "css": {
-    "base": "95",
+    "base": "96",
     "layout": "27",
     "ui": "66",
     "paper": "24",
-    "keywords": "35",
+    "keywords": "36",
     "responsive": "10",
     "themes": "25",
     "lab": "7",
