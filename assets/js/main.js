@@ -3003,7 +3003,7 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
     return h;
   }
 
-  /** Garis masa nota → HTML pratonton PDF (node + panel). */
+  /** Garis masa (.paper-timeline) → HTML pratonton PDF — satu sumber benar untuk _bodyHtml & _renderSubChild (node + panel). */
   function _pdfPaperTimelineHtml(timelineEl) {
     if (!timelineEl) return '';
     var out = '';
@@ -3107,6 +3107,11 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
         child.querySelectorAll('.paper-board').forEach(function(board) {
           h = _renderBoard(board, h);
         });
+      } else if (cls.indexOf('hero-actions') !== -1) {
+        /* butang navigasi bawah halaman — tiada dalam PDF */
+      } else {
+        /* Bungkus baharu / blok tidak dikenali: elak kandungan hilang (cth. .paper-timeline dalam div pembungkus) */
+        h += _bodyHtml(child);
       }
       return h;
     }
@@ -3129,7 +3134,10 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
     }
 
     // All note content lives inside .note-section > .container (one level below main)
-    // Walk its direct children in DOM order: master-summary board first, then subsections
+    // Walk its direct children in DOM order: master-summary board first, then subsections.
+    // Dalam setiap note-subsection, _renderSubChild mengendalikan section-heading, paper-timeline,
+    // paper-board, paper-accordion, paper-grid, paper-flap-card; lain-lain (kecuali hero-actions)
+    // lulus ke _bodyHtml supaya pembungkus baharu tidak membuang kandungan (cth. garis masa).
     var contentEl = mainEl.querySelector('.note-section .container') ||
                     mainEl.querySelector('.container.narrow') ||
                     mainEl;
