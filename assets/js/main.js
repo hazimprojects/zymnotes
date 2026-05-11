@@ -2814,8 +2814,8 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
       if (node.nodeType === 3) { out += _escPdfHtml(node.textContent); return; }
       if (node.nodeType !== 1) return;
       if (node.tagName === 'IMG') return; // drop emoji images
-      var m = (node.className || '').match(/\bkw-(istilah|tempat|tokoh|masa|konsep|kerajaan)\b/);
-      if (m) { out += '<span class="zpkw-' + m[1] + '">' + _escPdfHtml(node.textContent) + '</span>'; }
+      var m = (node.className || '').match(/\bkw-(istilah|tempat|tokoh|masa|tahun|konsep|kerajaan|pentadbiran|perjanjian|peristiwa|gerakan|pertubuhan|karya|tarikh)\b/);
+      if (m) { out += '<span class="zpkw zpkw-' + m[1] + '">' + _escPdfHtml(node.textContent) + '</span>'; }
       else { out += _kwHtml(node); }
     });
     return out;
@@ -3116,13 +3116,22 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
       '#zym-pr p.zp-p{font-size:12.5px;color:#3a3a5a;margin:4px 0 7px;line-height:1.52}',
       '#zym-pr p.zp-ph{font-size:13px;font-weight:700;color:#1a1a3a;margin:6px 0 5px;line-height:1.32}',
       '#zym-pr p.zp-sentence{font-size:12.5px;color:#3a3a5a;margin:5px 0;padding:6px 11px;border-left:3px solid #c7d2fe;line-height:1.55}',
-      // Keywords
-      '#zym-pr .zpkw-istilah{color:#7c3aed;font-weight:700}',
-      '#zym-pr .zpkw-tempat{color:#0f766e;font-weight:700}',
-      '#zym-pr .zpkw-tokoh{color:#1d4ed8;font-weight:700}',
-      '#zym-pr .zpkw-masa{color:#c2410c;font-weight:700}',
-      '#zym-pr .zpkw-konsep{color:#7c3aed;font-weight:700}',
-      '#zym-pr .zpkw-kerajaan{color:#0f766e;font-weight:700}',
+      // Kata kunci — selari dengan assets/css/keywords.css (mod terang)
+      '#zym-pr .zpkw{display:inline;padding:0.08em 0.16em;margin:0;border-radius:0.14em;font-size:inherit;line-height:inherit;font-weight:700;box-decoration-break:clone;-webkit-box-decoration-break:clone}',
+      '#zym-pr .zpkw-tokoh{color:#9f1239;background:rgba(255,228,230,0.92)}',
+      '#zym-pr .zpkw-masa{color:#1e40af;background:rgba(219,234,254,0.92)}',
+      '#zym-pr .zpkw-tahun{color:#075985;background:rgba(224,242,254,0.94)}',
+      '#zym-pr .zpkw-tempat{color:#166534;background:rgba(220,252,231,0.92)}',
+      '#zym-pr .zpkw-konsep{color:#9a3412;background:rgba(255,237,213,0.94)}',
+      '#zym-pr .zpkw-kerajaan{color:#6d28d9;background:rgba(237,233,254,0.94)}',
+      '#zym-pr .zpkw-istilah{color:#0f766e;background:rgba(204,251,241,0.94)}',
+      '#zym-pr .zpkw-pentadbiran{color:#92400e;background:rgba(254,243,199,0.94)}',
+      '#zym-pr .zpkw-perjanjian{color:#be185d;background:rgba(252,231,243,0.94)}',
+      '#zym-pr .zpkw-peristiwa{color:#b45309;background:rgba(254,249,195,0.94)}',
+      '#zym-pr .zpkw-gerakan{color:#7e22ce;background:rgba(243,232,255,0.94)}',
+      '#zym-pr .zpkw-pertubuhan{color:#4338ca;background:rgba(224,231,255,0.94)}',
+      '#zym-pr .zpkw-karya{color:#0e7490;background:rgba(207,250,254,0.94)}',
+      '#zym-pr .zpkw-tarikh{color:#1e40af;background:rgba(219,234,254,0.92)}',
     ].join('');
   }
 
@@ -4818,7 +4827,7 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
   if (!('serviceWorker' in navigator)) return;
 
   window.addEventListener('load', function () {
-    navigator.serviceWorker.register('/sw.js?v=406').catch(function (error) {
+    navigator.serviceWorker.register('/sw.js?v=407').catch(function (error) {
       console.warn('Service worker registration failed:', error);
     });
   });
