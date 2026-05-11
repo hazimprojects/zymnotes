@@ -448,7 +448,7 @@
   .reveal-on-scroll { opacity: 1 !important; transform: none !important; }
 
   /* ══════════════════════════════════════════════════
-     KEYWORDS — tebal + warna kategori (tiada latar / garis bawah)
+     KEYWORDS — penyerlah (warna + latar); kekalkan warna cetak
   ══════════════════════════════════════════════════ */
   .kw-istilah, .kw-tokoh, .kw-tempat, .kw-tarikh,
   .kw-kerajaan, .kw-masa, .kw-tahun, .kw-konsep,
@@ -456,9 +456,8 @@
   .kw-pertubuhan, .kw-karya, .kw-pentadbiran {
     font-weight: 700;
     text-decoration: none;
-    background: none !important;
-    padding: 0 !important;
-    border-radius: 0 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
   }
 
   /* ══════════════════════════════════════════════════
