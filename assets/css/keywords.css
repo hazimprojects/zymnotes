@@ -4,9 +4,9 @@
 
 .kw {
   display: inline;
-  padding: 0 0.08em;
+  padding: 0;
   margin: 0;
-  border-radius: 0.14em;
+  border-radius: 0;
   font-size: inherit;
   line-height: inherit;
   font-weight: 700;
@@ -14,20 +14,20 @@
   -webkit-box-decoration-break: clone;
 }
 
-/* Global keyword palette (unik untuk semua bab) */
-.kw-tokoh { color: #9f1239; background: rgba(255, 228, 230, 0.92); }
-.kw-masa { color: #1e40af; background: rgba(219, 234, 254, 0.92); }
-.kw-tahun { color: #075985; background: rgba(224, 242, 254, 0.94); }
-.kw-tempat { color: #166534; background: rgba(220, 252, 231, 0.92); }
-.kw-konsep { color: #9a3412; background: rgba(255, 237, 213, 0.94); }
-.kw-kerajaan { color: #6d28d9; background: rgba(237, 233, 254, 0.94); }
-.kw-istilah { color: #0f766e; background: rgba(204, 251, 241, 0.94); }
-.kw-pentadbiran { color: #92400e; background: rgba(254, 243, 199, 0.94); }
-.kw-perjanjian { color: #be185d; background: rgba(252, 231, 243, 0.94); }
-.kw-peristiwa { color: #b45309; background: rgba(254, 249, 195, 0.94); }
-.kw-gerakan { color: #7e22ce; background: rgba(243, 232, 255, 0.94); }
-.kw-pertubuhan { color: #4338ca; background: rgba(224, 231, 255, 0.94); }
-.kw-karya { color: #0e7490; background: rgba(207, 250, 254, 0.94); }
+/* Global keyword palette — warna teks sahaja (tiada blok latar) */
+.kw-tokoh { color: #9f1239; background: none; }
+.kw-masa { color: #1e40af; background: none; }
+.kw-tahun { color: #075985; background: none; }
+.kw-tempat { color: #166534; background: none; }
+.kw-konsep { color: #9a3412; background: none; }
+.kw-kerajaan { color: #6d28d9; background: none; }
+.kw-istilah { color: #0f766e; background: none; }
+.kw-pentadbiran { color: #92400e; background: none; }
+.kw-perjanjian { color: #be185d; background: none; }
+.kw-peristiwa { color: #b45309; background: none; }
+.kw-gerakan { color: #7e22ce; background: none; }
+.kw-pertubuhan { color: #4338ca; background: none; }
+.kw-karya { color: #0e7490; background: none; }
 
 .paper-chip .kw,
 .point-line .kw,
@@ -49,28 +49,28 @@
 
 html[data-theme="dark"] .kw-tokoh {
   color: #f2a7bb;
-  background: rgba(110, 28, 50, 0.34);
+  background: none;
 }
 
-html[data-theme="dark"] .kw-masa { color: #a9c4f2; background: rgba(42, 66, 132, 0.34); }
-html[data-theme="dark"] .kw-tahun { color: #8ecae6; background: rgba(8, 47, 73, 0.34); }
+html[data-theme="dark"] .kw-masa { color: #a9c4f2; background: none; }
+html[data-theme="dark"] .kw-tahun { color: #8ecae6; background: none; }
 
 html[data-theme="dark"] .kw-tempat {
   color: #9dd8b0;
-  background: rgba(24, 78, 48, 0.34);
+  background: none;
 }
 
-html[data-theme="dark"] .kw-konsep { color: #fdba74; background: rgba(124, 45, 18, 0.34); }
-html[data-theme="dark"] .kw-pentadbiran { color: #facc15; background: rgba(113, 63, 18, 0.34); }
-html[data-theme="dark"] .kw-perjanjian { color: #f9a8d4; background: rgba(131, 24, 67, 0.34); }
-html[data-theme="dark"] .kw-peristiwa { color: #fcd34d; background: rgba(120, 53, 15, 0.34); }
+html[data-theme="dark"] .kw-konsep { color: #fdba74; background: none; }
+html[data-theme="dark"] .kw-pentadbiran { color: #facc15; background: none; }
+html[data-theme="dark"] .kw-perjanjian { color: #f9a8d4; background: none; }
+html[data-theme="dark"] .kw-peristiwa { color: #fcd34d; background: none; }
 
-html[data-theme="dark"] .kw-kerajaan { color: #c4b5fd; background: rgba(76, 29, 149, 0.34); }
-html[data-theme="dark"] .kw-gerakan { color: #d8b4fe; background: rgba(88, 28, 135, 0.34); }
-html[data-theme="dark"] .kw-pertubuhan { color: #a5b4fc; background: rgba(49, 46, 129, 0.34); }
+html[data-theme="dark"] .kw-kerajaan { color: #c4b5fd; background: none; }
+html[data-theme="dark"] .kw-gerakan { color: #d8b4fe; background: none; }
+html[data-theme="dark"] .kw-pertubuhan { color: #a5b4fc; background: none; }
 
-html[data-theme="dark"] .kw-istilah { color: #86ddd4; background: rgba(14, 90, 82, 0.34); }
-html[data-theme="dark"] .kw-karya { color: #67e8f9; background: rgba(21, 94, 117, 0.34); }
+html[data-theme="dark"] .kw-istilah { color: #86ddd4; background: none; }
+html[data-theme="dark"] .kw-karya { color: #67e8f9; background: none; }
 
 /* =========================
    IDENTITI BLOK PERANG

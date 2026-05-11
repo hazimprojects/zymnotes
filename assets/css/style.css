@@ -6,14 +6,14 @@
 
 @import url("openmoji.css?v=13");   /* OpenMoji img helpers (nota & sparkle UI) */
 @import url("fluent-shell-emoji.css?v=5"); /* Fluent UI Emoji 3D pada halaman shell */
-@import url("base.css?v=94");       /* :root variables, dark mode tokens, body/reset/containers */
+@import url("base.css?v=95");       /* :root variables, dark mode tokens, body/reset/containers */
 @import url("layout.css?v=27");     /* Header, nav, dark mode fab, typography, footer, animations */
 @import url("ui.css?v=66");        /* Buttons, cards, homepage, hero, search, org-chart, interaction */
 @import url("paper.css?v=24");      /* Paper labels, boards, chips, accordion, steps, bab overview */
-@import url("keywords.css?v=34");   /* Keyword highlights, bloc identity, keyword legend, zh-mode annotations */
+@import url("keywords.css?v=35");   /* Keyword highlights, bloc identity, keyword legend, zh-mode annotations */
 @import url("responsive.css?v=10"); /* All @media queries + spacing fixes */
 @import url("themes.css?v=25");     /* Bab visual themes, dark mode overrides, war block chips */
 @import url("bab-hub-fluent-3d.css?v=1"); /* Bab induk: mesh + glass + chip wells (Fluent 3D) */
 @import url("shell-openmoji.css?v=12"); /* App shell: Zym 3D stage (mesh + glass) */
 @import url("lab.css?v=7");        /* Learning Lab, action bar, mini interactive blocks */
-@import url("print.css?v=3") print;    /* Print styles (Ctrl+P) */
+@import url("print.css?v=4") print;    /* Print styles (Ctrl+P) */
