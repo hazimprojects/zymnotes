@@ -2477,8 +2477,9 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
   var SUKA_SRC   = 'https://img.icons8.com/?size=100&id=5twNojKL5zU7&format=png&color=000000';
   var KONGSI_SRC = 'https://img.icons8.com/?size=100&id=xPX4qmtKvtBp&format=png&color=000000';
   var PDF_DL_SRC = 'https://img.icons8.com/?size=100&id=d2H6kHCiPSIg&format=png&color=000000';
-  var PDF_ICONS8_PRINT = 'https://img.icons8.com/?size=100&id=uRoarpD5f5ra&format=png&color=000000';
-  var PDF_ICONS8_DOWNLOAD = 'https://img.icons8.com/?size=100&id=yGBEe6Dss9zK&format=png&color=000000';
+  /* Ikon cerah untuk bar gelap — elakkan filter CSS invert pada PNG Icons8 (warna jadi negatif/pelik). */
+  var PDF_ICONS8_PRINT = 'https://img.icons8.com/?size=100&id=uRoarpD5f5ra&format=png&color=E2E8F0';
+  var PDF_ICONS8_DOWNLOAD = 'https://img.icons8.com/?size=100&id=yGBEe6Dss9zK&format=png&color=E2E8F0';
 
   var style = document.createElement('style');
   style.textContent = [
@@ -2527,7 +2528,7 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
     '#zym-pdf-print-btn,#zym-pdf-download-btn{width:40px;height:40px;border-radius:50%;border:none;background:rgba(255,255,255,0.09);cursor:pointer;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;transition:background 0.14s}',
     '#zym-pdf-print-btn:hover,#zym-pdf-download-btn:hover{background:rgba(255,255,255,0.18)}',
     '#zym-pdf-print-btn:disabled,#zym-pdf-download-btn:disabled{opacity:0.35;cursor:default;pointer-events:none}',
-    '#zym-pdf-print-btn img,#zym-pdf-download-btn img{width:20px;height:20px;display:block;pointer-events:none;filter:invert(1) brightness(1.15)}',
+    '#zym-pdf-print-btn img,#zym-pdf-download-btn img{width:20px;height:20px;display:block;pointer-events:none}',
     '#zym-pdf-close-btn{width:34px;height:34px;border-radius:50%;border:none;background:rgba(255,255,255,0.07);color:#94a3b8;font-size:1.1rem;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:background 0.14s,color 0.14s}',
     '#zym-pdf-close-btn:hover{background:rgba(255,255,255,0.15);color:#e2e8f0}',
     '#zym-pdf-pages-viewport{flex:1;position:relative;min-height:0;display:flex;flex-direction:column;background:#1e293b}',
@@ -2775,6 +2776,7 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
   var _pdfDims = null;
   var _pdfNoteTitle = '';
   var _pdfBusy = false;
+  var _pdfModalHistoryActive = false;
 
   function _escPdfHtml(s) {
     return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
@@ -3524,11 +3526,13 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
       pdfOverlay.classList.add('is-open');
       pdfOverlay.setAttribute('aria-hidden', 'false');
       document.body.style.overflow = 'hidden';
+      history.pushState({ zymPdfPreview: 1 }, '', window.location.href);
+      _pdfModalHistoryActive = true;
       if (pages.length && dlBtn) dlBtn.focus();
     });
   }
 
-  function closePdfPreview() {
+  function _closePdfPreviewUi() {
     pdfOverlay.classList.remove('is-open');
     pdfOverlay.setAttribute('aria-hidden', 'true');
     document.body.style.overflow = '';
@@ -3539,6 +3543,22 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
     if (dlBtn) dlBtn.disabled = true;
     if (prBtn) prBtn.disabled = true;
   }
+
+  function closePdfPreview() {
+    if (!pdfOverlay.classList.contains('is-open')) return;
+    var hadHist = _pdfModalHistoryActive;
+    _closePdfPreviewUi();
+    if (hadHist) {
+      _pdfModalHistoryActive = false;
+      history.back();
+    }
+  }
+
+  window.addEventListener('popstate', function () {
+    if (!pdfOverlay.classList.contains('is-open')) return;
+    _pdfModalHistoryActive = false;
+    _closePdfPreviewUi();
+  });
 
   document.getElementById('zym-pdf-download-btn').addEventListener('click', function() {
     if (!_pdfPageCanvases.length || !_pdfDims) return;
@@ -4798,7 +4818,7 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
   if (!('serviceWorker' in navigator)) return;
 
   window.addEventListener('load', function () {
-    navigator.serviceWorker.register('/sw.js?v=404').catch(function (error) {
+    navigator.serviceWorker.register('/sw.js?v=405').catch(function (error) {
       console.warn('Service worker registration failed:', error);
     });
   });
