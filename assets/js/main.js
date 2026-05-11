@@ -3006,28 +3006,40 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
   /** Garis masa (.paper-timeline) → HTML pratonton PDF — satu sumber benar untuk _bodyHtml & _renderSubChild (node + panel). */
   function _pdfPaperTimelineHtml(timelineEl) {
     if (!timelineEl) return '';
-    var out = '';
+    function _zpTlStep(nodeEl, panelEl) {
+      var s = '<div class="zp-tl-card">';
+      s += '<p class="zp-tl-hd">' + _kwHtml(nodeEl) + '</p>';
+      if (panelEl && (panelEl.className || '').indexOf('paper-timeline-panel') !== -1) {
+        var bd = _bodyHtml(panelEl);
+        if (bd) s += '<div class="zp-tl-bd">' + bd + '</div>';
+      }
+      s += '</div>';
+      return s;
+    }
+    var out = '<div class="zp-tl">';
     var ch = timelineEl.firstElementChild;
     while (ch) {
       if ((ch.className || '').indexOf('paper-timeline-card') !== -1) {
         var hd = ch.querySelector(':scope > .paper-timeline-node');
         var bd = ch.querySelector(':scope > .paper-timeline-panel');
-        if (hd) out += '<p class="zp-ph">' + _kwHtml(hd) + '</p>';
-        if (bd) out += _bodyHtml(bd);
+        if (hd) out += _zpTlStep(hd, bd);
+        else if (bd) {
+          var onlyBd = _bodyHtml(bd);
+          if (onlyBd) out += '<div class="zp-tl-card"><div class="zp-tl-bd">' + onlyBd + '</div></div>';
+        }
         ch = ch.nextElementSibling;
         continue;
       }
       if ((ch.className || '').indexOf('paper-timeline-node') !== -1) {
         var pn = ch.nextElementSibling;
-        out += '<p class="zp-ph">' + _kwHtml(ch) + '</p>';
-        if (pn && (pn.className || '').indexOf('paper-timeline-panel') !== -1) {
-          out += _bodyHtml(pn);
-        }
-        ch = pn ? pn.nextElementSibling : ch.nextElementSibling;
+        var panel = pn && (pn.className || '').indexOf('paper-timeline-panel') !== -1 ? pn : null;
+        out += _zpTlStep(ch, panel);
+        ch = panel ? panel.nextElementSibling : ch.nextElementSibling;
         continue;
       }
       ch = ch.nextElementSibling;
     }
+    out += '</div>';
     return out;
   }
 
@@ -3225,6 +3237,15 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
       '#zym-pr .zp-acc-body{padding:5px 9px}',
       '#zym-pr .zp-acc-body > p.zp-p{margin:2px 0 5px;line-height:1.46}',
       '#zym-pr .zp-acc-body > p.zp-ph{margin:3px 0 3px}',
+      // Garis masa PDF — kad selari blok akordion (kepala + isi)
+      '#zym-pr .zp-tl{margin:4px 0 10px}',
+      '#zym-pr .zp-tl-card{border:1px solid #e0e0ef;border-radius:8px;margin-bottom:5px;overflow:hidden;break-inside:avoid;background:#fafbff}',
+      '#zym-pr .zp-tl-hd{margin:0;padding:7px 11px;font-size:12.5px;font-weight:700;color:#1e1e3a;line-height:1.28;background:#f4f4ff;border-bottom:1px solid #e0e0ef}',
+      '#zym-pr .zp-tl-bd{padding:6px 11px 9px;background:#fff;font-size:12.5px;color:#3a3a5a}',
+      '#zym-pr .zp-tl-bd p.zp-p{margin:3px 0 6px;line-height:1.46}',
+      '#zym-pr .zp-tl-bd p.zp-ph{margin:4px 0;font-size:12.5px;line-height:1.3}',
+      '#zym-pr .zp-tl-bd .zp-chips{margin:4px 0 6px}',
+      '#zym-pr .zp-tl-bd .zp-answer{margin:4px 0}',
       // Chips — lebih tinggi & jarak baris supaya teks tidak mepet bingkai
       '#zym-pr .zp-chips{display:flex;flex-wrap:wrap;gap:5px 7px;margin:5px 0}',
       '#zym-pr .zp-chip{border:1px solid #d8d8ee;background:#f0f0f8;border-radius:6px;padding:4px 9px;font-size:11.5px;color:#2d2d5a;display:inline-flex;align-items:center;justify-content:center;gap:4px;max-width:100%;line-height:1.16;min-height:24px}',
@@ -3272,6 +3293,9 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
         '#zym-pr.zp-mode-eco .zp-acc-hd{background:#f3f4f6!important;border-bottom-color:#d1d5db!important}',
         '#zym-pr.zp-mode-eco .zp-acc-num{color:#374151!important;background:#e5e7eb!important}',
         '#zym-pr.zp-mode-eco .zp-acc-ttl,#zym-pr.zp-mode-eco .zp-acc-ttl-txt{color:#27272a!important}',
+        '#zym-pr.zp-mode-eco .zp-tl-card{border-color:#d4d4d8!important;background:#fff!important}',
+        '#zym-pr.zp-mode-eco .zp-tl-hd{background:#f3f4f6!important;border-bottom-color:#d1d5db!important;color:#27272a!important}',
+        '#zym-pr.zp-mode-eco .zp-tl-bd{background:#fafafa!important;color:#27272a!important}',
         '#zym-pr.zp-mode-eco .zp-chip,#zym-pr.zp-mode-eco .zp-step{background:#f4f4f5!important;border-color:#d4d4d8!important;color:#27272a!important}',
         '#zym-pr.zp-mode-eco .zp-step+.zp-step::before{color:#6b7280!important}',
         '#zym-pr.zp-mode-eco .zp-sentence{border-left-color:#9ca3af!important}',
@@ -3312,7 +3336,7 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
         var sectionEl = wrap.querySelector(':scope > .zp-section');
         var first = sectionEl ? sectionEl.nextElementSibling : null;
         var glueFirst = first && first.classList &&
-          (first.classList.contains('zp-board') || first.classList.contains('zp-flap') || first.classList.contains('zp-acc'));
+          (first.classList.contains('zp-board') || first.classList.contains('zp-flap') || first.classList.contains('zp-acc') || first.classList.contains('zp-tl'));
         var mergedFirst = false;
         if (sectionEl && glueFirst) {
           var merged = mergePair(rectRange(sectionEl), rectRange(first));
@@ -3332,14 +3356,14 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
           if (!ch.classList) continue;
           if (ch.classList.contains('zp-section')) continue;
           if (mergedFirst && first && ch === first) continue;
-          if (ch.classList.contains('zp-board') || ch.classList.contains('zp-flap') || ch.classList.contains('zp-acc')) {
+          if (ch.classList.contains('zp-board') || ch.classList.contains('zp-flap') || ch.classList.contains('zp-acc') || ch.classList.contains('zp-tl')) {
             var chRg = rectRange(ch);
             pushRange(chRg.top, chRg.bottom);
           }
         }
       });
 
-      container.querySelectorAll('.zp-board, .zp-flap, .zp-acc').forEach(function(el) {
+      container.querySelectorAll('.zp-board, .zp-flap, .zp-acc, .zp-tl').forEach(function(el) {
         if (el.closest && el.closest('.zp-section-wrap')) return;
         var rg = rectRange(el);
         pushRange(rg.top, rg.bottom);
@@ -5143,7 +5167,7 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
   if (!('serviceWorker' in navigator)) return;
 
   window.addEventListener('load', function () {
-    navigator.serviceWorker.register('/sw.js?v=417').catch(function (error) {
+    navigator.serviceWorker.register('/sw.js?v=418').catch(function (error) {
       console.warn('Service worker registration failed:', error);
     });
   });
