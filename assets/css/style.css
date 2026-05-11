@@ -16,4 +16,4 @@
 @import url("bab-hub-fluent-3d.css?v=1"); /* Bab induk: mesh + glass + chip wells (Fluent 3D) */
 @import url("shell-openmoji.css?v=12"); /* App shell: Zym 3D stage (mesh + glass) */
 @import url("lab.css?v=7");        /* Learning Lab, action bar, mini interactive blocks */
-@import url("print.css?v=4") print;    /* Print styles (Ctrl+P) */
+@import url("print.css?v=5") print;    /* Print styles (Ctrl+P) */
