@@ -2826,23 +2826,89 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
   }
 
   // ── Print Renderer: extract note DOM → build clean paper HTML ────────
-  function _kwHtml(el) {
-    var out = '';
-    el.childNodes.forEach(function(node) {
-      if (node.nodeType === 3) { out += _escPdfHtml(node.textContent); return; }
-      if (node.nodeType !== 1) return;
-      if (node.tagName === 'IMG') {
-        var src = node.getAttribute('src');
-        if (!src) return;
-        var w = node.getAttribute('width') || (node.width ? String(node.width) : '20');
-        var h = node.getAttribute('height') || (node.height ? String(node.height) : '20');
-        out += '<img class="zp-emoji" src="' + _escPdfAttr(src) + '" alt="" width="' + _escPdfAttr(String(w)) + '" height="' + _escPdfAttr(String(h)) + '" decoding="async" />';
-        return;
+  /** Indeks anak pertama dalam rentetan emoji di penghujung (teks di hadapan). */
+  function _pdfTrailingEmojiStartIndex(childNodes) {
+    var n = childNodes.length;
+    if (!n) return -1;
+    var j = n - 1;
+    while (j >= 0) {
+      var node = childNodes[j];
+      if (node.nodeType === 3 && !/\S/.test(node.textContent)) { j--; continue; }
+      break;
+    }
+    if (j < 0) return -1;
+    if (childNodes[j].nodeType !== 1 || childNodes[j].tagName !== 'IMG') return -1;
+    while (j >= 0) {
+      var nn = childNodes[j];
+      if (nn.nodeType === 3 && !/\S/.test(nn.textContent)) { j--; continue; }
+      if (nn.nodeType === 1 && nn.tagName === 'IMG') { j--; continue; }
+      break;
+    }
+    var trailStart = j + 1;
+    return trailStart > 0 ? trailStart : -1;
+  }
+
+  /** Indeks anak pertama selepas rentetan emoji/ruang di permulaan (untuk balut teks dinaikkan dalam PDF). */
+  function _pdfLeadingEmojiCutIndex(childNodes) {
+    var n = childNodes.length;
+    var i = 0;
+    while (i < n) {
+      var node = childNodes[i];
+      if (node.nodeType === 3 && !/\S/.test(node.textContent)) { i++; continue; }
+      break;
+    }
+    if (i >= n) return -1;
+    if (childNodes[i].nodeType !== 1 || childNodes[i].tagName !== 'IMG') return -1;
+    while (i < n) {
+      var nn = childNodes[i];
+      if (nn.nodeType === 3 && !/\S/.test(nn.textContent)) { i++; continue; }
+      if (nn.nodeType === 1 && nn.tagName === 'IMG') { i++; continue; }
+      break;
+    }
+    return i < n ? i : -1;
+  }
+
+  function _kwHtmlOne(node, o) {
+    o = o || {};
+    if (node.nodeType === 3) return _escPdfHtml(node.textContent);
+    if (node.nodeType !== 1) return '';
+    if (node.tagName === 'IMG') {
+      var src = node.getAttribute('src');
+      if (!src) return '';
+      var w = node.getAttribute('width') || (node.width ? String(node.width) : '20');
+      var h = node.getAttribute('height') || (node.height ? String(node.height) : '20');
+      return '<img class="zp-emoji" src="' + _escPdfAttr(src) + '" alt="" width="' + _escPdfAttr(String(w)) + '" height="' + _escPdfAttr(String(h)) + '" decoding="async" />';
+    }
+    var m = (node.className || '').match(/\bkw-(istilah|tempat|tokoh|masa|tahun|konsep|kerajaan|pentadbiran|perjanjian|peristiwa|gerakan|pertubuhan|karya|tarikh)\b/);
+    if (m) return '<span class="zpkw zpkw-' + m[1] + '">' + _escPdfHtml(node.textContent) + '</span>';
+    return _kwHtml(node, { freeze: !!o.freeze });
+  }
+
+  function _kwHtml(el, opts) {
+    if (!el || el.nodeType !== 1 || !el.childNodes || !el.childNodes.length) return '';
+    opts = opts || {};
+    if (!opts.freeze) {
+      var cut = _pdfLeadingEmojiCutIndex(el.childNodes);
+      if (cut >= 0) {
+        var head = '';
+        for (var i = 0; i < cut; i++) head += _kwHtmlOne(el.childNodes[i], { freeze: true });
+        var tail = '';
+        for (var j = cut; j < el.childNodes.length; j++) tail += _kwHtmlOne(el.childNodes[j], { freeze: true });
+        return head + '<span class="zp-txt-up">' + tail + '</span>';
       }
-      var m = (node.className || '').match(/\bkw-(istilah|tempat|tokoh|masa|tahun|konsep|kerajaan|pentadbiran|perjanjian|peristiwa|gerakan|pertubuhan|karya|tarikh)\b/);
-      if (m) { out += '<span class="zpkw zpkw-' + m[1] + '">' + _escPdfHtml(node.textContent) + '</span>'; }
-      else { out += _kwHtml(node); }
-    });
+      var ts = _pdfTrailingEmojiStartIndex(el.childNodes);
+      if (ts >= 0) {
+        var headT = '';
+        for (var ia = 0; ia < ts; ia++) headT += _kwHtmlOne(el.childNodes[ia], { freeze: true });
+        var tailT = '';
+        for (var jb = ts; jb < el.childNodes.length; jb++) tailT += _kwHtmlOne(el.childNodes[jb], { freeze: true });
+        return '<span class="zp-txt-up">' + headT + '</span>' + tailT;
+      }
+    }
+    var out = '';
+    for (var k = 0; k < el.childNodes.length; k++) {
+      out += _kwHtmlOne(el.childNodes[k], opts);
+    }
     return out;
   }
 
@@ -2985,7 +3051,10 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
         if (trig) {
           var ttl = trig.querySelector('.paper-accordion-title');
           h += '<div class="zp-acc-hd"><span class="zp-acc-num">' + idx + '</span>';
-          if (ttl) h += '<span class="zp-acc-ttl">' + _escPdfHtml(ttl.textContent.trim()) + '</span>';
+          if (ttl) {
+            h += '<span class="zp-acc-ttl"><span class="zp-acc-ttl-txt">' +
+              _escPdfHtml(ttl.textContent.trim()) + '</span></span>';
+          }
           h += '</div>';
         }
         if (panel) {
@@ -3125,7 +3194,10 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
       '#zym-pr .zp-acc{border:1px solid #e0e0ef;border-radius:8px;margin-bottom:4px;overflow:hidden;break-inside:avoid}',
       '#zym-pr .zp-acc-hd{display:flex;align-items:center;gap:7px;padding:5px 9px;background:#f4f4ff;border-bottom:1px solid #e0e0ef}',
       '#zym-pr .zp-acc-num{font-size:10px;font-weight:700;color:#4f46e5;min-width:20px;height:20px;line-height:1;background:#ede9fe;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0}',
-      '#zym-pr .zp-acc-ttl{font-size:12.5px;font-weight:700;color:#1e1e3a;line-height:1.08;display:flex;align-items:center;flex-wrap:wrap;column-gap:.28em;row-gap:.1em;position:relative;top:-0.08em}',
+      '#zym-pr .zp-acc-ttl{font-size:12.5px;font-weight:700;color:#1e1e3a;line-height:1.08;display:flex;align-items:center;flex-wrap:wrap;column-gap:.28em;row-gap:.1em}',
+      '#zym-pr .zp-acc-ttl-txt{position:relative;top:-0.26em;display:inline-block;line-height:1.06}',
+      // Teks selepas emoji (dibungkus semasa _kwHtml) — naikkan optik selari imej (html2canvas tidak sentiasa hormati :has())
+      '#zym-pr .zp-txt-up{position:relative;top:-0.32em;display:inline}',
       '#zym-pr .zp-acc-body{padding:5px 9px}',
       '#zym-pr .zp-acc-body > p.zp-p{margin:2px 0 5px;line-height:1.46}',
       '#zym-pr .zp-acc-body > p.zp-ph{margin:3px 0 3px}',
@@ -3158,10 +3230,8 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
       '#zym-pr .zpkw-pertubuhan{color:#4338ca;background:none}',
       '#zym-pr .zpkw-karya{color:#0e7490;background:none}',
       '#zym-pr .zpkw-tarikh{color:#1e40af;background:none}',
-      // Saiz 1em; tengah menegak dengan teks Fredoka (elak teks “tenggelam” di bawah emoji)
-      '#zym-pr .zp-emoji{display:inline-block;width:1em;height:1em;vertical-align:middle;margin:0 .26em 0 0;object-fit:contain;flex-shrink:0;line-height:1}',
-      // Perenggan / ayat dengan emoji — paksi rentas selari (Warna & emoji); :has dielakkan jika tidak disokong
-      '#zym-pr p.zp-p:has(.zp-emoji),#zym-pr p.zp-ph:has(.zp-emoji),#zym-pr p.zp-sentence:has(.zp-emoji){display:flex;flex-wrap:wrap;align-items:center;column-gap:.28em;row-gap:.2em}',
+      // Saiz 1em; imej duduk sedikit lebih rendah berbanding rentak teks yang dibungkus .zp-txt-up
+      '#zym-pr .zp-emoji{display:inline-block;width:1em;height:1em;vertical-align:middle;margin:0 .24em 0 0;object-fit:contain;flex-shrink:0;line-height:1;position:relative;top:0.06em}',
     ];
     if (isEco) {
       rules.push(
@@ -3177,7 +3247,7 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
         '#zym-pr.zp-mode-eco .zp-acc{border-color:#d4d4d8!important}',
         '#zym-pr.zp-mode-eco .zp-acc-hd{background:#f3f4f6!important;border-bottom-color:#d1d5db!important}',
         '#zym-pr.zp-mode-eco .zp-acc-num{color:#374151!important;background:#e5e7eb!important}',
-        '#zym-pr.zp-mode-eco .zp-acc-ttl{color:#27272a!important}',
+        '#zym-pr.zp-mode-eco .zp-acc-ttl,#zym-pr.zp-mode-eco .zp-acc-ttl-txt{color:#27272a!important}',
         '#zym-pr.zp-mode-eco .zp-chip,#zym-pr.zp-mode-eco .zp-step{background:#f4f4f5!important;border-color:#d4d4d8!important;color:#27272a!important}',
         '#zym-pr.zp-mode-eco .zp-step+.zp-step::before{color:#6b7280!important}',
         '#zym-pr.zp-mode-eco .zp-sentence{border-left-color:#9ca3af!important}',
