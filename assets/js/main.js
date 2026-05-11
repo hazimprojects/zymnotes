@@ -3158,7 +3158,8 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
       '#zym-pr .zpkw-pertubuhan{color:#4338ca;background:none}',
       '#zym-pr .zpkw-karya{color:#0e7490;background:none}',
       '#zym-pr .zpkw-tarikh{color:#1e40af;background:none}',
-      '#zym-pr .zp-emoji{display:inline-block;vertical-align:-0.22em;margin:0 4px 0 0;object-fit:contain;line-height:1}',
+      // Saiz & penjajaran selari teks (ikut openmoji--inline pada nota; bukan width/height piksel sumber)
+      '#zym-pr .zp-emoji{display:inline-block;width:1em;height:1em;vertical-align:-0.12em;margin:0 .28em 0 0;object-fit:contain;flex-shrink:0;line-height:1}',
     ];
     if (isEco) {
       rules.push(
