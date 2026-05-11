@@ -3259,8 +3259,8 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
       '#zym-pr p.zp-p{font-size:12.5px;color:#3a3a5a;margin:4px 0 7px;line-height:1.52}',
       '#zym-pr p.zp-ph{font-size:13px;font-weight:700;color:#1a1a3a;margin:6px 0 5px;line-height:1.32}',
       '#zym-pr p.zp-sentence{font-size:12.5px;color:#3a3a5a;margin:5px 0;padding:6px 11px;border-left:3px solid #c7d2fe;line-height:1.55}',
-      // Kata kunci — penyerlah (selari nota; html2canvas perlu latar nyata)
-      '#zym-pr .zpkw{display:inline;padding:0.06em 0.28em;margin:0;border-radius:0.35em;font-size:inherit;line-height:inherit;font-weight:700;-webkit-box-decoration-break:clone;box-decoration-break:clone;-webkit-print-color-adjust:exact;print-color-adjust:exact}',
+      // Kata kunci — penyerlah: elak line-height induk (1.52) + vertical-align untuk selari Fredoka/html2canvas
+      '#zym-pr .zpkw{display:inline;vertical-align:-0.07em;line-height:1.22;padding:0.03em 0.28em 0.11em;margin:0;border-radius:0.35em;font-size:inherit;font-weight:700;-webkit-box-decoration-break:clone;box-decoration-break:clone;-webkit-print-color-adjust:exact;print-color-adjust:exact}',
       '#zym-pr .zpkw-tokoh{color:#7f1d1d;background:rgba(254,202,211,0.62)}',
       '#zym-pr .zpkw-masa{color:#1e3a8a;background:rgba(191,219,254,0.62)}',
       '#zym-pr .zpkw-tahun{color:#0c4a6e;background:rgba(125,211,252,0.45)}',
@@ -3280,7 +3280,7 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
     ];
     if (isEco) {
       rules.push(
-        '#zym-pr.zp-mode-eco .zpkw,#zym-pr.zp-mode-eco [class*="zpkw-"]{color:#1e293b!important;font-weight:700!important;padding:0.06em 0.28em!important;border-radius:0.35em!important;background:rgba(241,245,249,0.95)!important;-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important}',
+        '#zym-pr.zp-mode-eco .zpkw,#zym-pr.zp-mode-eco [class*="zpkw-"]{color:#1e293b!important;font-weight:700!important;display:inline!important;vertical-align:-0.07em!important;line-height:1.22!important;padding:0.03em 0.28em 0.11em!important;border-radius:0.35em!important;background:rgba(241,245,249,0.95)!important;-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important}',
         '#zym-pr.zp-mode-eco .zp-chapter-lbl,#zym-pr.zp-mode-eco .zp-section-badge{background:#4b5563!important;color:#fff!important}',
         '#zym-pr.zp-mode-eco .zp-hero{border-bottom-color:#9ca3af!important}',
         '#zym-pr.zp-mode-eco .zp-subtopik{color:#52525b!important}',
