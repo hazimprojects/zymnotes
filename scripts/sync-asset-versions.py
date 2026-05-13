@@ -159,6 +159,19 @@ def sync_service_worker(versions: dict) -> bool:
             rf"\g<1>{v}",
             new_block,
         )
+    # Individual CSS files in PRECACHE_URLS
+    CSS_PRECACHE_MAP = {
+        "/assets/css/openmoji.css?v=":           versions["css"]["openmoji"],
+        "/assets/css/fluent-shell-emoji.css?v=": versions["css"]["fluent_shell"],
+        "/assets/css/bab-hub-fluent-3d.css?v=":  versions["css"]["bab_hub"],
+        "/assets/css/shell-openmoji.css?v=":     versions["css"]["shell_openmoji"],
+    }
+    for path_prefix, ver in CSS_PRECACHE_MAP.items():
+        new_block = re.sub(
+            rf"({re.escape(path_prefix)})[^\"']+",
+            rf"\g<1>{ver}",
+            new_block,
+        )
     if "'/data/zh-comprehension.json'" not in new_block:
         new_block = new_block.replace(
             "'/data/zh-glossary.json',",
