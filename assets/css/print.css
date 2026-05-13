@@ -405,11 +405,21 @@
   /* ══════════════════════════════════════════════════
      TIMELINE — kompak
   ══════════════════════════════════════════════════ */
-  .paper-timeline { gap: 2px !important; margin-top: 3px !important; }
+  .paper-timeline { gap: 6px !important; margin-top: 4px !important; }
+  .paper-timeline-card {
+    break-inside: avoid;
+    border-radius: 6px !important;
+  }
   .paper-timeline-node {
-    padding: 3px 8px !important;
+    padding: 4px 8px !important;
     font-size: 8pt !important;
-    border-radius: 5px !important;
+    border-radius: 5px 5px 0 0 !important;
+    break-inside: avoid;
+  }
+  .paper-timeline-panel {
+    padding: 3px 8px 5px !important;
+    font-size: 8pt !important;
+    border-radius: 0 0 5px 5px !important;
     break-inside: avoid;
   }
 
@@ -438,17 +448,16 @@
   .reveal-on-scroll { opacity: 1 !important; transform: none !important; }
 
   /* ══════════════════════════════════════════════════
-     KEYWORDS — bold + underline
+     KEYWORDS — penyerlah (warna + latar); kekalkan warna cetak
   ══════════════════════════════════════════════════ */
   .kw-istilah, .kw-tokoh, .kw-tempat, .kw-tarikh,
   .kw-kerajaan, .kw-masa, .kw-tahun, .kw-konsep,
   .kw-perjanjian, .kw-peristiwa, .kw-gerakan,
   .kw-pertubuhan, .kw-karya, .kw-pentadbiran {
     font-weight: 700;
-    text-decoration: underline;
-    background: none !important;
-    padding: 0 !important;
-    border-radius: 0 !important;
+    text-decoration: none;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
   }
 
   /* ══════════════════════════════════════════════════
@@ -461,6 +470,72 @@
     font-family: "PingFang SC", "Microsoft YaHei", "Noto Sans SC", sans-serif;
     opacity: 1 !important;
     color: #333 !important;
+  }
+
+  /* ══════════════════════════════════════════════════
+     PRATONTON PDF — cetak halaman pratonton (bukan nota HTML)
+  ══════════════════════════════════════════════════ */
+  body.zym-print-pdf-preview::before {
+    content: none !important;
+    display: none !important;
+  }
+  body.zym-print-pdf-preview * {
+    visibility: hidden;
+  }
+  body.zym-print-pdf-preview #zym-pdf-overlay,
+  body.zym-print-pdf-preview #zym-pdf-overlay * {
+    visibility: visible;
+  }
+  body.zym-print-pdf-preview #zym-pdf-overlay {
+    position: fixed !important;
+    inset: 0 !important;
+    width: 100% !important;
+    min-height: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    background: #fff !important;
+    z-index: 2147483647 !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+  body.zym-print-pdf-preview #zym-pdf-topbar,
+  body.zym-print-pdf-preview #zym-pdf-mode-wrap,
+  body.zym-print-pdf-preview #zym-pdf-carousel-prev,
+  body.zym-print-pdf-preview #zym-pdf-carousel-next {
+    display: none !important;
+  }
+  body.zym-print-pdf-preview #zym-pdf-pages-viewport {
+    position: static !important;
+    flex: 1 !important;
+    min-height: 0 !important;
+  }
+  body.zym-print-pdf-preview #zym-pdf-pages {
+    display: block !important;
+    overflow: visible !important;
+    scroll-snap-type: none !important;
+    width: 100% !important;
+  }
+  body.zym-print-pdf-preview .zym-pdf-page-slide {
+    display: block !important;
+    width: 100% !important;
+    min-width: 100% !important;
+    max-width: 100% !important;
+    page-break-after: always;
+    break-inside: avoid;
+    padding: 6mm 0 !important;
+  }
+  body.zym-print-pdf-preview .zym-pdf-page-slide:last-of-type {
+    page-break-after: auto;
+  }
+  body.zym-print-pdf-preview .zym-pdf-page-outer {
+    max-width: 100% !important;
+    box-shadow: none !important;
+    border: 0 !important;
+  }
+  body.zym-print-pdf-preview .zym-pdf-page-canvas-wrap img {
+    max-width: 100% !important;
+    max-height: none !important;
+    height: auto !important;
   }
 }
 

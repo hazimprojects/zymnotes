@@ -174,6 +174,10 @@ body.app-shell-page .home-feature-card.hfc-amber {
   background: linear-gradient(155deg, rgba(255, 255, 255, 0.55) 0%, rgba(254, 243, 230, 0.92) 100%);
   border-color: rgba(217, 119, 6, 0.32);
 }
+body.app-shell-page .home-feature-card.hfc-indigo {
+  background: linear-gradient(155deg, rgba(255, 255, 255, 0.55) 0%, rgba(238, 242, 255, 0.94) 100%);
+  border-color: rgba(79, 70, 229, 0.32);
+}
 
 body.app-shell-page .home-feature-card.hfc-violet .home-feature-icon-badge {
   background: linear-gradient(145deg, rgba(255, 255, 255, 0.75), rgba(221, 214, 254, 0.95));
@@ -199,6 +203,12 @@ body.app-shell-page .home-feature-card.hfc-amber .home-feature-icon-badge {
     0 1px 0 rgba(255, 255, 255, 0.9) inset,
     0 10px 22px rgba(217, 119, 6, 0.14);
 }
+body.app-shell-page .home-feature-card.hfc-indigo .home-feature-icon-badge {
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.75), rgba(224, 231, 255, 0.96));
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.9) inset,
+    0 10px 22px rgba(79, 70, 229, 0.18);
+}
 
 [data-theme="dark"] body.app-shell-page .home-feature-card.hfc-violet {
   background: linear-gradient(155deg, rgba(40, 36, 58, 0.95) 0%, rgba(30, 27, 48, 0.92) 100%);
@@ -216,6 +226,10 @@ body.app-shell-page .home-feature-card.hfc-amber .home-feature-icon-badge {
   background: linear-gradient(155deg, rgba(48, 40, 30, 0.95) 0%, rgba(36, 30, 24, 0.92) 100%);
   border-color: rgba(252, 211, 77, 0.28);
 }
+[data-theme="dark"] body.app-shell-page .home-feature-card.hfc-indigo {
+  background: linear-gradient(155deg, rgba(38, 36, 58, 0.95) 0%, rgba(28, 27, 44, 0.92) 100%);
+  border-color: rgba(165, 180, 252, 0.32);
+}
 
 [data-theme="dark"] body.app-shell-page .home-feature-card.hfc-violet .home-feature-icon-badge {
   background: linear-gradient(145deg, rgba(60, 54, 82, 0.95), rgba(45, 38, 72, 0.98));
@@ -232,6 +246,10 @@ body.app-shell-page .home-feature-card.hfc-amber .home-feature-icon-badge {
 [data-theme="dark"] body.app-shell-page .home-feature-card.hfc-amber .home-feature-icon-badge {
   background: linear-gradient(145deg, rgba(58, 48, 36, 0.95), rgba(44, 36, 28, 0.98));
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.3);
+}
+[data-theme="dark"] body.app-shell-page .home-feature-card.hfc-indigo .home-feature-icon-badge {
+  background: linear-gradient(145deg, rgba(52, 50, 72, 0.95), rgba(38, 36, 56, 0.98));
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.32);
 }
 
 body[class*="page-theme-"].app-shell-page .home-scope-section {

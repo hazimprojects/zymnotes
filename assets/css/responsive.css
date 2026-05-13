@@ -175,7 +175,7 @@
   .paper-grid.compact-kingdom-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.65rem; }
 
   .paper-chip-list.two-col-chips, .two-col-chips { display: flex; flex-wrap: wrap; }
-  .paper-accordion-trigger, .paper-timeline-node { padding-right: 2.4rem; }
+  .paper-accordion-trigger, .paper-timeline-node { padding-right: 1rem; }
 
   .org-level-3 { flex-direction: column; align-items: stretch; }
   .org-node { width: 100%; }

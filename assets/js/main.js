@@ -481,6 +481,35 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // =========================
+  // PAPER TIMELINE — satu kad per langkah (tajuk + isi sentiasa kelihatan)
+  // =========================
+  document.querySelectorAll(".paper-timeline").forEach(function (wrap) {
+    if (wrap.dataset.zymTimelineWrapped) return;
+    wrap.dataset.zymTimelineWrapped = "1";
+    var el = wrap.firstElementChild;
+    while (el) {
+      var next = el.nextElementSibling;
+      if (
+        el.classList &&
+        el.classList.contains("paper-timeline-node") &&
+        next &&
+        next.classList &&
+        next.classList.contains("paper-timeline-panel")
+      ) {
+        var card = document.createElement("article");
+        card.className = "paper-timeline-card";
+        card.setAttribute("role", "group");
+        wrap.insertBefore(card, el);
+        card.appendChild(el);
+        card.appendChild(next);
+        el = card.nextElementSibling;
+      } else {
+        el = next;
+      }
+    }
+  });
+
+  // =========================
   // PROCESS CARDS
   // =========================
   const processCards = document.querySelectorAll(".paper-process-card");
@@ -820,32 +849,6 @@ document.addEventListener("DOMContentLoaded", function () {
   prepareAccordionPanels(document.body);
 
   window.addEventListener("resize", refreshOpenAccordions);
-
-  // =========================
-  // PAPER TIMELINE
-  // =========================
-  const paperTimelineNodes = document.querySelectorAll(".paper-timeline-node");
-  const paperTimelinePanels = document.querySelectorAll(".paper-timeline-panel");
-
-  paperTimelineNodes.forEach((node) => {
-    node.addEventListener("click", () => {
-      const targetId = node.getAttribute("data-timeline");
-      if (!targetId) return;
-
-      const targetPanel = document.getElementById(targetId);
-      if (!targetPanel) return;
-
-      const isOpen = node.classList.contains("active");
-
-      paperTimelineNodes.forEach((item) => item.classList.remove("active"));
-      paperTimelinePanels.forEach((panel) => panel.classList.remove("active"));
-
-      if (!isOpen) {
-        node.classList.add("active");
-        targetPanel.classList.add("active");
-      }
-    });
-  });
 
   // =========================
   // REVEAL ON SCROLL
@@ -1451,6 +1454,66 @@ var ZYMNOTES_NAV = { chapters: [
     { num: '8.4', title: 'Peranan Kabinet Pertama Persekutuan Tanah Melayu', url: 'bab-8-4.html' },
   ]},
 ]};
+
+// ── CTA indeks bab induk seterusnya (subtopik terakhir sahaja) ──────────────────
+// Pada halaman subtopik terakhir dalam bab: ganti butang utama "Kembali ke Bab N"
+// (ke indeks bab semasa) dengan "Seterusnya: Bab M" ke indeks bab berikutnya.
+// Subtopik lain tidak diubah. Tiada bab selepas 8 — kekalkan CTA asal.
+(function () {
+  var pathname = window.location.pathname;
+  var fileMatch = pathname.match(/(bab-(\d+)-\d+\.html)$/i);
+  if (!fileMatch) return;
+  var currentFile = fileMatch[1].toLowerCase();
+  var chNum = parseInt(fileMatch[2], 10);
+  if (!(chNum >= 1 && chNum <= 8)) return;
+  if (!window.ZYMNOTES_NAV || !ZYMNOTES_NAV.chapters || !ZYMNOTES_NAV.chapters.length) return;
+  var idx = chNum - 1;
+  var chapter = ZYMNOTES_NAV.chapters[idx];
+  if (!chapter || !chapter.subtopics || !chapter.subtopics.length) return;
+  var lastSubUrl = String(chapter.subtopics[chapter.subtopics.length - 1].url || '').toLowerCase();
+  if (lastSubUrl !== currentFile) return;
+  if (idx + 1 >= ZYMNOTES_NAV.chapters.length) return;
+  var nextCh = ZYMNOTES_NAV.chapters[idx + 1];
+
+  function hrefBasename(h) {
+    if (!h) return '';
+    var x = String(h).split('#')[0].split('?')[0];
+    var parts = x.split('/');
+    return (parts[parts.length - 1] || '').toLowerCase();
+  }
+  var hubFile = hrefBasename(chapter.url);
+
+  var bars = document.querySelectorAll('main.note-reading-main .note-subsection .hero-actions');
+  if (!bars.length) bars = document.querySelectorAll('main .note-subsection .hero-actions');
+  if (!bars.length) return;
+
+  for (var b = 0; b < bars.length; b++) {
+    var bar = bars[b];
+    var target = null;
+    var primaries = bar.querySelectorAll('a.btn.btn-primary');
+    for (var pi = 0; pi < primaries.length; pi++) {
+      if (hrefBasename(primaries[pi].getAttribute('href')) === hubFile) {
+        target = primaries[pi];
+        break;
+      }
+    }
+    if (!target) {
+      var anchors = bar.querySelectorAll('a.btn');
+      for (var i = 0; i < anchors.length; i++) {
+        if (hrefBasename(anchors[i].getAttribute('href')) === hubFile) {
+          target = anchors[i];
+          break;
+        }
+      }
+    }
+    if (!target) continue;
+
+    target.setAttribute('data-zym-next-bab', '1');
+    target.href = nextCh.url;
+    target.textContent = 'Seterusnya: Bab ' + nextCh.num;
+    target.setAttribute('aria-label', 'Pergi ke indeks Bab ' + nextCh.num + ' — ' + nextCh.title);
+  }
+})();
 
 
 // =========================
@@ -2401,20 +2464,9 @@ function hzLabQuizSparklePair() {
 })();
 
 // ── Nota Feedback Widget ──────────────────────────────────────────────────────
-// Supabase setup (isi nilai dari projek Supabase anda):
-//   1. Buat table: CREATE TABLE public.nota_feedback (
-//        id bigserial PRIMARY KEY, page_path text NOT NULL,
-//        reaction text NOT NULL CHECK (reaction IN ('mudah','boleh-baik','kurang-jelas')),
-//        created_at timestamptz DEFAULT now());
-//   2. Aktifkan RLS: ALTER TABLE public.nota_feedback ENABLE ROW LEVEL SECURITY;
-//   3. Policy INSERT anon: CREATE POLICY "anon insert" ON public.nota_feedback
-//        FOR INSERT TO anon WITH CHECK (true);
-//   4. Fungsi kiraan (SECURITY DEFINER agar anon tidak boleh baca jadual terus):
-//        CREATE OR REPLACE FUNCTION public.get_nota_helpful_count(p_path text)
-//        RETURNS bigint LANGUAGE sql SECURITY DEFINER AS $$
-//          SELECT COUNT(*) FROM public.nota_feedback
-//          WHERE page_path = p_path AND reaction = 'mudah'; $$;
-//        GRANT EXECUTE ON FUNCTION public.get_nota_helpful_count TO anon;
+// Skema Supabase (jadual nota_feedback, RPC submit/delete/kiraan) + log PDF:
+//   docs/supabase/nota_feedback_pdf.sql
+//
 var NOTA_FB_SUPABASE_URL = 'https://hcvdhonpszwdiwcxwcrp.supabase.co';
 var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhjdmRob25wc3p3ZGl3Y3h3Y3JwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzgwNTUwOTEsImV4cCI6MjA5MzYzMTA5MX0.UazJr2fXKTG08s7GbYA8aZnl2HwP6Uh60eSN6ei_m1A';
 
@@ -2425,6 +2477,9 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
   var SUKA_SRC   = 'https://img.icons8.com/?size=100&id=5twNojKL5zU7&format=png&color=000000';
   var KONGSI_SRC = 'https://img.icons8.com/?size=100&id=xPX4qmtKvtBp&format=png&color=000000';
   var PDF_DL_SRC = 'https://img.icons8.com/?size=100&id=d2H6kHCiPSIg&format=png&color=000000';
+  /* Ikon cerah untuk bar gelap — elakkan filter CSS invert pada PNG Icons8 (warna jadi negatif/pelik). */
+  var PDF_ICONS8_PRINT = 'https://img.icons8.com/?size=100&id=uRoarpD5f5ra&format=png&color=E2E8F0';
+  var PDF_ICONS8_DOWNLOAD = 'https://img.icons8.com/?size=100&id=yGBEe6Dss9zK&format=png&color=E2E8F0';
 
   var style = document.createElement('style');
   style.textContent = [
@@ -2469,21 +2524,38 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
     '#zym-pdf-overlay.is-open{opacity:1;visibility:visible}',
     '#zym-pdf-topbar{display:flex;align-items:center;gap:8px;padding:10px 14px;background:#0f172a;flex-shrink:0;min-height:52px}',
     '#zym-pdf-topbar-title{font-family:Fredoka,sans-serif;font-size:0.92rem;font-weight:600;color:#cbd5e1;flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}',
-    '#zym-pdf-save-btn{display:inline-flex;align-items:center;gap:5px;padding:7px 14px;border-radius:99px;border:none;background:#4f46e5;color:#fff;font-size:0.8rem;font-weight:700;cursor:pointer;flex-shrink:0;line-height:1.4;white-space:nowrap}',
-    '#zym-pdf-save-btn:hover{background:#4338ca}',
-    '#zym-pdf-save-btn:disabled{opacity:0.55;cursor:default;pointer-events:none}',
+    '#zym-pdf-mode-wrap{display:flex;align-items:center;gap:8px;flex-shrink:0;margin-right:4px}',
+    '#zym-pdf-mode-seg{display:inline-flex;border-radius:999px;background:rgba(255,255,255,0.06);padding:3px;gap:2px}',
+    '#zym-pdf-mode-full,#zym-pdf-mode-eco{border:none;cursor:pointer;font-family:Fredoka,sans-serif;font-size:0.72rem;font-weight:600;padding:6px 11px;border-radius:999px;color:#94a3b8;background:transparent;white-space:nowrap;transition:background 0.15s,color 0.15s}',
+    '#zym-pdf-mode-full:disabled,#zym-pdf-mode-eco:disabled{opacity:0.45;cursor:default}',
+    '#zym-pdf-mode-full:hover,#zym-pdf-mode-eco:hover{color:#e2e8f0}',
+    '#zym-pdf-mode-full.is-active,#zym-pdf-mode-eco.is-active{background:rgba(79,70,229,0.45);color:#fff}',
+    '#zym-pdf-topbar-actions{display:flex;align-items:center;gap:6px;flex-shrink:0}',
+    '#zym-pdf-print-btn,#zym-pdf-download-btn{width:40px;height:40px;border-radius:50%;border:none;background:rgba(255,255,255,0.09);cursor:pointer;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;transition:background 0.14s}',
+    '#zym-pdf-print-btn:hover,#zym-pdf-download-btn:hover{background:rgba(255,255,255,0.18)}',
+    '#zym-pdf-print-btn:disabled,#zym-pdf-download-btn:disabled{opacity:0.35;cursor:default;pointer-events:none}',
+    '#zym-pdf-print-btn img,#zym-pdf-download-btn img{width:20px;height:20px;display:block;pointer-events:none}',
     '#zym-pdf-close-btn{width:34px;height:34px;border-radius:50%;border:none;background:rgba(255,255,255,0.07);color:#94a3b8;font-size:1.1rem;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:background 0.14s,color 0.14s}',
     '#zym-pdf-close-btn:hover{background:rgba(255,255,255,0.15);color:#e2e8f0}',
-    '#zym-pdf-pages{flex:1;overflow-y:auto;padding:16px 12px;display:flex;flex-direction:column;align-items:center;gap:14px;background:#2d3748}',
-    '#zym-pdf-loading{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:60px 24px;color:#94a3b8;font-size:0.85rem;text-align:center;width:100%}',
+    '#zym-pdf-pages-viewport{flex:1;position:relative;min-height:0;display:flex;flex-direction:column;background:#1e293b}',
+    '#zym-pdf-pages{flex:1;display:flex;flex-direction:row;align-items:center;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scroll-behavior:smooth;gap:0;width:100%;scrollbar-width:thin;overscroll-behavior-x:contain}',
+    '#zym-pdf-pages::-webkit-scrollbar{height:6px}',
+    '#zym-pdf-pages::-webkit-scrollbar-thumb{background:rgba(255,255,255,0.18);border-radius:3px}',
+    '.zym-pdf-page-slide{flex:0 0 100%;width:100%;min-width:100%;max-width:100%;box-sizing:border-box;scroll-snap-align:center;scroll-snap-stop:always;display:flex;align-items:center;justify-content:center;padding:12px 44px 18px;min-height:0}',
+    '#zym-pdf-carousel-prev,#zym-pdf-carousel-next{position:absolute;top:50%;transform:translateY(-50%);z-index:3;width:40px;height:40px;border-radius:50%;border:none;background:rgba(15,23,42,0.55);color:#e2e8f0;font-size:1.35rem;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 12px rgba(0,0,0,0.35);transition:background 0.15s,color 0.15s}',
+    '#zym-pdf-carousel-prev:hover,#zym-pdf-carousel-next:hover{background:rgba(79,70,229,0.55);color:#fff}',
+    '#zym-pdf-carousel-prev:disabled,#zym-pdf-carousel-next:disabled{opacity:0.25;cursor:default;pointer-events:none}',
+    '#zym-pdf-carousel-prev{left:6px}',
+    '#zym-pdf-carousel-next{right:6px}',
+    '#zym-pdf-loading{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:60px 24px;color:#94a3b8;font-size:0.85rem;text-align:center;width:100%;min-width:100%}',
     '.zym-pdf-spinner{width:36px;height:36px;border:3px solid rgba(79,70,229,0.2);border-top-color:#4f46e5;border-radius:50%;animation:zym-spin 0.8s linear infinite;flex-shrink:0}',
     '@keyframes zym-spin{to{transform:rotate(360deg)}}',
-    '.zym-pdf-page-outer{background:#fff;box-shadow:0 6px 28px rgba(0,0,0,0.4);width:100%;max-width:520px;overflow:hidden;border-radius:2px}',
+    '.zym-pdf-page-outer{background:#fff;box-shadow:0 6px 28px rgba(0,0,0,0.4);width:100%;max-width:min(520px,calc(100vw - 88px));overflow:hidden;border-radius:2px;flex-shrink:0}',
     '.zym-pdf-page-hdr{display:flex;align-items:center;justify-content:space-between;padding:5px 9px;border-bottom:0.5px solid #d4d4e8;font-family:Fredoka,sans-serif}',
     '.zym-pdf-page-hdr-l{font-size:0.65rem;font-weight:700;color:#6060a0}',
     '.zym-pdf-page-hdr-r{font-size:0.57rem;color:#b0b0cc;max-width:55%;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;text-align:right}',
-    '.zym-pdf-page-canvas-wrap{aspect-ratio:186/257;overflow:hidden;background:#fff}',
-    '.zym-pdf-page-canvas-wrap img{display:block;width:100%;height:100%;object-fit:cover;border:0}',
+    '.zym-pdf-page-canvas-wrap{display:flex;align-items:center;justify-content:center;background:#fff;min-height:0}',
+    '.zym-pdf-page-canvas-wrap img{display:block;max-width:100%;max-height:min(72vh,calc(100dvh - 210px));width:auto;height:auto;object-fit:contain;border:0}',
     '.zym-pdf-page-ftr{display:flex;align-items:center;justify-content:space-between;padding:4px 9px;border-top:0.5px solid #d4d4e8;font-size:0.55rem;color:#b8b8d0;font-family:Fredoka,sans-serif}',
     '.zym-pdf-page-num{color:#6b7280;font-size:0.7rem;text-align:center;font-family:Fredoka,sans-serif;padding:2px}',
     '@media print{#zym-pdf-overlay{display:none!important}}',
@@ -2639,28 +2711,93 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
   pdfOverlay.innerHTML = [
     '<div id="zym-pdf-topbar">',
       '<div id="zym-pdf-topbar-title">Pratonton PDF</div>',
-      '<button id="zym-pdf-save-btn" type="button" disabled>',
-        '<svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" style="flex-shrink:0"><path d="M5 20h14v-2H5v2zm7-18l-5 5h3v4h4V7h3l-5-5z"/></svg>',
-        '<span>Simpan PDF</span>',
-      '</button>',
+      '<div id="zym-pdf-mode-wrap" role="group" aria-label="Mod PDF">',
+        '<div id="zym-pdf-mode-seg">',
+          '<button type="button" id="zym-pdf-mode-full" class="is-active" aria-pressed="true">Warna & emoji</button>',
+          '<button type="button" id="zym-pdf-mode-eco" aria-pressed="false">Jimat dakwat</button>',
+        '</div>',
+      '</div>',
+      '<div id="zym-pdf-topbar-actions">',
+        '<button type="button" id="zym-pdf-print-btn" class="zym-pdf-icon-btn" disabled aria-label="Cetak nota">',
+          '<img src="' + PDF_ICONS8_PRINT + '" alt="" width="20" height="20" loading="lazy">',
+        '</button>',
+        '<button type="button" id="zym-pdf-download-btn" class="zym-pdf-icon-btn" disabled aria-label="Muat turun PDF">',
+          '<img src="' + PDF_ICONS8_DOWNLOAD + '" alt="" width="20" height="20" loading="lazy">',
+        '</button>',
+      '</div>',
       '<button id="zym-pdf-close-btn" type="button" aria-label="Tutup">✕</button>',
     '</div>',
-    '<div id="zym-pdf-pages">',
-      '<div id="zym-pdf-loading">',
-        '<div class="zym-pdf-spinner"></div>',
-        '<p>Sedang menyediakan pratonton…</p>',
+    '<div id="zym-pdf-pages-viewport" class="zym-pdf-pages-viewport">',
+      '<div id="zym-pdf-pages">',
+        '<div id="zym-pdf-loading">',
+          '<div class="zym-pdf-spinner"></div>',
+          '<p>Sedang menyediakan pratonton…</p>',
+        '</div>',
       '</div>',
+      '<button type="button" id="zym-pdf-carousel-prev" aria-label="Halaman sebelumnya">‹</button>',
+      '<button type="button" id="zym-pdf-carousel-next" aria-label="Halaman seterusnya">›</button>',
     '</div>'
   ].join('');
   document.body.appendChild(pdfOverlay);
+
+  function _pdfUpdateCarouselUi() {
+    var track = document.getElementById('zym-pdf-pages');
+    var prev = document.getElementById('zym-pdf-carousel-prev');
+    var next = document.getElementById('zym-pdf-carousel-next');
+    var ttl = document.getElementById('zym-pdf-topbar-title');
+    if (!track || !prev || !next) return;
+    var slides = track.querySelectorAll('.zym-pdf-page-slide');
+    var n = slides.length;
+    if (!n) {
+      prev.disabled = true;
+      next.disabled = true;
+      if (ttl) ttl.textContent = 'Pratonton PDF';
+      return;
+    }
+    var cw = track.clientWidth || 1;
+    var idx = Math.min(n - 1, Math.max(0, Math.round(track.scrollLeft / cw)));
+    prev.disabled = idx <= 0;
+    next.disabled = idx >= n - 1;
+    if (ttl) ttl.textContent = 'Pratonton PDF · ' + (idx + 1) + ' / ' + n;
+  }
+
+  (function _pdfCarouselInit() {
+    var track = document.getElementById('zym-pdf-pages');
+    if (!track || track.dataset.zymPdfCarousel) return;
+    track.dataset.zymPdfCarousel = '1';
+    track.addEventListener('scroll', function() {
+      requestAnimationFrame(_pdfUpdateCarouselUi);
+    }, { passive: true });
+    var prev = document.getElementById('zym-pdf-carousel-prev');
+    var next = document.getElementById('zym-pdf-carousel-next');
+    if (prev) {
+      prev.addEventListener('click', function() {
+        var t = document.getElementById('zym-pdf-pages');
+        if (t) t.scrollBy({ left: -(t.clientWidth || 0), behavior: 'smooth' });
+      });
+    }
+    if (next) {
+      next.addEventListener('click', function() {
+        var t = document.getElementById('zym-pdf-pages');
+        if (t) t.scrollBy({ left: (t.clientWidth || 0), behavior: 'smooth' });
+      });
+    }
+  })();
 
   var _pdfPageCanvases = [];
   var _pdfDims = null;
   var _pdfNoteTitle = '';
   var _pdfBusy = false;
+  var _pdfModalHistoryActive = false;
+  var _pdfActiveMode = 'full';
+  var _pdfCache = { full: { pages: null, dims: null }, eco: { pages: null, dims: null } };
 
   function _escPdfHtml(s) {
     return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+  }
+
+  function _escPdfAttr(s) {
+    return String(s).replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;');
   }
 
   function _loadScript(src, cb) {
@@ -2689,16 +2826,89 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
   }
 
   // ── Print Renderer: extract note DOM → build clean paper HTML ────────
-  function _kwHtml(el) {
+  /** Indeks anak pertama dalam rentetan emoji di penghujung (teks di hadapan). */
+  function _pdfTrailingEmojiStartIndex(childNodes) {
+    var n = childNodes.length;
+    if (!n) return -1;
+    var j = n - 1;
+    while (j >= 0) {
+      var node = childNodes[j];
+      if (node.nodeType === 3 && !/\S/.test(node.textContent)) { j--; continue; }
+      break;
+    }
+    if (j < 0) return -1;
+    if (childNodes[j].nodeType !== 1 || childNodes[j].tagName !== 'IMG') return -1;
+    while (j >= 0) {
+      var nn = childNodes[j];
+      if (nn.nodeType === 3 && !/\S/.test(nn.textContent)) { j--; continue; }
+      if (nn.nodeType === 1 && nn.tagName === 'IMG') { j--; continue; }
+      break;
+    }
+    var trailStart = j + 1;
+    return trailStart > 0 ? trailStart : -1;
+  }
+
+  /** Indeks anak pertama selepas rentetan emoji/ruang di permulaan (untuk balut teks dinaikkan dalam PDF). */
+  function _pdfLeadingEmojiCutIndex(childNodes) {
+    var n = childNodes.length;
+    var i = 0;
+    while (i < n) {
+      var node = childNodes[i];
+      if (node.nodeType === 3 && !/\S/.test(node.textContent)) { i++; continue; }
+      break;
+    }
+    if (i >= n) return -1;
+    if (childNodes[i].nodeType !== 1 || childNodes[i].tagName !== 'IMG') return -1;
+    while (i < n) {
+      var nn = childNodes[i];
+      if (nn.nodeType === 3 && !/\S/.test(nn.textContent)) { i++; continue; }
+      if (nn.nodeType === 1 && nn.tagName === 'IMG') { i++; continue; }
+      break;
+    }
+    return i < n ? i : -1;
+  }
+
+  function _kwHtmlOne(node, o) {
+    o = o || {};
+    if (node.nodeType === 3) return _escPdfHtml(node.textContent);
+    if (node.nodeType !== 1) return '';
+    if (node.tagName === 'IMG') {
+      var src = node.getAttribute('src');
+      if (!src) return '';
+      var w = node.getAttribute('width') || (node.width ? String(node.width) : '20');
+      var h = node.getAttribute('height') || (node.height ? String(node.height) : '20');
+      return '<img class="zp-emoji" src="' + _escPdfAttr(src) + '" alt="" width="' + _escPdfAttr(String(w)) + '" height="' + _escPdfAttr(String(h)) + '" decoding="async" />';
+    }
+    var m = (node.className || '').match(/\bkw-(istilah|tempat|tokoh|masa|tahun|konsep|kerajaan|pentadbiran|perjanjian|peristiwa|gerakan|pertubuhan|karya|tarikh)\b/);
+    if (m) return '<span class="zpkw zpkw-' + m[1] + '">' + _escPdfHtml(node.textContent) + '</span>';
+    return _kwHtml(node, { freeze: !!o.freeze });
+  }
+
+  function _kwHtml(el, opts) {
+    if (!el || el.nodeType !== 1 || !el.childNodes || !el.childNodes.length) return '';
+    opts = opts || {};
+    if (!opts.freeze) {
+      var cut = _pdfLeadingEmojiCutIndex(el.childNodes);
+      if (cut >= 0) {
+        var head = '';
+        for (var i = 0; i < cut; i++) head += _kwHtmlOne(el.childNodes[i], { freeze: true });
+        var tail = '';
+        for (var j = cut; j < el.childNodes.length; j++) tail += _kwHtmlOne(el.childNodes[j], { freeze: true });
+        return head + '<span class="zp-txt-up">' + tail + '</span>';
+      }
+      var ts = _pdfTrailingEmojiStartIndex(el.childNodes);
+      if (ts >= 0) {
+        var headT = '';
+        for (var ia = 0; ia < ts; ia++) headT += _kwHtmlOne(el.childNodes[ia], { freeze: true });
+        var tailT = '';
+        for (var jb = ts; jb < el.childNodes.length; jb++) tailT += _kwHtmlOne(el.childNodes[jb], { freeze: true });
+        return '<span class="zp-txt-up">' + headT + '</span>' + tailT;
+      }
+    }
     var out = '';
-    el.childNodes.forEach(function(node) {
-      if (node.nodeType === 3) { out += _escPdfHtml(node.textContent); return; }
-      if (node.nodeType !== 1) return;
-      if (node.tagName === 'IMG') return; // drop emoji images
-      var m = (node.className || '').match(/\bkw-(istilah|tempat|tokoh|masa|konsep|kerajaan)\b/);
-      if (m) { out += '<span class="zpkw-' + m[1] + '">' + _escPdfHtml(node.textContent) + '</span>'; }
-      else { out += _kwHtml(node); }
-    });
+    for (var k = 0; k < el.childNodes.length; k++) {
+      out += _kwHtmlOne(el.childNodes[k], opts);
+    }
     return out;
   }
 
@@ -2759,7 +2969,7 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
           if (trig2) {
             var ttl2 = trig2.querySelector('.paper-accordion-title');
             h += '<div class="zp-acc-hd"><span class="zp-acc-num">' + idx2 + '</span>';
-            if (ttl2) h += '<span class="zp-acc-ttl">' + _escPdfHtml(ttl2.textContent.trim()) + '</span>';
+            if (ttl2) h += '<span class="zp-acc-ttl">' + _kwHtml(ttl2) + '</span>';
             h += '</div>';
           }
           if (panel2) {
@@ -2777,18 +2987,60 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
           if (li > 0) h += '<p style="color:#6366f1;font-size:12px;margin:2px 0 2px ' + (isL3 ? '40px' : isL2 ? '20px' : '0') + '">↓</p>';
           if (isL3) {
             h += '<div class="zp-chips" style="padding-left:40px">';
-            nodes.forEach(function(n) { h += '<span class="zp-chip">' + _escPdfHtml(n.textContent.trim()) + '</span>'; });
+            nodes.forEach(function(n) { h += '<span class="zp-chip">' + _kwHtml(n) + '</span>'; });
             h += '</div>';
           } else {
             nodes.forEach(function(n) {
               var ps = isL2 ? ' style="padding-left:20px"' : '';
-              h += '<p class="zp-ph"' + ps + '>' + _escPdfHtml(n.textContent.trim()) + '</p>';
+              h += '<p class="zp-ph"' + ps + '>' + _kwHtml(n) + '</p>';
             });
           }
         });
+      } else if (cls.indexOf('paper-timeline') !== -1) {
+        h += _pdfPaperTimelineHtml(node);
       } else { h += _bodyHtml(node); }
     });
     return h;
+  }
+
+  /** Garis masa (.paper-timeline) → HTML pratonton PDF — satu sumber benar untuk _bodyHtml & _renderSubChild (node + panel). */
+  function _pdfPaperTimelineHtml(timelineEl) {
+    if (!timelineEl) return '';
+    function _zpTlStep(nodeEl, panelEl) {
+      var s = '<div class="zp-tl-card">';
+      s += '<p class="zp-tl-hd">' + _kwHtml(nodeEl) + '</p>';
+      if (panelEl && (panelEl.className || '').indexOf('paper-timeline-panel') !== -1) {
+        var bd = _bodyHtml(panelEl);
+        if (bd) s += '<div class="zp-tl-bd">' + bd + '</div>';
+      }
+      s += '</div>';
+      return s;
+    }
+    var out = '<div class="zp-tl">';
+    var ch = timelineEl.firstElementChild;
+    while (ch) {
+      if ((ch.className || '').indexOf('paper-timeline-card') !== -1) {
+        var hd = ch.querySelector(':scope > .paper-timeline-node');
+        var bd = ch.querySelector(':scope > .paper-timeline-panel');
+        if (hd) out += _zpTlStep(hd, bd);
+        else if (bd) {
+          var onlyBd = _bodyHtml(bd);
+          if (onlyBd) out += '<div class="zp-tl-card"><div class="zp-tl-bd">' + onlyBd + '</div></div>';
+        }
+        ch = ch.nextElementSibling;
+        continue;
+      }
+      if ((ch.className || '').indexOf('paper-timeline-node') !== -1) {
+        var pn = ch.nextElementSibling;
+        var panel = pn && (pn.className || '').indexOf('paper-timeline-panel') !== -1 ? pn : null;
+        out += _zpTlStep(ch, panel);
+        ch = panel ? panel.nextElementSibling : ch.nextElementSibling;
+        continue;
+      }
+      ch = ch.nextElementSibling;
+    }
+    out += '</div>';
+    return out;
   }
 
   function _buildPrintHtml(mainEl) {
@@ -2804,7 +3056,7 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
         else if (sc.indexOf('strip-sub') !== -1) color = '#d97706';
       }
       h += '<div class="zp-board" style="border-color:' + color + '">';
-      if (strip) h += '<div class="zp-board-lbl" style="color:' + color + '">' + _escPdfHtml(strip.textContent.trim()) + '</div>';
+      if (strip) h += '<div class="zp-board-lbl" style="color:' + color + '">' + _kwHtml(strip) + '</div>';
       if (body) h += _bodyHtml(body);
       h += '</div>';
       return h;
@@ -2819,7 +3071,10 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
         if (trig) {
           var ttl = trig.querySelector('.paper-accordion-title');
           h += '<div class="zp-acc-hd"><span class="zp-acc-num">' + idx + '</span>';
-          if (ttl) h += '<span class="zp-acc-ttl">' + _escPdfHtml(ttl.textContent.trim()) + '</span>';
+          if (ttl) {
+            h += '<span class="zp-acc-ttl"><span class="zp-acc-ttl-txt">' +
+              _escPdfHtml(ttl.textContent.trim()) + '</span></span>';
+          }
           h += '</div>';
         }
         if (panel) {
@@ -2837,7 +3092,7 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
         var fQ   = child.querySelector('.point-heading');
         var fA   = child.querySelector('.answer-paper');
         h += '<div class="zp-flap">';
-        if (fTop) h += '<div class="zp-flap-top">' + _escPdfHtml(fTop.textContent.trim()) + '</div>';
+        if (fTop) h += '<div class="zp-flap-top">' + _kwHtml(fTop) + '</div>';
         if (fQ)   h += '<div class="zp-flap-q">' + _kwHtml(fQ) + '</div>';
         if (fA)   h += '<div class="zp-flap-a">' + _bodyHtml(fA) + '</div>';
         h += '</div>';
@@ -2847,7 +3102,15 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
         h += '<div class="zp-section">';
         if (badge) h += '<span class="zp-section-badge">' + _escPdfHtml(badge.textContent.trim()) + '</span>';
         if (sh2)   h += '<h2 class="zp-section-title">' + _kwHtml(sh2) + '</h2>';
+        child.querySelectorAll(':scope > p').forEach(function(pEl) {
+          var tp = pEl.textContent.trim();
+          if (tp && tp.indexOf('Klik kad') === -1 && tp.indexOf('akan terbuka') === -1) {
+            h += '<p class="zp-p">' + _kwHtml(pEl) + '</p>';
+          }
+        });
         h += '</div>';
+      } else if (cls.indexOf('paper-timeline') !== -1) {
+        h += _pdfPaperTimelineHtml(child);
       } else if (cls.indexOf('paper-board') !== -1) {
         h = _renderBoard(child, h);
       } else if (cls.indexOf('paper-accordion') !== -1) {
@@ -2856,6 +3119,11 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
         child.querySelectorAll('.paper-board').forEach(function(board) {
           h = _renderBoard(board, h);
         });
+      } else if (cls.indexOf('hero-actions') !== -1) {
+        /* butang navigasi bawah halaman — tiada dalam PDF */
+      } else {
+        /* Bungkus baharu / blok tidak dikenali: elak kandungan hilang (cth. .paper-timeline dalam div pembungkus) */
+        h += _bodyHtml(child);
       }
       return h;
     }
@@ -2871,14 +3139,17 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
       var lead = heroEl.querySelector('.lead');
       h += '<div class="zp-hero">';
       if (lbl)  h += '<span class="zp-chapter-lbl">' + _escPdfHtml(lbl.textContent.trim()) + '</span>';
-      if (eye)  h += '<div class="zp-subtopik">' + _escPdfHtml(eye.textContent.trim()) + '</div>';
-      if (h1)   h += '<h1 class="zp-title">' + _escPdfHtml(h1.textContent.trim()) + '</h1>';
+      if (eye)  h += '<div class="zp-subtopik">' + _kwHtml(eye) + '</div>';
+      if (h1)   h += '<h1 class="zp-title">' + _kwHtml(h1) + '</h1>';
       if (lead) h += '<p class="zp-desc">' + _kwHtml(lead) + '</p>';
       h += '</div>';
     }
 
     // All note content lives inside .note-section > .container (one level below main)
-    // Walk its direct children in DOM order: master-summary board first, then subsections
+    // Walk its direct children in DOM order: master-summary board first, then subsections.
+    // Dalam setiap note-subsection, _renderSubChild mengendalikan section-heading, paper-timeline,
+    // paper-board, paper-accordion, paper-grid, paper-flap-card; lain-lain (kecuali hero-actions)
+    // lulus ke _bodyHtml supaya pembungkus baharu tidak membuang kandungan (cth. garis masa).
     var contentEl = mainEl.querySelector('.note-section .container') ||
                     mainEl.querySelector('.container.narrow') ||
                     mainEl;
@@ -2894,68 +3165,221 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
         // master-summary-paper (Ringkasan) and other direct boards
         h = _renderBoard(child, h);
       } else if (cls.indexOf('note-subsection') !== -1) {
-        child.childNodes.forEach(function(c) {
-          if (c.nodeType === 1) h = _renderSubChild(c, h);
-        });
+        var subKids = [];
+        for (var si = 0; si < child.childNodes.length; si++) {
+          var sn = child.childNodes[si];
+          if (sn.nodeType === 1) subKids.push(sn);
+        }
+        var i = 0;
+        while (i < subKids.length) {
+          var c = subKids[i];
+          var ccls = c.className || '';
+          if (ccls.indexOf('section-heading') !== -1) {
+            h += '<div class="zp-section-wrap">';
+            h = _renderSubChild(c, h);
+            i++;
+            while (i < subKids.length) {
+              var nx = subKids[i];
+              var nxcls = nx.className || '';
+              if (nxcls.indexOf('section-heading') !== -1) break;
+              h = _renderSubChild(nx, h);
+              i++;
+            }
+            h += '</div>';
+          } else {
+            h = _renderSubChild(c, h);
+            i++;
+          }
+        }
       }
     });
 
     h += '</div>';
     return h;
   }
-  function _getPrintCss() {
-    return [
+  function _getPrintCss(mode) {
+    var isEco = mode === 'eco';
+    var rules = [
       '#zym-pr,#zym-pr *{box-sizing:border-box;font-family:Fredoka,sans-serif}',
-      '#zym-pr{position:fixed;left:-9999px;top:0;width:794px;background:#fff;font-size:13px;color:#1a1a3a;line-height:1.5;z-index:-9999;pointer-events:none}',
-      '#zym-pr .zp-page{padding:0 36px 32px}',
+      '#zym-pr{position:fixed;left:-9999px;top:0;width:794px;background:#fff;font-size:13.5px;color:#1a1a3a;line-height:1.48;z-index:-9999;pointer-events:none}',
+      '#zym-pr .zp-page{padding:0 34px 26px}',
       // Hero
-      '#zym-pr .zp-hero{padding:22px 0 14px;border-bottom:2px solid #4f46e5;margin-bottom:16px}',
-      '#zym-pr .zp-chapter-lbl{display:inline-block;font-size:8px;font-weight:700;color:#fff;background:#4f46e5;padding:2px 10px;border-radius:4px;letter-spacing:.06em;text-transform:uppercase;margin-bottom:6px}',
-      '#zym-pr .zp-subtopik{font-size:9px;color:#6b7280;letter-spacing:.1em;text-transform:uppercase;margin:4px 0 5px}',
-      '#zym-pr h1.zp-title{font-size:21px;font-weight:700;color:#1e1e3a;line-height:1.2;margin:0 0 8px}',
-      '#zym-pr .zp-desc{font-size:11.5px;color:#4a4a6a;margin:0;line-height:1.55}',
-      // Boards
-      '#zym-pr .zp-board{border:1.5px solid;border-left-width:4px;border-radius:0 8px 8px 0;padding:10px 14px;margin-bottom:12px;background:#fafaff}',
-      '#zym-pr .zp-board-lbl{font-size:8px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;margin-bottom:8px}',
+      '#zym-pr .zp-hero{padding:16px 0 12px;border-bottom:2px solid #4f46e5;margin-bottom:12px;break-inside:avoid;page-break-inside:avoid}',
+      '#zym-pr .zp-chapter-lbl{display:inline-flex;align-items:center;justify-content:center;font-size:8.5px;font-weight:700;color:#fff;background:#4f46e5;padding:5px 11px;border-radius:4px;letter-spacing:.06em;text-transform:uppercase;margin-bottom:6px;line-height:1;min-height:22px}',
+      '#zym-pr .zp-subtopik{display:flex;align-items:center;font-size:9.5px;color:#6b7280;letter-spacing:.1em;text-transform:uppercase;margin:4px 0 5px;line-height:1.2;min-height:18px}',
+      '#zym-pr h1.zp-title{display:flex;flex-wrap:wrap;align-items:center;column-gap:.35em;row-gap:.12em;font-size:22px;font-weight:700;color:#1e1e3a;line-height:1.2;margin:0 0 6px}',
+      '#zym-pr .zp-desc{font-size:12px;color:#4a4a6a;margin:0;line-height:1.5}',
+      // Boards — padding & margin lebih selesa (elak teks “tersepit” dengan sempadan)
+      '#zym-pr .zp-board{border:1.5px solid;border-left-width:4px;border-radius:0 8px 8px 0;padding:9px 13px;margin-bottom:7px;background:#fafaff;break-inside:avoid;page-break-inside:avoid}',
+      '#zym-pr .zp-board-lbl{display:flex;align-items:center;min-height:20px;font-size:8.5px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;margin-bottom:7px;line-height:1.08}',
       // Flap card (Soalan Utama)
-      '#zym-pr .zp-flap{border:1.5px solid #d97706;border-radius:8px;overflow:hidden;margin-bottom:14px}',
-      '#zym-pr .zp-flap-top{background:#fef3c7;padding:7px 14px;font-size:11px;font-weight:700;color:#92400e;border-bottom:1px solid #fde68a}',
-      '#zym-pr .zp-flap-q{padding:10px 14px 4px;font-size:12px;font-weight:700;color:#1a1a3a}',
-      '#zym-pr .zp-flap-a{padding:4px 14px 10px;font-size:12px;color:#3a3a5a;background:#fffbf0}',
-      // Section
-      '#zym-pr .zp-section{margin:18px 0 8px}',
-      '#zym-pr .zp-section-badge{display:inline-block;font-size:8px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#fff;background:#4f46e5;padding:3px 10px;border-radius:999px;margin-bottom:6px}',
-      '#zym-pr h2.zp-section-title{font-size:15px;font-weight:700;color:#1e1e3a;margin:0 0 8px;line-height:1.3}',
-      // Accordion
-      '#zym-pr .zp-acc{border:1px solid #e0e0ef;border-radius:8px;margin-bottom:8px;overflow:hidden;break-inside:avoid}',
-      '#zym-pr .zp-acc-hd{display:flex;align-items:center;gap:10px;padding:8px 12px;background:#f4f4ff;border-bottom:1px solid #e0e0ef}',
-      '#zym-pr .zp-acc-num{font-size:10px;font-weight:700;color:#4f46e5;min-width:22px;height:22px;background:#ede9fe;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0}',
-      '#zym-pr .zp-acc-ttl{font-size:13px;font-weight:700;color:#1e1e3a}',
-      '#zym-pr .zp-acc-body{padding:10px 12px}',
-      // Chips
-      '#zym-pr .zp-chips{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0}',
-      '#zym-pr .zp-chip{border:1px solid #d8d8ee;background:#f0f0f8;border-radius:6px;padding:4px 10px;font-size:11px;color:#2d2d5a;display:inline-flex;align-items:center;gap:5px;max-width:100%}',
+      '#zym-pr .zp-flap{border:1.5px solid #d97706;border-radius:8px;overflow:hidden;margin-bottom:8px;break-inside:avoid;page-break-inside:avoid}',
+      '#zym-pr .zp-flap-top{display:flex;align-items:center;min-height:30px;line-height:1.1;background:#fef3c7;padding:7px 13px;font-size:11.5px;font-weight:700;color:#92400e;border-bottom:1px solid #fde68a}',
+      '#zym-pr .zp-flap-q{display:flex;flex-wrap:wrap;align-items:center;gap:.35em;padding:10px 14px 6px;font-size:12.5px;font-weight:700;color:#1a1a3a;line-height:1.28}',
+      '#zym-pr .zp-flap-a{display:flex;flex-wrap:wrap;align-items:center;gap:.35em;padding:5px 14px 10px;font-size:12.5px;color:#3a3a5a;background:#fffbf0;line-height:1.45}',
+      // Section (eyebrow → tajuk)
+      '#zym-pr .zp-section{margin:14px 0 6px;break-inside:avoid;page-break-inside:avoid}',
+      '#zym-pr .zp-section-badge{display:inline-flex;align-items:center;justify-content:center;font-size:8.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#fff;background:#4f46e5;padding:5px 12px;border-radius:999px;margin-bottom:7px;line-height:1;min-height:22px}',
+      '#zym-pr h2.zp-section-title{display:flex;flex-wrap:wrap;align-items:center;column-gap:.35em;row-gap:.15em;font-size:16px;font-weight:700;color:#1e1e3a;margin:0 0 8px;line-height:1.25}',
+      // Pembungkus bahagian (logik DOM sahaja; elak pisah halaman diurus melalui julat blok PDF)
+      '#zym-pr .zp-section-wrap{margin:10px 0 12px}',
+      '#zym-pr .zp-section-wrap .zp-section{margin:0 0 3px}',
+      '#zym-pr .zp-section-wrap .zp-section-badge{margin-bottom:5px}',
+      '#zym-pr .zp-section-wrap h2.zp-section-title{margin:0 0 5px}',
+      // Accordion — sedikit lebih jimat ruang (contoh: “Berlaku secara” bab 1.1)
+      '#zym-pr .zp-acc{border:1px solid #e0e0ef;border-radius:8px;margin-bottom:4px;overflow:hidden;break-inside:avoid}',
+      '#zym-pr .zp-acc-hd{display:flex;align-items:center;gap:7px;padding:5px 9px;background:#f4f4ff;border-bottom:1px solid #e0e0ef}',
+      '#zym-pr .zp-acc-num{font-size:10px;font-weight:700;color:#4f46e5;min-width:20px;height:20px;line-height:1;background:#ede9fe;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0}',
+      '#zym-pr .zp-acc-ttl{font-size:12.5px;font-weight:700;color:#1e1e3a;line-height:1.08;display:flex;align-items:center;flex-wrap:wrap;column-gap:.28em;row-gap:.1em}',
+      '#zym-pr .zp-acc-ttl-txt{position:relative;top:-0.26em;display:inline-block;line-height:1.06}',
+      // Teks selepas emoji (dibungkus semasa _kwHtml) — naikkan optik selari imej (html2canvas tidak sentiasa hormati :has())
+      '#zym-pr .zp-txt-up{position:relative;top:-0.32em;display:inline}',
+      '#zym-pr .zp-acc-body{padding:5px 9px}',
+      '#zym-pr .zp-acc-body > p.zp-p{margin:2px 0 5px;line-height:1.46}',
+      '#zym-pr .zp-acc-body > p.zp-ph{margin:3px 0 3px}',
+      // Garis masa PDF — kad selari blok akordion (kepala + isi)
+      '#zym-pr .zp-tl{margin:4px 0 10px}',
+      '#zym-pr .zp-tl-card{border:1px solid #e0e0ef;border-radius:8px;margin-bottom:5px;overflow:hidden;break-inside:avoid;background:#fafbff}',
+      '#zym-pr .zp-tl-hd{margin:0;padding:7px 11px;font-size:12.5px;font-weight:700;color:#1e1e3a;line-height:1.28;background:#f4f4ff;border-bottom:1px solid #e0e0ef}',
+      '#zym-pr .zp-tl-bd{padding:6px 11px 9px;background:#fff;font-size:12.5px;color:#3a3a5a}',
+      '#zym-pr .zp-tl-bd p.zp-p{margin:3px 0 6px;line-height:1.46}',
+      '#zym-pr .zp-tl-bd p.zp-ph{margin:4px 0;font-size:12.5px;line-height:1.3}',
+      '#zym-pr .zp-tl-bd .zp-chips{margin:4px 0 6px}',
+      '#zym-pr .zp-tl-bd .zp-answer{margin:4px 0}',
+      // Chips — lebih tinggi & jarak baris supaya teks tidak mepet bingkai
+      '#zym-pr .zp-chips{display:flex;flex-wrap:wrap;gap:5px 7px;margin:5px 0}',
+      '#zym-pr .zp-chip{border:1px solid #d8d8ee;background:#f0f0f8;border-radius:6px;padding:4px 9px;font-size:11.5px;color:#2d2d5a;display:inline-flex;align-items:center;justify-content:center;gap:4px;max-width:100%;line-height:1.16;min-height:24px}',
       // Steps (process flow)
-      '#zym-pr .zp-steps{display:flex;flex-wrap:wrap;gap:4px 8px;margin:6px 0;align-items:center}',
-      '#zym-pr .zp-step{border:1px solid #c7d2fe;background:#eef2ff;border-radius:6px;padding:4px 10px;font-size:11px;color:#3730a3;position:relative}',
-      '#zym-pr .zp-step+.zp-step::before{content:"→";margin-right:8px;color:#6366f1;font-size:12px}',
+      '#zym-pr .zp-steps{display:flex;flex-wrap:wrap;gap:5px 8px;margin:7px 0;align-items:center}',
+      '#zym-pr .zp-step{border:1px solid #c7d2fe;background:#eef2ff;border-radius:6px;padding:5px 10px;font-size:11.5px;color:#3730a3;position:relative;display:inline-flex;align-items:center;justify-content:center;line-height:1.34;min-height:30px}',
+      '#zym-pr .zp-step+.zp-step::before{content:"→";margin-right:6px;color:#6366f1;font-size:12px}',
       // Answer box
-      '#zym-pr .zp-answer{border-left:3px solid #d0d0e8;padding-left:10px;margin:6px 0}',
+      '#zym-pr .zp-answer{border-left:3px solid #d0d0e8;padding-left:10px;margin:5px 0}',
       // Text
-      '#zym-pr p.zp-p{font-size:12px;color:#3a3a5a;margin:4px 0 6px;line-height:1.55}',
-      '#zym-pr p.zp-ph{font-size:12.5px;font-weight:700;color:#1a1a3a;margin:6px 0 4px}',
-      '#zym-pr p.zp-sentence{font-size:12px;color:#3a3a5a;margin:5px 0;padding:5px 10px;border-left:3px solid #c7d2fe;line-height:1.6}',
-      // Keywords
-      '#zym-pr .zpkw-istilah{color:#7c3aed;font-weight:700}',
-      '#zym-pr .zpkw-tempat{color:#0f766e;font-weight:700}',
-      '#zym-pr .zpkw-tokoh{color:#1d4ed8;font-weight:700}',
-      '#zym-pr .zpkw-masa{color:#c2410c;font-weight:700}',
-      '#zym-pr .zpkw-konsep{color:#7c3aed;font-weight:700}',
-      '#zym-pr .zpkw-kerajaan{color:#0f766e;font-weight:700}',
-    ].join('');
+      '#zym-pr p.zp-p{font-size:12.5px;color:#3a3a5a;margin:4px 0 7px;line-height:1.52}',
+      '#zym-pr p.zp-ph{font-size:13px;font-weight:700;color:#1a1a3a;margin:6px 0 5px;line-height:1.32}',
+      '#zym-pr p.zp-sentence{font-size:12.5px;color:#3a3a5a;margin:5px 0;padding:6px 11px;border-left:3px solid #c7d2fe;line-height:1.55}',
+      // Kata kunci — penyerlah: inline-block + translateY supaya latar selari Fredoka/html2canvas
+      '#zym-pr .zpkw{display:inline-block;vertical-align:text-bottom;line-height:1.1;padding:0.05em 0.26em 0.09em;margin:0;border-radius:0.35em;font-size:inherit;font-weight:700;transform:translateY(0.11em);-webkit-box-decoration-break:clone;box-decoration-break:clone;-webkit-print-color-adjust:exact;print-color-adjust:exact}',
+      '#zym-pr .zpkw-tokoh{color:#7f1d1d;background:rgba(254,202,211,0.62)}',
+      '#zym-pr .zpkw-masa{color:#1e3a8a;background:rgba(191,219,254,0.62)}',
+      '#zym-pr .zpkw-tahun{color:#0c4a6e;background:rgba(125,211,252,0.45)}',
+      '#zym-pr .zpkw-tempat{color:#14532d;background:rgba(187,247,208,0.62)}',
+      '#zym-pr .zpkw-konsep{color:#7c2d12;background:rgba(254,215,170,0.62)}',
+      '#zym-pr .zpkw-kerajaan{color:#4c1d95;background:rgba(221,214,254,0.62)}',
+      '#zym-pr .zpkw-istilah{color:#115e59;background:rgba(153,246,228,0.55)}',
+      '#zym-pr .zpkw-pentadbiran{color:#78350f;background:rgba(254,243,199,0.72)}',
+      '#zym-pr .zpkw-perjanjian{color:#831843;background:rgba(251,207,232,0.62)}',
+      '#zym-pr .zpkw-peristiwa{color:#713f12;background:rgba(254,249,195,0.65)}',
+      '#zym-pr .zpkw-gerakan{color:#581c87;background:rgba(233,213,255,0.58)}',
+      '#zym-pr .zpkw-pertubuhan{color:#312e81;background:rgba(199,210,254,0.62)}',
+      '#zym-pr .zpkw-karya{color:#0e7490;background:rgba(165,243,252,0.55)}',
+      '#zym-pr .zpkw-tarikh{color:#1e3a8a;background:rgba(191,219,254,0.55)}',
+      // Saiz 1em; imej duduk sedikit lebih rendah berbanding rentak teks yang dibungkus .zp-txt-up
+      '#zym-pr .zp-emoji{display:inline-block;width:1em;height:1em;vertical-align:middle;margin:0 .24em 0 0;object-fit:contain;flex-shrink:0;line-height:1;position:relative;top:0.06em}',
+    ];
+    if (isEco) {
+      rules.push(
+        '#zym-pr.zp-mode-eco .zpkw,#zym-pr.zp-mode-eco [class*="zpkw-"]{color:#1e293b!important;font-weight:700!important;display:inline-block!important;vertical-align:text-bottom!important;line-height:1.1!important;padding:0.05em 0.26em 0.09em!important;border-radius:0.35em!important;background:rgba(241,245,249,0.95)!important;transform:translateY(0.11em)!important;-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important}',
+        '#zym-pr.zp-mode-eco .zp-chapter-lbl,#zym-pr.zp-mode-eco .zp-section-badge{background:#4b5563!important;color:#fff!important}',
+        '#zym-pr.zp-mode-eco .zp-hero{border-bottom-color:#9ca3af!important}',
+        '#zym-pr.zp-mode-eco .zp-subtopik{color:#52525b!important}',
+        '#zym-pr.zp-mode-eco .zp-board{border:1.5px solid #a1a1aa!important;border-left-width:4px!important;background:#fff!important}',
+        '#zym-pr.zp-mode-eco .zp-board-lbl{color:#374151!important}',
+        '#zym-pr.zp-mode-eco .zp-flap{border-color:#9ca3af!important}',
+        '#zym-pr.zp-mode-eco .zp-flap-top{background:#f3f4f6!important;color:#111827!important;border-bottom-color:#d1d5db!important}',
+        '#zym-pr.zp-mode-eco .zp-flap-a{background:#fafafa!important;color:#27272a!important}',
+        '#zym-pr.zp-mode-eco .zp-acc{border-color:#d4d4d8!important}',
+        '#zym-pr.zp-mode-eco .zp-acc-hd{background:#f3f4f6!important;border-bottom-color:#d1d5db!important}',
+        '#zym-pr.zp-mode-eco .zp-acc-num{color:#374151!important;background:#e5e7eb!important}',
+        '#zym-pr.zp-mode-eco .zp-acc-ttl,#zym-pr.zp-mode-eco .zp-acc-ttl-txt{color:#27272a!important}',
+        '#zym-pr.zp-mode-eco .zp-tl-card{border-color:#d4d4d8!important;background:#fff!important}',
+        '#zym-pr.zp-mode-eco .zp-tl-hd{background:#f3f4f6!important;border-bottom-color:#d1d5db!important;color:#27272a!important}',
+        '#zym-pr.zp-mode-eco .zp-tl-bd{background:#fafafa!important;color:#27272a!important}',
+        '#zym-pr.zp-mode-eco .zp-chip,#zym-pr.zp-mode-eco .zp-step{background:#f4f4f5!important;border-color:#d4d4d8!important;color:#27272a!important}',
+        '#zym-pr.zp-mode-eco .zp-step+.zp-step::before{color:#6b7280!important}',
+        '#zym-pr.zp-mode-eco .zp-sentence{border-left-color:#9ca3af!important}',
+        '#zym-pr.zp-mode-eco p.zp-p,#zym-pr.zp-mode-eco p.zp-ph,#zym-pr.zp-mode-eco p.zp-sentence{color:#27272a!important}',
+        '#zym-pr.zp-mode-eco .zp-desc{color:#3f3f46!important}',
+        '#zym-pr.zp-mode-eco .zp-emoji{display:none!important}'
+      );
+    }
+    return rules.join('');
   }
 
-  function _generatePages(cb) {
+  /** Koordinat piksel kanvas (html2canvas scale) untuk blok — elak pisah tengah kotak / eyebrow + blok pertama. */
+  function _collectPdfBlockRanges(container, scale) {
+    var ranges = [];
+    if (!container || !scale) return ranges;
+    try {
+      var cr = container.getBoundingClientRect();
+      function rectRange(el) {
+        var r = el.getBoundingClientRect();
+        return {
+          top: (r.top - cr.top) * scale,
+          bottom: (r.bottom - cr.top) * scale
+        };
+      }
+      function pushRange(top, bottom) {
+        if (bottom > top + 2) ranges.push({ top: top, bottom: bottom });
+      }
+      function mergePair(a, b) {
+        return { top: Math.min(a.top, b.top), bottom: Math.max(a.bottom, b.bottom) };
+      }
+
+      container.querySelectorAll('.zp-hero').forEach(function(el) {
+        var rg = rectRange(el);
+        pushRange(rg.top, rg.bottom);
+      });
+
+      container.querySelectorAll('.zp-section-wrap').forEach(function(wrap) {
+        var sectionEl = wrap.querySelector(':scope > .zp-section');
+        var first = sectionEl ? sectionEl.nextElementSibling : null;
+        var glueFirst = first && first.classList &&
+          (first.classList.contains('zp-board') || first.classList.contains('zp-flap') || first.classList.contains('zp-acc') || first.classList.contains('zp-tl'));
+        var mergedFirst = false;
+        if (sectionEl && glueFirst) {
+          var merged = mergePair(rectRange(sectionEl), rectRange(first));
+          var mergedDocH = (merged.bottom - merged.top) / scale;
+          if (mergedDocH <= 560) {
+            pushRange(merged.top, merged.bottom);
+            mergedFirst = true;
+          } else {
+            pushRange(rectRange(sectionEl).top, rectRange(sectionEl).bottom);
+          }
+        } else if (sectionEl) {
+          var secRg = rectRange(sectionEl);
+          pushRange(secRg.top, secRg.bottom);
+        }
+        for (var ci = 0; ci < wrap.children.length; ci++) {
+          var ch = wrap.children[ci];
+          if (!ch.classList) continue;
+          if (ch.classList.contains('zp-section')) continue;
+          if (mergedFirst && first && ch === first) continue;
+          if (ch.classList.contains('zp-board') || ch.classList.contains('zp-flap') || ch.classList.contains('zp-acc') || ch.classList.contains('zp-tl')) {
+            var chRg = rectRange(ch);
+            pushRange(chRg.top, chRg.bottom);
+          }
+        }
+      });
+
+      container.querySelectorAll('.zp-board, .zp-flap, .zp-acc, .zp-tl').forEach(function(el) {
+        if (el.closest && el.closest('.zp-section-wrap')) return;
+        var rg = rectRange(el);
+        pushRange(rg.top, rg.bottom);
+      });
+
+      container.querySelectorAll('.zp-section').forEach(function(el) {
+        if (el.closest && el.closest('.zp-section-wrap')) return;
+        var rg2 = rectRange(el);
+        pushRange(rg2.top, rg2.bottom);
+      });
+    } catch (e) {}
+    return ranges;
+  }
+
+  function _generatePages(mode, cb) {
+    var pdfMode = mode === 'eco' ? 'eco' : 'full';
     var mainEl = document.querySelector('main.note-reading-main');
     if (!mainEl) { cb(new Error('Tiada kandungan nota')); return; }
     var savedScrollY = window.scrollY || window.pageYOffset || 0;
@@ -2966,12 +3390,13 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
       // Inject scoped CSS for the print renderer
       var cssEl = document.createElement('style');
       cssEl.id = 'zym-pr-css';
-      cssEl.textContent = _getPrintCss();
+      cssEl.textContent = _getPrintCss(pdfMode);
       document.head.appendChild(cssEl);
 
       // Build clean print container from note DOM
       var container = document.createElement('div');
       container.id = 'zym-pr';
+      if (pdfMode === 'eco') container.classList.add('zp-mode-eco');
       container.setAttribute('aria-hidden', 'true');
       container.innerHTML = _buildPrintHtml(mainEl);
       document.body.appendChild(container);
@@ -2985,8 +3410,11 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
 
       requestAnimationFrame(function() {
         requestAnimationFrame(function() {
+          var h2cScale = 2;
+          void container.offsetHeight;
+          var blockRanges = _collectPdfBlockRanges(container, h2cScale);
           window.html2canvas(container, {
-            scale: 2,
+            scale: h2cScale,
             useCORS: true,
             allowTaint: false,
             backgroundColor: '#ffffff',
@@ -3006,29 +3434,105 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
             var pxPerMm = canvas.width / cW;
             var pxPerPage = Math.round(cH * pxPerMm);
             var numPages = Math.ceil(canvas.height / pxPerPage);
+            var ctxFull = canvas.getContext('2d');
+            var cwPx = canvas.width;
 
-            // Smart split: scan up to 6% above each boundary for a mostly-white row
-            function _bestSplitY(approxY) {
-              if (approxY <= 0 || approxY >= canvas.height) return approxY;
-              var ctx2 = canvas.getContext('2d');
-              var maxSearch = Math.min(Math.round(pxPerPage * 0.06), approxY);
-              var sampW = Math.floor(canvas.width / 4);
-              var bestY = approxY, bestScore = -1;
-              for (var dy = 0; dy <= maxSearch; dy += 2) {
-                var y = approxY - dy;
-                var row = ctx2.getImageData(0, y, canvas.width, 1).data;
-                var light = 0;
-                for (var xi = 0; xi < row.length; xi += 16) {
-                  if (row[xi] > 238 && row[xi+1] > 238 && row[xi+2] > 238) light++;
+            function _rowWhiteness(y) {
+              if (y < 0 || y >= canvas.height) return 0;
+              var row = ctxFull.getImageData(0, y, cwPx, 1).data;
+              var light = 0;
+              var samp = 0;
+              for (var xi = 0; xi < row.length; xi += 16) {
+                samp++;
+                if (row[xi] > 235 && row[xi + 1] > 235 && row[xi + 2] > 235) light++;
+              }
+              return samp ? light / samp : 0;
+            }
+
+            function _rowBisectsBlock(y, ranges) {
+              for (var i = 0; i < ranges.length; i++) {
+                var rg = ranges[i];
+                if (y > rg.top && y < rg.bottom) return true;
+              }
+              return false;
+            }
+
+            function _rowWhiteBlend(y) {
+              return (_rowWhiteness(y) + _rowWhiteness(y - 1) + _rowWhiteness(y + 1)) / 3;
+            }
+
+            /** Pilih baris hampir dengan sempadan bawah blok (ruang antara kotak) — elak potong tengah kandungan. */
+            function _pickPdfBoundarySplit(ideal, minY, forwardPx, ranges) {
+              var hi = Math.min(Math.floor(ideal + forwardPx), canvas.height - 2);
+              var edges = [];
+              for (var ri = 0; ri < ranges.length; ri++) {
+                var b = Math.floor(ranges[ri].bottom) + 2;
+                if (b > minY && b <= hi) edges.push(b);
+              }
+              edges.sort(function(a, x) { return a - x; });
+              var uniq = [];
+              for (var ei = 0; ei < edges.length; ei++) {
+                if (ei === 0 || edges[ei] > edges[ei - 1]) uniq.push(edges[ei]);
+              }
+              var bestY = -1;
+              var bestScore = -1;
+              for (var ui = 0; ui < uniq.length; ui++) {
+                var yy = uniq[ui];
+                var w = _rowWhiteBlend(yy);
+                var near = 1 - Math.min(1, Math.abs(yy - ideal) / (pxPerPage * 0.3));
+                var score = w * 0.78 + near * 0.22;
+                if (score > bestScore) {
+                  bestScore = score;
+                  bestY = yy;
                 }
-                var score = (light / sampW) * (1 - dy / maxSearch * 0.25);
-                if (score > bestScore) { bestScore = score; bestY = y; }
               }
               return bestY;
             }
 
+            /** Cari baris pisahan: utamakan yang tidak melintasi blok; kemudian sempadan blok; kemudian “ruang putih”. */
+            function _pickPdfSplitY(approxY, ranges, minY) {
+              var maxSearch = Math.min(Math.round(pxPerPage * 0.36), approxY - minY);
+              if (maxSearch < 0) maxSearch = 0;
+              var bestSafeY = -1;
+              var bestSafeWhite = -1;
+              var bestAnyY = approxY;
+              var bestAnyCombo = -1e9;
+              for (var dy = 0; dy <= maxSearch; dy++) {
+                var y = Math.floor(approxY - dy);
+                if (y <= minY) break;
+                var white = _rowWhiteBlend(y);
+                var bisects = _rowBisectsBlock(y, ranges);
+                var penalty = (maxSearch > 0 ? dy / maxSearch : 0) * 0.12;
+                var combo = white - penalty;
+                if (!bisects && white > bestSafeWhite) {
+                  bestSafeWhite = white;
+                  bestSafeY = y;
+                }
+                if (combo > bestAnyCombo) {
+                  bestAnyCombo = combo;
+                  bestAnyY = y;
+                }
+              }
+              if (bestSafeY > minY && bestSafeWhite > 0.1) return bestSafeY;
+              var fwd = Math.round(pxPerPage * 0.26);
+              var bnd = _pickPdfBoundarySplit(approxY, minY, fwd, ranges);
+              if (bnd > minY && !_rowBisectsBlock(bnd, ranges)) return bnd;
+              if (bestAnyY > minY) return bestAnyY;
+              if (bnd > minY) return bnd;
+              return Math.max(minY + 1, Math.min(approxY, canvas.height - 1));
+            }
+
             var splitPts = [0];
-            for (var s = 1; s < numPages; s++) splitPts.push(_bestSplitY(s * pxPerPage));
+            var minGapPx = Math.min(Math.round(pxPerPage * 0.055), 72);
+            for (var s = 1; s < numPages; s++) {
+              var ideal = Math.round(s * pxPerPage);
+              var prevY = splitPts[s - 1];
+              var minY = Math.min(prevY + minGapPx, ideal - 6);
+              if (minY >= ideal) minY = prevY + 40;
+              var yPick = _pickPdfSplitY(ideal, blockRanges, minY);
+              if (yPick <= prevY) yPick = Math.min(prevY + minGapPx, canvas.height - 2);
+              splitPts.push(yPick);
+            }
             splitPts.push(canvas.height);
 
             var pages = [];
@@ -3044,10 +3548,175 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
               pctx.drawImage(canvas, 0, srcY, canvas.width, srcH, 0, 0, canvas.width, Math.min(srcH, pxPerPage));
               pages.push(pc);
             }
-            cb(null, pages, {pageW:pageW,pageH:pageH,mLeft:mLeft,mRight:mRight,mTop:mTop,mBottom:mBottom,cW:cW,cH:cH});
+            cb(null, pages, {
+              pageW: pageW,
+              pageH: pageH,
+              mLeft: mLeft,
+              mRight: mRight,
+              mTop: mTop,
+              mBottom: mBottom,
+              cW: cW,
+              cH: cH,
+              jpegQuality: pdfMode === 'eco' ? 0.82 : 0.92,
+              grayscalePdf: pdfMode === 'eco',
+              mode: pdfMode
+            });
           }).catch(function(e) { _cleanup(); cb(e); });
         });
       });
+    });
+  }
+
+  function _pdfGrayscaleCanvas(src) {
+    var c = document.createElement('canvas');
+    c.width = src.width;
+    c.height = src.height;
+    var ctx = c.getContext('2d');
+    ctx.drawImage(src, 0, 0);
+    try {
+      var imgData = ctx.getImageData(0, 0, c.width, c.height);
+      var d = imgData.data;
+      for (var i = 0; i < d.length; i += 4) {
+        var y = 0.299 * d[i] + 0.587 * d[i + 1] + 0.114 * d[i + 2];
+        d[i] = d[i + 1] = d[i + 2] = y;
+      }
+      ctx.putImageData(imgData, 0, 0);
+    } catch (e) {}
+    return c;
+  }
+
+  function _pdfCanvasToJpegDataUrl(pc, dims) {
+    var q = dims && typeof dims.jpegQuality === 'number' ? dims.jpegQuality : 0.92;
+    if (dims && dims.grayscalePdf) {
+      try {
+        var g = _pdfGrayscaleCanvas(pc);
+        return g.toDataURL('image/jpeg', q);
+      } catch (e2) {}
+    }
+    return pc.toDataURL('image/jpeg', q);
+  }
+
+  function _pdfPopulateSlides(pages, dims) {
+    var pagesDiv = document.getElementById('zym-pdf-pages');
+    if (!pagesDiv) return;
+    pagesDiv.innerHTML = '';
+    pages.forEach(function(pc, i) {
+      var slide = document.createElement('div');
+      slide.className = 'zym-pdf-page-slide';
+
+      var outer = document.createElement('div');
+      outer.className = 'zym-pdf-page-outer';
+
+      var hdr = document.createElement('div');
+      hdr.className = 'zym-pdf-page-hdr';
+      hdr.innerHTML = '<span class="zym-pdf-page-hdr-l">ZymNotes</span>' +
+        '<span class="zym-pdf-page-hdr-r">' + _escPdfHtml(_pdfNoteTitle) + '</span>';
+      outer.appendChild(hdr);
+
+      var wrap = document.createElement('div');
+      wrap.className = 'zym-pdf-page-canvas-wrap';
+      var img = document.createElement('img');
+      img.src = _pdfCanvasToJpegDataUrl(pc, dims);
+      img.alt = '';
+      img.decoding = 'async';
+      wrap.appendChild(img);
+      outer.appendChild(wrap);
+
+      var ftr = document.createElement('div');
+      ftr.className = 'zym-pdf-page-ftr';
+      ftr.innerHTML = '<span>zymnotes.com</span>' +
+        '<span style="color:#9090b8;font-weight:600">' + (i + 1) + ' / ' + pages.length + '</span>';
+      outer.appendChild(ftr);
+
+      slide.appendChild(outer);
+      pagesDiv.appendChild(slide);
+    });
+    pagesDiv.scrollLeft = 0;
+    requestAnimationFrame(_pdfUpdateCarouselUi);
+  }
+
+  function _pdfSetModeSegmentUI(mode) {
+    var full = document.getElementById('zym-pdf-mode-full');
+    var eco = document.getElementById('zym-pdf-mode-eco');
+    if (full) {
+      full.classList.toggle('is-active', mode === 'full');
+      full.setAttribute('aria-pressed', mode === 'full' ? 'true' : 'false');
+    }
+    if (eco) {
+      eco.classList.toggle('is-active', mode === 'eco');
+      eco.setAttribute('aria-pressed', mode === 'eco' ? 'true' : 'false');
+    }
+  }
+
+  function _pdfSwitchMode(mode) {
+    if (_pdfBusy) return;
+    var target = mode === 'eco' ? 'eco' : 'full';
+    if (target === _pdfActiveMode) return;
+    var prev = _pdfActiveMode;
+    var slot = target === 'full' ? _pdfCache.full : _pdfCache.eco;
+    if (slot.pages && slot.dims) {
+      _pdfActiveMode = target;
+      _pdfPageCanvases = slot.pages;
+      _pdfDims = slot.dims;
+      _pdfSetModeSegmentUI(target);
+      _pdfPopulateSlides(slot.pages, slot.dims);
+      return;
+    }
+    _pdfBusy = true;
+    _pdfSetModeSegmentUI(target);
+    var genLoad = document.createElement('div');
+    genLoad.id = 'zym-pdf-gen-load';
+    genLoad.innerHTML =
+      '<div class="zym-pdf-spinner" style="width:40px;height:40px;border-width:4px"></div>' +
+      '<p style="margin:0;font-size:0.9rem;font-family:Fredoka,sans-serif">Menjana PDF (' +
+      (target === 'eco' ? 'Jimat dakwat' : 'Warna') + ')…</p>';
+    genLoad.style.cssText =
+      'position:fixed;inset:0;z-index:10002;display:flex;flex-direction:column;' +
+      'align-items:center;justify-content:center;gap:14px;' +
+      'background:rgba(15,23,42,0.82);color:#94a3b8;' +
+      'backdrop-filter:blur(3px);-webkit-backdrop-filter:blur(3px)';
+    document.body.appendChild(genLoad);
+    var dlBtn = document.getElementById('zym-pdf-download-btn');
+    var prBtn = document.getElementById('zym-pdf-print-btn');
+    if (dlBtn) dlBtn.disabled = true;
+    if (prBtn) prBtn.disabled = true;
+    var mfSw = document.getElementById('zym-pdf-mode-full');
+    var meSw = document.getElementById('zym-pdf-mode-eco');
+    if (mfSw) mfSw.disabled = true;
+    if (meSw) meSw.disabled = true;
+
+    _generatePages(target, function(err, pages, dims) {
+      _pdfBusy = false;
+      genLoad.remove();
+      if (err) {
+        _pdfSetModeSegmentUI(prev);
+        if (dlBtn) dlBtn.disabled = false;
+        if (prBtn) prBtn.disabled = false;
+        if (mfSw) mfSw.disabled = false;
+        if (meSw) meSw.disabled = false;
+        var toast = document.createElement('div');
+        toast.style.cssText =
+          'position:fixed;bottom:80px;left:50%;transform:translateX(-50%);' +
+          'background:#ef4444;color:#fff;padding:10px 22px;border-radius:8px;' +
+          'font-size:0.85rem;z-index:10002;font-family:Fredoka,sans-serif;white-space:nowrap';
+        toast.textContent = 'Ralat semasa menyediakan PDF. Cuba lagi.';
+        document.body.appendChild(toast);
+        setTimeout(function() { toast.remove(); }, 4000);
+        return;
+      }
+      _pdfActiveMode = target;
+      if (target === 'full') {
+        _pdfCache.full = { pages: pages, dims: dims };
+      } else {
+        _pdfCache.eco = { pages: pages, dims: dims };
+      }
+      _pdfPageCanvases = pages;
+      _pdfDims = dims;
+      _pdfPopulateSlides(pages, dims);
+      if (dlBtn) dlBtn.disabled = false;
+      if (prBtn) prBtn.disabled = false;
+      if (mfSw) mfSw.disabled = false;
+      if (meSw) meSw.disabled = false;
     });
   }
 
@@ -3058,19 +3727,19 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
     var total = pages.length;
     pages.forEach(function(pc, i) {
       if (i > 0) pdf.addPage();
-      var imgData = pc.toDataURL('image/jpeg', 0.92);
+      var imgData = _pdfCanvasToJpegDataUrl(pc, dims);
       pdf.addImage(imgData, 'JPEG', dims.mLeft, dims.mTop, dims.cW, dims.cH);
       // Header
       pdf.setDrawColor(212, 212, 232);
       pdf.setLineWidth(0.3);
       pdf.line(dims.mLeft, dims.mTop - 2, dims.pageW - dims.mRight, dims.mTop - 2);
       pdf.setFont('helvetica', 'bold');
-      pdf.setFontSize(8);
+      pdf.setFontSize(9);
       pdf.setTextColor(96, 96, 160);
       pdf.text('ZymNotes', dims.mLeft, dims.mTop - 5);
       if (title) {
         pdf.setFont('helvetica', 'normal');
-        pdf.setFontSize(6.5);
+        pdf.setFontSize(7);
         pdf.setTextColor(176, 176, 204);
         pdf.text(title, dims.pageW - dims.mRight, dims.mTop - 5, { align:'right', maxWidth: dims.cW * 0.6 });
       }
@@ -3079,7 +3748,7 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
       pdf.setDrawColor(212, 212, 232);
       pdf.line(dims.mLeft, fY, dims.pageW - dims.mRight, fY);
       pdf.setFont('helvetica', 'normal');
-      pdf.setFontSize(6.5);
+      pdf.setFontSize(7);
       pdf.setTextColor(144, 144, 184);
       pdf.text('zymnotes.com', dims.mLeft, fY + 4);
       pdf.setTextColor(176, 176, 204);
@@ -3088,7 +3757,28 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
       pdf.text('© 2026 ZymNotes', dims.pageW - dims.mRight, fY + 4, { align:'right' });
     });
     var fname = (title || 'ZymNotes').replace(/[^\w\sÀ-ɏ-]/g,'').trim().replace(/\s+/g,'-') || 'ZymNotes';
+    if (dims && dims.mode === 'eco') fname = fname + '-kelas';
     pdf.save(fname + '.pdf');
+    recordPdfDownload().finally(function () {
+      document.dispatchEvent(new CustomEvent('zym-nota-pdf-downloaded', { detail: { path: pathname } }));
+    });
+  }
+
+  function recordPdfDownload() {
+    if (!NOTA_FB_SUPABASE_URL || !NOTA_FB_SUPABASE_KEY) return Promise.resolve();
+    return fetch(NOTA_FB_SUPABASE_URL + '/rest/v1/rpc/submit_nota_pdf_download', {
+      method: 'POST',
+      headers: {
+        'apikey': NOTA_FB_SUPABASE_KEY,
+        'Authorization': 'Bearer ' + NOTA_FB_SUPABASE_KEY,
+        'Content-Type': 'application/json',
+        Prefer: 'return=minimal'
+      },
+      body: JSON.stringify({ p_path: pathname })
+    }).then(function (r) {
+      if (!r.ok) return Promise.reject(new Error('pdf dl rpc'));
+      if (typeof gtag === 'function') gtag('event', 'nota_pdf_download', { page_path: pathname });
+    });
   }
 
   function openPdfPreview() {
@@ -3096,9 +3786,21 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
     _pdfBusy = true;
     _pdfPageCanvases = [];
     _pdfDims = null;
+    _pdfCache = { full: { pages: null, dims: null }, eco: { pages: null, dims: null } };
+    _pdfActiveMode = 'full';
+    _pdfSetModeSegmentUI('full');
 
     var h1El = document.querySelector('.note-hero h1, .papercraft-hero h1');
     _pdfNoteTitle = (h1El ? h1El.textContent : document.title.replace(/\s*·.*$/,'')).trim();
+
+    var dlBtn0 = document.getElementById('zym-pdf-download-btn');
+    var prBtn0 = document.getElementById('zym-pdf-print-btn');
+    var mf0 = document.getElementById('zym-pdf-mode-full');
+    var me0 = document.getElementById('zym-pdf-mode-eco');
+    if (dlBtn0) dlBtn0.disabled = true;
+    if (prBtn0) prBtn0.disabled = true;
+    if (mf0) mf0.disabled = true;
+    if (me0) me0.disabled = true;
 
     // Show a translucent loading screen OVER the page — NOT the overlay.
     // Opening the overlay first would block html2canvas from seeing the note content.
@@ -3114,11 +3816,15 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
       'backdrop-filter:blur(3px);-webkit-backdrop-filter:blur(3px)';
     document.body.appendChild(genLoad);
 
-    _generatePages(function(err, pages, dims) {
+    _generatePages('full', function(err, pages, dims) {
       _pdfBusy = false;
       genLoad.remove();
 
       if (err) {
+        if (dlBtn0) dlBtn0.disabled = false;
+        if (prBtn0) prBtn0.disabled = false;
+        if (mf0) mf0.disabled = false;
+        if (me0) me0.disabled = false;
         var toast = document.createElement('div');
         toast.style.cssText =
           'position:fixed;bottom:80px;left:50%;transform:translateX(-50%);' +
@@ -3130,73 +3836,110 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
         return;
       }
 
+      _pdfCache.full = { pages: pages, dims: dims };
       _pdfPageCanvases = pages;
       _pdfDims = dims;
 
-      var pagesDiv = document.getElementById('zym-pdf-pages');
-      var saveBtn = document.getElementById('zym-pdf-save-btn');
-      pagesDiv.innerHTML = '';
+      var dlBtn = document.getElementById('zym-pdf-download-btn');
+      var prBtn = document.getElementById('zym-pdf-print-btn');
+      _pdfPopulateSlides(pages, dims);
 
-      pages.forEach(function(pc, i) {
-        var outer = document.createElement('div');
-        outer.className = 'zym-pdf-page-outer';
-
-        var hdr = document.createElement('div');
-        hdr.className = 'zym-pdf-page-hdr';
-        hdr.innerHTML = '<span class="zym-pdf-page-hdr-l">ZymNotes</span>' +
-          '<span class="zym-pdf-page-hdr-r">' + _escPdfHtml(_pdfNoteTitle) + '</span>';
-        outer.appendChild(hdr);
-
-        // Use <img> with data URL — moving canvas elements is unreliable across browsers
-        var wrap = document.createElement('div');
-        wrap.className = 'zym-pdf-page-canvas-wrap';
-        var img = document.createElement('img');
-        img.src = pc.toDataURL('image/jpeg', 0.92);
-        img.alt = '';
-        img.decoding = 'async';
-        wrap.appendChild(img);
-        outer.appendChild(wrap);
-
-        var ftr = document.createElement('div');
-        ftr.className = 'zym-pdf-page-ftr';
-        ftr.innerHTML = '<span>zymnotes.com</span>' +
-          '<span style="color:#9090b8;font-weight:600">' + (i + 1) + ' / ' + pages.length + '</span>';
-        outer.appendChild(ftr);
-
-        pagesDiv.appendChild(outer);
-      });
-
-      saveBtn.disabled = false;
+      if (dlBtn) dlBtn.disabled = false;
+      if (prBtn) prBtn.disabled = false;
+      var mf1 = document.getElementById('zym-pdf-mode-full');
+      var me1 = document.getElementById('zym-pdf-mode-eco');
+      if (mf1) mf1.disabled = false;
+      if (me1) me1.disabled = false;
       // Open the overlay AFTER pages are ready
       pdfOverlay.classList.add('is-open');
       pdfOverlay.setAttribute('aria-hidden', 'false');
       document.body.style.overflow = 'hidden';
-      if (pages.length) saveBtn.focus();
+      history.pushState({ zymPdfPreview: 1 }, '', window.location.href);
+      _pdfModalHistoryActive = true;
+      if (pages.length && dlBtn) dlBtn.focus();
     });
   }
 
-  function closePdfPreview() {
+  function _closePdfPreviewUi() {
     pdfOverlay.classList.remove('is-open');
     pdfOverlay.setAttribute('aria-hidden', 'true');
     document.body.style.overflow = '';
+    var ttl = document.getElementById('zym-pdf-topbar-title');
+    if (ttl) ttl.textContent = 'Pratonton PDF';
+    var dlBtn = document.getElementById('zym-pdf-download-btn');
+    var prBtn = document.getElementById('zym-pdf-print-btn');
+    if (dlBtn) dlBtn.disabled = true;
+    if (prBtn) prBtn.disabled = true;
   }
 
-  document.getElementById('zym-pdf-save-btn').addEventListener('click', function() {
+  function closePdfPreview() {
+    if (!pdfOverlay.classList.contains('is-open')) return;
+    document.body.classList.remove('zym-print-pdf-preview');
+    var hadHist = _pdfModalHistoryActive;
+    _closePdfPreviewUi();
+    if (hadHist) {
+      _pdfModalHistoryActive = false;
+      history.back();
+    }
+  }
+
+  window.addEventListener('popstate', function () {
+    if (!pdfOverlay.classList.contains('is-open')) return;
+    _pdfModalHistoryActive = false;
+    _closePdfPreviewUi();
+  });
+
+  document.getElementById('zym-pdf-download-btn').addEventListener('click', function() {
     if (!_pdfPageCanvases.length || !_pdfDims) return;
     var btn = this;
     btn.disabled = true;
-    btn.querySelector('span').textContent = 'Sedang menyimpan…';
     setTimeout(function() {
       _savePdf(_pdfPageCanvases, _pdfDims, _pdfNoteTitle);
       btn.disabled = false;
-      btn.querySelector('span').textContent = 'Simpan PDF';
     }, 50);
   });
 
+  document.getElementById('zym-pdf-print-btn').addEventListener('click', function() {
+    if (!pdfOverlay.classList.contains('is-open')) return;
+    document.body.classList.add('zym-print-pdf-preview');
+    function onAfterPrint() {
+      window.removeEventListener('afterprint', onAfterPrint);
+      document.body.classList.remove('zym-print-pdf-preview');
+    }
+    window.addEventListener('afterprint', onAfterPrint);
+    setTimeout(function() { window.print(); }, 0);
+  });
+
   document.getElementById('zym-pdf-close-btn').addEventListener('click', closePdfPreview);
-  pdfOverlay.addEventListener('click', function(e) { if (e.target === pdfOverlay) closePdfPreview(); });
+  pdfOverlay.addEventListener('click', function(e) {
+    var t = e.target;
+    if (t && t.id === 'zym-pdf-mode-full') {
+      e.preventDefault();
+      _pdfSwitchMode('full');
+      return;
+    }
+    if (t && t.id === 'zym-pdf-mode-eco') {
+      e.preventDefault();
+      _pdfSwitchMode('eco');
+      return;
+    }
+    if (e.target === pdfOverlay) closePdfPreview();
+  });
   document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape' && pdfOverlay.classList.contains('is-open')) closePdfPreview();
+    if (!pdfOverlay.classList.contains('is-open')) return;
+    if (e.key === 'Escape') {
+      closePdfPreview();
+      return;
+    }
+    if (e.key === 'ArrowLeft') {
+      e.preventDefault();
+      var t = document.getElementById('zym-pdf-pages');
+      if (t) t.scrollBy({ left: -(t.clientWidth || 0), behavior: 'smooth' });
+    } else if (e.key === 'ArrowRight') {
+      e.preventDefault();
+      var t2 = document.getElementById('zym-pdf-pages');
+      if (t2) t2.scrollBy({ left: (t2.clientWidth || 0), behavior: 'smooth' });
+    }
   });
 
   pdfBtn.addEventListener('click', openPdfPreview);
@@ -3214,18 +3957,10 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
 })();
 
 // ── Nota Stat Bar ─────────────────────────────────────────────────────────────
-// Tunjuk kiraan reaksi ringkas (😊 3 · 🤔 1) + skor terbaik pengguna di hero nota.
-// Hanya muncul apabila ada data — tidak muncul langsung jika tiada rekod.
-//
-// SQL diperlukan di Supabase (jalankan sekali):
-//   CREATE OR REPLACE FUNCTION public.get_nota_reaction_counts(p_path text)
-//   RETURNS json LANGUAGE sql SECURITY DEFINER AS $$
-//     SELECT json_build_object(
-//       'mudah',        COUNT(*) FILTER (WHERE reaction = 'mudah'),
-//       'boleh-baik',   COUNT(*) FILTER (WHERE reaction = 'boleh-baik'),
-//       'kurang-jelas', COUNT(*) FILTER (WHERE reaction = 'kurang-jelas')
-//     ) FROM nota_feedback WHERE page_path = p_path; $$;
-//   GRANT EXECUTE ON FUNCTION public.get_nota_reaction_counts TO anon;
+// Tunjuk kiraan reaksi ringkas (suka, mudah) + kiraan muat turun PDF di hero nota.
+// Hanya muncul apabila ada sekurang-kurangnya satu kiraan > 0.
+// Skema Supabase (RPC get_nota_reaction_counts, get_nota_pdf_download_count, dll.):
+//   docs/supabase/nota_feedback_pdf.sql
 (function () {
   if (!window.location.pathname.match(/\/notes\/bab-\d+-\d+\.html/)) return;
 
@@ -3247,6 +3982,35 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
     }).then(function (r) { return r.ok ? r.json() : null; }).catch(function () { return null; });
   }
 
+  function fetchPdfDownloadCount() {
+    if (!NOTA_FB_SUPABASE_URL || !NOTA_FB_SUPABASE_KEY) return Promise.resolve(0);
+    return fetch(NOTA_FB_SUPABASE_URL + '/rest/v1/rpc/get_nota_pdf_download_count', {
+      method: 'POST',
+      headers: {
+        'apikey': NOTA_FB_SUPABASE_KEY,
+        'Authorization': 'Bearer ' + NOTA_FB_SUPABASE_KEY,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ p_path: pathname })
+    })
+      .then(function (r) {
+        if (!r.ok) return 0;
+        return r.text().then(function (t) {
+          try {
+            var s = (t || '').trim();
+            if (!s) return 0;
+            var j = JSON.parse(s);
+            if (Array.isArray(j)) j = j[0];
+            var n = typeof j === 'number' ? j : parseInt(String(j), 10);
+            return isNaN(n) ? 0 : n;
+          } catch (e) {
+            return 0;
+          }
+        });
+      })
+      .catch(function () { return 0; });
+  }
+
   var lead = document.querySelector('.note-hero .lead');
   if (!lead) return;
 
@@ -3254,30 +4018,50 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
     { key: 'suka',  imgSrc: 'https://img.icons8.com/?size=100&id=5twNojKL5zU7&format=png&color=000000' },
     { key: 'mudah', pair: HZ_FLUENT_SPARKLE.faceSmiling }
   ];
+  var STAT_PDF_DL_IMG = 'https://img.icons8.com/?size=100&id=yGBEe6Dss9zK&format=png&color=000000';
 
   function pillImg(r) {
     var src = r.imgSrc || hzFluent3dAsset(r.pair[0], r.pair[1]);
     return '<img src="' + src + '" alt="" width="14" height="14" loading="lazy" class="nota-stat-emoji">';
   }
 
-  fetchReactionCounts().then(function (counts) {
-    var pills = [];
+  function mountNotaStatBar() {
+    Promise.all([fetchReactionCounts(), fetchPdfDownloadCount()]).then(function (pair) {
+      var counts = pair[0];
+      var pdfN = pair[1];
+      var pills = [];
 
-    if (counts) {
-      STAT_REACTIONS.forEach(function (r) {
-        var n = Number(counts[r.key] || 0);
-        if (n > 0) pills.push(pillImg(r) + '<span>' + n + '</span>');
-      });
-    }
+      if (counts) {
+        STAT_REACTIONS.forEach(function (r) {
+          var n = Number(counts[r.key] || 0);
+          if (n > 0) pills.push(pillImg(r) + '<span>' + n + '</span>');
+        });
+      }
+      if (pdfN > 0) {
+        pills.push(
+          '<img src="' + STAT_PDF_DL_IMG + '" alt="" width="14" height="14" loading="lazy" class="nota-stat-emoji">' +
+          '<span>' + pdfN + '</span>'
+        );
+      }
 
-    if (!pills.length) return;
+      var oldBar = document.querySelector('.nota-stat-bar');
+      if (oldBar) oldBar.remove();
 
-    var bar = document.createElement('div');
-    bar.className = 'nota-stat-bar';
-    bar.innerHTML = pills.map(function (html) {
-      return '<span class="nota-stat-pill">' + html + '</span>';
-    }).join('');
-    lead.insertAdjacentElement('afterend', bar);
+      if (!pills.length) return;
+
+      var bar = document.createElement('div');
+      bar.className = 'nota-stat-bar';
+      bar.innerHTML = pills.map(function (html) {
+        return '<span class="nota-stat-pill">' + html + '</span>';
+      }).join('');
+      lead.insertAdjacentElement('afterend', bar);
+    });
+  }
+
+  mountNotaStatBar();
+  document.addEventListener('zym-nota-pdf-downloaded', function (ev) {
+    if (!ev || !ev.detail || ev.detail.path !== pathname) return;
+    mountNotaStatBar();
   });
 })();
 
@@ -4383,7 +5167,7 @@ var NOTA_FB_SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXB
   if (!('serviceWorker' in navigator)) return;
 
   window.addEventListener('load', function () {
-    navigator.serviceWorker.register('/sw.js?v=376').catch(function (error) {
+    navigator.serviceWorker.register('/sw.js?v=422').catch(function (error) {
       console.warn('Service worker registration failed:', error);
     });
   });
