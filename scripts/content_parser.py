@@ -6,8 +6,11 @@ import yaml
 from pathlib import Path
 
 _KW_TYPES = {
+    # Standard 8 types
     "tokoh", "tahun", "tempat", "peristiwa",
     "gerakan", "pertubuhan", "karya", "istilah",
+    # Extended types used in Bab 1 and others
+    "kerajaan", "konsep", "masa", "pentadbiran", "perjanjian",
 }
 
 # Matches [text]{type} keyword syntax

@@ -40,8 +40,19 @@ def needs_rebuild(yaml_path: Path, html_path: Path, force: bool) -> bool:
     return yaml_path.stat().st_mtime > html_path.stat().st_mtime
 
 
-def build_file(yaml_path: Path, av: dict, force: bool = False) -> Path | None:
+def build_file(yaml_path: Path, av: dict, force: bool = False):
+    """Build one YAML → HTML.
+
+    Returns:
+      True     – file has passthrough: true, skipped intentionally
+      None     – HTML already up-to-date, nothing written
+      Path     – HTML was (re)generated at this path
+    """
     data = load_content_file(yaml_path)
+
+    if data.get("passthrough"):
+        return True  # HTML managed manually; skip generation
+
     fail_ini = get_fail_ini(data)
     out_path = NOTES_DIR / fail_ini
 
@@ -137,13 +148,16 @@ def main() -> None:
     NOTES_DIR.mkdir(exist_ok=True)
 
     generated: list[Path] = []
+    passthrough = 0
     skipped = 0
     errors = 0
 
     for yf in yaml_files:
         try:
             result = build_file(yf, av, force=force)
-            if result:
+            if result is True:  # passthrough sentinel
+                passthrough += 1
+            elif result:
                 generated.append(result)
                 print(f"  built  {result.name}")
             else:
@@ -152,7 +166,7 @@ def main() -> None:
             print(f"  ERROR  {yf.name}: {exc}")
             errors += 1
 
-    print(f"\nDone: {len(generated)} built, {skipped} skipped, {errors} errors.")
+    print(f"\nDone: {len(generated)} built, {skipped} skipped, {passthrough} passthrough, {errors} errors.")
 
     if generated:
         # Get all notes HTML for sw.js update (not just newly generated)

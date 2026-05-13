@@ -52,6 +52,32 @@ EMOJI_MAP = {
     "rice":             ("Sheaf of rice/3D/sheaf_of_rice_3d.png", "🌾"),
     "factory":          ("Factory/3D/factory_3d.png", "🏭"),
     "person":           ("Bust in silhouette/3D/bust_in_silhouette_3d.png", "👤"),
+    # Arrows and directional symbols (used by paper-steps, org-chart)
+    "right_arrow":      ("Right arrow/3D/right_arrow_3d.png", "➡️"),
+    "down_arrow":       ("Down arrow/3D/down_arrow_3d.png", "⬇️"),
+    "left_arrow":       ("Left arrow/3D/left_arrow_3d.png", "⬅️"),
+    "up_arrow":         ("Up arrow/3D/up_arrow_3d.png", "⬆️"),
+    # Calendar (used by paper-timeline)
+    "calendar":         ("Calendar/3D/calendar_3d.png", "📅"),
+    # Additional content emojis
+    "money_bag":        ("Money bag/3D/money_bag_3d.png", "💰"),
+    "water_wave":       ("Water wave/3D/water_wave_3d.png", "🌊"),
+    "droplet":          ("Droplet/3D/droplet_3d.png", "💧"),
+    "cup_with_straw":   ("Cup with straw/3D/cup_with_straw_3d.png", "🥤"),
+    "bar_chart":        ("Bar chart/3D/bar_chart_3d.png", "📊"),
+    "busts":            ("Busts in silhouette/3D/busts_in_silhouette_3d.png", "👥"),
+    "dove":             ("Dove/3D/dove_3d.png", "🕊️"),
+    "balance_scale":    ("Balance scale/3D/balance_scale_3d.png", "⚖️"),
+    "chart_yen":        ("Chart increasing with yen/3D/chart_increasing_with_yen_3d.png", "📈"),
+    "pushpin_red":      ("Round pushpin/3D/round_pushpin_3d.png", "📍"),
+    "trophy":           ("Trophy/3D/trophy_3d.png", "🏆"),
+    "building":         ("Building/3D/building_3d.png", "🏢"),
+    "house":            ("House/3D/house_3d.png", "🏠"),
+    "anchor":           ("Anchor/3D/anchor_3d.png", "⚓"),
+    "lightning":        ("Lightning/3D/lightning_3d.png", "⚡"),
+    "rice_field":       ("Rice scene/3D/rice_scene_3d.png", "🌾"),
+    "handshake_people": ("People holding hands/3D/people_holding_hands_3d.png", "🫱🏼‍🫲🏼"),
+    "hammer":           ("Hammer/3D/hammer_3d.png", "🔨"),
 }
 
 # Keycap 1–9 generated dynamically

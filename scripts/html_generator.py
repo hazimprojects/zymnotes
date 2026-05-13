@@ -192,6 +192,7 @@ def gen_board_block(block: dict, slug: str, counter: list[int]) -> str:
             f'{get_emoji_img(emoji_name)} {parse_inline(tajuk)}</div>'
         )
 
+    two_col_cls = " two-col-chips" if block.get("two_col") else ""
     chips_html = ""
     for item in senarai:
         zh_id = _next_zh(counter, slug)
@@ -202,7 +203,7 @@ def gen_board_block(block: dict, slug: str, counter: list[int]) -> str:
         f'data-cv-title="{cv_title}" data-cv-type="board">'
         f'<div class="cv-unit-body">\n'
         f'{header_html}'
-        f'<div class="paper-chip-list">\n{chips_html}</div>\n'
+        f'<div class="paper-chip-list{two_col_cls}">\n{chips_html}</div>\n'
         f'</div></article>\n'
     )
 
@@ -239,6 +240,130 @@ def gen_accordion_block(block: dict, slug: str, counter: list[int]) -> str:
     return f'<div class="paper-accordion">\n{items_html}</div>\n'
 
 
+def gen_steps_block(block: dict) -> str:
+    """Generate paper-steps (horizontal process flow) from block dict.
+
+    YAML schema::
+        jenis: steps
+        compact: true        # adds compact-steps class
+        items:
+          - emoji: droplet
+            text: "Step text here"
+    """
+    compact_cls = " compact-steps" if block.get("compact") else ""
+    items_html = ""
+    for i, item in enumerate(block.get("items", [])):
+        emoji = item.get("emoji", "pushpin")
+        text = parse_inline(str(item.get("text", "")))
+        items_html += (
+            f'<div class="paper-step">\n'
+            f'<div class="paper-step-icon">{get_emoji_img(emoji)}</div>\n'
+            f'<p>{text}</p>\n'
+            f'</div>\n'
+        )
+        # Add arrow between steps (not after the last one)
+        if i < len(block.get("items", [])) - 1:
+            items_html += (
+                f'<div class="paper-step-arrow">'
+                f'{get_emoji_img("right_arrow")}</div>\n'
+            )
+    return f'<div class="paper-steps{compact_cls}">\n{items_html}</div>\n'
+
+
+def gen_timeline_block(block: dict, slug: str, counter: list[int]) -> str:
+    """Generate paper-timeline (vertical timeline) from block dict.
+
+    YAML schema::
+        jenis: timeline
+        items:
+          - tarikh: "Februari 1943"
+            kandungan:
+              - "[entity]{type} did something at [Place]{tempat}."
+    """
+    items = block.get("items", [])
+    parts = ""
+    for i, item in enumerate(items, 1):
+        tarikh = parse_inline(str(item.get("tarikh", "")))
+        node_id = f"{slug}-time-{i}"
+        content_lines = item.get("kandungan", [])
+        panel_html = ""
+        for line in content_lines:
+            panel_html += f'<p>{parse_inline(str(line))}</p>\n'
+        parts += (
+            f'<div class="paper-timeline-node">'
+            f'{get_emoji_img("calendar")} {tarikh}</div>\n'
+            f'<div class="paper-timeline-panel" id="{node_id}">\n'
+            f'{panel_html}'
+            f'</div>\n'
+        )
+    return f'<div class="paper-timeline">\n{parts}</div>\n'
+
+
+def gen_org_block(block: dict) -> str:
+    """Generate org-chart (hierarchical structure) from block dict.
+
+    YAML schema::
+        jenis: org
+        levels:
+          - ["[crown] Sultan"]                         # level-1 nodes
+          - ["[handshake] Bendahara"]                  # level-2 nodes
+          - ["[money_bag] Bendahari", "[shield] Temenggung"]  # level-3 nodes
+    """
+    levels = block.get("levels", [])
+    parts = ""
+    for i, level_nodes in enumerate(levels, 1):
+        nodes_html = ""
+        for node_str in level_nodes:
+            emoji, text = parse_item(str(node_str))
+            nodes_html += (
+                f'<div class="org-node">{get_emoji_img(emoji)} {text}</div>\n'
+            )
+        parts += f'<div class="org-level org-level-{i}">\n{nodes_html}</div>\n'
+        # Add vertical arrow between levels (not after last)
+        if i < len(levels):
+            parts += (
+                f'<div class="org-arrow">{get_emoji_img("down_arrow")}</div>\n'
+            )
+    return f'<div class="org-chart">\n{parts}</div>\n'
+
+
+def gen_glossary_block(block: dict, slug: str, counter: list[int]) -> str:
+    """Generate glossary-paper (styled text block) from block dict.
+
+    YAML schema::
+        jenis: glossary
+        tajuk: "Petikan Surat Sultan Perak"
+        emoji: scroll
+        items:
+          - "[light_bulb] Text here..."
+          - "Plain text paragraph..."
+    """
+    tajuk = block.get("tajuk", "")
+    emoji_name = block.get("emoji", "books")
+    senarai = block.get("items", block.get("senarai", []))
+    cv_title = parse_inline(tajuk) if tajuk else "Maklumat"
+
+    strip_html = ""
+    if tajuk:
+        strip_html = (
+            f'<div class="paper-strip strip-glossary">'
+            f'{get_emoji_img(emoji_name)} {cv_title}</div>'
+        )
+
+    lines_html = ""
+    for item in senarai:
+        zh_id = _next_zh(counter, slug)
+        lines_html += _point_line(str(item), zh_id=zh_id) + "\n"
+
+    return (
+        f'<article class="paper-board glossary-paper cv-unit" '
+        f'data-cv-collectible="true" data-cv-title="{cv_title}" data-cv-type="board">\n'
+        f'{strip_html}<div class="cv-unit-body">\n'
+        f'{lines_html}'
+        f'</div></article>\n'
+    )
+
+
 def gen_section(section: dict, slug: str, counter: list[int], section_num: int) -> str:
     tajuk = parse_inline(str(section.get("tajuk", "")))
     label = section.get("label", "")
@@ -266,6 +391,14 @@ def gen_section(section: dict, slug: str, counter: list[int], section_num: int) 
             blocks_html += gen_board_block(block, slug, counter)
         elif jenis == "accordion":
             blocks_html += gen_accordion_block(block, slug, counter)
+        elif jenis == "steps":
+            blocks_html += gen_steps_block(block)
+        elif jenis == "timeline":
+            blocks_html += gen_timeline_block(block, slug, counter)
+        elif jenis == "org":
+            blocks_html += gen_org_block(block)
+        elif jenis == "glossary":
+            blocks_html += gen_glossary_block(block, slug, counter)
 
     return (
         f'<section class="note-subsection reveal-on-scroll">\n'
