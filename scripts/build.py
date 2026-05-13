@@ -16,7 +16,6 @@ from pathlib import Path
 # Allow importing sibling scripts
 sys.path.insert(0, str(Path(__file__).parent))
 
-import yaml
 from content_parser import load_content_file, is_subtopik, get_fail_ini
 from html_generator import gen_page_subtopik, gen_page_bab
 
