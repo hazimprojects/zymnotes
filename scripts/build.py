@@ -76,8 +76,8 @@ def update_sw_precache(generated_html: list[Path]) -> None:
     """
     sw_text = SW_PATH.read_text(encoding="utf-8")
 
-    # New notes entries (no trailing comma — JS array trailing comma is handled below)
-    new_notes = sorted(f"  '/notes/{p.name}'" for p in generated_html)
+    # Each entry has a trailing comma — required for valid JS array syntax
+    new_notes = sorted(f"  '/notes/{p.name}'," for p in generated_html)
 
     # Find the PRECACHE_URLS array boundaries
     start_match = re.search(r'const PRECACHE_URLS\s*=\s*\[', sw_text)
