@@ -14,6 +14,6 @@
 @import url("responsive.css?v=10"); /* All @media queries + spacing fixes */
 @import url("themes.css?v=25");     /* Bab visual themes, dark mode overrides, war block chips */
 @import url("bab-hub-fluent-3d.css?v=1"); /* Bab induk: mesh + glass + chip wells (Fluent 3D) */
-@import url("shell-openmoji.css?v=13"); /* App shell: Zym 3D stage (mesh + glass) */
+@import url("shell-openmoji.css?v=12"); /* App shell: Zym 3D stage (mesh + glass) */
 @import url("lab.css?v=7");        /* Learning Lab, action bar, mini interactive blocks */
 @import url("print.css?v=6") print;    /* Print styles (Ctrl+P) */
