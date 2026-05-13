@@ -1,0 +1,34 @@
+bab: 5
+tajuk: Persekutuan Tanah Melayu 1948
+bab_label: Bab 5
+subjek: Sejarah
+tingkatan: 4
+tema: bab-theme-5
+og_image_v: '20260420'
+description: 'Nota Sejarah Tingkatan 4 Bab 5: Persekutuan Tanah Melayu 1948. Ringkasan bab induk dan pautan subtopik untuk
+  ulang kaji SPM.'
+lead: Bab ini menerangkan bagaimana [Persekutuan Tanah Melayu 1948]{pentadbiran} diperkenalkan oleh [British]{pertubuhan}
+  untuk menggantikan [Malayan Union]{pentadbiran}, faktor penubuhannya, ciri-cirinya dan kesan pembentukannya terhadap penduduk
+  tempatan serta perkembangan tuntutan ke arah [kemerdekaan]{istilah}.
+sinopsis:
+- '[classical_building] [Persekutuan Tanah Melayu 1948]{pentadbiran} diperkenalkan oleh [British]{pertubuhan} untuk menggantikan
+  [Malayan Union]{pentadbiran}.'
+- '[puzzle] Terdapat pelbagai faktor yang membawa kepada penubuhan [Persekutuan Tanah Melayu 1948]{pentadbiran}.'
+- '[scroll_old] Ciri-ciri [Persekutuan Tanah Melayu 1948]{pentadbiran} berbeza daripada [Malayan Union]{pentadbiran} dan lebih
+  diterima oleh penduduk tempatan.'
+- '[handshake_light] Pembentukan [Perjanjian Persekutuan Tanah Melayu 1948]{pentadbiran} menggambarkan toleransi penduduk
+  negara ini dalam mencari penyelesaian politik.'
+- '[hibiscus] Perkembangan ini menjadi satu langkah penting yang menuntut ke arah [kemerdekaan]{istilah}.'
+subtopik:
+- kod: '5.1'
+  tajuk: Latar Belakang Penubuhan Persekutuan Tanah Melayu 1948
+  penerangan: Latar belakang pengenalan Persekutuan Tanah Melayu 1948 bagi menggantikan Malayan Union.
+- kod: '5.2'
+  tajuk: Faktor Penubuhan Persekutuan Tanah Melayu 1948
+  penerangan: Faktor politik, pentadbiran dan tuntutan penduduk tempatan yang membawa kepada penubuhannya.
+- kod: '5.3'
+  tajuk: Ciri-ciri Persekutuan Tanah Melayu 1948
+  penerangan: Ciri utama persekutuan baharu yang berbeza daripada Malayan Union dan lebih diterima oleh rakyat.
+- kod: '5.4'
+  tajuk: Kesan Penubuhan Persekutuan Tanah Melayu 1948
+  penerangan: Kesan politik dan sosial yang membuka jalan kepada perkembangan tuntutan kemerdekaan.

@@ -1,0 +1,33 @@
+bab: 6
+tajuk: Ancaman Komunis dan Perisytiharan Darurat
+bab_label: Bab 6
+subjek: Sejarah
+tingkatan: 4
+tema: bab-theme-6
+og_image_v: '20260420'
+description: 'Nota Sejarah Tingkatan 4 Bab 6: Ancaman Komunis dan Perisytiharan Darurat. Ringkasan bab induk dan pautan subtopik
+  untuk ulang kaji SPM.'
+lead: Bab ini menerangkan bagaimana perkembangan pengaruh [komunis]{gerakan} di negara kita berlaku sebelum meletusnya [Perang
+  Dunia Kedua]{peristiwa}, ancaman yang dibawa oleh gerakan tersebut terhadap politik, ekonomi dan keselamatan negara, usaha
+  yang diambil untuk menanganinya, serta kesan [zaman darurat]{istilah} terhadap kehidupan masyarakat di negara kita.
+sinopsis:
+- '[pushpin] Perkembangan pengaruh [komunis]{gerakan} di negara kita berlaku sebelum meletusnya [Perang Dunia Kedua]{peristiwa}.'
+- '[warning] Komunis melakukan pelbagai tindakan untuk melumpuhkan ekonomi negara dan menggugat kestabilan politik.'
+- '[triangular-flag] Matlamat komunis adalah untuk merampas kuasa daripada [British]{pertubuhan} dan menggantikannya dengan
+  sebuah [Republik Komunis]{gerakan}.'
+- '[handshake_light] Namun begitu, [British]{pertubuhan} berjaya menawan hati dan fikiran rakyat untuk bersama-sama membanteras
+  ancaman komunis.'
+- '[globe_meridians] [Zaman darurat]{istilah} telah membawa pelbagai kesan kepada politik, ekonomi dan sosial di negara kita.'
+subtopik:
+- kod: '6.1'
+  tajuk: Kemasukan Pengaruh Komunis di Negara Kita
+  penerangan: Bagaimana pengaruh komunis mula masuk dan berkembang di negara kita sebelum darurat diisytiharkan.
+- kod: '6.2'
+  tajuk: Ancaman Komunis di Negara Kita
+  penerangan: Tindakan komunis yang menggugat keselamatan, ekonomi dan kestabilan politik negara.
+- kod: '6.3'
+  tajuk: Usaha Menangani Ancaman Komunis
+  penerangan: Langkah kerajaan dan rakyat dalam membanteras ancaman komunis sepanjang zaman darurat.
+- kod: '6.4'
+  tajuk: Kesan Zaman Darurat terhadap Negara Kita
+  penerangan: Kesan darurat terhadap politik, ekonomi, sosial dan kehidupan rakyat di negara kita.

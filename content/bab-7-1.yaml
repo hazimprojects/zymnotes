@@ -1,0 +1,165 @@
+subtopik: '7.1'
+tajuk: Latar Belakang Idea Negara Merdeka
+bab: 7
+tajuk_bab: Usaha ke Arah Kemerdekaan
+bab_label: Bab 7
+subjek: Sejarah
+tingkatan: 4
+tema: bab-theme-7
+audio: false
+has_quiz: false
+fail_sebelum: bab-7.html
+fail_seterusnya: bab-7-2.html
+kod_seterusnya: '7.2'
+og_image_v: '20260420'
+description: 'Nota Sejarah Tingkatan 4 Bab 7.1 (Usaha ke Arah Kemerdekaan): Latar Belakang Idea Negara Merdeka. Ringkasan
+  padat untuk ulang kaji SPM.'
+lead: Subtopik ini menerangkan bagaimana idea [negara merdeka]{istilah} mula berkembang di negara kita melalui perjuangan
+  pelbagai [pertubuhan]{pertubuhan} dan [tokoh]{tokoh} yang membawa ideologi serta pendekatan masing-masing, daripada konsep
+  [Melayu Raya]{gerakan} hingga kepada [demokrasi]{istilah}, [negara Islam]{istilah} dan [perpaduan antara kaum]{istilah}.
+ringkasan:
+- '[light_bulb] Perkembangan politik antarabangsa dan serantau telah mempengaruhi gelombang politik di negara kita sehingga
+  benih kesedaran politik berkembang menjadi idea negara merdeka.'
+- '[classical_building] Idea negara merdeka tidak lahir daripada satu pertubuhan sahaja, tetapi berkembang melalui perjuangan
+  pelbagai [pertubuhan]{pertubuhan} dan [tokoh]{tokoh} dengan pendekatan yang berbeza.'
+- '[globe-showing-europe-africa] Antara idea yang diperjuangkan termasuk [Melayu Raya]{gerakan}, [demokrasi]{istilah}, [negara
+  Islam]{istilah} dan [perpaduan antara kaum]{istilah}.'
+soalan_utama:
+  soalan: Bagaimanakah idea negara merdeka mula berkembang di negara kita?
+  heading: Bagaimanakah idea negara merdeka mula berkembang di negara kita?
+  jawapan:
+  - '[light_bulb] Idea negara merdeka berkembang hasil pengaruh perkembangan politik antarabangsa dan serantau serta kesedaran
+    politik dalam kalangan penduduk tempatan.'
+  - '[pushpin] Idea ini dibawa oleh pelbagai pertubuhan dan tokoh yang memperjuangkan kemerdekaan melalui ideologi dan pendekatan
+    yang berbeza, tetapi menuju kepada matlamat yang sama.'
+bahagian:
+- tajuk: '1938'
+  label: Tahun 1938
+  desc: Permulaan awal idea kemerdekaan melalui konsep penyatuan dunia Melayu.
+  kandungan:
+  - jenis: board
+    tajuk: Kesatuan Melayu Muda (KMM)
+    strip: true
+    senarai:
+    - '[globe-showing-europe-africa] [Melayu Raya]{gerakan}'
+- tajuk: '1945'
+  label: Tahun 1945
+  desc: Perjuangan idea merdeka berkembang melalui gerakan kebangsaan Melayu yang lebih tersusun.
+  kandungan:
+  - jenis: board
+    tajuk: Parti Kebangsaan Melayu Malaya (PKMM)
+    strip: true
+    senarai:
+    - '[person] [Dr. Burhanuddin al-Helmi]{tokoh}'
+    - '[person] [Ishak Haji Muhammad]{tokoh}'
+    - '[person] [Ahmad Boestamam]{tokoh}'
+- tajuk: '1946'
+  label: Tahun 1946
+  desc: Tahun ini memperlihatkan kemunculan banyak pertubuhan dengan idea kemerdekaan yang lebih pelbagai.
+  kandungan:
+  - jenis: accordion
+    items:
+    - tajuk: Angkatan Pemuda Insaf (API)
+      senarai:
+      - '[pushpin] [API]{pertubuhan} dipimpin oleh [Ahmad Boestamam]{tokoh}.'
+      - '[pushpin] Pertubuhan ini memperjuangkan idea negara merdeka yang menekankan:'
+      - '[pushpin] Risalah ini membawa slogan:'
+      - '[pushpin] Slogan ini menyeru perjuangan mencapai kemerdekaan bangsa dan tanah air melalui:'
+      - '[warning] Namun perjuangan akan diteruskan melalui kekerasan jika terpaksa.'
+      - '[light_bulb] Pendekatan dan imej radikal ini menyebabkan [API]{pertubuhan} diharamkan oleh [British]{pertubuhan}.'
+      - '[ballot-box-with-ballot] pemerintahan demokrasi'
+      - '[money-bag] dasar ekonomi yang mengutamakan rakyat'
+      - '[scales] keadilan sosial'
+    - tajuk: Persatuan Kebangsaan Melayu Sarawak (PKMS)
+      senarai:
+      - '[pushpin] [Persatuan Kebangsaan Melayu Sarawak (PKMS)]{pertubuhan} di bawah pimpinan [Datu Patinggi Abang Haji Abdillah]{tokoh}
+        mempelopori gerakan menentang penyerahan [Sarawak]{tempat} kepada [British]{pertubuhan}.'
+      - '[pushpin] Matlamat pertubuhan ini ialah:'
+      - '[pushpin] Mereka juga mahu Sarawak berkerajaan sendiri sebagaimana yang dijanjikan dalam:'
+      - '[pushpin] oleh Raja Brooke.'
+      - '[national-park] menjadikan Sarawak negeri merdeka di bawah pemerintahan Raja Brooke'
+    - tajuk: Pergerakan Pemuda Melayu (PPM)
+      senarai:
+      - '[pushpin] Kontroversi penyerahan [Sarawak]{tempat} kepada [British]{pertubuhan} melahirkan:'
+      - '[pushpin] [PPM]{pertubuhan} rela berkorban jiwa untuk mendapatkan:'
+      - '[pushpin] Catatan “Merdeka” dalam surat-menyurat [PPM]{pertubuhan} menunjukkan bahawa gerakan ini memang bertujuan:'
+      - '[pushpin] Anggota [PPM]{pertubuhan} menubuhkan pakatan sulit:'
+      - '[pushpin] Pakatan ini nekad membunuh:'
+      - '[light_bulb] Penubuhan [Rukun 13]{pertubuhan} membuktikan kebencian [PPM]{pertubuhan} terhadap kolonial.'
+      - '[fire] [Pergerakan Pemuda Melayu (PPM)]{pertubuhan}'
+      - '[round-pushpin] di [Sibu]{tempat}'
+    - tajuk: United Malays National Organisation (UMNO)
+      senarai:
+      - '[pushpin] [UMNO]{pertubuhan} dipimpin oleh [Dato’ Onn Jaafar]{tokoh}.'
+      - '[pushpin] [UMNO]{pertubuhan} berusaha menyatukan orang Melayu untuk:'
+      - '[pushpin] Dengan slogan:'
+      - '[pushpin] [UMNO]{pertubuhan} berjuang menentang [Malayan Union]{peristiwa} bagi memelihara:'
+      - '[pushpin] Tujuannya ialah memperjuangkan kemerdekaan [Tanah Melayu]{tempat} melalui:'
+      - '[shield] mempertahankan hak bangsa Melayu'
+      - '[crown] mempertahankan kedudukan Raja-raja Melayu'
+    - tajuk: Parti Kebangsaan Melayu Labuan (PKML)
+      senarai:
+      - '[pushpin] Perjuangan [PKMM]{pertubuhan} untuk kemerdekaan [Tanah Melayu]{tempat} telah mempengaruhi penubuhan:'
+      - '[pushpin] [PKML]{pertubuhan} dipimpin oleh:'
+      - '[pushpin] [PKML]{pertubuhan} menjalankan:'
+      - '[pushpin] dan menuntut:'
+      - '[pushpin] Laungan:'
+      - '[pushpin] dalam penulisan surat [Zakaria Gunn]{tokoh} kepada ahli [PKML]{pertubuhan} menekankan kesedaran kebangsaan
+        untuk merdeka.'
+      - '[classical_building] [Parti Kebangsaan Melayu Labuan (PKML)]{pertubuhan}'
+      - '[round-pushpin] di [Sabah]{tempat}'
+    - tajuk: Malayan Indian Congress (MIC)
+      senarai:
+      - '[pushpin] [MIC]{pertubuhan} diasaskan oleh [John Thivy]{tokoh}.'
+      - '[pushpin] [MIC]{pertubuhan} meletakkan objektif untuk:'
+      - '[pushpin] [MIC]{pertubuhan} menegaskan bahawa kewarganegaraan tunggal perlu diberikan kepada mereka yang:'
+      - '[handshake_light] bekerjasama dengan kaum lain'
+      - '[hibiscus] memperjuangkan kemerdekaan Tanah Melayu'
+- tajuk: '1947'
+  label: Tahun 1947
+  desc: Idea negara merdeka berkembang melalui pendekatan berasaskan Islam.
+  kandungan:
+  - jenis: board
+    tajuk: Hizbul Muslimin
+    strip: true
+    senarai:
+    - '[mosque] [Majlis Agama Islam Tertinggi (MATA)]{pertubuhan}'
+- tajuk: '1949'
+  label: Tahun 1949
+  desc: Perjuangan kemerdekaan semakin dikaitkan dengan keharmonian masyarakat berbilang kaum.
+  kandungan:
+  - jenis: board
+    tajuk: Malayan Chinese Association (MCA)
+    strip: true
+    senarai:
+    - '[ballot-box-with-ballot] sebuah negara yang berdemokrasi penuh'
+- tajuk: '1951'
+  label: Tahun 1951
+  desc: 'Dua pendekatan besar muncul: negara Islam dan perpaduan kebangsaan pelbagai kaum.'
+  kandungan:
+  - jenis: accordion
+    items:
+    - tajuk: Parti Islam Se-Tanah Melayu (PAS)
+      senarai:
+      - '[pushpin] Idea negara Islam diteruskan melalui penubuhan:'
+      - '[pushpin] [Dr. Burhanuddin al-Helmi]{tokoh}, Yang Dipertua [PAS]{pertubuhan}, menegaskan bahawa [PAS]{pertubuhan}
+        bercita-cita membina:'
+      - '[pushpin] dengan:'
+      - '[pushpin] Bagi [PAS]{pertubuhan}, kemerdekaan bererti:'
+      - '[mosque] [Parti Islam Se-Tanah Melayu (PAS)]{pertubuhan}'
+    - tajuk: Independence of Malayan Party (IMP)
+      senarai:
+      - '[pushpin] [Dato’ Onn Jaafar]{tokoh} mengasaskan:'
+      - '[pushpin] untuk melaksanakan idea:'
+      - '[pushpin] Selepas [1949]{masa}, pemikiran politik [Dato’ Onn Jaafar]{tokoh} semakin terarah kepada:'
+      - '[pushpin] Menurut beliau, tuntutan kemerdekaan tidak boleh dibuat tanpa:'
+      - '[pushpin] Beliau mahu:'
+      - '[classical_building] [Independence of Malayan Party (IMP)]{pertubuhan}'
+kesimpulan:
+- '[pushpin] Idea negara merdeka tercetus secara menyeluruh dalam kalangan penduduk di negara kita.'
+- '[pushpin] Idea ini lahir daripada pelbagai pertubuhan yang membawa ideologi dan pendekatan berbeza, seperti:'
+- '[light_bulb] Walaupun wujud kepelbagaian idea negara merdeka, semuanya menuju ke arah matlamat yang sama, iaitu:'
+- '[globe-showing-europe-africa] Melayu Raya'
+- '[ballot-box-with-ballot] demokrasi'
+- '[mosque] negara Islam'
+- '[handshake_light] perpaduan antara kaum'

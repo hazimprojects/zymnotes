@@ -1,0 +1,340 @@
+subtopik: '6.3'
+tajuk: Usaha Menangani Ancaman Komunis
+bab: 6
+tajuk_bab: Ancaman Komunis dan Perisytiharan Darurat
+bab_label: Bab 6
+subjek: Sejarah
+tingkatan: 4
+tema: bab-theme-6
+audio: false
+has_quiz: false
+fail_sebelum: bab-6-2.html
+fail_seterusnya: bab-6-4.html
+kod_seterusnya: '6.4'
+og_image_v: '20260420'
+description: 'Nota Sejarah Tingkatan 4 Bab 6.3 (Ancaman Komunis dan Perisytiharan Darurat): Usaha Menangani Ancaman Komunis.
+  Ringkasan padat untuk ulang kaji SPM.'
+lead: Subtopik ini menerangkan pelbagai langkah yang diambil oleh kerajaan untuk menangani ancaman [komunis]{gerakan} melalui
+  pendekatan [undang-undang]{istilah}, [keselamatan]{istilah}, [pentadbiran]{istilah}, [psikologi]{istilah} dan [rundingan]{istilah}.
+ringkasan:
+- '[police-car-light] Kerajaan melaksanakan pelbagai langkah untuk menangani ancaman [komunis]{gerakan} dari segi [undang-undang]{istilah},
+  [keselamatan]{istilah}, [pentadbiran]{istilah}, [psikologi]{istilah} dan [rundingan]{istilah}.'
+- '[police-officer] Usaha ini merangkumi penguatkuasaan [Undang-Undang Darurat]{istilah}, pemerkasaan pasukan keselamatan,
+  sistem pendaftaran kebangsaan, [Rancangan Briggs]{istilah} dan tawaran pengampunan.'
+- '[megaphone] Kerajaan juga melaksanakan [Kempen Bulan Rakyat Melawan Penjahat]{istilah}, [perintah berkurung]{istilah} dan
+  [perang saraf]{istilah} untuk melemahkan pengaruh komunis.'
+- '[handshake_light] Selain tindakan keselamatan, kerajaan turut berusaha menamatkan konflik melalui [Rundingan Baling]{peristiwa},
+  walaupun rundingan itu gagal.'
+soalan_utama:
+  soalan: Apakah usaha yang dilakukan oleh kerajaan untuk menangani ancaman komunis di negara kita?
+  heading: Apakah usaha yang dilakukan oleh kerajaan untuk menangani ancaman komunis di negara kita?
+  jawapan:
+  - '[light_bulb] Bagi menangani ancaman komunis, kerajaan telah melaksanakan pelbagai langkah dari segi undang-undang, keselamatan,
+    pentadbiran, psikologi dan rundingan.'
+  - '[pushpin] Usaha ini dilakukan untuk melemahkan gerakan komunis, melindungi rakyat dan memulihkan keamanan negara.'
+bahagian:
+- tajuk: Penguatkuasaan Undang-Undang Darurat
+  label: Bahagian Pertama
+  desc: ''
+  kandungan:
+  - jenis: board
+    tajuk: ''
+    strip: false
+    senarai:
+    - '[prohibited] menahan sesiapa sahaja yang disyaki terlibat dalam pergerakan komunis tanpa perbicaraan'
+    - '[scales] mengenakan hukuman berat kepada sesiapa sahaja yang membantu komunis'
+    - '[water-pistol] mengetatkan undang-undang senjata api dengan mengenakan hukuman mati terhadap mereka yang membawa senjata
+      api dan bahan letupan'
+    - '[houses] menggeledah rumah kediaman, memagar kampung, mengadakan perintah berkurung, mewujudkan [Kampung Baru]{tempat}
+      serta memindahkan dan menempatkan penduduk'
+  - jenis: accordion
+    items:
+    - tajuk: Pengharaman PKM dan pertubuhan radikal
+      senarai:
+      - '[pushpin] British turut mengharamkan [PKM]{pertubuhan} dan parti politik berfahaman radikal seperti:'
+      - '[red-square] [AWAS]{pertubuhan}'
+      - '[shield] [Ikatan Pembela Tanah Air (PETA)]{pertubuhan}'
+      - '[fire] [Pemuda Radikal Melayu (PERAM)]{pertubuhan}'
+      - '[classical_building] [PKMM]{pertubuhan}'
+      - '[mosque] [Hizbul Muslimin]{pertubuhan}'
+    - tajuk: Penangkapan pemimpin gerakan radikal
+      senarai:
+      - '[pushpin] British juga menangkap pemimpin gerakan radikal seperti:'
+      - '[light_bulb] Langkah ini bertujuan mengekang pengaruh komunis daripada terus merebak.'
+      - '[person] [Ahmad Boestamam]{tokoh}'
+      - '[person] [Ishak Haji Muhammad]{tokoh}'
+      - '[person] [Abu Bakar al-Baqir]{tokoh}'
+      - '[person] [Khatijah Sidek]{tokoh}'
+- tajuk: Pemerkasaan Pasukan Keselamatan
+  label: Bahagian Kedua
+  desc: ''
+  kandungan:
+  - jenis: board
+    tajuk: ''
+    strip: false
+    senarai:
+    - '[police-officer] Polis'
+    - '[military-helmet] Tentera'
+    - '[handshake_light] Sukarelawan'
+  - jenis: board
+    tajuk: Info
+    strip: true
+    senarai:
+    - '[pushpin] [Pesan Apot a/k Saad]{tokoh} (Big Nose), perintis Senoi Praaq:'
+    - '[pushpin] “Jangan sia-siakan pengorbanan saya serta rakan-rakan yang telah lama bersara. Dulu kami terpaksa berlapar
+      di dalam hutan, makanan dicatu, tak cukup tidur, tinggalkan anak bini berbulan-bulan, nyawa pula di hujung peluru, semuanya
+      semata-mata nak tengok rakyat Malaysia dapat hidup aman.”'
+  - jenis: accordion
+    items:
+    - tajuk: Polis · Cawangan Khas
+      senarai:
+      - '[pushpin] Beliau menubuhkan:'
+      - '[pushpin] Peranan Cawangan Khas:'
+      - '[light_bulb] Kejayaan penyusupan ini memudahkan pasukan keselamatan merancang tindakan terhadap PKM.'
+      - '[calendar] [Ogos 1950]{masa} → [Guy C. Madoc]{tokoh} dilantik mengetuai badan perisikan'
+    - tajuk: Polis · Special Constables (SC)
+      senarai:
+      - '[pushpin] Seramai [24 ribu orang]{istilah} dilatih dan dihantar untuk:'
+      - '[light_bulb] Mereka menjadi barisan hadapan dalam menghadapi ancaman komunis.'
+      - '[calendar] [1948]{masa} → ditubuhkan ketika [Rancangan Briggs]{istilah} dilaksanakan'
+    - tajuk: Polis · Polis Hutan
+      senarai:
+      - '[pushpin] Pada asalnya, pasukan ini dikenali sebagai:'
+      - '[pushpin] Tugas mereka:'
+      - '[airplane] [Flying Squad]{pertubuhan}'
+    - tajuk: Polis · Polis Wanita
+      senarai:
+      - '[calendar] [Ogos 1955]{masa} → polis wanita ditubuhkan'
+    - tajuk: Polis · Senoi Praaq (Urang Perang)
+      senarai:
+      - '[pushpin] Dalam bahasa Semai, Senoi Praaq bermaksud:'
+      - '[pushpin] Tugas mereka:'
+      - '[pushpin] Anggotanya terdiri daripada Orang Asli suku:'
+      - '[pushpin] Mereka terkenal dengan gelaran:'
+      - '[pushpin] [Pesan Apot a/k Saad]{tokoh} (Big Nose), perintis Senoi Praaq:'
+      - '[pushpin] “Jangan sia-siakan pengorbanan saya serta rakan-rakan yang telah lama bersara. Dulu kami terpaksa berlapar
+        di dalam hutan, makanan dicatu, tak cukup tidur, tinggalkan anak bini berbulan-bulan, nyawa pula di hujung peluru,
+        semuanya semata-mata nak tengok rakyat Malaysia dapat hidup aman.”'
+      - '[calendar] [1956]{masa} → [Senoi Praaq]{pertubuhan} ditubuhkan'
+    - tajuk: Polis · Auxiliary Police (AP)
+      senarai:
+      - '[pushpin] Peranan mereka:'
+      - '[calendar] [Disember 1948]{masa} → terdapat [17 ribu orang]{istilah} anggota Auxiliary Police di seluruh [Persekutuan
+        Tanah Melayu]{pentadbiran}'
+    - tajuk: Tentera · Pasukan Askar Melayu
+      senarai:
+      - '[pushpin] Tugas utama:'
+      - '[pushpin] Kerajaan juga melengkapkan tentera darat dengan:'
+      - '[pushpin] Rejimen Askar Melayu diperbesar daripada:'
+      - '[light_bulb] Pasukan ini mencapai prestasi cemerlang kerana berjaya:'
+      - '[calendar] [1933]{masa} → pasukan ini ditubuhkan'
+    - tajuk: Tentera · Pasukan Askar Komanwel
+      senarai:
+      - '[pushpin] Kerajaan membawa masuk askar Komanwel dari:'
+      - '[pushpin] Pasukan ini membantu memerangi komunis di [Tanah Melayu]{tempat}.'
+      - '[globe_meridians] Britain'
+      - '[globe_meridians] Australia'
+      - '[globe_meridians] New Zealand'
+      - '[globe_meridians] India'
+      - '[globe-showing-europe-africa] Afrika Timur'
+      - '[globe_meridians] Kenya'
+      - '[globe_meridians] Uganda'
+      - '[white-flag] Rhodesia'
+      - '[globe_meridians] Fiji'
+    - tajuk: Tentera · Sarawak Rangers
+      senarai:
+      - '[pushpin] Pasukan ini terdiri daripada:'
+      - '[pushpin] Tugas mereka:'
+      - '[pushpin] Kelebihan mereka:'
+      - '[pushpin] Cogan kata:'
+      - '[light_bulb] Banyak kem dan markas komunis berjaya dimusnahkan oleh pasukan ini.'
+      - '[busts-in-silhouette] orang Iban'
+    - tajuk: Sukarelawan · Home Guard
+      senarai:
+      - '[pushpin] Home Guard ialah pasukan Pengawal Kampung.'
+      - '[pushpin] Tugas mereka:'
+      - '[pushpin] Anggotanya diberikan latihan ketenteraan.'
+      - '[light_bulb] Mereka berjaya membantu:'
+      - '[cooked-rice] membantu menyekat bekalan makanan dan ubatan daripada jatuh ke tangan komunis'
+      - '[houses] mengawal kampung dan pekan'
+- tajuk: Pendaftaran Kebangsaan dan Kad Pengenalan
+  label: Bahagian Ketiga
+  desc: ''
+  kandungan:
+  - jenis: board
+    tajuk: ''
+    strip: false
+    senarai:
+    - '[calendar] [23 Julai 1948]{masa} → kerajaan memperkenalkan sistem pendaftaran kebangsaan dan kad pengenalan'
+- tajuk: Rancangan Briggs
+  label: Bahagian Keempat
+  desc: ''
+  kandungan:
+  - jenis: board
+    tajuk: ''
+    strip: false
+    senarai:
+    - '[calendar] [1950]{masa} → [Sir Henry Gurney]{tokoh} melancarkan Rancangan Briggs'
+    - '[person] [Leftenan Jeneral Sir Harold Rowdon Briggs]{tokoh} → dilantik sebagai Pengarah Operasi'
+  - jenis: board
+    tajuk: Info  Min Yuen (Organisasi Massa)
+    strip: true
+    senarai:
+    - '[money-bag] mendapatkan bekalan makanan dan wang kepada komunis'
+    - '[angry-face] melakukan peras ugut'
+    - '[luggage] merompak'
+    - '[megaphone] menjalankan propaganda'
+    - '[detective] melakukan perisikan dan sabotaj'
+    - '[busts-in-silhouette] merekrut ahli baharu'
+    - '[classical_building] membantu kegiatan politik'
+  - jenis: board
+    tajuk: Suasana di Kampung Baru
+    strip: true
+    senarai:
+    - '[houses] Kampung Baru'
+- tajuk: Tawaran Pengampunan
+  label: Bahagian Kelima
+  desc: ''
+  kandungan:
+  - jenis: board
+    tajuk: ''
+    strip: false
+    senarai:
+    - '[calendar] [6 September 1949]{masa} → [Sir Henry Gurney]{tokoh} mengisytiharkan pengampunan kepada komunis supaya menyerah
+      diri'
+- tajuk: Kempen Bulan Rakyat Melawan Penjahat
+  label: Bahagian Keenam
+  desc: ''
+  kandungan:
+  - jenis: board
+    tajuk: ''
+    strip: false
+    senarai:
+    - '[calendar] [22 Disember 1949]{masa} → Majlis Perundangan Persekutuan mengisytiharkan kempen Bulan Rakyat Melawan Penjahat'
+- tajuk: Perintah Berkurung
+  label: Bahagian Ketujuh
+  desc: ''
+  kandungan:
+  - jenis: board
+    tajuk: ''
+    strip: false
+    senarai:
+    - '[bullseye] membolehkan pasukan keselamatan menjalankan operasi dengan lebih berkesan'
+    - '[angry-face] menekan penduduk yang enggan bekerjasama dengan kerajaan'
+  - jenis: accordion
+    items:
+    - tajuk: Contoh 1 · Labis, Johor
+      senarai:
+      - '[calendar] [Jun 1951]{masa} → penduduk di kawasan Labis, Johor dikenakan perintah berkurung'
+      - '[right-arrow] untuk membolehkan pasukan keselamatan memburu komunis'
+    - tajuk: Contoh 2 · Tanjung Malim
+      senarai:
+      - '[pushpin] Sebabnya:'
+      - '[calendar] [Mac 1952]{masa} → penduduk Tanjung Malim dikenakan perintah berkurung selama [22 jam]{istilah}'
+- tajuk: Perang Saraf
+  label: Bahagian Kelapan
+  desc: ''
+  kandungan:
+  - jenis: board
+    tajuk: ''
+    strip: false
+    senarai:
+    - '[red_heart] memenangi hati rakyat'
+    - '[brain] mempengaruhi fikiran rakyat'
+  - jenis: accordion
+    items:
+    - tajuk: Mengadakan Lawatan
+      senarai:
+      - '[pushpin] Templer mendampingi rakyat untuk mengetahui masalah dan pandangan mereka.'
+      - '[pushpin] Beliau melakukan [122 lawatan]{istilah} ke:'
+      - '[pushpin] Setiap lawatan mengambil masa 2 hingga 3 hari.'
+      - '[pushpin] Bersama isterinya, beliau juga melakukan [20 lawatan]{istilah} ke:'
+      - '[pushpin] Isterinya menubuhkan:'
+      - '[school] sekolah'
+      - '[houses] kampung'
+      - '[hospital] hospital'
+      - '[pill] dispensari'
+      - '[card-index-dividers] bilik operasi'
+      - '[police-car] pondok polis'
+      - '[military-helmet] unit pasukan keselamatan'
+      - '[construction-worker] kawasan buruh'
+      - '[pick] lombong'
+      - '[herb] estet'
+    - tajuk: Melonggarkan Syarat Kewarganegaraan
+      senarai:
+      - '[pushpin] Syarat kewarganegaraan dilonggarkan untuk menarik kaum bukan Melayu menjadi rakyat Tanah Melayu.'
+      - '[pushpin] Tujuannya:'
+      - '[handshake_light] mewujudkan bangsa yang bersatu'
+    - tajuk: Mengadakan Pilihan Raya Majlis Perbandaran Kuala Lumpur
+      senarai:
+      - '[pushpin] Kerajaan mengadakan pilihan raya tempatan yang pertama.'
+      - '[pushpin] Tujuannya:'
+      - '[people-hugging] menggalakkan penyertaan orang bukan Melayu dalam politik'
+      - '[shield] mendapatkan sokongan mereka untuk menentang komunis'
+    - tajuk: Menawarkan Hadiah Wang Tunai
+      senarai:
+      - '[pushpin] Hadiah wang tunai ditawarkan kepada penduduk yang berjaya:'
+      - '[pushpin] Contoh:'
+      - '[bullseye] menangkap gerila komunis'
+      - '[incoming-envelope] memberi maklumat tentang mereka'
+    - tajuk: Memenangi Kepercayaan Orang Asli
+      senarai:
+      - '[pushpin] Templer berusaha mendapatkan sokongan Orang Asli.'
+      - '[pushpin] Tujuannya:'
+      - '[pushpin] Beliau mendirikan 14 kubu yang menyediakan:'
+      - '[handshake_light] supaya Orang Asli menyokong kerajaan dalam usaha menghapuskan komunis'
+    - tajuk: Memajukan Perkhidmatan Penerangan
+      senarai:
+      - '[pushpin] Kerajaan Tanah Melayu memajukan Jabatan Penerangan dan Perkhidmatan Radio Malaya.'
+      - '[pushpin] Tujuannya:'
+      - '[pushpin] Jabatan ini bertanggungjawab:'
+      - '[megaphone] mendapatkan sokongan penduduk tempatan'
+      - '[brain] menimbulkan kesedaran agar masyarakat menyokong kerajaan'
+    - tajuk: Memperkenalkan Kawasan Hitam dan Kawasan Putih
+      senarai:
+      - '[pushpin] Kerajaan memperkenalkan konsep:'
+      - '[black-circle] Kawasan Hitam → kawasan yang mempunyai kegiatan komunis aktif dan dikenakan perintah berkurung'
+      - '[white-circle] Kawasan Putih → kawasan yang diisytiharkan bebas daripada ancaman komunis'
+- tajuk: Rundingan Baling
+  label: Bahagian Kesembilan
+  desc: ''
+  kandungan:
+  - jenis: board
+    tajuk: ''
+    strip: false
+    senarai:
+    - '[calendar] [28 Disember 1955]{masa}'
+    - '[round-pushpin] Sekolah Inggeris, Baling, Kedah, Tanah Melayu'
+  - jenis: accordion
+    items:
+    - tajuk: Wakil kerajaan Persekutuan Tanah Melayu
+      senarai:
+      - '[person] [Tunku Abdul Rahman]{tokoh}'
+      - '[person] [Tan Cheng Lock]{tokoh}'
+      - '[person] [David Marshall]{tokoh}'
+    - tajuk: Wakil PKM
+      senarai:
+      - '[person] [Chin Peng]{tokoh}'
+      - '[person] [Chen Tien]{tokoh}'
+      - '[person] [Rashid Maidin]{tokoh}'
+    - tajuk: Syarat kedua-dua pihak
+      senarai:
+      - '[pushpin] Tunku Abdul Rahman menuntut supaya Chin Peng:'
+      - '[pushpin] Chin Peng pula mensyaratkan bahawa:'
+      - '[pushpin] hanya akan dilakukan jika kerajaan mengiktiraf PKM sebagai parti politik yang sah.'
+      - '[pushpin] Tunku Abdul Rahman menolak syarat tersebut.'
+      - '[light_bulb] Akibatnya, Rundingan Baling gagal.'
+      - '[firecracker] membubarkan PKM'
+      - '[water-pistol] meletakkan senjata'
+      - '[raising-hands] menyerah diri'
+kesimpulan:
+- '[pushpin] Kerajaan menangani ancaman komunis melalui pelbagai cara, termasuk:'
+- '[pushpin] Kejayaan menentang komunis tidak bergantung pada kekuatan ketenteraan semata-mata, tetapi juga pada:'
+- '[light_bulb] Perjuangan ini membuktikan bahawa perpaduan antara rakyat dan kerajaan amat penting dalam usaha mempertahankan
+  tanah air daripada ancaman musuh.'
+- '[police-car-light] penguatkuasaan undang-undang'
+- '[police-officer] pemerkasaan pasukan keselamatan'
+- '[houses] penempatan semula penduduk'
+- '[megaphone] kempen rakyat'
+- '[brain] perang saraf'
+- '[handshake_light] rundingan'

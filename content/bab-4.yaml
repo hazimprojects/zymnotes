@@ -1,0 +1,44 @@
+bab: 4
+tajuk: Era Peralihan Kuasa British
+bab_label: Bab 4
+subjek: Sejarah
+tingkatan: 4
+tema: bab-theme-4
+og_image_v: '20260420'
+description: 'Nota Sejarah Tingkatan 4 Bab 4: Era Peralihan Kuasa British di Negara Kita. Ringkasan bab induk dan pautan subtopik
+  untuk ulang kaji SPM.'
+lead: Bab ini menerangkan perubahan pentadbiran negara kita selepas tamatnya [Perang Dunia Kedua]{masa}, bermula dengan [British
+  Military Administration (BMA)]{pentadbiran}, diikuti [Malayan Union]{pentadbiran}, reaksi penduduk tempatan di [Tanah Melayu]{tempat},
+  serta isu penyerahan [Sarawak]{tempat} dan [Sabah]{tempat} kepada British.
+sinopsis:
+- '[military-helmet] [British Military Administration (BMA)]{pentadbiran} diperkenalkan di negara kita selepas tamatnya [Perang
+  Dunia Kedua]{masa}.'
+- '[classical_building] Selepas itu, British melaksanakan [Malayan Union]{pentadbiran} di [Tanah Melayu]{tempat}.'
+- '[megaphone] Pelaksanaan Malayan Union mencetuskan bantahan besar-besaran daripada penduduk tempatan hingga British menggantikannya
+  dengan [Persekutuan Tanah Melayu 1948]{pentadbiran}.'
+- '[herb] Di [Sarawak]{tempat}, tindakan [Vyner Brooke]{tokoh} menyerahkan negeri itu kepada British mencetuskan reaksi menyokong
+  dan menentang, namun majoriti penduduk tempatan menentangnya.'
+- '[desert-island] Di [Sabah]{tempat}, British pula berjaya mengambil alih negeri itu daripada [Syarikat Borneo Utara British
+  (SBUB)]{pentadbiran} tanpa penentangan yang besar.'
+subtopik:
+- kod: '4.1'
+  tajuk: British Military Administration
+  penerangan: Pentadbiran Tentera British selepas tamat Perang Dunia Kedua di negara kita.
+- kod: '4.2'
+  tajuk: Gagasan Malayan Union
+  penerangan: Pengenalan Malayan Union dan matlamat British melaksanakan pentadbiran baharu.
+- kod: '4.3'
+  tajuk: Reaksi Penduduk Tempatan terhadap Malayan Union
+  penerangan: Bantahan orang Melayu dan usaha mempertahankan kedudukan negeri-negeri Melayu.
+- kod: '4.4'
+  tajuk: Penyerahan Sarawak kepada Kerajaan British
+  penerangan: Sebab dan proses penyerahan Sarawak oleh Vyner Brooke kepada British.
+- kod: '4.5'
+  tajuk: Reaksi Penduduk Tempatan terhadap Penyerahan Sarawak
+  penerangan: Gerakan menentang penyerahan Sarawak dan tindakan penduduk tempatan.
+- kod: '4.6'
+  tajuk: Penyerahan Sabah kepada Kerajaan British
+  penerangan: Pengambilalihan Sabah oleh British daripada Syarikat Borneo Utara British.
+- kod: '4.7'
+  tajuk: Reaksi Penduduk Tempatan terhadap Penyerahan Sabah
+  penerangan: Reaksi masyarakat tempatan terhadap perubahan pentadbiran di Sabah.

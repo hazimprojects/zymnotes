@@ -1,0 +1,281 @@
+subtopik: '7.5'
+tajuk: Penubuhan Parti Politik
+bab: 7
+tajuk_bab: Usaha ke Arah Kemerdekaan
+bab_label: Bab 7
+subjek: Sejarah
+tingkatan: 4
+tema: bab-theme-7
+audio: false
+has_quiz: false
+fail_sebelum: bab-7.html
+og_image_v: '20260416'
+description: 'Nota Sejarah Tingkatan 4 Bab 7.5 (Usaha ke Arah Kemerdekaan): Penubuhan Parti Politik. Ringkasan padat untuk
+  ulang kaji SPM.'
+lead: Subtopik ini menerangkan bagaimana penubuhan [parti politik]{pertubuhan} selepas [Perang Dunia Kedua]{peristiwa} membantu
+  memperkukuh perjuangan [kemerdekaan]{perjanjian}, serta bagaimana [kerjasama politik antara kaum]{istilah} akhirnya menjadi
+  asas kepada pembinaan negara yang [stabil]{istilah} dan [berdaulat]{istilah}.
+ringkasan:
+- '[classical_building] Selepas [Perang Dunia Kedua]{peristiwa}, banyak [parti politik]{pertubuhan} ditubuhkan hasil perkembangan
+  [nasionalisme]{istilah} dan keinginan membebaskan tanah air daripada penjajahan.'
+- '[hibiscus] Walaupun banyak parti bermula dengan asas kaum atau wilayah, kebanyakannya menuju kepada matlamat yang sama,
+  iaitu mencapai [kemerdekaan]{perjanjian} dan membina negara yang berdaulat.'
+- '[handshake_light] Perkembangan ini akhirnya mendorong [kerjasama politik antara parti dan antara kaum]{istilah}, yang menjadi
+  asas penting kepada perjuangan kemerdekaan negara.'
+soalan_utama:
+  soalan: Bagaimanakah penubuhan parti politik membantu perjuangan kemerdekaan negara kita?
+  heading: Bagaimanakah penubuhan parti politik membantu perjuangan kemerdekaan negara kita?
+  jawapan:
+  - '[light_bulb] Penubuhan parti politik membantu perjuangan kemerdekaan dengan menyedarkan rakyat tentang kepentingan organisasi
+    politik, membela kepentingan masyarakat, dan menyatukan tenaga rakyat dalam menuntut kebebasan daripada penjajah.'
+  - '[pushpin] Walaupun banyak parti bermula dengan pendekatan berbeza, perkembangan ini akhirnya membawa kepada kerjasama
+    politik yang lebih matang dan memperkukuh perjuangan ke arah kemerdekaan.'
+fokus: 'Parti politik memperkukuh perjuangan merdeka. Tiga perkara:'
+bahagian:
+- tajuk: Kemunculan Parti Politik Selepas Perang Dunia Kedua
+  label: Bahagian Pertama
+  desc: ''
+  kandungan:
+  - jenis: board
+    tajuk: ''
+    strip: false
+    senarai:
+    - '[pushpin] Selepas [Perang Dunia Kedua]{peristiwa}, pelbagai [parti politik]{pertubuhan} muncul di [Tanah Melayu]{tempat},
+      [Sarawak]{tempat} dan [Sabah]{tempat}.'
+    - '[pushpin] Ada parti yang berasaskan kaum, ada juga yang bersifat pelbagai kaum. Walaupun matlamat mereka berbeza dari
+      segi pendekatan, kebanyakannya menuju kepada satu matlamat utama, iaitu membebaskan tanah air daripada penjajah dan
+      membina negara yang merdeka serta berdaulat.'
+  - jenis: board
+    tajuk: Ciri Umum Penubuhan Parti Politik
+    strip: true
+    senarai:
+    - '[busts-in-silhouette] kebanyakan parti politik berasaskan kaum dari segi aspirasi dan keahlian'
+    - '[shield] ditubuhkan untuk memperjuangkan kepentingan kaum masing-masing'
+    - '[handshake_light] terdapat juga usaha menubuhkan parti pelbagai kaum'
+    - '[hibiscus] membentuk parti bercorak kebangsaan'
+  - jenis: accordion
+    items:
+    - tajuk: Tahun 1940-an · 10 parti
+      senarai:
+      - '[calendar] [Oktober 1945]{masa}'
+      - '[person] Pemimpin:'
+      - '[pushpin] Perjuangan:'
+      - '[calendar] [1946]{masa}'
+      - '[person] Pemimpin:'
+      - '[pushpin] Perjuangan:'
+      - '[calendar] [Februari 1946]{masa}'
+      - '[person] Pemimpin:'
+      - '[pushpin] Perjuangan:'
+      - '[calendar] [Mac 1946]{masa}'
+      - '[person] Pemimpin:'
+      - '[pushpin] Perjuangan:'
+      - '[calendar] [Mei 1946]{masa}'
+      - '[person] Pemimpin:'
+      - '[pushpin] Perjuangan:'
+      - '[calendar] [Jun 1946]{masa}'
+      - '[person] Pemimpin:'
+      - '[pushpin] Perjuangan:'
+      - '[calendar] [Ogos 1946]{masa}'
+      - '[person] Pemimpin:'
+      - '[pushpin] Perjuangan:'
+      - '[calendar] [Disember 1946]{masa}'
+      - '[round-pushpin] [Jesselton dan Labuan]{tempat}'
+      - '[person] Pemimpin:'
+      - '[pushpin] Perjuangan:'
+      - '[calendar] [Jun 1947]{masa}'
+      - '[person] Pemimpin:'
+      - '[pushpin] Perjuangan:'
+      - '[calendar] [Februari 1949]{masa}'
+      - '[person] Pemimpin:'
+      - '[pushpin] Perjuangan:'
+      - '[brain] [Dr. Burhanuddin al-Helmi]{tokoh}'
+      - '[fountain-pen] [Ishak Haji Muhammad]{tokoh}'
+      - '[fire] [Ahmad Boestamam]{tokoh}'
+    - tajuk: Parti Kebangsaan Melayu Malaya (PKMM)
+      senarai:
+      - '[pushpin] [Oktober 1945]{masa}'
+      - '[pushpin] Pemimpin:'
+      - '[pushpin] Perjuangan:'
+      - '[pushpin] [Dr. Burhanuddin al-Helmi]{tokoh}'
+      - '[pushpin] [Ishak Haji Muhammad]{tokoh}'
+      - '[pushpin] [Ahmad Boestamam]{tokoh}'
+    - tajuk: Persatuan Kebangsaan Melayu Sarawak (PKMS)
+      senarai:
+      - '[pushpin] [1946]{masa}'
+      - '[pushpin] Pemimpin:'
+      - '[pushpin] Perjuangan:'
+      - '[person] [Abang Haji Zaini]{tokoh}'
+      - '[person] [Abang Haji Openg]{tokoh}'
+      - '[person] [Datu Patinggi Abang Haji Abdillah]{tokoh}'
+    - tajuk: Angkatan Pemuda Insaf (API)
+      senarai:
+      - '[pushpin] [Februari 1946]{masa}'
+      - '[pushpin] Pemimpin:'
+      - '[pushpin] Perjuangan:'
+      - '[fire] [Ahmad Boestamam]{tokoh}'
+    - tajuk: Pergerakan Pemuda Melayu (PPM)
+      senarai:
+      - '[pushpin] [Mac 1946]{masa}'
+      - '[pushpin] Pemimpin:'
+      - '[pushpin] Perjuangan:'
+      - '[person] [Mohamad Sirat Yaman]{tokoh}'
+      - '[person] [Awang Rambli]{tokoh}'
+      - '[person] [Rosli Dhoby]{tokoh}'
+      - '[person] [Morshidi Sidek]{tokoh}'
+    - tajuk: United Malays National Organisation (UMNO)
+      senarai:
+      - '[pushpin] [Mei 1946]{masa}'
+      - '[pushpin] Pemimpin:'
+      - '[pushpin] Perjuangan:'
+      - '[person] [Dato’ Onn Jaafar]{tokoh}'
+      - '[person] [Tunku Abdul Rahman]{tokoh}'
+    - tajuk: Parti Kebangsaan Melayu Labuan (PKML)
+      senarai:
+      - '[pushpin] [Jun 1946]{masa}'
+      - '[pushpin] Pemimpin:'
+      - '[pushpin] Perjuangan:'
+      - '[person] [Tengku Noordin]{tokoh}'
+      - '[person] [Zakaria Gunn]{tokoh}'
+    - tajuk: Malayan Indian Congress (MIC)
+      senarai:
+      - '[pushpin] [Ogos 1946]{masa}'
+      - '[pushpin] Pemimpin:'
+      - '[pushpin] Perjuangan:'
+      - '[person] [John Thivy]{tokoh}'
+      - '[person] [K.L. Devasar]{tokoh}'
+    - tajuk: Barisan Pemuda (BARIP)
+      senarai:
+      - '[pushpin] [Disember 1946]{masa}'
+      - '[pushpin] [Jesselton dan Labuan]{tempat}'
+      - '[pushpin] Pemimpin:'
+      - '[pushpin] Perjuangan:'
+      - '[person] [Mandur Syarif]{tokoh}'
+      - '[person] [Imam Suhaili Yaakub]{tokoh}'
+      - '[person] [Pengiran Ahmad]{tokoh}'
+    - tajuk: Barisan Pemuda Sarawak (BPS)
+      senarai:
+      - '[pushpin] [Jun 1947]{masa}'
+      - '[pushpin] Pemimpin:'
+      - '[pushpin] Perjuangan:'
+      - '[person] [Abang Mohd. Kassim Taha]{tokoh}'
+      - '[person] [Ahmad Zaidi Adruce]{tokoh}'
+    - tajuk: Malayan Chinese Association (MCA)
+      senarai:
+      - '[pushpin] [Februari 1949]{masa}'
+      - '[pushpin] Pemimpin:'
+      - '[pushpin] Perjuangan:'
+      - '[person] [Tan Cheng Lock]{tokoh}'
+      - '[person] [Yong Shook Lin]{tokoh}'
+      - '[person] [H.S. Lee]{tokoh}'
+    - tajuk: Tahun 1950-an · 4 parti
+      senarai:
+      - '[calendar] [September 1951]{masa}'
+      - '[person] Pemimpin:'
+      - '[pushpin] Perjuangan:'
+      - '[calendar] [November 1951]{masa}'
+      - '[person] Pemimpin:'
+      - '[pushpin] Perjuangan:'
+      - '[calendar] [Januari 1953]{masa}'
+      - '[person] Pemimpin:'
+      - '[pushpin] Perjuangan:'
+      - '[calendar] [Februari 1954]{masa}'
+      - '[person] Pemimpin:'
+      - '[pushpin] Perjuangan:'
+      - '[person] [Dato’ Onn Jaafar]{tokoh}'
+      - '[person] [Tan Cheng Lock]{tokoh}'
+    - tajuk: Independence of Malayan Party (IMP)
+      senarai:
+      - '[pushpin] [September 1951]{masa}'
+      - '[pushpin] Pemimpin:'
+      - '[pushpin] Perjuangan:'
+      - '[pushpin] [Dato’ Onn Jaafar]{tokoh}'
+      - '[pushpin] [Tan Cheng Lock]{tokoh}'
+    - tajuk: Parti Islam Se-Tanah Melayu (PAS)
+      senarai:
+      - '[pushpin] [November 1951]{masa}'
+      - '[pushpin] Pemimpin:'
+      - '[pushpin] Perjuangan:'
+      - '[person] [Haji Ahmad Fuad Hassan]{tokoh}'
+      - '[person] [Dr. Burhanuddin al-Helmi]{tokoh}'
+    - tajuk: People’s Progressive Party (PPP)
+      senarai:
+      - '[pushpin] [Januari 1953]{masa}'
+      - '[pushpin] Pemimpin:'
+      - '[pushpin] Perjuangan:'
+      - '[person] [Dr. S. Kanapathippilai]{tokoh}'
+      - '[person] [D.R. Seenivasagam]{tokoh}'
+    - tajuk: Parti Negara
+      senarai:
+      - '[pushpin] [Februari 1954]{masa}'
+      - '[pushpin] Pemimpin:'
+      - '[pushpin] Perjuangan:'
+      - '[person] [Dato’ Onn Jaafar]{tokoh}'
+      - '[person] [Dato’ Hamzah Abdullah]{tokoh}'
+      - '[person] [Heah Joo Seang]{tokoh}'
+      - '[person] [E.E.C. Thuraisingham]{tokoh}'
+      - '[person] [P. Ramani]{tokoh}'
+- tajuk: Kerjasama Politik ke Arah Kemerdekaan
+  label: Bahagian Kedua
+  desc: ''
+  kandungan:
+  - jenis: board
+    tajuk: ''
+    strip: false
+    senarai:
+    - '[pushpin] Gerakan politik mencapai kematangan apabila wujud kerjasama antara kaum mulai pertengahan [1940-an]{masa}.'
+    - '[pushpin] Sebelum kerjasama parti politik yang lebih tersusun terbentuk, telah wujud beberapa pakatan penting yang
+      menjadi perintis kepada kerjasama kaum dalam perjuangan kemerdekaan.'
+  - jenis: board
+    tajuk: Glosari
+    strip: true
+    senarai:
+    - '[books] Konvensyen'
+    - '[right-arrow] persidangan anggota pertubuhan politik untuk membincangkan sesuatu perkara'
+  - jenis: accordion
+    items:
+    - tajuk: Pakatan PUTERA–AMCJA
+      senarai:
+      - '[calendar] [Disember 1947]{masa}'
+      - '[pushpin] Pusat Tenaga Rakyat (PUTERA) dipimpin oleh:'
+      - '[pushpin] All Malaya Council of Joint Action (AMCJA) diketuai oleh:'
+      - '[pushpin] Kedua-dua pertubuhan ini bergabung untuk:'
+      - '[pushpin] Manifesto ini mencadangkan:'
+      - '[person] [Dr. Burhanuddin al-Helmi]{tokoh}'
+    - tajuk: Persidangan Kebangsaan
+      senarai:
+      - '[calendar] [Februari 1954]{masa}'
+      - '[pushpin] Persidangan ini diketuai oleh:'
+      - '[pushpin] Tujuannya ialah membincangkan langkah untuk membentuk:'
+      - '[pushpin] Persidangan ini disertai oleh:'
+      - '[pushpin] Tuntutan utama persidangan ini ialah:'
+      - '[person] [Dato’ Panglima Bukit Gantang]{tokoh} Menteri Besar Perak'
+      - '[person] [Dato’ Abdul Wahab Abdul Aziz]{tokoh}'
+    - tajuk: Konvensyen Kebangsaan
+      senarai:
+      - '[calendar] [Ogos 1954]{masa}'
+      - '[pushpin] Konvensyen ini dianjurkan oleh:'
+      - '[pushpin] Konvensyen ini membincangkan:'
+      - '[pushpin] Konvensyen ini turut dihadiri oleh:'
+      - '[pushpin] Hasil konvensyen:'
+      - '[pushpin] Konvensyen'
+      - '[pushpin] persidangan anggota pertubuhan politik untuk membincangkan sesuatu perkara'
+      - '[classical_building] UMNO di bawah pimpinan [Tunku Abdul Rahman]{tokoh}'
+      - '[classical_building] MCA di bawah pimpinan [Tan Cheng Lock]{tokoh}'
+    - tajuk: Pembentukan Parti Perikatan
+      senarai:
+      - '[calendar] [Oktober 1954]{masa}'
+      - '[pushpin] MIC menyertai UMNO dan MCA untuk membentuk:'
+      - '[pushpin] Penyertaan MIC melengkapkan kerjasama tiga kaum terbesar di Tanah Melayu, iaitu:'
+      - '[pushpin] Parti ini memilih:'
+      - '[light_bulb] Logo ini melambangkan:'
+      - '[handshake_light] Parti Perikatan'
+kesimpulan:
+- '[light_bulb] Penubuhan parti politik membantu menyusun perjuangan rakyat dengan lebih teratur dan matang, seterusnya membuka
+  jalan kepada kerjasama politik yang lebih luas.'
+- '[hibiscus] Kematangan politik, permuafakatan dan kesediaan berkongsi kepentingan inilah yang menjadi landasan penting kepada
+  kemerdekaan negara kita.'
+- '[pushpin] penubuhan parti politik selepas Perang Dunia Kedua menunjukkan rakyat semakin sedar akan pentingnya organisasi
+  politik dalam perjuangan kemerdekaan'
+- '[handshake_light] walaupun banyak parti ditubuhkan atas dasar kaum, perkembangan ini akhirnya mendorong pemimpin untuk
+  bekerjasama dan bertolak ansur'
+- '[hibiscus] kerjasama politik antara kaum menjadi asas penting ke arah kemerdekaan dan kehidupan yang rukun serta damai'

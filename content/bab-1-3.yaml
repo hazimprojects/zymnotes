@@ -1,0 +1,181 @@
+subtopik: '1.3'
+tajuk: Keunggulan Sistem Pentadbiran dan Undang-undang
+bab: 1
+tajuk_bab: Warisan Negara Bangsa
+bab_label: Bab 1
+subjek: Sejarah
+tingkatan: 4
+tema: bab-theme-1
+audio: true
+has_quiz: true
+fail_sebelum: bab-1-2.html
+fail_seterusnya: bab-1-4.html
+kod_seterusnya: '1.4'
+og_image_v: '20260420'
+description: 'Nota Sejarah Tingkatan 4 Bab 1.3 (Warisan Negara Bangsa): Keunggulan Sistem Pentadbiran dan Undang-undang. Ringkasan
+  padat untuk ulang kaji SPM.'
+lead: Subtopik ini menerangkan bagaimana [Kesultanan Melayu Melaka]{kerajaan} mencapai keunggulan melalui [sistem pentadbiran]{konsep}
+  yang tersusun dan [undang-undang]{konsep} yang sistematik.
+ringkasan:
+- '[classical_building] [Kesultanan Melayu Melaka]{kerajaan} membuktikan keunggulannya melalui [sistem pentadbiran]{konsep}
+  yang tersusun.'
+- '[scroll_old] Keunggulan turut terserlah melalui [undang-undang]{konsep} yang teratur dan sistematik.'
+- '[handshake_light] Kerjasama antara [sultan]{tokoh} dan para pembesar menjadikan pentadbiran berjalan lancar.'
+- '[chart] Keunggulan ini menjadikan [Melaka]{kerajaan} sebagai kerajaan yang masyhur dan unggul.'
+soalan_utama:
+  soalan: Apakah yang dimaksudkan dengan keunggulan dalam sesebuah kerajaan?
+  heading: Apakah yang dimaksudkan dengan keunggulan dalam sesebuah kerajaan?
+  jawapan:
+  - '[light_bulb] [Keunggulan]{konsep} bermaksud kesempurnaan dan keistimewaan yang dimiliki oleh sesebuah kerajaan.'
+  - '[light_bulb] Dalam [Kesultanan Melayu Melaka]{kerajaan}, keunggulan ini dapat dilihat dengan jelas melalui [sistem pentadbiran]{konsep}
+    yang tersusun dan [undang-undang]{konsep} yang teratur.'
+fokus: 'Melaka unggul melalui pentadbiran dan undang-undang yang tersusun. Dua aspek:'
+bahagian:
+- tajuk: Sistem Pentadbiran
+  label: Bahagian Pertama
+  desc: ''
+  kandungan:
+  - jenis: board
+    tajuk: ''
+    strip: false
+    senarai:
+    - '[pushpin] [Kesultanan Melayu Melaka]{kerajaan} mempunyai sistem pentadbiran yang lengkap, tersusun dan sistematik.'
+    - '[pushpin] Sistem ini dikenali sebagai [Sistem Pembesar Empat Lipatan]{istilah}.'
+  - jenis: board
+    tajuk: Struktur Pentadbiran Kesultanan Melayu Melaka
+    strip: true
+    senarai: []
+  - jenis: board
+    tajuk: Ciri Pentadbiran
+    strip: true
+    senarai:
+    - '[bar-chart] berhierarki'
+    - '[scales] tersusun'
+    - '[crown] berpusat kepada sultan'
+  - jenis: board
+    tajuk: Pembesar dalam Pentadbiran
+    strip: true
+    senarai:
+    - '[keycap_1] Bendahara'
+    - '[keycap_2] Penghulu Bendahari'
+    - '[keycap_3] Temenggung'
+    - '[keycap_4] Laksamana'
+  - jenis: board
+    tajuk: Peringkat Pentadbiran
+    strip: true
+    senarai:
+    - '[keycap_1] Pentadbiran Pusat'
+    - '[keycap_2] Pentadbiran Jajahan'
+  - jenis: board
+    tajuk: Pentadbiran Pusat
+    strip: true
+    senarai:
+    - '[handshake_light] kerjasama'
+    - '[brain] persefahaman'
+    - '[scales] permuafakatan'
+  - jenis: board
+    tajuk: Peranan Bendahara
+    strip: true
+    senarai:
+    - '[classical_building] ketua pentadbir'
+    - '[crossed_swords] ketua turus angkatan tentera'
+    - '[brain] penasihat sultan'
+    - '[crown] pemangku sultan'
+  - jenis: board
+    tajuk: Sistem Kewangan
+    strip: true
+    senarai:
+    - '[passenger-ship] perdagangan'
+    - '[money-bag] cukai'
+    - '[wrapped-gift] ufti dari wilayah taklukan & naungan'
+  - jenis: board
+    tajuk: Kawasan Pegangan
+    strip: true
+    senarai:
+    - '[globe-showing-europe-africa] wilayah'
+    - '[water-wave] sungai'
+    - '[desert-island] pulau'
+  - jenis: board
+    tajuk: Sistem Keselamatan
+    strip: true
+    senarai:
+    - '[cityscape-at-dusk] darat'
+    - '[water-wave] laut'
+  - jenis: board
+    tajuk: Pentadbiran Jajahan
+    strip: true
+    senarai:
+    - '[house-with-garden] daerah'
+    - '[houses] kampung'
+  - jenis: board
+    tajuk: Rumusan Sistem Pentadbiran
+    strip: true
+    senarai:
+    - '[brain] kebijaksanaan pemerintah'
+    - '[bar-chart] agihan tugas yang jelas'
+    - '[scales] pentadbiran yang sistematik'
+- tajuk: Undang-undang
+  label: Bahagian Kedua
+  desc: ''
+  kandungan:
+  - jenis: board
+    tajuk: ''
+    strip: false
+    senarai:
+    - '[blue-book] Hukum Kanun Melaka'
+    - '[water-wave] Undang-Undang Laut Melaka'
+  - jenis: board
+    tajuk: Hukum Kanun Melaka
+    strip: true
+    senarai:
+    - '[scales] jenayah'
+    - '[crown] kuasa sultan & pembesar'
+    - '[busts-in-silhouette] kekeluargaan'
+    - '[money-bag] ekonomi'
+  - jenis: board
+    tajuk: Info Penting
+    strip: true
+    senarai:
+    - '[crown] titah'
+    - '[angry-face] murka'
+    - '[wrapped-gift] kurnia'
+    - '[sparkles] anugerah'
+  - jenis: board
+    tajuk: Undang-Undang Laut Melaka
+    strip: true
+    senarai:
+    - '[anchor] peranan nakhoda'
+    - '[water-wave] pelayaran'
+    - '[scales] jenayah di laut'
+    - '[money-bag] percukaian'
+  - jenis: accordion
+    items:
+    - tajuk: 'Hukum Kanun Melaka: Jenayah'
+      senarai:
+      - '[pushpin] Jenayah menggugat ketenteraman dan keharmonian.'
+      - '[pushpin] Hukuman dikenakan atas jenayah seperti membunuh, menikam dan mencuri.'
+      - '[open_book] Fasal 5.1 → Membunuh tanpa pengetahuan raja/pembesar → hukuman bunuh'
+      - '[open_book] Fasal 4 → Ingkar arahan & memalsukan titah sultan → hukuman bunuh'
+    - tajuk: 'Hukum Kanun Melaka: Sultan & Pembesar'
+      senarai:
+      - '[pushpin] Pembesar perlu arif tentang undang-undang dan melaksanakan hukum dengan adil.'
+      - '[open_book] Fasal 1 → menjelaskan tugas Sultan, Bendahara, Temenggung dan Penghulu Bendahari'
+      - '[writing-hand] Sultan berkuasa melantik pembesar'
+    - tajuk: 'Hukum Kanun Melaka: Kekeluargaan'
+      senarai:
+      - '[pushpin] Undang-undang keluarga bertujuan mewujudkan keharmonian dan menyelesaikan konflik.'
+      - '[open_book] Fasal 26 → perkahwinan memerlukan 4 orang saksi, jika tidak cukup minimum 2 orang'
+      - '[prohibited] hamba abdi tidak boleh jadi saksi'
+      - '[prohibited] wanita tidak boleh jadi saksi'
+    - tajuk: 'Hukum Kanun Melaka: Ekonomi'
+      senarai:
+      - '[pushpin] Perdagangan ialah asas kekuatan Melaka.'
+      - '[open_book] Fasal 30 → riba diharamkan'
+      - '[brain] peniaga mesti akil baligh'
+      - '[relieved-face] peniaga mesti siuman'
+      - '[speaking_head] perlu melafazkan niat jual beli'
+kesimpulan:
+- '[light_bulb] Keunggulan Kesultanan Melayu Melaka terbukti melalui pentadbiran dan undang-undang yang sistematik.'
+- '[light_bulb] Pematuhan kepada [undang-undang]{konsep} mewujudkan kesejahteraan dan kemakmuran.'
+- '[classical_building] sistem pentadbiran yang tersusun'
+- '[scroll_old] undang-undang yang sistematik'

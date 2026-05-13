@@ -1,0 +1,247 @@
+subtopik: '2.4'
+tajuk: Perkembangan Nasionalisme di Asia Tenggara
+bab: 2
+tajuk_bab: Kebangkitan Nasionalisme
+bab_label: Bab 2
+subjek: Sejarah
+tingkatan: 4
+tema: bab-theme-2
+audio: true
+has_quiz: true
+fail_sebelum: bab-2-3.html
+fail_seterusnya: bab-2-5.html
+kod_seterusnya: '2.5'
+og_image_v: '20260420'
+description: 'Nota Sejarah Tingkatan 4 Bab 2.4 (Kebangkitan Nasionalisme): Perkembangan Nasionalisme di Asia Tenggara. Ringkasan
+  padat untuk ulang kaji SPM.'
+lead: Subtopik ini menerangkan bagaimana [nasionalisme]{istilah} berkembang di [Asia Tenggara]{tempat} sebagai tindak balas
+  terhadap penjajahan Barat. Gerakan ini muncul untuk membebaskan negara daripada penjajahan, mempertahankan kedaulatan dan
+  membina identiti bangsa.
+ringkasan:
+- '[globe] Di [Asia Tenggara]{tempat}, semangat [nasionalisme]{istilah} muncul akibat penjajahan Barat.'
+- '[crossed_swords] Gerakan ini bertujuan membebaskan negara daripada penjajahan, mempertahankan kedaulatan dan membina jati
+  diri bangsa.'
+- '[round-pushpin] Perkembangan nasionalisme dapat dilihat di [Filipina]{tempat}, [Burma]{tempat}, [Vietnam]{tempat} dan [Indonesia]{tempat}.'
+- '[shield] [Thailand]{tempat} pula melaksanakan pembaharuan untuk mengekalkan kemerdekaannya daripada penjajahan Barat.'
+soalan_utama:
+  soalan: Bagaimana nasionalisme muncul di Asia Tenggara?
+  heading: Bagaimana nasionalisme muncul di Asia Tenggara?
+  jawapan:
+  - '[light_bulb] Di rantau [Asia Tenggara]{tempat}, semangat [nasionalisme]{istilah} muncul akibat penjajahan Barat.'
+  - '[pushpin] Gerakan ini bertujuan untuk:'
+  - '[crossed_swords] Membebaskan negara daripada penjajahan'
+  - '[shield] Mempertahankan kedaulatan negara'
+  - '[compass] Membina identiti dan jati diri bangsa'
+fokus: 'Di Asia Tenggara, nasionalisme bangkit menentang penjajahan Barat (abad ke-19). Lima negara:'
+bahagian:
+- tajuk: Nasionalisme di Filipina
+  label: Bahagian Pertama
+  desc: ''
+  kandungan:
+  - jenis: board
+    tajuk: ''
+    strip: false
+    senarai:
+    - '[person] [José Rizal]{tokoh}'
+    - '[person] [Andres Bonifacio]{tokoh}'
+    - '[person] [Emilio Aguinaldo]{tokoh}'
+  - jenis: accordion
+    items:
+    - tajuk: Gerakan Propaganda
+      senarai:
+      - '[brain] Gerakan ini dipimpin oleh [José Rizal]{tokoh}.'
+      - '[bullseye] [Rizal]{tokoh} menubuhkan [Liga Filipina]{pertubuhan} pada [1892]{tahun} untuk menuntut perubahan politik,
+        ekonomi dan sosial.'
+      - '[warning] Namun usaha ini tidak berjaya.'
+      - '[scales] Filipina dijadikan sebahagian wilayah Sepanyol'
+      - '[busts-in-silhouette] Hak yang sama diberikan kepada rakyat Filipina seperti rakyat Sepanyol'
+    - tajuk: Gerakan Katipunan & Revolusi 1896
+      senarai:
+      - '[loudspeaker] Kegagalan Gerakan Propaganda membawa kepada gerakan radikal.'
+      - '[pushpin] [Andres Bonifacio]{tokoh} menubuhkan [Katipunan]{pertubuhan}, sebuah gerakan revolusi rahsia.'
+      - '[page-facing-up] Akhbar [Kalayan]{karya} digunakan untuk menyebarkan idea revolusi.'
+      - '[crossed_swords] Pada [1896]{tahun}, [Bonifacio]{tokoh} dan [Aguinaldo]{tokoh} melancarkan [Revolusi Filipina]{peristiwa}.'
+      - '[right-arrow] Namun, konflik dalaman menyebabkan usaha mereka gagal.'
+    - tajuk: Kerjasama dengan Amerika & penjajahan baharu
+      senarai:
+      - '[pushpin] [Aguinaldo]{tokoh} bekerjasama dengan [Amerika Syarikat]{tempat} dan berjaya mengusir Sepanyol.'
+      - '[tear-off-calendar] Pada [1899]{tahun}, [Aguinaldo]{tokoh} mengisytiharkan kemerdekaan [Filipina]{tempat}.'
+      - '[warning] Namun, kemerdekaan tersebut tidak diiktiraf oleh [Amerika Syarikat]{tempat}.'
+      - '[globe_meridians] [Filipina]{tempat} kemudian diletakkan di bawah penguasaan Amerika Syarikat.'
+    - tajuk: Perjuangan melalui politik
+      senarai:
+      - '[pushpin] Golongan nasionalis menukar strategi kepada saluran diplomasi dan politik sederhana.'
+      - '[tear-off-calendar] Pada [1907]{tahun}, [Sergio Osmena]{tokoh} dilantik sebagai pemimpin [Parti Nasionalis]{pertubuhan}
+        dalam Dewan Perhimpunan Filipina.'
+      - '[loudspeaker] Perjuangan kemerdekaan diteruskan sehingga [Perang Dunia Kedua]{peristiwa}.'
+- tajuk: Nasionalisme di Burma (Myanmar)
+  label: Bahagian Kedua
+  desc: ''
+  kandungan:
+  - jenis: board
+    tajuk: ''
+    strip: false
+    senarai:
+    - '[graduation-cap] golongan kelas menengah & siswazah universiti (Thakin)'
+    - '[man-fairy] sami Buddha (pongyi)'
+    - '[rice] golongan petani'
+  - jenis: board
+    tajuk: Info
+    strip: true
+    senarai: []
+  - jenis: accordion
+    items:
+    - tajuk: Gerakan awal dan isu kasut
+      senarai:
+      - '[calendar] Pada [1906]{tahun}, [Persatuan Belia Buddha]{pertubuhan} ditubuhkan untuk melindungi agama Buddha serta
+        mengekalkan pendidikan dan budaya Burma.'
+      - '[mans-shoe] [Isu Kasut]{istilah} digunakan untuk meniup semangat nasionalisme apabila orang British memakai kasut
+        dalam kuil Buddha.'
+      - '[angry-face] Tindakan ini dianggap mencemarkan kesucian agama dan membangkitkan kemarahan rakyat.'
+    - tajuk: Perjuangan radikal dan pemberontakan
+      senarai:
+      - '[pushpin] Persatuan Belia Buddha kemudian diambil alih oleh [U Ba Pe]{tokoh}.'
+      - '[pushpin] Namanya diubah menjadi [Majlis Persatuan Am Kesatuan Burma]{pertubuhan} dan mula memperjuangkan isu bangsa
+        Burma.'
+      - '[tear-off-calendar] Pada [1920]{tahun}, [Revolusi Pelajar]{peristiwa} berlaku untuk menuntut penubuhan universiti
+        tempatan.'
+      - '[tear-off-calendar] Pada [1930–1932]{tahun}, [Pemberontakan Saya San]{peristiwa} tercetus.'
+      - '[person] Pemberontakan ini diketuai oleh [Saya San]{tokoh}, seorang bekas pongyi, dan disokong oleh petani yang terbeban
+        cukai.'
+    - tajuk: Gerakan politik
+      senarai:
+      - '[calendar] Pada [1935]{tahun}, [Perlembagaan Burma]{istilah} diperkenalkan dan Burma dipisahkan dari [India]{tempat}.'
+      - '[light_bulb] Keadaan ini meningkatkan tuntutan untuk berkerajaan sendiri.'
+      - '[pushpin] Golongan [Thakin]{istilah} menubuhkan [Parti Do Bama Asiayone]{pertubuhan} (Kami Orang Burma).'
+      - '[speaking_head] Mereka menggelarkan diri sebagai [Thakin]{istilah} yang bermaksud tuan, untuk menegaskan bahawa orang
+        Burma mesti bertuankan orang Burma.'
+      - '[tear-off-calendar] Pada [1937]{tahun}, [Dr. Ba Maw]{tokoh} menang pilihan raya dan menjadi Perdana Menteri pertama
+        Burma.'
+      - '[person] [Aung San]{tokoh}'
+      - '[person] [Kyaw Nein]{tokoh}'
+      - '[person] [U Nu]{tokoh}'
+- tajuk: Nasionalisme di Vietnam
+  label: Bahagian Ketiga
+  desc: ''
+  kandungan:
+  - jenis: board
+    tajuk: ''
+    strip: false
+    senarai: []
+  - jenis: board
+    tajuk: Info
+    strip: true
+    senarai: []
+  - jenis: accordion
+    items:
+    - tajuk: Perubahan kepimpinan
+      senarai:
+      - '[pushpin] Pada awalnya, gerakan dipimpin oleh golongan bangsawan dan golongan mandarin yang mahu memulihkan sistem
+        pemerintahan beraja.'
+      - '[pushpin] Namun, kepimpinan kemudian diambil alih oleh golongan intelektual muda yang membawa gerakan anti-Perancis.'
+    - tajuk: Peranan akhbar
+      senarai:
+      - '[pushpin] Idea nasionalisme disebarkan melalui akhbar seperti:'
+      - '[loudspeaker] Akhbar ini mengkritik penindasan Perancis dan menuntut hak rakyat Vietnam.'
+      - '[rolled-up-newspaper] [Tribune Indigène]{karya}'
+      - '[rolled-up-newspaper] [La Cloche Fêlée]{karya}'
+    - tajuk: 'Gerakan revolusi: nasionalisme vs komunisme'
+      senarai:
+      - '[pushpin] Selepas [Perang Dunia Pertama]{peristiwa}, muncul dua aliran:'
+      - '[tear-off-calendar] Pada [1930]{tahun}, [VNQDD]{pertubuhan} melancarkan pemberontakan untuk menubuhkan republik Vietnam.'
+      - '[cross-mark] Perancis bertindak balas dan [Nguyen Thai Hoc]{tokoh} dihukum bunuh.'
+      - '[firecracker] [Ho Chi Minh]{tokoh} meneruskan perjuangan melalui [PKV]{pertubuhan}.'
+      - '[classical_building] [Parti Viet Nam Quoc Dang Dang (VNQDD)]{pertubuhan}'
+      - '[person] [Nguyen Thai Hoc]{tokoh}'
+      - '[scales] memperjuangkan demokrasi, nasionalisme & sosialisme'
+      - '[classical_building] [Parti Komunis Vietnam (PKV)]{pertubuhan}'
+      - '[person] [Ho Chi Minh]{tokoh}'
+    - tajuk: Kesudahan perjuangan di Vietnam
+      senarai:
+      - '[tear-off-calendar] Pada [September 1945]{tahun}, [Republik Demokratik Vietnam]{tempat} ditubuhkan di [Hanoi]{tempat}.'
+      - '[person] [Ho Chi Minh]{tokoh} dilantik sebagai presiden pertama.'
+      - '[globe_meridians] Vietnam Selatan ([Saigon]{tempat}) masih di bawah pengaruh [Perancis]{tempat} dan [Amerika Syarikat]{tempat}.'
+      - '[tear-off-calendar] Pada [1976]{tahun}, [Vietnam]{tempat} akhirnya bersatu sepenuhnya.'
+- tajuk: Nasionalisme di Indonesia
+  label: Bahagian Keempat
+  desc: ''
+  kandungan:
+  - jenis: board
+    tajuk: ''
+    strip: false
+    senarai: []
+  - jenis: accordion
+    items:
+    - tajuk: Peranan Raden Adjeng Kartini
+      senarai:
+      - '[person] [Raden Adjeng Kartini]{tokoh} ialah tokoh wanita penting dalam perkembangan nasionalisme Indonesia.'
+      - '[envelope] Kartini menulis surat kepada rakan-rakan Eropah.'
+      - '[books] Isi surat beliau diterbitkan dalam buku:'
+      - '[pushpin] Penulisan beliau mendedahkan diskriminasi penjajah Belanda dan kemunduran rakyat Indonesia.'
+      - '[books] [Hilang Gelap Terbitlah Terang]{karya} ([1911]{tahun})'
+      - '[books] [Letters of a Javanese Princess]{karya}'
+    - tajuk: Gerakan nasionalisme Islam dan politik
+      senarai:
+      - '[pushpin] Pertubuhan penting:'
+      - '[pushpin] Kemudian muncul parti politik seperti:'
+      - '[person] [PNI]{pertubuhan} dipimpin oleh [Soekarno]{tokoh} dan menjadi parti yang berpengaruh.'
+      - '[mosque] [Muhammadiyah]{pertubuhan} – mempertahankan Islam daripada sekularisme Barat'
+    - tajuk: Sumpah Pemuda 1928 dan usaha penyatuan
+      senarai:
+      - '[calendar] Kongres Pemuda Indonesia melahirkan ikrar:'
+      - '[puzzle] [Soekarno]{tokoh} menubuhkan [PPPKI]{pertubuhan}, iaitu gabungan parti-parti politik untuk menyatukan perjuangan
+        kemerdekaan.'
+      - '[globe-showing-europe-africa] satu tanah air'
+      - '[globe_meridians] satu bangsa'
+      - '[speaking_head] satu bahasa'
+- tajuk: Nasionalisme di Thailand
+  label: Bahagian Kelima
+  desc: ''
+  kandungan:
+  - jenis: board
+    tajuk: ''
+    strip: false
+    senarai: []
+  - jenis: accordion
+    items:
+    - tajuk: Pembaharuan Raja Mongkut
+      senarai:
+      - '[pushpin] [Raja Mongkut]{tokoh} menjalinkan hubungan diplomatik dengan kuasa Barat seperti [British]{tempat}, [Amerika
+        Syarikat]{tempat} dan [Perancis]{tempat}.'
+      - '[pushpin] Thailand melaksanakan pemodenan dalam:'
+      - '[pushpin] Raja Mongkut membawa masuk 80 orang penasihat Barat untuk melatih pegawai tempatan.'
+      - '[classical_building] pentadbiran'
+      - '[school] pendidikan'
+      - '[crossed_swords] ketenteraan'
+    - tajuk: Pembaharuan Raja Chulalongkorn
+      senarai:
+      - '[pushpin] [Raja Chulalongkorn]{tokoh} meneruskan pemodenan bagi memastikan Thailand kekal bebas daripada penjajahan
+        Barat, khususnya British.'
+    - tajuk: Revolusi Thai dan pemerintahan baharu
+      senarai:
+      - '[pushpin] Pemerintahan [Raja Vajiravudh]{tokoh} yang lemah mencetuskan ketidakpuasan rakyat.'
+      - '[pushpin] Politik negara lebih dikuasai oleh kerabat diraja Thailand.'
+      - '[pushpin] Golongan reformis menubuhkan [Parti Rakyat]{pertubuhan} yang dipimpin oleh:'
+      - '[tear-off-calendar] Pada [1932]{tahun}, [Revolusi Thai]{peristiwa} dilancarkan.'
+      - '[crown] Raja diletakkan pada kedudukan tertinggi, namun tidak mencampuri urusan kerajaan yang dikendalikan oleh Perdana
+        Menteri yang dilantik rakyat.'
+      - '[person] [Nai Pridi Phanomyong]{tokoh}'
+      - '[person] [Field Marshal Phibulsongkram]{tokoh}'
+    - tajuk: Isu ekonomi dan kerjasama dengan Jepun
+      senarai:
+      - '[pushpin] Rakyat tidak puas hati dengan penguasaan ekonomi oleh kapitalis Barat dan orang Cina.'
+      - '[pushpin] [Phibulsongkram]{tokoh} memperkenalkan undang-undang baharu untuk menyekat dominasi ekonomi oleh kapitalis
+        dan menggalakkan peribumi terlibat dalam perniagaan.'
+      - '[tear-off-calendar] Semasa [Perang Dunia Kedua]{peristiwa}, Thailand bekerjasama dengan [Jepun]{tempat} supaya tidak
+        dijajah.'
+      - '[map] Thailand juga berusaha mendapatkan semula wilayah di Indochina dan negeri utara Tanah Melayu.'
+kesimpulan:
+- '[light_bulb] Nasionalisme di Asia Tenggara berkembang melalui kesedaran menuntut kemerdekaan dan mempertahankan kedaulatan
+  negara.'
+- '[light_bulb] Pengajaran: Sumbangan pemimpin nasionalisme perlu diteladani sebagai inspirasi mempertahankan kedaulatan bangsa
+  dan negara.'
+- '[small-blue-diamond] Filipina – revolusi menentang Sepanyol, kemudian dijajah Amerika'
+- '[small-blue-diamond] Burma – perjuangan golongan pongyi, pelajar dan Thakin menentang British'
+- '[small-blue-diamond] Vietnam – gerakan nasionalisme dan komunisme menentang Perancis'
+- '[small-blue-diamond] Indonesia – pendidikan, politik dan Islam memacu kemerdekaan daripada Belanda'
+- '[small-blue-diamond] Thailand – mempertahankan kemerdekaan melalui diplomasi dan pemodenan'

@@ -1,0 +1,135 @@
+subtopik: '2.8'
+tajuk: Kesan Perkembangan Nasionalisme
+bab: 2
+tajuk_bab: Kebangkitan Nasionalisme
+bab_label: Bab 2
+subjek: Sejarah
+tingkatan: 4
+tema: bab-theme-2
+audio: true
+has_quiz: true
+fail_sebelum: bab-2.html
+og_image_v: '20260420'
+description: 'Nota Sejarah Tingkatan 4 Bab 2.8 (Kebangkitan Nasionalisme): Kesan Perkembangan Nasionalisme. Ringkasan padat
+  untuk ulang kaji SPM.'
+lead: Subtopik ini menerangkan kesan perkembangan [nasionalisme]{istilah} di negara kita dalam aspek [politik]{istilah}, [ekonomi]{istilah}
+  dan [sosial]{istilah}. Kesan ini menunjukkan bahawa nasionalisme bukan sekadar idea, tetapi satu kekuatan yang mengubah
+  kehidupan masyarakat sebelum merdeka.
+ringkasan:
+- '[classical_building] Perkembangan [nasionalisme]{istilah} memberi kesan besar dalam bidang politik dengan meningkatkan
+  kesedaran rakyat terhadap pentadbiran dan peluang berperanan dalam kerajaan.'
+- '[briefcase] Dalam bidang ekonomi, nasionalisme menggalakkan masyarakat meningkatkan pendidikan, taraf hidup dan penguasaan
+  ekonomi.'
+- '[busts-in-silhouette] Dalam bidang sosial, nasionalisme membangkitkan kesedaran tentang pendidikan, peranan wanita dan
+  kebajikan masyarakat pelbagai kaum.'
+- '[fire] Semua perkembangan ini menjadi titik tolak penting ke arah perjuangan kemerdekaan dan pembinaan negara bangsa.'
+soalan_utama:
+  soalan: Apakah kesan yang dapat dilihat daripada perkembangan nasionalisme di negara kita?
+  heading: Apakah kesan yang dapat dilihat daripada perkembangan nasionalisme di negara kita?
+  jawapan:
+  - '[pushpin] Perkembangan nasionalisme memberikan kesan menyeluruh dalam aspek:'
+  - '[classical_building] Politik'
+  - '[briefcase] Ekonomi'
+  - '[busts-in-silhouette] Sosial'
+fokus: 'Nasionalisme di Tanah Melayu membentuk hala tuju negara. Tiga aspek kesan:'
+bahagian:
+- tajuk: Politik
+  label: Bahagian Pertama
+  desc: ''
+  kandungan:
+  - jenis: accordion
+    items:
+    - tajuk: Peluang pekerjaan dalam pentadbiran
+      senarai:
+      - '[pushpin] Usaha golongan intelektual berpendidikan Inggeris serta [Kesatuan Melayu Singapura (KMS)]{pertubuhan} berjaya
+        meningkatkan penyertaan orang Melayu dalam pentadbiran.'
+      - '[bar-chart] Bilangan orang Melayu dalam [Malayan Civil Service (MCS)]{pertubuhan} meningkat daripada:'
+      - '[person] [7 orang (1930)]{tahun}'
+      - '[busts-in-silhouette] [20 orang (1937)]{tahun}'
+    - tajuk: Dasar Desentralisasi
+      senarai:
+      - '[pushpin] British memperkenalkan dasar ini untuk mengembalikan sebahagian kuasa kepada:'
+      - '[pushpin] Kesannya, orang Melayu menjadi lebih peka terhadap politik dan mula menubuhkan persatuan di peringkat negeri.'
+      - '[crown] Sultan'
+      - '[handshake_light] Residen'
+      - '[classical_building] Majlis Mesyuarat Negeri'
+    - tajuk: Pengaruh nasionalisme China dan kesedaran politik India
+      senarai:
+      - '[pushpin] Kebangkitan nasionalisme di [China]{tempat} memberi kesan kepada masyarakat Cina di Tanah Melayu.'
+      - '[pushpin] Antara tahun [1930 hingga 1950]{tahun}, muncul golongan India kelahiran Tanah Melayu yang dikenali sebagai
+        [Straits-born people]{istilah}.'
+      - '[pushpin] Golongan ini mula membentuk identiti sendiri dan memberi perhatian kepada politik tempatan.'
+      - '[books] menubuhkan kelab bacaan'
+      - '[performing-arts] menubuhkan kumpulan drama'
+      - '[school] banyak sekolah Cina ditubuhkan sekitar [1921]{tahun} dengan bahasa Mandarin sebagai bahasa pengantar'
+    - tajuk: Tindakan British terhadap gerakan nasionalisme
+      senarai:
+      - '[pushpin] British bertindak mengekang gerakan nasionalisme dengan menangkap tokoh seperti:'
+      - '[tear-off-calendar] Mereka dipenjarakan oleh British pada [1941]{tahun}.'
+      - '[tear-off-calendar] Namun mereka dibebaskan oleh [Jepun]{tempat} pada [1942]{tahun}.'
+      - '[person] [Ibrahim Haji Yaakob]{tokoh}'
+      - '[person] [Ishak Haji Muhammad]{tokoh}'
+      - '[person] [Ahmad Boestamam]{tokoh}'
+- tajuk: Ekonomi
+  label: Bahagian Kedua
+  desc: ''
+  kandungan:
+  - jenis: accordion
+    items:
+    - tajuk: Gesaan Kaum Muda
+      senarai:
+      - '[pushpin] Golongan [Kaum Muda]{istilah} menyeru masyarakat supaya meningkatkan taraf hidup melalui:'
+      - '[pushpin] [Persatuan al-Jamiah al-Khairiah]{pertubuhan} ditubuhkan di [Singapura]{tempat} untuk:'
+      - '[graduation-cap] pendidikan'
+      - '[briefcase] kegiatan ekonomi'
+    - tajuk: Dasar pendidikan British dan peranan Za'ba
+      senarai:
+      - '[pushpin] British hanya memberi tumpuan kepada pendidikan rendah.'
+      - '[pushpin] Keadaan ini menyukarkan masyarakat tempatan meningkatkan taraf ekonomi.'
+      - '[pushpin] [Za''ba]{tokoh} menyedarkan pelatih di [Sultan Idris Training College (SITC)]{pertubuhan} tentang:'
+      - '[graduation-cap] kepentingan pendidikan tinggi'
+      - '[books] kepentingan penguasaan bahasa Inggeris'
+    - tajuk: Bantuan pelajaran ke luar negara
+      senarai:
+      - '[pushpin] Akhbar seperti:'
+      - '[pushpin] membantu menubuhkan dana biasiswa pelajaran ke luar negara.'
+      - '[pushpin] Usaha ini turut disokong oleh:'
+      - '[rolled-up-newspaper] [The Malay Mail]{karya}'
+      - '[rolled-up-newspaper] [The Malaya Tribune]{karya}'
+- tajuk: Sosial
+  label: Bahagian Ketiga
+  desc: ''
+  kandungan:
+  - jenis: accordion
+    items:
+    - tajuk: Tuntutan pendidikan dan kemunculan guru wanita
+      senarai:
+      - '[pushpin] Akhbar, majalah dan persatuan menyeru masyarakat supaya meningkatkan pendidikan melalui:'
+      - '[pushpin] Bilangan lepasan [Sultan Idris Training College (SITC)]{pertubuhan} meningkat:'
+      - '[pushpin] Mereka berkhidmat sebagai guru dan menyebarkan kepentingan pendidikan kepada masyarakat.'
+      - '[mosque] madrasah'
+      - '[school] sekolah Melayu'
+    - tajuk: Majalah Bulan Melayu dan peranan Ibu Zain
+      senarai:
+      - '[pushpin] [Majalah Bulan Melayu]{karya} diterbitkan oleh guru wanita di [Johor Bahru]{tempat} pada [1930]{tahun}.'
+      - '[pushpin] Majalah ini diedarkan ke seluruh Tanah Melayu dan Indonesia.'
+      - '[speaking_head] [Ibu Zain]{tokoh} sebagai penggerak utama menyeru wanita supaya:'
+      - '[pushpin] [Ibu Zain]{tokoh} juga menganjurkan [Tabung Derma Pelajaran Tinggi]{pertubuhan} untuk anak perempuan Melayu
+        Semenanjung.'
+      - '[books] menuntut ilmu pengetahuan'
+      - '[woman-teacher] meningkatkan martabat wanita'
+    - tajuk: Persatuan masyarakat India dan tuntutan masyarakat Cina
+      senarai:
+      - '[pushpin] Masyarakat India dan Ceylon menubuhkan persatuan untuk menjaga kebajikan sosial mereka.'
+      - '[person] [E.E.C. Thuraisingham]{tokoh} membantu memajukan perusahaan getah semasa kemelesetan ekonomi pada tahun
+        1920-an hingga 1930-an melalui kedudukannya sebagai Presiden [Malayan Rubber Estate Owner Association]{pertubuhan}.'
+      - '[pushpin] Menjelang [Perang Dunia Kedua]{peristiwa}, masyarakat Cina mula mendesak kerajaan supaya memberi peluang
+        perwakilan dalam jawatankuasa kerajaan.'
+      - '[person] [Tan Cheng Lock]{tokoh} menuntut kebajikan masyarakat Cina serta dana pendidikan melalui [Majlis Perundangan
+        Negeri-negeri Selat (SSLC)]{pertubuhan}.'
+kesimpulan:
+- '[light_bulb] Perkembangan nasionalisme membangkitkan kesedaran rakyat untuk membela bangsa dan memajukan negara.'
+- '[fire] Nasionalisme menjadi titik tolak penting ke arah kemerdekaan dan pembinaan negara bangsa.'
+- '[keycap_1] Politik – penubuhan persatuan, pelibatan rakyat dalam pentadbiran'
+- '[keycap_2] Ekonomi – galakan pendidikan dan peluang niaga'
+- '[keycap_3] Sosial – kebangkitan kaum wanita dan perpaduan masyarakat'

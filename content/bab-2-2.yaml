@@ -1,0 +1,139 @@
+subtopik: '2.2'
+tajuk: Perkembangan Idea Nasionalisme di Barat
+bab: 2
+tajuk_bab: Kebangkitan Nasionalisme
+bab_label: Bab 2
+subjek: Sejarah
+tingkatan: 4
+tema: bab-theme-2
+audio: true
+has_quiz: true
+fail_sebelum: bab-2-1.html
+fail_seterusnya: bab-2-3.html
+kod_seterusnya: '2.3'
+og_image_v: '20260420'
+description: 'Nota Sejarah Tingkatan 4 Bab 2.2 (Kebangkitan Nasionalisme): Perkembangan Idea Nasionalisme di Barat. Ringkasan
+  padat untuk ulang kaji SPM.'
+lead: Subtopik ini menerangkan bagaimana idea [nasionalisme]{istilah} berkembang di [Barat]{tempat} melalui beberapa [revolusi
+  penting]{peristiwa}. Perkembangan ini menjadi asas kepada tuntutan hak rakyat, kebebasan dan pembentukan kerajaan yang lebih
+  adil.
+ringkasan:
+- '[globe-showing-europe-africa] [Nasionalisme]{istilah} di [Barat]{tempat} muncul sebagai tindak balas terhadap pemerintahan
+  beraja yang menindas hak rakyat.'
+- '[scales] Perjuangan ini berkembang untuk menuntut kedaulatan rakyat dan kebebasan daripada penjajahan atau pemerintahan
+  mutlak.'
+- '[scroll_old] Tiga [revolusi penting]{peristiwa} yang membentuk idea nasionalisme Barat ialah [Revolusi Keagungan]{peristiwa},
+  [Revolusi Amerika]{peristiwa} dan [Revolusi Perancis]{peristiwa}.'
+- '[fire] Idea ini kemudiannya menjadi inspirasi kepada kebangkitan nasionalisme di bahagian lain dunia, termasuk di [Asia]{tempat}
+  dan [Asia Tenggara]{tempat}.'
+soalan_utama:
+  soalan: Bagaimana semangat nasionalisme bermula di Eropah?
+  heading: Bagaimana semangat nasionalisme bermula di Eropah?
+  jawapan:
+  - '[light_bulb] [Nasionalisme]{istilah} di [Barat]{tempat} muncul sebagai tindak balas terhadap pemerintahan beraja yang
+    menindas hak rakyat.'
+  - '[pushpin] Ia kemudian berkembang sebagai perjuangan menuntut:'
+  - '[scales] Kedaulatan rakyat'
+  - '[unlocked] Kebebasan daripada penjajahan asing'
+fokus: 'Tiga revolusi utama yang membentuk perkembangan idea [nasionalisme]{istilah} di Barat ialah:'
+bahagian:
+- tajuk: Revolusi Keagungan (1688) – England
+  label: Bahagian Pertama
+  desc: ''
+  kandungan:
+  - jenis: board
+    tajuk: ''
+    strip: false
+    senarai:
+    - '[princess] Mary II'
+    - '[prince] Raja William of Orange (dari [Belanda]{tempat})'
+  - jenis: board
+    tajuk: Info
+    strip: true
+    senarai: []
+  - jenis: accordion
+    items:
+    - tajuk: Bill of Rights
+      senarai:
+      - '[pushpin] Selepas revolusi, [Bill of Rights]{istilah} digubal untuk menghadkan kuasa raja.'
+      - '[receipt] Parlimen diberi hak menggubal undang-undang'
+      - '[money-bag] Cukai tidak boleh dikutip tanpa persetujuan parlimen'
+    - tajuk: John Locke dan ideanya
+      senarai:
+      - '[pushpin] [John Locke]{tokoh}, ahli falsafah Inggeris, menghasilkan karya [Two Treatises of Government]{karya}.'
+      - '[scales] Menolak pemerintahan raja mutlak'
+      - '[classical_building] Menyokong raja berperlembagaan'
+      - '[people-hugging] Menekankan persetujuan antara rakyat dan pemerintah'
+      - '[scroll_old] Mengiktiraf kepentingan hak asasi manusia'
+- tajuk: Revolusi Amerika (1776) – Amerika Syarikat
+  label: Bahagian Kedua
+  desc: ''
+  kandungan:
+  - jenis: board
+    tajuk: ''
+    strip: false
+    senarai:
+    - '[sailboat] Akta Pelayaran'
+    - '[candy] Akta Gula'
+    - '[open-mailbox-with-raised-flag] Akta Setem'
+    - '[hot-beverage] Akta Teh'
+  - jenis: board
+    tajuk: Kesudahan Revolusi Amerika
+    strip: true
+    senarai: []
+  - jenis: accordion
+    items:
+    - tajuk: George Washington dan perang terhadap British
+      senarai:
+      - '[pushpin] [George Washington]{tokoh} memimpin kongres dan melancarkan perang terhadap [British]{tempat}.'
+    - tajuk: Perisytiharan Kemerdekaan
+      senarai:
+      - '[pushpin] [Perisytiharan Kemerdekaan]{peristiwa} ditulis oleh [Thomas Jefferson]{tokoh} pada [Julai 1776]{tahun}.'
+      - '[light_bulb] Jika kerajaan gagal menjamin hak ini, rakyat berhak membentuk kerajaan baharu.'
+      - '[scales] kehidupan'
+      - '[statue-of-liberty] kebebasan'
+      - '[smiling-face-with-smiling-eyes] kebahagiaan'
+- tajuk: Revolusi Perancis (1789) – Perancis
+  label: Bahagian Ketiga
+  desc: ''
+  kandungan:
+  - jenis: board
+    tajuk: ''
+    strip: false
+    senarai:
+    - '[statue-of-liberty] Kebebasan'
+    - '[scales] Persamaan'
+    - '[handshake_light] Persaudaraan'
+  - jenis: board
+    tajuk: Kesudahan Revolusi Perancis
+    strip: true
+    senarai: []
+  - jenis: accordion
+    items:
+    - tajuk: Jean Jacques Rousseau
+      senarai:
+      - '[pushpin] [Jean Jacques Rousseau]{tokoh} menghasilkan karya [The Social Contract]{karya}.'
+      - '[speaking_head] Suara rakyat digelar sebagai hasrat umum.'
+      - '[scales] Hak rakyat dianggap lebih penting daripada kuasa raja.'
+    - tajuk: Voltaire
+      senarai:
+      - '[pushpin] [Voltaire]{tokoh} mengkritik ketidakadilan sosial dan institusi lama.'
+    - tajuk: Pemerintahan Raja Louis XVI
+      senarai:
+      - '[pushpin] Pemerintahan autokratik [Raja Louis XVI]{tokoh} ([1774–1792]{tahun}) menyebabkan:'
+      - '[castle] Golongan bangsawan memonopoli kuasa'
+      - '[money-with-wings] Rakyat dikenakan pelbagai cukai'
+    - tajuk: Tindakan golongan revolusi
+      senarai:
+      - '[pushpin] Golongan revolusi membuat rancangan untuk:'
+      - '[unlocked] Menggempur Penjara Bastile'
+      - '[dove] Membebaskan tahanan politik'
+      - '[crown] Menggulingkan Raja Louis XVI'
+kesimpulan:
+- '[light_bulb] Idea nasionalisme di Barat menyedarkan rakyat tentang hak mereka.'
+- '[light_bulb] Ilmu pengetahuan ialah senjata utama untuk menentang penindasan.'
+- '[globe] Idea ini memberi inspirasi kepada negara-negara di [Asia]{tempat} dan [Asia Tenggara]{tempat} untuk bangkit menuntut
+  kemerdekaan dan kedaulatan bangsa sendiri.'
+- '[brain] Hak dan suara rakyat lebih penting daripada kuasa raja'
+- '[classical_building] Rakyat berhak memilih dan membentuk kerajaan sendiri'
+- '[scroll_old] Undang-undang mesti melindungi hak semua rakyat, bukan hanya golongan elit'

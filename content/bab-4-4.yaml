@@ -1,0 +1,80 @@
+subtopik: '4.4'
+tajuk: Penyerahan Sarawak kepada Kerajaan British
+bab: 4
+tajuk_bab: Era Peralihan Kuasa British
+bab_label: Bab 4
+subjek: Sejarah
+tingkatan: 4
+tema: bab-theme-4
+audio: false
+has_quiz: false
+fail_sebelum: bab-4-3.html
+fail_seterusnya: bab-4-5.html
+kod_seterusnya: '4.5'
+og_image_v: '20260420'
+description: 'Nota Sejarah Tingkatan 4 Bab 4.4 (Era Peralihan Kuasa British di Negara Kita): Penyerahan Sarawak kepada Kerajaan
+  British. Ringkasan padat untuk ulang kaji SPM.'
+lead: Subtopik ini menerangkan mengapa [Sarawak]{tempat} diserahkan kepada British selepas [Perang Dunia Kedua]{masa}, faktor-faktor
+  yang mempengaruhi keputusan [Vyner Brooke]{tokoh}, serta proses penyerahan yang akhirnya menukar Sarawak menjadi [Tanah
+  Jajahan British]{istilah}.
+ringkasan:
+- '[globe_meridians] Selepas [Perang Dunia Kedua]{masa}, [Sarawak]{tempat} diserahkan kepada kerajaan British.'
+- '[crown] Penyerahan ini berlaku kerana gabungan faktor [masalah pewarisan takhta]{istilah}, desakan British dan masalah
+  kewangan yang dihadapi oleh [Vyner Brooke]{tokoh}.'
+- '[scroll_old] Proses penyerahan melibatkan surat daripada [Pejabat Tanah Jajahan]{pentadbiran}, usaha [Gerard T. MacBryan]{tokoh}
+  mendapatkan persetujuan ketua tempatan, dan undian [Cession Bill]{istilah} di [Majlis Negeri]{istilah}.'
+- '[warning] Walau bagaimanapun, penyerahan ini mendapat tentangan hebat terutama daripada masyarakat peribumi di [Sarawak]{tempat}.'
+soalan_utama:
+  soalan: Mengapakah Sarawak diserahkan kepada British selepas Perang Dunia Kedua dan bagaimanakah proses penyerahan itu berlaku?
+  heading: Mengapakah Sarawak diserahkan kepada British selepas Perang Dunia Kedua dan bagaimanakah proses penyerahan itu
+    berlaku?
+  jawapan:
+  - '[light_bulb] Selepas [Perang Dunia Kedua]{masa}, [Sarawak]{tempat} diserahkan kepada kerajaan British. Penyerahan ini
+    berlaku kerana masalah pewarisan takhta, desakan British dan masalah kewangan yang dihadapi oleh [Vyner Brooke]{tokoh}.'
+  - '[warning] Namun, penyerahan ini telah menimbulkan pelbagai reaksi dalam kalangan penduduk tempatan di Sarawak.'
+bahagian:
+- tajuk: Faktor Penyerahan Sarawak kepada British
+  label: Bahagian Pertama
+  desc: ''
+  kandungan:
+  - jenis: accordion
+    items:
+    - tajuk: Masalah Pewarisan Takhta
+      senarai:
+      - '[pushpin] [Vyner Brooke]{tokoh} tidak mempunyai anak lelaki untuk menggantikannya sebagai pemerintah [Sarawak]{tempat}.'
+      - '[pushpin] Walaupun begitu, Vyner Brooke enggan melantik:'
+      - '[light_bulb] Keadaan ini menyebabkan masa depan pemerintahan Brooke di Sarawak menjadi tidak menentu.'
+      - '[downcast-face-with-sweat] Beliau semakin tua'
+      - '[face-with-thermometer] Kesihatannya semakin merosot'
+    - tajuk: Desakan Kerajaan British
+      senarai:
+      - '[pushpin] Pada [19 Jun 1944]{masa}, [Pejabat Tanah Jajahan]{pentadbiran} mendesak [Vyner Brooke]{tokoh} supaya memberikan
+        kuasa yang lebih luas kepada British di [Sarawak]{tempat}.'
+      - '[pushpin] Pada [28 Februari 1945]{masa}, Pejabat Tanah Jajahan menghantar surat kepada Vyner Brooke tentang rancangan
+        penyerahan Sarawak kepada British.'
+      - '[light_bulb] Akhirnya, [Vyner Brooke]{tokoh} bersetuju untuk menyerahkan Sarawak kepada British.'
+      - '[chart-increasing-with-yen] Kaya dengan sumber ekonomi'
+      - '[briefcase] Penting untuk melindungi pelaburan British'
+      - '[globe] Memperluas penguasaan British di Borneo'
+    - tajuk: Masalah Kewangan
+      senarai:
+      - '[pushpin] Selepas [Perang Dunia Kedua]{masa}, [Sarawak]{tempat} mengalami kerosakan yang besar.'
+      - '[pushpin] [Vyner Brooke]{tokoh} tidak mempunyai kewangan yang mencukupi untuk membangunkan semula Sarawak.'
+      - '[light_bulb] Oleh itu, penyerahan kepada British dianggap jalan mudah untuk memulihkan Sarawak.'
+      - '[oil-drum] Lombong minyak musnah'
+      - '[herb] Ladang getah terbiar'
+      - '[school] Kemudahan pendidikan rosak'
+      - '[hospital] Kemudahan kesihatan musnah'
+      - '[motorway] Jalan raya rosak'
+      - '[airplane] Lapangan terbang perlu dibaiki'
+kesimpulan:
+- '[light_bulb] Penyerahan Sarawak berlaku melalui tekanan, kepentingan dan kelemahan selepas perang.'
+- '[pushpin] Penyerahan [Sarawak]{tempat} kepada British berlaku kerana gabungan:'
+- '[pushpin] Proses penyerahan ini dijalankan melalui:'
+- '[warning] Walau bagaimanapun, penyerahan Sarawak tidak diterima sepenuhnya oleh rakyat, khususnya masyarakat peribumi yang
+  melihat tindakan ini sebagai satu bentuk penjajahan baharu.'
+- '[light_bulb] Oleh itu, penyerahan Sarawak kepada British telah menjadi titik penting yang membangkitkan penentangan politik
+  dalam kalangan penduduk tempatan selepas perang.'
+- '[crown] Masalah pewarisan takhta'
+- '[globe_meridians] Desakan kerajaan British'
+- '[money-bag] Masalah kewangan selepas perang'

@@ -1,0 +1,186 @@
+subtopik: '3.4'
+tajuk: Perang Dunia Kedua di Asia Pasifik
+bab: 3
+tajuk_bab: Konflik Dunia dan Pendudukan Jepun
+bab_label: Bab 3
+subjek: Sejarah
+tingkatan: 4
+tema: bab-theme-3
+audio: false
+has_quiz: false
+fail_sebelum: bab-3-3.html
+fail_seterusnya: bab-3-5.html
+kod_seterusnya: '3.5'
+og_image_v: '20260420'
+description: 'Nota Sejarah Tingkatan 4 Bab 3.4 (Konflik Dunia dan Pendudukan Jepun di Negara Kita): Perang Dunia Kedua di
+  Asia Pasifik. Ringkasan padat untuk ulang kaji SPM.'
+lead: Subtopik ini menerangkan bagaimana [Perang Dunia Kedua di Asia Pasifik]{peristiwa} bermula, faktor kebangkitan Jepun
+  sebagai kuasa tentera, dasar peluasan kuasanya, sekatan ekonomi oleh Kuasa Bersekutu serta serangan-serangan awal Jepun
+  di rantau Asia Pasifik.
+ringkasan:
+- '[water-wave] [Perang Dunia Kedua di Asia Pasifik]{peristiwa} berlaku antara [1941]{tahun} hingga [1945]{tahun} dan juga
+  dikenali sebagai [Perang Pasifik]{peristiwa}.'
+- '[globe] Pertempuran berlaku di [Lautan Pasifik]{tempat}, [Tanah Besar Asia]{tempat} dan [Kepulauan Asia Tenggara]{tempat}.'
+- '[chart] Peperangan ini berpunca daripada kebangkitan Jepun sebagai kuasa tentera yang menjalankan dasar imperialisme di
+  rantau Asia Pasifik.'
+- '[prohibited] Sekatan ekonomi oleh Amerika Syarikat, British dan Belanda mempercepatkan tindakan Jepun meluaskan serangan
+  ke selatan.'
+- '[bomb] Perang bermula apabila Jepun menyerang [Tanah Melayu]{tempat} dan [Pearl Harbor]{tempat} pada [8 Disember 1941]{tahun}.'
+soalan_utama:
+  soalan: Bagaimanakah Perang Dunia Kedua bermula di Asia Pasifik?
+  heading: Bagaimanakah Perang Dunia Kedua bermula di Asia Pasifik?
+  jawapan:
+  - '[light_bulb] [Perang Dunia Kedua di Asia Pasifik]{peristiwa} berlaku antara [1941]{tahun} hingga [1945]{tahun} dan juga
+    dikenali sebagai [Perang Pasifik]{peristiwa}.'
+  - '[pushpin] Pertempuran berlaku di [Lautan Pasifik]{tempat}, [Tanah Besar Asia]{tempat} dan [Kepulauan Asia Tenggara]{tempat}.'
+  - '[light_bulb] Perang ini berpunca daripada kemunculan Jepun sebagai kuasa tentera di Asia yang menjalankan dasar imperialisme
+    di rantau Asia Pasifik.'
+fokus: 'Asia Pasifik: Jepun meluaskan kuasa lalu mencetuskan perang. Empat perkara:'
+bahagian:
+- tajuk: Peluasan Kuasa Jepun
+  label: Bahagian Pertama
+  desc: ''
+  kandungan:
+  - jenis: board
+    tajuk: ''
+    strip: false
+    senarai:
+    - '[factory] negara perindustrian'
+    - '[crossed_swords] kuasa ketenteraan yang setaraf dengan kuasa Barat'
+  - jenis: board
+    tajuk: Dasar Peluasan Kuasa Jepun
+    strip: true
+    senarai:
+    - '[keycap_1] keperluan perindustrian'
+    - '[keycap_2] pengaruh golongan tentera'
+    - '[keycap_3] mewujudkan orde baharu Asia'
+  - jenis: board
+    tajuk: Glosari
+    strip: true
+    senarai: []
+  - jenis: board
+    tajuk: Peluasan Kuasa Jepun hingga Perang Dunia Kedua
+    strip: true
+    senarai:
+    - '[calendar] [1910]{tahun} — Jepun menguasai Korea'
+    - '[calendar] [1932]{tahun} — Jepun menduduki Manchuria'
+    - '[calendar] [1937]{tahun} — Jepun menduduki China'
+    - '[calendar] [1941]{tahun} — Jepun menduduki Indochina'
+  - jenis: accordion
+    items:
+    - tajuk: A. Keperluan Perindustrian
+      senarai:
+      - '[pushpin] Pada akhir abad ke-19, Jepun berusaha mengurangkan pergantungan kepada negara Barat untuk mendapatkan bahan
+        mentah.'
+      - '[pushpin] Oleh itu, Jepun memerlukan:'
+      - '[light_bulb] Keperluan ini mendorong Jepun menjalankan dasar peluasan kuasa.'
+      - '[pick] wilayah yang dapat membekalkan bahan mentah'
+      - '[shopping-cart] kawasan pasaran untuk meluaskan perindustrian'
+    - tajuk: B. Pengaruh Golongan Tentera
+      senarai:
+      - '[pushpin] Pada abad ke-20, Jepun mempunyai angkatan tentera paling moden di Asia.'
+      - '[calendar] [1932]{tahun} — golongan tentera mula menguasai politik Jepun.'
+      - '[pushpin] Golongan tentera berpendapat bahawa masalah ekonomi Jepun boleh diselesaikan melalui:'
+      - '[calendar] [Oktober 1941]{tahun} — [Jeneral Hideki Tojo]{tokoh} menjadi Perdana Menteri Jepun dan beliau membawa
+        Jepun ke kancah peperangan.'
+      - '[globe-showing-europe-africa] penaklukan kawasan yang kaya dengan bahan mentah'
+      - '[shopping-bags] penguasaan kawasan pasaran baharu'
+    - tajuk: C. Orde Baharu Asia
+      senarai:
+      - '[pushpin] Di bawah pengaruh tentera, dasar luar Jepun bertujuan untuk:'
+      - '[pushpin] Jepun mewujudkan orde baharu di Asia Timur yang merangkumi:'
+      - '[pushpin] Kawasan ini dirancang untuk dimasukkan ke dalam satu blok ekonomi.'
+      - '[pushpin] Kemudian, rancangan tersebut dikembangkan ke seluruh Asia.'
+      - '[chart] mengembangkan kuasa'
+      - '[chart-increasing-with-yen] mewujudkan kebebasan ekonomi'
+      - '[prohibited] menentang imperialisme Barat'
+- tajuk: Sekatan Ekonomi terhadap Jepun
+  label: Bahagian Kedua
+  desc: ''
+  kandungan:
+  - jenis: board
+    tajuk: ''
+    strip: false
+    senarai:
+    - '[globe_meridians] Amerika Syarikat'
+    - '[globe_meridians] British'
+    - '[globe_meridians] Belanda'
+  - jenis: board
+    tajuk: Glosari
+    strip: true
+    senarai: []
+- tajuk: Rancangan Penaklukan Wilayah di Selatan
+  label: Bahagian Ketiga
+  desc: ''
+  kandungan:
+  - jenis: board
+    tajuk: ''
+    strip: false
+    senarai:
+    - '[pick] bijih timah'
+    - '[herb] getah'
+    - '[rock] bauksit'
+    - '[oil-drum] petroleum'
+  - jenis: board
+    tajuk: Info
+    strip: true
+    senarai:
+    - '[globe_meridians] Jerman'
+    - '[globe_meridians] Itali'
+  - jenis: board
+    tajuk: Kemuncak Ketegangan
+    strip: true
+    senarai: []
+- tajuk: Bermulanya Perang Dunia Kedua di Asia Pasifik
+  label: Bahagian Keempat
+  desc: ''
+  kandungan:
+  - jenis: board
+    tajuk: ''
+    strip: false
+    senarai:
+    - '[hibiscus] Tanah Melayu'
+    - '[globe_meridians] Pearl Harbor, Hawaii'
+- tajuk: Garisan Masa Perang Dunia Kedua di Asia Pasifik ️
+  label: Bahagian Kelima
+  desc: ''
+  kandungan:
+  - jenis: accordion
+    items:
+    - tajuk: Garisan Masa Serangan Jepun
+      senarai:
+      - '[calendar] [8 Disember 1941]{tahun} — pendaratan Jepun di Kelantan'
+      - '[calendar] [8 Disember 1941]{tahun} — Jepun menyerang Pearl Harbor'
+      - '[calendar] [10 Disember 1941]{tahun} — Jepun mendarat di Pulau Guam'
+      - '[calendar] [16 Disember 1941]{tahun} — Jepun menguasai Miri'
+      - '[calendar] [22 Disember 1941]{tahun} — pendaratan pertama Jepun di Filipina'
+      - '[calendar] [23 Disember 1941]{tahun} — Pulau Wake jatuh selepas serangan kedua Jepun'
+      - '[calendar] [25 Disember 1941]{tahun} — Hong Kong menyerah kalah'
+      - '[calendar] [2 Januari 1942]{tahun} — Manila dikalahkan'
+      - '[calendar] [2 Januari 1942]{tahun} — Jepun menakluk Burma'
+      - '[calendar] [19 Januari 1942]{tahun} — Jepun menguasai Sandakan'
+      - '[calendar] [15 Februari 1942]{tahun} — Singapura dikalahkan'
+      - '[calendar] [19 Februari 1942]{tahun} — Jepun mengebom Darwin'
+      - '[calendar] [27 Februari 1942]{tahun} — Pertempuran di Laut Jawa: Jepun mengalahkan tentera Bersekutu'
+      - '[calendar] [28 Februari 1942]{tahun} — Jepun menyerang Jawa'
+    - tajuk: 'Info Penting: Masa Tokyo pada 8 Disember 1941'
+      senarai:
+      - '[pushpin] Berdasarkan masa [Tokyo]{tempat} sebagai Garisan Tarikh Antarabangsa, [Perang Dunia Kedua di Asia Pasifik]{peristiwa}
+        bermula dengan pendaratan tentera Jepun di [Kota Bharu, Kelantan]{tempat}.'
+      - '[light_bulb] Ini menunjukkan bahawa serangan di [Tanah Melayu]{tempat} berlaku lebih awal mengikut masa Tokyo.'
+      - '[two-oclock] 2:15 pagi — Jepun mendarat di Pantai Kuala Pak Amat, antara Pantai Sabak dan Pantai Badang, Kota Bharu,
+        Kelantan'
+      - '[three-oclock] 3:25 pagi — Jepun menyerang Pearl Harbor, Hawaii'
+      - '[four-oclock] 4:00 pagi — Jepun mendarat di Singgora, Thailand'
+kesimpulan:
+- '[pushpin] [Perang Dunia Kedua di Asia Pasifik]{peristiwa} berpunca daripada:'
+- '[pushpin] Peperangan ini berkembang menjadi konflik besar apabila Jepun melancarkan serangan serentak ke atas [Tanah Melayu]{tempat},
+  [Pearl Harbor]{tempat} dan wilayah-wilayah lain di Asia Pasifik.'
+- '[pushpin] Secara keseluruhan, [Perang Dunia Kedua]{peristiwa} yang melibatkan medan [Eropah]{tempat} dan [Asia Pasifik]{tempat}
+  telah:'
+- '[light_bulb] Oleh itu, kita harus mengambil iktibar daripada [Perang Dunia Kedua]{peristiwa} dengan:'
+- '[sushi] peluasan kuasa Jepun'
+- '[factory] keperluan perindustrian'
+- '[crossed_swords] pengaruh golongan tentera'
+- '[globe] rancangan mewujudkan orde baharu Asia'
+- '[prohibited] sekatan ekonomi oleh Kuasa Bersekutu'

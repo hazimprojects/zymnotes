@@ -1,0 +1,38 @@
+bab: 7
+tajuk: Usaha ke Arah Kemerdekaan
+bab_label: Bab 7
+subjek: Sejarah
+tingkatan: 4
+tema: bab-theme-7
+og_image_v: '20260420'
+description: 'Nota Sejarah Tingkatan 4 Bab 7: Usaha ke Arah Kemerdekaan. Ringkasan bab induk dan pautan subtopik untuk ulang
+  kaji SPM.'
+lead: Bab ini menerangkan bagaimana kesedaran politik selepas [Perang Dunia Kedua]{peristiwa} mencetuskan aspirasi rakyat
+  untuk mencapai [kemerdekaan]{perjanjian}, perkembangan idea negara merdeka, usaha membina [perpaduan rakyat berbilang kaum]{istilah},
+  pembentukan [Jawatankuasa Hubungan Antara Kaum (CLC)]{pertubuhan} dan [Sistem Ahli]{istilah}, perkembangan [pendidikan kebangsaan]{istilah}
+  serta [kerjasama parti politik]{pertubuhan} sebagai usaha ke arah kemerdekaan negara.
+sinopsis:
+- '[pushpin] Kesedaran politik selepas [Perang Dunia Kedua]{peristiwa} mencetuskan aspirasi rakyat untuk mencapai [kemerdekaan]{perjanjian}.'
+- '[light_bulb] Idea [negara merdeka]{istilah} dicetuskan oleh pelbagai golongan untuk membentuk negara yang [berdaulat]{istilah}.'
+- '[handshake_light] Usaha mencapai kemerdekaan dilakukan bagi memenuhi gesaan [British]{pertubuhan} supaya [perpaduan rakyat
+  berbilang kaum]{istilah} dapat diwujudkan sebagai prasyarat untuk merdeka.'
+- '[classical_building] Oleh sebab itu, penubuhan [Jawatankuasa Hubungan Antara Kaum (CLC)]{pertubuhan}, pembentukan [Sistem
+  Ahli]{istilah} dan [sistem pendidikan kebangsaan]{istilah} serta [kerjasama parti politik]{pertubuhan} dilakukan sebagai
+  usaha ke arah kemerdekaan.'
+subtopik:
+- kod: '7.1'
+  tajuk: Latar Belakang Idea Negara Merdeka
+  penerangan: Memahami perkembangan idea negara merdeka dan bagaimana aspirasi kemerdekaan mula berkembang dalam kalangan
+    rakyat.
+- kod: '7.2'
+  tajuk: Jawatankuasa Hubungan Antara Kaum
+  penerangan: Melihat peranan CLC dalam membina persefahaman, kerjasama dan tolak ansur antara pemimpin pelbagai kaum.
+- kod: '7.3'
+  tajuk: Sistem Ahli
+  penerangan: Menjelaskan pembentukan Sistem Ahli sebagai langkah awal latihan berkerajaan sendiri sebelum merdeka.
+- kod: '7.4'
+  tajuk: Sistem Pendidikan Kebangsaan
+  penerangan: Meneliti usaha mewujudkan sistem pendidikan yang dapat menyatukan rakyat dan membina identiti kebangsaan.
+- kod: '7.5'
+  tajuk: Penubuhan Parti Politik
+  penerangan: Memahami perkembangan parti politik dan kerjasama mereka dalam mengukuhkan perjuangan ke arah kemerdekaan.

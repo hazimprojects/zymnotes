@@ -1,0 +1,265 @@
+subtopik: '3.2'
+tajuk: Latar Belakang Perang Dunia
+bab: 3
+tajuk_bab: Konflik Dunia dan Pendudukan Jepun
+bab_label: Bab 3
+subjek: Sejarah
+tingkatan: 4
+tema: bab-theme-3
+audio: false
+has_quiz: false
+fail_sebelum: bab-3-1.html
+fail_seterusnya: bab-3-3.html
+kod_seterusnya: '3.3'
+og_image_v: '20260420'
+description: 'Nota Sejarah Tingkatan 4 Bab 3.2 (Konflik Dunia dan Pendudukan Jepun di Negara Kita): Latar Belakang Perang
+  Dunia. Ringkasan padat untuk ulang kaji SPM.'
+lead: Subtopik ini menerangkan punca berlakunya [Perang Dunia Pertama]{peristiwa} serta kesan besarnya terhadap dunia. Peperangan
+  ini tercetus akibat perkembangan [nasionalisme]{gerakan} di Eropah, persaingan [kuasa imperialis]{istilah}, pembentukan
+  [pakatan ketenteraan]{istilah} dan krisis di [Rantau Balkan]{tempat}.
+ringkasan:
+- '[globe-showing-europe-africa] [Perang Dunia Pertama]{peristiwa} tercetus akibat persaingan [kuasa imperialis]{istilah},
+  pembentukan [pakatan ketenteraan]{istilah} dan krisis di [Rantau Balkan]{tempat}.'
+- '[crossed_swords] Perang bermula pada [1914]{tahun} dan berakhir pada [1918]{tahun}, tetapi kesannya berlarutan hingga mencetuskan
+  ketegangan baharu.'
+- '[scroll_old] Selepas perang, [Persidangan Damai Paris]{perjanjian}, [Deklarasi 14 Perkara]{perjanjian} dan [Perjanjian
+  Versailles]{perjanjian} membentuk susunan dunia baharu.'
+- '[hibiscus] Walaupun perang berlaku jauh di [Eropah]{tempat}, [Tanah Melayu]{tempat} turut menerima kesan politik dan ekonomi.'
+soalan_utama:
+  soalan: Apakah punca berlakunya Perang Dunia?
+  heading: Apakah punca berlakunya Perang Dunia?
+  jawapan:
+  - '[light_bulb] Perkembangan nasionalisme di Eropah serta persaingan imperialis antara kuasa besar telah mencetuskan dua
+    peperangan besar dunia, iaitu [Perang Dunia Pertama]{peristiwa} ([1914–1918]{tahun}) dan [Perang Dunia Kedua]{peristiwa}
+    ([1939–1945]{tahun}).'
+  - '[pushpin] Kedua-dua peperangan ini membawa kesan besar kepada dunia, termasuk [Tanah Melayu]{tempat}.'
+fokus: 'Perang Dunia Pertama (1914–1918): konflik besar yang mengubah politik dunia. Lima perkara:'
+bahagian:
+- tajuk: Perang Dunia Pertama (1914–1918)
+  label: Bahagian Pertama
+  desc: ''
+  kandungan:
+  - jenis: board
+    tajuk: ''
+    strip: false
+    senarai:
+    - '[crossed_swords] persaingan kuasa imperialis'
+    - '[handshake_light] pakatan ketenteraan'
+    - '[globe-showing-europe-africa] krisis di Rantau Balkan'
+  - jenis: board
+    tajuk: A. Persaingan Kuasa Imperialis
+    strip: true
+    senarai:
+    - '[pushpin] [Revolusi Industri]{istilah} menyebabkan negara-negara Eropah berlumba-lumba mendapatkan tanah jajahan.'
+    - '[pushpin] Tujuan utama mereka ialah mendapatkan bahan mentah dan memasarkan hasil industri ke kawasan jajahan.'
+  - jenis: board
+    tajuk: Glosari
+    strip: true
+    senarai: []
+  - jenis: board
+    tajuk: B. Pakatan Ketenteraan
+    strip: true
+    senarai: []
+  - jenis: board
+    tajuk: Glosari
+    strip: true
+    senarai: []
+  - jenis: board
+    tajuk: C. Krisis Rantau Balkan
+    strip: true
+    senarai:
+    - '[pushpin] Krisis di [Rantau Balkan]{tempat} menjadi pencetus langsung kepada [Perang Dunia Pertama]{peristiwa}.'
+    - '[pushpin] [Austria-Hungary]{tempat} menuduh [Serbia]{tempat} menghasut rakyat berketurunan Serb untuk membebaskan diri
+      daripada pemerintahannya.'
+    - '[pushpin] Kemuncaknya berlaku apabila [Archduke Ferdinand]{tokoh}, Putera Mahkota Austria-Hungary, dan isterinya [Sophie]{tokoh}
+      dibunuh oleh seorang pemuda Serbia.'
+- tajuk: Pihak yang Terlibat
+  label: Bahagian Kedua
+  desc: ''
+  kandungan:
+  - jenis: board
+    tajuk: Panduan warna pihak perang
+    strip: true
+    senarai: []
+  - jenis: accordion
+    items:
+    - tajuk: Kuasa Tengah
+      senarai:
+      - '[pushpin] Kuasa Tengah terdiri daripada negara yang mahu mengekalkan empayar masing-masing dan terlibat dalam konflik
+        akibat persaingan imperialis.'
+      - '[magnify_left] Ditubuhkan pada [1882]{tahun} sebagai [Triple Alliance]{istilah}.'
+      - '[pushpin] Pada awalnya melibatkan Jerman, Austria-Hungary dan Itali.'
+      - '[pushpin] Namun, Itali kemudian berpaling tadah dan menyertai Pakatan Bertiga.'
+      - '[pushpin] Pakatan ini lemah kerana kedudukan geografi yang mencabar dan matlamat yang tidak sepenuhnya seragam.'
+      - '[pushpin] Empayar Uthmaniyah pula menyertai perang untuk mempertahankan wilayahnya dan kepentingan dunia Islam.'
+      - '[globe_meridians] Jerman'
+      - '[globe_meridians] Austria-Hungary'
+    - tajuk: Pakatan Bertiga
+      senarai:
+      - '[pushpin] Pakatan Bertiga dibentuk untuk mengimbangi ancaman Kuasa Tengah.'
+      - '[magnify_left] Bermula daripada perjanjian diplomatik antara Perancis dan Rusia pada [1894]{tahun}.'
+      - '[pushpin] Britain menyertai pakatan ini pada [1907]{tahun}.'
+      - '[pushpin] Pakatan ini mempunyai lebih banyak tanah jajahan dan sumber.'
+      - '[pushpin] Amerika Syarikat membantu pada akhir perang, tetapi bukan anggota rasmi pakatan.'
+      - '[globe_meridians] Britain'
+      - '[globe_meridians] Perancis'
+      - '[globe_meridians] Rusia'
+- tajuk: Kronologi Perang Dunia Pertama (1914–1918)
+  label: Bahagian Ketiga
+  desc: ''
+  kandungan:
+  - jenis: board
+    tajuk: ''
+    strip: false
+    senarai: []
+  - jenis: board
+    tajuk: Info Tambahan
+    strip: true
+    senarai:
+    - '[globe_meridians] Bulgaria'
+    - '[globe_meridians] Portugal'
+    - '[globe_meridians] Romania'
+    - '[globe_meridians] Greece'
+  - jenis: accordion
+    items:
+    - tajuk: 28 Julai 1914
+      senarai:
+      - '[backhand-index-pointing-right] Austria-Hungary mengisytiharkan perang terhadap Serbia.'
+      - '[crossed_swords] mahu membalas pembunuhan Archduke Ferdinand'
+      - '[handshake_light] mendapat sokongan daripada Jerman'
+    - tajuk: 30 Julai 1914
+      senarai:
+      - '[backhand-index-pointing-right] Rusia memberikan bantuan kepada Serbia.'
+      - '[magnify_left] Bangsa Rusia dan Serbia mempunyai hubungan rapat kerana kedua-duanya berasal daripada rumpun [Slav]{istilah}.'
+      - '[shield] Rusia menyokong bangsa Slav di Serbia'
+      - '[warning] Rusia menentang tindakan Austria-Hungary'
+    - tajuk: 1 Ogos 1914
+      senarai:
+      - '[backhand-index-pointing-right] Jerman mengisytiharkan perang terhadap Rusia.'
+      - '[handshake_light] mahu mempertahankan Austria-Hungary'
+      - '[crossed_swords] mahu menyerang lebih awal sebelum Rusia sempat bersiap'
+    - tajuk: 3 Ogos 1914
+      senarai:
+      - '[backhand-index-pointing-right] Jerman mengisytiharkan perang terhadap Perancis.'
+      - '[pushpin] Rancangan ini dikenali sebagai [Pelan Schlieffen]{istilah}.'
+      - '[backhand-index-pointing-right] Jerman juga menceroboh [Belgium]{tempat} untuk menyerang Perancis dari arah utara
+        kerana laluan itu paling cepat.'
+      - '[handshake_light] Rusia dan Perancis merupakan sekutu'
+      - '[warning] Jerman bimbang diserang dari dua arah'
+      - '[map] mahu melumpuhkan Perancis terlebih dahulu sebelum memberi tumpuan kepada Rusia'
+    - tajuk: 4 Ogos 1914
+      senarai:
+      - '[backhand-index-pointing-right] Britain mengisytiharkan perang terhadap Jerman.'
+      - '[magnify_left] Jerman bukan sekadar melalui Belgium, tetapi menyerangnya dengan kekerasan. Tindakan ini membangkitkan
+        kemarahan Britain.'
+      - '[warning] Britain marah kerana Jerman melanggar kedaulatan Belgium'
+      - '[scroll_old] Belgium ialah negara berkecuali yang dijamin oleh perjanjian antarabangsa'
+    - tajuk: Oktober 1914
+      senarai:
+      - '[backhand-index-pointing-right] Empayar Uthmaniyah menyertai Kuasa Tengah.'
+      - '[shield] mahu mempertahankan wilayah sendiri'
+      - '[handshake_light] bekerjasama dengan Jerman menentang musuh bersama'
+    - tajuk: Mac 1915
+      senarai:
+      - '[backhand-index-pointing-right] Itali menyertai Pakatan Bertiga.'
+      - '[repeat-button] walaupun asalnya bersama Kuasa Tengah, Itali berpaling tadah'
+      - '[national-park] Britain dan Perancis menjanjikan wilayah kepada Itali'
+    - tajuk: April 1917
+      senarai:
+      - '[backhand-index-pointing-right] Amerika Syarikat menyertai Pakatan Bertiga.'
+      - '[ship] marah selepas kapal dagangnya diserang oleh kapal selam Jerman'
+      - '[statue-of-liberty] mahu mempertahankan demokrasi dunia'
+- tajuk: Berakhirnya Perang Dunia Pertama
+  label: Bahagian Keempat
+  desc: ''
+  kandungan:
+  - jenis: board
+    tajuk: ''
+    strip: false
+    senarai: []
+  - jenis: board
+    tajuk: Persidangan Damai Paris
+    strip: true
+    senarai:
+    - '[calendar] [18 Januari 1919]{tahun}'
+  - jenis: board
+    tajuk: Glosari
+    strip: true
+    senarai: []
+  - jenis: board
+    tajuk: Perjanjian Versailles
+    strip: true
+    senarai:
+    - '[calendar] [28 Jun 1919]{tahun}'
+  - jenis: board
+    tajuk: Dunia Selepas Perang
+    strip: true
+    senarai:
+    - '[chart-decreasing] kuasa Eropah mula lemah'
+    - '[chart] Amerika Syarikat muncul sebagai kuasa besar'
+    - '[angry-face] Jerman menanggung rasa tidak puas hati'
+- tajuk: Kesan Perang Dunia Pertama
+  label: Bahagian Kelima
+  desc: ''
+  kandungan:
+  - jenis: board
+    tajuk: ''
+    strip: false
+    senarai:
+    - '[crown] pemerintahan'
+    - '[map] sempadan negara'
+    - '[globe-showing-europe-africa] politik antarabangsa'
+    - '[hibiscus] kedudukan Tanah Melayu'
+  - jenis: board
+    tajuk: Info
+    strip: true
+    senarai:
+    - '[pushpin] British turut meluluskan tiga undang-undang penting semasa perang:'
+  - jenis: board
+    tajuk: Glosari
+    strip: true
+    senarai: []
+  - jenis: accordion
+    items:
+    - tajuk: A. Keruntuhan Pemerintahan Beraja
+      senarai:
+      - '[pushpin] Banyak sistem monarki di Eropah runtuh selepas perang.'
+      - '[light_bulb] Sistem lama digantikan dengan republik, revolusi dan ideologi baharu.'
+      - '[globe_meridians] Jerman → Kaiser Wilhelm II turun takhta dan melarikan diri ke Belanda'
+      - '[globe_meridians] Jerman → digantikan dengan Republik Jerman'
+      - '[globe_meridians] Austria-Hungary → Dinasti Habsburg tamat apabila wilayah-wilayahnya memberontak'
+      - '[globe_meridians] Rusia → Tsar Nicholas II digulingkan'
+      - '[triangular-flag] Rusia → lahir kerajaan komunis pertama di dunia di bawah Vladimir Lenin'
+      - '[globe_meridians] Empayar Uthmaniyah → Sultan Mehmed VI digulingkan'
+      - '[globe_meridians] Turki → lahir Republik Turki di bawah Mustafa Kemal Atatürk'
+    - tajuk: B. Kemunculan Negara Baharu
+      senarai:
+      - '[pushpin] Perpecahan empayar besar melahirkan banyak negara baharu.'
+      - '[light_bulb] Banyak sempadan negara moden hari ini terbentuk selepas [Perang Dunia Pertama]{peristiwa}.'
+      - '[globe_meridians] Austria'
+      - '[hibiscus] Hungary'
+      - '[globe_meridians] Czechoslovakia'
+      - '[globe_meridians] Yugoslavia'
+    - tajuk: C. Kesan terhadap Negara Kita
+      senarai:
+      - '[pushpin] Walaupun perang berlaku jauh di [Eropah]{tempat}, [Tanah Melayu]{tempat} tetap menerima kesannya.'
+      - '[pushpin] Raja-raja Melayu diminta menyatakan sokongan kepada [British]{tempat}.'
+      - '[pushpin] British turut meluluskan tiga undang-undang penting semasa perang:'
+      - '[open_book] To Vest in the High Commissioner Exceptional Power in Time of Public Emergency Enactment 1914'
+      - '[right-arrow] Memberi kuasa kepada Pesuruhjaya Tinggi British untuk melaksanakan undang-undang tentera semasa kecemasan.'
+      - '[open_book] [Trading With Enemy Enactment 1914]{perjanjian}'
+      - '[right-arrow] Melarang sebarang urusan perdagangan dengan negara musuh.'
+      - '[open_book] Naval and Military News (Emergency) Enactment 1914'
+      - '[right-arrow] Menyekat penyebaran berita tentang pergerakan tentera dan kapal British dalam akhbar.'
+      - '[pushpin] Ekonomi negeri-negeri Melayu dimanipulasi untuk membantu British membiayai peperangan.'
+      - '[pushpin] Hasil utama yang digunakan ialah:'
+      - '[pick] bijih timah'
+      - '[herb] getah'
+kesimpulan:
+- '[pushpin] [Perang Dunia Pertama]{peristiwa} berpunca daripada:'
+- '[pushpin] Peperangan ini membawa kesan besar seperti:'
+- '[light_bulb] [Perang Dunia Pertama]{peristiwa} memberi pengajaran bahawa keamanan dunia amat penting. Namun, dunia gagal
+  mengekalkan keamanan itu sepenuhnya, lalu [Perang Dunia Kedua]{peristiwa} tercetus kira-kira 20 tahun kemudian.'
+- '[factory] persaingan kuasa imperialis'
+- '[handshake_light] pakatan ketenteraan'
+- '[globe-showing-europe-africa] krisis di Rantau Balkan'

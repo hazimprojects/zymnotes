@@ -1,0 +1,82 @@
+subtopik: '4.6'
+tajuk: Penyerahan Sabah kepada Kerajaan British
+bab: 4
+tajuk_bab: Era Peralihan Kuasa British
+bab_label: Bab 4
+subjek: Sejarah
+tingkatan: 4
+tema: bab-theme-4
+audio: false
+has_quiz: false
+fail_sebelum: bab-4-5.html
+fail_seterusnya: bab-4-7.html
+kod_seterusnya: '4.7'
+og_image_v: '20260420'
+description: 'Nota Sejarah Tingkatan 4 Bab 4.6 (Era Peralihan Kuasa British di Negara Kita): Penyerahan Sabah kepada Kerajaan
+  British. Ringkasan padat untuk ulang kaji SPM.'
+lead: Subtopik ini menerangkan mengapa [Sabah]{tempat} diserahkan kepada kerajaan British selepas [Perang Dunia Kedua]{masa},
+  termasuk kepentingan British, hubungan luar yang sudah dikuasai British dan masalah kewangan [Syarikat Borneo Utara British
+  (SBUB)]{pentadbiran}.
+ringkasan:
+- '[globe_meridians] Selepas [Perang Dunia Kedua]{masa}, [Sabah]{tempat} diserahkan kepada kerajaan British dan dijadikan
+  [tanah jajahan British]{istilah}.'
+- '[classical_building] Selepas tentera Jepun menyerah kalah, British memperkenalkan [British Military Administration (BMA)]{pentadbiran}
+  di Sabah.'
+- '[money-bag] Penyerahan ini berlaku kerana tiga faktor utama, iaitu memenuhi kepentingan British, meneruskan dasar British
+  dalam hubungan luar dan masalah kewangan [SBUB]{pentadbiran}.'
+- '[person] Sebagai tanah jajahan British, Sabah ditadbir oleh [Gabenor British]{tokoh}, dan gabenor pertamanya ialah [Sir
+  Edward Twining]{tokoh}.'
+soalan_utama:
+  soalan: Mengapakah Sabah diserahkan kepada kerajaan British selepas Perang Dunia Kedua?
+  heading: Mengapakah Sabah diserahkan kepada kerajaan British selepas Perang Dunia Kedua?
+  jawapan:
+  - '[light_bulb] Selepas [Perang Dunia Kedua]{masa}, [Sabah]{tempat} diserahkan kepada kerajaan British dan dijadikan tanah
+    jajahan British. Penyerahan ini berlaku kerana kepentingan British, dasar hubungan luar yang sudah dikuasai British, serta
+    masalah kewangan yang dihadapi oleh [Syarikat Borneo Utara British (SBUB)]{pentadbiran}.'
+bahagian:
+- tajuk: Faktor Penyerahan Sabah kepada British
+  label: Bahagian Pertama
+  desc: ''
+  kandungan:
+  - jenis: accordion
+    items:
+    - tajuk: Memenuhi Kepentingan British
+      senarai:
+      - '[pushpin] British melihat [Sabah]{tempat} sebagai kawasan yang penting untuk kepentingan ekonomi dan politik mereka.'
+      - '[pushpin] Pada masa itu, Perdana Menteri Britain ialah:'
+      - '[pushpin] British sedang menyelesaikan isu pemberian kemerdekaan kepada:'
+      - '[pushpin] Dalam keadaan itu, Sabah dilihat sebagai wilayah yang berpotensi menggantikan kepentingan British di kawasan
+        lain.'
+      - '[light_bulb] Oleh itu, British mahu terus menguasai Sabah untuk menjaga kepentingan ekonominya.'
+      - '[person] Clement Attlee'
+    - tajuk: Meneruskan Dasar British dalam Hubungan Luar
+      senarai:
+      - '[pushpin] Semasa pemerintahan [SBUB]{pentadbiran}, Sabah sebenarnya sudah berada di bawah:'
+      - '[pushpin] British telah menguasai:'
+      - '[light_bulb] Keadaan ini menyebabkan SBUB lebih mudah membuat keputusan untuk menyerahkan Sabah kepada kerajaan British
+        pada tahun 1946.'
+      - '[light_bulb] Penyerahan ini juga menunjukkan bahawa pengaruh British di Sabah sudah lama wujud sebelum Sabah dijadikan
+        tanah jajahan secara rasmi.'
+      - '[shield] Naungan British'
+    - tajuk: Masalah Kewangan SBUB
+      senarai:
+      - '[pushpin] [SBUB]{pentadbiran} menghadapi masalah kewangan yang serius selepas perang.'
+      - '[pushpin] Sebelum meninggalkan Sabah, tentera Jepun telah memusnahkan beberapa bandar penting seperti:'
+      - '[pushpin] Kemusnahan ini menyebabkan Sabah memerlukan kos yang sangat besar untuk dipulihkan.'
+      - '[pushpin] SBUB tidak mempunyai dana yang mencukupi untuk membangunkan semula Sabah.'
+      - '[light_bulb] Oleh itu, syarikat tersebut bersetuju menyerahkan Sabah kepada British.'
+      - '[cityscape] Jesselton'
+      - '[cityscape] Kudat'
+      - '[cityscape] Sandakan'
+kesimpulan:
+- '[light_bulb] Penyerahan Sabah menunjukkan British mahu terus menguasai negeri itu selepas perang.'
+- '[pushpin] Penyerahan Sabah kepada British berlaku kerana:'
+- '[pushpin] Penyerahan ini menyebabkan Sabah berubah daripada wilayah di bawah [Syarikat Borneo Utara British]{pentadbiran}
+  kepada [tanah jajahan British]{istilah}.'
+- '[light_bulb] Peristiwa ini membuktikan bahawa British bukan sahaja mahu memulihkan Sabah selepas perang, tetapi juga ingin
+  terus menguasai negeri itu demi kepentingan politik dan ekonominya.'
+- '[hibiscus] Oleh itu, penyerahan Sabah kepada British menjadi satu peristiwa penting dalam sejarah negeri tersebut kerana
+  membuka jalan kepada perubahan pentadbiran dan perkembangan politik selepas perang.'
+- '[globe_meridians] Kepentingan British di Sabah'
+- '[globe] Penguasaan British dalam hubungan luar dan pertahanan'
+- '[money-bag] Masalah kewangan SBUB selepas kemusnahan perang'

@@ -1,0 +1,137 @@
+subtopik: '3.5'
+tajuk: Faktor Kedatangan Jepun ke Negara Kita
+bab: 3
+tajuk_bab: Konflik Dunia dan Pendudukan Jepun
+bab_label: Bab 3
+subjek: Sejarah
+tingkatan: 4
+tema: bab-theme-3
+audio: false
+has_quiz: false
+fail_sebelum: bab-3-4.html
+fail_seterusnya: bab-3-6.html
+kod_seterusnya: '3.6'
+og_image_v: '20260420'
+description: 'Nota Sejarah Tingkatan 4 Bab 3.5 (Konflik Dunia dan Pendudukan Jepun di Negara Kita): Faktor Kedatangan Jepun
+  ke Negara Kita. Ringkasan padat untuk ulang kaji SPM.'
+lead: Subtopik ini menghuraikan sebab Jepun datang ke negara kita, iaitu untuk [mengeksploitasi sumber bahan mentah]{istilah}
+  dan memanfaatkan [kepentingan strategik ketenteraan]{istilah} negara kita dalam usaha peluasan kuasa Jepun di Asia Tenggara.
+ringkasan:
+- '[sushi] Jepun datang ke negara kita kerana dua faktor utama, iaitu [eksploitasi sumber bahan mentah]{istilah} dan [kepentingan
+  strategik ketenteraan]{istilah}.'
+- '[calendar] Pada [8 Disember 1941]{tahun}, tentera Jepun mula menyerang [Tanah Melayu]{tempat}, manakala pada [16 Disember
+  1941]{tahun} Jepun melancarkan serangan ke atas [Sarawak]{tempat} dan [Sabah]{tempat}.'
+- '[pick] Negara kita menjadi sasaran kerana kaya dengan bahan mentah seperti bijih timah, getah, emas, bijih besi, arang
+  batu, bauksit dan petroleum.'
+- '[anchor] Kedudukan strategik negara kita pula penting untuk ketenteraan Jepun, khususnya bagi menguasai pangkalan di Singapura,
+  telaga minyak di Sumatera dan laluan ke Pulau Jawa.'
+soalan_utama:
+  soalan: Mengapakah Jepun datang menyerang dan menduduki negara kita pada tahun 1941–1942?
+  heading: Mengapakah Jepun datang menyerang dan menduduki negara kita pada tahun 1941–1942?
+  jawapan:
+  - '[light_bulb] Jepun datang ke negara kita kerana dua faktor utama, iaitu [eksploitasi sumber bahan mentah]{istilah} dan
+    [kepentingan strategik ketenteraan]{istilah}.'
+  - '[pushpin] Jepun mahu mengeksploitasi kekayaan bahan mentah negara kita untuk keperluan perindustrian dan peperangan.'
+  - '[pushpin] Pada masa yang sama, kedudukan negara kita sangat penting untuk pergerakan tentera Jepun dalam menawan kawasan
+    lain di Asia Tenggara.'
+fokus: 'Jepun menyerang Tanah Melayu (Disember 1941) demi ekonomi dan strategi. Tiga aspek:'
+bahagian:
+- tajuk: Faktor Kedatangan Jepun ke Negara Kita
+  label: Bahagian Pertama
+  desc: ''
+  kandungan:
+  - jenis: board
+    tajuk: ''
+    strip: false
+    senarai:
+    - '[keycap_1] Eksploitasi Sumber Bahan Mentah'
+    - '[keycap_2] Kepentingan Strategik Ketenteraan'
+- tajuk: Eksploitasi Sumber Bahan Mentah
+  label: Bahagian Kedua
+  desc: ''
+  kandungan:
+  - jenis: board
+    tajuk: ''
+    strip: false
+    senarai:
+    - '[pick] bijih timah'
+    - '[herb] getah'
+    - '[coin] emas'
+    - '[chains] bijih besi'
+    - '[black-circle] arang batu'
+    - '[brick] bauksit'
+  - jenis: board
+    tajuk: Lingkungan Sekemakmuran Asia Timur Raya
+    strip: true
+    senarai: []
+- tajuk: Kepentingan Strategik Ketenteraan
+  label: Bahagian Ketiga
+  desc: ''
+  kandungan:
+  - jenis: board
+    tajuk: ''
+    strip: false
+    senarai: []
+  - jenis: board
+    tajuk: Info
+    strip: true
+    senarai: []
+- tajuk: Serangan Jepun terhadap Negara Kita
+  label: Bahagian Keempat
+  desc: ''
+  kandungan:
+  - jenis: board
+    tajuk: ''
+    strip: false
+    senarai:
+    - '[beach-with-umbrella] Pantai Kuala Pak Amat'
+    - '[beach-with-umbrella] Pantai Sabak'
+    - '[round-pushpin] Kota Bharu'
+    - '[round-pushpin] Singgora'
+    - '[round-pushpin] Patani'
+  - jenis: board
+    tajuk: Tentangan British
+    strip: true
+    senarai:
+    - '[pushpin] Kapal perang British [Repulse]{tempat} dan [Prince of Wales]{tempat} digerakkan untuk menyekat kemaraan Jepun
+      tetapi ditenggelamkan oleh tentera Jepun di perairan [Kuantan]{tempat}.'
+  - jenis: accordion
+    items:
+    - tajuk: A. Kemaraan di Tanah Melayu dan Singapura
+      senarai:
+      - '[pushpin] Serangan tentera Jepun di Tanah Melayu berlaku melalui [tiga laluan kemaraan utama]{istilah}.'
+      - '[pushpin] Kemaraan dari Thailand sebenarnya berpecah kepada dua laluan utama, menjadikan jumlah keseluruhan laluan
+        serangan Jepun di Tanah Melayu sebanyak tiga.'
+      - '[light_bulb] Ini menunjukkan bahawa kemaraan tentera Jepun sangat terancang dan dilakukan dari beberapa arah secara
+        serentak.'
+      - '[pushpin] Kapal perang British [Repulse]{tempat} dan [Prince of Wales]{tempat} digerakkan untuk menyekat kemaraan
+        Jepun tetapi ditenggelamkan oleh tentera Jepun di perairan [Kuantan]{tempat}.'
+      - '[keycap_1] Laluan Pantai Timur – tentera Jepun mendarat di Kota Bharu (Kelantan) dan mara ke selatan melalui pantai
+        timur'
+      - '[keycap_2] Laluan Pantai Barat – tentera Jepun mendarat di Singgora dan Patani (Thailand), memasuki Kedah dan bergerak
+        melalui pantai barat'
+      - '[keycap_3] Laluan Darat Tengah – pasukan dari Thailand bergerak melalui jalan darat menuju bandar utama di Tanah
+        Melayu'
+    - tajuk: B. Kemaraan di Sarawak dan Sabah
+      senarai:
+      - '[pushpin] Serangan tentera Jepun ke atas Sarawak dan Sabah bermula dengan pendaratan di [Miri]{tempat}.'
+      - '[pushpin] Sepasukan tentera Jepun mara menduduki [Kuching]{tempat} dan [Sibu]{tempat}.'
+      - '[pushpin] Sepasukan lagi tentera Jepun mara ke [Sabah]{tempat} melalui [Labuan]{tempat} dan menduduki bandar utama
+        di Sabah.'
+      - '[pushpin] Pendudukan Jepun di [Sandakan]{tempat} melengkapkan kempen serangan tentera Jepun di Sabah.'
+      - '[round-pushpin] Miri – 16 Disember 1941'
+      - '[round-pushpin] Kuching – 24 Disember 1941'
+      - '[round-pushpin] Sibu – 27 Disember 1941'
+      - '[round-pushpin] Labuan – 1 Januari 1942'
+      - '[round-pushpin] Beaufort – 5 Januari 1942'
+      - '[round-pushpin] Jesselton – 9 Januari 1942'
+      - '[round-pushpin] Sandakan – 19 Januari 1942'
+kesimpulan:
+- '[pushpin] Jepun datang ke negara kita kerana:'
+- '[pushpin] Serangan Jepun dilakukan secara pantas dan terancang melalui beberapa arah di [Tanah Melayu]{tempat}, [Sarawak]{tempat}
+  dan [Sabah]{tempat}.'
+- '[pushpin] Akhirnya, seluruh negara kita jatuh ke tangan Jepun dan menjadi sebahagian daripada empayar tenteranya di Asia.'
+- '[light_bulb] Peristiwa ini membuktikan bahawa kekayaan sumber alam dan kedudukan strategik negara kita telah menjadikan
+  tanah air kita sasaran kuasa asing.'
+- '[pick] eksploitasi sumber bahan mentah'
+- '[anchor] kepentingan strategik ketenteraan'

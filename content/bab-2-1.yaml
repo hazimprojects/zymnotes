@@ -1,0 +1,112 @@
+subtopik: '2.1'
+tajuk: Maksud Nasionalisme
+bab: 2
+tajuk_bab: Kebangkitan Nasionalisme
+bab_label: Bab 2
+subjek: Sejarah
+tingkatan: 4
+tema: bab-theme-2
+audio: true
+has_quiz: true
+fail_sebelum: bab-2.html
+fail_seterusnya: bab-2-2.html
+kod_seterusnya: '2.2'
+og_image_v: '20260420'
+description: 'Nota Sejarah Tingkatan 4 Bab 2.1 (Kebangkitan Nasionalisme): Maksud Nasionalisme. Ringkasan padat untuk ulang
+  kaji SPM.'
+lead: Subtopik ini menjelaskan maksud [nasionalisme]{istilah} serta bagaimana idea ini difahami melalui pandangan beberapa
+  [tokoh]{tokoh} dan sejarawan. Pemahaman terhadap nasionalisme penting kerana ia menjadi asas kepada semangat perjuangan
+  bangsa dan negara.
+ringkasan:
+- '[red_heart] [Nasionalisme]{istilah} ialah perasaan cinta yang mendalam terhadap bangsa dan negara.'
+- '[crossed_swords] Nasionalisme mendorong perjuangan untuk menentang penjajahan, membela bangsa dan tanah air serta mencapai
+  kebebasan.'
+- '[brain] Maksud nasionalisme tidak statik, sebaliknya berbeza mengikut keturunan, agama, bahasa, adat resam dan pengalaman
+  sejarah.'
+- '[person] Beberapa [tokoh]{tokoh} dan sejarawan memberikan tafsiran yang berbeza mengikut konteks masyarakat dan zamannya.'
+soalan_utama:
+  soalan: Apa itu nasionalisme? Kenapa penting kita memahaminya?
+  heading: Nasionalisme ialah perasaan cinta yang mendalam terhadap bangsa dan negara.
+  jawapan:
+  - '[light_bulb] [Nasionalisme]{istilah} ialah perasaan cinta yang mendalam terhadap bangsa dan negara.'
+  - '[light_bulb] Pemahaman terhadap nasionalisme penting kerana semangat ini mendorong rakyat untuk mempertahankan hak, menolak
+    penjajahan dan membina negara yang berdaulat.'
+fokus: 'Nasionalisme: kesedaran mempertahankan dan membebaskan bangsa daripada kuasa asing. Definisi, faktor makna, pandangan
+  tokoh, matlamat:'
+bahagian:
+- tajuk: Maksud nasionalisme boleh berbeza mengikut konteks
+  label: Bahagian Pertama
+  desc: ''
+  kandungan:
+  - jenis: board
+    tajuk: ''
+    strip: false
+    senarai:
+    - '[dna] Keturunan'
+    - '[mosque] Agama'
+    - '[speaking_head] Bahasa'
+    - '[japanese_dolls] Adat resam'
+    - '[clock] Pengalaman sejarah'
+    - '[books] Zaman tertentu'
+- tajuk: Pendapat tokoh terkenal tentang nasionalisme
+  label: Bahagian Kedua
+  desc: Setiap tokoh memberikan pandangan berdasarkan konteks masyarakat dan zamannya. Klik setiap tokoh untuk membaca pandangannya.
+  kandungan:
+  - jenis: accordion
+    items:
+    - tajuk: Hans Kohn
+      senarai:
+      - '[speech_left] "Nasionalisme merupakan satu gerakan yang meletakkan kesetiaan seseorang hanya kepada negara atau bangsanya."'
+      - '[magnify_right] Intipati: [Nasionalisme]{istilah} ialah kesetiaan sepenuhnya kepada negara dan tanah air.'
+    - tajuk: Profesor William R. Roff
+      senarai:
+      - '[speech_left] "Kebangkitan nasionalisme Melayu berlaku kerana ancaman terhadap hak dan ekonomi orang Melayu, serta
+        kebimbangan terhadap sekularisme dan imperialisme Barat."'
+      - '[pushpin] Intipati: [Nasionalisme]{istilah} timbul akibat tekanan luar dan keperluan mempertahankan identiti.'
+    - tajuk: Dato' Onn Jaafar
+      senarai:
+      - '[speech_left] "Kita hendak menzahirkan suatu bangsa yang tegap, kuat, berdikari dan setanding dengan bangsa lain."'
+      - '[megaphone] Intipati: [Nasionalisme]{istilah} membina jati diri dan keyakinan bangsa.'
+    - tajuk: Dr. Burhanuddin al-Helmi
+      senarai:
+      - '[speech_left] "Perjuangan mesti dilakukan dengan persatuan, tatatertib dan adab sopan, demi menebus kembali hak mutlak
+        bangsa."'
+      - '[raised_fist] Intipati: [Nasionalisme]{istilah} mesti disertai akhlak, tatatertib dan perpaduan.'
+    - tajuk: Dr. R. Suntharalingam
+      senarai:
+      - '[speech_left] "Nasionalisme ialah fenomena sejagat — setiap bangsa berhak membentuk negara dan memindahkan kedaulatan
+        kepada rakyat."'
+      - '[classical_building] Intipati: Setiap bangsa mempunyai hak untuk merdeka dan mentadbir sendiri.'
+    - tajuk: Profesor Datuk Zainal Abidin Abdul Wahid
+      senarai:
+      - '[speech_left] "Nasionalisme Melayu telah wujud sejak Kesultanan Melayu Melaka — dengan kesetiaan kepada raja sebagai
+        ciri utama."'
+      - '[crown] Intipati: Nasionalisme Melayu berkait dengan cinta tanah air dan kesetiaan kepada institusi raja.'
+    - tajuk: Profesor Emeritus Tan Sri Dr. Khoo Kay Kim
+      senarai:
+      - '[speech_left] "Nasionalisme sebelum merdeka ialah perjuangan orang Melayu untuk mendapatkan kembali kedudukan unggul
+        dalam negara sendiri."'
+      - '[pushpin] Intipati: [Nasionalisme]{istilah} ialah usaha mengembalikan maruah dan kedudukan bangsa.'
+- tajuk: Rumusan pandangan tokoh
+  label: Bahagian Ketiga
+  desc: ''
+  kandungan:
+  - jenis: board
+    tajuk: Rumusan pandangan tokoh
+    strip: true
+    senarai:
+    - '[red_heart] Cinta akan bangsa dan negara'
+    - '[shield] Mempertahankan hak dan identiti'
+    - '[classical_building] Hak mentadbir negara sendiri'
+    - '[handshake_light] Perpaduan dan persatuan'
+    - '[crown] Kesetiaan kepada tanah air dan institusi bangsa'
+    - '[chart] Membina keyakinan dan maruah bangsa'
+kesimpulan:
+- '[light_bulb] [Nasionalisme]{istilah} berubah mengikut zaman, sejarah dan pemimpin.'
+- '[brain] Berubah mengikut zaman, sejarah dan pemimpin'
+- '[red_heart] Lahir dari cinta akan tanah air'
+- '[brick] Membina negara bangsa dan identiti sendiri'
+- '[speech_balloon] Melahirkan perasaan kekitaan'
+- '[globe] Membebaskan negara daripada penjajahan'
+- '[hibiscus] Membina bangsa bersatu dan negara berdaulat'
+- '[fire] Inilah semangat [nasionalisme]{istilah} yang menjadi asas perjuangan rakyat kita.'

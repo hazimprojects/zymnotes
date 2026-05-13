@@ -1,0 +1,122 @@
+subtopik: '2.6'
+tajuk: Faktor Kemunculan Gerakan Nasionalisme
+bab: 2
+tajuk_bab: Kebangkitan Nasionalisme
+bab_label: Bab 2
+subjek: Sejarah
+tingkatan: 4
+tema: bab-theme-2
+audio: true
+has_quiz: true
+fail_sebelum: bab-2-5.html
+fail_seterusnya: bab-2-7.html
+kod_seterusnya: '2.7'
+og_image_v: '20260420'
+description: 'Nota Sejarah Tingkatan 4 Bab 2.6 (Kebangkitan Nasionalisme): Faktor Kemunculan Gerakan Nasionalisme. Ringkasan
+  padat untuk ulang kaji SPM.'
+lead: Subtopik ini menerangkan faktor-faktor yang menyebabkan semangat [nasionalisme]{istilah} semakin kuat pada abad ke-20.
+  Kesedaran ini tidak muncul secara tiba-tiba, sebaliknya dipengaruhi oleh agama, penulisan, media, pendidikan, golongan intelektual
+  dan pengaruh luar.
+ringkasan:
+- '[brain] Semangat [nasionalisme]{istilah} semakin kuat pada abad ke-20 akibat gabungan pelbagai faktor dalaman dan luaran.'
+- '[mosque] Agama, pendidikan, penulisan, media dan pengaruh antarabangsa memainkan peranan besar dalam membangkitkan kesedaran
+  rakyat.'
+- '[writing-hand] Kesedaran ini disebarkan melalui karya kreatif, akhbar, madrasah, institusi pendidikan dan penubuhan persatuan.'
+- '[fire] Semua faktor ini akhirnya melahirkan tokoh dan gerakan yang menjadi asas perjuangan kemerdekaan Tanah Melayu.'
+soalan_utama:
+  soalan: Apa yang menyebabkan semangat nasionalisme semakin kuat pada abad ke-20?
+  heading: Apa yang menyebabkan semangat nasionalisme semakin kuat pada abad ke-20?
+  jawapan:
+  - '[light_bulb] Banyak faktor dalaman dan luaran seperti agama, pendidikan, penulisan, media dan pengaruh antarabangsa telah
+    mencetuskan kesedaran rakyat untuk bangkit menentang penjajahan.'
+fokus: 'Nasionalisme Melayu abad ke-20 dipacu faktor dalaman dan luaran. Enam faktor utama:'
+bahagian:
+- tajuk: Peranan Agama
+  label: Bahagian Pertama
+  desc: ''
+  kandungan:
+  - jenis: board
+    tajuk: ''
+    strip: false
+    senarai:
+    - '[man-wearing-turban] [Sayyid Jamal al-Din al-Afghani]{tokoh}'
+    - '[man-wearing-turban] [Sheikh Muhammad Abduh]{tokoh}'
+    - '[man-wearing-turban] [Rashid Rida]{tokoh}'
+- tajuk: Penulisan Kreatif
+  label: Bahagian Kedua
+  desc: ''
+  kandungan:
+  - jenis: board
+    tajuk: ''
+    strip: false
+    senarai:
+    - '[green-book] [Melor Kuala Lumpur]{karya} – [Harun Aminurrashid]{tokoh}'
+    - '[closed-book] [Cerita Awang Putat]{karya} – [Abdul Rahim Kajai]{tokoh}'
+    - '[blue-book] [Putera Gunung Tahan]{karya} – [Ishak Haji Muhammad]{tokoh}'
+    - '[blue-book] [Anak Mat Lela Gila]{karya} – [Ishak Haji Muhammad (Pak Sako)]{tokoh}'
+- tajuk: Media Cetak
+  label: Bahagian Ketiga
+  desc: ''
+  kandungan:
+  - jenis: board
+    tajuk: ''
+    strip: false
+    senarai:
+    - '[newspaper] menyampaikan berita kepada masyarakat'
+    - '[loudspeaker] menyebarkan idea pembaharuan'
+    - '[brain] meningkatkan kesedaran tentang hak rakyat'
+- tajuk: Sistem Pendidikan
+  label: Bahagian Keempat
+  desc: ''
+  kandungan:
+  - jenis: accordion
+    items:
+    - tajuk: Madrasah Islam moden
+      senarai:
+      - '[pushpin] Madrasah moden menyebarkan idea pembaharuan Islam.'
+      - '[light_bulb] Madrasah ini menerima pengaruh [Kaum Muda]{istilah} dari Sumatera serta pelajar yang pulang dari Mesir.'
+      - '[school] [Madrasah al-Attas]{pertubuhan}, Johor Bahru ([1914]{tahun})'
+      - '[school] [Madrasah al-Masyhur]{pertubuhan}, Pulau Pinang ([1916]{tahun})'
+      - '[school] [Madrasah al-Idrisiyah]{pertubuhan}, Kuala Kangsar ([1926]{tahun})'
+    - tajuk: Pendidikan Barat
+      senarai:
+      - '[pushpin] Institusi pendidikan Barat turut melahirkan tokoh nasionalis.'
+      - '[pushpin] [SITC]{pertubuhan} menjadi pusat penting dalam melahirkan penulis dan pemimpin masyarakat.'
+      - '[pushpin] Di SITC, pelajar membincangkan idea nasionalisme dan menghasilkan penulisan untuk menyedarkan masyarakat.'
+      - '[school] [Raffles Institution]{pertubuhan}, Singapura'
+      - '[school] [Malay College Kuala Kangsar (MCKK)]{pertubuhan}'
+      - '[school] [Sultan Idris Training College (SITC)]{pertubuhan}'
+- tajuk: Kemunculan Golongan Intelektual
+  label: Bahagian Kelima
+  desc: ''
+  kandungan:
+  - jenis: board
+    tajuk: ''
+    strip: false
+    senarai:
+    - '[mosque] [Syed Sheikh al-Hadi]{tokoh} – pelopor reformasi pemikiran'
+- tajuk: Pengaruh Luar & Serantau
+  label: Bahagian Keenam
+  desc: ''
+  kandungan:
+  - jenis: board
+    tajuk: ''
+    strip: false
+    senarai:
+    - '[mosque] [Pan-Islamisme]{istilah} – menyeru perpaduan umat Islam menentang penjajahan'
+    - '[dove] [Gerakan Islah]{gerakan} – menggalakkan pembaharuan masyarakat Islam secara progresif'
+    - '[crossed_swords] [Kemenangan Jepun ke atas Rusia (1905)]{peristiwa} – membuktikan negara Asia mampu menewaskan kuasa
+      Barat'
+    - '[globe_meridians] [Revolusi China]{peristiwa} – Dr. Sun Yat Sen menumbangkan kerajaan Manchu dan menubuhkan republik'
+    - '[globe_meridians] [Perjuangan Mahatma Gandhi]{tokoh} – menentang British melalui gerakan tanpa kekerasan'
+    - '[globe_meridians] gerakan nasionalisme di Filipina dan Indonesia – memberi inspirasi kepada rakyat Tanah Melayu'
+kesimpulan:
+- '[light_bulb] Gerakan nasionalisme di negara kita tidak muncul secara tiba-tiba.'
+- '[light_bulb] Ia dipengaruhi oleh pelbagai faktor seperti:'
+- '[fire] Semua usaha ini akhirnya menjadi asas penting kepada perjuangan kemerdekaan Tanah Melayu.'
+- '[mosque] peranan agama'
+- '[books] penulisan kreatif'
+- '[newspaper] media cetak'
+- '[school] sistem pendidikan'
+- '[graduation-cap] kemunculan golongan intelektual'
+- '[globe] pengaruh luar dan serantau'

@@ -1,0 +1,124 @@
+subtopik: '5.3'
+tajuk: Ciri-ciri Persekutuan Tanah Melayu 1948
+bab: 5
+tajuk_bab: Persekutuan Tanah Melayu 1948
+bab_label: Bab 5
+subjek: Sejarah
+tingkatan: 4
+tema: bab-theme-5
+audio: false
+has_quiz: false
+fail_sebelum: bab-5-2.html
+fail_seterusnya: bab-5-4.html
+kod_seterusnya: '5.4'
+og_image_v: '20260420'
+description: 'Nota Sejarah Tingkatan 4 Bab 5.3 (Persekutuan Tanah Melayu 1948): Ciri-ciri Persekutuan Tanah Melayu 1948. Ringkasan
+  padat untuk ulang kaji SPM.'
+lead: Subtopik ini menerangkan ciri-ciri utama [Persekutuan Tanah Melayu 1948]{pentadbiran} dari segi [pentadbiran]{istilah},
+  [kuasa Raja-raja Melayu]{istilah}, [perundangan]{istilah} dan [kewarganegaraan]{istilah}.
+ringkasan:
+- '[scroll_old] [Perjanjian Persekutuan Tanah Melayu 1948]{perjanjian} dirangka oleh [Jawatankuasa Kerja]{pertubuhan} dalam
+  tempoh lima bulan dan dibentangkan pada [20 November 1946]{masa}.'
+- '[classical_building] Ciri utama [Persekutuan Tanah Melayu 1948]{pentadbiran} meliputi [pentadbiran]{istilah}, [kuasa Raja-raja
+  Melayu]{istilah}, [perundangan]{istilah} dan [kewarganegaraan]{istilah}.'
+- '[crown] Sistem baharu ini memulihkan semula kedudukan [Raja-raja Melayu]{tokoh} dan lebih menjaga status [Tanah Melayu]{tempat}.'
+- '[identification-card] Syarat [kewarganegaraan]{istilah} dalam persekutuan ini diperketatkan berbanding [Malayan Union]{pentadbiran}.'
+soalan_utama:
+  soalan: Apakah ciri-ciri utama Persekutuan Tanah Melayu 1948?
+  heading: Apakah ciri-ciri utama Persekutuan Tanah Melayu 1948?
+  jawapan:
+  - '[light_bulb] [Perjanjian Persekutuan Tanah Melayu 1948]{perjanjian} dirangka oleh [Jawatankuasa Kerja]{pertubuhan} dalam
+    tempoh lima bulan.'
+  - '[calendar] Rangka perjanjian ini dibentangkan pada [20 November 1946]{masa} dalam satu persidangan yang dihadiri oleh
+    [Raja-raja Melayu]{tokoh}, wakil [British]{pertubuhan} dan [UMNO]{pertubuhan}.'
+  - '[pushpin] Ciri-ciri utama [Persekutuan Tanah Melayu 1948]{pentadbiran} meliputi [pentadbiran]{istilah}, [kuasa Raja-raja
+    Melayu]{istilah}, [perundangan]{istilah} dan [kewarganegaraan]{istilah}.'
+bahagian:
+- tajuk: Pentadbiran
+  label: Bahagian Pertama
+  desc: ''
+  kandungan:
+  - jenis: board
+    tajuk: ''
+    strip: false
+    senarai:
+    - '[brown-circle] sembilan buah [negeri Melayu]{tempat}'
+    - '[orange-circle] dua buah [Negeri-negeri Selat]{tempat}'
+  - jenis: accordion
+    items:
+    - tajuk: Ketua Pentadbiran
+      senarai:
+      - '[pushpin] Kerajaan Persekutuan diketuai oleh:'
+      - '[pushpin] [Pesuruhjaya Tinggi British]{tokoh} mempunyai:'
+      - '[pushpin] Kerajaan Persekutuan pula bertanggungjawab dalam:'
+      - '[person] [Pesuruhjaya Tinggi British]{tokoh}'
+    - tajuk: Majlis Mesyuarat Persekutuan dan Majlis Perundangan
+      senarai:
+      - '[pushpin] Persekutuan ditubuhkan bagi membantu [Pesuruhjaya Tinggi British]{tokoh} melalui dua badan utama:'
+      - '[pushpin] [Majlis Mesyuarat Persekutuan]{pertubuhan} mengandungi:'
+      - '[pushpin] Pada peringkat awal, ahli tidak rasmi dilantik oleh:'
+      - '[pushpin] Ahli [Majlis Perundangan Persekutuan]{pertubuhan} pula terdiri daripada:'
+      - '[light_bulb] Ini menunjukkan pentadbiran Persekutuan mempunyai struktur yang lebih tersusun berbanding [Malayan Union]{pentadbiran}.'
+      - '[classical_building] [Majlis Mesyuarat Persekutuan]{pertubuhan}'
+      - '[scroll_old] [Majlis Perundangan Persekutuan]{pertubuhan}'
+- tajuk: Kuasa Raja-raja Melayu
+  label: Bahagian Kedua
+  desc: ''
+  kandungan:
+  - jenis: board
+    tajuk: ''
+    strip: false
+    senarai:
+    - '[crown] [Majlis Raja-Raja]{pertubuhan}'
+- tajuk: Perundangan
+  label: Bahagian Ketiga
+  desc: ''
+  kandungan:
+  - jenis: board
+    tajuk: ''
+    strip: false
+    senarai:
+    - '[person] [Pesuruhjaya Tinggi]{tokoh}'
+- tajuk: Kewarganegaraan
+  label: Bahagian Keempat
+  desc: ''
+  kandungan:
+  - jenis: board
+    tajuk: ''
+    strip: false
+    senarai:
+    - '[keycap_1] kewarganegaraan secara kuat kuasa undang-undang'
+    - '[keycap_2] kewarganegaraan secara pendaftaran'
+  - jenis: accordion
+    items:
+    - tajuk: Kewarganegaraan Secara Kuat Kuasa Undang-undang
+      senarai:
+      - '[pushpin] Prinsip [jus soli]{istilah} hanya terbuka kepada:'
+      - '[pushpin] Bagi pemohon yang lahir di luar negeri ayahnya, ayahnya mestilah:'
+      - '[pushpin] Selain itu, golongan berikut juga boleh memohon kewarganegaraan:'
+      - '[pushpin] Permohonan ini tertakluk kepada mana-mana undang-undang yang dikuatkuasakan.'
+      - '[crown] [rakyat Raja]{istilah}'
+      - '[globe_meridians] [rakyat British]{istilah}'
+    - tajuk: Glosari · Rakyat Raja dan Rakyat British
+      senarai:
+      - '[open_book] [Rakyat Raja]{istilah} → orang Melayu dan Orang Asli yang lahir dan tinggal di negeri Melayu yang mempunyai
+        sultan.'
+      - '[open_book] [Rakyat British]{istilah} → mereka yang lahir di [Melaka]{tempat}, [Pulau Pinang]{tempat} dan mana-mana
+        tanah jajahan British yang lain.'
+    - tajuk: Kewarganegaraan Secara Pendaftaran
+      senarai:
+      - '[pushpin] Kewarganegaraan secara pendaftaran diberikan kepada mereka yang:'
+      - '[pushpin] Seseorang pemohon juga perlu:'
+      - '[light_bulb] Syarat ini menunjukkan bahawa kewarganegaraan dalam [Persekutuan Tanah Melayu 1948]{pentadbiran} lebih
+        ketat berbanding [Malayan Union]{pentadbiran}.'
+      - '[house] dilahirkan dalam [Persekutuan Tanah Melayu]{pentadbiran}'
+      - '[calendar] bermastautin selama [15 tahun]{istilah} daripada tempoh [20 tahun]{istilah} dari hari permohonannya'
+kesimpulan:
+- '[pushpin] [Persekutuan Tanah Melayu 1948]{pentadbiran} mempunyai ciri penting dari segi:'
+- '[pushpin] Melalui perjanjian ini:'
+- '[light_bulb] Oleh itu, [Persekutuan Tanah Melayu 1948]{pentadbiran} menjadi asas penting kepada pembentukan sistem pentadbiran
+  negara yang lebih tersusun dan lebih menjaga kedudukan [Raja-raja Melayu]{tokoh} serta kepentingan penduduk tempatan.'
+- '[classical_building] pentadbiran'
+- '[crown] kuasa Raja-raja Melayu'
+- '[scroll_old] perundangan'
+- '[identification-card] kewarganegaraan'

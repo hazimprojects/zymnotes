@@ -1,0 +1,89 @@
+subtopik: '4.1'
+tajuk: British Military Administration
+bab: 4
+tajuk_bab: Era Peralihan Kuasa British
+bab_label: Bab 4
+subjek: Sejarah
+tingkatan: 4
+tema: bab-theme-4
+audio: false
+has_quiz: false
+fail_sebelum: bab-4.html
+fail_seterusnya: bab-4-2.html
+kod_seterusnya: '4.2'
+og_image_v: '20260420'
+description: 'Nota Sejarah Tingkatan 4 Bab 4.1 (Era Peralihan Kuasa British di Negara Kita): British Military Administration
+  (BMA). Ringkasan padat untuk ulang kaji SPM.'
+lead: Subtopik ini menerangkan peranan [British Military Administration (BMA)]{pentadbiran} di [Tanah Melayu]{tempat} selepas
+  [Jepun menyerah kalah]{masa}, serta menilai sejauh mana pentadbiran ini berjaya memulihkan keamanan, kehidupan rakyat dan
+  keyakinan terhadap British.
+ringkasan:
+- '[military-helmet] [British Military Administration (BMA)]{pentadbiran} ialah pentadbiran tentera British di [Tanah Melayu]{tempat}
+  yang bermula pada [12 September 1945]{masa}.'
+- '[person] BMA berada di bawah arahan [Lord Mountbatten]{tokoh}, manakala hal ehwal awam dirancang oleh [Brigedier Jeneral
+  H.C. Willan]{tokoh}.'
+- '[shield] Tujuan utama BMA ialah mengembalikan [kestabilan dan keamanan]{istilah} serta memulihkan [kepercayaan rakyat]{istilah}
+  terhadap British.'
+- '[warning] Walau bagaimanapun, BMA gagal mengawal masalah keselamatan, inflasi, pasar gelap, bekalan makanan dan pemulihan
+  ekonomi dengan berkesan.'
+soalan_utama:
+  soalan: Apakah peranan British Military Administration (BMA) di Tanah Melayu selepas Jepun menyerah kalah, dan sejauh manakah
+    pentadbiran ini berjaya?
+  heading: Apakah peranan British Military Administration (BMA) di Tanah Melayu selepas Jepun menyerah kalah, dan sejauh manakah
+    pentadbiran ini berjaya?
+  jawapan:
+  - '[light_bulb] [British Military Administration (BMA)]{pentadbiran} ialah pentadbiran tentera British di [Tanah Melayu]{tempat}
+    yang bertujuan memulihkan keamanan, kestabilan dan kepercayaan rakyat selepas perang. Namun, pentadbiran ini tidak berjaya
+    sepenuhnya kerana banyak masalah harian rakyat masih gagal diatasi.'
+fokus: 'BMA (1945): pentadbiran tentera British selepas Jepun kalah. Empat perkara:'
+bahagian:
+- tajuk: Pentadbiran Tentera British Selepas Perang
+  label: Bahagian Pertama
+  desc: ''
+  kandungan:
+  - jenis: board
+    tajuk: ''
+    strip: false
+    senarai:
+    - '[person] [Lord Mountbatten]{tokoh} → Pemerintah Tertinggi Tentera Bersekutu di Asia Tenggara ([1943–1946]{masa})'
+- tajuk: Dua Tugas Utama British Military Administration
+  label: Bahagian Kedua
+  desc: ''
+  kandungan:
+  - jenis: board
+    tajuk: ''
+    strip: false
+    senarai: []
+- tajuk: Ekonomi, Inflasi dan Pasar Gelap
+  label: Bahagian Ketiga
+  desc: ''
+  kandungan:
+  - jenis: board
+    tajuk: ''
+    strip: false
+    senarai:
+    - '[package] Menyorok barang'
+    - '[dollar-banknote] Rasuah'
+    - '[angry-face] Peras ugut'
+    - '[sunglasses] Pasar gelap'
+- tajuk: Harapan Rakyat terhadap BMA
+  label: Bahagian Keempat
+  desc: ''
+  kandungan:
+  - jenis: board
+    tajuk: ''
+    strip: false
+    senarai:
+    - '[shield] Menyelamatkan mereka'
+    - '[handshake_light] Memulihkan kehidupan harian'
+    - '[classical_building] Mengembalikan pentadbiran yang teratur'
+kesimpulan:
+- '[light_bulb] BMA cuba memulihkan negara, tetapi gagal memenuhi harapan rakyat.'
+- '[pushpin] Namun begitu, BMA gagal memenuhi harapan rakyat kerana tidak berjaya:'
+- '[light_bulb] Kegagalan BMA memberi kesedaran bahawa rakyat tidak boleh terlalu bergantung kepada kuasa asing untuk menyelesaikan
+  masalah negara.'
+- '[hibiscus] Sebaliknya, pengalaman ini mendorong rakyat supaya lebih berhati-hati, berwaspada dan yakin bahawa masa depan
+  negara harus ditentukan oleh rakyat sendiri.'
+- '[shield] Memulihkan keamanan negara'
+- '[handshake_light] Mengembalikan kepercayaan rakyat'
+- '[building-construction] Membaiki sosioekonomi dan infrastruktur'

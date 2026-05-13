@@ -1,0 +1,116 @@
+subtopik: '3.1'
+tajuk: Nasionalisme di Negara Kita Sebelum Perang Dunia
+bab: 3
+tajuk_bab: Konflik Dunia dan Pendudukan Jepun di Negara Kita
+bab_label: Bab 3
+subjek: Sejarah
+tingkatan: 4
+tema: bab-theme-3
+audio: false
+has_quiz: false
+fail_sebelum: bab-3.html
+fail_seterusnya: bab-3-2.html
+kod_seterusnya: '3.2'
+og_image_v: '20260420'
+description: 'Nota Sejarah Tingkatan 4 Bab 3.1 (Konflik Dunia dan Pendudukan Jepun di Negara Kita): Nasionalisme di Negara
+  Kita Sebelum Perang Dunia. Ringkasan padat untuk ulang kaji SPM.'
+lead: Subtopik ini menerangkan bagaimana [nasionalisme]{gerakan} mula berkembang di [Tanah Melayu]{tempat} sebelum tercetusnya
+  perang dunia. Perkembangan ini bermula daripada penentangan terhadap campur tangan [British]{tempat}, dipengaruhi oleh gerakan
+  Islam antarabangsa, dan diteruskan secara bijaksana melalui penulisan serta penerbitan.
+ringkasan:
+- '[hibiscus] [Nasionalisme]{gerakan} di negara kita berkembang daripada penentangan orang Melayu terhadap campur tangan [British]{tempat}.'
+- '[mosque] Perkembangannya turut dipengaruhi oleh semangat [Pan-Islamisme]{gerakan} dan kebangkitan [Empayar Uthmaniyah]{tempat}.'
+- '[writing-hand] Apabila penentangan terbuka ditekan, masyarakat Melayu menukar strategi kepada [penulisan]{istilah} dan
+  [penerbitan]{istilah}.'
+- '[dove] Idea nasionalisme kemudian disampaikan secara [simbolik]{istilah}, berlapik dan tersirat melalui akhbar serta karya
+  kreatif.'
+soalan_utama:
+  soalan: Bagaimanakah nasionalisme mula berkembang di Tanah Melayu sebelum tercetusnya Perang Dunia?
+  heading: Bagaimanakah nasionalisme mula berkembang di Tanah Melayu sebelum tercetusnya Perang Dunia?
+  jawapan:
+  - '[light_bulb] Nasionalisme di negara kita bermula daripada penentangan orang Melayu terhadap campur tangan British.'
+  - '[pushpin] Perkembangannya turut dipengaruhi oleh gerakan Islam antarabangsa, penulisan, penerbitan dan usaha masyarakat
+    Melayu menentang penjajahan secara bijaksana.'
+fokus: 'Nasionalisme tempatan berkembang berperingkat. Tiga fasa awal:'
+bahagian:
+- tajuk: Kesedaran Awal Nasionalisme
+  label: Bahagian Pertama
+  desc: ''
+  kandungan:
+  - jenis: board
+    tajuk: ''
+    strip: false
+    senarai:
+    - '[pushpin] Campur tangan [British]{tempat} ditentang secara terbuka oleh orang Melayu.'
+    - '[pushpin] Namun, penentangan ini menerima tindak balas keras daripada British.'
+    - '[pushpin] British bimbang akan pengaruh gerakan Islam dari [Timur Tengah]{tempat}, khususnya semangat [Pan-Islamisme]{gerakan}
+      dan kebangkitan [Empayar Uthmaniyah]{tempat}.'
+  - jenis: board
+    tajuk: Tindakan Awal British
+    strip: true
+    senarai:
+    - '[scroll_old] [Enakmen Undang-Undang Islam 1904]{perjanjian}'
+  - jenis: board
+    tajuk: Langkah Pengawasan British
+    strip: true
+    senarai:
+    - '[magnify_left] [Criminal Intelligence Department (CID)]{pertubuhan}'
+    - '[magnify_left] [Political Intelligence Bureau (PIB)]{pertubuhan}'
+  - jenis: board
+    tajuk: Penentangan Tok Janggut
+    strip: true
+    senarai:
+    - '[mosque] semangat mempertahankan agama Islam'
+    - '[stop-sign] kesedaran menentang penjajahan Barat'
+    - '[money-with-wings] penolakan terhadap cukai British'
+    - '[angry-face] bantahan terhadap sikap angkuh British'
+  - jenis: board
+    tajuk: Info Penting
+    strip: true
+    senarai:
+    - '[calendar] [11 November 1914]{tahun}'
+- tajuk: Kesan Penindasan dan Strategi Baharu
+  label: Bahagian Kedua
+  desc: ''
+  kandungan:
+  - jenis: board
+    tajuk: ''
+    strip: false
+    senarai:
+    - '[pushpin] Penentangan [Tok Janggut]{tokoh} akhirnya gagal akibat tindakan keras British.'
+    - '[pushpin] Keadaan ini menyebabkan masyarakat Melayu menyusun strategi baharu melalui [penulisan]{istilah} dan [penerbitan]{istilah}.'
+    - '[pushpin] Perjuangan tidak lagi dilakukan secara terbuka, tetapi disampaikan secara berlapik dan tersirat.'
+  - jenis: board
+    tajuk: Sekatan British terhadap Penulisan
+    strip: true
+    senarai:
+    - '[open_book] [Publishing and Book Enactment 1915]{perjanjian}'
+    - '[open_book] [The Seditious Publication (Prohibition) Enactment 1919]{perjanjian}'
+- tajuk: Pernyataan Nasionalisme Secara Berselindung
+  label: Bahagian Ketiga
+  desc: ''
+  kandungan:
+  - jenis: board
+    tajuk: ''
+    strip: false
+    senarai:
+    - '[rolled-up-newspaper] [Utusan Melayu]{karya}'
+    - '[rolled-up-newspaper] [Lembaga Melayu]{karya}'
+    - '[rolled-up-newspaper] Lidah Teruna'
+    - '[rolled-up-newspaper] Pengasuh'
+  - jenis: board
+    tajuk: Info Penting
+    strip: true
+    senarai:
+    - '[bird] menggunakan haiwan sebagai lambang'
+    - '[speaking_head] menyampaikan mesej politik secara halus'
+    - '[shield] mengelakkan sekatan British'
+kesimpulan:
+- '[pushpin] Kesedaran nasionalisme sebelum Perang Dunia berkembang secara berperingkat dan berhati-hati.'
+- '[pushpin] Walaupun ditekan oleh undang-undang British, masyarakat Melayu tetap meneruskan perjuangan melalui:'
+- '[light_bulb] Hal ini membuktikan bahawa nasionalisme awal di negara kita berkembang melalui kebijaksanaan, keberanian dan
+  kesedaran politik masyarakat Melayu.'
+- '[hibiscus] Semangat inilah yang menjadi asas kepada perkembangan nasionalisme yang lebih tersusun pada peringkat seterusnya.'
+- '[writing-hand] penulisan kreatif'
+- '[newspaper] akhbar dan penerbitan'
+- '[dove] penyampaian idea secara simbolik dan tersirat'

@@ -1,0 +1,142 @@
+subtopik: '7.2'
+tajuk: Jawatankuasa Hubungan Antara Kaum
+bab: 7
+tajuk_bab: Usaha ke Arah Kemerdekaan
+bab_label: Bab 7
+subjek: Sejarah
+tingkatan: 4
+tema: bab-theme-7
+audio: false
+has_quiz: false
+fail_sebelum: bab-7-1.html
+fail_seterusnya: bab-7-3.html
+kod_seterusnya: '7.3'
+og_image_v: '20260420'
+description: 'Nota Sejarah Tingkatan 4 Bab 7.2 (Usaha ke Arah Kemerdekaan): Jawatankuasa Hubungan Antara Kaum. Ringkasan padat
+  untuk ulang kaji SPM.'
+lead: Subtopik ini menerangkan sebab penubuhan [Jawatankuasa Hubungan Antara Kaum]{pertubuhan} atau [Communities Liaison Committee
+  (CLC)]{pertubuhan}, keanggotaannya, dan peranannya dalam menyelesaikan isu sensitif antara kaum melalui [perundingan]{istilah},
+  [tolak ansur]{istilah} dan [persefahaman]{istilah} ke arah [berkerajaan sendiri]{perjanjian}.
+ringkasan:
+- '[light_bulb] Selepas [Perang Dunia Kedua]{peristiwa}, hubungan antara kaum semakin tegang sehingga pemimpin tempatan dan
+  [British]{pertubuhan} menyedari bahawa kerjasama antara kaum perlu diwujudkan sebelum kemerdekaan diberikan.'
+- '[handshake_light] [CLC]{pertubuhan} ditubuhkan untuk menghimpunkan pemimpin pelbagai kaum dan mencari penyelesaian secara
+  aman melalui [perundingan]{istilah}, [tolak ansur]{istilah} dan [persefahaman]{istilah}.'
+- '[classical_building] Jawatankuasa ini membincangkan isu penting seperti [politik]{istilah}, [kedudukan istimewa orang Melayu]{istilah},
+  [ekonomi]{istilah}, [kewarganegaraan]{istilah} dan [pendidikan]{istilah} ke arah [berkerajaan sendiri]{perjanjian}.'
+soalan_utama:
+  soalan: Mengapakah Jawatankuasa Hubungan Antara Kaum ditubuhkan?
+  heading: Mengapakah Jawatankuasa Hubungan Antara Kaum ditubuhkan?
+  jawapan:
+  - '[light_bulb] Jawatankuasa Hubungan Antara Kaum ditubuhkan kerana hubungan antara kaum selepas Perang Dunia Kedua semakin
+    tegang, sedangkan kemerdekaan hanya boleh dicapai jika wujud kerjasama antara kaum utama di Tanah Melayu.'
+  - '[pushpin] Oleh itu, perundingan antara pemimpin kaum dijalankan untuk membina kestabilan politik, memperbaiki ekonomi,
+    mewujudkan keharmonian sosial dan menyediakan asas ke arah berkerajaan sendiri.'
+bahagian:
+- tajuk: Penubuhan Jawatankuasa Hubungan Antara Kaum
+  label: Bahagian Pertama
+  desc: CLC ditubuhkan untuk menghimpunkan pemimpin pelbagai kaum dan mencari jalan damai ke arah kestabilan negara.
+  kandungan:
+  - jenis: board
+    tajuk: ''
+    strip: false
+    senarai:
+    - '[calendar] [Januari 1949]{masa}'
+    - '[right-arrow] [Jawatankuasa Hubungan Antara Kaum]{pertubuhan}'
+    - '[right-arrow] atau [Communities Liaison Committee (CLC)]{pertubuhan} ditubuhkan'
+  - jenis: board
+    tajuk: Objektif CLC
+    strip: true
+    senarai:
+    - '[magnify_left] mengkaji hubungan kaum secara mendalam'
+    - '[scales] membetulkan keadaan politik, ekonomi dan sosial supaya lebih adil'
+    - '[handshake_light] mewujudkan keadaan harmoni dan muhibah antara penduduk'
+  - jenis: board
+    tajuk: Kesan awal penubuhan CLC
+    strip: true
+    senarai:
+    - '[handshake_light] pemimpin kaum perlu bekerjasama'
+    - '[bullseye] berkongsi kepentingan'
+    - '[hibiscus] membentuk hala tuju bersama ke arah kemerdekaan'
+  - jenis: accordion
+    items:
+    - tajuk: Penasihat CLC
+      senarai:
+      - '[globe_meridians] [Malcolm MacDonald]{tokoh}'
+      - '[right-arrow] [Gabenor Jeneral British di Asia Tenggara]{tokoh}'
+    - tajuk: Pengerusi CLC
+      senarai:
+      - '[person] [E.E.C. Thuraisingham]{tokoh}'
+      - '[right-arrow] wakil orang Ceylon'
+    - tajuk: Wakil Melayu
+      senarai:
+      - '[hibiscus] [Dato’ Onn Jaafar]{tokoh} Menteri Besar Johor / Presiden UMNO'
+      - '[person] [Dato’ Abdul Wahab Abdul Aziz]{tokoh}'
+      - '[person] [Dato’ Panglima Bukit Gantang]{tokoh} Menteri Besar Perak'
+      - '[person] [Mohd. Salleh Hakim]{tokoh} Ahli Majlis Perundangan Negeri Selangor'
+      - '[person] [Dr. Mustapha Osman]{tokoh} Ahli Jawatankuasa Kerja UMNO'
+      - '[person] [Zainal Abidin Haji Abas]{tokoh} Setiausaha Agung UMNO'
+    - tajuk: Wakil Cina
+      senarai:
+      - '[hibiscus] [Tan Cheng Lock]{tokoh} ([Melaka]{tempat})'
+      - '[person] [Lee Tiang Keng]{tokoh} ([Pulau Pinang]{tempat})'
+      - '[person] [C.C. Tan]{tokoh} ([Singapura]{tempat})'
+      - '[person] [Yong Shook Lin]{tokoh} ([Selangor]{tempat})'
+    - tajuk: Ahli Lain
+      senarai:
+      - '[person] [Roland Braddell]{tokoh} wakil orang Eropah'
+      - '[person] [L.R. Doraisamy Iyer]{tokoh} wakil kaum India'
+      - '[person] [Dr. J.S. Goonting]{tokoh} wakil orang Serani'
+- tajuk: Peranan Jawatankuasa Hubungan Antara Kaum
+  label: Bahagian Kedua
+  desc: CLC menyelesaikan isu sensitif antara kaum melalui rundingan, tolak ansur dan persefahaman.
+  kandungan:
+  - jenis: board
+    tajuk: ''
+    strip: false
+    senarai:
+    - '[handshake_light] perundingan'
+    - '[brain] tolak ansur'
+    - '[scales] persefahaman'
+  - jenis: accordion
+    items:
+    - tajuk: Isu Politik
+      senarai:
+      - '[pushpin] Persediaan ke arah [berkerajaan sendiri]{perjanjian}.'
+      - '[right-arrow] [CLC]{pertubuhan} mencadangkan:'
+      - '[light_bulb] Kesan:'
+      - '[ballot-box-with-ballot] pengalaman pilihan raya diberikan secara berperingkat'
+    - tajuk: Kedudukan Istimewa Orang Melayu
+      senarai:
+      - '[pushpin] Orang Melayu menuntut pengiktirafan sebagai penduduk asal.'
+      - '[right-arrow] [CLC]{pertubuhan} bersetuju:'
+      - '[light_bulb] Kesan:'
+      - '[check-mark] orang Melayu mempunyai kedudukan istimewa'
+      - '[check-mark] kerana taat setia tidak berbelah bahagi'
+    - tajuk: Kedudukan Ekonomi Orang Melayu
+      senarai:
+      - '[pushpin] Orang Melayu ketinggalan dalam sektor ekonomi.'
+      - '[right-arrow] [CLC]{pertubuhan} mencadangkan:'
+      - '[light_bulb] Kesan:'
+      - '[pushpin] Cadangan ini datang daripada:'
+      - '[light_bulb] Tujuan:'
+      - '[office-building] penubuhan agensi untuk meningkatkan ekonomi dan pendidikan'
+    - tajuk: Kewarganegaraan Bukan Melayu
+      senarai:
+      - '[pushpin] Orang Melayu tegas dalam isu kewarganegaraan.'
+      - '[right-arrow] [CLC]{pertubuhan} bersetuju:'
+      - '[light_bulb] Kesan:'
+      - '[check-mark] kewarganegaraan penting untuk memupuk taat setia'
+    - tajuk: Pendidikan
+      senarai:
+      - '[pushpin] Sistem pendidikan berbeza mengikut kaum.'
+      - '[right-arrow] [CLC]{pertubuhan} mencadangkan:'
+      - '[light_bulb] Kesan:'
+      - '[bullseye] Tujuan:'
+      - '[books] sistem pendidikan yang seragam'
+kesimpulan:
+- '[pushpin] [CLC]{pertubuhan} memainkan peranan penting dalam:'
+- '[pushpin] Pendekatan yang digunakan:'
+- '[light_bulb] Pengajaran utama:'
+- '[handshake_light] membina persefahaman antara pemimpin kaum'
+- '[scales] menyelesaikan isu sensitif secara aman'

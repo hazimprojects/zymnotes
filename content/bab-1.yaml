@@ -1,0 +1,34 @@
+bab: 1
+tajuk: Warisan Negara Bangsa
+bab_label: Bab 1
+subjek: Sejarah
+tingkatan: 4
+tema: bab-theme-1
+og_image_v: '20260420'
+description: 'Nota Sejarah Tingkatan 4 Bab 1: Warisan Negara Bangsa. Ringkasan bab induk dan pautan subtopik untuk ulang kaji
+  SPM.'
+lead: Bab ini menerangkan bagaimana warisan [negara bangsa]{istilah} berkembang di [Alam Melayu]{tempat} dan diteruskan hingga
+  zaman [Kesultanan Melayu Melaka]{kerajaan} serta [Johor-Riau]{kerajaan}.
+sinopsis:
+- '[classical_building] Kerajaan [Alam Melayu]{tempat} sudah mempunyai ciri [negara bangsa]{istilah} sebelum kedatangan Barat.'
+- '[counterclockwise-arrows-button] Ciri ini diwarisi daripada [Funan]{kerajaan} dan [Champa]{kerajaan}, kemudian diteruskan
+  oleh [Srivijaya]{kerajaan}, [Kesultanan Melayu Melaka]{kerajaan} dan [Johor-Riau]{kerajaan}.'
+- '[scroll_old] Antara ciri utama [negara bangsa]{istilah} ialah [raja]{tokoh}, [undang-undang]{konsep}, [wilayah pengaruh]{tempat}
+  dan [rakyat]{istilah}.'
+- '[scales] [Kesultanan Melayu Melaka]{kerajaan} mengukuhkan warisan ini melalui sistem [pentadbiran]{konsep} dan [perundangan]{konsep}
+  yang unggul.'
+- '[handshake_light] Hubungan timbal balik antara [pemerintah]{tokoh} dan [rakyat]{istilah} menjadi warisan penting yang kekal
+  bernilai hingga kini.'
+subtopik:
+- kod: '1.1'
+  tajuk: Latar Belakang Negara Bangsa Sebelum Kedatangan Barat
+  penerangan: Asas negara bangsa di Alam Melayu dan kesinambungan warisannya.
+- kod: '1.2'
+  tajuk: Ciri-ciri Negara Bangsa Kesultanan Melayu Melaka
+  penerangan: Kerajaan, rakyat, kedaulatan, wilayah pengaruh, undang-undang dan lambang kebesaran.
+- kod: '1.3'
+  tajuk: Keunggulan Sistem Pentadbiran dan Undang-undang
+  penerangan: Kecekapan pentadbiran dan kekuatan undang-undang sebelum kedatangan Barat.
+- kod: '1.4'
+  tajuk: Peranan Pemerintah dan Rakyat
+  penerangan: Hubungan timbal balik antara pemerintah dan rakyat berasaskan waadat.
