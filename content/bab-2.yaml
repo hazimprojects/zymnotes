@@ -1,0 +1,47 @@
+bab: 2
+tajuk: Kebangkitan Nasionalisme
+bab_label: Bab 2
+subjek: Sejarah
+tingkatan: 4
+tema: bab-theme-2
+og_image_v: '20260420'
+description: 'Nota Sejarah Tingkatan 4 Bab 2: Kebangkitan Nasionalisme. Ringkasan bab induk dan pautan subtopik untuk ulang
+  kaji SPM.'
+lead: Bab ini menerangkan bagaimana perkembangan idea [nasionalisme]{istilah} di [Barat]{tempat} telah mempengaruhi kebangkitan
+  nasionalisme di [Asia]{tempat} dan [Asia Tenggara]{tempat}, termasuk di [negara kita]{tempat}.
+sinopsis:
+- '[globe_meridians] Perkembangan idea [nasionalisme]{istilah} di [Barat]{tempat} telah mempengaruhi kebangkitan nasionalisme
+  di [Asia]{tempat} dan [Asia Tenggara]{tempat}, termasuk di [negara kita]{tempat}.'
+- '[brain] Gerakan nasionalisme berkembang seiring dengan matlamat perjuangan, cara gerakan disusun, [ketokohan pemimpin nasionalis]{tokoh}
+  dan pengaruh pelbagai faktor.'
+- '[open_book] Bab ini menghimpunkan perkembangan nasionalisme dari sudut [maksud]{istilah}, idea, perkembangan wilayah, kesedaran
+  di negara kita, faktor kemunculan dan kesannya.'
+- '[chart] Perkembangan nasionalisme seterusnya memberikan kesan penting kepada usaha membina tamadun bangsa dan negara.'
+subtopik:
+- kod: '2.1'
+  tajuk: Maksud Nasionalisme
+  penerangan: Pengenalan kepada maksud nasionalisme serta kefahaman asas tentang semangat cinta akan bangsa dan negara.
+- kod: '2.2'
+  tajuk: Perkembangan Idea Nasionalisme di Barat
+  penerangan: Idea nasionalisme di Barat yang berkembang melalui peristiwa penting dan menjadi pengaruh kepada kebangkitan
+    di tempat lain.
+- kod: '2.3'
+  tajuk: Perkembangan Nasionalisme di Asia
+  penerangan: Kebangkitan nasionalisme di Asia yang dipengaruhi oleh pelbagai faktor dalaman dan luaran.
+- kod: '2.4'
+  tajuk: Kesedaran Awal Nasionalisme di Negara Kita
+  penerangan: Kemunculan semangat nasionalisme dalam kalangan masyarakat tempatan sebelum era penjajahan moden.
+- kod: '2.5'
+  tajuk: Faktor-Faktor Kemunculan Nasionalisme
+  penerangan: Faktor dalaman dan luaran yang mendorong kebangkitan nasionalisme di Tanah Melayu.
+- kod: '2.6'
+  tajuk: Gerakan Nasionalisme Melayu (1920-an–1930-an)
+  penerangan: Perkembangan gerakan nasionalisme Melayu melalui akhbar, persatuan dan pendidikan.
+- kod: '2.7'
+  tajuk: Gerakan Nasionalisme Melayu (1940-an)
+  penerangan: Perkembangan lanjut gerakan nasionalisme menjelang era pendudukan Jepun dan selepasnya.
+- kod: '2.8'
+  tajuk: Kesan Gerakan Nasionalisme
+  penerangan: Impak gerakan nasionalisme terhadap perkembangan politik, sosial dan ekonomi negara.
+fail_sebelum: bab-1.html
+fail_seterusnya: bab-3.html

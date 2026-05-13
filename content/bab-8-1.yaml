@@ -1,0 +1,59 @@
+subtopik: '8.1'
+tajuk: Perkembangan Pilihan Raya di Persekutuan Tanah Melayu
+bab: 8
+tajuk_bab: Pilihan Raya
+bab_label: Bab 8
+subjek: Sejarah
+tingkatan: 4
+tema: bab-theme-8
+audio: false
+has_quiz: false
+fail_sebelum: bab-8.html
+fail_seterusnya: bab-8-2.html
+kod_seterusnya: '8.2'
+og_image_v: '20260420'
+description: 'Nota Sejarah Tingkatan 4 Bab 8.1 (Pilihan Raya): Perkembangan Pilihan Raya di Persekutuan Tanah Melayu. Ringkasan
+  padat untuk ulang kaji SPM.'
+lead: Subtopik ini menerangkan [kepentingan pilihan raya]{perjanjian} dalam [pembentukan kerajaan]{istilah} dan sistem [berkerajaan
+  sendiri]{gerakan}, perkembangan berperingkat daripada [majlis perbandaran]{tempat} hingga [peringkat Persekutuan (1955)]{peristiwa},
+  peranan [Perjanjian Persekutuan Tanah Melayu 1948]{perjanjian}, [Jawatankuasa Pilihan Raya]{pertubuhan} serta [pilihan raya
+  tempatan]{masa} yang membuka jalan kepada [Perikatan UMNO–MCA]{pertubuhan} dan keyakinan rakyat menjelang [kemerdekaan]{perjanjian}.
+ringkasan:
+- '[ballot-box-with-ballot] [Pilihan raya]{perjanjian} ialah asas kepada sistem [berkerajaan sendiri]{istilah} kerana memberi
+  peluang kepada rakyat memilih [wakil]{istilah}, menentukan [parti pemerintah]{pertubuhan} dan membentuk [kerajaan]{pertubuhan}.'
+- '[cityscape] Di [Persekutuan Tanah Melayu]{tempat}, pilihan raya berkembang secara berperingkat daripada [majlis perbandaran]{tempat}
+  ke [peringkat negeri]{tempat} dan akhirnya [peringkat Persekutuan (1955)]{peristiwa}, selaras dengan [Perjanjian Persekutuan
+  Tanah Melayu 1948]{perjanjian}.'
+- '[handshake_light] [UMNO]{pertubuhan} dan [MCA]{pertubuhan} mula bekerjasama dalam pilihan raya tempatan, membentuk [Perikatan]{gerakan}
+  — asas kerjasama politik antara kaum sebelum [kemerdekaan]{perjanjian}.'
+soalan_utama:
+  soalan: Apakah kepentingan pilihan raya dalam pembentukan kerajaan di negara kita?
+  heading: Apakah kepentingan pilihan raya dalam pembentukan kerajaan di negara kita?
+  jawapan:
+  - '[light_bulb] [Pilihan raya]{perjanjian} merupakan asas kepada sistem [berkerajaan sendiri]{istilah} kerana memberikan
+    peluang kepada rakyat untuk:'
+  - '[ballot-box-with-ballot] memilih [wakil]{istilah}'
+  - '[classical_building] menentukan [parti pemerintah]{pertubuhan}'
+  - '[hibiscus] membentuk [kerajaan]{pertubuhan}'
+bahagian:
+- tajuk: Pilihan raya majlis perbandaran pertama
+  label: '1951'
+  desc: George Town, Pulau Pinang — pilihan raya pertama di Tanah Melayu.
+  kandungan:
+  - jenis: board
+    tajuk: George Town, Pulau Pinang
+    strip: true
+    senarai: []
+- tajuk: Pilihan raya Kuala Lumpur
+  label: '1952'
+  desc: Perikatan mula tampil dalam politik tempatan.
+  kandungan:
+  - jenis: board
+    tajuk: Kuala Lumpur
+    strip: true
+    senarai: []
+kesimpulan:
+- '[pushpin] Pilihan raya peringkat awal berjaya menyedarkan rakyat tentang amalan [demokrasi]{gerakan}, memberi pengalaman
+  mengendalikan pilihan raya, dan melatih rakyat ke arah [berkerajaan sendiri]{istilah}.'
+- '[light_bulb] Pilihan raya ini menjadi [langkah penting]{peristiwa} menuju [kemerdekaan]{perjanjian} dan asas pembentukan
+  [sistem demokrasi]{gerakan} negara.'

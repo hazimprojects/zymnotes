@@ -1,0 +1,118 @@
+subtopik: '1.4'
+tajuk: Peranan Pemerintah dan Rakyat
+bab: 1
+tajuk_bab: Warisan Negara Bangsa
+bab_label: Bab 1
+subjek: Sejarah
+tingkatan: 4
+tema: bab-theme-1
+audio: true
+has_quiz: true
+fail_sebelum: bab-1.html
+og_image_v: '20260420'
+description: 'Nota Sejarah Tingkatan 4 Bab 1.4 (Warisan Negara Bangsa): Peranan Pemerintah dan Rakyat. Ringkasan padat untuk
+  ulang kaji SPM.'
+lead: Subtopik ini menerangkan hubungan antara [pemerintah]{tokoh} dan [rakyat]{istilah} dalam [Kesultanan Melayu Melaka]{kerajaan}
+  yang berasaskan [waadat]{istilah} serta menyumbang kepada kestabilan dan kegemilangan kerajaan.
+ringkasan:
+- '[scroll_old] Hubungan antara [pemerintah]{tokoh} dan [rakyat]{istilah} berasaskan konsep [waadat]{istilah}.'
+- '[handshake_light] Hubungan ini bersifat [timbal balik]{konsep} dan [saling melengkapi]{konsep}.'
+- '[classical_building] Hubungan ini menyokong sistem pemerintahan dalam [Kesultanan Melayu Melaka]{kerajaan}.'
+- '[sparkles] Hasilnya, pentadbiran berjalan lancar dan Melaka mencapai kegemilangan.'
+soalan_utama:
+  soalan: Bagaimanakah hubungan antara pemerintah dan rakyat dalam Kesultanan Melayu Melaka?
+  heading: Bagaimanakah hubungan antara pemerintah dan rakyat dalam Kesultanan Melayu Melaka?
+  jawapan:
+  - '[light_bulb] Hubungan antara pemerintah dan rakyat dalam [Kesultanan Melayu Melaka]{kerajaan} berasaskan konsep [waadat]{istilah},
+    iaitu perjanjian antara pemerintah dan rakyat.'
+  - '[light_bulb] Hubungan ini bersifat [timbal balik]{konsep} dan [saling melengkapi]{konsep}, lalu menyokong kestabilan
+    pemerintahan.'
+  - '[light_bulb] Hasilnya, pentadbiran berjalan lancar dan [Kesultanan Melayu Melaka]{kerajaan} mencapai kegemilangan.'
+fokus: 'Hubungan pemerintah–rakyat di Melaka bersandarkan waadat (timbal balik). Struktur masyarakat dan jenis hubungan:'
+bahagian:
+- tajuk: Golongan Pemerintah dan Rakyat
+  label: Bahagian Pertama
+  desc: ''
+  kandungan:
+  - jenis: board
+    tajuk: ''
+    strip: false
+    senarai:
+    - '[keycap_1] Golongan Pemerintah'
+    - '[keycap_2] Golongan Diperintah'
+  - jenis: board
+    tajuk: Golongan Pemerintah
+    strip: true
+    senarai:
+    - '[crown] Sultan'
+    - '[handshake_light] Pembesar'
+    - '[busts-in-silhouette] Kerabat diraja'
+    - '[mosque] Ulama'
+  - jenis: board
+    tajuk: Golongan Rakyat
+    strip: true
+    senarai:
+    - '[shopping-bags] peniaga'
+    - '[rice] petani'
+    - '[hammer-and-wrench] tukang'
+    - '[fishing-pole] nelayan'
+- tajuk: Peranan Sultan dan Pembesar
+  label: Bahagian Kedua
+  desc: ''
+  kandungan:
+  - jenis: board
+    tajuk: Peranan Sultan
+    strip: true
+    senarai:
+    - '[shield] pelindung rakyat'
+    - '[handshake_light] penyatu masyarakat'
+    - '[chart] pemimpin negara'
+  - jenis: board
+    tajuk: Peranan Pembesar
+    strip: true
+    senarai:
+    - '[shield] menjaga keamanan kawasan pegangan'
+    - '[handshake_light] menjadi perantara sultan dengan rakyat'
+    - '[money-bag] mengutip hasil melalui sistem serah'
+    - '[crossed_swords] menyediakan tentera melalui sistem kerah'
+- tajuk: Peranan Rakyat
+  label: Bahagian Ketiga
+  desc: ''
+  kandungan:
+  - jenis: board
+    tajuk: ''
+    strip: false
+    senarai:
+    - '[handshake_light] taat setia kepada pemerintah'
+    - '[scroll_old] mematuhi arahan'
+    - '[prohibited] tidak menderhaka (takut ditimpa tulah)'
+- tajuk: Konsep Waadat
+  label: Bahagian Keempat
+  desc: ''
+  kandungan:
+  - jenis: board
+    tajuk: ''
+    strip: false
+    senarai:
+    - '[crown] Sang Sapurba (pemerintah)'
+    - '[busts-in-silhouette] Demang Lebar Daun (wakil rakyat)'
+  - jenis: board
+    tajuk: Intipati Waadat
+    strip: true
+    senarai:
+    - '[prohibited] tidak menderhaka kepada raja'
+  - jenis: board
+    tajuk: Jika Waadat Dilanggar
+    strip: true
+    senarai:
+    - '[warning] rakyat derhaka → ditimpa tulah'
+    - '[warning] raja zalim → kerajaan akan binasa'
+  - jenis: board
+    tajuk: Glosari
+    strip: true
+    senarai:
+    - '[scroll_old] Waadat → perjanjian'
+    - '[warning] Tulah → kecelakaan akibat menderhaka kepada raja'
+kesimpulan:
+- '[handshake_light] saling bergantung'
+- '[scales] bersifat timbal balik'

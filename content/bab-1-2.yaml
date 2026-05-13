@@ -1,0 +1,120 @@
+subtopik: '1.2'
+tajuk: Ciri-ciri Negara Bangsa Kesultanan Melayu Melaka
+bab: 1
+tajuk_bab: Warisan Negara Bangsa
+bab_label: Bab 1
+subjek: Sejarah
+tingkatan: 4
+tema: bab-theme-1
+audio: true
+has_quiz: true
+fail_sebelum: bab-1-1.html
+fail_seterusnya: bab-1-3.html
+kod_seterusnya: '1.3'
+og_image_v: '20260420'
+description: 'Nota Sejarah Tingkatan 4 Bab 1.2 (Warisan Negara Bangsa): Ciri-ciri Negara Bangsa Kesultanan Melayu Melaka.
+  Ringkasan padat untuk ulang kaji SPM.'
+lead: Subtopik ini menerangkan ciri-ciri [negara bangsa]{istilah} dalam [Kesultanan Melayu Melaka]{kerajaan} serta bagaimana
+  sistem pemerintahannya membentuk sebuah kerajaan yang kukuh dan gemilang.
+ringkasan:
+- '[crown] [Kesultanan Melayu Melaka]{kerajaan} mempunyai sistem pemerintahan yang tersusun dan lengkap.'
+- '[scroll_old] Negara bangsa Melaka terbina melalui [enam ciri utama]{konsep} yang saling melengkapi.'
+- '[shield] Ciri-ciri ini membuktikan kekuatan Melaka sebagai kerajaan yang berdaulat sebelum kedatangan Barat.'
+- '[hibiscus] Warisan ini turut menjadi panduan kepada pembentukan negara bangsa Malaysia masa kini.'
+soalan_utama:
+  soalan: Apakah ciri-ciri negara bangsa yang terdapat dalam Kesultanan Melayu Melaka?
+  heading: Apakah ciri-ciri negara bangsa yang terdapat dalam Kesultanan Melayu Melaka?
+  jawapan:
+  - '[light_bulb] [Kesultanan Melayu Melaka]{kerajaan} mempunyai sistem pemerintahan yang tersusun dan lengkap, yang menunjukkan
+    pembentukan [negara bangsa]{istilah} yang kukuh sebelum kedatangan Barat.'
+fokus: 'Melaka menunjukkan negara bangsa yang kukuh di Alam Melayu. Enam ciri utama:'
+bahagian:
+- tajuk: Kerajaan
+  label: Bahagian Pertama
+  desc: ''
+  kandungan:
+  - jenis: board
+    tajuk: ''
+    strip: false
+    senarai:
+    - '[pushpin] Kerajaan wujud kerana adanya [raja]{tokoh} sebagai pemerintah tertinggi.'
+    - '[pushpin] Selepas kedatangan [Islam]{istilah}, pemerintah menggunakan gelaran [sultan]{tokoh}.'
+    - '[pushpin] Pemerintahan raja diperkukuh melalui:'
+- tajuk: Rakyat
+  label: Bahagian Kedua
+  desc: ''
+  kandungan:
+  - jenis: board
+    tajuk: Hierarki Sosial Kesultanan Melayu Melaka
+    strip: true
+    senarai:
+    - '[pushpin] Rakyat memberikan:'
+  - jenis: board
+    tajuk: Hierarki Sosial Kesultanan Melayu Melaka
+    strip: true
+    senarai:
+    - '[crown] Sultan & Pembesar → Golongan Pemerintah'
+    - '[busts-in-silhouette] Rakyat → Golongan Diperintah'
+- tajuk: Kedaulatan
+  label: Bahagian Ketiga
+  desc: ''
+  kandungan:
+  - jenis: board
+    tajuk: ''
+    strip: false
+    senarai:
+    - '[pushpin] [Kedaulatan]{konsep} ialah lambang kekuasaan tertinggi sultan.'
+    - '[pushpin] Kedaulatan bermaksud:'
+- tajuk: Wilayah Pengaruh
+  label: Bahagian Keempat
+  desc: ''
+  kandungan:
+  - jenis: board
+    tajuk: Jenis Wilayah
+    strip: true
+    senarai:
+    - '[pushpin] [Wilayah pengaruh]{tempat} ialah kawasan yang:'
+  - jenis: board
+    tajuk: Jenis Wilayah
+    strip: true
+    senarai:
+    - '[pushpin] Pahang'
+    - '[pushpin] Kuala Linggi'
+    - '[pushpin] Kelantan'
+    - '[pushpin] Rokan'
+    - '[pushpin] Inderagiri'
+    - '[pushpin] Kampar'
+    - '[pushpin] Diperoleh melalui peperangan.'
+    - '[pushpin] Menerima ketuanan Melaka melalui perkahwinan atau persahabatan.'
+    - '[pushpin] Contoh: [Kerajaan Majapahit]{kerajaan} menghadiahkan [Siantan]{tempat} kepada [Sultan Mansur Shah]{tokoh}
+      kerana perkahwinan diraja.'
+- tajuk: Undang-undang
+  label: Bahagian Kelima
+  desc: ''
+  kandungan:
+  - jenis: board
+    tajuk: ''
+    strip: false
+    senarai:
+    - '[pushpin] [Kesultanan Melayu Melaka]{kerajaan} mempunyai dua undang-undang bertulis:'
+- tajuk: Lambang Kebesaran
+  label: Bahagian Keenam
+  desc: ''
+  kandungan:
+  - jenis: board
+    tajuk: ''
+    strip: false
+    senarai:
+    - '[pushpin] [Lambang kebesaran]{konsep} ialah identiti dan keistimewaan sultan.'
+    - '[pushpin] Ia juga melambangkan:'
+kesimpulan:
+- '[light_bulb] Kesultanan Melayu Melaka mempunyai ciri-ciri negara bangsa yang lengkap.'
+- '[light_bulb] Ciri-ciri ini menjadikan [Melaka]{kerajaan} sebagai kerajaan yang kuat dan gemilang.'
+- '[pushpin] Ia membuktikan bahawa asas [negara bangsa]{istilah} telah wujud sebelum kedatangan Barat.'
+- '[pushpin] Ciri-ciri ini juga menjadi panduan kepada pembentukan [negara bangsa Malaysia]{istilah} pada masa kini.'
+- '[crown] kerajaan'
+- '[busts-in-silhouette] rakyat'
+- '[shield] kedaulatan'
+- '[map] wilayah pengaruh'
+- '[scroll_old] undang-undang'
+- '[military-medal] lambang kebesaran'

@@ -1,0 +1,157 @@
+subtopik: '6.2'
+tajuk: Ancaman Komunis di Negara Kita
+bab: 6
+tajuk_bab: Ancaman Komunis dan Perisytiharan Darurat
+bab_label: Bab 6
+subjek: Sejarah
+tingkatan: 4
+tema: bab-theme-6
+audio: false
+has_quiz: false
+fail_sebelum: bab-6-1.html
+fail_seterusnya: bab-6-3.html
+kod_seterusnya: '6.3'
+og_image_v: '20260420'
+description: 'Nota Sejarah Tingkatan 4 Bab 6.2 (Ancaman Komunis dan Perisytiharan Darurat): Ancaman Komunis di Negara Kita.
+  Ringkasan padat untuk ulang kaji SPM.'
+lead: Subtopik ini menerangkan bagaimana [Parti Komunis Malaya (PKM)]{pertubuhan} melancarkan perjuangan bersenjata selepas
+  [Perang Dunia Kedua]{peristiwa}, menyebabkan [British]{pertubuhan} mengisytiharkan [darurat]{istilah} dan memulakan usaha
+  membanteras ancaman komunis di negara kita.
+ringkasan:
+- '[police-car-light] Selepas [Perang Dunia Kedua]{peristiwa}, [PKM]{pertubuhan} melancarkan perjuangan bersenjata untuk menubuhkan
+  [Republik Komunis]{gerakan} di [Tanah Melayu]{tempat}.'
+- '[calendar] Pembunuhan tiga pengurus ladang Eropah di [Sungai Siput, Perak]{tempat} pada [16 Jun 1948]{masa} membawa kepada
+  pengisytiharan [darurat]{istilah}.'
+- '[bomb] Selepas darurat, komunis terus melancarkan tindakan yang melumpuhkan [ekonomi]{istilah}, merosakkan [infrastruktur]{istilah},
+  mengancam [keselamatan rakyat]{istilah} dan menyerang [pasukan keselamatan]{istilah}.'
+- '[handshake_light] Ancaman ini menyebabkan rakyat hidup dalam ketakutan dan mendorong kerajaan serta penduduk bekerjasama
+  untuk membanteras komunis demi menjaga keamanan negara.'
+soalan_utama:
+  soalan: Bagaimanakah komunis mengancam keamanan negara selepas Perang Dunia Kedua?
+  heading: Bagaimanakah komunis mengancam keamanan negara selepas Perang Dunia Kedua?
+  jawapan:
+  - '[light_bulb] Selepas [Perang Dunia Kedua]{peristiwa}, [Parti Komunis Malaya (PKM)]{pertubuhan} melancarkan perjuangan
+    bersenjata untuk menubuhkan [Republik Komunis]{gerakan} di [Tanah Melayu]{tempat}.'
+  - '[pushpin] Tindakan ini menyebabkan [British]{pertubuhan} mengisytiharkan [darurat]{istilah} dan memulakan usaha membanteras
+    ancaman komunis.'
+bahagian:
+- tajuk: Latar Belakang dan Perisytiharan Darurat
+  label: Bahagian Pertama
+  desc: ''
+  kandungan:
+  - jenis: board
+    tajuk: ''
+    strip: false
+    senarai:
+    - '[calendar] [19 Februari 1948 – 25 Februari 1948]{masa} → [Persidangan Kongres Belia Asia]{peristiwa}'
+    - '[calendar] [Mac 1948]{masa} → [Persidangan Parti Komunis India]{peristiwa}'
+  - jenis: accordion
+    items:
+    - tajuk: Perisytiharan Darurat
+      senarai:
+      - '[pushpin] Mangsa yang terbunuh ialah:'
+      - '[pushpin] Berikutan peristiwa itu, [Sir Edward Gent]{tokoh}, [Pesuruhjaya Tinggi British]{tokoh} di [Tanah Melayu]{tempat},
+        mengisytiharkan [darurat]{istilah}.'
+      - '[calendar] [16 Jun 1948]{masa} → komunis membunuh tiga orang pengurus ladang Eropah di [Sungai Siput, Perak]{tempat}.'
+    - tajuk: Perluasan Undang-Undang Darurat
+      senarai:
+      - '[light_bulb] Dengan itu, usaha membanteras ancaman komunis bermula secara rasmi.'
+      - '[calendar] [16 Jun 1948]{masa} → dilaksanakan di kawasan tertentu di:'
+- tajuk: Tindakan Komunis Selepas Darurat
+  label: Bahagian Kedua
+  desc: ''
+  kandungan:
+  - jenis: board
+    tajuk: ''
+    strip: false
+    senarai:
+    - '[tornado] huru-hara'
+    - '[fearful-face] ketakutan'
+    - '[chart-decreasing] hilangnya keyakinan rakyat terhadap [British]{pertubuhan}'
+  - jenis: board
+    tajuk: Statistik orang awam yang terbunuh, tercedera dan hilang (1948–1960)
+    strip: true
+    senarai:
+    - '[pushpin] Terbunuh: [2473]{istilah}'
+    - '[pushpin] Tercedera: [1385]{istilah}'
+    - '[pushpin] Hilang: [810]{istilah}'
+    - '[pushpin] Jumlah: [4668]{istilah}'
+  - jenis: board
+    tajuk: Statistik anggota keselamatan yang terkorban dan tercedera (1948–1960)
+    strip: true
+    senarai:
+    - '[police-officer] Polis → Terkorban: [513]{istilah}, Tercedera: [701]{istilah}, Jumlah: [1214]{istilah}'
+    - '[shield] Special Constable → Terkorban: [593]{istilah}, Tercedera: [746]{istilah}, Jumlah: [1339]{istilah}'
+    - '[police-car] Auxiliary Police → Terkorban: [242]{istilah}, Tercedera: [154]{istilah}, Jumlah: [396]{istilah}'
+    - '[military-helmet] Tentera → Terkorban: [519]{istilah}, Tercedera: [959]{istilah}, Jumlah: [1478]{istilah}'
+  - jenis: board
+    tajuk: Info
+    strip: true
+    senarai:
+    - '[calendar] [13 September 1948]{masa} → [Sir Henry Gurney]{tokoh} dilantik sebagai [Pesuruhjaya Tinggi British]{tokoh}
+      di [Tanah Melayu]{tempat} menggantikan [Sir Edward Gent]{tokoh}.'
+    - '[calendar] [6 Oktober 1951]{masa} → [Sir Henry Gurney]{tokoh} menjadi mangsa serang hendap komunis di [Jalan Kuala
+      Kubu Bharu]{tempat} semasa dalam perjalanan ke [Bukit Fraser]{tempat}.'
+  - jenis: board
+    tajuk: Contoh Serangan Komunis terhadap Pasukan Keselamatan
+    strip: true
+    senarai:
+    - '[calendar] [17 Jun 1948]{masa} – [Choh, Johor]{tempat} → menyerang [Balai Polis Kampung Jeram]{tempat}'
+    - '[calendar] [26 Jun 1948]{masa} – [Temerloh, Pahang]{tempat} → menyerang [Balai Polis Kuala Krau]{tempat}'
+    - '[calendar] [28 Jun 1948]{masa} – [Jerantut, Pahang]{tempat} → membakar balai polis'
+    - '[calendar] [17 Julai 1948]{masa} – [Gua Musang, Kelantan]{tempat} → menyerang [Balai Polis Gua Musang]{tempat}'
+    - '[calendar] [8 Mac 1949]{masa} – [Kajang, Selangor]{tempat} → menyerang jip tentera'
+    - '[calendar] [22 Februari 1950]{masa} – [Muar, Johor]{tempat} → menyerang [Balai Polis Bukit Kepong]{tempat}'
+    - '[calendar] [24 Mac 1950]{masa} – [Ulu Semur, Kelantan]{tempat} → menyerang hendap pasukan askar Melayu'
+    - '[calendar] [28 Jun 1950]{masa} – [Kota Tinggi, Johor]{tempat} → menyerang [Balai Polis Kambau]{tempat}'
+    - '[calendar] [21 Februari 1952]{masa} – [Taiping, Perak]{tempat} → menyerang kenderaan polis'
+    - '[calendar] [28 Mei 1954]{masa} – [Kedah]{tempat} → membunuh Ketua Polis Kedah'
+    - '[calendar] [18 Oktober 1954]{masa} – [Pontian, Johor]{tempat} → menyerang [Balai Polis Chuan Seng]{tempat}'
+  - jenis: accordion
+    items:
+    - tajuk: Komunis Melumpuhkan Ekonomi
+      senarai:
+      - '[pushpin] Sejak [darurat]{istilah} dikuatkuasakan, lombong bijih timah dan ladang getah menjadi sasaran utama serangan
+        komunis untuk melemahkan ekonomi [British]{pertubuhan}.'
+      - '[round-pushpin] Antara negeri yang terlibat:'
+      - '[pushpin] Komunis turut bertindak:'
+      - '[light_bulb] Tindakan ini menyebabkan pekerja ladang dan lombong menderita kerana pekerjaan harian terganggu dan
+        nyawa mereka turut terancam.'
+      - '[calendar] [1948–1956]{masa} → komunis menyerang [80 lombong bijih timah]{istilah}.'
+    - tajuk: Komunis Merosakkan Infrastruktur
+      senarai:
+      - '[pushpin] Komunis menjalankan pelbagai kegiatan sabotaj terhadap kemudahan asas, terutama dalam bidang:'
+      - '[pushpin] Antara tindakan mereka ialah:'
+      - '[pushpin] Mereka juga menyerang pekerja awam yang ditugaskan untuk:'
+      - '[light_bulb] Akibatnya, kehidupan harian penduduk tempatan terjejas kerana infrastruktur tidak dapat diselenggara
+        dengan baik.'
+      - '[train] pengangkutan'
+      - '[satellite-antenna] perhubungan'
+    - tajuk: Komunis Mengancam Keselamatan Rakyat
+      senarai:
+      - '[pushpin] Komunis melakukan pelbagai tindakan ganas terhadap penduduk yang enggan bekerjasama dengan mereka.'
+      - '[pushpin] Antaranya:'
+      - '[round-pushpin] Contoh penting:'
+      - '[pushpin] Kesan serangan:'
+      - '[light_bulb] Tindakan komunis ini menyebabkan kesengsaraan dan penderitaan yang besar kepada rakyat.'
+      - '[pouting-face] mengugut'
+      - '[bomb] mensabotaj'
+      - '[crossed_swords] menyerang'
+      - '[wilted-flower] melakukan kekejaman'
+      - '[crying-face] menganiaya'
+      - '[person-standing] menculik'
+      - '[package] merampas'
+      - '[fire] membakar harta benda'
+      - '[skull] membunuh penduduk'
+    - tajuk: Komunis Mengancam Pasukan Keselamatan
+      senarai:
+      - '[pushpin] [PKM]{pertubuhan} turut menyasarkan pasukan keselamatan dan menyerang balai polis.'
+      - '[pushpin] Tujuannya ialah:'
+      - '[tornado] mencetuskan keadaan huru-hara'
+      - '[prohibited] menunjukkan kerajaan tidak berupaya melindungi keselamatan penduduk'
+kesimpulan:
+- '[pushpin] Komunis cuba mewujudkan:'
+- '[pushpin] Untuk mencapai matlamat itu, mereka melancarkan perjuangan bersenjata dan melakukan pelbagai tindakan yang mengancam:'
+- '[light_bulb] Tindakan komunis ini menyebabkan rakyat hidup dalam ketakutan dan mendorong kerajaan serta penduduk bekerjasama
+  untuk membanteras ancaman tersebut demi menjaga keamanan negara.'
+- '[triangular-flag] sebuah kerajaan [republik komunis]{gerakan} di [Tanah Melayu]{tempat}'

@@ -1,0 +1,248 @@
+subtopik: '3.6'
+tajuk: Dasar Pendudukan Jepun di Negara Kita
+bab: 3
+tajuk_bab: Konflik Dunia dan Pendudukan Jepun
+bab_label: Bab 3
+subjek: Sejarah
+tingkatan: 4
+tema: bab-theme-3
+audio: false
+has_quiz: false
+fail_sebelum: bab-3-5.html
+fail_seterusnya: bab-3-7.html
+kod_seterusnya: '3.7'
+og_image_v: '20260420'
+description: 'Nota Sejarah Tingkatan 4 Bab 3.6 (Konflik Dunia dan Pendudukan Jepun di Negara Kita): Dasar Pendudukan Jepun
+  di Negara Kita. Ringkasan padat untuk ulang kaji SPM.'
+lead: Subtopik ini menerangkan bagaimana Jepun mentadbir dan mengawal negara kita semasa pendudukan melalui [dasar pentadbiran]{istilah},
+  [dasar ekonomi]{istilah} dan [dasar sosial]{istilah} untuk mengukuhkan kekuasaannya serta menyokong kepentingan perang.
+ringkasan:
+- '[classical_building] Jepun mentadbir negara kita melalui tiga dasar utama, iaitu [dasar pentadbiran]{istilah}, [dasar ekonomi]{istilah}
+  dan [dasar sosial]{istilah}.'
+- '[crown] Dalam pentadbiran, Jepun mengekalkan Raja-raja Melayu dan menggunakan pemimpin tempatan, tetapi semuanya berada
+  di bawah pengawasan tentera Jepun.'
+- '[yen-banknote] Dalam ekonomi, Jepun memperkenalkan ekonomi kawalan dan mata wang Jepun yang dikenali sebagai [wang pokok
+  pisang]{istilah}; pencetakan tanpa kawalan menyebabkan inflasi dan kekurangan barang di pasaran.'
+- '[skull] Dalam sosial, rakyat berdepan perubahan pendidikan, catuan makanan, layanan berbeza mengikut kaum dan kekejaman
+  seperti [Landasan Kereta Api Maut]{peristiwa}.'
+soalan_utama:
+  soalan: Bagaimanakah Jepun mentadbir dan mengawal negara kita semasa pendudukan Jepun?
+  heading: Bagaimanakah Jepun mentadbir dan mengawal negara kita semasa pendudukan Jepun?
+  jawapan:
+  - '[light_bulb] Jepun melaksanakan pemerintahan tentera yang keras melalui dasar pentadbiran, ekonomi dan sosial untuk mengukuhkan
+    kekuasaannya serta menyokong kepentingan perang.'
+  - '[pushpin] Selepas menawan negara kita, Jepun meletakkan [Tanah Melayu]{tempat}, [Sarawak]{tempat} dan [Sabah]{tempat}
+    di bawah jajahan tentera Jepun.'
+  - '[pushpin] Pentadbiran ini dikendalikan oleh [Panglima Agung Tentera Jepun (Southern Army)]{pertubuhan}.'
+fokus: '1941–1945: dasar Jepun ubah kehidupan rakyat. Tiga dasar utama:'
+bahagian:
+- tajuk: A. Dasar Pentadbiran
+  label: Bahagian Pertama
+  desc: ''
+  kandungan:
+  - jenis: board
+    tajuk: ''
+    strip: false
+    senarai: []
+  - jenis: board
+    tajuk: Perubahan pada April 1944
+    strip: true
+    senarai:
+    - '[globe] Sumatera → di bawah tentera Jepun ke-25'
+    - '[round-pushpin] pusat di Bukit Tinggi, Sumatera'
+    - '[hibiscus] Tanah Melayu → di bawah tentera Jepun ke-29'
+    - '[round-pushpin] pusat di Taiping, Perak'
+    - '[calendar] Pada [April 1944]{tahun}, [Tanah Melayu]{tempat} dan [Sumatera]{tempat} ditadbir secara berasingan.'
+    - '[pushpin] Hal ini berlaku kerana terdapat [perbezaan sistem politik dan ekonomi]{istilah} yang ketara di bawah pentadbiran
+      [British]{pertubuhan} dan [Belanda]{pertubuhan} sebelum perang.'
+  - jenis: board
+    tajuk: Perubahan Pentadbiran Wilayah
+    strip: true
+    senarai: []
+  - jenis: board
+    tajuk: Pentadbiran Borneo
+    strip: true
+    senarai:
+    - '[pushpin] [Sarawak]{tempat}, [Sabah]{tempat} dan [Brunei]{tempat} digabungkan menjadi satu unit pentadbiran yang dikenali
+      sebagai [Kita Boruneo]{istilah}.'
+    - '[pushpin] Pentadbiran ini diketuai oleh [Gabenor Jeneral]{istilah} dan diletakkan di bawah [pasukan tentera Jepun ke-37]{pertubuhan}
+      yang berpusat di [Kuching]{tempat}.'
+  - jenis: board
+    tajuk: Info
+    strip: true
+    senarai:
+    - '[angry-face] kejam'
+    - '[crossed_swords] ganas'
+    - '[skull] menyiksa dan membunuh orang awam yang disyaki menentang Jepun'
+    - '[pushpin] Jepun menggunakan [Kempeitai]{pertubuhan}, iaitu polis tentera Jepun.'
+    - '[pushpin] Tujuannya ialah untuk menjaga kepentingan pentadbiran tentera Jepun.'
+    - '[pushpin] Kempeitai bertindak dengan:'
+  - jenis: board
+    tajuk: Persidangan Raja-raja Melayu
+    strip: true
+    senarai:
+    - '[crown] mengukuhkan kedudukan Raja-raja Melayu'
+    - '[military-helmet] tetapi tetap di bawah pengawasan Gabenor Jepun'
+    - '[calendar] [Januari 1943]{tahun}'
+    - '[round-pushpin] Diadakan di [Singapura]{tempat}.'
+    - '[pushpin] Tujuannya untuk:'
+  - jenis: board
+    tajuk: Koa Kunrenjo
+    strip: true
+    senarai:
+    - '[teacher] melatih pemimpin tempatan'
+    - '[sushi] menyokong cita-cita politik Jepun'
+    - '[pushpin] Jepun menubuhkan [Institut Latihan Pemimpin-pemimpin Muda]{pertubuhan} yang dikenali sebagai [Koa Kunrenjo]{pertubuhan}.'
+    - '[pushpin] Tujuan penubuhannya ialah:'
+  - jenis: accordion
+    items:
+    - tajuk: Pentadbiran Tentera Jepun
+      senarai:
+      - '[light_bulb] Tentera Jepun memperkenalkan [Pemerintahan Tentera Tanah Melayu]{istilah}.'
+      - '[pushpin] Pada peringkat awal, [Tanah Melayu]{tempat} digabungkan dengan [Sumatera]{tempat} di bawah satu pentadbiran
+        untuk membentuk [Kawasan Pertahanan Khas]{istilah}.'
+      - '[pushpin] Kawasan ini diletakkan di bawah pentadbiran [pasukan tentera Jepun ke-25]{pertubuhan} yang berpusat di
+        [Singapura]{tempat}.'
+      - '[pushpin] Pada [April 1944]{tahun}, [Tanah Melayu]{tempat} dan [Sumatera]{tempat} ditadbir secara berasingan.'
+      - '[pushpin] Hal ini berlaku kerana terdapat [perbezaan sistem politik dan ekonomi]{istilah} yang ketara di bawah pentadbiran
+        [British]{pertubuhan} dan [Belanda]{pertubuhan} sebelum perang.'
+      - '[pushpin] [Singapura]{tempat} yang dikenali sebagai [Syonan-to]{tempat} ([Pulau Cahaya Selatan]{istilah}) diasingkan
+        pentadbirannya daripada [Tanah Melayu]{tempat} yang dikenali sebagai [Malai Baru]{tempat} ([Melayu Baru]{istilah}).'
+      - '[pushpin] Negeri Melayu, iaitu [Perlis]{tempat}, [Kedah]{tempat}, [Kelantan]{tempat} dan [Terengganu]{tempat} dipindahkan
+        di bawah pentadbiran kerajaan [Thailand]{tempat}.'
+      - '[pushpin] [Sarawak]{tempat}, [Sabah]{tempat} dan [Brunei]{tempat} digabungkan menjadi satu unit pentadbiran yang
+        dikenali sebagai [Kita Boruneo]{istilah}.'
+      - '[pushpin] Pentadbiran ini diketuai oleh [Gabenor Jeneral]{istilah} dan diletakkan di bawah [pasukan tentera Jepun
+        ke-37]{pertubuhan} yang berpusat di [Kuching]{tempat}.'
+      - '[pushpin] Jepun menggunakan [Kempeitai]{pertubuhan}, iaitu polis tentera Jepun.'
+      - '[pushpin] Tujuannya ialah untuk menjaga kepentingan pentadbiran tentera Jepun.'
+      - '[pushpin] Kempeitai bertindak dengan:'
+      - '[pushpin] Sumatera → di bawah tentera Jepun ke-25'
+      - '[pushpin] pusat di Bukit Tinggi, Sumatera'
+      - '[pushpin] Tanah Melayu → di bawah tentera Jepun ke-29'
+      - '[pushpin] pusat di Taiping, Perak'
+    - tajuk: Dasar terhadap Raja-raja Melayu
+      senarai:
+      - '[light_bulb] Jepun tetap mengekalkan kedudukan Raja-raja Melayu, tetapi semuanya berada di bawah kawalannya.'
+      - '[pushpin] Jepun mengiktiraf Raja-raja Melayu sebagai:'
+      - '[pushpin] Jepun juga memberi bayaran pencen seperti sebelum pendudukan.'
+      - '[pushpin] [Januari 1943]{tahun}'
+      - '[pushpin] Diadakan di [Singapura]{tempat}.'
+      - '[pushpin] Tujuannya untuk:'
+      - '[mosque] ketua agama Islam'
+      - '[japanese_dolls] ketua adat Melayu'
+    - tajuk: Dasar terhadap Kepimpinan Tempatan
+      senarai:
+      - '[light_bulb] Jepun menggunakan pemimpin tempatan untuk membantu pentadbirannya.'
+      - '[pushpin] Jepun memberi peluang kepada:'
+      - '[pushpin] untuk:'
+      - '[pushpin] Jepun menubuhkan [Institut Latihan Pemimpin-pemimpin Muda]{pertubuhan} yang dikenali sebagai [Koa Kunrenjo]{pertubuhan}.'
+      - '[pushpin] Tujuan penubuhannya ialah:'
+      - '[graduation-cap] pemimpin tempatan yang berpendidikan'
+      - '[brain] pemimpin yang berpengalaman'
+- tajuk: B. Dasar Ekonomi
+  label: Bahagian Kedua
+  desc: ''
+  kandungan:
+  - jenis: board
+    tajuk: ''
+    strip: false
+    senarai:
+    - '[chart] Rancangan Pengeluaran Lima Tahun → mengawal pengeluaran dan penggunaan barangan tempatan'
+    - '[bar-chart] Jawatankuasa Penyelidikan Bahan → menyelidik kegunaan baharu sumber tempatan'
+    - '[factory] Rancangan Perindustrian Lima Tahun → membangunkan industri tempatan dengan menggunakan kemudahan sedia ada
+      secara maksimum'
+  - jenis: board
+    tajuk: Mata Wang Jepun
+    strip: true
+    senarai:
+    - '[chart-decreasing] berlaku inflasi'
+    - '[money-with-wings] terlalu banyak wang dalam edaran'
+    - '[shopping-cart] barangan di pasaran semakin berkurangan'
+    - '[worried-face] kehidupan rakyat menjadi semakin sukar'
+- tajuk: C. Dasar Sosial
+  label: Bahagian Ketiga
+  desc: ''
+  kandungan:
+  - jenis: board
+    tajuk: ''
+    strip: false
+    senarai: []
+  - jenis: board
+    tajuk: Info
+    strip: true
+    senarai:
+    - '[rice] menambah pengeluaran makanan'
+    - '[loudspeaker] tidak menyebar khabar angin'
+    - '[pushpin] Pentadbiran tentera Jepun secara halus memanipulasi pegawai agama untuk tujuan propaganda Jepun.'
+    - '[pushpin] Pegawai agama diminta menyampaikan hal yang diputuskan oleh tentera Jepun dalam kelas agama di masjid dan
+      surau.'
+    - '[pushpin] Masjid juga digunakan untuk menyampaikan titah sultan bagi menyokong dasar Jepun seperti:'
+  - jenis: board
+    tajuk: Karya sastera berkaitan
+    strip: true
+    senarai:
+    - '[pushpin] Kekejaman ini turut digambarkan dalam karya [Nyawa di Hujung Pedang]{karya} oleh [Ahmad Murad Nasaruddin]{tokoh}.'
+    - '[pushpin] Novel ini berdasarkan kisah sebenar seorang pemuda Melayu yang ditangkap dan diseksa oleh [Kempeitai]{pertubuhan}.'
+  - jenis: accordion
+    items:
+    - tajuk: Pendidikan
+      senarai:
+      - '[pushpin] Jepun menutup sekolah Inggeris dan sekolah Cina.'
+      - '[pushpin] Kemudian Jepun memperkenalkan sistem pendidikan Jepun yang bertujuan:'
+      - '[handshake_light] membentuk semangat persaudaraan sejagat (Hakko Ichiu)'
+      - '[crossed-flags] menanam kesetiaan kepada Jepun'
+      - '[factory] mencapai teknologi industri'
+      - '[pine-decoration] meningkatkan disiplin dan nilai Jepun'
+      - '[fire] menekankan semangat Jepun (Nippon Seishin)'
+      - '[kimono] menghormati kebudayaan Jepun'
+      - '[crown] menghormati Maharaja Jepun (Tenno Heika)'
+    - tajuk: Sikap Jepun terhadap Agama
+      senarai:
+      - '[pushpin] Tentera Jepun menunjukkan sikap yang lebih berhati-hati dan hormat terhadap agama Islam dan adat Melayu
+        bagi membendung kegiatan penentangan penduduk tempatan terhadap pendudukan Jepun.'
+      - '[pushpin] Oleh itu:'
+      - '[pushpin] Persidangan agama Islam turut diadakan di [Singapura]{tempat} dan [Kuala Kangsar]{tempat}.'
+      - '[pushpin] Pentadbiran tentera Jepun secara halus memanipulasi pegawai agama untuk tujuan propaganda Jepun.'
+      - '[pushpin] Pegawai agama diminta menyampaikan hal yang diputuskan oleh tentera Jepun dalam kelas agama di masjid dan
+        surau.'
+      - '[pushpin] Masjid juga digunakan untuk menyampaikan titah sultan bagi menyokong dasar Jepun seperti:'
+      - '[open_book] kelas agama dibenarkan diteruskan'
+      - '[classical_building] Majlis Agama Negeri ditubuhkan'
+      - '[mosque] persidangan agama Islam diadakan'
+    - tajuk: Catuan dan Penghasilan Makanan
+      senarai:
+      - '[pushpin] Jepun memperkenalkan [Ordinan Kawalan Barangan dan Bahan Penting]{perjanjian} untuk mengawal bekalan makanan.'
+      - '[pushpin] Makanan yang dicatu termasuk:'
+      - '[pushpin] Jepun juga melancarkan kempen [Tambah Lebih Banyak Makanan]{peristiwa}.'
+      - '[pushpin] Akibat kekurangan makanan, penduduk terpaksa:'
+      - '[cooked-rice] beras'
+      - '[salt] garam'
+      - '[candy] gula'
+    - tajuk: Layanan terhadap Penduduk
+      senarai:
+      - '[pushpin] Orang Melayu dan peribumi diberi layanan yang lebih baik jika bekerjasama dengan Jepun.'
+      - '[pushpin] Jepun membantu orang India menubuhkan [Tentera Kebangsaan India]{pertubuhan}.'
+      - '[pushpin] Gerakan ini dipimpin oleh [Subhas Chandra Bose]{tokoh}.'
+      - '[pushpin] Orang Cina menerima layanan yang paling kejam kerana permusuhan Jepun terhadap China dalam [Perang China-Jepun]{peristiwa}.'
+      - '[pushpin] Ramai orang Cina menjadi mangsa kekejaman tentera Jepun.'
+    - tajuk: Kekejaman Jepun dan Landasan Kereta Api Maut
+      senarai:
+      - '[pushpin] Jepun membina [Landasan Kereta Api Maut]{peristiwa} dari [Thailand]{tempat} ke [Burma (Myanmar)]{tempat}.'
+      - '[straight-ruler] Panjang landasan ini ialah [415 kilometer]{tahun}.'
+      - '[pushpin] Pembinaan landasan ini melibatkan:'
+      - '[pushpin] Mereka dipaksa bekerja dalam keadaan:'
+      - '[pushpin] Ramai yang terkorban akibat:'
+      - '[pushpin] Kekejaman ini turut digambarkan dalam karya [Nyawa di Hujung Pedang]{karya} oleh [Ahmad Murad Nasaruddin]{tokoh}.'
+      - '[pushpin] Novel ini berdasarkan kisah sebenar seorang pemuda Melayu yang ditangkap dan diseksa oleh [Kempeitai]{pertubuhan}.'
+      - '[construction-worker] 200,000 buruh paksa (romusha)'
+      - '[military-helmet] 60,000 tawanan perang'
+kesimpulan:
+- '[pushpin] Dasar pendudukan Jepun di negara kita boleh difahami melalui tiga bahagian utama:'
+- '[pushpin] Pendudukan Jepun menyebabkan rakyat mengalami:'
+- '[pushpin] Namun, pengalaman pahit ini turut:'
+- '[light_bulb] Pendudukan Jepun membuktikan bahawa kekejaman penjajah akhirnya menimbulkan kesedaran untuk mempertahankan
+  maruah, kebebasan dan kedaulatan negara.'
+- '[classical_building] dasar pentadbiran'
+- '[yen-banknote] dasar ekonomi'
+- '[school] dasar sosial'

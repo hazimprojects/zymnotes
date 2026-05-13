@@ -20,6 +20,12 @@ jobs:
         with:
           fetch-depth: 80
 
+      - name: Install Python dependencies
+        run: pip install PyYAML
+
+      - name: Build HTML from content YAML
+        run: python3 scripts/build.py
+
       - name: Generate updates.json
         run: python3 scripts/generate-updates.py
 

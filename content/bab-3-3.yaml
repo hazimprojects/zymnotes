@@ -1,0 +1,232 @@
+subtopik: '3.3'
+tajuk: Perang Dunia Kedua
+bab: 3
+tajuk_bab: Konflik Dunia dan Pendudukan Jepun
+bab_label: Bab 3
+subjek: Sejarah
+tingkatan: 4
+tema: bab-theme-3
+audio: false
+has_quiz: false
+fail_sebelum: bab-3-2.html
+fail_seterusnya: bab-3-4.html
+kod_seterusnya: '3.4'
+og_image_v: '20260420'
+description: 'Nota Sejarah Tingkatan 4 Bab 3.3 (Konflik Dunia dan Pendudukan Jepun di Negara Kita): Perang Dunia Kedua. Ringkasan
+  padat untuk ulang kaji SPM.'
+lead: Subtopik ini menerangkan mengapa [Perang Dunia Kedua]{peristiwa} tercetus di [Eropah]{tempat} dan [Asia Pasifik]{tempat}.
+  Perang ini berpunca daripada kemunculan ideologi baharu, ketidakpuasan hati terhadap [Perjanjian Versailles]{perjanjian}
+  dan kegagalan [Liga Bangsa-Bangsa]{pertubuhan} mengekalkan keamanan dunia.
+ringkasan:
+- '[collision] [Perang Dunia Kedua]{peristiwa} berlaku antara [1939]{tahun} hingga [1945]{tahun} dan melibatkan dua medan
+  utama, iaitu [Eropah dan Afrika Utara]{tempat} serta [Asia dan Asia Tenggara]{tempat}.'
+- '[fire] Perang ini tercetus akibat kemunculan ideologi baharu seperti [Fasisme]{gerakan} dan [Nazisme]{gerakan}, ketidakpuasan
+  terhadap [Perjanjian Versailles]{perjanjian} dan kegagalan [Liga Bangsa-Bangsa]{pertubuhan}.'
+- '[crossed_swords] Dua pihak utama yang terlibat ialah Kuasa Paksi dan Kuasa Bersekutu.'
+- '[tornado] Di Eropah, Jerman menggunakan strategi [Blitzkrieg]{istilah} untuk menakluki banyak negara dengan pantas.'
+- '[dove] Perang di Eropah berakhir pada [April 1945]{tahun} selepas Kuasa Bersekutu berjaya melalui kerjasama kuasa besar
+  dan keberkesanan strategi serangan balas.'
+soalan_utama:
+  soalan: Mengapakah Perang Dunia Kedua tercetus di Eropah dan bagaimana peperangan itu berakhir di benua tersebut?
+  heading: Mengapakah Perang Dunia Kedua tercetus di Eropah dan bagaimana peperangan itu berakhir di benua tersebut?
+  jawapan:
+  - '[light_bulb] [Perang Dunia Kedua]{peristiwa} berlaku antara tahun [1939]{tahun} hingga [1945]{tahun} dan melibatkan dua
+    medan utama, iaitu [Eropah dan Afrika Utara]{tempat} serta [Asia dan Asia Tenggara]{tempat}.'
+  - '[pushpin] Perang ini tercetus akibat gabungan kemunculan ideologi baharu, ketidakpuasan hati terhadap [Perjanjian Versailles]{perjanjian}
+    dan kegagalan [Liga Bangsa-Bangsa]{pertubuhan} mengekalkan keamanan dunia.'
+fokus: 'Perang Dunia Kedua di Eropah bermula 1939. Empat perkara:'
+bahagian:
+- tajuk: Kuasa Utama dalam Perang Dunia Kedua
+  label: Bahagian Pertama
+  desc: ''
+  kandungan:
+  - jenis: board
+    tajuk: Panduan warna pihak perang
+    strip: true
+    senarai: []
+  - jenis: board
+    tajuk: Info
+    strip: true
+    senarai:
+    - '[globe_meridians] Finland'
+    - '[hibiscus] Hungary'
+    - '[globe_meridians] Romania'
+    - '[globe_meridians] Poland'
+    - '[globe_meridians] China'
+    - '[globe_meridians] Kanada'
+    - '[globe_meridians] India'
+  - jenis: accordion
+    items:
+    - tajuk: Kuasa Paksi
+      senarai:
+      - '[pushpin] Kuasa Paksi ialah negara yang bertindak agresif dan melancarkan peperangan untuk meluaskan kuasa.'
+      - '[globe_meridians] Jerman'
+      - '[globe_meridians] Itali'
+      - '[sushi] Jepun'
+    - tajuk: Kuasa Bersekutu
+      senarai:
+      - '[pushpin] Kuasa Bersekutu ialah negara yang menentang pencerobohan dan mempertahankan negara yang diserang.'
+      - '[globe_meridians] Britain'
+      - '[globe_meridians] Amerika Syarikat'
+      - '[globe_meridians] Perancis'
+      - '[globe_meridians] Rusia'
+- tajuk: Faktor Tercetusnya Perang Dunia Kedua di Eropah
+  label: Bahagian Kedua
+  desc: ''
+  kandungan:
+  - jenis: board
+    tajuk: ''
+    strip: false
+    senarai: []
+  - jenis: board
+    tajuk: 'Faktor 1: Kemunculan Ideologi Baharu'
+    strip: true
+    senarai:
+    - '[classical_building] mengutamakan kepentingan negara melebihi individu'
+    - '[crossed_swords] menekankan nasionalisme melampau'
+    - '[bomb] menganggap peperangan sebagai cara meningkatkan imej negara'
+  - jenis: board
+    tajuk: Glosari
+    strip: true
+    senarai: []
+  - jenis: board
+    tajuk: 'Faktor 2: Ketidakpuasan Hati terhadap Perjanjian Versailles'
+    strip: true
+    senarai:
+    - '[money-with-wings] pampasan perang yang tinggi'
+    - '[chart-decreasing] kemelesetan ekonomi'
+    - '[chart] inflasi yang teruk'
+    - '[globe-showing-europe-africa] kehilangan tanah jajahan'
+    - '[military-helmet] sekatan terhadap angkatan tentera'
+  - jenis: board
+    tajuk: 'Faktor 3: Kegagalan Liga Bangsa-Bangsa'
+    strip: true
+    senarai:
+    - '[handshake_light] memastikan keamanan dunia'
+    - '[globe-showing-europe-africa] mewujudkan kerjasama antarabangsa'
+    - '[prohibited] mengelakkan peperangan baharu'
+  - jenis: board
+    tajuk: Cabaran Liga Bangsa-Bangsa selepas Perang Dunia Pertama
+    strip: true
+    senarai: []
+  - jenis: board
+    tajuk: ''
+    strip: false
+    senarai: []
+  - jenis: accordion
+    items:
+    - tajuk: Fasisme di Itali
+      senarai:
+      - '[person] Dipimpin oleh [Benito Mussolini]{tokoh} dan Parti Fasis.'
+      - '[calendar] [1922]{tahun} — gerakan fasisme berjaya menguasai kerajaan Itali.'
+      - '[pushpin] Untuk memulihkan imejnya, Itali bertindak meluaskan tanah jajahan dengan menguasai [Habsyah (Ethiopia)]{tempat}
+        dan [Albania]{tempat}.'
+      - '[pushpin] mengutamakan kepentingan negara melebihi individu'
+      - '[pushpin] menekankan nasionalisme melampau'
+      - '[pushpin] menganggap peperangan sebagai cara meningkatkan imej negara'
+    - tajuk: Nazisme di Jerman
+      senarai:
+      - '[person] Dipimpin oleh [Adolf Hitler]{tokoh} dan Parti Nazi.'
+      - '[calendar] [1933]{tahun} — gerakan nazisme berjaya membentuk kerajaan di Jerman.'
+      - '[light_bulb] Hitler menggunakan fahaman ini untuk memulihkan semangat nasionalisme Jerman.'
+      - '[dna] mengagungkan bangsa Jerman'
+      - '[scroll_old] mengetepikan Perjanjian Versailles'
+      - '[military-helmet] membina semula angkatan tentera Jerman'
+      - '[shield] menduduki semula Rhineland'
+- tajuk: Perang Dunia Kedua di Eropah
+  label: Bahagian Ketiga
+  desc: ''
+  kandungan:
+  - jenis: board
+    tajuk: ''
+    strip: false
+    senarai: []
+  - jenis: board
+    tajuk: Glosari
+    strip: true
+    senarai: []
+  - jenis: accordion
+    items:
+    - tajuk: A. Penaklukan Jerman di Eropah Barat
+      senarai:
+      - '[pushpin] Jerman menggunakan strategi [Blitzkrieg]{istilah}, iaitu serangan pantas menggunakan:'
+      - '[tear-off-calendar] Menjelang pertengahan [1941]{tahun}, hampir seluruh Eropah Barat berada di bawah penguasaan Jerman.'
+      - '[airplane] kapal terbang'
+      - '[shield] kereta kebal'
+      - '[motorcycle] tentera bermotosikal'
+    - tajuk: B. Pengeboman Britain (1940–1941)
+      senarai:
+      - '[tear-off-calendar] Dari [September 1940]{tahun} hingga [Jun 1941]{tahun}, Jerman melancarkan serangan udara dan
+        laut terhadap Britain.'
+      - '[light_bulb] Namun begitu, Britain tetap bertahan dan tidak menyerah kalah.'
+      - '[anchor] pelabuhan'
+      - '[factory] kawasan perindustrian'
+      - '[shield] pertahanan udara Britain'
+    - tajuk: C. Penyertaan Itali dalam Perang
+      senarai:
+      - '[calendar] [Jun 1940]{tahun} — Itali, sebagai sekutu Jerman, mengisytiharkan perang terhadap Britain dan Perancis.'
+      - '[pushpin] Tentera Itali menyerang Perancis dari:'
+      - '[pushpin] Pada masa yang sama, tentera Jerman menyerang Perancis dari:'
+      - '[light_bulb] Serangan dua hala ini mempercepat kekalahan Perancis.'
+      - '[down-arrow] arah selatan'
+    - tajuk: D. Serangan ke atas Rusia – Operasi Barbarossa
+      senarai:
+      - '[pushpin] Setelah menguasai Eropah Barat, Jerman melancarkan [Operasi Barbarossa]{peristiwa}.'
+      - '[pushpin] Operasi ini ialah serangan besar-besaran untuk menawan Rusia.'
+      - '[pushpin] Operasi ini turut dibantu oleh tentera Finland, Hungary dan Romania.'
+      - '[cityscape] Leningrad'
+      - '[cityscape] Moscow'
+      - '[cityscape] Stalingrad'
+- tajuk: Berakhirnya Perang Dunia Kedua di Eropah
+  label: Bahagian Keempat
+  desc: ''
+  kandungan:
+  - jenis: board
+    tajuk: ''
+    strip: false
+    senarai:
+    - '[handshake_light] kerjasama kuasa besar'
+    - '[crossed_swords] keberkesanan strategi serangan balas'
+  - jenis: board
+    tajuk: Penamat Perang di Eropah
+    strip: true
+    senarai:
+    - '[right-arrow] tentera Bersekutu memasuki Jerman dari arah barat'
+    - '[right-arrow] tentera Rusia menyerang Jerman dari arah timur'
+  - jenis: accordion
+    items:
+    - tajuk: A. Kerjasama Kuasa Besar
+      senarai:
+      - '[pushpin] Pemimpin kuasa besar Kuasa Bersekutu sering bertemu untuk membuat keputusan politik dan ketenteraan.'
+      - '[pushpin] beroperasi di bawah [Komander Tertinggi Bersekutu]{pertubuhan} yang diketuai oleh Amerika Syarikat.'
+      - '[person] Franklin D. Roosevelt – Presiden Amerika Syarikat'
+      - '[person] Winston Churchill – Perdana Menteri Britain'
+      - '[person] Joseph Stalin – Presiden Rusia'
+    - tajuk: B. Keberkesanan Strategi Serangan Balas
+      senarai:
+      - '[pushpin] Kuasa Bersekutu berjaya menang kerana strategi serangan balas mereka lebih berkesan, manakala Kuasa Paksi
+        melakukan beberapa kesilapan besar.'
+      - '[pushpin] Pada awalnya, serangan Jerman ke atas Rusia berjalan lancar. Namun, peperangan berlanjutan hingga melalui
+        dua musim sejuk di Rusia.'
+      - '[calendar] [Januari 1943]{tahun} — Jeneral Jerman, [Friedrich Von Paulus]{tokoh}, mengingkari arahan Hitler dan menyerah
+        kalah kepada tentera Rusia di [Stalingrad]{tempat}.'
+      - '[light_bulb] Kekalahan di Stalingrad menjadi titik penting yang melemahkan Jerman di Eropah.'
+      - '[calendar] [Jun 1944]{tahun} — tentera Kuasa Bersekutu melancarkan operasi pendaratan di [Normandy, Perancis]{tempat},
+        dikenali sebagai [Operasi D-Day]{peristiwa}.'
+      - '[pushpin] Tentera Bersekutu berjaya memperdayakan Jerman dengan menyebarkan maklumat bahawa pendaratan akan berlaku
+        di [Calais]{tempat}, padahal serangan sebenar berlaku di [Normandy]{tempat}.'
+      - '[skull] kehilangan banyak nyawa'
+      - '[water-pistol] kehabisan peluru'
+      - '[fuel-pump] kekurangan minyak'
+      - '[bread] kehabisan makanan'
+      - '[disappointed-face] semangat tentera semakin lemah'
+kesimpulan:
+- '[pushpin] [Perang Dunia Kedua]{peristiwa} di Eropah tercetus akibat:'
+- '[pushpin] Peperangan ini menyaksikan kebangkitan kuasa agresif seperti Jerman dan Itali yang menggunakan peperangan untuk
+  meluaskan pengaruh.'
+- '[pushpin] Namun, perang akhirnya berakhir apabila:'
+- '[light_bulb] Kemenangan Kuasa Bersekutu di Eropah membolehkan mereka memberi tumpuan kepada peperangan di [Asia Pasifik]{tempat}
+  dalam usaha menghadapi kemaraan tentera Jepun.'
+- '[fire] kemunculan ideologi baharu seperti [Fasisme]{gerakan} dan [Nazisme]{gerakan}'
+- '[angry-face] ketidakpuasan hati terhadap [Perjanjian Versailles]{perjanjian}'
+- '[dove] kegagalan [Liga Bangsa-Bangsa]{pertubuhan}'

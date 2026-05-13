@@ -1,0 +1,94 @@
+subtopik: '4.2'
+tajuk: Gagasan Malayan Union
+bab: 4
+tajuk_bab: Era Peralihan Kuasa British
+bab_label: Bab 4
+subjek: Sejarah
+tingkatan: 4
+tema: bab-theme-4
+audio: false
+has_quiz: false
+fail_sebelum: bab-4-1.html
+fail_seterusnya: bab-4-3.html
+kod_seterusnya: '4.3'
+og_image_v: '20260420'
+description: 'Nota Sejarah Tingkatan 4 Bab 4.2 (Era Peralihan Kuasa British di Negara Kita): Gagasan Malayan Union. Ringkasan
+  padat untuk ulang kaji SPM.'
+lead: Subtopik ini menerangkan maksud [Malayan Union]{pentadbiran}, sebab British memperkenalkannya di [Tanah Melayu]{tempat},
+  ciri-ciri utama perlembagaannya, serta cara British mendapatkan persetujuan [Raja-raja Melayu]{tokoh}.
+ringkasan:
+- '[classical_building] [Malayan Union]{pentadbiran} diperkenalkan oleh British di [Tanah Melayu]{tempat} untuk menggantikan
+  [British Military Administration (BMA)]{pentadbiran}.'
+- '[page-facing-up] Gagasan ini boleh difahami melalui dua bahagian utama, iaitu [latar belakang dan ciri-ciri Malayan Union]{istilah}
+  serta [cara British mendapatkan tandatangan Sultan]{istilah}.'
+- '[crown] [Malayan Union]{pentadbiran} mengurangkan kuasa [Raja-raja Melayu]{tokoh} dan meletakkan [Tanah Melayu]{tempat}
+  di bawah kawalan British yang lebih langsung.'
+- '[writing-hand] British memperoleh persetujuan [Raja-raja Melayu]{tokoh} melalui [H.C. Willan]{tokoh} dan [Sir Harold MacMichael]{tokoh}
+  dengan desakan, tekanan dan paksaan politik.'
+soalan_utama:
+  soalan: Apakah Malayan Union, mengapakah British memperkenalkannya, dan bagaimanakah British mendapatkan persetujuan Raja-raja
+    Melayu?
+  heading: Apakah Malayan Union, mengapakah British memperkenalkannya, dan bagaimanakah British mendapatkan persetujuan Raja-raja
+    Melayu?
+  jawapan:
+  - '[light_bulb] [Malayan Union]{pentadbiran} diperkenalkan oleh British di [Tanah Melayu]{tempat} untuk menggantikan [British
+    Military Administration (BMA)]{pentadbiran}. British berharap sistem ini dapat melicinkan pentadbiran, meningkatkan pelaburan
+    ekonomi, mengukuhkan pertahanan dan mengekalkan orang asing sebagai tenaga kerja.'
+  - '[warning] Namun, gagasan ini sebenarnya mengurangkan kuasa [Raja-raja Melayu]{tokoh} dan mengubah kedudukan [Tanah Melayu]{tempat}
+    di bawah British.'
+bahagian:
+- tajuk: Sistem Pentadbiran Malayan Union
+  label: Bahagian Ketiga
+  desc: ''
+  kandungan:
+  - jenis: accordion
+    items:
+    - tajuk: Konsep Kesatuan
+      senarai:
+      - '[warning] [Singapura]{tempat} dikecualikan.'
+      - '[brown-circle] Negeri-negeri Melayu Bersekutu'
+      - '[brown-circle] Negeri-negeri Melayu Tidak Bersekutu'
+      - '[brown-circle] Negeri-negeri Selat'
+    - tajuk: Kedudukan Raja-raja Melayu
+      senarai:
+      - '[pushpin] [Sultan]{tokoh} hanya menjadi ahli [Majlis Raja-Raja]{istilah}.'
+      - '[warning] Kuasa politik [Raja-raja Melayu]{tokoh} dikurangkan dengan ketara.'
+      - '[mosque] Hal agama Islam'
+      - '[japanese_dolls] Adat istiadat Melayu'
+    - tajuk: Ketua Pentadbir
+      senarai:
+      - '[pushpin] [Malayan Union]{pentadbiran} diketuai oleh [Gabenor British]{tokoh}.'
+      - '[pushpin] Gabenor ini dilantik oleh [Raja England]{tokoh}.'
+      - '[warning] Kedua-dua majlis ini berada di bawah kawalan [Gabenor British]{tokoh}.'
+      - '[classical_building] Majlis Eksekutif'
+      - '[scroll_old] Majlis Perundangan Malayan Union'
+- tajuk: Kewarganegaraan Malayan Union
+  label: Bahagian Keempat
+  desc: ''
+  kandungan:
+  - jenis: board
+    tajuk: ''
+    strip: false
+    senarai:
+    - '[open_book] Prinsip jus soli'
+- tajuk: British Mendapatkan Tandatangan Sultan
+  label: Bahagian Kelima
+  desc: ''
+  kandungan:
+  - jenis: board
+    tajuk: ''
+    strip: false
+    senarai:
+    - '[person] H.C. Willan'
+    - '[person] Sir Harold MacMichael'
+kesimpulan:
+- '[light_bulb] Malayan Union mencetuskan perubahan besar dan kemarahan orang Melayu.'
+- '[pushpin] [Malayan Union]{pentadbiran} merupakan rancangan British untuk menguasai [Tanah Melayu]{tempat} melalui sistem
+  pentadbiran baharu yang lebih berpusat.'
+- '[pushpin] British pula mendapatkan persetujuan Raja-raja Melayu melalui:'
+- '[light_bulb] Cara British memperoleh tandatangan Sultan menimbulkan kemarahan dan bantahan daripada [Raja-raja Melayu]{tokoh}
+  serta orang Melayu.'
+- '[triangular-flag] Hal ini akhirnya mencetuskan penentangan hebat terhadap [Malayan Union]{pentadbiran}.'
+- '[crown] Mengurangkan kuasa Raja-raja Melayu'
+- '[globe_meridians] Meletakkan Tanah Melayu di bawah kawalan British yang lebih langsung'
+- '[identification-card] Melonggarkan syarat kewarganegaraan melalui prinsip jus soli'

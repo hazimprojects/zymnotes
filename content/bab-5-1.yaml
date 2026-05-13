@@ -1,0 +1,274 @@
+subtopik: '5.1'
+tajuk: Latar Belakang Penubuhan Persekutuan Tanah Melayu 1948
+bab: 5
+tajuk_bab: Persekutuan Tanah Melayu 1948
+bab_label: Bab 5
+subjek: Sejarah
+tingkatan: 4
+tema: bab-theme-5
+audio: false
+has_quiz: false
+fail_sebelum: bab-5.html
+fail_seterusnya: bab-5-2.html
+kod_seterusnya: '5.2'
+og_image_v: '20260420'
+description: 'Nota Sejarah Tingkatan 4 Bab 5.1 (Persekutuan Tanah Melayu 1948): Latar Belakang Penubuhan Persekutuan Tanah
+  Melayu 1948. Ringkasan padat untuk ulang kaji SPM.'
+lead: Subtopik ini menerangkan mengapa [Persekutuan Tanah Melayu 1948]{pentadbiran} diperkenalkan untuk menggantikan [Malayan
+  Union 1946]{pentadbiran} yang ditolak oleh penduduk tempatan, serta peranan [Jawatankuasa Kerja]{pertubuhan} dan [PUTERA-AMCJA]{pertubuhan}
+  dalam proses tersebut.
+ringkasan:
+- '[classical_building] [Persekutuan Tanah Melayu 1948]{pentadbiran} diperkenalkan untuk menggantikan [Malayan Union 1946]{pentadbiran}
+  yang ditolak oleh penduduk tempatan.'
+- '[puzzle] [Jawatankuasa Kerja]{pertubuhan} dibentuk untuk merangka asas [Perjanjian Persekutuan Tanah Melayu]{perjanjian}.'
+- '[raised_fist] Golongan nasionalis Melayu radikal membantah proses perundingan British yang dianggap tertutup dan tidak
+  demokratik.'
+- '[handshake_light] Gabungan [PUTERA-AMCJA]{pertubuhan} mengemukakan cadangan alternatif yang dikenali sebagai [Perlembagaan
+  Rakyat]{perjanjian}.'
+- '[loudspeaker] Walaupun cadangan ini ditolak oleh British, perjuangan mereka memperlihatkan usaha awal pelbagai golongan
+  rakyat memikirkan bentuk negara merdeka yang lebih adil dan menyeluruh.'
+soalan_utama:
+  soalan: Mengapakah Persekutuan Tanah Melayu 1948 ditubuhkan, dan apakah peranan Jawatankuasa Kerja serta PUTERA-AMCJA dalam
+    proses tersebut?
+  heading: Mengapakah Persekutuan Tanah Melayu 1948 ditubuhkan, dan apakah peranan Jawatankuasa Kerja serta PUTERA-AMCJA dalam
+    proses tersebut?
+  jawapan:
+  - '[light_bulb] [Persekutuan Tanah Melayu 1948]{pentadbiran} diperkenalkan untuk menggantikan [Malayan Union 1946]{pentadbiran}
+    yang ditolak oleh penduduk tempatan.'
+  - '[pushpin] Bagi tujuan itu, satu [Jawatankuasa Kerja]{pertubuhan} dibentuk untuk merangka [Perjanjian Persekutuan Tanah
+    Melayu]{perjanjian}.'
+  - '[pushpin] Dalam masa yang sama, golongan nasionalis Melayu radikal dan bukan Melayu turut mengemukakan cadangan alternatif
+    yang dikenali sebagai [Perlembagaan Rakyat]{perjanjian}.'
+bahagian:
+- tajuk: Penubuhan Jawatankuasa Kerja
+  label: Bahagian Pertama
+  desc: ''
+  kandungan:
+  - jenis: board
+    tajuk: ''
+    strip: false
+    senarai:
+    - '[calendar] [25 Julai 1946]{masa} → [Jawatankuasa Kerja]{pertubuhan} ditubuhkan.'
+    - '[bullseye] Matlamat penubuhan → membincangkan asas [Perjanjian Persekutuan Tanah Melayu 1948]{perjanjian}.'
+  - jenis: board
+    tajuk: Info
+    strip: true
+    senarai:
+    - '[keycap_1] kerajaan pusat'
+    - '[keycap_2] kerajaan negeri'
+  - jenis: accordion
+    items:
+    - tajuk: Ahli Jawatankuasa Kerja · Wakil UMNO
+      senarai:
+      - '[person] 1. [Dato’ Onn Jaafar]{tokoh}'
+      - '[person] 2. [Dato’ Abdul Rahman Mohd Yassin]{tokoh}'
+      - '[person] 3. [Haji Megat Yunus]{tokoh}'
+    - tajuk: Ahli Jawatankuasa Kerja · Wakil Kerajaan British
+      senarai:
+      - '[person] 1. [A.T. Newboult]{tokoh} – Ketua Setiausaha [Malayan Union]{pentadbiran}'
+      - '[person] 2. [K.K. O’Connor]{tokoh} – Peguam Negara [Malayan Union]{pentadbiran}'
+      - '[person] 3. [W.D. Godsall]{tokoh} – Setiausaha Kewangan'
+      - '[person] 4. [Dr. W. Linchan]{tokoh} – Ahli [MCS (Malayan Civil Service)]{pertubuhan}'
+      - '[person] 5. [A. Williams]{tokoh} – Ahli [MCS]{pertubuhan}'
+      - '[person] 6. [D.C. Watherston]{tokoh} – Setiausaha'
+    - tajuk: Ahli Jawatankuasa Kerja · Wakil Raja-raja Melayu
+      senarai:
+      - '[person] 1. [Raja Kamaralzaman Raja Ngah Mansur]{tokoh} – Raja Kecil Tengah Perak'
+      - '[person] 2. [Dato’ Hamzah Abdullah]{tokoh} – Orang Kaya Menteri Besar Selangor'
+      - '[person] 3. [Haji Mohamad Sheriff Osman]{tokoh} – Setiausaha Kerajaan Kedah'
+      - '[person] 4. [Dato’ Nik Ahmad Kamil Mahmud]{tokoh} – Dato’ Seri Setia Raja Kelantan'
+    - tajuk: Pegawai pemerhati dan penasihat undang-undang
+      senarai:
+      - '[pushpin] Terdapat juga pegawai pemerhati dan penasihat undang-undang dalam [Jawatankuasa Kerja]{pertubuhan}, iaitu:'
+      - '[person] 1. [Theodore Adams]{tokoh} – Penasihat Raja-raja Melayu'
+      - '[person] 2. [Roland Braddell]{tokoh} – Penasihat Undang-undang UMNO'
+      - '[person] 3. [Ralph Hone]{tokoh} – Pemerhati dan wakil Gabenor Jeneral'
+- tajuk: Cadangan Jawatankuasa Kerja
+  label: Bahagian Kedua
+  desc: ''
+  kandungan:
+  - jenis: board
+    tajuk: ''
+    strip: false
+    senarai:
+    - '[keycap_1] menyatukan semua negeri Melayu dalam satu pentadbiran bersama dua buah [Negeri-negeri Selat]{tempat}'
+    - '[keycap_2] memulihkan kedudukan dan kedaulatan [Raja-raja Melayu]{tokoh}'
+    - '[keycap_3] menjaga kedudukan istimewa orang Melayu dan kepentingan sah kaum lain'
+    - '[keycap_4] menubuhkan [Dewan Perundangan Negeri]{pentadbiran} bagi setiap negeri'
+    - '[keycap_5] mengenakan syarat kewarganegaraan yang ketat'
+- tajuk: Gerakan Nasionalis Melayu Radikal
+  label: Bahagian Ketiga
+  desc: ''
+  kandungan:
+  - jenis: board
+    tajuk: ''
+    strip: false
+    senarai: []
+  - jenis: accordion
+    items:
+    - tajuk: Pertubuhan dalam PUTERA
+      senarai:
+      - '[pushpin] [PUTERA]{pertubuhan} terdiri daripada beberapa pertubuhan Melayu, antaranya:'
+      - '[classical_building] [Parti Kebangsaan Melayu Malaya (PKMM)]{pertubuhan} · dipengerusikan oleh [Dr. Burhanuddin al-Helmi]{tokoh}'
+      - '[classical_building] [Angkatan Pemuda Insaf (API)]{pertubuhan} · diterajui oleh [Ahmad Boestamam]{tokoh} sebagai
+        presiden'
+      - '[classical_building] [Gerakan Angkatan Muda (GERAM)]{pertubuhan} · diketuai oleh [Aziz Ishak]{tokoh} dan [Abdul Samad
+        Ismail]{tokoh}'
+      - '[classical_building] [Hizbul Muslimin]{pertubuhan} · diketuai oleh [Abu Bakar al-Baqir]{tokoh}'
+      - '[classical_building] [Barisan Tani Malaya (BATAS)]{pertubuhan} · diketuai oleh [Musa Ahmad]{tokoh}'
+      - '[classical_building] [Angkatan Wanita Sedar (AWAS)]{pertubuhan} · diketuai oleh [Shamsiah Fakeh]{tokoh}'
+- tajuk: Gabungan PUTERA-AMCJA
+  label: Bahagian Keempat
+  desc: ''
+  kandungan:
+  - jenis: board
+    tajuk: ''
+    strip: false
+    senarai: []
+  - jenis: accordion
+    items:
+    - tajuk: Pertubuhan dalam AMCJA
+      senarai:
+      - '[pushpin] [AMCJA]{pertubuhan} terdiri daripada:'
+      - '[classical_building] [Pan-Malayan Federation of Trade Union (PMFTU)]{pertubuhan} · Setiausahanya ialah [Chan Loo]{tokoh}'
+      - '[classical_building] [Malayan Democratic Union (MDU)]{pertubuhan} · dipengerusikan oleh [John Eber]{tokoh}'
+      - '[classical_building] [Malayan Indian Congress (MIC)]{pertubuhan} · diketuai oleh [John Thivy]{tokoh} sebagai presiden'
+    - tajuk: Pendirian PUTERA-AMCJA
+      senarai:
+      - '[pushpin] Gabungan ini menolak [Perjanjian Persekutuan]{perjanjian} kerana:'
+      - '[pushpin] [PUTERA-AMCJA]{pertubuhan} menentang cadangan tersebut secara terbuka.'
+      - '[warning] [Jawatankuasa Kerja]{pertubuhan} tidak diwakili oleh semua kaum'
+      - '[warning] tidak mempunyai wakil bukan Melayu'
+      - '[warning] dianggap tidak demokratik'
+      - '[warning] dilihat mengukuhkan British'
+      - '[warning] dianggap bersifat perkauman'
+- tajuk: Sumbangan Nasionalis Melayu Radikal
+  label: Bahagian Kelima
+  desc: ''
+  kandungan:
+  - jenis: board
+    tajuk: ''
+    strip: false
+    senarai:
+    - '[hibiscus] membebaskan tanah air daripada penjajahan'
+    - '[map] menyatukan seluruh Tanah Melayu'
+    - '[prohibited] enggan berkompromi dengan penjajah untuk mencapai kemerdekaan'
+  - jenis: board
+    tajuk: Petikan Penting
+    strip: true
+    senarai: []
+  - jenis: board
+    tajuk: Info
+    strip: true
+    senarai:
+    - '[warning] keberanian mereka menentang British secara terbuka'
+    - '[warning] membangkitkan perasaan anti-British melalui penulisan'
+  - jenis: accordion
+    items:
+    - tajuk: Perjuangan mereka
+      senarai:
+      - '[pushpin] Golongan ini juga:'
+      - '[pushpin] [Ahmad Boestamam]{tokoh} menerbitkan [Suara Rakyat]{karya} sebagai wadah membuka minda rakyat ke arah idea
+        bebas dan merdeka.'
+      - '[handshake_light] memperjuangkan hak semua kaum dalam sebuah negara'
+      - '[speaking_head] menekankan kebebasan hak bersuara'
+      - '[megaphone] menuntut kebebasan berhimpun'
+      - '[newspaper] memperjuangkan kebebasan menerbitkan akhbar'
+    - tajuk: Pengaruh PKMM
+      senarai:
+      - '[pushpin] Fahaman kebangsaan yang diperjuangkan oleh golongan ini mudah diterima oleh sebahagian rakyat.'
+      - '[pushpin] [PKMM]{pertubuhan} berjaya menubuhkan cawangan di:'
+      - '[round-pushpin] seluruh negeri [Perak]{tempat}'
+      - '[round-pushpin] [Hulu Langat, Selangor]{tempat}'
+      - '[round-pushpin] [Temerloh, Pahang]{tempat}'
+    - tajuk: Perjuangan membela ketidakadilan
+      senarai:
+      - '[pushpin] Golongan nasionalis Melayu radikal juga memperjuangkan pembelaan terhadap ketidakadilan.'
+      - '[pushpin] Mereka berjuang berdasarkan:'
+      - '[pushpin] Para pejuang ini bukan sahaja menjadi tokoh setempat, malah melangkaui sempadan negeri sehingga digelar
+        [tokoh politik nasional]{istilah}.'
+      - '[brain] prinsip'
+      - '[books] falsafah perjuangan'
+- tajuk: Cadangan PUTERA-AMCJA dan Perlembagaan Rakyat
+  label: Bahagian Keenam
+  desc: ''
+  kandungan:
+  - jenis: board
+    tajuk: ''
+    strip: false
+    senarai:
+    - '[classical_building] [UMNO]{pertubuhan}'
+    - '[crown] [Raja-raja Melayu]{tokoh}'
+    - '[globe_meridians] [British]{pertubuhan}'
+  - jenis: board
+    tajuk: Info
+    strip: true
+    senarai:
+    - '[factory] kilang'
+    - '[convenience-store] kedai'
+    - '[school] sekolah'
+    - '[office-building] pejabat'
+    - '[herb] ladang'
+  - jenis: accordion
+    items:
+    - tajuk: Cadangan PUTERA
+      senarai:
+      - '[pushpin] Cadangan [PUTERA]{pertubuhan} meliputi:'
+      - '[speaking_head] kedudukan [Bahasa Melayu]{istilah}'
+      - '[shield] pertahanan dan hal ehwal luar negeri'
+      - '[identification-card] syarat kewarganegaraan Tanah Melayu'
+      - '[triangular-flag] bendera dan lagu kebangsaan'
+    - tajuk: Cadangan AMCJA
+      senarai:
+      - '[pushpin] Cadangan [AMCJA]{pertubuhan} meliputi:'
+      - '[map] penyatuan Tanah Melayu dengan [Singapura]{tempat}'
+      - '[classical_building] sebuah kerajaan pusat yang kuat'
+      - '[crown] [Raja-raja Melayu]{tokoh} sebagai Raja Berperlembagaan'
+      - '[chart] kemajuan politik dan ekonomi orang Melayu'
+      - '[mosque] adat istiadat dan agama Islam'
+      - '[identification-card] syarat kewarganegaraan'
+    - tajuk: Pembentukan Perlembagaan Rakyat
+      senarai:
+      - '[calendar] [Akhir Mac 1947]{masa} → cadangan [PUTERA]{pertubuhan} dan [AMCJA]{pertubuhan} digabungkan untuk membentuk
+        [Perlembagaan Rakyat]{perjanjian}.'
+      - '[calendar] [Julai 1947]{masa} → [PUTERA-AMCJA]{pertubuhan} mengadakan pertemuan untuk mengemukakan draf [Perlembagaan
+        Rakyat]{perjanjian}.'
+    - tajuk: Kandungan Perlembagaan Rakyat
+      senarai:
+      - '[pushpin] Antara kandungannya ialah:'
+      - '[keycap_1] Tanah Melayu disatukan dengan [Singapura]{tempat}'
+      - '[keycap_2] Penubuhan sebuah Dewan Perundangan Pusat dan majlis-majlis negeri yang dipilih bagi seluruh Tanah Melayu'
+      - '[keycap_3] Kewarganegaraan yang sama bagi semua orang yang menganggap Tanah Melayu sebagai tempat tinggal tetap dan
+        sanggup mencurahkan kesetiaan tanpa berbelah bahagi'
+      - '[keycap_4] [Raja-raja Melayu]{tokoh} sebagai Raja Berperlembagaan yang bertanggungjawab kepada rakyat dan menerima
+        nasihat melalui Majlis Mesyuarat'
+      - '[keycap_5] Hal ehwal agama Islam dan adat istiadat Melayu diketuai sepenuhnya oleh orang Melayu melalui Majlis Khas'
+      - '[keycap_6] Perhatian khas hendaklah diberikan kepada kemajuan politik dan ekonomi orang Melayu'
+      - '[keycap_7] [Bahasa Melayu]{istilah} hendaklah menjadi bahasa kebangsaan dan bahasa rasmi yang tunggal bagi Tanah
+        Melayu'
+      - '[keycap_8] Hal ehwal luar negeri dan pertahanan hendaklah menjadi tanggungjawab bersama kerajaan Tanah Melayu dan
+        kerajaan British'
+      - '[keycap_9] Kewarganegaraan Malaya haruslah dinamakan Melayu'
+      - '[keycap-10] Warna merah dan putih harus dimasukkan sebagai latar belakang bendera kebangsaan Tanah Melayu'
+    - tajuk: Reaksi British terhadap Perlembagaan Rakyat
+      senarai:
+      - '[pushpin] British menolak [Perlembagaan Rakyat]{perjanjian} dan menerima [Perjanjian Persekutuan Tanah Melayu]{perjanjian}
+        yang digubal oleh [Jawatankuasa Kerja]{pertubuhan}.'
+    - tajuk: Hartal PUTERA-AMCJA
+      senarai:
+      - '[pushpin] Dengan sokongan [Dewan Perniagaan Cina]{pertubuhan}, hartal dilaksanakan di bandar utama di Tanah Melayu.'
+      - '[calendar] [20 September 1947]{masa} → [PUTERA-AMCJA]{pertubuhan} menganjurkan [hartal]{istilah} dan semua peniaga
+        diminta menutup kedai sebagai tanda bantahan.'
+      - '[calendar] [20 Oktober 1947]{masa} → dipilih sebagai [Hari Hartal Se-Malaya]{istilah}.'
+kesimpulan:
+- '[pushpin] Penubuhan [Persekutuan Tanah Melayu 1948]{pentadbiran} bermula dengan usaha British menubuhkan [Jawatankuasa
+  Kerja]{pertubuhan} bagi menggantikan [Malayan Union]{pentadbiran} yang ditolak oleh rakyat.'
+- '[pushpin] Namun, [Jawatankuasa Kerja]{pertubuhan} tidak diterima oleh golongan nasionalis Melayu radikal dan bukan Melayu
+  kerana:'
+- '[pushpin] Oleh itu, gabungan [PUTERA-AMCJA]{pertubuhan} mengemukakan [Perlembagaan Rakyat]{perjanjian} sebagai cadangan
+  alternatif.'
+- '[light_bulb] Walaupun cadangan ini ditolak oleh British, perjuangan mereka membuktikan bahawa pelbagai golongan rakyat
+  telah mula memikirkan bentuk negara merdeka yang lebih adil, demokratik dan menyeluruh.'
+- '[warning] tidak melibatkan semua pihak'
+- '[warning] dianggap tidak demokratik'
+- '[warning] dilihat mengukuhkan kuasa British'

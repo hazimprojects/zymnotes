@@ -1,0 +1,46 @@
+bab: 3
+tajuk: Konflik Dunia dan Pendudukan Jepun
+bab_label: Bab 3
+subjek: Sejarah
+tingkatan: 4
+tema: bab-theme-3
+og_image_v: '20260420'
+description: 'Nota Sejarah Tingkatan 4 Bab 3: Konflik Dunia dan Pendudukan Jepun di Negara Kita. Ringkasan bab induk dan pautan
+  subtopik untuk ulang kaji SPM.'
+lead: Bab ini membincangkan konflik dunia yang merangkumi [Perang Dunia Pertama]{peristiwa} dan [Perang Dunia Kedua]{peristiwa},
+  perkembangan perang ke [Asia Pasifik]{tempat}, serta kesan pendudukan [Jepun]{tempat} terhadap rakyat dan perkembangan [nasionalisme]{gerakan}
+  di negara kita.
+sinopsis:
+- '[globe_meridians] Konflik dunia yang merangkumi [Perang Dunia Pertama]{peristiwa} dan [Perang Dunia Kedua]{peristiwa} tercetus
+  akibat perkembangan [imperialisme]{gerakan} dan [nasionalisme]{gerakan} dalam persaingan merebut kuasa politik dan ekonomi.'
+- '[crossed_swords] Perang dunia bermula di [Eropah]{tempat}, kemudian merebak ke [Asia Pasifik]{tempat}.'
+- '[sushi] Pemerintahan tentera Jepun di negara kita telah mencetuskan tindak balas rakyat terhadap pendudukan asing.'
+- '[fire] Pendudukan Jepun turut menyemarakkan perkembangan [nasionalisme]{gerakan} tempatan.'
+subtopik:
+- kod: '3.1'
+  tajuk: Nasionalisme di Negara Kita Sebelum Perang Dunia
+  penerangan: Kesedaran nasionalisme di negara kita sebelum tercetusnya konflik dunia.
+- kod: '3.2'
+  tajuk: Latar Belakang Perang Dunia
+  penerangan: Punca dan faktor utama yang membawa kepada konflik dunia.
+- kod: '3.3'
+  tajuk: Perang Dunia Kedua
+  penerangan: Perkembangan Perang Dunia Kedua dan kuasa-kuasa yang terlibat.
+- kod: '3.4'
+  tajuk: Perang Dunia Kedua di Asia Pasifik
+  penerangan: Perkembangan perang apabila konflik meluas ke rantau Asia Pasifik.
+- kod: '3.5'
+  tajuk: Faktor Kedatangan Jepun ke Negara Kita
+  penerangan: Sebab-sebab kedatangan Jepun ke Tanah Melayu dan wilayah sekitarnya.
+- kod: '3.6'
+  tajuk: Dasar Pendudukan Jepun di Negara Kita
+  penerangan: Dasar pemerintahan tentera Jepun dan kesannya terhadap kehidupan rakyat.
+- kod: '3.7'
+  tajuk: Perjuangan Rakyat Menentang Pendudukan Jepun
+  penerangan: Bentuk penentangan rakyat tempatan terhadap pendudukan Jepun.
+- kod: '3.8'
+  tajuk: Perkembangan Gerakan Nasionalisme Tempatan dan Pendudukan Jepun
+  penerangan: Hubungan antara pendudukan Jepun dengan perkembangan gerakan nasionalisme tempatan.
+- kod: '3.9'
+  tajuk: Keadaan Negara Kita Selepas Kekalahan Jepun
+  penerangan: Keadaan politik dan keselamatan negara selepas Jepun menyerah kalah.

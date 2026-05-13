@@ -1,0 +1,213 @@
+subtopik: '4.5'
+tajuk: Reaksi Penduduk Tempatan terhadap Penyerahan Sarawak
+bab: 4
+tajuk_bab: Era Peralihan Kuasa British
+bab_label: Bab 4
+subjek: Sejarah
+tingkatan: 4
+tema: bab-theme-4
+audio: false
+has_quiz: false
+fail_sebelum: bab-4-4.html
+fail_seterusnya: bab-4-6.html
+kod_seterusnya: '4.6'
+og_image_v: '20260420'
+description: 'Nota Sejarah Tingkatan 4 Bab 4.5 (Era Peralihan Kuasa British di Negara Kita): Reaksi Penduduk Tempatan terhadap
+  Penyerahan Sarawak. Ringkasan padat untuk ulang kaji SPM.'
+lead: Subtopik ini menerangkan bagaimana penduduk tempatan bertindak balas terhadap penyerahan [Sarawak]{tempat} kepada British,
+  termasuk golongan yang menentang dan golongan yang menyokong penyerahan tersebut.
+ringkasan:
+- '[raised_fist] Penyerahan [Sarawak]{tempat} kepada British mencetuskan dua reaksi yang berbeza, iaitu golongan yang menentang
+  dan golongan yang menyokong penyerahan.'
+- '[warning] Golongan yang menentang melihat penyerahan itu sebagai satu bentuk penjajahan baharu dan pelanggaran terhadap
+  [Perlembagaan 1941]{istilah}.'
+- '[newspaper] Gerakan antipenyerahan menggunakan persidangan, demonstrasi, peletakan jawatan, akhbar, surat bantahan dan
+  penubuhan [Rukun 13]{pertubuhan}.'
+- '[handshake_light] Golongan yang menyokong pula percaya British dapat memajukan negeri, meningkatkan taraf hidup rakyat
+  dan membuka peluang pekerjaan.'
+soalan_utama:
+  soalan: Bagaimanakah penduduk tempatan bertindak balas terhadap penyerahan Sarawak kepada British?
+  heading: Bagaimanakah penduduk tempatan bertindak balas terhadap penyerahan Sarawak kepada British?
+  jawapan:
+  - '[light_bulb] Penyerahan [Sarawak]{tempat} kepada British mencetuskan dua reaksi utama, iaitu penentangan dan sokongan
+    daripada penduduk tempatan.'
+  - '[light_bulb] Golongan yang menentang melihat penyerahan itu sebagai penjajahan baharu, manakala golongan yang menyokong
+    percaya British dapat membawa kemajuan kepada Sarawak.'
+bahagian:
+- tajuk: Penentangan terhadap Penyerahan Sarawak
+  label: Bahagian Pertama
+  desc: ''
+  kandungan:
+  - jenis: board
+    tajuk: ''
+    strip: false
+    senarai: []
+- tajuk: Faktor Penentangan Penyerahan Sarawak
+  label: Bahagian Kedua
+  desc: ''
+  kandungan:
+  - jenis: accordion
+    items:
+    - tajuk: Tindakan Vyner Brooke Bertentangan dengan Perlembagaan 1941
+      senarai:
+      - '[pushpin] [Prinsip Kelapan Perlembagaan 1941]{istilah} menyatakan bahawa [Sarawak]{tempat} akan diberikan pemerintahan
+        sendiri.'
+      - '[warning] Namun, tindakan [Vyner Brooke]{tokoh} menyerahkan Sarawak kepada British telah melanggar prinsip tersebut.'
+      - '[light_bulb] Hal ini bermaksud hak rakyat Sarawak untuk berkerajaan sendiri telah dinafikan.'
+      - '[teacher] Rakyat Sarawak akan dibimbing untuk mentadbir negeri mereka sendiri'
+    - tajuk: Vyner Brooke Mengetepikan Surat Wasiat Charles Brooke
+      senarai:
+      - '[pushpin] [Vyner Brooke]{tokoh} membuat keputusan menyerahkan Sarawak tanpa berunding dengan:'
+      - '[light_bulb] Golongan antipenyerahan mahu memulihkan pemerintahan Dinasti Brooke kerana mereka berpendapat cara ini
+        akan memudahkan usaha menuntut kemerdekaan.'
+      - '[person] Anthony Brooke'
+      - '[person] Bertram Brooke'
+    - tajuk: Gerard T. MacBryan Menggunakan Muslihat
+      senarai:
+      - '[pushpin] [Gerard T. MacBryan]{tokoh} menggunakan pelbagai cara untuk mendapatkan persetujuan ketua tempatan, seperti:'
+      - '[light_bulb] Cara ini menimbulkan kemarahan penduduk tempatan kerana dianggap tidak jujur dan tidak menghormati rakyat
+        Sarawak.'
+      - '[angry-face] Tekanan'
+      - '[megaphone] Desakan'
+      - '[handshake_light] Pujukan'
+      - '[money-bag] Sogokan'
+- tajuk: Bentuk Penentangan Penduduk Tempatan
+  label: Bahagian Ketiga
+  desc: ''
+  kandungan:
+  - jenis: board
+    tajuk: Rayuan Anthony Brooke
+    strip: true
+    senarai:
+    - '[pushpin] [Anthony Brooke]{tokoh} turut menentang penyerahan Sarawak melalui saluran perundangan.'
+    - '[pushpin] Beliau membuat rayuan di [Privy Council]{istilah}.'
+    - '[pushpin] [16 Julai 1948]{masa} → beliau membawa kes ini ke Mahkamah Tinggi Brunei.'
+  - jenis: accordion
+    items:
+    - tajuk: Mengadakan Persidangan
+      senarai:
+      - '[pushpin] [Johari Anang]{tokoh} dan [Sharkawi Osman]{tokoh} menganjurkan satu persidangan yang dihadiri oleh wakil
+        dari seluruh Sarawak.'
+      - '[pushpin] Pengerusinya ialah [Johari Anang]{tokoh}.'
+      - '[magnify_left] Orang Dayak turut menubuhkan [Sarawak Dayak Association (SDA)]{pertubuhan} yang mempunyai kira-kira
+        500 orang ahli.'
+      - '[calendar] Mengadakan demonstrasi pada setiap 1 Julai'
+      - '[prohibited] Menentang penyerahan Sarawak kepada British'
+    - tajuk: Mengadakan Demonstrasi
+      senarai:
+      - '[pushpin] Pada [30 Oktober 1946]{masa}, demonstrasi pertama diadakan semasa ketibaan Gabenor pertama Sarawak, [Charles
+        Arden Clarke]{tokoh}, di [Astana]{tempat}.'
+      - '[pushpin] Demonstrasi ini diketuai oleh [Datu Patinggi Abang Haji Abdillah]{tokoh}.'
+      - '[pushpin] Perarakan ini disertai oleh 16 persatuan Melayu.'
+      - '[pushpin] Sepanduk dan poster antipenyerahan turut ditampal pada pokok, perahu dan jeti.'
+      - '[pushpin] Demonstrasi di [Sibu]{tempat} pula dipimpin oleh [Pergerakan Pemuda Melayu (PPM)]{pertubuhan}.'
+      - '[light_bulb] Beberapa demonstrasi berjaya diadakan dan menunjukkan penolakan yang berterusan terhadap penyerahan
+        Sarawak.'
+      - '[megaphone] “Sarawak adalah hak kami”'
+      - '[megaphone] “Leburkan kolonial”'
+      - '[megaphone] “No Cession”'
+    - tajuk: Meletakkan Jawatan Beramai-ramai
+      senarai:
+      - '[pushpin] British menyedari bahawa gerakan antipenyerahan dipimpin oleh guru dan pegawai perkhidmatan awam.'
+      - '[pushpin] Pada [Disember 1946]{masa}, British mengeluarkan [Pekeliling No. 9/1946 (Circular No. 9)]{istilah} yang
+        melarang pegawai awam menyertai gerakan antipenyerahan.'
+      - '[pushpin] Pada [2 April 1947]{masa}, seramai 409 orang kakitangan kerajaan meletakkan jawatan sebagai bantahan.'
+      - '[pushpin] Selain itu, seramai 56 orang pelajar Maktab Perguruan Melayu Sarawak turut menamatkan pengajian sebagai
+        tanda bantahan.'
+      - '[post-office] Pos dan Telegraf'
+      - '[anchor] Marin'
+      - '[money-bag] Kastam'
+      - '[hospital] Perubatan dan Kesihatan'
+      - '[printer] Percetakan'
+      - '[straight-ruler] Tanah dan Ukur'
+      - '[building-construction] Kerja Raya'
+      - '[fire-engine] Bomba'
+      - '[briefcase] Perbendaharaan'
+    - tajuk: Bantahan Golongan Wanita
+      senarai:
+      - '[pushpin] Golongan wanita memainkan peranan yang sangat penting dalam gerakan antipenyerahan.'
+      - '[pushpin] [Cikgu Lily Eberwein]{tokoh} mengetuai kaum ibu mengadakan kempen kesedaran di rumah panjang.'
+      - '[pushpin] Cikgu Ajibah Abol pula menggerakkan kaum wanita supaya bergabung dalam perjuangan menuntut kemerdekaan
+        Sarawak.'
+      - '[person] Cikgu Lily Eberwein'
+      - '[person] Hajah Sipah Tuanku Othman'
+      - '[person] Dayang Fauziah'
+      - '[person] Cikgu Ajibah Abol'
+    - tajuk: Menggunakan Akhbar
+      senarai:
+      - '[pushpin] Pada [Januari 1949]{masa}, gerakan antipenyerahan mendapat nafas baharu apabila akhbar [Utusan Sarawak]{istilah}
+        mula diterbitkan.'
+      - '[loudspeaker] Menyebarkan bantahan'
+      - '[writing-hand] Mengkritik rancangan penyerahan'
+      - '[prohibited] Menyerang dasar British secara terbuka'
+    - tajuk: Menulis Surat Bantahan
+      senarai:
+      - '[pushpin] [Pergerakan Pemuda Melayu (PPM)]{pertubuhan} menghantar surat kepada kerajaan British di London untuk menyatakan
+        bantahan terhadap penjajahan Sarawak.'
+      - '[pushpin] Pada [1949]{masa}, [Barisan Pemuda Sarawak (BPS)]{pertubuhan} menghantar referendum untuk memansuhkan penyerahan
+        Sarawak.'
+      - '[pushpin] Mereka juga menghantar surat bantahan kepada [Clement Attlee]{tokoh}, Perdana Menteri British, dengan salinannya
+        kepada Gabenor.'
+      - '[pushpin] [Anthony Brooke]{tokoh} turut menentang penyerahan Sarawak melalui saluran perundangan.'
+      - '[pushpin] Beliau membuat rayuan di [Privy Council]{istilah}.'
+      - '[pushpin] [16 Julai 1948]{masa} → beliau membawa kes ini ke Mahkamah Tinggi Brunei.'
+      - '[warning] Namun, rayuan tersebut ditolak.'
+    - tajuk: Menubuhkan Kumpulan Rukun 13
+      senarai:
+      - '[pushpin] Pada [20 Ogos 1948]{masa}, golongan muda dalam gerakan antipenyerahan menubuhkan [Rukun 13]{pertubuhan}.'
+      - '[pushpin] Kumpulan ini ditubuhkan secara sulit oleh pemimpin PPM di [Sibu]{tempat}.'
+      - '[person] Awang Rambli'
+      - '[person] Morshidi Sidek'
+      - '[person] Bujang Suntong'
+- tajuk: Reaksi Penduduk yang Menyokong Penyerahan Sarawak
+  label: Bahagian Keempat
+  desc: ''
+  kandungan:
+  - jenis: board
+    tajuk: ''
+    strip: false
+    senarai:
+    - '[person] Datu Bandar Abang Haji Mustapha'
+    - '[person] Datu Amar Abang Haji Suleiman'
+- tajuk: Faktor Sokongan terhadap Penyerahan Sarawak
+  label: Bahagian Kelima
+  desc: ''
+  kandungan:
+  - jenis: accordion
+    items:
+    - tajuk: Memajukan Negeri
+      senarai:
+      - '[pushpin] Golongan propenyerahan berpendapat bahawa selepas perang, Sarawak mengalami kemusnahan besar.'
+      - '[pushpin] Mereka percaya penyerahan kepada British dapat memajukan Sarawak dari segi:'
+      - '[classical_building] Politik'
+      - '[motorway] Perhubungan'
+      - '[chart-increasing-with-yen] Perdagangan'
+      - '[rice] Pertanian'
+      - '[school] Pendidikan'
+      - '[hospital] Kesihatan'
+      - '[smiling-face-with-smiling-eyes] Taraf hidup rakyat'
+    - tajuk: Memajukan Penduduk Tempatan
+      senarai:
+      - '[pushpin] Golongan propenyerahan menubuhkan [Young Malay Association (YMA)]{pertubuhan}.'
+      - '[chart] Menggalakkan kemajuan orang Melayu dalam bidang ekonomi dan sosial'
+      - '[handshake_light] Membantu orang Melayu yang ketinggalan'
+    - tajuk: Memberikan Peluang Pekerjaan dalam Perkhidmatan Awam
+      senarai:
+      - '[pushpin] Penyokong penyerahan percaya British akan membuka lebih banyak peluang pekerjaan kepada golongan intelektual
+        tempatan dalam perkhidmatan kerajaan.'
+      - '[light_bulb] Mereka juga percaya British akan memberi taraf berkerajaan sendiri kepada Sarawak pada masa hadapan.'
+      - '[scales] Peguam'
+      - '[stethoscope] Doktor'
+      - '[building-construction] Jurutera'
+kesimpulan:
+- '[light_bulb] Penyerahan Sarawak mencetuskan perpecahan pandangan tetapi menyemarakkan nasionalisme.'
+- '[pushpin] Penyerahan Sarawak kepada British telah mencetuskan dua reaksi yang berbeza dalam kalangan penduduk tempatan.'
+- '[pushpin] Golongan yang menentang melihat penyerahan itu sebagai:'
+- '[pushpin] Golongan yang menyokong pula percaya British dapat:'
+- '[light_bulb] Walaupun gerakan antipenyerahan akhirnya gagal, perjuangan tersebut berjaya membangkitkan kesedaran politik
+  dan semangat nasionalisme dalam kalangan penduduk Sarawak.'
+- '[triangular-flag] Reaksi terhadap penyerahan Sarawak membuktikan bahawa rakyat tempatan semakin sedar akan hak mereka dan
+  semakin berani mempertahankan masa depan negeri sendiri.'
+- '[prohibited] Pengkhianatan terhadap hak rakyat Sarawak'
+- '[globe_meridians] Bentuk penjajahan baharu'
+- '[warning] Pelanggaran terhadap Perlembagaan 1941'

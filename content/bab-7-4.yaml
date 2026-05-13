@@ -1,0 +1,147 @@
+subtopik: '7.4'
+tajuk: Sistem Pendidikan Kebangsaan
+bab: 7
+tajuk_bab: Usaha ke Arah Kemerdekaan
+bab_label: Bab 7
+subjek: Sejarah
+tingkatan: 4
+tema: bab-theme-7
+audio: false
+has_quiz: false
+fail_sebelum: bab-7-3.html
+fail_seterusnya: bab-7-5.html
+kod_seterusnya: '7.5'
+og_image_v: '20260420'
+description: 'Nota Sejarah Tingkatan 4 Bab 7.4 (Usaha ke Arah Kemerdekaan): Sistem Pendidikan Kebangsaan. Ringkasan padat
+  untuk ulang kaji SPM.'
+lead: Subtopik ini menerangkan mengapa pembentukan [sistem pendidikan kebangsaan]{istilah} penting kepada negara kita, latar
+  belakang sistem persekolahan sebelum merdeka, serta usaha melalui beberapa [laporan]{perjanjian} dan [ordinan]{perjanjian}
+  untuk membina satu sistem pendidikan yang dapat memupuk [perpaduan]{istilah}, [identiti kebangsaan]{istilah} dan [taat setia
+  kepada tanah air]{istilah}.
+ringkasan:
+- '[school] Semasa pentadbiran [British]{pertubuhan}, sistem persekolahan berkembang mengikut kaum dengan bahasa pengantar
+  dan kurikulum yang berbeza.'
+- '[chart-decreasing] Keadaan ini mewujudkan [jurang ekonomi dan sosial]{istilah}, menyukarkan pembentukan [perpaduan]{istilah}
+  dan menghalang pembinaan satu [identiti bangsa]{istilah} yang sama.'
+- '[blue-book] Oleh itu, beberapa [laporan]{perjanjian}, [ordinan]{perjanjian} dan [penyata]{perjanjian} diperkenalkan untuk
+  membentuk sistem pendidikan kebangsaan di Tanah Melayu, Sarawak dan Sabah.'
+soalan_utama:
+  soalan: Mengapakah pembentukan sistem pendidikan kebangsaan penting kepada negara kita?
+  heading: Mengapakah pembentukan sistem pendidikan kebangsaan penting kepada negara kita?
+  jawapan:
+  - '[light_bulb] Pembentukan sistem pendidikan kebangsaan penting kerana sistem persekolahan yang berasingan mengikut kaum
+    telah mewujudkan jurang sosial dan ekonomi serta menyukarkan usaha menyatukan rakyat.'
+  - '[pushpin] Oleh itu, satu sistem pendidikan yang lebih seragam diperlukan untuk memupuk perpaduan, membina identiti negara
+    dan melahirkan taat setia kepada tanah air.'
+bahagian:
+- tajuk: Latar belakang sistem pendidikan sebelum merdeka
+  label: Bahagian Pertama
+  desc: Sistem pendidikan di bawah British berkembang secara berasingan mengikut kaum dan wilayah.
+  kandungan:
+  - jenis: board
+    tajuk: ''
+    strip: false
+    senarai:
+    - '[school] sekolah vernakular Melayu'
+    - '[red-paper-lantern] sekolah vernakular Cina'
+    - '[diya-lamp] sekolah vernakular Tamil'
+    - '[mosque] sekolah aliran agama'
+    - '[globe_meridians] sekolah Inggeris'
+  - jenis: board
+    tajuk: Glosari
+    strip: true
+    senarai:
+    - '[books] Sekolah vernakular sekolah yang menggunakan bahasa ibunda sebagai bahasa pengantar'
+- tajuk: Usaha ke Arah Pembentukan Sistem Pendidikan Kebangsaan
+  label: Bahagian Kedua
+  desc: Usaha ini dilakukan melalui beberapa jawatankuasa pelajaran di Tanah Melayu, Sarawak dan Sabah.
+  kandungan:
+  - jenis: board
+    tajuk: Info
+    strip: true
+    senarai:
+    - '[person] [Dr. William P. Fenn]{tokoh} – ahli akademik dari China'
+    - '[person] [Dr. Wu Teh Yao]{tokoh} – pegawai Pertubuhan Bangsa-Bangsa Bersatu (PBB)'
+    - '[pushpin] British menjemput:'
+    - '[right-arrow] untuk mengkaji pendidikan Cina di Tanah Melayu.'
+  - jenis: board
+    tajuk: Pendidikan Kebangsaan di Sarawak
+    strip: true
+    senarai:
+    - '[school] mewujudkan sekolah menengah berbilang kaum dengan bahasa Inggeris sebagai bahasa pengantar'
+    - '[blue-book] menyeragamkan sukatan pelajaran dan peperiksaan'
+    - '[open_book] memperkenalkan buku teks yang berlatarbelakangkan unsur tempatan'
+    - '[compass] memastikan pendidikan sivik diajar secara formal di sekolah'
+    - '[pushpin] Berdasarkan Laporan Woodhead 1955, cadangan di Sarawak termasuk:'
+    - '[light_bulb] Matlamat pendidikan kebangsaan di Sarawak ialah untuk membentuk:'
+  - jenis: board
+    tajuk: Pendidikan Kebangsaan di Sabah
+    strip: true
+    senarai:
+    - '[speaking_head] mempertingkat pengajaran bahasa Melayu dan bahasa Inggeris di sekolah Cina'
+    - '[speaking_head] memastikan bahasa Inggeris diajar di sekolah Melayu dan bahasa Melayu diajar di sekolah Inggeris'
+    - '[memo] menetapkan peperiksaan di sekolah menengah dikendalikan dalam bahasa Inggeris'
+    - '[pushpin] Laporan Woodhead 1955 diterima di Sabah dengan beberapa pindaan, iaitu:'
+    - '[pushpin] Tujuan ordinan ini ialah untuk meneruskan rancangan Woodhead bagi:'
+    - '[light_bulb] Selain itu, matlamatnya juga adalah untuk melahirkan:'
+  - jenis: accordion
+    items:
+    - tajuk: Laporan Barnes 1951
+      senarai:
+      - '[pushpin] Jawatankuasa Pelajaran Melayu dipengerusikan oleh:'
+      - '[pushpin] Laporan ini menekankan kepentingan sekolah rendah untuk membina:'
+      - '[pushpin] Kandungan Laporan Barnes:'
+      - '[person] [L.J. Barnes]{tokoh}'
+    - tajuk: Laporan Fenn-Wu 1951
+      senarai:
+      - '[pushpin] Laporan ini diterbitkan akibat:'
+      - '[pushpin] Tujuan laporan ini ialah:'
+      - '[pushpin] Kandungan Laporan Fenn-Wu:'
+      - '[pushpin] British menjemput:'
+      - '[pushpin] untuk mengkaji pendidikan Cina di Tanah Melayu.'
+      - '[warning] bantahan masyarakat Cina terhadap Laporan Barnes'
+    - tajuk: Ordinan Pelajaran 1952
+      senarai:
+      - '[pushpin] Ordinan ini diluluskan selepas:'
+      - '[pushpin] Tujuan Ordinan Pelajaran 1952 ialah:'
+      - '[pushpin] Kandungan Ordinan Pelajaran 1952:'
+      - '[pushpin] Ordinan Pelajaran 1952 merupakan:'
+      - '[warning] Namun begitu, ordinan ini masih belum dapat memenuhi aspirasi semua kaum kerana:'
+      - '[brain] Jawatankuasa Penasihat Pusat Pelajaran meneliti Laporan Barnes dan Laporan Fenn-Wu'
+    - tajuk: Laporan Woodhead di Sarawak dan Sabah 1955
+      senarai:
+      - '[pushpin] [E.W. Woodhead]{tokoh}, Ketua Pegawai Pelajaran dari Britain , diundang untuk:'
+      - '[pushpin] Cadangan umum Laporan Woodhead:'
+      - '[pushpin] Berdasarkan Laporan Woodhead 1955, cadangan di Sarawak termasuk:'
+      - '[pushpin] Matlamat pendidikan kebangsaan di Sarawak ialah untuk membentuk:'
+      - '[pushpin] Laporan Woodhead 1955 diterima di Sabah dengan beberapa pindaan, iaitu:'
+      - '[pushpin] Tujuan ordinan ini ialah untuk meneruskan rancangan Woodhead bagi:'
+      - '[pushpin] Selain itu, matlamatnya juga adalah untuk melahirkan:'
+      - '[magnify_left] meninjau perkembangan pendidikan'
+      - '[memo] membuat cadangan tentang pendidikan di Sarawak dan Sabah'
+    - tajuk: Penyata Jawatankuasa Pelajaran 1956
+      senarai:
+      - '[pushpin] Jawatankuasa Pelajaran ini dipengerusikan oleh:'
+      - '[pushpin] Jawatankuasa ini ditubuhkan untuk:'
+      - '[pushpin] Penyata ini juga dikenali sebagai:'
+      - '[pushpin] Teras pembentukan sistem pendidikan kebangsaan:'
+      - '[pushpin] Cadangan Penyata Razak:'
+      - '[light_bulb] Penyata Razak menjadi asas utama kepada pembentukan sistem pendidikan kebangsaan yang bertujuan memupuk:'
+      - '[person] [Dato’ Abdul Razak Hussein]{tokoh} selaku Menteri Pelajaran'
+- tajuk: Kesan pembentukan sistem pendidikan kebangsaan
+  label: Bahagian Ketiga
+  desc: Sistem pendidikan kebangsaan menjadi asas penting dalam membina generasi yang bersatu dan cintakan negara.
+  kandungan:
+  - jenis: board
+    tajuk: ''
+    strip: false
+    senarai:
+    - '[books] sukatan pelajaran diseragamkan'
+    - '[memo] peperiksaan diseragamkan'
+    - '[speaking_head] bahasa pengantar yang sama diberi keutamaan'
+kesimpulan:
+- '[pushpin] Penyata Jawatankuasa Pelajaran 1956 menjadi asas kepada pembentukan sistem pendidikan kebangsaan di negara kita.'
+- '[pushpin] Melalui sistem pendidikan yang lebih seragam, perpaduan rakyat dapat dipupuk dan identiti negara dapat dibina
+  dengan lebih kukuh.'
+- '[light_bulb] Oleh itu, sistem pendidikan kebangsaan menjadi salah satu asas penting dalam membentuk generasi muda yang
+  bersatu dan cintakan negara.'

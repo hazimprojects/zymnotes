@@ -1,0 +1,112 @@
+subtopik: '7.3'
+tajuk: Sistem Ahli
+bab: 7
+tajuk_bab: Usaha ke Arah Kemerdekaan
+bab_label: Bab 7
+subjek: Sejarah
+tingkatan: 4
+tema: bab-theme-7
+audio: false
+has_quiz: false
+fail_sebelum: bab-7-2.html
+fail_seterusnya: bab-7-4.html
+kod_seterusnya: '7.4'
+og_image_v: '20260420'
+description: 'Nota Sejarah Tingkatan 4 Bab 7.3 (Usaha ke Arah Kemerdekaan): Sistem Ahli. Ringkasan padat untuk ulang kaji
+  SPM.'
+lead: Subtopik ini menerangkan maksud [Sistem Ahli]{istilah}, bagaimana sistem ini dibentuk, ciri-ciri utamanya dan kepentingannya
+  sebagai langkah awal melatih penduduk tempatan mentadbir [Persekutuan Tanah Melayu]{pentadbiran} ke arah [kemerdekaan]{perjanjian}.
+ringkasan:
+- '[light_bulb] Selepas [Perang Dunia Kedua]{peristiwa}, British menjalankan dasar [dekolonisasi]{gerakan} dengan menyediakan
+  langkah ke arah [berkerajaan sendiri]{perjanjian} secara beransur-ansur.'
+- '[classical_building] Kekurangan pegawai tempatan dalam perkhidmatan kerajaan mendorong [Dato’ Onn Jaafar]{tokoh} meminta
+  lebih banyak peluang pentadbiran diberikan kepada wakil tempatan.'
+- '[man-office-worker] Cadangan ini membawa kepada pembentukan [Sistem Ahli]{istilah}, iaitu sistem latihan awal yang membolehkan
+  penduduk tempatan belajar mentadbir kerajaan sebelum kemerdekaan dicapai.'
+soalan_utama:
+  soalan: Apakah Sistem Ahli dan apakah kepentingannya ke arah kemerdekaan Tanah Melayu?
+  heading: Apakah Sistem Ahli dan apakah kepentingannya ke arah kemerdekaan Tanah Melayu?
+  jawapan:
+  - '[light_bulb] Sistem Ahli ialah satu sistem yang melatih penduduk tempatan untuk menerajui pentadbiran Persekutuan Tanah
+    Melayu sebelum British memberikan kemerdekaan.'
+  - '[pushpin] Sistem ini penting kerana memberi pengalaman mentadbir, memupuk perpaduan kaum dan menyediakan asas ke arah
+    berkerajaan sendiri serta kemerdekaan.'
+bahagian:
+- tajuk: Pembentukan Sistem Ahli
+  label: Bahagian Pertama
+  desc: Sistem Ahli dibentuk sebagai latihan awal kepada penduduk tempatan untuk mentadbir kerajaan sebelum merdeka.
+  kandungan:
+  - jenis: board
+    tajuk: ''
+    strip: false
+    senarai:
+    - '[calendar] [1951]{masa} [Sir Henry Gurney]{tokoh}, Pesuruhjaya Tinggi British, mengumumkan senarai anggota Sistem Ahli'
+  - jenis: board
+    tajuk: Portfolio yang kekal di bawah pentadbiran British
+    strip: true
+    senarai:
+    - '[money-bag] Hal Ehwal Ekonomi'
+    - '[factory] Perindustrian dan Perhubungan Sosial'
+    - '[building-construction] Perumahan dan Kerja Raya'
+  - jenis: board
+    tajuk: Rombakan Sistem Ahli 1954
+    strip: true
+    senarai:
+    - '[calendar] [1954]{masa} berlaku rombakan dalam Sistem Ahli'
+  - jenis: accordion
+    items:
+    - tajuk: Anggota Sistem Ahli
+      senarai:
+      - '[person] [Dato’ Onn Jaafar]{tokoh} Ahli Hal Ehwal Dalam Negeri'
+      - '[person] [E.E.C. Thuraisingham]{tokoh} Ahli Pelajaran'
+      - '[person] [Lee Tiang Keng]{tokoh} Ahli Kesihatan'
+      - '[person] [Tunku Yaacob ibni Almarhum Sultan Abdul Hamid Halim Shah]{tokoh} Ahli Pertanian dan Perhutanan'
+      - '[person] [Dato’ Mahmud Mat]{tokoh} Ahli Tanah, Lombong dan Perhubungan'
+      - '[person] [Dato’ Nik Ahmad Kamil]{tokoh} Ahli Kerajaan Tempatan, Perumahan dan Perancang Bandar ([1954]{masa})'
+      - '[person] [H.S. Lee]{tokoh} Ahli Pengangkutan ([1954]{masa})'
+      - '[person] [Dr. Ismail Abdul Rahman]{tokoh} Ahli Hasil Bumi ([1954]{masa})'
+    - tajuk: Info · Dato’ Onn Jaafar sebagai “Menteri” Hal Ehwal Dalam Negeri
+      senarai:
+      - '[pushpin] [Dato’ Onn Jaafar]{tokoh} bertanggungjawab menjaga:'
+      - '[pushpin] Selain itu, agensi berikut juga berada di bawah tanggungjawab beliau:'
+      - '[passport-control] hal ehwal imigran'
+      - '[newspaper] penyiaran dan pencetakan'
+      - '[handshake_light] hubungan negeri Melayu dengan Negeri-negeri Selat'
+      - '[kaaba] hal ehwal menunaikan haji'
+      - '[identification-card] pendaftaran kerakyatan'
+      - '[ring] perkahwinan'
+      - '[coffin] kematian'
+- tajuk: Ciri-ciri Sistem Ahli
+  label: Bahagian Kedua
+  desc: Sistem Ahli mempunyai beberapa ciri utama yang menunjukkan ia merupakan latihan awal ke arah pemerintahan sendiri.
+  kandungan:
+  - jenis: board
+    tajuk: ''
+    strip: false
+    senarai:
+    - '[keycap_1] Ahli bertaraf “Menteri” dan bertanggungjawab menjaga portfolio yang mengandungi jabatan dan agensi kerajaan'
+    - '[keycap_2] Ahli dilantik oleh Pesuruhjaya Tinggi British dengan persetujuan Majlis Raja-Raja'
+    - '[keycap_3] Ahli bertanggungjawab mencadangkan undang-undang yang berkaitan dengan jabatannya untuk dibentangkan dalam
+      MPP'
+    - '[keycap_4] Ahli diletakkan di bawah kuasa Pesuruhjaya Tinggi'
+    - '[keycap_5] Sistem ini berbentuk kabinet bayangan yang terdiri daripada beberapa pegawai tadbir dan tokoh masyarakat'
+- tajuk: Kepentingan Sistem Ahli ke Arah Kemerdekaan
+  label: Bahagian Ketiga
+  desc: Sistem Ahli menjadi langkah penting dalam menyediakan penduduk tempatan untuk menerima pemerintahan sendiri.
+  kandungan:
+  - jenis: board
+    tajuk: ''
+    strip: false
+    senarai:
+    - '[checkmark] menyediakan asas penting untuk melatih orang tempatan ke arah berkerajaan sendiri'
+    - '[checkmark] memberikan pendedahan kepada penduduk tempatan untuk belajar mentadbir dan menerajui kerajaan menjelang
+      kemerdekaan'
+    - '[checkmark] memupuk perpaduan kaum kerana ahlinya terdiri daripada gabungan pemimpin pelbagai kaum'
+    - '[checkmark] memastikan kemerdekaan yang diperoleh mendapat sokongan seluruh penduduk Persekutuan Tanah Melayu'
+kesimpulan:
+- '[pushpin] Sistem Ahli memberikan pendedahan yang baik kepada penduduk tempatan untuk:'
+- '[pushpin] Sistem ini juga selaras dengan dasar British yang menyediakan tempoh peralihan pentadbiran sebelum kemerdekaan.'
+- '[light_bulb] Oleh itu, Sistem Ahli menjadi satu langkah penting dalam menyediakan pemimpin tempatan yang berpengalaman,
+  memperkukuh perpaduan kaum dan membuka jalan ke arah kemerdekaan negara.'
+- '[classical_building] mentadbir kerajaan'
+- '[man-office-worker] menerajui pentadbiran negara'

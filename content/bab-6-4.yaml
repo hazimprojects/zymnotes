@@ -1,0 +1,154 @@
+subtopik: '6.4'
+tajuk: Kesan Zaman Darurat terhadap Negara Kita
+bab: 6
+tajuk_bab: Ancaman Komunis dan Perisytiharan Darurat
+bab_label: Bab 6
+subjek: Sejarah
+tingkatan: 4
+tema: bab-theme-6
+audio: false
+has_quiz: false
+fail_sebelum: bab-6.html
+og_image_v: '20260420'
+description: 'Nota Sejarah Tingkatan 4 Bab 6.4 (Ancaman Komunis dan Perisytiharan Darurat): Kesan Zaman Darurat terhadap Negara
+  Kita. Ringkasan padat untuk ulang kaji SPM.'
+lead: Subtopik ini menerangkan kesan [zaman darurat]{istilah} terhadap negara kita dari aspek [politik]{istilah} dan [sosioekonomi]{istilah},
+  serta bagaimana peristiwa darurat turut mempercepat usaha ke arah [rundingan kemerdekaan]{peristiwa}.
+ringkasan:
+- '[classical_building] [Zaman darurat]{istilah} memberikan kesan jangka panjang kepada negara kita, khususnya dalam aspek
+  [politik]{istilah} dan [sosioekonomi]{istilah}.'
+- '[identification-card] Darurat membawa kesan politik seperti peningkatan jumlah warganegara, penubuhan [Malayan Chinese
+  Association (MCA)]{pertubuhan} dan mempercepat kemerdekaan.'
+- '[money-with-wings] Dari sudut sosioekonomi, darurat meningkatkan kos perbelanjaan, menyebabkan penderitaan rakyat, merenggangkan
+  hubungan kaum dan mengorbankan banyak nyawa.'
+- '[dove] [Darurat]{istilah} akhirnya tamat pada [31 Julai 1960]{masa} selepas berlangsung selama [12 tahun]{istilah} di negara
+  kita.'
+soalan_utama:
+  soalan: Apakah kesan zaman darurat terhadap negara kita dari aspek politik dan sosioekonomi?
+  heading: Apakah kesan zaman darurat terhadap negara kita dari aspek politik dan sosioekonomi?
+  jawapan:
+  - '[light_bulb] [Zaman darurat]{istilah} memberikan kesan jangka panjang terhadap negara kita, khususnya dalam aspek politik
+    dan sosioekonomi.'
+  - '[pushpin] Peristiwa darurat juga mempercepat usaha ke arah [rundingan kemerdekaan]{peristiwa}.'
+bahagian:
+- tajuk: Aspek Politik
+  label: Bahagian Pertama
+  desc: ''
+  kandungan:
+  - jenis: board
+    tajuk: ''
+    strip: false
+    senarai:
+    - '[identification-card] peningkatan jumlah warganegara'
+    - '[classical_building] penubuhan [Malayan Chinese Association (MCA)]{pertubuhan}'
+    - '[hibiscus] mempercepat kemerdekaan'
+  - jenis: accordion
+    items:
+    - tajuk: Peningkatan Jumlah Warganegara
+      senarai:
+      - '[pushpin] Kesan daripada kelonggaran ini:'
+      - '[light_bulb] Kelonggaran syarat ini menunjukkan pengorbanan orang Melayu terhadap kaum lain demi mewujudkan perpaduan
+        rakyat.'
+      - '[calendar] [1952]{masa} → kerajaan melonggarkan syarat kewarganegaraan'
+    - tajuk: Penubuhan Malayan Chinese Association (MCA)
+      senarai:
+      - '[pushpin] Zaman darurat mendorong [Sir Henry Gurney]{tokoh} mengambil langkah menawan hati penduduk Cina dengan menggalakkan
+        penubuhan parti politik yang berorientasikan tempatan.'
+      - '[pushpin] Penubuhan MCA penting kerana:'
+      - '[pushpin] Sumbangan MCA kepada kerajaan dan rakyat:'
+      - '[pushpin] Selain itu, MCA turut menjalankan:'
+      - '[pushpin] Hasil kutipan tersebut didermakan kepada penduduk di [Kampung Baru]{tempat}.'
+      - '[calendar] [27 Februari 1949]{masa}'
+      - '[round-pushpin] [Kuala Lumpur]{tempat}'
+      - '[right-arrow] [Tan Cheng Lock]{tokoh} menubuhkan [Malayan Chinese Association (MCA)]{pertubuhan}'
+    - tajuk: Mempercepat Kemerdekaan
+      senarai:
+      - '[pushpin] British sedar bahawa darurat tidak dapat ditamatkan melalui strategi ketenteraan semata-mata.'
+      - '[light_bulb] Oleh itu, darurat menjadi faktor yang mendorong British mempercepat kemerdekaan [Persekutuan Tanah Melayu]{pentadbiran}.'
+      - '[pushpin] Penubuhan [Jawatankuasa Hubungan Antara Kaum (CLC)]{pertubuhan} meningkatkan kesedaran politik dalam kalangan
+        pemimpin pelbagai kaum bahawa mereka boleh berkongsi:'
+      - '[pushpin] Kesedaran ini membawa kepada penubuhan:'
+      - '[pushpin] Kemenangan ini meyakinkan British bahawa [Persekutuan Tanah Melayu]{pentadbiran} dapat menewaskan komunis
+        melalui perpaduan rakyat berbilang kaum.'
+      - '[light_bulb] Dalam suasana inilah British bersetuju memberikan kemerdekaan kepada [Persekutuan Tanah Melayu]{pentadbiran}.'
+      - '[pushpin] Dengan itu, [PKM]{pertubuhan} tidak lagi mempunyai alasan untuk meneruskan perjuangannya.'
+      - '[handshake_light] kepentingan bersama'
+      - '[compass] hala tuju yang sama'
+- tajuk: Aspek Sosioekonomi
+  label: Bahagian Kedua
+  desc: ''
+  kandungan:
+  - jenis: board
+    tajuk: ''
+    strip: false
+    senarai:
+    - '[money-with-wings] meningkatkan kos perbelanjaan'
+    - '[disappointed-face] menyebabkan penderitaan dan kesengsaraan kepada rakyat'
+    - '[handshake_light] merenggangkan hubungan kaum'
+    - '[skull] mengorbankan banyak nyawa'
+  - jenis: accordion
+    items:
+    - tajuk: Meningkatkan Kos Perbelanjaan
+      senarai:
+      - '[pushpin] Darurat menjejaskan perkembangan ekonomi dan meningkatkan kos perbelanjaan pihak British.'
+      - '[pushpin] Kerajaan terpaksa membelanjakan:'
+      - '[pushpin] untuk menangani ancaman komunis.'
+      - '[pushpin] Anggaran purata kos darurat ialah:'
+      - '[pushpin] untuk membanteras ancaman komunis.'
+      - '[pushpin] Selain itu, kerajaan juga membelanjakan kos yang besar untuk penempatan semula penduduk di pinggir hutan.'
+      - '[dollar-banknote] lebih [$10 juta sebulan]{istilah}'
+      - '[pushpin] atau'
+      - '[dollar-banknote] [$120 juta setahun]{istilah}'
+    - tajuk: Menyebabkan Penderitaan dan Kesengsaraan kepada Rakyat
+      senarai:
+      - '[pushpin] Rakyat menghadapi pelbagai penderitaan sepanjang zaman darurat.'
+      - '[pushpin] Kawasan yang menjadi sasaran komunis:'
+      - '[right-arrow] menyebabkan kegiatan ekonomi negara terjejas.'
+      - '[pushpin] Kesan lain:'
+      - '[pushpin] Golongan yang turut mengalami kesukaran ialah:'
+      - '[pushpin] Mereka menjadi sasaran peras ugut komunis untuk mendapatkan:'
+      - '[pushpin] Jika tuntutan komunis tidak dipenuhi:'
+      - '[pushpin] Penduduk juga menghadapi kesukaran untuk:'
+      - '[pushpin] kerana terpaksa mematuhi pelbagai peraturan kerajaan.'
+      - '[pushpin] Akibatnya:'
+      - '[pushpin] Catuan makanan yang dikenakan kerajaan menyebabkan ramai penduduk bergantung pada makanan seperti:'
+      - '[herb] ladang'
+      - '[pick] lombong'
+    - tajuk: Merenggangkan Hubungan Kaum
+      senarai:
+      - '[pushpin] Rancangan penempatan semula [Kampung Baru]{tempat} menyebabkan masyarakat hidup secara terpisah mengikut
+        kaum.'
+      - '[pushpin] Keadaan yang berlaku:'
+      - '[pushpin] Kawalan ketat pasukan keselamatan menyebabkan hubungan antara kaum menjadi terbatas.'
+      - '[light_bulb] Kehidupan yang terasing ini menjadikan hubungan antara kaum semakin renggang kerana penduduk tidak mempunyai
+        banyak ruang untuk bersosial dengan kaum lain.'
+      - '[globe_meridians] kaum Cina dikumpulkan di petempatan baharu yang dilengkapi prasarana dan kemudiannya berkembang
+        menjadi bandar baharu'
+      - '[hibiscus] kaum Melayu pula tinggal di kampung yang serba kekurangan'
+      - '[busts-in-silhouette] kaum lain berada di petempatan yang berasingan'
+    - tajuk: Korban Zaman Darurat
+      senarai:
+      - '[pushpin] Zaman darurat menyebabkan ramai yang terkorban, termasuk:'
+      - '[light_bulb] Keadaan ini membuktikan bahawa darurat membawa penderitaan dan kesengsaraan yang besar kepada penduduk
+        [Persekutuan Tanah Melayu]{pentadbiran}.'
+      - '[police-officer] anggota pasukan keselamatan'
+      - '[triangular-flag] anggota komunis'
+      - '[busts-in-silhouette] orang awam'
+- tajuk: Penamatan Darurat
+  label: Bahagian Ketiga
+  desc: ''
+  kandungan:
+  - jenis: board
+    tajuk: ''
+    strip: false
+    senarai:
+    - '[skull-and-crossbones] banyak nyawa terkorban'
+    - '[derelict-house] kemusnahan harta benda'
+    - '[disappointed-face] kesengsaraan kepada rakyat'
+kesimpulan:
+- '[pushpin] Zaman darurat meninggalkan kesan besar terhadap negara kita dari aspek:'
+- '[pushpin] Darurat juga menyebabkan rakyat hidup dalam:'
+- '[light_bulb] Walaupun zaman darurat membawa banyak kesan buruk, pengalaman ini turut menyedarkan rakyat dan pemimpin tentang
+  pentingnya perpaduan, keselamatan dan kerjasama dalam mempertahankan negara.'
+- '[classical_building] politik'
+- '[money-bag] sosioekonomi'

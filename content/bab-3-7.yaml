@@ -1,0 +1,274 @@
+subtopik: '3.7'
+tajuk: Perjuangan Rakyat Menentang Pendudukan Jepun
+bab: 3
+tajuk_bab: Konflik Dunia dan Pendudukan Jepun
+bab_label: Bab 3
+subjek: Sejarah
+tingkatan: 4
+tema: bab-theme-3
+audio: false
+has_quiz: false
+fail_sebelum: bab-3-6.html
+fail_seterusnya: bab-3-8.html
+kod_seterusnya: '3.8'
+og_image_v: '20260420'
+description: 'Nota Sejarah Tingkatan 4 Bab 3.7 (Konflik Dunia dan Pendudukan Jepun di Negara Kita): Perjuangan Rakyat Menentang
+  Pendudukan Jepun. Ringkasan padat untuk ulang kaji SPM.'
+lead: Subtopik ini menjelaskan bagaimana rakyat di negara kita menentang pendudukan Jepun melalui perjuangan bersenjata, perang
+  gerila, kerjasama dengan pihak luar dan penentangan individu demi mempertahankan tanah air.
+ringkasan:
+- '[raised_fist] Rakyat daripada pelbagai kaum dan latar belakang bangkit menentang Jepun melalui perjuangan bersenjata, perang
+  gerila, kerjasama dengan pihak luar dan penentangan individu.'
+- '[military-helmet] Di [Tanah Melayu]{tempat}, perjuangan digerakkan oleh [Rejimen Askar Melayu]{pertubuhan}, [MPAJA]{pertubuhan},
+  [Force 136]{pertubuhan} dan gerila lain.'
+- '[person] Penentangan individu pula dapat dilihat melalui keberanian [Gurchan Singh]{tokoh} dan [Sybil Kathigasu]{tokoh}.'
+- '[ant] Di [Sarawak]{tempat} dan [Sabah]{tempat}, penentangan terserlah melalui [Operasi Semut]{peristiwa} dan [Pemberontakan
+  Jesselton]{peristiwa}.'
+soalan_utama:
+  soalan: Bagaimanakah rakyat di negara kita menentang pendudukan Jepun semasa Perang Dunia Kedua?
+  heading: Bagaimanakah rakyat di negara kita menentang pendudukan Jepun semasa Perang Dunia Kedua?
+  jawapan:
+  - '[light_bulb] Rakyat daripada pelbagai kaum dan latar belakang bangkit menentang Jepun melalui perjuangan bersenjata,
+    gerila, kerjasama dengan pihak luar dan penentangan individu demi mempertahankan tanah air.'
+  - '[pushpin] Semasa pendudukan Jepun, tentera Jepun bertindak kejam, rakyat [Tanah Melayu]{tempat}, [Sarawak]{tempat} dan
+    [Sabah]{tempat} menderita, tetapi semangat perjuangan rakyat tetap tidak luntur.'
+  - '[pushpin] Penentangan dilakukan oleh askar, gerila, pemimpin tempatan dan individu yang berani.'
+fokus: 'Rakyat menentang pendudukan Jepun melalui pelbagai saluran. Lima bentuk perjuangan:'
+bahagian:
+- tajuk: Rejimen Askar Melayu
+  label: Bahagian Pertama
+  desc: ''
+  kandungan:
+  - jenis: board
+    tajuk: ''
+    strip: false
+    senarai:
+    - '[crossed_swords] menentang pendaratan Jepun di Kelantan'
+    - '[shield] menjadi benteng utama pertahanan negara'
+  - jenis: board
+    tajuk: Tokoh Rejimen Askar Melayu
+    strip: true
+    senarai: []
+  - jenis: accordion
+    items:
+    - tajuk: Leftenan Adnan Saidi
+      senarai:
+      - '[pushpin] Berjuang habis-habisan di [Bukit Candu, Singapura]{tempat}.'
+      - '[light_bulb] Beliau menjadi lambang keberanian dan keperwiraan askar Melayu dalam menentang Jepun.'
+    - tajuk: Leftenan Ibrahim Alla Ditta MC
+      senarai:
+      - '[pushpin] Menyelamatkan hampir [2000]{tahun} tentera Bersekutu yang terperangkap di pantai Johor.'
+      - '[sports-medal] Dianugerahi pingat [Military Cross]{peristiwa}.'
+    - tajuk: Koperal Yaakob Bidin
+      senarai:
+      - '[pushpin] Menunjukkan keberanian dalam pertempuran di [Pasir Panjang]{tempat}.'
+      - '[sports-medal] Dianugerahi pingat [Military Medal]{peristiwa}.'
+- tajuk: Penentangan MPAJA
+  label: Bahagian Kedua
+  desc: ''
+  kandungan:
+  - jenis: board
+    tajuk: ''
+    strip: false
+    senarai: []
+  - jenis: board
+    tajuk: Latihan MPAJA
+    strip: true
+    senarai:
+    - '[bomb] sabotaj'
+    - '[herb] perang gerila'
+  - jenis: board
+    tajuk: Struktur MPAJA
+    strip: true
+    senarai: []
+- tajuk: Kerjasama MPAJA dan Force 136
+  label: Bahagian Ketiga
+  desc: ''
+  kandungan:
+  - jenis: board
+    tajuk: ''
+    strip: false
+    senarai:
+    - '[water-pistol] senjata'
+    - '[pill] ubat-ubatan'
+    - '[money-bag] kewangan'
+    - '[military-helmet] latihan ketenteraan'
+- tajuk: Kerjasama KMT dan MPAJA
+  label: Bahagian Keempat
+  desc: ''
+  kandungan:
+  - jenis: board
+    tajuk: ''
+    strip: false
+    senarai:
+    - '[round-pushpin] Hulu Perak'
+    - '[round-pushpin] Kelantan'
+  - jenis: board
+    tajuk: Kesan sampingan
+    strip: true
+    senarai: []
+- tajuk: Force 136
+  label: Bahagian Kelima
+  desc: ''
+  kandungan:
+  - jenis: board
+    tajuk: ''
+    strip: false
+    senarai: []
+  - jenis: board
+    tajuk: Force 136
+    strip: true
+    senarai:
+    - '[ship] kapal selam'
+    - '[parachute] payung terjun dari kapal terbang'
+  - jenis: board
+    tajuk: Kerjasama Force 136 dan gerila Melayu
+    strip: true
+    senarai:
+    - '[eye] mengumpulkan maklumat'
+    - '[bomb] melakukan sabotaj'
+    - '[speaking_head] menyebarkan propaganda'
+    - '[anchor] membuat persiapan untuk British melancarkan Operasi Zipper'
+  - jenis: accordion
+    items:
+    - tajuk: Anggota terawal Force 136 di Tanah Melayu
+      senarai:
+      - '[pushpin] Antara anggota terawal Force 136 di Tanah Melayu ialah:'
+      - '[person] Mejar Tengku Mahmood Mahyiddeen'
+      - '[person] Leftenan Tunku Yusuf Tunku Yaakub'
+      - '[person] Kapten Ibrahim Ismail'
+      - '[person] Leftenan Tengku Osman Tengku Mohd Jiwa'
+    - tajuk: Tengku Mahmood Mahyiddeen
+      senarai:
+      - '[pushpin] [Tengku Mahmood Mahyiddeen]{tokoh} ialah pemimpin pasukan Melayu [Force 136]{pertubuhan}.'
+      - '[pushpin] Beliau menerima jolokan [“Harimau Malaya”]{karya} kerana mengelolakan siaran radio dari [India]{tempat}
+        yang diberikan nama [Suara Harimau Malaya]{karya}.'
+      - '[pushpin] Beliau juga menyeru orang Melayu supaya menentang tentera Jepun dan tali barutnya.'
+    - tajuk: Penubuhan gerila Melayu oleh Force 136
+      senarai:
+      - '[pushpin] Force 136 berjaya membentuk beberapa pasukan gerila Melayu di kawasan tertentu.'
+      - '[round-pushpin] Anggota Force 136 berjaya mendarat di [Hulu Perak]{tempat}.'
+      - '[handshake_light] Dengan bantuan [Pegawai Daerah Gerik, Kapten Mohd Salleh Haji Sulaiman]{tokoh}, [Askar Melayu Setia]{pertubuhan}
+        ditubuhkan.'
+      - '[round-pushpin] Anggota Force 136 berjaya mendarat di [Raub, Pahang]{tempat}.'
+      - '[handshake_light] Dengan bantuan [Penolong Pegawai Daerah Raub, Yeop Mahidin]{tokoh}, [Gerila Wataniah Pahang]{pertubuhan}
+        ditubuhkan.'
+      - '[round-pushpin] Anggota Force 136 berjaya mendarat di [Kampung Kuala Janing, Kedah]{tempat}.'
+      - '[handshake_light] Dengan bantuan [Pegawai Daerah Kedah]{tokoh} dan [Tunku Abdul Rahman]{tokoh}, [Gerila Melayu Kedah]{pertubuhan}
+        dibentuk.'
+    - tajuk: Disember 1944 · Force 136 Ulu Perak – Askar Melayu Setia
+      senarai:
+      - '[pushpin] Anggota Force 136 berjaya mendarat di [Hulu Perak]{tempat}.'
+      - '[pushpin] Dengan bantuan [Pegawai Daerah Gerik, Kapten Mohd Salleh Haji Sulaiman]{tokoh}, [Askar Melayu Setia]{pertubuhan}
+        ditubuhkan.'
+    - tajuk: Januari 1945 · Force 136 Pahang – Wataniah Pahang
+      senarai:
+      - '[pushpin] Anggota Force 136 berjaya mendarat di [Raub, Pahang]{tempat}.'
+      - '[pushpin] Dengan bantuan [Penolong Pegawai Daerah Raub, Yeop Mahidin]{tokoh}, [Gerila Wataniah Pahang]{pertubuhan}
+        ditubuhkan.'
+    - tajuk: Februari 1945 · Force 136 Kedah – Gerila Melayu Kedah
+      senarai:
+      - '[pushpin] Anggota Force 136 berjaya mendarat di [Kampung Kuala Janing, Kedah]{tempat}.'
+      - '[pushpin] Dengan bantuan [Pegawai Daerah Kedah]{tokoh} dan [Tunku Abdul Rahman]{tokoh}, [Gerila Melayu Kedah]{pertubuhan}
+        dibentuk.'
+- tajuk: Penentangan Individu
+  label: Bahagian Keenam
+  desc: ''
+  kandungan:
+  - jenis: accordion
+    items:
+    - tajuk: Gurchan Singh
+      senarai:
+      - '[pushpin] Kegiatan anti-Jepun turut digerakkan secara individu seperti oleh [Gurchan Singh]{tokoh}.'
+      - '[pushpin] Beliau menentang pendudukan tentera Jepun dengan cara menyebarkan risalah dan propaganda menggunakan nama
+        samaran [“Lion of Malaya”]{karya}.'
+      - '[pushpin] Risalah penentangan yang dihasilkannya diedarkan secara teratur dan berkesan untuk memberitahu penduduk
+        tentang fakta sebenar perang dan pendudukan tentera Jepun.'
+      - '[pushpin] Beliau ditangkap oleh [Kempeitai]{pertubuhan} selepas dikhianati, namun berjaya melarikan diri ke [Burma]{tempat}
+        sehingga perang tamat.'
+      - '[newspaper] menyebarkan risalah anti-Jepun sebagai “Lion of Malaya”'
+      - '[detective] menyamar sebagai wartawan dalam sidang akhbar tentera Jepun'
+      - '[bomb] mendalangi sabotaj terhadap landasan kereta api yang menjejaskan pengangkutan tentera Jepun'
+    - tajuk: Sybil Kathigasu
+      senarai:
+      - '[pushpin] [Sybil Kathigasu]{tokoh} atau Sybil Medan Daly ialah seorang jururawat yang terkenal dengan keberanian
+        dan kecekalan membantu mangsa perang serta gerila anti-Jepun di Perak.'
+      - '[pushpin] Sybil dan suaminya, [Dr. Abdon Clement Kathigasu]{tokoh}, mengendalikan sebuah klinik di [Ipoh]{tempat}
+        sebelum perang sehingga kedatangan Jepun.'
+      - '[pushpin] Semasa pendudukan Jepun, pasangan ini memberikan bantuan ubat-ubatan dan perkhidmatan perubatan kepada
+        gerila anti-Jepun.'
+      - '[pushpin] Sybil dan suaminya ditangkap oleh tentera Jepun apabila kegiatan mereka terbongkar.'
+      - '[pushpin] Semasa berada dalam tahanan, penyeksaan demi penyeksaan dilakukan oleh tentera Jepun sehingga menyebabkan
+        kematian suaminya.'
+      - '[pushpin] Selepas tentera Jepun menyerah kalah, Sybil dibebaskan dan diterbangkan ke [Britain]{tempat} untuk menerima
+        rawatan perubatan.'
+      - '[sports-medal] Sybil Kathigasu dianugerahi [Pingat King George VI]{peristiwa} di Istana Buckingham oleh Raja George
+        VI kerana keberaniannya semasa pendudukan Jepun dan merupakan wanita dari Tanah Melayu yang menerima anugerah tersebut.'
+      - '[pill] membantu gerila dengan rawatan perubatan'
+      - '[radio] menyembunyikan radio'
+      - '[loudspeaker] berkongsi maklumat daripada siaran radio British dengan gerila anti-Jepun'
+- tajuk: Gerakan Anti-Jepun di Sarawak dan Sabah
+  label: Bahagian Ketujuh
+  desc: ''
+  kandungan:
+  - jenis: board
+    tajuk: Kawasan Operasi Semut
+    strip: true
+    senarai:
+    - '[pushpin] Semut I → Bario hingga Belait dan Trusan'
+    - '[pushpin] Semut II → Baram, Tutong, Marudi dan Brunei'
+    - '[pushpin] Semut III → Sungai Rajang'
+    - '[pushpin] Semut IV → Bintulu dan Mukah'
+  - jenis: board
+    tajuk: Info
+    strip: true
+    senarai:
+    - '[pushpin] [Jesselton]{tempat} kini dikenali sebagai [Kota Kinabalu]{tempat}.'
+  - jenis: accordion
+    items:
+    - tajuk: Operasi Semut
+      senarai:
+      - '[light_bulb] [Operasi Semut]{peristiwa} ialah siri operasi peninjauan yang dilakukan oleh [Unit Khas Z Australia]{pertubuhan}
+        sebagai sebahagian daripada kempen tentera Bersekutu menentang Jepun di Sarawak.'
+      - '[pushpin] Operasi tersebut dilaksanakan oleh [Jabatan Peninjauan Perkhidmatan Australia]{pertubuhan} atau [Australian
+        Services Reconnaissance Department (SRD)]{pertubuhan} untuk mengumpulkan risikan dan melatih orang tempatan melancarkan
+        perang gerila melawan Jepun.'
+      - '[calendar] Pada bulan [Mei 1945]{tahun}, anggota SRD mendarat di kawasan tengah dan timur laut Sarawak untuk mengatur
+        penentangan terhadap tentera Jepun dan membuat persediaan bagi pendaratan pasukan Bersekutu.'
+      - '[pushpin] Anggota ini terdiri daripada tentera Australia, British dan New Zealand.'
+      - '[pushpin] Rekrut tempatan yang dikenali sebagai gerila Semut antaranya diambil daripada orang:'
+      - '[light_bulb] Kepakaran gerila Semut penting dalam usaha merancang taktikal perang gerila menentang tentera Jepun
+        kerana sebagai penduduk tempatan, mereka mengetahui selok-belok bumi Sarawak.'
+      - '[busts-in-silhouette] Kayan'
+      - '[busts-in-silhouette] Kenyah'
+      - '[busts-in-silhouette] Kelabit'
+      - '[busts-in-silhouette] Murut'
+      - '[busts-in-silhouette] Iban'
+    - tajuk: Pemberontakan Jesselton (Double Tenth)
+      senarai:
+      - '[pushpin] [Pemberontakan Jesselton]{peristiwa} juga dikenali sebagai [pemberontakan Double Tenth]{peristiwa}, iaitu
+        penentangan terhadap pendudukan tentera Jepun di Sabah yang diketuai oleh [Albert Kwok]{tokoh}.'
+      - '[calendar] Pada bulan [Oktober 1943]{tahun}, kumpulan Albert Kwok yang dikenali sebagai gerila Kinabalu melancarkan
+        serangan terhadap Jepun.'
+      - '[pushpin] Tentera Jepun kemudian melancarkan serangan balas dengan pantas dan kejam.'
+      - '[pushpin] Perkampungan di pesisiran pantai diserang dan dibom. Beratus-ratus orang disoal siasat dan diseksa sehingga
+        mati dalam usaha mencari pemimpin dan anggota pemberontak.'
+      - '[calendar] Pada bulan [Disember 1943]{tahun}, [Albert Kwok]{tokoh} menyerah diri dengan harapan dapat menamatkan
+        serangan balas tentera Jepun terhadap orang awam.'
+      - '[pushpin] Beliau bersama [175]{tahun} orang lain kemudiannya dihukum bunuh di [Petagas]{tempat}, manakala [131]{tahun}
+        orang lagi dipenjarakan di [Labuan]{tempat}.'
+      - '[pushpin] Selain itu, terdapat pasukan gerila anti-Jepun yang dipimpin oleh [Datu Mustapha Datu Harun]{tokoh}.'
+      - '[pushpin] [Jesselton]{tempat} kini dikenali sebagai [Kota Kinabalu]{tempat}.'
+      - '[office-building] pejabat pentadbiran Jepun'
+      - '[oncoming-police-car] balai polis'
+      - '[military-helmet] kemudahan tentera Diraja Jepun'
+kesimpulan:
+- '[pushpin] Perjuangan rakyat menentang Jepun memperlihatkan:'
+- '[pushpin] Rakyat menentang Jepun melalui:'
+- '[light_bulb] Semua bentuk perjuangan ini bukan sahaja melemahkan penguasaan Jepun, malah menyemai semangat kebangsaan yang
+  semakin kuat dalam kalangan rakyat.'
+- '[triangular-flag] Perjuangan tersebut akhirnya menjadi antara asas penting yang mempercepatkan gerakan ke arah kemerdekaan
+  negara.'
+- '[crossed_swords] keberanian yang luar biasa'
+- '[handshake_light] kerjasama merentas kaum'
+- '[hibiscus] semangat nasionalisme yang tinggi'

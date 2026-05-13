@@ -1,0 +1,148 @@
+subtopik: '2.3'
+tajuk: Perkembangan Nasionalisme di Asia
+bab: 2
+tajuk_bab: Kebangkitan Nasionalisme
+bab_label: Bab 2
+subjek: Sejarah
+tingkatan: 4
+tema: bab-theme-2
+audio: true
+has_quiz: true
+fail_sebelum: bab-2-2.html
+fail_seterusnya: bab-2-4.html
+kod_seterusnya: '2.4'
+og_image_v: '20260420'
+description: 'Nota Sejarah Tingkatan 4 Bab 2.3 (Kebangkitan Nasionalisme): Perkembangan Nasionalisme di Asia. Ringkasan padat
+  untuk ulang kaji SPM.'
+lead: Subtopik ini menerangkan bagaimana idea [nasionalisme]{istilah} di [Asia]{tempat} berkembang sebagai kesinambungan daripada
+  pengaruh Barat, khususnya selepas pertembungan dengan kuasa [Eropah]{tempat}. Tekanan penjajahan mendorong rakyat Asia bangkit
+  mempertahankan maruah, identiti dan masa depan bangsa mereka.
+ringkasan:
+- '[globe] Perkembangan [nasionalisme]{istilah} di [Asia]{tempat} ialah kesinambungan idea dari Barat selepas pertembungan
+  dengan kuasa [Eropah]{tempat}.'
+- '[loudspeaker] Penjajahan mendorong rakyat Asia bangkit menuntut kemerdekaan dan mempertahankan jati diri bangsa.'
+- '[compass] Gerakan ini berkembang dalam pelbagai bentuk seperti penentangan langsung, gerakan pembaharuan agama, penubuhan
+  pertubuhan politik dan usaha pemodenan negara.'
+- '[fire] Antara contoh utama perkembangan nasionalisme di Asia ialah di [India]{tempat}, [China]{tempat}, [Empayar Uthmaniyah
+  dan Mesir]{tempat} serta [Jepun]{tempat}.'
+soalan_utama:
+  soalan: Bagaimana semangat nasionalisme sampai ke Asia?
+  heading: Bagaimana semangat nasionalisme sampai ke Asia?
+  jawapan:
+  - '[light_bulb] Perkembangan [nasionalisme]{istilah} di [Asia]{tempat} ialah kesinambungan idea dari Barat, terutama selepas
+    pertembungan dengan kuasa [Eropah]{tempat}.'
+  - '[loudspeaker] Penjajahan mendorong rakyat Asia untuk bangkit menuntut kemerdekaan dan mempertahankan jati diri bangsa.'
+fokus: 'Nasionalisme juga berkembang di Asia (abad ke-19 – awal ke-20), bukan hanya di Barat. Empat wilayah:'
+bahagian:
+- tajuk: Nasionalisme di India
+  label: Bahagian Pertama
+  desc: ''
+  kandungan:
+  - jenis: board
+    tajuk: Dahagi India 1857
+    strip: true
+    senarai:
+    - '[om] [Brahmo Samaj]{gerakan}'
+    - '[diya-lamp] [Arya Samaj]{gerakan}'
+  - jenis: accordion
+    items:
+    - tajuk: Dahagi India 1857
+      senarai:
+      - '[round-pushpin] Kebangkitan besar-besaran oleh sepoi, iaitu askar upahan India, yang marah terhadap ancaman terhadap
+        adat dan agama mereka.'
+      - '[pushpin] Peristiwa ini menjadi titik tolak kesedaran [nasionalisme]{istilah} di [India]{tempat}.'
+    - tajuk: Gerakan sosioagama awal
+      senarai:
+      - '[loudspeaker] Gerakan ini menyemai semula kecintaan terhadap budaya dan tradisi tempatan yang terjejas akibat pengaruh
+        Barat.'
+      - '[pushpin] [Brahmo Samaj]{gerakan}'
+      - '[pushpin] [Arya Samaj]{gerakan}'
+    - tajuk: Kelahiran golongan intelektual
+      senarai:
+      - '[pushpin] Pendidikan Barat membuka jalan kepada penubuhan:'
+      - '[classical_building] [Indian National Congress]{pertubuhan} – [1885]{tahun}'
+      - '[mosque] [Liga Muslim]{pertubuhan} – [1906]{tahun}'
+    - tajuk: Gerakan radikal dan perjuangan tanpa kekerasan
+      senarai:
+      - '[pushpin] Gerakan radikal dipimpin oleh:'
+      - '[pushpin] Mereka menentang British secara lebih tegas dan radikal.'
+      - '[pushpin] Selepas [Perang Dunia Pertama]{peristiwa}, [Mahatma Gandhi]{tokoh} mengetuai dasar tidak bekerjasama.'
+      - '[open_book] Pegangan beliau: [Satyagraha]{istilah} = berpegang teguh kepada kebenaran, menolak keganasan.'
+      - '[person] [Bal Gangadhar Tilak]{tokoh}'
+      - '[person] [Bipin Chandra Pal]{tokoh}'
+    - tajuk: Kemerdekaan India dan Pakistan
+      senarai:
+      - '[globe_meridians] [14 Ogos 1947]{tahun} – Pakistan merdeka'
+      - '[person] [Muhammad Ali Jinnah]{tokoh} sebagai Gabenor Jeneral'
+      - '[globe_meridians] [15 Ogos 1947]{tahun} – India merdeka'
+      - '[person] [Jawaharlal Nehru]{tokoh} sebagai Perdana Menteri'
+- tajuk: Nasionalisme di China
+  label: Bahagian Kedua
+  desc: ''
+  kandungan:
+  - jenis: board
+    tajuk: ''
+    strip: false
+    senarai:
+    - '[cross-mark] anti-Barat'
+    - '[cross-mark] anti-Dinasti Manchu'
+  - jenis: board
+    tajuk: Kesudahan di China
+    strip: true
+    senarai: []
+  - jenis: accordion
+    items:
+    - tajuk: Dr. Sun Yat Sen dan Tiga Prinsip Rakyat
+      senarai:
+      - '[pushpin] [Dr. Sun Yat Sen]{tokoh} ialah tokoh utama revolusi di China.'
+      - '[keycap_1] Nasionalisme – menyingkirkan Manchu & menentang imperialisme'
+      - '[keycap_2] Demokrasi – rakyat memerintah negara'
+      - '[keycap_3] Kebajikan sosial – menjaga kebajikan rakyat'
+- tajuk: Nasionalisme di Empayar Uthmaniyah & Mesir
+  label: Bahagian Ketiga
+  desc: ''
+  kandungan:
+  - jenis: board
+    tajuk: ''
+    strip: false
+    senarai: []
+  - jenis: accordion
+    items:
+    - tajuk: Gerakan Islah (Pemulihan Islam)
+      senarai:
+      - '[pushpin] Gerakan ini dipelopori oleh:'
+      - '[loudspeaker] Mereka menyeru umat Islam supaya:'
+      - '[globe-showing-europe-africa] Usaha ini dilakukan kerana penjajahan Barat mencetuskan pertembungan budaya antara
+        Eropah-Amerika dengan budaya Islam.'
+      - '[man-wearing-turban] [Sayyid Jamal al-Din al-Afghani]{tokoh}'
+      - '[man-wearing-turban] [Sheikh Muhammad Abduh]{tokoh}'
+    - tajuk: Gerakan Pan-Islamisme
+      senarai:
+      - '[tear-off-calendar] Pada [1883]{tahun}, [Sayyid Jamal]{tokoh} menubuhkan [al-Urwah al-Wuthqa]{pertubuhan} (Ikatan
+        yang Kuat) untuk memperkuat rasa persaudaraan dan memajukan umat Islam.'
+      - '[newspaper] Akhbar [al-Urwah al-Wuthqa]{karya} diterbitkan untuk menyebarkan seruan [Pan-Islamisme]{istilah}, iaitu
+        penyatuan umat Islam seluruh dunia menentang penjajah.'
+      - '[tear-off-calendar] Pada [1914]{tahun}, [Empayar Uthmaniyah]{tempat} mengeluarkan fatwa jihad menentang penjajahan.'
+      - '[crown] [Khalifah Abdul Hamid II]{tokoh} memimpin gerakan ini dan mendapat sokongan dunia Islam, termasuk [Tok Janggut]{tokoh}
+        yang menentang British di [Kelantan]{tempat} pada [1915]{tahun}.'
+- tajuk: Nasionalisme di Jepun
+  label: Bahagian Keempat
+  desc: ''
+  kandungan:
+  - jenis: board
+    tajuk: ''
+    strip: false
+    senarai:
+    - '[factory] Perindustrian'
+    - '[school] Pendidikan'
+    - '[crossed_swords] Ketenteraan'
+  - jenis: board
+    tajuk: Glosari
+    strip: true
+    senarai: []
+kesimpulan:
+- '[light_bulb] Nasionalisme di Asia lahir daripada tekanan penjajahan dan keinginan membina negara bangsa sendiri.'
+- '[police-car-light] Iktibar: Kita mesti berwaspada terhadap anasir asing dan mengekalkan kedaulatan negara serta jati diri
+  bangsa.'
+- '[keycap_1] Penentangan langsung terhadap penjajah (India, China, Mesir)'
+- '[keycap_2] Gerakan pembaharuan & pemodenan dalaman (Uthmaniyah, Jepun)'

@@ -1,0 +1,156 @@
+subtopik: '3.8'
+tajuk: Perkembangan Gerakan Nasionalisme Tempatan dan Pendudukan Jepun
+bab: 3
+tajuk_bab: Konflik Dunia dan Pendudukan Jepun
+bab_label: Bab 3
+subjek: Sejarah
+tingkatan: 4
+tema: bab-theme-3
+audio: false
+has_quiz: false
+fail_sebelum: bab-3-7.html
+fail_seterusnya: bab-3-9.html
+kod_seterusnya: '3.9'
+og_image_v: '20260420'
+description: 'Nota Sejarah Tingkatan 4 Bab 3.8 (Konflik Dunia dan Pendudukan Jepun di Negara Kita): Perkembangan Gerakan Nasionalisme
+  Tempatan dan Pendudukan Jepun. Ringkasan padat untuk ulang kaji SPM.'
+lead: Subtopik ini menerangkan bagaimana pendudukan Jepun meninggalkan kesan besar terhadap kehidupan masyarakat di negara
+  kita serta membawa perkembangan nasionalisme tempatan di [Tanah Melayu]{tempat}, [Sarawak]{tempat} dan [Sabah]{tempat}.
+ringkasan:
+- '[fire] Pendudukan Jepun membawa perkembangan nasionalisme tempatan melalui semangat antipenjajah, keyakinan bahawa kuasa
+  Eropah boleh ditewaskan, dan peluang politik yang muncul semasa pendudukan.'
+- '[hibiscus] Di Tanah Melayu, perjuangan kemerdekaan orang Melayu berkembang melalui [KMM]{pertubuhan}, penglibatan dalam
+  [Giyu Gun]{pertubuhan} dan [Giyu Tai]{pertubuhan}, serta penubuhan [KRIS]{pertubuhan} sebelum perjuangan diteruskan oleh
+  [PKMM]{pertubuhan}.'
+- '[deciduous-tree] Di Sarawak dan Sabah, peluang memegang jawatan lebih tinggi dan penubuhan pertubuhan baharu menimbulkan
+  keyakinan politik untuk mentadbir sendiri selepas perang.'
+soalan_utama:
+  soalan: Bagaimanakah pendudukan Jepun membawa perkembangan nasionalisme tempatan di Tanah Melayu, Sarawak dan Sabah?
+  heading: Bagaimanakah pendudukan Jepun membawa perkembangan nasionalisme tempatan di Tanah Melayu, Sarawak dan Sabah?
+  jawapan:
+  - '[light_bulb] Pendudukan Jepun mengubah landskap politik dan mempercepat kesedaran nasionalisme dalam kalangan penduduk
+    tempatan.'
+bahagian:
+- tajuk: Perkembangan Semangat Antipenjajah
+  label: Bahagian Pertama
+  desc: ''
+  kandungan:
+  - jenis: board
+    tajuk: ''
+    strip: false
+    senarai:
+    - '[globe] “Asia untuk Asia”'
+    - '[sunrise] “Lingkungan Sekemakmuran Asia Timur Raya”'
+  - jenis: board
+    tajuk: Kesan kejatuhan British
+    strip: true
+    senarai: []
+- tajuk: Perjuangan Menuntut Kemerdekaan dalam Kalangan Orang Melayu
+  label: Bahagian Kedua
+  desc: ''
+  kandungan:
+  - jenis: board
+    tajuk: ''
+    strip: false
+    senarai: []
+  - jenis: board
+    tajuk: Glosari
+    strip: true
+    senarai: []
+  - jenis: board
+    tajuk: KRIS dan Harapan Kemerdekaan
+    strip: true
+    senarai:
+    - '[person] Dr. Burhanuddin al-Helmi'
+    - '[person] Ibrahim Haji Yaakob'
+    - '[person] Onan Haji Siraj'
+    - '[busts-in-silhouette] bekas pemimpin KMM yang lain'
+  - jenis: board
+    tajuk: Kesan penyerahan kalah Jepun
+    strip: true
+    senarai: []
+  - jenis: accordion
+    items:
+    - tajuk: Pembubaran KMM
+      senarai:
+      - '[calendar] Pada [Jun 1942]{tahun}, tentera Jepun membubarkan [KMM]{pertubuhan}.'
+      - '[pushpin] Hal ini berlaku kerana tindakan pemimpinnya menuntut kemerdekaan daripada Jepun.'
+      - '[pushpin] Pemimpin KMM sedar bahawa Jepun tidak akan memberikan kemerdekaan kepada Tanah Melayu, walaupun KMM telah
+        membantu tentera Jepun dalam peperangan dengan British.'
+    - tajuk: Taktik dan Strategi Baharu
+      senarai:
+      - '[pushpin] Perjuangan mendapatkan kemerdekaan diteruskan dengan taktik dan strategi baharu.'
+      - '[pushpin] Anggota KMM dalam organisasi ketenteraan yang ditubuhkan oleh tentera Jepun, iaitu:'
+      - '[pushpin] Mereka menyertai gerakan bawah tanah menentang Jepun, tetapi pada masa yang sama bekerjasama dengan pentadbiran
+        tentera Jepun.'
+      - '[military-helmet] Giyu Gun'
+      - '[shield] Giyu Tai'
+- tajuk: Kesedaran Politik di Sarawak dan Sabah
+  label: Bahagian Ketiga
+  desc: ''
+  kandungan:
+  - jenis: board
+    tajuk: ''
+    strip: false
+    senarai: []
+  - jenis: board
+    tajuk: Pegawai Daerah tempatan di Sarawak
+    strip: true
+    senarai:
+    - '[person] Abang Haji Openg – Kuching'
+    - '[person] Empenit Adam – Simanggang'
+    - '[person] Satem – Lawas'
+    - '[pushpin] Pemimpin tempatan yang dilantik menjadi Pegawai Daerah pada zaman pendudukan Jepun di Sarawak ialah:'
+  - jenis: board
+    tajuk: Glosari
+    strip: true
+    senarai:
+    - '[light_bulb] [Kakeo Kokokai]{pertubuhan} ialah Persatuan Cina Seberang Laut anjuran Jepun yang menggabungkan persatuan
+      Cina yang merangkumi dialek, daerah dan nama keluarga di bawah satu pertubuhan. Pertubuhan ini diasaskan di Kuching
+      serta mempunyai cawangan di bandar utama yang didiami oleh orang Cina seperti di Sibu.'
+  - jenis: board
+    tajuk: Pantai Timur Sabah
+    strip: true
+    senarai:
+    - '[pushpin] Di bahagian pantai timur Sabah, [Parti Kebangsaan Melayu Tawau]{pertubuhan} ditubuhkan.'
+    - '[pushpin] Parti ini dipengerusikan oleh [Orang Kaya-Kaya Abu Bakar]{tokoh}.'
+  - jenis: accordion
+    items:
+    - tajuk: Sarawak
+      senarai:
+      - '[pushpin] Kegiatan penduduk di Sarawak dikawal melalui persatuan yang ditaja oleh tentera Jepun.'
+      - '[pushpin] Contohnya, persatuan Cina digabungkan menjadi [Kakeo Kokokai]{pertubuhan}.'
+      - '[pushpin] Berikutan kekurangan pegawai Jepun, orang Melayu dan Iban diberikan jawatan dan kuasa yang lebih tinggi
+        sebagai pegawai daerah yang sebelumnya hanya disandang oleh pegawai British.'
+      - '[pushpin] Menjawat jawatan tinggi turut memberikan kesedaran dan keyakinan kepada pegawai tempatan untuk menjalankan
+        tugas penting.'
+      - '[light_bulb] Kesedaran politik melalui pengalaman semasa pendudukan Jepun menjadikan peribumi Sarawak lebih yakin
+        untuk berkerajaan sendiri selepas Perang Dunia Kedua.'
+      - '[pushpin] Pemimpin tempatan yang dilantik menjadi Pegawai Daerah pada zaman pendudukan Jepun di Sarawak ialah:'
+      - '[pushpin] [Kakeo Kokokai]{pertubuhan} ialah Persatuan Cina Seberang Laut anjuran Jepun yang menggabungkan persatuan
+        Cina yang merangkumi dialek, daerah dan nama keluarga di bawah satu pertubuhan. Pertubuhan ini diasaskan di Kuching
+        serta mempunyai cawangan di bandar utama yang didiami oleh orang Cina seperti di Sibu.'
+      - '[pushpin] Abang Haji Openg – Kuching'
+      - '[pushpin] Empenit Adam – Simanggang'
+      - '[pushpin] Satem – Lawas'
+    - tajuk: Sabah
+      senarai:
+      - '[pushpin] Pendudukan Jepun juga menyuntik kesedaran berpolitik dalam kalangan masyarakat setempat di Sabah.'
+      - '[pushpin] Beberapa pertubuhan ditubuhkan selepas pendudukan Jepun seperti [Parti Kebangsaan Melayu Labuan (PKML)]{pertubuhan}.'
+      - '[pushpin] PKML ditubuhkan oleh:'
+      - '[pushpin] Penubuhan ini berdasarkan idea [Harun Aminurrashid]{tokoh}, nasionalis Tanah Melayu.'
+      - '[pushpin] Di bahagian pantai timur Sabah, [Parti Kebangsaan Melayu Tawau]{pertubuhan} ditubuhkan.'
+      - '[pushpin] Parti ini dipengerusikan oleh [Orang Kaya-Kaya Abu Bakar]{tokoh}.'
+      - '[person] Tengku Noordin'
+      - '[person] Abu Bakar'
+      - '[person] Zakaria Gunn'
+kesimpulan:
+- '[pushpin] Pendudukan Jepun telah mempercepat perkembangan nasionalisme tempatan di negara kita.'
+- '[pushpin] Antara kesan utamanya ialah:'
+- '[pushpin] Pengalaman melihat British ditewaskan, peluang politik semasa pendudukan Jepun dan kesedaran baharu dalam kalangan
+  rakyat telah menguatkan keinginan untuk bebas daripada penjajahan.'
+- '[light_bulb] Pendudukan Jepun membuktikan bahawa walaupun rakyat hidup dalam kesengsaraan, pengalaman tersebut akhirnya
+  membangkitkan keberanian dan keyakinan untuk memperjuangkan kemerdekaan di Tanah Melayu, Sarawak dan Sabah.'
+- '[fire] semangat antipenjajah semakin meningkat'
+- '[flexed-biceps] rakyat menjadi lebih yakin terhadap kebolehan sendiri'
+- '[triangular-flag] perjuangan kemerdekaan diteruskan dengan lebih tersusun selepas Jepun menyerah kalah'

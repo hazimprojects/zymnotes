@@ -1,0 +1,171 @@
+subtopik: '5.2'
+tajuk: Faktor Penubuhan Persekutuan Tanah Melayu 1948
+bab: 5
+tajuk_bab: Persekutuan Tanah Melayu 1948
+bab_label: Bab 5
+subjek: Sejarah
+tingkatan: 4
+tema: bab-theme-5
+audio: false
+has_quiz: false
+fail_sebelum: bab-5-1.html
+fail_seterusnya: bab-5-3.html
+kod_seterusnya: '5.3'
+og_image_v: '20260420'
+description: 'Nota Sejarah Tingkatan 4 Bab 5.2 (Persekutuan Tanah Melayu 1948): Faktor Penubuhan Persekutuan Tanah Melayu
+  1948. Ringkasan padat untuk ulang kaji SPM.'
+lead: Subtopik ini menerangkan faktor yang mendorong penubuhan [Persekutuan Tanah Melayu 1948]{pentadbiran}, termasuk [penentangan
+  orang Melayu terhadap Malayan Union]{istilah}, cadangan [Raja-raja Melayu]{tokoh} dan [UMNO]{pertubuhan}, serta sokongan
+  pentadbir [British]{pertubuhan}.
+ringkasan:
+- '[calendar] [Persekutuan Tanah Melayu 1948]{pentadbiran} ditubuhkan secara rasmi pada [1 Februari 1948]{masa} selepas [Raja-raja
+  Melayu]{tokoh} menandatangani [Perjanjian Persekutuan Tanah Melayu 1948]{perjanjian}.'
+- '[raised_fist] Penubuhannya didorong oleh [penentangan orang Melayu terhadap Malayan Union]{istilah} yang dianggap menjejaskan
+  kedudukan [Raja-raja Melayu]{tokoh} dan orang Melayu.'
+- '[crown] Cadangan [Raja-raja Melayu]{tokoh} dan [UMNO]{pertubuhan} memberi asas kepada pembentukan sistem pentadbiran baharu
+  yang lebih sesuai.'
+- '[globe_meridians] Sokongan pentadbir [British]{pertubuhan} pula membantu mengukuhkan usaha ke arah pembentukan persekutuan
+  yang lebih stabil dari sudut politik dan ekonomi.'
+soalan_utama:
+  soalan: Apakah faktor yang mendorong penubuhan Persekutuan Tanah Melayu 1948?
+  heading: Apakah faktor yang mendorong penubuhan Persekutuan Tanah Melayu 1948?
+  jawapan:
+  - '[light_bulb] [Persekutuan Tanah Melayu 1948]{pentadbiran} ditubuhkan secara rasmi pada [1 Februari 1948]{masa} selepas
+    [Raja-raja Melayu]{tokoh} menandatangani [Perjanjian Persekutuan Tanah Melayu 1948]{perjanjian}.'
+  - '[pushpin] Penubuhannya didorong oleh beberapa faktor utama, iaitu [penentangan orang Melayu terhadap Malayan Union]{istilah},
+    [cadangan Raja-raja Melayu dan UMNO]{istilah}, serta [sokongan pentadbir British]{istilah}.'
+bahagian:
+- tajuk: Penentangan Orang Melayu terhadap Malayan Union
+  label: Bahagian Pertama
+  desc: ''
+  kandungan:
+  - jenis: board
+    tajuk: ''
+    strip: false
+    senarai:
+    - '[crown] [Raja-raja Melayu]{tokoh}'
+    - '[hibiscus] orang Melayu'
+  - jenis: accordion
+    items:
+    - tajuk: Peranan Gammans dan Rees Williams
+      senarai:
+      - '[pushpin] Ahli Parlimen British, iaitu:'
+      - '[pushpin] telah menyaksikan sendiri bantahan orang Melayu terhadap [Malayan Union]{pentadbiran}.'
+      - '[pushpin] Selepas kembali ke [England]{tempat}, mereka melaporkan hasil tinjauan tersebut kepada [Dewan Parlimen
+        British]{pertubuhan}.'
+      - '[pushpin] [Gammans]{tokoh} menyatakan bahawa jika British meneruskan rancangan [Malayan Union]{pentadbiran}, keadaan
+        huru-hara akan berlaku di [Tanah Melayu]{tempat}.'
+      - '[light_bulb] Penentangan yang meluas ini menunjukkan bahawa [Malayan Union]{pentadbiran} tidak diterima oleh penduduk
+        tempatan.'
+      - '[person] [L.D. Gammans]{tokoh}'
+      - '[person] [David Rees Williams]{tokoh}'
+    - tajuk: Kesan Penentangan Orang Melayu
+      senarai:
+      - '[pushpin] Ketika pelbagai bantahan sedang dilakukan, usaha untuk menggubal [Perjanjian Persekutuan Tanah Melayu]{perjanjian}
+        telah dimulakan melalui rundingan antara:'
+      - '[light_bulb] Ini menunjukkan bahawa penentangan orang Melayu menjadi faktor penting yang memaksa British mencari
+        penyelesaian baharu.'
+      - '[crown] [Raja-raja Melayu]{tokoh}'
+      - '[classical_building] [UMNO]{pertubuhan}'
+      - '[globe_meridians] [British]{pertubuhan}'
+- tajuk: Cadangan Raja-raja Melayu dan UMNO
+  label: Bahagian Kedua
+  desc: ''
+  kandungan:
+  - jenis: board
+    tajuk: ''
+    strip: false
+    senarai:
+    - '[calendar] [27 Mei 1946]{masa} → [Malcolm MacDonald]{tokoh}, Gabenor Jeneral, dan [Sir Edward Gent]{tokoh}, Gabenor
+      [Malayan Union]{pentadbiran}, mengadakan pertemuan dengan [Raja-raja Melayu]{tokoh} di [Kuala Kangsar]{tempat}.'
+  - jenis: board
+    tajuk: Petikan Surat Sultan Perak
+    strip: true
+    senarai: []
+  - jenis: accordion
+    items:
+    - tajuk: Cadangan Raja-raja Melayu
+      senarai:
+      - '[pushpin] Dalam pertemuan tersebut, [Raja-raja Melayu]{tokoh} mencadangkan beberapa perkara penting:'
+      - '[light_bulb] Cadangan ini bertujuan memulihkan semula kedudukan politik [Raja-raja Melayu]{tokoh} dan identiti negeri-negeri
+        Melayu.'
+      - '[keycap_1] penubuhan persekutuan bertaraf naungan, bukannya tanah jajahan'
+      - '[keycap_2] satu perjanjian baharu bagi menggantikan [Malayan Union]{pentadbiran}'
+      - '[keycap_3] jawatan [Pesuruhjaya Tinggi]{pentadbiran} menggantikan [Gabenor]{pentadbiran}'
+      - '[keycap_4] raja mempunyai kuasa dalam perundangan'
+      - '[keycap_5] perkataan [“Negeri-negeri Melayu”]{istilah} mesti muncul dalam persekutuan baharu'
+    - tajuk: Peranan Sultan Perak
+      senarai:
+      - '[pushpin] [Sultan Perak]{tokoh} bertindak sebagai jurucakap [Raja-raja Melayu]{tokoh}.'
+      - '[pushpin] Baginda menjelaskan kepada [Sir Edward Gent]{tokoh} supaya British menerima terlebih dahulu cadangan pembentukan
+        persekutuan sebelum membincangkan perkara lain.'
+      - '[pushpin] [Gammans]{tokoh} dan [Rees Williams]{tokoh} kemudiannya menyampaikan surat bantahan daripada [Sultan Perak]{tokoh}
+        di [Parlimen British]{pertubuhan}.'
+- tajuk: Sokongan Pentadbir British
+  label: Bahagian Ketiga
+  desc: ''
+  kandungan:
+  - jenis: board
+    tajuk: ''
+    strip: false
+    senarai:
+    - '[dove] keamanan'
+    - '[scales] kestabilan'
+    - '[chart-increasing-with-yen] kemajuan ekonomi'
+  - jenis: board
+    tajuk: Glosari
+    strip: true
+    senarai: []
+  - jenis: board
+    tajuk: Info
+    strip: true
+    senarai:
+    - '[calendar] [Ogos 1941]{masa} → [Piagam Atlantik]{perjanjian} diisytiharkan.'
+  - jenis: accordion
+    items:
+    - tajuk: Pegawai British yang Menyokong
+      senarai:
+      - '[pushpin] Antara pegawai tinggi British yang menyokong pembentukan [Persekutuan Tanah Melayu]{pentadbiran} ialah:'
+      - '[person] [Sir Edward Gent]{tokoh}'
+      - '[person] [Malcolm MacDonald]{tokoh}'
+      - '[person] [Sir Ralph Hone]{tokoh}'
+      - '[person] [Gammans]{tokoh}'
+      - '[person] [A.T. Newboult]{tokoh}'
+      - '[person] [Roland Braddell]{tokoh}'
+      - '[person] [W. Linehan]{tokoh}'
+      - '[person] [Theodore Adams]{tokoh}'
+    - tajuk: Cadangan Sir Ralph Hone
+      senarai:
+      - '[pushpin] [Sir Ralph Hone]{tokoh} mencadangkan supaya British melibatkan [Raja-raja Melayu]{tokoh} dalam pentadbiran
+        berasaskan perlembagaan.'
+      - '[pushpin] Antaranya dengan:'
+      - '[light_bulb] Cadangan ini membantu meyakinkan British bahawa persekutuan lebih sesuai berbanding [Malayan Union]{pentadbiran}.'
+      - '[crown] memberikan kuasa tertentu kepada sultan dalam [Majlis Negeri]{pentadbiran}'
+      - '[classical_building] memberikan peranan dalam [Majlis Perundangan]{pentadbiran}'
+    - tajuk: Rundingan British dengan UMNO dan Raja-raja Melayu
+      senarai:
+      - '[pushpin] Ini menunjukkan British mula mengambil kira pandangan pemimpin tempatan.'
+      - '[calendar] [Mei 1946]{masa} → [Sir Edward Gent]{tokoh} bertemu dengan wakil [UMNO]{pertubuhan} di [Pulau Pinang]{tempat}.'
+      - '[calendar] [18 Julai 1946]{masa} → di [King’s House, Kuala Lumpur]{tempat}, British memberi peluang kepada [Dato’
+        Onn Jaafar]{tokoh} dan [Raja-raja Melayu]{tokoh} untuk mengemukakan cadangan balas.'
+    - tajuk: Kepentingan Politik dan Ekonomi
+      senarai:
+      - '[pushpin] British menyedari bahawa pembentukan persekutuan dapat mewujudkan:'
+      - '[light_bulb] Keadaan politik yang stabil dianggap penting untuk memulihkan ekonomi selepas perang.'
+      - '[scales] politik yang lebih stabil'
+      - '[money-bag] keyakinan pelabur luar untuk melabur di [Tanah Melayu]{tempat}'
+    - tajuk: Dasar Dekolonisasi British
+      senarai:
+      - '[pushpin] Pada masa yang sama, British juga perlu melaksanakan dasar [dekolonisasi]{istilah} yang disarankan oleh
+        [Pertubuhan Bangsa-Bangsa Bersatu (PBB)]{pertubuhan} melalui [Piagam Atlantik]{perjanjian}.'
+kesimpulan:
+- '[pushpin] Penubuhan [Persekutuan Tanah Melayu 1948]{pentadbiran} didorong oleh tiga faktor utama, iaitu:'
+- '[pushpin] Bantahan orang Melayu telah membuka mata British bahawa [Malayan Union]{pentadbiran} ditolak oleh penduduk tempatan
+  dari pelbagai lapisan.'
+- '[pushpin] Pada masa yang sama, cadangan [Raja-raja Melayu]{tokoh} dan [UMNO]{pertubuhan} memberi asas kepada pembentukan
+  satu sistem pentadbiran baharu yang lebih sesuai.'
+- '[light_bulb] Sokongan pentadbir British pula mengukuhkan lagi usaha menubuhkan [Persekutuan Tanah Melayu]{pentadbiran}
+  demi mewujudkan kestabilan politik, kemajuan ekonomi dan perubahan pentadbiran selepas perang.'
+- '[raised_fist] penentangan orang Melayu terhadap [Malayan Union]{pentadbiran}'
+- '[crown] cadangan [Raja-raja Melayu]{tokoh} dan [UMNO]{pertubuhan}'
+- '[globe_meridians] sokongan pentadbir [British]{pertubuhan}'

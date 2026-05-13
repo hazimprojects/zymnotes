@@ -1,0 +1,103 @@
+subtopik: '2.5'
+tajuk: Kesedaran Nasionalisme di Negara Kita
+bab: 2
+tajuk_bab: Kebangkitan Nasionalisme
+bab_label: Bab 2
+subjek: Sejarah
+tingkatan: 4
+tema: bab-theme-2
+audio: true
+has_quiz: true
+fail_sebelum: bab-2-4.html
+fail_seterusnya: bab-2-6.html
+kod_seterusnya: '2.6'
+og_image_v: '20260420'
+description: 'Nota Sejarah Tingkatan 4 Bab 2.5 (Kebangkitan Nasionalisme): Kesedaran Nasionalisme di Negara Kita. Ringkasan
+  padat untuk ulang kaji SPM.'
+lead: Subtopik ini menerangkan bahawa kesedaran [nasionalisme]{istilah} di negara kita tidak bermula hanya pada zaman penjajahan
+  [British]{tempat}, tetapi telah dapat dikesan sejak zaman [Kesultanan Melayu Melaka]{tempat} lagi. Kesedaran ini berkembang
+  melalui perjuangan sultan, tokoh tempatan, gerakan agama, penulisan dan pertubuhan.
+ringkasan:
+- '[crown] Kesedaran [nasionalisme]{istilah} di negara kita telah bermula sejak zaman [Kesultanan Melayu Melaka]{tempat}.'
+- '[crossed_swords] Perjuangan awal dapat dilihat melalui usaha sultan dan tokoh tempatan mempertahankan wilayah daripada
+  kuasa asing.'
+- '[mosque] Pada abad ke-20, kesedaran ini berkembang melalui [Gerakan Islah]{gerakan}, penulisan, akhbar dan pertubuhan.'
+- '[hibiscus] Kesedaran inilah yang akhirnya menjadi asas kepada perjuangan kebangsaan dan kemerdekaan negara.'
+soalan_utama:
+  soalan: Bilakah semangat nasionalisme sebenarnya bermula di tanah air kita? Adakah hanya semasa zaman penjajahan British?
+  heading: Bilakah semangat nasionalisme sebenarnya bermula di tanah air kita? Adakah hanya semasa zaman penjajahan British?
+  jawapan:
+  - '[light_bulb] Sebenarnya, kesedaran [nasionalisme]{istilah} di negara kita telah mula muncul sejak zaman [Kesultanan Melayu
+    Melaka]{tempat} lagi.'
+fokus: 'Penentangan penjajahan di Tanah Melayu bermula seawal Melaka. Lima peringkat nasionalisme Melayu:'
+bahagian:
+- tajuk: Zaman Kesultanan Melayu Melaka
+  label: Bahagian Pertama
+  desc: ''
+  kandungan:
+  - jenis: board
+    tajuk: ''
+    strip: false
+    senarai:
+    - '[person-with-crown] [Sultan Muzaffar Shah]{tokoh}'
+    - '[prince] [Sultan Mahmud Shah]{tokoh}'
+- tajuk: Penentangan terhadap British di Kedah
+  label: Bahagian Kedua
+  desc: ''
+  kandungan:
+  - jenis: board
+    tajuk: ''
+    strip: false
+    senarai: []
+- tajuk: Pejuang Tempatan Menentang Penjajah
+  label: Bahagian Ketiga
+  desc: ''
+  kandungan:
+  - jenis: board
+    tajuk: ''
+    strip: false
+    senarai: []
+- tajuk: Gerakan Islah oleh Tokoh Agama
+  label: Bahagian Keempat
+  desc: ''
+  kandungan:
+  - jenis: board
+    tajuk: ''
+    strip: false
+    senarai:
+    - '[man-wearing-turban] [Sheikh Muhammad Tahir Jalaluddin]{tokoh}'
+    - '[man-wearing-turban] [Haji Abbas Mohd Taha]{tokoh}'
+    - '[man-wearing-turban] [Syed Sheikh al-Hadi]{tokoh}'
+- tajuk: Perjuangan Melalui Penulisan & Akhbar
+  label: Bahagian Kelima
+  desc: ''
+  kandungan:
+  - jenis: board
+    tajuk: ''
+    strip: false
+    senarai:
+    - '[man-teacher] [Zainal Abidin Ahmad (Za''ba)]{tokoh}'
+    - '[man-teacher] [Muhammad Rakawi Yusuf]{tokoh}'
+    - '[man-teacher] [Abdul Rahim Kajai]{tokoh}'
+    - '[woman-teacher] [Hajah Zainon Munshi Sulaiman (Ibu Zain)]{tokoh}'
+    - '[woman-teacher] [Fatimah Yaakub]{tokoh}'
+- tajuk: Pertubuhan Sosioekonomi oleh Intelektual
+  label: Bahagian Keenam
+  desc: ''
+  kandungan:
+  - jenis: board
+    tajuk: ''
+    strip: false
+    senarai:
+    - '[man-student] [Ibrahim Haji Yaakob]{tokoh}'
+    - '[man-student] [Ishak Haji Muhammad]{tokoh}'
+    - '[man-student] [Ahmad Boestamam]{tokoh}'
+    - '[man-student] [Burhanuddin al-Helmi]{tokoh}'
+kesimpulan:
+- '[light_bulb] Kesedaran nasionalisme di negara kita telah lama wujud dalam pemikiran dan perjuangan tokoh tempatan.'
+- '[light_bulb] Kesedaran ini akhirnya menjadi asas kepada perjuangan kebangsaan yang membawa kepada kemerdekaan negara.'
+- '[crown] Sultan & pembesar'
+- '[mosque] Tokoh agama'
+- '[newspaper] Wartawan & penulis'
+- '[teacher] Guru & pendidik'
+- '[busts-in-silhouette] Rakyat biasa yang berani menentang penjajahan'

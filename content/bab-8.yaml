@@ -1,0 +1,36 @@
+bab: 8
+tajuk: Pilihan Raya
+bab_label: Bab 8
+subjek: Sejarah
+tingkatan: 4
+tema: bab-theme-8
+og_image_v: '20260420'
+description: 'Nota Sejarah Tingkatan 4 Bab 8: Pilihan Raya. Ringkasan bab induk dan pautan subtopik untuk ulang kaji SPM.'
+lead: Bab ini menerangkan bagaimana [pilihan raya]{perjanjian} membolehkan rakyat memilih [wakil]{istilah} dalam membentuk
+  kerajaan, serta peranan pilihan raya dalam mengamalkan [sistem demokrasi]{gerakan}. Fokus utama ialah perkembangan pilihan
+  raya di [Persekutuan Tanah Melayu]{tempat}, termasuk [pilihan raya umum]{perjanjian} pada [1955]{masa}, penubuhan [Majlis
+  Perundangan Persekutuan]{pertubuhan} dan [kabinet pertama]{pertubuhan}, serta konteks pilihan raya di [Sarawak]{tempat}
+  dan [Sabah]{tempat}.
+sinopsis:
+- '[pushpin] [Pilihan raya]{perjanjian} diadakan untuk membolehkan rakyat memilih [wakil]{istilah} dalam membentuk kerajaan.'
+- '[classical_building] [Pilihan raya]{perjanjian} menyaksikan pengamalan [sistem demokrasi]{gerakan} di sesebuah negara.'
+- '[calendar] Di negara kita, pilihan raya bermula dengan pilihan raya majlis perbandaran, pilihan raya negeri dan [pilihan
+  raya umum]{perjanjian} yang diadakan pada tahun [1955]{masa}.'
+- '[ballot-box-with-ballot] Melalui [Pilihan Raya Majlis Perundangan Persekutuan 1955]{peristiwa}, sebanyak [52]{masa} orang
+  ahli dipilih untuk menganggotai [Majlis Perundangan Persekutuan]{pertubuhan} yang akhirnya berjaya membentuk [kabinet pertama]{pertubuhan}
+  di negara kita.'
+- '[map] Sementara itu, pilihan raya juga diadakan di [Sarawak]{tempat} dan [Sabah]{tempat} bagi memilih wakil masing-masing
+  dalam kerajaan tempatan.'
+subtopik:
+- kod: '8.1'
+  tajuk: Perkembangan Pilihan Raya di Persekutuan Tanah Melayu
+  penerangan: Meneliti asas dan perkembangan sistem serta amalan pilihan raya dalam konteks Persekutuan Tanah Melayu.
+- kod: '8.2'
+  tajuk: Proses Pilihan Raya Umum Pertama
+  penerangan: Memahami jalannya pilihan raya umum pertama pada 1955 dan implikasinya terhadap politik tanah air.
+- kod: '8.3'
+  tajuk: Penubuhan Majlis Perundangan Persekutuan
+  penerangan: Melihat bagaimana Majlis Perundangan Persekutuan dibentuk hasil pilihan raya dan peranan institusi tersebut.
+- kod: '8.4'
+  tajuk: Peranan Kabinet Pertama Persekutuan Tanah Melayu
+  penerangan: Menjelaskan fungsi dan sumbangan kabinet pertama dalam mentadbir negara selepas pilihan raya.

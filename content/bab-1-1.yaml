@@ -1,0 +1,118 @@
+subtopik: '1.1'
+tajuk: Latar Belakang Negara Bangsa Sebelum Kedatangan Barat
+bab: 1
+tajuk_bab: Warisan Negara Bangsa
+bab_label: Bab 1
+subjek: Sejarah
+tingkatan: 4
+tema: bab-theme-1
+audio: true
+has_quiz: true
+fail_sebelum: bab-1.html
+fail_seterusnya: bab-1-2.html
+kod_seterusnya: '1.2'
+og_image_v: '20260420'
+description: 'Nota Sejarah Tingkatan 4 Bab 1.1 (Warisan Negara Bangsa): Latar Belakang Negara Bangsa Sebelum Kedatangan Barat.
+  Ringkasan padat untuk ulang kaji SPM.'
+lead: Subtopik ini menerangkan kewujudan awal [negara bangsa]{istilah} di [Alam Melayu]{tempat} serta kesinambungan ciri-cirinya
+  daripada kerajaan awal hingga kerajaan seterusnya.
+ringkasan:
+- '[classical_building] Asas [negara bangsa]{istilah} telah wujud di [Alam Melayu]{tempat} sebelum kedatangan Barat.'
+- '[compass] Pembentukannya berlaku secara [berperingkat]{masa} dan mengambil [masa yang panjang]{masa}.'
+- '[scroll_old] Negara bangsa Alam Melayu terbina melalui [raja]{tokoh}, [undang-undang]{konsep}, [wilayah pengaruh]{tempat}
+  dan [rakyat]{istilah}.'
+- '[repeat-button] Ciri-ciri ini diwarisi dan diteruskan oleh [kerajaan seterusnya]{kerajaan}.'
+soalan_utama:
+  soalan: Adakah konsep negara bangsa hanya wujud selepas kedatangan Barat?
+  heading: Adakah konsep negara bangsa hanya wujud selepas kedatangan Barat?
+  jawapan:
+  - '[light_bulb] Tidak. Asas [negara bangsa]{istilah} telah wujud lebih awal di [Alam Melayu]{tempat} melalui kemunculan
+    [kerajaan]{kerajaan} yang kuat dan berpengaruh.'
+fokus: 'Negara bangsa di Alam Melayu sudah wujud sebelum Barat tiba, terbina secara berperingkat. Empat perkara utama:'
+bahagian:
+- tajuk: Proses Pembentukan Negara Bangsa
+  label: Bahagian Pertama
+  desc: ''
+  kandungan:
+  - jenis: board
+    tajuk: ''
+    strip: false
+    senarai: []
+  - jenis: accordion
+    items:
+    - tajuk: Berperingkat
+      senarai:
+      - '[pushpin] Pembentukan negara bangsa berlaku sedikit demi sedikit dan tidak terbina secara sekaligus.'
+    - tajuk: Masa yang panjang
+      senarai:
+      - '[pushpin] Proses ini berkembang dalam tempoh yang panjang mengikut perubahan masyarakat dan pemerintahan.'
+    - tajuk: Mengikut keperluan zaman
+      senarai:
+      - '[pushpin] Ciri-cirinya berkembang berdasarkan keperluan pentadbiran, kuasa dan perkembangan zaman.'
+- tajuk: Kehebatan Kerajaan Alam Melayu
+  label: Bahagian Kedua
+  desc: ''
+  kandungan:
+  - jenis: board
+    tajuk: ''
+    strip: false
+    senarai:
+    - '[pushpin] [Kesultanan Melayu Melaka]{kerajaan}'
+    - '[pushpin] [Kesultanan Johor-Riau]{kerajaan}'
+- tajuk: Negara bangsa Alam Melayu terbina melalui empat unsur utama
+  label: Bahagian Ketiga
+  desc: Klik kad dan isi akan terbuka terus di bawahnya.
+  kandungan:
+  - jenis: accordion
+    items:
+    - tajuk: Raja
+      senarai:
+      - '[light_bulb] [Raja]{tokoh} dianggap mempunyai kedudukan yang suci dan dihormati.'
+      - '[open_book] Contoh: [Raja Champa]{kerajaan} dianggap suci dan dikaitkan dengan [Dewa Siva]{istilah}.'
+      - '[classical_building] sistem pentadbiran'
+      - '[handshake_light] bantuan para pembesar'
+      - '[busts-in-silhouette] ketaatan rakyat'
+    - tajuk: Undang-undang
+      senarai:
+      - '[open_book] Contoh: [Kerajaan Majapahit]{kerajaan} mengamalkan [undang-undang Kutara Manawa]{konsep}.'
+      - '[shield] keamanan kerajaan'
+      - '[smiling-face-with-smiling-eyes] kesejahteraan rakyat'
+      - '[scales] kelancaran pentadbiran'
+    - tajuk: Wilayah Pengaruh
+      senarai:
+      - '[open_book] Contoh: [Kerajaan Funan]{kerajaan} mempunyai [wilayah]{tempat} yang luas meliputi:'
+      - '[check-mark] menerima'
+      - '[check-mark] mengakui'
+      - '[check-mark] mematuhi pemerintahan raja'
+    - tajuk: Rakyat
+      senarai:
+      - '[handshake_light] setia kepada raja'
+      - '[prohibited] tidak menderhaka'
+- tajuk: Kesinambungan Negara Bangsa di Alam Melayu
+  label: Bahagian Keempat
+  desc: Klik kad dan isi akan terbuka terus di bawahnya.
+  kandungan:
+  - jenis: accordion
+    items:
+    - tajuk: Funan & Champa
+      senarai:
+      - '[pushpin] Kerajaan awal yang menunjukkan perkembangan ciri-ciri negara bangsa di Alam Melayu.'
+    - tajuk: Srivijaya
+      senarai:
+      - '[pushpin] [Kerajaan Srivijaya]{kerajaan} yang berpusat di [Palembang]{tempat} meneruskan ciri-ciri [negara bangsa]{istilah}
+        daripada [Funan]{kerajaan} dan [Champa]{kerajaan}.'
+      - '[pushpin] Kesinambungan ini menjadikan [Srivijaya]{kerajaan} sebagai empayar yang terkenal di [Alam Melayu]{tempat}.'
+    - tajuk: Kesultanan Melayu Melaka
+      senarai:
+      - '[pushpin] Ciri-ciri ini diwarisi oleh [Kesultanan Melayu Melaka]{kerajaan} dan seterusnya memperkukuh sistem [negara
+        bangsa]{istilah}.'
+    - tajuk: Kesultanan Johor-Riau
+      senarai:
+      - '[pushpin] [Kesultanan Johor-Riau]{kerajaan} meneruskan tradisi [negara bangsa]{istilah} dengan menekankan kepentingan
+        [Islam]{istilah}.'
+kesimpulan:
+- '[light_bulb] Warisan ini membentuk kekuatan kerajaan di Alam Melayu.'
+- '[light_bulb] Pewarisan ini menjadikan kerajaan-kerajaan tersebut kuat dan berpengaruh di [Alam Melayu]{tempat}.'
+- '[classical_building] memperkukuh kerajaan Srivijaya'
+- '[crown] menguatkan Kesultanan Melayu Melaka'
+- '[scroll_old] diteruskan oleh Kesultanan Johor-Riau'

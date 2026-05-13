@@ -1,0 +1,178 @@
+subtopik: '2.7'
+tajuk: Perkembangan Nasionalisme
+bab: 2
+tajuk_bab: Kebangkitan Nasionalisme
+bab_label: Bab 2
+subjek: Sejarah
+tingkatan: 4
+tema: bab-theme-2
+audio: true
+has_quiz: true
+fail_sebelum: bab-2-6.html
+fail_seterusnya: bab-2-8.html
+kod_seterusnya: '2.8'
+og_image_v: '20260420'
+description: 'Nota Sejarah Tingkatan 4 Bab 2.7 (Kebangkitan Nasionalisme): Perkembangan Nasionalisme. Ringkasan padat untuk
+  ulang kaji SPM.'
+lead: Subtopik ini menjelaskan bagaimana [nasionalisme]{istilah} berkembang dalam kalangan rakyat di negara kita sebelum merdeka
+  melalui tiga saluran utama, iaitu perjuangan golongan intelektual, penulisan serta pertubuhan atau persatuan.
+ringkasan:
+- '[brain] Perkembangan [nasionalisme]{istilah} di negara kita dapat dilihat melalui tiga saluran utama.'
+- '[graduation-cap] Golongan intelektual berpendidikan agama, Inggeris dan Melayu menjadi pelopor kesedaran nasionalisme.'
+- '[fountain-pen] Penulisan melalui akhbar, majalah dan karya kreatif menyebarkan idea nasionalisme kepada masyarakat.'
+- '[handshake_light] Persatuan dan pertubuhan pula menyatukan suara rakyat untuk menuntut hak serta membina jati diri bangsa.'
+soalan_utama:
+  soalan: Bagaimanakah nasionalisme berkembang dalam kalangan rakyat di negara kita sebelum merdeka?
+  heading: Bagaimanakah nasionalisme berkembang dalam kalangan rakyat di negara kita sebelum merdeka?
+  jawapan:
+  - '[light_bulb] Perkembangan nasionalisme dapat dilihat melalui tiga saluran utama:'
+  - '[brain] perjuangan golongan intelektual'
+  - '[fountain-pen] perjuangan melalui penulisan'
+  - '[handshake_light] perjuangan melalui pertubuhan atau persatuan'
+fokus: 'Intelektual Melayu membangkit nasionalisme melalui penulisan dan persatuan. Tiga saluran:'
+bahagian:
+- tajuk: Perjuangan Golongan Intelektual
+  label: Bahagian Pertama
+  desc: ''
+  kandungan:
+  - jenis: board
+    tajuk: ''
+    strip: false
+    senarai: []
+  - jenis: board
+    tajuk: Info
+    strip: true
+    senarai:
+    - '[calendar] diterbitkan pada [23 Julai 1906]{tahun}'
+    - '[books] menyeru kembali kepada ajaran al-Quran dan Hadis'
+    - '[loudspeaker] membahaskan polemik Kaum Muda dan Kaum Tua'
+    - '[round-pushpin] berkembang di Negeri-negeri Selat'
+  - jenis: accordion
+    items:
+    - tajuk: Intelektual berpendidikan agama
+      senarai:
+      - '[brain] Golongan ini dikenali sebagai [Kaum Muda]{istilah} dan membawa idea [Gerakan Islah]{gerakan} dari Timur Tengah.'
+      - '[man-wearing-turban] [Sheikh Muhammad Tahir Jalaluddin]{tokoh}'
+      - '[man-wearing-turban] [Syed Sheikh al-Hadi]{tokoh}'
+      - '[man-wearing-turban] [Haji Abbas Mohd Taha]{tokoh}'
+    - tajuk: Intelektual berpendidikan Inggeris
+      senarai:
+      - '[pushpin] Golongan ini dilahirkan melalui [Maktab Melayu Kuala Kangsar (MCKK)]{pertubuhan} yang ditubuhkan pada [1905]{tahun}.'
+      - '[pushpin] Pada awalnya, MCKK ditubuhkan untuk melatih anak bangsawan yang berkhidmat dalam pentadbiran.'
+      - '[scales] peluang pekerjaan dalam jabatan kerajaan'
+      - '[graduation-cap] peluang pendidikan yang lebih luas untuk orang Melayu'
+    - tajuk: Intelektual berpendidikan Melayu
+      senarai:
+      - '[pushpin] Golongan ini lahir melalui [Sultan Idris Training College (SITC)]{pertubuhan} yang ditubuhkan pada [1922]{tahun}.'
+      - '[pushpin] SITC menjadi pusat penting dalam membangkitkan kesedaran kebangsaan.'
+      - '[fire] Kesannya lahir [Kesatuan Melayu Muda (KMM)]{pertubuhan} yang membawa perjuangan nasionalisme lebih radikal.'
+      - '[student] [O.T. Dussek]{tokoh}'
+      - '[student] [Abdul Hadi Hassan]{tokoh}'
+      - '[student] [Abdul Hadi Abdul Manan]{tokoh}'
+      - '[student] [Harun Aminurrashid]{tokoh}'
+- tajuk: Perjuangan Melalui Penulisan
+  label: Bahagian Kedua
+  desc: ''
+  kandungan:
+  - jenis: board
+    tajuk: ''
+    strip: false
+    senarai: []
+  - jenis: accordion
+    items:
+    - tajuk: Akhbar dan majalah
+      senarai:
+      - '[office-building] [Syarikat Jelutong Press]{pertubuhan} mencetuskan penerbitan media di Tanah Melayu.'
+      - '[books] Golongan berpendidikan Melayu dan Inggeris turut aktif menulis.'
+      - '[scales] hak & masa depan bangsa'
+      - '[counterclockwise-arrows-button] polemik Kaum Muda vs Kaum Tua'
+      - '[classical_building] isu pentadbiran, ekonomi & sosial'
+    - tajuk: Fajar Sarawak dan perkembangan di Sabah
+      senarai:
+      - '[pushpin] [Fajar Sarawak]{karya} ditulis oleh:'
+      - '[megaphone] Slogan: “Fajar telah tersinsing, bangunlah wahai bangsaku!”'
+      - '[pushpin] Di Sabah, penulisan banyak menyentuh isu pendidikan, tanah bumiputera dan kewangan petani.'
+      - '[loudspeaker] Isu ini disuarakan oleh Ketua Anak Negeri dan melalui persatuan sosiobudaya.'
+      - '[fountain-pen] [Muhammad Rakawi Yusuf]{tokoh}'
+      - '[fountain-pen] [Muhammad Awi Anang]{tokoh}'
+      - '[fountain-pen] [Muhd Daud Abdul Ghani]{tokoh}'
+      - '[fountain-pen] [Haji Abd Rahman Kassim]{tokoh}'
+    - tajuk: Akhbar masyarakat Cina dan India
+      senarai:
+      - '[pushpin] Sebelum abad ke-20:'
+      - '[pushpin] Akhbar ini bertujuan merangsang pemikiran masyarakat Huachiao untuk mengekalkan identiti budaya, memperjuangkan
+        nasib wanita dan menyemai rasa cinta kepada negara China.'
+      - '[pushpin] Selepas abad ke-20:'
+      - '[pushpin] Menjelang [1929]{tahun}, akhbar ini lebih bersifat anti-imperialisme.'
+      - '[pushpin] Sekitar tahun 1930-an:'
+      - '[pushpin] Akhbar ini mula disebarkan di Pulau Pinang dan membahaskan isu perjuangan kelas pekerja serta keadilan
+        sosioekonomi.'
+      - '[pushpin] Akhbar penting:'
+      - '[loudspeaker] Akhbar ini membincangkan isu politik, sosial, perkembangan di India serta kepentingan perpaduan masyarakat
+        India kelas menengah di Tanah Melayu.'
+      - '[rolled-up-newspaper] [Lat Pau]{karya}'
+      - '[rolled-up-newspaper] [Modern Daily News]{karya}'
+    - tajuk: 'Karya kreatif: novel, puisi dan cerpen'
+      senarai:
+      - '[pushpin] Karya kreatif seperti novel, puisi dan cerpen turut menyemai semangat nasionalisme.'
+      - '[pushpin] Tema utamanya ialah cinta akan negara dan pembelaan bangsa.'
+      - '[pushpin] Novel ini menyeru supaya memerdekakan diri dari segi ekonomi.'
+      - '[blue-book] [Mari Kita Berjuang]{karya} – [Abdullah Sidek]{tokoh}'
+- tajuk: Perjuangan Melalui Persatuan
+  label: Bahagian Ketiga
+  desc: ''
+  kandungan:
+  - jenis: board
+    tajuk: ''
+    strip: false
+    senarai: []
+  - jenis: accordion
+    items:
+    - tajuk: Kesatuan Melayu Singapura (KMS)
+      senarai:
+      - '[spiral-calendar] Ditubuhkan pada [1926]{tahun} di [Singapura]{tempat}.'
+      - '[person] Diasaskan oleh [Mohammad Eunos Abdullah]{tokoh}.'
+      - '[glowing-star] KMS menjadi pencetus kepada penubuhan:'
+      - '[bullseye] Persatuan ini banyak disertai kakitangan kerajaan yang bekerjasama dengan British sambil memohon lebih
+        banyak peluang dalam pentadbiran.'
+      - '[scales] memperjuangkan kepentingan politik orang Melayu'
+      - '[books] memperjuangkan pendidikan orang Melayu'
+      - '[hammer-and-wrench] menekankan pelajaran teknikal & pengajian tinggi'
+    - tajuk: Persaudaraan Sahabat Pena (PASPAM)
+      senarai:
+      - '[calendar] Ditubuhkan pada [1934]{tahun}.'
+      - '[round-pushpin] Bermula di [Pulau Pinang]{tempat} dan berkembang ke seluruh Tanah Melayu.'
+      - '[pushpin] Aktif menganjurkan perhimpunan tahunan dari [1934–1939]{tahun}.'
+      - '[pushpin] Di Sarawak, cawangan Kuching dikaitkan dengan:'
+      - '[pushpin] Mereka juga mengasaskan [Persatuan Melayu Sarawak (PMS)]{pertubuhan} pada [1939]{tahun}.'
+      - '[pushpin] Di Sabah, cawangan PASPAM berkembang di Jesselton, Tawau dan Labuan.'
+      - '[pushpin] Kesedaran berpersatuan di Sabah wujud sekitar akhir 1930-an.'
+      - '[handshake_light] menggalakkan perpaduan & perkongsian idea'
+      - '[speaking_head] menyatukan pergerakan orang Melayu di seluruh Tanah Melayu, Brunei, Labuan dan Sarawak'
+    - tajuk: Kesatuan Melayu Muda (KMM)
+      senarai:
+      - '[calendar] Ditubuhkan sekitar [1937–1938]{tahun}.'
+      - '[person] Diasaskan oleh [Ibrahim Haji Yaakob]{tokoh}.'
+      - '[newspaper] Bergerak melalui akhbar [Majlis]{karya}.'
+      - '[loudspeaker] Seruan KMM: “Bangun sebagai satu bangsa yang mempunyai tamadun dan kesopanan di tanah airnya.”'
+      - '[warning] KMM dianggap radikal oleh British kerana membangkitkan semangat anti-British secara lantang.'
+      - '[right-facing-fist] menentang British secara terbuka'
+      - '[hibiscus] mewujudkan gagasan Melayu Raya (gabungan Tanah Melayu & Indonesia)'
+    - tajuk: Persatuan masyarakat Cina, India, Sikh dan India Muslim
+      senarai:
+      - '[pushpin] Tumpuannya ialah politik di negara asal, pendidikan tinggi dan teknikal.'
+      - '[pushpin] Persatuan awal termasuk:'
+      - '[calendar] Pada [1927]{tahun}, Persidangan India Se-Malaya diadakan di Kuala Lumpur.'
+      - '[tear-off-calendar] Pada [1937]{tahun}, lawatan [Pandit Jawaharlal Nehru]{tokoh} mengukuhkan gerakan nasionalisme
+        India.'
+      - '[pushpin] Golongan ini aktif dalam perniagaan dan pentadbiran.'
+      - '[person] [Dr. Sun Yat Sen]{tokoh} – melawat Negeri-negeri Melayu Bersekutu sebanyak 4 kali'
+      - '[person] [Tan Jiak Kim]{tokoh} – menubuhkan Persatuan Orang Cina Peranakan British (SCBA)'
+      - '[person] [Tan Cheng Lock]{tokoh} – menghidupkan SCBA di Melaka ([1915]{tahun})'
+kesimpulan:
+- '[light_bulb] Nasionalisme di negara kita berkembang melalui tiga saluran utama sebelum Perang Dunia Kedua.'
+- '[light_bulb] Sumbangan tokoh dan organisasi ini telah mencetuskan semangat nasionalisme sebelum Perang Dunia Kedua dan
+  menjadi asas kepada gerakan kemerdekaan yang lebih besar selepasnya.'
+- '[keycap_1] golongan intelektual – menggerakkan pendidikan, tafsiran agama dan tulisan'
+- '[keycap_2] penulisan – membakar semangat rakyat melalui akhbar, majalah dan karya kreatif'
+- '[keycap_3] persatuan – menyatukan suara rakyat untuk menuntut hak dan membina jati diri bangsa'

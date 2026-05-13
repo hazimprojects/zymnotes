@@ -1,0 +1,109 @@
+subtopik: '5.4'
+tajuk: Kesan Penubuhan Persekutuan Tanah Melayu 1948
+bab: 5
+tajuk_bab: Persekutuan Tanah Melayu 1948
+bab_label: Bab 5
+subjek: Sejarah
+tingkatan: 4
+tema: bab-theme-5
+audio: false
+has_quiz: false
+fail_sebelum: bab-5.html
+og_image_v: '20260420'
+description: 'Nota Sejarah Tingkatan 4 Bab 5.4 (Persekutuan Tanah Melayu 1948): Kesan Penubuhan Persekutuan Tanah Melayu 1948.
+  Ringkasan padat untuk ulang kaji SPM.'
+lead: Subtopik ini menerangkan kesan penubuhan [Persekutuan Tanah Melayu 1948]{pentadbiran} terhadap politik, kedudukan orang
+  Melayu, kewarganegaraan dan hubungan antara kaum.
+ringkasan:
+- '[crown] [Persekutuan Tanah Melayu 1948]{pentadbiran} berjaya mengembalikan kedudukan [Raja-raja Melayu]{tokoh} yang terjejas
+  semasa [Malayan Union]{pentadbiran}.'
+- '[shield] Persekutuan ini turut menjaga [kedudukan istimewa orang Melayu]{istilah} sambil mengiktiraf [kepentingan sah kaum
+  lain]{istilah}.'
+- '[identification-card] Penubuhannya membuka ruang [kewarganegaraan]{istilah} kepada orang bukan Melayu dalam kerangka politik
+  yang lebih tersusun.'
+- '[handshake_light] Ia juga membuka jalan ke arah [kerjasama kaum]{istilah} melalui [Jawatankuasa Hubungan Antara Kaum (CLC)]{pertubuhan}
+  dan menjadi asas penting kepada kemerdekaan negara.'
+soalan_utama:
+  soalan: Apakah kesan penubuhan Persekutuan Tanah Melayu 1948 terhadap politik, kedudukan orang Melayu dan hubungan antara
+    kaum?
+  heading: Apakah kesan penubuhan Persekutuan Tanah Melayu 1948 terhadap politik, kedudukan orang Melayu dan hubungan antara
+    kaum?
+  jawapan:
+  - '[light_bulb] [Persekutuan Tanah Melayu 1948]{pentadbiran} membawa kesan besar kepada negara kita kerana berjaya mengembalikan
+    kedudukan [Raja-raja Melayu]{tokoh}, menjaga kedudukan istimewa orang Melayu, membuka ruang kewarganegaraan dan mewujudkan
+    kerjasama antara kaum.'
+  - '[pushpin] Kesan ini menunjukkan bahawa [Persekutuan Tanah Melayu 1948]{pentadbiran} bukan sekadar menggantikan [Malayan
+    Union]{pentadbiran}, tetapi menjadi asas penting kepada pembinaan negara yang lebih stabil dan tersusun.'
+bahagian:
+- tajuk: Mengembalikan Kedudukan Raja-raja Melayu
+  label: Bahagian Pertama
+  desc: ''
+  kandungan:
+  - jenis: board
+    tajuk: ''
+    strip: false
+    senarai:
+    - '[crown] [Majlis Raja-Raja]{pertubuhan}'
+  - jenis: accordion
+    items:
+    - tajuk: Ciri Majlis Raja-Raja
+      senarai:
+      - '[person] dipengerusikan oleh seorang daripada [Raja-raja Melayu]{tokoh}'
+      - '[crown] dianggotai oleh sembilan orang [Raja Melayu]{tokoh}'
+    - tajuk: Peranan Pesuruhjaya Tinggi dan Raja-raja Melayu
+      senarai:
+      - '[pushpin] Selain itu, [Pesuruhjaya Tinggi]{tokoh} perlu memastikan bahawa [Raja-raja Melayu]{tokoh} dirujuk dalam
+        perkara yang berada dalam bidang kuasa kerajaan Persekutuan.'
+      - '[light_bulb] Hal ini membuktikan bahawa kedudukan [Raja-raja Melayu]{tokoh} dipulihkan semula sebagai tonggak pemerintahan
+        negeri-negeri Melayu.'
+- tajuk: Menjaga Kedudukan Istimewa Orang Melayu
+  label: Bahagian Kedua
+  desc: ''
+  kandungan:
+  - jenis: board
+    tajuk: ''
+    strip: false
+    senarai:
+    - '[hibiscus] kedudukan istimewa orang Melayu'
+    - '[scales] kepentingan sah kaum lain'
+- tajuk: Membuka Ruang Kewarganegaraan
+  label: Bahagian Ketiga
+  desc: ''
+  kandungan:
+  - jenis: board
+    tajuk: ''
+    strip: false
+    senarai:
+    - '[busts-in-silhouette] orang bukan Melayu'
+    - '[right-arrow] untuk menjadi warganegara'
+- tajuk: Mewujudkan Kerjasama Kaum
+  label: Bahagian Keempat
+  desc: ''
+  kandungan:
+  - jenis: board
+    tajuk: ''
+    strip: false
+    senarai:
+    - '[handshake_light] [Jawatankuasa Hubungan Antara Kaum]{pertubuhan}'
+    - '[right-arrow] [Communities Liaison Committee (CLC)]{pertubuhan}'
+  - jenis: accordion
+    items:
+    - tajuk: Peranan dan Kesan Jawatankuasa Hubungan Antara Kaum
+      senarai:
+      - '[pushpin] Kebanyakan cadangan [CLC]{pertubuhan} kemudiannya dimasukkan ke dalam:'
+      - '[pushpin] Jawatankuasa ini berjaya:'
+      - '[scroll_old] usul perundangan yang diluluskan oleh [Majlis Perundangan Persekutuan]{pertubuhan}'
+    - tajuk: Langkah ke arah kemerdekaan
+      senarai:
+      - '[light_bulb] [Persekutuan Tanah Melayu 1948]{pentadbiran} menjadi langkah penting yang merintis jalan kepada pembentukan:'
+      - '[scroll_old] [Perlembagaan Tanah Melayu 1957]{perjanjian}'
+      - '[right-arrow] yang akhirnya membawa kepada kemerdekaan negara'
+kesimpulan:
+- '[pushpin] Penubuhan [Persekutuan Tanah Melayu 1948]{pentadbiran} membawa kesan yang besar kepada negara kita kerana:'
+- '[pushpin] Perjanjian ini menunjukkan bahawa kestabilan negara hanya dapat dicapai melalui:'
+- '[light_bulb] Oleh itu, gabungan kuat antara rakyat, pemimpin dan institusi Raja berjaya menggagalkan rancangan British
+  yang boleh melemahkan kedudukan orang Melayu dan mengubah struktur politik [Tanah Melayu]{tempat} secara tidak adil.'
+- '[crown] mengembalikan kedudukan [Raja-raja Melayu]{tokoh}'
+- '[shield] menjaga kedudukan istimewa orang Melayu'
+- '[identification-card] membuka ruang kewarganegaraan kepada orang bukan Melayu'
+- '[handshake_light] mewujudkan kerjasama dan perpaduan antara kaum'

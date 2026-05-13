@@ -1,0 +1,143 @@
+subtopik: '6.1'
+tajuk: Kemasukan Pengaruh Komunis di Negara Kita
+bab: 6
+tajuk_bab: Ancaman Komunis dan Perisytiharan Darurat
+bab_label: Bab 6
+subjek: Sejarah
+tingkatan: 4
+tema: bab-theme-6
+audio: false
+has_quiz: false
+fail_sebelum: bab-6.html
+fail_seterusnya: bab-6-2.html
+kod_seterusnya: '6.2'
+og_image_v: '20260420'
+description: 'Nota Sejarah Tingkatan 4 Bab 6.1 (Ancaman Komunis dan Perisytiharan Darurat): Kemasukan Pengaruh Komunis di
+  Negara Kita. Ringkasan padat untuk ulang kaji SPM.'
+lead: Subtopik ini menerangkan bagaimana ideologi [komunis]{gerakan} mula masuk ke negara kita sejak [tahun 1920-an]{masa}
+  melalui pengaruh dari [China]{tempat} dan [Indonesia]{tempat}, serta bagaimana penubuhan [Parti Komunis Malaya (PKM)]{pertubuhan}
+  memperkukuhkan penyebaran fahaman tersebut.
+ringkasan:
+- '[triangular-flag] [Komunisme]{gerakan} ialah ideologi yang diasaskan oleh [Karl Marx]{tokoh} dan [Friedrich Engels]{tokoh}
+  melalui karya [Communist Manifesto]{karya} dan [Das Kapital]{karya}.'
+- '[calendar] Penyebaran ideologi ini di negara kita bermula sejak [tahun 1920-an]{masa} melalui pengaruh dari [China]{tempat}
+  dan [Indonesia]{tempat}.'
+- '[classical_building] Kemasukan pengaruh komunis berlaku melalui tiga saluran utama: dari [China]{tempat}, dari [Indonesia]{tempat}
+  dan melalui penubuhan [Parti Komunis Malaya (PKM)]{pertubuhan}.'
+- '[warning] Selepas [Perang Dunia Kedua]{peristiwa}, keadaan [kekosongan politik]{istilah} memberi peluang kepada [PKM]{pertubuhan}
+  untuk meluaskan pengaruhnya.'
+soalan_utama:
+  soalan: Bagaimanakah ideologi komunis mula masuk dan berkembang di negara kita?
+  heading: Bagaimanakah ideologi komunis mula masuk dan berkembang di negara kita?
+  jawapan:
+  - '[light_bulb] [Komunisme]{gerakan} ialah ideologi yang diasaskan oleh [Karl Marx]{tokoh} dan [Friedrich Engels]{tokoh}
+    melalui karya [Communist Manifesto]{karya} dan [Das Kapital]{karya}.'
+  - '[pushpin] Komunisme ialah fahaman politik yang menjadikan [ekonomi]{istilah} dan [barang pengguna]{istilah} sebagai milik
+    negara sepenuhnya.'
+  - '[pushpin] Penyebaran ideologi ini di negara kita bermula sejak [tahun 1920-an]{masa} melalui pengaruh dari [China]{tempat}
+    dan [Indonesia]{tempat}.'
+bahagian:
+- tajuk: Kemasukan Pengaruh Komunis dari China
+  label: Bahagian Pertama
+  desc: ''
+  kandungan:
+  - jenis: board
+    tajuk: ''
+    strip: false
+    senarai:
+    - '[classical_building] cawangan [Parti Kuomintang (KMT)]{pertubuhan}'
+    - '[right-arrow] yang berpusat di [China]{tempat}'
+  - jenis: accordion
+    items:
+    - tajuk: Perkembangan Awal
+      senarai:
+      - '[pushpin] Selain [KMT]{pertubuhan}, terdapat pertubuhan lain:'
+      - '[pushpin] Selepas itu:'
+      - '[pushpin] Namun:'
+      - '[right-arrow] menyebabkan [Comintern]{pertubuhan} menubuhkan parti baharu:'
+      - '[school] [Main School]{pertubuhan}'
+      - '[right-arrow] bergerak dalam kalangan orang [Hailam]{istilah}'
+      - '[right-arrow] di bawah arahan [Parti Komunis China (PKC)]{pertubuhan}'
+- tajuk: Kemasukan Pengaruh Komunis dari Indonesia
+  label: Bahagian Kedua
+  desc: ''
+  kandungan:
+  - jenis: board
+    tajuk: ''
+    strip: false
+    senarai:
+    - '[calendar] [1920-an]{masa} → fahaman komunis dibawa oleh tokoh Indonesia seperti:'
+  - jenis: accordion
+    items:
+    - tajuk: Kegagalan di Indonesia
+      senarai:
+      - '[pushpin] Kesan:'
+      - '[pushpin] Namun:'
+      - '[light_bulb] Sebab utama:'
+      - '[calendar] [1926]{masa} → [Partai Komunis Indonesia (PKI)]{pertubuhan} gagal menguasai [Pulau Jawa]{tempat}.'
+- tajuk: Penubuhan Parti Komunis Malaya (PKM)
+  label: Bahagian Ketiga
+  desc: ''
+  kandungan:
+  - jenis: board
+    tajuk: ''
+    strip: false
+    senarai:
+    - '[calendar] [30 April 1930]{masa}'
+    - '[round-pushpin] [Kuala Pilah, Negeri Sembilan]{tempat}'
+  - jenis: accordion
+    items:
+    - tajuk: Cara PKM Menyebarkan Pengaruh
+      senarai:
+      - '[pushpin] [PKM]{pertubuhan} bergerak melalui:'
+      - '[pushpin] Selain itu:'
+      - '[construction-worker] kesatuan sekerja'
+      - '[classical_building] pertubuhan'
+      - '[newspaper] penerbitan akhbar'
+      - '[school] sekolah Cina'
+    - tajuk: Peranan PKM Semasa Pendudukan Jepun (1941–1945)
+      senarai:
+      - '[pushpin] [PKM]{pertubuhan} bertindak:'
+      - '[pushpin] [PKM]{pertubuhan} menerima bantuan daripada [British]{pertubuhan}:'
+      - '[handshake_light] bekerjasama dengan [British]{pertubuhan}'
+      - '[right-arrow] menentang [Jepun]{peristiwa}'
+    - tajuk: Selepas Jepun Menyerah Kalah (1945)
+      senarai:
+      - '[pushpin] Berlaku:'
+      - '[pushpin] Keadaan ini memberi peluang kepada [PKM]{pertubuhan} untuk:'
+      - '[warning] [kekosongan politik]{istilah}'
+      - '[right-arrow] kerana kelewatan [British]{pertubuhan} kembali'
+    - tajuk: Tindakan Bintang Tiga (MPAJA)
+      senarai:
+      - '[pushpin] [MPAJA]{pertubuhan} keluar dari hutan dan:'
+      - '[pushpin] Sasaran:'
+      - '[right-arrow] yang dituduh bersubahat dengan [Jepun]{peristiwa}'
+      - '[collision] melakukan kekacauan'
+      - '[kitchen-knife] pembunuhan'
+    - tajuk: Tindakan British (BMA)
+      senarai:
+      - '[pushpin] Namun:'
+      - '[right-arrow] memberi peluang kepada [PKM]{pertubuhan} untuk:'
+      - '[calendar] [1 Disember 1945]{masa} → [MPAJA]{pertubuhan} dibubarkan.'
+    - tajuk: Penguasaan PKM dalam Kesatuan Sekerja
+      senarai:
+      - '[pushpin] [PKM]{pertubuhan} menyusup ke dalam:'
+      - '[pushpin] [PKM]{pertubuhan} juga menyusup ke dalam:'
+      - '[construction-worker] [Pan-Malayan Federation of Trade Unions (PMFTU)]{pertubuhan}'
+    - tajuk: Tindakan Akhir British
+      senarai:
+      - '[pushpin] Disebabkan ancaman komunis terhadap:'
+      - '[right-arrow] [British]{pertubuhan} meluluskan:'
+      - '[pushpin] Kesan:'
+      - '[money-bag] ekonomi'
+      - '[shield] keselamatan negara'
+kesimpulan:
+- '[pushpin] Ideologi [komunis]{gerakan} masuk ke negara kita melalui:'
+- '[pushpin] Penyebaran ini berkembang melalui:'
+- '[pushpin] Selepas [Perang Dunia Kedua]{peristiwa}, keadaan [kekosongan politik]{istilah} memberi peluang kepada [PKM]{pertubuhan}
+  meluaskan pengaruh.'
+- '[pushpin] Namun:'
+- '[light_bulb] Peristiwa ini menunjukkan bahawa ideologi luar boleh mempengaruhi negara jika berlaku ketidakstabilan politik
+  dan kelemahan pentadbiran.'
+- '[globe_meridians] [China]{tempat}'
+- '[globe_meridians] [Indonesia]{tempat}'
