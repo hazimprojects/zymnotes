@@ -1305,73 +1305,89 @@ body.page-theme-home.app-shell-page .home-hero-primary-cta:hover {
   box-shadow: 0 14px 36px rgba(79, 70, 229, 0.42), 0 2px 10px rgba(67, 56, 202, 0.25);
 }
 
-body.page-theme-home.app-shell-page .home-feature-grid {
+body.page-theme-home.app-shell-page .home-feature-grid,
+body.page-theme-about.app-shell-page .home-feature-grid {
   gap: 14px;
   margin-bottom: 1.1rem;
 }
 
-body.page-theme-home.app-shell-page .home-feature-card {
+body.page-theme-home.app-shell-page .home-feature-card,
+body.page-theme-about.app-shell-page .home-feature-card {
   border-radius: 18px;
   padding: 1rem 1rem 0.95rem;
   border-width: 1px;
   box-shadow: 0 8px 26px rgba(55, 48, 100, 0.08), 0 1px 0 rgba(255, 255, 255, 0.65) inset;
 }
 
-body.page-theme-home.app-shell-page .home-feature-card:hover {
+body.page-theme-home.app-shell-page .home-feature-card:hover,
+body.page-theme-about.app-shell-page .home-feature-card:hover {
   transform: translateY(-3px);
   box-shadow: 0 14px 34px rgba(55, 48, 100, 0.12);
 }
 
-body.page-theme-home.app-shell-page .home-feature-icon {
+body.page-theme-home.app-shell-page .home-feature-icon,
+body.page-theme-about.app-shell-page .home-feature-icon {
   margin-bottom: 0.6rem;
 }
 
-body.page-theme-home.app-shell-page .home-feature-title {
+body.page-theme-home.app-shell-page .home-feature-title,
+body.page-theme-about.app-shell-page .home-feature-title {
   font-size: 0.98rem;
   font-weight: 800;
 }
 
-body.page-theme-home.app-shell-page .home-feature-desc {
+body.page-theme-home.app-shell-page .home-feature-desc,
+body.page-theme-about.app-shell-page .home-feature-desc {
   font-size: 0.86rem;
   line-height: 1.55;
   color: #64748b;
 }
 
-[data-theme="dark"] body.page-theme-home.app-shell-page .home-feature-desc {
+[data-theme="dark"] body.page-theme-home.app-shell-page .home-feature-desc,
+[data-theme="dark"] body.page-theme-about.app-shell-page .home-feature-desc {
   color: rgba(148, 163, 184, 0.95);
 }
 
-body.page-theme-home.app-shell-page .home-feature-card.hfc-violet {
+body.page-theme-home.app-shell-page .home-feature-card.hfc-violet,
+body.page-theme-about.app-shell-page .home-feature-card.hfc-violet {
   border-left: 3px solid #7c3aed;
 }
-body.page-theme-home.app-shell-page .home-feature-card.hfc-cyan {
+body.page-theme-home.app-shell-page .home-feature-card.hfc-cyan,
+body.page-theme-about.app-shell-page .home-feature-card.hfc-cyan {
   border-left: 3px solid #0891b2;
 }
-body.page-theme-home.app-shell-page .home-feature-card.hfc-emerald {
+body.page-theme-home.app-shell-page .home-feature-card.hfc-emerald,
+body.page-theme-about.app-shell-page .home-feature-card.hfc-emerald {
   border-left: 3px solid #059669;
 }
-body.page-theme-home.app-shell-page .home-feature-card.hfc-amber {
+body.page-theme-home.app-shell-page .home-feature-card.hfc-amber,
+body.page-theme-about.app-shell-page .home-feature-card.hfc-amber {
   border-left: 3px solid #d97706;
 }
-body.page-theme-home.app-shell-page .home-feature-card.hfc-indigo {
+body.page-theme-home.app-shell-page .home-feature-card.hfc-indigo,
+body.page-theme-about.app-shell-page .home-feature-card.hfc-indigo {
   border-left: 3px solid #4f46e5;
 }
 
-body.page-theme-home.app-shell-page .home-scope-section {
+body.page-theme-home.app-shell-page .home-scope-section,
+body.page-theme-about.app-shell-page .home-scope-section {
   margin-bottom: 1.1rem;
 }
 
-body.page-theme-home.app-shell-page .home-scope-label {
+body.page-theme-home.app-shell-page .home-scope-label,
+body.page-theme-about.app-shell-page .home-scope-label {
   font-size: 0.74rem;
   letter-spacing: 0.1em;
 }
 
-body.page-theme-home.app-shell-page .home-scope-item.home-scope-active {
+body.page-theme-home.app-shell-page .home-scope-item.home-scope-active,
+body.page-theme-about.app-shell-page .home-scope-item.home-scope-active {
   font-weight: 700;
   color: var(--ink);
 }
 
-body.page-theme-home.app-shell-page .home-cta-row {
+body.page-theme-home.app-shell-page .home-cta-row,
+body.page-theme-about.app-shell-page .home-cta-row {
   gap: 10px;
   margin-bottom: 0.85rem;
 }

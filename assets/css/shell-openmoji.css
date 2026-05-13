@@ -141,7 +141,8 @@ body.page-theme-home.app-shell-page .home-hero-primary-cta:hover {
     0 6px 16px rgba(67, 56, 202, 0.28);
 }
 
-body.page-theme-home.app-shell-page .home-feature-card {
+body.page-theme-home.app-shell-page .home-feature-card,
+body.page-theme-about.app-shell-page .home-feature-card {
   border-radius: 20px;
   box-shadow:
     0 1px 0 rgba(255, 255, 255, 0.75) inset,
@@ -149,7 +150,8 @@ body.page-theme-home.app-shell-page .home-feature-card {
     0 4px 12px rgba(15, 23, 42, 0.05);
 }
 
-body.page-theme-home.app-shell-page .home-feature-card:hover {
+body.page-theme-home.app-shell-page .home-feature-card:hover,
+body.page-theme-about.app-shell-page .home-feature-card:hover {
   transform: translateY(-4px);
   box-shadow:
     0 1px 0 rgba(255, 255, 255, 0.8) inset,
